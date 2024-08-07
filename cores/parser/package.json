@@ -1,0 +1,42 @@
+{
+	"name": "@email.reciever/parser",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy --env prod",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest",
+		"cf-typegen": "wrangler types"
+	},
+	"dependencies": {
+		"@email.reciever/consts": "workspace:^",
+		"@octokit/rest": "^21.0.1",
+		"@types/unist": "^3.0.2",
+		"cheerio": "1.0.0-rc.12",
+		"dayjs": "^1.11.12",
+		"jsdom": "^24.1.1",
+		"lodash.chunk": "^4.2.0",
+		"markdown-it": "^14.1.0",
+		"postal-mime": "^2.2.7",
+		"remark-parse": "^11.0.0",
+		"remark-stringify": "^11.0.0",
+		"turndown": "^7.2.0",
+		"unified": "^11.0.5",
+		"unist-util-filter": "^5.0.1",
+		"unist-util-is": "^6.0.0",
+		"unist-util-visit": "^5.0.0"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.4.5",
+		"@cloudflare/workers-types": "^4.20240725.0",
+		"@email.reciever/types": "workspace:^",
+		"@types/jsdom": "^21.1.7",
+		"@types/lodash.chunk": "^4.2.9",
+		"@types/node": "20",
+		"@types/turndown": "^5.0.5",
+		"typescript": "^5.5.2",
+		"vitest": "1.5.0",
+		"wrangler": "^3.60.3"
+	}
+}
