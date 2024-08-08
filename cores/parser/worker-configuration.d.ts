@@ -4,5 +4,5 @@ interface Env {
 	AI: Ai;
 	// repo token for write and modify
 	REPO_TOKEN: string;
-	ENV?: 'env';
+	ENV?: 'dev';
 }
