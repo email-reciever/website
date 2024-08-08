@@ -72,6 +72,6 @@ export function md(markdown: string, env: Env, collectLinkPlugin?: CollectLinks)
 			// replace link with translated blog
 			.use(translatedLinkSource, () => links)
 			.use(remarkStringify)
-			.process(markdown)
+			.process(markdown) as unknown as string
 	);
 }

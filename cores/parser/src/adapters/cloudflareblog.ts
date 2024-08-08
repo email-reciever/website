@@ -9,7 +9,7 @@ export const cloudflareblog: Adapter = (text, html) => {
 	const endIndex = markdownContent.indexOf('Copyright © 2024 Cloudflare');
 	const blogContent = markdownContent.slice(0, endIndex);
 
-	const $ = load(html);
+	const $ = load(html, null, false);
 	let origin_url: string | undefined;
 
 	$('td > a').each((index, element) => {

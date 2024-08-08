@@ -7,7 +7,7 @@ export const modular: Adapter = (text, html) => {
 	const endIndex = text.indexOf('X (https');
 	const blogContent = text.slice(startIndex, endIndex);
 
-	const $ = load(html);
+	const $ = load(html, null, false);
 	let origin_url: string | undefined;
 
 	$('td > a').each((index, element) => {

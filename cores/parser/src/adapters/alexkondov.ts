@@ -7,7 +7,7 @@ export const alexkondov: Adapter = (text, html) => {
 	const endIndex = text.indexOf('============================================================');
 	const blogContent = text.slice(startIndex, endIndex);
 
-	const $ = load(html);
+	const $ = load(html, null, false);
 	let origin_url: string | undefined;
 
 	$('td > a').each((index, element) => {

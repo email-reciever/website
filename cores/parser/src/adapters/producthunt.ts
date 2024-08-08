@@ -6,7 +6,7 @@ export const producthunt: Adapter = (text, html) => {
 	const endIndex = text.indexOf("What did you think of today's newsletter?");
 	const blogContent = text.slice(startIndex, endIndex);
 
-	const $ = load(html);
+	const $ = load(html, null, false);
 	let origin_url: string | undefined;
 
 	$('td.actions > a').each((index, element) => {
