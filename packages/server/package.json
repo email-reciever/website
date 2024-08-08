@@ -1,0 +1,8 @@
+{
+  "name": "@email.reciever/server",
+  "version": "0.0.1",
+  "dependencies": {},
+  "scripts": {
+    "dev": "deno task dev"
+  }
+}

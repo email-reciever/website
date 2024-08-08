@@ -1,0 +1,17 @@
+{
+  "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
+  "tasks": {
+    "dev": "deno run -A --watch src/server.ts"
+  },
+  "imports": {
+    "$oak": "https://deno.land/x/oak/mod.ts"
+  },
+  "lint": {
+    "include": ["src/"],
+    "rules": {
+      "tags": ["recommended"],
+      "include": ["ban-untagged-todo"],
+      "exclude": ["no-unused-vars"]
+    }
+  }
+}
