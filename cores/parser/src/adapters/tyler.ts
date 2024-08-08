@@ -10,7 +10,7 @@ export const tyler: Adapter = (text, html) => {
 	const endIndex = text.indexOf('----------------------\nSpot the Bug: Solution\n----------------------');
 	const blogContent = text.slice(startIndex, middleStartIndex).concat(text.slice(middleEndIndex, endIndex));
 
-	const $ = load(html);
+	const $ = load(html, null, false);
 	let origin_url: string | undefined;
 
 	$('p > a').each((index, element) => {
