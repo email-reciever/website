@@ -9,6 +9,7 @@ export default defineConfig({
     lib: {
       entry: {
         index: resolve(__dirname, 'src', 'index.ts'),
+        regexp: resolve(__dirname, 'src', 'regexp.ts'),
         github: resolve(__dirname, 'src', 'github.ts'),
         'white-lists': resolve(__dirname, 'src', 'white-lists.ts')
       }

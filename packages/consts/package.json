@@ -19,6 +19,12 @@
       "types": "./dist/github.d.ts",
       "default": "./dist/github.cjs"
     },
+    "./regexp": {
+      "import": "./dist/regexp.js",
+      "require": "./dist/regexp.cjs",
+      "types": "./dist/regexp.d.ts",
+      "default": "./dist/regexp.cjs"
+    },
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.cjs",
