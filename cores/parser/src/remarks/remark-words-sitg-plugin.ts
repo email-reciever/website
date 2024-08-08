@@ -11,7 +11,7 @@ export const SITGPREFIX = '$';
 export const SITGNODETYPE: string[] = ['text'];
 export const ESCAPENODETYPE: string[] = [];
 
-export const escapeTextContent = ['\n'];
+export const escapeTextContent = ['\n', '', '””'];
 
 export type CollectSitg = (key: string, value: string) => string;
 
