@@ -1,11 +1,11 @@
 import { load } from 'cheerio';
-import transferService from 'turndown';
+import { td } from '../utils/td';
 
 import { Adapter } from '../types';
 
 export const cloudflareblog: Adapter = (text, html) => {
 	// due to cloudflare email can not parsed to markdown. use turndown parse it
-	const markdownContent = new transferService().turndown(text);
+	const markdownContent = new td().turndown(text);
 	const endIndex = markdownContent.indexOf('Copyright © 2024 Cloudflare');
 	const blogContent = markdownContent.slice(0, endIndex);
 

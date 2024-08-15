@@ -5,8 +5,7 @@
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkStringify from 'remark-stringify';
-// import { JSDOM } from 'jsdom';
-import transferService from 'turndown';
+import { td } from '../utils/td';
 import { remarkWordsSitgPlugin } from '../remarks/remark-words-sitg-plugin';
 import { remarkTranslatePlugin } from '../remarks/remark-translate-plugin';
 import type { LinkItem, CollectLinks } from '../types';
@@ -35,7 +34,7 @@ function translateWithAI(content: Record<string, string>, env: Env, onTranslateS
 function translatedLinkSource(getLinks: () => LinkItem[]) {
 	return async () => {
 		if (getLinks().length) {
-			const { turndown } = new transferService();
+			const { turndown } = new td();
 			try {
 				// jsdom do not use node:* prefix for node modules. wait for a instand lib
 				// https://github.com/jsdom/jsdom/issues/3753
