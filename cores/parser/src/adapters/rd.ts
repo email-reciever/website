@@ -54,6 +54,6 @@ export const rd: Adapter = async (text, html, headers) => {
 	return {
 		blogContent: sectionContent,
 		collectLinks,
-		origin_url: headers.find((v) => v.key === 'x-newsletter')!.value,
+		origin_url: headers.find((v) => v.key === 'x-newsletter')?.value,
 	};
 };

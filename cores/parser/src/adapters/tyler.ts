@@ -1,14 +1,16 @@
 import { load } from 'cheerio';
+import { html2md } from '../utils/html2md';
 import { Adapter } from '../types';
 
 export const tyler: Adapter = (text, html) => {
+	const { md } = html2md(html);
 	// slice content from the main things to sports
-	const startIndex = text.indexOf('--------------\nThe Main Thing\n--------------') || 0;
+	const startIndex = md.indexOf('The Main Thing\n--------------') || 0;
 	// due to postal format markdown without ``, make code type to para. remove it
-	const middleStartIndex = text.indexOf('------------\nSpot the Bug\n------------');
-	const middleEndIndex = text.indexOf('---------\nCool Bits\n---------');
-	const endIndex = text.indexOf('----------------------\nSpot the Bug: Solution\n----------------------');
-	const blogContent = text.slice(startIndex, middleStartIndex).concat(text.slice(middleEndIndex, endIndex));
+	const middleStartIndex = md.indexOf('![Spot the Bug logo]');
+	const middleEndIndex = md.indexOf('![Cool Bits logo]');
+	const endIndex = md.lastIndexOf('![Spot the Bug logo]');
+	const blogContent = md.slice(startIndex, middleStartIndex).concat(md.slice(middleEndIndex, endIndex));
 
 	const $ = load(html, null, false);
 	let origin_url: string | undefined;
