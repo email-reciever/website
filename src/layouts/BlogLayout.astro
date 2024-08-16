@@ -1,0 +1,38 @@
+---
+import Layout, { type Props as LayoutProps } from './Layout.astro'
+import Author from '@/components/Author.astro'
+import Summary from '@/components/Summary.astro'
+import { generateURI } from '@/lib/url.astro'
+import '@/styles/markdown.css'
+
+interface Props extends LayoutProps {}
+
+const { frontmatter = {} as LayoutProps['frontmatter'] } = Astro.props
+
+const { author, avatar, origin_url } = frontmatter!
+const avatarURL = generateURI(avatar!)
+---
+
+<Layout frontmatter={frontmatter}>
+  <Summary frontmatter={frontmatter!} />
+  <div
+    id="blog-content"
+    data-author={author}
+    class="flex flex-col-reverse md:grid my-0 mx-auto px-6 w-full max-w-full md:max-w-7xl"
+  >
+    <div id="blog-content-wrapper" class="md:pr-20 md:pb-20 md:border-r">
+      <div id="blog-content-markdown" class="typography"><slot /></div>
+    </div>
+    <div id="blog-power">
+      <Author fallback={author} src={avatarURL} origin_url={origin_url} />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  @media screen(md) {
+    #blog-content {
+      grid-template-columns: minmax(0, 1fr) 340px;
+    }
+  }
+</style>

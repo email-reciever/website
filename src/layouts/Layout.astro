@@ -1,0 +1,98 @@
+---
+import type { frontmatter } from '@email.reciever/types/markdown-extends'
+import { SITETITLE, SITEURL } from 'astro:env/client'
+import Head, { type Props as HeadProps } from '../components/Head.astro'
+import { ModeToggle } from '../components/ModeToggle'
+import { Button } from '@/components/ui/button'
+import { GitHubLogoIcon, FontStyleIcon } from '@radix-ui/react-icons'
+import '../styles/global.css'
+import './layout.css'
+import { CombineAvatar } from '@/components/ui/avatar'
+
+export interface Props extends HeadProps {
+  frontmatter?: frontmatter
+}
+
+const { frontmatter = {} as frontmatter, title, description } = Astro.props
+const logo = new URL('/media-source/email-reciever.svg', Astro.url).toString()
+---
+
+<script is:inline>
+  const getThemePreference = () => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light'
+  }
+  const isDark = getThemePreference() === 'dark'
+  document.documentElement.classList[isDark ? 'add' : 'remove']('dark')
+
+  if (typeof localStorage !== 'undefined') {
+    const observer = new MutationObserver(() => {
+      const isDark = document.documentElement.classList.contains('dark')
+      localStorage.setItem('theme', isDark ? 'dark' : 'light')
+    })
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    })
+  }
+</script>
+
+<html lang="zh-Hans">
+  <head>
+    <Head
+      frontmatter={frontmatter}
+      title={frontmatter.title ?? title}
+      description={frontmatter.description ?? description}
+    />
+  </head>
+  <body>
+    <header
+      class="sticky w-full z-10 top-0 transition-all bg-white dark:bg-black shadow-sm"
+    >
+      <div
+        class="flex items-center justify-between mx-auto w-full min-h-16 max-w-7xl md:px-6"
+      >
+        <CombineAvatar
+          client:only="react"
+          avatar={{ src: logo }}
+          fallback={{ children: title }}
+        />
+        <a href={new URL('rss.xml', Astro.site)} target="_blank">
+          <Button variant="outline" size="icon" client:only="react">
+            R<FontStyleIcon className="h-4 w-4" />
+          </Button>
+        </a>
+      </div>
+    </header>
+    <slot />
+    <footer class="p-7 border-t border-t-black/10 dark:border-t-white/10">
+      <div
+        class="mx-auto my-0 flex flex-col md:flex-row gap-2 md:gap-0 justify-between items-center text-sm"
+      >
+        <p class="m-0">
+          Built by <a class="underline" href={SITEURL}>{SITETITLE}</a>. The
+          source code is available on <a class="underline" href={SITEURL}
+            >Github</a
+          >
+        </p>
+        <p class="m-0 flex items-center gap-2">
+          <ModeToggle client:only="react" />
+          <a href={SITEURL} referrerpolicy="no-referrer" target="_blank">
+            <Button
+              client:only="react"
+              variant="ghost"
+              size="icon"
+              className="rounded-full"
+            >
+              <GitHubLogoIcon client:only="react" className="h-4 w-4" />
+            </Button>
+          </a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

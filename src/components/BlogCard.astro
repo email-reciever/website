@@ -1,0 +1,58 @@
+---
+import type { CollectionEntry, CollectionKey } from 'astro:content'
+import { CombineAvatar } from './ui/avatar'
+
+import { generateURI } from '@/lib/url.astro'
+
+interface Props<R extends CollectionKey = 'tyler'> {
+  tag: R
+  post: CollectionEntry<R>
+}
+
+const {
+  tag,
+  post: {
+    slug,
+    data: { title, author, date, avatar, description, banner, subAuthor }
+  }
+} = Astro.props
+
+const avatarURL = generateURI(avatar!)
+const bannerURL = generateURI(banner ?? `${author}-banner.png`, !banner)
+---
+
+<a
+  href={`/post/${author}/${slug}`}
+  class="p-4 md:p-6 justify-end flex flex-col items-start overflow-hidden rounded relative min-h-52 row-span-4 row-end-auto after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:rounded after:transition-all after:shadow-[inset_0_0_0_1px_hsla(0,0%,100%,.2)] after:opacity-100 after:bg-gradient-to-b after:from-transparent after:via-[rgba(0, 0, 0, .7)] after:via-50% after:to-black hover:after:opacity-70"
+>
+  <img
+    class="w-full h-full object-top object-cover absolute top-0 left-0 text-transparent"
+    src={bannerURL}
+    loading="lazy"
+    fetchpriority="low"
+    decoding="async"
+    alt={description}
+  />
+  <div class="relative z-10 flex flex-col items-stretch gap-3">
+    <p class="text-neutral-300 text-xl m-0 font-bold">
+      {title}
+    </p>
+    <div class="w-full flex items-center gap-2">
+      <CombineAvatar
+        client:only="react"
+        avatar={{ src: avatarURL }}
+        fallback={{ children: author }}
+      />
+      <p
+        class="m-0 text-neutral-500 text-sm font-medium inline-block overflow-hidden text-ellipsis whitespace-nowrap word-wrap-normal max-w-full min-w-0"
+      >
+        {subAuthor ?? author}
+      </p>
+      <p
+        class="m-0 ml-auto text-neutral-500 text-sm font-medium whitespace-nowrap"
+      >
+        {date}
+      </p>
+    </div>
+  </div>
+</a>

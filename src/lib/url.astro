@@ -1,0 +1,16 @@
+---
+import { testPureURI } from '@email.reciever/consts/regexp'
+
+export function generateURI(url: string, relativePublic?: boolean) {
+  if (testPureURI.test(url)) {
+    return url
+  }
+  const realURI = relativePublic ? `/media-source/${url}` : url
+  try {
+    return new URL(realURI, Astro.url).toString()
+  } catch (e) {
+    console.log(e, realURI)
+    return realURI
+  }
+}
+---

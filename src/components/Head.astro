@@ -1,0 +1,46 @@
+---
+import { ViewTransitions } from 'astro:transitions'
+import { SITETITLE, SITEDESCRIPTION } from 'astro:env/client'
+
+import type { frontmatter } from 'astro:extends-markdown'
+
+import '../styles/global.css'
+
+export interface Props {
+  title?: string
+  frontmatter?: frontmatter
+  description?: string
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+
+const {
+  frontmatter = {} as frontmatter,
+  title = SITETITLE,
+  description = SITEDESCRIPTION
+} = Astro.props
+---
+
+<meta charset="UTF-8" />
+<meta name="description" property="og:description" content={description} />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="author" content={frontmatter.author} />
+
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title={SITETITLE}
+  href={new URL('rss.xml', Astro.site)}
+/>
+
+<ViewTransitions />

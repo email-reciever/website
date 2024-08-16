@@ -1,0 +1,32 @@
+---
+import { CombineAvatar } from '@/components/ui/avatar'
+
+interface Props {
+  src: string
+  fallback: string
+  origin_url: string
+}
+
+const { src, fallback, origin_url } = Astro.props
+---
+
+<div class="flex flex-col gap-3 px-10 pb-10">
+  <p>发布者</p>
+  <div class="flex items-center gap-3">
+    <CombineAvatar
+      client:only="react"
+      avatar={{ src }}
+      fallback={{ children: fallback }}
+    />
+    <div class="flex flex-col gap-1 items-stretch">
+      <a
+        href={origin_url}
+        referrerpolicy="no-referrer"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p class="mr-1 font-semibold leading-5 text-sm">{fallback}</p>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content'
+import { SITETITLE } from 'astro:env/client'
+import Layout from '@/layouts/Layout.astro'
+import { allCollectionsEntries, type Collections } from '@/content/config'
+import BlogCard from '@/components/BlogCard.astro'
+import { Button } from '@/components/ui/button'
+const { slug } = Astro.params
+
+const allCollectionPosts = await Promise.all(
+  allCollectionsEntries.map((collection) => getCollection(collection))
+)
+
+let posts = allCollectionPosts.flat()
+let title = '全部'
+
+if (slug !== undefined && slug !== 'all') {
+  title = slug
+  posts = allCollectionPosts[allCollectionsEntries.indexOf(slug as Collections)]
+}
+---
+
+<Layout title={SITETITLE}>
+  <main class="px-4 my-0 w-full mx-auto max-w-7xl md:px-6 min-h-[80vh]">
+    <ul class="flex gap-6 list-none m-0 p-0 mt-16">
+      {
+        ['全部', ...allCollectionsEntries].map((type) => (
+          <li>
+            <a
+              class:list={[
+                'block min-w-14 relative no-underline text-sm transition-colors',
+                {
+                  'text-neutral-900 dark:text-neutral-200 before:absolute before:content-[""] before:w-full before:h-0.5 before:dark:bg-neutral-200 before:bg-neutral-900 before:top-[calc(100%+12px)]':
+                    title === type
+                }
+              ]}
+              {...(title === type
+                ? {}
+                : {
+                    href: `/slug/${allCollectionsEntries.includes(type as Collections) ? type : 'all'}`
+                  })}
+            >
+              <img
+                class="block h-9 mx-auto"
+                src={`/media-source/${allCollectionsEntries.includes(type as Collections) ? type : 'all'}-ico.png`}
+              />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="flex flex-col gap-3 md:grid md:gap-6 grid-cols-3 my-10">
+      {posts.map((post) => <BlogCard tag={slug as Collections} post={post} />)}
+    </div>
+  </main>
+</Layout>

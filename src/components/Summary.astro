@@ -1,0 +1,43 @@
+---
+import type { frontmatter } from '@email.reciever/types'
+import { ArrowLeftIcon } from '@radix-ui/react-icons'
+import Tag, { type Keys, backgrouds } from './Tag.astro'
+
+interface Props {
+  frontmatter: frontmatter
+}
+
+const {
+  frontmatter: { title, author, origin_url, description, date, subAuthor }
+} = Astro.props
+
+const [start, end] = backgrouds[author as Keys] ?? []
+---
+
+<div
+  class="w-full px-6 py-3 bg-gradient-to-br from-[var(--badge-start)] from-10% via-[var(--badge-end)] via-40% to-transparent"
+>
+  <div class="pb-[7%] w-full mx-auto my-0">
+    <div class="mb-5">
+      <div class="md:text-sm pt-2">
+        <a
+          onclick="history.back()"
+          class="flex items-center gap-2 cursor-pointer"
+          ><ArrowLeftIcon client:load /> 回到首页</a
+        >
+      </div>
+    </div>
+    <div class="mt-6">
+      <div class="flex flex-col md:flex-row md:items-center gap-3">
+        <Tag url={origin_url} type={author as Keys}>{subAuthor ?? author}</Tag>
+        <p class="text-slate-400 text-sm font-normal">{date}</p>
+      </div>
+      <h1 class="text-2xl font-semibold mt-6 md:text-5xl">{title}</h1>
+      <p class="text-base text-slate-400 md:mt-6 md:text-2xl">
+        <span>{description}</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<style define:vars={{ 'badge-start': start, 'badge-end': end }}></style>
