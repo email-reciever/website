@@ -28,7 +28,7 @@ type Rss = {
 	};
 };
 
-async function crawlPost(item: PostItem, breakPoint: (string | RegExp)[], channel: Rss['channel'], env: Env) {
+async function crawlPost(item: PostItem, breakPoint: (string | string[] | RegExp)[], channel: Rss['channel'], env: Env) {
 	try {
 		const { link, title, pubDate, description, author } = item;
 		const { image, link: origin_site } = channel;
@@ -41,7 +41,7 @@ async function crawlPost(item: PostItem, breakPoint: (string | RegExp)[], channe
 		if (postHtml.length) {
 			const { md } = html2md(postHtml);
 			const startIndex = md.indexOf(breakPoint[0] as string) ?? 0;
-			const endIndex = md.indexOf(breakPoint[1] as string) ?? -1;
+			const endIndex = (breakPoint[1] as string[]).map((v) => md.indexOf(v) ?? -1).find((v) => v !== -1);
 			const content = md.slice(startIndex, endIndex);
 			const matchDescription = load(description, null, false)('p').text();
 			await createBlog(

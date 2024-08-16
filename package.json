@@ -11,7 +11,8 @@
     "sr": "pnpm -F=\"@email.reciever/server\" dev",
     "parser:deploy": "pnpm -F=\"@email.reciever/parser\" run deploy",
     "start": "astro dev",
-    "build": "pnpm biome check --write && astro check && astro build",
+    "build:consts": "pnpm -F=\"@email.reciever/consts\" build",
+    "build": "pnpm run build:consts  && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "up:r": "pnpm up -r"
