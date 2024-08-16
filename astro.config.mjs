@@ -34,7 +34,7 @@ export default defineConfig({
       }
     },
     ssr: {
-      external: ['node:buffer', 'node:worker_threads']
+      external: ['node:buffer', 'node:worker_threads', 'node:async_hooks']
     },
     build: {
       minify: false,
