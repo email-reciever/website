@@ -1,10 +1,12 @@
 import { load } from 'cheerio';
+import { html2md } from '../utils/html2md';
 import { Adapter } from '../types';
 
 export const producthunt: Adapter = (text, html) => {
-	const startIndex = text.indexOf('TOP NEWS') || 0;
-	const endIndex = text.indexOf("What did you think of today's newsletter?");
-	const blogContent = text.slice(startIndex, endIndex);
+	const { md } = html2md(html);
+	const startIndex = md.indexOf('TOP NEWS') || 0;
+	const endIndex = md.indexOf("What did you think of today's newsletter?");
+	const blogContent = md.slice(startIndex, endIndex);
 
 	const $ = load(html, null, false);
 	let origin_url: string | undefined;

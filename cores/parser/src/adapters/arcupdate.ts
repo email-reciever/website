@@ -1,10 +1,12 @@
 import { Adapter } from '../types';
+import { html2md } from '../utils/html2md';
 
 export const arcupdate: Adapter = (text, html) => {
+	const { md } = html2md(html);
 	// slice content from the main things to sports
-	const startIndex = text.indexOf('https://thebrowser.company/') || 0;
-	const endIndex = text.indexOf('NEW YORK (https://thebrowser.company/)');
-	const blogContent = text.slice(startIndex, endIndex);
+	const startIndex = md.indexOf('[![ARC]') || 0;
+	const endIndex = md.lastIndexOf('We’ll see you on the web');
+	const blogContent = md.slice(startIndex, endIndex);
 
 	return {
 		blogContent,

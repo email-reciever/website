@@ -1,11 +1,13 @@
 import { load } from 'cheerio';
+import { html2md } from '../utils/html2md';
 import { Adapter } from '../types';
 
 export const modular: Adapter = (text, html) => {
+	const { md } = html2md(html);
 	// slice content from the main things to sports
-	const startIndex = text.indexOf('Modular (https') || 0;
-	const endIndex = text.indexOf('X (https');
-	const blogContent = text.slice(startIndex, endIndex);
+	const startIndex = md.indexOf('Read Modverse Weekly') || 0;
+	const endIndex = md.indexOf('[![X]');
+	const blogContent = md.slice(startIndex, endIndex);
 
 	const $ = load(html, null, false);
 	let origin_url: string | undefined;
