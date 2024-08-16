@@ -18,6 +18,22 @@ router.post('/create', async (ctx) => {
   ctx.response.body = { status }
 })
 
+router.post('/read', async (ctx) => {
+  let status = 200
+  let response: Record<string, unknown> = {}
+
+  try {
+    const { fileName } = await ctx.request.body.json()
+    const filePath = resolve(import.meta.dirname!, '../../../', fileName)
+    const content = Deno.readTextFileSync(filePath)
+    response = { content }
+  } catch (e) {
+    status = 400
+  }
+
+  ctx.response.body = { status, ...response }
+})
+
 // Logger
 app.use(async (ctx, next) => {
   await next()
