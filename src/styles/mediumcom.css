@@ -1,0 +1,5 @@
+#blog-content[data-author="mediumcom"] {
+  img {
+    @apply w-full block mx-auto;
+  }
+}

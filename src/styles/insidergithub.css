@@ -1,0 +1,16 @@
+#blog-content[data-author="insidergithub"] {
+  p {
+    > a {
+      > img[alt="GitHub"] {
+        @apply mx-auto w-1/2;
+        &:first-child {
+          @apply block dark:hidden;
+        }
+
+        &:last-child {
+          @apply hidden dark:block;
+        }
+      }
+    }
+  }
+}

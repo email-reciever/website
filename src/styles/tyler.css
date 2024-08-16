@@ -1,0 +1,15 @@
+#blog-content[data-author="tyler"] {
+  p {
+    > img {
+      @apply block mx-auto;
+
+      &[alt="Cool Bits logo"] {
+        @apply w-28;
+      }
+    }
+
+    > a:has(img) {
+      @apply inline-block mx-auto w-8;
+    }
+  }
+}

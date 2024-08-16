@@ -1,73 +1,83 @@
 /* use shadcn typography: https://ui.shadcn.com/docs/components/typography */
+/* category custom theme */
+@import url('./tyler.css');
+@import url('./insidergithub.css');
+@import url('./mediumcom.css');
 
-.typography h1 {
-  @apply m-[unset] first:mb-10 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
-}
+.typography {
+  h1 {
+    @apply m-[unset] first:mb-10 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  }
 
-.typography h2 {
-  @apply m-[unset] mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
-}
+  h2 {
+    @apply m-[unset] mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
+  }
 
-.typography h3 {
-  @apply m-[unset] scroll-m-20 text-2xl font-semibold tracking-tight;
-}
+  h3 {
+    @apply m-[unset] scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
 
-.typography h4 {
-  @apply m-[unset] scroll-m-20 text-xl font-semibold tracking-tight;
-}
+  h4 {
+    @apply m-[unset] scroll-m-20 text-xl font-semibold tracking-tight;
+  }
 
-.typography p {
-  @apply m-[unset] leading-7 [&:not(:first-child)]:mt-6;
-}
+  p {
+    @apply m-[unset] leading-7 [&:not(:first-child)]:mt-6;
+  }
 
-.typography blockquote  {
-  @apply m-[unset] mt-6 border-l-2 pl-6 italic;
-}
+  blockquote {
+    @apply m-[unset] mt-6 border-l-2 pl-6 italic;
+  }
 
-.typography table {
-  @apply m-[unset] w-full;
-}
+  table {
+    @apply m-[unset] w-full;
+  }
 
-.typography table > thead > tr {
-  @apply m-[unset] m-0 border-t p-0 even:bg-muted;
-}
+  table > thead > tr {
+    @apply m-[unset] m-0 border-t p-0 even:bg-muted;
+  }
 
-.typography table > thead > tr > th {
-  @apply m-[unset] border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right;
-}
+  table > thead > tr > th {
+    @apply m-[unset] border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right;
+  }
 
-.typography table > tbody > tr {
-  @apply m-[unset] m-0 border-t p-0 even:bg-muted;
-}
+  table > tbody > tr {
+    @apply m-[unset] m-0 border-t p-0 even:bg-muted;
+  }
 
-.typography table > tbody > tr > td {
-  @apply m-[unset] border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right;
-}
+  table > tbody > tr > td {
+    @apply m-[unset] border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right;
+  }
 
-.typography ul {
-  @apply m-[unset] my-6 ml-6 list-disc [&>li]:mt-2;
-}
+  ul {
+    @apply m-[unset] my-6 ml-6 list-disc [&>li]:mt-2;
+  }
 
-.typography code {
-  @apply m-[unset] relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
-}
+  code {
+    @apply m-[unset] relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+  }
 
-.typography .lead {
-  @apply m-[unset] text-xl text-muted-foreground;
-}
+  .lead {
+    @apply m-[unset] text-xl text-muted-foreground;
+  }
 
-.typography small {
-  @apply m-[unset] text-sm font-medium leading-none;
-}
+  small {
+    @apply m-[unset] text-sm font-medium leading-none;
+  }
 
-.typography .large {
-  @apply m-[unset] text-lg font-semibold;
-}
+  .large {
+    @apply m-[unset] text-lg font-semibold;
+  }
 
-.typography .muted {
-  @apply m-[unset] text-sm text-muted-foreground;
-}
+  .muted {
+    @apply m-[unset] text-sm text-muted-foreground;
+  }
 
-.typography a {
-  @apply !text-primary;
+  a {
+    @apply !text-primary;
+  }
+
+  img {
+    @apply mx-auto;
+  }
 }
