@@ -21,7 +21,7 @@ All subscription feeds can be found [WHITE-LISTS](/packages/consts/src/white-lis
 
 ## 👀 Want to get more?
 
-Click [Create A Issue](https://github.com/email-reciever/website/issues/new) with tip format to submit your subscrib url. or add my email - [jiangjiangjiangxi@gmail.com](jiangjiangjiangxi@gmail.com) to your publish list.
+Click [Create A Issue](https://github.com/email-reciever/website/issues/new?assignees=&labels=Subscribe&projects=&template=submit_subscribe.md&title=%5BSubscribe%5D%3A+) with tip format to submit your subscrib url. or add my email - [jiangjiangjiangxi@gmail.com](jiangjiangjiangxi@gmail.com) to your publish list.
 
 ## 👻 Usage Libiary
 
