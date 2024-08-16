@@ -9,7 +9,7 @@
     "p:dev": "pnpm --aggregate-output -r dev",
     "parser:dev": "pnpm -F=\"@email.reciever/parser\" dev",
     "sr": "pnpm -F=\"@email.reciever/server\" dev",
-    "parser:deploy": "pnpm -F=\"@email.reciever/parser\" deploy",
+    "parser:deploy": "pnpm -F=\"@email.reciever/parser\" run deploy",
     "start": "astro dev",
     "build": "pnpm biome check --write && astro check && astro build",
     "preview": "astro preview",
