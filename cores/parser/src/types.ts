@@ -28,10 +28,12 @@ export type AdapterOutput = {
 	blogContent: string;
 	collectLinks?: CollectLinks;
 	origin_url?: string;
+	translate?: boolean;
 };
 
 export type Adapter = (
 	text: Required<Email>['text'],
 	html: Required<Email>['html'],
-	headers: Required<Email>['headers']
+	headers: Required<Email>['headers'],
+	env: Env
 ) => AdapterOutput | Promise<AdapterOutput>;
