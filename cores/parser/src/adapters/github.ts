@@ -16,6 +16,24 @@ export const $repo = {
 
 export const repoURI = `https://github.com/${ORGNAME}/${REPONAME}`;
 
+export async function githubRead(fileName: string, env: Env) {
+	const $github = new Octokit({
+		auth: env.REPO_TOKEN,
+	});
+
+	// update or create blog
+	const { status, data } = await $github.rest.repos.getContent({
+		...$repo,
+		path: fileName,
+	});
+
+	if (status < 300) {
+		console.log('create blog success');
+
+		return data;
+	}
+}
+
 export async function github(file: FileInfo, env: Env) {
 	const $github = new Octokit({
 		auth: env.REPO_TOKEN,
