@@ -5,4 +5,5 @@ interface Env {
 	// repo token for write and modify
 	REPO_TOKEN: string;
 	ENV?: 'dev';
+	ZHIHU_COOKIE: string;
 }
