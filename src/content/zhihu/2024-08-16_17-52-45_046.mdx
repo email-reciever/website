@@ -1,0 +1,67 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 栗子前端技术周刊第 35 期 - React19 推迟发布、2023 JS 状态调查报告、htmx 2.0...
+description:  栗子前端技术周刊第 35 期 (2024.6.17 - 2024.6.23)：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。1. React19 推迟发布：起因是 TanStack Query 核心维护者之一 Dominik 发现 React18 和 React19 RC 的 Suspense 并行获取处理方面有差别，React18 会正常地以并行的方式加载数据，而 React19 RC 则是以瀑布流的方式获取，这一改变会影响不少依赖 React 的网站，降低它们的加载速度。对于这个变更，React 团队的理由是在 suspending 之前渲染所有兄弟组件是有成本的，而且在本质上会导致 fallback 显示的延迟，更推荐提前获取数据。最终在一系列讨论，React 决定推迟 React19 的发布，直到找出更好的解决方案。
+date: 星期一 07 早上 六月 24o 2024
+author: zhihu
+origin_url: https://zhuanlan.zhihu.com/p/704790913
+origin_site: https://www.zhihu.com/people/wzy66/posts
+translated: false
+avatar: /media-source/zhihu-ico.png
+banner: https://picx.zhimg.com/v2-3bc0a8b21654e9817bd7bc04b9e32064_l.jpg
+subAuthor: 栗子前端
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="栗子前端技术周刊第 35 期 - React19 推迟发布、2023 JS 状态调查报告、htmx 2.0..." url="https://zhuanlan.zhihu.com/p/704790913" />
+
+
+
+**栗子前端技术周刊第 35 期 (2024.6.17 - 2024.6.23)**：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。
+
+## **技术资讯**
+
+**1\.** [React19 推迟发布](https://link.zhihu.com/?target=https%3A//www.infoq.cn/article/TP67w8oHSQzVFyhyVt2m)：起因是 TanStack Query 核心维护者之一 Dominik 发现 React18 和 React19 RC 的 `Suspense` 并行获取处理方面有差别，React18 会正常地以并行的方式加载数据，而 React19 RC 则是以瀑布流的方式获取，这一改变会影响不少依赖 React 的网站，降低它们的加载速度。对于这个变更，React 团队的理由是在 suspending 之前渲染所有兄弟组件是有成本的，而且在本质上会导致 `fallback` 显示的延迟，更推荐提前获取数据。最终在一系列讨论，React 决定推迟 React19 的发布，直到找出更好的解决方案。
+
+```text
+/* 也会影响使用 React.lazy 延迟加载组件的起效方式 **/
+<Suspense>
+ <Lazy1 />
+ <Layz2 />
+</Suspense>
+```
+
+**2\.** [2023 年 JavaScript 状态调查结果](https://link.zhihu.com/?target=https%3A//2023.stateofjs.com/zh-Hans/)：JavaScript 开发人员年度大调查的结果已经出炉。看看 JavaScript 开发人员使用和不使用哪些功能、库流行程度随时间的变化情况、哪些构建工具更受欢迎、JavaScript 和 TypeScript 的使用率之间的差距，以及更多其他信息，这很有意思。
+
+![](https://pic3.zhimg.com/v2-b34577f422ae53143ea48260c9a29c46_b.jpg)
+
+**3\.** [htmx 2.0](https://link.zhihu.com/?target=https%3A//htmx.org/posts/2024-06-17-htmx-2-0-0-is-released)：htmx 2.0 发布，主要变更包括所有插件均已从核心仓库移出，各自独立维护、不再支持 IE、移除了过时的 `hx-sse` 和 `hx-ws` 属性等等。
+
+## **技术文章**
+
+**1\.** [12 Design Patterns in Vue](https://link.zhihu.com/?target=https%3A//michaelnthiessen.com/12-design-patterns-vue)：Vue 中的 12 种设计模式 - 在本文中，作者介绍了 Vue 的 12 种不同的设计模式，并提供了简洁的示例。
+
+**2\.** [移动混合开发技术演进之路](https://link.zhihu.com/?target=https%3A//juejin.cn/post/7382051737362284559)：本文主要探讨了移动混合开发（Hybrid APP）的技术演进历程，将阐述了 webview（H5）、React Native、小程序技术等在其中所扮演的关键角色及带来的变革。
+
+**3\.** [一文搞懂前端文件上传操作](https://link.zhihu.com/?target=https%3A//juejin.cn/post/7377195179758927911)：文中介绍了文件上传中前端与后端的交互方式、前端文件操作相关的对象、大文件处理等内容。
+
+## **开发工具**
+
+**1\.** [Pic Smaller](https://link.zhihu.com/?target=https%3A//github.com/joye61/pic-smaller)：开源的批量图像压缩工具 - 支持 JPEG、PNG、WebP、AVIF、SVG 和 GIF 的智能压缩，并且私有化部署。
+
+![](https://pic3.zhimg.com/v2-2e0cdf8127f8adfea8feca3cc0fea982_b.jpg)
+
+**2\.** [Entity Code](https://link.zhihu.com/?target=https%3A//entitycode.com/%23featured-content)：HTML 字符实体的快速参考 - 这实际上是 2009 年的一个项目，但它仍然非常有用，可以快速查找最常见的字符实体。
+
+![](https://pic4.zhimg.com/v2-5c9a8500d194ec2b6cb1233bd3e5f02f_b.jpg)
+
+**3\.** [JSONEditor](https://link.zhihu.com/?target=https%3A//github.com/josdejong/jsoneditor)：用于查看和编辑 JSON 的组件 - 如果你需要让用户直接处理 JSON，那么这个组件值得一试。它支持文本和树形视图，并兼容跨浏览器。
+
+![](https://pic3.zhimg.com/v2-4a5ec4fd7c4945878ba87a0b2258f9ee_b.jpg)
+
+_以上资讯文章选自常见周刊，如 JavaScript Weekly 等，周刊内容也会不断优化改进，希望你们能够喜欢。_
+
+
+

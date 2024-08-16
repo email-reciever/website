@@ -1,0 +1,90 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 栗子前端技术周刊第 39 期 - Node.js v22.5.0、Deno 1.45、博客园求救信...
+description:  栗子前端技术周刊第 39 期 (2024.7.15 - 2024.7.21)：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。1. Node.js v22.5.0：Node.js v22.5.0 (Current) 发布，有两点值得注意，一是 node：http 中的 WebSocket 功能现在已公开，二是 Node 已内嵌 SQLite，现在可通过 node：sqlite 直接访问 SQLite。2. Deno 1.45：Deno 1.45 已发布，除了继续大幅
+date: 星期一 08 早上 七月 22o 2024
+author: zhihu
+origin_url: https://zhuanlan.zhihu.com/p/709956107
+origin_site: https://www.zhihu.com/people/wzy66/posts
+translated: false
+avatar: /media-source/zhihu-ico.png
+banner: https://picx.zhimg.com/v2-3bc0a8b21654e9817bd7bc04b9e32064_l.jpg
+subAuthor: 栗子前端
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="栗子前端技术周刊第 39 期 - Node.js v22.5.0、Deno 1.45、博客园求救信..." url="https://zhuanlan.zhihu.com/p/709956107" />
+
+
+
+**栗子前端技术周刊第 39 期 (2024.7.15 - 2024.7.21)**：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。
+
+## **技术资讯**
+
+**1\.** [Node.js v22.5.0](https://link.zhihu.com/?target=https%3A//nodejs.org/zh-cn/blog/release/v22.5.0)：Node.js v22.5.0 (Current) 发布，有两点值得注意，一是 `node:http` 中的 WebSocket 功能现在已公开，二是 Node 已内嵌 SQLite，现在可通过 `node:sqlite` 直接访问 SQLite。
+
+```text
+import { DatabaseSync } from 'node:sqlite';
+const database = new DatabaseSync(':memory:');
+
+// 执行 SQL 语句
+database.exec(`
+  CREATE TABLE data(
+    key INTEGER PRIMARY KEY,
+    value TEXT
+  ) STRICT
+`);
+```
+
+**2\.** [Deno 1.45](https://link.zhihu.com/?target=https%3A//deno.com/blog/v1.45)：Deno 1.45 已发布，除了继续大幅改进 Node.js 兼容性，此版本还支持了 workspaces 和 monorepos，即单仓多模块。
+
+```text
+{
+  "workspace": ["./packages/A", "./packages/B"]
+}
+```
+
+**3\.** [博客园求救信](https://link.zhihu.com/?target=https%3A//www.cnblogs.com/cmt/p/18302049)：2024 年第三季度的资金缺口将博客园推到命运的关口，博客园向开发者求救，求开博客园会员。博客园的初衷是为几百万程序员开发者创建一番净土，专心为开发者服务，尽量不接广告，这点比起某 DN 平台的各种骚操作来说，确实好非常多。  
+
+**4\.** [jQuery 4.0 Beta 2](https://link.zhihu.com/?target=https%3A//blog.jquery.com/2024/07/17/second-beta-of-jquery-4-0-0/)：今年二月，jQuery 发布了 4.0.0 的第一个测试版。现在 jQuery 已经准备好发布第二个测试版，同时预计很快就会发布候选版本。Beta 2 版本对 jQuery 的测试框架进行了重大重写，删除了所有过时或不支持的依赖项。除此之外，还修复了导出问题，保证包能在 ESM 和 CommonJS 下使用，更多内容可见 Changelog。  
+
+## **技术文章**
+
+**1\.** [CSS Selectors](https://link.zhihu.com/?target=https%3A//css-tricks.com/css-selectors/)：CSS 选择器 - 一本全面的指南，涵盖了 CSS 中选择元素的所有方法（如伪选择器、嵌套选择器、属性选择器等），以及如何使用它们来应用样式。  
+
+**2\.** [5 Important Principles About Hooks You Have To Know](https://link.zhihu.com/?target=https%3A//code.likeagirl.io/learning-react-5-important-principles-about-hooks-you-have-to-know-4967cd9d4eb4): 你必须知道的关于 Hook 的 5 个重要原则 - 在本文中，作者将讨论每位 React 新手程序员都应了解的关于 Hook 的五项原则，以改进和简化他们的代码。  
+
+**3\.** [How to Make Complex Chrome Extensions](https://link.zhihu.com/?target=https%3A//evilmartians.com/chronicles/how-to-make-complex-chrome-plugins-a-zero-gravity-guide)：如何编写复杂的 Chrome 浏览器插件 - 如今，制作一个快速、简单的浏览器插件并不是什么难事，尤其是有了像 Extension 这样的工具。但大型插件就不同了，所以学习一个团队是如何开发插件是很有意义的。  
+
+**4\.** [Vue.js 的下一步：深入探索 Pinia 的强大功能](https://link.zhihu.com/?target=https%3A//juejin.cn/post/7392791237618171913)：作者将从零开始，逐步深入，带你全面了解 Pinia 的使用方法和最佳实践。  
+
+## **开发工具**
+
+**1\.** [InfiniteGrid 4.12](https://link.zhihu.com/?target=https%3A//naver.github.io/egjs-infinitegrid/)：Grid 布局下的瀑布流，可在 PC 和移动设备上使用，并与 React、Vue、Angular、Svelte 等框架集成。
+
+![](https://pic3.zhimg.com/v2-51d895ce165890bf571bdf38d68efb4a_b.jpg)
+
+**2\.** [CSS Grid 生成器](https://link.zhihu.com/?target=https%3A//cssgridgenerator.io/)：这是一款基于浏览器的便捷工具，可创建自定义 CSS Grid 布局。生成器允许你指定列数、行数和 `gap` 大小。
+
+![](https://pic3.zhimg.com/v2-d1165e5d597fc22ca0bba81104247a0e_b.jpg)
+
+**3\.** [Eruda 3.1](https://link.zhihu.com/?target=https%3A//github.com/liriliri/eruda)：移动端调试工具，和 vConsole 一样，使用它可以查看 Console、Elements、Network 等面板，同时还提供了很多插件，如显示页面 fps 和内存，可视化屏幕点击等等。
+
+![](https://pic3.zhimg.com/v2-6f50afffbf10b2ad627577c4d80baaaa_b.jpg)
+
+image-20240720082458973
+
+**4\.** [React CodeMirror](https://link.zhihu.com/?target=https%3A//uiwjs.github.io/react-codemirror/)：React 代码编辑器组件，使用方便，支持 Hook 方式调用，也支持主题定制化。
+
+![](https://pic1.zhimg.com/v2-9e3c6ae8858e8bcde1734bb484816268_b.jpg)
+
+**5\.** [MDXEditor 3.8](https://link.zhihu.com/?target=https%3A//mdxeditor.dev/)：React Markdown 编辑器组件，可让用户自然地编写 Markdown 文档，就像在 Google docs 或 Notion 中一样。该组件支持核心 markdown 语法和某些扩展，包括表格、图片、代码块等，同时它还内置 JSX 编辑器。
+
+![](https://pic3.zhimg.com/v2-1b8dae73b893c080d3a8e7d79e7c75aa_b.jpg)
+
+_以上资讯文章选自常见周刊，如 JavaScript Weekly 等，周刊内容也会不断优化改进，希望你们能够喜欢。_
+
+
+

@@ -1,0 +1,74 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 栗子前端技术周刊第 34 期 - TypeScript 5.5 RC、TC39 会议、Safari 18 Beta 中的 WebKit...
+description:  栗子前端技术周刊第 34 期 (2024.6.10 - 2024.6.16)：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。1. TypeScript 5.5 RC：TypeScript 5.5 RC 相比与其 beta 版本，支持了 ECMAScript 的 Set 更多的方法，调整了正则表达检查的规则等等。其他 5.5 将推出的重要功能包括推断类型谓词、通过注释在 JSDoc 中导入类型的功能、孤立声明等等。2. TC39 会议：TC39 再次开会推进了几项关键提案，包括惰性加载模块、Error.isError() 、RegExp 转义和 Promise.try。3. Safari 18 Beta 中的 WebKit：WWDC24 为 Safari 带来了许多新内容，新的测试版添加了近 50 项新的 web 功能，包括视图过渡 API 支持、样式查询、新的 Passkeys 功能，甚至还有 Safari for visionOS 中的 WebXR 体验
+date: 星期一 08 早上 六月 17o 2024
+author: zhihu
+origin_url: https://zhuanlan.zhihu.com/p/703711825
+origin_site: https://www.zhihu.com/people/wzy66/posts
+translated: false
+avatar: /media-source/zhihu-ico.png
+banner: https://picx.zhimg.com/v2-3bc0a8b21654e9817bd7bc04b9e32064_l.jpg
+subAuthor: 栗子前端
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="栗子前端技术周刊第 34 期 - TypeScript 5.5 RC、TC39 会议、Safari 18 Beta 中的 WebKit..." url="https://zhuanlan.zhihu.com/p/703711825" />
+
+
+
+**栗子前端技术周刊第 34 期 (2024.6.10 - 2024.6.16)**：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。
+
+## **技术资讯**
+
+**1\. [TypeScript 5.5 RC](https://link.zhihu.com/?target=https%3A//devblogs.microsoft.com/typescript/announcing-typescript-5-5-rc/)**：TypeScript 5.5 RC 相比与其 beta 版本，支持了 ECMAScript 的 Set 更多的方法，调整了正则表达检查的规则等等。其他 5.5 将推出的重要功能包括推断类型谓词、通过注释在 JSDoc 中导入类型的功能、孤立声明等等。
+
+**2\. [TC39 会议](https://link.zhihu.com/?target=https%3A//socket.dev/blog/tc39-advances-key-proposals)**：TC39 再次开会推进了几项关键提案，包括惰性加载模块、`Error.isError()` 、`RegExp` 转义和 `Promise.try`。
+
+**3\. [Safari 18 Beta 中的 WebKit](https://link.zhihu.com/?target=https%3A//webkit.org/blog/15443/news-from-wwdc24-webkit-in-safari-18-beta/)**：WWDC24 为 Safari 带来了许多新内容，新的测试版添加了近 50 项新的 web 功能，包括视图过渡 API 支持、样式查询、新的 Passkeys 功能，甚至还有 Safari for visionOS 中的 WebXR 体验。
+
+## **技术文章**
+
+**1\. [how-deep-is-your-dom](https://link.zhihu.com/?target=https%3A//frontendatscale.com/blog/how-deep-is-your-dom/)**：你的 DOM 树有多深 - 我们知道，从理论上讲，DOM 树越深，渲染速度越慢。本文将从实践出发来探究 DOM 深度对性能有什么实际影响。
+
+**2\. [CSS Container Queries](https://link.zhihu.com/?target=https%3A//css-tricks.com/css-container-queries/)**：CSS 容器查询 - 有关容器查询的实用资料，概述了为什么要关注容器查询、容器查询的功能以及何时使用容器查询，文中这里还有大量的示例。
+
+**3\. [基于wujie的解决方案来简单聊聊微前端](https://link.zhihu.com/?target=https%3A//juejin.cn/post/7377567987119620147)**：详细地介绍了微前端的各方面，包括是什么微前端、微前端适用场景、流行的微前端方案等等。  
+
+## **开发工具**
+
+**1\. [DGM.js](https://link.zhihu.com/?target=https%3A//dgmjs.dev/)**：这是一个用于渲染无限可展画布的库，其中包含很多形状，GPLv3 许可。
+
+![](https://pic1.zhimg.com/v2-d66a75defba8b4558934774c35733f18_b.jpg)
+
+**2\. [use-immer 0.10](https://link.zhihu.com/?target=https%3A//github.com/immerjs/use-immer)**： Immer 版本的 Hook，如果你喜欢不可变状态编程，可以试试。
+
+```text
+const [person, updatePerson] = useImmer({
+  name: "Michel",
+  age: 33
+});
+
+updatePerson(draft => {
+  draft.name = name;
+});
+```
+
+**3\. [JsonTree.js](https://link.zhihu.com/?target=https%3A//github.com/williamtroup/JsonTree.js)**：将 JSON 数据显示为可定制树视图 - 无其他依赖，可进行大量定制，并可使用 CSS 变量轻松设置树的主题。
+
+![](https://pic4.zhimg.com/v2-76a86613ec1d06b15cdc8e44a2eaad9b_b.jpg)
+
+**4\. [uuid v10](https://link.zhihu.com/?target=https%3A//github.com/uuidjs/uuid)**：生成符合 RFC 的 UUID - 涵盖所有主要 UUID 标准。v10.0 版增加了对更多 RFC9562 UUID 类型（即 v6、v7 和 v8）的支持。
+
+```text
+import { v6 as uuidv6 } from 'uuid';
+
+uuidv6(); // ⇨ '1e940672-c5ea-64c0-8bad-9b1deb4d3b7d'
+```
+
+_以上资讯文章选自常见周刊，如 JavaScript Weekly 等，周刊内容也会不断优化改进，希望你们能够喜欢。_
+
+
+

@@ -1,0 +1,99 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 栗子前端技术周刊第 38 期 - VueConf 2024、pnpm 9.5、Vitest 2.0...
+description:  栗子前端技术周刊第 38 期 (2024.7.8 - 2024.7.14)：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。1. VueConf 2024：VueConf 2024 于上周六在深圳召开，大会介绍了 Vue Router 的新数据加载器 API、Vue DevTools 的下一个迭代、Vue Vapor 等等内容，可通过官方 PPT 了解更多演讲详情。
+date: 星期一 08 早上 七月 15o 2024
+author: zhihu
+origin_url: https://zhuanlan.zhihu.com/p/708703776
+origin_site: https://www.zhihu.com/people/wzy66/posts
+translated: false
+avatar: /media-source/zhihu-ico.png
+banner: https://picx.zhimg.com/v2-3bc0a8b21654e9817bd7bc04b9e32064_l.jpg
+subAuthor: 栗子前端
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="栗子前端技术周刊第 38 期 - VueConf 2024、pnpm 9.5、Vitest 2.0..." url="https://zhuanlan.zhihu.com/p/708703776" />
+
+
+
+**栗子前端技术周刊第 38 期 (2024.7.8 - 2024.7.14)**：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。
+
+## **技术资讯**
+
+**1\.** [VueConf 2024](https://link.zhihu.com/?target=https%3A//vueconf.cn/)：VueConf 2024 于上周六在深圳召开，大会介绍了 Vue Router 的新数据加载器 API、Vue DevTools 的下一个迭代、Vue Vapor 等等内容，可通过官方 PPT 了解更多演讲详情。
+
+![](https://pic4.zhimg.com/v2-01a0f3950943af7d9a423b5aed70ee87_b.jpg)
+
+**2\.** [pnpm 9.5](https://link.zhihu.com/?target=https%3A//socket.dev/blog/pnpm-9-5-introduces-catalogs-shareable-dependency-version-specifiers)：pnpm 9.5 引入了“Catalogs”功能，实现了可共享的依赖关系版本说明，减少了合并冲突，改进了对 monorepos 的支持。使用时首先在 pnpm-workspace.yaml 定义 catalog，然后再 package.json 中使用，最终 package.json 会使用 workspace.yaml 中 catalog 定义的版本。
+
+```text
+# pnpm-workspace.yaml
+catalogs:
+  # Can be referenced through "catalog:react17"
+  react17:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+
+  # Can be referenced through "catalog:react18"
+  react18:
+    react: ^18.2.0
+    react-dom: ^18.2.0
+
+{
+  "name": "@example/components",
+  "dependencies": {
+    "react": "catalog:react18",
+  }
+}
+```
+
+**3\.** [Vitest 2.0](https://link.zhihu.com/?target=https%3A//github.com/vitest-dev/vitest/releases/tag/v2.0.0)：Vitest 2.0 发布，提供了更好的浏览器模式支持、新的 Blob Reporter 和一些稳定性改进。
+
+## **技术文章**
+
+**1\.** [React, Visualized](https://link.zhihu.com/?target=https%3A//react.gg/visualized)：React 入门指南，使用可视化方式介绍。
+
+![](https://pic3.zhimg.com/v2-a4ad78c5ef35545a80865b7a48b76a06_b.jpg)
+
+**2\.** [Protecting Against Third Party Code Changes with Script Integrity](https://link.zhihu.com/?target=https%3A//frontendmasters.com/blog/script-integrity/)：利用脚本完整性验证来防止第三方修改代码 - 最近有很多关于 polyfill.io 的新闻，如果你从他们的域名加载了脚本，你可能会收到一些恶意代码。为了防止这个情况发生，你可以通过 `integrity` 属性来做完整性验证。  
+
+**3\.** [删除node\_modules依赖文件很慢？其实三秒就能删除了](https://link.zhihu.com/?target=https%3A//juejin.cn/post/7389925676532908041)：估计只要是从事前端开发的朋友们肯定都会遇到过删除 node\_modules 依赖文件的情况，文中介绍删除依赖为什么会慢和如何秒删除依赖。  
+
+## **开发工具**
+
+**1\.** [es-toolkit](https://link.zhihu.com/?target=https%3A//es-toolkit.slash.page/zh_hans/)：es-toolkit 是一个新的 JavaScript 工具库，自称是更快、更现代化的 lodash 版本，而 lodash 则是更快、更现代化的 underscore 版本。
+
+```text
+import { countBy } from 'es-toolkit/array';
+
+const array = [1, 2, 3, 4, 5, 6];
+const result = countBy(array, x => x % 2 === 0 ? 'even' : 'odd');
+
+console.log(result);
+// 输出: { 'odd': 3, 'even': 3 }
+```
+
+**2\.** [Croner 8.1](https://link.zhihu.com/?target=https%3A//github.com/hexagon/croner)：定时任务，在后端中常见，Croner 支持全平台定时任务，包括 Node、Deno、Bun 和浏览器。
+
+```text
+const job = Cron('*/5 * * * * *', () => {
+ console.log('每五秒运行一次');
+});
+```
+
+**3\.** [file-type 19.1](https://link.zhihu.com/?target=https%3A//github.com/sindresorhus/file-type)：从 Buffer、Uint8Array 或 ArrayBuffer 中检测文件类型，现在还能从 streams 流中读取。
+
+```text
+import { fileTypeFromFile } from 'file-type';
+
+console.log(await fileTypeFromFile('Unicorn.png'));
+//=> {ext: 'png', mime: 'image/png'}
+```
+
+_以上资讯文章选自常见周刊，如 JavaScript Weekly 等，周刊内容也会不断优化改进，希望你们能够喜欢。_
+
+
+

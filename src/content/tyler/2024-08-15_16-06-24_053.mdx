@@ -1,0 +1,191 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Bytes_ The final boss of build tools
+description: Bytes_ The final boss of build tools
+date: 星期四 11 晚上 八月 1o 2024
+author: tyler
+origin_url: https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/x0hph3uw0d2ol7b5/aHR0cHM6Ly9ieXRlcy5kZXYvYXJjaGl2ZXMvMzEw
+origin_site: https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/x0hph3uw0d2ol7b5/aHR0cHM6Ly9ieXRlcy5kZXYvYXJjaGl2ZXMvMzEw
+translated: true
+avatar: /media-source/tyler-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Bytes_ The final boss of build tools" url="https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/x0hph3uw0d2ol7b5/aHR0cHM6Ly9ieXRlcy5kZXYvYXJjaGl2ZXMvMzEw" />
+
+<Detail client:only="react">
+	The Main Thing
+--------------
+
+![Lebron waving a Vite flag in front of the US Olympic team](https://bytes.dev/images/content/olympic-flag.jpg)
+
+One nation, under Vite
+
+### The final boss of build tools
+
+Last October, we wrote about Vite’s ambitious goal of becoming “the shared foundation for higher-level innovations in the web ecosystem.” And after just 10 months, it feels like we can pretty much say… mission accomplished?
+
+We’ve seen Remix [migrate to Vite](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/6qhehou7e6rzdpbo/aHR0cHM6Ly9yZW1peC5ydW4vYmxvZy9yZW1peC12aXRlLXN0YWJsZQ==), Angular use it for [their dev server](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/kkhmh2ulv2wr3lbl/aHR0cHM6Ly92MTcuYW5ndWxhci5pby9ndWlkZS9lc2J1aWxk), and dozens of other frameworks and libraries build on top of it. This has caused Vite’s npm downloads to double yet again to 14 million per week.
+
+In fact, Next.js is currently the only JavaScript meta-framework that _doesn’t_ use Vite in some way (for their own turbo-tastic reasons), but the rest of the JS ecosystem has united under the lightning bolt banner.
+
+**So what’s next for Vite?** According to Evan You’s recent [keynote](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/58hvh8um2oxqzgu6/aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj1BOU1TRnA5RnM4aw==), the team plans to expand on their original goal by forming “a completely unified toolchain that can handle your JavaScript and TypeScript source – all the way from source file to AST, to linting, formatting, unit testing, transforming, bundling, minification, all the way to production, at native speed.”
+
+Here’s what they’re currently building to make that happen:
+
+*   **Environment API** – Currently experimental in Vite 6 alpha, this lower-level construct will provide better support for frameworks that run in multiple environments like the browser, Node.js, and workers.
+    
+*   **Rolldown** – This Rust-based bundler is still a WIP and aims to provide full compatibility with Rollup (Vite’s current bundler), plus new features like more advanced chunk splitting and module federation.
+    
+*   **OXC** – This JavaScript compiler is also written in Rust and provides super fast parsing, linting, and resolving, with more functionality planned for the future.
+    
+
+**Bottom Line:** Multiple OSS projects and VC-backed startups have tried and failed to build a unified, Rust-based toolchain like this. But now that Vite has conquered all of its other goals, it makes sense for the team to try and tackle the final boss of build tools. I wouldn’t bet against them.
+
+[![](https://bytes.dev/images/fb-share-icon.png)](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/25h2h9u2w096e4h3/aHR0cHM6Ly9mYWNlYm9vay5jb20vc2hhcmVyL3NoYXJlci5waHA_dT1odHRwcyUzQSUyRiUyRmJ5dGVzLmRldiUyRmFyY2hpdmVzJTJGMzEw)  [![](https://bytes.dev/images/li-share-icon.png)](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/qvh8h8urp2wz0ncl/aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL3NoYXJpbmcvc2hhcmUtb2Zmc2l0ZS8_dXJsPWh0dHBzJTNBJTJGJTJGYnl0ZXMuZGV2JTJGYXJjaGl2ZXMlMkYzMTA=)  [![](https://bytes.dev/images/tw-share-icon.png)](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/g3hnhwu3wo9rkxsr/aHR0cHM6Ly90d2l0dGVyLmNvbS9pbnRlbnQvdHdlZXQvP3RleHQ9QnJlYWtpbmclMjBkb3duJTIwd2hhdCUyN3MlMjBuZXh0JTIwZm9yJTIwJTQwdml0ZV9qcyZ1cmw9aHR0cHMlM0ElMkYlMkZieXRlcy5kZXYlMkZhcmNoaXZlcyUyRjMxMA==)  [![](https://bytes.dev/images/em-share-icon.png)](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/9qhzhdupr3w0l4b9/bWFpbHRvOj9ib2R5PVRob3VnaHQlMjB5b3UlMjdkJTIwbG92ZSUyMHRoaXMlMjB3ZWVrJTI3cyUyMEJ5dGVzJTBBLS0tJTBBQnJlYWtpbmclMjBkb3duJTIwd2hhdCUyN3MlMjBuZXh0JTIwZm9yJTIwJTQwdml0ZV9qcyUwQWh0dHBzJTNBJTJGJTJGYnl0ZXMuZGV2JTJGYXJjaGl2ZXMlMkYzMTAmc3ViamVjdD1Zb3UlMjBsaWtlJTIwY29ybmJyZWFkJTNG)  
+
+* * *
+
+![Neon logo](https://bytes.dev/images/content/neon-logo.png)
+
+Our Friends  
+(With Benefits)
+-----------------------------
+
+![Men's gymnast in the Olympics looking tired](https://bytes.dev/images/content/gymnast.jpg)
+
+Mfw I think about setting up a Postgres DB from scratch
+
+### [Ship faster with Postgres on Neon](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/n2hohqu305qmkqh6/aHR0cHM6Ly9meWkubmVvbi50ZWNoL2J5dGVz)
+
+Postgres is the world’s most popular open-source database for a reason – but it’s also easy to get stuck wasting weeks on complex configs and maintenance.
+
+That’s where Neon can help. They offer fully managed Postgres with features designed to help you ship faster:
+
+*   Your DB [automatically adapts](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/48hvh7ur8qlvn8ux/aHR0cHM6Ly9uZW9uLnRlY2gvZG9jcy9pbnRyb2R1Y3Rpb24vYXV0b3NjYWxpbmcvP3JlZj1ieXRlcw==) to your app’s workload, eliminating the need for over-provisioning or manual resource allocation.
+    
+*   Instantly create ready-to-use Development/Preview/Test databases (with both schema and data) that shut down when unused.
+    
+*   You can restore your database in seconds to any point in the past 30 days, 24 hours, or even 1 minute ago.
+    
+
+[Get started with their generous free tier](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/n2hohqu305qmkqh6/aHR0cHM6Ly9meWkubmVvbi50ZWNoL2J5dGVz), and provision your Postgres database in under a second. Seriously, it’s that fast.
+
+* * *
+
+![Cool Bits logo](https://bytes.dev/images/content/cool-bits.png)
+
+Cool Bits
+---------
+
+1.  Ryan Dahl wrote about [What Deno got wrong about HTTP imports](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/reh8h9u0zvd4elh2/aHR0cHM6Ly9kZW5vLmNvbS9ibG9nL2h0dHAtaW1wb3J0cw==) and how they’re addressing it. I just wish that my competitive dressage coach had that same level of introspection after I flamed out of the Olympic trials.
+    
+2.  Jake Archibald wrote about how [JavaScript garbage collection doesn’t work as he expected when it comes to closures](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/08hwhgudrwevk3sl/aHR0cHM6Ly9qYWtlYXJjaGliYWxkLmNvbS8yMDI0L2dhcmJhZ2UtY29sbGVjdGlvbi1hbmQtY2xvc3VyZXMv).
+    
+3.  James Cowling built [Cronvex](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/8ghqh3ulnpdzxrik/aHR0cHM6Ly93d3cuY3JvbnZleC5jb20vP3JlZj1ieXRlcw==) – an implementation of user space crons that can be used to register periodic jobs that call third-party http endpoints. It’s similar to EasyCron or FastCron, but completely free, open source, and built on top of Convex. \[sponsored\]
+    
+4.  TkDodo wrote a blog post imploring you to [Please stop using barrel files](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/vqh3hmupr30ldqag/aHR0cHM6Ly90a2RvZG8uZXUvYmxvZy9wbGVhc2Utc3RvcC11c2luZy1iYXJyZWwtZmlsZXM=) – no matter how much fun it is to yell “get barreled!” every time you do.
+    
+5.  The [TypeScript 5.6 beta](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/l2heh6u37v2ezpa6/aHR0cHM6Ly9kZXZibG9ncy5taWNyb3NvZnQuY29tL3R5cGVzY3JpcHQvYW5ub3VuY2luZy10eXBlc2NyaXB0LTUtNi1iZXRhLw==) introduces errors on suspicious truthish/nullish checks, new iterator methods like `.map()` and `.filter()`, and more.
+    
+6.  Brenley Dueck wrote [Battle of the Asyncs](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/m2h7h6u8z05v7rsm/aHR0cHM6Ly93d3cuYnJlbmVsei5jb20vcG9zdHMvYmF0dGxlLW9mLXRoZS1hc3luY3Mv) to compare the async primitives of React vs Solid.js.
+    
+7.  [microjs](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/7qh7h2uo5plq46iz/aHR0cDovL21pY3JvanMuY29tLw==) is a micro-site dedicated to helping you find useful micro-frameworks, which, according to my doctor, work _just as well_ as a regular framework.
+    
+8.  Apryse’s [HTML pdf viewer](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/owhkhwurdl9p8nfv/aHR0cHM6Ly9hcHJ5c2UuY29tL2Jsb2cvZGV2ZWxvcG1lbnQvZW1iZWQtcGRmLWZpbGVzLW9yLXBkZi12aWV3ZXItaW4td2Vic2l0ZT91dG1fY2FtcGFpZ249YXVnMDEyNCZ1dG1fbWVkaXVtPW5ld3NsZXR0ZXImdXRtX3NvdXJjZT1ieXRlcy5kZXY=) lets you easily embed a PDF viewer on your site with advanced features, a consistent viewing experience and full customization. Trust me, your users will thank you. \[sponsored\]
+    
+9.  [Porffor](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/z2hgh7u3xr6ndrtp/aHR0cHM6Ly9naXRodWIuY29tL0NhbmFkYUhvbmsvcG9yZmZvcg==) is an experimental AOT JavaScript engine that compiles JS code to Wasm or native code.
+    
+10.  Stack Overflow just released their [2024 Developer Survey](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/x0hph3uw0d2o77h5/aHR0cHM6Ly9zdXJ2ZXkuc3RhY2tvdmVyZmxvdy5jby8yMDI0). TLDR: most developers don’t really trust AI tools (but everyone uses them), most developers aren’t happy at work (but are terrified of being laid off), and we’re all drowning in technical debt (but no one wants to clean it up). Sounds about right.
+    
+
+* * *
+
+
+</Detail>
+
+## 主要事物
+
+![Lebron waving a Vite flag in front of the US Olympic team](https://bytes.dev/images/content/olympic-flag.jpg)
+
+一个民族,即时
+
+### 构建工具的最终老板
+
+去年10月,我们写了关于Vite的雄心勃勃的目标,即成为“网络生态系统中高层次创新的共享基础”。
+
+我们已经看到Remix[快速迁移](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/6qhehou7e6rzdpbo/aHR0cHM6Ly9yZW1peC5ydW4vYmxvZy9yZW1peC12aXRlLXN0YWJsZQ==), Angular 使用它为[Dev 服务器](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/kkhmh2ulv2wr3lbl/aHR0cHM6Ly92MTcuYW5ndWxhci5pby9ndWlkZS9lc2J1aWxk),以及数十个其他框架和库建立在其上,这导致Vite的npm下载量再次增加一倍,每周达到1400万。
+
+事实上,Next.js 是目前唯一的 JavaScript 元框架。*不会*以某种方式使用Vite(出于自身的涡轮战术原因),但JS生态系统的其余部分已经在闪电的旗帜下团结起来。
+
+**那么,即时的下一步是什么呢?**根据Evan You最近的[关键词](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/58hvh8um2oxqzgu6/aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj1BOU1TRnA5RnM4aw==),该团队计划通过形成“一个完全统一的工具链,可以处理您的JavaScript和TypeScript源 - 从源文件到AST,到链接,格式化,单元测试,转换,包装,缩小,到生产,在原生速度。
+
+以下是他们目前正在建设的,以使这一点发生:
+
+* **环境火灾**目前在Vite 6 alpha中进行实验,这个较低级别的构建将为在多个环境中运行的框架提供更好的支持,如浏览器,Node.js和工人。
+
+* **滚落**这个基于Rust的包裹仍然是一个WIP,旨在提供与Rollup(Vite的当前包裹)的完全兼容性,以及更先进的分裂和模块联盟等新功能。
+
+* **氧化**这个JavaScript编译器也用Rust编写,提供超快的解析、链接和解决,未来计划提供更多的功能。
+
+**底线:**多个OSS项目和VC支持的初创公司已经尝试并未成功地构建这样一个统一的基于Rust的工具链,但现在Vite已经征服了其它所有目标,团队有意义地尝试解决构建工具的最终老板。
+
+[![](https://bytes.dev/images/fb-share-icon.png)](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/25h2h9u2w096e4h3/aHR0cHM6Ly9mYWNlYm9vay5jb20vc2hhcmVyL3NoYXJlci5waHA_dT1odHRwcyUzQSUyRiUyRmJ5dGVzLmRldiUyRmFyY2hpdmVzJTJGMzEw)  [![](https://bytes.dev/images/li-share-icon.png)](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/qvh8h8urp2wz0ncl/aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL3NoYXJpbmcvc2hhcmUtb2Zmc2l0ZS8_dXJsPWh0dHBzJTNBJTJGJTJGYnl0ZXMuZGV2JTJGYXJjaGl2ZXMlMkYzMTA=)  [![](https://bytes.dev/images/tw-share-icon.png)](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/g3hnhwu3wo9rkxsr/aHR0cHM6Ly90d2l0dGVyLmNvbS9pbnRlbnQvdHdlZXQvP3RleHQ9QnJlYWtpbmclMjBkb3duJTIwd2hhdCUyN3MlMjBuZXh0JTIwZm9yJTIwJTQwdml0ZV9qcyZ1cmw9aHR0cHMlM0ElMkYlMkZieXRlcy5kZXYlMkZhcmNoaXZlcyUyRjMxMA==)  [![](https://bytes.dev/images/em-share-icon.png)](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/9qhzhdupr3w0l4b9/bWFpbHRvOj9ib2R5PVRob3VnaHQlMjB5b3UlMjdkJTIwbG92ZSUyMHRoaXMlMjB3ZWVrJTI3cyUyMEJ5dGVzJTBBLS0tJTBBQnJlYWtpbmclMjBkb3duJTIwd2hhdCUyN3MlMjBuZXh0JTIwZm9yJTIwJTQwdml0ZV9qcyUwQWh0dHBzJTNBJTJGJTJGYnl0ZXMuZGV2JTJGYXJjaGl2ZXMlMkYzMTAmc3ViamVjdD1Zb3UlMjBsaWtlJTIwY29ybmJyZWFkJTNG)  
+
+***
+
+![Neon logo](https://bytes.dev/images/content/neon-logo.png)
+
+我们的朋友\
+(带好处)
+-----
+
+![Men's gymnast in the Olympics looking tired](https://bytes.dev/images/content/gymnast.jpg)
+
+Mfw 我正在考虑从头开始设置Postgres DB
+
+### [船舶更快与Postgres在尼昂](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/n2hohqu305qmkqh6/aHR0cHM6Ly9meWkubmVvbi50ZWNoL2J5dGVz)
+
+由于某种原因,Postgres是世界上最受欢迎的开源数据库 - 但是,在复杂的配置和维护上浪费数周也很容易。
+
+他们提供完全管理的 Postgres 功能,旨在帮助您更快地发货:
+
+* 你的DB[自动调整](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/48hvh7ur8qlvn8ux/aHR0cHM6Ly9uZW9uLnRlY2gvZG9jcy9pbnRyb2R1Y3Rpb24vYXV0b3NjYWxpbmcvP3JlZj1ieXRlcw==)对您的应用程序的工作负载,消除过度提供或手动分配资源的需要。
+
+* 立即创建可用开发/预览/测试数据库(包括方案和数据),在未使用时关闭。
+
+* 您可以在几秒钟内将数据库恢复到过去 30 天, 24 小时,甚至 1 分钟前的任何时候。
+
+[开始与他们慷慨的免费动物](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/n2hohqu305qmkqh6/aHR0cHM6Ly9meWkubmVvbi50ZWNoL2J5dGVz),并在不到一秒钟内提供您的Postgres数据库。
+
+***
+
+![Cool Bits logo](https://bytes.dev/images/content/cool-bits.png)
+
+## 酷比特
+
+1. Ryan Dahl 写了关于[Deno对 HTTP 导入的错误](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/reh8h9u0zvd4elh2/aHR0cHM6Ly9kZW5vLmNvbS9ibG9nL2h0dHAtaW1wb3J0cw==)我只是希望我的竞技服装教练在我离开奥运会试验后有同样的内心思维水平。
+
+2. 杰克·阿基巴尔德写道[JavaScript垃圾收集在关闭时不会像预期的那样工作](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/08hwhgudrwevk3sl/aHR0cHM6Ly9qYWtlYXJjaGliYWxkLmNvbS8yMDI0L2dhcmJhZ2UtY29sbGVjdGlvbi1hbmQtY2xvc3VyZXMv)是的
+
+3. 詹姆斯·科林建造[克隆克斯](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/8ghqh3ulnpdzxrik/aHR0cHM6Ly93d3cuY3JvbnZleC5jb20vP3JlZj1ieXRlcw==)– 可用于注册定期工作,呼叫第三方HTTP终端的用户空间Cron的实现,类似于EasyCron或FastCron,但完全免费,开源,并建立在Convex上。
+
+4. TkDodo写了一篇博客文章,恳求你[请停止使用 barrel 文件](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/vqh3hmupr30ldqag/aHR0cHM6Ly90a2RvZG8uZXUvYmxvZy9wbGVhc2Utc3RvcC11c2luZy1iYXJyZWwtZmlsZXM=)不管有多么有趣,每次喊“被打碎!”
+
+5. 该[TypeScript 5.6 测试版](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/l2heh6u37v2ezpa6/aHR0cHM6Ly9kZXZibG9ncy5taWNyb3NvZnQuY29tL3R5cGVzY3JpcHQvYW5ub3VuY2luZy10eXBlc2NyaXB0LTUtNi1iZXRhLw==)在可疑的真實/無效檢查上引入錯誤,新的迭代器方法如`.map()`和`.filter()`,还有更多。
+
+6. Brenley Dueck 写道[阿辛克人的战役](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/m2h7h6u8z05v7rsm/aHR0cHM6Ly93d3cuYnJlbmVsei5jb20vcG9zdHMvYmF0dGxlLW9mLXRoZS1hc3luY3Mv)要比较 React vs Solid.js 的 async 原理。
+
+7. [微型](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/7qh7h2uo5plq46iz/aHR0cDovL21pY3JvanMuY29tLw==)这是一个致力于帮助你找到有用的微框架的微网站,根据我的医生,工作*同样也*作为一个正常的框架。
+
+8. 阿普里斯[HTML PDF 查看器](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/owhkhwurdl9p8nfv/aHR0cHM6Ly9hcHJ5c2UuY29tL2Jsb2cvZGV2ZWxvcG1lbnQvZW1iZWQtcGRmLWZpbGVzLW9yLXBkZi12aWV3ZXItaW4td2Vic2l0ZT91dG1fY2FtcGFpZ249YXVnMDEyNCZ1dG1fbWVkaXVtPW5ld3NsZXR0ZXImdXRtX3NvdXJjZT1ieXRlcy5kZXY=)允许您轻松地嵌入您的网站上的PDF浏览器,具有先进的功能,一致的浏览体验和完整的定制。
+
+9. [保时捷](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/z2hgh7u3xr6ndrtp/aHR0cHM6Ly9naXRodWIuY29tL0NhbmFkYUhvbmsvcG9yZmZvcg==)是一个实验性的 AOT JavaScript 引擎,将 JS 代码编译成 Wasm 或原生代码。
+
+10. Stack Overflow刚刚发布他们的[2024 开发者调查](https://click.convertkit-mail4.com/o8u9gp9876sqhk2z25vuquqrekrrrio/x0hph3uw0d2o77h5/aHR0cHM6Ly9zdXJ2ZXkuc3RhY2tvdmVyZmxvdy5jby8yMDI0)TLDR:大多数开发人员并不真正信任人工智能工具(但每个人都使用它们),大多数开发人员在工作中并不开心(但害怕被解雇),我们都淹没在技术债务中(但没有人想清理它)。
+
+***
+
+

@@ -1,0 +1,90 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 栗子前端技术周刊第 41 期 - Node 实验性支持 TS、TypeScript 5.6 Beta、Storybook 8.2
+description:  栗子前端技术周刊第 41 期 (2024.7.29 - 2024.8.4)：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。1. Node 实验性支持 TypeScript：在 7.25 合并的 PR 中，有一个是 Node.js 增加了对 TypeScript 的实验性支持。最初的实现是通过设置实验标志 --experimental-strip-types 来执行 TypeScript 文件。不过社区也有不少认为 TS 会降低 Node 的稳定性，用户需要不断更新 Node 版本才能获取到 TS 的所有功能，所以后续也有可能以解耦的方式分发独立包令其获得实验性 TypeScript 支持。
+date: 星期一 08 早上 八月 5o 2024
+author: zhihu
+origin_url: https://zhuanlan.zhihu.com/p/712619762
+origin_site: https://www.zhihu.com/people/wzy66/posts
+translated: false
+avatar: /media-source/zhihu-ico.png
+banner: https://picx.zhimg.com/v2-3bc0a8b21654e9817bd7bc04b9e32064_l.jpg
+subAuthor: 栗子前端
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="栗子前端技术周刊第 41 期 - Node 实验性支持 TS、TypeScript 5.6 Beta、Storybook 8.2" url="https://zhuanlan.zhihu.com/p/712619762" />
+
+
+
+**栗子前端技术周刊第 41 期 (2024.7.29 - 2024.8.4)**：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。
+
+## **技术资讯**
+
+**1\.** [Node 实验性支持 TypeScript](https://link.zhihu.com/?target=https%3A//socket.dev/blog/node-js-adds-experimental-support-for-typescript)：在 7.25 合并的 PR 中，有一个是 Node.js 增加了对 TypeScript 的实验性支持。最初的实现是通过设置实验标志 `--experimental-strip-types` 来执行 TypeScript 文件。不过社区也有不少认为 TS 会降低 Node 的稳定性，用户需要不断更新 Node 版本才能获取到 TS 的所有功能，所以后续也有可能以解耦的方式分发独立包令其获得实验性 TypeScript 支持。
+
+![](https://pic1.zhimg.com/v2-ebf7b93120ef6953aa2c7a9559f63e00_b.jpg)
+
+**2\.** [TypeScript 5.6 Beta](https://link.zhihu.com/?target=https%3A//devblogs.microsoft.com/typescript/announcing-typescript-5-6-beta/)：TypeScript 5.6 的首个测试版已经发布，其中区域优先检查（目前仅限 VS Code）是一个特别有趣的新增功能，它支持仅对文件的相关区域进行 TS 检查。  
+
+**3\.** [Storybook 8.2](https://link.zhihu.com/?target=https%3A//storybook.js.org/blog/storybook-8-2)：流行组件工作坊 - 该版本重点关注测试，提供了新的测试钩子，以便与其他流行测试工具保持一致。Storybook 还推出了全新的文档网站，为 Next.js、Angular 和 SvelteKit 等特定框架提供入门指南。  
+
+**4\.** [Stack Overflow 2024 年开发人员调查报告](https://link.zhihu.com/?target=https%3A//survey.stackoverflow.co/2024)：整体情况总而言之：大多数开发人员并不信任人工智能工具（但每个人都在使用它们），大多数开发人员工作得并不开心（但又害怕被裁员），我们都被技术债务淹没了（但没有人愿意清理）。  
+
+## **技术文章**
+
+**1\.** [Patterns for Memory Efficient DOM Manipulation](https://link.zhihu.com/?target=https%3A//frontendmasters.com/blog/patterns-for-memory-efficient-dom-manipulation/)：使用原生 JS 高效的操作 DOM，虽然像 React 或者 Vue 这样的框架让我们可以无需关注 DOM 更新就可以完成应用的开发，但是在某些场景（如拖拽、滚动等）还是需要操作 DOM，而且作为前端，还是有必要掌握好基础知识。作者在文中提出了很多最佳实践，同时对 DOM 操作和优化背后的核心原则进行了很好的概述。  
+
+**2\.** [Garbage Collection and Closures](https://link.zhihu.com/?target=https%3A//jakearchibald.com/2024/garbage-collection-and-closures/)：垃圾回收和闭包 - 当三位 JavaScript 专家聚在一起，在遇到内存泄漏时都能学到有关 JavaScript 工作原理的新知识时，它就值得你一探究竟。  
+
+**3\.** [vite 项目 - hmr 失效问题排查思路分享](https://link.zhihu.com/?target=https%3A//juejin.cn/post/7397022072034066469)：项目由 webpack 转 vite 后，hmr 一直存在一些问题，即变更文件都会导致页面重新加载。作者最近解决了此问题，写下此文，简单介绍一下 hmr 的概念、比较 webpack 和 vite 中的 hmr 共同点和差异，并讲述 vite 项目中 hmr 失效的排查思路和解决措施。  
+
+## **开发工具**
+
+1.  [Floating UI](https://link.zhihu.com/?target=https%3A//floating-ui.com/docs/computePosition)：正如其名，该库作用是计算坐标，将浮动元素定位到另一个元素旁边。
+
+![](https://pic3.zhimg.com/v2-004e2be5401e53b04dc2fd724fe338c6_b.gif)
+
+**2\.** [emoji-picker-element](https://link.zhihu.com/?target=https%3A//nolanlawson.github.io/emoji-picker-element/)：一个轻量级表情符号选择器，支持向其中添加自定义表情符号。
+
+![](https://pic3.zhimg.com/v2-23425de035042f99f715cf1391eebf6a_b.jpg)
+
+**3\.** [json-to-csv-export](https://link.zhihu.com/?target=https%3A//github.com/coston/json-to-csv-export)：支持将 JSON 数据下载为 CSV 格式文件。
+
+```text
+() => {
+  const mockData = [{
+    "ID": 1,
+    "First Name": "Sarajane",
+    "Last Name": "Wheatman",
+    "Email": "swheatman0@google.nl",
+    "Language": "Zulu",
+    "IP Address": "40.98.252.240"
+  },
+  {
+    "ID": 2,
+    "First Name": "Linell",
+    "Last Name": "Humpherston",
+    "Email": "lhumpherston1@google.com.br",
+    "Language": "Czech",
+    "IP Address": "82.225.151.150"
+  }]
+
+  return (
+    <button onClick={() => jsonToCsvExport({ data: mockData })}>
+      Download Data
+    </button>
+  )
+}
+```
+
+**4\.** [react-movable](https://link.zhihu.com/?target=https%3A//github.com/tajo/react-movable)：支持列表和表格拖拽放置的库，移动端设备友好，支持样式定制，无其他依赖，gzip 下体积不到 4kB。
+
+![](https://pic3.zhimg.com/v2-465951b2801d645f6ba8621edee4d9f2_b.gif)
+
+_以上资讯文章选自常见周刊，如 JavaScript Weekly 等，周刊内容也会不断优化改进，希望你们能够喜欢。_
+
+
+

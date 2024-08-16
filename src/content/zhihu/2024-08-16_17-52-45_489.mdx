@@ -1,0 +1,87 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 栗子前端技术周刊第 36 期 - TypeScript 5.5、React-Admin v5、华为“仓颉”发布...
+description:  栗子前端技术周刊第 36 期 (2024.6.24 - 2024.6.30)：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。1. TypeScript 5.5：TypeScript 的此次发布版本是功能最重要的版本之一，功能包括：推断类型谓词，改进某些场景下的类型推断，特别是数组和过滤；JSDoc @import 标记，用于在 JavaScript 文件中导入类型的新标记，不会对运行时产生影响；改善编辑器体验与 watch 模式等等。
+date: 星期一 08 早上 七月 1o 2024
+author: zhihu
+origin_url: https://zhuanlan.zhihu.com/p/706049730
+origin_site: https://www.zhihu.com/people/wzy66/posts
+translated: false
+avatar: /media-source/zhihu-ico.png
+banner: https://picx.zhimg.com/v2-3bc0a8b21654e9817bd7bc04b9e32064_l.jpg
+subAuthor: 栗子前端
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="栗子前端技术周刊第 36 期 - TypeScript 5.5、React-Admin v5、华为“仓颉”发布..." url="https://zhuanlan.zhihu.com/p/706049730" />
+
+
+
+**栗子前端技术周刊第 36 期 (2024.6.24 - 2024.6.30)**：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。
+
+## **技术资讯**
+
+**1\.** [TypeScript 5.5](https://link.zhihu.com/?target=https%3A//devblogs.microsoft.com/typescript/announcing-typescript-5-5/)：TypeScript 的此次发布版本是功能最重要的版本之一，功能包括：推断类型谓词，改进某些场景下的类型推断，特别是数组和过滤；JSDoc @import 标记，用于在 JavaScript 文件中导入类型的新标记，不会对运行时产生影响；改善编辑器体验与 `watch` 模式等等。
+
+```js
+// 推断类型谓词
+function makeBirdCalls(countries: string[]) {
+  // birds: (Bird | undefined)[]
+  const birds = countries
+    .map(country => nationalBirds.get(country))
+    .filter(bird => bird !== undefined); // 过滤 undefined
+
+  for (const bird of birds) {
+    // 以前版本：error: 'bird' is possibly 'undefined'。 5.5 不会报错，能正确推断类型。
+    bird.sing(); 
+  }
+}
+```
+
+**2\.** [React-Admin v5](https://link.zhihu.com/?target=https%3A//marmelab.com/blog/2024/06/20/react-admin-v5.html)：React-Admin 是一个封装完善的中后台应用框架，v5 版本添加了许多新功能和完成许多功能的改进，包括现在默认有一个主题切换器和一个深色主题、Data providers 在组件卸载时可以取消请求、`useDefaultTitle()` Hook 可以在任何地方返回应用标题等等。  
+
+**3\.** [华为“仓颉”发布](https://link.zhihu.com/?target=https%3A//developer.huawei.com/consumer/cn/doc/openharmony-cangjie/cj-wp-abstract)：在上周华为开发者大会上，华为内部研发已久的国产自主编程语言仓颉终于正式对外官宣！仓颉语言作为面向未来的下一代编程语言，当前已经完成设计与实现并启动了开发者预览，未来将与 ArkTS 共同发展，为鸿蒙原生应用开发者提供极致高效的开发体验。熟悉 TS 的同学应该能很快上手 ArkTS，此次的仓颉，有兴趣的同学可以去更深入了解下。  
+
+## **技术文章**
+
+**1\.** [A Look at JavaScript's New Set Methods](https://link.zhihu.com/?target=https%3A//developer.mozilla.org/en-US/blog/javascript-set-methods/)：了解 JavaScript Set 的新方法 - 新方法让你更容易地处理集合相关的功能，比如查找集合间的交集、并集和差集。在 Node 22+、Chrome/Edge 122+、Firefox 127+、Safari 17+ 中可用，现在已被视为“基线”功能。
+
+```js
+// 查找交集
+const intersectionSet = set1.intersection(set2);
+```
+
+**2\.** [Understanding React Compiler](https://link.zhihu.com/?target=https%3A//tonyalicea.dev/blog/understanding-react-compiler/): 了解 React 编译器 - React 团队新推出的实验性工具，可通过重写代码自动优化性能，但是否应该使用它，以及它的引擎是如何工作的？本文作者将带你一探究竟。
+
+**3\.** [深入理解前端缓存](https://link.zhihu.com/?target=https%3A//juejin.cn/post/7382891974942179354)：本文将带你深入理解缓存机制以及缓存时间的判断公式，让你知道如何合理的使用缓存机制来更好地进行性能优化。作者将前端缓存分成 HTTP 缓存和浏览器缓存两个部分来和大家一起交流。
+
+## **开发工具**
+
+**1\.** [simpleParallax](https://link.zhihu.com/?target=https%3A//simpleparallax.com/)：一个可为页面上的任何图片添加视差样式动画的简单库，支持以原生 JS 或 React 组件方式使用。
+
+```js
+import SimpleParallax from "simple-parallax-js";
+
+const Component = () => (
+  <SimpleParallax>
+    <img src="image.jpg" alt="image" />
+  </SimpleParallax>
+)
+```
+
+**2\.** [PixelMatch 6.0](https://link.zhihu.com/?target=https%3A//github.com/mapbox/pixelmatch)：高效的像素级图像比较库 - 给它两张图像，它就能突出显示差异。
+
+![](https://pic2.zhimg.com/v2-bb62dc657f255b47a6d275dcd77a13f1_b.jpg)
+
+**3\.** [Matter.js 0.20](https://link.zhihu.com/?target=https%3A//github.com/liabru/matter-js)：Matter.js 是一款适用于 web 的 JavaScript 2D 刚体物理引擎。
+
+![](https://pic4.zhimg.com/v2-74fea6b1753a89295678b50a806e37cf_b.gif)
+
+matter-js
+
+_以上资讯文章选自常见周刊，如 JavaScript Weekly 等，周刊内容也会不断优化改进，希望你们能够喜欢。_
+
+
+

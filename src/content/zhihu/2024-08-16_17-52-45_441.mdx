@@ -1,0 +1,61 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 栗子前端技术周刊第 37 期 - Mako 开源、Polyfill 攻击、使用 Expo 创建 RN 应用...
+description:  栗子前端技术周刊第 37 期 (2024.7.1 - 2024.7.7)：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。1. Mako 开源： Mako 是「极快」和「生产级」的前端构建工具，基于 Rust。Mako 自 2023.11.24 起已在蚂蚁内部正式发布，通过工程化的方式验证了数千个项目和所有用到的 npm 包及其不同版本，已落地数百个项目，并对内服务了中后台、小程序、H5 移动端、低代码、营销、组件库、组件打包、Serverless Function 等多个不同平台和业务场景，已具备了生产级的能力。
+date: 星期一 08 早上 七月 8o 2024
+author: zhihu
+origin_url: https://zhuanlan.zhihu.com/p/707455197
+origin_site: https://www.zhihu.com/people/wzy66/posts
+translated: false
+avatar: /media-source/zhihu-ico.png
+banner: https://picx.zhimg.com/v2-3bc0a8b21654e9817bd7bc04b9e32064_l.jpg
+subAuthor: 栗子前端
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="栗子前端技术周刊第 37 期 - Mako 开源、Polyfill 攻击、使用 Expo 创建 RN 应用..." url="https://zhuanlan.zhihu.com/p/707455197" />
+
+
+
+**栗子前端技术周刊第 37 期 (2024.7.1 - 2024.7.7)**：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。
+
+## **技术资讯**
+
+**1\.** [Mako 开源](https://link.zhihu.com/?target=https%3A//makojs.dev/blog/mako-open-sourced_zh-CN): Mako 是「极快」和「生产级」的前端构建工具，基于 Rust。Mako 自 2023.11.24 起已在蚂蚁内部正式发布，通过工程化的方式验证了数千个项目和所有用到的 npm 包及其不同版本，已落地数百个项目，并对内服务了中后台、小程序、H5 移动端、低代码、营销、组件库、组件打包、Serverless Function 等多个不同平台和业务场景，已具备了生产级的能力。
+
+![](https://pic4.zhimg.com/v2-19840e82c55f8214abc3e718bc9801ff_b.jpg)
+
+**2\.** [Polyfill 攻击波及 10 万多个网站](https://link.zhihu.com/?target=https%3A//sansec.io/research/polyfill-supply-chain-attack)：polyfill.js 是一个支持旧版浏览器的流行开源库，超过 10 万个网站使用 `cdn.polyfill.io` 域名嵌入了该库，它通过读取请求的 User-Agent，并返回该特定浏览器所需的 polyfills。今年 2 月，一家中国公司购买了该 CDN 的 GitHub 仓库和域名，并开始在使用该服务的 10 万多个网站上注入 `www.googie-anaiytics.com` 的虚假分析脚本。所以值得借鉴的是，在做前端性能优化的时候，你可能会把一些资源通过 CDN 加载，但是要使用可靠 CDN 服务，最好是自己公司的。
+
+**3\.** [使用 Expo 创建 RN 应用](https://link.zhihu.com/?target=https%3A//reactnative.dev/blog/2024/06/25/use-a-framework-to-build-react-native-apps)：截至今天，React Native 唯一推荐的社区框架是 Expo。Expo 从 React Native 早期就开始投资建设 React Native 生态系统，所以 React Native 团队相信 Expo 提供的开发体验是同类中最好的。
+
+**4\.** [State of JavaScript 报告中去年前端技术亮点](https://link.zhihu.com/?target=https%3A//2023.stateofjs.com/zh-Hans/awards/)：2023 的 JS 报告调查中，使用率增加最大、满意率最高和正面评价比例最高的技术都是 **Vite**，讨论次数最多的库则为 **React**，其他更多信息可查看官网报告。  
+
+## **技术文章**
+
+**1\.** [Web Performance Guide](https://link.zhihu.com/?target=https%3A//www.speedcurve.com/web-performance-guide/)：Web 性能指南 - 包含 20 多个简明实用的指南，涵盖各种内容，例如如何使用不同的 Web 核心指标、优化技术、关键 CSS、监控等。  
+
+**2\.** [如何开发 JSSDK？](https://link.zhihu.com/?target=https%3A//juejin.cn/post/7387250487622270985): 文中介绍了 JSSDK 的定义与分类、设计 JSSDK 原则、SDK 核心功能的实现等等。  
+
+**3\.** [前端圈子十年变化之我见](https://link.zhihu.com/?target=https%3A//juejin.cn/post/7387227689319039002)：张鑫旭对前端十年变化的一些见解，一个是人的变化，一个是技术的变化，可以看看大佬的想法。  
+
+## **开发工具**
+
+**1\.** [Bug 报告 Checklist](https://link.zhihu.com/?target=https%3A//www.perfectbugreport.io/)：bug 报告中应包含的内容的 checklist，可以发给你的测试看看，或者在生产问题复盘的时候可以参考下。
+
+![](https://pic4.zhimg.com/v2-7bf7ff3413e5e821f6a760c56696bf9b_b.jpg)
+
+**2\.** [Termino.js 2.0](https://link.zhihu.com/?target=https%3A//github.com/MarketingPipeline/Termino.js)：在浏览器中创建类似终端的体验 - 零依赖、可定制化，并且可以在单个页面上创建多个终端实例。
+
+![](https://pic4.zhimg.com/v2-800bca6006167e185aab4a1240dcfd8f_b.gif)
+
+**3\.** [React Ace 12.0](https://link.zhihu.com/?target=https%3A//securingsincity.github.io/react-ace/)： Web 代码编辑器组件，基于 React 实现。
+
+![](https://pic1.zhimg.com/v2-0fa29d9e226f05bb414c44c10c720dac_b.jpg)
+
+_以上资讯文章选自常见周刊，如 JavaScript Weekly 等，周刊内容也会不断优化改进，希望你们能够喜欢。_
+
+
+

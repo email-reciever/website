@@ -1,0 +1,69 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 栗子前端技术周刊第 42 期 - Puppeteer 支持 Firefox、Astro 4.13、nvm 0.40...
+description:  栗子前端技术周刊第 42 期 (2024.8.5 - 2024.8.11)：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。1. Puppeteer 支持 Firefox：Puppeteer 现在已支持 Firefox。这意味着你用 Puppeteer 编写的自动化端到端测试用例，可以同时在 Chrome 浏览器和 Firefox 浏览器上运行。2. Astro 4.13：Astro 4.13 将请求重写和内容收集 JSON 模式从实验性功能正式加入到稳定功能中，除此之外，还有一些日志改进。3. nvm 0.40：No
+date: 星期一 08 早上 八月 12o 2024
+author: zhihu
+origin_url: https://zhuanlan.zhihu.com/p/713908007
+origin_site: https://www.zhihu.com/people/wzy66/posts
+translated: false
+avatar: /media-source/zhihu-ico.png
+banner: https://picx.zhimg.com/v2-3bc0a8b21654e9817bd7bc04b9e32064_l.jpg
+subAuthor: 栗子前端
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="栗子前端技术周刊第 42 期 - Puppeteer 支持 Firefox、Astro 4.13、nvm 0.40..." url="https://zhuanlan.zhihu.com/p/713908007" />
+
+
+
+**栗子前端技术周刊第 42 期 (2024.8.5 - 2024.8.11)**：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。
+
+## **技术资讯**
+
+**1\. [Puppeteer 支持 Firefox](https://link.zhihu.com/?target=https%3A//hacks.mozilla.org/2024/08/puppeteer-support-for-firefox)**：Puppeteer 现在已支持 Firefox。这意味着你用 Puppeteer 编写的自动化端到端测试用例，可以同时在 Chrome 浏览器和 Firefox 浏览器上运行。
+
+```text
+import puppeteer from "puppeteer";
+
+const browser = await puppeteer.launch({
+  browser: "firefox"
+});
+
+const page = await browser.newPage();
+// ...
+await browser.close();
+```
+
+**2\. [Astro 4.13](https://link.zhihu.com/?target=https%3A//astro.build/blog/astro-4130/)**：Astro 4.13 将请求重写和内容收集 JSON 模式从实验性功能正式加入到稳定功能中，除此之外，还有一些日志改进。
+
+**3\. [nvm 0.40](https://link.zhihu.com/?target=https%3A//nodeweekly.com/link/158438/fcd03620c9)**：Node 版本管理命令行工具，0.40 版本 `nvm use/nvm install` 增加了 `--save` 选项，可将操作写到 `.nvmrc` 文件中，除此之外，还支持了 `NVM_AUTH_HEADER` 环境变量和 `.nvmrc` 文件支持写注释。
+
+## **技术文章**
+
+**1\. [The Node.js best practices list](https://link.zhihu.com/?target=https%3A//github.com/goldbergyoni/nodebestpractices%23readme)**：2024 年版面向 Node 开发人员的深度指南。该指南分为 8 个部分并定期更新，深入探讨了从错误处理和代码风格到 Docker 和安全实践等多个领域。  
+
+**2\. [Reading from the Clipboard in JavaScript](https://link.zhihu.com/?target=https%3A//blog.logrocket.com/javascript-design-patterns-guide/)**：浏览器对用户剪贴板的读写有很好的支持，这为在 web 上获得更好的体验提供了可能，本文将介绍如何使用剪贴板。  
+
+**3\. [告别轮询，SSE 流式传输可太香了](https://link.zhihu.com/?target=https%3A//juejin.cn/post/7355666189475954725)**：本文将从 SSE 的概念、与 Websocket 对比、SSE 应用场景多个方面介绍 SSE 流式传输。对于需要轮询的业务场景来说，采用 SSE 在对应场景下会是一个更好的技术方案。  
+
+## **开发工具**
+
+**1\. [Puter](https://link.zhihu.com/?target=https%3A//github.com/HeyPuter/puter)**：在浏览器中的实现了一款操作系统，功能丰富、运行速度极快，并具有高度可扩展性。
+
+![](https://pic3.zhimg.com/v2-724c27068a2291f51b52df4a52e24d42_b.jpg)
+
+**2\. [Node.js 工具箱](https://link.zhihu.com/?target=https%3A//nodejstoolbox.com/)**：查找和比较 Node.js 软件包，这是一个由社区维护的出色资源，提供了一种按类别查找软件包和库的方法，例如，你可以查看 HTTP 框架、测试框架、查询构建器等。你可以通过各种方式对库进行比较，查看其下载次数，star 数等等。
+
+![](https://pic4.zhimg.com/v2-519e4f79c6a5c1a6937afcc5e9d47a73_b.jpg)
+
+**3\. [SVG Viewer](https://link.zhihu.com/?target=https%3A//www.svgviewer.dev/)**：查看、编辑和优化 SVG - 一个功能强大的小型 web 应用，提供优化、美化、旋转、翻转、改变尺寸等选项，并可将 SVG 转换为 React、React Native、PNG 甚至不同类型的数据 URI。
+
+![](https://pic2.zhimg.com/v2-403cbeee6a8ff231b00645e10eb172f5_b.jpg)
+
+_以上资讯文章选自常见周刊，如 JavaScript Weekly 等，周刊内容也会不断优化改进，希望你们能够喜欢。_
+
+
+

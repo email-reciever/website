@@ -1,0 +1,232 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 5 ways GitHub engineers use GitHub Copilot 👨‍💻👩🏽‍💻
+description: 5 ways GitHub engineers use GitHub Copilot 👨‍💻👩🏽‍💻
+date: 星期五 01 凌晨 七月 19o 2024
+author: insidergithub
+origin_url: edi
+origin_site: edi
+translated: true
+avatar: /media-source/insidergithub-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="5 ways GitHub engineers use GitHub Copilot 👨‍💻👩🏽‍💻" url="edi" />
+
+<Detail client:only="react">
+	See how they automate tasks, stay focused, and more ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌  ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌  ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ 
+
+   [![GitHub](https://images.github.media/EloquaImages/clients/GitHubInc/%7B06958555-b158-43f9-9f4c-f7cc10a305a0%7D_github-logo-email.png)  ![GitHub](https://images.github.media/EloquaImages/clients/GitHubInc/%7B369cff35-9244-420e-9a83-1a9040d9e311%7D_github-logo-email-dark-mode.png)](https://app.github.media/e/er?s=88570519&lid=6370&elqTrackId=86f52dce36bb4b5988ccac249888549c&elq=67e4a6f189074ae0830cf2c3bf3e3378&elqaid=4144&elqat=1)
+
+[![](https://images.github.media/EloquaImages/clients/GitHubInc/%7B0da1dee9-e914-4030-a21c-f4f02cc63994%7D_github-insider-header-2024.png)](https://app.github.media/e/er?s=88570519&lid=6370&elqTrackId=cba9d7a2636a48f1bda0033640cada3c&elq=67e4a6f189074ae0830cf2c3bf3e3378&elqaid=4144&elqat=1)
+
+Calling all developers, engineers, and tech professionals! 🗣️
+
+👉 Do you build code for your personal or work projects? Are you looking for technical strategies to boost your efficiency? Do you use GitHub Copilot, or are you open to trying?
+
+If you answered yes to any of the above, this edition of _The GitHub Insider_ is for you! And if you answered no, stick around—you might find these insights interesting anyway. 😉
+
+We’ll explore five ways GitHub engineers use Copilot to increase efficiency, automate repetitive tasks, stay focused, and more.
+
+Hang on tight and let’s go! 🚀
+
+(Shoutout to [Holger Staudacher](https://app.github.media/e/er?s=88570519&lid=6387&elqTrackId=a9d9c8c916dc4f32b052acad29c10d84&elq=67e4a6f189074ae0830cf2c3bf3e3378&elqaid=4144&elqat=1) for sharing the initial [blog post](https://app.github.media/e/er?s=88570519&lid=6386&elqTrackId=36120f801d1149f29ec0ce48c07c1c0b&elq=67e4a6f189074ae0830cf2c3bf3e3378&elqaid=4144&elqat=1) with us! 👏)
+
+## 1\. Semi-automating repetitive tasks 🌐
+
+One of my favorite bosses once gave me some advice: automate yourself out of a job. Now, I don’t know if I would go _that_ far, but it is true that finding ways to automate repetitive tasks is one of the coolest things that we can do as developers. After all, why do something one hundred times if we can write a script to do it for us!
+
+For instance, at GitHub, teams are often tasked with developing and maintaining several live services, many of which utilize protocol buffers for data communication. During maintenance, the developers on those teams often need to increment ID numbers in the **protobuf** definitions, as illustrated below:
+
+![](https://images.github.media/EloquaImages/clients/GitHubInc/%7B9936c3c0-f5a1-4e8a-bbc2-7d1bf28cb4ee%7D_gh-insider-july-2024-2-1.png)
+
+This is where Copilot can really come in handy. Your AI-powered pair programmer can suggest completions for you, simply by hitting your tab key. Removing the need to manually generate ID numbers can save a lot of time and free you to focus on bigger, more creative, strategic tasks.
+
+Simply set up the string syntax in your editor with Copilot enabled for one definition and tab through the completion suggestions until, voila, it’s done!
+
+(We _could_ get really nerdy and use Copilot to help us write a regular expression to automate this even more, but using a semi-automated approach can leave you in control, while still speeding things up.)
+
+## 2\. Minimize distractions 😵‍💫
+
+I don’t know about any of you, but I often struggle to stay on task when I’m coding. Sometimes, [I’m in the zone and it’s great](https://app.github.media/e/er?s=88570519&lid=6385&elqTrackId=bd7bea256b174a779a19e21a85b8dfb4&elq=67e4a6f189074ae0830cf2c3bf3e3378&elqaid=4144&elqat=1) – but then something will come up and I’ll need to look up how to do something, and I’ll get sucked into a vortex of cat memes and doom scrolling.
+
+![](https://images.github.media/EloquaImages/clients/GitHubInc/%7Bed57d76e-efb5-47d9-9024-2ff55bf5975d%7D_gh-insider-july-2024-2-2.gif)
+
+Take regular expressions, for example. This is something that developers frequently encounter and need to build. But I don’t always remember exactly what the correct syntax is for a specific task.
+
+Fortunately, regular expressions are something that AI tools are fantastic at helping create and test. Now, I’ll use a real example from a GitHub developer who needed to build a regex to capture a Markdown code block and extract the language identifier.
+
+Now, you _could_ switch to Copilot Chat and ask it to build that regex for you, but that might take you out of your coding flow and lead to more distractions.
+
+Instead, if you want to minimize distractions but still get the benefits, you can formalize the task inside a code comment, like this:
+
+![](https://images.github.media/EloquaImages/clients/GitHubInc/%7B7cbbadad-5ad3-4095-955f-e2425a94456d%7D_gh-insider-july-2024-2-3.png)
+
+This will prompt Copilot to generate the regular expression as the subsequent statement in your editor:
+
+![](https://images.github.media/EloquaImages/clients/GitHubInc/%7Bd02b2aa8-0955-4be6-89ae-962b7c78230f%7D_gh-insider-july-2024-2-4.png)
+
+And as a bonus, you’ve now _documented_ your code, explaining what the regex does to anyone else who might stumble upon it later.
+
+![](https://images.github.media/EloquaImages/clients/GitHubInc/%7B1c4a7a63-43ae-4d22-a816-bfbe5a2299fe%7D_gh-insider-july-2024-2-5.png)
+
+## 3\. Structuring data-related notes 📝
+
+Speaking of documentation, you can use Copilot Chat to assist in documenting your code and solutions too!
+
+For instance, if you’re like me, you’ve probably been in a situation where you need to troubleshoot a specific issue and you want to share the solution with other members of your team. In a perfect world, we would all take the time to write beautiful prose, explaining the solution and process. But more often than not, our solutions are often scattered across notes and code blocks, with little structure.
+
+This is where Copilot Chat can come in clutch. Simply write something like this:
+
+_“Organize my notes, structure them, and compile the data in the editor into Markdown tables.”_
+
+Within seconds, you’ll have your documentation, all your teammates will be able to dig in and replicate when needed, and you can continue on your day!
+
+![](https://images.github.media/EloquaImages/clients/GitHubInc/%7Ba298d3bf-4c72-4483-8afc-2018360074c5%7D_gh-insider-july-2024-2-6.gif)
+
+You can even use the agents feature in VS Code to use **@workspace** to collate information from a number of different open documents inside your workspace.
+
+## 4\. Playing and learning 🎨
+
+Acquiring new skills (or improving or enhancing your existing skills) is an important part of being a developer. And Copilot is a great way to enhance, improve and extend your skills!
+
+For instance, are you looking to learn a new language? GitHub’s [John Berryman](https://app.github.media/e/er?s=88570519&lid=6384&elqTrackId=0692961cba264041ae40432452e625eb&elq=67e4a6f189074ae0830cf2c3bf3e3378&elqaid=4144&elqat=1) was interested in learning Rust, and he decided to use Copilot Chat to help him out. He wanted to build a program that was capable of converting any numerical input into its written English equivalent. This might seem pretty simple, until you consider that you have to account for complexities like how to handle teen numbers, dealing with naming conventions for tens, the placement of “and” in the output, and so on.
+
+So, John used Copilot Chat to guide him through the process. And luckily for us, he documented his experience! In just 23 minutes, John was able to produce a functional version of this program in Rust, even though he had no prior experience.
+
+You can check out his video below! (This was done using an older version of GitHub Copilot, which is why the UI might look a little different.)
+
+[![](https://images.github.media/EloquaImages/clients/GitHubInc/%7B7dcc0c98-313b-4eb4-8076-682934357159%7D_gh-insider-july-2024-2-7.png)](https://app.github.media/e/er?s=88570519&lid=6383&elqTrackId=124ed3b434f446e89e12d955fd86b810&elq=67e4a6f189074ae0830cf2c3bf3e3378&elqaid=4144&elqat=1)
+
+## 5\. Extend Copilot with Extensions ⛓️
+
+We do have one final tip and that is to extend Copilot using [extensions](https://app.github.media/e/er?s=88570519&lid=6382&elqTrackId=95a4fa38b75147328209b533eba971f8&elq=67e4a6f189074ae0830cf2c3bf3e3378&elqaid=4144&elqat=1). Because after all, wouldn’t it be great if we could use Copilot more places?!
+
+Copilot extensions are available as both [GitHub Apps](https://app.github.media/e/er?s=88570519&lid=6381&elqTrackId=27ef934f68994c15ac885da8ed27d3d3&elq=67e4a6f189074ae0830cf2c3bf3e3378&elqaid=4144&elqat=1) and inside [Visual Studio Code](https://app.github.media/e/er?s=88570519&lid=6380&elqTrackId=259e8d50934d426290a41497d4787398&elq=67e4a6f189074ae0830cf2c3bf3e3378&elqaid=4144&elqat=1). This means that you can leverage the power of things like Copilot Chat but use them with other applications and services.
+
+For instance, you can use the [Docker extension](https://app.github.media/e/er?s=88570519&lid=6379&elqTrackId=532d574327f14811b0887bc391c7bee5&elq=67e4a6f189074ae0830cf2c3bf3e3378&elqaid=4144&elqat=1) to use Copilot to ask information about how you can containerize an application or project inside your repository.
+
+This way, I don’t have to leave my project to get more context or information, I can just use Copilot directly from my editor or repository.
+
+![](https://images.github.media/EloquaImages/clients/GitHubInc/%7B32e9fdeb-dd0f-4cac-a5f0-a74ecad3501e%7D_gh-insider-july-2024-2-8.png)
+
+You can even [build your own extensions](https://app.github.media/e/er?s=88570519&lid=6378&elqTrackId=28e1403adcef47dd8829818a48d09c99&elq=67e4a6f189074ae0830cf2c3bf3e3378&elqaid=4144&elqat=1), if you want to go further.
+
+This saves me from having to have several different dashboards or services open; instead, I can do even more of my work all in one place. Bliss!
+
+[Try these tips now](https://app.github.media/e/er?s=88570519&lid=6377&elqTrackId=ea7174154a2549e4b4dcad9c2c7758cb&elq=67e4a6f189074ae0830cf2c3bf3e3378&elqaid=4144&elqat=1)
+
+* * *
+
+✨ 
+</Detail>
+
+$83
+
+[![GitHub](https://images.github.media/EloquaImages/clients/GitHubInc/%7B06958555-b158-43f9-9f4c-f7cc10a305a0%7D_github-logo-email.png)  ![GitHub](https://images.github.media/EloquaImages/clients/GitHubInc/%7B369cff35-9244-420e-9a83-1a9040d9e311%7D_github-logo-email-dark-mode.png)](https://app.github.media/e/er?s=88570519\&lid=6370\&elqTrackId=86f52dce36bb4b5988ccac249888549c\&elq=67e4a6f189074ae0830cf2c3bf3e3378\&elqaid=4144\&elqat=1)
+
+[![](https://images.github.media/EloquaImages/clients/GitHubInc/%7B0da1dee9-e914-4030-a21c-f4f02cc63994%7D_github-insider-header-2024.png)](https://app.github.media/e/er?s=88570519\&lid=6370\&elqTrackId=cba9d7a2636a48f1bda0033640cada3c\&elq=67e4a6f189074ae0830cf2c3bf3e3378\&elqaid=4144\&elqat=1)
+
+呼吁所有开发人员,工程师和技术专业人士! ️
+
+👉您是否为个人或工作项目构建代码?您是否正在寻找提高效率的技术策略?您是否使用GitHub Copilot,或者您是否愿意尝试?
+
+如果您对上述任何一项答案表示“是”,则本版*《GitHub Insider》*如果你回答“不”的话,请保持周围 - 无论如何,你可能会发现这些见解很有趣。
+
+我们将探索GitHub工程师使用Copilot来提高效率、自动化重复任务、保持专注等五种方式。
+
+紧紧挂起来,我们走吧!
+
+(下载到)[霍尔格·斯塔达赫](https://app.github.media/e/er?s=88570519\&lid=6387\&elqTrackId=a9d9c8c916dc4f32b052acad29c10d84\&elq=67e4a6f189074ae0830cf2c3bf3e3378\&elqaid=4144\&elqat=1)为了分享最初的[博客文章](https://app.github.media/e/er?s=88570519\&lid=6386\&elqTrackId=36120f801d1149f29ec0ce48c07c1c0b\&elq=67e4a6f189074ae0830cf2c3bf3e3378\&elqaid=4144\&elqat=1)和我们在一起!
+
+## 1、半自动重复任务
+
+我最喜欢的一位老板曾经给了我一些建议:把自己从工作中自动化。*这个*远远,但事实是,寻找自动重复任务的方法是我们作为开发人员可以做的最酷的事情之一. 毕竟,如果我们可以为我们编写脚本,为什么要做一百次的事情!
+
+例如,在GitHub,团队经常被委托开发和维护多个实时服务,其中许多都使用协议缓冲器进行数据通信。**原子弹**定义,如下所示:
+
+![](https://images.github.media/EloquaImages/clients/GitHubInc/%7B9936c3c0-f5a1-4e8a-bbc2-7d1bf28cb4ee%7D_gh-insider-july-2024-2-1.png)
+
+这就是Copilot真正有用的地方。你的AI驱动的双程序员可以为你提出完成建议,简单地点击你的标签键。消除手动生成ID号码的需要可以节省大量的时间,并使你可以专注于更大的,更具创造力的战略任务。
+
+只需在您的编辑器中设置字符串语法,使用 Copilot 启用一个定义,并通过完成建议,直到 voila,它完成!
+
+(我们*能*用Copilot来帮助我们编写一个常规表达式,以便进一步自动化,但使用半自动化方法可以让你控制,同时加速事情。
+
+## 二、最小限度的娱乐
+
+我不知道你们中的任何一个,但我经常在编码时努力保持任务。[我在该地区,它很棒](https://app.github.media/e/er?s=88570519\&lid=6385\&elqTrackId=bd7bea256b174a779a19e21a85b8dfb4\&elq=67e4a6f189074ae0830cf2c3bf3e3378\&elqaid=4144\&elqat=1)但是,然后会出现一些东西,我需要寻找如何做某些事情,我会被吸入猫的旋转和命运滚动的旋转。
+
+![](https://images.github.media/EloquaImages/clients/GitHubInc/%7Bed57d76e-efb5-47d9-9024-2ff55bf5975d%7D_gh-insider-july-2024-2-2.gif)
+
+比如说常规表达式,这是开发人员经常遇到的并需要构建的东西,但我并不总是记得对特定任务的正确语法是什么。
+
+幸运的是,常规表达式是AI工具在帮助创建和测试方面非常出色的东西,现在,我将使用GitHub开发人员的真实例子,他们需要构建一个regex来捕捉一个Markdown代码块并提取语言标识符。
+
+现在,你*能*转到 Copilot 聊天,并要求它为您构建这个 regex,但这可能会使您脱离编码流程并导致更多的分心。
+
+相反,如果您想最大限度地减少分心,但仍然获得好处,您可以在代码评论中正式化任务,如下:
+
+![](https://images.github.media/EloquaImages/clients/GitHubInc/%7B7cbbadad-5ad3-4095-955f-e2425a94456d%7D_gh-insider-july-2024-2-3.png)
+
+这将促使 Copilot 在您的编辑器中生成正常表达式作为下面的陈述:
+
+![](https://images.github.media/EloquaImages/clients/GitHubInc/%7Bd02b2aa8-0955-4be6-89ae-962b7c78230f%7D_gh-insider-july-2024-2-4.png)
+
+作为奖金,你现在有*文件化*你的代码,解释了regex对任何可能后来碰到它的其他人所做的事情。
+
+![](https://images.github.media/EloquaImages/clients/GitHubInc/%7B1c4a7a63-43ae-4d22-a816-bfbe5a2299fe%7D_gh-insider-july-2024-2-5.png)
+
+## 3、数据相关备注的结构化
+
+谈到文档,您也可以使用 Copilot Chat 协助记录您的代码和解决方案!
+
+例如,如果你像我一样,你可能已经处于需要解决特定问题的情况下,你想与你的团队的其他成员分享解决方案. 在一个完美的世界中,我们都会花时间写美丽的散文,解释解决方案和流程。
+
+这里是Copilot聊天可以来合并的地方. 只需写点这样的东西:
+
+*“组织我的笔记,结构它们,并将编辑器中的数据编译成Markdown表。*
+
+在几秒钟内,你将有你的文档,所有的队友将能够在需要时挖掘和复制,你可以继续你的一天!
+
+![](https://images.github.media/EloquaImages/clients/GitHubInc/%7Ba298d3bf-4c72-4483-8afc-2018360074c5%7D_gh-insider-july-2024-2-6.gif)
+
+您甚至可以使用VS Code中的代理功能来使用**工作空间**从工作区内的一些不同的开放文档中收集信息。
+
+## 四、玩耍和学习
+
+获得新技能(或改进或增强现有技能)是成为开发人员的重要组成部分,而Copilot是提高,改进和扩展你的技能的好方法!
+
+例如,你想学习一门新语言吗?GitHub的[约翰·贝里曼](https://app.github.media/e/er?s=88570519\&lid=6384\&elqTrackId=0692961cba264041ae40432452e625eb\&elq=67e4a6f189074ae0830cf2c3bf3e3378\&elqaid=4144\&elqat=1)他想建立一个程序,可以将任何数字输入转换为其书面英语等级。这可能看起来很简单,直到你认为你必须考虑复杂性,如如何处理青少年数字,处理数十的命名公约,在输出中放置“和”等。
+
+因此,约翰用Copilot Chat指导他完成这个过程,幸运的是,他记录了他的经历!在23分钟内,约翰能够在Rust中制作这个程序的功能版本,尽管他没有以前的经验。
+
+您可以在下面查看他的视频! (这是使用GitHub Copilot的较旧版本完成的,这就是为什么用户界面可能看起来有点不同的原因。
+
+[![](https://images.github.media/EloquaImages/clients/GitHubInc/%7B7dcc0c98-313b-4eb4-8076-682934357159%7D_gh-insider-july-2024-2-7.png)](https://app.github.media/e/er?s=88570519\&lid=6383\&elqTrackId=124ed3b434f446e89e12d955fd86b810\&elq=67e4a6f189074ae0830cf2c3bf3e3378\&elqaid=4144\&elqat=1)
+
+## 延伸 Copilot 用扩展 ️
+
+我们确实有一个最后的提示,那就是使用 Copilot 来扩展[扩展](https://app.github.media/e/er?s=88570519\&lid=6382\&elqTrackId=95a4fa38b75147328209b533eba971f8\&elq=67e4a6f189074ae0830cf2c3bf3e3378\&elqaid=4144\&elqat=1)因为毕竟,如果我们可以使用Copilot更多的场所,那就不会太好了吗?
+
+Copilot扩展可作为两个[GitHub 应用程序](https://app.github.media/e/er?s=88570519\&lid=6381\&elqTrackId=27ef934f68994c15ac885da8ed27d3d3\&elq=67e4a6f189074ae0830cf2c3bf3e3378\&elqaid=4144\&elqat=1)而且内部[视觉工作室代码](https://app.github.media/e/er?s=88570519\&lid=6380\&elqTrackId=259e8d50934d426290a41497d4787398\&elq=67e4a6f189074ae0830cf2c3bf3e3378\&elqaid=4144\&elqat=1)这意味着你可以利用像Copilot聊天这样的东西,但可以与其他应用程序和服务一起使用它们。
+
+例如,您可以使用[Docker 扩展](https://app.github.media/e/er?s=88570519\&lid=6379\&elqTrackId=532d574327f14811b0887bc391c7bee5\&elq=67e4a6f189074ae0830cf2c3bf3e3378\&elqaid=4144\&elqat=1)使用 Copilot 请求有关如何容器化应用程序或项目的信息。
+
+这样,我不需要离开我的项目以获得更多的背景或信息,我可以直接从我的编辑器或存储库使用Copilot。
+
+![](https://images.github.media/EloquaImages/clients/GitHubInc/%7B32e9fdeb-dd0f-4cac-a5f0-a74ecad3501e%7D_gh-insider-july-2024-2-8.png)
+
+你甚至可以[建立自己的扩展](https://app.github.media/e/er?s=88570519\&lid=6378\&elqTrackId=28e1403adcef47dd8829818a48d09c99\&elq=67e4a6f189074ae0830cf2c3bf3e3378\&elqaid=4144\&elqat=1)如果你想走得更远
+
+这让我免得有几个不同的仪表板或服务开放;相反,我可以在一个地方做更多的工作。
+
+[试试这些提示现在](https://app.github.media/e/er?s=88570519\&lid=6377\&elqTrackId=ea7174154a2549e4b4dcad9c2c7758cb\&elq=67e4a6f189074ae0830cf2c3bf3e3378\&elqaid=4144\&elqat=1)
+
+***
+
+$156
+
+
