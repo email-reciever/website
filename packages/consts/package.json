@@ -25,6 +25,12 @@
       "types": "./dist/regexp.d.ts",
       "default": "./dist/regexp.cjs"
     },
+    "./zhihu": {
+      "import": "./dist/zhihu.js",
+      "require": "./dist/zhihu.cjs",
+      "types": "./dist/zhihu.d.ts",
+      "default": "./dist/zhihu.cjs"
+    },
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.cjs",

@@ -11,6 +11,7 @@ export default defineConfig({
         index: resolve(__dirname, 'src', 'index.ts'),
         regexp: resolve(__dirname, 'src', 'regexp.ts'),
         github: resolve(__dirname, 'src', 'github.ts'),
+        zhihu: resolve(__dirname, 'src', 'zhihu.ts'),
         'white-lists': resolve(__dirname, 'src', 'white-lists.ts')
       }
     }
