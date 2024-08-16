@@ -32,6 +32,9 @@ export default defineConfig({
       alias: {
         '@': resolve(import.meta.dirname, 'src')
       }
+    },
+    ssr: {
+      external: ['node:buffer']
     }
   },
   experimental: {
