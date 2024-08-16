@@ -17,7 +17,7 @@ All subscription feeds can be found [WHITE-LISTS](/packages/consts/src/white-lis
 | ARCUPDATE      | members@arc.net                         |
 | ALEXKONDOV     | alexkondov38@147790190.mailchimpapp.com |
 | INSIDERGITHUB  | insider@github.com                      |
-| ZHIHU          | ihttps://rsshub.tinsfox.com             |
+| ZHIHU          | https://rsshub.tinsfox.com              |
 
 ## 👀 Want to get more?
 
