@@ -34,7 +34,7 @@ export default defineConfig({
       }
     },
     ssr: {
-      external: ['node:buffer', 'node:worker_threads', 'node:async_hooks', 'MessageChannel']
+      external: ['node:buffer', 'node:worker_threads', 'node:async_hooks']
     },
     build: {
       minify: false,
@@ -42,7 +42,7 @@ export default defineConfig({
   },
   experimental: {
     actions: true,
-    // contentCollectionCache: true,
+    contentCollectionCache: true,
     clientPrerender: true,
     globalRoutePriority: true,
     serverIslands: true,

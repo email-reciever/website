@@ -11,9 +11,11 @@
     "sr": "pnpm -F=\"@email.reciever/server\" dev",
     "parser:deploy": "pnpm -F=\"@email.reciever/parser\" run deploy",
     "start": "astro dev",
+    "postinstall": "pnpm run build:consts",
     "build:consts": "pnpm -F=\"@email.reciever/consts\" build",
-    "build": "pnpm run build:consts  && astro build",
-    "preview": "astro preview",
+    "check": "astro check",
+    "build": " astro build",
+    "preview": "wrangler pages dev ./dist",
     "astro": "astro",
     "up:r": "pnpm up -r"
   },
@@ -66,9 +68,9 @@
     "input-otp": "^1.2.4",
     "lucide-react": "^0.419.0",
     "next-themes": "^0.3.0",
-    "react": "19.0.0-rc-a7d1240c-20240731",
+    "react": "^18.3.1",
     "react-day-picker": "8.10.1",
-    "react-dom": "19.0.0-rc-a7d1240c-20240731",
+    "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.2",
     "react-resizable-panels": "^2.0.23",
     "recharts": "^2.12.7",
@@ -90,7 +92,8 @@
     "@email.reciever/types": "workspace:^",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "shadcn-ui": "^0.8.0"
+    "shadcn-ui": "^0.8.0",
+    "wrangler": "^3.71.0"
   },
   "licenses": [
     {

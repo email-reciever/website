@@ -1,3 +1,4 @@
 {
-  "tailwindCSS.experimental.configFile": "tailwind.config.mts"
+  "tailwindCSS.experimental.configFile": "tailwind.config.mts",
+  "deepscan.ignoreConfirmWarning": true
 }
