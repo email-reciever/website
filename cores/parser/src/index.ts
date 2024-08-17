@@ -77,30 +77,38 @@ export default {
 		return Response.redirect(repoURI);
 	},
 	async email(message, env, ctx) {
-		const emailSender = message.from;
-		if (checkEmailSendValid(emailSender) && message.rawSize) {
-			// collect major infomation
-			const { from, raw } = message;
-			const { text, html, subject, date, headers } = await postalMime.parse(raw);
+		try {
+			const emailSender = message.from;
+			if (checkEmailSendValid(emailSender) && message.rawSize) {
+				// collect major infomation
+				const { from, raw } = message;
+				const { text, html, subject, date, headers } = await postalMime.parse(raw);
 
-			// get email sender type, also use for collect dir. example: reactdigest/xxx
-			const dir = getEmailSenderType(from);
-			// default use content like total text
-			// with different email sender, use adapter to collect right content for translate
-			const { blogContent = text, collectLinks, origin_url = 'javascript:;' } = await adapter[dir](text!, html!, headers, env);
-			// translate content
-			const translatedMD = await md(blogContent!, env, collectLinks);
+				// get email sender type, also use for collect dir. example: reactdigest/xxx
+				const dir = getEmailSenderType(from);
+				// default use content like total text
+				// with different email sender, use adapter to collect right content for translate
+				const { blogContent = text, collectLinks, origin_url = 'javascript:;' } = await adapter[dir](text!, html!, headers, env);
+				// translate content
+				const translatedMD = await md(blogContent!, env, collectLinks);
 
-			const title = subject ?? `${from}`;
-			// generate frontmatter
-			const basicFrontMatter: frontmatter = {
-				...createCommonFrontmatter(title, dir, origin_url, date),
-				email_recorder: from,
-			};
+				const title = subject ?? `${from}`;
+				// generate frontmatter
+				const basicFrontMatter: frontmatter = {
+					...createCommonFrontmatter(title, dir, origin_url, date),
+					email_recorder: from,
+				};
 
-			await createBlog(translatedMD, blogContent!, basicFrontMatter, env);
-		} else {
-			message.setReject('Unknown Sender!!');
+				await createBlog(translatedMD, blogContent!, basicFrontMatter, env);
+			} else {
+				message.setReject('Unknown Sender!!');
+			}
+		} catch (e) {
+			console.log('email parse error', e);
 		}
+	},
+	async tail(event, env) {
+		const key = dayjs().toISOString();
+		await env.LOGGER.put(key, JSON.stringify(event));
 	},
 } satisfies ExportedHandler<Env>;
