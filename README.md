@@ -1,4 +1,4 @@
-<a align="center" href="https://email-reciever.page.dev" target="_blank" rel="noopener"><img src="https://github.com/email-reciever/website/raw/main/public/media-source/email-reciever.png?sanitize=true" alt="Logo" style="max-width: 100%;" /></a>
+<a align="center" href="https://email-reciever.pages.dev" target="_blank" rel="noopener"><img src="https://github.com/email-reciever/website/raw/main/public/media-source/email-reciever.png?sanitize=true" alt="Logo" style="max-width: 100%;" /></a>
 
 A website that automatically translates subscription source emails and organizes the output to be saved as a document. The translation is a bit mechanical though. But can save some unnecessary access time
 

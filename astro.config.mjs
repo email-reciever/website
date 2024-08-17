@@ -12,7 +12,7 @@ import { name, description, repository } from './package.json'
 // https://astro.build/config
 export default defineConfig({
   // normal config
-  site: 'https://email-reciever.page.dev',
+  site: 'https://email-reciever.pages.dev',
   server: {
     host: true,
     port: 10990,
