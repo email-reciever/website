@@ -8,4 +8,5 @@ interface Env {
 	ENV?: 'dev';
 	ZHIHU_COOKIE: string;
 	LOGGER: R2Bucket;
+	SELF_EMAIL: string;
 }

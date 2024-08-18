@@ -83,7 +83,7 @@ export default {
 			// collect major infomation
 			const { text, html, subject, date, headers } = await postalMime.parse(raw);
 			// use a logger collect info
-			console.log('recieve email', html);
+			console.log('recieve email', text, html);
 			if (checkEmailSendValid(emailSender) && message.rawSize) {
 				// get email sender type, also use for collect dir. example: reactdigest/xxx
 				const dir = getEmailSenderType(from);
@@ -102,7 +102,9 @@ export default {
 
 				await createBlog(translatedMD, blogContent!, basicFrontMatter, env);
 			} else {
-				message.setReject('Unknown Sender!!');
+				if (emailSender !== env.SELF_EMAIL) {
+					message.setReject('Unknown Sender!!');
+				}
 			}
 		} catch (e) {
 			console.log('email parse error', e);

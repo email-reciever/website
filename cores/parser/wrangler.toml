@@ -3,6 +3,8 @@ compatibility_date = "2024-08-01"
 compatibility_flags = ["nodejs_compat"]
 main = "src/index.ts"
 name = "subscribe-email"
+# more useage
+upload_source_maps = true
 
 # Automatically place your workloads in an optimal location to minimize latency.
 # If you are running back-end logic in a Worker, running it closer to your back-end infrastructure
@@ -105,6 +107,3 @@ bucket_name = "email-reciever-logger"
 # [[vectorize]]
 # binding = "MY_INDEX"
 # index_name = "my-index"
-
-# more useage
-upload_source_maps = true
