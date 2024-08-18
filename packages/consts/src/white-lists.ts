@@ -8,5 +8,6 @@ export const WHITELISTS = {
   ARCUPDATE: 'members@arc.net',
   ALEXKONDOV: 'alexkondov38@147790190.mailchimpapp.com',
   INSIDERGITHUB: 'insider@github.com',
-  ZHIHU: 'https://rsshub.tinsfox.com'
+  ZHIHU: 'https://rsshub.tinsfox.com',
+  AJIANG: 'https://email-reciever.page.dev'
 } as const

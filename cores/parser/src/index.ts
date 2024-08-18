@@ -22,7 +22,7 @@ import type { Adapter, SenderType } from './types';
 
 dayjs.locale('zh-cn');
 
-const adapter: Record<SenderType, Adapter> = {
+const adapter: Partial<Record<SenderType, Adapter>> = {
 	reactdigest: rd,
 	tyler,
 	alexkondov,
@@ -53,7 +53,7 @@ export default {
 			// debug with https://kreata.ee/postal-mime/example/
 			if (markdownContent?.length) {
 				// with different email sender, use adapter to collect right content for translate
-				const { blogContent = markdownContent, collectLinks, origin_url } = await adapter[type](markdownContent!, html, [], env);
+				const { blogContent = markdownContent, collectLinks, origin_url } = await adapter[type]!(markdownContent!, html, [], env);
 				// translate content
 				const translatedMD = await md(blogContent!, env, collectLinks);
 
@@ -89,7 +89,7 @@ export default {
 				const dir = getEmailSenderType(from);
 				// default use content like total text
 				// with different email sender, use adapter to collect right content for translate
-				const { blogContent = text, collectLinks, origin_url = 'javascript:;' } = await adapter[dir](text!, html!, headers, env);
+				const { blogContent = text, collectLinks, origin_url = 'javascript:;' } = await adapter[dir]!(text!, html!, headers, env);
 				// translate content
 				const translatedMD = await md(blogContent!, env, collectLinks);
 
