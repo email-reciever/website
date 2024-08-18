@@ -41,7 +41,6 @@ export default defineConfig({
     }
   },
   experimental: {
-    actions: true,
     contentCollectionCache: true,
     clientPrerender: true,
     globalRoutePriority: true,

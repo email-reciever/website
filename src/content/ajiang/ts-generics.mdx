@@ -1,0 +1,324 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 浅谈泛型
+description: 简单聊聊 Typescript 中的 泛型(<T>)
+date: 星期一 9 上午 八月 19o 2024
+author: ajiang
+origin_url: https://mp.weixin.qq.com/mp/homepage?__biz=Mzg5NzI0MzgwNQ==&hid=3
+origin_site: https://mp.weixin.qq.com/mp/homepage?__biz=Mzg5NzI0MzgwNQ==&hid=3
+translated: true
+avatar: /media-source/ajiang-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx'
+import { Reference } from '@/components/Reference.tsx'
+
+<Reference
+  client:only="react"
+  title="浅谈泛型"
+  url="https://mailchi.mp/3cad32bff06c/a-front-end-engineers-take-on-llms?e=6955ce1080"
+/>
+
+在开始聊之前, 我们首先要知道泛型是什么?
+
+引用一段官方的话:
+
+<a href="https://www.typescriptlang.org/docs/handbook/2/generics.html">
+  <blockquote>
+  A major part of software engineering is building components that not only have well-defined and consistent APIs, but are also reusable. Components that are capable of working on the data of today as well as the data of tomorrow will give you the most flexible capabilities for building up large software systems.
+
+In languages like C# and Java, one of the main tools in the toolbox for creating reusable components is generics, that is, being able to create a component that can work over a variety of types rather than a single one. This allows users to consume these components and use their own types.
+
+  </blockquote>
+</a>
+
+直译下来就是:
+
+<blockquote>
+软件工程的一个主要部分是构建不仅具有定义明确、一致的应用程序接口，而且可以重复使用的组件。组件既能处理当前的数据，也能处理未来的数据，这将为您构建大型软件系统提供最灵活的能力。
+
+在 C# 和 Java 等语言中，创建可重用组件的工具箱中的一个主要工具就是泛型，也就是说，创建的组件可以在多种类型而不是单一类型中工作。这样，用户就可以使用这些组件，并使用他们自己的类型。
+
+</blockquote>
+
+简单总结就是: **可重复使用(reusable)**、**处理未来数据(as well as the data of tomorrow)** 和 **非单一的多种类型(over a variety of types)**
+
+emmmm~ 还是很书面并且没有什么具象化的词语。我个人对泛型的一个理解是:
+
+> 一个参数化的类型系统。不指定时可根据类型推导转换为任意的类型，并可以在作用域(这个也许说的不是很准确, 但是用作用域大家比较好比对)范围内重复使用; 若指定类型或继承类型则进行类型收窄来完成更具体的类型声明和赋予的职责。
+
+下面我们用一些例子慢慢的了解一下泛型在类型系统中的用处和它的一些场景。
+
+## 语法
+
+泛型在 `typescript` 中的语法为使用尖括号包裹的泛型声明完成泛型的定义. 如:
+
+1. 类型泛型 - [Playground Link](https://www.typescriptlang.org/play/?#code/JYOwLgpgTgZghgYwgAgJIFsAOAbAggHgBUA+ZAbwFgAoZZEOdCALmQGcwpQBza2zKAPaZWLQsgD045IBNrQCCagZ2VA-vKAKV0DbNoGj1QDrygLjlAYXLJ+Q1skAhboG8fdQDpkgGADAbnqAqc0Cf2sjGAtBUC4SoGnNQGjKgNCNANlNAEK8TZAgAD0gQABNjQBkI7WtAeENAZxVAAXcDQWFTC0AY7UALRUBGVxVAcvlAU3NAZsVALO1qAF9qaklkUpU0LDxqBAEQdmQAVVZoXBYMHAIyZAALCGAuSbAWEABXdAAjaGRa0gBecl46BmZkAHI4ACtgOBAuY4AafcNhFkoaWimZuYXkAEYADgAGfb1KjA6hgACemBQACEiMhduxONcdntXvRGCxEdwHlkRK4JFI5BpAJDmukAG3mAEuiLGwONxrIBToJUgFAAwCwcoACeUASAkaQCYSpkjMhAFeBgAqlbQ0pFcZAWOoNKhNFSUwA8Cp1ur0BtBoSxofDUbR0UdThcrjd7q9HnjjqwBIw+cJjnUgA)
+
+```ts
+interface ImplA<T> {
+  name: string
+  // 此处即使用泛型作为了 props 的类型. 而并未对 T 做初始化或收窄的 extends 行为. 意味着 props 的类型完全由使用侧来决定
+  props: T
+}
+
+// 使用侧使用 ImplA
+const UserA: ImplA<{ height: number }> = {
+  name: 'ajiang',
+  props: {
+    height: 180
+  }
+}
+
+type B<T = string> = {
+  name: string
+  // 此处泛型有了默认类型 string. 若使用者不传递泛型则 props 自动为 string 类型
+  props: T
+}
+
+// 使用默认值
+const UserB: B = {
+  name: 'ajiang',
+  props: 'some props'
+}
+```
+
+2. 函数泛型 - [Playground Link](https://www.typescriptlang.org/play/?jsx=1#code/GYVwdgxgLglg9mABAIwIYCcA8AVAfACjFQFsBTALkWwEpEBvAWAChFF1SoR0kiyBuRAHpBiQJvxgGcTAiEaAbuUD3yoFO5QBTqgNH9AifGALNUChioEXlQA3OgX8VADqYoMiQCFugFfjAe2qBvH0DR6oCx5QFeBgCqVA4BaALm0AIRlQB0iQGdlQA3lQC45F0BAA0AK40Af7UAKV0B2I0Bk+MBTRTNNQE7tf0A0I0BwY0As7RCE-LNAbZs7e2YAX2ZmYUQYlOYIBABnKEQQFtJ0ADkSUkQAXhN0fAByVAArVDAAczHaOuawNo6u3v7KACIpmdmtptb23lIAZSh0EGghkfw6RGAYdDa+skoJsYAaRAAbVBfNogxpMYHsxohKosRMtVidzpdoJR7o9nlBXhREG10DA5gI-gC3piLjjZgJqkw6vZGkwYe0sST0Tc0Fh6XMCBMQWCoYhaUTsXN0ZRWbMahSRIBa70ALJpGQAPGoA4M0OK3aGHQcAA7gAhUzDHCfAgnSg0Ia4RAnWoiQD+8rFAJ2mgHh9QAwKoAoOX8EkAjDqAWDlAFiagC0FQAasYAH+NFdStiBxUG6wFQEAG8uYYYjUYGAEliAAHH5a9D0ZisHD6wE0Q18KpBkSAIATYoA4uSMZkAb6aATAVAADpgEDIwCziYAG03ljv9ZiMzFAkFgCFDaYzGDzhALtEYLDYHC4PH6xaY5MVqwH0HgYBT6czlB3Y6zwxgo8zpcQgCDNQA55oBng2binldfrgDyNQAFSoANvMAJdGAHgUsoBQAMAAnlACQE+wW0AWSVADt-MpAGfA0MwHDdBI2jRBABBNON4ITZCD0zAB1GAoAACyTMBgG6PNs1nSdCULKhl1XGkjgecBNwQbCMGI0j0H3U8MDwwiOLIjlQTmMYTWPHj0CAA)
+
+```ts
+// 一般函数声明
+function bar<T>(name: T) {
+  return name // 这里我们可以在编辑器内发现函数 bar 的返回类型会自动标注成 T. 即变为动态推导用户输入的内容. 或指定为用户指定的泛型类型
+}
+
+// 推导输入
+const userName = bar('ajang')
+// const userName: "ajang"
+
+const nameStruct = bar({ firstName: 'a', lastName: 'jiang' })
+// const nameStruct: { firstName: string; lastName: string; }
+
+// 类型输入
+const stringName = bar<string>('ajiang')
+// const stringName: string
+
+// 箭头函数声明
+const arrowBar = <T>(name: T) => name
+// 使用方式同上. 这里就不多做赘述
+
+// 使用 interface 声明
+interface ImplBar {
+  <T>(name: T): T
+}
+
+// 适用于函数的时候需要重新声明上述的函数
+function implBar<T>(name: T) {
+  return name
+}
+
+const functionImplBar: ImplBar = implBar
+// const functionImplBar: ImplBar
+
+// 如果想要在声明的时候增加默认值或者传递类型需要前置泛型至 interface 处
+interface ImplBarWithInfer<T> {
+  (name: T): T
+}
+
+const functionImplBarInfer: ImplBarWithInfer<'ajiang'> = implBar
+// const functionImplBarInfer: ImplBarWithInfer<"ajiang">
+```
+
+3.  `extends` 关键字
+    使用泛型很大程度上都离不开 `extends`. 从我个人的理解上来讲. `extends` 有两个作用:
+
+    - 类型收窄 - [Playground Link](https://www.typescriptlang.org/play/?jsx=1&ssl=5&ssc=39&pln=1&pc=1#code/GYVwdgxgLglg9mABAcwKZQHIwgawwQwFtUAeAFUVQA8pUwATAZ0UagCcYxkAaRAVUQBeRBWq0GzAAb4AJAG9OwVG0QAlAL6TEAfjWIAXCIB8ACjBFUhsgEpEcgLAAoRIjboQbJGYsA6VvjYoRgB1GCgACxMAcnwo211zYj8AG2xUEwBGW0NE1Ft8Zj4ndScnCARWRDBsPAshFHQsXAJiaPwAKxh8LjigA)
+      因为当你不对你设置的泛型进行限制的时候. 这时泛型完全由使用侧来决定. 而一般情况下我们的内部都会用到声明的泛型来完成一些列的逻辑操作或类型推导.
+      这个时候其实我们的泛型在某种程度上已经确定了一个范围. 这个时候. 我们就需要使用 `extends` 来限制使用侧输入的范围了
+
+      ```ts
+      // 这里我们限制了 name 为 string 类型. 再通过特定的结构匹配来完成最终 nickName 的类型推导
+      function getNickName<
+        T extends string,
+        U = T extends `a${infer R}` ? R : T
+      >(name: T) {
+        return (name.startsWith('a') ? name.slice(1) : name) as U
+      }
+
+      // const nickName: "jiang"
+      const nickName = getNickName('ajiang')
+      ```
+
+    - 后续泛型推导. 上述例子中的 `U` 就是通过前置收窄泛型 `T` 来完成最终类型的推导. 其中还搭配了 `infer` 来完成了临时类型变量的声明辅助完成了最终类型的生成
+
+## 场景
+
+掌握语法后我们利用场景来看看泛型在使用中可以有怎样的效果.
+
+### 多个泛型类型推导 - [Playground Link](https://www.typescriptlang.org/play/?jsx=1#code/PTAEkQjQbuUU3NH95QKV0L+KgHU2oGO1AIRoADlBUcobx9AeeVAAUBLAYwGtRAQt0HylQX4CA6UQWDlBAyMBqjQA3NAX6MC45QKaqrQC9ugUuN4oAA4VKLQL6agIgiAsACgAZgFcAduQAupAPbbpsgDxrQoAEqgApgA89d7QBMAzjbvlDAJ1dm7nq+pNoA5gA0oDqU2oYA7toAfBGWoADS9k4uHqAAFJR2AJ6G6jYAlADaALqpqlYAqqAAvKAA3qCVACqgoRmV2poAtgBGdr7V1QBcNt3VoAC+akl5egCGvmF2ejPWUYVF7jPp5e1pvtuaviYH7kwXrprkdnlpVnnuhlfP+8WnzUl8h0mCDPt87FFKgdpqB1pttlDivMFuU6lYrG0FqA1p4Gmlymolqo1D5tEFQCMNi0zvVQNo1kM7DMAORrABWpDW4WZaNAAAs7KQwnydqAAIwADgADLztLIAHIMpmgZkcrlhZmEtQk4zk+mMgDivi+UmpMioeUpvkhzP1dh5KrlVEVjOZ1VOIFApL1SqNJpmHTtMyCIXCAG46QqlcHgqEwhGiWpPYBToKggGeDdiAduDAGvKgBezQB9PoAxxRoeEA0epRQD3yoBTuQQ2M83r0oEA2-GAGQjABx6gHnEwC1poAAKJYsEA89Y4QA8CoAdeX4gGV9QCySoA6VJLpZ1ZMbDa5egAQlTWm00kGVezOdzeQKhSKZpKZTuo4yWWruYS617dXptaoG4+l6uXXY-ZpTa1zZQeQrto64bDadoOraV72u6oCem+wF6F+P5SAGdLRqAABE+7qphEZOpQX4zJht5hHhixAA)
+
+这个属于我们比较常见的一种使用方式. 该场景主要适用于不确定输入源遵守一定的类型收窄效果来完成后续参数的类型推导.
+
+```ts
+// 我们来使用函数来完成一个类似 Pick 的功能. 不要抬杠说为啥不直接用 pick. 好蠢
+function pick<
+  R extends Record<string, unknown>,
+  K extends (keyof R)[],
+  U = { [T in K[number]]: R[T] }
+>(target: R, keys: K) {
+  return keys.reduce(
+    (source, key) => ({ ...source, [key]: target[key] }),
+    {} as U
+  )
+}
+
+const bar = {
+  name: 'ajiang',
+  height: 180,
+  nickName: 'jiang'
+}
+
+const nameGroup = pick(bar, ['name', 'nickName'])
+// const nameGroup: { name: string; nickName: string; }
+
+// 若我们想要获取更精准的类型, 可以使用 as const 进行常量断言. 使每个值作为当前键的类型
+const constantBar = {
+  name: 'ajiang',
+  height: 180,
+  nickName: 'jiang'
+} as const
+
+const constantNameGroup = pick(constantBar, ['name', 'nickName'])
+// const constantNameGroup: { name: "ajiang"; nickName: "jiang"; }
+```
+
+细心的铁汁可能已经发现了, 我们第三个泛型类型是一个我们常用的泛型 `interface` 的变体. 它使用元组 `Tuple` 作为键的类型. 再使用对应的每个键来完成值类型的获取.
+可能有的铁汁会说, 那使用 `Record<K[number], R[K[number]]>` 不行么? 我们来验证一下 - [Playground Link](https://www.typescriptlang.org/play/?jsx=1#code/PTAEkQjQbuUU3NH95QKV0L+KgHU2oGO1AIRoADlBUcobx9AeeVAAUBLAYwGtRAQt0HylQX4CA6UQWDlBAyMBqjQA3NAX6MC45QKaqrQC9ugUuN4oAA4VKLQL6agIgiAsACgAZgFcAduQAupAPbbpsgDxrQoAEqgApgA89d7QBMAzjbvlDAJ1dm7nq+pNoA5gA0oDqU2oYA7toAfBGWoADS9k4uHqAAFJR2AJ6G6jYAlADaALqpqlYAqqAAvKAA3qCVACqgoRmV2poAtgBGdr7V1QBcNt3VoAC+akl5egCGvmF2ejPWUYVF7jPp5e1pvtuaviYH7kwXrprkdnlpVnnuhlfP+8WnzUl8h0mCDPt87FFKgdpqB1pttlDivMFuU6lYrG0FqA1p4Gmlymolqo1FpdAZjKYqNZvH4AmlbI5nG5PNSfP5AsFQpFotpYglkmiMlkmbkCsVShUaoKmq1WbSzOkBsMxhMotZKorBqNxpMkstVhstjsbL9DsdTm1zpdrqBbvc7I9nq96uiPl9fD9bX8WoC8sDQe7PYiijC4Ubg8jUW92licaA8S6CaoiWofNogqARhsWmcXdo1kM7DMAORrABWpDW4WLgoAFnZSGFa8aAIwADgADILtLIAHIFougYsVqthYuEtSp4wZ-OFgDivi+UhzMioeSzvkhxdndhrQ57VH7heL1VOIFAaZnA4XS5mHR3MyCIXCAG5QAfKEfB0+uW+iZe9EpSg5X8L8b00ZdWlXYCaX8dcNi3Hc923PsBxPJM1HPQBToKgQBng3YQB24MANeVABezQA+n0AMcUaDwQBo9SiQB75UAU7kEGxTwANAQBt+MAGQjAA49QB5xMAWtNAAAolhYEAeescEAHgVAB15fhAGV9QBZJUAOlTqJoqd00AgCqz0AAhbNWktPMBxLctK2rOsGybVtO27VDCxLEdq0JViL2nPRJ1UditO0PQwMXCCV1kPJvN0hDOm3NCohQw80NPUBzy8tztL8292nfYzQAAIlM0dMrfD8vxmTLHLCPLFnUjNoJA1wAGEkp8lKAqg2RquC+rQs3cKkKigrYvKIA).
+
+```ts
+function pickRecord<
+  R extends Record<string, unknown>,
+  K extends (keyof R)[],
+  U = Record<K[number], R[K[number]]>
+>(target: R, keys: K) {
+  return keys.reduce(
+    (source, key) => ({ ...source, [key]: target[key] }),
+    {} as U
+  )
+}
+
+const bar = {
+  name: 'ajiang',
+  height: 180,
+  nickName: 'jiang'
+}
+
+// const nameGroup: { name: string; nickName: string; }
+const nameGroup = pick(bar, ['name', 'nickName'])
+
+// const pickRecordNameGroup: Record<"name" | "nickName", string>
+const pickRecordNameGroup = pickRecord(bar, ['name', 'nickName'])
+
+const constantBar = {
+  name: 'ajiang',
+  height: 180,
+  nickName: 'jiang'
+} as const
+
+// const constantNameGroup: { name: "ajiang"; nickName: "jiang"; }
+const constantNameGroup = pick(constantBar, ['name', 'nickName'])
+
+// const pickRecordConstantNameGroup: Record<"name" | "nickName", "ajiang" | "jiang">
+const pickRecordConstantNameGroup = pickRecord(constantBar, [
+  'name',
+  'nickName'
+])
+```
+
+可以看到虽然也可以组装成我们所要的键和值的类型. 但是无法得到正确的映射. 若我们获取的键的类型均为相同的类型, 这时还没有什么太大的问题. 若像下面使用了 `const` 断言的, 就无法得到正确的类型匹配了
+
+像我们上面的那种 `Record<K[number], R[K[number]]>` 和我们去使用 `{[_: K[number]]: R[K[number]]}` 是没有区别的. 从这种写法你就可以更直观的看出来值的类型和键只有收拢的关系没有匹配的关系.  
+而我们使用 `{ [T in K[number]]: R[T] }` 的时候可以得到临时的泛型`T`去代表当前的每个键再去匹配我们当前获取对象的每个键的值的类型就成为了可能, 完成了映射的匹配
+
+### 配合内置类型方法进行类型转换
+
+其实上面的也算一种. 我们下面说几种比较常用也比较通用的方法.
+
+1. 快速去除 `readonly` - [Playground Link](https://www.typescriptlang.org/play/?jsx=1&ssl=12&ssc=2&pln=7&pc=1#code/C4TwDgpgBAqgdgJQgQwCYHs4BsQB4AqAfFALxQDeAsAFBRQC0ATihtiFANoDSUAlnFADWEEOgBmUfAF0AXJO5SoEAB7AIcVAGcoSAMbpGqXMjggANFBMhCNOnQD8sRC0w4CCm7Ttz8CmgF8aGn41RjFkXWgASQBbMCwkNFd2Ki9mJLYoOGQYiDlNYEZ+AHMAblsodNYcKDBGdDBNOUTqvFS7KAALCF5izuA5OABXGIAjCEYK-09A6hpQSCcW5Nj40iWXNlxVhM2cTxp9OALK9Dkd5cyyciycvKgAcmQAK14TYoeLOoamii6evoDKAARgAHAAGKD+KE0eoAOm+jTh3V6-XWYIAzEFqEcTkNGHJ4JccDt1jdsrk5E9Xu9PrV6o05DcUYC5GDIdDZjR8QiGZpkQC0WRMUA)
+
+```ts
+type UnReadonly<T> = {
+  -readonly [K in keyof T]: T[K] extends Record<any, any>
+    ? UnReadonly<T[K]>
+    : T[K]
+}
+
+interface ImplReadonly {
+  readonly name: string
+  readonly props: Readonly<{
+    height: number
+  }>
+}
+
+type UnReadonlyImpl = UnReadonly<ImplReadonly>
+
+const ro: ImplReadonly = { name: 'ajiang', props: { height: 180 } }
+// Cannot assign to 'height' because it is a read-only property.(2540)
+ro.props.height = 183
+
+const ur: UnReadonlyImpl = { name: 'ajiang', props: { height: 180 } }
+
+// it is ok
+ur.props.height = 183
+```
+
+上面的例子也使用到了一个技巧就是递归使用, 配合 `extends` 就可以完成任意深度的嵌套对象的去 `readonly` 化了.
+
+2. 模版字符串类型 - [Playground Link](https://www.typescriptlang.org/play/?jsx=1#code/GYVwdgxgLglg9mABAZwA4BsZQKrIKYBOAkmKiFADwBiieAHlHmACbIpQExgDmANIgFlaDJq3ace-ADLDGLNsg5duAPgAUXMlABciAAYASAN5UAvgH1jAi8amm9ASkRGAsAChEiCAkWIA2sD8ALb86AC6iAC8iJrkAHRomFBqAOTmKU4Ahmx+VPwC0mHungR4UCAESK4enojAMASKuoHFtUEwzMzoeLohrZ7o2TqI6K2m7uNu7olYuIQkWqmZAFYwmTzmABZ4MNybUOYAjAAcAMwZQA)
+
+有的时候我们需要限制用户使用方法的输入的格式来完成我们的内容获取. 比如我们要求用户来输入一串 `first_middle_last` 这样有规律且每个部分都有特定意义的字符时. 并从中获取对应的每个特定值的类型. 这个时候泛型就派上用场了
+
+```ts
+function splitUserInput<F extends string, M extends string, L extends string>(
+  input: `${F}_${M}_${L}`
+) {
+  const [f, m, l] = input.split('_') as [F, M, L]
+  return {
+    first: f,
+    middle: m,
+    last: l
+  }
+}
+
+splitUserInput('ajiang_height_183')
+
+/**
+ function splitUserInput<"ajiang", "height", "183">(input: "ajiang_height_183"): {
+    first: "ajiang";
+    middle: "height";
+    last: "183";
+  }
+*/
+```
+
+从这个例子我们更加明显的可以感知到, 泛型的一个很大的作用就是作为类型参数存在, 而在当前作用域中复用或者产出来完成整个类型整体的推导
+
+3. 上述例子其实我们还可以扩展一个常用的就是 `snake_case` 转换为 `camelCase` - [Playground Link](https://www.typescriptlang.org/play/?jsx=1&ssl=8&ssc=26&pln=1&pc=1#code/GYVwdgxgLglg9mABFOBhAhgWwKYBsMDO2APALABQiiAKotgB5TZgAmBiABgCQDeBUAJxhgA5gF8A+r35DRYjgBpEFKgFVEAXhp1GzNp17Dg2AYgAy2YFEmGwx0wCUYIgBbWOiAPyInrqDqZWdm4eIxNEADEYAX4xW3sfbFiPbxCLKzieVQAHbJMIdCJiKJioAD5MhyT3RAAuAx50614cvIECot83Co966goygAoCMHQAa2xCbD6ASkQeFUQBbCgQASQR8cnC7AA6ZezcdAhsQYB6QYkAbXQAWgAvAF0eAEYxGbORJUHMdCgIFxzDRlRC-f4ufbYQ7HU5nCRnJQAckRM12KFaJimgxmc0KiFUFDEFAoKAwOHwO0GiM2EwkHWwKKAA)
+
+```ts
+function toCamelCase<
+  T extends `${string}_${string}`,
+  U = T extends `${infer Left}_${infer Right}`
+    ? Right extends `${infer First}${infer Rest}`
+      ? `${Left}${Uppercase<First>}${Rest}`
+      : `${Left}${Uppercase<Right>}`
+    : T
+>(snakeCase: T) {
+  return snakeCase.replace(/(_[a-z]{1})/g, (match) =>
+    match.replace(/_/, '').toUpperCase()
+  ) as U
+}
+
+toCamelCase('snake_case')
+```
+
+以上就是泛型的一些小技巧和我们根据场景来完成的一些泛型的理解. 当然泛型的妙处还不止如此, 只要善用 `extends` 和 `infer` 我们可以完成更多复杂的类型撰写. 但是万变不离其宗. 基础语法还是这些.
