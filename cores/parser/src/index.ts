@@ -78,12 +78,13 @@ export default {
 	},
 	async email(message, env, ctx) {
 		try {
+			const { from, raw } = message;
 			const emailSender = message.from;
+			// collect major infomation
+			const { text, html, subject, date, headers } = await postalMime.parse(raw);
+			// use a logger collect info
+			console.log('recieve email', html);
 			if (checkEmailSendValid(emailSender) && message.rawSize) {
-				// collect major infomation
-				const { from, raw } = message;
-				const { text, html, subject, date, headers } = await postalMime.parse(raw);
-
 				// get email sender type, also use for collect dir. example: reactdigest/xxx
 				const dir = getEmailSenderType(from);
 				// default use content like total text
