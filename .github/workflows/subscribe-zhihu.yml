@@ -7,7 +7,7 @@ on:
 
 jobs:
   trigger:
-    runs-on: trigger workers
+    runs-on: ubuntu-latest
     steps:
       - name: send trigger curl
         uses: indiesdev/curl@v1.1
