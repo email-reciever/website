@@ -4,6 +4,7 @@
 import { Octokit } from '@octokit/rest';
 import { encode, decode } from 'js-base64';
 import { ORGNAME, REPONAME } from '@email.reciever/consts/github';
+import { logger } from '../utils/logger';
 
 export type FileInfo = {
 	path: string;
@@ -30,7 +31,7 @@ export async function githubRead(fileName: string, env: Env) {
 	});
 
 	if (status < 300) {
-		console.log('fetch metadata success');
+		logger(env, 'fetch metadata success', fileName);
 		const { content, sha } = data as any;
 		return { content: content.length ? decode(content) : undefined, sha };
 	}
@@ -46,7 +47,7 @@ export async function github(file: FileInfo, env: Env) {
 	// base64 content
 	const content = encode(file.content);
 	// update or create blog
-	const { status } = await $github.rest.repos.createOrUpdateFileContents({
+	const { status, ...response } = await $github.rest.repos.createOrUpdateFileContents({
 		...$repo,
 		...file,
 		content,
@@ -54,6 +55,6 @@ export async function github(file: FileInfo, env: Env) {
 	});
 
 	if (status < 300) {
-		console.log('create blog success');
+		logger(env, 'create or update file success', file.path, response);
 	}
 }

@@ -15,6 +15,8 @@ import { alexkondov } from './adapters/alexkondov';
 import { insidergithub } from './adapters/insidergithub';
 import { zhihu } from './adapters/zhihu';
 
+import { logger } from './utils/logger';
+
 import { createBlog, createCommonFrontmatter, checkEmailSendValid, getEmailSenderType } from './utils/blog';
 
 import type { frontmatter } from '@email.reciever/types/markdown-extends';
@@ -78,13 +80,13 @@ export default {
 	},
 	async email(message, env, ctx) {
 		try {
-			const { from, raw } = message;
-			const emailSender = message.from;
+			const { raw } = message;
 			// collect major infomation
-			const { text, html, subject, date, headers } = await postalMime.parse(raw);
+			const { from, text, html, subject, date, headers } = await postalMime.parse(raw);
+			const emailSender = from.address;
 			// use a logger collect info
-			console.log('recieve email', text, html);
-			if (checkEmailSendValid(emailSender) && message.rawSize) {
+			logger(env, 'recieve email', emailSender, subject, text, html);
+			if (checkEmailSendValid(emailSender)) {
 				// get email sender type, also use for collect dir. example: reactdigest/xxx
 				const dir = getEmailSenderType(from);
 				// default use content like total text
@@ -97,7 +99,7 @@ export default {
 				// generate frontmatter
 				const basicFrontMatter: frontmatter = {
 					...createCommonFrontmatter(title, dir, origin_url, date),
-					email_recorder: from,
+					email_recorder: emailSender,
 				};
 
 				await createBlog(translatedMD, blogContent!, basicFrontMatter, env);
@@ -107,11 +109,7 @@ export default {
 				}
 			}
 		} catch (e) {
-			console.log('email parse error', e);
+			logger(env, 'email parse error', e);
 		}
-	},
-	async tail(event, env) {
-		const key = dayjs().toISOString();
-		await env.LOGGER.put(key, JSON.stringify(event));
 	},
 } satisfies ExportedHandler<Env>;

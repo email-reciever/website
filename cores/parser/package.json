@@ -12,7 +12,7 @@
 	"dependencies": {
 		"@email.reciever/consts": "workspace:^",
 		"@mixmark-io/domino": "^2.2.0",
-		"@octokit/rest": "^21.0.1",
+		"@octokit/rest": "^21.0.2",
 		"@types/unist": "^3.0.3",
 		"cheerio": "1.0.0-rc.12",
 		"dayjs": "^1.11.12",
@@ -29,15 +29,15 @@
 		"unist-util-visit": "^5.0.0"
 	},
 	"devDependencies": {
-		"@cloudflare/vitest-pool-workers": "^0.4.22",
-		"@cloudflare/workers-types": "^4.20240806.0",
+		"@cloudflare/vitest-pool-workers": "^0.4.23",
+		"@cloudflare/workers-types": "^4.20240815.0",
 		"@email.reciever/types": "workspace:^",
 		"@types/jsdom": "^21.1.7",
 		"@types/lodash.chunk": "^4.2.9",
-		"@types/node": "^20.14.15",
+		"@types/node": "^20.16.1",
 		"@types/turndown": "^5.0.5",
 		"typescript": "^5.5.4",
 		"vitest": "1.5.0",
-		"wrangler": "^3.71.0"
+		"wrangler": "^3.72.0"
 	}
 }

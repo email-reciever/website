@@ -3,9 +3,10 @@ import { WHITELISTS } from '@email.reciever/consts/white-lists';
 import { XMLParser } from 'fast-xml-parser';
 import { load } from 'cheerio';
 import { html2md } from '../utils/html2md';
-import { Adapter, AdapterOutput, SenderType } from '../types';
+import { Adapter, AdapterOutput } from '../types';
 import { getMetaData, setMetaData } from '../utils/metadata';
 import { createBlog, createCommonFrontmatter } from '../utils/blog';
+import { logger } from '../utils/logger';
 
 const host = WHITELISTS.ZHIHU;
 
@@ -59,7 +60,7 @@ async function crawlPost(item: PostItem, breakPoint: (string | string[] | RegExp
 			);
 		}
 	} catch (e) {
-		console.log('post crawl fail', item.title, e);
+		logger(env, 'post crawl fail', item.title, e);
 	}
 }
 
@@ -82,7 +83,7 @@ async function getUserLatestArticals(userId: Users, metadata: string[], env: Env
 
 		return [userId, updateArticals.map((v) => v.title)];
 	} catch (e) {
-		console.warn('get failed');
+		logger(env, 'getUserLatestArticals failed', e);
 	}
 }
 
