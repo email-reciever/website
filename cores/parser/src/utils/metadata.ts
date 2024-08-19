@@ -13,17 +13,25 @@ export async function getMetaData<R extends Record<string, any>>(key: SenderType
 		response = await githubRead(fileName, env);
 	}
 
-	const content = ((response as any)?.content || '{}').replace(/\\r\\n$/, '');
-
-	return JSON.parse(content) as R;
+	const { content = '{}', sha } = response ?? ({} as any);
+	const safeContent = content?.replace?.(/\\r\\n$/, '');
+	return {
+		content: JSON.parse(safeContent) as R,
+		sha,
+	};
 }
 
-export async function setMetaData<R extends Record<string, any>>(key: SenderType, content: R, env: Env) {
+export async function setMetaData<R extends Record<string, any>>(key: SenderType, content: R, env: Env, sha?: string) {
 	const fileName = `${key}.${metadataFileSuffix}`;
 	const payload: FileInfo = {
 		content: JSON.stringify(content),
 		path: fileName,
 	};
+
+	if (sha) {
+		payload.sha = sha;
+	}
+
 	if (env.ENV === 'dev') {
 		await local(payload, env);
 	} else {

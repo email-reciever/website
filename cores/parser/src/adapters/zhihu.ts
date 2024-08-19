@@ -3,7 +3,7 @@ import { WHITELISTS } from '@email.reciever/consts/white-lists';
 import { XMLParser } from 'fast-xml-parser';
 import { load } from 'cheerio';
 import { html2md } from '../utils/html2md';
-import { Adapter, AdapterOutput } from '../types';
+import { Adapter, AdapterOutput, SenderType } from '../types';
 import { getMetaData, setMetaData } from '../utils/metadata';
 import { createBlog, createCommonFrontmatter } from '../utils/blog';
 
@@ -97,7 +97,7 @@ function generators<R extends (...args: any[]) => Promise<any> | any>(processors
 }
 
 export const zhihu: Adapter = async (text, html, headers, env) => {
-	const metaData = await getMetaData('zhihu', env);
+	const { content: metaData, sha } = await getMetaData<Record<string, string[]>>('zhihu', env);
 	const processors = generators(Object.keys(ZHUSER).map((v) => () => getUserLatestArticals(v as Users, metaData[v] ?? [], env)));
 
 	let shouldUpdate = false;
@@ -111,7 +111,7 @@ export const zhihu: Adapter = async (text, html, headers, env) => {
 
 	// update metadata file
 	if (shouldUpdate) {
-		await setMetaData('zhihu', metaData, env);
+		await setMetaData('zhihu', metaData, env, sha);
 	}
 	return {} as AdapterOutput;
 };

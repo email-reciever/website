@@ -2,12 +2,13 @@
  * @description write markdown file to github repo
  */
 import { Octokit } from '@octokit/rest';
-import { encode } from 'js-base64';
+import { encode, decode } from 'js-base64';
 import { ORGNAME, REPONAME } from '@email.reciever/consts/github';
 
 export type FileInfo = {
 	path: string;
 	content: string;
+	sha?: string;
 };
 
 export const $repo = {
@@ -26,15 +27,12 @@ export async function githubRead(fileName: string, env: Env) {
 	const { status, data } = await $github.rest.repos.getContent({
 		...$repo,
 		path: fileName,
-		mediaType: {
-			format: 'raw',
-		},
 	});
 
 	if (status < 300) {
-		console.log('create blog success');
-
-		return { content: data };
+		console.log('fetch metadata success');
+		const { content, sha } = data as any;
+		return { content: content.length ? decode(content) : undefined, sha };
 	}
 }
 
