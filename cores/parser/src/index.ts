@@ -21,6 +21,7 @@ import { createBlog, createCommonFrontmatter, checkEmailSendValid, getEmailSende
 
 import type { frontmatter } from '@email.reciever/types/markdown-extends';
 import type { Adapter, SenderType } from './types';
+import { forward } from './utils/forward';
 
 dayjs.locale('zh-cn');
 
@@ -82,13 +83,21 @@ export default {
 		try {
 			const { raw } = message;
 			// collect major infomation
-			const { from, text, html, subject, date, headers } = await postalMime.parse(raw);
-			const emailSender = from.address;
+			let { from, text, html, subject, date, headers } = await postalMime.parse(raw);
+			let emailSender = from.address;
+			const selfForward = emailSender === env.SELF_EMAIL;
+			if (selfForward && subject) {
+				const forwardInfo = forward(subject);
+				if (forwardInfo?.sender) {
+					subject = forwardInfo.subject;
+					emailSender = forwardInfo.sender;
+				}
+			}
 			// use a logger collect info
 			logger(env, 'recieve email', emailSender, subject, text, html);
 			if (checkEmailSendValid(emailSender)) {
 				// get email sender type, also use for collect dir. example: reactdigest/xxx
-				const dir = getEmailSenderType(from);
+				const dir = getEmailSenderType(emailSender);
 				// default use content like total text
 				// with different email sender, use adapter to collect right content for translate
 				const { blogContent = text, collectLinks, origin_url = 'javascript:;' } = await adapter[dir]!(text!, html!, headers, env);
@@ -104,7 +113,7 @@ export default {
 
 				await createBlog(translatedMD, blogContent!, basicFrontMatter, env);
 			} else {
-				if (emailSender !== env.SELF_EMAIL) {
+				if (!selfForward) {
 					message.setReject('Unknown Sender!!');
 				}
 			}
