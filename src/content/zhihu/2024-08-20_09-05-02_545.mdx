@@ -1,0 +1,79 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 栗子前端技术周刊第 43 期 - Angular v18.2、LogicFlow 2.0、ViteConf 演讲者名单...
+description:  栗子前端技术周刊第 43 期 (2024.8.12 - 2024.8.18)：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。1. Angular v18.2：Angular v18.2 刚刚发布，带来了大量新的 DX 功能，包括新的诊断功能、新的 TypeScript isolatedModules 选项（用于改善生产构建时间）等等。 2. LogicFlow 2.0：LogicFlow 是一款滴滴客服技术团队开源的流程图编辑框架，它提供了一系列流程图交互、编辑所必需的功能和灵活的节点自定义、插件等拓展机制。LogicFLow 2.0 在功能性和稳定性方面都得到了显著提升，为用户和开发者提供了更强大的工具和能力支持。 
+date: 星期一 12 凌晨 八月 19o 2024
+author: zhihu
+origin_url: https://zhuanlan.zhihu.com/p/715113618
+origin_site: https://www.zhihu.com/people/wzy66/posts
+translated: false
+avatar: /media-source/zhihu-ico.png
+banner: https://picx.zhimg.com/v2-3bc0a8b21654e9817bd7bc04b9e32064_l.jpg
+subAuthor: 栗子前端
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="栗子前端技术周刊第 43 期 - Angular v18.2、LogicFlow 2.0、ViteConf 演讲者名单..." url="https://zhuanlan.zhihu.com/p/715113618" />
+
+
+
+**栗子前端技术周刊第 43 期 (2024.8.12 - 2024.8.18)**：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。
+
+## **技术资讯**
+
+**1\. [Angular v18.2](https://link.zhihu.com/?target=https%3A//github.com/angular/angular/blob/main/CHANGELOG.md)**：Angular v18.2 刚刚发布，带来了大量新的 DX 功能，包括新的诊断功能、新的 TypeScript isolatedModules 选项（用于改善生产构建时间）等等。  
+
+**2\. [LogicFlow 2.0](https://link.zhihu.com/?target=https%3A//site.logic-flow.cn/)**：LogicFlow 是一款滴滴客服技术团队开源的流程图编辑框架，它提供了一系列流程图交互、编辑所必需的功能和灵活的节点自定义、插件等拓展机制。LogicFLow 2.0 在功能性和稳定性方面都得到了显著提升，为用户和开发者提供了更强大的工具和能力支持。  
+
+![](https://pic2.zhimg.com/v2-e8faaf1b5a7a71bb6b61535abc09c05d_b.jpg)
+
+**3\. [ViteConf 公布演讲者名单](https://link.zhihu.com/?target=https%3A//viteconf.org/)**：ViteConf 刚刚公布了演讲者名单，其中包括 JavaScript 生态系统中几乎所有有趣项目的创建者和维护者。ViteConf 将在 10 月 3 日开始。
+
+![](https://pic3.zhimg.com/v2-4e4600f880c0a3a79dee019a0ac41196_b.jpg)
+
+**4\. [GitHub 全球性宕机](https://link.zhihu.com/?target=https%3A//www.infoq.cn/article/7qG56fhYfoH8kceRLC2T)**：GitHub 在 8 月 14 日遭遇全球性宕机，其中 Copilot 也瘫痪了，但目前系统已经回归正常。根据美国东部时间 8-14 8:26 的状态消息，GitHub 已经回滚了导致此番事故的数据库基础设施变更，并表示服务现已“全面恢复运行”。。  
+
+**5\. [ECMAScript 安全赋值操作符提案](https://link.zhihu.com/?target=https%3A//github.com/arthurfiorette/proposal-safe-assignment-operator)**：该提案提出了一种有趣的语法（?=），可从赋值中返回一个 `[error, value]` 元组。  
+
+```text
+const [error, response] ?= await fetch("https://arthur.place")
+```
+
+## **技术文章**
+
+**1\. [45 Visual Studio Code Shortcuts for Boosting Your Productivity](https://link.zhihu.com/?target=https%3A//www.sitepoint.com/visual-studio-code-keyboard-shortcuts/)**：VS Code 提高工作效率的快捷键 - 掌握 VS Code 可以大大提升开发体验，本文将讨论如何使用 VS Code 键盘快捷键来轻松导航、编辑和管理代码库。  
+
+**2\. [101 React Tips & Tricks For Beginners To Experts](https://link.zhihu.com/?target=https%3A//dev.to/_ndeyefatoudiop/101-react-tips-tricks-for-beginners-to-experts-4m11)**：101 个 React 技巧 - 作者在过去的 5 年中，一直在专业地使用 React，文中他将分享多年来学到的 101 个最佳技巧。  
+
+**3\. [前端容器化部署](https://link.zhihu.com/?target=https%3A//juejin.cn/post/7401144423562117172)**：作者将介绍关于“容器重启后丢失原前端资源”的现象和解决方案。  
+
+## **开发工具**
+
+**1\. [Volta 2.0](https://link.zhihu.com/?target=https%3A//volta.sh/)**：这是一款由 Rust 支持的老牌工具，用于安装和切换 JavaScript 相关工具（如 Node、TypeScript、Yarn 等）。
+
+```text
+volta list node // 查看 volta 已安装的 node 版本
+volta install node@<version> // 全局安装(安装并切换到当前版本)
+volta pin node@<version> // 项目中安装(当在项目中，执行该命令之后，会在项目的 package.json 中)
+```
+
+**2\. [jscodeshift 17.0](https://link.zhihu.com/?target=https%3A//github.com/facebook/jscodeshift)**：来自 Facebook 的 JavaScript codemod 工具包。
+
+```text
+jscodeshift(src)
+  .find(jscodeshift.Identifier)
+  .forEach(function(path) {
+    // do something with path
+  });
+```
+
+**3\. [tailwindcss-highlights](https://zhuanlan.zhihu.com/github.com/jln13x/tailwindcss-highlights)**：为文本添加高光的 Tailwind 插件 - 这里的 “高光 ”指的是一种类似于荧光笔的效果，用于在纸质文档上做标记，包括 20 种不同的效果。
+
+![](https://pic3.zhimg.com/v2-cd20199e715528142c00f7ff50a4a82a_b.jpg)
+
+_以上资讯文章选自常见周刊，如 JavaScript Weekly 等，周刊内容也会不断优化改进，希望你们能够喜欢。_
+
+
+
