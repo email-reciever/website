@@ -1,0 +1,92 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#455 The Forensics Of React Server Components
+description: RD#455 The Forensics Of React Server Components
+date: 星期日 04 下午 五月 12o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/forensics-react-server-components
+origin_site: https://newsletter.reactdigest.net/p/forensics-react-server-components
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#455 The Forensics Of React Server Components" url="https://newsletter.reactdigest.net/p/forensics-react-server-components" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1Ue89sFmLc8SZ8-bGX-O5IuMB2b0xL08CvrqFbbFUn_mOZIaBi8e8BoCK8-2gMEShrPnHDuwAOhujkM8VlMiY1CeDF8pqWzXT5GjozG1EOKfqHG5eeSgOwo2DEYL9nOaPxyKi7gAHlH7p9IFsvstTGNo35A_1TAywh0I81R4owzF_nBE5DhHOo5U_VWKKln_cR518bJ9kXDWZbErrlDvw_NxPS9xXrrEqqARLHJaZSZALzO0alB8jXQ-yQs3sPpJlGol7IDFcS4A0IGml2XAaveNmaHYAxBYvGyCGHdxVTLagMi5Bes0rhOvioBf10mAdfffBXUWjKiIABlqosskO1ul-GEAj3Dt1EMj-9sDR3cXtjainUEKw-9_SHTrsb6jka0sayrnBCpNc6bbdMxafBsZBrMO-O4Hp5nUAaYnyYrxwzGj6ijv87PyiN5L_xNr2EHzG8f5JcVhGDRfRKeM_uCuj99N1W0AurmWf8IWaPJm2v0ieCvhu2oVOVFdcMrYFoAkhXSZ1vPr2w6Jx6_jdZJi5tB_T6aVCDpPR4xiKlh1XdRNOAkkK853Xltt9cPZe8S6IK68FnOARkkELPwd131o8CFk1et1-75FBs6yhbZuYvJnQON83fuXOwEvdRCZDw/46a/-MPcrfIYTeGINXT219zlGQ/h0/h001.FmY8fZi4BPNpFmi94jti-mkE2TAyFI4DIN4o7MKUOa0)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/46a/-MPcrfIYTeGINXT219zlGQ/ho.gif)
+
+[The Forensics Of React Server Components](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqdUqvrAcuWP08tYMJ3IAaFO_vJ4JNbFh3P7-XsDELPrle72ODoziqicUVCyKx0CBz2ZSPrJUlIBPa8swW1ghg_Jt288FHFoz7TgBrzIHFGrrMx0kKZsXGiW9vAm6kNUCTIK0waZGRfLTRgZYIgCWKFVULMPmgd5dWd2O3nNl6jWj81obXXi1nZUL_6sJBtV4nOpFtMZSAWIWezdsxdqCIWewShXAoen1-Ln_LZ2T5JQ5VKDVDvEDuHHViw7RHVClrg/46a/-MPcrfIYTeGINXT219zlGQ/h1/h001.yoipEK8y_GVf_ntsw7V7dbSgYD6CgKeMonsHxJMlzW4)  
+_27 minutes_ by Lazar Nikolov
+
+React Server Components combine the best of client-side rendering, and author Lazar thoroughly examines how we got here with a deep look at the impact that RSCs have on the page load timeline.
+
+[Supabase is now GA](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO35oA5CkVYx29QDYAp0J07Iv9rhR0lD_zF0CLhhk4LOVL7IOF3T3kEjpTfPet2UNwe9K-0N8LtsWk9bFRKyaigvih5-TggO-AEFTpVULa8jyO3LghN62Rt5ZTmH--mxZ912sYjCTy_-_XoxH6V9-Fm7lNthpWC6BuaBCgbUM62CleULWOL4UvEtKKmZW7o0bSw/46a/-MPcrfIYTeGINXT219zlGQ/h2/h001.AR3lsgO0YelpG3KkZxn9zDXqcMa8hUqLeQzbYyo6_Z0)  
+_sponsored by Supabase_
+
+The open source Firebase alternative is now Generally Available.
+
+[A (Mostly) Complete Guide to React Rendering Behavior](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63kxVSnd3-RrNpdNkuw4zipdHvKg_fbIWnaqYhUxDjK8DrYDln-tL2GMw2MF0S5Ec6rjFRRc94ui97TmugT-InBOTf21UZIuLlP_aVFXQe4sV1Mv1fUD8rarNA-FdSfwNiMqZ0lS1iz3KLWRmr6tUAz67u5zUH33W0jV0qkp-bUzecO057Go-f41qFMKFXI1WrOBtvou3nwaC6SGrX_mc35AwNqsVfXshmatRCKuR7-vfxubFdsE73Gx9dWPM4yFXdI0xlGUedxULpsm6cFDdz24AZBEdXRGtzVbfsASlax3P/46a/-MPcrfIYTeGINXT219zlGQ/h3/h001.uf9K-GlYLzjyCrGVig2FCLLBt2yq-qmTPNbIemZcGiE)  
+_about 1 hour_ by Mark Erikson
+
+Details on how React rendering behaves, and how use of Context and React-Redux affect rendering.
+
+[Locality of Behavior in React Components](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw_tSr8xvIWN4j7Z6rD1otnm-6y5bjPTImMjm_hFkjV-GfSUN1uzUeuuYTOxMTXo3KMMaVmPNl1Vz3Fz8BIzlVpCG6nD3FUh8EQWY6rQRarXWa2WlcFEzHjR0YTj4JfA97q2E2-g8qHvBlh-eeyWJ20Uj0lwe6grLerzbvbUOYcY0ddYbCh7ivMZ3_WRka6bqJGzsSwD-ECNB9y2dNODH1UQ/46a/-MPcrfIYTeGINXT219zlGQ/h4/h001.D0YrSngwjuU9ASsLrXEBLflZ6jJmAF0HSLG8fL2pbnU)  
+_5 minutes_ by Alex Kondov
+
+While programming is solving a problem through code, engineering is maintaining that solution over time. After building software for the last 10 years, I’ve found the former is easy, but the latter isn’t.
+
+[React Strict Mode and Race Condition](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfLlFcsXOFpUrtXNVZnzChyYjtYuiCd4n2plsP2LokpXOuqNWkpK9wNGeP2rMTG2rIbhORFiugc8znyvjwnFgwbpN1yygBUKXGdiBJ16ifMwcg_wOwbT1NS7fqZm78LP8Ff4_uOECejtxrq9d32Ggnpy9MedbojeIefvM4VqEc1S3lJUtxGp3_m6o2TxIRc-j5Xpj4eWGon8rOSfqu9bIro5C2v6-SpBhdIHK31qvr0e/46a/-MPcrfIYTeGINXT219zlGQ/h5/h001.XUkFSYA5cP0gfzJxyKObqlRc0z7d5G_UlrAWFh0tIvw)  
+_4 minutes_ by Nico Prananta
+
+One of the main reasons React introduced Strict Mode is to help us find hard-to-notice bugs, like race conditions. One of the ways it does this is by re-running Effects twice in development mode.
+
+[Why Patching Globals Is Harmful](https://link.mail.beehiiv.com/ss/c/u001.K5pvBZzC3tJzgxtI00uQCHbH9vbSx1zKKd3MWdVqhyqcllTr5ebJvvKQLOvdDhAV2aEn41PJCiuF2bOC9r714TJfr7iFtC8NVIU4UY3KzDXuucBQ_etHnsCloYkpFMjJgrgJCZUKr9vIeyLD--HLSQvOf3iDnX9G4IEVMeYnJBu21Ci5hQmtF273Wt8rfaGEWhM_f-xSfJlIftpt21Wq_EcMgwdHDU_QdrefqLbh1pTtvfUEDFRnhWkS9neN4JOk/46a/-MPcrfIYTeGINXT219zlGQ/h6/h001.8A_8OMoeKdclmgSd87UNnB0xPtWvn3xVrTN7_z2Zqtg)  
+_20 minutes_ by Artem Zakharchenko
+
+Throughout the next few thousands of words, I will be referring to modifications of global APIs as "patching". You take the code you don't own, you modify its behavior, you patch it. I hope we are clear on semantics.
+
+#
+</Detail>
+
+[阅读在线](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1Ue89sFmLc8SZ8-bGX-O5IuMB2b0xL08CvrqFbbFUn_mOZIaBi8e8BoCK8-2gMEShrPnHDuwAOhujkM8VlMiY1CeDF8pqWzXT5GjozG1EOKfqHG5eeSgOwo2DEYL9nOaPxyKi7gAHlH7p9IFsvstTGNo35A_1TAywh0I81R4owzF_nBE5DhHOo5U_VWKKln_cR518bJ9kXDWZbErrlDvw_NxPS9xXrrEqqARLHJaZSZALzO0alB8jXQ-yQs3sPpJlGol7IDFcS4A0IGml2XAaveNmaHYAxBYvGyCGHdxVTLagMi5Bes0rhOvioBf10mAdfffBXUWjKiIABlqosskO1ul-GEAj3Dt1EMj-9sDR3cXtjainUEKw-9_SHTrsb6jka0sayrnBCpNc6bbdMxafBsZBrMO-O4Hp5nUAaYnyYrxwzGj6ijv87PyiN5L_xNr2EHzG8f5JcVhGDRfRKeM_uCuj99N1W0AurmWf8IWaPJm2v0ieCvhu2oVOVFdcMrYFoAkhXSZ1vPr2w6Jx6_jdZJi5tB_T6aVCDpPR4xiKlh1XdRNOAkkK853Xltt9cPZe8S6IK68FnOARkkELPwd131o8CFk1et1-75FBs6yhbZuYvJnQON83fuXOwEvdRCZDw/46a/-MPcrfIYTeGINXT219zlGQ/h0/h001.FmY8fZi4BPNpFmi94jti-mkE2TAyFI4DIN4o7MKUOa0)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/46a/-MPcrfIYTeGINXT219zlGQ/ho.gif)
+
+[反应服务器组件的法医学](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqdUqvrAcuWP08tYMJ3IAaFO_vJ4JNbFh3P7-XsDELPrle72ODoziqicUVCyKx0CBz2ZSPrJUlIBPa8swW1ghg_Jt288FHFoz7TgBrzIHFGrrMx0kKZsXGiW9vAm6kNUCTIK0waZGRfLTRgZYIgCWKFVULMPmgd5dWd2O3nNl6jWj81obXXi1nZUL_6sJBtV4nOpFtMZSAWIWezdsxdqCIWewShXAoen1-Ln_LZ2T5JQ5VKDVDvEDuHHViw7RHVClrg/46a/-MPcrfIYTeGINXT219zlGQ/h1/h001.yoipEK8y_GVf_ntsw7V7dbSgYD6CgKeMonsHxJMlzW4)\
+*27分钟*拉扎尔·尼科洛夫
+
+React Server Components 结合了最佳的客户端渲染,作者 Lazar 仔细研究了我们如何来到这里,深入研究了 RSC 对页面加载时间线的影响。
+
+[Supabase 现在是 GA](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO35oA5CkVYx29QDYAp0J07Iv9rhR0lD_zF0CLhhk4LOVL7IOF3T3kEjpTfPet2UNwe9K-0N8LtsWk9bFRKyaigvih5-TggO-AEFTpVULa8jyO3LghN62Rt5ZTmH--mxZ912sYjCTy_-_XoxH6V9-Fm7lNthpWC6BuaBCgbUM62CleULWOL4UvEtKKmZW7o0bSw/46a/-MPcrfIYTeGINXT219zlGQ/h2/h001.AR3lsgO0YelpG3KkZxn9zDXqcMa8hUqLeQzbYyo6_Z0)\
+*由 Supabase 赞助*
+
+开源的Firebase替代方案现在一般可用。
+
+[一個(大多數)完整的指南來反應反應行為](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63kxVSnd3-RrNpdNkuw4zipdHvKg_fbIWnaqYhUxDjK8DrYDln-tL2GMw2MF0S5Ec6rjFRRc94ui97TmugT-InBOTf21UZIuLlP_aVFXQe4sV1Mv1fUD8rarNA-FdSfwNiMqZ0lS1iz3KLWRmr6tUAz67u5zUH33W0jV0qkp-bUzecO057Go-f41qFMKFXI1WrOBtvou3nwaC6SGrX_mc35AwNqsVfXshmatRCKuR7-vfxubFdsE73Gx9dWPM4yFXdI0xlGUedxULpsm6cFDdz24AZBEdXRGtzVbfsASlax3P/46a/-MPcrfIYTeGINXT219zlGQ/h3/h001.uf9K-GlYLzjyCrGVig2FCLLBt2yq-qmTPNbIemZcGiE)\
+*大约1小时*马克·埃里克森
+
+详细了解 React 渲染行为,以及使用 Context 和 React-Redux 如何影响渲染。
+
+[反应组件中的行为地理位置](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw_tSr8xvIWN4j7Z6rD1otnm-6y5bjPTImMjm_hFkjV-GfSUN1uzUeuuYTOxMTXo3KMMaVmPNl1Vz3Fz8BIzlVpCG6nD3FUh8EQWY6rQRarXWa2WlcFEzHjR0YTj4JfA97q2E2-g8qHvBlh-eeyWJ20Uj0lwe6grLerzbvbUOYcY0ddYbCh7ivMZ3_WRka6bqJGzsSwD-ECNB9y2dNODH1UQ/46a/-MPcrfIYTeGINXT219zlGQ/h4/h001.D0YrSngwjuU9ASsLrXEBLflZ6jJmAF0HSLG8fL2pbnU)\
+*五分钟*亚历克斯·康多夫
+
+虽然编程是通过代码来解决一个问题,但工程是随着时间的推移来维持这个解决方案,经过过去10年的软件开发,我发现前者很容易,但后者不是。
+
+[反應嚴格模式和賽車條件](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfLlFcsXOFpUrtXNVZnzChyYjtYuiCd4n2plsP2LokpXOuqNWkpK9wNGeP2rMTG2rIbhORFiugc8znyvjwnFgwbpN1yygBUKXGdiBJ16ifMwcg_wOwbT1NS7fqZm78LP8Ff4_uOECejtxrq9d32Ggnpy9MedbojeIefvM4VqEc1S3lJUtxGp3_m6o2TxIRc-j5Xpj4eWGon8rOSfqu9bIro5C2v6-SpBhdIHK31qvr0e/46a/-MPcrfIYTeGINXT219zlGQ/h5/h001.XUkFSYA5cP0gfzJxyKObqlRc0z7d5G_UlrAWFh0tIvw)\
+*四分钟*尼科·普兰塔
+
+React 引入严格模式的主要原因之一是帮助我们找到难以注意的错误,例如比赛条件。
+
+[为什么 Patching Global 是有害的](https://link.mail.beehiiv.com/ss/c/u001.K5pvBZzC3tJzgxtI00uQCHbH9vbSx1zKKd3MWdVqhyqcllTr5ebJvvKQLOvdDhAV2aEn41PJCiuF2bOC9r714TJfr7iFtC8NVIU4UY3KzDXuucBQ_etHnsCloYkpFMjJgrgJCZUKr9vIeyLD--HLSQvOf3iDnX9G4IEVMeYnJBu21Ci5hQmtF273Wt8rfaGEWhM_f-xSfJlIftpt21Wq_EcMgwdHDU_QdrefqLbh1pTtvfUEDFRnhWkS9neN4JOk/46a/-MPcrfIYTeGINXT219zlGQ/h6/h001.8A_8OMoeKdclmgSd87UNnB0xPtWvn3xVrTN7_z2Zqtg)\
+*二十分钟*阿瑟姆·扎哈尔申科
+
+在接下来的几千个字里,我将把全球API的修改称为“补丁”。你拿走你不拥有的代码,你修改它的行为,你补丁它。
+
+#
+
+
