@@ -1,0 +1,92 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#452 How to Style a React Application
+description: RD#452 How to Style a React Application
+date: 星期日 05 下午 四月 21o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/style-react-application
+origin_site: https://newsletter.reactdigest.net/p/style-react-application
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#452 How to Style a React Application" url="https://newsletter.reactdigest.net/p/style-react-application" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UKINGihC6nNh8l4JhJ_bQxQIP5ZoGg_2b9_OJZ3fe7aPdA9KubfSyPU-21ZerwoUPkpfg_4mHiCg7ZBFcCRCw6SlVlNUIggoSY-aRt6YL9EkFKi99QKqxbDoHoZxMxtbrxNihOz4rdPKJ14xkqWKQE45M9ihtswBh9z9GK5UtEM-OzLOkIMpcKj7zPmuM8D9YFtEy7cchmAfSEA0xDLUO_hkdMqsdYiEiClVBgf2nPmCBHkvqr72b0L-Dmm-R9ibBX969Jhrqsu4nMWwQ47L9tAmle10Fl-uRTo-cICNRwEHb_X4GXf2fnvPGtmBe75grjKc9yGOOg_vXo0TICN5IUpwOHOMeADO51wmd89dHbsUkuZx7nmWPBuZqKYtteaUlBOcFFf9HS6qBL3Rr7El83u4_eGbJL3B1Fr1ZJgDIr4dGojXci2AXbTUvi9LsiYx7pwVUorDSnoVVr88ifG1U5Ch6shLOLiC7beJWzXXC_7iAmcyn11FqC-Pk8GjUw33NaCYNlGWIyB9q_m1OxVLYr_8Aav2Cf7-9FgeVSs3OK11rOM66YusP_O-tYTu6PRaLRH4H1WMycZ8b1ceCkqfU9BPog9iT_fFKGFhcVJl9O5Q/45p/QNumGF3IQ2Sa3FOYMGrm6Q/h0/h001.WKx3MkrC7sYf3bRSXnb4iUtP3ZH_5OTesuTdGSSkaPU)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/45p/QNumGF3IQ2Sa3FOYMGrm6Q/ho.gif)
+
+[How to Style a React Application](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw4XhJ__UjK0fSF63WNawpx5-BmGLzkw0FntBTWJfFqQFmwULgwHaguu_OcbzMPY2QpCL51jzCyaWPlELCvkaZeC9Gzw1AODWcGwZO4D4dq3tGNHeDbctwnC17gafnDiWe9Auc1uZnnYIjytV8rC5fvdFh0eeHXUcnsq-pw9HEh2PEGbBpVgQoly8vsHpOEr_fQ/45p/QNumGF3IQ2Sa3FOYMGrm6Q/h1/h001.l_va1egqTr9mOzm-gC53mDd5D5XfXEplsy-Eet_2vGo)  
+_26 minutes_ by Alex Kondov
+
+Once the logic and the components are ready and functional, making them look pretty is straightforward, right? Right?
+
+[React-admin: The Secret Sauce To Productive Coding](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTb97y9TwJYSZR_ofJ-77n74JPRM5q4F_9dgoQa3UwSOohlMkmuRRbQdMonOzJwP5FcwWHIJrwvsweA6id5J_I4COh3nkZnNVK5tapmvX6F4r92JbhcDkl44y4g_PgmsFUcnFIAH9KcN2Rs966KZoXEGPYmdb5y99H5VlXQkq-Jcm6Q1dt-vPbUt4wQ18388SRQ/45p/QNumGF3IQ2Sa3FOYMGrm6Q/h2/h001.goUxZUDu8KAc3IyC7Bw3kdLayKPMMK7A_SvhPk5HoQg)  
+_sponsored by Marmelab_
+
+With 500,000 daily users and 24k stars, React-admin is the leading open-source framework for single-page apps (ERPs, Admins, B2B apps). Compatible with Vite, Next & Remix, it builds upon acclaimed libraries like react-hook-form, react-query, react-router & material-ui. Backend agnostic & with 200+ components, it elevates your development while ensuring a top-notch user experience. Give it a try!
+
+[Improving our Jest execution time by 300%](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqWBkV1MaxKDCeAh_zUETT_8Nmr73fK2svKZ8qAlTP2CTlAVB883-HzxcvBGxBIOTWnUZLuYhODXop__K5SA-IDkDW-11un9sG23ViNHTJuYGewD-voqPfa_Kwp0w3zVRvoIhat4Rr6VRwGAFVP1X7QcvJr37-c19MO5nGbJI9nnF_KPfMsRp-DV3M8gUrJqQ5yM0d-Cdox1P8YB8k2eRAJM/45p/QNumGF3IQ2Sa3FOYMGrm6Q/h3/h001.xvksvQf9nX8qKYqTI-ApFR7z17LVa8HDqga071FbfBw)  
+_6 minutes_ by Cameron G. Gould
+
+It’s worth investing in learning your libaries from the start. Writing tests slightly incorrectly will have a snowball effect later on, which can significantly slow down your ability to iterate.
+
+[CSS in React Server Components](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfyko-iFD6lxTdvug6MbGi8GkevDuAk6VOSzpoGdN4YYTVvfYtKGdgpWOBEzDrN9OXnAIRE3Qgw78eeWFvOzLj_2K9teXSPHcSrV9TeI9RRw3KP0moLVX8UhUHWnpuH_L1npYFEv6Q1cMnE63pK9FSRc-qRuXV010ziABy3-ggHXIZ5BHBIruf5PksvQeHKQ3w/45p/QNumGF3IQ2Sa3FOYMGrm6Q/h4/h001.e1yU7cvrL-YV2MwE1690HQcEP59Qa8z4cEyKAZ6I6Ug)  
+_20 minutes_ by Josh W. Comeau
+
+In this blog post, we’re going to explore the compatibility issues between React Server Components and CSS-in-JS libraries like styled-components. You’ll understand what the issue is, what the options are, and what’s on the horizon.
+
+[Zustand and React Context](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF8wrP7SY-Hgdt0VG8jIaqk-5FwU1bAo24fUjY1vT1WnYb2IPKNngDiOas1D-rkaPnImQV9R9qES3xOMTamh2qBrz5YDKTKJGEA1srT7JqTi4zjD5QC2cVrUGbBrZ8X7G7A-iRTlh59nrMAy4GV7thxRKDFWhppHwuoCxGGN02-fJGxVVAeQvp90ufhm6NNxD71Ubii0KfPofb6xlLW-qedg/45p/QNumGF3IQ2Sa3FOYMGrm6Q/h5/h001.a2uOv_Xk9VcLNjb-pGPZpdn-MUtD7gpzXIAY278Kw00)  
+_6 minutes_ by T. K. Dodo
+
+Zustand stores a global and don't need React Context – but sometimes, it makes sense to combine them regardless.
+
+[Next.js 14.2](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8iNZPUX9eQGa8nJffuScClRk7xbYdMQw1-XRjgxoF00a7i1dOgtd6movc9uPMnGdadzzCj8KmKhTCE7knn9OJVNBmpz_r-pGdILpaCNc-_Hkw30dnvvdia0ISk4KcMz0W2trLN239fklfifjei6a0rn9kEZ51YoqAZ1gS8Tl5CsLRZvg7G5LUUZTrmzC8PNDsw/45p/QNumGF3IQ2Sa3FOYMGrm6Q/h6/h001.UgLTNwTfx0ITzt3YYPR-tlV6JnsEu5o_q_Yyxs3BCuc)  
+_8 minutes_ by Delba de Oliveira and Tim Neutkens
+
+Next.js 14.2 includes development, production, and caching improvements. Including new configuration options, 99% Turbopack tests passing, and more.
+
+#
+</Detail>
+
+[阅读在线](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UKINGihC6nNh8l4JhJ_bQxQIP5ZoGg_2b9_OJZ3fe7aPdA9KubfSyPU-21ZerwoUPkpfg_4mHiCg7ZBFcCRCw6SlVlNUIggoSY-aRt6YL9EkFKi99QKqxbDoHoZxMxtbrxNihOz4rdPKJ14xkqWKQE45M9ihtswBh9z9GK5UtEM-OzLOkIMpcKj7zPmuM8D9YFtEy7cchmAfSEA0xDLUO_hkdMqsdYiEiClVBgf2nPmCBHkvqr72b0L-Dmm-R9ibBX969Jhrqsu4nMWwQ47L9tAmle10Fl-uRTo-cICNRwEHb_X4GXf2fnvPGtmBe75grjKc9yGOOg_vXo0TICN5IUpwOHOMeADO51wmd89dHbsUkuZx7nmWPBuZqKYtteaUlBOcFFf9HS6qBL3Rr7El83u4_eGbJL3B1Fr1ZJgDIr4dGojXci2AXbTUvi9LsiYx7pwVUorDSnoVVr88ifG1U5Ch6shLOLiC7beJWzXXC_7iAmcyn11FqC-Pk8GjUw33NaCYNlGWIyB9q_m1OxVLYr_8Aav2Cf7-9FgeVSs3OK11rOM66YusP_O-tYTu6PRaLRH4H1WMycZ8b1ceCkqfU9BPog9iT_fFKGFhcVJl9O5Q/45p/QNumGF3IQ2Sa3FOYMGrm6Q/h0/h001.WKx3MkrC7sYf3bRSXnb4iUtP3ZH_5OTesuTdGSSkaPU)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/45p/QNumGF3IQ2Sa3FOYMGrm6Q/ho.gif)
+
+[如何设计一个React应用程序](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw4XhJ__UjK0fSF63WNawpx5-BmGLzkw0FntBTWJfFqQFmwULgwHaguu_OcbzMPY2QpCL51jzCyaWPlELCvkaZeC9Gzw1AODWcGwZO4D4dq3tGNHeDbctwnC17gafnDiWe9Auc1uZnnYIjytV8rC5fvdFh0eeHXUcnsq-pw9HEh2PEGbBpVgQoly8vsHpOEr_fQ/45p/QNumGF3IQ2Sa3FOYMGrm6Q/h1/h001.l_va1egqTr9mOzm-gC53mDd5D5XfXEplsy-Eet_2vGo)\
+*26分钟*亚历克斯·康多夫
+
+一旦逻辑和组件做好了准备和功能,让它们看起来很漂亮就很简单,对吗?对吗?
+
+[React-admin:生产性编码的秘密酱油](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTb97y9TwJYSZR_ofJ-77n74JPRM5q4F_9dgoQa3UwSOohlMkmuRRbQdMonOzJwP5FcwWHIJrwvsweA6id5J_I4COh3nkZnNVK5tapmvX6F4r92JbhcDkl44y4g_PgmsFUcnFIAH9KcN2Rs966KZoXEGPYmdb5y99H5VlXQkq-Jcm6Q1dt-vPbUt4wQ18388SRQ/45p/QNumGF3IQ2Sa3FOYMGrm6Q/h2/h001.goUxZUDu8KAc3IyC7Bw3kdLayKPMMK7A_SvhPk5HoQg)\
+*由 Marmelab 赞助*
+
+React-admin 拥有 500,000 位每日用户和 24,000 颗星,是单页应用程序(ERPs,Admins,B2B 应用程序)的领先开源框架,兼容 Vite,Next & Remix,它基于受欢迎的图书馆,如 react-hook-form, react-query, react-router & material-ui。
+
+[提高我们的 Jest 执行时间 300%](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqWBkV1MaxKDCeAh_zUETT_8Nmr73fK2svKZ8qAlTP2CTlAVB883-HzxcvBGxBIOTWnUZLuYhODXop__K5SA-IDkDW-11un9sG23ViNHTJuYGewD-voqPfa_Kwp0w3zVRvoIhat4Rr6VRwGAFVP1X7QcvJr37-c19MO5nGbJI9nnF_KPfMsRp-DV3M8gUrJqQ5yM0d-Cdox1P8YB8k2eRAJM/45p/QNumGF3IQ2Sa3FOYMGrm6Q/h3/h001.xvksvQf9nX8qKYqTI-ApFR7z17LVa8HDqga071FbfBw)\
+*六分钟*卡梅伦·G·古尔德
+
+写错了测试稍后会产生雪球效应,这可能会显著减慢你重复的能力。
+
+[CSS 在 React 服务器组件中](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfyko-iFD6lxTdvug6MbGi8GkevDuAk6VOSzpoGdN4YYTVvfYtKGdgpWOBEzDrN9OXnAIRE3Qgw78eeWFvOzLj_2K9teXSPHcSrV9TeI9RRw3KP0moLVX8UhUHWnpuH_L1npYFEv6Q1cMnE63pK9FSRc-qRuXV010ziABy3-ggHXIZ5BHBIruf5PksvQeHKQ3w/45p/QNumGF3IQ2Sa3FOYMGrm6Q/h4/h001.e1yU7cvrL-YV2MwE1690HQcEP59Qa8z4cEyKAZ6I6Ug)\
+*二十分钟*作者:Josh W. Comeau
+
+在本博客文章中,我们将探讨 React Server 组件和 CSS-in-JS 库之间的兼容性问题,例如有风格的组件。
+
+[Zustand 和 React 背景](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF8wrP7SY-Hgdt0VG8jIaqk-5FwU1bAo24fUjY1vT1WnYb2IPKNngDiOas1D-rkaPnImQV9R9qES3xOMTamh2qBrz5YDKTKJGEA1srT7JqTi4zjD5QC2cVrUGbBrZ8X7G7A-iRTlh59nrMAy4GV7thxRKDFWhppHwuoCxGGN02-fJGxVVAeQvp90ufhm6NNxD71Ubii0KfPofb6xlLW-qedg/45p/QNumGF3IQ2Sa3FOYMGrm6Q/h5/h001.a2uOv_Xk9VcLNjb-pGPZpdn-MUtD7gpzXIAY278Kw00)\
+*六分钟*作者: T. K. Dodo
+
+Zustand 存储了全球性,不需要 React 背景 - 但有时,无论如何,将它们结合起来是有意义的。
+
+[下一篇: JS 14.2](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8iNZPUX9eQGa8nJffuScClRk7xbYdMQw1-XRjgxoF00a7i1dOgtd6movc9uPMnGdadzzCj8KmKhTCE7knn9OJVNBmpz_r-pGdILpaCNc-_Hkw30dnvvdia0ISk4KcMz0W2trLN239fklfifjei6a0rn9kEZ51YoqAZ1gS8Tl5CsLRZvg7G5LUUZTrmzC8PNDsw/45p/QNumGF3IQ2Sa3FOYMGrm6Q/h6/h001.UgLTNwTfx0ITzt3YYPR-tlV6JnsEu5o_q_Yyxs3BCuc)\
+*八分钟*由Delba de Oliveira和Tim Neutkens撰写
+
+Next.js 14.2 包括开发、生产和缓存改进,包括新的配置选项、 99% 通过 Turbopack 测试等。
+
+#
+
+
