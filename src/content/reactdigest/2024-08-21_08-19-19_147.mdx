@@ -1,0 +1,92 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#453 Get your codebase ready for React 19
+description: RD#453 Get your codebase ready for React 19
+date: 星期日 05 下午 四月 28o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/get-codebase-ready-react-19
+origin_site: https://newsletter.reactdigest.net/p/get-codebase-ready-react-19
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#453 Get your codebase ready for React 19" url="https://newsletter.reactdigest.net/p/get-codebase-ready-react-19" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1WdXTjAyc0_GKk0r9GMyCgY5_9DpkEdBJamfcOZX18idkAkzvW0cLYmG8vCYZuvI8rU8cmMJfFvv3RgD8MvBoqF64lzh-BBhc4DAUAeT4-SE7mFcL6GNZSt8B0MnZWHTI5CrKgRchugXGC7vNi8ypURVK3JOm_7hpncnNUm0Ox4mr-WnneW5IIxAWkzUae8Pd6pPgSJFDfA0xVq7bxL3B9QQWygX0BARz1n-GXgaH_6ABkES0aE_VQ01P1_esInZnZR4KIzmzBiuEBexxBqeSVpIlDe9NqbGNlhEcy_o2SpfLZii5jMtj1NQcmI-yW0usFGlM5IjDOGwVq5tyouEKfqtPc8-fz3n1iG7IxXYI6YcyZ25if7ILxPXqyIuxJbLzmLzn0KM3ANieGXD_4MnQayvZZo2iSjA2SjdhgsvQIxjORloGQpu2z-2jW0616tmqz496KDwnpybdDTrNDS8rT0x0SV2nL5DhTucND8MIfLfniEXZuIW9yQESYB_GwJz2Snx3oT2IOlSMFJezC2IznDTkRHhRWy4TnMqOZC7_bbcczuwmHSwZebUkteqz-zLlnakxSTh_4FXkF-B3ihvCm_S9H5FtpJIAkE2GegQsLoQKoQvOzvVAm6FEIBF4RDQZg/45w/FHphVs4yRJymxawZ2tXQ7w/h0/h001.tSVDF_z20pkO_adNERly3tfA49Q1-gd_L4JGfJfzQVI)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/45w/FHphVs4yRJymxawZ2tXQ7w/ho.gif)
+
+[Get your codebase ready for React 19](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF5amLYDkjYBfQHj5UE-q6D5qwqZCXFKKOtl2eSvvbSQ7RW0JCYxfX8TTiIfwSe428qU9sm75PXcaza2jfOLK3XL_oU5plThhKU0GCtzbi7BOJRqrJ58ptXDU0XVlstYkb-9ve6iqnlDqZHiGNjoI_PE-sw8eIiSobcRoOsVG36S4krEI1OmzkuRQQfawmH2XIexDHnPEVx8dn4cFcD4iA25R1sfsePFb1pFNt_XWtsD9/45w/FHphVs4yRJymxawZ2tXQ7w/h1/h001.pgGjgdKaCGarOqJEsSY-W34StWqele5UhpTqrByKkas)  
+_5 minutes_ by Adrienne Ross
+
+Is your app ready for what’s coming up in React 19’s release? Get prepared with what is going to change ahead of its release date.
+
+[FusionAuth’s New React, Vue, and Angular Authentication SDKs](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfRUJCyGiHJUrPFmfIUeKJRrLUfpAxwZtueOJcj-uR1ES92n8Jpo1OrLEOffxGDUtlcToGIxePjzyEI7NSi-J1tngKBrp1IsCJdSlIUPDCjR_L0VAmHPL_wKf8OP2Yz_2mw1ZE2dfwygYmvKf_aNM2aw/45w/FHphVs4yRJymxawZ2tXQ7w/h2/h001.r5xnwng5a_gEl4aBrWTcp5rIZ4TGFwcflKK8E1u5Q8U)  
+_sponsored by FusionAuth_
+
+FusionAuth has been busy building out Javascript SDKs to make it easy to integrate authentication into your React, Angular, or Vue apps. Their SDKs make it easy for you to focus on the features your users actually care about while leveraging a world-class implementation of login workflows and the security of an isolated authentication server. Happy SDKing!
+
+[Building an interactive 3D event badge with React Three Fiber](https://link.mail.beehiiv.com/ss/c/u001.hSYjXyWe6vDRiKIKx11n8q-josapS_jcOBcxPrzmb2kZGUptpfipXkVE_gcFLPN8PijKJEVW8STPqDt6JMQ5WTuGs-qj53tMJTSbLBeD10oOGOBHdko-6Z5kLQne-7-iBQUUBYgFR_EOJYfObXYs6B2nnrL-2rKyJAOb5yXMxuN8gcHH-1ohnek0OL5lvIgUr2NOpJUQOzlzAEmaenEAcFWWa2wXB-jMu6NmsAd5rskZXvgQSemjd55YsvZOXu9YBh7PcM6u1Uyh5vC7uVfMPg/45w/FHphVs4yRJymxawZ2tXQ7w/h3/h001.nl5j5bqqI_mCaZKoue7aZKAmvVaasvdUdlc7vAINnv0)  
+_13 minutes_ by Paul Henschel
+
+See a full working demo of how we built the interactive badge using React Three Fiber and react-three-rapier.
+
+[Improving INP in React and Next.js](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqRVLPHtv5LeHO6pahnLh1-r6abJsZcAOhgytdWTojDxaeLssNwmeMTwRVzN3euMD8nwtwUnCxfznYamQo4ryEK0G12T2f1BQSLvjaXixxyMNIJ3EaHsg8DArC5MO_P3_jnPeF5ilF51d5X5lt-urXxzfUKL8_K6HZE-jdGl_OfSlONr4K-R6Xb0oABJfb8al26Ab2c9ZZTyeROZ8-KvV4v9xEIOgKw72rSaWCZJPTGx0/45w/FHphVs4yRJymxawZ2tXQ7w/h4/h001.f4G5yoPO87nkL9tXZhNWmQxc06sp5Z98ThFv9FGnjkM)  
+_5 minutes_ by Jan Kaiser
+
+A follow-up article on the new Core Web Vital INP outlining some techniques to improve your INP score in Next.js and React.
+
+[The first framework that lets you visualize your React/NodeJS app's code](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqVCnV9ZbDUvTMdXGinyqvmFFFwj_FTOXAQyJpAugL4Bw63pXgGrMqFnEg0RXa7nFKqbCvt5mPw_SIyT98pTO8AZ3GZZAdnsoKwDvuBUkhaB-aJ6ZvcddWVx6lLPxIYf_rwKg_cGUAvQ7GFMhX32ivyrRAy4GMmz-bcgDumAi4QxL4F1kg-8R9leycmDQddXRtMgxM4F_nfbaoWn2XX2rp9etfeuEJeovyhd0Ya_lQLrvsfjR7WKQ8rTH-jB6KsQb6rvsdKNPZq0VRhfQYOIsCdo/45w/FHphVs4yRJymxawZ2tXQ7w/h5/h001.spp8YGA55TYEJBfE0C6at0uT3tTGFH-pkZAKH0rdclU)  
+_8 minutes_ by Vinny
+
+Imagine you’re working on your full-stack app, and you want to implement a new feature. It’s a complicated one, so you whip out a pen and paper, or head over to tldraw, and start drawing a diagram of what your app currently looks like, from database, to server, and on over to the client. But how cool would it be if you had a tool that visualized your entire full-stack app for you?
+
+[HTML attributes vs DOM properties](https://link.mail.beehiiv.com/ss/c/u001.aPX4i1CZjyg0TJtq3966ENvsMnHFZZS55i2wJI2F6NMgdBPWZrut-VCr5NBfQJAuuzox1WQWXAgsBEh2hmC5iRsZlb8YdnJ4O7Iiu6YtmNdiIXnGg6yU7UOESD1JFktfT7vQ2m1uvpKoK7c-Ucaf0wzBOlPLoAMLprZzObdRcGyJGJSgoRLv0kACGflqnysPKpir_5XHFtCmcoDUaOErXTBulvBcfhLT3miKB2geHwA/45w/FHphVs4yRJymxawZ2tXQ7w/h6/h001.QWu3oMemm01-iz6radTtrrpr4tDkJHsKHn8_weq8bYQ)  
+_8 minutes_ by Jake Archibald
+
+They're completely different, but often coupled.
+
+#
+</Detail>
+
+[阅读在线](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1WdXTjAyc0_GKk0r9GMyCgY5_9DpkEdBJamfcOZX18idkAkzvW0cLYmG8vCYZuvI8rU8cmMJfFvv3RgD8MvBoqF64lzh-BBhc4DAUAeT4-SE7mFcL6GNZSt8B0MnZWHTI5CrKgRchugXGC7vNi8ypURVK3JOm_7hpncnNUm0Ox4mr-WnneW5IIxAWkzUae8Pd6pPgSJFDfA0xVq7bxL3B9QQWygX0BARz1n-GXgaH_6ABkES0aE_VQ01P1_esInZnZR4KIzmzBiuEBexxBqeSVpIlDe9NqbGNlhEcy_o2SpfLZii5jMtj1NQcmI-yW0usFGlM5IjDOGwVq5tyouEKfqtPc8-fz3n1iG7IxXYI6YcyZ25if7ILxPXqyIuxJbLzmLzn0KM3ANieGXD_4MnQayvZZo2iSjA2SjdhgsvQIxjORloGQpu2z-2jW0616tmqz496KDwnpybdDTrNDS8rT0x0SV2nL5DhTucND8MIfLfniEXZuIW9yQESYB_GwJz2Snx3oT2IOlSMFJezC2IznDTkRHhRWy4TnMqOZC7_bbcczuwmHSwZebUkteqz-zLlnakxSTh_4FXkF-B3ihvCm_S9H5FtpJIAkE2GegQsLoQKoQvOzvVAm6FEIBF4RDQZg/45w/FHphVs4yRJymxawZ2tXQ7w/h0/h001.tSVDF_z20pkO_adNERly3tfA49Q1-gd_L4JGfJfzQVI)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/45w/FHphVs4yRJymxawZ2tXQ7w/ho.gif)
+
+[让您的代码库为 React 19 做好准备](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF5amLYDkjYBfQHj5UE-q6D5qwqZCXFKKOtl2eSvvbSQ7RW0JCYxfX8TTiIfwSe428qU9sm75PXcaza2jfOLK3XL_oU5plThhKU0GCtzbi7BOJRqrJ58ptXDU0XVlstYkb-9ve6iqnlDqZHiGNjoI_PE-sw8eIiSobcRoOsVG36S4krEI1OmzkuRQQfawmH2XIexDHnPEVx8dn4cFcD4iA25R1sfsePFb1pFNt_XWtsD9/45w/FHphVs4yRJymxawZ2tXQ7w/h1/h001.pgGjgdKaCGarOqJEsSY-W34StWqele5UhpTqrByKkas)\
+*五分钟*由Adrienne Ross
+
+您的应用程序是否为 React 19 的发布准备好了?在发布日期之前做好准备。
+
+[FusionAuth 新的 React、Vue 和 Angular 认证 SDK](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfRUJCyGiHJUrPFmfIUeKJRrLUfpAxwZtueOJcj-uR1ES92n8Jpo1OrLEOffxGDUtlcToGIxePjzyEI7NSi-J1tngKBrp1IsCJdSlIUPDCjR_L0VAmHPL_wKf8OP2Yz_2mw1ZE2dfwygYmvKf_aNM2aw/45w/FHphVs4yRJymxawZ2tXQ7w/h2/h001.r5xnwng5a_gEl4aBrWTcp5rIZ4TGFwcflKK8E1u5Q8U)\
+*由 FusionAuth 赞助*
+
+FusionAuth一直在忙于构建JavaScript SDK,以便轻松地将身份验证集成到您的React、Angular或Vue应用程序中。他们的SDK使您能够轻松地专注于用户真正关心的功能,同时利用世界级的登录工作流和孤立身份验证服务器的安全性。
+
+[使用 React Three Fiber 构建交互式 3D 事件徽章](https://link.mail.beehiiv.com/ss/c/u001.hSYjXyWe6vDRiKIKx11n8q-josapS_jcOBcxPrzmb2kZGUptpfipXkVE_gcFLPN8PijKJEVW8STPqDt6JMQ5WTuGs-qj53tMJTSbLBeD10oOGOBHdko-6Z5kLQne-7-iBQUUBYgFR_EOJYfObXYs6B2nnrL-2rKyJAOb5yXMxuN8gcHH-1ohnek0OL5lvIgUr2NOpJUQOzlzAEmaenEAcFWWa2wXB-jMu6NmsAd5rskZXvgQSemjd55YsvZOXu9YBh7PcM6u1Uyh5vC7uVfMPg/45w/FHphVs4yRJymxawZ2tXQ7w/h3/h001.nl5j5bqqI_mCaZKoue7aZKAmvVaasvdUdlc7vAINnv0)\
+*十三分钟*保罗·亨舍尔
+
+查看我们如何使用 React Three Fiber 和 react-three-rapier 构建交互式徽章的完整工作演示。
+
+[在 React 和 Next.js 中改进 INP](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqRVLPHtv5LeHO6pahnLh1-r6abJsZcAOhgytdWTojDxaeLssNwmeMTwRVzN3euMD8nwtwUnCxfznYamQo4ryEK0G12T2f1BQSLvjaXixxyMNIJ3EaHsg8DArC5MO_P3_jnPeF5ilF51d5X5lt-urXxzfUKL8_K6HZE-jdGl_OfSlONr4K-R6Xb0oABJfb8al26Ab2c9ZZTyeROZ8-KvV4v9xEIOgKw72rSaWCZJPTGx0/45w/FHphVs4yRJymxawZ2tXQ7w/h4/h001.f4G5yoPO87nkL9tXZhNWmQxc06sp5Z98ThFv9FGnjkM)\
+*五分钟*作者:Jan Kaiser
+
+关于新的核心Web Vital INP的后续文章概述了一些技术来改善您的INP分数在Next.js和React。
+
+[允许您可视化 React/NodeJS 应用程序的代码的第一个框架](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqVCnV9ZbDUvTMdXGinyqvmFFFwj_FTOXAQyJpAugL4Bw63pXgGrMqFnEg0RXa7nFKqbCvt5mPw_SIyT98pTO8AZ3GZZAdnsoKwDvuBUkhaB-aJ6ZvcddWVx6lLPxIYf_rwKg_cGUAvQ7GFMhX32ivyrRAy4GMmz-bcgDumAi4QxL4F1kg-8R9leycmDQddXRtMgxM4F_nfbaoWn2XX2rp9etfeuEJeovyhd0Ya_lQLrvsfjR7WKQ8rTH-jB6KsQb6rvsdKNPZq0VRhfQYOIsCdo/45w/FHphVs4yRJymxawZ2tXQ7w/h5/h001.spp8YGA55TYEJBfE0C6at0uT3tTGFH-pkZAKH0rdclU)\
+*八分钟*关于 Vinny
+
+想象一下,你正在开发你的全套应用程序,你想实施一个新的功能,这是一个复杂的功能,所以你把笔和纸张拿出来,或者把头转移到tldraw,并开始绘制你的应用程序目前看起来像什么的图表,从数据库到服务器,再到客户端。
+
+[HTML 属性 vs DOM 属性](https://link.mail.beehiiv.com/ss/c/u001.aPX4i1CZjyg0TJtq3966ENvsMnHFZZS55i2wJI2F6NMgdBPWZrut-VCr5NBfQJAuuzox1WQWXAgsBEh2hmC5iRsZlb8YdnJ4O7Iiu6YtmNdiIXnGg6yU7UOESD1JFktfT7vQ2m1uvpKoK7c-Ucaf0wzBOlPLoAMLprZzObdRcGyJGJSgoRLv0kACGflqnysPKpir_5XHFtCmcoDUaOErXTBulvBcfhLT3miKB2geHwA/45w/FHphVs4yRJymxawZ2tXQ7w/h6/h001.QWu3oMemm01-iz6radTtrrpr4tDkJHsKHn8_weq8bYQ)\
+*八分钟*杰克·阿基巴尔德
+
+它们是完全不同的,但往往是相结合的。
+
+#
+
+
