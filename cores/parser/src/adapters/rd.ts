@@ -6,9 +6,11 @@
 import { visit } from 'unist-util-visit';
 import { type Test } from 'unist-util-is';
 import chunk from 'lodash.chunk';
+import { load } from 'cheerio';
 
 import { type VisitNode, shouldSitg } from '../remarks/remark-words-sitg-plugin';
 import type { LinkItem, Adapter, CollectLinks } from '../types';
+import { html2md } from '../utils/html2md';
 
 export const collectLinks: CollectLinks = (onCollectLinks) => {
 	return function (tree) {
@@ -48,12 +50,26 @@ export const collectLinks: CollectLinks = (onCollectLinks) => {
 };
 
 export const rd: Adapter = async (text, html, headers) => {
+	const { md } = html2md(html);
+	// old style
+	const oldStyleIndex = md.indexOf('## how did you like this issue');
+	const latestStyleIndex = md.indexOf('### how did you like this issu');
 	// slice content to newsletters
-	const sectionContent = text.slice(0, text.indexOf('## newsletters'));
+	const sectionContent = md.slice(Math.max(0, md.indexOf('# React Digest')), Math.max(oldStyleIndex, latestStyleIndex));
+	let origin_url: string | undefined = headers.find((v) => v.key === 'x-newsletter')?.value;
+
+	if (!origin_url) {
+		const $ = load(html, null, false);
+		$('a[href^="https://reactdigest.net/digests"]').each((index, element) => {
+			if (!origin_url) {
+				origin_url = element.attribs.href;
+			}
+		});
+	}
 
 	return {
 		blogContent: sectionContent,
 		collectLinks,
-		origin_url: headers.find((v) => v.key === 'x-newsletter')?.value,
+		origin_url,
 	};
 };
