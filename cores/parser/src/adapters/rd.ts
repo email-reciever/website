@@ -55,7 +55,10 @@ export const rd: Adapter = async (text, html, headers) => {
 	const oldStyleIndex = md.indexOf('## how did you like this issue');
 	const latestStyleIndex = md.indexOf('### how did you like this issu');
 	// slice content to newsletters
-	const sectionContent = md.slice(Math.max(0, md.indexOf('# React Digest')), Math.max(oldStyleIndex, latestStyleIndex));
+	const sectionContent = md.slice(
+		Math.max(0, md.indexOf('[Read Online]'), md.indexOf('# React Digest')),
+		Math.max(oldStyleIndex, latestStyleIndex)
+	);
 	let origin_url: string | undefined = headers.find((v) => v.key === 'x-newsletter')?.value;
 
 	if (!origin_url) {

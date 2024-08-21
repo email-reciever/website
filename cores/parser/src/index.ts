@@ -1,4 +1,4 @@
-import postalMime from 'postal-mime';
+import postalMime, { Header } from 'postal-mime';
 import dayjs from 'dayjs';
 import 'dayjs/locale/zh-cn';
 
@@ -44,6 +44,7 @@ interface RequestBody {
 	html: string;
 	title: string;
 	date: string;
+	headers?: Header[];
 }
 
 export default {
@@ -52,11 +53,11 @@ export default {
 		const { url } = request;
 		const { pathname } = new URL(url);
 		if (pathname === '/') {
-			const { md: markdownContent, type, html, title, date } = await request.json<RequestBody>();
+			const { md: markdownContent, type, html, title, date, headers = [] } = await request.json<RequestBody>();
 			// debug with https://kreata.ee/postal-mime/example/
 			if (markdownContent?.length) {
 				// with different email sender, use adapter to collect right content for translate
-				const { blogContent = markdownContent, collectLinks, origin_url } = await adapter[type]!(markdownContent!, html, [], env);
+				const { blogContent = markdownContent, collectLinks, origin_url } = await adapter[type]!(markdownContent!, html, headers, env);
 				// translate content
 				const translatedMD = await md(blogContent!, env, collectLinks);
 
