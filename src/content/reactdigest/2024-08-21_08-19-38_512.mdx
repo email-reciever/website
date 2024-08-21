@@ -1,0 +1,92 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#457 React Compiler
+description: RD#457 React Compiler
+date: 星期一 05 下午 五月 27o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/react-compiler
+origin_site: https://newsletter.reactdigest.net/p/react-compiler
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#457 React Compiler" url="https://newsletter.reactdigest.net/p/react-compiler" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XYEuFVChJelSuJ5XoBpKBQZE46Sz-vYmr07xWsTzOpTnjtc2Gf_VW5HLEV7qZlzAV6zWGAiHzWv27Hd2-jPjDv2aicuat7MYg7cc8ks-EJAd7fK0KtOm7nkl_5gtul8wKCHT6UdYxULEyBYlokWbKx0qsDjNC4z2ZoVVf8aVpKKVDBReWdvJjaDMuvnA0Jubf1-JcZy7NC84Zr6LrScmY8prIQKsNKTcgHI-ylWG9d8uFKBGDnoK7f0We8lwMGIwgPf178IpL9w7Ps76XSw2NCe9xY8-D-QZy2BMXDJbzWgxSckX8ghC2xj77mrrQa_uLMUvYw2fGI01aAtRSrr4h41xR8GJCGCWITjxe0desrDYTuSkuCFJXyPGjbaXVKnG3Nw8tJNltkP4SsMmv5C1rJFuIIg4z0Pc8mscGY2ZK-qudiw0vBCnVPvVT9iN0cDPG_lNnd00N-IDdgBd7h7mYkzK8NuXRsy1MV2QcV18-MerR_DjVxMkXIDCSTuvsk7qbIcuH8bd7CgObP0y2thHGocd4nQCKkRhFwugQb6EuO9K5CoUITYLHOJ5lNrQd00hmX2dKPArhVYtKMtIYFzH1r/46p/rydrnAqUQzCTjiWjfARLQA/h0/h001.HztS5OuUB7HYbEE1SMXtn8db9fr4Y-3EKj5dwHsFeSs)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/46p/rydrnAqUQzCTjiWjfARLQA/ho.gif)
+
+[React Compiler](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvldpq9Hvk07FFmRQtOuP0BdU8uAA9X-FC_b53Cnf0kW0p6tUtwgwF6-kcL0Nour8RJAoAaFRNtZZ4Wlgz_vn3ORJiHkrY0E4QZJl4k2dUaNiOhPPdma5ysc34GVEx86umhhLZTUiSzM0WzfqYQxsfyt6qfH4NBtnJtfjtsSTG-Fa/46p/rydrnAqUQzCTjiWjfARLQA/h1/h001.MZMBymzXVcMxaSfWvrx33AiPAbmjpv-gdp3dFAFepCg)  
+_12 minutes_ by React Team
+
+In order to optimize applications, React Compiler automatically memoizes your code. You may be familiar today with memoization through APIs such as useMemo, useCallback, and React.memo. With these APIs you can tell React that certain parts of your application don’t need to recompute if their inputs haven’t changed, reducing work on updates.
+
+[The Current State of React Server Components: A Guide for the Perplexed](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqQafazjAZlm2I4qgqy3bDrI2JKmjLtubqTb9n-lzt2zxJ9YpEHR2DvB9gab8PDyv1z3rVCBOap5Kytld8Ds1FiYnYs7a_HQ433f__aGd3WiZ1U0Wr83ulB99BmY2p9yfiRDW-vYvC-JLw2laE-MAzLBLWVOMB0nR1L9zGFeqJwb-5hBzE1mjjg7Cdi04Ls6Dr2oFXK-cZeoLZuo6WUf-hFfAX-PeG1ht110KMXTwNWR59VbYhiWGkedjQSORcpR87mqsM32mx5CcxAN14YD9CUcu33sgsNtCiAkcGhBCnDts/46p/rydrnAqUQzCTjiWjfARLQA/h2/h001.HRWLWU4qSoIr2f-z6aPTREWflgBiSFDoUxBT2XWmEUA)  
+_sponsored by Progress_
+
+A sneak peak into the React Server Components world - what they are, how are they different from the client components, what the pros and cons of incorporating them now, and more.
+
+[Quantifying the Impact of Styled Components on Server Response Times](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63nSwWeemaMq9s6uxXiNOcr8GsESTh3wuYIHI_6OV_Zq5-3Lj5z1_1mqvT42sLCr3BtoZj8sOM1uV91YLm3YkHuNA5O7Zs8KOY8NvPVatSDifiTkqlQFNjWpvwOW9YRru8SNar91Zk62TK-7e26e490HEUPlU88RChXJ8rJGg4ZLL7DTFbPYinDf8OMZqLriEZBoT3K_nQcWMwsQNXPunNvd4XW-PZ6zHW8ZRo281jQSdudww80ioe9OJEwrJGfIUIQ/46p/rydrnAqUQzCTjiWjfARLQA/h3/h001.fMAQqzOBmlnTDH-hZSo9WANHxBRyyQEbUGeSoVO3tSw)  
+_4 minutes_ by Andrew Levine
+
+Working off of a suspicion, I spent some time at work trying to properly attribute the amount of time spent during SSR to Styled Components.
+
+[Prefer Multiple Compositions](https://link.mail.beehiiv.com/ss/c/u001.K5pvBZzC3tJzgxtI00uQCFu6fMmYR5aFhvsZ1tJ6dmVM_ZGXuWQZ2SoLnC7GoKi68McEN4giow2WSFdLEZFfkNzohGYuGlsJ5ZJgsCt5oORWkWsgYaT9KDT7eHEeJ5UixNb3e5qcYVp5l81VRQYgh3RM0aeAo7MrR0uuqi6izt3HZOvEz0aSh8SwMv7JX3cuWwj5tC6UmwWXDnLBIUJnlw/46p/rydrnAqUQzCTjiWjfARLQA/h4/h001.dsPdBlXDAb7VIsBm-c09Pp6_tq4S-1bt5uIYiBos6lo)  
+_5 minutes_ by Kyle Shevlin
+
+The flexibility of JavaScript and React means there are lots of ways to achieve the same result. Let's consider why we might choose one way over another when it comes to React. Specifically, when to choose a more verbose solution with composition over the DRYest code possible.
+
+[React Compiler With React 18](https://link.mail.beehiiv.com/ss/c/u001.aPX4i1CZjyg0TJtq3966EAYjY2dIBbvEu-MxjJX5h6me8a5pGR3cVJZ_K3CWvZkN3DYSY7O7rcOZfq2821kXRhIQnkEgj_ZNm8UV7xR2uTS2CVcV2PjHfzadjT83x42cs6fvB4vHNLDlsBM1ddnsEnIy5LTVbECdCZWaG86nrr8IS8qgBrcSHaWIQVKSnTKOm16kT3yfa6lG5LCVn6FXMxSxWSQnaT8M0c32mTf7Ws8/46p/rydrnAqUQzCTjiWjfARLQA/h5/h001.MgJj_DpxhnvnZtapmC2GKMvr2-VKtNFjVSnVaJa64fg)  
+_5 minutes_ by Jack Herrington
+
+First off, no, the React Compiler isn’t part of React 19. React 19 is just the React library. It doesn’t make any build changes for you. So to integrate the React Compiler means doing that work yourself. It also means that the React Compiler is optional. Let me show you how to use the React Compiler with a React 18 project.
+
+[Inline Styles on Steroids](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqepZ6D-zpY6qNEjkO_Qmcm6zkRzz8apEs_iyIkhRL-ctDUZFwS8FqiX0pYBZvzhc9TuPJekoxbGvbgEwUJLb2HtLYb_oVNKH11reF_dlEv-4R0G1r4fV9oMX87xnITnPE27woCo5vpCIly2G36OfGXxWFMIvjAb4NGSSP5DPSKkj/46p/rydrnAqUQzCTjiWjfARLQA/h6/h001.Un0S7cxMe0hjBVwUEXpIKuNYNvgjH4SlPjaqlD8rVrU)  
+_8 minutes_ by Robin Weser
+
+A short reflection on my journey with fela and an introduction to css-hooks and brandeur adding support for native CSS features to inline styles
+
+#
+</Detail>
+
+[阅读在线](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XYEuFVChJelSuJ5XoBpKBQZE46Sz-vYmr07xWsTzOpTnjtc2Gf_VW5HLEV7qZlzAV6zWGAiHzWv27Hd2-jPjDv2aicuat7MYg7cc8ks-EJAd7fK0KtOm7nkl_5gtul8wKCHT6UdYxULEyBYlokWbKx0qsDjNC4z2ZoVVf8aVpKKVDBReWdvJjaDMuvnA0Jubf1-JcZy7NC84Zr6LrScmY8prIQKsNKTcgHI-ylWG9d8uFKBGDnoK7f0We8lwMGIwgPf178IpL9w7Ps76XSw2NCe9xY8-D-QZy2BMXDJbzWgxSckX8ghC2xj77mrrQa_uLMUvYw2fGI01aAtRSrr4h41xR8GJCGCWITjxe0desrDYTuSkuCFJXyPGjbaXVKnG3Nw8tJNltkP4SsMmv5C1rJFuIIg4z0Pc8mscGY2ZK-qudiw0vBCnVPvVT9iN0cDPG_lNnd00N-IDdgBd7h7mYkzK8NuXRsy1MV2QcV18-MerR_DjVxMkXIDCSTuvsk7qbIcuH8bd7CgObP0y2thHGocd4nQCKkRhFwugQb6EuO9K5CoUITYLHOJ5lNrQd00hmX2dKPArhVYtKMtIYFzH1r/46p/rydrnAqUQzCTjiWjfARLQA/h0/h001.HztS5OuUB7HYbEE1SMXtn8db9fr4Y-3EKj5dwHsFeSs)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/46p/rydrnAqUQzCTjiWjfARLQA/ho.gif)
+
+[回应编译器](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvldpq9Hvk07FFmRQtOuP0BdU8uAA9X-FC_b53Cnf0kW0p6tUtwgwF6-kcL0Nour8RJAoAaFRNtZZ4Wlgz_vn3ORJiHkrY0E4QZJl4k2dUaNiOhPPdma5ysc34GVEx86umhhLZTUiSzM0WzfqYQxsfyt6qfH4NBtnJtfjtsSTG-Fa/46p/rydrnAqUQzCTjiWjfARLQA/h1/h001.MZMBymzXVcMxaSfWvrx33AiPAbmjpv-gdp3dFAFepCg)\
+*12分钟*响应团队
+
+为了优化应用程序,React Compiler 会自动记忆你的代码. 您可能已经熟悉使用Memo、Callback 和 React.memo 等 API 来记忆化。
+
+[反应服务器组件的当前状态:对困惑者的指南](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqQafazjAZlm2I4qgqy3bDrI2JKmjLtubqTb9n-lzt2zxJ9YpEHR2DvB9gab8PDyv1z3rVCBOap5Kytld8Ds1FiYnYs7a_HQ433f__aGd3WiZ1U0Wr83ulB99BmY2p9yfiRDW-vYvC-JLw2laE-MAzLBLWVOMB0nR1L9zGFeqJwb-5hBzE1mjjg7Cdi04Ls6Dr2oFXK-cZeoLZuo6WUf-hFfAX-PeG1ht110KMXTwNWR59VbYhiWGkedjQSORcpR87mqsM32mx5CcxAN14YD9CUcu33sgsNtCiAkcGhBCnDts/46p/rydrnAqUQzCTjiWjfARLQA/h2/h001.HRWLWU4qSoIr2f-z6aPTREWflgBiSFDoUxBT2XWmEUA)\
+*由 Progress 赞助*
+
+进入 React Server Components 世界的尖峰 - 它们是什么,它们如何与客户端组件不同,现在集成它们的优点和缺点以及更多。
+
+[定量化对服务器响应时间的风格化组件的影响](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63nSwWeemaMq9s6uxXiNOcr8GsESTh3wuYIHI_6OV_Zq5-3Lj5z1_1mqvT42sLCr3BtoZj8sOM1uV91YLm3YkHuNA5O7Zs8KOY8NvPVatSDifiTkqlQFNjWpvwOW9YRru8SNar91Zk62TK-7e26e490HEUPlU88RChXJ8rJGg4ZLL7DTFbPYinDf8OMZqLriEZBoT3K_nQcWMwsQNXPunNvd4XW-PZ6zHW8ZRo281jQSdudww80ioe9OJEwrJGfIUIQ/46p/rydrnAqUQzCTjiWjfARLQA/h3/h001.fMAQqzOBmlnTDH-hZSo9WANHxBRyyQEbUGeSoVO3tSw)\
+*四分钟*安德鲁·莱文
+
+出于怀疑,我花了一段时间在工作中,试图正确地将SSR期间花费的时间归因于风格化组件。
+
+[喜欢多重组成](https://link.mail.beehiiv.com/ss/c/u001.K5pvBZzC3tJzgxtI00uQCFu6fMmYR5aFhvsZ1tJ6dmVM_ZGXuWQZ2SoLnC7GoKi68McEN4giow2WSFdLEZFfkNzohGYuGlsJ5ZJgsCt5oORWkWsgYaT9KDT7eHEeJ5UixNb3e5qcYVp5l81VRQYgh3RM0aeAo7MrR0uuqi6izt3HZOvEz0aSh8SwMv7JX3cuWwj5tC6UmwWXDnLBIUJnlw/46p/rydrnAqUQzCTjiWjfARLQA/h4/h001.dsPdBlXDAb7VIsBm-c09Pp6_tq4S-1bt5uIYiBos6lo)\
+*五分钟*凯尔·谢夫林
+
+JavaScript 和 React 的灵活性意味着有许多方法可以实现相同的结果. 让我们来考虑为什么我们在 React 时会选择一种方式,而不是另一种方式。
+
+[使用 React 18 编译器](https://link.mail.beehiiv.com/ss/c/u001.aPX4i1CZjyg0TJtq3966EAYjY2dIBbvEu-MxjJX5h6me8a5pGR3cVJZ_K3CWvZkN3DYSY7O7rcOZfq2821kXRhIQnkEgj_ZNm8UV7xR2uTS2CVcV2PjHfzadjT83x42cs6fvB4vHNLDlsBM1ddnsEnIy5LTVbECdCZWaG86nrr8IS8qgBrcSHaWIQVKSnTKOm16kT3yfa6lG5LCVn6FXMxSxWSQnaT8M0c32mTf7Ws8/46p/rydrnAqUQzCTjiWjfARLQA/h5/h001.MgJj_DpxhnvnZtapmC2GKMvr2-VKtNFjVSnVaJa64fg)\
+*五分钟*杰克·赫林顿
+
+首先,不,React 编译器不是 React 19 的一部分,React 19 只是 React 库,它不会为您做出任何构建更改,因此,整合 React 编译器意味着你自己做这件事,这也意味着 React 编译器是可选的,让我告诉你如何使用 React 编译器与 React 18 项目。
+
+[在线风格在类固醇](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqepZ6D-zpY6qNEjkO_Qmcm6zkRzz8apEs_iyIkhRL-ctDUZFwS8FqiX0pYBZvzhc9TuPJekoxbGvbgEwUJLb2HtLYb_oVNKH11reF_dlEv-4R0G1r4fV9oMX87xnITnPE27woCo5vpCIly2G36OfGXxWFMIvjAb4NGSSP5DPSKkj/46p/rydrnAqUQzCTjiWjfARLQA/h6/h001.Un0S7cxMe0hjBVwUEXpIKuNYNvgjH4SlPjaqlD8rVrU)\
+*八分钟*罗宾·韦塞尔
+
+我与 fela 的旅程的简短反思,以及对 css-hooks 和 brandeur 的介绍,将原生 CSS 功能的支持添加到内线风格中
+
+#
+
+
