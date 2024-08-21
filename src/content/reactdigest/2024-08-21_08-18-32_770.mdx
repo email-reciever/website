@@ -1,0 +1,92 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#447 Best Practices for Writing React Tests
+description: RD#447 Best Practices for Writing React Tests
+date: 星期日 04 下午 三月 17o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/best-practices-writing-react-tests
+origin_site: https://newsletter.reactdigest.net/p/best-practices-writing-react-tests
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#447 Best Practices for Writing React Tests" url="https://newsletter.reactdigest.net/p/best-practices-writing-react-tests" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1X3xpJPvQntEhy5vt5bX8KuNw_rB5BZ-9ua8kcKrFXh6fzBAZM4naa6h2DwbT7F-FykpS-uwcDsiP7feGBSfPP7JFjAAHlXTEItefmr6DJR0ummWrWUBGNDMXQhh_x4xo0dCzCjJMmYxZYUF4WM4grxyEcYycmW9g3_NU4HbjBvdO-66qYSUr9XDNoYoJ2qn88-GErK08Oi7ggw7n9H7csWBUiy3TucO2EFN8Wh0ACXd0azovb9qDIsPFIDyJ__yWcb2FBHN6T1qUfAturcs2XalheT-bHphTmY9Zv2aDxQ5jN5kCWYacuGT4V4KmVTIhEbrivs9Z54jJFIEp38uMt7O2cYw3mH1wCle1lVyIjGOMPZf4JW6_YQQNdqMOhT4xGE9_DwdLW2s7DzQooEgWUikNKHAnXs3d4bx3K-5IlqP-gejeoUn3JrCQRS1sov87srkwftBgfORkCeQXjvYX3kR5jhRwgd2jVHBHTDorpCqTfwzvIsxCTQaMMEDNj-QjToo7oNQmHg6mZGo_TCA4QcfvlCjnZeI7RkBuBY-VWHN-ri2wD8-4EeuOHjxrCkpOveRvDY6YAgHCUzUeq7dYjzC4QPK65lyYPoJhPSuwigoqZNG60zp_5AWDD7CQiP5R0/44q/OE36uTBwR36t_JuOvr9O-A/h0/h001.TVc8ie_qxgk6Bw3V2KHvawSXKtyMh9AORWNxhpoykaQ)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/44q/OE36uTBwR36t_JuOvr9O-A/ho.gif)
+
+[Best Practices for Writing Tests with React Testing Library](https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBOYHL4AWpUvMf-VgIx2HDt7yLueV6znfaW-ZmMHsUw6T8rEi7TxIebGjjI98fyMKwqZkEuuiF1o3xCG46fACAQQLmvPtx4pRNyQgLCPzEdh4bZyCTsrE0Ko-yLH93vuJqUWOBsT6MRsjtylQnp75KhQzJu12c6bh0_OBZlOzUhvESf8zkhYt2PMZCXX0IKzFes5yN746DDN7FLWipFduWGKxrMCwC02PR8oqOYIYAqKyw/44q/OE36uTBwR36t_JuOvr9O-A/h1/h001.XOOxDs9EIPF6s3bAnrtFrBcU4Cp2Fkto1FzV5DSblo0)  
+_17 minutes_ by Alex Khomenko
+
+Properly written tests not only help prevent regressions and buggy code, but in the case of React Testing Library, they also improve the accessibility of components and the overall user experience. In this post, we'll explore how to get the most out of your React Testing Library tests. I'll provide a collection of what I consider to be best practices and tips on how to avoid common mistakes with React Testing Library.
+
+[Embed Conversational AI Into Your React JS App](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8pEBcl8c-515bQBpkmLU9Cfdb_KXG0H_xPLUe6FG4ysV/44q/OE36uTBwR36t_JuOvr9O-A/h2/h001.hs6Y478NfpvohJFLb2aTfQLUTt0CV_4nk8veajiRddQ)  
+_sponsored by nlux_
+
+Free and open-source library to integrate context-aware conversational AI into your React app, powered by any LLM. nlux makes that super simple. High performance, comprehensive documentation, and feature-rich. Check it out!
+
+[Progressively Enhance Handling Your Forms With Server Actions](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF9QvXOdh3M1WtnyEbmvUCbaM72lbKL32Vgoq-jOWkaHzz7aQWYRtTISIoqnJdeGVZC5lRYZ5LPMNTFAp6jd6-ztutNkrCwf1-DemHkW76lSdSgehe03s4d8zpOWKKSoSz7MD6pTlYf1JtfYmcbvLP1kEMYTFl22-4celEJdtcMotlaFXXbt72bTCsASfgWOKZpfSIlzlerVl6MCX9DN1oodatVAO9RSjK5XFzE8-NGeEgPCg7wUHQny3fzy1JaD5twRAXlmGSi8cvLxuCMtFbYQzsiPg8puCJb6mtWk866GZ/44q/OE36uTBwR36t_JuOvr9O-A/h3/h001.eTFgeVQv3rOkmyrp2vzn_lsLcgBpk3xWQWlQIqQ8I1c)  
+_6 minutes_ by Dave Bitter
+
+A large part of adding interactivity to your applications is through forms. Single Page Applications SPAs have not always handled this part the best. Let’s have a look at how we can use React.js Server Actions to handle your forms progressively enhanced.
+
+[Navigating the future of frontend](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfQV8Zz1JGMdBNyE4ROgi40M57TnA98vmngYJD-TrRLZ2wgUSaN1-MVjsoVB7i7VlPgEPcluReVLm5qWlO3sVrGUCsQFHVHXQtRyuMt-X5fBUkzcxozNZHFXNPG0RZMI4WijhgfrJxepdrfo1NGr1ylmBimjqEeE6RKfzidgD1Jex4vFwWaColH9XKX792tpt8az9QLx4Fa4tnUxlHWvFrb6U-yspVC7SLJtdtnOh61ev/44q/OE36uTBwR36t_JuOvr9O-A/h4/h001.8Y9pVr36YsOieNasccaU20dNTBicbyfgM5UFvA-LJzk)  
+_24 minutes_
+
+Make sense of modern frontend meta-frameworks. Connect the dots between fundamental concepts old and new.
+
+[How to Create Interactive Animations Using React Spring](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqf3123FxAOjHAoPC8ylrL2dh_7AU7iAVp17TJgTiPYeZjX6OqMe791h-SSBEA9CI_yKut8Mq9B7sOMtEiFm0uJNk1GJLfEtPyfPbTU_XpQ0p6460q3c21d3oiY-puv_fDQjid9lEQ6r1BgoS4ljbf1gXluWQvpLOeN0nWKOoTOfA2pvffz8PzHKKuzWwnofjP4roFZDZesmlGnYMMgW0VjlCj-iQexOoM8OPlvGdqXK1/44q/OE36uTBwR36t_JuOvr9O-A/h5/h001.LcU5F6ZEiTBZDISmdZ7Fp84KUII5k10CWblCVgnuZbM)  
+_13 minutes_ by Yemi Ojedapo
+
+Explore the features of React Spring, a JS-based animation library, and learn how to use its hooks and components in React applications.
+
+[Applying Strategy Pattern in React](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVQr8ZLEavULW3Nx8LvsheMORDwhp2bhmsLn8BxFDzYBK0QqcvtJ2HT7VDCR5Cnt0Rzu7CJMkxCSG5zagAkZmSC_-eu_4nkj8HVVU-t1lZVnFHSbXqtcqS8cCnZZvo_kJzXmMU1SpuVDEeHNT6r_J85EnD-SzAQOUESZW1W3g3huG0eH2_bbZfxjxA2I3aseunhldfmRWP4Mfny0bcJqyWYQbvuv3Z9cZp5cKOu8OddjnUnRdcLln4FEtOJZy-pC8NA/44q/OE36uTBwR36t_JuOvr9O-A/h6/h001.SSqcEWLTbNZz8y3yClwSc8Fijt6ibayrzYrgIiLOxxM)  
+_5 minutes_ by Huy Ta Quoc
+
+In the first part, we explored the significance of the Strategy pattern in React projects and outlined its implementation. However, the approach presented might have be a little bit of an overkill. This article aims to introduce a more simple and practical way of applying the Strategy pattern.
+
+#
+</Detail>
+
+[阅读在线](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1X3xpJPvQntEhy5vt5bX8KuNw_rB5BZ-9ua8kcKrFXh6fzBAZM4naa6h2DwbT7F-FykpS-uwcDsiP7feGBSfPP7JFjAAHlXTEItefmr6DJR0ummWrWUBGNDMXQhh_x4xo0dCzCjJMmYxZYUF4WM4grxyEcYycmW9g3_NU4HbjBvdO-66qYSUr9XDNoYoJ2qn88-GErK08Oi7ggw7n9H7csWBUiy3TucO2EFN8Wh0ACXd0azovb9qDIsPFIDyJ__yWcb2FBHN6T1qUfAturcs2XalheT-bHphTmY9Zv2aDxQ5jN5kCWYacuGT4V4KmVTIhEbrivs9Z54jJFIEp38uMt7O2cYw3mH1wCle1lVyIjGOMPZf4JW6_YQQNdqMOhT4xGE9_DwdLW2s7DzQooEgWUikNKHAnXs3d4bx3K-5IlqP-gejeoUn3JrCQRS1sov87srkwftBgfORkCeQXjvYX3kR5jhRwgd2jVHBHTDorpCqTfwzvIsxCTQaMMEDNj-QjToo7oNQmHg6mZGo_TCA4QcfvlCjnZeI7RkBuBY-VWHN-ri2wD8-4EeuOHjxrCkpOveRvDY6YAgHCUzUeq7dYjzC4QPK65lyYPoJhPSuwigoqZNG60zp_5AWDD7CQiP5R0/44q/OE36uTBwR36t_JuOvr9O-A/h0/h001.TVc8ie_qxgk6Bw3V2KHvawSXKtyMh9AORWNxhpoykaQ)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/44q/OE36uTBwR36t_JuOvr9O-A/ho.gif)
+
+[使用 React 测试库撰写测试的最佳实践](https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBOYHL4AWpUvMf-VgIx2HDt7yLueV6znfaW-ZmMHsUw6T8rEi7TxIebGjjI98fyMKwqZkEuuiF1o3xCG46fACAQQLmvPtx4pRNyQgLCPzEdh4bZyCTsrE0Ko-yLH93vuJqUWOBsT6MRsjtylQnp75KhQzJu12c6bh0_OBZlOzUhvESf8zkhYt2PMZCXX0IKzFes5yN746DDN7FLWipFduWGKxrMCwC02PR8oqOYIYAqKyw/44q/OE36uTBwR36t_JuOvr9O-A/h1/h001.XOOxDs9EIPF6s3bAnrtFrBcU4Cp2Fkto1FzV5DSblo0)\
+*十七分钟*亚历克斯·霍曼科
+
+正确编写的测试不仅有助于防止回归和错误的代码,在React测试库的情况下,它们还可以提高组件的可用性和整体用户体验。在本文中,我们将探索如何充分利用React测试库测试。
+
+[在您的 React JS 应用程序中嵌入交谈 AI](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8pEBcl8c-515bQBpkmLU9Cfdb_KXG0H_xPLUe6FG4ysV/44q/OE36uTBwR36t_JuOvr9O-A/h2/h001.hs6Y478NfpvohJFLb2aTfQLUTt0CV_4nk8veajiRddQ)\
+*由 nlux 赞助*
+
+免费和开源的图书馆,将环境意识的对话人工智能集成到您的React应用程序中,由任何LLM驱动。 nlux使其非常简单。
+
+[通过服务器操作逐步改进您的表单处理](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF9QvXOdh3M1WtnyEbmvUCbaM72lbKL32Vgoq-jOWkaHzz7aQWYRtTISIoqnJdeGVZC5lRYZ5LPMNTFAp6jd6-ztutNkrCwf1-DemHkW76lSdSgehe03s4d8zpOWKKSoSz7MD6pTlYf1JtfYmcbvLP1kEMYTFl22-4celEJdtcMotlaFXXbt72bTCsASfgWOKZpfSIlzlerVl6MCX9DN1oodatVAO9RSjK5XFzE8-NGeEgPCg7wUHQny3fzy1JaD5twRAXlmGSi8cvLxuCMtFbYQzsiPg8puCJb6mtWk866GZ/44q/OE36uTBwR36t_JuOvr9O-A/h3/h001.eTFgeVQv3rOkmyrp2vzn_lsLcgBpk3xWQWlQIqQ8I1c)\
+*六分钟*戴夫·伯特
+
+将交互性添加到您的应用程序中的很大一部分是通过表单。单页应用程序SPAs并不总是处理这个部分的最佳方式. 让我们看看我们如何使用React.js服务器操作来处理您的表单逐渐增强。
+
+[导航前线的未来](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfQV8Zz1JGMdBNyE4ROgi40M57TnA98vmngYJD-TrRLZ2wgUSaN1-MVjsoVB7i7VlPgEPcluReVLm5qWlO3sVrGUCsQFHVHXQtRyuMt-X5fBUkzcxozNZHFXNPG0RZMI4WijhgfrJxepdrfo1NGr1ylmBimjqEeE6RKfzidgD1Jex4vFwWaColH9XKX792tpt8az9QLx4Fa4tnUxlHWvFrb6U-yspVC7SLJtdtnOh61ev/44q/OE36uTBwR36t_JuOvr9O-A/h4/h001.8Y9pVr36YsOieNasccaU20dNTBicbyfgM5UFvA-LJzk)\
+*24 分钟*
+
+让现代前端元框架有意义. 连接旧和新基本概念之间的点。
+
+[如何使用React Spring创建交互式动画](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqf3123FxAOjHAoPC8ylrL2dh_7AU7iAVp17TJgTiPYeZjX6OqMe791h-SSBEA9CI_yKut8Mq9B7sOMtEiFm0uJNk1GJLfEtPyfPbTU_XpQ0p6460q3c21d3oiY-puv_fDQjid9lEQ6r1BgoS4ljbf1gXluWQvpLOeN0nWKOoTOfA2pvffz8PzHKKuzWwnofjP4roFZDZesmlGnYMMgW0VjlCj-iQexOoM8OPlvGdqXK1/44q/OE36uTBwR36t_JuOvr9O-A/h5/h001.LcU5F6ZEiTBZDISmdZ7Fp84KUII5k10CWblCVgnuZbM)\
+*十三分钟*$40
+
+探索基于 JS 的动画库 React Spring 的功能,并了解如何在 React 应用程序中使用其链接和组件。
+
+[在 React 中应用策略模式](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVQr8ZLEavULW3Nx8LvsheMORDwhp2bhmsLn8BxFDzYBK0QqcvtJ2HT7VDCR5Cnt0Rzu7CJMkxCSG5zagAkZmSC_-eu_4nkj8HVVU-t1lZVnFHSbXqtcqS8cCnZZvo_kJzXmMU1SpuVDEeHNT6r_J85EnD-SzAQOUESZW1W3g3huG0eH2_bbZfxjxA2I3aseunhldfmRWP4Mfny0bcJqyWYQbvuv3Z9cZp5cKOu8OddjnUnRdcLln4FEtOJZy-pC8NA/44q/OE36uTBwR36t_JuOvr9O-A/h6/h001.SSqcEWLTbNZz8y3yClwSc8Fijt6ibayrzYrgIiLOxxM)\
+*五分钟*$44
+
+在第一部分中,我们探讨了战略模式在React项目中的重要性,并概述了其实施情况,但是,提出的方法可能有点过度。
+
+#
+
+
