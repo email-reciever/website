@@ -1,0 +1,101 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#459 How to Create a Modal in React with HTML Dialog
+description: RD#459 How to Create a Modal in React with HTML Dialog
+date: 星期日 06 晚上 六月 9o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/create-modal-react-html-dialog
+origin_site: https://newsletter.reactdigest.net/p/create-modal-react-html-dialog
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#459 How to Create a Modal in React with HTML Dialog" url="https://newsletter.reactdigest.net/p/create-modal-react-html-dialog" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UuwS913DaNnC9Pm66va2xTsmikNxZEz-IlcbgC4n9r12TpwbSj2la5Al4Mo4XOH79Tu9UP2qaYJP4ysQDgPDMQjxqHmqp1RbVc09amUvJhTSzIf5pJWNVJdP8lAdI7ptpgZ8bYpancJP2HOuUbIexpzbDwPhbD44TZmsxIgAqyrgdUu235QsQgkjp1Qj_jTvypcdburdNi0c2e1KxqZSgvjCn6YZsOJut1nazPDARp-nkC-oeex3fImC-HNTO_tLl4PCYFpJyWK2C3bVjDToD1uhq6OUWN09tQ8rJ767gbJ4eHqJDqWkhstQ9NoSp4wI1r5d7WTs3kiy_97MvxsCbRRnDxK0t2H-1VkiNLDg67gk_BJTMV4SdJL3_2flmpn1pKk6MJd38cIoyQ6kuZ2MD5SV6PyujBvApjZs2HlAIiSG-JPyfQMFa6UIVMU_PE_Z56N6bkHkYNs6cDKqnXvLT2HB-yV8mHdcZHvk64Nc3C8N5sP-1x_A058e7xHnKIyMebBxcT1bC_kPZciQGHIe0NKPUautlNcWEmnlsUzlbc8UjSi9Sgbs2fpA73ruijqHACgim6ojMStNWOM9zydS8PgpMFx-kjosnSMQs6cFkc8yrcHfgy3nuxceCYYT_dPNgS-TQmsCy-UCREnBQdm75a/472/AN0_EGbOTtioaHPkXhfLTw/h0/h001.X--43yHm4R3Ol5HaehKjZmlXNBQglhHsfES6fIE-fAE)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/472/AN0_EGbOTtioaHPkXhfLTw/ho.gif)
+
+[How to Create a Modal in React with HTML Dialog](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO_L2mbx2zVzQueeeyszbp9OHqmNcPh7f4U70q1fzmt_YTg65bfBb7zfs43CYkxLGCk9cLA-yeR7HlSnV1VBN8F2VfSlUJ2WLFeSIloMLGeKgGniQn_1AC9ET2R7K-YiWxD-L4hDAabx4G3xRsMbmCS5aQZcIWG89ip-HyeInn9idA5OnfWt5sxk0Rd_iSKDduAtIxaAubWlzxhL9PTkFFA_MBJ6Pn2Ym-pzHszh4XgUFazSJ2Dq2uLvOi08OCd6jcw/472/AN0_EGbOTtioaHPkXhfLTw/h1/h001.erFCfkTJUloAzXNGf5mvijITMoK8JG5DR4Tr1_6xWMk)  
+_23 minutes_ by Colby Fayock
+
+Modals aren’t anything new, but gone are the days that we need to install bloated libraries to one to our app. Instead, let’s see how we can drop in a new modal to a React app using the HTML Dialog element.
+
+[Implement policy-driven RBAC and ABAC in React](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqdD8mD2LmF4iyQyJj-lNrQ0-4DqSdszxMREOon4iaeJ9dJWK-IhfbznmxXYPCGd0PrVs6iT8mNuYcMVeiaKdbv3NK4teCU3i7oE7X3zoEQrtNX29sUk-i69tAS7lyl8_hRvl_GPjyXSQ7YLwd6c6CX7ptV8HEjzNxZ6i4aLrzPo01iBtaXkFspj5d4txo54GhA/472/AN0_EGbOTtioaHPkXhfLTw/h2/h001.-AQf8i-G0NMIcmmGzmxUFEIGRjBfX_HV8vP4HKLimuI)  
+_sponsored by Cerbos_
+
+Fine-grained access controls are challenging. We put together a guide on using Cerbos to implement a scalable and maintainable authorization framework, featuring examples and best practices. If you're looking to simplify your authorization processes while maintaining high security standards, you will find this piece helpful.
+
+[Interactive dropdown menus with Radix UI](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqTbOBVb2nf1lhWB8eAomJogS8yLYMU8SUBYjwn4wUmmqeCVi3jn_fLqmpolATwxx3MGMmq8H6NlMsHkm2vaffeoADrneKZEcYM0s-YEX9zHwJa9-Ah28CJHN3wJrAOYi3Bno939RO1f1rS9GEWxLhwkt1psowHnMxy2DDtjWXqmx2Ca3-2PuN4MNl0wbRmO8ivvbSaaMwBhh9y6I9InXM4cRJ0zx8BCrxmwQOvV2rOM7/472/AN0_EGbOTtioaHPkXhfLTw/h3/h001.OsXViIQVPH-V69moEoCCCxdzH6epuHHbZ9e_uqS82co)  
+_9 minutes_ by Joshua Wootonn
+
+Dropdown menus are great until you have interactive content. This guide combines dialogs and dropdown menus for a simple interactive dropdown flow.
+
+[Sneaky React Memory Leaks II: Closures Vs. React Query](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAOzr0tMGi1OJ5XK-II-s05ZHWG5bk3VepgGvnWxjN57KzMt-EpNeI8uGi3xrVEiOUhDFBKMklvk-YQ0VhFX5vmXCl3MHXjHJ-loJ3H2HsuTdkmEN9Rmq65DfQGgtGmPCKNcAXBMNkM_CLMy_3wu7NoRtoahmYFC6cw6lCU5zgLHnENT_CcaWM5h2xTNO7HQv_PRA1_c8tvwHvT4pjcFo_WnHQDdTeDb6tqzuv3ZeSdJ9F/472/AN0_EGbOTtioaHPkXhfLTw/h4/h001.y0LseK8ma30aLPUcMxMgXzypX94Y-Z5K6yijmZfepKA)  
+_6 minutes_ by Kevin Schiener
+
+How to spot and fix memory leaks in React Query caused by closure scopes.
+
+[Best Practices in React: A Guide for Developers](https://link.mail.beehiiv.com/ss/c/u001.aPX4i1CZjyg0TJtq3966EDo5caJ8-tF9mcylfkc4YmkBIc1n4S56EchCoGnYQG6HfCvW0IRdnC3YuXP_WfTFLfpFr28PaAlzK3RAEf26eBSbWL0c-LiDADCZgzGBwuT4mX3YRKDywtanm_YLaxQn5Z-5hPUK0P9YTrMn1-TvKRsL7LccTRata8tUC7w3jbK2nnohHWEUHuF_VaQeI1wqIgKibaeiS-7zC7BZ099Tf2try4OArzDFtwIJp6whO7XtX-ZuI9QaSxp0asI6VWi_PAS2phG3iHcWrDY_DS9goTE/472/AN0_EGbOTtioaHPkXhfLTw/h5/h001.6cQaPAWHkCx9Lpngs9LMUndNH-oQA1AGbisRCUq5JHk)  
+_2 minutes_ by Jamil Hallal
+
+Before diving into complex patterns and optimizations, ensure you have a solid understanding of React's basic concepts. This includes JSX, components, state, props, and the component lifecycle. A strong foundation will make it easier to understand more advanced best practices.
+
+[The Benefits of Using RTK Query](https://link.mail.beehiiv.com/ss/c/u001.GyLXS_kgZ_zhliVlX2b_SQnXmxwLpUR6KT2YAxZ52G04Zz4_5L2RwkxTHn208Zwl759zX76F_CI-6VHmKpLx4-xF0Vm6a21FNQOWmeYVGxnIACyir5XhJJaIOe6Sj0TR8ml4mqccngSzIDmPyygeBJ5K504i93fgd5Zfkbz46hscH1u29i-1NEY_KWXZ-Z3z8Pjuk246NMyMYTwJdPNLYIppJuTagubTJJHVzk3WcZOXIkX7zW5fvWSbpIzu0Op3ap_gw2KjiYyjKt9WrFFlIdTfjEv7QdDrfuRnWmNG2u0/472/AN0_EGbOTtioaHPkXhfLTw/h6/h001.ZCeAmqRYF3EZxRMr5IsEOmcj1LM6qvQX6Yjdjgc-quY)  
+_4 minutes_ by Oren Farchi
+
+This powerful library, built on top of Redux Toolkit, provides a robust and efficient solution for managing asynchronous data fetching and caching. In this article, we’ll explore the code you provided and highlight the key benefits of using RTK Query.
+
+And today we’ll wrap up with a bonus link on JavaScript promises:
+
+*   [Promises From The Ground Up](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfyko-iFD6lxTdvug6MbGi8Xg2exNNTAEA5i-YSO4iKA4hSKgAy4gysNXOjreTg0nHW-RQuwVkc8wEv9e7LIuT04gfMMoRXCxwkEPHaJQjB1BA9zaneNbSziT8BUS0zXMO3yDt3XvQTW2_wq7nWFKDudTVv15vaNIxMukxneBrW1t0CW8dz3-xkITk5vCELweKDyPbVXDZanXNVI7TSwyLm3ycnS_zTVuQOD-KXDFm93/472/AN0_EGbOTtioaHPkXhfLTw/h7/h001.mYayG9V8zOkfsLM5Zimg5R_7Wk4VPDioGu28axddGkg)
+    
+
+#
+</Detail>
+
+[阅读在线](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UuwS913DaNnC9Pm66va2xTsmikNxZEz-IlcbgC4n9r12TpwbSj2la5Al4Mo4XOH79Tu9UP2qaYJP4ysQDgPDMQjxqHmqp1RbVc09amUvJhTSzIf5pJWNVJdP8lAdI7ptpgZ8bYpancJP2HOuUbIexpzbDwPhbD44TZmsxIgAqyrgdUu235QsQgkjp1Qj_jTvypcdburdNi0c2e1KxqZSgvjCn6YZsOJut1nazPDARp-nkC-oeex3fImC-HNTO_tLl4PCYFpJyWK2C3bVjDToD1uhq6OUWN09tQ8rJ767gbJ4eHqJDqWkhstQ9NoSp4wI1r5d7WTs3kiy_97MvxsCbRRnDxK0t2H-1VkiNLDg67gk_BJTMV4SdJL3_2flmpn1pKk6MJd38cIoyQ6kuZ2MD5SV6PyujBvApjZs2HlAIiSG-JPyfQMFa6UIVMU_PE_Z56N6bkHkYNs6cDKqnXvLT2HB-yV8mHdcZHvk64Nc3C8N5sP-1x_A058e7xHnKIyMebBxcT1bC_kPZciQGHIe0NKPUautlNcWEmnlsUzlbc8UjSi9Sgbs2fpA73ruijqHACgim6ojMStNWOM9zydS8PgpMFx-kjosnSMQs6cFkc8yrcHfgy3nuxceCYYT_dPNgS-TQmsCy-UCREnBQdm75a/472/AN0_EGbOTtioaHPkXhfLTw/h0/h001.X--43yHm4R3Ol5HaehKjZmlXNBQglhHsfES6fIE-fAE)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/472/AN0_EGbOTtioaHPkXhfLTw/ho.gif)
+
+[如何用HTML对话创建一个Modal in React](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO_L2mbx2zVzQueeeyszbp9OHqmNcPh7f4U70q1fzmt_YTg65bfBb7zfs43CYkxLGCk9cLA-yeR7HlSnV1VBN8F2VfSlUJ2WLFeSIloMLGeKgGniQn_1AC9ET2R7K-YiWxD-L4hDAabx4G3xRsMbmCS5aQZcIWG89ip-HyeInn9idA5OnfWt5sxk0Rd_iSKDduAtIxaAubWlzxhL9PTkFFA_MBJ6Pn2Ym-pzHszh4XgUFazSJ2Dq2uLvOi08OCd6jcw/472/AN0_EGbOTtioaHPkXhfLTw/h1/h001.erFCfkTJUloAzXNGf5mvijITMoK8JG5DR4Tr1_6xWMk)\
+*23分钟*科尔比·费洛克
+
+Modals不是什么新鲜事,但我们需要为我们的应用程序安装膨胀的库的日子已经过去了,相反,让我们看看我们如何使用HTML对话元素将一个新的modal放入React应用程序中。
+
+[在 React 中实施基于政策的 RBAC 和 ABAC](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqdD8mD2LmF4iyQyJj-lNrQ0-4DqSdszxMREOon4iaeJ9dJWK-IhfbznmxXYPCGd0PrVs6iT8mNuYcMVeiaKdbv3NK4teCU3i7oE7X3zoEQrtNX29sUk-i69tAS7lyl8_hRvl_GPjyXSQ7YLwd6c6CX7ptV8HEjzNxZ6i4aLrzPo01iBtaXkFspj5d4txo54GhA/472/AN0_EGbOTtioaHPkXhfLTw/h2/h001.-AQf8i-G0NMIcmmGzmxUFEIGRjBfX_HV8vP4HKLimuI)\
+*由 Cerbos 赞助*
+
+细粒访问控制是具有挑战性的。我们编制了一份关于使用Cerbos来实现可扩展和可维护的授权框架的指南,其中包括示例和最佳实践。
+
+[使用Radix UI的交互式下载菜单](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqTbOBVb2nf1lhWB8eAomJogS8yLYMU8SUBYjwn4wUmmqeCVi3jn_fLqmpolATwxx3MGMmq8H6NlMsHkm2vaffeoADrneKZEcYM0s-YEX9zHwJa9-Ah28CJHN3wJrAOYi3Bno939RO1f1rS9GEWxLhwkt1psowHnMxy2DDtjWXqmx2Ca3-2PuN4MNl0wbRmO8ivvbSaaMwBhh9y6I9InXM4cRJ0zx8BCrxmwQOvV2rOM7/472/AN0_EGbOTtioaHPkXhfLTw/h3/h001.OsXViIQVPH-V69moEoCCCxdzH6epuHHbZ9e_uqS82co)\
+*九分钟*约书亚·伍顿
+
+推卸菜单非常好,直到你有交互式内容. 此指南结合对话和推卸菜单,为一个简单的交互式推卸流。
+
+[Sneaky React 记忆泄露 II: 关闭 反复查询](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAOzr0tMGi1OJ5XK-II-s05ZHWG5bk3VepgGvnWxjN57KzMt-EpNeI8uGi3xrVEiOUhDFBKMklvk-YQ0VhFX5vmXCl3MHXjHJ-loJ3H2HsuTdkmEN9Rmq65DfQGgtGmPCKNcAXBMNkM_CLMy_3wu7NoRtoahmYFC6cw6lCU5zgLHnENT_CcaWM5h2xTNO7HQv_PRA1_c8tvwHvT4pjcFo_WnHQDdTeDb6tqzuv3ZeSdJ9F/472/AN0_EGbOTtioaHPkXhfLTw/h4/h001.y0LseK8ma30aLPUcMxMgXzypX94Y-Z5K6yijmZfepKA)\
+*六分钟*凯文·施耶纳
+
+如何识别和修复 React Query 中的关闭范围引起的内存泄露。
+
+[React 最佳实践:为开发人员提供指南](https://link.mail.beehiiv.com/ss/c/u001.aPX4i1CZjyg0TJtq3966EDo5caJ8-tF9mcylfkc4YmkBIc1n4S56EchCoGnYQG6HfCvW0IRdnC3YuXP_WfTFLfpFr28PaAlzK3RAEf26eBSbWL0c-LiDADCZgzGBwuT4mX3YRKDywtanm_YLaxQn5Z-5hPUK0P9YTrMn1-TvKRsL7LccTRata8tUC7w3jbK2nnohHWEUHuF_VaQeI1wqIgKibaeiS-7zC7BZ099Tf2try4OArzDFtwIJp6whO7XtX-ZuI9QaSxp0asI6VWi_PAS2phG3iHcWrDY_DS9goTE/472/AN0_EGbOTtioaHPkXhfLTw/h5/h001.6cQaPAWHkCx9Lpngs9LMUndNH-oQA1AGbisRCUq5JHk)\
+*两分钟*吉米尔·哈拉尔
+
+在深入复杂的模式和优化之前,请确保您对 React 的基本概念有很好的了解,包括 JSX、组件、状态、附件和组件生命周期。
+
+[使用 RTK Query 的优点](https://link.mail.beehiiv.com/ss/c/u001.GyLXS_kgZ_zhliVlX2b_SQnXmxwLpUR6KT2YAxZ52G04Zz4_5L2RwkxTHn208Zwl759zX76F_CI-6VHmKpLx4-xF0Vm6a21FNQOWmeYVGxnIACyir5XhJJaIOe6Sj0TR8ml4mqccngSzIDmPyygeBJ5K504i93fgd5Zfkbz46hscH1u29i-1NEY_KWXZ-Z3z8Pjuk246NMyMYTwJdPNLYIppJuTagubTJJHVzk3WcZOXIkX7zW5fvWSbpIzu0Op3ap_gw2KjiYyjKt9WrFFlIdTfjEv7QdDrfuRnWmNG2u0/472/AN0_EGbOTtioaHPkXhfLTw/h6/h001.ZCeAmqRYF3EZxRMr5IsEOmcj1LM6qvQX6Yjdjgc-quY)\
+*四分钟*作者:Oren Farchi
+
+这个强大的库,建立在Redux工具包上,为管理非同步数据采集和缓存提供了强大而高效的解决方案. 在本文中,我们将探索您提供的代码,并强调使用RTK Query的主要好处。
+
+今天我们将包装一个关于JavaScript承诺的奖金链接:
+
+* [来自地面上的承诺](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfyko-iFD6lxTdvug6MbGi8Xg2exNNTAEA5i-YSO4iKA4hSKgAy4gysNXOjreTg0nHW-RQuwVkc8wEv9e7LIuT04gfMMoRXCxwkEPHaJQjB1BA9zaneNbSziT8BUS0zXMO3yDt3XvQTW2_wq7nWFKDudTVv15vaNIxMukxneBrW1t0CW8dz3-xkITk5vCELweKDyPbVXDZanXNVI7TSwyLm3ycnS_zTVuQOD-KXDFm93/472/AN0_EGbOTtioaHPkXhfLTw/h7/h001.mYayG9V8zOkfsLM5Zimg5R_7Wk4VPDioGu28axddGkg)
+
+#
+
+
