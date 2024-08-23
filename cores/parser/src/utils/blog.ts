@@ -17,6 +17,11 @@ export function getEmailSenderType(email: any) {
 		.toLocaleLowerCase() as Lowercase<WlKeys>;
 }
 
+// https://docs.astro.build/en/guides/markdown-content/#escaping-special-characters
+export function escapeUnsafeCharactors(content = '') {
+	return content.replace(/</g, '&lt;').replace(/{/g, '&lcub;');
+}
+
 export async function createBlog(translateContent: string, originContent: string, frontMatter: frontmatter, env: Env) {
 	const frontMatterContent = Object.entries(frontMatter)
 		.map(([k, v]) => `${k}: ${v}`)
@@ -34,12 +39,12 @@ import { Reference } from '@/components/Reference.tsx';
 ${
 	frontMatter.translated
 		? `<Detail client:only="react">
-	${originContent}
+	${escapeUnsafeCharactors(originContent)}
 </Detail>`
 		: ''
 }
 
-${translateContent}
+${escapeUnsafeCharactors(translateContent)}
 
 `;
 
