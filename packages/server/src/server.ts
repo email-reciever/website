@@ -1,5 +1,7 @@
 import { Application, Router } from '$oak'
 import { resolve } from 'node:path'
+import '$dotenvload'
+import { batchUpdate } from './router/batchUpdate.ts'
 
 const app = new Application()
 
@@ -33,6 +35,8 @@ router.post('/read', async (ctx) => {
 
   ctx.response.body = { status, ...response }
 })
+
+router.post('/batch-update/:type', batchUpdate)
 
 // Logger
 app.use(async (ctx, next) => {

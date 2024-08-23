@@ -4,8 +4,12 @@
     "dev": "deno run -A --watch src/server.ts"
   },
   "imports": {
-    "$oak": "https://deno.land/x/oak/mod.ts"
+    "$oak": "https://deno.land/x/oak/mod.ts",
+    "$pm": "npm:postal-mime",
+    "$chunk": "npm:lodash.chunk",
+    "$dotenvload": "jsr:@std/dotenv/load"
   },
+  "npmRegistry": "https://registry.npmmirror.com",
   "lint": {
     "include": ["src/"],
     "rules": {
