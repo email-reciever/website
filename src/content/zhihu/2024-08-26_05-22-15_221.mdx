@@ -1,0 +1,78 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 栗子前端技术周刊第 44 期 - Node v22.7.0、React Native 0.75、Bun v1.1.25...
+description:  栗子前端技术周刊第 44 期 (2024.8.19 - 2024.8.25)：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。1. Node v22.7.0：Node v22.7.0 发布，v22.6.0 版本引入了类型注释剥离功能（通过 --experimental-strip-types 开启），可支持剥离 .ts 文件中的类型注释，使其无需转换特定于 TypeScript 语法即可运行。v22.7.0 进一步支持了 --experimental-transform-types 功能，可以在运行之前将仅适用于 TypeScript 的语法转换为 JavaScript。 2. React Native 0.75：该版本发布了多项功能，例如支持 % 值的 Yoga 3.1、针对新架构的多项稳定修复，以及建议用户使用 React Native 框架进行开发。 3. Bun v1.1.25：该版本支持了 node：cluster，现在能以每秒 129 万次请求的速度运行，此
+date: 星期一 12 凌晨 八月 26o 2024
+author: zhihu
+origin_url: https://zhuanlan.zhihu.com/p/716379220
+origin_site: https://www.zhihu.com/people/wzy66/posts
+translated: false
+avatar: /media-source/zhihu-ico.png
+banner: https://picx.zhimg.com/v2-3bc0a8b21654e9817bd7bc04b9e32064_l.jpg
+subAuthor: 栗子前端
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="栗子前端技术周刊第 44 期 - Node v22.7.0、React Native 0.75、Bun v1.1.25..." url="https://zhuanlan.zhihu.com/p/716379220" />
+
+
+
+**栗子前端技术周刊第 44 期 (2024.8.19 - 2024.8.25)**：浏览前端一周最新消息，学习国内外优秀文章视频，让我们保持对前端的好奇心。
+
+## **技术资讯**
+
+**1\. [Node v22.7.0](https://link.zhihu.com/?target=https%3A//nodejs.org/en/blog/release/v22.7.0)**：Node v22.7.0 发布，v22.6.0 版本引入了类型注释剥离功能（通过 `--experimental-strip-types` 开启），可支持剥离 .ts 文件中的类型注释，使其无需转换特定于 TypeScript 语法即可运行。v22.7.0 进一步支持了 `--experimental-transform-types` 功能，可以在运行之前将仅适用于 TypeScript 的语法转换为 JavaScript。  
+
+**2\. [React Native 0.75](https://link.zhihu.com/?target=https%3A//reactnative.dev/blog/2024/08/12/release-0.75)**：该版本发布了多项功能，例如支持 `%` 值的 Yoga 3.1、针对新架构的多项稳定修复，以及建议用户使用 React Native 框架进行开发。  
+
+**3\. [Bun v1.1.25](https://link.zhihu.com/?target=https%3A//bun.sh/blog/bun-v1.1.25)**：该版本支持了 `node:cluster`，现在能以每秒 129 万次请求的速度运行，此外，对 V8 的 C++ API 也提供了支持。  
+
+![](https://pic2.zhimg.com/v2-8eef4f73a5cdb1385000c375857a6379_b.jpg)
+
+## **技术文章**
+
+**1\. [Best Practices for Fetching Data in Vue.js](https://link.zhihu.com/?target=https%3A//blog.jobins.jp/best-practices-for-fetching-data-in-vuejs%23heading-separate-api-calls-into-services)**：Vue 中关于数据获取的最佳实践 - 本文分享了在 Vue 中获取数据的一些最佳实践和常用方法，几乎所有 Vue 开发人员都会使用这些方法。  
+
+**2\. [Why Unknown Types Are Useful](https://link.zhihu.com/?target=https%3A//michaeluloth.com/programming-types-unknown-why-useful/)**：为什么 `unknown` 类型很有用 - 文中从数据请求案例出发，简明地讲解了为什么 Typescript 中 `unknown` 类型是很有用的。  
+
+**3\. [深入理解 AST-带你揭秘前端工程的幕后魔法](https://link.zhihu.com/?target=https%3A//juejin.cn/post/7405239837939548160)**：本文将带领大家了解什么是 AST，它的语法怎么学习，以及它在我们实际开发中有什么用，最后作者会带大家实现几个小案例，真实的感受一下 AST 的魔法。  
+
+## **开发工具**
+
+**1\. [Milkdown](https://link.zhihu.com/?target=https%3A//milkdown.dev/)**：基于插件系统的轻量级 WYSIWYG Markdown 编辑器，支持个性化定制。
+
+![](https://pic4.zhimg.com/v2-568cd70174350a2e46f08d6065098dbf_b.jpg)
+
+**2\. [tinykeys](https://link.zhihu.com/?target=https%3A//github.com/jamiebuilds/tinykeys)**：按键绑定库，大小仅 650 B，功能简单贴心。
+
+```js
+import { tinykeys } from "tinykeys"
+
+tinykeys(window, {
+  "Shift+D": () => {
+    alert("The 'Shift' and 'd' keys were pressed at the same time")
+  },
+  "y e e t": () => {
+    alert("The keys 'y', 'e', 'e', and 't' were pressed in order")
+  },
+  "$mod+([0-9])": event => {
+    event.preventDefault()
+    alert(`Either 'Control+${event.key}' or 'Meta+${event.key}' were pressed`)
+  },
+})
+```
+
+**3\. [Legend State](https://link.zhihu.com/?target=https%3A//github.com/LegendApp/legend-state)**：一个小型、快速、现代的状态系统，让你编写更少的代码，开发更快的应用。Legend State 有四个主要目标：尽可能简单易用、性能最好的 React 状态库、细粒度响应能力以实现最小化渲染、强大的同步和持久化能力。
+
+![](https://pic2.zhimg.com/v2-aef88beb3595867d3a3cb471d02a9081_b.jpg)
+
+**4\. [LogTape](https://link.zhihu.com/?target=https%3A//github.com/dahlia/logtape)**：零依赖的简单日志库，易于使用和扩展。
+
+![](https://pic2.zhimg.com/v2-30e65baeb5b84210fd3e714d6003c525_b.jpg)
+
+_以上资讯文章选自常见周刊，如 JavaScript Weekly 等，周刊内容也会不断优化改进，希望你们能够喜欢。_
+
+
+
