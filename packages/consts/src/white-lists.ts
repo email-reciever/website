@@ -9,5 +9,9 @@ export const WHITELISTS = {
   ALEXKONDOV: 'alexkondov38@147790190.mailchimpapp.com',
   INSIDERGITHUB: 'insider@github.com',
   ZHIHU: 'https://rsshub.tinsfox.com',
-  AJIANG: 'https://email-reciever.page.dev'
+  AJIANG: 'https://email-reciever.page.dev',
+  JAVASCRIPTWEEKLY: 'jsw@peterc.org',
+  NODEWEEKLY: 'node@cooperpress.com',
+  REACTSTATUS: 'react@cooperpress.com',
+  FRONTENDFOCUS: 'frontend@cooperpress.com'
 } as const
