@@ -37,7 +37,11 @@ export const batchUpdate: RouterMiddleware<
           headers
         }
         try {
-          const response = await fetch(Deno.env.get('WORKER')!, {
+          const url =
+            Deno.env.get('USE_LOCAL') === 'true'
+              ? Deno.env.get('WORKER_LOCAL')
+              : Deno.env.get('WORKER')
+          const response = await fetch(url!, {
             method: 'POST',
             body: JSON.stringify(payload)
           }).then((response) => response.json())
