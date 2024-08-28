@@ -12,8 +12,8 @@ export const javascriptweekly: Adapter = (text, html) => {
 	const $ = load(html, null, false);
 	let origin_url: string | undefined;
 
-	$('td > p > a').each((index, element) => {
-		if ($(element).text() === 'Read on the Web' && !origin_url) {
+	$('td  p > a').each((index, element) => {
+		if ($(element).text().toLocaleLowerCase() === 'read on the web' && !origin_url) {
 			origin_url = element.attribs.href;
 		}
 	});

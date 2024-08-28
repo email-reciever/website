@@ -1,0 +1,1801 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Common Causes of Memory Leaks in JavaScript
+description: Common Causes of Memory Leaks in JavaScript
+date: 星期六 12 凌晨 八月 10o 2024
+author: others
+origin_url: https://www.trevorlasn.com/blog/common-causes-of-memory-leaks-in-javascript
+origin_site: https://www.trevorlasn.com/blog/common-causes-of-memory-leaks-in-javascript
+translated: true
+avatar: /media-source/others-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Common Causes of Memory Leaks in JavaScript" url="https://www.trevorlasn.com/blog/common-causes-of-memory-leaks-in-javascript" />
+
+<Detail client:only="react">
+	Aug 10, 2024
+
+•
+
+18 min read
+
+•
+
+By Trevor Indrek Lasn
+
+Principal Software Engineer @ [stackredefine.com](https://www.stackredefine.com/?utm_source=trevorlasn.com) , [carrentalgateway.com](https://carrentalgateway.com/?utm_source=trevorlasn.com)
+
+* * *
+
+# Common Causes of Memory Leaks in JavaScript
+
+## Identify and fix common JavaScript memory leaks (Node.js and Deno.js)
+
+Memory leaks are a silent threat that gradually degrades performance, leads to crashes, and increases operational costs. Unlike obvious bugs, memory leaks are often subtle and difficult to spot until they start causing serious problems.
+
+Increased memory usage drives up server costs and negatively impacts user experience. Understanding how memory leaks occur is the first step in addressing them.
+
+###### Understanding Memory Leaks
+
+A memory leak happens when your application allocates memory and then fails to release it after it’s no longer needed. Over time, these unreleased memory blocks accumulate, leading to progressively higher memory consumption.
+
+This is especially problematic in long-running processes like web servers, where the leak can cause the application to consume more and more memory until it eventually crashes or slows down to a crawl.
+
+###### Understanding Memory Usage in Node.js (V8)
+
+Node.js (V8) handles several distinct types of memory. Each plays a critical role in how your application performs and utilizes resources.
+
+**Memory Type**
+
+**Description**
+
+**RSS (Resident Set Size)**
+
+Total memory allocated for the Node.js process, including all parts of the memory: code, stack, and heap.
+
+**Heap Total**
+
+Memory allocated for JavaScript objects. This is the total size of the allocated heap.
+
+**Heap Used**
+
+Memory actually used by the JavaScript objects. This shows how much of the heap is currently in use.
+
+**External**
+
+Memory used by C++ objects that are linked to JavaScript objects. This memory is managed outside the V8 heap.
+
+**Array Buffers**
+
+Memory allocated for **ArrayBuffer** objects, which are used to hold raw binary data.
+
+1.  **RSS (Resident Set Size):** The total memory allocated for the process.
+
+RSS refers to the total memory footprint of a Node.js process. It includes all memory allocated for the process, including the heap, stack, and code segments.
+
+```javascript
+// rss.js
+console.log('Initial Memory Usage:', process.memoryUsage());
+
+setInterval(() => &lcub;
+    const memoryUsage = process.memoryUsage();
+    console.log(`RSS: $&lcub;memoryUsage.rss}`);
+}, 1000);
+```
+
+This script logs the RSS memory usage every second. We can observe how the total memory footprint changes over time.
+
+```bash
+➜ node rss.js
+Initial Memory Usage: &lcub;
+  rss: 38502400,
+  heapTotal: 4702208,
+  heapUsed: 2559000,
+  external: 1089863,
+  arrayBuffers: 10515
+}
+RSS: 41025536
+RSS: 41041920
+RSS: 41041920
+RSS: 41041920
+```
+
+2.  **Heap Total:** The amount of memory allocated for the JavaScript objects.
+
+Heap Total represents the total amount of memory allocated for the JavaScript objects by the V8 engine (the JavaScript engine used by Node.js).
+
+```javascript
+// heap.js
+console.log('Initial Memory Usage:', process.memoryUsage());
+
+const largeArray = new Array(1e6).fill('A');
+
+setInterval(() => &lcub;
+    const memoryUsage = process.memoryUsage();
+    console.log(`Heap Total: $&lcub;memoryUsage.heapTotal}`);
+}, 1000);
+```
+
+Allocating a large array increases the heap total. The logged heap total shows the memory allocated for JavaScript objects.
+
+```shell
+➜  node heap.js
+Initial Memory Usage: &lcub;
+  rss: 38535168,
+  heapTotal: 4702208,
+  heapUsed: 2559224,
+  external: 1089863,
+  arrayBuffers: 10515
+}
+Heap Total: 12976128
+Heap Total: 12976128
+Heap Total: 12976128
+Heap Total: 12976128
+Heap Total: 12976128
+Heap Total: 12976128
+Heap Total: 12976128
+```
+
+3.  **Heap Used:** The amount of memory actually used by the objects.
+
+Heap Used refers to the amount of memory that is currently being used by the JavaScript objects on the heap.
+
+When we push objects into an array, we’re increasing the amount of memory used by the heap.
+
+```javascript
+// heap-used.js
+console.log('Initial Memory Usage:', process.memoryUsage());
+
+let data = [];
+for (let i = 0; i &lt; 1e6; i++) &lcub;
+    data.push(&lcub; index: i });
+}
+
+setInterval(() => &lcub;
+    const memoryUsage = process.memoryUsage();
+    console.log(`Heap Used: $&lcub;memoryUsage.heapUsed}`);
+}, 1000);
+```
+
+The heap used value will rise as more objects are added.
+
+```shell
+➜  node heap-used.js
+Initial Memory Usage: &lcub;
+  rss: 38748160,
+  heapTotal: 4702208,
+  heapUsed: 2559424,
+  external: 1089863,
+  arrayBuffers: 10515
+}
+Heap Used: 2833808
+Heap Used: 2847776
+Heap Used: 2850800
+Heap Used: 2854352
+Heap Used: 2875800
+Heap Used: 2879488
+```
+
+4.  **External:** Memory used by C++ objects bound to JavaScript.
+
+External memory refers to the memory used by C++ objects linked to JavaScript. These objects are created through bindings that let JavaScript interact with native code, allocating memory outside of the typical JavaScript heap.
+
+This memory isn’t directly visible in JavaScript but still adds to the total memory used by the application.
+
+The **Buffer.alloc** method allocates a 50MB buffer, which is tracked as external memory.
+
+```javascript
+// external.js
+const buffer = Buffer.alloc(50 * 1024 * 1024); // Allocate 50MB of buffer
+
+console.log('Initial Memory Usage:', process.memoryUsage());
+
+setInterval(() => &lcub;
+    const memoryUsage = process.memoryUsage();
+    console.log(`External Memory: $&lcub;memoryUsage.external}`);
+}, 1000);
+```
+
+This example logs the external memory usage, which will reflect the buffer allocation.
+
+```sh
+➜  node external.js
+Initial Memory Usage: &lcub;
+  rss: 39223296,
+  heapTotal: 4702208,
+  heapUsed: 2560832,
+  external: 53518663,
+  arrayBuffers: 52439315
+}
+External Memory: 53814435
+External Memory: 53814435
+External Memory: 53814435
+External Memory: 53814435
+External Memory: 53814435
+External Memory: 53814435
+External Memory: 53814435
+```
+
+5.  **Array Buffers:** Memory allocated for **ArrayBuffer** objects.
+
+Array Buffers are memory used for **ArrayBuffer** objects. These objects store fixed-length binary data in JavaScript.
+
+**ArrayBuffer** is part of JavaScript’s typed array system, letting you work with binary data directly.
+
+The memory for these buffers is tracked separately from regular JavaScript objects. They’re often used for handling raw data, like files or network protocols.
+
+Here’s an example where I allocate a 50MB **ArrayBuffer** and then check the initial memory usage of my Node.js process.
+
+```javascript
+// array-buffer.js
+const buffer = new ArrayBuffer(50 * 1024 * 1024); // 50MB ArrayBuffer
+
+console.log('Initial Memory Usage:', process.memoryUsage());
+
+setInterval(() => &lcub;
+    const memoryUsage = process.memoryUsage();
+    console.log(`Array Buffers: $&lcub;memoryUsage.arrayBuffers}`);
+}, 1000);
+```
+
+```shell
+➜ node array-buffer.js
+Initial Memory Usage: &lcub;
+  rss: 39075840,
+  heapTotal: 4702208,
+  heapUsed: 2559496,
+  external: 53518663,
+  arrayBuffers: 52439315
+}
+Array Buffers: 52439315
+Array Buffers: 52439315
+Array Buffers: 52439315
+Array Buffers: 52439315
+Array Buffers: 52439315
+Array Buffers: 52439315
+```
+
+###### Common Causes of Memory Leaks in JavaScript
+
+Memory leaks in JavaScript often arise from:
+
+1.  ###### Improperly Managed Variables
+    
+
+Variables that are not properly managed can cause memory leaks.
+
+For instance, if you declare variables that are supposed to be temporary but forget to clean them up, they will continue to consume memory.
+
+```javascript
+let cache = &lcub;};
+
+function storeData(key, value) &lcub;
+    cache[key] = value;
+}
+
+// Simulating the function being called multiple times
+storeData('item1', new Array(1000000).fill('A'));
+storeData('item2', new Array(1000000).fill('B'));
+
+// Memory leak: data stored in 'cache' is never released
+```
+
+In the example above, data is added to a global object called **cache**. If this data isn’t removed when it’s no longer needed, it will keep using memory unnecessarily.
+
+This is especially problematic if these variables are stored in a global scope, making them persist throughout the application’s lifecycle.
+
+```javascript
+let globalUserSessions = &lcub;}; // Global scope
+
+function addUserSession(sessionId, userData) &lcub;
+  globalUserSessions[sessionId] = userData; // Store user data in global scope
+}
+
+function removeUserSession(sessionId) &lcub;
+  delete globalUserSessions[sessionId]; // Manually remove user session
+}
+
+// Simulate adding user sessions
+addUserSession('session1', &lcub; name: 'Alice', data: new Array(1000000).fill('A') });
+addUserSession('session2', &lcub; name: 'Bob', data: new Array(1000000).fill('B') });
+
+// The globalUserSessions object will persist for the entire app lifecycle unless manually cleaned up
+```
+
+**globalUserSessions** is a global object used to store user session data. Because it’s in the global scope, it persists for the entire runtime of the application.
+
+If sessions are not properly removed using **removeUserSession**, the data will remain in memory indefinitely, leading to a memory leak.
+
+2.  ###### Persistent Global Objects
+    
+
+Global objects can hold onto memory longer than needed. Data in them can stay in memory after it’s no longer needed. This gradually increases memory usage.
+
+```javascript
+global.config = &lcub;
+    settings: new Array(1000000).fill('Configuration')
+};
+// Memory leak: 'config' is global and remains in memory for the entire application lifecycle
+```
+
+Since **config** is globally accessible and never cleared, the memory it uses is retained for the entire runtime of the application. Here’s one way we can avoid the memory leak:
+
+```javascript
+function createConfig() &lcub;
+    return &lcub;
+        settings: new Array(1000000).fill('Configuration')
+    };
+}
+
+// Use config only when needed, and let it be garbage collected afterwards
+function processConfig() &lcub;
+    const config = createConfig();
+    // Perform operations with config
+    console.log(config.settings[0]);
+
+    // Config will be cleared from memory once it's no longer referenced
+}
+
+processConfig();
+```
+
+Instead of storing **config** in a global object, we store **config** locally within a function. This ensures that **config** is cleared after the function runs, freeing up memory for garbage collection.
+
+3.  ###### Event Listeners Not Removed
+    
+
+Adding event listeners without removing them properly when they are no longer needed can lead to memory leaks.
+
+Each event listener retains a reference to the function and any variables it uses, preventing the garbage collector from reclaiming that memory.
+
+Over time, if you keep adding listeners without removing them, this will result in increased memory usage.
+
+Here’s an example that demonstrates how event listeners can cause memory leaks if not properly removed:
+
+```javascript
+const EventEmitter = require('events');
+const myEmitter = new EventEmitter();
+
+function listener() &lcub;
+    console.log('Event triggered!');
+}
+
+// Adding event listeners repeatedly
+setInterval(() => &lcub;
+    myEmitter.on('event', listener);
+}, 1000);
+```
+
+A new event listener is added every second. However, these listeners are never removed, which causes them to accumulate in memory.
+
+Each listener holds a reference to the **listener** function and any associated variables, preventing garbage collection and leading to increased memory usage over time.
+
+To prevent this memory leak, you should remove event listeners when they are no longer needed.
+
+```javascript
+const EventEmitter = require('events');
+const myEmitter = new EventEmitter();
+
+function listener() &lcub;
+    console.log('Event triggered!');
+}
+
+// Add an event listener
+myEmitter.on('event', listener);
+
+// Trigger the event and then remove the listener
+myEmitter.emit('event');
+myEmitter.removeListener('event', listener);
+
+// Alternatively, you can use `once` method to add a listener that automatically removes itself after being triggered
+myEmitter.once('event', listener);
+```
+
+4.  ###### Closures Capturing Variables
+    
+
+Closures in JavaScript can unintentionally hold onto variables longer than needed. When a closure captures a variable, it keeps a reference to that memory.
+
+If the closure is used in a long-running process or isn’t properly terminated, the captured variables stay in memory, causing a leak.
+
+```javascript
+function createClosure() &lcub;
+    let capturedVar = new Array(1000000).fill('Data');
+
+    return function() &lcub;
+        console.log(capturedVar[0]);
+    };
+}
+
+const closure = createClosure();
+// The closure holds onto 'capturedVar', even if it's not used anymore.
+```
+
+To avoid leaks, ensure closures don’t unnecessarily capture large variables or end them when no longer needed.
+
+```javascript
+function createClosure() &lcub;
+    let capturedVar = new Array(1000000).fill('Data');
+
+    return function() &lcub;
+        console.log(capturedVar[0]);
+        capturedVar = null; // Release memory when no longer needed
+    };
+}
+
+const closure = createClosure();
+closure(); // 'capturedVar' is released after use.
+```
+
+5.  ###### Unmanaged Callbacks
+    
+
+In certain scenarios, unmanaged callbacks can cause memory issues if they hold onto variables or objects longer than necessary.
+
+However, JavaScript’s garbage collector is generally effective at cleaning up memory once references are no longer needed.
+
+```javascript
+function fetchData(callback) &lcub;
+    let data = new Array(1000000).fill('Data');
+
+    setTimeout(() => &lcub;
+        callback(data);
+    }, 1000);
+}
+
+function handleData(data) &lcub;
+    console.log(data[0]);
+}
+
+fetchData(handleData); // The 'data' array remains in memory.
+```
+
+In the example above:
+
+1.  **Data Allocation:** The **fetchData** function allocates a large array (data), which holds 1 million elements.
+2.  **Callback Reference:** The callback function (**handleData**) references this large array when it’s invoked by setTimeout after 1 second.
+
+Despite the large allocation, JavaScript’s garbage collector ensures that memory is released when no longer needed.
+
+There is no need to manually clear the references unless you are dealing with very complex scenarios where references are unintentionally retained.
+
+###### Avoiding Unnecessary Complexity
+
+In most cases, there’s no need to manually clear references in standard asynchronous callbacks.
+
+###### Overly Complex (Not Recommended)
+
+```js
+function fetchData(callback) &lcub;
+  let data = new Array(1000000).fill('Data');
+
+  setTimeout(() => &lcub;
+      callback(data);
+      data = null; // Release the reference
+      global.gc(); // Explicitly trigger garbage collection
+  }, 1000);
+}
+
+function handleData(data) &lcub;
+  console.log(data[0]);
+  data = null; // Clear reference after handling
+}
+
+console.log('Initial Memory Usage:', process.memoryUsage());
+
+fetchData(handleData);
+
+setTimeout(() => &lcub;
+  console.log('Final Memory Usage:', process.memoryUsage());
+}, 2000); // Give some time for garbage collection
+```
+
+While this code manually clears references and explicitly triggers garbage collection, it introduces unnecessary complexity.
+
+JavaScript’s garbage collector is typically sufficient for handling memory cleanup without these additional steps.
+
+In most scenarios, such manual interventions are not only redundant but can also make the code harder to maintain.
+
+6.  ###### Incorrect Use of bind()
+    
+
+Using **bind()** creates a new function with its **this** keyword set to a specific value. If you’re not careful, this can cause memory leaks.
+
+```js
+function MyClass() &lcub;
+    this.largeData = new Array(1000000).fill('leak');
+
+    window.addEventListener('click', this.handleClick.bind(this));
+}
+
+MyClass.prototype.handleClick = function() &lcub;
+    console.log('Clicked');
+};
+
+// If MyClass instance is destroyed, but the event listener is not removed,
+// the bound function will keep the instance alive in memory.
+```
+
+###### Why Memory Leaks Happen with bind()
+
+_1_. **References are Kept:** When you use _bind()_, the new function remembers the original function and this value. If you don’t remove the function when it’s no longer needed, it sticks around and uses memory.
+
+_2_. **Big Objects Stay in Memory:** Bound functions can accidentally keep large objects in memory, even if you don’t need them anymore.
+
+7.  ###### Circular References
+    
+
+Circular references happen when two objects refer to each other. This creates a loop that can confuse the garbage collector, preventing it from freeing up memory.
+
+```js
+function CircularReference() &lcub;
+    this.reference = this; // Circular reference
+}
+
+let obj = new CircularReference();
+obj = null; // Setting obj to null may not free the memory.
+```
+
+Even if you set **obj** to null, the memory might not be released because of the self-loop.
+
+###### How to Avoid Circular Reference
+
+1.  **Break the Loop:** Make sure objects don’t refer back to each other when they are no longer needed. This helps the garbage collector clear them out.
+
+```js
+function CircularReference() &lcub;
+    this.reference = this;
+}
+
+let obj = new CircularReference();
+
+// Breaking the circular reference
+obj.reference = null; 
+obj = null; // Now the memory can be freed
+```
+
+By setting **obj.reference** to null, we break the circular reference. This allows the garbage collector to free up the memory when **obj** is no longer needed.
+
+2.  **Use Weak References**: Using **WeakMap**, **WeakSet**, or **WeakRef** allows the garbage collector to clean up memory even if there are references, as long as they are weak.
+
+```js
+let weakMap = new WeakMap();
+
+function CircularReference() &lcub;
+    let obj = &lcub;};
+    weakMap.set(obj, "This is a weak reference");
+    return obj;
+}
+
+let obj = CircularReference();
+// The object can be garbage collected when no longer needed
+```
+
+**weakMap** holds a weak reference to **obj**. This means that when **obj** is no longer used elsewhere, it can still be garbage collected even though it’s referenced in **weakMap**.
+
+```js
+let weakRef;
+
+function createObject() &lcub;
+    let obj = &lcub; data: 'important' };
+    weakRef = new WeakRef(obj);
+    return obj;
+}
+
+let obj = createObject();
+
+console.log(weakRef.deref()); // &lcub; data: 'important' }
+
+obj = null; // Now the object can be garbage collected
+```
+
+**weakRef** allows you to hold a weak reference to **obj**. If **obj** is set to null and there are no other references to it, it can be garbage collected, even though **weakRef** still exists.
+
+###### Quick Note
+
+_WeakMap_, _WeakSet_, and _WeakRef_ are great for preventing memory leaks, but you might not need them all the time. They’re more for advanced use cases, like managing caches or big data.
+
+If you’re working on typical web apps, you might not see them often, but it’s good to know they exist when you need them.
+
+###### Profiling Memory Usage in Node.js
+
+To find memory leaks, you need to profile your application to understand how memory is being used.
+
+Here’s a Node.js application designed to simulate CPU-intensive tasks, I/O operations, and intentionally create a memory leak for testing purposes.
+
+```javascript
+const http = require('http');
+const url = require('url');
+
+// Simulate a CPU-intensive task
+const handleCpuIntensiveTask = (req, res) => &lcub;
+    let result = 0;
+    for (let i = 0; i &lt; 1e7; i++) &lcub;
+        result += i * Math.random();
+    }
+    console.log('Memory Usage (CPU Task):', process.memoryUsage()); // Log memory usage
+    res.writeHead(200, &lcub; 'Content-Type': 'text/plain' });
+    res.end(`Result of the CPU-intensive task: $&lcub;result}`);
+};
+
+// Create a large in-memory buffer
+const largeBuffer = Buffer.alloc(1024 * 1024 * 50, 'a'); // 50MB buffer filled with 'a'
+
+// Simulate an I/O operation
+const handleSimulateIo = (req, res) => &lcub;
+    // Simulate reading the buffer as if it were a file
+    setTimeout(() => &lcub;
+        console.log('Memory Usage (Simulate I/O):', process.memoryUsage()); // Log memory usage
+        res.writeHead(200, &lcub; 'Content-Type': 'text/plain' });
+        res.end(`Simulated I/O operation completed with data of length: $&lcub;largeBuffer.length}`);
+    }, 500); // Simulate a 500ms I/O operation
+};
+
+// Simulate a memory leak (For Testing)
+let memoryLeakArray = [];
+
+const causeMemoryLeak = () => &lcub;
+    memoryLeakArray.push(new Array(1000).fill('memory leak'));
+    console.log('Memory leak array length:', memoryLeakArray.length);
+};
+
+const server = http.createServer((req, res) => &lcub;
+    const parsedUrl = url.parse(req.url, true);
+
+    if (parsedUrl.pathname === '/cpu-intensive') &lcub;
+        handleCpuIntensiveTask(req, res);
+    } else if (parsedUrl.pathname === '/simulate-io') &lcub;
+        handleSimulateIo(req, res);
+    } else if (parsedUrl.pathname === '/cause-memory-leak') &lcub;
+        causeMemoryLeak();
+        res.writeHead(200, &lcub; 'Content-Type': 'text/plain' });
+        res.end('Memory leak caused. Check memory usage.');
+    } else &lcub;
+        res.writeHead(404, &lcub; 'Content-Type': 'text/plain' });
+        res.end('Not Found');
+    }
+});
+
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => &lcub;
+    console.log(`Server is running on port $&lcub;PORT}`);
+});
+```
+
+Next, we need to stress test our server. This script stress tests the server by sending 100 requests each to simulate CPU, I/O, and memory leaks.
+
+```sh
+#!/bin/bash
+
+# Number of requests to send
+REQUESTS=100
+
+# Endpoint URLs
+CPU_INTENSIVE_URL="http://localhost:3000/cpu-intensive"
+SIMULATE_IO_URL="http://localhost:3000/simulate-io"
+MEMORY_LEAK_URL="http://localhost:3000/cause-memory-leak"
+
+echo "Sending $REQUESTS requests to $CPU_INTENSIVE_URL and $SIMULATE_IO_URL..."
+
+# Loop for CPU-intensive endpoint
+for ((i=1;i&lt;=REQUESTS;i++)); do
+  curl -s $CPU_INTENSIVE_URL > /dev/null &
+done
+
+# Loop for Simulated I/O endpoint
+for ((i=1;i&lt;=REQUESTS;i++)); do
+  curl -s $SIMULATE_IO_URL > /dev/null &
+done
+
+# Loop for Memory Leak endpoint
+for ((i=1;i&lt;=REQUESTS;i++)); do
+  curl -s $MEMORY_LEAK_URL > /dev/null &
+done
+
+wait
+echo "Done."
+```
+
+It loops through the URLs and sends silent requests using curl, running them in the background to simulate a high load.
+
+```sh
+➜  ./load_test.sh
+Sending 100 requests to http://localhost:3000/cpu-intensive and http://localhost:3000/simulate-io and http://localhost:3000/cause-memory-leak
+Done.
+```
+
+Here’s how our server responds to the stress test. Make sure the server is running before you start the test.
+
+```sh
+➜  node --prof server.js
+Server is running on port 3000
+Memory Usage (Simulate I/O): &lcub;
+  rss: 122863616,
+  heapTotal: 17547264,
+  heapUsed: 8668016,
+  external: 54075004,
+  arrayBuffers: 52439275
+}
+Memory leak array length: 25
+Memory leak array length: 26
+Memory leak array length: 27
+Memory leak array length: 28
+Memory leak array length: 29
+Memory leak array length: 30
+Memory leak array length: 31
+Memory leak array length: 32
+Memory leak array length: 33
+Memory leak array length: 34
+Memory leak array length: 35
+Memory leak array length: 36
+Memory leak array length: 37
+Memory leak array length: 38
+Memory leak array length: 39
+Memory leak array length: 40
+Memory leak array length: 41
+Memory leak array length: 42
+Memory leak array length: 43
+Memory leak array length: 44
+Memory leak array length: 45
+Memory leak array length: 46
+Memory leak array length: 47
+Memory leak array length: 48
+Memory leak array length: 49
+Memory leak array length: 50
+Memory leak array length: 51
+Memory leak array length: 52
+Memory leak array length: 53
+Memory leak array length: 54
+Memory leak array length: 55
+Memory leak array length: 56
+Memory Usage (CPU Task): &lcub;
+  rss: 122716160,
+  heapTotal: 17547264,
+  heapUsed: 11393456,
+  external: 54075004,
+  arrayBuffers: 52439275
+}
+Memory leak array length: 173
+```
+
+###### Analysing the results
+
+The profiling data will be saved in a file with a name like _isolate-0xXXXXXXXXXXXX-v8.log._
+
+To process the log and get a human-readable summary, run:
+
+```plaintext
+➜  node --prof-process isolate-0x140008000-42065-v8.log > processed-profile.txt
+```
+
+This will generate a **processed-profile.txt** file with the CPU profiling data, which includes details about where your application spent time and how it managed memory.
+
+Open the **processed-profile.txt** file and look for areas where a significant amount of time or memory is being used.
+
+```ts
+Statistical profiling result from isolate-0x140008000-42065-v8.log, (4099 ticks, 308 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+   1007   24.6%   24.6%  JS: *handleCpuIntensiveTask /Users/trevorindreklasn/Projects/labs/node-memory/server.js:5:32
+      5    0.1%    0.1%  JS: +handleCpuIntensiveTask /Users/trevorindreklasn/Projects/labs/node-memory/server.js:5:32
+      1    0.0%    0.0%  JS: ^onParserExecute node:_http_server:839:25
+      1    0.0%    0.0%  JS: ^getKeys node:internal/util/inspect:709:17
+      1    0.0%    0.0%  JS: ^clearBuffer node:internal/streams/writable:742:21
+      1    0.0%    0.0%  JS: ^checkListener node:events:276:23
+      1    0.0%    0.0%  JS: ^Socket node:net:353:16
+      1    0.0%    0.0%  JS: +pushAsyncContext node:internal/async_hooks:539:26
+      1    0.0%    0.0%  JS: +processTicksAndRejections node:internal/process/task_queues:67:35
+
+ [C++]:
+   ticks  total  nonlib   name
+   2772   67.6%   67.6%  t std::__1::__hash_table&lt;std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::__unordered_map_hasher&lt;int, std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, true>, std::__1::__unordered_map_equal&lt;int, std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::equal_to&lt;int>, std::__1::hash&lt;int>, true>, std::__1::allocator&lt;std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>>>::rehash(unsigned long)
+
+ [Summary]:
+   ticks  total  nonlib   name
+   1019   24.9%   24.9%  JavaScript
+   2772   67.6%   67.6%  C++
+    358    8.7%    8.7%  GC
+      0    0.0%          Shared libraries
+    308    7.5%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   2636  100.0%   64.3%  TOTAL
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   2772   67.6%  t std::__1::__hash_table&lt;std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::__unordered_map_hasher&lt;int, std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, true>, std::__1::__unordered_map_equal&lt;int, std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::equal_to&lt;int>, std::__1::hash&lt;int>, true>, std::__1::allocator&lt;std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>>>::rehash(unsigned long)
+   1880   67.8%    JS: *handleCpuIntensiveTask /Users/trevorindreklasn/Projects/labs/node-memory/server.js:5:32
+   1727   91.9%      JS: ^&lt;anonymous> /Users/trevorindreklasn/Projects/labs/node-memory/server.js:36:34
+   1129   65.4%        JS: +emit node:events:467:44
+   1129  100.0%          JS: ^parserOnIncoming node:_http_server:1033:26
+   1129  100.0%            JS: ^parserOnHeadersComplete node:_http_common:71:33
+    598   34.6%        JS: ^emit node:events:467:44
+    598  100.0%          JS: ^parserOnIncoming node:_http_server:1033:26
+    598  100.0%            JS: ^parserOnHeadersComplete node:_http_common:71:33
+    153    8.1%      JS: ~&lt;anonymous> /Users/trevorindreklasn/Projects/labs/node-memory/server.js:36:34
+    140   91.5%        JS: ^emit node:events:467:44
+    140  100.0%          JS: ~parserOnIncoming node:_http_server:1033:26
+    140  100.0%            JS: ~parserOnHeadersComplete node:_http_common:71:33
+     13    8.5%        JS: ~parserOnIncoming node:_http_server:1033:26
+     13  100.0%          JS: ~parserOnHeadersComplete node:_http_common:71:33
+    655   23.6%    t std::__1::__hash_table&lt;std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::__unordered_map_hasher&lt;int, std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, true>, std::__1::__unordered_map_equal&lt;int, std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::equal_to&lt;int>, std::__1::hash&lt;int>, true>, std::__1::allocator&lt;std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>>>::rehash(unsigned long)
+    654   99.8%      JS: *handleCpuIntensiveTask /Users/trevorindreklasn/Projects/labs/node-memory/server.js:5:32
+    612   93.6%        JS: ^&lt;anonymous> /Users/trevorindreklasn/Projects/labs/node-memory/server.js:36:34
+    410   67.0%          JS: +emit node:events:467:44
+    410  100.0%            JS: ^parserOnIncoming node:_http_server:1033:26
+    202   33.0%          JS: ^emit node:events:467:44
+    202  100.0%            JS: ^parserOnIncoming node:_http_server:1033:26
+     42    6.4%        JS: ~&lt;anonymous> /Users/trevorindreklasn/Projects/labs/node-memory/server.js:36:34
+     40   95.2%          JS: ^emit node:events:467:44
+     40  100.0%            JS: ~parserOnIncoming node:_http_server:1033:26
+      2    4.8%          JS: ~parserOnIncoming node:_http_server:1033:26
+      2  100.0%            JS: ~parserOnHeadersComplete node:_http_common:71:33
+     49    1.8%    JS: ^&lt;anonymous> /Users/trevorindreklasn/Projects/labs/node-memory/server.js:36:34
+     38   77.6%      JS: +emit node:events:467:44
+     38  100.0%        JS: ^parserOnIncoming node:_http_server:1033:26
+     38  100.0%          JS: ^parserOnHeadersComplete node:_http_common:71:33
+     11   22.4%      JS: ^emit node:events:467:44
+     11  100.0%        JS: ^parserOnIncoming node:_http_server:1033:26
+     11  100.0%          JS: ^parserOnHeadersComplete node:_http_common:71:33
+
+   1007   24.6%  JS: *handleCpuIntensiveTask /Users/trevorindreklasn/Projects/labs/node-memory/server.js:5:32
+    940   93.3%    JS: ^&lt;anonymous> /Users/trevorindreklasn/Projects/labs/node-memory/server.js:36:34
+    663   70.5%      JS: +emit node:events:467:44
+    663  100.0%        JS: ^parserOnIncoming node:_http_server:1033:26
+    663  100.0%          JS: ^parserOnHeadersComplete node:_http_common:71:33
+    277   29.5%      JS: ^emit node:events:467:44
+    277  100.0%        JS: ^parserOnIncoming node:_http_server:1033:26
+    277  100.0%          JS: ^parserOnHeadersComplete node:_http_common:71:33
+     67    6.7%    JS: ~&lt;anonymous> /Users/trevorindreklasn/Projects/labs/node-memory/server.js:36:34
+     61   91.0%      JS: ^emit node:events:467:44
+     61  100.0%        JS: ~parserOnIncoming node:_http_server:1033:26
+     61  100.0%          JS: ~parserOnHeadersComplete node:_http_common:71:33
+      6    9.0%      JS: ~parserOnIncoming node:_http_server:1033:26
+      6  100.0%        JS: ~parserOnHeadersComplete node:_http_common:71:33
+
+    308    7.5%  UNKNOWN
+     11    3.6%    JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+     11  100.0%      JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      2   18.2%        JS: ~&lt;anonymous> node:internal/streams/duplex:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      2   18.2%        JS: ~&lt;anonymous> node:http:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      2  100.0%            JS: ~compileForPublicLoader node:internal/bootstrap/realm:332:25
+      1    9.1%        JS: ~&lt;anonymous> node:net:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    9.1%        JS: ~&lt;anonymous> node:internal/streams/readable:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    9.1%        JS: ~&lt;anonymous> node:internal/streams/operators:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    9.1%        JS: ~&lt;anonymous> node:internal/perf/observe:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    9.1%        JS: ~&lt;anonymous> node:internal/child_process:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    9.1%        JS: ~&lt;anonymous> node:child_process:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    9.1%        JS: ~&lt;anonymous> node:_http_agent:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+```
+
+###### Pay particular attention to:
+
+*   **High CPU usage functions:** These are the bottlenecks in your code.
+*   **Memory-intensive functions:** Functions that consume large amounts of memory might point to potential memory leaks, especially if they correspond to parts of your code that are supposed to release memory but don’t.
+*   **Event Loop and Garbage Collection (GC):** Look for a high percentage of time spent in GC, as this might suggest that the application is struggling with memory management.
+
+Memory leaks may be subtle, but addressing them is key to keeping your JavaScript applications efficient and reliable.
+
+* * *
+
+Hi, my name is Trevor. I write about software engineering, startups, security, and more.
+
+
+</Detail>
+
+2024 年 8 月 10 日
+
+•
+
+阅读时间 18 分钟
+
+•
+
+作者：特雷弗·英德雷克·拉森
+
+首席软件工程师 @ [stackredefine.com](https://www.stackredefine.com/?utm_source=trevorlasn.com) 、[carrentalgateway.com](https://carrentalgateway.com/?utm_source=trevorlasn.com)
+
+***
+
+# JavaScript 中内存泄漏的常见原因
+
+## 识别并修复常见的 JavaScript 内存泄漏（Node.js 和 Deno.js）
+
+内存泄漏是一种无声的威胁，它会逐渐降低性能、导致崩溃并增加运营成本。与明显的错误不同，内存泄漏通常很微妙且难以发现，直到它们开始导致严重问题。
+
+内存使用量的增加会增加服务器成本并对用户体验产生负面影响。了解内存泄漏是如何发生的是解决内存泄漏问题的第一步。
+
+###### 了解内存泄漏
+
+当您的应用程序分配内存，然后在不再需要内存后无法释放它时，就会发生内存泄漏。随着时间的推移，这些未释放的内存块会累积，导致内存消耗逐渐增加。
+
+这在 Web 服务器等长时间运行的进程中尤其成问题，其中泄漏可能导致应用程序消耗越来越多的内存，直到最终崩溃或速度减慢。
+
+###### 了解 Node.js (V8) 中的内存使用情况
+
+Node.js (V8) 处理几种不同类型的内存。每个都在应用程序如何执行和利用资源方面发挥着关键作用。
+
+**内存类型**
+
+**描述**
+
+**RSS（居民集大小）**
+
+为 Node.js 进程分配的总内存，包括内存的所有部分：代码、堆栈和堆。
+
+**堆总计**
+
+为 JavaScript 对象分配的内存。这是分配的堆的总大小。
+
+**已使用的堆**
+
+JavaScript 对象实际使用的内存。这显示当前有多少堆正在使用。
+
+**外部的**
+
+链接到 JavaScript 对象的 C++ 对象使用的内存。该内存在 V8 堆之外进行管理。
+
+**数组缓冲区**
+
+为 **ArrayBuffer** 对象分配的内存，用于保存原始二进制数据。
+
+1. **RSS（Resident Set Size）：** 为进程分配的总内存。
+
+RSS 是指 Node.js 进程的总内存占用量。它包括为进程分配的所有内存，包括堆、堆栈和代码段。
+
+```javascript
+// rss.js
+console.log('Initial Memory Usage:', process.memoryUsage());
+
+setInterval(() => &lcub;
+    const memoryUsage = process.memoryUsage();
+    console.log(`RSS: $&lcub;memoryUsage.rss}`);
+}, 1000);
+```
+
+该脚本每秒记录 RSS 内存使用情况。我们可以观察总内存占用量如何随时间变化。
+
+```bash
+➜ node rss.js
+Initial Memory Usage: &lcub;
+  rss: 38502400,
+  heapTotal: 4702208,
+  heapUsed: 2559000,
+  external: 1089863,
+  arrayBuffers: 10515
+}
+RSS: 41025536
+RSS: 41041920
+RSS: 41041920
+RSS: 41041920
+```
+
+2. **堆总计：** 为 JavaScript 对象分配的内存量。
+
+Heap Total 表示 V8 引擎（Node.js 使用的 JavaScript 引擎）为 JavaScript 对象分配的内存总量。
+
+```javascript
+// heap.js
+console.log('Initial Memory Usage:', process.memoryUsage());
+
+const largeArray = new Array(1e6).fill('A');
+
+setInterval(() => &lcub;
+    const memoryUsage = process.memoryUsage();
+    console.log(`Heap Total: $&lcub;memoryUsage.heapTotal}`);
+}, 1000);
+```
+
+分配大数组会增加堆总数。记录的堆总数显示为 JavaScript 对象分配的内存。
+
+```shell
+➜  node heap.js
+Initial Memory Usage: &lcub;
+  rss: 38535168,
+  heapTotal: 4702208,
+  heapUsed: 2559224,
+  external: 1089863,
+  arrayBuffers: 10515
+}
+Heap Total: 12976128
+Heap Total: 12976128
+Heap Total: 12976128
+Heap Total: 12976128
+Heap Total: 12976128
+Heap Total: 12976128
+Heap Total: 12976128
+```
+
+3. **堆已使用：** 对象实际使用的内存量。
+
+已用堆是指堆上 JavaScript 对象当前正在使用的内存量。
+
+当我们将对象推入数组时，我们会增加堆使用的内存量。
+
+```javascript
+// heap-used.js
+console.log('Initial Memory Usage:', process.memoryUsage());
+
+let data = [];
+for (let i = 0; i &lt; 1e6; i++) &lcub;
+    data.push(&lcub; index: i });
+}
+
+setInterval(() => &lcub;
+    const memoryUsage = process.memoryUsage();
+    console.log(`Heap Used: $&lcub;memoryUsage.heapUsed}`);
+}, 1000);
+```
+
+随着更多对象的添加，堆使用值将会上升。
+
+```shell
+➜  node heap-used.js
+Initial Memory Usage: &lcub;
+  rss: 38748160,
+  heapTotal: 4702208,
+  heapUsed: 2559424,
+  external: 1089863,
+  arrayBuffers: 10515
+}
+Heap Used: 2833808
+Heap Used: 2847776
+Heap Used: 2850800
+Heap Used: 2854352
+Heap Used: 2875800
+Heap Used: 2879488
+```
+
+4. **外部：** 绑定到 JavaScript 的 C++ 对象使用的内存。
+
+外部内存是指链接到 JavaScript 的 C++ 对象使用的内存。这些对象是通过绑定创建的，这些绑定让 JavaScript 与本机代码交互，在典型的 JavaScript 堆之外分配内存。
+
+此内存在 JavaScript 中不直接可见，但仍会添加到应用程序使用的总内存中。
+
+**Buffer.alloc** 方法分配一个 50MB 的缓冲区，该缓冲区被作为外部内存进行跟踪。
+
+```javascript
+// external.js
+const buffer = Buffer.alloc(50 * 1024 * 1024); // Allocate 50MB of buffer
+
+console.log('Initial Memory Usage:', process.memoryUsage());
+
+setInterval(() => &lcub;
+    const memoryUsage = process.memoryUsage();
+    console.log(`External Memory: $&lcub;memoryUsage.external}`);
+}, 1000);
+```
+
+此示例记录外部内存使用情况，这将反映缓冲区分配。
+
+```sh
+➜  node external.js
+Initial Memory Usage: &lcub;
+  rss: 39223296,
+  heapTotal: 4702208,
+  heapUsed: 2560832,
+  external: 53518663,
+  arrayBuffers: 52439315
+}
+External Memory: 53814435
+External Memory: 53814435
+External Memory: 53814435
+External Memory: 53814435
+External Memory: 53814435
+External Memory: 53814435
+External Memory: 53814435
+```
+
+5. **Array Buffers：** 为 **ArrayBuffer** 对象分配的内存。
+
+数组缓冲区是用于 **ArrayBuffer** 对象的内存。这些对象在 JavaScript 中存储固定长度的二进制数据。
+
+**ArrayBuffer** 是 JavaScript 类型化数组系统的一部分，可让您直接使用二进制数据。
+
+这些缓冲区的内存与常规 JavaScript 对象分开跟踪。它们通常用于处理原始数据，例如文件或网络协议。
+
+在下面的示例中，我分配了 50MB **ArrayBuffer**，然后检查 Node.js 进程的初始内存使用情况。
+
+```javascript
+// array-buffer.js
+const buffer = new ArrayBuffer(50 * 1024 * 1024); // 50MB ArrayBuffer
+
+console.log('Initial Memory Usage:', process.memoryUsage());
+
+setInterval(() => &lcub;
+    const memoryUsage = process.memoryUsage();
+    console.log(`Array Buffers: $&lcub;memoryUsage.arrayBuffers}`);
+}, 1000);
+```
+
+```shell
+➜ node array-buffer.js
+Initial Memory Usage: &lcub;
+  rss: 39075840,
+  heapTotal: 4702208,
+  heapUsed: 2559496,
+  external: 53518663,
+  arrayBuffers: 52439315
+}
+Array Buffers: 52439315
+Array Buffers: 52439315
+Array Buffers: 52439315
+Array Buffers: 52439315
+Array Buffers: 52439315
+Array Buffers: 52439315
+```
+
+###### JavaScript 中内存泄漏的常见原因
+
+JavaScript 中的内存泄漏通常由以下原因引起：
+
+1.######变量管理不当
+
+未正确管理的变量可能会导致内存泄漏。
+
+例如，如果您声明了应该是临时的变量但忘记清理它们，它们将继续消耗内存。
+
+```javascript
+let cache = &lcub;};
+
+function storeData(key, value) &lcub;
+    cache[key] = value;
+}
+
+// Simulating the function being called multiple times
+storeData('item1', new Array(1000000).fill('A'));
+storeData('item2', new Array(1000000).fill('B'));
+
+// Memory leak: data stored in 'cache' is never released
+```
+
+在上面的示例中，数据被添加到名为 **cache** 的全局对象中。如果不再需要这些数据时不将其删除，它将继续不必要地使用内存。
+
+如果这些变量存储在全局范围内，使它们在应用程序的整个生命周期中持续存在，那么这尤其成问题。
+
+```javascript
+let globalUserSessions = &lcub;}; // Global scope
+
+function addUserSession(sessionId, userData) &lcub;
+  globalUserSessions[sessionId] = userData; // Store user data in global scope
+}
+
+function removeUserSession(sessionId) &lcub;
+  delete globalUserSessions[sessionId]; // Manually remove user session
+}
+
+// Simulate adding user sessions
+addUserSession('session1', &lcub; name: 'Alice', data: new Array(1000000).fill('A') });
+addUserSession('session2', &lcub; name: 'Bob', data: new Array(1000000).fill('B') });
+
+// The globalUserSessions object will persist for the entire app lifecycle unless manually cleaned up
+```
+
+**globalUserSessions** 是用于存储用户会话数据的全局对象。因为它位于全局范围内，所以它在应用程序的整个运行时持续存在。
+
+如果未使用 **removeUserSession** 正确删除会话，数据将无限期地保留在内存中，从而导致内存泄漏。
+
+2.######持久全局对象
+
+全局对象占用内存的时间可能比需要的时间长。其中的数据在不再需要后可以保留在内存中。这会逐渐增加内存使用量。
+
+```javascript
+global.config = &lcub;
+    settings: new Array(1000000).fill('Configuration')
+};
+// Memory leak: 'config' is global and remains in memory for the entire application lifecycle
+```
+
+由于 **config** 是全局可访问的并且永远不会被清除，因此它使用的内存将在应用程序的整个运行时保留。这是避免内存泄漏的一种方法：
+
+```javascript
+function createConfig() &lcub;
+    return &lcub;
+        settings: new Array(1000000).fill('Configuration')
+    };
+}
+
+// Use config only when needed, and let it be garbage collected afterwards
+function processConfig() &lcub;
+    const config = createConfig();
+    // Perform operations with config
+    console.log(config.settings[0]);
+
+    // Config will be cleared from memory once it's no longer referenced
+}
+
+processConfig();
+```
+
+我们不是将 **config** 存储在全局对象中，而是将 **config** 存储在函数中本地。这可确保在函数运行后清除 **config**，从而释放内存用于垃圾回收。
+
+3. ###### 事件监听器未删除
+
+添加事件侦听器而不在不再需要时正确删除它们可能会导致内存泄漏。
+
+每个事件侦听器都保留对函数及其使用的任何变量的引用，以防止垃圾收集器回收该内存。
+
+随着时间的推移，如果您不断添加侦听器而不删除它们，这将导致内存使用量增加。
+
+下面的示例演示了如果未正确删除事件侦听器如何导致内存泄漏：
+
+```javascript
+const EventEmitter = require('events');
+const myEmitter = new EventEmitter();
+
+function listener() &lcub;
+    console.log('Event triggered!');
+}
+
+// Adding event listeners repeatedly
+setInterval(() => &lcub;
+    myEmitter.on('event', listener);
+}, 1000);
+```
+
+每秒都会添加一个新的事件侦听器。但是，这些侦听器永远不会被删除，这导致它们在内存中累积。
+
+每个侦听器都保存对 **侦听器** 函数和任何关联变量的引用，从而防止垃圾收集并导致内存使用量随着时间的推移而增加。
+
+为了防止这种内存泄漏，您应该在不再需要事件侦听器时将其删除。
+
+```javascript
+const EventEmitter = require('events');
+const myEmitter = new EventEmitter();
+
+function listener() &lcub;
+    console.log('Event triggered!');
+}
+
+// Add an event listener
+myEmitter.on('event', listener);
+
+// Trigger the event and then remove the listener
+myEmitter.emit('event');
+myEmitter.removeListener('event', listener);
+
+// Alternatively, you can use `once` method to add a listener that automatically removes itself after being triggered
+myEmitter.once('event', listener);
+```
+
+4. ###### 闭包捕获变量
+
+JavaScript 中的闭包可能会无意中保留变量的时间超过所需的时间。当闭包捕获变量时，它会保留对该内存的引用。
+
+如果闭包用于长时间运行的进程或未正确终止，则捕获的变量将保留在内存中，从而导致泄漏。
+
+```javascript
+function createClosure() &lcub;
+    let capturedVar = new Array(1000000).fill('Data');
+
+    return function() &lcub;
+        console.log(capturedVar[0]);
+    };
+}
+
+const closure = createClosure();
+// The closure holds onto 'capturedVar', even if it's not used anymore.
+```
+
+为了避免泄漏，请确保闭包不会不必要地捕获大变量或在不再需要时结束它们。
+
+```javascript
+function createClosure() &lcub;
+    let capturedVar = new Array(1000000).fill('Data');
+
+    return function() &lcub;
+        console.log(capturedVar[0]);
+        capturedVar = null; // Release memory when no longer needed
+    };
+}
+
+const closure = createClosure();
+closure(); // 'capturedVar' is released after use.
+```
+
+5. ###### 非托管回调
+
+在某些情况下，如果非托管回调保留变量或对象的时间超过必要的时间，则可能会导致内存问题。
+
+然而，一旦不再需要引用，JavaScript 的垃圾收集器通常可以有效地清理内存。
+
+```javascript
+function fetchData(callback) &lcub;
+    let data = new Array(1000000).fill('Data');
+
+    setTimeout(() => &lcub;
+        callback(data);
+    }, 1000);
+}
+
+function handleData(data) &lcub;
+    console.log(data[0]);
+}
+
+fetchData(handleData); // The 'data' array remains in memory.
+```
+
+在上面的例子中：
+
+1. **数据分配：** **fetchData**函数分配一个大数组（数据），其中包含100万个元素。
+2. **回调引用：** 回调函数（**handleData**）在 1 秒后被 setTimeout 调用时引用这个大数组。
+
+尽管分配量很大，JavaScript 的垃圾收集器仍确保在不再需要时释放内存。
+
+除非您正在处理无意中保留引用的非常复杂的场景，否则无需手动清除引用。
+
+###### 避免不必要的复杂性
+
+在大多数情况下，无需手动清除标准异步回调中的引用。
+
+###### 过于复杂（不推荐）
+
+```js
+function fetchData(callback) &lcub;
+  let data = new Array(1000000).fill('Data');
+
+  setTimeout(() => &lcub;
+      callback(data);
+      data = null; // Release the reference
+      global.gc(); // Explicitly trigger garbage collection
+  }, 1000);
+}
+
+function handleData(data) &lcub;
+  console.log(data[0]);
+  data = null; // Clear reference after handling
+}
+
+console.log('Initial Memory Usage:', process.memoryUsage());
+
+fetchData(handleData);
+
+setTimeout(() => &lcub;
+  console.log('Final Memory Usage:', process.memoryUsage());
+}, 2000); // Give some time for garbage collection
+```
+
+虽然此代码手动清除引用并显式触发垃圾收集，但它引入了不必要的复杂性。
+
+JavaScript 的垃圾收集器通常足以处理内存清理，无需这些额外的步骤。
+
+在大多数情况下，这种手动干预不仅是多余的，而且还会使代码更难以维护。
+
+6.######bind() 的错误使用
+
+使用 **bind()** 创建一个新函数，并将其 **this** 关键字设置为特定值。如果你不小心，这可能会导致内存泄漏。
+
+```js
+function MyClass() &lcub;
+    this.largeData = new Array(1000000).fill('leak');
+
+    window.addEventListener('click', this.handleClick.bind(this));
+}
+
+MyClass.prototype.handleClick = function() &lcub;
+    console.log('Clicked');
+};
+
+// If MyClass instance is destroyed, but the event listener is not removed,
+// the bound function will keep the instance alive in memory.
+```
+
+###### 为什么bind()会发生内存泄漏
+
+*1*。 **保留引用：** 当您使用 *bind()* 时，新函数会记住原始函数和此值。如果不再需要该功能时不删除该功能，它会保留并使用内存。
+
+*2*。 **大对象保留在内存中：** 绑定函数可能会意外地将大对象保留在内存中，即使您不再需要它们。
+
+7. ###### 循环引用
+
+当两个对象相互引用时，就会发生循环引用。这会创建一个循环，可能会迷惑垃圾收集器，从而阻止其释放内存。
+
+```js
+function CircularReference() &lcub;
+    this.reference = this; // Circular reference
+}
+
+let obj = new CircularReference();
+obj = null; // Setting obj to null may not free the memory.
+```
+
+即使将**obj**设置为null，由于自循环，内存也可能不会被释放。
+
+###### 如何避免循环引用
+
+1. **打破循环：** 确保对象在不再需要时不会相互引用。这有助于垃圾收集器清除它们。
+
+```js
+function CircularReference() &lcub;
+    this.reference = this;
+}
+
+let obj = new CircularReference();
+
+// Breaking the circular reference
+obj.reference = null; 
+obj = null; // Now the memory can be freed
+```
+
+通过将 **obj.reference** 设置为 null，我们打破了循环引用。这允许垃圾收集器在不再需要 **obj** 时释放内存。
+
+2. **使用弱引用**：使用**WeakMap**、**WeakSet**或**WeakRef**允许垃圾收集器清理内存，即使存在引用，只要它们是弱引用。
+
+```js
+let weakMap = new WeakMap();
+
+function CircularReference() &lcub;
+    let obj = &lcub;};
+    weakMap.set(obj, "This is a weak reference");
+    return obj;
+}
+
+let obj = CircularReference();
+// The object can be garbage collected when no longer needed
+```
+
+**weakMap** 持有对 **obj** 的弱引用。这意味着当 **obj** 不再在其他地方使用时，即使它在 **weakMap** 中引用，它仍然可以被垃圾回收。
+
+```js
+let weakRef;
+
+function createObject() &lcub;
+    let obj = &lcub; data: 'important' };
+    weakRef = new WeakRef(obj);
+    return obj;
+}
+
+let obj = createObject();
+
+console.log(weakRef.deref()); // &lcub; data: 'important' }
+
+obj = null; // Now the object can be garbage collected
+```
+
+**weakRef** 允许您保存对 **obj** 的弱引用。如果 **obj** 设置为 null 并且没有其他引用它，则它可以被垃圾回收，即使 **weakRef** 仍然存在。
+
+###### 快速说明
+
+*WeakMap*、*WeakSet* 和 *WeakRef* 非常适合防止内存泄漏，但您可能并不总是需要它们。它们更适合高级用例，例如管理缓存或大数据。
+
+如果您正在开发典型的网络应用程序，您可能不会经常看到它们，但是当您需要它们时知道它们的存在是件好事。
+
+###### 分析 Node.js 中的内存使用情况
+
+要查找内存泄漏，您需要分析应用程序以了解内存的使用方式。
+
+这是一个 Node.js 应用程序，旨在模拟 CPU 密集型任务、I/O 操作，并故意创建内存泄漏以进行测试。
+
+```javascript
+const http = require('http');
+const url = require('url');
+
+// Simulate a CPU-intensive task
+const handleCpuIntensiveTask = (req, res) => &lcub;
+    let result = 0;
+    for (let i = 0; i &lt; 1e7; i++) &lcub;
+        result += i * Math.random();
+    }
+    console.log('Memory Usage (CPU Task):', process.memoryUsage()); // Log memory usage
+    res.writeHead(200, &lcub; 'Content-Type': 'text/plain' });
+    res.end(`Result of the CPU-intensive task: $&lcub;result}`);
+};
+
+// Create a large in-memory buffer
+const largeBuffer = Buffer.alloc(1024 * 1024 * 50, 'a'); // 50MB buffer filled with 'a'
+
+// Simulate an I/O operation
+const handleSimulateIo = (req, res) => &lcub;
+    // Simulate reading the buffer as if it were a file
+    setTimeout(() => &lcub;
+        console.log('Memory Usage (Simulate I/O):', process.memoryUsage()); // Log memory usage
+        res.writeHead(200, &lcub; 'Content-Type': 'text/plain' });
+        res.end(`Simulated I/O operation completed with data of length: $&lcub;largeBuffer.length}`);
+    }, 500); // Simulate a 500ms I/O operation
+};
+
+// Simulate a memory leak (For Testing)
+let memoryLeakArray = [];
+
+const causeMemoryLeak = () => &lcub;
+    memoryLeakArray.push(new Array(1000).fill('memory leak'));
+    console.log('Memory leak array length:', memoryLeakArray.length);
+};
+
+const server = http.createServer((req, res) => &lcub;
+    const parsedUrl = url.parse(req.url, true);
+
+    if (parsedUrl.pathname === '/cpu-intensive') &lcub;
+        handleCpuIntensiveTask(req, res);
+    } else if (parsedUrl.pathname === '/simulate-io') &lcub;
+        handleSimulateIo(req, res);
+    } else if (parsedUrl.pathname === '/cause-memory-leak') &lcub;
+        causeMemoryLeak();
+        res.writeHead(200, &lcub; 'Content-Type': 'text/plain' });
+        res.end('Memory leak caused. Check memory usage.');
+    } else &lcub;
+        res.writeHead(404, &lcub; 'Content-Type': 'text/plain' });
+        res.end('Not Found');
+    }
+});
+
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => &lcub;
+    console.log(`Server is running on port $&lcub;PORT}`);
+});
+```
+
+接下来，我们需要对我们的服务器进行压力测试。该脚本通过每个发送 100 个请求来模拟 CPU、I/O 和内存泄漏来对服务器进行压力测试。
+
+```sh
+#!/bin/bash
+
+# Number of requests to send
+REQUESTS=100
+
+# Endpoint URLs
+CPU_INTENSIVE_URL="http://localhost:3000/cpu-intensive"
+SIMULATE_IO_URL="http://localhost:3000/simulate-io"
+MEMORY_LEAK_URL="http://localhost:3000/cause-memory-leak"
+
+echo "Sending $REQUESTS requests to $CPU_INTENSIVE_URL and $SIMULATE_IO_URL..."
+
+# Loop for CPU-intensive endpoint
+for ((i=1;i&lt;=REQUESTS;i++)); do
+  curl -s $CPU_INTENSIVE_URL > /dev/null &
+done
+
+# Loop for Simulated I/O endpoint
+for ((i=1;i&lt;=REQUESTS;i++)); do
+  curl -s $SIMULATE_IO_URL > /dev/null &
+done
+
+# Loop for Memory Leak endpoint
+for ((i=1;i&lt;=REQUESTS;i++)); do
+  curl -s $MEMORY_LEAK_URL > /dev/null &
+done
+
+wait
+echo "Done."
+```
+
+它循环遍历 URL 并使用curl 发送静默请求，在后台运行它们以模拟高负载。
+
+```sh
+➜  ./load_test.sh
+Sending 100 requests to http://localhost:3000/cpu-intensive and http://localhost:3000/simulate-io and http://localhost:3000/cause-memory-leak
+Done.
+```
+
+以下是我们的服务器如何响应压力测试。开始测试之前请确保服务器正在运行。
+
+```sh
+➜  node --prof server.js
+Server is running on port 3000
+Memory Usage (Simulate I/O): &lcub;
+  rss: 122863616,
+  heapTotal: 17547264,
+  heapUsed: 8668016,
+  external: 54075004,
+  arrayBuffers: 52439275
+}
+Memory leak array length: 25
+Memory leak array length: 26
+Memory leak array length: 27
+Memory leak array length: 28
+Memory leak array length: 29
+Memory leak array length: 30
+Memory leak array length: 31
+Memory leak array length: 32
+Memory leak array length: 33
+Memory leak array length: 34
+Memory leak array length: 35
+Memory leak array length: 36
+Memory leak array length: 37
+Memory leak array length: 38
+Memory leak array length: 39
+Memory leak array length: 40
+Memory leak array length: 41
+Memory leak array length: 42
+Memory leak array length: 43
+Memory leak array length: 44
+Memory leak array length: 45
+Memory leak array length: 46
+Memory leak array length: 47
+Memory leak array length: 48
+Memory leak array length: 49
+Memory leak array length: 50
+Memory leak array length: 51
+Memory leak array length: 52
+Memory leak array length: 53
+Memory leak array length: 54
+Memory leak array length: 55
+Memory leak array length: 56
+Memory Usage (CPU Task): &lcub;
+  rss: 122716160,
+  heapTotal: 17547264,
+  heapUsed: 11393456,
+  external: 54075004,
+  arrayBuffers: 52439275
+}
+Memory leak array length: 173
+```
+
+###### 分析结果
+
+分析数据将保存在名为 *isolate-0xXXXXXXXXXXXX-v8.log.* 的文件中。
+
+要处理日志并获取人类可读的摘要，请运行：
+
+```plaintext
+➜  node --prof-process isolate-0x140008000-42065-v8.log > processed-profile.txt
+```
+
+这将生成一个包含 CPU 分析数据的 **processed-profile.txt** 文件，其中包括有关应用程序在何处花费时间以及如何管理内存的详细信息。
+
+打开 **processed-profile.txt** 文件并查找使用大量时间或内存的区域。
+
+```ts
+Statistical profiling result from isolate-0x140008000-42065-v8.log, (4099 ticks, 308 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+   1007   24.6%   24.6%  JS: *handleCpuIntensiveTask /Users/trevorindreklasn/Projects/labs/node-memory/server.js:5:32
+      5    0.1%    0.1%  JS: +handleCpuIntensiveTask /Users/trevorindreklasn/Projects/labs/node-memory/server.js:5:32
+      1    0.0%    0.0%  JS: ^onParserExecute node:_http_server:839:25
+      1    0.0%    0.0%  JS: ^getKeys node:internal/util/inspect:709:17
+      1    0.0%    0.0%  JS: ^clearBuffer node:internal/streams/writable:742:21
+      1    0.0%    0.0%  JS: ^checkListener node:events:276:23
+      1    0.0%    0.0%  JS: ^Socket node:net:353:16
+      1    0.0%    0.0%  JS: +pushAsyncContext node:internal/async_hooks:539:26
+      1    0.0%    0.0%  JS: +processTicksAndRejections node:internal/process/task_queues:67:35
+
+ [C++]:
+   ticks  total  nonlib   name
+   2772   67.6%   67.6%  t std::__1::__hash_table&lt;std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::__unordered_map_hasher&lt;int, std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, true>, std::__1::__unordered_map_equal&lt;int, std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::equal_to&lt;int>, std::__1::hash&lt;int>, true>, std::__1::allocator&lt;std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>>>::rehash(unsigned long)
+
+ [Summary]:
+   ticks  total  nonlib   name
+   1019   24.9%   24.9%  JavaScript
+   2772   67.6%   67.6%  C++
+    358    8.7%    8.7%  GC
+      0    0.0%          Shared libraries
+    308    7.5%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   2636  100.0%   64.3%  TOTAL
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   2772   67.6%  t std::__1::__hash_table&lt;std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::__unordered_map_hasher&lt;int, std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, true>, std::__1::__unordered_map_equal&lt;int, std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::equal_to&lt;int>, std::__1::hash&lt;int>, true>, std::__1::allocator&lt;std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>>>::rehash(unsigned long)
+   1880   67.8%    JS: *handleCpuIntensiveTask /Users/trevorindreklasn/Projects/labs/node-memory/server.js:5:32
+   1727   91.9%      JS: ^&lt;anonymous> /Users/trevorindreklasn/Projects/labs/node-memory/server.js:36:34
+   1129   65.4%        JS: +emit node:events:467:44
+   1129  100.0%          JS: ^parserOnIncoming node:_http_server:1033:26
+   1129  100.0%            JS: ^parserOnHeadersComplete node:_http_common:71:33
+    598   34.6%        JS: ^emit node:events:467:44
+    598  100.0%          JS: ^parserOnIncoming node:_http_server:1033:26
+    598  100.0%            JS: ^parserOnHeadersComplete node:_http_common:71:33
+    153    8.1%      JS: ~&lt;anonymous> /Users/trevorindreklasn/Projects/labs/node-memory/server.js:36:34
+    140   91.5%        JS: ^emit node:events:467:44
+    140  100.0%          JS: ~parserOnIncoming node:_http_server:1033:26
+    140  100.0%            JS: ~parserOnHeadersComplete node:_http_common:71:33
+     13    8.5%        JS: ~parserOnIncoming node:_http_server:1033:26
+     13  100.0%          JS: ~parserOnHeadersComplete node:_http_common:71:33
+    655   23.6%    t std::__1::__hash_table&lt;std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::__unordered_map_hasher&lt;int, std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, true>, std::__1::__unordered_map_equal&lt;int, std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>, std::__1::equal_to&lt;int>, std::__1::hash&lt;int>, true>, std::__1::allocator&lt;std::__1::__hash_value_type&lt;int, std::__1::unique_ptr&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>, std::__1::default_delete&lt;std::__1::unordered_map&lt;int, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>, std::__1::hash&lt;int>, std::__1::equal_to&lt;int>, std::__1::allocator&lt;std::__1::pair&lt;int const, std::__1::unique_ptr&lt;v8_inspector::InspectedContext, std::__1::default_delete&lt;v8_inspector::InspectedContext>>>>>>>>>>::rehash(unsigned long)
+    654   99.8%      JS: *handleCpuIntensiveTask /Users/trevorindreklasn/Projects/labs/node-memory/server.js:5:32
+    612   93.6%        JS: ^&lt;anonymous> /Users/trevorindreklasn/Projects/labs/node-memory/server.js:36:34
+    410   67.0%          JS: +emit node:events:467:44
+    410  100.0%            JS: ^parserOnIncoming node:_http_server:1033:26
+    202   33.0%          JS: ^emit node:events:467:44
+    202  100.0%            JS: ^parserOnIncoming node:_http_server:1033:26
+     42    6.4%        JS: ~&lt;anonymous> /Users/trevorindreklasn/Projects/labs/node-memory/server.js:36:34
+     40   95.2%          JS: ^emit node:events:467:44
+     40  100.0%            JS: ~parserOnIncoming node:_http_server:1033:26
+      2    4.8%          JS: ~parserOnIncoming node:_http_server:1033:26
+      2  100.0%            JS: ~parserOnHeadersComplete node:_http_common:71:33
+     49    1.8%    JS: ^&lt;anonymous> /Users/trevorindreklasn/Projects/labs/node-memory/server.js:36:34
+     38   77.6%      JS: +emit node:events:467:44
+     38  100.0%        JS: ^parserOnIncoming node:_http_server:1033:26
+     38  100.0%          JS: ^parserOnHeadersComplete node:_http_common:71:33
+     11   22.4%      JS: ^emit node:events:467:44
+     11  100.0%        JS: ^parserOnIncoming node:_http_server:1033:26
+     11  100.0%          JS: ^parserOnHeadersComplete node:_http_common:71:33
+
+   1007   24.6%  JS: *handleCpuIntensiveTask /Users/trevorindreklasn/Projects/labs/node-memory/server.js:5:32
+    940   93.3%    JS: ^&lt;anonymous> /Users/trevorindreklasn/Projects/labs/node-memory/server.js:36:34
+    663   70.5%      JS: +emit node:events:467:44
+    663  100.0%        JS: ^parserOnIncoming node:_http_server:1033:26
+    663  100.0%          JS: ^parserOnHeadersComplete node:_http_common:71:33
+    277   29.5%      JS: ^emit node:events:467:44
+    277  100.0%        JS: ^parserOnIncoming node:_http_server:1033:26
+    277  100.0%          JS: ^parserOnHeadersComplete node:_http_common:71:33
+     67    6.7%    JS: ~&lt;anonymous> /Users/trevorindreklasn/Projects/labs/node-memory/server.js:36:34
+     61   91.0%      JS: ^emit node:events:467:44
+     61  100.0%        JS: ~parserOnIncoming node:_http_server:1033:26
+     61  100.0%          JS: ~parserOnHeadersComplete node:_http_common:71:33
+      6    9.0%      JS: ~parserOnIncoming node:_http_server:1033:26
+      6  100.0%        JS: ~parserOnHeadersComplete node:_http_common:71:33
+
+    308    7.5%  UNKNOWN
+     11    3.6%    JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+     11  100.0%      JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      2   18.2%        JS: ~&lt;anonymous> node:internal/streams/duplex:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      2  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      2   18.2%        JS: ~&lt;anonymous> node:http:1:1
+      2  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      2  100.0%            JS: ~compileForPublicLoader node:internal/bootstrap/realm:332:25
+      1    9.1%        JS: ~&lt;anonymous> node:net:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    9.1%        JS: ~&lt;anonymous> node:internal/streams/readable:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    9.1%        JS: ~&lt;anonymous> node:internal/streams/operators:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    9.1%        JS: ~&lt;anonymous> node:internal/perf/observe:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    9.1%        JS: ~&lt;anonymous> node:internal/child_process:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    9.1%        JS: ~&lt;anonymous> node:child_process:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+      1    9.1%        JS: ~&lt;anonymous> node:_http_agent:1:1
+      1  100.0%          JS: ^compileForInternalLoader node:internal/bootstrap/realm:384:27
+      1  100.0%            JS: ^requireBuiltin node:internal/bootstrap/realm:421:24
+```
+
+###### 特别注意：
+
+* **高 CPU 使用率函数：** 这些是代码中的瓶颈。
+* **内存密集型函数：** 消耗大量内存的函数可能会导致潜在的内存泄漏，特别是当它们对应于代码中应该释放内存但没有释放内存的部分时。
+* **事件循环和垃圾收集 (GC)：** 查找花费在 GC 上的时间比例较高，因为这可能表明应用程序正在努力进行内存管理。
+
+内存泄漏可能很微妙，但解决它们是保持 JavaScript 应用程序高效可靠的关键。
+
+***
+
+嗨，我叫特雷弗。我写的内容涉及软件工程、初创公司、安全等。
+
+

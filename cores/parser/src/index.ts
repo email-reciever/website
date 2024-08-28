@@ -41,6 +41,8 @@ const adapter: Partial<Record<SenderType, Adapter>> = {
 	others,
 	javascriptweekly,
 	nodeweekly: javascriptweekly,
+	frontendfocus: javascriptweekly,
+	reactstatus: javascriptweekly,
 };
 
 interface RequestBody {
