@@ -1,0 +1,243 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Now Node can run even more TypeScript
+description: Now Node can run even more TypeScript
+date: 星期三 11 中午 八月 28o 2024
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/545
+origin_site: https://nodeweekly.com/issues/545
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Now Node can run even more TypeScript" url="https://nodeweekly.com/issues/545" />
+
+<Detail client:only="react">
+	#545 — August 27, 2024
+
+[Read on the Web](https://nodeweekly.com/issues/545)
+
+Together with 
+
+[![WorkOS](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_514,h_98/e_make_transparent/co_white,e_outline:9/tdfxwgk852ui9leli4wm.png)](https://nodeweekly.com/link/158878/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ukukynd1fw7qun7ribag.jpg)](https://nodeweekly.com/link/158879/0a4070b383)
+
+[How to Create an NPM Package in 2024](https://nodeweekly.com/link/158879/0a4070b383 "www.totaltypescript.com") — Sounds simple, but there are a lot of steps involved if you want to follow best practices, introduce useful tools, and get things just right. Matt Pocock walks through the process here, and there’s a 14-minute screencast too, if you’d prefer to watch along.
+
+Matt Pocock
+
+[Node v22.7.0 (Current) Released](https://nodeweekly.com/link/158880/0a4070b383 "nodejs.org") — Node 22.6 let you _strip_ types from source code, but now with `--experimental-transform-types` you can transform TypeScript-only syntax into JavaScript before running it too. Module syntax detection is now also enabled by default.
+
+Rafael Gonzaga
+
+[![](https://copm.s3.amazonaws.com/5c33be76.png)](https://nodeweekly.com/link/158878/0a4070b383)
+
+[WorkOS: The Modern Identity Platform for B2B SaaS](https://nodeweekly.com/link/158878/0a4070b383 "workos.com") — WorkOS is a modern identity platform for B2B SaaS, offering flexible and easy-to-use APIs to integrate SSO, SCIM, and RBAC in minutes instead of months. It's trusted by hundreds of high-growth startups such as Perplexity, Vercel, Drata, and Webflow.
+
+WorkOS sponsor
+
+[sqlite-vec: A Vector Search Extension for SQLite](https://nodeweekly.com/link/158881/0a4070b383 "github.com") — If using a dedicated vector storage database is beyond your immediate requirements, you can now use SQLite for the task. While this is an SQLite extension, it’s easy to use with numerous languages and runtimes, [including Node.js, as shown here.](https://nodeweekly.com/link/158882/0a4070b383)
+
+Alex Garcia
+
+IN BRIEF:
+
+*   [Deno 1.46 has been released](https://nodeweekly.com/link/158883/0a4070b383) and promises to be the final 1.x release before the [much awaited Deno 2.0.](https://nodeweekly.com/link/158884/0a4070b383) Deno's Node compatibility improves even more (it now supports Playwright and [many more things](https://nodeweekly.com/link/158885/0a4070b383)) and ships with V8 12.9.
+    
+*   The Deno project has also [announced on X](https://nodeweekly.com/link/158886/0a4070b383) that its [Deno Standard Library](https://nodeweekly.com/link/158887/0a4070b383) is now considered stable. The Standard Library is [a suite of packages](https://nodeweekly.com/link/158888/0a4070b383) offering a variety of features, from data structures to crypto to time management, many of which work across numerous JS runtimes (including Node).
+    
+*   In other runtime news, [Bun 1.1.25](https://nodeweekly.com/link/158889/0a4070b383) unveiled its `node:cluster` API support with a demo showing it serving 1.29 million requests per second on a basic HTTP server example.
+    
+
+[Node v20.17.0 (LTS) Released](https://nodeweekly.com/link/158890/0a4070b383 "nodejs.org") — The LTS release of Node gains some backports, including support for using `require` for synchronous ESM graphs (using a flag), `matchesGlob`, and `duplexPair`.
+
+Marco Ippolito
+
+[Regexes Got Good: The History (and Future) of Regular Expressions in JavaScript](https://nodeweekly.com/link/158952/0a4070b383 "www.smashingmagazine.com") — Regular expression support in JavaScript was always a little underwhelming, but things have improved a lot in recent years. Steven takes us on a tour to refresh our knowledge.
+
+Steven Levithan
+
+▶  [Node.js Evolves](https://nodeweekly.com/link/158891/0a4070b383 "syntax.fm") — Discussion on new Node.js features including native TypeScript support, SQLite integration, dotenv support and more.
+
+Syntax by Sentry podcastsponsor
+
+📄 [Understanding AbortController in Node.js](https://nodeweekly.com/link/158892/0a4070b383) Stanley Ulili
+
+📄 [Generating Unique Random Numbers in JavaScript Using Sets](https://nodeweekly.com/link/158893/0a4070b383) Amejimaobari
+
+📄 [Configuring SSH Keys for Multiple GitHub Accounts](https://nodeweekly.com/link/158894/0a4070b383) Steven Harman
+
+📄 [Top Ten `git` Tips and Tricks](https://nodeweekly.com/link/158895/0a4070b383) Julie Kent
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/k2aabn7jm7ldryargoog.jpg)](https://nodeweekly.com/link/158896/0a4070b383)
+
+[npm-check-updates 17.0: Update `package.json` Dependencies to Latest Versions](https://nodeweekly.com/link/158896/0a4070b383 "github.com") — That is, as opposed to the _specified_ versions. It includes a handy `-i` interactive mode so you can look at potential upgrades and then opt in to them one by one.
+
+Raine Revere
+
+[html-metadata 2.0: HTML Metadata Scraper and Parser](https://nodeweekly.com/link/158897/0a4070b383 "github.com") — The Wikimedia Foundation’s library for extracting metadata embedded within HTML, such as Schema․org data, Dublin Core, JSON-LD, Open Graph, meta tags, title tags, and the like.
+
+Wikimedia
+
+But it doesn't support RDF yet, which leads us to the next item.. :-)
+
+[N3.js: Fast, Spec-Compliant, Streaming RDF Library](https://nodeweekly.com/link/158898/0a4070b383 "github.com") — [RDF](https://nodeweekly.com/link/158899/0a4070b383) (Resource Description Framework) is a long standing mechanism / format for modeling and specifying Web resources and this library works in Node and browser alike.
+
+RDF JavaScript Libraries
+
+[wait-on 8.0: Tool & Library to Wait for Ports, Files, and Sockets](https://nodeweekly.com/link/158900/0a4070b383 "github.com") — For when you need to wait until files, ports, sockets, and similar resources become available (or the opposite).
+
+Jeff Barczewski
+
+*   [Better SSE 0.13](https://nodeweekly.com/link/158901/0a4070b383) – Simple, spec-compliant, no dependency SSE (server-sent events) implementation. [More on SSE here.](https://nodeweekly.com/link/158902/0a4070b383)
+    
+*   [jsdom 25.0](https://nodeweekly.com/link/158903/0a4070b383) – Pure JS implementation of WHATWG DOM and HTML standards for Node.
+    
+*   [Happy DOM 15.0](https://nodeweekly.com/link/158904/0a4070b383) – JS implementation of a web browser _sans_ UI.
+    
+*   [Tedious 19.0](https://nodeweekly.com/link/158905/0a4070b383) – TDS module for connecting to _Microsoft SQL Server._
+    
+*   [Awilix 11.0](https://nodeweekly.com/link/158906/0a4070b383) – Inversion of Control (IoC) container for Node.
+    
+*   [fdir 6.3](https://nodeweekly.com/link/158907/0a4070b383) – High-perf directory crawler & globbing library.
+    
+*   [pnpm 9.9](https://nodeweekly.com/link/158908/0a4070b383) – Fast, space efficient package manager.
+    
+*   [Poku 2.5](https://nodeweekly.com/link/158909/0a4070b383) – Cross-platform JavaScript test runner.
+    
+*   [Javet 3.1.5](https://nodeweekly.com/link/158910/0a4070b383) – Java + V8. Embed JS into Java.
+    
+
+Got a link for us? Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+Sponsorship: Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#545 — 2024 年 8 月 27 日
+
+[网上阅读](https://nodeweekly.com/issues/545)
+
+与 
+
+\[![WorkOS](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_514,h_98/e_make_transparent/co_white,e_outline:9/tdfxwgk852ui9leli4wm.png)]\(https://nodeweekly. com/link/158878/0a4070b383)
+
+![Node.js 周刊](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ukukynd1fw7qun7ribag.jpg)](https://nodeweekly.com/link/158879/0a4070b383)
+
+[如何在 2024 年创建 NPM 包](https://nodeweekly.com/link/158879/0a4070b383 "www.totaltypescript.com") — 听起来很简单，但如果您想最好地遵循，则涉及很多步骤实践，引入有用的工具，并把事情做好。 Matt Pocock 在此介绍了整个过程，如果您愿意观看，还有 14 分钟的截屏视频。
+
+马特·波考克
+
+[Node v22.7.0（当前）已发布](https://nodeweekly.com/link/158880/0a4070b383 "nodejs.org") — Node 22.6 允许您从源代码中*剥离*类型，但现在带有`--experimental -transform-types`您也可以在运行之前将纯 TypeScript 语法转换为 JavaScript。现在默认情况下也会启用模块语法检测。
+
+拉斐尔冈萨加
+
+[![](https://copm.s3.amazonaws.com/5c33be76.png)](https://nodeweekly.com/link/158878/0a4070b383)
+
+[WorkOS：B2B SaaS 的现代身份平台](https://nodeweekly.com/link/158878/0a4070b383 "workos.com") — WorkOS 是 B2B SaaS 的现代身份平台，提供灵活且易于使用的功能API 可在几分钟（而不是几个月）内集成 SSO、SCIM 和 RBAC。它受到 Perplexity、Vercel、Drata 和 Webflow 等数百家高增长初创公司的信任。
+
+WorkOS 赞助商
+
+[sqlite-vec：SQLite 的矢量搜索扩展](https://nodeweekly.com/link/158881/0a4070b383 "github.com") - 如果使用专用矢量存储数据库超出了您的直接要求，您现在可以使用SQLite 用于该任务。虽然这是一个 SQLite 扩展，但它很容易与多种语言和运行时一起使用，[包括 Node.js，如此处所示。](https://nodeweekly.com/link/158882/0a4070b383)
+
+亚历克斯·加西亚
+
+简而言之：
+
+* [Deno 1.46 已发布](https://nodeweekly.com/link/158883/0a4070b383)并承诺成为\[备受期待的 Deno 2.0 之前的最终 1.x 版本。]\(https://nodeweekly.com /link/158884/0a4070b383) Deno 的 Node 兼容性进一步提高（它现在支持 Playwright 和[更多功能](https://nodeweekly.com/link/158885/0a4070b383)）并随 V8 12.9 一起提供。
+
+* Deno 项目还[于 X 宣布](https://nodeweekly.com/link/158886/0a4070b383)其[Deno 标准库](https://nodeweekly.com/link/158887/0a4070b383)现已被认为是稳定的。标准库是[一套软件包](https://nodeweekly.com/link/158888/0a4070b383)，提供各种功能，从数据结构到加密再到时间管理，其中许多功能可以跨多种 JS 运行时（包括节点）。
+
+* 在其他运行时新闻中，[Bun 1.1.25](https://nodeweekly.com/link/158889/0a4070b383) 公布了其“node:cluster” API 支持，并通过演示展示了它在基本基础上每秒处理 129 万个请求HTTP 服务器示例。
+
+[Node v20.17.0 (LTS) 已发布](https://nodeweekly.com/link/158890/0a4070b383 "nodejs.org") - Node 的 LTS 版本获得了一些向后移植，包括支持使用“require”进行同步 ESM图表（使用标志）、“matchesGlob”和“duplexPair”。
+
+马可·伊波利托
+
+[正则表达式变得很好：JavaScript 中正则表达式的历史（和未来）](https://nodeweekly.com/link/158952/0a4070b383 "www.smashingmagazine.com") - JavaScript 中的正则表达式支持总是有点平庸，但近年来情况有了很大改善。史蒂文带我们参观以刷新我们的知识。
+
+史蒂文·莱维森
+
+▶  [Node.js 的演变](https://nodeweekly.com/link/158891/0a4070b383 "syntax.fm") — 讨论新的 Node.js 功能，包括本机 TypeScript 支持、SQLite 集成、dotenv 支持等。
+
+Sentry 播客赞助商的语法
+
+📄 [了解 Node.js 中的 AbortController](https://nodeweekly.com/link/158892/0a4070b383) Stanley Ulili
+
+📄 [使用集合在 JavaScript 中生成唯一的随机数](https://nodeweekly.com/link/158893/0a4070b383) Amejimaobari
+
+📄 [为多个 GitHub 帐户配置 SSH 密钥](https://nodeweekly.com/link/158894/0a4070b383) Steven Harman
+
+📄 [十大`git`提示和技巧](https://nodeweekly.com/link/158895/0a4070b383) Julie Kent
+
+🛠 代码和工具
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/k2aabn7jm7ldryargoog.jpg)](https://nodeweekly.com/link/158896/0a4070b383)
+
+[npm-check-updates 17.0：更新 `package.json` 依赖项到最新版本](https://nodeweekly.com/link/158896/0a4070b383 "github.com") - 也就是说，与*指定的*相反版本。它包括一个方便的“-i”交互模式，因此您可以查看潜在的升级，然后一一选择。
+
+雷恩·里维尔
+
+[html-metadata 2.0：HTML 元数据抓取器和解析器](https://nodeweekly.com/link/158897/0a4070b383 "github.com") - 维基媒体基金会的库，用于提取 HTML 中嵌入的元数据，例如 Schema․org 数据、Dublin Core、JSON-LD、Open Graph、元标签、标题标签等。
+
+维基媒体
+
+但它还不支持 RDF，这让我们进入下一个项目..:-)
+
+[N3.js：快速、符合规范的流式 RDF 库](https://nodeweekly.com/link/158898/0a4070b383 "github.com") — \[RDF]\(https://nodeweekly.com/link/ 158899/0a4070b383)（资源描述框架）是一种长期存在的机制/格式，用于建模和指定 Web 资源，该库在 Node 和浏览器中都可以工作。
+
+RDF JavaScript 库
+
+[wait-on 8.0：等待端口、文件和套接字的工具和库](https://nodeweekly.com/link/158900/0a4070b383 "github.com") - 当您需要等待文件、端口时、套接字和类似资源变得可用（或相反）。
+
+杰夫·巴尔泽夫斯基
+
+* [更好的 SSE 0.13](https://nodeweekly.com/link/158901/0a4070b383) – 简单、符合规范、无依赖性的 SSE（服务器发送事件）实现。 [有关 SSE 的更多信息请点击此处。](https://nodeweekly.com/link/158902/0a4070b383)
+
+* [jsdom 25.0](https://nodeweekly.com/link/158903/0a4070b383) – WHATWG DOM 和 Node.js 的 HTML 标准的纯 JS 实现。
+
+* [Happy DOM 15.0](https://nodeweekly.com/link/158904/0a4070b383) – 网页浏览器 *sans* UI 的 JS 实现。
+
+* [Tedious 19.0](https://nodeweekly.com/link/158905/0a4070b383) – 用于连接到 *Microsoft SQL Server* 的 TDS 模块。
+
+* [Awilix 11.0](https://nodeweekly.com/link/158906/0a4070b383) – Node.js 的控制反转 (IoC) 容器。
+
+* [fdir 6.3](https://nodeweekly.com/link/158907/0a4070b383) – 高性能目录抓取工具和全局库。
+
+* [pnpm 9.9](https://nodeweekly.com/link/158908/0a4070b383) – 快速、节省空间的包管理器。
+
+* [Poku 2.5](https://nodeweekly.com/link/158909/0a4070b383) – 跨平台 JavaScript 测试运行器。
+
+* [Javet 3.1.5](https://nodeweekly.com/link/158910/0a4070b383) – Java + V8。将 JS 嵌入到 Java 中。
+
+有我们的链接吗？ 回复并告诉我们。我们无法包含所有内容，但我们会查看您发送的所有内容。 *谢谢！*
+
+***
+
+赞助：发送电子邮件至“&lt;kristina@cooperpress.com>”了解详细信息。
+
+***
+
+由库珀出版社有限公司出版\
+费尔菲尔德企业中心, 劳斯, LN11 0LS, 英国
+
+
