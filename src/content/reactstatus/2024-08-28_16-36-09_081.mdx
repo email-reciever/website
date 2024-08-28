@@ -1,0 +1,235 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: The interface segregation principle in React
+description: The interface segregation principle in React
+date: 星期三 04 下午 八月 28o 2024
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/397
+origin_site: https://react.statuscode.com/issues/397
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="The interface segregation principle in React" url="https://react.statuscode.com/issues/397" />
+
+<Detail client:only="react">
+	     body &lcub; margin: 0; padding: 0; width: 100%; background-color: white; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering: optimizeLegibility; direction: ltr; } body &lcub; font-family: -apple-system,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height: 1.48em; } img &lcub; border: 0; outline: none; height: auto; text-decoration: none; max-width: 100%; line-height: 100%; } @media screen and (max-width: 600px) &lcub; table\[id="main"\] &lcub; max-width: 600px !important; width: 100% !important; min-width: 100% !important; } .nomob &lcub; display: none !important; } .onlymob &lcub; display: inline-block !important; } .rightifmob &lcub; text-align: right !important; } .som &lcub; max-width: 33% !important; } div.footer p &lcub; text-align: left !important; } div.footer td &lcub; text-align: left !important; } .el-columns .column &lcub; width: 100% !important; } }
+
+Plus Jack Herrington shares a trick from the React Native world. |
+
+#​397 — August 28, 2024
+
+[Read on the Web](https://react.statuscode.com/issues/397)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://react.statuscode.com/link/159031/5d0bbb4a61)
+
+React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ixdsyk3z8nzkcgoo9t8u.jpg)](https://react.statuscode.com/link/159049/5d0bbb4a61)
+
+[Material UI v6: The Popular React UI Design/Component System](https://react.statuscode.com/link/159049/5d0bbb4a61 "mui.com") — At almost exactly ten years old, the MUI design system has its latest major release. The enhancements are more evolutionary than revolutionary though, with a focus on improved theming, color scheme management, container query support, and React 19 support. There are also some [revamped templates](https://react.statuscode.com/link/159050/5d0bbb4a61) to help you get started.
+
+García, Bittu, Andai, et al.
+
+💡 If you're on MUI v5, there's [a handy guide for upgrading to v6](https://react.statuscode.com/link/159051/5d0bbb4a61) which the team [suggests](https://react.statuscode.com/link/159052/5d0bbb4a61) _"shouldn't be too bad"_ to do.
+
+[Implementing a React-a-Like from Scratch](https://react.statuscode.com/link/159053/5d0bbb4a61 "www.rob.directory") — While it's unlikely you'll _actually_ want to do this, at least thinking about it can prove instructive as to what’s going on in React’s engine room.
+
+Robby Pruzan
+
+[![](https://copm.s3.amazonaws.com/bc3ff0a3.png)](https://react.statuscode.com/link/159031/5d0bbb4a61)
+
+[Front-End System Design](https://react.statuscode.com/link/159031/5d0bbb4a61 "frontendmasters.com") — Learn to create scalable, efficient user interfaces in this extensive video course by Evgennii Ray. Explore the box model, browser rendering, DOM manipulation, state management, performance and much more.
+
+Frontend Masters sponsor
+
+[The Interface Segregation Principle in React](https://react.statuscode.com/link/159054/5d0bbb4a61 "alexkondov.com") — Alex looks at one of the famed [SOLID](https://react.statuscode.com/link/159055/5d0bbb4a61) object orientation principles and how it can apply to React.
+
+Alex Kondov
+
+▶  [21 Talks from _Chain React 2024_](https://react.statuscode.com/link/159056/5d0bbb4a61 "www.youtube.com") — [Chain React](https://react.statuscode.com/link/159057/5d0bbb4a61) was a React Native conference that took place last month in Portland, Oregon. Catch up with what went on in this playlist, including [building React Native apps for TVs](https://react.statuscode.com/link/159058/5d0bbb4a61), how to [optimize React Native performance](https://react.statuscode.com/link/159059/5d0bbb4a61), or Jack Herrington showing off [how to build a local-first semantic search system](https://react.statuscode.com/link/159060/5d0bbb4a61) inside a React Native app.
+
+Chain React 2024
+
+[How to Build a Bluetooth Low Energy-Powered Expo App](https://react.statuscode.com/link/159061/5d0bbb4a61 "expo.dev") — [Bluetooth Low Energy](https://react.statuscode.com/link/159062/5d0bbb4a61) is aimed at use cases like healthcare, fitness, beacons, security and home entertainment. Here’s one way to get started.
+
+Daniel Friyia (Expo Blog)
+
+▶  [Simplified React Web-to-Native Migration with 'use dom'](https://react.statuscode.com/link/159063/5d0bbb4a61 "www.youtube.com") — Web-to-native migration can seemingly never be made simple enough, which is where Expo’s new, experimental `[use dom](https://react.statuscode.com/link/159064/5d0bbb4a61)` directive comes in.
+
+James Shopland (Jolly Coding)
+
+📄 [Type-Safe Routing with React Router](https://react.statuscode.com/link/159065/5d0bbb4a61) – However, [TanStack Router](https://react.statuscode.com/link/159066/5d0bbb4a61) may be a better fit if you want to do this. Sahaj Jain
+
+📺 [A Secret React Native Hack for React Web Devs](https://react.statuscode.com/link/159067/5d0bbb4a61) Jack Herrington
+
+📰 Classifieds
+
+[\[Live Workshop\]](https://react.statuscode.com/link/159032/5d0bbb4a61) Solve frontend issues with backend solutions: tracing problems through your Next.js stack. 🔍
+
+* * *
+
+🚀[Join React Advanced London](https://react.statuscode.com/link/159033/5d0bbb4a61) on Oct 25 & 28! 60+ advanced React and Web Dev talks, workshops & networking. Use code [React15](https://react.statuscode.com/link/159033/5d0bbb4a61) for 15% off!
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/x4db6ivxiamce71espl1.jpg)](https://react.statuscode.com/link/159068/5d0bbb4a61)
+
+[Code Hike 1.0: Turn Markdown into Rich Interactive Experiences](https://react.statuscode.com/link/159068/5d0bbb4a61 "codehike.org") — Aimed at use cases like code walkthroughs and interactive docs, [Code Hike](https://react.statuscode.com/link/159069/5d0bbb4a61) bridges the gap between Markdown and React when creating technical content that takes full advantage of the modern web.
+
+Rodrigo Pombo
+
+[React Cosmos v6.2: A Sandbox for Developing and Testing UI Components](https://react.statuscode.com/link/159070/5d0bbb4a61 "reactcosmos.org") — Built upon a project first showcased at ReactEurope 2015, Cosmos is a long standing and ‘slowly matured’ tool for prototyping React components in an isolated manner.
+
+Ovidiu Cherecheș et al.
+
+[Snaptail: One File React Apps](https://react.statuscode.com/link/159071/5d0bbb4a61 "snaptail.dev") — If you’re still feeling a little overwhelmed by React, here’s how to build an app by manipulating **just one file**.
+
+Sandro Rybarik
+
+[uikit 0.5: Build 3D UIs in React-Three-Fiber Apps](https://react.statuscode.com/link/159072/5d0bbb4a61 "pmndrs.github.io") — Ideal for games, XR (VR/AR), and web-based spatial-style apps. [GitHub repo.](https://react.statuscode.com/link/159036/5d0bbb4a61)
+
+Bela Bohlender
+
+🕒 [Time Picker: A `shadcn/ui`\-Based Date/Time Picker Component](https://react.statuscode.com/link/159073/5d0bbb4a61)  
+OpenStatus
+
+*   [React Stripe 2.8](https://react.statuscode.com/link/159074/5d0bbb4a61) – React components for Stripe.js and Stripe Elements.
+    
+*   [react-native-MMKV 3.0](https://react.statuscode.com/link/159039/5d0bbb4a61) – Fast key/value storage for React Native apps.
+    
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/eqotpsgybbqcu7dfuzmk.jpg)](https://react.statuscode.com/link/159075/5d0bbb4a61)
+
+*   [json-viewer 3.5](https://react.statuscode.com/link/159075/5d0bbb4a61) – Display JSON data in a readable, user-friendly way _(above)_.
+    
+*   [VisionCamera 4.5.2](https://react.statuscode.com/link/159042/5d0bbb4a61) – Advanced camera control for React Native.
+    
+*   [React Suite 5.70](https://react.statuscode.com/link/159076/5d0bbb4a61) – A suite of React components. ([Examples.](https://react.statuscode.com/link/159077/5d0bbb4a61))
+    
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+[Change your email address](https://react.statuscode.com/edit_subscription/5d0bbb4a61) or [Stop getting this newsletter](https://react.statuscode.com/leave/5d0bbb4a61)
+
+© Cooper Press Ltd · Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+![n](https://react.statuscode.com/open/397/5d0bbb4a61
+</Detail>
+
+```
+ body &lcub; margin: 0; padding: 0; width: 100%; background-color: white; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering: optimizeLegibility; direction: ltr; } body &lcub; font-family: -apple-system,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height: 1.48em; } img &lcub; border: 0; outline: none; height: auto; text-decoration: none; max-width: 100%; line-height: 100%; } @media screen and (max-width: 600px) &lcub; table\[id="main"\] &lcub; max-width: 600px !important; width: 100% !important; min-width: 100% !important; } .nomob &lcub; display: none !important; } .onlymob &lcub; display: inline-block !important; } .rightifmob &lcub; text-align: right !important; } .som &lcub; max-width: 33% !important; } div.footer p &lcub; text-align: left !important; } div.footer td &lcub; text-align: left !important; } .el-columns .column &lcub; width: 100% !important; } }
+```
+
+另外 Jack Herrington 分享了 React Native 世界的一个技巧。 |
+
+\#​397 — 2024 年 8 月 28 日
+
+[网上阅读](https://react.statuscode.com/issues/397)
+
+连同 
+
+\[![前端大师徽标](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)]\(https:// react.statuscode.com/link/159031/5d0bbb4a61)
+
+反应状态
+
+\[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ixdsyk3z8nzkcgoo9t8u.jpg)]\(https://react.statuscode.com/link/159049/5d0bbb4a61 ）
+
+[Material UI v6：流行的 React UI 设计/组件系统](https://react.statuscode.com/link/159049/5d0bbb4a61 "mui.com") — MUI 设计系统已经有近十年的历史了最新的主要版本。不过，这些增强功能更多的是进化性而非革命性，重点是改进的主题、配色方案管理、容器查询支持和 React 19 支持。还有一些[改进的模板](https://react.statuscode.com/link/159050/5d0bbb4a61) 可以帮助您入门。
+
+加西亚、比特图、安代等人。
+
+💡 如果您使用的是 MUI v5，团队 [建议](https://react.statuscode) 有 [升级到 v6 的便捷指南](https://react.statuscode.com/link/159051/5d0bbb4a61) .com/link/159052/5d0bbb4a61) *“应该不会太糟糕”*。
+
+[从头开始实现 React-a-Like](https://react.statuscode.com/link/159053/5d0bbb4a61 "www.rob.directory") — 虽然您“实际上”不太可能想要这样做，至少思考一下它可以对 React 引擎室中发生的事情有所启发。
+
+罗比·普鲁赞
+
+[![](https://copm.s3.amazonaws.com/bc3ff0a3.png)](https://react.statuscode.com/link/159031/5d0bbb4a61)
+
+[前端系统设计](https://react.statuscode.com/link/159031/5d0bbb4a61 "frontendmasters.com") — 在 Evgennii Ray 的这个内容广泛的视频课程中学习如何创建可扩展、高效的用户界面。探索盒模型、浏览器渲染、DOM 操作、状态管理、性能等等。
+
+前端大师赞助商
+
+[React 中的接口隔离原则](https://react.statuscode.com/link/159054/5d0bbb4a61 "alexkondov.com") — Alex 着眼于著名的 \[SOLID]\(https://react.statuscode. com/link/159055/5d0bbb4a61）面向对象原则及其如何应用于 React。
+
+亚历克斯·康多夫
+
+▶  [来自 *Chain React 2024* 的 21 场演讲](https://react.statuscode.com/link/159056/5d0bbb4a61 "www.youtube.com") — \[Chain React]\(https://react.statuscode.com /link/159057/5d0bbb4a61）是上个月在俄勒冈州波特兰举行的 React Native 会议。了解此播放列表中发生的事情，包括[为电视构建 React Native 应用程序](https://react.statuscode.com/link/159058/5d0bbb4a61)、如何\[优化 React Native 性能]\(https:// react.statuscode.com/link/159059/5d0bbb4a61），或 Jack Herrington 在 React 中展示[如何构建本地优先语义搜索系统](https://react.statuscode.com/link/159060/5d0bbb4a61)本机应用程序。
+
+链式反应 2024
+
+[如何构建低功耗蓝牙供电的 Expo 应用程序](https://react.statuscode.com/link/159061/5d0bbb4a61 "expo.dev") — \[低功耗蓝牙]\(https://react.statuscode. com/link/159062/5d0bbb4a61）针对医疗保健、健身、信标、安全和家庭娱乐等用例。这是一种入门方法。
+
+丹尼尔·弗里亚（世博博客）
+
+▶  [使用 'use dom' 简化 React Web 到本机迁移](https://react.statuscode.com/link/159063/5d0bbb4a61 "www.youtube.com") — Web 到本机迁移看似永远不可能变得足够简单，这就是 Expo 新的实验性“[use dom](https://react.statuscode.com/link/159064/5d0bbb4a61)”指令的用武之地。
+
+詹姆斯·肖普兰（Jolly Coding）
+
+📄 [React Router 的类型安全路由](https://react.statuscode.com/link/159065/5d0bbb4a61) – 但是，[TanStack Router](https://react.statuscode.com/link/159066/5d0bbb4a61) ）如果您想这样做，可能更适合。萨哈吉·耆那教
+
+📺 [React Web 开发人员的秘密 React Native Hack](https://react.statuscode.com/link/159067/5d0bbb4a61) Jack Herrington
+
+📰 分类广告
+
+[\[Live Workshop\]](https://react.statuscode.com/link/159032/5d0bbb4a61) 使用后端解决方案解决前端问题：通过 Next.js 堆栈跟踪问题。 🔍
+
+***
+
+🚀[加入 React Advanced London](https://react.statuscode.com/link/159033/5d0bbb4a61) 将于 10 月 25 日至 28 日举行！ 60 多个高级 React 和 Web 开发讲座、研讨会和社交网络。使用代码 [React15](https://react.statuscode.com/link/159033/5d0bbb4a61) 可享受 15% 的折扣！
+
+🛠 代码、工具和库
+
+\[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/x4db6ivxiamce71espl1.jpg)]\(https://react.statuscode.com/link/159068/5d0bbb4a61 ）
+
+[Code Hike 1.0：将 Markdown 变成丰富的交互体验](https://react.statuscode.com/link/159068/5d0bbb4a61 "codehike.org") — 针对代码演练和交互式文档等用例，\[Code Hike] (https://react.statuscode.com/link/159069/5d0bbb4a61) 在创建充分利用现代网络的技术内容时，弥合了 Markdown 和 React 之间的差距。
+
+罗德里戈·庞博
+
+[React Cosmos v6.2：用于开发和测试 UI 组件的沙箱](https://react.statuscode.com/link/159070/5d0bbb4a61 "reactcosmos.org") — 基于在 ReactEurope 2015 上首次展示的项目 Cosmos 构建是一个历史悠久且“慢慢成熟”的工具，用于以独立的方式对 React 组件进行原型设计。
+
+奥维迪乌·切雷切什 (Ovidiu Cherecheş) 等人。
+
+[Snaptail：一个文件 React 应用程序](https://react.statuscode.com/link/159071/5d0bbb4a61 "snaptail.dev") — 如果您仍然对 React 感到有点不知所措，以下是如何构建应用程序操作**仅一个文件**。
+
+桑德罗·雷巴里克
+
+[uikit 0.5：在 React-Three-Fiber 应用程序中构建 3D UI](https://react.statuscode.com/link/159072/5d0bbb4a61 "pmndrs.github.io") — 非常适合游戏、XR (VR/AR) ，以及基于网络的空间风格应用程序。 [GitHub 存储库。](https://react.statuscode.com/link/159036/5d0bbb4a61)
+
+贝拉·博伦德
+
+🕒 [时间选择器：基于 `shadcn/ui` 的日期/时间选择器组件](https://react.statuscode.com/link/159073/5d0bbb4a61)\
+打开状态
+
+* [React Stripe 2.8](https://react.statuscode.com/link/159074/5d0bbb4a61) – Stripe.js 和 Stripe Elements 的 React 组件。
+
+* [react-native-MMKV 3.0](https://react.statuscode.com/link/159039/5d0bbb4a61) – React Native 应用的快速键/值存储。
+
+\[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/eqotpsgybbqcu7dfuzmk.jpg)]\(https://react.statuscode.com/link/159075/5d0bbb4a61 ）
+
+* [json-viewer 3.5](https://react.statuscode.com/link/159075/5d0bbb4a61) – 以可读、用户友好的方式显示 JSON 数据\*（上文）\*。
+
+* [VisionCamera 4.5.2](https://react.statuscode.com/link/159042/5d0bbb4a61) – React Native 的高级相机控制。
+
+* [React Suite 5.70](https://react.statuscode.com/link/159076/5d0bbb4a61) – 一套 React 组件。 （[示例。](https://react.statuscode.com/link/159077/5d0bbb4a61)）
+
+由彼得·库珀和特伦斯·C·甘农策划。
+
+**[Cooperpress](https://cooperpress.com/)** 出版物。
+
+[更改您的电子邮件地址](https://react.statuscode.com/edit_subscription/5d0bbb4a61) 或 [停止接收此新闻通讯](https://react.statuscode.com/leave/5d0bbb4a61)
+
+© Cooper Press Ltd·费尔菲尔德企业中心，劳斯，LN11 0LS，英国
+
+!\[n]\(https://react.statuscode.com/open/397/5d0bbb4a61
+
+
