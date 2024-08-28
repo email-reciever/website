@@ -5,9 +5,9 @@ import { Adapter } from '../types';
 export const modular: Adapter = (text, html) => {
 	const { md } = html2md(html);
 	// slice content from the main things to sports
-	const startIndex = md.indexOf('Read Modverse Weekly') || 0;
-	const endIndex = md.indexOf('[![X]');
-	const blogContent = md.slice(startIndex, endIndex);
+	const startIndex = Math.max(md.indexOf('Read Modverse Weekly'), 0);
+	const endIndexMatcher = md.match(/\[!\[(")?X/);
+	const blogContent = md.slice(startIndex, endIndexMatcher?.index ?? md.length);
 
 	const $ = load(html, null, false);
 	let origin_url: string | undefined;
