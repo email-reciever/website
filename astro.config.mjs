@@ -32,12 +32,6 @@ export default defineConfig({
       alias: {
         '@': resolve(import.meta.dirname, 'src')
       }
-    },
-    ssr: {
-      external: ['node:buffer', 'node:worker_threads', 'node:async_hooks']
-    },
-    build: {
-      minify: false,
     }
   },
   experimental: {

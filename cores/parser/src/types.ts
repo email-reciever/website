@@ -4,7 +4,7 @@ import type { Plugin } from 'unified';
 
 export type { Email, Plugin };
 
-export type WlKeys = keyof typeof WHITELISTS;
+export type WlKeys = keyof typeof WHITELISTS | 'OTHERS';
 
 export type SenderType = Lowercase<WlKeys>;
 
