@@ -14,6 +14,8 @@ import { arcupdate } from './adapters/arcupdate';
 import { alexkondov } from './adapters/alexkondov';
 import { insidergithub } from './adapters/insidergithub';
 import { zhihu } from './adapters/zhihu';
+import { others } from './adapters/others';
+import { javascriptweekly } from './adapters/javascriptweekly';
 
 import { logger } from './utils/logger';
 
@@ -36,6 +38,9 @@ const adapter: Partial<Record<SenderType, Adapter>> = {
 	modular,
 	producthunt,
 	zhihu,
+	others,
+	javascriptweekly,
+	nodeweekly: javascriptweekly,
 };
 
 interface RequestBody {
@@ -45,6 +50,7 @@ interface RequestBody {
 	title: string;
 	date: string;
 	headers?: Header[];
+	siteURL?: string;
 }
 
 export default {
@@ -53,24 +59,30 @@ export default {
 		const { url } = request;
 		const { pathname } = new URL(url);
 		if (pathname === '/') {
-			const { md: markdownContent, type, html, title, date, headers = [] } = await request.json<RequestBody>();
+			const { md: markdownContent, type, html, title, date, siteURL, headers = [] } = await request.json<RequestBody>();
 			// debug with https://kreata.ee/postal-mime/example/
 			if (markdownContent?.length) {
 				// with different email sender, use adapter to collect right content for translate
-				const { blogContent = markdownContent, collectLinks, origin_url } = await adapter[type]!(markdownContent!, html, headers, env);
+				const {
+					blogContent = markdownContent,
+					collectLinks,
+					translate = true,
+					origin_url,
+				} = await adapter[type]!(markdownContent!, html, headers, env);
 				// translate content
-				const translatedMD = await md(blogContent!, env, collectLinks);
+				const translatedMD = translate ? await md(blogContent!, env, collectLinks) : '';
 
 				await createBlog(
 					translatedMD,
 					blogContent!,
 					{
-						...createCommonFrontmatter(title, type, origin_url!, date),
+						...createCommonFrontmatter(title, type, origin_url ?? siteURL!, date),
+						translated: !!translatedMD?.length,
 					} as unknown as frontmatter,
 					env
 				);
 
-				return Response.json({ translated: translatedMD, inputs: blogContent, origin_url });
+				return Response.json({ translated: translatedMD, inputs: blogContent, origin_url: origin_url ?? siteURL });
 			}
 		} else if (pathname === '/zhihu') {
 			// use restful api to update zhihu artical
@@ -101,9 +113,14 @@ export default {
 				const dir = getEmailSenderType(emailSender);
 				// default use content like total text
 				// with different email sender, use adapter to collect right content for translate
-				const { blogContent = text, collectLinks, origin_url = 'javascript:;' } = await adapter[dir]!(text!, html!, headers, env);
+				const {
+					blogContent = text,
+					collectLinks,
+					translate = true,
+					origin_url = 'javascript:;',
+				} = await adapter[dir]!(text!, html!, headers, env);
 				// translate content
-				const translatedMD = await md(blogContent!, env, collectLinks);
+				const translatedMD = translate ? await md(blogContent!, env, collectLinks) : '';
 
 				const title = subject ?? `${from}`;
 				// generate frontmatter
@@ -112,7 +129,7 @@ export default {
 					email_recorder: emailSender,
 				};
 
-				await createBlog(translatedMD, blogContent!, basicFrontMatter, env);
+				await createBlog(translatedMD, blogContent!, { ...basicFrontMatter, translated: !!translatedMD?.length }, env);
 			} else {
 				if (!selfForward) {
 					message.setReject('Unknown Sender!!');
