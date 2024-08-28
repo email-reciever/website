@@ -2,6 +2,7 @@ import { Application, Router } from '$oak'
 import { resolve } from 'node:path'
 import '$dotenvload'
 import { batchUpdate } from './router/batchUpdate.ts'
+import { translate } from './router/translate.ts'
 
 const app = new Application()
 
@@ -12,6 +13,7 @@ router.post('/create', async (ctx) => {
   try {
     const { path, content } = await ctx.request.body.json()
     const filePath = resolve(import.meta.dirname!, '../../../', path)
+    console.log(filePath)
     Deno.writeTextFileSync(filePath, content)
   } catch (e) {
     status = 400
@@ -37,6 +39,11 @@ router.post('/read', async (ctx) => {
 })
 
 router.post('/batch-update/:type', batchUpdate)
+router.post('/translate', translate)
+
+router.get('/', (ctx) => {
+  ctx.response.redirect('https://email-reciever.pages.dev/')
+})
 
 // Logger
 app.use(async (ctx, next) => {

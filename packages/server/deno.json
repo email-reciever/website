@@ -7,7 +7,10 @@
     "$oak": "https://deno.land/x/oak/mod.ts",
     "$pm": "npm:postal-mime",
     "$chunk": "npm:lodash.chunk",
-    "$dotenvload": "jsr:@std/dotenv/load"
+    "$dotenvload": "jsr:@std/dotenv/load",
+    "$ggta": "npm:@vitalets/google-translate-api",
+    "$hpa": "npm:http-proxy-agent",
+    "$ci": "npm:cheerio"
   },
   "npmRegistry": "https://registry.npmmirror.com",
   "lint": {
