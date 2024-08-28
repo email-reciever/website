@@ -1,0 +1,352 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Making your page faster before it even loads
+description: Making your page faster before it even loads
+date: 星期三 04 下午 八月 28o 2024
+author: frontendfocus
+origin_url: https://frontendfoc.us/issues/657
+origin_site: https://frontendfoc.us/issues/657
+translated: true
+avatar: /media-source/frontendfocus-ico.png
+email_recorder: frontend@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Making your page faster before it even loads" url="https://frontendfoc.us/issues/657" />
+
+<Detail client:only="react">
+	     body &lcub; margin: 0; padding: 0; width: 100%; background-color: white; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering: optimizeLegibility; direction: ltr; } body &lcub; font-family: -apple-system,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height: 1.48em; } img &lcub; border: 0; outline: none; height: auto; text-decoration: none; max-width: 100%; line-height: 100%; } @media screen and (max-width: 600px) &lcub; table\[id="main"\] &lcub; max-width: 600px !important; width: 100% !important; min-width: 100% !important; } .nomob &lcub; display: none !important; } .onlymob &lcub; display: inline-block !important; } .rightifmob &lcub; text-align: right !important; } .som &lcub; max-width: 33% !important; } div.footer p &lcub; text-align: left !important; } div.footer td &lcub; text-align: left !important; } .el-columns .column &lcub; width: 100% !important; } } @media only screen and (max-width: 480px) &lcub; table.mobilealignleft &lcub; width: 100%; } .mobilealignleft &lcub; text-align: left !important; } }
+
+Plus share your thoughts on CSS in 2024. |
+
+👋 **Hey!** Hope you're doing well. I'm back after a week away in Germany, and as such, usual service resumes. _Let's get to it_.  
+\_\_  
+_Chris Brandrick, your editor_
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://frontendfoc.us/link/158986/bb16deca26)
+
+🚀 **Frontend** Focus
+
+#​657 — August 28, 2024 | [Read on the web](https://frontendfoc.us/issues/657)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v1724793727/yobcjeteozjmlae2cpcu.png)](https://frontendfoc.us/link/158988/bb16deca26)
+
+[The _State of CSS 2024_ Survey](https://frontendfoc.us/link/158988/bb16deca26 "survey.devographics.com") — The increased pace of evolution in the CSS space seems to show no signs of slowing, as such we can now do so much more than we could just a few short years ago (be that advanced math, scroll-triggered animations, etc). As such, this [recently launched survey](https://frontendfoc.us/link/158989/bb16deca26) — which covers things like layout, color, typography, accessibility, and more — plays an important role in letting browser vendors know what we all think about the path CSS is taking. _Be sure to fill it out, and tell em we sent ya_. 😉
+
+Devographics
+
+[How to Make Your Web Page Faster Before It Even Loads](https://frontendfoc.us/link/158990/bb16deca26 "blog.sentry.io") — Can we measure the events that happen _before_ the first byte of a web page is received by the browser, and in turn optimize them to make our web pages and apps load even faster?
+
+Salma Alam-Naylor
+
+[![](https://copm.s3.amazonaws.com/ff6257be.png)](https://frontendfoc.us/link/158986/bb16deca26)
+
+[Front-End System Design](https://frontendfoc.us/link/158986/bb16deca26 "frontendmasters.com") — Learn to create scalable, efficient user interfaces in this extensive video course by Evgennii Ray. Explore the box model, browser rendering, DOM manipulation, state management, performance and much more.
+
+Frontend Masters sponsor
+
+[Can You Convert a Video to Pure CSS?](https://frontendfoc.us/link/158991/bb16deca26 "dgerrells.com") — Can or _should..?_ A highly detailed exploration of using scroll-based animations as a way to play video as just CSS. David has also made a [neat browser-based tool for converting any video into a pure CSS keyframe animation](https://frontendfoc.us/link/158992/bb16deca26) ready to be dropped into your site.
+
+David Gerrells
+
+[`blocking=render`: Why Would You Do That?!](https://frontendfoc.us/link/158993/bb16deca26 "csswizardry.com") — Harry stresses that unless you know you need [this behavior](https://frontendfoc.us/link/158994/bb16deca26), _you don’t need it_.
+
+Harry Roberts
+
+⚡️ Quick Links
+
+*   😉 jQuery, everyone's favorite JavaScript library, [turned 18](https://frontendfoc.us/link/158995/bb16deca26) earlier this week.
+    
+*   📱 The UK gov is [carrying out an investigation](https://frontendfoc.us/link/158996/bb16deca26) around mobile browsers and browser engines, however Alistair highlights [how Apple could "_follow the proposals whilst violating their intention_"](https://frontendfoc.us/link/158997/bb16deca26).
+    
+*   🖼️ [Public Work](https://frontendfoc.us/link/158998/bb16deca26) is a neat site that allows you to search over 100,000 copyright-free images from The MET, New York Public Library, and more.
+    
+*   ✏️ Instead of leaving a comment under a blog post, why not [draw your response](https://frontendfoc.us/link/158999/bb16deca26)?
+    
+
+📙 **Tutorials, Articles & Opinion**
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v1724825209/a5ueibebfpvtysykjhab.png)](https://frontendfoc.us/link/159000/bb16deca26)
+
+[Custom Range Slider Using Anchor Positioning & Scroll-Driven Animations](https://frontendfoc.us/link/159000/bb16deca26 "frontendmasters.com") — It’s still a _touch_ early to truly adopt these two features (only Chrome and Edge have full support today), but it can’t hurt to explore both [Anchor positioning](https://frontendfoc.us/link/159001/bb16deca26) and [scroll-driven animations](https://frontendfoc.us/link/159002/bb16deca26) to get an overview of just what could be done in the near future – it's a nifty effect!
+
+Temani Afif
+
+[🙈 Spoiler Alert: It Needs to Be Accessible](https://frontendfoc.us/link/159003/bb16deca26 "www.scottohara.me") — Here’s what Scott would expect from a would-be spoiler component, “_if someone were to build one, or if one were to ever be standardized_”.
+
+Scott O'Hara
+
+[Increase Library Adoption with Interactive Coding Tutorials](https://frontendfoc.us/link/159004/bb16deca26 "tutorialkit.dev") — TutorialKit enables you to create interactive tutorials instantly without building or managing any backend infrastructure.
+
+StackBlitz sponsor
+
+[Basic Keyboard Shortcut Support for Focused Links](https://frontendfoc.us/link/159005/bb16deca26 "ericwbailey.website") — Turns out there’s a _lot_ of different actions you can perform via the keyboard when an anchor element is focused.
+
+Eric Bailey
+
+[Double Your Specificity with This One Weird Trick](https://frontendfoc.us/link/159006/bb16deca26 "cirrus.twiddles.com") — A bit of a hack, sure, but by doubling up the relevant selector(s) you can boost your specificity without resorting to overrides or using `!important`.
+
+James Nash
+
+[Five WASM Use Cases for Frontend Development](https://frontendfoc.us/link/159007/bb16deca26 "frontenddogma.com") — [WebAssembly](https://frontendfoc.us/link/159008/bb16deca26) is gaining ground in frontend development, so how should you consider applying it?
+
+Eleanor Hecks
+
+[Elastic Overflow Scrolling](https://frontendfoc.us/link/159009/bb16deca26 "css-tricks.com") — Creating a CSS-only “rubber band” scrolling effect.
+
+Dave Seidman
+
+[Common Misconceptions About How to Optimize LCP](https://frontendfoc.us/link/159010/bb16deca26)  
+Brendan Kenny
+
+[What Skills Should You Focus on as a Junior Web Developer in 2024?](https://frontendfoc.us/link/159011/bb16deca26)  
+Frontend Masters
+
+🔧 **Code, Tools & Resources**
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/cb0mihimzajabydodrb4.jpg)](https://frontendfoc.us/link/159014/bb16deca26)
+
+[Tagger: Zero Dependency, Vanilla JavaScript Tagging Library](https://frontendfoc.us/link/159014/bb16deca26 "github.com") — You can play with [a live demo here](https://frontendfoc.us/link/159015/bb16deca26).
+
+Jakub T. Jankiewicz
+
+[Web Vitals: Chrome Extension for Instant Feedback on Loading, Interactivity and Layout Shift Metrics](https://frontendfoc.us/link/159018/bb16deca26 "chromewebstore.google.com") — Includes support for all of the Core Web Vitals.
+
+Addy Osmani
+
+[Extensible JavaScript Builder for Surveys and Forms](https://frontendfoc.us/link/159017/bb16deca26 "surveyjs.io") — Streamline form management in your JS app with SurveyJS—fast, secure, and code-free.
+
+SurveyJS sponsor
+
+[Replace Twitter (X) Embeds with Semantic HTML](https://frontendfoc.us/link/159016/bb16deca26 "shkspr.mobi") — A Python script for converting a public Tweet into embedded, semantic HTML.
+
+Terence Eden
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v1724829573/p0m3s2mwl8rmsuiax9ka.png)](https://frontendfoc.us/link/159019/bb16deca26)
+
+[The Monospace Web](https://frontendfoc.us/link/159019/bb16deca26 "owickstrom.github.io") — A well formed, minimalist CSS design exploration, featuring lists, tables, charts, ASCII drawings, etc.
+
+Oskar Wickström
+
+[Fuite 5.0: A Tool for Finding Memory Leaks in Web Apps](https://frontendfoc.us/link/159020/bb16deca26 "github.com") — A CLI tool that you can point at a URL to analyze for memory leaks. [Here’s how it works.](https://frontendfoc.us/link/159021/bb16deca26) There’s also [a video tutorial](https://frontendfoc.us/link/159022/bb16deca26).
+
+Nolan Lawson
+
+[Milkdown: Plugin-Driven WYSIWYG Markdown Editor Framework](https://frontendfoc.us/link/159023/bb16deca26 "milkdown.dev") — A lightweight WYSIWYG Markdown editor based around a plugin system that enables a significant level of customization. It’s neat to see [the docs](https://frontendfoc.us/link/159024/bb16deca26) are rendered by the editor itself. [GitHub repo.](https://frontendfoc.us/link/159025/bb16deca26)
+
+Mirone
+
+[heic-to: Convert HEIC/HEIF Images to JPEG or PNG In-Browser](https://frontendfoc.us/link/159027/bb16deca26 "github.com") — [HEIF](https://frontendfoc.us/link/159044/bb16deca26) is a modern container format for storing images but is frequently unsupported by many tools, so converting supplied HEIF images to more popular formats could be useful.
+
+Hopper Gee
+
+[RoundtableJS: A JavaScript Library for Building Complex Surveys, Forms, and Data Annotation Tasks](https://frontendfoc.us/link/159026/bb16deca26)  
+roundtableAI
+
+[Time Picker: A Date/Time Picker Component Built with React and shadcn/ui](https://frontendfoc.us/link/159045/bb16deca26)  
+OpenStatus
+
+📰 Classifieds
+
+[Blacksmith](https://frontendfoc.us/link/159013/bb16deca26) runs GitHub Actions up to 2x faster at half the cost with a one-line change. Trusted by 100+ companies like GitBook and Slope.
+
+* * *
+
+Boost your PostgreSQL skills with [Redgate’s 101 webinar series](https://frontendfoc.us/link/159046/bb16deca26) of easy-to-follow, expert hosted sessions. It’s PostgreSQL, simplified.
+
+📬
+
+**Got a new email address?** You can [change your email here](https://frontendfoc.us/edit_subscription/bb16deca26).
+
+* * *
+
+**Bored of us?** Click [here to stop getting this newsletter](https://frontendfoc.us/leave/bb16deca26).
+
+* * *
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll take a look.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Curated by [Chris Brandrick](https://frontendfoc.us/link/159047/bb16deca26) & [Peter Cooper](https://frontendfoc.us/link/159048/bb16deca26).  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+[Stop getting this newsletter](https://frontendfoc.us/leave/bb16deca26)
+
+[Ipx.](https://frontendfoc.us/open/657/bb16deca26?ipx=t)
+
+![n](https://frontendfoc.us/open/657/bb16deca26
+</Detail>
+
+```
+ body &lcub; margin: 0; padding: 0; width: 100%; background-color: white; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering: optimizeLegibility; direction: ltr; } body &lcub; font-family: -apple-system,BlinkMacSystemFont,Helvetica,sans-serif; font-size: 15px; line-height: 1.48em; } img &lcub; border: 0; outline: none; height: auto; text-decoration: none; max-width: 100%; line-height: 100%; } @media screen and (max-width: 600px) &lcub; table\[id="main"\] &lcub; max-width: 600px !important; width: 100% !important; min-width: 100% !important; } .nomob &lcub; display: none !important; } .onlymob &lcub; display: inline-block !important; } .rightifmob &lcub; text-align: right !important; } .som &lcub; max-width: 33% !important; } div.footer p &lcub; text-align: left !important; } div.footer td &lcub; text-align: left !important; } .el-columns .column &lcub; width: 100% !important; } } @media only screen and (max-width: 480px) &lcub; table.mobilealignleft &lcub; width: 100%; } .mobilealignleft &lcub; text-align: left !important; } }
+```
+
+另外，请分享您对 2024 年 CSS 的想法。
+
+👋 **嘿！** 希望你一切顺利。我离开德国一周后回来了，因此，正常的服务恢复了。 *让我们开始吧*。\
+\_\_\
+*克里斯·布兰德里克，你的编辑*
+
+连同 
+
+\[![前端大师徽标](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)]\(https:// frontendfoc.us/link/158986/bb16deca26)
+
+🚀 **前端** 焦点
+
+\#​657 — 2024 年 8 月 28 日 | [网上阅读](https://frontendfoc.us/issues/657)
+
+\[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v1724793727/yobcjeteozjmlae2cpcu.png)]\(https://frontendfoc.us/link/158988/bb16deca26 ）
+
+[*CSS 2024 年状况* 调查](https://frontendfoc.us/link/158988/bb16deca26 "survey.devgraphics.com") — CSS 领域不断加快的发展步伐似乎没有放缓的迹象，因此，我们现在可以做的事情比几年前要多得多（例如高等数学、滚动触发的动画等）。因此，这项[最近启动的调查](https://frontendfoc.us/link/158989/bb16deca26)——涵盖布局、颜色、排版、可访问性等——在让浏览器供应商了解什么方面发挥了重要作用我们都在思考 CSS 正在走的路。 *请务必填写，并告诉他们我们已发送给您*。 😉
+
+地形学
+
+[如何让你的网页在加载之前更快](https://frontendfoc.us/link/158990/bb16deca26 "blog.sentry.io") - 我们可以测量在第一个字节*之前*发生的事件吗？浏览器接收网页，然后对其进行优化以使我们的网页和应用程序加载速度更快？
+
+萨尔玛·阿拉姆-内勒
+
+[![](https://copm.s3.amazonaws.com/ff6257be.png)](https://frontendfoc.us/link/158986/bb16deca26)
+
+[前端系统设计](https://frontendfoc.us/link/158986/bb16deca26 "frontendmasters.com") — 在 Evgennii Ray 的这个内容丰富的视频课程中学习如何创建可扩展、高效的用户界面。探索盒模型、浏览器渲染、DOM 操作、状态管理、性能等等。
+
+前端大师赞助商
+
+[Can You Convert a Video to Pure CSS?](https://frontendfoc.us/link/158991/bb16deca26 "dgerrells.com") — 可以或 *应该..?* 使用基于滚动的动画的高度详细的探索作为一种像 CSS 一样播放视频的方式。 David 还制作了一个[基于浏览器的简洁工具，用于将任何视频转换为纯 CSS 关键帧动画](https://frontendfoc.us/link/158992/bb16deca26)，随时可以将其放入您的网站中。
+
+大卫·格勒尔斯
+
+[`blocking=render`：你为什么要这样做？！](https://frontendfoc.us/link/158993/bb16deca26 "csswizardry.com") - Harry 强调除非你知道你需要\[这种行为]\(https ://frontendfoc.us/link/158994/bb16deca26），*您不需要它*。
+
+哈里·罗伯茨
+
+⚡️ 快速链接
+
+* 😉 jQuery，每个人最喜欢的 JavaScript 库，本周早些时候 [18 岁生日](https://frontendfoc.us/link/158995/bb16deca26)。
+
+* 📱 英国政府正在针对移动浏览器和浏览器引擎进行[开展调查](https://frontendfoc.us/link/158996/bb16deca26)，但阿利斯泰尔强调[苹果如何“\*遵循这些提案，同时违反其意图” \*"](https://frontendfoc.us/link/158997/bb16deca26)。
+
+* 🖼️ [公共作品](https://frontendfoc.us/link/158998/bb16deca26) 是一个简洁的网站，可让您搜索来自 MET、纽约公共图书馆等的超过 100,000 张无版权图像。
+
+* ✏️ 与其在博客文章下留下评论，为什么不[画出你的回应](https://frontendfoc.us/link/158999/bb16deca26)？
+
+📙 **教程、文章和意见**
+
+\[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v1724825209/a5ueibebfpvtysykjhab.png)]\(https://frontendfoc.us/link/159000/bb16deca26 ）
+
+[使用锚点定位和滚动驱动动画的自定义范围滑块](https://frontendfoc.us/link/159000/bb16deca26 "frontendmasters.com") — 真正采用这两个功能仍然是一个“接触”早期（仅限 Chrome）和 Edge 今天已得到全面支持），但探索 [锚定定位](https://frontendfoc.us/link/159001/bb16deca26) 和 \[滚动驱动动画]\(https://frontendfoc. us/link/159002/bb16deca26）来大致了解在不久的将来可以做什么 - 这是一个很棒的效果！
+
+特马尼·阿菲夫
+
+[🙈 剧透警报：需要可访问](https://frontendfoc.us/link/159003/bb16deca26 "www.scotohara.me") — 这是 Scott 对潜在剧透组件的期望，“*如果有人要建造一个，或者是否要标准化*”。
+
+斯科特·奥哈拉
+
+[通过交互式编码教程提高库的采用率](https://frontendfoc.us/link/159004/bb16deca26 "tutorialkit.dev") — TutorialKit 使您能够立即创建交互式教程，而无需构建或管理任何后端基础设施。
+
+StackBlitz 赞助商
+
+[焦点链接的基本键盘快捷键支持](https://frontendfoc.us/link/159005/bb16deca26 "ericwbailey.website") - 结果是，当锚元素时，您可以通过键盘执行*很多*不同的操作是专注的。
+
+埃里克·贝利
+
+[用这个奇怪的技巧使你的特异性加倍](https://frontendfoc.us/link/159006/bb16deca26 "cirrus.twiddles.com") - 当然，有点黑客，但通过加倍相关的选择器）您可以提高您的特异性，而无需诉诸覆盖或使用 `!important`。
+
+詹姆斯·纳什
+
+[前端开发的五个 WASM 用例](https://frontendfoc.us/link/159007/bb16deca26 "frontenddogma.com") — [WebAssembly](https://frontendfoc.us/link/159008/bb16deca26) 正在获得进步前端开发基础，那么您应该如何考虑应用它？
+
+埃莉诺·赫克斯
+
+[弹性溢出滚动](https://frontendfoc.us/link/159009/bb16deca26 "css-tricks.com") — 创建纯 CSS“橡皮筋”滚动效果。
+
+戴夫·赛德曼
+
+[关于如何优化 LCP 的常见误解](https://frontendfoc.us/link/159010/bb16deca26)\
+布伦丹·肯尼
+
+[2024 年作为一名初级 Web 开发人员应该关注哪些技能？](https://frontendfoc.us/link/159011/bb16deca26)\
+前端大师
+
+🔧 **代码、工具和资源**
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/cb0mihimzajabydodrb4.jpg)](https://frontendfoc.us/link/159014/bb16deca26)
+
+[Tagger：零依赖、Vanilla JavaScript 标记库](https://frontendfoc.us/link/159014/bb16deca26 "github.com") — 您可以在[此处进行现场演示](https://frontendfoc.us) /link/159015/bb16deca26）。
+
+雅库布·T·扬凯维奇
+
+[Web Vitals：用于对加载、交互性和布局转换指标进行即时反馈的 Chrome 扩展程序](https://frontendfoc.us/link/159018/bb16deca26 "chromewebstore.google.com") — 包括对所有核心 Web Vitals 的支持。
+
+阿迪·奥斯马尼
+
+[用于调查和表单的可扩展 JavaScript 生成器](https://frontendfoc.us/link/159017/bb16deca26 "surveyjs.io") — 使用 SurveyJS 简化 JS 应用中的表单管理 — 快速、安全且无需代码。
+
+SurveyJS 赞助商
+
+[用语义 HTML 替换 Twitter (X) 嵌入](https://frontendfoc.us/link/159016/bb16deca26 "shkspr.mobi") — 用于将公共推文转换为嵌入式语义 HTML 的 Python 脚本。
+
+特伦斯·伊登
+
+\[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v1724829573/p0m3s2mwl8rmsuiax9ka.png)]\(https://frontendfoc.us/link/159019/bb16deca26 ）
+
+[The Monospace Web](https://frontendfoc.us/link/159019/bb16deca26 "owickstrom.github.io") — 一个结构良好、简约的 CSS 设计探索，以列表、表格、图表、ASCII 绘图等为特色。
+
+奥斯卡·维克斯特罗姆
+
+[Fuite 5.0：在 Web 应用程序中查找内存泄漏的工具](https://frontendfoc.us/link/159020/bb16deca26 "github.com") — 一个 CLI 工具，您可以指向 URL 来分析内存泄漏。 [其工作原理如下。](https://frontendfoc.us/link/159021/bb16deca26) 还有[视频教程](https://frontendfoc.us/link/159022/bb16deca26)。
+
+诺兰·劳森
+
+[Milkdown：插件驱动的 WYSIWYG Markdown 编辑器框架](https://frontendfoc.us/link/159023/bb16deca26 "milkdown.dev") — 一个基于插件系统的轻量级 WYSIWYG Markdown 编辑器，可实现显着级别的自定义。很高兴看到[文档](https://frontendfoc.us/link/159024/bb16deca26)是由编辑器本身呈现的。 [GitHub 存储库](https://frontendfoc.us/link/159025/bb16deca26)
+
+米罗内
+
+[heic-to：在浏览器中将 HEIC/HEIF 图像转换为 JPEG 或 PNG](https://frontendfoc.us/link/159027/bb16deca26 "github.com") — \[HEIF]\(https://frontendfoc.us /link/159044/bb16deca26）是一种用于存储图像的现代容器格式，但许多工具通常不支持，因此将提供的 HEIF 图像转换为更流行的格式可能会很有用。
+
+霍珀·吉
+
+[RoundtableJS：用于构建复杂调查、表单和数据注释任务的 JavaScript 库](https://frontendfoc.us/link/159026/bb16deca26)\
+圆桌人工智能
+
+[时间选择器：使用 React 和 shadcn/ui 构建的日期/时间选择器组件](https://frontendfoc.us/link/159045/bb16deca26)\
+打开状态
+
+📰 分类广告
+
+[Blacksmith](https://frontendfoc.us/link/159013/bb16deca26) 只需一行更改，即可将 GitHub Actions 的运行速度提高 2 倍，成本降低一半。受到 GitBook 和 Slope 等 100 多家公司的信赖。
+
+***
+
+通过 [Redgate 的 101 网络研讨会系列](https://frontendfoc.us/link/159046/bb16deca26) 的易于理解的专家主持的会议来提高您的 PostgreSQL 技能。它是 PostgreSQL，经过简化。
+
+📬
+
+**有新的电子邮件地址吗？** 您可以[在此处更改您的电子邮件](https://frontendfoc.us/edit_subscription/bb16deca26)。
+
+***
+
+**对我们感到厌倦？** 单击[此处停止获取此新闻通讯](https://frontendfoc.us/leave/bb16deca26)。
+
+***
+
+**有我们的链接吗？** 回复并告诉我们。我们无法包含所有内容，但我们会看一下。
+
+***
+
+由库珀出版社有限公司出版\
+由 [Chris Brandrick](https://frontendfoc.us/link/159047/bb16deca26) 和 [Peter Cooper](https://frontendfoc.us/link/159048/bb16deca26) 策划。\
+费尔菲尔德企业中心, 劳斯, LN11 0LS, 英国
+
+[停止接收此新闻通讯](https://frontendfoc.us/leave/bb16deca26)
+
+[IPX。](https://frontendfoc.us/open/657/bb16deca26?ipx=t)
+
+!\[n]\(https://frontendfoc.us/open/657/bb16deca26
+
+
