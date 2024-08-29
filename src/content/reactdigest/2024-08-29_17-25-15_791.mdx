@@ -1,0 +1,92 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#466 How Airbnb Smoothly Upgrades React
+description: RD#466 How Airbnb Smoothly Upgrades React
+date: 星期一 02 凌晨 七月 29o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/airbnb-smoothly-upgrades-react
+origin_site: https://newsletter.reactdigest.net/p/airbnb-smoothly-upgrades-react
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#466 How Airbnb Smoothly Upgrades React" url="https://newsletter.reactdigest.net/p/airbnb-smoothly-upgrades-react" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1WIRDm3G3oj9JSMy0xwJ05GDiKg6VKaangc8-3uz3Gr3gOjfbzr53Clg5R6HpzHfzo9ZA4KvUBnxmaeb0dPMoXCBTdRtWjU9fyoZ1gRQxx0EYTBPwun9tMBo_anB3Rd8Dt9ooJxynpSWu7J-PChIpuFKnFoqb7O8SBZ6HaIkqL5MevizZJSWOY2T2NLJo3POhA1n5Dw5J2S-xjBefc3wvPPxwKCxuQGcdBAXudlrfvDhOQw8qSG5_KBnc6CmwgGoqHpaeJnANiDDwc8pwZN6b6ddmW_7Jurjvf3FgJv5wMalEgzPu0sx9qQZ9Red2xNWbXVtyDrcwDDJ8MNrS9uAcOUcWHX4JFAd3V_NcEGGm7WIbDitxbMMJGfDJZyoZmfvI6LPD_LLOQpoZBHoNHXgqw2z6zZknJwTkF2vDQZz0Xq3smMNKKkzuS7AlAdfWsdLo2OfoSoXl5zu-8SzooRHIbJNMFFzhyuL0bg8jq90sJNufMbmGz8xzp3DoEw6-q3-fZVALz1pnXHuOHDEGnEY2y1KBH5pZCcf48FoEFaC4r8iJ0XwsYhaRzTVvcLALWbYXb7gLg79-SZ_NChHuKOl1Cps5mio3MgKl6RfAF17an72_jzKkaKvn-ArgFVyxGca2o/48f/v7e5cftcRKCDDczo9Rn5pQ/h0/h001.czxcDbJ5TACTqlFEnPAcyphjH1yPQHCFLwpugq9Q_vU)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/48f/v7e5cftcRKCDDczo9Rn5pQ/ho.gif)
+
+[How Airbnb Smoothly Upgrades React](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTcJ4kVnEX2_UEy_aKzh2sPSAnVILxGvi0NcsYbQtwXWLmxx4WGfntqqu_zagKFlMzTCUqRX1eZH6aj4cAmj-7uzrI0KBGsevShEkBpzx5feHXUBna5ME2jGnMueean992rwT0LiFdf8NU_cEU9HohBWOt18bQVG2GEnl8pka4dEu8Dd2c80DufBvLbE6UgLqufpCGxkTTUjI4xm9mw7UVWbrmjzXkJkt4xoh9IWXTK6wU-x2LuP1B7yIRCYmLgR6_w/48f/v7e5cftcRKCDDczo9Rn5pQ/h1/h001.1jV8AlsFkVyl02ISzYV-VyMhb2xehNsbfvSWcQQZKO8)  
+_11 minutes_ by Andre Wiggins
+
+Airbnb’s frontend recently reached a major milestone: all of our web surfaces have been upgraded from React 16 to React 18. To safely perform this upgrade, we created the React Upgrade System: reusable infrastructure that allows us to roll out new versions of React progressively across our monorepo and measure the results of the upgrade.
+
+[Merge React Code faster with AI-driven code reviews](https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBORZK9n0y51vkA6A1dgAumtJmgZngF9CeOYcKYmlNBkGuXNli43GN4-N-aD0kMpwxquKZ_IAsAWSFU5DQYHQQZRM/48f/v7e5cftcRKCDDczo9Rn5pQ/h2/h001.kjAPQaXdxsShsieXpr_NBe1rPx0N2AnJUicQNjjGdgc)  
+_sponsored by CodeRabbit_
+
+CodeRabbit is your AI pull request reviewer. It provides context-aware feedback for your front-end code, line-by-line code suggestions, and real-time chat. Use CodeRabbit to improve the code quality and prevent production failures. It's free for OSS project or you can try it with a free seven-day trial today.
+
+[Do not pass DTOs to UI components](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVcmnrlVE51-ilr5V5Vu8zcmP2EJakQekaR643fnkNsTIEDSS3j6vKnGo_rN8rxSdq3asqml6xjrlykWR0lEny_Hqk6A6jOZZqFGsnXWAVpgLyVCNYlOvy-2y3UYedrrEwV0eTcDiN7coNTBhTPEk6bxkvH6-BjNubLNGD7jV9_rHEmXi4nU3Zy-Oh4oXm4rBS4rfk1bXmPS_HiUCjA4Sf3Y/48f/v7e5cftcRKCDDczo9Rn5pQ/h3/h001.dLjOIQp1YGQlRhcOiubHlVkHRVudl8pKKpL2mRC-CUI)  
+_4 minutes_ by Dario Djuric
+
+As frontend developers, we often work with data transfer objects (DTOs) that come from a backend API or service. These DTOs represent the raw data structure used for transfer across the network. However, using DTOs directly in UI components can lead to issues around maintainability, reusability, and separation of concerns.
+
+[Use useId() Instead Of Hand-Making IDs](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvtswBk-hMELUbzBdd2Qx-J5Wonvxn0oXwHV2hPMAupuTXpvjLkplc2HG-hZ8tuTQHgWA9POflbJ-JHpcldSPUgfMMOvBa3tH1R5Hq9QPXVDy6jfx3WSiME0abjcnihnhsa_CzzOjWx1R_MSPvXxfr_KqTjVVs0h3BP9EpcVAAsmxb1D0PbNgrkDnmfAoMcBJQLqPIjJPbniDa__Z4eE_wGO82hfm6M-pNHl3ClzfcIKr/48f/v7e5cftcRKCDDczo9Rn5pQ/h4/h001.S1o9LaDegEAqsHehLv1KKUc4usvTOu7pZhqmRJIaCBk)  
+_5 minutes_ by Brad Westfall
+
+Use useRef() instead of hand-made IDs if you want DOM access from JS. Use useId() instead of hand-made IDs to link two DOM nodes for accessibility.
+
+[State of React 2023](https://link.mail.beehiiv.com/ss/c/u001.c2RDt9UGnmAT9r6mLVzaNuXXKe9oQPQkYQnBI1Wxw6-zApV4jdyHGPY3Kvn8KSr-MMpaPiiPaViXdg9NUiaDEkuuilH05Qx63Ub1XRotS-Q2vhPm4dMUH7ZOFQr3vsMpzLWAWvkY95Ni1WLDBBl8dBGbGxbKFFxgVJfl7p7FBXD2Wt--0UZ81XU5e_Ff_-GeBc-m1U4u6kfTMIlDpuIJ1Q/48f/v7e5cftcRKCDDczo9Rn5pQ/h5/h001.c7HbnSfDEiub_Mij0vf_UhJNeeuKSDgcHxooV3lgie0)  
+_16 minutes_ by Sacha Greif
+
+The 2023 edition of the annual survey about the latest trends in the React ecosystem.
+
+[Data Fetching with Server Actions in Next.js](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zJOrvDIic_psNMxgHJkPB7wra_vJHG7egL-WPZgDzWWKLsf9_q0hlSZEG4fVmxL5ytAK_nFbcGzz0Qg9U3MrcamJrXJmq0EiVngSqy9aiXVHO9Df5D3hsCWWMn9y-f2gLBNeLt90rmXpu9uzULKTmTYzfYg3Vzmc6je2Pu0UIAn7ccqtrI_quB1QAdvCZ8SuEQ/48f/v7e5cftcRKCDDczo9Rn5pQ/h6/h001.WwFFdO_86fNkm1Roc_kQXYjZDOZUAT5yD2WWnz3RNvQ)  
+_7 minutes_ by Robin Wieruch
+
+I have been working with React Server Components and Server Actions in Next.js for the last 6 months. While I am excited about Server Components and their ability to execute code on the server, I am not convinced (yet) by the story of data fetching in Client Components.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1WIRDm3G3oj9JSMy0xwJ05GDiKg6VKaangc8-3uz3Gr3gOjfbzr53Clg5R6HpzHfzo9ZA 4KvUBnxmaeb0dPMoXCBTdRtWjU9fyoZ1gRQxx0EYTBPwun9tMBo\_anB3Rd8Dt9ooJxynpSWu7J-PChIpuFKnFoqb7O8SBZ6HIkqL5MevizZJSWOY2T2NLJo3POhA1n5Dw5J2S-xjBefc3wvPPxwKC xuQGcdBAXudlrfvDhOQw8qSG5\_KBnc6CmwgGoqHpaeJnANiDDwc8pwZN6b6ddmW\_7Jurjvf3FgJv5wMalEgzPu0sx9qQZ9Red2xNWbXVtyDrcwDDJ8MNRS9uAcOUcWHX4JFAd3V\_NCEGGm7WIbDit xbMMJGfDJZyoZmfvI6LPD\_LLOQpoZBHoNHXgqw2z6zZknJwTkF2vDQZz0Xq3smMNKKkzuS7AlAd fWsdLo2OfoSoXl5zu-8SzooRHIbJNMFFzhyuL0bg8jq90sJNufMbmGz8xzp3DoEw6-q3-fZVALz 1pnXHuOHDEGneY2y1KBH5pZCcf48FoEFaC4r8iJ0XwsYhaRzTVvcLALWbYXb7gLg79-SZ\_NChHuKOl1Cps5mio3MgKl6RfAF17an72\_jzKkaKvn-ArgFVyxGca2o/48f/v7e5cftcRKCDDczo9R n5pQ/h0/h001.czxcDbJ5TACTqlFEnPAcyphjH1yPQHCFLwpugq9Q\_vU ）
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/48f/v7e5cftcRKCDDczo9Rn5pQ/ho.gif)
+
+【Airbnb如何顺利升级React】(https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2\_rh17KMcAxCTcJ4kVnEX2\_UEy\_aKzh2sPSAnVILxGvi0NcsYbQtwXWLmxx4WGfntqqu\_zagKFlMzTCUqRX1eZH6aj4cAmj-7uzrI0 KBGsevShEkBpzx5feHXUBna5ME2jGnMueean992rwT0LiFdf8NU\_cEU9HohBWOt18bQVG2GEnl8pka4dEu8Dd2c80DufBvLbE6UgLqufpCGxkTTUjI4xm9mw7UVWbrmjzXkJkt4xoh9IWXTK6wU- x2LuP1B7yIRCYmLgR6\_w/48f/v7e5cftcRKCDDczo9Rn5pQ/h1/h001.1jV8AlsFkVyl02ISzYV-VyMhb2xehNsbfvSWcQQZKO8)\
+*11 分钟* 安德烈·威金斯
+
+Airbnb 的前端最近达到了一个重要的里程碑：我们所有的 Web 界面都已从 React 16 升级到 React 18。为了安全地执行此升级，我们创建了 React 升级系统：可重用的基础设施，使我们能够在各个领域逐步推出新版本的 React我们的 monorepo 并衡量升级的结果。
+
+\[通过 AI 驱动的代码审查更快地合并 React 代码]\(https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBORZK9n0y51vkA6A1dgAumtJmgZngF9CeOYcKYmlNBkGuXNli43GN4-N-aD0kMpwxquKZ\_IAsAWSFU5DQYHQQ ZRM/48f/v7e5cftcRKCDDczo9Rn5pQ/h2/h001.kjAPQaXdxsShsieXpr\_NBe1rPx0N2AnJUicQNjjGdgc)\
+*由CodeRabbit赞助*
+
+CodeRabbit 是您的 AI 拉取请求审核者。它为您的前端代码提供上下文感知反馈、逐行代码建议和实时聊天。使用CodeRabbit提高代码质量并防止生产故障。它对于 OSS 项目是免费的，或者您今天就可以免费试用 7 天。
+
+\[不要将 DTO 传递给 UI 组件]\(https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu\_fY2A1vmVcmnrlVE51-ilr5V5Vu8zcmP2EJakQekaR643fnkNsTIEDSS3j6vKnGo\_rN8rxSdq3asqml6xjrlykWR0lEny \_Hqk6A6jOZZqFGsnXWAVpgLyVCNYlOvy-2y3UYedrrEwV0eTcDiN7coNTBhTPEk6bxkvH6-BjNubLNGD7jV9\_rHEmXi4nU3Zy-Oh4oXm4rBS4rfk1bXmPS\_HiUCjA4Sf3Y/48f/v7e5cft cRKCDDczo9Rn5pQ/h3/h001.dLjOIQp1YGQlRhcOiubHlVkHRVudl8pKKpL2mRC-CUI )\
+*4 分钟*达里奥·朱里克 (Dario Djuric)
+
+作为前端开发人员，我们经常使用来自后端 API 或服务的数据传输对象 (DTO)。这些 DTO 代表用于跨网络传输的原始数据结构。然而，直接在 UI 组件中使用 DTO 可能会导致可维护性、可重用性和关注点分离方面的问题。
+
+\[使用 useId() 而不是手工制作 ID]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvtswBk-hMELUbzBdd2Qx-J5Wonvxn0oXwHV2hPMAupuTXpvjLkplc2HG-hZ8tuTQHgWA9POflbJ-JHpc ldSPUgfMMOvBa3tH1R5Hq9QPXVDy6jfx3WSiME0abjcnihnhsa\_CzzOjWx1R\_MSPvXxfr\_KqTjV Vs0h3BP9EpcVAAsmxb1D0PbNgrkDnmfAoMcBJQLqPIjJPbniDa\_\_Z4eE\_wGO82hfm6M-pNHl3Clz fcIKr/48f/v7e5cftcRKCDDczo9Rn5pQ/h4 /h001.S1o9LaDegEAqsHehLv1KKUc4usvTOu7pZhqmRJIaCBk)\
+*5 分钟* 布拉德·韦斯特福尔
+
+如果你想从 JS 访问 DOM，请使用 useRef() 而不是手工制作的 ID。使用 useId() 而不是手工制作的 ID 来链接两个 DOM 节点以实现可访问性。
+
+\[2023 年 React 状态]\(https://link.mail.beehiiv.com/ss/c/u001.c2RDt9UGnmAT9r6mLVzaNuXXKe9oQPQkYQnBI1Wxw6-zApV4jdyHGPY3Kvn8KSr-MMpaPiiPaViXdg9NUiaDEkuuilH05Qx63Ub1XRotS-Q2vhPm 4dMUH7ZOFQr3vsMpzLWAWvkY95Ni1WLDBBl8dBGbGxbKFFxgVJfl7p7FBXD2Wt--0UZ81X U5e\_Ff\_-GeBc-m1U4u6kfTMIlDpuIJ1Q/48f/v7e5cftcRKCDDczo9Rn5pQ/h5/h001.c7 HbnSfDEiub\_Mij0vf\_UhJNeeuKSDgcHxooV3lgie0) \
+*16 分钟* 萨莎·格雷夫
+
+2023 年版关于 React 生态系统最新趋势的年度调查。
+
+\[在 Next.js 中使用服务器操作获取数据]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf\_qUprM09yoMPtF27zJOrvDIic\_psNMxgHJkPB7wra\_vJHG7egL-WPZgDzWWKLsf9\_q0hlSZEG4fVm xL5ytAK\_nFbcGzz0Qg9U3MrcamJrXJmq0EiVngSqy9aiXVHO9Df5D3hsCWWMn9y-f2gLBNeLt90rmXpu9uzULKTmTYzfYg3Vzmc6je2Pu0UIAn7ccqtrI\_quB1QAdvCZ8SuEQ/48f/v7e5cftcRKCDDc zo9Rn5pQ/h6/h001.WwFFdO\_86fNkm1Roc\_kQXYjZDOZUAT5yD2WWnz3RNvQ)\
+*7 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+过去 6 个月我一直在 Next.js 中使用 React 服务器组件和服务器操作。虽然我对服务器组件及其在服务器上执行代码的能力感到兴奋，但我（尚）对客户端组件中数据获取的故事并不信服。
+
+#
+
+

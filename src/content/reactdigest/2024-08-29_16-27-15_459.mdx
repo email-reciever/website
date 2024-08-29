@@ -1,0 +1,102 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#440 Reconciliation, Renderers, Fiber, Virtual Tree
+description: RD#440 Reconciliation, Renderers, Fiber, Virtual Tree
+date: 星期日 11 晚上 一月 28o 2024
+author: reactdigest
+origin_url: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Freconciliation-renderers-?= =?us-ascii?Q?fiber-virtual-tree?=
+origin_site: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Freconciliation-renderers-?= =?us-ascii?Q?fiber-virtual-tree?=
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#440 Reconciliation, Renderers, Fiber, Virtual Tree" url="=?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Freconciliation-renderers-?= =?us-ascii?Q?fiber-virtual-tree?=" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-r5aei1LqixOIwQN0qeGQMnutSrobjDmU3KuKXU1SB7AkI4jiZZzsggzmumYix74ZTgrDresQUYHZDG2ETF4F5DcJgv_sIrRUwAT2BeCUVX7RhX4s3r2AK80XhSDmI9HQeTUwnuJUw1ahSrxgPyIYTnJd6r4cuWT5spo4nYa9Y8U4wYGRtT6-Cd-E66HXxmPEgbkik3LilL8SsnYb9BadiNiyDhksJiPHEjlooBaMG_J_wCXI2EZz770Qo5Y2bio9bKCNbxRDhMjyYPAbzp1wqPZOiCYzSBIFm4bPQwingQeihbkmjYnrS5kdmbqHs5HDPa07H_SGtOwKporI3Xe6njvC9FhraEI889zee1_PXttphX2H6zLmEXrjrazm50U1L1iW71v4VJMIZny_pqjAkbofQOK4ju5HDesYgYBrNzKhQAJrwCIdMv8swWuFqb78PR-vrzbllHXOn6-pRhranMhqUFT2SrCQtckhS0UNE-ZtaBSkv3RcnZDHw92nhZWSUVIzflpmqtELvwTT-fmmx-39QQyUqIbcGSnHntWZAfISbKroKG_gwBdZ_83Y8zCuIDbhwvVlhlVVfFkJr2Vn3r6azGIfIZNI6Q0TSE9sA84A2t3iElC0o2b_P2DLoCQlvK1qWo4v9EEDwIWr6qthcR67uGtgVYpCg1tW486nrcl/43d/-bWar0O4RZutbctRuGZamw/h0/hjhP4wQiIxP6NSoNBUFTdEwHLFiTwVOwg7qLYhrgqrs)
+
+![](https://link.mail.beehiiv.com/ss/o/2neHg-Hzkdcq_goMOXZHDQ/43d/-bWar0O4RZutbctRuGZamw/ho.gif)
+
+[Reconciliation, Renderers, Fiber, Virtual Tree](https://link.mail.beehiiv.com/ss/c/lwxq2V6aEWya6_kWoUO8rMUQ0zFybNrUL5O6-fmi_MQvjsvxMx8CjRcffAnpi5zo9RTwigjFOZ4nVJNp8ccGj7w2Ypgb92EjHyl2nEpSfFrpPpFMpXdZqs7UcujuW2qg2KeKvC5C2wNK-f7EPGcE1I-F-hqkCWHLfIrAKt4eD77Yg0tiPoWFykg7NoAymdBAxZkD30DSdDpeRHxbIx8S946SvNQhNHmv4dKb7lEbE0M/43d/-bWar0O4RZutbctRuGZamw/h1/SefZTzwmkOpL2iqfYILbT4uYxd3jSoygJvwyD_LQvsE)  
+_23 minutes_ by Frontend Almanac
+
+Today we will look under the hood of the library and try to understand how it works inside, how it stores data, and how Virtual Tree looks like.
+
+[Design and build UI components in Webflow](https://link.mail.beehiiv.com/ss/c/Rbmf5CzHe5itG0NBmgkKQOw8CCyVQk75-SaULbwiWarvfXC7k3YMTjvISLG4k4HzX-ncqcKeXqBodigtoDGL6ljqFLbONw0AEb4RiKbpoySGRfpi9Ld0Ok8CycTEpxOl1t85XUTCKpCPZqI0N5Gv9NybcSjdewSsn6GdFUzHxW35AZEA7toQota9UAM8IIlLnlssLNq7i-CFwAGrpriSX4wbxh6-ph-Smo78wY4vhDQ/43d/-bWar0O4RZutbctRuGZamw/h2/ksRtAZe2h3tQSadPI9VNNBDiiO2R8d1WFzdH0UUHW-I)  
+_sponsored by Webflow_
+
+Build production-ready React components visually in Webflow, so you can bring new products and apps to market faster.
+
+[Wrangling Tuple Types](https://link.mail.beehiiv.com/ss/c/qYYjKomkpBxuEZ9qVfTg7DfYhtpopx-IC87JTaFQ0Icr36pfvOfQCNHb4a7kPxRn8pXvTnhjlLTbx3996GALPvIGjkagPILy4_62dhPC-fj9tyVqEPYwi7J8S09vBpMO09WVzzoghS85b5cRs1Wwguj8MliecSNONRYpg6srE7FzdDfdQIi-b7b-qbbX44WmtxZUFx1N_LNRURidlv9FYUniKtXTj_Vh3uTcjO_YBbc/43d/-bWar0O4RZutbctRuGZamw/h3/7U-j5w3klfY66HcADP5B6SqGT6OawPoirmlrPm3CYa0)  
+_4 minutes_ by Kyle Shevlin
+
+TypeScript doesn't know whether you're returning an array or a tuple from a function, so let's learn a couple ways we can fix that problem.
+
+[Mastering React and OpenLayers Integration](https://link.mail.beehiiv.com/ss/c/e7lrOU0N2eMt0diSomWSqOYfBqzU7NJIvhkrOO31j-IojdQlImphQAPCpIqXHEyzbvSAioD7uaBnduaD-QaDQaxZTAAsbeOQu5zba6IJvjs05bAFUlJJKqqxC1aCm1_ovpE65XYdIw04uNv2UPlxIK1xhBxSEEaFTva6wRGfH7OFx68Ef5oaq65MpsSwNgdYpbOrOFpQsBFJijRU9HjNlzvYyTPDmqtl2G4jcR6bTOvbQBLQ5ZmYWAk9EiELqFiQoYaPH93CAMoTbdmP4SYRyw/43d/-bWar0O4RZutbctRuGZamw/h4/KIgfIPI5dtgZCtLK20OJDCG73mW_f0SkOioR7XcYz10)  
+_11 minutes_ by Max Dietrich
+
+Unlock the full potential of interactive maps in your React applications by delving into the seamless integration of OpenLayers.
+
+[New client-side hooks coming to React 19](https://link.mail.beehiiv.com/ss/c/e7lrOU0N2eMt0diSomWSqGisQ5HTr3FlLQHvqcKJPXY_x_dhLxhb_EbO9-HTklVn850a9QOEmUYt2LZrD2rFHzwA5L-FLOBex_3e9-6D09GhDTRfXEOkhX9ieveiAwURX91CD5HXojDrzY7vPeeuG-DR6rd4XjlORwW5lGWD6ULC5-MAH3T-nPCeIa03b5Gt8yewl3SPFeCta-o3A73FRe4VPz3_v85YJrQ3-Bh5SwJunTq4w7g1BePh82P9O_jo/43d/-bWar0O4RZutbctRuGZamw/h5/rpFYhU-rZVJnrzgMdNocllUXZMP67abgKnxLclG4ZKc)  
+_7 minutes_ by François Zaninotto
+
+Data fetching and form handling are about to get easier in React, and not just in SSR apps.
+
+[5 React Architecture Best Practices for 2024](https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyDeTcF_5eFPJVHpagbPL9ifL82s9ZvSkYdmkd43m8WMZqAOh259LVtqslPvsXWO_C5nl2kK3KB5z6f7-M66abmsDAxjaKbAJdMD5_Hkr9Z2Yvl6rv3mARS3eIfWhyORWT4YmGb6c0npHaYms4uhsvDLMgJjFNjsBrVfvis0_z9vBlNYVOHwU4h21WhGeQZs6db4-s0JbrRtfhUaT67Y4A0-US07sVa6hxBvMmKYTpqV8/43d/-bWar0O4RZutbctRuGZamw/h6/rnkmL5AFatlzaecCYOqSWf6Z8UwrJJ1SQNAsynFuGvk)  
+_15 minutes_ by Sebastian Deutsch
+
+It's tricky to keep your codebase organized as your React project grows. Here are five best-practice tips for organizing your large React app.
+
+[Codacy: Ship secure, high-quality code with a single developer toolbox](https://link.mail.beehiiv.com/ss/c/lwxq2V6aEWya6_kWoUO8rGx-Fih_zl9xRTN68Qxwj2vrnOqKagB4ds19Nhvys51C2JBvTpvLKwmjkSGXdMMHOYMtIGpvsSEutwAsSXBqgK90qlFYcwm_Ok4PmCO4Rq_Sg7a_FAFr-mO9ITshHB-VPzYVJkE9XDC2UIB8FWPnLPtvOBFMjykFikS00srlCtoUZ1wqj9IHToxWkRtEfoFdVO3jhalycf-3OkMGvLnS1SaIdqJPnb2lcLTNODUvqyK6/43d/-bWar0O4RZutbctRuGZamw/h7/UK2ZRFEUoQtTnNzvNFYLq9mhtjbVBbv6ztlZSFqemkM)  
+_sponsored by Codacy_
+
+Codacy is an all-in-one solution that offers developers automated code analysis and issue detection upstream in the development lifecycle before code ever gets merged. Now integrated with leading security scanner Semgrep, Codacy Security boasts nearly 2,000 SAST rules to check your code across 20+ languages (including Javascript), as well as secrets and insecure dependencies detection.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-r5aei1LqixOIwQN0qeGQMnutSrobjDmU3KuKXU1SB7AkI4jiZZzsggzmumYix74ZTgrDresQUYHZDG2ETF4F5DcJgv\_sIrRUw AT2BeCUVX7RhX4s3r2AK80XhSDMI9HQeTUwnuJUw1ahSrxgPyIYTnJd6r4cuWT5spo4nYa9Y8U4wYGRtT6-Cd-E66HXxmPEgbkik3LilL8SsnYb9BadiNiyDhksJiPHEjlooBaMG\_J\_wCXI2EZz 770Qo5Y2bio9bKCNbxRDhMjyYPAbzp1wqPZOiCYzSBIFm4bPQwingQeihbkmjYnrS5kdmbqHs5H DPa07H\_SGtOwKporI3Xe6njvC9FhraEI889zee1\_PXttphX2H6zLmEXrjrazm50U1L1iW71v4VJ MIZny\_pqjAkbofQOK4ju5HDesYgYBrNzKhQAJrwCIdMv8swWuFqb78PR-vrzbllHXOn6-pRhranMhqUFT2SrCQtckhS0UNE-ZtaBSkv3RcnZDHw92nhZWSUVIzflpmqtELvwTT-fmmx-39QQyUqIbcGSnHntW ZAfISbKroKG\_gwBdZ\_83Y8zCuIDbhwvVlhlVVfFkJr2Vn3r6azGIfIZNI6Q0TSE9sA84A2t3iElC0o2b\_P2DLoCQlvK1qWo4v9EEDwIWr6qthcR67uGtgVYpCg1tW486nrcl/43d/-b War0O4RZutbctRuGZamw/h0/hjhP4wQiIxP6NSoNBUFTdEwHLFiTwVOwg7qLYhrgqrs)
+
+![](https://link.mail.beehiiv.com/ss/o/2neHg-Hzkdcq_goMOXZHDQ/43d/-bWar0O4RZutbctRuGZamw/ho.gif)
+
+\[协调、渲染器、光纤、虚拟树]\(https://link.mail.beehiiv.com/ss/c/lwxq2V6aEWya6\_kWoUO8rMUQ0zFybNrUL5O6-fmi\_MQvjsvxMx8CjRcffAnpi5zo9RTwigjFOZ4nVJNp8ccGj7w2Ypgb92EjHyl2nEpSfF rpPpFMpXdZqs7UcujuW2qg2KeKvC5C2wNK-f7EPGCE1I-F-hqkCWHLfIRAKt4eD77Yg0tiPoW Fykg7NoAymdBAxZkD30DSdDpeRHxbIx8S946SvNQhNHmv4dKb7lEbE0M/43d/-bWar0O4RZut bctRuGZamw/h1/SefZTzwmkOpL2iqfYILbT4uYxd3jSoygJvwyD\_LQvsE)\
+*23 分钟* 由 Frontend Almanac 提供
+
+今天我们将深入了解该库的内部结构，并尝试了解它的内部工作原理、如何存储数据以及虚拟树的外观。
+
+\[在Webflow中设计和构建UI组件]\(https://link.mail.beehiiv.com/ss/c/Rbmf5CzHe5itG0NBmgkKQOw8CCyVQk75-SaULbwiWarvfXC7k3YMTjvISLG4k4HzX-ncqcKeXqBodigtoDGL6ljqFLbONw0AEb4RiKbpoySGRfpi9Ld0Ok8Cy cTEpxOl1t85XUTCKpCPZqI0N5Gv9NybcSjdewSsn6GdFUzHxW35AZEA7toQota9UAM8IllLnlssLNq7i-CFwAGrpriSX4wbxh6-ph-Smo78wY4vhDQ/43d/-bWar0O4RZutbctRuGZamw/h2/ksRtAZe2 h3tQSadPI9VNNBDiiO2R8d1WFzdH0UUHW-I)\
+*由Webflow赞助*
+
+在 Webflow 中直观地构建可投入生产的 React 组件，以便您可以更快地将新产品和应用程序推向市场。
+
+\[争论元组类型]\(https://link.mail.beehiiv.com/ss/c/qYYjKomkpBxuEZ9qVfTg7DfYhtpopx-IC87JTaFQ0Icr36pfvOfQCNHb4a7kPxRn8pXvTnhjlLTbx3996GALPvIGjkagPILy4\_62dhPC-fj9tyVq EPYwi7J8S09vBpMO09WVzzoghS85b5cRs1Wwguj8MliecSNONRYpg6srE7FzdDfdQIi-b7b-qbbX 44WmtxZUFx1N\_LNRURidlv9FYUniKtXTj\_Vh3uTcjO\_YBbc/43d/-bWar0O4RZutbctRuGZamw/h 3/7U-j5w3klfY66HcADP5B6SqGT6OawPoirmlrPm3CYa0)\
+*4 分钟* 凯尔·谢夫林 (Kyle Shevlin)
+
+TypeScript 不知道您是从函数返回数组还是元组，因此让我们学习几种解决该问题的方法。
+
+\[掌握 React 和 OpenLayers 集成]\(https://link.mail.beehiiv.com/ss/c/e7lrOU0N2eMt0diSomWSqOYfBqzU7NJIvhkrOO31j-IojdQlImphQAPCpIqXHEyzbvSAioD7uaBnduaD-QaDQaxZTAAsbeOQu5zba6IJvjs05bAFUlJJ KqqxC1aCm1\_ovpE65XYdIw04uNv2UPlxIK1xhBxSEEaFTva6wrGfH7OFx68Ef5oaq65MpsSwNgdYpbOrOFpQsBFJijRU9HjNlzvYyTPDmqtl2G4jcR6bTOvbQBLQ5ZmYWAk9EiELqFiQoYaPH 93CAMoTbdmP4SYRyw/43d/-bWar0O4RZutbctRuGZamw/h4/KIgfIPI5dtgZCtLK20OJDCG73mW\_f0SkOioR7XcYz10)\
+*11 分钟* 马克斯·迪特里希
+
+通过深入研究 OpenLayers 的无缝集成，释放 React 应用程序中交互式地图的全部潜力。
+
+\[React 19 中的新客户端挂钩]\(https://link.mail.beehiiv.com/ss/c/e7lrOU0N2eMt0diSomWSqGisQ5HTr3FlLQHvqcKJPXY\_x\_dhLxhb\_EbO9-HTklVn850a9QOEmUYt2LZrD2rFHzwA5L-FLOBex\_3e9- 6D09GhDTRfXEOkhX9ieveiAwURX91CD5HXojDrzY7vPeeuG-DR6rd4XjlORwW5lGWD6ULC5-MAH3T-nPCela03b5Gt8yewl3SPFeCta-o3A73FRe4VPz3\_v85YJrQ3-Bh5SwJunTq4w7g1BePh8 2P9O\_jo/43d/-bWar0O4RZutbctRuGZamw /h5/rpFYhU-rZVJnrzgMdNocllUXZMP67abgKnxLclG4ZKc)\
+*7 分钟* 弗朗索瓦·扎尼诺托
+
+数据获取和表单处理在 React 中将变得更加容易，而不仅仅是在 SSR 应用程序中。
+
+\[2024 年 5 个 React 架构最佳实践]\(https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyDeTcF\_5eFPJVHpagbPL9ifL82s9ZvSkYdmkd43m8WMZqAOh259LVtqslPvsXWO\_C5nl2kK3KB5z6f7-M66 abmsDAxjaKbAJdMD5\_Hkr9Z2Yvl6rv3mARS3eIfWhyORWT4YmGb6c0npHaYms4uhsvDLMgJjFNjsBrVfvis0\_z9vBlNYVOHwU4h21WhGeQZs6db4-s0JbrRtfhUaT67Y4A0-US07sVa6hxBvMmKYTpqV8 /43d/-bWar0O4RZutbctRuGZamw/h6/rnkmL5AFatlzaecCYOqSWf6Z8UwrJJ1SQNAsynFuGvk)\
+*15 分钟* 塞巴斯蒂安·多伊奇
+
+随着 React 项目的增长，保持代码库井然有序是很棘手的。以下是组织大型 React 应用程序的五个最佳实践技巧。
+
+\[Codacy：使用单个开发人员工具箱交付安全、高质量的代码]\(https://link.mail.beehiiv.com/ss/c/lwxq2V6aEWya6\_kWoUO8rGx-Fih\_zl9xRTN68Qxwj2vrnOqKagB4ds19Nhvys51C2JBvTpvLKwmjkSGXdMMHOYMtIGpvsSE utwasSXBqgK90qlFYcwm\_Ok4PmCO4Rq\_Sg7a\_FAFr-mO9ITshHB-VPzYVJkE9XDC2UIB8FWPnLPtvO BFMjykFikS00srlCtoUZ1wqj9IHToxWkRtEfoFdVO3jhalycf-3OkMGvLnS1SaIdqJPnb2lcLTNODU vqyK6/43d/-bWar0O4RZutbctRuGZamw/h7/ UK2ZRFEUoQtTnNzvNFYLq9mhtjbVBbv6ztlZSFqemkM)\
+*由 Codacy 赞助*
+
+Codacy 是一种一体化解决方案，可在代码合并之前为开发人员提供开发生命周期上游的自动化代码分析和问题检测。 Codacy Security 现在与领先的安全扫描器 Semgrep 集成，拥有近 2,000 条 SAST 规则，可检查 20 多种语言（包括 Javascript）的代码，以及秘密和不安全依赖项检测。
+
+#
+
+

@@ -1,0 +1,92 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#442 A Better Guide to Forms in React
+description: RD#442 A Better Guide to Forms in React
+date: 星期一 12 凌晨 二月 12o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/better-guide-forms-react
+origin_site: https://newsletter.reactdigest.net/p/better-guide-forms-react
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#442 A Better Guide to Forms in React" url="https://newsletter.reactdigest.net/p/better-guide-forms-react" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-r5aei1LqixOIwQN0qeGQMnZzitAMmzPTAqm8PvN5wLT-JvsdV_Y67SjoMNNH5iYRCJpFqCui8F-K05NJMiJjFEsBFqT9JhqrUQGsLeZBgvbolwBPjZiBRPG_i94RgYLHWVyMHk1y52PkE0LCoLefhGXiSZGyu7JvrUOGwpP7oIR_jkbraWrMRh1fzJEjKpTAfbkbyMbseT2skuoyG2McWuIQf4bzY_RQs-iNz4tdXXxOSMCoCbo1IyphH_jNjverwPoEdF3KO2P1Jg-_48MUqsODoR5DffdsfdvQU3_S3xPtO7DaNhBWEgPZhU3TF_jSV2xlpKOxGibgVTMTrhrQ_-C7Cg1PKI5wiBIvk2HuSGwwgX656XWN7r8d_0hwKLxEImfpg_YgVzaoLzs95zqbWw5tjvbDcyvmISbUrb_LPVtEcRwty2zXNwkhMGbyAk45unhrpKZ7sjpsKIQ08p9qg1s5aoEiBbl13AehdSuZLamZpVtRGbLU-vykGNP9o2XKt5e3qdEWy8ijkVDLJn_WC-t-4wkHzbNC_XxD8-8yWL9o9E1TVRmCI9l6-SaGQOlQlnPqhk7Gcdov5n8uCU2dm-RF5HY5Hqnf2OY8Pv4VKtyymnfGNKxFoW_sqe3R5rWrg/43r/Mn0ktFa8SCaxD1BJ_VRQ-Q/h0/X2G-L6U_rYcB4Fp7pERMRPKoyqnbbZQwD2ixW3-qreU)
+
+![](https://link.mail.beehiiv.com/ss/o/2neHg-Hzkdcq_goMOXZHDQ/43r/Mn0ktFa8SCaxD1BJ_VRQ-Q/ho.gif)
+
+[A Better Guide to Forms in React](https://link.mail.beehiiv.com/ss/c/4KXyCgamclLKt01CO8032fzPOJv79LZ-GmjunyzQqdMOMDdJejikJhOsHoRqD1xT8mBZLpYDJePKvLqsWnXd3ItZv_s9AHHhJjABx-BI26Gc5qdxqVQaB-ohCb5M30U95yqbV9ZSBfs3b-byNj6InS6AZq9IWMQNcgfHK8z0QHvIOiqWOXcTPohMz2fJJqS0TfSe3ngDL1KEv5PWfQdNDTo0dc2-IFhC5jr8q5ga4KoRTQtYrJLu5J1KYhp4gSLq/43r/Mn0ktFa8SCaxD1BJ_VRQ-Q/h1/LAnbAx9ibKMzf4uvzY_z_b6WPt5rERZAaLAHx7mSoTU)  
+_15 minutes_ by Andrew Jones
+
+This article will explain modern best practices for building forms in React, how to build dynamic forms, how forms relate to React Server Components, and more.
+
+[Product for Engineers: Helping engineers flex their product muscles](https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-qBvoLBcaaZ3EH35nxLYCZp51kHhocg2USvLhNVkWTixlwsvobByjd7QBAjCQbOP7dcFQSdkf2QOvRiNOHA-PrI/43r/Mn0ktFa8SCaxD1BJ_VRQ-Q/h2/3AX96ASmsykAhsmWkRgSPTaIzX5fysRwgyZ62l1lHYE)  
+_sponsored by PostHog_
+
+Product for Engineers is PostHog’s newsletter dedicated to helping engineers improve their product skills. Subscribe for free to get curated advice on building great products, lessons (and mistakes) from building PostHog, and deep dives into the strategies of top startups.
+
+[Remix Takes on Next.js in Battle of the React Frameworks](https://link.mail.beehiiv.com/ss/c/i-14uV6vHkCzB2eOsMx0wLSReWCohMYBQm1f91MvDzYHZJYFfYfz0ztf6VKehFR8pWokF5aDDtoQQXvCfUVCPSHT-aeuEOam0N8rki2kSUPyn4aFahFrSrTqY-SVt5I_FFfaEMChIgTJMiLB5g3biTdTxbUhuWUs444nBgnqsaL4vVqoj3zjQInOFpClytJNnZ_-htWiuNPXpnp-udM90B5wdMjS0Vq2ozEUS9w6nY_1Qm2V_Ye0x2c6kaT7lrKZ-Gy5WXXaq8xQPEh8nSL0SQ/43r/Mn0ktFa8SCaxD1BJ_VRQ-Q/h3/XxlIHI3PycXbMZCUbS5Y_XZAor6pcES3W9y2svpEZNM)  
+_6 minutes_ by Richard MacManus
+
+Remix is a rising JavaScript framework taking on Next.js, but its origins go back a full decade. We spoke with Remix CEO, Michael Jackson.
+
+[Avoid using React's useFormStatus](https://link.mail.beehiiv.com/ss/c/cSWObR4MeC66qGxCYLRtYYE-Rj5vi6kfhDnoUnkq4fUe9ckJgAX2ho0QtYloYTc6Zl_TZA2yXWya--OBUoAXwMEp_bK9IidEJcKokmWOhpTv7Q5KTVm10s5jrD2LjBWP1WausRSoUF3XokUEA_pq7c3KO8_wFkikdn6JgV6DcI5khFXzwvVW8Aizdkg03EsG-0tbsZGiiP_NZbyVJjOdUzs5wZ8da_3gPk9QJ3fFJsNcQyVp_eta97S3j0pXn6Vg/43r/Mn0ktFa8SCaxD1BJ_VRQ-Q/h4/98z0KgIdyLazmg-drz6LYe07uep7JvTTvNvfYhWvybo)  
+_3 minutes_ by Allan Lasser
+
+Server actions are the new shiny toy in Reactland, and for good reason: they make handling form submissions more straightforward than they’ve even been for front-end developers. That being said, they’re still in an experimental state, so the APIs for handling them shouldn’t be taken for granted.
+
+[How to Detect Clicks Anywhere on a Page in React](https://link.mail.beehiiv.com/ss/c/Rbmf5CzHe5itG0NBmgkKQKCRn07ivFii_g1Z2WGzgSTqqTMcH20J82JrdWYhGjFJGpbu0NWGcDbSKbfm1j-O96uM-ZYopKrG_SBrkaThZvrM4o58maKwbK35rgjt2DoRIwzYQeiG0FWxQJQ-sGxlQhWuv9OwmKyAddZuQmNE5ry9zifNJxoDh1G7VTIAciQUuBUi26i44tJXoMyG6U49JZWU-QnAtmFa2KnlCYUsbgeeeI-mYjsWLn0eW-gy3Xmz/43r/Mn0ktFa8SCaxD1BJ_VRQ-Q/h5/pym3nDGNx5BViB_WaB7xiWqHtaCCle96D8XL5pLQ6vA)  
+_6 minutes_ by Colby Fayock
+
+Detecting clicks is a fundamental way to engage with your visitors on interaction. While it’s easy to detect clicking on something, what about clicking outside of it?
+
+[How to Optimize the DOM Size in React?](https://link.mail.beehiiv.com/ss/c/Rbmf5CzHe5itG0NBmgkKQHFZRyg3HU106WVpgTB2J2mTz2JGmn4ZALsKXeJ9F_pi_s3MrJN7r1svHCnq1Y5GOpPpxITmSMY37Vhlnnh7RSEJtqbuX5UNPTPrCK6ywUZDZn3FMkg8UFd2Tcr4LUTfMDlvg5NoCBvlG2I3SoTfhlm0-7xkfCkGRV0rtnvBoufN1OrKSeKd9lARzTq2QPNCRVsHfhHDakpWwiTEQHdVDQLXcMATK-MleEyDkbKH5uyq/43r/Mn0ktFa8SCaxD1BJ_VRQ-Q/h6/FoLmZsV6sCIQs--noGZ-A0PZmVDg1wPmlLnZT-v1qgk)  
+_15 minutes_ by Snehasish Konger
+
+Snehasish will share strategies and insights on minimizing the DOM size, enhancing your application's performance, and ensuring a better user experience.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-r5aei1LqixOIwQN0qeGQMnZzitAMmzPTAqm8PvN5wLT-JvsdV\_Y67SjoMNNH5iYRCJpFqCui8F-K05NJMiJjFEsBFqT9Jhq rUQGsLeZBgvbolwBPjZiBRPG\_i94RgYLHWVyMHk1y52PkE0LCoLefhGXiSZGyu7JvrUOGwpP7oI R\_jkbraWrMRh1fzJEjKpTAfbkbyMbseT2skuoyG2McWuIQf4bzY\_RQs-iNz4tdXXxOSMCoCbo1I yphH\_jNjverwPoEdF3KO2P1Jg-*48MUqsODoR5DffdsfdvQU3\_S3xPtO7DaNhBWEgPZhU3TF\_jSV 2xlpKOxGibgVTMTrhrQ*-C7Cg1PKI5wiBIvk2HuSGwwgX656XWN7r8d\_0hwKLxEImfpg\_YgVzaoL zs95zqbWw5tjvbDcyvmISbUrb\_LPVtEcRwty2zXNwkhMGbyAk45unhrpKZ7sjpsKIQ08p9qg1s5a oEiBbl13AehdSuZLamZpVtRGbLU-vykGNP9o2XKt5e3qdEWy8ijkVDLJn\_WC-t-4wkHzbNC\_XxD8 -8yWL9o9E1TVRmCI9l6-SaGQOlQlnPqhk7Gcdov5n8uCU2dm-RF5HY5Hqnf2OY8Pv4VKtyymnfGNKxFoW\_sqe3R5rWrg/43r /Mn0ktFa8SCaxD1BJ\_VRQ-Q/h0/X2G-L6U\_rYcB4Fp7pERMRPKoyqnbbZQwD2ixW3-qreU)
+
+![](https://link.mail.beehiiv.com/ss/o/2neHg-Hzkdcq_goMOXZHDQ/43r/Mn0ktFa8SCaxD1BJ_VRQ-Q/ho.gif)
+
+\[React 表单更好指南]\(https://link.mail.beehiiv.com/ss/c/4KXyCgamclLKt01CO8032fzPOJv79LZ-GmjunyzQqdMOMDdJejikJhOsHoRqD1xT8mBZLpYDJePKvLqsWnXd3ItZv\_s9AHHhJjABx-BI26Gc5 qdxqVQaB-ohCb5M30U95yqbV9ZSBfs3b-byNj6InS6AZq9IWMQNcgfHK8z0QHvIOiqWOXcTPohMz2fJJqS0TfSe3ngDL1KEv5PWfQdNDTo0dc2-IFhC5jr8q5ga4KoRTQtYrJLu5J1KYhp4gSLq/ 43r/Mn0ktFa8SCaxD1BJ\_VRQ-Q/h1/LAnbAx9ibKMzf4uvzY\_z\_b6WPt5rERZAaLAHx7mSoTU)\
+*15 分钟* 安德鲁·琼斯
+
+本文将解释在 React 中构建表单的现代最佳实践、如何构建动态表单、表单与 React 服务器组件的关系等等。
+
+\[工程师产品：帮助工程师展示产品实力]\(https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-qBvoLBcaaZ3EH35nxLYCZp51kHhocg2USvLhNVkWTixlwsvobByjd7QBAjCQbOP7dcFQSdkf2QOvRiNOHA-Pri/4 3r/Mn0ktFa8SCaxD1BJ\_VRQ-Q/h2/3AX96ASmsykAhsmWkRgSPTaIzX5fysRwgyZ62l1lHYE)\
+*由PostHog赞助*
+
+《工程师产品》是 PostHog 的时事通讯，致力于帮助工程师提高产品技能。免费订阅，获取有关构建优秀产品的精选建议、构建 PostHog 的经验教训（和错误），以及深入探讨顶级初创公司的战略。
+
+\[Remix 在 React 框架之战中挑战 Next.js]\(https://link.mail.beehiiv.com/ss/c/i-14uV6vHkCzB2eOsMx0wLSReWCohMYBQm1f91MvDzYHZJYFfYfz0ztf6VKehFR8pWokF5aDDtoQQXvCfUVCPSHT-aeuEOam0N8rki2k SUPyn4aFahFrSrTqY-SVt5I\_FFfaEMChIgTJMiLB5g3biTdTxbUhuWUs444nBgnqsaL4vVqoj3zjQInOFpClytJNnZ\_-htWiuNPXpnp-udM90B5wdMjS0Vq2ozEUS9w6nY\_1Qm2V\_Ye0x2c 6kaT7lrKZ-Gy5WXXaq8xQPEh8nSL0SQ/43r/Mn0ktFa8SCaxD1BJ\_VRQ-Q /h3/XxlIHI3PycXbMZCUbS5Y\_XZAor6pcES3W9y2svpEZNM)\
+*6 分钟* 理查德·麦克马纳斯
+
+Remix 是一个新兴的 JavaScript 框架，继承了 Next.js，但它的起源可以追溯到整整十年前。我们采访了 Remix 首席执行官迈克尔·杰克逊。
+
+\[避免使用React的useFormStatus]\(https://link.mail.beehiiv.com/ss/c/cSWObR4MeC66qGxCYLRtYYE-Rj5vi6kfhDnoUnkq4fUe9ckJgAX2ho0QtYloYTc6Zl\_TZA2yXWya--OBUoAXwMEp\_bK9IidEJcKokmWOhpTv7Q 5KTVm10s5jrD2LjBWP1WausRSoUF3XokUEA\_pq7c3KO8\_wFkikdn6JgV6DcI5khFXzwvVW8Aizdkg03ESG-0tbsZGiiP\_NZbyVJjOdUzs5wZ8da\_3gPk9QJ3fFJsNcQyVp\_eta97S3j0pX n6Vg/43r/Mn0ktFa8SCaxD1BJ\_VRQ-Q/h4/98z0KgIdyL​​azmg-drz6LYe07uep7JvTTvNvfYhWvybo)\
+*3 分钟* 艾伦·拉瑟 (Allan Lasser)
+
+服务器操作是 Reactland 中新的闪亮玩具，这是有充分理由的：它们使处理表单提交比前端开发人员更加简单。话虽如此，它们仍处于实验状态，因此处理它们的 API 不应被视为理所当然。
+
+\[如何在 React 中检测页面上任意位置的点击]\(https://link.mail.beehiiv.com/ss/c/Rbmf5CzHe5itG0NBmgkKQKCRn07ivFii\_g1Z2WGzgSTqqTMcH20J82JrdWYhGjFJGpbu0NWGcDbSKbfm1j-O96uM-ZYopKrG\_SBrkaThZvr M4o58maKwbK35rgjt2DoRIwzYQeiG0FWxQJQ-sGxlQhWuv9OwmKyAddZuQmNE5ry9zifNJxoDh1G7VTIAciQUuBUi26i44tJXoMyG6U49JZWU-QnAtmFa2KnlCYUsbgeeeI-mYjsWLn0eW-gy3 Xmz/43r/Mn0ktFa8SCaxD1BJ\_VRQ-Q/h5 /pym3nDGNx5BViB\_WaB7xiWqHtaCCle96D8XL5pLQ6vA)\
+*6 分钟* 科尔比·法约克
+
+检测点击是与访问者互动的基本方式。虽然很容易检测到点击某物，但点击某物之外的情况又如何呢？
+
+\[如何优化React中的DOM大小？]\(https://link.mail.beehiiv.com/ss/c/Rbmf5CzHe5itG0NBmgkKQHFZRyg3HU106WVpgTB2J2mTz2JGmn4ZALsKXeJ9F\_pi\_s3MrJN7r1svHCnq1Y5GOpPpxITmSMY37Vhlnnh7RSEJ tqbuX5UNPTPRCK6ywUZDZn3FMkg8UFd2Tcr4LUTfMDlvg5NoCBvlG2I3SoTfhlm0-7xkfCkGRV0rtnvBoufN1OrKSeKd9lARzTq2QPNCRVsHfhHDakpWwiTEQHdVDQLXcMATK-MleEyDkbKH5uyq/43r/Mn0 ktFa8SCaxD1BJ\_VRQ-Q/h6/FoLmZsV6sCIQs--noGZ-A0PZmVDg1wPmlLnZT-v1qgk )\
+*15 分钟* 由 Snehasish Konger 创作
+
+Snehasish 将分享有关最小化 DOM 大小、增强应用程序性能以及确保更好的用户体验的策略和见解。
+
+#
+
+

@@ -1,0 +1,96 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#439 The future of React.use and React.useMemo
+description: RD#439 The future of React.use and React.useMemo
+date: 星期一 12 凌晨 一月 15o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/future-reactuse-reactusememo
+origin_site: https://newsletter.reactdigest.net/p/future-reactuse-reactusememo
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#439 The future of React.use and React.useMemo" url="https://newsletter.reactdigest.net/p/future-reactuse-reactusememo" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-r5aei1LqixOIwQN0qeGQMk5ZZboWo7iR8aQL3kAJUw8LgRXv4b7OhgEYXCRkIMQNfJ9Mm0bKCmwKa6EI8L2sUMoiKgdC53K4Dx1OJMD1i3KYCqI9ptVI-YmyKH2uWKvCBMxQIgNGJN1hUL972VB4-O-kI1rbVQZCo8tx_vvC-kNTMbQZqa6mxCwY6nmc1YA91UxxbvQ03WgQY8LGkTqt3iNFaw_KC1-usiYORaE5s2xaorG_kcF_dAWP1PTK30TpB8M6HHyKudCKPeOjztOXH4FCvZvZ9iV-yH4xLmy2Fb5YtnqfyOEpbNIVj3rXpTHHLezqP4vQ5WIjkWirAckbELswBRSzWmJcveznXPGsat3JRamD24eJfs_H5zgM7E3RoW5DvWBY1W5Ojh20TimcmsI7mFL-WmDHDr1-EQYrHELg_N8jlIXSyg8eOZpX2_Kwc4FqoWybecNOgpc34NUb9siVkTJQnJThHij3ClybdSfTs1UCvTKM_KgZPfGbpOQmkj38UHHoSwCE_iZaq1Gd-i7mDaOiDnXaYJ7lmANfaI-hJqw7B-e6WrPwwP7xJfdQ8amJ9vKBSrDd2UM4buo_-d4yIiB_tbyqGUMSRHHvhU0OeJ__c--agYejQ81onQPFR80XvtMq5PywEAF5TUaU1I/42z/XUJ9Hjc6SMqmDDPc5zsnmA/h0/oW6IJc2l_One2jdlBoRPolXVc9sijq5YHDYygcjzVxs)
+
+![](https://link.mail.beehiiv.com/ss/o/2neHg-Hzkdcq_goMOXZHDQ/42z/XUJ9Hjc6SMqmDDPc5zsnmA/ho.gif)
+
+Hello! 👋
+
+[The future of React.use and React.useMemo](https://link.mail.beehiiv.com/ss/c/aHFB5pbxm1xlUhKbGNbkihaFFawCN5VqmgUS-0ovEsCGa4QPLJeFK2f9choXJv42tckhy9Jg_GS5hPnK5FbAwoix_7gvDtGcuv6R2SwdqrIrZ3rsgmcIsW7G1Z1wA5qNUxsWdza3Ryf_Y6eRvBODQYZTaNdh14k9RDi8FcHrKk9fRVVHqm-w4WUPvb4bOshO2iK6CSma3IXYpfz34dwJ1YHfjc1KiMB9-XhiyIBCUzhisRHjuTdU2t6B0VdC_IGO/42z/XUJ9Hjc6SMqmDDPc5zsnmA/h1/5qjoif4k3aA4_wjA5n1hr5CxfPZgEJFwB4sDaJUxloM)  
+_10 minutes_ by Colin Campbell
+
+use-context-selector is my preferred way to prevent re-renders when using React contexts. But some future React updates provide a better alternative using only React.use and React.useMemo. Follow along as I learn a powerful lesson in my unsuccessfully attempt to prove Dan Abramov wrong.
+
+[Get $1 off your next domain from Porkbun - the best registrar for React users!](https://link.mail.beehiiv.com/ss/c/Rbmf5CzHe5itG0NBmgkKQM6YehsOdHThPcQsRSJDyOYEWApbHgI28g3vRBb0Umux97KiD80nhCT7T2Q987NhuAOYyyK9N5jpIgh1Uv9nHynyBT9v0vPOSePXYoDh_AApjhJyeRcw2zaeE1jsCP-cdAz2DPldauc-8KpKl9MuqOmhQn8drPJdtg7COLj3P8lHKGjXlaeZVwGHDAQP_9No0gzTPYxAtPlF5ZyjByV52Z4/42z/XUJ9Hjc6SMqmDDPc5zsnmA/h2/0X0EU3X0Edovkx1KbY-vu2GG5fMyaln-rCDORFQcVI8)  
+_sponsored by TLD_
+
+Porkbun offers incredible low prices on 500+ domain extensions including .dev, .xyz, .io, and .tech. Plus every domain name comes with freebies like SSL Certificates, WHOIS Privacy, DNS, URL Forwarding, and hosting trials because why pay for things that should be free? Save $1 off your next domain from Porkbun and see why they’re the domain registrar for everyone in tech.
+
+[How to Set Up Soft Navigation Reporting in a React App](https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyNVBIvcSJ_8N0Xqc03pzCfTtgmN95AXjUM2YVj1uWVbwNENs63qCQtwbK9xgRH1hbnuSIvbrP8wm40LbL6St7fXZhVVBGncyqh2PK6Qi-0aWBdmR__nh6AY9Drpy1bpuHqzGuIM8v84MziptV246pV-B0JUZGzx4Cv54hid1igmP-FIlH9mUY-Gs6Urbsa4npRNwcErgShbkmLeXt49U25Hffm_UZwkcAdELmqLV0FIc/42z/XUJ9Hjc6SMqmDDPc5zsnmA/h3/CkHIayWIX9WbF1Sa5ufM-44L7_xmJGuhkPRVPEs941E)  
+_7 minutes_ by Anna Monus
+
+In this tutorial, we look into how you can report Core Web Vitals for soft navigations from a React application to the Chrome DevTools Console.
+
+[Common mistakes with the Next.js App Router and how to fix them](https://link.mail.beehiiv.com/ss/c/5gM3m-6u57Xmc9E5KeSlwGrYXlQc4YBMJq0qDcZlNLD_ohb3CjMrHwSwLHYCxEa80hLnKTrTBbVwEzY6tBIV_CoFa7d3h9x38z6GOZo42GUuzdAjCui6NtOqMioAPylfT894SCjVmdtk64ppVN-UtI4xoCEuIMeSyoWyxxktSE-AagE1ibTzwq4xtqIUr7y5SxmGwPqF3P0qFWtzjy9EuNC4kOVaOXiFscdAyAUNIhISw8Lv3xuTDggbFv5ZNBKxK-jjdRLXTMIb0rJUhYGks_YdcviqOaCyNjwevObD5Hs/42z/XUJ9Hjc6SMqmDDPc5zsnmA/h4/0B_0e6vByuVFQVBjifqZ03TRSjnuP9AWr8Xlwo81WPE)  
+_11 minutes_ by Lee Robinson
+
+Learn how to use the Next.js App Router more effectively and understand the new model.
+
+[Build Dynamic Forms with React Hook Form](https://link.mail.beehiiv.com/ss/c/7uXE0u3HczV_Hgl2DfUmuKVoAhkOoZxj6dfVZ_QmEgabQn56_eFo6Fh-4uEBfsMsnn8DN9o_1IoScTCjtpKMl0D8J2s33MuOkWH4dWauvO6behl0ZGZ1x-k4mzeDPPKSrTWSO4OBouZ17XaaGvjn9p8XEptBgXY1a20YCVFNzG8o5jB2QsiBxU0YH1FZaINCKgNhQR9yQZrgoupwOK4hqNQp-WxN_6xzyuKx27_SEiQo93eRYH-Cm2bOHXIYIgVX/42z/XUJ9Hjc6SMqmDDPc5zsnmA/h5/aeFM00-o41d10AiJ4DAoZi9nLGRR3pd2e4PeMUWgu-c)  
+_11 minutes_ by Alex Khomenko
+
+Discover how to efficiently create scalable and maintainable dynamic forms for various configurations using React Hook Form. This guide explores practical strategies and code examples for rendering flexible form controls with streamlined validation in React applications.
+
+[A Quick Guide To The render() Method in React](https://link.mail.beehiiv.com/ss/c/I44l0TfBMmW1QCKusp1aHIol4AUXQIMLRBZd8_4xEefPWtnqIiBSajhKJmdiTaIZ4zKy0DzaXq0Bluqi4HkaurwV6q2t1H6bttCGmPo7PhvVVJdTk4XgXEFZPt3ErUNsDY7qp3ZoAhorDz_ZMYQZfJhOjYwnWwk5BoOC9sfSGlpDJbmA8phh-EGpRqWLURkdthevh5vmC6HtP0BXa0JL69nz-7mCQFfoSZs5U7QuA1ls0y-3fNwsDh9xKrz78BgqbqKX3YlsNv04O7KsTEno1A/42z/XUJ9Hjc6SMqmDDPc5zsnmA/h6/6-AdLScrWypsYbsj_7kj4knkGs6SXOO77Vnc-qNVZiQ)  
+_1 minute_ by Irakli Tchigladze
+
+In this guide, we’ll try to shed light on what render() is, what it does, and why it’s so important for development process with React.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-r5aei1LqixOIwQN0qeGQMk5ZZboWo7iR8aQL3kAJUw8LgRXv4b7OhgEYXCRkIMQNfJ9Mm0bKCmwKa6EI8L2sUMoiKgdC5 3K4Dx1OJMD1i3KYCqI9ptVI-YmyKH2uWKvCBMxQigNGJN1hUL972VB4-O-kI1rbVQZCo8tx\_vvC-kNTMbQZqa6mxCwY6nmc1YA91UxxbvQ03WgQY8LGkTqt3iNFaw\_KC1-usiYORaE5s2x aorG\_kcF\_dAWP1PTK30TpB8M6HHyKudCKPeOjztOXH4FCvZvZ9iV-yH4xLmy2Fb5YtnqfyOEpbNIVj3rXpTHHLezqP4vQ5WIjkWirAckbELswBRSzWmJcveznXPGsat3JRamD24eJfs\_H5zgM7E 3RoW5DvWBY1W5Ojh20TimcmsI7mFL-WmDHDr1-EQYrHELg\_N8jlIXSyg8eOZpX2\_Kwc4FqoWy becNOgpc34NUb9siVkTJQnJThHij3ClybdSfTs1UCvTKM\_KgZPfGbpOQmkj38UHHoSwCE\_iZa q1Gd-i7mDaOiDnXaYJ7lmANfaI-hJqw7B-e6WrPwwP7xJfdQ8amJ9vKBSrDd2UM4buo\_-d4yIiB\_tbyqGUMSRHHvhU0OeJ\_\_c --agYejQ81onQPFR80XvtMq5PywEAF5TUaU1I/42z/XUJ9Hjc6SMqmDDPc5zsnmA/h0/oW6IJc2l\_One2jdlBoRPolXVc9sijq5YHDYygcjzVxs)
+
+![](https://link.mail.beehiiv.com/ss/o/2neHg-Hzkdcq_goMOXZHDQ/42z/XUJ9Hjc6SMqmDDPc5zsnmA/ho.gif)
+
+你好！ 👋
+
+\[React.use 和 React.useMemo 的未来]\(https://link.mail.beehiiv.com/ss/c/aHFB5pbxm1xlUhKbGNbkihaFFawCN5VqmgUS-0ovEsCGa4QPLJeFK2f9choXJv42tckhy9Jg\_GS5hPnK5FbAwoix\_7gvDtGcuv6R2SwdqrIr Z3rsgmcIsW7G1Z1wA5qNUxsWdza3Ryf\_Y6eRvBODQYZTaNdh14k9RDi8FcHrKk9fRVVHqm-w4WUPvb4bOshO2iK6CSma3IXYpfz34dwJ1YHfjc1KiMB9-XhiyIBCUzhisRHjuTdU2t6B0Vd C\_IGO/42z/XUJ9Hjc6SMqmDDPc5zsnmA/h1/5qjoif4k3aA4\_wjA5n1hr5CxfPZgEJFwB4sDaJUxloM)\
+*10 分钟* 科林·坎贝尔
+
+use-context-selector 是我在使用 React 上下文时防止重新渲染的首选方法。但未来的一些 React 更新提供了仅使用 React.use 和 React.useMemo 的更好替代方案。请跟随我的脚步，在我试图证明丹·阿布拉莫夫错误的失败尝试中，我吸取了深刻的教训。
+
+\[从 Porkbun 获得 1 美元折扣 - React 用户的最佳注册商！]\(https://link.mail.beehiiv.com/ss/c/Rbmf5CzHe5itG0NBmgkKQM6YehsOdHThPcQsRSJDyOYEWApbHgI28g3vRBb0Umux97KiD80nhCT7T2Q987NhuAOYyyK 9N5jpIgh1Uv9nHynyBT9v0vPOSePXYoDh\_AApjhJyeRcw2zaeE1jsCP-cdAz2DPldauc-8KpKl9MuqOmhQn8drPJdtg7COLj3P8lHKGjXlaeZVwGHDAQP\_9No0gzTPYxAtPLF5ZyjByV52Z4/42 z/XUJ9Hjc6SMqmDDPc5zsnMA/h2/0X0EU3X0Edovkx1KbY-vu2GG5fMyaln -rCDORFQcVI8)\
+*由TLD赞助*
+
+Porkbun 为 500 多个域名扩展提供令人难以置信的低价，包括 .dev、.xyz、.io 和 .tech。另外，每个域名都附带 SSL 证书、WHOIS 隐私、DNS、URL 转发和托管试用等免费赠品，因为为什么要为应该免费的东西付费呢？从 Porkbun 购买下一个域名可节省 1 美元，看看为什么他们是科技行业每个人的域名注册商。
+
+\[如何在 React 应用程序中设置软导航报告]\(https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyNVBIvcSJ\_8N0Xqc03pzCfTtgmN95AXjUM2YVj1uWVbwNENs63qCQtwbK9xgRH1hbnuSIvbrP8wm40LbL6St 7fXZhVVBGncyqh2PK6Qi-0aWBdmR\_\_nh6AY9Drpy1bpuHqzGuIM8v84MziptV246pV-B0JUZGzx4Cv54hid1igmP-FILH9mUY-GS6Urbsa4npRNwcErgShbkmLeXt49U25Hffm\_UZwkcadELmq LV0FIc/42z/XUJ9Hjc6SMqmDDPc5zsnmA/h3/CkHIayWIX9WbF1Sa5ufM-44L7\_xmJGuhkPRVPEs941E) \
+*7 分钟* 安娜·莫纳斯 (Anna Monus)
+
+在本教程中，我们将研究如何报告从 React 应用程序到 Chrome DevTools 控制台的软导航的 Core Web Vitals。
+
+\[Next.js 应用程序路由器的常见错误以及如何修复它们]\(https://link.mail.beehiiv.com/ss/c/5gM3m-6u57Xmc9E5KeSlwGrYXlQc4YBMJq0qDcZlNLD\_ohb3CjMrHwSwLHYCxEa80hLnKTrTBbVwEzY6tBIV\_CoFa7d3h9x3 8z6GOZo42GUuzdAjCui6NtOqMioAPylfT894SCjVmdtk64ppVN-UTI4xoCEUIMeSyoWyxxktSE-AagE1ibTzwq4xtqiUr7y5SxmGwPqF3P0qFWtzjy9EUNC4KOVAOXIFSCDAYAUNIHISw8Lv3xutDgg bFv5ZNBKxK-jjdRLXTMIb0rJUhYGks\_YdcviqOaCyNjwevObD5Hs/42z/XUJ9Hjc6SMqmDDPc5zsnmA/h4/0B\_0e6vByuVFQVBjifqZ03TRSjnuP9AWr8Xlwo81WPE )\
+*11 分钟* 李·罗宾逊
+
+了解如何更有效地使用 Next.js App Router 并了解新模型。
+
+\[使用 React Hook Form 构建动态表单]\(https://link.mail.beehiiv.com/ss/c/7uXE0u3HczV\_Hgl2DfUmuKVoAhkOoZxj6dfVZ\_QmEgabQn56\_eFo6Fh-4uEBfsMsnn8DN9o\_1IoScTCjtpKMl0D8J2s33MuOkWH4d WauvO6behl0ZGZ1x-k4mzeDPPKSrTWSO4OBouZ17XaaGvjn9p8XEptBgXY1a20YCVFNzG8o5jB2QsiBxU0YH1FZaINCKgNhQR9yQZrgoupwOK4hqNQp-WxN\_6xzyuKx27\_SEiQo93eRYH-Cm2 bOHXIYIgVX/42z/XUJ9Hjc6SMqmDDPc5zsnmA/h5/aeFM00-o41d10AiJ4DAoZi9nLGRR3pd2e4PeMUWgu-c)\
+*11 分钟* 亚历克斯·霍缅科
+
+了解如何使用 React Hook Form 为各种配置高效创建可扩展且可维护的动态表单。本指南探讨了在 React 应用程序中通过简化的验证来呈现灵活的表单控件的实用策略和代码示例。
+
+\[React 中 render() 方法快速指南]\(https://link.mail.beehiiv.com/ss/c/I44l0TfBMmW1QCKusp1aHIol4AUXQIMLRBZd8\_4xEefPWtnqIiBSajhKJmdiTaIZ4zKy0DzaXq0Bluqi4HkaurwV6q2t1H6bttCGmPo7PhvVVJdT k4XgXEFZPt3EUNsDY7qp3ZoAhorDz\_ZMYQZfJhOjYwnWwk5BoOC9sfSGlpDJbmA8phh-EGpRqWLURkdthevh5vmC6HtP0BXa0JL69nz-7mCQFfoSZs5U7QuA1ls0y-3fNwsDh9xKrz78Bgqb qKX3YlsNv04O7KsTEno1A/42z/XUJ9Hjc6SMqmDDPc5zsnmA/h6/6-AdLScrWypsYbsj\_7kj4knkGs6SXOO77Vnc-qNVZiQ) \
+*1 分钟* 伊拉克利·奇格拉泽 (Irakli Tchigladze)
+
+在本指南中，我们将尝试阐明 render() 是什么、它的作用以及为什么它对于 React 开发过程如此重要。
+
+#
+
+

@@ -1,0 +1,92 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#446 Write your own typesafe React router in 500 lines
+description: RD#446 Write your own typesafe React router in 500 lines
+date: 星期一 01 凌晨 三月 11o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/write-typesafe-react-router-500-lines
+origin_site: https://newsletter.reactdigest.net/p/write-typesafe-react-router-500-lines
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#446 Write your own typesafe React router in 500 lines" url="https://newsletter.reactdigest.net/p/write-typesafe-react-router-500-lines" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1VdJuO0-a6YE7t9jOoWulTCUBeqXOsjBWXpk5ftil7FNEWlGJquOMKDoTb_JStNTUPhJj036PeyyOp7fSMyl4efse-3G60zETIHZd9mMTioi-PkO8X7rd6i4DpBkLRskF5GoXX5E33l7p6bJC8cd2vsfJY-XAQxz6tWBmLj4vaHKvE-2RObRPWYVqAEyyh8CgYCIIvwoYeBKJWjAU9o6aOeWW8J7Wg04pudgv4aVq40aoghBEqO34xKi1guxJbUh80a-suh0j99NsHQxV5EgynEIpYO_QFE3_9suxTTcq5U3L3RSYKq3jIvXD72cLoAOF_7mh5xzKIMFPMAfFgIVI2d9x8KDCLc2mSpQJQP4KOY1tCfhsRpR_A87WLkGXP2Sc4f4aCcm979pyXBfXtAfc3oX2oeDHfi_C-pthIyqdPUBvCMT81BI1SeLkd7xelaaBBy3T_lFH_5qKRgA9ACqmNE02jkSgnBEIh1nHkwgt_5kpJWq6rMw5BFFBiZ_SEB8Ztwfy5ZTSZoD8umhNm45p8_SDHc3CVohGm1uYibxm7lzPG41za1CsLhrMyDj4QNYcsZT7sIt66STEPzFEv_2U1qtTp60EBB1s_3olwUJvB5vJaxIKizGgd8hWZ84yXLAI64hMslIZBCnwbgRh7QaD4a/44j/-a3LaRRnRqmgBV07CAlueg/h0/h001.hVYmCZL1DT6xx4WovsoAJWTKkY50Ox2yHzIEB2u5-CY)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/44j/-a3LaRRnRqmgBV07CAlueg/ho.gif)
+
+[Write your own typesafe React router in 500 lines](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAOzsZVzuQV6Hm2cW56jv0s8OTvF2q-okonH2_lHR7plXxRkQHeeZ7yYERE2eHgl_RhUsH80Skk0aawduwjPaLGM21sAz1btg9pcj4A-IpXSS1huUHSJ4k6vYe_2F7Bv6piE89sZdgVQFNZ3usXPJeR73xkABJ6Gi3STRex6UEPd5xjzGN-SuNY9Hy6_Oig25IMoUpzqBU9WekVw2ih_Ebda9V6BtadraoN2WdBrNuHDofO6yUYSA7kYJctIZXcYBrxQ/44j/-a3LaRRnRqmgBV07CAlueg/h1/h001.Yd3o19zRTxa8ALCL_j0ULQOmwEMvglIRIpiTsCn03Rs)  
+_31 minutes_ by Oleg Wock
+
+There are a lot of things you can do for yourself. One of them is simple type-safe React routing library. Sounds good, doesn't it?
+
+[How to measure React component usage](https://link.mail.beehiiv.com/ss/c/u001.GyLXS_kgZ_zhliVlX2b_SWCnHaEmu0ZUjW34u1J7dvkG4olRn3Sz0yD_F5iiryaJOSEKB1qmku6M6Vt4FBtbuJGxOiDu5QqL4P2n6LK-MR4/44j/-a3LaRRnRqmgBV07CAlueg/h2/h001.RuEfYGBGTdiTr_OguG_TeKuXJYLbkXbqaIzCPAbPIS8)  
+_sponsored by Omlet_
+
+Omlet is a new tool to measure component (and prop) usage in your codebase. Identify which components to improve or deprecate. Increase code quality and consistent component adoption across your team.
+
+[react-strict-dom, why it's so great?](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO21yqVRF_dWcJxv2o_HOo5Eu5WpP_aBqfohXrXQfGpvW5fDso8NKAXZdbtiFvR9UU0dBV3LNyX0kMxE2o7pwATclJGXv5XeQ93NC4CnpDGwbENbHqYuaIqMnRW-EUNGf5PYXJ-fO1F6nbtK_9gTaxVsN59UAaxkR6h-4GPUBVsbF_R98WZggv9bLV1zxm-67EnZtGX4hK9HDf_XvrT-avnPeTtICle4LMSmaWZA8A5fQ/44j/-a3LaRRnRqmgBV07CAlueg/h3/h001.hXnLS-cQBJA2FGWdZPXVHXIPo4F_GXstOMwI18I_psw)  
+_4 minutes_ by Szymon Rybczak
+
+In this article, I'd like to go through the historical background of building a universal codebase that shares components between Web and Native, and how react-strict-dom changes the way we can do it.
+
+[Conceptual Model of React and RSC](https://link.mail.beehiiv.com/ss/c/u001.GyLXS_kgZ_zhliVlX2b_Se5IoGj94xf9Nq-55VNg6sipBLRye8fCDo6Rp5gQwkmT3SxgrXOE6PyGUD9lgWemracrLI671DYEYg-9WiUTBq9k1HVdQeLeo5mLZ_ktUhcMsgGWz_Mituh-Tr04xCcx79R3vqoC3n0JkA-KOsG6T4-CPkF8Srt0bAxvqY99CpkqgN0Cb2mlkereOc4RFiYLpKFSXSjb8PRR1YoGfyM2SdwPkNun-dD7UeC1dHNThlr7RiW_WHzxc7aMJo7hQ3R97A/44j/-a3LaRRnRqmgBV07CAlueg/h4/h001.nw7COias4xyToF9MHcqGBMxzydGf6RnZLz7juQMf0_4)  
+_9 minutes_ by Ondrej Velisek
+
+Building web apps is a complex problem. We need simple high-level mental structures to support such a heavy load.
+
+[Understanding Cookies and Sessions in React](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqf3123FxAOjHAoPC8ylrL2fYlMi9rmA4JTCNqQBpaCswKgm4l4VdNIxELvQnldeHq5-CXrlXYriGBEPN2KuxpYaTBDURmHFeYbBA2v5XRYu8rN9hIM5RahKRVUKtDMhjx15ou8xBCqc4JTUD1yEX4STL9CJn_O9XqADf9cWbKY52k8glTq-DbRr_KPAn_rpLBccFEjgy5ogO0Ev6LQYs1f7oGau01QAFHt_Cbz4Dueic/44j/-a3LaRRnRqmgBV07CAlueg/h5/h001.4RB2YQ-2ehPWFeOUb1I5w8Z9edR9L4yMkNR7Jl4UZnA)  
+_11 minutes_ by Blessing Ene Anyebe
+
+Dive into implementation techniques and best practices for cookies and sessions in React, to ensure your React apps are efficient and secure.
+
+[How to safely use dangerouslySetInnerHTML in React](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVYZlakaEGMuy5KnYBt7IEbpETdIYSTPuN7woifc7Z7EwPqM-E2CHHhjOIUHQvWOHJxDH257nYzvUqZ--WhDevFpMZKVU9okaw5M7RMUV5hGUw3_EKDXvgS-XioYA3Ta6q2zWT_mamAPWoCjIrUDEftR0IgB1wg6BEwKM8cfkWiZhSYTJA3LRUi_IDSq9KpsoOgNBDF9n2TT2BHBx_4CVX5uy66fkUlN1lomfbrW0lGwSmROCZSAW1vV9P2nIv62BWwSCSmJ92h6fMz0xE86_tuw/44j/-a3LaRRnRqmgBV07CAlueg/h6/h001.C5_JhAw6O1Hs1LTNJkY-bGg67XPyO4nmc4nY7M0sL08)  
+_11 minutes_
+
+In this blog post, we will look at some examples of how to use dangerouslySetInnerHTML and how to safely sanitize the HTML before setting it.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1VdJuO0-a6YE7t9jOoWulTCUBeqXOsjBWXpk5ftil7FNEWlGJquOMKDoTb\_JStNUPhJj036 PeyyOp7fSMyl4efse-3G60zETIHZd9mMTioi-PkO8X7rd6i4DpBkLRskF5GoXX5E33l7p6bJC8cd2vsfJY-XAQxz6tWBmLj4vaHKvE-2RObRPWYVqAEyyh8CgYCIIvwoYeBKJWjAU9o6aOeWW8J7W g04pudgv4aVq40aoghBEqO34xKi1guxJbUh80a-suh0j99NsHQxV5EgynEipYO\_QFE3\_9suxTTcq5U3L3RSYKq3jIvXD72cLoAOF\_7mh5xzKIMFPMAfFgIVI2d9x8KDCLc2mSpQJQP4KOY1t CfhsRpR\_A87WLkGXP2Sc4f4aCcm979pyXBfXtAfc3oX2oeDHfi\_C-pthIyqdPUBvCMT81BI1S eLkd7xelaaBBy3T\_lFH\_5qKRgA9ACqmNE02jkSgnBEIh1nHkwgt\_5kpJWq6rMw5BFFBiZ\_SEB 8Ztwfy5ZTSZoD8umhNm45p8\_SDHc3CVohGm1uYibxm7lzPG41za1CsLhrMyDj4QNYcsZT7sIt66STEPzFEv\_2U1qtTp60EBB1s\_3olwUJvB5vJaxIKizGgd8hWZ84yXLAI64hMslIZBCnwbgR h7QaD4a/44j/-a3LaRRnRqmgBV07CAlueg/h0/h001.hVYmCZL1DT6xx4WovsoAJWTKkY50Ox2yHzIEB2u5- CY)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/44j/-a3LaRRnRqmgBV07CAlueg/ho.gif)
+
+\[用 500 行编写你自己的类型安全 React 路由器]\(https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn\_0mUAOzsZVzuQV6Hm2cW56jv0s8OTvF2q-okonH2\_lHR7plXxRkQHeeZ7yYERE2eHgl\_RhUsH80Skk0a awduwjPaLGM21sAz1btg9pcj4A-IpXSS1huUHSJ4k6vYe\_2F7Bv6piE89sZdgVQFNZ3usXPJeR73x kABJ6Gi3STRex6UEPd5xjzGN-SunY9Hy6\_Oig25IMoUpzqBU9WekVw2ih\_Ebda9V6BtadraoN2WdBr NuHDofO6yUYSA7kYJctIZXcYBrxQ/44j/-a3LaRRnRqmgBV07CAlueg/h1/h001.Yd3o19zRTxa8ALCL\_j0ULQOmwEMvglIRIPiTsCn03Rs)\
+*31 分钟* 奥列格·沃克
+
+您可以为自己做很多事情。其中之一是简单的类型安全 React 路由库。听起来不错，不是吗？
+
+\[如何测量React组件使用情况]\(https://link.mail.beehiiv.com/ss/c/u001.GyLXS\_kgZ\_zhliVlX2b\_SWCnHaEmu0ZUjW34u1J7dvkG4olRn3Sz0yD\_F5iiryaJOSEKB1qmku6M6Vt4FBtbuJGxOiDu5QqL4P2n6LK-MR4 /44j/-a3LaRRnRqmgBV07CAlueg/h2/h001.RuEfYGBGTdiTr\_OguG\_TeKuXJYLbkXbqaIzCPAbPIS8)\
+*由欧姆莱特赞助*
+
+Omlet 是一个新工具，用于测量代码库中组件（和 prop）的使用情况。确定要改进或弃用哪些组件。提高整个团队的代码质量和组件采用的一致性。
+
+\[react-strict-dom，为什么它这么棒？]\(https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn\_0mUAO21yqVRF\_dWcJxv2o\_HOo5Eu5WpP\_aBqfohXrXQfGpvW5fDso8NKAXZdbtiFvR9UU0dBV3LNyX0 kMXE2o7pwATclJGXv5XeQ93NC4CnpDGwbENbHqYuaIqMnRW-EUNGf5PYXJ-fO1F6nbtK\_9gTaxVsN59UAaxkR6h-4GPUBVsbF\_R98WZggv9bLV1zxm-67EnZtGX4hK9HDf\_XvrT-avnPett ICle4LMSmaWZA8A5fQ/44j/-a3LaRRnRqmgBV07CAlueg/h3 /h001.hXnLS-cQBJA2FGWdZPXVHXIPo4F\_GXstOMwI18I\_psw)\
+*4 分钟* Szymon Rybczak
+
+在本文中，我想介绍一下构建在 Web 和 Native 之间共享组件的通用代码库的历史背景，以及 React-strict-dom 如何改变我们的实现方式。
+
+【React与RSC概念模型】(https://link.mail.beehiiv.com/ss/c/u001.GyLXS\_kgZ\_zhliVlX2b\_Se5IoGj94xf9Nq-55VNg6sipBLRye8fCDo6Rp5gQwkmT3SxgrXOE6PyGUD9lgWemracrLI671DYEYg-9WiUTBq9k1 HVdQeLeo5mLZ\_ktUhcMsgGWz\_Mituh-Tr04xCcx79R3vqoC3n0JkA-KOsG6T4-CPkF8Srt0bAxvqY99CpkqgN0Cb2mlkereOc4RFiYLpKFSXSjb8PRR1YoGfyM2SdwPkNun-dd7UeC 1dHNThlr7RiW\_WHzxc7aMJo7hQ3R97A/44j/-a3LaRRnRqmgBV07CAlueg/h4/h001。 nw7COias4xyToF9MHcqGBMxzydGf6RnZLz7juQMf0\_4)\
+*9 分钟* Ondrej Velisek
+
+构建网络应用程序是一个复杂的问题。我们需要简单的高级心理结构来支撑如此沉重的负担。
+
+\[了解 React 中的 Cookie 和会话]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqf3123FxAOjHAoPC8ylrL2fYlMi9rmA4JTCNqQBpaCswKgm4l4VdNIxELvQnldeHq5-CXrlXYriGBEPN2Kux pYATBDURmHFeYbBA2v5XRYu8rN9hIM5RahKRVUKtDMhjx15ou8xBCqc4JTUD1yEX4STL9CJn\_O9XqADf9cWbKY52k8glTq-DbRr\_KPAn\_rpLBccFEjgy5ogO0Ev6LQYs1f7oGau01QAFHt\_Cbz4D ueic/44j/-a3LaRRnRqmgBV07CAlueg/h5/h001.4RB2YQ-2ehPWFeOUb1I5w8Z9edR9L4yMkNR7Jl4UZnA)\
+*11 分钟* Blessing Ene Anyebe
+
+深入研究 React 中 cookie 和会话的实现技术和最佳实践，以确保您的 React 应用程序高效且安全。
+
+\[如何在React中安全使用dangerouslySetInnerHTML]\(https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu\_fY2A1vmVYZlakaEGMuy5KnYBt7IEbpETdIYSTPuN7woifc7Z7EwPqM-E2CHHhjOIUHQvWOHJxDH257nYzvUqZ-- WhDevFpMZKVU9okaw5M7RMUV5hGUw3\_EKDXvgS-XioYA3Ta6q2zWT\_mamAPWoCjIrUDEftR0IgB1w g6BEwKM8cfkWiZhSYTJA3LRUi\_IDSq9KpsoOgNBDF9n2TT2BHBx\_4CVX5uy66fkULN1lomfbrW0lGw SmROCZSAW1vV9P2nIv62BWwSCSmJ92h6fMz0xE86\_tuw/44j/-a3LaRRnRqmgBV07CAlueg/h6/h001.C5\_JhAw6O1Hs1LTNJkY-bGg67XPyO4nmc4nY7M0sL08 )\
+*11分钟*
+
+在这篇博文中，我们将查看一些示例，了解如何使用angerouslySetInnerHTML以及如何在设置之前安全地清理HTML。
+
+#
+
+

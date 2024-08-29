@@ -1,0 +1,92 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#444 React 19 will be compiled
+description: RD#444 React 19 will be compiled
+date: 星期一 12 凌晨 二月 26o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/react-19-will-compiled
+origin_site: https://newsletter.reactdigest.net/p/react-19-will-compiled
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#444 React 19 will be compiled" url="https://newsletter.reactdigest.net/p/react-19-will-compiled" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-r5aei1LqixOIwQN0qeGQMkjwQP-xAmHTBjZDCvDF0jVf6Z52l_aIvkkbEetlc8gV-2sKAps5iSo-DNTPR_b-fBaGzUWJ_HKlYyb0R61IgwxMiYWBoZIS_RLKYd7TyZNPukr2ClZrZRZamgIxNHtRwI7qUR-VXEUX8cK8K_dmSWby81aAYYs20aBTANItK-1ehjcZvSpelkAEJRShzd-kqRrvixOST4oxSVM4TgWmpBd4i4rmR2kTW5k_seN6hL7uQzj4IbpYBxAAAqN8L1yiBZsJQGtVm0pfjlMLHqNbAM9s8-cWSQEaQplk8rvLSp4s8w147fwGb3gHVFdLTSUF9umDpf2GSkMDcy-aJGHCPu7KjR3UBhaUlxfwiRGozw1gU5J6Ht1GNlxJRDK57sWavVFonSdFgovEL3cQILDHjeyzwuHjCgnykPoF-e9p7RRMhZSrJWikk-kkg4JG5yv7gM4M7aZ6FsNx13U_NXAxQH6DyBTrNFZdxLyrBLhq9CGHvauFALU0WeN-qnFhd8HgmJyOAXv0JEdS8abuNpBSvm9V8jSrArBQCCjfaADVVA2NoEqdMnK7qSqvcAu4rijwLWeSiDbmOrRd87wp6MsWHBzZDwpbBU8IembMqvausWvCw/445/4lzOL4TBRIeSaa_SnbEvYg/h0/uuoz4kgKENN_ldAOBy_3A1OzufN7n_2JnbgsuXTw7z4)
+
+![](https://link.mail.beehiiv.com/ss/o/2neHg-Hzkdcq_goMOXZHDQ/445/4lzOL4TBRIeSaa_SnbEvYg/ho.gif)
+
+[React 19 will be compiled](https://link.mail.beehiiv.com/ss/c/bsn4scWd0pf-U6yftf3Pr-RG9mPs1G6GyEg3D3kRofzEqdDNlnYeqbtMDNNodu6ic4EOsx6jen6I-clhJciGJ8HD2qgvq3BY3cj8AhGD7s10eLUtR2FnZc4eDRDZ984b57YphxNPIcqjRI8aVf1kH3A8lj_XevA85Wwhl0_Ip5GiXrl31rD42U8PB62SWby3nwKVAQ_YErc0gV6_6PEArDwcG00GKTl7kfSNDOFJ5Ks/445/4lzOL4TBRIeSaa_SnbEvYg/h1/420MyPCpT19DcUr-Qkz1uowv4UxtKkDFon_JCyrHn6Q)  
+_14 minutes_ by Brad Westfall
+
+Or maybe 20. Whatever the version, I hope this post helps anyone who feels confused about what it means for React to become "compiled". I'll try to show examples and historical context for how we got to this point because it has been a heavily discussed topic and is sometimes hard to follow along, especially if you haven't seen the whole story of React play out.
+
+[Building for the Future: Next.js and KendoReact Integration Unveiled](https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyDBrazaY5bjRhbBUBeZWjAhY5ujqebLMp6RG2GN9kajBWuRdzbk5k2maJXmELZO3bfF5GYJFxpk3NnL-97A1D97HQfryDOMK32YdaaK9PVMFrhHUr44pZlR3fKmwv03s2Mtp6BZo1Wqbs1aAxarQQxBNXq2SfOL5yMnxoH3qoVleJ4WBkUNlXGoDsew_u-zkGGKEruWrNyRM7Ssh6q3wOI-Gp19BYnn6Is4e816aVTFw2XnXIAwZdbf0EiqUKSGAktU8P7eXR9e99kzEz1068Rc/445/4lzOL4TBRIeSaa_SnbEvYg/h2/rEXRuWWKhFDz3gOK7nuiS0QlatAPqADkVEx5uL_lnx4)  
+_sponsored by Progress_
+
+Ready to take full advantage of Next.js while using KendoReact’s professionally designed UI component library? It’s a snap—see for yourself.
+
+[Avoiding Hydration Mismatches with useSyncExternalStore](https://link.mail.beehiiv.com/ss/c/i-14uV6vHkCzB2eOsMx0wAMiJSGfyyxSnmfMOxTBvDjRU_2qEXDt6uViueA0u0Na6p_aWprVw_PclVxdskiy5J6rryDwrWHj-9BjjwUj0euKqiK0hD5x3l2L9UMQcLetNeiuGy3uG2m12xCJCajdkBCviuwkVnTlOLyRyBYNGrfeNKT5Au0SZ4SuX_IOgdPRV1Sj0hUac4PS0KW1uqPtCK5Un0P4fO1h9TkPO_v5PT_roJCVGrs767YZzWOzzQxs/445/4lzOL4TBRIeSaa_SnbEvYg/h3/DF6THzCe_tmnfBi6qHYoKQW7t0JQ4CFdEI-XytStTSw)  
+_6 minutes_ by Dominik
+
+Avoiding hydration mismatches can usually be done in two ways - suppressing the warning or spawning an effect. But is there a third option ... ?
+
+[Control Lazy Load, Infinite Scroll and Animations in React](https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyDeTcF_5eFPJVHpagbPL9ieggZ47dbiLa-rvzLJJR_V3GmEYvZg-cycndBD-47Ua2b4JDjZi-RcQBEfZGjb6P26BcEIMXiCTFI9MDB-rJXxpyxE1HwYC7U3vcZO49LMcncfB7U8tn1WGyMBKecufkYSEDjjHj1AAt56VllL0yUIVmYKdw4ilu3d6_dI5CuoHRbrt59XvdimTOEM-FSYykqGFTo0RoYG1MZfizrMhzzeMBfGQh-YEl0lmOWXJGX5c1g/445/4lzOL4TBRIeSaa_SnbEvYg/h4/4q2WjKWc88oxvspYNR1_BgMa4RnXKOBuemoYonsHQYU)  
+_8 minutes_ by Blessing Ene Anyebe
+
+Explore 3 use cases for working with the React Intersection Observer: lazy loading, infinite scrolling, and animation/transition triggers.
+
+[React Trends in 2024](https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyHoVuCfdwASs8DQHmQd8tUSzPGPodC5IhRoVn5I5SNtjA3G3Qg6MMm6qoQ19KMYdMzx9HQa445NKmSMBInImmVYiYD95AlQgTAdI08Z6wMh4E9wDT38JZyGRkyNOW-aJ68iHrYeh8b-rFU6hCixjEIwTodCvL8GJdcsrB2uN0MknI_w80MT9Y2Lt36-UIHKVrw/445/4lzOL4TBRIeSaa_SnbEvYg/h5/-EFXtn0iN1vpjnYY99d2n6IGvd5I0ifhyhMKPrpYuZk)  
+_11 minutes_ by Robin Wieruch
+
+I trust you share my enthusiasm as we embark on the journey into 2024, embracing the exciting trends in web dev. With a prevailing focus on performance, it is evident that we are moving towards a future coined by remarkable user experiences in the browser.
+
+[Understanding Controlled vs Uncontrolled Components In React](https://link.mail.beehiiv.com/ss/c/7uXE0u3HczV_Hgl2DfUmuKVoAhkOoZxj6dfVZ_QmEgagldfN2PTQ1RcnNO97oaA2i7ZtmR4FRXMAcCkmrjQoA0u_CqoA9OCqIcstuBucr1CxZNxpKJjaPNMtI6jwa52OuZXYDqJLBft-EmAxiB_Mkj8r66EygkJn0HKcABi0hi_QJQT9Joqw8EZtQ5cfs3JBlASxN5FjHRt_nzhQJKIwGRFyG7VgWG3jpK_FRz0S4LLy50mfwnu991j271MYj7u_/445/4lzOL4TBRIeSaa_SnbEvYg/h6/LGpY5uL1qdC59mKHFOzhQ2-lTZl0QtHmcdzA56faqKQ)  
+_8 minutes_ by Alex Khomenko
+
+Controlled and uncontrolled components are fundamental concepts in React. This post explains the differences between the two and provides guidelines for choosing the right approach for various scenarios in React applications. We'll also explore how to transition between the two types of components and provide code examples to illustrate the concepts.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-r5aei1LqixOIwQN0qeGQMkjwQP-xAmHTBjZDCvDF0jVf6Z52l\_aIvkkbEetlc8gV-2sKAps5iSo-DNTPR\_b-fBaGzUWJ\_HKl Yyb0R61IgwxMiYWBoZIS\_RLKYd7TyZNPukr2ClZrZRZamgIxNHtRwI7qUR-VXEUX8cK8K\_dmSWby81aAYYs20aBTANItK-1ehjcZvSpelkAEJRShzd-kqRrvixOST4oxSVM4TgWmpBd4i4rmR2kTW5k\_seN 6hL7uQzj4IbpYBxAAAqN8L1yiBZsJQGtVm0pfjlMLHqNbAM9s8-cWSQEaQplk8rvLSp4s8w147fwGb3gHVFdLTSUF9umDpf2GSkMDcy-aJGHCPu7KjR3UBhaUlxfwiRGozw1gU5J6Ht1GNlxJRDK 57sWavVFonSdFgovel3cQILDHjeyzwuHjCgnykPoF-e9p7RRMhZSrJWikk-kkg4JG5yv7gM4M7a Z6FsNx13U\_NXAxQH6DyBTrNFZdxLyrBLhq9CGHvauFALU0WeN-qnFhd8HgmJyOAXv0JEdS8abuN pBSvm9V8jSrArBQCCjfaADVVA2NoEqdMnK7qSqvcAu4rijwLWeSiDbmOrRd87wp6MsWHBzZDwpbBU8IembMqvausWvCw /445/4lzOL4TBRIeSaa\_SnbEvYg/h0/uuoz4kgKENN\_ldAOBy\_3A1OzufN7n\_2JnbgsuXTw7z4)
+
+![](https://link.mail.beehiiv.com/ss/o/2neHg-Hzkdcq_goMOXZHDQ/445/4lzOL4TBRIeSaa_SnbEvYg/ho.gif)
+
+\[React 19将被编译]\(https://link.mail.beehiiv.com/ss/c/bsn4scWd0pf-U6yftf3Pr-RG​​9mPs1G6GyEg3D3kRofzEqdDNlnYeqbtMDNNodu6ic4EOsx6jen6I-clhJciGJ8HD2qgvq3BY3cj8AhGD7s10eLU tR2FnZc4eDRDZ984b57YphxNPIcqjRI8aVf1kH3A8lj\_XevA85Wwhl0\_Ip5GiXrl31rD42U 8PB62SWby3nwKVAQ\_YErc0gV6\_6PEArDwcG00GKTl7kfSNDOFJ5Ks/445/4lzOL4TBRIESaa \_SnbEvYg/h1/420MyPCpT19DcUr-Qkz1uowv4UxtKkDFon\_JCyrHn6Q)\
+*14 分钟* 布拉德·韦斯特福尔
+
+或者也许是 20。无论哪个版本，我希望这篇文章可以帮助那些对 React“编译”意味着什么感到困惑的人。我将尝试展示我们如何走到这一步的示例和历史背景，因为它一直是一个被广泛讨论的主题，有时很难理解，特别是如果您还没有看到 React 的整个故事。
+
+\[构建未来：Next.js 和 KendoReact 集成揭晓]\(https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyDBrazaY5bjRhbBUBeZWjAhY5ujqebLMp6RG2GN9kajBWuRdzbk5k2maJXmELZO3bfF5GYJFxpk3Nn L-97A1D97HQfryDOMK32YdaaK9PVMFrhHUr44pZlR3fKmwv03s2Mtp6BZo1Wqbs1aAxarQQxBNXq2SfOL5yMnxoH3qoVleJ4WBkUNlXGoDsew\_u-zkGGKEruWrNyRM7Ssh6q3wOI-Gp19BYnn6 Is4e816aVTFw2XnXIAwZdbf0EiqUKSGAktU8P7eXR9e99kzEz1068Rc/445/4lzOL4TBRIeSaa\_SnbEvYg/h2/rEXRuWWKhFDz3gOK7nuiS0QlatAPqADkVEx5uL\_lnx4)\
+*由进步赞助*
+
+准备好在使用 KendoReact 专业设计的 UI 组件库的同时充分利用 Next.js 了吗？很简单——您自己看看吧。
+
+\[避免与 useSyncExternalStore 水合不匹配]\(https://link.mail.beehiiv.com/ss/c/i-14uV6vHkCzB2eOsMx0wAMiJSGfyyxSnmfMOxTBvDjRU\_2qEXDt6uViueA0u0Na6p\_aWprVw\_PclVxdskiy5J6rryDwrWHj-9BjjwU j0euKqiK0hD5x3l2L9UMQcLetNeiuGy3uG2m12xCJCajdkBCviuwkVnTlOLyRyBYNGrfeNKT5Au0SZ4SuX\_IOgdPRV1Sj0hUac4PS0KW1uqPtCK5Un0P4fO1h9TkPO\_v5PT\_roJCVGrs767YZz WOzzQxs/445/4lzOL4TBRIeSaa\_SnbEvYg/h3/DF6THzCe\_tmnfBi6qHYoKQW7t0JQ4CFdEI-XytStTSw)\
+*6 分钟* 多米尼克
+
+避免水合不匹配通常可以通过两种方式来完成——抑制警告或产生效果。但还有第三种选择吗……？
+
+\[Control Lazy Load, Infinite Scroll and Animations in React]\(https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyDeTcF\_5eFPJVHpagbPL9ieggZ47dbiLa-rvzLJJR\_V3GmEYvZg-cycndBD-47Ua2b4JDjZi-RcQBEfZGjb6P26BcEIMXiCTFI9MDB-rJXxpyxE1HwYC7U3vcZO49LMcncfB7U8tn1WGyMBKecufkYSEDjjHj1AAt56VllL0yUIVmYKdw4ilu3d6\_dI5CuoHRbrt59XvdimTOEM-FSYykqGFTo0RoYG1MZfizrMhzzeMBfGQh-YEl0lmOWXJGX5c1g/445/4lzOL4TBRIeSaa\_SnbEvYg/h4 /4q2WjKWc88oxvspYNR1\_BgMa4RnXKOBuemoYonsHQYU)\
+*8 分钟* Blessing Ene Anyebe
+
+探索使用 React Intersection Observer 的 3 个用例：延迟加载、无限滚动和动画/转换触发器。
+
+\[2024 年反应趋势]\(https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyHoVuCfdwASs8DQHmQd8tUSzPGPodC5IhRoVn5I5SNtjA3G3Qg6MMm6qoQ19KMYdMzx9HQa445NKmSMBInImmVYiY D95AlQgTAdI08Z6wMh4E9wDT38JZyGRkyNOW-aJ68iHrYeh8b-rFU6hCixjEIwTodCvL8GJdcsrB2uN0MknI\_w80MT9Y2Lt36-UIHKVrw/445/4lzOL4TBRieSaa\_SnbEvYg/h5/-EFXtn0i N1vpjnYY99d2n6IGvd5I0ifhyhMKPrpYuZk)\
+*11 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+我相信，当我们踏上 2024 年的旅程，拥抱 Web 开发中令人兴奋的趋势时，您会和我一样充满热情。随着对性能的普遍关注，很明显，我们正在走向一个由浏览器中卓越的用户体验创造的未来。
+
+\[了解 React 中的受控组件与非受控组件]\(https://link.mail.beehiiv.com/ss/c/7uXE0u3HczV\_Hgl2DfUmuKVoAhkOoZxj6dfVZ\_QmEgagldfN2PTQ1RcnNO97oaA2i7ZtmR4FRXMAcCkmrjQoA0u\_CqoA9OCqIcstuBucr 1CxZNxpKJjaPNMtI6jwa52OuZXYDqJLBft-EmAxiB\_Mkj8r66EygkJn0HKcABi0hi\_QJQT9Jo qw8EZtQ5cfs3JBlASxN5FjHRt\_nzhQJKIwGRFyG7VgWG3jpK\_FRz0S4LLy50mfwnu991j271MY j7u\_/445/4lzOL4TBRIeSaa\_SnbEvYg/h6/LGpY5uL1qdC59mKHFOzhQ2-lTZl0QtHmcdzA56faqKQ)\
+*8 分钟* 亚历克斯·霍缅科
+
+受控和非受控组件是 React 中的基本概念。这篇文章解释了两者之间的差异，并提供了为 React 应用程序中的各种场景选择正确方法的指南。我们还将探讨如何在两种类型的组件之间进行转换，并提供代码示例来说明这些概念。
+
+#
+
+

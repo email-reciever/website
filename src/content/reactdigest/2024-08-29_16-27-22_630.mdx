@@ -1,0 +1,92 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#443 How to Center a Div
+description: RD#443 How to Center a Div
+date: 星期一 12 凌晨 二月 19o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/center-div
+origin_site: https://newsletter.reactdigest.net/p/center-div
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#443 How to Center a Div" url="https://newsletter.reactdigest.net/p/center-div" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-r5aei1LqixOIwQN0qeGQMnmrKI-lOazURqVUl2L38k3HUNSBPknBjR9Wl_tIUvHx02TMG7G4wYZJW3EwDvwazbx-o0EBdoQKa8ksa6ydby71e71YxNzf0sLTZnYVEpZkuw8e1k5ibEjYyD1_ojLjUaZzN17isoavamXaj3yOjKhm5hy_66zZwqWCU4-Yk1iKjif2stJnS8EiPLMp3cOpD8Og22c3Qdp6kEnqAcSBqgwquDPu2EthcZMsFplzUykWqZ52TnHs11J5EDWuvGTbKGJW2T72imImCXBuRZy-aPjAjtlxqCCJw8qB1qH_eAFI6PvwOuQjXxJycw103ZHGKgscZaxHpQJd1YdG1wStEmTP3OnBNKuG1TZnwD5Ah4q04Y5c3yX9I5WAlt_Ncq8xU32-Cz9j_ds4_rQM2JvQLUbJwwj_Y3d2BaG1pq_bDUErHwS8whI36zlX2ML0Rf4l9DjJJ1hKpXpV9VJjtwRPt8RVpIAHGYerHirieL2fIZwOY7sAbvdRDLXwJPg63PfaqoZF63ce4L2Tsj9_GDgSP_BG7-Doy60EI0II5lYNFbc-iDH618_qz3b8L-EhWRHuQj7L00-NmJ5p_SYkJfnERBa/43y/9i5EMPxLQZS2KzVoy374bA/h0/eExzenvNgpjNKZS82zkDPu4N-1fqXvg3UjFLpt45qjM)
+
+![](https://link.mail.beehiiv.com/ss/o/2neHg-Hzkdcq_goMOXZHDQ/43y/9i5EMPxLQZS2KzVoy374bA/ho.gif)
+
+[How to Center a Div](https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyP1DkUcDeyDq9C9t9InwSM70ygHeY6cfPtkF7yPuHMLLp1vdSRzcdV8oEKtEsKjtyB2Wm9Dv47LpmZcV9i2KU5ej26u4V9_3RlQhzUOjWfQwl0IhM2QZckOPNnUTcLZ4RQ45YEtd6cZteZ9oEW1O_C5USd31ORW8f82vXSU98Axkrx28MzNHTXDuZ1HDZ5wPlw/43y/9i5EMPxLQZS2KzVoy374bA/h1/H9FPVLf7eJscrPJDll-F34fcxG4HPYHrPipm3wP_7fo)  
+_13 minutes_ by Josh Comeau
+
+Back in the day, centering an element was one of the trickiest things in CSS. As the language has evolved, we’ve been given lots of new tools we can use… But how do we pick the best option? When do we use Flexbox, or CSS Grid, or something else? Let's dig into it.
+
+[Launch Frictionless CSV Importing with OneSchema](https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyBK1vigfMf6iCiqxW15UbA89wZ5xUxVDpPo6XgA8yY04n0ECy6qXugiumKTRRSvcQwqsf9W8EVbAZsu4wvEEpIxss_S5jkECTmZgxTuUoiCWSAEWI-ORQz-NMywlprd3Cw/43y/9i5EMPxLQZS2KzVoy374bA/h2/B4ugYZ57ah7SHZmEw670EuLR2QxL6I7lcdvBTB6Y6zE)  
+_sponsored by OneSchema_
+
+OneSchema is an embedded CSV importer that automatically matches, validates, and cleans data for your users. With a large library of prebuilt validations and robust SDKs, OneSchema only takes 30 minutes to get running in your app. Trusted by companies like Ramp, Scale AI, and Vanta, OneSchema is the clear choice for all of your data-importing needs!
+
+[Tips for Code Readability and Performance](https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyDpkY1hzSDmTehBtISmD2AQhb6ZHaAj80CopWFG6eVckhivMz78CdMWgaFAfAPbmj34AUkRN1nqECj_O7oAO5Jjg7h39Oi_0jRkngS9tPGItwI8UdlwWJsPtlR9xXBAjoYQ3DyZH8PENomvO3kvUo52XAMgC_xPKntn9hKyCHoO-jmNgtwZWugfzQJTvSmhZlw/43y/9i5EMPxLQZS2KzVoy374bA/h3/SFwMEdZ4CdbHBCm4555jXKu_mqINcZjtc1FZhS7xg5A)  
+_15 minutes_ by Neha Sharma
+
+When you're working on projects, whether they're large or small, you'll need to focus on code quality, readability, maintainable, and scalability. Writing good code will also help you reduce PR comments from your teammates. In this tutorial, you will learn how to improve your React code.
+
+[Building Interactive Data Visualizations with D3.js and React](https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyDeTcF_5eFPJVHpagbPL9id-p2J7zXApu2hBlLyVGQ95h9liPhq5jpm2lQr3e7m-KX2uhLBHg7Z2Iy6aWkkR-WFX74y_BbbH1fmL9-FxuTahsJ9Kai6VPcNYk9N2B6XCUXunWVEum7Qr99Hpsb7S0Zv2YBQ5hNKNH-q__J5TCXSm09ZZVwLp0gcj0o7EOawIVhjzPQcCQa3u0Zc1HcrQUCM/43y/9i5EMPxLQZS2KzVoy374bA/h4/u-jrOu63W3cq7bxPfzCe869_I9H2c5DMPTN0zLtUU00)  
+_36 minutes_ by Oluwabusayo Jacobs
+
+Learn how to integrate React and D3.js to create responsive data visualizations (bar, pie, chloropeth), handle data loading, and manipulate elements.
+
+[Private Routes in React](https://link.mail.beehiiv.com/ss/c/cSWObR4MeC66qGxCYLRtYePl3b03zFT3oSvrkdF9GBZtTlp2ZEj2pVRI6r6jXqLZg5qOvLtP1VTAj7s_6MKWiacPBq9D15zCEVOVOtA0Ga2M_5WiYpdaVdt446mxejd_yVVlE7hSooHdlKRvKnfj_zgkKlaojzkJpQ4GgNgsrEFtGtet6I1sJ04Gfl9dAb4pqIZ5xJBzA7UA6miWM97Fvw/43y/9i5EMPxLQZS2KzVoy374bA/h5/vzd0R6mrKdN5VLR5htSFMMgxKKWcdqP5V9MeZqtt9Co)  
+_2 minutes_ by Arindam Majumder
+
+Introduction In modern Web Applications, ensuring the privacy and security of certain routes is a crucial aspect. We don't want everyone to access every part of our Web App. For that we use Private routes provided by React router v6.
+
+[Senior Frontend Developer Roadmap 2024](https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyOME1AgPTLWYrwN7JYLO4ir_WLmocv4jlBeA6wfCAaBDHe27cjA4cpsiCKfaJpSJV986Vkn5nYtYblQRgmsmlgOzrfzGP0zVNlnrpHdfa7OvJ66_oYfigZCfxV1iPJ7zgbRIDCdtv6cznKjn5SU6r5CHuWZEA7oRVzMhEtE3P46O-wwx4ce3y0b2qa4uDofTngre8BfZ5DpfcALgiWXb6zF279r9jxBEaYSqiy_ueHb1CLG2sW4FczuvgZekWAPPIw/43y/9i5EMPxLQZS2KzVoy374bA/h6/bR2k5hWTafYqzFxZaEwZYyXxFqDGAKngUPn0im7EyeA)  
+_22 minutes_ by Dragos Nedelcu
+
+A clear step-by-step roadmap for you to get to Senior Frontend Developer and beyond. Regardless of the level you are at right now, you will know exactly what you need to do to get to the next level.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-r5aei1LqixOIwQN0qeGQMnmrKI-lOazURqVUl2L38k3HUNSBPknBjR9Wl\_tIUvHx02TMG7G4wYZJW3EwDvwazbx-o0EB doQKa8ksa6ydby71e71YxNzf0sLTZnYVEpZkuw8e1k5ibEjYyD1\_ojLjUaZzN17isoavamXaj3yOjKhm5hy\_66zZwqWCU4-Yk1iKjif2stJnS8EiPLMp3cOpD8Og22c3Qdp6kEnqAcSBqgwquDPu 2EthcZMsFplzUykWqZ52TnHs11J5EDWuvGTbKGJW2T72imImCXBuRZy-aPjAjtlxqCCJw8qB1qH\_eAFI6PvwOuQjXxJycw103ZHGKgscZaxHpQJd1YdG1wStEmTP3OnBNKuG1TZnwD5Ah4 q04Y5c3yX9I5WAlt\_Ncq8xU32-Cz9j\_ds4\_rQM2JvQLUbJwwj\_Y3d2BaG1pq\_bDUErHwS8w HI36zlX2ML0Rf4l9DjJJ1hKpXpV9VJjtwRPt8RVpIAHGYerHirieL2fIZwOY7sAbvdRDLXw JPg63PfaqoZF63ce4L2Tsj9\_GDgSP\_BG7-Doy60EI0II5lYNFbc-iDH618\_qz3b8L-EhWRHuQj7L00-NmJ5p\_SYkJfnERBa/43y/9i5EMPxLQZS2KzVoy374bA/h0 /eExzenvNgpjNKZS82zkDPu4N-1fqXvg3UjFLpt45qjM)
+
+![](https://link.mail.beehiiv.com/ss/o/2neHg-Hzkdcq_goMOXZHDQ/43y/9i5EMPxLQZS2KzVoy374bA/ho.gif)
+
+\[如何将 Div 居中]\(https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyP1DkUcDeyDq9C9t9InwSM70ygHeY6cfPtkF7yPuHMLLp1vdSRzcdV8oEKtEsKjtyB2Wm9Dv47LpmZcV9i2KU5ej26u 4V9\_3RlQhzUOjWfQwl0IhM2QZckOPNnUTcLZ4RQ45YEtd6cZteZ9oEW1O\_C5USd31ORW8f82vXSU98Axkrx28MzNHTXDuZ1HDZ5wPlw/43y/9i5EMPxLQZS2KzVoy374bA/h1/H9 FPVLf7eJscrPJDLL-F34fcxG4HPYHrPipm3wP\_7fo)\
+*13 分钟* 乔什·科莫
+
+过去，将元素居中是 CSS 中最棘手的事情之一。随着语言的发展，我们获得了许多可以使用的新工具……但是我们如何选择最佳选项呢？我们什么时候使用 Flexbox、CSS Grid 或者其他东西？让我们深入研究一下。
+
+\[使用 OneSchema 启动顺畅的 CSV 导入]\(https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyBK1vigfMf6iCiqxW15UbA89wZ5xUxVDpPo6XgA8yY04n0ECy6qXugiumKTRRSvcQwqsf9W8EVbAZsu4wvEEp Ixss\_S5jkECTmZgxTuUoiCWSAEWI-ORQz-NMywlprd3Cw/43y/9i5EMPxLQZS2KzVoy374bA/h2/B4ugYZ57ah7SHZmEw670EuLR2QxL6I7lcdvBTB6Y6zE)\
+*由 OneSchema 赞助*
+
+OneSchema 是一个嵌入式 CSV 导入器，可以自动为您的用户匹配、验证和清理数据。凭借大量预构建验证和强大的 SDK，OneSchema 只需 30 分钟即可在您的应用程序中运行。 OneSchema 受到 Ramp、Scale AI 和 Vanta 等公司的信赖，是满足您所有数据导入需求的明智选择！
+
+\[代码可读性和性能提示]\(https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyDpkY1hzSDmTehBtISmD2AQhb6ZHaAj80CopWFG6eVckhivMz78CdMWgaFAfAPbmj34AUkRN1nqECj\_O7oAO5Jjg7h39Oi \_0jRkngS9tPGITwI8UdlwWJsPtlR9xXBAjoYQ3DyZH8PENomvO3kvUo52XAMgC\_xPKntn9h KyCHOO-jmNgtwZWugfzQJTvSmhZlw/43y/9i5EMPxLQZS2KzVoy374bA/h3/SFwMEdZ4CdbH BCm4555jXKu\_mqINcZjtc1FZhS7xg5A)\
+*15 分钟* Neha Sharma
+
+当您处理项目时，无论项目大小，您都需要关注代码质量、可读性、可维护性和可扩展性。编写好的代码还可以帮助您减少队友的公关评论。在本教程中，您将学习如何改进 React 代码。
+
+\[使用 D3.js 和 React 构建交互式数据可视化]\(https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyDeTcF\_5eFPJVHpagbPL9id-p2J7zXApu2hBlLyVGQ95h9liPhq5jpm2lQr3e7m-KX2uhLBHg7Z2Iy6aWkkR -WFX74y\_BbbH1fmL9-FxuTahsJ9Kai6VPcNYk9N2B6XCUXunWVEum7Qr99Hpsb7S0Zv2YBQ5hNKNH-q\_\_J5TCXSm09ZZVwLp0gcj0o7EOawIVhjzPQcCQa3u0Zc1HcrQUCM/43y/9i5EMPxLQZ S2KzVoy374bA/h4/u-jrOu63W3cq7bxPfzCe869\_I9H2c5DMPTN0zLtUU00 )\
+*36 分钟* Oluwabusayo Jacobs
+
+了解如何集成 React 和 D3.js 以创建响应式数据可视化（条形图、饼图、Chlopeth）、处理数据加载和操作元素。
+
+\[React 中的私有路由]\(https://link.mail.beehiiv.com/ss/c/cSWObR4MeC66qGxCYLRtYePl3b03zFT3oSvrkdF9GBZtTlp2ZEj2pVRI6r6jXqLZg5qOvLtP1VTAj7s\_6MKWiacPBq9D15zCEVOVOtA0Ga2M\_5WiY pdaVdt446mxejd\_yVVlE7hSooHdlKRvKnfj\_zgkKlaojzkJpQ4GgNgsrEFtGtet6I1sJ04Gfl9dAb4pqIZ5xJBzA7UA6miWM97Fvw/43y/9i5EMPxLQZS2KzVoy374bA/h5/vz d0R6mrKdN5VLR5htSFMMgxKKWcdqP5V9MeZqtt9Co)\
+*2 分钟* Arindam Majumder
+
+简介 在现代 Web 应用程序中，确保某些路由的隐私和安全是一个至关重要的方面。我们不希望每个人都访问我们网络应用程序的每个部分。为此，我们使用 React router v6 提供的私有路由。
+
+\[2024 年高级前端开发人员路线图]\(https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyOME1AgPTLWYrwN7JYLO4ir\_WLmocv4jlBeA6wfCAaBDHe27cjA4cpsiCKfaJpSJV986Vkn5nYtYblQRgmsmlgOzr fzGP0zVNlnrpHdfa7OvJ66\_oYfigZCfxV1iPJ7zgbRIDCdtv6cznKjn5SU6r5CHuWZEA7oRV zMhEtE3P46O-wwx4ce3y0b2qa4uDofTngre8BfZ5DpfcALgiWXb6zF279r9jxBEaYSqiy\_ue Hb1CLG2sW4FczuvgZekWAPPIw/43y/9i5EMPxLQZS2KzVoy374bA/h6/bR2k5hWTafYqzFxZaEwZYyXxFqDGAKngUPn0im7EyeA)\
+*22 分钟* 作者：Dragos Nedelcu
+
+清晰的分步路线图，帮助您晋升为高级前端开发人员及更高级别。无论您现在处于哪个级别，您都会确切地知道需要做什么才能达到下一个级别。
+
+#
+
+

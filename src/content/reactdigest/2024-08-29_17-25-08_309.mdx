@@ -1,0 +1,82 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#462 Web Workers, Comlink, Vite and TanStack Query
+description: RD#462 Web Workers, Comlink, Vite and TanStack Query
+date: 星期一 02 凌晨 七月 1o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/web-workers-comlink-vite-tanstack-query
+origin_site: https://newsletter.reactdigest.net/p/web-workers-comlink-vite-tanstack-query
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#462 Web Workers, Comlink, Vite and TanStack Query" url="https://newsletter.reactdigest.net/p/web-workers-comlink-vite-tanstack-query" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1Vp6D5xaVPNiiJDHJUsNbmf20Wk7YkXC9LCdbVkqZlRnKfEQn70lEXLIl72aglMC1wo5-dxS6mJVrglAkdLfXe6gikWoxLvUhbVOXuo9d5Kowgv4pVxZ-1FmVaeMqk57xGPeRkjsSwZi2IW_X9cLCNXth8N4N0B5UMmRLf7BQI2BRj_Yf5cKdHEq98ftBgeT9NHeRrIl-HCLG6ISirKMTZzw1bYlPfSsqSmOr0uiKI7Vrp7C4BqMSJTezbFy1rL4KcUrR7X8EYPjDIk2dqjo8U1qRTstfzdlOUTPACXBt-SWnG0Xa8rMaEzA0WNo7ENJRvcNJsKNqfOF3zB5VfzE0zDJhr_aBu5s9xg-i_3rbnPEJGmi3kwzGQDTlTIFHSV3X9ttUeVpBfbD43SVvKLCMwFmOrPRT15DfNmqOQskH0YWgi8UNpaUtbmCPip-IXv3_U7VlKbktPitbhUwuaVYt495waVn2H8XQXRzylPmFjicF9F7zFJ2gwZePjQ_wqk6FrhH9TW-NNSCC0FT0qSPIxTFT7kvlO3wg72sewG-dYu49Emju6SkN0UZQK6GIL00e28rwGcX0OzzVGZb6ZVnR1JBOL9DObmBCXc0T70qLbiiQGH-hkI9G3J02O4M91n1adpDTFen-qXNt5Hzt6NqIwG/47n/VsoaSShXRzKYMicxtWJ71Q/h0/h001.-aB5NLz6cDfQc-mxs0RALD6SpYc0CwVfCdiyg_Uh2Xc)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/47n/VsoaSShXRzKYMicxtWJ71Q/ho.gif)
+
+[Web Workers, Comlink, Vite and TanStack Query](https://link.mail.beehiiv.com/ss/c/u001.aPX4i1CZjyg0TJtq3966ENtvq_odNnpHkpdvDJ2PhR_jaHyWYurvjzOU9DObDw5acY_7TQfnX0kfZOmDpAuyIWhMsmiYhnZosGsy1AJ89kwtYQMkdVXbiQN9EB7BZdBudkC6KfX5qN1rFPx0i8OXH-mB8X41mw0hM3gt75QTfVTxcEhpDYDMuhozxqECcf-00hvh3ZRHY7EHtrhsGNzbyzw1KJzKB37VfqQ3CfqJ5grl5I6zHSAnL6nKy7x5IbXK/47n/VsoaSShXRzKYMicxtWJ71Q/h1/h001.OJCDFtql5mdluUcCypEdlsL2YyVlauEdV2oTfksYvLs)  
+_6 minutes_ by John Reilly
+
+Web Workers are a great way to offload work from the main thread. Comlink is a delightful way to communicate with Web Workers. TanStack Query is an awesome way to bring them together.
+
+[Tests are dead. Meticulous AI is here.](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzA37hCquJL7kvZO-rkPj6htQ/47n/VsoaSShXRzKYMicxtWJ71Q/h2/h001.J6yr5y-DIVx_260_1AbyR6T2L53Nc9zJwxnavtFdv90)  
+_sponsored by Meticulous_
+
+Meticulous AI is a tool which automatically creates and maintains a continuously evolving e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Backed by CTO of GitHub, Guillermo Rauch (next.js author), yc and others, it's built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[Wait for pending: A Suspense algorithm exploration](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVQOGIYIbQOa41zU84dQuydKH0E-FTzEobjF57WvbQLlQ_ayN11wPJxJq_uTjxmCYS0bn2tArVqQd7e6FLr97x6bKrq7o7OZPYFv8gAXMsvHf8jCM0zI_Dx1-vRHZoGs_Q6fpoUg9z3UGpe3KFZRbcBitGlw-oum5wBbuHzS3nTdkHdvmOPrursBeyf0lrH7Y1mp9ODX-Ec5dsSyqpjEMiEzhr18IqilOBUymoxvFLGfeCbQSTf4U9UsjKvAlPthe2x7bHgxie95uF3SsaLeNO1o/47n/VsoaSShXRzKYMicxtWJ71Q/h3/h001.m3NBloOi_ZHOwFkTL1gtZbLs1AuWym_G6gVEjSj99dQ)  
+_5 minutes_ by Alex Reardon
+
+'Wait for pending' is an interesting variation of the react@18 and react@19 Suspense algorithms. For flat async trees, 'wait for pending' allows for fast calling of render functions, and minimal re-renders. For trees with nested async components, child async components will have their initial render called slower than the react@18 algorithm.
+
+[Component, colocation, composition](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63rJvwVhne07AblaaahAqv4tmiugoqvYPzGiJrDdrvM4xaA5xrM0CZpfjrRZd-Rb8b_fxycE05oZI0rZx5pxikssqWPyCIb89JmKH1W1FIp02hDZMXuSREd73nl2_Q2vySZUnnWzGEl7Pfxaxi9H06jnrrIuotQ697YgK8XLBUdZfa8A5PQmvPr0ltU2-annnMnzNTjlXaFHXnO_Xa7EqD9k9-maQW96iCDmlvHx0pdvU/47n/VsoaSShXRzKYMicxtWJ71Q/h4/h001.Cxv2eA-TTzWtx-V95Eoxb6hLSKNDg53_Ai1IyxSdQXo)  
+_10 minutes_ by Bobae Kang
+
+Bobae’s take on the latest React drama and what it reveals about React's evolving strategy and ecosystem.
+
+[Using the Intersection Observer API with React](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v_DxMTfUzLX2DhXhlHu0BEoUbxctUeCmuYy73flBw1IkDBNhsS6-JEZl7u2qhudk-cNEgYVvpOk6RdBWC2eD1xd1H1nnhIHnNHvn9ikLVvPyuR7ll7EDWsasoOPVne3AeOVkAvjmibw2XhUeFJcLsIbXwUZeCiEPzrZypedXjWb4CDmxyqBTj1i5m2-z-Lgw8lFiygkGMayImO0KT4Q9KrZjvO-FRvwoDWA195UhxULtcmNwp6PbwQ/47n/VsoaSShXRzKYMicxtWJ71Q/h5/h001.kz4gjuJYhG5NiLv0DgJjJMbgQ-9T1O7NMv6tEwsLtso)  
+_3 minutes_ by Corina Udrescu
+
+The Intersection Observer API allows us to easily check if two items are intersecting.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1Vp6D5xaVPNiiJDHJUsNbmf20Wk7YkXC9LCdbVkqZlRnKfEQn70lEXLIl72aglMC1wo5-dx S6mJVrglAkdLfXe6gikWoxLvUhbVOXuo9d5Kowgv4pVxZ-1FmVaeMqk57xGPeRkjsSwZi2IW\_X9cLCNXth8N4N0B5UMmRLf7BQI2BRj\_Yf5ckdHEq98ftBgeT9NHerril-HCLG6ISirKMTZzw1b YlPfSsqSmOr0uiKI7Vrp7C4BqMSJTezbFy1rL4KcUrR7X8EYPjDIk2dqjo8U1qRTstfzdlOUTPACXBt-SWnG0Xa8rMaEzA0WNo7ENJRvcNJsKNqfOF3zB5VfzE0zDJhr\_aBu5s9xg-i\_3rbnPEJGmi 3kwzGQDTlTIFHSV3X9ttUeVpBfbD43SVvKLCMwFmOrPRT15DfNmqOQskH0YWgi8UNpaUtbmCPip-IXv3\_U7VlKbktPitbhUwuaVYt495waVn2H8XQXRzylPmFjicF9F7zFJ2gwZePjQ\_wq k6FrhH9TW-NNSCC0FT0qSPIxTFT7kvlO3wg72sewG-dYu49Emju6SkN0UZQK6GIL00e28rwGcX 0OzzVGZb6ZVnR1JBOL9DObmBCXc0T70qLbiiQGH-hkI9G3J02O4M91n1adpDTFen-qXNt5Hzt6 NqIwG/47n/VsoaSShXRzKYMicXTWJ71Q/h0 /h001.-aB5NLz6cDfQc-mxs0RALD6SpYc0CwVfCdiyg\_Uh2Xc)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/47n/VsoaSShXRzKYMicxtWJ71Q/ho.gif)
+
+\[Web Workers、Comlink、Vite 和 TanStack 查询]\(https://link.mail.beehiiv.com/ss/c/u001.aPX4i1CZjyg0TJtq3966ENtvq\_odNnpHkpdvDJ2PhR\_jaHyWYurvjzOU9DObDw5acY\_7TQfnX0kfZOmDpAuyIWhMsmiYhnZ osGsy1AJ89kwtYQMkdVXbiQN9EB7BZdBudkC6KfX5qN1rFPx0i8OXH-MB8X41mw0hM3gt75QT fVTxcEhpDYDMuhozxqECcf-00hvh3ZRHY7EHtrhsGNzbyzw1KJzKB37VfqQ3CfqJ5grl5I6zH SAnL6nKy7x5IbXK/47n/VsoaSShXRzKYMicxtWJ71Q/h1/h001.OJCDFtql5mdluUcCypEdlsL2YyVlauEdV2oTfksYvLs)\
+*6 分钟* 约翰·赖利 (John Reilly)
+
+Web Workers 是从主线程卸载工作的好方法。 Comlink 是一种与 Web Workers 进行交流的令人愉快的方式。 TanStack Query 是将它们结合在一起的绝佳方式。
+
+\[测试已死。细致的AI就在这里。]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzA37hCquJL7kvZO-rkPj6htQ/47n/VsoaSShXRz KYMicxtWJ71Q/h2/h001.J6yr5y-DIVx\_260\_1AbyR6T2L53Nc9zJwxnavtFdv90)\
+*由精心赞助*
+
+Meticulous AI 是一款自动创建和维护不断发展的 e2e UI 测试套件的工具，该套件涵盖应用程序的每个角落 - 无需开发人员进行任何干预。在 GitHub 首席技术官 Guillermo Rauch（next.js 作者）、yc 和其他人的支持下，它是从 Chromium 级别构建的，具有确定性调度引擎 - 使其成为唯一消除碎片的测试工具。
+
+\[等待待处理：Suspense 算法探索]\(https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu\_fY2A1vmVQOGIYIbQOa41zU84dQuydKH0E-FTzEobjF57WvbQLlQ\_ayN11wPJxJq\_uTjxmCYS0bn2tArVqQd 7e6FLr97x6bKrq7o7OZPYFv8gAXMsvHf8jCM0zI\_Dx1-vRHZoGs\_Q6fpoUg9z3UGpe3KFZRbc BitGlw-oum5wBbuHzS3nTdkHdvmOPrursBeyf0lrH7Y1mp9ODX-Ec5dsSyqpjEMIEzhr18Iqil OBUymoxvFLGfeCbQSTf4U9UsjKvAlPthe2x7bHgxie95uF3SsaLeNO1o/47n/VsoaSShXRzKYMicxtWJ71Q/h3/h001.m3NBloOi\_ZHOwFkTL1gtZbLs1AuWym\_G6gVEjSj99dQ) \
+*5 分钟* 亚历克斯·里尔登 (Alex Reardon)
+
+“等待待处理”是react@18 和react@19 Suspense 算法的一个有趣的变体。对于平面异步树，“等待挂起”允许快速调用渲染函数并最小化重新渲染。对于具有嵌套异步组件的树，子异步组件的初始渲染调用速度将慢于react@18算法。
+
+\[组件、托管、组合]\(https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63rJvwVhne07AblaaahAqv4tmiugoqvYPzGiJrDdrvM4xaA5xrM0CZpfjrRZd-Rb8b\_fxycE05oZI0r Zx5pxikssqWPyCIb89JmKH1W1FIp02hDZMXuSREd73nl2\_Q2vySZUnnWzGEL7Pfxaxi9H06jnrrIuotQ697YgK8XLBUdZfa8A5PQmvPr0ltU2-annnMnzNTjlXaFHXnO\_Xa7EqD9k9-maQW9 6iCDmlvHx0pdvU/47n/VsoaSShXRzKYMicxtWJ71Q/h4/h001.Cxv2eA-TTzWtx-V95Eoxb6hLSKNDg53\_Ai1IyxSdQXo)\
+*10 分钟* 作者：Bobae Kang
+
+Bobae 对最新 React 戏剧的看法以及它揭示了 React 不断发展的战略和生态系统。
+
+\[将 Intersection Observer API 与 React 结合使用]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v\_DxMTfUzLX2DhXhlHu0BEoUbxctUeCmuYy73flBw1IkDBNhsS6-JEZl7u2qhudk-cNE gYVvpOk6RdBWC2eD1xd1H1nnhIHnNHvn9ikLVvPyuR7ll7EDWsasoOPVne3AeOVkAvjmibw2XhUeFJclsIbXwUZeCiEPzrZypedXjWb4CDmxyqBTj1i5m2-z-Lgw8lFiygkGMayImO0KT4Q9K rZjvO-FRvwoDWA195UhxULtcmNwp6PbwQ/47n/VsoaSShXRzKYMicxtWJ71Q/h5/h001。 kz4gjuJYhG5NiLv0DgJjJMbgQ-9T1O7NMv6tEwsLtso)\
+*3 分钟* Corina Udrescu
+
+Intersection Observer API 允许我们轻松检查两个项目是否相交。
+
+#
+
+

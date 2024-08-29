@@ -1,0 +1,92 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#449 Flaky Tests In React： Detection, Prevention and Tools
+description: RD#449 Flaky Tests In React： Detection, Prevention and Tools
+date: 星期二 12 凌晨 四月 2o 2024
+author: reactdigest
+origin_url: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fflaky-tests-react-detecti?= =?us-ascii?Q?on-prevention-tools?=
+origin_site: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fflaky-tests-react-detecti?= =?us-ascii?Q?on-prevention-tools?=
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#449 Flaky Tests In React： Detection, Prevention and Tools" url="=?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fflaky-tests-react-detecti?= =?us-ascii?Q?on-prevention-tools?=" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1V7MnuGy12VmdAYUnYqBxpwlmmQ-CiOANZjdc0Ybb1XQowLANZllI00duLaYiSlMsDWqHIEVFOjcl5SgiP-tRyjgjKPzLQ998_43AvcXDXPzmbFqPSwqQFnAOTjI5u8HiQymfEF3EG-1BIMwY7WZzBFMTSILXkVPIX114KdqGFt8I0pLwI0WS6uUq_e8jn1ZCXWEP4qQBG9IrKeFeMeKicShHnuzm3aBrgnrXcCEPB3FjXZl8Aq_zZr_CQsIAu_Scy3jBnBNnNV21bGksYkDJF0quGssYEZ9S6gr-uXW3CTNLgCnuNujSz7WArqSiBH4bpc9W1Fsf-vbjX_4CMChFoRyPvgndq_LrJDIFSTqsv6jiO1LgcLcSVfGEFmytshLl15ZFrIsZ-KC4gYGCF6D918ZK4diJIqPJSGUeEb5adSHaao_hFs-4lX-XjPvFkMl06SPul2q_Ay-NUkIGKxTQmr6pA04Grcq6ibEJCvyjIGSSJlirFR5xfnetfbEiepMUUmpkVugaFwF4ocud0v-zQc_rIw-miIWzG-LC5THyeI0CR_ujWQe2asA0J0X5ROonZcn7XK6Wldc5Z_uGp_l9hAv3vZjDdGLwpvAcEva-DI7FyZZ7k3odAW1V-Khp4QJixvBfefoX6vy8kS5r1f6E_flUzjd5LmLqC9p_q1EVHQTw/455/hTSmS2ZqQ9CxYYAd6uiYdg/h0/h001.Ay67tU1ykclDNdYzS7HQryDP1SzofsOfVfGWpRTRWgw)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/455/hTSmS2ZqQ9CxYYAd6uiYdg/ho.gif)
+
+[Flaky Tests In React: Detection, Prevention and Tools](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO7Xeh93nnKEe_x2Irs-5DUOtu4jDY0RQa2p_juDc02dJDZ7B6XRxg5pJzSOoaPtTanNBI8GLfV1a1ozNK7a4ZXlPYmOR9pqLCM9BprR5EiFSt2h-xk2AaVuam537iLn9u8-tgWuH2zxqzHe80OTTTT-Yjnr_64fj6HCGIfkFNoozzJ-d5fRGCadxFYrec6opGlGkzDEpuCYt0Mzkoq645E0/455/hTSmS2ZqQ9CxYYAd6uiYdg/h1/h001.Jmi9-56VuQrPuSJW17NRUNxhpA0-whylEznkrcSPEjU)  
+_15 minutes_ by Victor Ayomipo, Tomas Fernandez
+
+This guide explores the causes, detection, and fixes for flaky tests in React, ensuring code quality and a smooth user experience.
+
+[Omlet React Analytics - Measure component & prop adoption](https://link.mail.beehiiv.com/ss/c/u001.GyLXS_kgZ_zhliVlX2b_SWCnHaEmu0ZUjW34u1J7dvkG4olRn3Sz0yD_F5iiryaJOSEKB1qmku6M6Vt4FBtbuNd8yv_3ixcetNvERSd2PW8/455/hTSmS2ZqQ9CxYYAd6uiYdg/h2/h001.n2Fw3b5VJO6GK-M8y8kgrmLhv8jQZIsUgq3Ly-oIBQc)  
+_sponsored by Omlet_
+
+Imagine being able to track most popular, least used, unused, and newly created React components and props directly in your code. Gain visibility into component and prop usage in your codebase and drill down into trends and gaps. Turn insights into specific codebase improvements — like what code to update, deprecate, or migrate. It takes 5 minutes to set up.
+
+[React useEffect and objects as dependency](https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhYf6Tadtz5p3wSZz-URRP1uAFAta-gvlDeRLxYGk0SMNgMhLhiXJOmQPUONc7byIdTj0PW2470cY6EXx87jzD6ZS_nN3LslpgpMpud1Mq3iCGRpCYI6RS8K_rBJ3_Cew8zPF4Rq5YiCFs_iW13mO3xWJYwfP54R0upeO1OZXXOyJkREzHYRMoy0I84Bm7oDSrlb94YWdxwOtRN8B-WhgOJyWZB3WzsSg3-ckFZvzGo7dNMJHOqdZxBWLQKR6o8VJZQ/455/hTSmS2ZqQ9CxYYAd6uiYdg/h3/h001.KRXq9g2N05GMVmMpSWe7Ls6ztGWfBeOg2rnirEh9sqE)  
+_4 minutes_ by Johannes Kettmann
+
+React’s useEffect hook can lead to tricky situations. If you’re not careful it can cause unnecessary executions of the effect or even infinite re-renders. Especially when using objects as dependencies. Here are 4 approaches that avoid unnecessary executions.
+
+[What is a layout in React?](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZ-pyUg2ztC9LxMbdIC_TPg-gsADU5HyAwfiKwCNXkyYUoFU1WVotEF0XRlH3zhx7nKN3qWavBKWdTG0zTJ0L8ifITT2kZnFmHT63r4GudLllnVNBijMCxw41IJve0zlAhRiXIgdruvq-R-ECdnDR5Wso3WLD7IsB70ONfoa1yKa_B3CGWkBT5eOeFkzFXMlynu_KfjDMPqeTykrhlnSM3j2FBM2NE2w9DKlnRB1tmYd/455/hTSmS2ZqQ9CxYYAd6uiYdg/h4/h001.4Ns9Qj-3HfigGWATThKivlMqOj9KDvUSDUChgme6_lk)  
+_7 minutes_ by Eric Burel
+
+Layout, pages, components are core concepts of React development.
+
+[A faster React.memo()](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvvwS6kwU-gqlGsjl_HDVu60YWa32htQ-MLShVSsAXZ6gZzSLI3DVZDtOcXobzgi7sUrnduQ_J6eELxC1p2_9x2w7_1lgVP9A_HbUTMA3vnz4CVkk7WvaXhYm_ep1aopjDq2fH4JIab3s_76a5AzjAdOCQiE2Rj-wJPomPGzIihjER0_fT1C6URo5_kqHi8qXu6B-ebBNx-f8YFBxHzDS1WU/455/hTSmS2ZqQ9CxYYAd6uiYdg/h5/h001.b5b2fdqmDbA2rDD3WktcgGA8nG4us9WpkfJ-fehq7qk)  
+_7 minutes_ by romgrk
+
+Recently, I spent time optimizing React code, and the obvious answer is, as always, React.memo(). So to speed things up I added a bunch of them everywhere because you should memo all the things by default anyway. This lead me to think if there was a way to make React.memo() faster.
+
+[Power of Partial Prerendering with Bun](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw9Yzs-bcwnEVCWGYi6hqVE6M5kh_ez1loQcYC8sKrYb9QVyXaEgZkfHM4HE9jO__KTcieOkxFRi6tMoC54_kzkppcpacj8YMAdtUra8UdoJVcfRV3V1GIMzBupI9YWgRKhQR2ZfX_kgfojZJosyiE4uZ6DmvLb86hZ8OGwrL_V25mFcJ9G9RyyW8v_A1Bhds22Zt50H7wHPg6RK-07LehExy5ztvtdC9c484PxRiUkKS/455/hTSmS2ZqQ9CxYYAd6uiYdg/h6/h001.lIvt4TLaj0hgbFOw78TxSb3hSTGmiljZaoyruWseU98)  
+_5 minutes_ by Aral Roca
+
+Unlock the power of partial pre-rendering with Bun, optimizing web application performance and package size effortlessly.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1V7MnuGy12VmdAYUnYqBxpwlmmQ-CiOANZjdc0Ybb1XQowLANZllI00duLaYiSlMsDWqHIEVFOjcl 5SGIP-tRyjgjKPzLQ998\_43AvcXDXPzmbFqPSwqQFnAOTjiI5u8HiQymfEF3EG-1BIMwY7WZzBFMTSILXkVPIX114KdqGFt8I0pLwI0WS6uUq\_e8jn1ZCXWEP4qQBG9IrkefeMeKicShHnuzm3aBrgnr XcCEPB3FjXZl8Aq\_zZr\_CQsIAu\_Scy3jBnBNnNV21bGksYkDJF0quGssYEZ9S6gr-uXW3CTNLgCnuNuNujSz7WArqSiBH4bpc9W1Fsf-vbjX\_4CMChFoRyPvgndq\_LrJDIFSTqsv6jiO1LgcL CSVfGEFmytshLl15ZFrIsZ-KC4gYGCF6D918ZK4diJIqPJSGUeEb5adSHAao\_hFs-4lX-XjPvFkMl06SPul2q\_Ay-NUkIGKxTQmr6pA04Grcq6ibEJCvyjIGSSJlirFR5xfnetfbEiepMUUmpkVugaFwF4ocud 0v-zQc\_rIw-miIWzG-LC5THyeI0CR\_ujWQe2asA0J0X5ROonZcn7XK6Wldc5Z\_uGp\_l9hAv3vZjDdGLwpvAcEva-DI7FyZZ7k3odAW1V -Khp4QJixvBfefoX6vy8kS5r1f6E\_flUzjd5LmLqC9p\_q1EVHQTw/455/hTSmS2ZqQ9CxYYAd6uiYdg/h0/h001.Ay67tU1ykclDNdYzS7HQryDP1SzofsOfVfGWpRTRWgw)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/455/hTSmS2ZqQ9CxYYAd6uiYdg/ho.gif)
+
+\[React 中的不稳定测试：检测、预防和工具ZXlPYmOR9pqLCM9BprR5EiFSt2h-xk2AaVuam537iLn9u8-tgWuH2zxqzHe80OTTTT-Yjnr\_64fj6HCGIfkFNoozzJ-d5fRGCadxFYrec6opGlGkzDEpuCYt0Mzkoq645E0/455/hTSmS2Z qQ9CxYYAd6uiYdg/h1/h001 .Jmi9-56VuQrPuSJW17NRUNxhpA0-whylEznkrcSPEjU)\
+*15 分钟*，维克多·阿约米波 (Victor Ayomipo)、托马斯·费尔南德斯 (Tomas Fernandez)
+
+本指南探讨了 React 中不稳定测试的原因、检测和修复，确保代码质量和流畅的用户体验。
+
+\[Omlet React Analytics - 衡量组件和道具的采用情况]\(https://link.mail.beehiiv.com/ss/c/u001.GyLXS\_kgZ\_zhliVlX2b\_SWCnHaEmu0ZUjW34u1J7dvkG4olRn3Sz0yD\_F5iiryaJOSEKB1qmku6M6Vt4FBtbuNd8yv\_3ixcetNvERS d2PW8/455/hTSmS2ZqQ9CxYYAd6uiYdg/h2/h001.n2Fw3b5VJO6GK-M8y8kgrmLhv8jQZIsUgq3Ly-oIBQc)\
+*由欧姆莱特赞助*
+
+想象一下，能够直接在代码中跟踪最流行、最少使用、未使用和新创建的 React 组件和 props。深入了解代码库中组件和道具的使用情况，并深入了解趋势和差距。将见解转化为特定的代码库改进 - 例如要更新、弃用或迁移哪些代码。设置需要 5 分钟。
+
+[React useEffect and objects as dependency](https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhYf6Tadtz5p3wSZz-URRP1uAFAta-gvlDeRLxYGk0SMNgMhLhiXJOmQPUONc7byIdTj0PW2470cY6EXx87jzD6ZS_nN3LslpgpMpud1Mq3iCGRpCYI6RS8K_rBJ3_Cew8zPF4Rq5YiCFs_iW13mO3xWJYwfP54R0upeO1OZXXOyJkREzHYRMoy0I84Bm7oDSrlb94YWdxwOtRN8B-WhgOJyWZB3WzsSg3-ckFZvzGo7dNMJHOqdZxBWLQKR6o8VJZQ/455/hTSmS2ZqQ9CxYYAd6uiYdg/h3/h001.KRXq9g2N05GMVmMpSWe7Ls6ztGWfBeOg2rnirEh9sqE)\
+*4 分钟* 约翰内斯·凯特曼
+
+React 的 useEffect 钩子可能会导致棘手的情况。如果您不小心，可能会导致不必要的效果执行，甚至无限的重新渲染。特别是当使用对象作为依赖项时。这里有 4 种避免不必要执行的方法。
+
+\[React 中的布局是什么？]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZ-pyUg2ztC9LxMbdIC\_TPg-gsADU5HyAwfiKwCNXkyYUoFU1WVotEF0XRlH3zhx7nKN3qWavBKWdTG0zTJ0 L8ifITT2kZnFmHT63r4GudLllnVNBijMCxw41IJve0zlAhRiXIgdruvq-R-ECdnDR5Wso3WLD7IsB70ONfoa1yKa\_B3CGWkBT5eOeFkzFXMlynu\_KfjDMPqeTykrhlnSM3j2FBM2NE2w9DKlnRB1tmYd/4 55/hTSmS2ZqQ9CxYYAd6uiYdg/h4/h001.4Ns9Qj-3HfigGWATThKivlMqOj9KDvUSDUChgme6\_lk) \
+*7 分钟* 作者：Eric Burel
+
+布局、页面、组件是React开发的核心概念。
+
+\[更快的 React.memo()]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvvwS6kwU-gqlGsjl\_HDVu60YWa32htQ-MLShVSsAXZ6gZzSLI3DVZDtOcXobzgi7sUrnduQ\_J6eELxC1p2 \_9x2w7\_1lgVP9A\_HbUTMA3vnz4CVkk7WvaXhYm\_ep1aopjDq2fH4JIab3s\_76a5AzjAdOCQiE2Rj-wJPomPGzIihjER0\_fT1C6URo5\_kqHi8qXu6B-ebBNx-f8YFBxHzDS1WU/455/hTSmS2ZqQ 9CxYYAd6uiYdg/h5/h001。 b5b2fdqmDbA2rDD3WktcgGA8nG4us9WpkfJ-fehq7qk)\
+*7 分钟* 由 romgrk 提供
+
+最近，我花了一些时间优化 React 代码，显而易见的答案是一如既往的 React.memo()。因此，为了加快速度，我在各处添加了一堆它们，因为无论如何您都应该默认记住所有内容。这让我思考是否有办法让 React.memo() 更快。
+
+\[Bun 部分预渲染的威力]\(https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw9Yzs-bcwnEVCWGYi6hqVE6M5kh\_ez1loQcYC8sKrYb9QVyXaEgZkfHM4HE9jO\_\_KTcieOkxFRi6tMoC54 \_kzkppcpacj8YMAdtUra8UdoJVcfRV3V1GIMzBupI9YWgRKhQR2ZfX\_kgfojZJosyiE4uZ6DmvLb86hZ8OGwrL\_V25mFcJ9G9RyyW8v\_A1Bhds22Zt50H7wHPg6RK-07LehExy5ztvtdC9c 484PxRiUKKS/455/hTSmS2ZqQ9CxYYAd6uiYdg/h6/h001.lIvt4TLaj0hgbFOw78TxSb3hSTGmiljZaoyruWseU98)\
+*5 分钟* Aral Roca
+
+使用 Bun 释放部分预渲染的强大功能，轻松优化 Web 应用程序性能和包大小。
+
+#
+
+

@@ -1,0 +1,102 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#458 Sneaky React Memory Leaks
+description: RD#458 Sneaky React Memory Leaks
+date: 星期一 01 凌晨 六月 3o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/sneaky-react-memory-leaks
+origin_site: https://newsletter.reactdigest.net/p/sneaky-react-memory-leaks
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#458 Sneaky React Memory Leaks" url="https://newsletter.reactdigest.net/p/sneaky-react-memory-leaks" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XQVkmYkpTr-zqAcMvOaBQXPSz-VCl3i6FptpvWIy_gMiP58ZK8FdGHtI7nfXtkC3DTK_PRIJt3NVsNkwie61t1Sg3JJlq2mDbJL36ymb2JcCT4RVv8kiHBpdzfjWo1QE6Sy0F_RGQRKmPwmrm7kw2aCdeiCuj2O2qZ5bnRjyku5zChLoLonF333j8rXmU6QLVHpiFXtJL9Xq3q2Cdj-gtEoICaDRdV7xLVjta0PO2yU5DqiGqdKw8WpnCQGpc8nb5_hYGMq_0PzzZYkxhWfyDBWJqZ92eHAn5mCnRCmxAFqUpsxN0JzPAstN3oknBwiXP9cfxE1w2AZlNjO9Co6UHe2q2pVWzb72ILwqcod6JgmyobaRrURLhnHKofqToEtJIlezMAJT0i6DtJua9jdVW71uhxBfT5Q2wiIhSGmCQ0xlAphWWy04gZYIikZj-0OIqcbBHLn8bD8wxltmCdMac4KRXF4AF9Eb4Eb1KX9N_sQZfxrnQIsQ9ltQeHv-wa9ugwRVd2vIEGEjhXjDQbBhTJkck9PsEPM6NashzzGc65d39axkGNAM91nLzl9cfzTriK0_Bao1O4T2BOYnnzXke87BtHVLK1ZWfI4_bRknLMkw/46v/CzhmTVwHSACBZ29S_8qQJQ/h0/h001.SWVbPTDZG3OvC_oNq4lB4ksnx_SU6k4vZczKrcJra70)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/46v/CzhmTVwHSACBZ29S_8qQJQ/ho.gif)
+
+[Sneaky React Memory Leaks: How useCallback and closures can bite you](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAOzr0tMGi1OJ5XK-II-s05ZGc94urOwxSZdAACHdbpE1INUyoWjBdOHbk9WV0ncb2ENTmrFooi51xPT70NRpeEO7jfT8Wcuiq_oirK8vxGwfrRI70THEGNENi2dDETQWy1j0W22HgsIM9kntXl0_23feYhD7ZAhjMcUaApePpUE_mVN2U49ezG6Yh2cf2S6nYYw/46v/CzhmTVwHSACBZ29S_8qQJQ/h1/h001.sCAtT95ca7BsSpLViJbrc2tx7WmGPzh7eb9wslg3noo)  
+_10 minutes_ by Kevin Schiener
+
+Avoid performance issues caused by memory leaks in your React applications by understanding closures, useCallback, and best practices.
+
+[Use AI to replace your end-to-end UI testing](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzA37hCquJL7kvZO-rkPj6htQ/46v/CzhmTVwHSACBZ29S_8qQJQ/h2/h001.2xPFp6PnJmIpsd-RggS2Oa8BQuAcAFMWkUbzGSkPzks)  
+_sponsored by Meticulous_
+
+Meticulous AI is a tool which automatically creates and maintains a continuously evolving e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Backed by CTO of GitHub, Guillermo Rauch (next.js author), yc and others, it's built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[Combining React Server Components with react-query for Easy Data Management](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfaSOFJc2XPJZaMvVYObtcgMJFT03gq20GngkWjKZI-WK5eH687onzuLU1VXFS5a963WGtnhX1LIZ1qxKLYEcoRuTSrKBzMqS0nzjwULuFCSbopnzcI1KclroiHGxKM3HvW8moGLZmrUE_hW34qBPohBY14U7qGE0uo1TZ7qjRrCa0m3vDFQ861BBBqiadn-MYmMSBw4jD2x3EVONenl2_zgJgF4F65YzKhCZNBC9Niue0yn9C68UjpQiy2UBTtXentqd2juehVytbRH9tSagQXY/46v/CzhmTVwHSACBZ29S_8qQJQ/h3/h001.unaX4vD3j_uN4xy1L2H3pZ6u8tXmYVuLwF1qTlfZQv0)  
+_25 minutes_ by Adam Rackis Spotify
+
+Server-side component rendering can improve data loading efficiency over client-rendered SPAs. Despite their benefits, such as out-of-order streaming, they have limitations, including slow server action updates and lack of support for client-side interactivity. React Query complements RSC by managing client-side data updates, addressing some of RSC's drawbacks.
+
+[Build a notes app with React Query and JSON server](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v_DxMTfUzLWUnXrsKgR8G6aOEbNJdGgyO9lB61AoNFTU8mUVwOjAbn_shu9Tu398FPbJwSFyhmMC3ihvX1XtxSpfIfJUL8YU6Fdzfs59POIVtdir5qpyAjRZYVfm-k0mIIgbL0NQV6WF-AzpW8RXpV9tkCsNYhIKzqoMLqnh0bj_cnQVBe9EgKRnSeFxm3H5MffvMgk66-hQ7K3oCvsTSc5q9FK29GfLDehzDiKD7g_BjIdOvkz6Gg/46v/CzhmTVwHSACBZ29S_8qQJQ/h4/h001.iNj5NQOnjNHucxQBcUp35MU3_nMjs_PCYfq4QC6nN1s)  
+_2 minutes_ by Corina Udrescu
+
+Build a Google Keep inspired Notes app using React Query for fetching the data and json-server as the backend API.
+
+[Type-safe module mocking in Storybook](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO_OTDGp1H-NbTP7ItPiRcLsCkUrmqC_N7i-uyGwigioqd6qyz44eIKItHOFX2KmuhXD_JIrJGKOQ5DEUIO49hXhRc8GrOBz3I5NSJ8xG6Jeip4lK6fd3J3Zo0JdihWHyZYXKPeX3W14mKBKcnFGIC1Q-GBCMfbI-JTf8Hg_pYRBRT1svIJphy0NjqzoW6wXGI8S3C-JfoIaFFfmCbMpyY34/46v/CzhmTVwHSACBZ29S_8qQJQ/h5/h001.oRx9CMl8uWg-dugnom9cUU8bWKsvcZNCmUVaYbEu2lk)  
+_10 minutes_ by Jeppe Reinhold
+
+Consistency is crucial to develop and test UI in isolation. Mocking types of inputs with external dependencies has historically been difficult in Storybook. And that is what we’re solving today with module mocking
+
+[Automatic Query Invalidation after Mutations](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgFxeHolb4-LyCzATOQf_v07HQv9Z2kABY8qQUPCaGotz2fgxnzF4Z0S4bqySksp2iZGMZJcj_k4pll5OdjN_doVjvbtQNX8NJJWi2s298I54Ch67zIET7x4Pi9whXLVA7dFU4aawzZpLs3A5plhdVegCJH33gRlIkEEQ9VySvNgkLA_1hWWtdYXhg4ZO8xJpouUtQdZTFjiNTCoyNpd-mk3A/46v/CzhmTVwHSACBZ29S_8qQJQ/h6/h001.LxbBiqRhaxxwSPy0nvIqa-kFhGW0K5ymYeFo5lO5GUQ)  
+_9 minutes_ by Dominik Dorfmeister
+
+Even though there is nothing built into React Query, it doesn't need a lot of code to implement automatic query invalidation in user-land thanks to the global cache callbacks.
+
+[Build local-first React SPAs with in-browser SQLite and self-hostable sync layer](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqVjrJfMDf9Ee_ZgdrPM7zWc72gNfgAXWE-EK0_rtNu0GPLeLtgQUOlhpX-NdAdLgIT2r6B_3PfxGQJb8G2e9BcoKYYG0U5en98jKvO-Qx7tXsTjFAM0OinMo0DuPoWPXq3JUHMuNNxLVX_4t_1kP26Y/46v/CzhmTVwHSACBZ29S_8qQJQ/h7/h001.spa8RqEBHCZiy8H5ZXaRY_uEm-IsdZzEwXGKbHxBlAw)  
+_sponsored by Powersync_
+
+PowerSync is a self-hostable sync layer that connects to any Postgres and keeps in-browser SQLite in sync in real-time. Leverage local-first architecture for instant reactivity, real-time collaboration and full offline support for React apps. Set up the self-host demo with a single Docker compose command.
+
+#
+</Detail>
+
+[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XQVkmYkpTr-zqAcMvOaBQXPSz-VCl3i6FptpvWIy_gMiP58ZK8FdGHtI7nfXtkC3DTK_PRIJt3NVsNkwie61t1Sg3JJlq2mDbJL36ymb2JcCT4RVv8kiHBpdzfjWo1QE6Sy0F_RGQRKmPwmrm7kw2aCdeiCuj2O2qZ5bnRjyku5zChLoLonF333j8rXmU6QLVHpiFXtJL9Xq3q2Cdj-gtEoICaDRdV7xLVjta0PO2yU5DqiGqdKw8WpnCQGpc8nb5_hYGMq_0PzzZYkxhWfyDBWJqZ92eHAn5mCnRCmxAFqUpsxN0JzPAstN3oknBwiXP9cfxE1w2AZlNjO9Co6UHe2q2pVWzb72ILwqcod6JgmyobaRrURLhnHKofqToEtJIlezMAJT0i6DtJua9jdVW71uhxBfT5Q2wiIhSGmCQ0xlAphWWy04gZYIikZj-0OIqcbBHLn8bD8wxltmCdMac4KRXF4AF9Eb4Eb1KX9N_sQZfxrnQIsQ9ltQeHv-wa9ugwRVd2vIEGEjhXjDQbBhTJkck9PsEPM6NashzzGc65d39axkGNAM91nLzl9cfzTriK0_Bao1O4T2BOYnnzXke87BtHVLK1ZWfI4_bRknLMkw/46v/CzhmTVwHSACBZ29S_8qQJQ/h0/h001.SWVbPTDZG3OvC_oNq4lB4ksnx_SU6k4vZczKrcJra70)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/46v/CzhmTVwHSACBZ29S_8qQJQ/ho.gif)
+
+\[偷偷摸摸的 React 内存泄漏：useCallback 和闭包如何影响您]\(https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn\_0mUAOzr0tMGi1OJ5XK-II-s05ZGc94urOwxSZdAACHdbpE1INUyoWjBdOHbk9WV0ncb2ENTmrFooi5 1xPT70NRpeEO7jfT8Wcuiq\_oirK8vxGwfrRI70THEGNENi2dDETQWy1j0W22HgsIM9kntXl0\_2 3feYhD7ZAhjMcUaApePpUE\_mVN2U49ezG6Yh2cf2S6nYYw/46v/CzhmTVwHSACBZ29S\_8qQJQ/ h1/h001.sCATT95ca7BsSpLViJbrc2tx7WmGPzh7eb9wslg3noo)\
+*10 分钟* 凯文·席纳
+
+通过了解闭包、useCallback 和最佳实践，避免 React 应用程序中因内存泄漏引起的性能问题。
+
+\[使用 AI 替代端到端 UI 测试]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzA37hCquJL7kvZO-rkPj6htQ/46v/Czhm TVwHSACBZ29S\_8qQJQ/h2/h001.2xPFp6PnJmIpsd-RggS2Oa8BQuAcAFMWkUbzGSkPzks)\
+*由精心赞助*
+
+Meticulous AI 是一款自动创建和维护不断发展的 e2e UI 测试套件的工具，该套件涵盖应用程序的每个角落 - 无需开发人员进行任何干预。在 GitHub 首席技术官 Guillermo Rauch（next.js 作者）、yc 和其他人的支持下，它是从 Chromium 级别构建的，具有确定性调度引擎 - 使其成为唯一消除碎片的测试工具。
+
+\[将React服务器组件与react-query相结合以实现轻松的数据管理]\(https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfaSOFJc2XPJZaMvVYObtcgMJFT03gq20GngkWjKZI-WK5eH687onzuLU1VXFS5a963WGtnhX1LIZ1qx KLYEcoRuTSrKBzMqS0nzjwULuFCSbopnzcI1KclroiHGxKM3HvW8moGLZmrUE\_hW34qBPohBY14U7qGE0uo1TZ7qjRrCa0m3vDFQ861BBBqiadn-MYmMSBw4jD2x3EVONenl2\_zgJgF4F65YzKhCZNBC9纽埃0yn9C68UjpQiy2UBTtXentqd2juehVytbRH9tSagQXY/46v/CzhmTVwHSACBZ29S\_8qQJQ/h3/h001.unaX4vD3j\_uN4xy1L2H3pZ6u8tXmYVuLwF1qTlfZQv0)\
+*25 分钟* Adam Rackis Spotify
+
+与客户端渲染的 SPA 相比，服务器端组件渲染可以提高数据加载效率。尽管它们有好处（例如无序流），但它们也有局限性，包括服务器操作更新缓慢以及缺乏对客户端交互的支持。 React Query 通过管理客户端数据更新来补充 RSC，解决 RSC 的一些缺点。
+
+\[使用 React 查询和 JSON 服务器构建笔记应用程序]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v\_DxMTfUzLWUnXrsKgR8G6aOEbNJdGgyO9lB61AoNFTU8mUVwOjAbn\_shu9Tu398FPbJwSF yhmMC3ihvX1XtxSpfIfJUL8YU6Fdzfs59POIVtdir5qpyAjRZYVfm-k0mIIgbL0NQV6WF-A zpW8RXpV9tkCsNYhIKzqoMLqnh0bj\_cnQVBe9EgKRnSeFxm3H5MffvMgk66-hQ7K3oCvTSc 5q9FK29GfLDehzDiKD7g\_BjIdOvkz6Gg/46v/CzhmTVwHSACBZ29S\_8qQJQ/h4/h001.iNj5NQOnjNHucxQBcUp35MU3\_nMjs\_PCYfq4QC6nN1s )\
+*2 分钟* Corina Udrescu
+
+使用 React Query 构建一个受 Google Keep 启发的 Notes 应用程序来获取数据，并使用 json-server 作为后端 API。
+
+\[类型安全模块模拟]\(https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn\_0mUAO\_OTDGp1H-NbTP7ItPiRcLsCkUrmqC\_N7i-uyGwigioqd6qyz44eIKItHOFX2KmuhXD\_JIrJGKOQ5DEUIO49hXhRc 8GROBz3I5NSJ8xG6Jeip4lK6fd3J3Zo0JdihWHyZYXKPeX3W14mKBKcnFGIC1Q-GBCMfbI-JTf8Hg\_pYRBRT1svIJphy0NjqzoW6wXGI8S3C-JfoIaFFfmCbMpyY34/46v/CzhmTVwHSACBZ 29S\_8qQJQ/h5/h001.oRx9CMl8uWg- dugnom9cUU8bWKsvcZNCmUVaYbEu2lk)\
+*10 分钟* Jeppe Reinhold
+
+一致性对于单独开发和测试 UI 至关重要。在 Storybook 中，模拟具有外部依赖项的输入类型历来很困难。这就是我们今天通过模块模拟解决的问题
+
+\[突变后自动查询失效]\(https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgFxeHolb4-LyCzATOQf\_v07HQv9Z2kABY8qQUPCaGotz2fgxnzF4Z0S4bqySksp2iZGMZJcj\_k4pll5O djN\_doVjvbtQNX8NJJWi2s298I54Ch67zIET7x4Pi9whXLVA7dFU4aawzZpls3A5plhdVegC JH33gRlIkEEQ9VySvNgkLA\_1hWWtdYXhg4ZO8xJpouUtQdZTFjiNTCoyNpd-mk3A/46v/Czhm TVwHSACBZ29S\_8qQJQ/h6/h001.LxbBiqRhaxxwSPy0nvIqa-kFhGW0K5ymYeFo5lO5GUQ)\
+*9 分钟* 多米尼克·多夫梅斯特 (Dominik Dorfmeister)
+
+尽管 React Query 中没有内置任何内容，但由于全局缓存回调，它不需要大量代码来在用户态实现自动查询失效。
+
+\[使用浏览器内 SQLite 和自托管同步层构建本地优先的 React SPA]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqVjrJfMDf9Ee\_ZgdrPM7zWc72gNfgAXWE-EK0\_rtNu0GPLeLtgQUOlhpX-NdAdLgIT2 r6B\_3PfxGQJb8G2e9BcoKYYG0U5en98jKvO-Qx7tXsTjFAM0OinMo0DuPoWPXq3JUHMuNNxLVX\_4t\_1kP26Y/46v/CzhmTVwHSACBZ29S\_8qQJQ/ h7/h001.spa8RqEBHCZiy8H5ZXaRY\_uEm-IsdZzEwXGKbHxBlAw)\
+*由Powersync赞助*
+
+PowerSync 是一个自托管同步层，可连接到任何 Postgres 并保持浏览器内 SQLite 实时同步。利用本地优先架构实现即时反应、实时协作以及对 React 应用程序的全面离线支持。使用单个 Docker compose 命令设置自托管演示。
+
+#
+
+

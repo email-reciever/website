@@ -1,0 +1,74 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: The underlying mechanisms of React’s concurrent mode
+description: The underlying mechanisms of React’s concurrent mode
+date: 星期一 02 凌晨 八月 28o 2023
+author: reactdigest
+origin_url: https://reactdigest.net/digests/1703
+origin_site: https://reactdigest.net/digests/1703
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="The underlying mechanisms of React’s concurrent mode" url="https://reactdigest.net/digests/1703" />
+
+<Detail client:only="react">
+	# React Digest
+
+[The underlying mechanisms of React’s concurrent mode](https://reactdigest.net/link/16302/a24eb3ef-556d-456e-a6a4-25de0a1cd63b/email)
+
+In this article, besides sharing how the concurrent mode works with the help of React’s transitions, I will also walk you through my reasoning process that I employ whenever I try to arrive from having no idea how this works to I finally get it.
+
+[Component Development with Storybook and KendoReact](https://reactdigest.net/link/16303/a24eb3ef-556d-456e-a6a4-25de0a1cd63b/email) (sponsor)
+
+Storybook provides a great environment for experimenting with UI components in isolation and through a variety of different configurations. In this article, I'll show you how to get started with Storybook, highlight a few add-ons, and showcase a Storybook built for KendoReact.
+
+[React Hook: useGlobalState](https://reactdigest.net/link/16304/a24eb3ef-556d-456e-a6a4-25de0a1cd63b/email)
+
+React hook useGlobalState. React hook to share state without a context. Easy way to share state between components.
+
+[useMemo overdose](https://reactdigest.net/link/16305/a24eb3ef-556d-456e-a6a4-25de0a1cd63b/email)
+
+Developers tend to overuse the useMemo hook and can't even adequately explain why they are doing it. In this post, we will learn when to use the useMemo hook and when not.
+
+[Current state of state management](https://reactdigest.net/link/16306/a24eb3ef-556d-456e-a6a4-25de0a1cd63b/email)
+
+What are current options for state management? Why would I need a state manager? What is relevant? What is maintained?
+
+[What are props](https://reactdigest.net/link/16307/a24eb3ef-556d-456e-a6a4-25de0a1cd63b/email)
+
+In the world of React, this custom attribute is what is known as a "prop". And we can add as many props to our components as we like. They can be any JavaScript data type.
+
+
+</Detail>
+
+# 反应摘要
+
+【React并发模式底层机制】(https://reactdigest.net/link/16302/a24eb3ef-556d-456e-a6a4-25de0a1cd63b/email)
+
+在这篇文章中，除了分享并发模式如何在 React 转换的帮助下工作之外，我还将引导您完成我的推理过程，每当我试图从不知道它是如何工作的到我最终明白它时，我都会使用这个推理过程。
+
+[使用 Storybook 和 KendoReact 进行组件开发](https://reactdigest.net/link/16303/a24eb3ef-556d-456e-a6a4-25de0a1cd63b/email)（赞助商）
+
+Storybook 提供了一个很好的环境，可以通过各种不同的配置单独试验 UI 组件。在本文中，我将向您展示如何开始使用 Storybook，重点介绍一些附加组件，并展示为 KendoReact 构建的 Storybook。
+
+[React Hook：useGlobalState](https://reactdigest.net/link/16304/a24eb3ef-556d-456e-a6a4-25de0a1cd63b/email)
+
+React 钩子 useGlobalState。 React hook 可以在没有上下文的情况下共享状态。在组件之间共享状态的简单方法。
+
+[useMemo过量](https://reactdigest.net/link/16305/a24eb3ef-556d-456e-a6a4-25de0a1cd63b/email)
+
+开发人员往往会过度使用 useMemo 挂钩，甚至无法充分解释他们这样做的原因。在这篇文章中，我们将了解何时使用 useMemo 钩子，何时不使用。
+
+【状态管理现状】(https://reactdigest.net/link/16306/a24eb3ef-556d-456e-a6a4-25de0a1cd63b/email)
+
+当前状态管理有哪些选择？为什么我需要一个状态管理器？什么是相关的？维护什么？
+
+[什么是 props](https://reactdigest.net/link/16307/a24eb3ef-556d-456e-a6a4-25de0a1cd63b/email)
+
+在 React 的世界中，这个自定义属性就是所谓的“prop”。我们可以根据需要向组件添加任意数量的 props。它们可以是任何 JavaScript 数据类型。
+
+

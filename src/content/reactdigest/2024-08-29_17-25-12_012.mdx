@@ -1,0 +1,92 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#464 Sneaky React Memory Leaks
+description: RD#464 Sneaky React Memory Leaks
+date: 星期一 02 凌晨 七月 15o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/sneaky-react-memory-leaks-4e01
+origin_site: https://newsletter.reactdigest.net/p/sneaky-react-memory-leaks-4e01
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#464 Sneaky React Memory Leaks" url="https://newsletter.reactdigest.net/p/sneaky-react-memory-leaks-4e01" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XQVkmYkpTr-zqAcMvOaBQXPSz-VCl3i6FptpvWIy_gMp4bTfvHQXH7OhZIK7a_1amj7NyWatRJBg7Wag5KCpr8Xpmlbg9U46pVM0auGZHA90av6uL3O1rO5Qe02xFKGEYRpaYHqvlEvVEL5zjgGOptUJ4RaBMXIHidcKesF2s3QjiSxmzEShb4faRmNT1Vzmv1tY69W68GCZX3rrqoMgP3Bp7uN8Tbsmj9lu5g6nwtpVogc0FZkMVQ7WwyolWbn94OK8S7rL75jpyKDH0hpMW-wa8u42vfWaoa1UGpsBN3oK8vm0vrWJjYXYJbvbnV_kzW8UCPjjsllS4Uv3oXFDly2uFGtxiTmBQ_bngB_yAmm88YiVEdYaHbNYMSoSObPgif7Y7QYX1U3PkthsnrHaA1Vf3pM1RypKk6Zbp5KtGkxeibF7P26cTu2M04ciel-rVFq6p1TIS_NUs-wYM6glMFh3HEXRmsAfK66WileX0WhaUikcYstehl_2uU5xEgBvL58m7NMxMI_x-Arii6IYLC6jp_7nDoZZQZGWgZ003U3LqPfUYR-m_2QmK_M1ML_HS5eDD9BAgOR63BCsDjQB186RgOEuUkeH4ZslHG5pK1cw/481/O5As1QJRQYKXBdfPOQE9Pw/h0/h001.OPvB1fDAATCWT5bhfud4mTi-uvSkoTQAT5Vvp3QjHJ4)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/481/O5As1QJRQYKXBdfPOQE9Pw/ho.gif)
+
+[Sneaky React Memory Leaks: How the React compiler won’t save you](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAOzr0tMGi1OJ5XK-II-s05ZFk8DVd97vnxRuNFD6hJXkEWaUOxScAflSJaf7FyfHXhpLNl6PfCBaEI92lILUycHQyYlqpstw-TgmFq0LDM6CO1xZYckkvzp_TlBk8YD6KcEOggT8QctVDfRue2lhzzEgialDSz4GnMxGWHM3cXz2--o8f1q7waJNoJzoSAMy0RAduI6ZZbfjDysYn-b50M6s/481/O5As1QJRQYKXBdfPOQE9Pw/h1/h001.NsaWt3Q9iO-VXMU_XmMRJMZdU4c7PObONExu8kaqMAQ)  
+_10 minutes_ by Kevin Schiener
+
+How the React compiler handles memory leaks caused by closures and why it won’t save us from them.
+
+[Tests are dead. Meticulous AI is here.](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzA37hCquJL7kvZO-rkPj6htQ/481/O5As1QJRQYKXBdfPOQE9Pw/h2/h001.m_xqxxYi4nOpAMl64sIRVea1Z0p2P5mLefKqcC1tIqo)  
+_sponsored by Meticulous_
+
+Meticulous AI is a tool which automatically creates and maintains a continuously evolving e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Backed by CTO of GitHub, Guillermo Rauch (next.js author), yc and others, it's built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[Path To A Clean(er) React Architecture: Domain Logic](https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhYf6Tadtz5p3wSZz-URRP1uNW-PaCCcTrO6Xvo4Jstu8HsrE8FVrZdTgXbI6x-Mx59ODtiSR62F-MWHGIEs7gbbw3Jg-J1O1Kl2dybrP0k9Su82rbzHtewEHddq56ieUiHHDbKN2LrY_BJ1wxFgSA_SYCkS2TszQAv3qomsxvO9M8Th5yRYFty6MnaQ5W5cEce2EunyuT80H2AgkuWQpyMs/481/O5As1QJRQYKXBdfPOQE9Pw/h3/h001.u4LmSCDaD0ZYSZ_MbeQ5XLdEh3p_l-rIy6iHaUym3hk)  
+_11 minutes_ by Johannes Kettmann
+
+Ever wondered where to put all the small functions that often end up in utility files? The domain layer might be the answer.
+
+[The React useRef Hook: Not Just for DOM Elements](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVbRN_Po6j2g4qXkjd7wvufrm88ufstEjL2N-T_1vCoSSKctiw-mW5fQuWde1PozMeAWLBbtTAtLXhIyqZB4rvrDdDzdr0zAS1MkJRJ-n31UrawloIflTPBQ4eIyEqEBfAHNTgU1WeoarQyWrW3KqtDpA0TdNxH2S4Vpm4earvmzlCoc8SU8dKx2CQvMmT2-eIL9T2VlET5yH8TmnaXbBJtS6K3ijcoviWn5YyF9RVa4f/481/O5As1QJRQYKXBdfPOQE9Pw/h4/h001.pkOJYZACL8X5ynF1djXvWzlfktMo0K8JDYzgr3vWaVA)  
+_4 minutes_ by Nick Taylor
+
+In this post, we'll cover what the useRef hook is, some examples of how it can be used, and when you shouldn't use it.
+
+[Learn Suspense by Building a Suspense-Enabled Library](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqU8Zz-_vI4X7T1IUftUy3JLE3gIwpu0_jTm87yrZ-vS8wqIW1nvArt0HRQQ69cVToBxqC478vVbES-y-b6iZOJCssCFYoKpemuZC24P5aFFGLJPsEfzJw3rUQu1_qrOp-alhm2VpPz5N1y6HWbbYHtTkLcxtw_1tgRtWeFxKIHfgAdYrWy9Q_EQllDYORpvYkQ/481/O5As1QJRQYKXBdfPOQE9Pw/h5/h001.2lqBGYZMrC85_iK7DtdANlY_lUkdPWKiixRIfK4txTo)  
+_16 minutes_ by Slava Knyazev
+
+Suspense has been a feature in React since v16.6.0. Despite this, I haven’t seen much of it in action beyond limited applications of “suspense-enabled libraries”. Let’s build a Suspense-enabled library, and use it. We will peel back the curtain of Suspense along the way.
+
+[From Web to Native with React](https://link.mail.beehiiv.com/ss/c/u001.HjBpxMuZJ3Xr2cyiPk5rUYfsrQe-LrBYaf7UY2UT9YSopMl4QqP0DmAA8hrtBw5PKX_xgj--bZd5FF5E32eLYjLNxf05rkKLUne-SbcooXnEKKxauUc9OcDH8A8vZpGH7Rtz5ofj2GtalTgd-QSv-Yt2t3qvCDk5cAcFtT9epN5CrJAWizwn_arFh-9lnn3mrF2Nml0bx4dlpwiyvsgO6w/481/O5As1QJRQYKXBdfPOQE9Pw/h6/h001.sAJvfjuK-Pbw_3DCDJM20W4tK5GY7OETYKfK8S1IkXw)  
+_23 minutes_ by Kadi Kraman
+
+Everything that web developers need to know about building their first React Native application.
+
+#
+</Detail>
+
+\[Read Online]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XQVkmYkpTr-zqAcMvOaBQXPSz-VCl3i6FptpvWIy\_gMp4bTfvHQXH7OhZIK7a\_1amj7NyWatRJBg7Wag5KCpr8Xpmlbg9U46pVM0auGZHA90av6uL3O1rO5Qe02xFKGEYRpaYHqvlEvVEL5zjgGOptUJ4RaBMXIHidcKesF2s3QjiSxmzEShb4faRmNT1Vzmv1tY69W68GCZX3rrqoMgP3Bp7uN8Tbsmj9lu5g6nwtpVogc0FZkMVQ7WwyolWbn94OK8S7rL75jpyKDH0hpMW-wa8u42vfWaoa1UGpsBN3oK8vm0vrWJjYXYJbvbnV\_kzW8UCPjjsllS4Uv3oXFDly2uFGtxiTmBQ\_bngB\_yAmm88YiVEdYaHbNYMSoSObPgif7Y7QYX1U3PkthsnrHaA1Vf3pM1RypKk6Zbp5KtGkxeibF7P26cTu2M04ciel-rVFq6p1TIS\_NUs-wYM6glMFh3HEXRmsAfK66WileX0WhaUikcYstehl\_2uU5xEgBvL58m7NMxMI\_x-Arii6IYLC6jp\_7nDoZZQZGWgZ003U3LqPfUYR-m\_2QmK\_M1ML\_HS5eDD9BAgOR63BCsDjQB186RgOEuUkeH4ZslHG5pK1cw/481/O5As1QJRQYKXBdfPOQE9Pw/h0/h001.OPvB1fDAATCWT5bhfud4mTi-uvSkoTQAT5Vvp3QjHJ4 ）
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/481/O5As1QJRQYKXBdfPOQE9Pw/ho.gif)
+
+\[Sneaky React Memory Leaks: How the React compiler won't save you]\(https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn\_0mUAOzr0tMGi1OJ5XK-II-s05ZFk8DVd97vnxRuNFD6hJXkEWaUOxScAflSJaf7FyfHXhpLNl6PfCBaEI92lILUycHQyYlqpstw-TgmFq0LDM6CO1xZYckkvzp\_TlBk8YD6KcEOggT8QctVDfRue2lhzzEgialDSz4GnMxGWHM3cXz2--o8f1q7waJNoJzoSAMy0RAduI6ZZbfjDysYn-b50M6s/481/ O5As1QJRQYKXBdfPOQE9Pw/h1/h001.NsaWt3Q9iO-VXMU\_XmMRJMZdU4c7PObONExu8kaqMAQ)\
+*10 分钟* 凯文·席纳
+
+React 编译器如何处理由闭包引起的内存泄漏以及为什么它不能使我们免受这些泄漏的影响。
+
+\[测试已死。细致的AI就在这里。]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzA37hCquJL7kvZO-rkPj6htQ/481/O5As1QJRQY KXBdfPOQE9Pw/h2/h001.m\_xqxxYi4nOpAMl64sIRVea1Z0p2P5mLefKqcC1tIqo)\
+*由精心赞助*
+
+Meticulous AI 是一款自动创建和维护不断发展的 e2e UI 测试套件的工具，该套件涵盖应用程序的每个角落 - 无需开发人员进行任何干预。在 GitHub 首席技术官 Guillermo Rauch（next.js 作者）、yc 和其他人的支持下，它是从 Chromium 级别构建的，具有确定性调度引擎 - 使其成为唯一消除碎片的测试工具。
+
+\[干净的 React 架构之路：域逻辑]\(https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhYf6Tadtz5p3wSZz-URRP1uNW-PaCCcTrO6Xvo4Jstu8HsrE8FVrZdTgXbI6x-Mx59ODtiSR62F-MWHGIEs7gbb w3Jg-J1O1Kl2dybrP0k9Su82rbzHtewEHddq56ieUiHHDbKN2LrY\_BJ1wxFgSA\_SYCkS2TszQAv3qomsxvO9M8Th5yRYFTy6MnaQ5W5cEce2EunyuT80H2AgkuWQpyMs/481/O5As1QJRQYKX BdfPOQE9Pw /h3/h001.u4LmsCDaD0ZYSZ\_MbeQ5XLdEh3p\_l-rIy6iHUym3hk)\
+*11 分钟* 约翰内斯·凯特曼
+
+有没有想过将经常出现在实用程序文件中的所有小函数放在哪里？领域层可能就是答案。
+
+\[React useRef Hook：不仅仅适用于 DOM 元素]\(https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu\_fY2A1vmVbRN\_Po6j2g4qXkjd7wvufrm88ufstEjL2N-T\_1vCoSSKctiw-mW5fQuWde1PozMeAWLBbtTAtLXhIyqZB 4rvrDdDzdr0zAS1MkJRJ-n31UrawloIflTPBQ4eIyEqEBfAHNTgU1WeoarQyWrW3KqtDPA0Td NxH2S4Vpm4earvmzlCoc8SU8dKx2CQvMmT2-eIL9T2VLET5yH8TmnaXbBJtS6K3ijcoviWn5Yy F9RVa4f/481/O5As1QJRQYKXBdfPOQE9Pw/h4/h001。 pkOJYZACL8X5ynF1djXvWzlfktMo0K8JDYzgr3vWaVA)\
+*4 分钟* 尼克·泰勒
+
+在这篇文章中，我们将介绍 useRef 钩子是什么、如何使用它的一些示例以及何时不应该使用它。
+
+\[通过构建支持悬念的库来学习悬念]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqU8Zz-\_vI4X7T1IUftUy3JLE3gIwpu0\_jTm87yrZ-vS8wqIW1nvArt0HRQQ69cVToBxqC47 8vVbES-y-b6iZOJCssCFYoKpemuZC24P5aFFGLJPsEfzJw3rUQu1\_qrOp-alhm2VpPz5N1y6HWbbYHtTkLcxtw\_1tgRtWeFxKIHfgAdYrWy9Q\_EQllDYORpvYkQ/481/O5As1QJRQYKXBd fPOQE9Pw/h5/h001。 2lqBGYZMrC85\_iK7DtdANlY\_lUkdPWKiixRIFK4txTo)\
+*16 分钟* 斯拉瓦·克尼亚泽夫 (Slava Knyazev)
+
+自 v16.6.0 以来，Suspense 一直是 React 中的一项功能。尽管如此，除了“支持悬念的库”的有限应用之外，我还没有看到太多实际应用。让我们构建一个支持 Suspense 的库并使用它。我们将一路揭开悬念的帷幕。
+
+\[从Web到本机的反应]（https://link.mail.beehiiv.com/ss/c/u001.hjbpxmuzj3xr2cyipk5ruyfsrqe-lrrbyaf7uy2 yuy2 yuy2 ysopml4qqpp0dmaa.pkrblnnx \_blnnem-jjx\_glnne ylne COOXNEKKXAUUC9OCDH8A8VZPGH7RTZ5OFJ2GTALTGD-QSV-YT2T3QVCDK5K5CACFTT9EPN5CRJAWIZWN\_ARFH-9LNNNNNNNNNNN3MRFF2NML0BX4DL0BX4DLPWIYVSN/481QJREKINQUEN/481QUDFEN1QUNFENQENQUEN1QUDFEY1QUNFEY1QUNFEY1QEY1QUNFEYFYEY1QYENFEYFIPYPENFEYENFEYENFEYEFYPENFEYENFEYEFYPEYEYENEDIPYENE W/H6/H001。 SAJvfjuK-Pbw\_3DCDJM20W4tK5GY7OETYKfK8S1IkXw)\
+*23 分钟* 卡迪·克拉曼
+
+Web 开发人员构建第一个 React Native 应用程序所需了解的所有信息。
+
+#
+
+

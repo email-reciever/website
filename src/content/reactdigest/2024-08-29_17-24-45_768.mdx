@@ -1,0 +1,96 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#450 How does useOptimistic() work internally in React?
+description: RD#450 How does useOptimistic() work internally in React?
+date: 星期一 02 凌晨 四月 8o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/useoptimistic-work-internally-react
+origin_site: https://newsletter.reactdigest.net/p/useoptimistic-work-internally-react
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#450 How does useOptimistic() work internally in React?" url="https://newsletter.reactdigest.net/p/useoptimistic-work-internally-react" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XNZDKGlec7Lq1871eiLM0MDVn0-KA029WLpHonaSX4fWSYE004rfJ6Sy77fYhgkN9Xo8rpKz53vjf8PT5eRwYdJzIooB_34m5gQMOx-LJMZW_bA5Ia4OWFtewhd_ODwSH3doo2oc6IBPM5-x1vlFUnbTX7J9t7bdktrSBCAzTE5ukFhuvhFxHGxVXNB6FFlqkQ1hJ0o1ishNgvenGvqES5KIQjOwCBRF4OYo_R7zmEcBM_T5l0aqpVrHOxcPOqFKhC7hnSd0A_TagHUyqL_7hJv9ASGsmoSzIER5WsUnNhMwmw-4EpvvI3nQVGwVp7A3bCBKD--0Q_Rxeyl7__5_4r4Z19zGbyamM7juJ4pF2yRsE-gY9c2kogLlaHQceg-jSVeOHXqgr1jEuXskWAWgBi-cXUbx8SoE9EKNkCIVThVmsfBPdaQX6NY3zDpdPB2NI0R0b7UnfeA4wk8bPQk9llOuHdUzyvxiP5zgZADwjU1pedVcxO1YNOX-5Hx02XNE9u1enzwHtVeNCb1rrQtkd8eACWlB-LoOcVHTlqet7Th1KtH3StChwVr_blHGirR9D5h_3ERYieMSAioAMtQrkxfHlqJqJpBGjHfN-pHJGBO6tiowsYJ10UVqOGZCqfpqc74YjA9K9CSWrifvE8YlSP/45b/VSNWomfGSk6cMmrP3BsPlg/h0/h001.hjpibvtnh5GtqQSRCs3VjDIWMM_xCYCYu9RzKPIllhg)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/45b/VSNWomfGSk6cMmrP3BsPlg/ho.gif)
+
+[How does useOptimistic() work internally in React?](https://link.mail.beehiiv.com/ss/c/u001.aPX4i1CZjyg0TJtq3966EMraFjId84XwxE28JB85KdQy1QJpD_SPYhxBxrgirhEOaQKSie9AaGxkYJsrEuZx_7gdB46nYj-6mK69nDLrhYkiW_o8GFSQtB1QQoyfmftFjPKN0brJ8BQ64vA163hhEHbx7sX_AIQMTIyPBlRLGLCPaoHczTyKWuwSSyn-iYJjL4fUN8VQoa9TfDWEJRaOEWtZUIvweAX6P6zfLFq7AbWzw2FvW0a68h3CZ7fqouUaHxzopy1E--A9wcbth-9j6w/45b/VSNWomfGSk6cMmrP3BsPlg/h1/h001.wooVve0XHSoYOAaFtGwUicek6swHTTIkWUdLfxxpxJA)  
+_44 minutes_ by Robin Wieruch
+
+Optimistic UI is a common trick in UI development to improve the perceived performance. useOptimistic() is a hook to help build it. Let’s figure out how it work internally.
+
+[Embed Conversational AI Into Your React JS App](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8pEBcl8c-515bQBpkmLU9CcR35TlaYuAdvTerZYX6hHX/45b/VSNWomfGSk6cMmrP3BsPlg/h2/h001.nkf7eSvvGD-pKA2Ql1n4L7iqvL_haHWqzo36_R_uuxI)  
+_sponsored by nlux_
+
+Free and open-source library to integrate context-aware conversational AI into your React app, powered by any LLM. nlux makes that super simple. High performance, comprehensive documentation, and feature-rich. Check it out!
+
+[9 React Hooks that you should be aware of as a Frontend Developer](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVYNkm6kIjKpAG_YVPmnmUeSiBrXwwhnlGAAZEqPbxgLbNcC47rdmtDiR7tPzRn4JQfm6EjDeiDMAzqxEjKJgde-pI3Vbe_0mExRGzfnIpCplGRr_sk7I34UrTjTLJxm2gWGwtM7z-xh3ceZ-Ofvt04a1IkoFtQD1EQycLCD5s6bJsA2brtZVB5WXg-RTkRjkKOfLxY_fwztEIK5Wt3CIieOK3Lfqk8de8_yOzMhdpqxEJrmKNTQ_Kze_bRePODLVONLz66Lv6-LszHZ3Ixs-cbFCMqK7puu1iC4IvnBvI_dI/45b/VSNWomfGSk6cMmrP3BsPlg/h3/h001.mmgRModPHBUQ50kXFq6MlOfENQaepI6KQv2ZkROqibA)  
+_13 minutes_ by Borneel B. Phukan
+
+Whether you're a seasoned developer or just getting started with React, understanding these hooks is key to harnessing the full potential of the framework.
+
+[Expose Platform APIs Over Wrapping Them](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63ia1iZFBPaOGI2PpVm-q76mxAcTqFY-WSOqTPyWnYhuNoBNo0S0zrZY4C22rBQGVU6ibyhI4l2Akr8Q36KthGJ6lBQyy2hn_VQukXD_s1s-nQUznGDXi51aumeSbpbgudfXRfZNL4EFfTyJ3HOLEiIy8GPibNbxgzbAdIykDkE9MWx7iiUg_wpKZ5v9hl6lg_-p1L8bGUxiTvSgmGYc7e2LFVgSImKLketdn6uojq1oY6rE3LS57YqA-x7Gztlf8OQ/45b/VSNWomfGSk6cMmrP3BsPlg/h4/h001.UIj_tfw6pOZrwnsAp1Js1kKghKNxfcT-V1c-ufqKeL8)  
+_9 minutes_ by Jim Nielsen
+
+Whenever a problem can be solved by native HTML elements, the longevity of the code improves tremendously as a result. This is a much less alienating way to learn web development, because the bulk of your knowledge will remain relevant as long as HTML does.
+
+[Exploring Authentication in Next.js](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zLUP7-rHrnRjTaKAs1yUp2uixZ_Ws16lcuBjvkYQMMNL7N9v8w2XQy5B2APtk2QNBFkjtlu15AIKvAUgqYC7P93CpQrhbRUWctE8iSrWKDtf6WawujVhYZC3e82EGOW8FAUZXaQYcvc3_3Atwj8792K2cUXMpRB-1n1o1Shx_AdcxLJ7Xy78a_7X2TW1WzQl0dGdXq0ZRmTgk4lSKDJvbtZ/45b/VSNWomfGSk6cMmrP3BsPlg/h5/h001.Ka6uyZhozgVn4Pjbha8XnP3kLf2f1s2B9p7x_vVa-Lc)  
+_19 minutes_ by Robin Wieruch
+
+Robin delved deep into exploring Authentication in Next.js 14 using Next's App Router, React Server Components (RSC), and Server Actions. This comprehensive tutorial covers using Lucia Auth for sign up, sign in, sign out, and protected routes.
+
+[The Best Vscode Snippets for React Typescript + Nextjs + Redux Toolkit](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVRH-svja2hUul8_7hZT_zjfHwCKC2THLB3-Yb395QanE-999L-f5qy1r2mmNwjOfxG_j7xzOVDFQIQeovZOZuOaWgBha-I47zIUvcTpjwFXPlG2I9I2xjZaYi2CRzyNIXWa-_kZmuGicLFJaUF3trJV_cW_eYqdFslMhSzQLARkV0LP2tS_ZHNLAhxlJVSve8vvSHI-iCmf-FftukURXOESE74HpjHurZDvy_7c3qR_Pgq56DQvC3VC9ns81WMaeGOLH2oR3BqbJWZCQkdZJQAv8Pn11RTsjjuTjEJFIXXqX/45b/VSNWomfGSk6cMmrP3BsPlg/h6/h001.dbChPX_SF8YojTzynGGq8CQvHUJH_3YcXSWlU7YhtbA)  
+_2 minutes_ by Bhanu Sunka
+
+Have you ever tried the ES7 React snippets extension? Have you ever felt overwhelmed by the sheer number of snippets it offers? If not, here's my selection of the most essential snippets. By focusing on just the necessities, you can slim down your Visual Studio Code setup and streamline your coding experience.
+
+And we’ll wrap up with a bonus link with the release of [Bun 1.1](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63pl12vFeF8QKHxlYfdkB0ewL8E77P1zWP2C6Np3k7hFtJsIF0fl9m_druE49_gfvVVPljYfwO0Jdws-3RUU26SzOVCkt2DfojyNiGUwDa8zeWmrh7Qb5NAcZ6ZVB_Oaj7OtX0uJXl4IIVHVS98sjwE5TrOlMPZLQZH0kOIb4pyVjg4Haq6ddS6n4vmyeN8PT_w/45b/VSNWomfGSk6cMmrP3BsPlg/h7/h001.Ds3tT-kT6oXbyEWrMJHGaAJ7oElTPgcmRsISC8BcWQ8).  
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XNZDKGlec7Lq1871eiLM0MDVn0-KA029WLpHonaSX4fWSYE004rfJ6Sy77fYhgkN9Xo8rp Kz53vjf8PT5eRwYdJzIooB\_34m5gQMOx-LJMZW\_bA5Ia4OWFtewhd\_ODwSH3doo2oc6IBPM5-x1vlFUnbTX7J9t7bdktrSBCAzTE5ukFhuvhFxHGxVXNB6FFlqkQ1hJ0o1ishNgvenGvqES5KIQjOwCBRF 4OYo\_R7zmEcBM\_T5l0aqpVrHOxcPOqFKhC7hnSd0A\_TagHUyqL\_7hJv9ASGsmoSzIER5Ws UnNhMwmw-4EpvvI3nQVGwVp7A3bCBKD--0Q\_Rxeyl7\_\_5\_4r4Z19zGbyamM7juJ4pF2yRsE -gY9c2kogLlaHQceg-jSVeOHXqgr1jEuXskWAWgBi-cXUbx8SoE9EKNkCIVThVmsfBPdaQX6NY3zDpdPB2NI0R0b7UnfeA4wk8bPQk9llOuHdUzyvxiP5zgZADwjU1pedVcxO1YNOX-5Hx02XNE9u1enz wHTVENCb1rrQtkd8eACWlB-LoOcVHTlqet7Th1KtH3StChwVr\_blHGirR9D5h\_3ERYieMSAioAMtQrkxfHlqJqJpBGjHfN-pHJGBO6tiowsYJ10UVqOGZCqfpqc74YjA9K9CSWrifvE8YlSP/45b/ VSNWomfGSk6cMmrP3BsPlg/h0/h001.hjpibvtnh5GtqQSRCs3VjDIWMM\_xCYCYu9RzKPIllhg)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/45b/VSNWomfGSk6cMmrP3BsPlg/ho.gif)
+
+\[useOptimistic() 在 React 内部如何工作？]\(https://link.mail.beehiiv.com/ss/c/u001.aPX4i1CZjyg0TJtq3966EMraFjId84XwxE28JB85KdQy1QJpD\_SPYhxBxrgirhEOaQKSie9AaGxkYJsrEuZx\_7gdB46nYj -6mK69nDLrhYkiW\_o8GFSQtB1QQoyfmftFjPKN0brJ8BQ64vA163hhEHbx7sX\_AIQMTIyPBlRLGLCPaoHczTyKWuwSSyn-iYJjL4fUN8VQoa9TfDWEJRaOEWtZUIvweAX6P6zfLFq7AbWzw2FvW0 a68h3CZ7fqouUaHxzopy1E--A9wcbth-9j6w/45b/VSNWomfGSk6cMmrP3BsPlg/h1/h001。 wooVve0XHSoYOAaFtGwUicek6swHTTIkWUdLfxxpxJA)\
+*44 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+乐观 UI 是 UI 开发中提高感知性能的常见技巧。 useOptimistic() 是一个帮助构建它的钩子。让我们弄清楚它的内部是如何工作的。
+
+\[将对话式 AI 嵌入到您的 React JS 应用程序中]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8pEBcl8c-515bQBpkmLU9CcR35TlaYuAdvTerZYX6hHX/45b/VSNWomfGSk6cMmrP3BsPlg/h2/h 001.nkf7eSvvGD-pKA2Ql1n4L7iqvL\_haHWqzo36\_R\_uuxI)\
+*由nlux赞助*
+
+免费开源库，可将上下文感知对话式 AI 集成到您的 React 应用程序中，由任何法学硕士提供支持。 nlux 让一切变得超级简单。高性能、全面的文档和丰富的功能。一探究竟！
+
+\[作为前端开发人员应该了解的 9 个 React Hooks]\(https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu\_fY2A1vmVYNkm6kIjKpAG\_YVPmnmUeSiBrXwwhnlGAAZEqPbxgLbNcC47rdmtDiR7tPzRn4JQfm6EjDeiDMAz qxEjKJgde-pI3Vbe\_0mExRGzfnIpCplGRr\_sk7I34UrTjTLJxm2gWGwtM7z-xh3ceZ-Ofvt04a1IkoFtQD1EQycLCD5s6bJsA2brtZVB5WXg-RTkRjkKOfLxY\_fwztEIK5Wt3CIieOK3Lfqk8de 8\_yOzMhdpqxEJrmKNTQ\_Kze\_bRePODLVONLz66Lv6-LszHZ3Ixs-cbFCMqK7puu1iC4IvnBvI\_dI/45b /VSNWomfGSk6cMmrP3BsPlg/h3/h001.mmgRModPHBUQ50kXFq6MlOfENQaepI6KQv2ZkROqibA)\
+*13 分钟* 作者：Borneel B. Phukan
+
+无论您是经验丰富的开发人员还是刚刚开始使用 React，了解这些钩子都是充分利用该框架潜力的关键。
+
+\[通过包装暴露平台 API]\(https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63ia1iZFBPaOGI2PpVm-q76mxAcTqFY-WSOqTPyWnYhuNoBNo0S0zrZY4C22rBQGVU6ibyhI4l2Akr8 Q36KthGJ6lBQyy2hn\_VQukXD\_s1s-nQUznGDXi51aumeSbpbgudfXRfZNL4EFfTyJ3HOLEiIy8GP ibNbxgzbAdIykDkE9MWx7iiUg\_wpKZ5v9hl6lg\_-p1L8bGUxiTvSgmGYc7e2LFVgSimKLketdn6u ojq1oY6rE3LS57YqA-x7Gztlf8OQ/45b/VSNWomfGSk6cMmrP3BsPlg/h4/h001.UIj\_tfw6pOZrwnsAp1Js1kKghKNxfcT-V1c -ufqKeL8)\
+*9 分钟* 吉姆·尼尔森
+
+每当问题可以通过本机 HTML 元素解决时，代码的寿命就会大大提高。这是一种学习 Web 开发的不太陌生的方式，因为只要 HTML 存在，您的大部分知识就将保持相关性。
+
+\[探索 Next.js 中的身份验证]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf\_qUprM09yoMPtF27zLUP7-rHrnRjTaKAs1yUp2uixZ\_Ws16lcuBjvkYQMMNL7N9v8w2XQy5B2APt k2QNBFkjtlu15AIKvAUgqYC7P93CpQrhbRUWctE8iSrWKDtf6WawujVhYZC3e82EGOW8FAUZXaQYcvc3\_3Atwj8792K2cUXMpRB-1n1o1Shx\_AdcxLJ7Xy78a\_7X2TW1WzQl0dGdXq0Z RmTgk4lSKDJvbtZ/45b/VSNWomfGSk6cMmrP3BsPlg/h5/h001.Ka6uyZhozgVn4Pjbha8XnP3kLf2f1s2B9p7x\_vVa-Lc)\
+*19 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+Robin 使用 Next 的 App Router、React Server Components (RSC) 和 Server Actions 深入探索 Next.js 14 中的身份验证。这个综合教程涵盖了使用 Lucia Auth 进行注册、登录、注销和受保护的路由。
+
+\[React Typescript + Nextjs + Redux 工具包的最佳 Vscode 片段]\(https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu\_fY2A1vmVRH-svja2hUul8\_7hZT\_zjfHwCKC2THLB3-Yb395QanE-999L-f5qy1r2mmNwjOfxG\_j 7xzOVDFQIQeovZOZuOaWgBha-I47zIUvcTpjwFXPlG2I9I2xjZaYi2CRzyNIXWa-\_kZmuGicLFJaUF3trJV\_cW\_eYqdFslMhSzQLARkV0LP2tS\_ZHNLAhxlJVSve8vvSHI-iCmf- FftukURXOESE74HpjHurZDvy\_7c3qR\_Pgq56DQvC3VC9ns81WMaeGOLH2oR3BqbJWZCQkdZJQAv8Pn11RTsjjuTjEJFIXXqX/45b/VSNWomfGsk6cMmrP3BsPlg/h6/h001.dbChPX\_SF8YojTzy nGGq8CQvHUJH\_3YcXSWlU7YhtbA)\
+*2 分钟* Bhanu Sunka
+
+您尝试过 ES7 React snippets 扩展吗？您是否曾对它提供的数量之多的片段感到不知所措？如果没有，这是我选择的最重要的片段。通过只关注必需品，您可以简化 Visual Studio Code 设置并简化您的编码体验。
+
+最后，我们将发布 \[Bun 1.1]\(https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63pl12vFeF8QKHxlYfdkB0ewL8E77P1zWP2C6Np3k7hFtJsIF0fl9m\_druE49\_gfvV 的奖励链接VPljYfwO0Jdws-3RUU26SzOVCkt2DfojyNiGUwDa8zeWmrh7Qb5NAcZ6ZVB\_Oaj7OtX0uJXl4IIVHVS98sjwE5TrOlMPZLQZH0kOIb4pyVjg4Haq6ddS6n4vmyeN8PT\_w/45b/VSNWomfGsk6cm mrP3BsPlg/h7/h001.Ds3tT -kT6oXbyEWrMJHGaAJ7oElTPgcmRsISC8BcWQ8)。
+
+#
+
+

@@ -1,0 +1,100 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#437 React Tricks： Fast, Fit and Fun
+description: RD#437 React Tricks： Fast, Fit and Fun
+date: 星期一 12 凌晨 十二月 18o 2023
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/react-tricks-fast-fit-fun
+origin_site: https://newsletter.reactdigest.net/p/react-tricks-fast-fit-fun
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#437 React Tricks： Fast, Fit and Fun" url="https://newsletter.reactdigest.net/p/react-tricks-fast-fit-fun" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-r5aei1LqixOIwQN0qeGQMkjwQP-xAmHTBjZDCvDF0jVzL8LLbSB52cMdpUGPUlP2Tg2GzUcWTyBV0AAheD26pMnuZsFb3fXqUIuhHAPJivYc32lBWWzvOMvSjWsoB5WJkFerW36TZ4Jci42l-0IVuNbalODVKQkAlYRlTqaZADC6axR1CbjFIoIbRHFTm-EiL_1JK91csNfqs_8pRjix4XUdDiq3yUdhY_djYkazSp8eqQ-x2LfXux-VN05q5vWZLTmd7_VtcET8Nq97e5fYQsu6pUl12R-2rptYPXqGkkaruCSfUSKq7se1O_BNtpwS13AQOxVIrjWaITAkUH7cDJ97-2vi8fmXJ7lE_LwCdj76xBA0VKBqThZCYx48ScL63dipf2Jy_eIqqyNvg1xP151nCuTNHbHRaMe3SmmsOOzQIFI6AxFT0s6PgA-eenreHHtmqmQjEsybt4HmVjRc8IcZT124TS1c242wtchQHDb57LjYhuDQtmuV0vYUT44uXEW_gNCy1kpVlYkf1MtTzbhFtGDPDM7RN8qdJl7AnjSDMWRPkunC5wT6HHaYlMaZIq0i7_xIOShX1R_-980c_eg4RCcu4WKAiW0J8p2ib_DunBK6obUN-vN1JSOR2aVZg/427/xGw-FZRkQJqmlEToo-zp_Q/h0/EOMx6Yzp4tQXCkXZMAG8Wmso223UpQyeR4w6YKFiZlM)
+
+![](https://link.mail.beehiiv.com/ss/o/2neHg-Hzkdcq_goMOXZHDQ/427/xGw-FZRkQJqmlEToo-zp_Q/ho.gif)
+
+Hello! 👋
+
+It seems that the migration to beehiiv worked well. Thank you for all your support in 2023. Let’s get into the last issue before Christmas. 🤶🎄
+
+[React Tricks: Fast, Fit and Fun](https://link.mail.beehiiv.com/ss/c/e7lrOU0N2eMt0diSomWSqIR0158OU5Dg6hKkqT4RBb8UPpiFR2SgTX93K-2VYxInH-kOutdEsM04Q93lGCb2FdanyJqXnCjRomI0WVR4FDWRih9kAiSbQ46QEizb2avfNvAA6NRoy-x1eMoNTGAW4VHRGkdm9z3nRBnj14ixop8m2kD9eKzQNZ9GgHtl3mJ_B440W9vWGorXAkBWUra9iw/427/xGw-FZRkQJqmlEToo-zp_Q/h1/ypvkyoTjXX16UrmIZK-bVfpEGUvnkOC5e1YYQd_9xOk)  
+_16 minutes_ by Alexey Taktarov
+
+How to make your React app or library faster and smaller. Tips and tricks: `useEvent`, `useSyncExternalStore`, stable object references, readonly `useState`.
+
+[Adding Authentication to Your React App](https://link.mail.beehiiv.com/ss/c/0HSGNIf5nNWRCkbf_H2lOpyf-FJFHMSCidr23XXg8icrYElVHzNdaxydCGVyd9cEYOaHTp-d1QAbQpbRQJx4NYhlPr5zj7JRVbOGp_itWZOf5s_6AzY3QUSl3VizUO3-b4hRd1tHmdy5SZQOIx-jLG-7sWpjGz93mQq276uClQMvfFEgw1bthn6sL9AjBo90Xvr7Y9TbdF6FFiA_PSiRYqui4FqH2jULHKgWt0TCdpSotflnbtZe9tjaVxMiU7l4/427/xGw-FZRkQJqmlEToo-zp_Q/h2/5qUxNLAeYLr9Vnom6HYsACS_QEwM8YtLoaeMUi9s1vk)  
+_sponsored by FusionAuth_
+
+Authentication is one of those things that always takes more effort than you want. Instead of adding static libraries (that you need to update and maintain), you can an auth provider that stays up-to-date automatically and comes with pre-built components. Check out how easy it is to add registration & log in with this React SDK from FusionAuth.
+
+[React Hydration Overlay](https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyIH4OrxK8L4ziQJe-9Y1Vdp-mZvMG1WvrVMzrIwiSVEcy_1fEbcoXbpNOTUzRJ3FGePoyqt9WMi_FIirpHnexBZ2A9lrkePG5VVnEXSBNzKMuJomce40ebZuwIEC__hMLahsp1o3WcPD3zjm-H69ed-pmDFe2hxtY8pTD89LMUYTUObIcY-OaEgmeegSYYcHQWdnIIeu_TQrfTMpreqIUcs/427/xGw-FZRkQJqmlEToo-zp_Q/h3/OriWxQlSqUWkPnkipDKelCPoxTqbmxBtafEsndTkz98)  
+_3 minutes_ by Sami Jaber
+
+@builder.io/react-hydration-overlay is an npm package that provides you with a more useful error message when React SSR hydration mismatch occurs.
+
+[Optimizing Performance in React-Native: Tips and Techniques](https://link.mail.beehiiv.com/ss/c/i-14uV6vHkCzB2eOsMx0wHDXGOHe8XhIGI_TwSS6-xaKHHcfGYOte0Iv7ez43_gLOlwF10VYs6Xy2zBQK4ochB2c7nneotUuwoFIQH9x0S18RblnSWAsb9XexBc_Y1T_W4eb1Tqp9rIKG2P2GmU5tYF1u580EiZ8E_l1LYhvNS7NElhiSnbriYsHg5yS_T8gIAPQURVVxQzimzOnHjb8Ckofipqd8RScmo2jJsRlrm9eAdphK1zgIER0KVUFrEgBR5g0tYrMAP8ZKy-hCCxQmQ/427/xGw-FZRkQJqmlEToo-zp_Q/h4/4i0VQxiGBONDVkoSrfMm8vaQZbSK240WkOisynUxQhE)  
+_7 minutes_ by Diego Oliveira
+
+Explore how to supercharge your app, covering key strategies for optimizing React Native app performance, enhancing user experience and app success.
+
+[A Chain Reaction](https://link.mail.beehiiv.com/ss/c/eaCZFApyhk8rdtjqfnYfAWG7KOfn_DR2DPErhCVltu3_Bv3XyvG622zqswC-Wj9e8s0l8VlvYKpMlNSVGjYDndn67eNszFiduewizKuW5vRVNG2Bt4eX9D56fqDcpB5V7Y0GdEUJi8KJzNu66gQ1YxuqKfMXC-uOOL_6rh08Fi8R4JfM7SC-pIWSt-BqZt7segAHhunTOX95T7NFyujXTw/427/xGw-FZRkQJqmlEToo-zp_Q/h5/7sa_6ghexQxUI8hXj_Kc8KEbdEz-EBcpSz6-eDQTLc0)  
+_13 minutes_ by Dan Abramov
+
+You mix a bit of data and code, and it keeps transforming until there is no more code to run, and only the residue is left.
+
+[React Performance Optimization](https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyDeTcF_5eFPJVHpagbPL9id1jU8wW3LZMK2ScueWOnPViY3YB9W0L4Y2JBoSq8R2Rzq5fb7obWLf7Pm6epPICg32vlh1swy4Eg0EO_M90tkBYWmfrRqchuRRWtGY4CLoREeoyFmDsJYz8os9-emD0BEAbEg-uEZtpT6zaA7HB2k9dHhSfqxA6g15osknqk8hZlrdKBBphFKaRte0ByD4stA/427/xGw-FZRkQJqmlEToo-zp_Q/h6/tf59YWLcZ4AVprjThD9MmZQ6R9Pi4uNDYdA8cXV4b7o)  
+_18 minutes_ by Blessing Ene Anyebe
+
+Learn how to identify bottlenecks and use memoization, lazy loading, virtualization, and more to create highly performant React applications.
+
+#
+</Detail>
+
+\[Read Online]\(https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-r5aei1LqixOIwQN0qeGQMkjwQP-xAmHTBjZDCvDF0jVzL8LLbSB52cMdpUGPUlP2Tg2GzUcWTyBV0AAheD26pMnuZsFb3fXqUIuhHAPJivYc32lBWWzvOMvSjWsoB5WJkFerW36TZ4Jci42l-0IVuNbalODVKQkAlYRlTqaZADC6axR1CbjFIoIbRHFTm-EiL\_1JK91csNfqs\_8pRjix4XUdDiq3yUdhY\_djYkazSp8eqQ-x2LfXux-VN05q5vWZLTmd7\_VtcET8Nq97e5fYQsu6pUl12R-2rptYPXqGkkaruCSfUSKq7se1O\_BNtpwS13AQOxVIrjWaITAkUH7cDJ97-2vi8fmXJ7lE\_LwCdj76xBA0VKBqThZCYx48ScL63dipf2Jy\_eIqqyNvg1xP151nCuTNHbHRaMe3SmmsOOzQIFI6AxFT0s6PgA-eenreHHtmqmQjEsybt4HmVjRc8IcZT124TS1c242wtchQHDb57LjYhuDQtmuV0vYUT44uXEW\_gNCy1kpVlYkf1MtTzbhFtGDPDM7RN8qdJl7AnjSDMWRPkunC5wT6HHaYlMaZIq0i7\_xIOShX1R\_-980c\_eg4RCcu4WKAiW0J8p2ib\_DunBK6obUN-vN1JSOR2aVZg/427/xGw -FZRkQJqmlEToo-zp\_Q/h0/EOMx6Yzp4tQXCkXZMAG8Wmso223UpQyeR4w6YKFiZlM)
+
+![](https://link.mail.beehiiv.com/ss/o/2neHg-Hzkdcq_goMOXZHDQ/427/xGw-FZRkQJqmlEToo-zp_Q/ho.gif)
+
+你好！ 👋
+
+看来迁移到 beehiiv 效果很好。感谢大家2023年的支持，圣诞节前我们进入最后一期吧。 🤶🎄
+
+\[React 技巧：快速、适合且有趣]\(https://link.mail.beehiiv.com/ss/c/e7lrOU0N2eMt0diSomWSqIR0158OU5Dg6hKkqT4RBb8UPpiFR2SgTX93K-2VYxInH-kOutdEsM04Q93lGCb2FdanyJqXnCjRomI0WVR4FDWRih9 kaiSbQ46QEizb2avfNvAA6NRoy-x1eMoNTGAW4VHRGkdm9z3nRBnj14ixop8m2kD9eKzQNZ9GgHtl3mJ\_B440W9vWGorXAkBWUra9iw/427/xGw-FZRkQJqmlEToo-zp\_Q/h1/ypvkyoTjXX 16UrmIZK-bVfpEGUvnkOC5e1YYQd\_9xOk)\
+*16 分钟* 阿列克谢·塔克塔罗夫
+
+如何使您的 React 应用程序或库更快、更小。提示和技巧：`useEvent`、`useSyncExternalStore`、稳定对象引用、只读`useState`。
+
+\[向您的 React 应用程序添加身份验证]\(https://link.mail.beehiiv.com/ss/c/0HSGNIf5nNWRCkbf\_H2lOpyf-FJFHMSCidr23XXg8icrYElVHzNdaxydCGVyd9cEYOaHTp-d1QAbQpbRQJx4NYhlPr5zj7JRVbOGp\_itWZOf5s\_6AzY3 QUSl3VizUO3-b4hRd1tHmdy5SZQOIx-jLG-7sWpjGz93mQq276uClQMvfFEgw1bthn6sL9AjBo90Xvr7Y9TbdF6FFiA\_PSiRYqui4FqH2jULHKgWt0TCdpSotflnbtZe9tjaVxMiU7l4/42 7/xGw-FZRkQJqmlEToo-zp\_Q/h2/5qUxNLAeYLr9Vnom6HYsACS\_QEwM8YtLoaeMUi9s1vk)\
+*由 FusionAuth 赞助*
+
+身份验证是总是需要比您想要的更多努力的事情之一。您可以使用一个自动保持最新状态并附带预构建组件的身份验证提供程序，而不是添加静态库（您需要更新和维护）。了解使用 FusionAuth 的 React SDK 添加注册和登录是多么容易。
+
+\[反应水合叠加]\(https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyIH4OrxK8L4ziQJe-9Y1Vdp-mZvMG1WvrVMzrIwiSVEcy\_1fEbcoXbpNOTUzRJ3FGePoyqt9WMi\_FIirpHnexBZ2A9lrkePG5V VnEXSBNzKMuJomce40ebZuwIEC\_\_hMLahsp1o3WcPD3zjm-H69ed-pmDFe2hxtY8pTD89LMUYTUObIcY-OaEgmeegSYYchHQWdnIIeu\_TQrfTMpreqIUcs/427/xGw-FZRkQJqmlEToo-zp\_Q/h3/OriWxQl SqUWkPnkipDKelCPoxTqbmxBtafEsndTkz98)\
+*3 分钟* 萨米·贾比尔
+
+@builder.io/react-Hydration-overlay 是一个 npm 包，当发生 React SSR 水合不匹配时，它为您提供更有用的错误消息。
+
+\[优化 React-Native 性能：技巧和技巧]\(https://link.mail.beehiiv.com/ss/c/i-14uV6vHkCzB2eOsMx0wHDXGOHe8XhIGI\_TwSS6-xaKHHcfGYOte0Iv7ez43\_gLOlwF10VYs6Xy2zBQK4ochB2c7nneotUuwoFIQ H9x0S18RblnSWAsb9XexBc\_Y1T\_W4eb1Tqp9rIKG2P2GmU5tYF1u580EiZ8E\_l1LYhvNS7NElhiSnbriYsHg5yS\_T8gIAPQURVVxQzimzOnHjb8Ckofipqd8RScmo2jJsRlrm9eAdphK1zgIER0 KVUFrEgBR5g0tYrMAP8ZKy-hCCxQmQ/427/xGw-FZRkQJqmlEToo-zp\_Q/h4/4i0VQxiGBONDVkoSrfMm8vaQZbSK240WkOisynUxQhE)\
+*7 分钟*迭戈·奥利维拉
+
+探索如何增强您的应用程序，涵盖优化 React Native 应用程序性能、增强用户体验和应用程序成功的关键策略。
+
+\[连锁反应]\(https://link.mail.beehiiv.com/ss/c/eaCZFApyhk8rdtjqfnYfAWG7KOfn\_DR2DPErhCVltu3\_Bv3XyvG622zqswC-Wj9e8s0l8VlvYKpMlNSVGjYDndn67eNszFiduewizKuW5vRVNG2Bt4eX9D56f qDcpB5V7Y0GdEUJi8KJzNu66gQ1YxuqKfMXC-uOOL\_6rh08Fi8R4JfM7SC-pIWSt-BqZt7segAHhunTOX95T7NFyujXTw/427/xGw-FZRkQJqmlEToo-zp\_Q/h5/7sa\_6ghexQxUI8hXj\_Kc 8KEbdEz-EBcpSz6-eDQTLc0)\
+*13 分钟* 丹·阿布拉莫夫
+
+你混合一些数据和代码，它会不断变化，直到没有更多的代码可以运行，只剩下残留物。
+
+\[React性能优化]\(https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyDeTcF\_5eFPJVHpagbPL9id1jU8wW3LZMK2ScueWOnPViY3YB9W0L4Y2JBoSq8R2Rzq5fb7obWLf7Pm6epPICg32vlh1swy4E g0EO\_M90tkBYWmfrRqchuRRWtGY4CLoREeoyFmDsJYz8os9-emD0BEAbEg-uEZtpT6zaA7HB2k9dHhSfqxA6g15osknqk8hZlrdKBBphFKaRte0ByD4stA/427/xGw-FZRkQJqmlEToo-zp\_Q/ h6/tf59YWLcZ4AVprjThD9MmZQ6R9Pi4uNDYdA8cXV4b7o)\
+*18 分钟* Blessing Ene Anyebe
+
+了解如何识别瓶颈并使用记忆、延迟加载、虚拟化等来创建高性能的 React 应用程序。
+
+#
+
+

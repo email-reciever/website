@@ -1,0 +1,92 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#454 API Layer & Fetch Functions
+description: RD#454 API Layer & Fetch Functions
+date: 星期一 12 凌晨 五月 6o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/api-layer-fetch-functions
+origin_site: https://newsletter.reactdigest.net/p/api-layer-fetch-functions
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#454 API Layer & Fetch Functions" url="https://newsletter.reactdigest.net/p/api-layer-fetch-functions" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XsR9lV6XziFqLIuNSDelayhHVDYEkKeKMX7q_yWRk9DCG2l99A9wl51iS7tZfQgHw0S5DpIelHNw1YhlmIXRl3RPN4L07urPSe0Pjqh1g90kwey8RC-MexgUFbl5o0pR4r2P9mvjHd-qOVpxAxjv8bQn5JYoOihHk10m3kDDC2tkWg24ZOLbeHZ52pJOJe_A4YWGm6Rqj_FUisgt2vCSML80nEKmN7ZxHbzu02Nffr-R2JAlHto40LrwnepGumpb3nQrsKYdXrBnTMAOWYsF_prVdRuYxhwp8uINPyl4rU5jcsyCQqESfX3AGAK_uIspntf-Dih31LOLBX2lS5vj2UI0aLQe_q-p-egBkd0sOjiXoJ74gHDs4R1YueGeeoIr3nvNZ2DLluMJ9CHZG5J8klc9bnncJ6Hi1z6gbhb3bqCYQPoHi_Sz_8Jee6YwGil8fzKVAcxDwuIhX5eQymFLSStqpAkbqSf7I4YT4exBR7Q-NZF5Qva7mjSAgbo8WIERmUWkhICj2N3wI6EFfApW_QdShOiTZxdTlooxxQCJmH7CIf11ME5CQgBCiTfkeD_GjohdZGmqnjoH1Rd7wx-kJzktAiGCqNfrGaffohjkCUCg/463/TV7jC1MVQ1ar7K4d-md27g/h0/h001.cv18ZXe7tb4PRGdLvUp3U7guXWhXKX-sAyCgjXtq5Xo)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/463/TV7jC1MVQ1ar7K4d-md27g/ho.gif)
+
+[API Layer & Fetch Functions](https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhYf6Tadtz5p3wSZz-URRP1uNW-PaCCcTrO6Xvo4Jstu889KBCjI9NC-9EjmqCd9Hvq8yQIzlMZSL2QQQAmlay4AjlbiRPkluTcblemGaW3JpxeiHf63xab9qg3HHtsb5qnKNI5WL8E0OqHtXj-osHDWwq9MvtlL6DXaNz8mIaxYEzZtmZmQt6sBYX38jfS7YHlHxQFDJzh1jmG1d7Kn41XK8eF1TnF5krJFSxOORfMwU/463/TV7jC1MVQ1ar7K4d-md27g/h1/h001.eJ-15ida0y4szdooKOq8ZR1GTlj3UJjrC43SUwq2DDo)  
+_4 minutes_ by Johannes Kettmann
+
+Mixing API and UI code quickly leads to messy and unmaintainable code. In this article, we take a step towards a cleaner React architecture by extracting fetch functions to an API layer.
+
+[Crack the code on React component usage](https://link.mail.beehiiv.com/ss/c/u001.GyLXS_kgZ_zhliVlX2b_SWCnHaEmu0ZUjW34u1J7dvkG4olRn3Sz0yD_F5iiryaJOSEKB1qmku6M6Vt4FBtbuAZ4Km4Qf43HcdB91QmcA-Q/463/TV7jC1MVQ1ar7K4d-md27g/h2/h001.6QInWTtDTUd9RNZHVj6Oh0fi086ctfhnWcuuYaJSz-w)  
+_sponsored by Omlet_
+
+Omlet gives you much-needed visibility into React component usage frequency, prop patterns, and design system coverage. Now you can make informed decisions about refactoring components, migrating to your design system, and promoting reuse.
+
+[React 19 Beta](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvuMRDy3w85kWf16GtEwWeEAlfpPe1_IeLDXyLBT8OPPh0Hk9ObANe96S2JQ2oBzH4b9jOY0b4bKK_LRgn8Pd2R9vETrxobgH9w0qePcjIqe_stlN8yZKhGVp2lA4rxpJPoMLK0Urr6Rd6QyFXcPBINcqCL2Lw7f0-ZZAhN53ZPCJiVM2hzIF0-_F07GigXkgTQ/463/TV7jC1MVQ1ar7K4d-md27g/h3/h001.4ktYjDwfnt2-Bowdoe9jW1y0YR3XJlgmdQ8m1R5kv5o)  
+_20 minutes_ by React Team
+
+React 19 Beta is now available on npm! In this post, we'll give an overview of the new features in React 19, and how you can adopt them.
+
+[Build an Image Magnifier Component](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVeqQVQqdEkw7MALQTs7Eal0vV61Q02NsARalhrmBKSQqCaEbJHRYV5vpv9Hmgf4iji9LSCtFP4mMFDbd6vj7OZxSBDf_GOeFcfzBpJxsx2ebxA_5mS7RyE1u4VgLKLFbFSRb9TnuMhRt99geRooc9UwhsmVvfgwWKlimXuqBE46k36pUnrCvuqlj37er_e6w3mdDjS-cjBzEuRVLPWt7DoAclK2IfOcNga0YMSwrLc0V/463/TV7jC1MVQ1ar7K4d-md27g/h4/h001.hUpzoNWC5w3IyE4Mt0s2IxNF7XcKZnfjif9LgB6nxro)  
+_3 minutes_ by Margish Patel
+
+Create an Image Magnifier Component in React. With step-by-step instructions and code examples, you'll learn how to enhance user experience by allowing them to zoom in on images for a closer look. Follow along to build your own customizable image magnifier component and elevate your web development skills.
+
+[Demystifying React's Types: Ref types](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVXUNp1pQdVyD3aPuYCXbjDEer1aaAIX5QJKrJRjM43y_rqJvVEf-3ICNay1cvExQBWn3MVMJdAARFAVWLbL5VCES5CumWlPUwirtUTSCtiqnmlr3MNG7uCl9I4KSruULWniS1idhwIiangXOCfYIHHUMYN7O_6dN3sdfysCQMNKHhbvskPknvfDfoF8uVDQ-wv0HvL9-w4h8HTfM0MhZjL8/463/TV7jC1MVQ1ar7K4d-md27g/h5/h001.bOMW5YCtPsCXeCEeenkCk7gS1l--zD5rBdEQLLOx2hY)  
+_4 minutes_ by Will T.
+
+When working with TypeScript in ReactJS, using refs in functional components requires a bit of extra care to ensure type safety. In this article, we'll explore the most popularly used and relevant types of refs available in TypeScript-based functional components.
+
+[Build a memory game](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v_DxMTfUzLWUnXrsKgR8G6aOEbNJdGgyCsPda_Bgsfa7P-2P9aC2s-uNMtVeBiNeNLRDeQqk9hUq80Gb831H7TJvHZtDgWQp67tXl36iJ1Ge7THgeQpYngu2uIYtTh7R8jDYfs23rNoeCTCMVObVupona1W7cpPqqHWoU4IjA4UW1tWLyazRrArjk-HpCP6bY5lQr6z8fkg/463/TV7jC1MVQ1ar7K4d-md27g/h6/h001.Xj6m4GwzZ19WdgHkDEGfmUpHUCv5q7ZBu7vSRJqXPF4)  
+_1 minute_ by Corina Udrescu
+
+You start with 6 images that you will display as 12 cards. By default, they are "flipped" - you only get a placeholder instead of the image.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XsR9lV6XziFqLIuNSDelayhHVDYEkKeKMX7q\_yWRk9DCG2l99A9wl51iS7tZfQgHw0S5D pIelHNw1YhlmIXRl3RPN4L07urPSe0Pjqh1g90kwey8RC-MexgUFbl5o0pR4r2P9mvjHd-qOVpxAxjv8bQn5JYoOihHK10m3kDDC2tkWg24ZOLbeHZ52pJOJe\_A4YWGm6Rqj\_FUisgt2vCSML8 0nEKmN7ZxHbzu02Nffr-R2JAlHto40LrwnepGumpb3nQrsKYdXrBnTMAOWYsF\_prVdRuYxhwp8u INPyl4rU5jcsyCQqESfX3AGAK\_uIspntf-Dih31LOLBX2lS5vj2UI0aLQe\_q-p-egBkd0sOjiXoJ 74gHDs4R1YueGeeoIr3nvNZ2DLluMJ9CHZG5J8klc9bnncJ6Hi1z6gbhb3bqCYQPoHi\_Sz\_8Jee6Y wGil8fzKVAcxDwuIhX5eQymFLSStqpAkbqSf7I4YT4exBR7Q-NZF5Qva7mjSAgbo8WIERmUWkhICj2 N3wI6EFfApW\_QdShOiTZxdTlooxxQCJmH7CIf11ME5CQgBCiTfkeD\_GjohdZGmqnjoH1Rd7wx-kJzktAiGCqNfrGaffohjkCUCg/463/TV7jC1MVQ1ar7K4d-md27g/h0/h001 .cv18ZXe7tb4PRGdLvUp3U7guXWhXKX-sAyCgjXtq5Xo)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/463/TV7jC1MVQ1ar7K4d-md27g/ho.gif)
+
+\[API 层和获取函数]\(https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhYf6Tadtz5p3wSZz-URRP1uNW-PaCCcTrO6Xvo4Jstu889KBCjI9NC-9EjmqCd9Hvq8yQIzlMZSL2QQQAmlay4AjlbiRPkluT cblemGaW3JpxeiHf63xab9qg3HHtsb5qnKNI5WL8E0OqHtXj-osHDWwq9MvtlL6DXaNz8mIaxYEzZtmZmQt6sBYX38jfS7YHlHxQFDJzh1jmG1d7Kn41XK8eF1TnF5krJFSxOORfMwU /463/TV7jC1MVQ1ar7K4d-md27g/h1/h001.eJ- 15ida0y4szdooKOq8ZR1GTlj3UJjrC43SUwq2DDo)\
+*4 分钟* 约翰内斯·凯特曼
+
+混合 API 和 UI 代码很快会导致代码混乱且难以维护。在本文中，我们通过将 fetch 函数提取到 API 层，向更清晰的 React 架构迈出了一步。
+
+【破解React组件使用代码】(https://link.mail.beehiiv.com/ss/c/u001.GyLXS\_kgZ\_zhliVlX2b\_SWCnHaEmu0ZUjW34u1J7dvkG4olRn3Sz0yD\_F5iiryaJOSEKB1qmku6M6Vt4FBtbuAZ4Km4Qf43HcdB91QmcA -Q/463/TV7jC1MVQ1ar7K4d-md27g/h2/h001.6QInWTtDTUd9RNZHVj6Oh0fi086ctfhnWcuuYaJSz-w)\
+*由欧姆莱特赞助*
+
+Omlet 为您提供了急需的 React 组件使用频率、prop 模式和设计系统覆盖范围的可见性。现在，您可以就重构组件、迁移到设计系统和促进重用做出明智的决策。
+
+\[反应 19 测试版]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvuMRDy3w85kWf16GtEwWeEAlfpPe1\_IeLDXyLBT8OPPh0Hk9ObANe96S2JQ2oBzH4b9jOY0b4bKK\_LRgn8Pd 2R9vETrxobgH9w0qePcjIqe\_stlN8yZKhGVp2lA4rxpJPoMLK0Urr6Rd6QyFXcPBINcqCL 2Lw7f0-ZZAhN53ZPCJiVM2hzIF0-\_F07GigXkgTQ/463/TV7jC1MVQ1ar7K4d-md27g/h3/ h001.4ktYjDwfnt2-Bowdoe9jW1y0YR3XJlgmdQ8m1R5kv5o)\
+*20 分钟*，React 团队
+
+React 19 Beta 现已在 npm 上发布！在这篇文章中，我们将概述 React 19 中的新功能以及如何采用它们。
+
+\[构建图像放大器组件]\(https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu\_fY2A1vmVeqQVQqdEkw7MALQTs7Eal0vV61Q02NsARalhrmBKSQqCaEbJHRYV5vpv9Hmgf4iji9LSCtFP4mMFDbd6vj7 OZxSBDf\_GOeFcfzBpJxsx2ebxA\_5mS7RyE1u4VgLKLFbFSRb9TnuMhRt99geRooc9UwhsmVvfgwWKlimXuqBE46k36pUnrCvuqlj37er\_e6w3mdDjS-cjBzEurRVLPWt7DoAclK2IfOcNga0Y MSwrLc0V/463/TV7jC1MVQ1ar7K4d-md27g/h4/h001.hUpzoNWC5w3IyE4Mt0s2IxNF7XcKZnfjif9LgB6nxro)\
+*3 分钟* 玛吉什·帕特尔
+
+在 React 中创建一个图像放大镜组件。通过分步说明和代码示例，您将了解如何通过允许用户放大图像以便更仔细地查看来增强用户体验。继续构建您自己的可定制图像放大器组件并提高您的 Web 开发技能。
+
+\[揭秘 React 的类型：Ref 类型]\(https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu\_fY2A1vmVXUNp1pQdVyD3aPuYCXbjDEer1aaAIX5QJKrJRjM43y\_rqJvVEf-3ICNay1cvExQBWn3MVMJdAARFAV WLbL5VCES5CumWlPUwirtUTSCtiqnmlr3MNG7uCl9I4KSruULWniS1idhwIiangXOCfYIHHUMYN7O\_6dN3sdfysCQMNKHhbvskPknvfDfoF8uVDQ-wv0HvL9-w4h8HTfM0MhZjL8/463/TV7jC1MV Q1ar7K4d-md27g/h5/h001.bOMW5YCtPsCXeCEeenkCk7gS1l--zD5rBdEQLLOx2hY )\
+*4 分钟* 威尔·T.
+
+在 ReactJS 中使用 TypeScript 时，在功能组件中使用 ref 需要额外小心以确保类型安全。在本文中，我们将探讨基于 TypeScript 的功能组件中最常用和相关的引用类型。
+
+\[构建记忆游戏]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v\_DxMTfUzLWUnXrsKgR8G6aOEbNJdGgyCsPda\_Bgsfa7P-2P9aC2s-uNMtVeBiNeNLRDeQqk9hUq 80Gb831H7TJvHZtDgWQp67tXl36iJ1Ge7THgeQpYngu2uIYtTh7R8jDYfs23rNoeCTCMVObVupona1W7cpPqqHWoU4IjA4UW1tWLyazRrArjk-HpCP6bY5lQr6z8fkg/463/TV7jC1MVQ1ar7K 4d-md27g/h6/h001.Xj6m4GwzZ19WdgHkDEGfmUpHUCv5q7ZBu7vSRJqXPF4)\
+*1 分钟* Corina Udrescu
+
+您从 6 张图像开始，将显示为 12 张卡片。默认情况下，它们是“翻转”的 - 您只会得到一个占位符而不是图像。
+
+#
+
+

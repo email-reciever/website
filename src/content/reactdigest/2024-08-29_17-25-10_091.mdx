@@ -1,0 +1,92 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#463 Enhancing The New York Times Web Performance with React 18
+description: RD#463 Enhancing The New York Times Web Performance with React 18
+date: 星期一 02 凌晨 七月 8o 2024
+author: reactdigest
+origin_url: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fenhancing-new-york-times-?= =?us-ascii?Q?web-performance-react-18?=
+origin_site: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fenhancing-new-york-times-?= =?us-ascii?Q?web-performance-react-18?=
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#463 Enhancing The New York Times Web Performance with React 18" url="=?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fenhancing-new-york-times-?= =?us-ascii?Q?web-performance-react-18?=" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XfHjAqSFfDsnBrxuj1HJ2oMcd_apvoW28leKPLTOVnMs3U6HrRGoUXPfJWDFED7BBC5LpargSNjzN26M3Z__n-AXKuxQNM7qP9VP0aHXOaOwvYcZFb4yABILRc3dm4Su6QMFG9-ZuIWt4EpFu7wjT8GdeIod5TAlZwyZ4nwL79d5un2Q-pm9maKbbhhyzvTjG8KGlXKo1zCQOxVnPShQNbl3k8pKscfHSOxKsV9fGoMF-eUtbUHf0FqUpk5KgfcUFU6130wuegq-npc-2YdUahW-8uGtPBF88FDD2FffRIMMcksTPbM5jZXBUWciV0vYPIUbbJ7aIjnwlsY2UJG49NB9cYndhA_7tCpwTHZX_8BT56MhEZqZDU4G19QBgQI9xFbo_35TZTpFGwcJe-DcHs8rpBAXonvHy31lZqAj9HlRAVNPNd7UFatRqJV1gIT3eQQNy56eqkuLPisnk5bW9xC_38L8VphfJiQOGKDejLSQ2ypD0r4qthcFeDKB_oie9i9WfPS2JfDImpHUyssuy2--2Xv3vYV3oBpGxmI1B-ZFaYo1DpWZ4WSLe9bCZLTp5PYhScYSNLZyb5y4SkvGVgxGVnycaHDRNhsa1Ny1TeX3trF2UpV64UutOw_d_wNaHjGelsgxRqfejYUyUtfy_e0K88PW5yh-3O6ZMKNwapzQ/47u/6ypBneATT2Kp4JGrgIdLfw/h0/h001.8fwTT6tDVrkzAlxeWLqVqWkA4uN8cMt8ROwu2GgUw8E)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/47u/6ypBneATT2Kp4JGrgIdLfw/ho.gif)
+
+[Enhancing The New York Times Web Performance with React 18](https://link.mail.beehiiv.com/ss/c/u001.GyLXS_kgZ_zhliVlX2b_SYpl-xQBT-lELWLVH6XB9eNV2VV8381Ux7i7gHptyQXeMiobzZXPA6pDeUlMoZahd4j76hAgDK0ZeYi6fV6def-QwK_0fP6hiA4bkQmmCskTOqqbmSi1fv-aVhttfO6E2ZBoFJPBPvBQDdKoS2WA-m9qFLxFVoPfJ18Tf_KWSNdkonfOWTcPGY6qlSVwySGSJBCqVQPP12MCXMUUVt34E35kxqQxQw88p08AGordrmffnIYq4qFSjgcXiAwftI3mpJfv6z-tYIH3HJDG4cg2xIQS5VM7fN5Q9h3QjW2cEdIs/47u/6ypBneATT2Kp4JGrgIdLfw/h1/h001.vcqeLs1fqGk5CtA49edn-hwYlIzy7WeSb2UKT673MNI)  
+_13 minutes_ by Ilya Gurevich
+
+How upgrading to React 18 energized The New York Times website – and how they tackled some of the challenges along the way.
+
+🎹 [STRICH: Fast and reliable 1D/2D JavaScript Barcode Scanning in your browser](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAOzqbG9ZFjVrmcyXIH-BJ76FJnyjCAlcttpYRQ3j2yCGdvLufUFnGWS73KraDlB8yFtXE_GhD6CIDG6yKfGsc_3KKavhj2Hs7hIP5qoI8Yqffb7VBz6Whw03NsosjCpauCDKobHm9VPW5JZDGUDdnEpbiEadQYT2jbmBfKLN4TgXpC1Dy2xR7f-EBi8VDNWfQLzMjacdzA-i6yVSDnRfo_es/47u/6ypBneATT2Kp4JGrgIdLfw/h2/h001.e2FXnc6R3CYO2u6Md8R--oiI4f9vCdRREFM9amKK8Gc)  
+_sponsored by Strich_
+
+STRICH brings lightning-quick and robust barcode scanning into your web apps. STRICH is easy to integrate, has a built-in user interface and requires zero dependencies. Sample code is available for all popular frameworks, professional support if you need it. Check out the free demo app today and start your free 30-day trial.
+
+[Use a framework to build React Native apps](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvg6X08HACLEPkNSKEkWmEp16bJaMfFgRL1tkLk3sxx6yW2yI5QVIELvhiqIpRXTcK6mQxYxyqc7eewrmmTBc_fIJp13Hvr2YL-d05xnQPS_Ez3YSYVBPVfrng0ReFQQ2-wt9d-csLhCq40lywbYwrHYH9FHb6DrHWvtbqtZiPv5TZp0VJBaSq2ABG56fXA0G-nenrkFOSRBqR72cgCS765fd7KQnTi2R4Z21EYO1dlZQWAeK99VmmfDgp5eaXqkzPMV-r2zAX31mp7xoy5gohbk/47u/6ypBneATT2Kp4JGrgIdLfw/h3/h001.nzyLE6NryTMtAzLPBUErh0Eu0wupL7wlDOIVirRCmj0)  
+_4 minutes_ by Nicola Corti
+
+At React Conf, React team updated their guidance on the best tool to get started building React Native apps: a React Native framework - a toolbox with all the necessary APIs to let you build production-ready apps.
+
+[Build an infinite scrolling list of pokemons](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v_DxMTfUzLWUnXrsKgR8G6aOEbNJdGgyxwZGHTpoi1W_LaW6Kk4HML6sv5JOSKeNx4xRnYPqQZ3TBKDeZ0XivnNAm7SmmFXU0LSM185JhC66Inut4GI0mkr2ReuNS10qJjCwpywouDov5Zoj78mcTRpGcUX79NhVpXSwJBYqPyt5YCoSSPTFHDpZSN0PPp6qCvLeeUKTWkNUjlZu3dzi9okCpKp_Biw6Vp1X8T6sgkXDHwN3Ib9kC2DpaPScdfAUOWYaO1bb3v8/47u/6ypBneATT2Kp4JGrgIdLfw/h4/h001.nrU6Bv7CEDxUnUYDlCSG410tL5EWLeaRaPRfuNXj7AQ)  
+_30 minute_s by Corina Udrescu
+
+Start by displaying a list of 12 pokemons. For each pokemon, show its name and photo. As the user scrolls, when he reaches the end of the currently visible items, show a "Loading..." text message and start loading the next page.
+
+[5 Misconceptions about React Server Components](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqX2FehMFaenwLRq291vYtiQE3D9MG-hBC_iCfpFqw5bmmJ6Oq-THlV12sP8XegJbC0gsDZb2KnXR76DQfjZ-ptm-xEoadab5uX8yJjjZYdAfGW5z9qaW2RPChg1-zBy1f1vcwv5Zu0YByZtsAroE7OSjL7yjp0gCqVT_Jrc-Zoj1EoNjqSqQbmZFBCKqMR_tu5EWdf67B577E8zsFz4sqbWHQhxa9_a1z0p2kh040Uwf1h10eAizu9VKSxcBucryyQ/47u/6ypBneATT2Kp4JGrgIdLfw/h5/h001.GD3Fg69tLNOD26Rf-YXlZ4-BgGvjdmcCMPFMJeiEzus)  
+_8 minutes_ by Vishwas Gopinath
+
+Confused about React Server Components? You're not alone. Let's bust 5 myths and discover how to supercharge your Next.js apps with this new paradigm.
+
+[Extra Arguments for Server Actions in React Forms](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zIxWK1qFhmKx_hUSnccizQCBFhujrjnZ36vob4iiqUzx6B8oLPrSsOzjmQKbAvyLoiOtA5wkxkF1_vX9Vf_I1RvxoY9KCXKVM1gfMacSenGbmakkLoAovoVEJyvYM8U1Z8Zo6ZHMNHi3t0iaV1YjSkHUoob6V1-Df61j8addANV7zVFPguy5A1Odz2DPXoy0AFJXkz7L6GvCy_Du4RshMgVf4ifY4b8IccTc1EQrZd8AHD2FiP7wIPeimph2cU1LeY/47u/6ypBneATT2Kp4JGrgIdLfw/h6/h001.8FJFUyh5R6JkTKZW73Bmix1LyrbwRmJsOwIn7Q_vyGE)  
+_3 minutes_ by Robin Wieruch
+
+In this short tutorial, you will learn how to pass extra arguments to server actions in React forms. We will start with the following React form component that updates a user's profile.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XfHjAqSFfDsnBrxuj1HJ2oMcd\_apvoW28leKPLTOVnMs3U6HrRGoUXPfJWDFED7BBC5Lparg SNjzN26M3Z\_\_n-AXKuxQNM7qP9VP0aHXOaOwvYcZFb4yABILRc3dm4Su6QMFG9-ZuIWt4EpF u7wjT8GdeIod5TAlZwyZ4nwL79d5un2Q-pm9maKbbhhyzvTjG8KGlXKo1zCQOxVnPShQNbl3 k8pKscfHSOxKsV9fGoMF-eUtbUHf0FqUpk5KgfcUFU6130wuegq-npc-2YdUahW-8uGtPBF88FD D2FffRIMMcksTPbM5jZXBUWciV0vYPIUbbJ7aIjnwlsY2UJG49NB9cYndha\_7tCpwTHZX\_8BT56 MhEZqZDU4G19QBgQI9xFbo\_35TZTpFGwcJe-DcHs8rpBAXonvHy31lZqAj9HlRAVNPNd7UFatRqJV1gIT3eQQNy56eqkuLPisnk5bW9xC\_38L8VphfJiQOGKDejLSQ2ypD0r4qthcFeDKB\_oie9 i9WfPS2JfDImpHUyssuy2--2Xv3vYV3oBpGxmI1B-ZFaYo1DpWZ4WSLe9bCZLTp5PYhScYSNLZyb5y4SkvGVgxGVnycaHDRNhsa1Ny1TeX3trF2UpV64UutOw\_d\_wNaHjGelsgxRqfejYUyUtfy \_e0K88PW5yh-3O6ZMKNwapzQ/47u/ 6ypBneATT2Kp4JGrgIdLfw/h0/h001.8fwTT6tDVrkzAlxeWLqVqWkA4uN8cMt8ROwu2GgUw8E)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/47u/6ypBneATT2Kp4JGrgIdLfw/ho.gif)
+
+\[使用 React 18 增强《纽约时报》网络性能]\(https://link.mail.beehiiv.com/ss/c/u001.GyLXS\_kgZ\_zhliVlX2b\_SYpl-xQBT-lELWLVH6XB9eNV2VV8381Ux7i7gHptyQXeMiobzZXPA6pDeUlMoZahd4j76hAgDK0ZeYi6 fV6def-QwK\_0fP6hiA4bkQmmCskTOqqbmSi1fv-aVhttfO6E2ZBoFJPBPvBQDdKoS2WA-m9qFLx FVoPfJ18Tf\_KWSNdkonfOWTcPGY6qlSVwySGSJBCqVQPP12MCXMUUVt34E35kxqQxQw88p08AGor drmffnIYq4qFSjgcXiAwftI3mpJfv6z-tYIH3HJDG4cg2xIQS5VM7fN5Q9h3QjW2cEdIs/47u/6ypBneATT2Kp4JGrgIdLfw/h1 /h001.vcqeLs1fqGk5CtA49edn-hwYlIzy7WeSb2UKT673MNI)\
+*13 分钟* 伊利亚·古列维奇
+
+升级到 React 18 如何为《纽约时报》网站注入活力，以及他们如何应对这一过程中的一些挑战。
+
+🎹 \[STRICH：在浏览器中快速可靠的一维/二维 JavaScript 条形码扫描]\(https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn\_0mUAOzqbG9ZFjVrmcyXIH-BJ76FJnyjCAlcttpYRQ3j2yCGdvLufUFnGWS73KraDlB8yFtX E\_GhD6CIDG6yKfGsc\_3KKavhj2Hs7hIP5qoI8Yqffb7VBz6Whw03NsosjCpauCDKobHm9VPW5JZDGUDdnEpbiEadQYT2jbmBfKLN4TgXpC1Dy2xR7f-EBi8VDNWfQLzMjacdzA-i6yVSDnRfo\_ es/47u/6ypBneATT2Kp4JGrgIdLfw/h2/ h001.e2FXnc6R3CYO2u6Md8R--oiI4f9vCdRREFM9amKK8Gc)\
+*由斯特里奇赞助*
+
+STRICH 为您的 Web 应用程序带来闪电般快速且强大的条形码扫描功能。 STRICH 易于集成，具有内置用户界面并且要求零依赖性。示例代码适用于所有流行的框架，如果您需要，还可以提供专业支持。立即查看免费演示应用程序并开始 30 天免费试用。
+
+\[使用框架构建React Native应用程序]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvg6X08HACLEPkNSKEkWmEp16bJaMfFgRL1tkLk3sxx6yW2yI5QVIELvhiqIpRXTcK6mQxYxyqc7eewrmmTBc\_fIJ p13Hvr2YL-d05xnQPS\_Ez3YSYVBPVfrng0ReFQQ2-wt9d-csLhCq40lywbYwrHYH9FHb6DrHWvtbqtZiPv5TZp0VJBaSq2ABG56fXA0G-nenrkFOSRBqR72cgCS765fd7KQnTi2R4Z21EYO1 dlZQWAeK99VmmfDgp5eaXqkzPMV-r2zAX31mp7xoy5gohbk/47u/6ypBneATT2Kp4JGrgIdLfw/h3/h001 .nzyLE6NryTMtAzLPBUErh0Eu0wupL7wlDOIVirRCmj0)\
+*4 分钟* 尼古拉·科尔蒂 (Nicola Corti)
+
+在 React Conf 上，React 团队更新了他们关于开始构建 React Native 应用程序的最佳工具的指南：React Native 框架 - 一个包含所有必要 API 的工具箱，可让您构建可用于生产的应用程序。
+
+\[构建无限滚动的神奇宝贝列表]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v\_DxMTfUzLWUnXrsKgR8G6aOEbNJdGgyxwZGHTpoi1W\_LaW6Kk4HML6sv5JOSKeNx4xRn YPqQZ3TBKDeZ0XivnNAm7SmmFXU0LSM185JhC66Inut4GI0mkr2ReuNS10qJjCwpywouDov5Zoj78mcTRpGcUX79NhVpXSwJBYqPyt5YCoSSPTFHDpZSN0PPp6qCvLeeUKTWkNUjlZu3dzi9okCpKp\_ Biw6Vp1X8T6sgkXDHwN3Ib9kC2DpaPScdfAUOWYaO1bb3v8/47u/6ypBneATT2Kp4JGrgIdLfw/h4/h001.nrU6Bv7CEDxUnUYDlCSG410tL5EWLeaRaPRfuNXj7AQ)\
+\_30 分钟\_s，作者：Corina Udrescu
+
+首先显示 12 个神奇宝贝的列表。对于每个神奇宝贝，显示其名称和照片。当用户滚动时，当他到达当前可见项目的末尾时，显示“正在加载...”文本消息并开始加载下一页。
+
+\[关于React服务器组件的5个误解]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqX2FehMFaenwLRq291vYtiQE3D9MG-hBC\_iCfpFqw5bmmJ6Oq-THlV12sP8XegJbC0gsDZb2KnXR76D QfjZ-ptm-xEoadab5uX8yJjjZYdAfGW5z9qaW2RPChg1-zBy1f1vcwv5Zu0YByZtsAroE7OSjL7yjp0gCqVT\_Jrc-Zoj1EoNjqSqQbmZFBCKqMR\_tu5EWdf67B577E8zsFz4sqbWHQhx a9\_a1z0p2kh040Uwf1h10eAizu9VKSxcBucryyQ/47u/6ypBneATT2Kp4JGrgIdLfw/h5/h001.GD3Fg69tLNOD26Rf -YXlZ4-BgGvjdmcCMPFMJeiEzus)\
+*8 分钟* Vishwas Gopinath
+
+对 React 服务器组件感到困惑吗？你并不孤单。让我们打破 5 个误区，探索如何使用这种新范例来增强您的 Next.js 应用程序。
+
+\[React Forms 中服务器操作的额外参数]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf\_qUprM09yoMPtF27zIxWK1qFhmKx\_hUSnccizQCBFhujrjnZ36vob4iiqUzx6B8oLPrSsOzj mQKbAvyLoiOtA5wkxkF1\_vX9Vf\_I1RvxoY9KCXKVM1gfMacSenGbmakkLoAovoVEJyvYM8U1Z8Zo6ZHMNHi3t0iaV1YjSkHUoob6V1-Df61j8addANV7zVFPguy5A1Odz2DPXoy0AFJXkz7L6GvCy\_ Du4RshMgVf4ifY4b8IccTc1EQrZd8AHD2FiP7wIPeimph2cU1LeY/47u/6ypBneATT2Kp4JGrgIdLfw/h6/h001.8FJFUyh5R6JkTKZW73Bmix1LyrbwRmJsOwIn7Q\_vyGE)\
+*3 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+在这个简短的教程中，您将学习如何将额外的参数传递给 React 表单中的服务器操作。我们将从以下用于更新用户个人资料的 React 表单组件开始。
+
+#
+
+

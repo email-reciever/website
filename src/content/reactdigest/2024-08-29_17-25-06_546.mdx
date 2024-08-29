@@ -1,0 +1,92 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#461 React 19 and Suspense
+description: RD#461 React 19 and Suspense
+date: 星期一 02 凌晨 六月 24o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/react-19-suspense
+origin_site: https://newsletter.reactdigest.net/p/react-19-suspense
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#461 React 19 and Suspense" url="https://newsletter.reactdigest.net/p/react-19-suspense" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XYEuFVChJelSuJ5XoBpKBQbny7T6r9mB2NrVQ8BqVJtQg_xRg0Hjq5C44_lJMXjhxa9x7aAtampmGIMJPLqj5qVbRDb39zedsovGke2BzLis0_LtILDBaxmUxkGSHHVfGYDekEy9CPQacJNF24yWI_-Fkd4RekNKkyyj_L6B1xGLHDfQYNi3YtjUzySxj5x3Z8UgItbMeCa79qlcmY5P2JAfXvplOJcOYsouYupJgnCalMcaOvkLWNrxkxZV-Ghd2FTlPdniPAy-A3QWRf8lqm8DPuLhOzUXgT35W8N-9nMPjhfWqHS8Gd_kTdKHvfrF1W6FcrZDFZvcgwhpR7ws7um8S-B9Cmht3Xq82t2agZubH0ZZW5Hde2bs-SUiAyxh85OK1WITvrGsrV1v9aqqPr4SdsW9jZjl8f0JfYT3Ex9_S-Eig60DCiiSvx0XANelJHURYsFeC7p0b9VHzH4u9-KrAbDWaZTXYxJB5CWGJM5gPsiXOGO2j7uWPrLhnKE8I7T4LUcF-APR5zBV1mhAyoiX6JSWrOH2h8M_tMOYVKUQnSwYch2pdj-r7UjA5cqQgI8Zd4BlUX_WLcyTvmVCL4/47g/0csitEAqSS2f7axEpq9fbA/h0/h001.B2t3MnE_Y39Xbhl_1RMrnievkrYtIK6MUKbu79CnoHM)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/47g/0csitEAqSS2f7axEpq9fbA/ho.gif)
+
+[React 19 and Suspense](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF87awdU8DR0ou_NTWoqeJgvPDR1v72sSXOCXjbZbZOCTKeBdb8loiLN7Ajyn4mLcT0RBYnDAQvVq3mRlsrw5z2OKsvq3CX8bD2dw39BoWtcC3y7R_KUm6DyOnzdfA8ZoIX3lEAhvMm7IpiNyLYnOeJ0EwJ1e9_ZaXgQtjfQLstLhPkDGdcy0mJwxSgVx2TtAmqmChks5YzQERG8l-q00pXw/47g/0csitEAqSS2f7axEpq9fbA/h1/h001.wW1J1etuJMyciEgh7dR8PBWSuxjbz9TTb4lZwCj4LCI)  
+_11 minutes_ by T.K.Dodo
+
+A drama in 3 acts.
+
+[Tests are dead. Meticulous AI is here.](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzA37hCquJL7kvZO-rkPj6htQ/47g/0csitEAqSS2f7axEpq9fbA/h2/h001.0BAldIs757VkTe4913kDvZjUKlNGBVl3GqOWfjrr7Ok)  
+_sponsored by Meticulous_
+
+Meticulous AI is a tool which automatically creates and maintains a continuously evolving e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Backed by CTO of GitHub, Guillermo Rauch (next.js author), yc and others, it's built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[Write SOLID React Hooks](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqdALeJCV2P0EXyr0NtYBJZMcIJ9Otsee4sEnJrmik-YCBbYZkEBT5GTbEkLXkMwiAyerxglx8NWowStnTLL67T5RYNz1ohTV5OXm_jjFPFDbLgUmIrt6L81Xp4cL1f69DVxXiEXp5tmhpfMlXEVKZZcDj8O9cXi5HHWBGa7C_cMot_qF9vOVSa9NMCx6zdbo6KSxRhTi0mmc0NyIgYLl6l4/47g/0csitEAqSS2f7axEpq9fbA/h3/h001.dgisLvwdnQ9_Pi5aSMrsBcOyRxoybJeE9xkiuuDy5OQ)  
+_19 minutes_ by Persson Dennis
+
+SOLID principles suits surprisingly well with React. This article explains how to implement React hooks to follow the SOLID principles.
+
+[How React 19 (Almost) Made the Internet Slower](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63qP3bky6qNnTxX93Fg0cxwKRqOxKO_olZleGafEXL2wppVCDa1JEjV41rJJH4PGmEBFUjd61BcA4_tioo5xmp-32sBf8Z44Z5ee0G6Yg8eUnaV4Fa1jt5yL18CX5Z7ZC4toRNwskilwfDteXbOxSRGvrH748BbVEa6O83BPzdpnhQ9s7kyU6CTuUSQPO6NDfrIxxDwdCxvcFPax481mxCqgrVVb85FCOfQysamb8qY2u/47g/0csitEAqSS2f7axEpq9fbA/h4/h001.4gu6vjh37nAb190u8KJXom3poQAQN7XTPL-a1KNl2Bs)  
+_7 minutes_ by Henrique Yuji View
+
+The author discusses the React 19 change that went unnoticed until last week that could potentially degrade the performance of websites that rely React.
+
+[Show top 10 articles from Hacker News](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v_DxMTfUzLVRrL_c3OGGC-6ltml6ytqa7wpdIgLuK0AQ556rtVLcLzJFiGbm0I8Px5Go3517NctI38EU1g_Dv7w-QsHBUkr8rYBFzxsg2_IclSLYpzqR5Dbc9OSO-eIA-SqEuMamNz2ePx2sRxdBatMp37qXm5kFy-Epj8Sij5g0Ciz0Xs0ltad7sDBCeJ7ANV_i37QrpVI/47g/0csitEAqSS2f7axEpq9fbA/h5/h001.HZ6D5dteryObvGI0JiVO1EaMZuXD4J66sW--9zrOCUk)  
+_30 minutes_ by Corina Udrescu
+
+Build a React component that shows a list of 10 articles from the Hacker News API.
+
+[React Form with Loading State (Pending Action)](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zJ7jpae0ioCIDu9BkJyI13X2LAFoVzeGjrXc82SlpTXLPJIRNvAQ4QvJsZQ7YzfdF1WaLEquGk3UKRpEYyhOLa5ltxo5xyx4XcdsNN0PZq5IjaZ2xoJAJIz9alLQu39JvyGgbf4jYGm56_gndrBDNDwF3CSWNTbYhIiUTCN6al93ctNGC0m7fmFwq8eeXsII3A/47g/0csitEAqSS2f7axEpq9fbA/h6/h001.d5ihZv8nliwrpWBrm8j_BzXdY0CHPgVlGuO_IOgbGjg)  
+_5 minutes_ by Robin Wieruch
+
+In this short tutorial, you will learn about multiple ways to show a loading spinner in React forms when using actions with a pending state. You can use the loading state to indicate that the form is submitting and prevent users from submitting the form multiple times.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XYEuFVChJelSuJ5XoBpKBQbny7T6r9mB2NrVQ8BqVJtQg\_xRg0Hjq5C44\_lJMXjh xa9x7aAtampmGIMJPLqj5qVbRDb39zedsovGke2BzLis0\_LtILDBaxmUxkGSHHVfGYDekEy9CPQacJNF24yWI\_-Fkd4RekNKkyyj\_L6B1xGLHDfQYNi3YtjUzySxj5x3Z8UgItbMeCa79qlcmY5P2JA fXvplojcoysouYupJgnCalMcaOvkLWNrxkxZV-Ghd2FTlPdniPAy-A3QWRf8lqm8DPuLhOzUXgT35W8N-9nMPjhfWqHS8Gd\_kTdKHvfrF1W6FcrZDFZvcgwhpR7ws7um8S-B9Cmht3Xq82 t2agZubH0ZZW5Hde2bs-SUiAyxh85OK1WITvrGsrV1v9aqqPr4SdsW9jZjl8f0JfYT3Ex9\_S-Eig60DCiiSvx0XANelJHURYsFeC7p0b9VHzH4u9-KrabDWaZTXYxJB5CWGJM5gPsiXOGO2 j7uWPrLhnKE8I7T4LUcF-APR5zBV1mhAyoiX6JSWrOH2h8M\_tMOYVKUQnSwYch2pdj-r7UjA5cqQgI8Zd4BlUX\_WLcyTvmVCL4/47g/0csitEAqSS2f7axEpq9fbA/h0 /h001.B2t3MnE\_Y39Xbhl\_1RMrnievkrYtIK6MUKbu79CnoHM)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/47g/0csitEAqSS2f7axEpq9fbA/ho.gif)
+
+\[React 19 和 Suspense]\(https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF87awdU8DR0ou\_NTWoqeJgvPDR1v72sSXOCXjbZbZOCTKeBdb8loiLN7Ajyn4mLcT0RBYnDAQvVq3mRlsrw5z2OKs vq3CX8bD2dw39BoWtcC3y7R\_KUm6DyOnzdfA8ZoIX3lEAhvMm7IpiNyLYnOeJ0EwJ1e9\_ZaXgQtjfQLstLhPkDGdcy0mJwxSgVx2TtAmqmChks5YzQERG8l-q00pXw/47g/0csiteA qSS2f7axEpq9fbA/h1/h001.wW1J1etuJMyciEgh7dR8PBWSuxjbz9TTb4lZwCj4LCI)\
+*11 分钟* T.K.Dodo
+
+一部三幕剧。
+
+\[测试已死。细致的AI就在这里。]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzA37hCquJL7kvZO-rkPj6htQ/47g/0csitEAqSS2 f7axEpq9fbA/h2/h001.0BAldIs757VkTe4913kDvZjUKlNGBVl3GqOWfjrr7Ok)\
+*由精心赞助*
+
+Meticulous AI 是一款自动创建和维护不断发展的 e2e UI 测试套件的工具，该套件涵盖应用程序的每个角落 - 无需开发人员进行任何干预。在 GitHub 首席技术官 Guillermo Rauch（next.js 作者）、yc 和其他人的支持下，它是从 Chromium 级别构建的，具有确定性调度引擎 - 使其成为唯一消除碎片的测试工具。
+
+\[编写 SOLID React Hooks]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqdALeJCV2P0EXyr0NtYBJZMcIJ9Otsee4sEnJrmik-YCBbYZkEBT5GTbEkLXkMwiAyerxglx8NWowStnTLL67T 5RYNz1ohTV5OXm\_jjFPFDbLgUmIrt6L81Xp4cL1f69DVxXiEXp5tmhpfMlXEVKZZcDj8O9cXi5HHWBGa7C\_cMot\_qF9vOVSa9NMCx6zdbo6KSxRhTi0mmc0NyIgYLl6l4/47g/0csitEAqSS2 f7axEpq9fbA/h3/h001.dgisLvwdnQ9\_Pi5aSMrsBcoyRxoybJeE9xkiuuDy5OQ)\
+*19 分钟* 佩尔森·丹尼斯
+
+SOLID 原则非常适合 React。本文解释了如何实现 React hooks 以遵循 SOLID 原则。
+
+\[React 19（几乎）如何使互联网变慢]\(https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63qP3bky6qNnTxX93Fg0cxwKRqOxKO\_olZleGafEXL2wppVCDa1JEjV41rJJH4PGmEBFUjd61BcA 4\_tioo5xmp-32sBf8Z44Z5ee0G6Yg8eUnaV4Fa1jt5yL18CX5Z7ZC4toRNwskilwfDteXbOxSRGvrH748BbVEa6O83BPzdpnhQ9s7kyU6CTuUSQPO6NDfrIxxDwdCxvcFPax481mxCqgrVVb85FCOf Qysamb8qY2u/47g/0csitEAqSS2f7axEpq9fbA/h4/h001.4gu6vjh37nAb190u8KJXom3poQAQN7XTPL-a1KNl2Bs)\
+*7 分钟* Henrique Yuji View
+
+作者讨论了直到上周才被注意到的 React 19 更改，该更改可能会降低依赖 React 的网站的性能。
+
+\[显示来自黑客新闻的前 10 篇文章]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v\_DxMTfUzLVRrL\_c3OGGC-6ltml6ytqa7wpdIgLuK0AQ556rtVLcLzJFiGbm0I8Px5Go3517 NctI38EU1g\_Dv7w-QsHBUkr8rYBFzxsg2\_IclSLYpzqR5Dbc9OSO-eIA-SqEuMamNz2ePx2sRxdBatMp37qXm5kFy-Epj8Sij5g0Ciz0Xs0ltad7sDBCeJ7ANV\_i37QrpVI/47g/0csitEAq SS2f7axEpq9fbA/h5/h001。 HZ6D5dteryObvGI0JiVO1EaMZuXD4J66sw--9zrOCUk)\
+*30 分钟* Corina Udrescu
+
+构建一个 React 组件，显示来自 Hacker News API 的 10 篇文章的列表。
+
+\[反应表单与加载状态（待处理操作）]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf\_qUprM09yoMPtF27zJ7jpae0ioCIDu9BkJyI13X2LAFoVzeGjrXc82SlpTXLPJIRNvAQ4QvJsZQ 7YzfdF1WaLEquGk3UKRpEYyhOLa5ltxo5xyx4XcdsNN0PZq5IjaZ2xoJAJIz9alLQu39JvyGgbf 4jYGm56\_gndrBDNDwF3CSWNTbYhIiUTCN6al93ctNGC0m7fmFwq8eeXsII3A/47g/0csiteEAqSS2 f7axEpq9fbA/h6/h001.d5ihZv8nliwrpWBrm8j\_BzXdY0CHPgVlGuO\_IOgbGjg)\
+*5 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+在这个简短的教程中，您将了解在使用具有挂起状态的操作时在 React 表单中显示加载微调器的多种方法。您可以使用加载状态来指示表单正在提交，并防止用户多次提交表单。
+
+#
+
+

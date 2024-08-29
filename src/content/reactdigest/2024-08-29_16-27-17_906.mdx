@@ -1,0 +1,102 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#441 Shining a light on Caustics
+description: RD#441 Shining a light on Caustics
+date: 星期日 11 晚上 二月 4o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/shining-light-caustics
+origin_site: https://newsletter.reactdigest.net/p/shining-light-caustics
+translated: true
+avatar: /media-source/reactdigest-ico.png
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#441 Shining a light on Caustics" url="https://newsletter.reactdigest.net/p/shining-light-caustics" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-r5aei1LqixOIwQN0qeGQMnlmGYTpIGpbepSI_P0csEEYv25B8npipZNwLiXvYi_a2SbwXasTEKO3dnGyjINY4xGJgMJO0rVxHPuoV-lxqK9D1cr9uHfCI7XK1TK1xnARqtqcZe3-2trY3ERcrG2O-cBa5XsI9ekotajzAyfioxMfAHzUm60JJp0TORKs8NWuUh_rB9MkulGMJgn9yY1xJiy5TTuWPHRfxPtOGVgM0mUoMAO1SCL8WlcPr3cQ720lKnl8mMzSPMv2VsifheIg16rpuYI1wO5iXrWoLHaZXpr9QzXO9HJ1rZFjaCY3WSzs4qurposDTu8RKZ9UDzxvw2xIiGIHG8fL5mlNKvZxXCmfQU1oinVJeN9IZu-Q6WQHlDfcBMQCuCooNAJKKDk3hYcM4Bqsls0On_sJawFn1nfZ9FCtQslRBvk9nc86O93Ho9utahDxs2rWNYQ9Fc6MzNwkZWtYGlxQLRsKoeWxxg9wCoeEwytcXWLCujNjqtT_MMxro-v8dBfI4DbhKnN0fgcKa5u4E_8kfQfJ2DNNCAbL0xqWfAM557Uxc_sjTv_KmxAnHXjs7KbSIL85AwsYVYWYRBDZuX3mckIwtmEVxQk5IfMmvVuDw99ImFzpWOpJQ/43k/cMAVhTjMSvCPXdS3V7s4Lw/h0/b2KPmhnFoD0q0oYtyGbMR70XC2hyyEWWTxMnUD1cySs)
+
+![](https://link.mail.beehiiv.com/ss/o/2neHg-Hzkdcq_goMOXZHDQ/43k/cMAVhTjMSvCPXdS3V7s4Lw/ho.gif)
+
+[Design and build UI components in Webflow](https://link.mail.beehiiv.com/ss/c/Rbmf5CzHe5itG0NBmgkKQOw8CCyVQk75-SaULbwiWapAG6aqi_2ZI9bH6ukRUXsES__DXv9OhzyhrzEy9pFzwbLkql8MIwJxPQUy07JSncx_misLqu87LLZ8td2jKhfsPHgYPnRP3oLFx9kFG6UCVRDcwTN_bLF7EG3RN6jz6PplPA5CHTjE-03VrIWQ7xxWYPZm7TQTkSxxz2iP6k2Mmg/43k/cMAVhTjMSvCPXdS3V7s4Lw/h1/Sa3bowQGBFnjJcArDPengQh93H2cAhW4Ud0KyP4sKGY)  
+_sponsored by Webflow_
+
+Build production-ready React components visually in Webflow, so you can bring new products and apps to market faster.
+
+[Shining a light on Caustics with Shaders and React Three Fiber](https://link.mail.beehiiv.com/ss/c/lwxq2V6aEWya6_kWoUO8rAhFdJx3ibMzH6aK0_-Shx_1XpTeH9W23UfzclmkiypyXYWogvEnSybNK5qa8OyGE-EO2ViPVW9Qgqf9YvyNiqYx6qQBTGyyZM4kllaryr79-4atscLzcnd95cQzXzC61eSD9UCGOuJj3nfYmfbtWYKuHO6f94Wp3MFU6WAs3uI2DLSWA2VdUvEHpln19SxGiKavKdZ5e5c3aoGbdv9FarU/43k/cMAVhTjMSvCPXdS3V7s4Lw/h2/TrTnuD2dFM5SL66kvhb2Lq3PxAfySjgbyO9Ww9-RjPg)  
+_21 minutes_ by Maxime Heckel
+
+A step-by-step guide on how to build a caustic light effect for your React Three Fiber project using shaders, render targets, normal maps, and custom materials.
+
+[React Intersection Observer: A Practical Guide](https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyIH4OrxK8L4ziQJe-9Y1VdpvvFh4EJxjZOExInBKaobJZVEzbUogib8JGZfOa6zHE2diBPc8E8_QNqY4POHRG5LdrSmrs5_db9V7J2iQpzLn5pK0XphxdcjXY6sUA3jvu8Y5EzuX3PMQWWAylzHb_MMzIO4TwdQJxWwr6n0nLzGmofZiUI7VoA42slLE_D0rM6SIPseGRQN4cv2KwsgidQ0/43k/cMAVhTjMSvCPXdS3V7s4Lw/h3/mYB6aoeBJPV54LCnrMM2l0axjPHqU185Ore_oScUQK4)  
+_5 minutes_ by Vishwas Gopinath
+
+In this blog post, we'll explore how to use the Intersection Observer in a React app. We'll reveal and highlight items with animations that occur on scroll.
+
+[Take a Qwik Break from React with Astro](https://link.mail.beehiiv.com/ss/c/i-14uV6vHkCzB2eOsMx0wHGPjtmJ7spH3kiJar0pEnZdEKBLIkqE44QDrTIM03eb9dcR4I17B3Y0MYQec7FZv7-sY0C_gcetOXabe6mhCdtv_i6GaFtxMwE2Z0y6wW93zd8p8heAwB0-eWVbtCJjHdKgcv6y8ImvWFpWFk8yK_CEjScYqsZ5_zYWSqpvms3ZFWiWDM97__XxMLckLPJQDb5kidXfcgGABw57oBo1Qdo/43k/cMAVhTjMSvCPXdS3V7s4Lw/h4/dSdH-erm7c7_1i8hSqeiR7Mlmmw8XzXylv4C4niFKis)  
+_8 minutes_ by Paul Scanlon
+
+Paul Scanlon compares React to Qwik using several examples. He concludes that Qwik is worth exploring as a React alternative.
+
+[Next.js App Router migration: the good, bad, and ugly](https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyGPIq_kodD7OKT-VJiyojFHWR27p7O07iYl2YPCmR_N7lYNrTXzCWDymtq9srwwH-AFaAGmeY6bROLUgHHnSISbUOPWNq4L9fN5lc-8zQyOxnzdwmeg-NMu3izqUOlep6dcmcM2j91B41DAAm9qfLvzRZzGJ0VyLqAgZOjCasYhzr6LQw8d8i1UiIQthWSxQu0qeWqTnzNRFrswVWM-yISW_XwlOlmYwyT6fo2pS4dNMhwwDTzggYukx5PBGfBv-jg/43k/cMAVhTjMSvCPXdS3V7s4Lw/h5/0YG84NicmLoPxTYa1XPICEOfRu6Otpp-q9LN0Fr3E9k)  
+_7 minutes_ by Brandon Bayer
+
+We rebuilt the Flightcontrol dashboard with Next.js App Router and this post shares the good and bad experiences from it.
+
+[How To Use forwardRef With Generic Components](https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyL5Xappc9eKMDfVwUCd1KpMjwP8XbuTNN1YnZbfFZpUdvUngUX4DbtCTo8OL6PjADS7_uxakiUN8jCIH-6mHR6uHzpWcMqHEbwk5aj4XrHFW2TlvxMtojuwFhRrYwMllZSUPI4hKcbAbFOOyOKztUdWJkSAAEZcDFf1fUPEVDG9ZxHnfd7J6KpB5la3ac3q7gdapvbPkaT672GeOPdc2Duk/43k/cMAVhTjMSvCPXdS3V7s4Lw/h6/vTPr31FLoXxU-0ksl__bky2e0TAXXhs_lTbSNXbEdLM)  
+_2 minutes_ by Matt Pocock
+
+Learn about the limitations of React's `forwardRef` TypeScript and discover a solution to enable inference on generic components.
+
+[Live Workshop: Mobile Crash Reporting & Debugging Best Practices](https://link.mail.beehiiv.com/ss/c/5gM3m-6u57Xmc9E5KeSlwB5bXkZ55gA32DbAV3fEc7-HPszup4BhCVQL_KqTCsTNxKJRp31fovorp6blKdHYE1UAAF2iLYLqU3FTtzCLU4XelnN-iKhtx2PSsSUVny4YIdv5wXUOMcVktRQv-45yStYEPcmIlmxk2xg6R06Fn7WX6U-hwv3y6ShUk6tDD6OTZD3_V2vne-dVfVvQWwrcCvEWHfiV-uUA-L85Nlc7ul4/43k/cMAVhTjMSvCPXdS3V7s4Lw/h7/i3rE3RbedEViLbApWDNLO-HU5HEKrsm2LdRXom7yilU)  
+_sponsored by Sentry_
+
+Come learn how to find and fix the root cause of mobile crashes. Your app rating will thank you. Save your spot now.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/JwgJ21y-yo16Zc6oHEqV-r5aei1LqixOIwQN0qeGQMnlmGYTpIGpbepSI\_P0csEEYv25B8npipZNwLiXvYi\_a2SbwXasTEKO3dnGyjINY4xGJgMJO0rV xHPuoV-lxqK9D1cr9uHfCI7XK1TK1xnARqtqcZe3-2tRY3ERcrG2O-cBa5XsI9ekotajzAyfioxMfAHzUm60JJp0TORKs8NWuUh\_rB9MkulGMJgn9yY1xJiy5TTuWPHRfxPtOGVgM0mUoMAO1SCL 8WlcPr3cQ720lKnl8mMzSPMv2VsifheIg16rpuYI1wO5iXrWoLHaZXpr9QzXO9HJ1rZFjaCY3WSzs4qurposDTu8RKZ9UDzxvw2xIiGIHG8fL5mlNKvZxXCMfQU1oinVJEN9IZu-Q6WQHldfc BMQCuCooNAJKKDk3hYcM4Bqsls0On\_sJawFn1nfZ9FCtQslRBvk9nc86O93Ho9utahDxs2rWNYQ9Fc6MzNwkZWtYGlxQLRsKoeWxxg9wCoeEwytcXWLCujNjqtT\_MMxro-v8dBfI4DbhKnN0f gcKa5u4E\_8kfQfJ2DNNCAbL0xqWfAM557Uxc\_sjTv\_KmxAnHXjs7KbSIL85AwsYVYWYRBD ZuX3mckIwtmEVxQk5IfMmvVuDw99ImFzpWOpJQ/43k/cMAVhTjMSvCPXdS3V7s4Lw/h0/b 2KPmhnFoD0q0oYtyGbMR70XC2hyyEWWTxMnUD1cySs)
+
+![](https://link.mail.beehiiv.com/ss/o/2neHg-Hzkdcq_goMOXZHDQ/43k/cMAVhTjMSvCPXdS3V7s4Lw/ho.gif)
+
+\[设计和构建 UI 组件d2jKhfsPHgYPnRP3oLFx9kFG6UCVRDcwTN\_bLF7EG3RN6jz6PplPA5CHTjE-03VrIWQ7xxWYPZ m7TQTkSxxz2iP6k2Mmg/43k/cMAVhTjMSvCPXdS3V7s4Lw/h1/Sa3bowQGBFnjJcarDPengQh9 3H2cAhW4Ud0KyP4sKGY)\
+*由Webflow赞助*
+
+在 Webflow 中直观地构建可投入生产的 React 组件，以便您可以更快地将新产品和应用程序推向市场。
+
+\[用着色器和 React Three Fiber 照亮焦散]\(https://link.mail.beehiiv.com/ss/c/lwxq2V6aEWya6\_kWoUO8rAhFdJx3ibMzH6aK0\_-Shx\_1XpTeH9W23UfzclmkiypyXYWogvEnSybNK5qa8OyGE-EO2ViPVW9Qgqf9Y vyNiqYx6qQBTGyyZM4kllaryr79-4atscLzcnd95cQzXzC61eSD9UCGOuJj3nfYmfbtWYKuHO 6f94Wp3MFU6WAs3uI2DLSWA2VdUvEHpln19SxGiKavKdZ5e5c3aoGbdv9FarU/43k/cMAVhTj MSvCPXdS3V7s4Lw/h2/TrTnuD2dFM5SL66kvhb2Lq3PxAfySjgbyO9Ww9-RjPg)\
+*21 分钟* 马克西姆·赫克尔
+
+有关如何使用着色器、渲染目标、法线贴图和自定义材质为 React Three Fiber 项目构建焦散光效果的分步指南。
+
+\[React Intersection Observer：实用指南]\(https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyIH4OrxK8L4ziQJe-9Y1VdpvvFh4EJxjZOExInBKaobJZVEzbUogib8JGZfOa6zHE2diBPc8E8\_QNqY4POHRG5L drSmrs5\_db9V7J2iQpzLn5pK0XphxdcjXY6sUA3jvu8Y5EzuX3PMQWWAylzHb\_MMzIO4TwdQJxWwr6n0nLzGmofZiUI7VoA42slLE\_D0rM6SIPseGRQN4cv2KwsgidQ0/43k/cMAVhTjMSvCP XdS3V7s4Lw/h3/mYB6aoeBJPV54LCnrMM2l0axjPHqU185Ore\_oScUQK4)\
+*5 分钟* Vishwas Gopinath
+
+在这篇博文中，我们将探讨如何在 React 应用程序中使用 Intersection Observer。我们将通过滚动时发生的动画来显示和突出显示项目。
+
+\[使用 Astro 从 React 中休息一下 Qwik]\(https://link.mail.beehiiv.com/ss/c/i-14uV6vHkCzB2eOsMx0wHGPjtmJ7spH3kiJar0pEnZdEKBLIkqE44QDrTIM03eb9dcR4I17B3Y0MYQec7FZv7-sY0C\_gcetOXabe6mh cdtv\_i6GaFtxMwE2Z0y6wW93zd8p8heAwB0-eWVbtCJjHdKgcv6y8ImvWFpWFk8yK\_CEjScYqsZ5\_zYWSqpvms3ZFWiWDM97\_\_XxMLckLPJQDb5kidXfcgGABw57oBo1Qdo/43k/cMAVh TjMSvCPXdS3V7s4Lw/h4/dSdH-erm7c7\_1i8hSqeiR7Mlmmw8XzXylv4C4niFKis)\
+*8 分钟* 保罗·斯坎伦
+
+Paul Scanlon 使用几个示例将 React 与 Qwik 进行了比较。他的结论是，Qwik 作为 React 的替代品值得探索。
+
+\[Next.js 应用程序路由器迁移：好的、坏的和丑陋的]\(https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyGPIq\_kodD7OKT-VJiyojFHWR27p7O07iYl2YPCmR\_N7lYNrTXzCWDymtq9srwwH-AFaAGmeY6bROLUgHHn SISbUOPWNq4L9fN5lc-8zQyOxnzdwmeg-NMu3izqUOlep6dcmcM2j91B41DAAm9qfLvzRZzGJ0V yLqAgZOjCasYhzr6LQw8d8i1UiIQthWSxQu0qeWqTnzNRFrswVWM-yISW\_XwlOlmYwyT6fo2pS4 dNMhwwDTzggYukx5PBGfBv-jg/43k/cMAVhTjMSvCPXdS3V7s4Lw /h5/0YG84NicmLoPxTYa1XPICEOfRu6Otpp-q9LN0Fr3E9k)\
+*7 分钟* 布兰登·拜尔
+
+我们使用 Next.js App Router 重建了 Flightcontrol 仪表板，这篇文章分享了其中好的和坏的经验。
+
+\[如何将forwardRef与通用组件一起使用]\(https://link.mail.beehiiv.com/ss/c/zuGyd97B3VCTINHkAvXjyL5Xappc9eKMDfVwUCd1KpMjwP8XbuTNN1YnZbfFZpUdvUngUX4DbtCTo8OL6PjADS7\_uxakiUN8jCIH-6mHR6uHzpWcMq HEbwk5aj4XrHFW2TlvxMtojuwFhRrYwMllZSUPI4hKcbAbFOOyOKztUdWJkSAAEZcDFf1fUPEVDG9ZxHnfd7J6KpB5la3ac3q7gdapvbPkaT672GeOPdc2Duk/43k/cMAVhTjMSvCPXdS3V7s4Lw/h 6/vTPr31FLoXxU-0ksl\_\_bky2e0TAXXhs\_lTbSNXbEdLM)\
+*2 分钟* 马特·波考克
+
+了解 React 的“forwardRef” TypeScript 的局限性，并发现一种能够对通用组件进行推理的解决方案。
+
+\[现场研讨会：移动崩溃报告和调试最佳实践]\(https://link.mail.beehiiv.com/ss/c/5gM3m-6u57Xmc9E5KeSlwB5bXkZ55gA32DbAV3fEc7-HPszup4BhCVQL\_KqTCsTNxKJRp31fovorp6blKdHYE1UAAF2iLYLqU3FTtzCLU4X elnN-iKhtx2PSsSUVny4YIdv5wXUOMcVktRQv-45yStYEPcmIlmxk2xg6R06Fn7WX6U-hwv3y6ShUk6tDD6OTZD3\_V2vne-dVfVvQWwrcCvEWHfiV-uUA-L85Nlc7ul4/43k/cMAVhTjMSvCP XdS3V7s4Lw /h7/i3rE3RbedEViLbApWDNLO-HU5HEKrsm2LdRXom7yilU)\
+*由哨兵赞助*
+
+快来了解如何查找并修复移动崩溃的根本原因。您的应用评分将会感谢您。立即保留您的位置。
+
+#
+
+
