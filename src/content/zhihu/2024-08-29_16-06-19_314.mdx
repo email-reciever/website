@@ -1,0 +1,223 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 体验碎周报第 197 期（2024.08.05）
+description: AI 产品推出了保存常用语功能。但要区分常用语，还得手动设置标题。 Kimi 用 A
+date: 星期一 09 上午 八月 5o 2024
+author: zhihu
+origin_url: https://zhuanlan.zhihu.com/p/712752279
+origin_site: https://www.zhihu.com/people/ftium4/posts
+translated: false
+avatar: /media-source/zhihu-ico.png
+banner: https://picx.zhimg.com/v2-a519a7ade4ad7a08b6170bc89f65b956_l.jpg
+subAuthor: 龙爪槐守望者
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="体验碎周报第 197 期（2024.08.05）" url="https://zhuanlan.zhihu.com/p/712752279" />
+
+
+
+系统的知识来源于对碎片的整理和思考，为了更好地输出系统知识，记录本周我发现的体验设计和思考，为构建系统知识做准备。  
+
+## 体验亮点
+
+### kimichat 自动生成常用语标题
+
+AI 产品推出了保存常用语功能。但要区分常用语，还得手动设置标题。 Kimi 用 AI 自动设置标题，不需要自己费心思为常用语起名了。这小小的设计亮点,体现了它对用户需求的深刻洞见。 别看这个功能小，看图2 文心一言就是反面教材，得手动设置标题，明显没有用心想过。
+
+![](https://pica.zhimg.com/v2-46c877f1a2344cae57c11fd3ed1fff2e_b.jpg)
+
+![](https://pic4.zhimg.com/v2-67126d1617eac484cb412c6aa119aef9_b.jpg)
+
+## 体验槽点
+
+### 夸克至臻画质动效泛白不及预期
+
+能理解夸克网盘在启用至臻画质时加个动效增加用户对画质增强效果的感知。但是这个动效在画质增强之前有一个白色的蒙版拉开，这一瞬间反倒是感觉画质泛白效果变差了。还不如关掉至臻画质时色彩由鲜艳变得普通来得明显。
+
+![](https://picx.zhimg.com/v2-957be39793e4e9af236a34e0bd0760c7_b.gif)
+
+## 推荐阅读
+
+### B 端系统当中的 AI 功能~
+
+链接：[https://mp.weixin.qq.com/s/tNjItjQGv3hkf4ellilk7Q](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/tNjItjQGv3hkf4ellilk7Q)
+
+文章探讨了 B 端产品中 AI 功能的实际应用，包括有赞、小鹅通、钉钉、飞书和金蝶等公司。每家公司都在不断迭代其 AI 功能，如智能客服、数据检索、文案创作等，以提升用户体验和工作效率。有赞的 AI 功能包含经营分析和自动任务，钉钉侧重于办公自动化，而金蝶在财务和 HR 领域的 AI 应用尤为全面。通过对比这些产品，文章展示了 AI 在 B 端系统中的落地情况和设计思路。
+
+### 设计不纠结：多方案在手，灵感自然有
+
+链接：[https://mp.weixin.qq.com/s/r4ANhKLrecnEkNEk-gb6cQ](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/r4ANhKLrecnEkNEk-gb6cQ)
+
+文章讨论了如何优化设计方案，特别是 B 端设计中的交互流程。通过重新梳理用户操作，提出了多种方案，包括并行选择行和列、使用穿梭框解决多选陷阱、分步骤选择和效果预览等。这些设计思路强调了关注用户目标，避免复杂的操作轨迹，并鼓励设计师提供多种可能性，以提高用户体验。最后，作者希望设计师在设计中保持灵活性，关注用户的实际需求。
+
+### 【英文】优化数字媒体的付费墙策略(以及我们如何将《经济学人》的订阅量提高了5%)
+
+链接：[https://thegood.com/insights/paywall-strategy/](https://link.zhihu.com/?target=https%3A//thegood.com/insights/paywall-strategy/)
+
+本文深入探讨了数字媒体的付费墙策略，包括付费墙的定义和两种主要类型：硬付费墙和注册墙。付费墙在数字出版物中至关重要，因为它们帮助实现内容的货币化。文章详细介绍了优化付费墙的五个关键要素，使用 SOLID 框架来提升用户体验。此外，通过《经济学人》的案例研究，文章展示了如何在不影响广告收入的情况下，提高转化率和减少用户流失的策略。优化步骤包括设定明确的目标、进行数据研究、明确问题陈述、制定可测试的假设以及设计实验，最后以成功的案例为基础，鼓励读者提升自身的付费墙策略，从而吸引更多的付费用户。
+
+![](https://pic1.zhimg.com/v2-258250b90825e76d6ed5c5c096cc487e_b.jpg)
+
+### 独立开发日记：一个删除交互的思考和设计
+
+链接：[https://mp.weixin.qq.com/s/3ROfNrMIXR5SELJhbPjPVg](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/3ROfNrMIXR5SELJhbPjPVg)
+
+这篇文章详细记录了独立开发者在极简日记应用中对删除交互进行重新设计的过程。原本的删除方式存在手势冲突，导致用户无法顺畅操作。在思考多种方案后，开发者选择了将删除操作整合到日记预览页面，并设计了一个更直观的删除交互，最终采用了垃圾桶动画效果，提升用户体验。尽管在实现过程中遇到了一些技术难题，但通过不断调整和改进，最终达到了理想效果，作者也从中获得了久违的编程乐趣。
+
+![](https://pic4.zhimg.com/v2-9d53897551864050e7610530a09e1b25_b.jpg)
+
+### 《UX入门》第十九讲：浅谈弹窗组件设计
+
+链接：[https://mp.weixin.qq.com/s/dZBMQYNcOzSKmBag\_mOF7Q](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/dZBMQYNcOzSKmBag_mOF7Q)
+
+弹窗组件是互联网应用中重要的界面设计元素，帮助展示信息和增强交互体验。本文介绍了弹窗的定义、分类及设计规范，包括模态和非模态弹窗的不同，设计时需要考虑用户的注意力和操作流程。文中还提到对话框、操作栏、提示和提示对话框的特点及设计原则，强调了在设计过程中应确保信息清晰、简洁，并有效引导用户操作，以提升整体用户体验。
+
+![](https://pic3.zhimg.com/v2-01bd66cde41e7e88523f683fa99d4d80_b.jpg)
+
+## 工具资源
+
+### 设计 Pathway —— 系统学习苹果设计指南
+
+链接：[https://developer.apple.com/cn/design/pathway/](https://link.zhihu.com/?target=https%3A//developer.apple.com/cn/design/pathway/)
+
+苹果最近在开发者网页设计板块增加了一个 Pathway 页面，Pathway 可以理解成学习某种知识必备的路径。苹果在这个页面中把《人机界面设计指南》和历年 WWDC 的演讲视频按照设计和制作 App 的的步骤组织在一起，方便读者能系统又快速地掌握苹果 App 界面设计。
+
+![](https://pic3.zhimg.com/v2-6b15a4a64b80eb8fc127157e7c8fdafc_b.jpg)
+
+### Lordicon —— 动画图标库
+
+链接：[https://lordicon.com/](https://link.zhihu.com/?target=https%3A//lordicon.com/)
+
+拥有超过 21,500 个精心设计的图标，适用于数字产品、演示或视频。用户可以轻松找到各种风格的图标，若找不到合适的图标，可以请求定制设计。
+
+![](https://picx.zhimg.com/v2-5a003f3ddbbd6bb7be257d9c720eba9f_b.jpg)
+
+### Solar Icons Set —— 图标集
+
+链接：[https://www.figma.com/community/file/1396367368966571051](https://link.zhihu.com/?target=https%3A//www.figma.com/community/file/1396367368966571051)
+
+包含 7518 个完全可自定义的图标，涵盖 37 个流行类别。该包提供六种图标风格，包括线性、双调线、粗体、粗体双调、破碎和轮廓风格。所有风格的图标作为FIgma 变体一并提供，便于用户使用。
+
+![](https://pica.zhimg.com/v2-9bba7db49dc9e6f3f7db98062f443cae_b.jpg)
+
+### AI art Icon —— 表示 AI 功能的图标集
+
+链接：[https://www.figma.com/community/file/1401116914280866478](https://link.zhihu.com/?target=https%3A//www.figma.com/community/file/1401116914280866478)
+
+用星星和魔棒表示 AI 功能成为行业共识，这个图标集共有 40 多个各种功能加上星星的图标，表示功能具备 AI 能力。
+
+![](https://pic2.zhimg.com/v2-ef8fea9f6611bfb08e1fab3c9a6577ed_b.jpg)
+
+### Eagle 4.0 发布
+
+链接：[https://mp.weixin.qq.com/s/gXiZaJvKfzX2vR4J3YW5qg](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/gXiZaJvKfzX2vR4J3YW5qg)
+
+知名的设计师素材管理工具 Eagle 4.0 正式发布，带来了一系列令人兴奋的功能更新，包括插件系统、 工具、界面 redesign 等。用户可以利用插件自定义功能，还能通过 Pinterest 搜索相似图片。新版本支持更多格式，性能显著提升。还新增了 AI 图片放大、压缩和去重功能，极大优化了工作流程。升级前请备份数据，确保安全。期待用户探索新功能，开启更多可能性。
+
+![](https://pic3.zhimg.com/v2-726a7985928b1d6a3684f7bd9180e8ca_b.jpg)
+
+### Relaaay —— 京东推出的在线界面工具
+
+链接：[https://ling.jd.com/files](https://link.zhihu.com/?target=https%3A//ling.jd.com/files)
+
+可以导入 Sketch，支持设计界面和制作原型，也有素材和插件中心。
+
+![](https://pic4.zhimg.com/v2-40c6f3f6a1e5ee12708b585b459cfc6f_b.jpg)
+
+### 鲜艺 AI 抠图—— 免费不联网的 AI 抠图工具
+
+链接：[https://kt.94xy.com/](https://link.zhihu.com/?target=https%3A//kt.94xy.com/)
+
+本地运行抠图工具，内嵌 RMBG-1.4 AI 模型，支持批量处理，能够自动裁剪透明像素并复制结果到剪贴板。用户无需联网，无需登录，使用简单，支持多种格式（如 jpg、png、gif 等），并能通过多种方式导入图片。
+
+![](https://pic1.zhimg.com/v2-2d468343c4ceb61a2f90d391d57e528a_b.jpg)
+
+## 产品发现
+
+### 等等标签 —— 限制访问指定网站的浏览量拓展
+
+链接：[https://chromewebstore.google.com/detail/等等标签-保持专注/iechpbdmenjodjnfjendoheikjbdholm?authuser=0&hl=zh-CN](https://link.zhihu.com/?target=https%3A//chromewebstore.google.com/detail/%25E7%25AD%2589%25E7%25AD%2589%25E6%25A0%2587%25E7%25AD%25BE-%25E4%25BF%259D%25E6%258C%2581%25E4%25B8%2593%25E6%25B3%25A8/iechpbdmenjodjnfjendoheikjbdholm%3Fauthuser%3D0%26hl%3Dzh-CN)
+
+在访问你拦截的网站前，先进入倒计时或先练习冥想，然后再决定是否进入网站。
+
+![](https://pica.zhimg.com/v2-24da839646615c8b7b5f4725f40e8ef4_b.jpg)
+
+### 夜迷 —— 京东旗下两性社区
+
+在京东里搜索「夜」就能自动打开，主要是讨论两性话题，卖情趣用品。
+
+![](https://pica.zhimg.com/v2-9ea072aad24f9e3d28c01d230e3626bc_b.jpg)
+
+### 闲鱼网页版
+
+链接：[https://2.taobao.com](https://link.zhihu.com/?target=https%3A//2.taobao.com/)
+
+以前是 All in App，关掉了闲鱼网页版，现在手机流量没得薅了，又重启网页版。目前只能浏览商品，交易还是得扫码打开 App。
+
+![](https://pic4.zhimg.com/v2-2e40670a7293c92dafadb82523049c2f_b.jpg)
+
+### Miley AI —— AI 将记录结构化并交予智能体处理
+
+链接：[https://apps.apple.com/cn/app/miley-ai-让记录拥有智能/id6503827110?l=zh-Hans-CN](https://link.zhihu.com/?target=https%3A//apps.apple.com/cn/app/miley-ai-%25E8%25AE%25A9%25E8%25AE%25B0%25E5%25BD%2595%25E6%258B%25A5%25E6%259C%2589%25E6%2599%25BA%25E8%2583%25BD/id6503827110%3Fl%3Dzh-Hans-CN)
+
+waylybaye 的新 App。官方描述写了一大堆，集日记记录、待办管理、习惯养成、健康追踪等功能于一体，很难让人记住。简单来说能把输入的非结构内容用 AI 转换成结构化内容，再让 AI 自动对不同结构的内容做不同的处理。
+
+![](https://pica.zhimg.com/v2-87b5430ab0d945b404df57acc35f0d24_b.jpg)
+
+## 相关资讯
+
+### 国家拟为网络用户统一签发“网号”“网证”
+
+链接：[https://mp.weixin.qq.com/s/z-iypLM6jnJA3Wqg-u8peg](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/z-iypLM6jnJA3Wqg-u8peg)
+
+公安部与国家互联网信息办公室发布《国家网络身份认证公共服务管理办法（征求意见稿）》，征求公众意见。该办法旨在建立国家网络身份认证公共服务平台，统一签发 “网号” 和 “网证”，以便于用户在互联网服务中进行身份核验而不需提供明文身份信息，从而保护个人信息安全。文件中还明确了使用规则、数据保护义务及法律责任，鼓励互联网平台接入这一公共服务。
+
+## 招聘信息
+
+### 百度智能办公平台正式UI视觉设计师 & 外包UI设计师
+
+工作地点：北京 职位要求：
+
+两年以上互联网设计经验，具备较高的审美水准和设计基本功，有成熟的UI设计案例逻辑清晰，对界面设计有较强的理解能力，乐于思考对设计趋势具有敏锐洞察力，掌握多种设计风格，熟练运用figma、sketch、ps等设计工具，具备一定动效能力良好的沟通合作能力，对工作有强烈责任感有三维、动态等设计经验者优先
+
+岗位职责：参与百度如流设计产品体验设计，结合业务需求输出视觉方案，并跟进方案落地关注产品数据表现和用户反馈，持续优化用户体验协助搭建UI规范 简历投递：huangjunjie06@baidu.com
+
+### 鲸灵集团招聘交互设计专家，
+
+22-35K\*14薪
+
+base：杭州
+
+岗位职责
+
+1.  独立负责私域电商领域的体验设计，覆盖无线端、PC端、小程序等。
+2.  深度理解商业需求，完成并实施设计方案。
+3.  与运营、研发团队紧密合作，参与产品全流程设计。
+4.  定期进行用户测试和数据效果评估，收集反馈，持续改进设计。
+5.  适应快节奏工作环境，具备优秀的时间管理和任务优先级排序能力。
+
+任职要求
+
+1.  全日制本科及以上学历。
+2.  交互设计、心理学、计算机等相关专业优先。
+3.  5年以上互联网行业B/C端产品全链路体验设计经验，有电商项目案例者优先。
+4.  精通设计方法和工具，具备出色的项目管理和沟通能力。
+5.  具备敏锐的行业认知和独立的思维推导能力，能够定位并解决问题。
+6.  具备完整的设计提案能力和较强的设计汇报能力，逻辑思维缜密，口头表达能力强。
+7.  具备强烈的自驱力和抗压力，能够独立思考并推动项目进展。
+
+公司简介
+
+鲸灵集团成立于 2017 年，是私域 SaaS 服务云平台，为所有 KOC、品牌商搭建、运营私域电商平台，提供技术支持、供应链服务、运营服务、售后服务等一体化 SaaS 解决方案，成功孵化出蜂享家、好家云店等多个百亿 GMV 私域自动化营销 SaaS 平台。 创新形成完整 S2B2C 的私域电商生态，并集成AI大数据选品、群货匹配、素材AI、客服AI、物流AI、售后AI、RPA导购等多种技术，赋能品牌商家和流量主。 截至目前，已获得腾讯、云九资本、启明创投、IDG资本、元璟资本、险峰长青等多家知名投资机构的融资。 未来三年，成为私域SaaS的领导者，联合10W+品牌商，链接1000W小B，服务3亿的消费者。 加分项熟悉系统思维，并有落地案例；独立负责过流量运营、流量变现相关产品，电商经验更佳，且有成功经验
+
+简历发送 yanyu@jingling.group
+
+### 谜底科技招聘UI设计师
+
+链接：[https://mp.weixin.qq.com/s/2UhdNp\_IG-FXraKelA1qXQ](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/2UhdNp_IG-FXraKelA1qXQ)
+
+发布于 2024-08-05 09:48・IP 属地湖南・
+

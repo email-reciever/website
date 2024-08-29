@@ -1,0 +1,245 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 体验碎周报第 188 期（2024.05.13）
+description: 微信输入法的跨设备复制粘贴有点惊艳。文字复制粘贴这是常识，问题是手机上图片是作为文件
+date: 星期一 12 凌晨 五月 13o 2024
+author: zhihu
+origin_url: https://zhuanlan.zhihu.com/p/697374360
+origin_site: https://www.zhihu.com/people/ftium4/posts
+translated: false
+avatar: /media-source/zhihu-ico.png
+banner: https://picx.zhimg.com/v2-a519a7ade4ad7a08b6170bc89f65b956_l.jpg
+subAuthor: 龙爪槐守望者
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="体验碎周报第 188 期（2024.05.13）" url="https://zhuanlan.zhihu.com/p/697374360" />
+
+
+
+系统的知识来源于对碎片的整理和思考，为了更好地输出系统知识，记录本周我发现的体验设计和思考，为构建系统知识做准备。  
+
+## 体验亮点
+
+### 微信输入法跨设备复制粘贴图片无缝同步
+
+微信输入法的跨设备复制粘贴有点惊艳。文字复制粘贴这是常识，问题是手机上图片是作为文件发送，很少有输入框能粘贴图片的。微信输入法把电脑同步的剪贴板图片供 2 个选项，即可以保存到相册，如果输入框是富文本也可以粘贴，当然最爽的是微信内，可以直接作为消息发送。
+
+![](https://pic1.zhimg.com/v2-8ba2d8efdea01d003699a81ec7c68f70_b.jpg)
+
+## 体验槽点
+
+### 百度地图小度 AI 润色字数大减内容失真
+
+百度地图打卡评论的小度 AI 润色没一点用，我写了 150 字的评价反向润色变成了只有 20 字，而且文字内容毫无关系，连店名都瞎编是错的。
+
+![](https://pica.zhimg.com/v2-144accd597379ec9420e300f3e4bb5a6_b.jpg)
+
+## 推荐阅读
+
+### 谈谈银行用户体验
+
+链接：[https://mp.weixin.qq.com/s/a0mbRHM9f0JU-GBaMAavuw](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/a0mbRHM9f0JU-GBaMAavuw)
+
+本文讨论了银行用户体验的重要性，指出客户体验受多方面因素影响，包括业务流程、系统支持、监管要求等。同时提到银行在提升用户体验方面的一些实践，如招商银行的用户体验管理和上海农商银行的数字化客户旅程管理体系。最后指出银行需要不断优化客户体验，以塑造未来银行服务的形象。
+
+![](https://pic2.zhimg.com/v2-83a4f1a6aca4553e1f0f98efc73adee7_b.jpg)
+
+### 从0开始做网站，你需要知道...
+
+链接：[https://mp.weixin.qq.com/s/QBRSND0ze-cJZzFlzNW3CA](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/QBRSND0ze-cJZzFlzNW3CA)
+
+本文主要介绍了从零开始设计网站时需要考虑的几个关键因素：设备分辨率、首屏高度、导航选择、布局与适配以及适配方式。根据设备市场占有率选择设计尺寸，考虑浏览器和系统占用高度，选择合适的导航方式，确定内容区大小，选择固定宽度、自适应或响应式布局方式。设计师应提前规划好适配方式，以提高设计效率。
+
+![](https://pic1.zhimg.com/v2-c6802c17d6a722d4a1e62f8a31500402_b.jpg)
+
+### 从哈罗单车聊聊任务链路优化设计思路
+
+链接：[https://mp.weixin.qq.com/s/Hsx0ywg33dB6OK1dwAeKOg](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/Hsx0ywg33dB6OK1dwAeKOg)
+
+本文介绍了哈罗单车的任务链路优化设计思路，通过手机上锁还车，提高了用户体验。任务链路优化的核心目标包括更好用、更准确、提升意愿。优化流程包括找问题、设定目标、构思方案、验证方案、持续改进。常用的优化方法有 PDSA 和 SDCA 循环法。优化的焦点包括目标用户、服务体系、使用场景、交互媒介、构成信息。
+
+![](https://pic2.zhimg.com/v2-3aef5e4e4cb8dccd69415c126963f043_b.jpg)
+
+### 软件的声音（英文）
+
+链接：[https://www.notboring.software/words/the-sound-of-software](https://link.zhihu.com/?target=https%3A//www.notboring.software/words/the-sound-of-software)
+
+来自赢得了 2022 年苹果应用设计奖 (Not Boring) Habits 背后工作室的文章，本文介绍了软件设计中如何使用声音，并提供了一些设计指南和实施建议。声音设计应当在传达信息、增强体验、增加可触及感和塑造情绪等方面发挥作用。好的声音设计应当避免重复，通过多样性和层叠创造纹理和丰富度。实施声音设计时，可以覆盖设备音量设置、给予用户控制权、配合触觉反馈以及根据目标设备设计声音等方面考虑。建议刚开始学习声音设计时，先获取声音样本，编辑声音，将声音与视觉结合，并可能考虑聘请专业的声音设计师合作。希望通过设计有意义的声音，为软件体验增添灵魂。
+
+![](https://pic4.zhimg.com/v2-3a410547c4b059cdb3afd49a6614eb85_b.jpg)
+
+### 当你以为自己用的是苹果系统字体
+
+链接：[https://sspai.com/post/87960](https://link.zhihu.com/?target=https%3A//sspai.com/post/87960)
+
+本文介绍了关于苹果系统字体的一些误区和正确用法。作者指出，苹方并不是固定的苹果系统字体，而是其中的一部分，系统会根据字符种类和语言设置来选择合适的字体。在开发和设计中，应该优先使用系统默认字体而不是直接指定苹方，以确保符合原生风格。此外，苹方的西文部分相对较弱，SF Pro 则具有更多优势。在非苹果平台设计时，也应该使用相应平台的原生字体。苹方的使用也受到法律限制，需要遵守相关许可协议。
+
+![](https://pica.zhimg.com/v2-5de0a1d9751e102d0a57ff5444f42262_b.jpg)
+
+### 我如何夺冠新加坡首届 GPT-4 提示工程大赛 \[译\]
+
+链接：[https://baoyu.io/translations/prompt-engineering/how-i-won-singapores-gpt-4-prompt-engineering-competition](https://link.zhihu.com/?target=https%3A//baoyu.io/translations/prompt-engineering/how-i-won-singapores-gpt-4-prompt-engineering-competition)
+
+这篇文章介绍了在新加坡首届 GPT-4 提示工程大赛中获胜的策略。主要内容包括借助 CO-STAR 框架构建高效提示、使用分隔符进行文本分段等技巧，以及实际案例分析。文章强调了有效提示的重要性，并分享了作者在实践中学到的一些提示工程策略。
+
+![](https://pic2.zhimg.com/v2-90e6c3ec053f0df26b5a8b0c75270375_b.jpg)
+
+### 移动端搜索：你应该选用哪种模式
+
+链接：[https://mp.weixin.qq.com/s/-DPFJb3Zv8Osz0B2Qx5Dqg](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/-DPFJb3Zv8Osz0B2Qx5Dqg)
+
+本文介绍了移动端搜索设计模式的选择原则和要点：
+
+1.  搜索入口：可以选择搜索条、底部导航图标或顶部导航图标，根据搜索需求和应用特点确定。
+2.  搜索结果范围：可以是全局的或局部的，取决于用户需求和应用功能。
+3.  呈现方法：可以是在新页面中展示搜索结果或在同一页面内搜索，根据使用场景选择。
+4.  搜索结果的复杂性：可以简单展示、分类和筛选展示，或使用部分展示来优化搜索结果。
+5.  输入字段的复杂性：可以是简单搜索框或多重搜索，根据需求允许处理多个搜索查询。
+
+设计搜索功能时，应根据用户需求和应用特点选择合适的搜索模式，以提升用户体验。
+
+![](https://picx.zhimg.com/v2-c1d2603657a0f2cce588ae7314b1ea43_b.jpg)
+
+### 保持一致：开发工具 UI 的5个基本设计模式（英文）
+
+链接：[https://evilmartians.com/chronicles/keep-it-together-5-essential-design-patterns-for-dev-tool-uis](https://link.zhihu.com/?target=https%3A//evilmartians.com/chronicles/keep-it-together-5-essential-design-patterns-for-dev-tool-uis)
+
+本文介绍了 5 种关键的开发工具 UI 设计模式：选项卡、工具栏、导航栏、属性面板和表格。每种设计模式都有具体的实际案例和设计原则，帮助开发者创建用户友好的工具界面。
+
+![](https://pic2.zhimg.com/v2-557ecd54738b82d75d9e42722121b92b_b.jpg)
+
+## 工具资源
+
+### Adobe Project Neo —— Adobe 推出的简单 3D 设计工具
+
+链接：[https://projectneo.adobe.com/](https://link.zhihu.com/?target=https%3A//projectneo.adobe.com/)
+
+通过简单的转动、转向和调整等操作矢量，能够帮助用户快速制作出优质的 3D 图标、插图。Project Neo 与 Creative Cloud 完美结合，能够轻松导出高质量的 SVG 和像素完美的图片，为 2D 设计提供帮助。用户可以轻松组合形状，利用先进的光影功能改造矢量图形，让创意设计变得更加有趣。
+
+![](https://pic1.zhimg.com/v2-78b7d9dd9d6a19a3615623139c5c7878_b.jpg)
+
+### interface.watch —— WatchOS 界面收集
+
+链接：[https://www.interface.watch/](https://link.zhihu.com/?target=https%3A//www.interface.watch/)
+
+这是一个提供 WatchOS App 界面参考的网站，用户可以在这里获取灵感、收集参考资料，并探索不同的界面设计可能性。网站上展示了不同类型的 WatchOS 应用程序，包括健康、娱乐、运动健身等领域的界面设计。
+
+![](https://picx.zhimg.com/v2-370fa814b51744e3d7c23872de2eb385_b.jpg)
+
+### Animate on Path —— 制作路径动画的 Figma 插件
+
+链接：[https://www.figma.com/community/plugin/1360032502633507393/animate-on-path](https://link.zhihu.com/?target=https%3A//www.figma.com/community/plugin/1360032502633507393/animate-on-path)
+
+选择对象和路径运行插件，即可实现让物体沿路径移动的动画效果。
+
+![](https://pic2.zhimg.com/v2-1b1139635b2a0f1be755bb7a783f88ab_b.jpg)
+
+### 飞波正点体 —— 手写毛笔风格的免费可商用字体
+
+链接：[https://www.uisdc.com/feibo-font](https://link.zhihu.com/?target=https%3A//www.uisdc.com/feibo-font)
+
+飞波正点体由作者从毛笔手写到后期软件封装，创作历时一年时间，完成共 7 千多字。字体风格稳重，气势上扬，笔画厚重有力，适用于各种标题大字排版。
+
+![](https://picx.zhimg.com/v2-d97198eaf88153ad1ec204e8022d54bb_b.jpg)
+
+![](https://pic2.zhimg.com/v2-9af2a3e1b8a026811ce006cbab55086f_b.jpg)
+
+### 苹果在 Figma 社区发布多个设计资源
+
+链接：[https://www.figma.com/@apple](https://link.zhihu.com/?target=https%3A//www.figma.com/%40apple)
+
+有 Siri、TipKit、Tap to Pay、Sign in with Apple、Messages 的设计稿，从图层属性来看，苹果确实是拿 Figma 画的，而不是拿 Sketch 转的格式。
+
+![](https://picx.zhimg.com/v2-b2dfdf76ac07584124e98abdc2db81cf_b.jpg)
+
+### Figma 提升访问速度 2.0
+
+链接：[https://zhuanlan.zhihu.com/p/402819516](https://zhuanlan.zhihu.com/p/402819516)
+
+通过下载专用软件，进行测速并自动修改 Hosts 配置，可以让 Figma 在中国等地区访问速度更快。同时提供了手动修改 Hosts 文件的方法和常见问题的解决方案，包括如何确定 Hosts 是否生效以及如何刷新浏览器的 DNS 缓存。
+
+![](https://pic1.zhimg.com/v2-91189df4eb37e71962036a24957de972_b.jpg)
+
+### uilabs —— 实验性的 UI 实验室
+
+链接：[https://www.uilabs.dev/](https://link.zhihu.com/?target=https%3A//www.uilabs.dev/)
+
+网站展示了多种使用 React、Tailwind CSS 和 Framer Motion 技术栈开发的动态组件和工具。包括动态设置、上下文工具栏、日历小部件、设计同步、弹性卡片等。每个组件都注重交互性和用户体验，展示了如何在网页中实现类似原生应用的动画和交互效果。
+
+![](https://picx.zhimg.com/v2-b6c72853adee24fd382b36ecc9370f31_b.jpg)
+
+## 产品发现
+
+### Rotation —— 安卓屏幕方向精细控制
+
+链接：[https://apkpure.com/cn/rotation\-orientation-manager/com.pranavpandey.rotation](https://link.zhihu.com/?target=https%3A//apkpure.com/cn/rotation-orientation-manager/com.pranavpandey.rotation)
+
+重力感应切换屏幕方向是智能手机最难用的功能，躺着床上侧卧刷手机突然横屏非常不爽。这款 App 能在安卓屏幕上添加多种屏幕方向控制策略。例如限定某些 App 必须横屏，折叠屏内屏重力感应外屏只能竖屏，充电或使用耳机时切换屏幕方向等。
+
+![](https://pica.zhimg.com/v2-4c3599b710fd6e1df5290b54e189d996_b.jpg)
+
+### Filmly —— 网易出品的网盘视频播放器
+
+链接：[https://filmly.163.com/](https://link.zhihu.com/?target=https%3A//filmly.163.com/)
+
+支持直连百度网盘、阿里云盘等影视资源在线播放，智能识别影片信息，自动刮削封面海报，支持跨平台同步。暂不支持管理和播放本地视频。按道理网盘播放是个小众的产品，不知道为啥网易这种大厂要做。
+
+![](https://picx.zhimg.com/v2-e2b807ea91da9e64265b29796f8f0eab_b.jpg)
+
+### Conflux —— 苹果全平台视频播放器
+
+链接：[https://conflux.one/](https://link.zhihu.com/?target=https%3A//conflux.one/)
+
+可在 iPhone、iPad、Apple TV、Mac、Apple Vision 上流畅播放视频。支持强大的流媒体选项，完美支持 Airplay 和字幕、 4K Ultra HD 。支持各种视频格式，无需转码，流畅播放来自 Mac、PC、NAS 或 Wi-Fi 硬盘的视频。
+
+![](https://picx.zhimg.com/v2-8b79f4c5212c75d651f02d88ada6bc8d_b.jpg)
+
+### SketchyBar —— 定制的 macOS 状态栏
+
+[https://github.com/FelixKratz/SketchyBar](https://link.zhihu.com/?target=https%3A//github.com/FelixKratz/SketchyBar)
+
+用户可以自由添加、删除和修改状态栏的各个元素，使得外观可以完全动态调整。用户可以通过强大的事件驱动脚本系统实现配置。
+
+![](https://picx.zhimg.com/v2-a41b950bd56c026e3eba93f9f0361871_b.jpg)
+
+### EpubKit 电子书精选
+
+链接：[https://books.epubkit.app](https://link.zhihu.com/?target=https%3A//books.epubkit.app/)
+
+EpubKit 是一个把网页打包成电子书的工具。这里精选了一些作者认为值得一读的资源，均为使用 EpubKit 打包成 ePub 格式的电子书，可以在 Kindle, iPad, 微信读书等设备上阅读。
+
+![](https://pic4.zhimg.com/v2-b7b79fb535cd8ff6209879c7d8f9814b_b.jpg)
+
+### Chrome-Stats —— Chrome 扩展数据跟踪分析平台
+
+链接：[https://chrome-stats.com/](https://link.zhihu.com/?target=https%3A//chrome-stats.com/)
+
+该平台用于对 Chrome 扩展进行竞争对手研究、提供详细的安全性评估指标和增长跟踪。便于用户进行竞争分析、识别不良行为者，并支持优秀 Chrome 扩展的成长。
+
+![](https://picx.zhimg.com/v2-84fd224357cc4c4c543a0913b8251419_b.jpg)
+
+### 休息日 —— iOS 节假日闹钟助手
+
+链接：[https://apps.apple.com/cn/app/休息日/id6501973975](https://link.zhihu.com/?target=https%3A//apps.apple.com/cn/app/%25E4%25BC%2591%25E6%2581%25AF%25E6%2597%25A5/id6501973975)
+
+「休息日」是一款内置多种放假模板的节假日闹钟神器，包含中国、日本、新加坡、美国、泰国、韩国的放假信息。只要按照步骤做，配合系统的快捷指令自动化，就再也不怕放假的早晨被闹钟吵醒了。除了内置的放假信息外，用户还可以自己手动标记放假上班的安排，避免调休补班时忘记设置闹钟。
+
+![](https://pic4.zhimg.com/v2-af3c517520982265277fa6662e58ae6d_b.jpg)
+
+## 热点言论
+
+### 高管决策失误背后：信息输入与一线接触的重要性
+
+链接：[https://okjk.co/cWIdVX](https://link.zhihu.com/?target=https%3A//okjk.co/cWIdVX)
+
+![](https://picx.zhimg.com/v2-99e1ad12e56a9ded0b4ff25198f418eb_b.jpg)
+
+![](https://pic4.zhimg.com/v2-c3b70bbe44b795c809d014f16ec55ce9_b.jpg)
+
+![](https://pic2.zhimg.com/v2-67a12f7832ef92bde022f96bae4cc8dd_b.jpg)
+
+发布于 2024-05-13 00:23・
+

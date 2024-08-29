@@ -1,0 +1,271 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 体验碎周报第 190 期（2024.05.27）
+description: 华为的广告词很接地气，电视机叫“全家人的巨幕手机”，确实现在买电视的少，手机是标配。用
+date: 星期一 01 凌晨 五月 27o 2024
+author: zhihu
+origin_url: https://zhuanlan.zhihu.com/p/699976328
+origin_site: https://www.zhihu.com/people/ftium4/posts
+translated: false
+avatar: /media-source/zhihu-ico.png
+banner: https://picx.zhimg.com/v2-a519a7ade4ad7a08b6170bc89f65b956_l.jpg
+subAuthor: 龙爪槐守望者
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="体验碎周报第 190 期（2024.05.27）" url="https://zhuanlan.zhihu.com/p/699976328" />
+
+
+
+系统的知识来源于对碎片的整理和思考，为了更好地输出系统知识，记录本周我发现的体验设计和思考，为构建系统知识做准备。  
+
+## 体验亮点
+
+### 华为广告词的亲民策略与设备特性描述
+
+华为的广告词很接地气，电视机叫“全家人的巨幕手机”，确实现在买电视的少，手机是标配。用已有设备（手机）做锚点再加上一个新特性（巨幕）来描述新设备，更能让人理解新设备特色。 AR 眼镜命名为“智能观影眼镜”也异曲同工，用来干嘛一看就懂。
+
+![](https://pic1.zhimg.com/v2-a2f425e44b71dac1cf0c7189af2a8cf0_b.jpg)
+
+![](https://pic1.zhimg.com/v2-f5cb75a6d72930c22342081ee8a99408_b.jpg)
+
+## 体验槽点
+
+### 京东App内外问卷系统使用体验的困惑
+
+京东用短信给我发了一条调研问卷链接，点击要求我用京东 App 打开，这能理解，为了关联我登录的京东的账号。然而真正答问卷的时，因为问卷由网易用他们的系统发起，京东为了安全禁止 App 内打开其他公司的链接，于是我又得跳转到浏览器回答问卷。问卷结束后，京东又在结果页推广其自研的问卷系统，为什么有和自家App深度集成安全又方便的自研系统不用，让我在网易和京东之间反复横跳呢？正当我想了解京东自研问卷时，又让我扫码打开微信。本来 App 内 3 个页面能搞定的事情，硬生生让我在 3 个不同的 App 里跳转了4次，都不知道该怎么吐槽了。
+
+![](https://pic4.zhimg.com/v2-177d121b6c67ce59cff9417b23c66c3f_b.jpg)
+
+## 推荐阅读
+
+### 用户界面密度 —— 什么是用户界面密度，以及如何为其设计（英文）
+
+链接：[https://matthewstrom.com/writing/ui-density/](https://link.zhihu.com/?target=https%3A//matthewstrom.com/writing/ui-density/)
+
+本文探讨了 UI 密度的概念，包括视觉密度、信息密度、设计密度和时间密度。UI 密度指界面提供信息的多少和连接信息的方式。通过比较布局紧凑和分散的软件界面，说明了界面变得更加分散的趋势。文章提到了视觉密度、信息密度和设计密度的概念，并讨论了如何在界面设计中实现更高价值的 UI 密度。Temporal density 的重要性，以及如何提高用户在界面上的操作效率也被提及。文章最终指出，UI 密度的目标是在最短的时间、空间和信息量内提供最高价值的结果。
+
+![](https://pica.zhimg.com/v2-bfca672d4163148de37bda7583d5faee_b.jpg)
+
+### 车载 HMI | 负一屏设计必备知识点
+
+链接：[https://mp.weixin.qq.com/s/rDG9vPgGYrHaPZoSto2-AA](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/rDG9vPgGYrHaPZoSto2-AA)
+
+本文介绍了车载 HMI 设计中的负一屏概念和交互特点。负一屏是车载系统中类似智能手机负一屏的功能，允许用户快速访问常用服务。根据米勒定律，负一屏设计应控制信息数量在 7±2 内，辅助用户记忆和优化操作流程。文章还分析了不同类型的负一屏样式和功能类型，强调负一屏设计的目的是提高系统可用性和用户体验。
+
+![](https://pic4.zhimg.com/v2-8e367ec68768198b07015496ae32836b_b.jpg)
+
+### 响应式设计中的断点
+
+链接：[https://mp.weixin.qq.com/s/c7H4e-znUl7dtwxX0v0m0w](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/c7H4e-znUl7dtwxX0v0m0w)
+
+断点决定了网页何时调整到不同的布局，帮助设计师在多种屏幕尺寸、方向和设备上保持布局一致。断点通常分为超小型、小型、中型和大型，设计时需考虑不同尺寸下的布局变化。设计师需要定义和考虑断点，在不同尺寸下优化布局和内容展示，确保用户体验良好。
+
+![](https://pic2.zhimg.com/v2-045b4996b5a7ad734357dbad3935740f_b.jpg)
+
+### 你的设计是否考虑了正确的键盘？（英文）
+
+链接：[https://uxdesign.cc/are-you-designing-with-the-right-keyboard-ab2f02df42b6](https://link.zhihu.com/?target=https%3A//uxdesign.cc/are-you-designing-with-the-right-keyboard-ab2f02df42b6)
+
+本文介绍了移动应用设计中键盘的重要性，包括 iOS 和 Android 上不同类型的键盘、键盘行为的影响因素，以及正确使用键盘的示例。键盘类型包括标准键盘、字母键盘、数字键盘和键盘扩展功能。正确选择和使用键盘可以提升用户体验。
+
+![](https://pica.zhimg.com/v2-4c74166697aeb882cc926e8c1e1c54b8_b.jpg)
+
+### 电话能告诉你什么是好的设计（英文）
+
+链接：[https://uxdesign.cc/what-telephones-can-tell-you-about-good-design-6c24885ca7e9](https://link.zhihu.com/?target=https%3A//uxdesign.cc/what-telephones-can-tell-you-about-good-design-6c24885ca7e9)
+
+这篇文章介绍了电话键盘设计背后故事，讲述了贝尔实验室在 20 世纪 50 年代为新型触摸电话设计键盘布局的过程。经过多次测试，他们最终选择了一种 “三排三列加一” 布局，这个设计在用户测试中表现最为符合大多数人的直觉。文章强调了设计中需考虑用户的实际需求和习惯，用户的偏好不一定就是最佳选择。最终，人的认知和习惯对产品的使用效果起着决定性的影响。
+
+![](https://picx.zhimg.com/v2-d230fd1b206938bc6a1b770c04f7f229_b.jpg)
+
+### 原来世界顶级设计团队都是这么卷毛玻璃的
+
+链接：[https://mp.weixin.qq.com/s/qkmwhZzTIz0-\_YagIlCZPg](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/qkmwhZzTIz0-_YagIlCZPg)
+
+本文主要介绍毛玻璃效果的发展历史和在界面设计中的应用。毛玻璃效果可以增强视觉层次，强调内容，提升界面的现代感和高级感。文章详细解释了苹果和微软在处理毛玻璃效果时的不同方法，包括色彩修正和图层叠加等技术。最后还介绍了在 CSS 和开发者平台上如何实现图层混合样式。
+
+![](https://pic2.zhimg.com/v2-9552d0f2324cc2465b8c5302312b418d_b.jpg)
+
+## 工具资源
+
+### Perspective Grid Generator —— 创建透视网格的 Figma 插件
+
+链接：[https://www.figma.com/community/plugin/1371153823779803304/perspective-grid-generator](https://link.zhihu.com/?target=https%3A//www.figma.com/community/plugin/1371153823779803304/perspective-grid-generator)
+
+可自定义水平和垂直线，调整网格角度，一键生成透视网格。
+
+![](https://pic2.zhimg.com/v2-1dec66a09fa2b878b355bdcf655939eb_b.jpg)
+
+### Fractal Glass Effect —— 制作分形玻璃效果的 Figma 插件
+
+链接：[https://www.figma.com/community/plugin/1365163591489620503/fractal-glass-effect](https://link.zhihu.com/?target=https%3A//www.figma.com/community/plugin/1365163591489620503/fractal-glass-effect)
+
+最近 Arc browser 带火了带条形纹理的半透明玻璃质感效果，之前 Nothing Phone 也用过这个风格的壁纸。PhotoShop 当然可以做到，用这个 Figma 插件是为了省事，一键生成分形玻璃效果。
+
+![](https://pic4.zhimg.com/v2-4ca9b020841b58238b4e4fc2255335af_b.jpg)
+
+![](https://pic2.zhimg.com/v2-df0aa3774c66e11499f416868310c82f_b.jpg)
+
+![](https://pica.zhimg.com/v2-b52ef077f6fffe8c070b88e944eadab2_b.jpg)
+
+### Rename Helper —— 批量按规则重命名图层再导出的 Figma 插件
+
+链接：[https://www.figma.com/community/plugin/1372126247948054836/rename-helper](https://link.zhihu.com/?target=https%3A//www.figma.com/community/plugin/1372126247948054836/rename-helper)
+
+电商设计师在做一整套跨站点的活动 banner 图时，要给每一个画板标上具体信息（语言、设备、活动名、坑位名、图片尺寸、导出倍数...），再导出不同 banner 交付给各站对应的运营同事，非常繁琐，容易出错。这款插件可以按规则批量对图层重命名再导出，适合所有需要批导图&重命名的设计师朋友们。
+
+![](https://pic2.zhimg.com/v2-77f40699823e533bb57cd1aea0ada143_b.jpg)
+
+### Microsoft Fabric UI kit、Visuals Kit —— 微软 Fabric 设计系统 Figma 资源
+
+UI Kit 链接：[https://www.figma.com/community/file/1372969568450571316](https://link.zhihu.com/?target=https%3A//www.figma.com/community/file/1372969568450571316)
+
+Visuals Kit 链接：[https://www.figma.com/community/file/1372969251006652467](https://link.zhihu.com/?target=https%3A//www.figma.com/community/file/1372969251006652467)
+
+Fabric 是微软用于 Office 相关的设计系统，被并入到微软 Fluent 设计系统里。最近微软在 Figma 发布了 UI Kit和 Visuals Kit（图标和插图库）。
+
+![](https://picx.zhimg.com/v2-f4901f4b3ab904281bc0d3a26502d671_b.jpg)
+
+![](https://picx.zhimg.com/v2-5661bc6dab047b698ecd6a0d344b40d1_b.jpg)
+
+### 竹记 —— 记录设计变更过程导出为视频
+
+链接：[https://zj.94xy.com/](https://link.zhihu.com/?target=https%3A//zj.94xy.com/)
+
+竹记运行时会记录每一次设计变更，随时回溯，一键导出为视频，后期可任意剪辑，无论你是分享还是展示。支持 Figma、即时设计、Pixso、MasterGo、Sketch、Adobe XD。
+
+![](https://pic4.zhimg.com/v2-47049f4d9459ba572ae754297f37d931_b.jpg)
+
+![](https://pic3.zhimg.com/v2-dbb9cedbbbcc65843fcfd44334166e8a_b.jpg)
+
+### Wavy Lines —— 快速创建锯齿和波浪线条的 Figma 插件
+
+链接：[https://www.figma.com/community/plugin/1357290676103745205/wavy-lines](https://link.zhihu.com/?target=https%3A//www.figma.com/community/plugin/1357290676103745205/wavy-lines)
+
+选择线条类型（曲线或锯齿），输入线条规格，点击 “Create Line” 即可生成线条。
+
+![](https://pica.zhimg.com/v2-6ebecee124668846004678747d3ed6f4_b.jpg)
+
+## 产品发现
+
+### Merlin Bird ID by Cornell Lab —— AI 识别鸟类
+
+链接：[https://merlin.allaboutbirds.org/](https://link.zhihu.com/?target=https%3A//merlin.allaboutbirds.org/)
+
+Merlin Bird ID 是由康奈尔鸟类学实验室开发的应用，可以帮助用户识别鸟类。该应用提供了四种识别鸟类的方式，包括回答问题、上传照片、录制鸣叫声或探索特定地区的鸟类。用户可以通过应用学习关于所观察到的鸟类的专业信息，记录自己的观察记录，并参与到全球鸟类观察数据库 eBird 中。
+
+![](https://picx.zhimg.com/v2-50dd678d686e10f2e244fce363d4e095_b.jpg)
+
+### HeyBeauty —— 电商 AI 虚拟试衣的 Chrome 扩展
+
+链接：[https://heybeauty.ai/extension](https://link.zhihu.com/?target=https%3A//heybeauty.ai/extension)
+
+右键电商网站衣服的图片，启动本扩展，上传自己的人物照片，即可查看衣服穿在你身上的效果，无需亲自试穿。
+
+![](https://pic3.zhimg.com/v2-91438dd483e835422d02546b334a176e_b.jpg)
+
+### Siphon 吸词 —— 记录复习网页内生词的 Chrome 扩展
+
+viVO">链接：[https://siphon.ink/](https://link.zhihu.com/?target=https%3A//siphon.ink/)
+
+在任意网站，双击生词即可翻译并自动加入生词库。自动记录生词的同时，会记录生词所在的句子和来源。通过纸牌卡片、打字拼写等方式愉快地复习生词。该工具提供统计数据，让用户的进步可量化可见。
+
+![](https://picx.zhimg.com/v2-f11d31f0cd963484db1a77c5d722dcef_b.jpg)
+
+![](https://picx.zhimg.com/v2-b09859e4ddec91063688620097f644cf_b.jpg)
+
+### 微信读书评论插件 —— PC 显示微信读书评论的 Chrome 扩展
+
+链接：[https://chromewebstore.google.com/detail/微信读书评论插件/kfjimgaoegibikoojcbnkbffkongnoep](https://link.zhihu.com/?target=https%3A//chromewebstore.google.com/detail/%25E5%25BE%25AE%25E4%25BF%25A1%25E8%25AF%25BB%25E4%25B9%25A6%25E8%25AF%2584%25E8%25AE%25BA%25E6%258F%2592%25E4%25BB%25B6/kfjimgaoegibikoojcbnkbffkongnoep)
+
+微信读书的网友评论有些很有启发，可惜只能在 App 显示。这个 Chrome 拓展能支持微信读书 PC 网页面显示评论。
+
+![](https://pic4.zhimg.com/v2-b562f7f2de3cdce67d2d96b96828b9cb_b.jpg)
+
+### 勇敢牛牛 —— 男性 DIY 记录工具
+
+链接：[https://apps.apple.com/cn/app/勇敢牛牛-运动记录工具/id1621927442?platform=iphone](https://link.zhihu.com/?target=https%3A//apps.apple.com/cn/app/%25E5%258B%2587%25E6%2595%25A2%25E7%2589%259B%25E7%2589%259B-%25E8%25BF%2590%25E5%258A%25A8%25E8%25AE%25B0%25E5%25BD%2595%25E5%25B7%25A5%25E5%2585%25B7/id1621927442%3Fplatform%3Diphone)
+
+用于记录男性独自进行”独坐书斋手作妻，此情不与外人知。点点滴滴落在地，子子孙孙都姓泥”的运动。用户可以记录运动的时间、次数、频率，并生成直观的折线图展示。该应用支持心率统计、同步到锻炼 App 等功能。
+
+![](https://picx.zhimg.com/v2-5aadfaa28210ffbb7163153308348605_b.jpg)
+
+## 相关资讯
+
+### 苹果以 i 命名的含义
+
+链接：[https://m.ithome.com/html/769414.htm](https://link.zhihu.com/?target=https%3A//m.ithome.com/html/769414.htm)
+
+苹果过去与现在的很多产品都惯用“i”作为前缀，诸如 iMac、iPhone、iPad 还有更早之前的 iBook 和 iPod。这一家族化的命名方式，出自苹果公司原广告创意总监 Ken Segall 之手。1998 年 Jony Ives 当时设计了一款全新的半透明家用电脑，其内部名称原为 MacMan。之后，Ken Segall 认为可以使用 i 前缀，以彰显其提供的全新的网络连接功能。最终，这款电脑以 iMac 的名义正式问世。
+
+![](https://pic2.zhimg.com/v2-e373d15e888f08ebd6cc4f18d7456ca1_b.jpg)
+
+### Arc Search 推出 Arc Call 交互神似锤子手机语音助手
+
+Arc 浏览器的 iOS 版本 Arc Search 推出的新功能，在 Arc 运行时将智能手机放在耳边，“Arc Call”就会启动，只需与 Arc 口头交谈即可告诉您答案。
+
+![](https://pic1.zhimg.com/v2-3fd6a4111531716a373baadc3f487fae_b.jpg)
+
+类似的交互其实和 2013年锤子手机语音助手相似。罗永浩认为人对着屏幕和语音助手对话非常尴尬，于是改成拿起手机贴到耳边，自动触发语音识别。从而给手机下命令。
+
+![](https://pic1.zhimg.com/v2-e6041135a8496092934d906da63dba8c_b.jpg)
+
+## 热点言论
+
+### 拼多多真正的商业模式
+
+前段时间在 风中的厂长 有一条在拼多多快递包裹里塞游戏卡盈利的微博火了，因为我在微博下面写了条评论不知道为啥也跟着火了。
+
+![](https://pic1.zhimg.com/v2-8dcfef1570c88c9b241b8be79670b322_b.jpg)
+
+后来阑夕针对 风中的厂长这条微博写了一个更长的微博（ [https://m.weibo.cn/status/5036883208049467](https://link.zhihu.com/?target=https%3A//m.weibo.cn/status/5036883208049467) ）解读拼多多的商业模式。就像我们用搜索引擎其实不是谷歌百度的用户，而是他们的商品。搜索引擎真正的用户是投广告的商家，商家出钱买到了搜索引擎使用者的广告浏览量。拼多多商业模式其实很类似，消费者不是用户而是商品，拼多多把想买东西的用户打包拍卖给想卖货的商家，谁的商品价格低就能买到用户的消费。
+
+## 招聘信息
+
+### 蚂蚁集团招聘产品设计专家/ 高级产品设计师
+
+![](https://pic4.zhimg.com/v2-a156e91f27f9d4efe5594933e74f5589_b.jpg)
+
+### vivo 招聘动效设计师
+
+![](https://pica.zhimg.com/v2-ec014079b5a92b0e851d16a08e829f62_b.jpg)
+
+### 得物招聘体验设计师/视觉设计专家
+
+Base上海杨浦 体验设计师岗位职责
+
+1.  负责业务线的整体的视觉风格制定，把控全业务线设计风格和品牌调性；
+2.  主导平台产品的整体用户体验优化，并衡量优化效果；
+3.  负责参与设计体验、流程的制定和规范，分享设计经验、推动提高团队的设计能力；
+4.  根据用户需求开展产品体验的创新研究和设计应用与扩展；
+5.  了解潮流文化，结合视觉表达能力，探索未来潮流的前瞻性设计。
+
+任职要求
+
+1.  3-5年以上移动端设计经验，有交易、社区、海外产品、金融相关设计经验者优先；
+2.  优秀的审美能力和视觉表现力，精通色彩、图形、信息和 GUI 设计原则及方法；
+3.  具备一定的交互设计能力，有较强的逻辑思维，熟练掌握产品需求分析技巧，能运用设计手法平衡商业和用户需求；
+4.  有制定过成熟互联网公司主视觉风格调性的设计经验，拥有较强的图形创意设计能力，作品具备较好的表现力和识别性；
+5.  有良好的沟通协调能力、有好奇心，积极了解学习新技术新事物新的设计流行趋势。
+
+视觉设计专家（信息流广告）职位描述
+
+1.  负责得物APP国内外的投放广告设计工作。
+2.  了解自身产品、用户、竞品特性，能够精准把控产品与品牌调性，产出调性、品质、创意兼具的平面或视频广告。
+3.  懂数据，能够洞察广告优化方向，找出设计发力点进行创意优化。
+4.  了解潮流文化，能够结合视觉表达能力，产出未来潮流的前瞻性设计。
+
+职位要求
+
+1.  5年以上工作经验，本科以上学历、设计专业出身，有成功项目案例者优先。
+2.  不盲从、有创意、脑洞大、内容敏感度高，能够抓住时下热点，应用到广告设计中。
+3.  优秀的审美，精通Photoshop、illustrator、C4D等各项设计软件，能够独立完成广告设计，具备动画、特效、拍摄能力者加分。
+4.  对工作有责任心，执行力、自驱力强，良好的沟通能力、团队协作能力，具备0-1项目管理经验者加分。
+
+职位的申请须提交作品集(相关作品附件或者链接)。 简历+作品投递：yangshihui@shizhuang-inc.com
+
+发布于 2024-05-27 01:21・
+

@@ -1,0 +1,328 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 体验碎周报第 192 期（2024.06.17）
+description: 用微信输入法 Win/macOS 测试版，输入文字后只需按“=”就可以直接获取 AI 回答。由
+date: 星期一 12 凌晨 六月 17o 2024
+author: zhihu
+origin_url: https://zhuanlan.zhihu.com/p/703738925
+origin_site: https://www.zhihu.com/people/ftium4/posts
+translated: false
+avatar: /media-source/zhihu-ico.png
+banner: https://picx.zhimg.com/v2-a519a7ade4ad7a08b6170bc89f65b956_l.jpg
+subAuthor: 龙爪槐守望者
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="体验碎周报第 192 期（2024.06.17）" url="https://zhuanlan.zhihu.com/p/703738925" />
+
+
+
+系统的知识来源于对碎片的整理和思考，为了更好地输出系统知识，记录本周我发现的体验设计和思考，为构建系统知识做准备。  
+
+## 体验亮点
+
+### 微信输入法“=”快速问AI
+
+用微信输入法 Win/macOS 测试版，输入文字后只需按“=”就可以直接获取 AI 回答。由于输入法是打字就启用，因此比任何需要另外启动的 AI 客户端都来得方便。AI 回答浮层右下角还提供复制为图片功能，便于社交分享。
+
+> 来自 [https://mp.weixin.qq.com/s/9QOczmlPhcfo3iFxCJ6\_1g](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/9QOczmlPhcfo3iFxCJ6_1g)  
+
+![](https://pic3.zhimg.com/v2-6e0fc76ab13cbd17a471fe2ecfc766a6_b.gif)
+
+## 体验槽点
+
+### 腾讯视频仿微信视频通话推广增加社交压力
+
+仿微信视频通话非常吸引注意力，但是微信很多时候视频通话可能是公司领导或者家中长辈打过来，用户本身就对视频通话产生了一定的社交压力，就像有人拿你家门铃声音做广告，腾讯视频通过这种仿微信视频通话推广新剧就很不合适了。
+
+![](https://picx.zhimg.com/v2-8dec2b2e14eb05fd52b2d998930259df_b.jpg)
+
+## 推荐阅读
+
+### UI 组件的决策树（英文）
+
+链接：[https://www.smashingmagazine.com/2024/05/decision-trees-ui-components/](https://link.zhihu.com/?target=https%3A//www.smashingmagazine.com/2024/05/decision-trees-ui-components/)
+
+这篇文章介绍了如何利用决策树来为 UI 组件做出决策，并给出了几个实际示例。决策树可以帮助设计团队系统化地记录设计决策，避免无休止的讨论和混乱。通过实例展示了不同 UI 组件的决策树，以及如何有效地利用它们。决策树不仅美观地可视化了设计决策，还作为文档来共享标准，对新员工也有极大帮助。在设计工作区域和编码场所展示决策树，能解决 UI 决策的争议。
+
+![](https://picx.zhimg.com/v2-80bc67a72d3a9549c88776af614bb067_b.jpg)
+
+### 熟悉与新颖性（英文）
+
+链接：[https://lawsofux.com/articles/2024/familiar-vs-novel/](https://link.zhihu.com/?target=https%3A//lawsofux.com/articles/2024/familiar-vs-novel/)
+
+设计中的熟悉感能够帮助用户快速转换经验，使他们更快上手，但新颖感也有其优势。当需要与竞争对手区分时，采用新颖设计能够帮助产品或服务脱颖而出。同时，当目标是通过创新技术颠覆现有产品或服务时，也可以选择新颖设计。无论采用何种设计方法，都必须建立在深入的用户研究和测试基础之上，以确保新设计能够满足目标受众的需求和偏好，同时不影响整体可用性和用户体验。
+
+### 你可以每次都安全地遵循的视觉设计规则（英文）
+
+链接：[https://anthonyhobday.com/sideprojects/saferules/](https://link.zhihu.com/?target=https%3A//anthonyhobday.com/sideprojects/saferules/)
+
+总结了视觉设计中的基本规则，如使用接近黑白的颜色、给中性色加入色彩、重要元素要高对比度、所有设计要有意义等。此外，还提到了字体、间距、边框、对齐、颜色、阴影等设计元素的处理方法。这些规则可以帮助设计师创建一致且有吸引力的界面设计，使用户体验更加良好。
+
+![](https://picx.zhimg.com/v2-d19800b98a5bf617acbaf9def9ed85b7_b.jpg)
+
+### UI必看 | 组件应用 - 签到组件设计方式详解
+
+链接：[https://mp.weixin.qq.com/s/eQ8BjDHTIj\_vbvsCTb176g](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/eQ8BjDHTIj_vbvsCTb176g)
+
+本文详细介绍了签到组件的类型、布局方法、状态及不同类型，包括 7 日进度条、7 日卡片、月历等，还展示了微信读书的特殊签到组件设计。适用于内容类 App，需要源源不断的内容供用户消费，签到类型包括每日签到、累计签到、连续签到。签到组件布局需考虑不同状态和类型，突出奖励信息。设计者可参考线上案例，灵活运用组件设计方式，提升用户体验和活跃度。
+
+![](https://pic2.zhimg.com/v2-169dfab7ab951e600f311015cc8a35cd_b.jpg)
+
+### 下行期怎样设计数据指标，才能牵引产品走在正确的轨道上？
+
+链接：[https://mp.weixin.qq.com/s/yg-Joreu0dYvoVP3XecrtQ](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/yg-Joreu0dYvoVP3XecrtQ)
+
+在产品发展中，数据指标扮演着关键角色。通过点评与 Taptap 的例子，我们看到错误的指标会导致产品转型失败，特别是在行业下行期。在这种情况下，关注核心用户活跃度变得尤为重要，因为核心用户的活跃行为可以增强产品的价值，吸引更多用户。不同阶段需要不同的指标，早期追求日活增长，后期则需关注核心用户活跃度。制定数据指标时需根据市场信号灵活调整，没有一成不变的方法。犬校提出的观点强调了核心用户活跃度作为重要的数据指标，值得深入思考。
+
+### AI 搜索选哪个？18 家 AI 搜索产品横向测评
+
+链接：[https://mp.weixin.qq.com/s/nvn0Lq4p78\_g5B6O0qR5TQ](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/nvn0Lq4p78_g5B6O0qR5TQ)
+
+18 款 AI 搜索产品横向测试，本文不是权威测试，而是个人向测试，测试集的目标不是大而全，而是自己用着舒服。Perplexity、海螺 AI、360 表现优秀。Bing、秘塔 AI、豆包表现较差，不建议选择。
+
+### B 端弹窗设计｜如何科学定义弹窗的尺寸规范？
+
+链接：[https://mp.weixin.qq.com/s/pn-U2pnYcVQANM7cQj3oJg](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/pn-U2pnYcVQANM7cQj3oJg)
+
+本文介绍了 B 端弹窗设计中如何科学定义弹窗尺寸规范。通过与需求方沟通、操作效率和适配性考量，确定最合适的弹窗尺寸。结合信息量不固定的情况，提出了选择 800px 的弹窗大小作为最优方案。文章还提供了弹窗设计的基本规范，包括高度、滚动条和浏览器适配等方面的考虑，以提高审核员的操作效率和用户体验。
+
+### AI 节点式接入：搭建批量生图 SOP 工程
+
+链接：[https://sspai.com/post/88220](https://link.zhihu.com/?target=https%3A//sspai.com/post/88220)
+
+企业在使用 SD 进行图像生成时，往往需要处理大量的图像素材。这一过程中包括编写 CSV 需求单、审核素材、打标和命名等步骤，传统的手工操作流程效率低下且容易出错。本文介绍通过 AI 节点式接入和 GPT 技术，可以显著优化这些流程，提高效率和质量。
+
+![](https://pic3.zhimg.com/v2-6b422b472c3012b0ad252afb5e3f089c_b.jpg)
+
+### 需求分析基础知识整理 —— 范围、流程及方法
+
+链接：[https://mp.weixin.qq.com/s/eY3EsVZzhgmTKd9huCjOvw](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/eY3EsVZzhgmTKd9huCjOvw)
+
+本文将从需求分析的意义、来源、分类、过滤、转化、分析、定义等流程维度来整理需求分析的相关方法、模型、理论。并以大型软件的全新构建场景为基础，结合通用的需求分析方法总结出一套系统的流程方法，以便于在后续工作中依据实际的产品情况、业务场景裁剪使用。
+
+![](https://pic3.zhimg.com/v2-019e7de337e2093daa46d5eed2e3cbba_b.jpg)
+
+### 职场设计师必备的晋升逻辑
+
+链接：[https://www.zcool.com.cn/article/ZMTYyMzIxMg==.html](https://link.zhihu.com/?target=https%3A//www.zcool.com.cn/article/ZMTYyMzIxMg%3D%3D.html)
+
+文章通过分析作者所在 B 端大厂的晋升规则，作帮助读者理解如何在职场中实现晋升，结合实际案例，展示了一次成功的晋升流程。
+
+![](https://pic1.zhimg.com/v2-37aa4c5a6bf90223dff2ad7e08788e8a_b.jpg)
+
+## 工具资源
+
+### The Hydrant Directory —— 公共消防栓设计灵感
+
+链接：[https://www.dayroselane.com/hydrants](https://link.zhihu.com/?target=https%3A//www.dayroselane.com/hydrants)
+
+网站展示了各种地点的消防栓，包括纽约、西雅图等城市的消防栓设计。用户可以随机浏览、按颜色筛选消防栓。这些资源可以用于设计项目、艺术创作等领域，为创意灵感提供来源。
+
+![](https://pic1.zhimg.com/v2-c55d0a4a667ae85335a28f81341e7ab6_b.jpg)
+
+### Apple 发布 iOS 18 的 Sketch 设计资源
+
+链接：[https://developer.apple.com/design/resources/](https://link.zhihu.com/?target=https%3A//developer.apple.com/design/resources/)
+
+既然 Figma 的没有第一时间发布，估计苹果内部还是用 Sketch 做设计。相比于 iOS 17 的组件库，多了小组件（Widget）、控制中心和文稿启动器 （Document Launcher）等。
+
+![](https://pic2.zhimg.com/v2-200c327e95573f78583ce339771c8ea5_b.jpg)
+
+![](https://pic2.zhimg.com/v2-82e55d206a5df5516e6f382bd590f547_b.jpg)
+
+### Doctolib Design System —— Doctolib 医疗的设计系统
+
+链接：[https://oxygen.doctolib.design/60b411768/p/77fd2d-doctolib-design-system](https://link.zhihu.com/?target=https%3A//oxygen.doctolib.design/60b411768/p/77fd2d-doctolib-design-system)
+
+该设计系统是 Doctolib 医疗生态系统的核心，确保每个交互都具有一致性和连贯性。内容包括 设计系统的原则和品牌基因，提供了有关写作原则、模式和组件的内容。模式里提供组件使用的决策树和使用指南很实用。
+
+![](https://picx.zhimg.com/v2-41b2993d5074fc296918ef9003725f5b_b.jpg)
+
+### Sneak Peek —— 查看顶尖设计师 Figma 文件
+
+链接：[https://www.sneakpeek.design/](https://link.zhihu.com/?target=https%3A//www.sneakpeek.design/)
+
+你可以浏览 Perplexity AI、Bezi、Lottie Files 等公司的设计师所使用的 Figma 文件，深入了解他们的设计过程、技巧和创意思路。网站还提供额外视频内容，让用户更深入了解设计师的工作方式和创意思路。
+
+![](https://pic1.zhimg.com/v2-7d9d43f6ee70c1951724b9d6596559ec_b.jpg)
+
+### HyperHuman —— AI 生成 3D 资产
+
+链接：[https://hyperhuman.deemos.com/](https://link.zhihu.com/?target=https%3A//hyperhuman.deemos.com/)
+
+能够从文本或图像中生成逼真的 3D 模型和面部资产，具备 PBR 纹理，可直接投入生产，能为 Unity、Unreal Engine 和 Maya 提供 CG 友好的资产。
+
+![](https://picx.zhimg.com/v2-4e39d5261785791badda4d55bf1dd573_b.jpg)
+
+### Tangent Line Tool ——创建椭圆的切线的 Figma 插件
+
+链接：[https://www.figma.com/community/plugin/1359101746740663370/tangent-line-tool](https://link.zhihu.com/?target=https%3A//www.figma.com/community/plugin/1359101746740663370/tangent-line-tool)
+
+只需选择两个椭圆，然后选择想要生成的切线类型，即可生成新的切线。插件提供了实时预览功能，让用户可以立即看到切线效果。除了支持标准圆形外，该插件还支持椭圆形状，为用户提供更多设计选择。
+
+![](https://pica.zhimg.com/v2-007f969ddb7c60473f79155d33021268_b.jpg)
+
+### Figproxy —— Figma 与硬件通信工具
+
+链接：[https://github.com/ideo/Figproxy](https://link.zhihu.com/?target=https%3A//github.com/ideo/Figproxy)
+
+实现了 Figma 原型与物理硬件的双向通信，用于快速制作涉及屏幕和物理元素（如电机、灯光、传感器等）的交互原型。特别适用于与 Arduino 等硬件原型平台通信，可用于快速原型的设备设计，如展示设备、家居自动化、游戏元素等。提供了详细安装和操作说明。
+
+![](https://pic1.zhimg.com/v2-f83c4ac82977f2f47e99101a4702d6f0_b.jpg)
+
+### Lasso Tool —— 类似套索功能的 Figma 插件
+
+链接：[https://www.figma.com/community/plugin/1362438745920118538/lasso-tool](https://link.zhihu.com/?target=https%3A//www.figma.com/community/plugin/1362438745920118538/lasso-tool)
+
+允许用户通过自由绘制选择功能，一键复制或剪切选中的所有图层，类似于 Photoshop。无论是矢量、文本、框架、组或其他类型的图层，插件都可以处理。用户可以选择标准 Lasso、磁性 Lasso 或使用现有矢量作为选择的功能。移动鼠标即可生成选择，简单易用。
+
+![](https://pic2.zhimg.com/v2-1271a2e20b561c4951c10e0203fe0d73_b.jpg)
+
+### Roast My Design —— AI 给网页设计打分
+
+链接：[https://roastmydesign.co/](https://link.zhihu.com/?target=https%3A//roastmydesign.co/)
+
+使用 AI 来分析网站的设计，并提供美学、文案、 UI 设计和一致性的分数。获得非常具体，详细的建议。
+
+![](https://pic2.zhimg.com/v2-1af2b972020e208f3eb33cbe6373a88b_b.jpg)
+
+## 产品发现
+
+### DarkOS Icon Pack —— 专为 Mac 和 iPhone 设计的暗黑主题
+
+链接：[https://www.darkosicon.com/zh/](https://link.zhihu.com/?target=https%3A//www.darkosicon.com/zh/)
+
+包括 600 + 应用图标、20 个高质量暗黑壁纸。图标设计精美、风格统一，覆盖系统、社交、娱乐、商务、生产力、开发工具、设计等领域，并持续更新。
+
+可以使用折扣代码 VIGGO 获得折扣 20%。
+
+![](https://pic3.zhimg.com/v2-640011381ad0869d3cdf087d56e665e4_b.jpg)
+
+### 流氓软件 —— 与流氓软件斗智斗勇的游戏
+
+链接：[https://store.steampowered.com/app/3019370/\_/?l=schinese](https://link.zhihu.com/?target=https%3A//store.steampowered.com/app/3019370/_/%3Fl%3Dschinese)
+
+这是一款让玩家穿越时空回到 1999 年的互联网世界，挑战解密恶意软件安装选项的冒险游戏。玩家扮演的角色需要与无良软件商作斗争，揭露隐藏在安装程序中的恶意选项，赢得名望与金钱，影响历史进程。游戏融合了技术解密、历史事件与虚构故事，让玩家体验对抗恶意软件的乐趣。
+
+![](https://pica.zhimg.com/v2-d01f022fc914b7762b981fe7aaab8462_b.jpg)
+
+### Dead Simple Twitter/X Search —— 增强 Twitter/X 搜索的浏览器扩展
+
+链接：[https://chromewebstore.google.com/detail/dead-simple-twitterx-sear/gmfcocpjaggohbkiiopmofadgicanlmp](https://link.zhihu.com/?target=https%3A//chromewebstore.google.com/detail/dead-simple-twitterx-sear/gmfcocpjaggohbkiiopmofadgicanlmp)
+
+这个扩展为您提供了一个更加用户友好的Twitter/X搜索体验，允许您通过广泛的选项过滤您的搜索。
+
+![](https://pic2.zhimg.com/v2-ea6a554c7f0437ee851bf20f6e91a62f_b.jpg)
+
+### 腾讯 UGit —— 简单易用的 Git 客户端
+
+链接：[https://code.tencent.com/ugit](https://link.zhihu.com/?target=https%3A//code.tencent.com/ugit)
+
+可视化界面友好，提供简单易用、大文件管理、快速提交、冲突处理等功能，支持 Excel 表格差异合并、多仓库管理解决方案，满足各种用户需求。操作简单，支持二进制文件冲突处理，适用于游戏研发等领域。
+
+![](https://pica.zhimg.com/v2-71fad62dccae4ff00aacfc9b1ffa5fbe_b.jpg)
+
+### 可灵大模型是 —— 快手团队自研的视频生成大模型
+
+链接：[https://kling.kuaishou.com/](https://link.zhihu.com/?target=https%3A//kling.kuaishou.com/)
+
+通过 3D 时空联合注意力机制，可灵可以生成大幅度运动的视频内容，达到电影级别的画面质量。支持长达 2 分钟的视频生成，模拟物理世界特性，并具备强大的概念组合能力，能够将用户丰富的想象力转化为具体的画面。可灵还能生成电影级的画面，支持自由的输出视频宽高比，为用户提供更多创作可能性。由于效果非常强大，有海外用户把它当作中国版的 Sora。
+
+![](https://pic4.zhimg.com/v2-de0f6cf948ad477441b289350ca8c2b3_b.jpg)
+
+### Peek —— AI 自动整理和总结浏览器多页签
+
+链接：[https://www.gopeek.ai/](https://link.zhihu.com/?target=https%3A//www.gopeek.ai/)
+
+通过 AI 自动分类标签，帮助用户专注于工作。用户可以利用自动浮现的标签组建议一键整理标签，同时从标签组中提取难以记忆的重要信息。用户还可以根据主题快速排序、组织和切换标签，同时在标签组中添加笔记，方便保持想法和标签的联系。
+
+![](https://pic2.zhimg.com/v2-d162088a9edcfd4f4c083278437a2817_b.jpg)
+
+### Riffo—— AI 文件重命名和整理工具
+
+链接：[https://riffo.ai/](https://link.zhihu.com/?target=https%3A//riffo.ai/)
+
+为用户提供解决下载文件夹杂乱、无意义截图和混乱导出文件等问题的便捷解决方案。用户只需简单三步：选择文件、设定命名格式、编辑并应用，便可快速整理文件。支持各种常见格式，包括图片、Word、PDF 等。菜单栏访问，批量重命名功能，并行处理让大批文件秒速完成，让您摆脱文件混乱，提高工作效率。
+
+![](https://pica.zhimg.com/v2-191f76324a626946fbd83a1caf3a2ad2_b.jpg)
+
+### macOS Sequoia 经典复古风格的新壁纸下载
+
+链接：[https://basicappleguy.com/haberdashery/macintoshwallpapers](https://link.zhihu.com/?target=https%3A//basicappleguy.com/haberdashery/macintoshwallpapers)
+
+macOS Sequoia 新动态壁纸以苹果经典 Macintosh 图标为背景，展示了 Control Panel、计算器和 MacWrite 等应用程序，呈现出复古风格。所有图片均为 6400 × 3552 png 格式。
+
+![](https://picx.zhimg.com/v2-0783f40f29e817ab7c63768d202a0a6f_b.jpg)
+
+### Screenshot.Rocks —— 生成手机或浏览器截图机器模型
+
+链接：[screenshot.rocks](https://link.zhihu.com/?target=http%3A//screenshot.rocks/)
+
+提供快速生成手机或浏览器截图机器模型，支持自定义和浏览器插件，操作简单方便。Chrome 扩展一键生成截图模型，适用于各大浏览器。完全开源，图片处理在本地进行，无需担心隐私问题。
+
+![](https://pica.zhimg.com/v2-d4eb4078316ab9303bd70c588a7a2bf8_b.jpg)
+
+## 相关资讯
+
+### Stable Diffusion 3 开源
+
+个人使用免费，商用需有授权。看国内自媒体报道（ [https://mp.weixin.qq.com/s/EmKIfmCiTTwSePyb3EHrSA](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/EmKIfmCiTTwSePyb3EHrSA) ）确实效果非常不错，也有自媒体报道（ [https://www.landiannews.com/archives/104479.html](https://link.zhihu.com/?target=https%3A//www.landiannews.com/archives/104479.html) ），Stable Diffusion 为规避裸体结果导致躯体部分错乱。
+
+![](https://pic1.zhimg.com/v2-a608bdcfd0408cf86df166cd0e0ad340_b.jpg)
+
+### Motiff 妙多全球发布了设计生产力工具
+
+链接：[https://mp.weixin.qq.com/s/FZVvnJ60RH7qDBbeEMVqag](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/FZVvnJ60RH7qDBbeEMVqag)
+
+猿辅导旗下的在线界面设计工具，性能优化不错，非常流畅。提供很多 AI 工具，让 AI 为设计师带来全新创意。AI 设计系统、AI 生成 UI 和 AI 工具箱已经准备就绪，为用户提供更高效的设计流程和更具创意性的解决方案。通过 AI 技术的应用，设计师可以更快速地完成任务，释放更多时间专注于创意和创新。
+
+### 苹果 WWDC2024 超全总结
+
+链接：[https://mp.weixin.qq.com/s/glyZNakqEto2qTBrOaSoHQ](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/glyZNakqEto2qTBrOaSoHQ)
+
+苹果 WWDC 发布了 Apple Intelligence，将人工智能集成到 iOS 18 系统，带来了自定义图标、智能写作工具等更新，提升用户体验。Apple Intelligence 注重隐私保护，能优化通知管理、邮件分类，提供文生图工具等功能。系统利用 A17 Pro 及 M 系列芯片的算力，强调用户数据隐私与安全。新功能如邮件摘要、智能通知管理、跨应用操作协调，展示了苹果 AI 的强大功能。但需要最新设备支持，价位较高，Vision Pro 国行定价 29999 元起。
+
+### 2024 年 Apple 设计大奖获奖名单
+
+链接：[https://developer.apple.com/cn/design/awards/](https://link.zhihu.com/?target=https%3A//developer.apple.com/cn/design/awards/)
+
+2024 年 Apple 设计大奖评选出了一批优秀作品，分为乐趣、多元、创新、互动和视觉图像等类别。获奖作品包括小熊感恩日记、NYT Games、oko、Crayola 冒险、Procreate Dreams 等。
+
+![](https://pica.zhimg.com/v2-9ee08875fb562d01ab22c8730f97657c_b.jpg)
+
+### Sidebar 停刊
+
+链接：[https://sidebar.io/break/](https://link.zhihu.com/?target=https%3A//t.co/dwZ28XYW1R)
+
+我每天都看，每天发布 5 条设计资讯的免费 newsletter 的 sidebar 在运营 10 年后宣布因创始人个人时间、资金压力和内容获取枯竭暂停运营。好在他推荐了一些设计相关的其他资讯网站。 用爱发电不长久，我也不知道自己的体验碎周报啥时候就停了，商业化也没啥头绪。
+
+## 招聘
+
+### 虎扑招视觉设计
+
+base：上海
+
+投递邮箱：dingzhe@hupu.com
+
+职位描述：
+
+1.  根据全年节点，负责虎扑APP大型运营活动、日常运营推广活动的H5页面，banner，海报设计等工作
+2.  负责虎扑品牌以及ip设计相关工作，支持虎扑企业文化（如礼盒、年会等视觉）设计工作
+3.  基于业务目标和用户特征，独立产出高质量的视觉设计方案，并跟进方案落地，保障上线质量
+4.  与多方配合，跟踪上线效果数据和用户反馈，正确运用多种设计方法，针对性的对设计方案进行优化迭代
+
+岗位要求：
+
+1.  本科以上学历，1-3年视觉设计工作经验，有品牌设计、ip设计或者手绘能力更佳
+2.  有较好的设计审美和沟通能力，能有效的表达并推进设计方案落地
+3.  善于思考总结，沉淀设计方法，提升自我设计能力并同时赋能团队
+
+### 上海冰鲸科技有限公司招聘资深品牌视觉设计师
+
+![](https://pic4.zhimg.com/v2-bb2d0cf0d1fe3d0fc4265ff3e69d7c25_b.jpg)
+
+发布于 2024-06-17 00:49・
+
