@@ -16,6 +16,7 @@ import { insidergithub } from './adapters/insidergithub';
 import { zhihu } from './adapters/zhihu';
 import { others } from './adapters/others';
 import { javascriptweekly } from './adapters/javascriptweekly';
+import { syntaxfm } from './adapters/syntaxfm';
 
 import { logger } from './utils/logger';
 
@@ -43,6 +44,7 @@ const adapter: Partial<Record<SenderType, Adapter>> = {
 	nodeweekly: javascriptweekly,
 	frontendfocus: javascriptweekly,
 	reactstatus: javascriptweekly,
+	syntaxfm,
 };
 
 interface RequestBody {
