@@ -13,5 +13,6 @@ export const WHITELISTS = {
   JAVASCRIPTWEEKLY: 'jsw@peterc.org',
   NODEWEEKLY: 'node@cooperpress.com',
   REACTSTATUS: 'react@cooperpress.com',
-  FRONTENDFOCUS: 'frontend@cooperpress.com'
+  FRONTENDFOCUS: 'frontend@cooperpress.com',
+  SYNTAXFM: 'crew@syntax.fm'
 } as const
