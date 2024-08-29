@@ -4,7 +4,9 @@ import type { RouterMiddleware } from '$oak'
 import { load } from '$ci'
 
 const fpSite = 'https://free-proxy-list.net'
-const fallbackIP = 'http://50.217.226.44:80'
+const fallbackIP = '50.217.226.44:80'
+const maxTranslateTime = 10
+const ipRecordCount: Record<string, number> = {}
 
 const defaultOptions = {
   from: 'en',
@@ -16,18 +18,27 @@ async function getAgent() {
   try {
     const html = await fetch(fpSite).then((response) => response.text())
     const $ = load(html)
-    const matchIp = $('table.table-striped > tbody > tr').filter(
-      (_index, item) => {
+    const matchIp = $('table.table-striped > tbody > tr')
+      .filter((_index, item) => {
         return ['US', 'anonymous'].every((v) => $(item).text().includes(v))
-      }
-    )
+      })
+      .map((_index, item) => {
+        return $(item)
+          .children('td')
+          .slice(0, 2)
+          .map((_index, child) => $(child).text())
+          .get()
+          .join(':')
+      })
+      .get()
     if (matchIp.length) {
-      ip = $(matchIp.get(0)!)
-        .children('td')
-        .slice(0, 2)
-        .map((_index, child) => $(child).text())
-        .get()
-        .join(':')
+      ip =
+        matchIp.find(
+          (v) =>
+            typeof ipRecordCount[v] === 'undefined' ||
+            ipRecordCount[v] < maxTranslateTime
+        ) ?? fallbackIP
+      ipRecordCount[ip] = (ipRecordCount[ip] ?? 0) + 1
       ip = `${ip.endsWith('443') ? 'https' : 'http'}://${ip}`
     }
   } catch (e) {
