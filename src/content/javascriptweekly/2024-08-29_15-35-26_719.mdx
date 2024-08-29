@@ -1,0 +1,292 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: JavaScript's Rust tool belt
+description: JavaScript's Rust tool belt
+date: 星期四 03 下午 八月 29o 2024
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/702
+origin_site: https://javascriptweekly.com/issues/702
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="JavaScript's Rust tool belt" url="https://javascriptweekly.com/issues/702" />
+
+<Detail client:only="react">
+	#​702 — August 29, 2024
+
+[Read on the Web](https://javascriptweekly.com/issues/702)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/159078/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dh55dxaasnkegvs8qipe.jpg)](https://javascriptweekly.com/link/159079/d076523b1d)
+
+[Rspack 1.0: The Rust-Powered JavaScript Bundler](https://javascriptweekly.com/link/159079/d076523b1d "rspack.dev") — Far from being ‘yet another bundler’ with its own approach and terminology to learn, Rspack prides itself on being webpack API and ecosystem compatible, while offering many times the performance. The team now considers it production ready and encourages you to try your webpack-based projects on it.
+
+Rspack Contributors
+
+💡 Rspack also has [a family of ancillary tools](https://javascriptweekly.com/link/159080/d076523b1d) worth checking out, such as [Rsdoctor](https://javascriptweekly.com/link/159081/d076523b1d), a tool for analyzing and visualizing your build process (for both Rspack _and_ webpack!)
+
+[![](https://copm.s3.amazonaws.com/0b70ecf1.png)](https://javascriptweekly.com/link/159078/d076523b1d)
+
+[Front-End System Design](https://javascriptweekly.com/link/159078/d076523b1d "frontendmasters.com") — Learn to create scalable, efficient user interfaces in this extensive video course by Evgennii Ray. Explore the box model, browser rendering, DOM manipulation, state management, performance and much more.
+
+Frontend Masters sponsor
+
+[How to Create an NPM Package in 2024](https://javascriptweekly.com/link/159082/d076523b1d "www.totaltypescript.com") — Sounds simple, but there are a lot of steps involved if you want to follow best practices, introduce useful tools, and get things just right. Matt Pocock walks through the process here, and there’s a 14-minute screencast too, if you’d prefer to watch along.
+
+Matt Pocock
+
+**IN BRIEF:**
+
+*   🤖 [v0](https://javascriptweekly.com/link/159083/d076523b1d) is an AI-powered tool from Vercel for, originally, generating `shadcn/ui`\-powered React components based upon prompts you supply. Now, however, [it has basic Vue.js support](https://javascriptweekly.com/link/159084/d076523b1d) too.
+    
+*   [Deno 1.46 has been released](https://javascriptweekly.com/link/159085/d076523b1d) and promises to be the final 1.x release before the [much awaited Deno 2.0.](https://javascriptweekly.com/link/159086/d076523b1d) Deno's Node compatibility improves even more (it now supports Playwright and [many more things](https://javascriptweekly.com/link/159087/d076523b1d)) and ships with V8 12.9.
+    
+*   📊 IEEE has published its latest annual [list of top programming languages](https://javascriptweekly.com/link/159088/d076523b1d). JavaScript takes third place, but TypeScript has leapt up several places to fourth.
+    
+
+**RELEASES:**
+
+*   [Prisma 5.19](https://javascriptweekly.com/link/159089/d076523b1d) – The popular ORM for Node.js and TypeScript adds 'TypedSQL', a way to write raw SQL queries in a type-safe way.
+    
+*   📈 [billboard.js 3.13](https://javascriptweekly.com/link/159090/d076523b1d) – Popular D3 chart library adds area-step-range charts.
+    
+*   [pnpm 9.9](https://javascriptweekly.com/link/159091/d076523b1d) – Fast, space efficient package manager.
+    
+*   [React Email 3.0](https://javascriptweekly.com/link/159092/d076523b1d), [Ember 5.11](https://javascriptweekly.com/link/159093/d076523b1d), [Bun v1.1.26](https://javascriptweekly.com/link/159094/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lohlaa7cae110fcjx2gh.jpg)](https://javascriptweekly.com/link/159095/d076523b1d)
+
+[JS Dates are About to Be Fixed](https://javascriptweekly.com/link/159095/d076523b1d "docs.timetime.in") — Handling dates and times is famously [a painful area for programmers](https://javascriptweekly.com/link/159096/d076523b1d) and JavaScript hasn’t done a lot to make it easier. Libraries like [Moment.js](https://javascriptweekly.com/link/159097/d076523b1d) help a lot, but Iago looks at how the [Temporal proposal](https://javascriptweekly.com/link/159098/d076523b1d) and its features will begin to help a lot more over time.
+
+Iago Lastra
+
+[Weekly Chats on the Art and Practice of Programming](https://javascriptweekly.com/link/159099/d076523b1d "stackoverflow.blog") — Your home for weekly conversations with fascinating guests about how technology is made and where it’s headed.
+
+The Stack Overflow Podcast sponsor
+
+[JavaScript Generators Explained](https://javascriptweekly.com/link/159100/d076523b1d "www.reactsquad.io") — Jan was frustrated by the quality of documentation and articles explaining _generators_ in JavaScript, and set out to explain things in a way that a more advanced developer could appreciate.
+
+Jan Hesters
+
+[Implementing a React-a-Like from Scratch](https://javascriptweekly.com/link/159101/d076523b1d "www.rob.directory") — While it's unlikely you'll _actually_ want to do this, at least thinking about it can prove instructive as to what’s going on in React’s engine room.
+
+Robby Pruzan
+
+▶  [How to Implement the 2048 Game in JavaScript](https://javascriptweekly.com/link/159102/d076523b1d "www.youtube.com") — Ania is back with one of her usual easy to follow walkthroughs of implementing a complete game in JavaScript. This time it’s the [2048](https://javascriptweekly.com/link/159103/d076523b1d) sliding puzzle game. _(Two weeks ago [she did Tic-Tac-Toe](https://javascriptweekly.com/link/159104/d076523b1d) as well.)_
+
+Ania Kubów
+
+[Learn Role-Based Access Control and Simplify Permissions Management](https://javascriptweekly.com/link/159105/d076523b1d "go.clerk.com") — Enhance security and streamline access by managing user roles with Clerk Organizations.
+
+Clerk sponsor
+
+📄 [The Only Widely Recognized JS Feature Ever Deprecated](https://javascriptweekly.com/link/159106/d076523b1d) – Spoiler: It’s `with`. Trevor Lasn
+
+📄 [Generating Unique Random Numbers in JavaScript Using Sets](https://javascriptweekly.com/link/159108/d076523b1d) Amejimaobari
+
+📺 [21 Talks from the _Chain React 2024_ Conference](https://javascriptweekly.com/link/159109/d076523b1d) – A React Native event. YouTube
+
+📄 [Exposing Internal Methods on Vue Custom Elements](https://javascriptweekly.com/link/159110/d076523b1d) Jaime Jones
+
+📄 [The Interface Segregation Principle in React](https://javascriptweekly.com/link/159111/d076523b1d) Alex Kondov
+
+🛠 Code & Tools
+
+[TypeScript 5.6 Release Candidate](https://javascriptweekly.com/link/159112/d076523b1d "devblogs.microsoft.com") — As always, Daniel presents an epic roundup of what’s new. We’ll focus more on it next week though, as the final release is [anticipated to land](https://javascriptweekly.com/link/159113/d076523b1d) next Tuesday (September 3).
+
+Daniel Rosenwasser (Microsoft)
+
+[Vuestic UI 1.10: A Vue.js 3.0 UI Framework](https://javascriptweekly.com/link/159114/d076523b1d "vuestic.dev") — Features 60 customizable and responsive components and with [the v1.10 release](https://javascriptweekly.com/link/159115/d076523b1d) it’s gained a significant bundle size optimization, a custom compiler that improves build time performance, and other minor enhancements. [GitHub repo.](https://javascriptweekly.com/link/159116/d076523b1d)
+
+Vuestic UI
+
+[✅ Bye Bye Bugs](https://javascriptweekly.com/link/159117/d076523b1d "www.qawolf.com") — Get 80% automated E2E test coverage for mobile and web apps in under 4 months with [QA Wolf](https://javascriptweekly.com/link/159117/d076523b1d). With QA cycles complete in minutes (not days), bugs don’t stand a chance. [Schedule a demo](https://javascriptweekly.com/link/159117/d076523b1d).
+
+QA Wolf sponsor
+
+[Material UI v6: The Popular React UI Design/Component System](https://javascriptweekly.com/link/159118/d076523b1d "mui.com") — At ten years old, the popular design system has its latest major release. There's a focus on improved theming, color scheme management, container queries, and React 19 support. There are [revamped templates](https://javascriptweekly.com/link/159119/d076523b1d) to be inspired by, too.
+
+García, Bittu, Andai, et al.
+
+[npm-check-updates 17.0: Update `package.json` Dependencies to Latest Versions](https://javascriptweekly.com/link/159120/d076523b1d "github.com") — That is, as opposed to the _specified_ versions. It includes a handy `-i` interactive mode so you can look at potential upgrades and then opt in to them one by one.
+
+Raine Revere
+
+[Code Hike 1.0: Turn Markdown into Rich Interactive Experiences](https://javascriptweekly.com/link/159121/d076523b1d "codehike.org") — Aimed at use cases like code walkthroughs and interactive docs, [Code Hike](https://javascriptweekly.com/link/159122/d076523b1d) bridges the gap between Markdown and React when creating technical content that takes full advantage of the modern web.
+
+Rodrigo Pombo
+
+[Calendar.js: A Calendar Control with Drag and Drop](https://javascriptweekly.com/link/159123/d076523b1d "github.com") — A responsive calendar with no dependencies, full drag and drop support (even between calendars), and many ways to manage events with recurring events, exporting, holidays, and more.
+
+William Troup
+
+*   📊 [Perspective 3.0](https://javascriptweekly.com/link/159124/d076523b1d) – Data visualization and analytics component. The core is written in C++ and compiled to WebAssembly where it can [be used from JavaScript](https://javascriptweekly.com/link/159125/d076523b1d). Their [homepage](https://javascriptweekly.com/link/159126/d076523b1d) shows it off well with a live example.
+    
+*   [json-viewer 3.5](https://javascriptweekly.com/link/159127/d076523b1d) – Display JSON data in a readable, user-friendly way.
+    
+*   ♟️ [Stockfish.js 16.1](https://javascriptweekly.com/link/159128/d076523b1d) – A JavaScript chess engine.
+    
+*   [jest-dom 6.5](https://javascriptweekly.com/link/159129/d076523b1d) – Jest matchers to test DOM state.
+    
+*   [Marked 14.1](https://javascriptweekly.com/link/159130/d076523b1d) – Fast Markdown compiler / parser.
+    
+*   [Javet 3.1.5](https://javascriptweekly.com/link/159131/d076523b1d) – Java + V8. Embed JS into Java.
+    
+*   [Pixi.js 8.3.4](https://javascriptweekly.com/link/159132/d076523b1d) – Fast 2D on WebGL engine.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/159133/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​702 — 2024 年 8 月 29 日
+
+[网上阅读](https://javascriptweekly.com/issues/702)
+
+与 
+
+\[![前端大师徽标](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)]\(https:// javascriptweekly.com/link/159078/d076523b1d)
+
+JavaScript 周刊
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dh55dxaasnkegvs8qipe.jpg)](https://javascriptweekly.com/link/159079/d076523b1d)
+
+[Rspack 1.0：Rust 支持的 JavaScript Bundler](https://javascriptweekly.com/link/159079/d076523b1d "rspack.dev") — Rspack 远非拥有自己的方法和术语需要学习的“又一个捆绑器”以其与 webpack API 和生态系统兼容而自豪，同时提供数倍的性能。该团队现在认为它已做好生产准备，并鼓励您在其上尝试基于 Webpack 的项目。
+
+Rspack 贡献者
+
+💡 Rspack 还有[一系列辅助工具](https://javascriptweekly.com/link/159080/d076523b1d)值得一试，例如[Rsdoctor](https://javascriptweekly.com/link/159081/d076523b1d) ，一个用于分析和可视化构建过程的工具（适用于 Rspack \* 和 \* webpack！）
+
+[![](https://copm.s3.amazonaws.com/0b70ecf1.png)](https://javascriptweekly.com/link/159078/d076523b1d)
+
+[前端系统设计](https://javascriptweekly.com/link/159078/d076523b1d "frontendmasters.com") — 在 Evgennii Ray 的这个内容丰富的视频课程中学习如何创建可扩展、高效的用户界面。探索盒模型、浏览器渲染、DOM 操作、状态管理、性能等等。
+
+前端大师赞助商
+
+[如何在 2024 年创建 NPM 包](https://javascriptweekly.com/link/159082/d076523b1d "www.totaltypescript.com") — 听起来很简单，但如果您想最好地遵循，则涉及很多步骤实践，引入有用的工具，并把事情做好。 Matt Pocock 在此介绍了整个过程，如果您愿意观看，还有 14 分钟的截屏视频。
+
+马特·波考克
+
+**简而言之：**
+
+* 🤖 [v0](https://javascriptweekly.com/link/159083/d076523b1d) 是 Vercel 的一款 AI 驱动工具，最初用于根据您提供的提示生成“shadcn/ui”驱动的 React 组件。然而现在，[它也具有基本的 Vue.js 支持](https://javascriptweekly.com/link/159084/d076523b1d)。
+
+* [Deno 1.46 已发布](https://javascriptweekly.com/link/159085/d076523b1d) 并承诺成为\[备受期待的 Deno 2.0 之前的最终 1.x 版本。]\(https://javascriptweekly.com /link/159086/d076523b1d) Deno 的 Node 兼容性进一步提高（它现在支持 Playwright 和[更多的东西](https://javascriptweekly.com/link/159087/d076523b1d)）并随 V8 12.9 一起提供。
+
+* 📊 IEEE 发布了最新的年度[顶级编程语言列表](https://javascriptweekly.com/link/159088/d076523b1d)。 JavaScript 排名第三，但 TypeScript 跃升了几个位次，升至第四。
+
+**发布：**
+
+* [Prisma 5.19](https://javascriptweekly.com/link/159089/d076523b1d) – Node.js 和 TypeScript 的流行 ORM 添加了“TypedSQL”，这是一种以类型安全的方式编写原始 SQL 查询的方法。
+
+* 📈 [billboard.js 3.13](https://javascriptweekly.com/link/159090/d076523b1d) – 流行的 D3 图表库添加了面积步长范围图表。
+
+* [pnpm 9.9](https://javascriptweekly.com/link/159091/d076523b1d) – 快速、节省空间的包管理器。
+
+* [React Email 3.0](https://javascriptweekly.com/link/159092/d076523b1d)、[Ember 5.11](https://javascriptweekly.com/link/159093/d076523b1d)、\[Bun v1.1.26]\(https ://javascriptweekly.com/link/159094/d076523b1d)
+
+📒 文章和教程
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lohlaa7cae110fcjx2gh.jpg)](https://javascriptweekly.com/link/159095/d076523b1d)
+
+[JS 日期即将被修复](https://javascriptweekly.com/link/159095/d076523b1d "docs.timetime.in") — 处理日期和时间是众所周知的\[程序员的痛苦领域]\(https:// javascriptweekly.com/link/159096/d076523b1d）而 JavaScript 并没有做太多事情来让它变得更容易。像 [Moment.js](https://javascriptweekly.com/link/159097/d076523b1d) 这样的库有很大帮助，但 Iago 看看 [临时提案](https://javascriptweekly.com/link/159098/d076523b1d) ），随着时间的推移，它的功能将开始提供更多帮助。
+
+伊阿古·拉斯特拉
+
+[关于编程艺术和实践的每周聊天](https://javascriptweekly.com/link/159099/d076523b1d "stackoverflow.blog") — 您每周都会与有趣的嘉宾讨论技术是如何制造的以及它的发展方向。
+
+Stack Overflow 播客赞助商
+
+[JavaScript 生成器解释](https://javascriptweekly.com/link/159100/d076523b1d "www.reactsquad.io") — Jan 对用 JavaScript 解释*生成器*的文档和文章的质量感到沮丧，并开始解释以更高级的开发人员可以欣赏的方式进行操作。
+
+简·赫斯特斯
+
+[从头开始实现 React-a-Like](https://javascriptweekly.com/link/159101/d076523b1d "www.rob.directory") — 虽然您“实际上”不太可能想要这样做，但至少思考它可以对 React 引擎室中发生的事情提供启发。
+
+罗比·普鲁赞
+
+▶  [如何用 JavaScript 实现 2048 游戏](https://javascriptweekly.com/link/159102/d076523b1d "www.youtube.com") — Ania 回来了，她带来了她惯用的简单易懂的实现完整游戏的演练之一。 JavaScript 中的游戏。这次是 [2048](https://javascriptweekly.com/link/159103/d076523b1d) 滑动益智游戏。 *（两周前[她也玩了井字棋](https://javascriptweekly.com/link/159104/d076523b1d)。）*
+
+阿尼娅·库博
+
+[了解基于角色的访问控制并简化权限管理](https://javascriptweekly.com/link/159105/d076523b1d "go.clerk.com") — 通过与文员组织一起管理用户角色来增强安全性并简化访问。
+
+文员赞助人
+
+📄 [唯一被广泛认可的已弃用的 JS 功能](https://javascriptweekly.com/link/159106/d076523b1d) – 剧透：它是 `with`。特雷弗·拉森
+
+📄 [使用集合在 JavaScript 中生成唯一的随机数](https://javascriptweekly.com/link/159108/d076523b1d) Amejimaobari
+
+📺 [*Chain React 2024* 会议的 21 场演讲](https://javascriptweekly.com/link/159109/d076523b1d) – React Native 事件。 YouTube
+
+📄 [在 Vue 自定义元素上公开内部方法](https://javascriptweekly.com/link/159110/d076523b1d) Jaime Jones
+
+📄 [React 中的接口隔离原则](https://javascriptweekly.com/link/159111/d076523b1d) Alex Kondov
+
+🛠 代码和工具
+
+[TypeScript 5.6 候选发布版](https://javascriptweekly.com/link/159112/d076523b1d "devblogs.microsoft.com") — 一如既往，Daniel 对新功能进行了精彩的总结。不过，我们下周将更多地关注它，因为最终版本[预计将于下周二（9 月 3 日）发布](https://javascriptweekly.com/link/159113/d076523b1d)。
+
+丹尼尔·罗森瓦瑟（微软）
+
+[Vuestic UI 1.10：Vue.js 3.0 UI 框架](https://javascriptweekly.com/link/159114/d076523b1d "vuestic.dev") — 具有 60 个可定制和响应式组件，并带有 \[v1.10 版本]\( https://javascriptweekly.com/link/159115/d076523b1d）它获得了显着的包大小优化、可提高构建时间性能的自定义编译器以及其他细微的增强功能。 [GitHub 存储库](https://javascriptweekly.com/link/159116/d076523b1d)
+
+视觉用户界面
+
+[✅ Bye Bye Bugs](https://javascriptweekly.com/link/159117/d076523b1d "www.qawolf.com") — 通过 \[QA Wolf] 在 4 个月内获得 80% 的移动和 Web 应用程序自动化 E2E 测试覆盖率（https://javascriptweekly.com/link/159117/d076523b1d）。由于 QA 周期只需几分钟（而不是几天）即可完成，因此不会出现错误。 [安排演示](https://javascriptweekly.com/link/159117/d076523b1d)。
+
+QA Wolf 赞助商
+
+[Material UI v6：流行的 React UI 设计/组件系统](https://javascriptweekly.com/link/159118/d076523b1d "mui.com") — 已有十年历史，流行的设计系统发布了最新的主要版本。重点是改进的主题、配色方案管理、容器查询和 React 19 支持。还有[改进的模板](https://javascriptweekly.com/link/159119/d076523b1d) 可供启发。
+
+加西亚、比特图、安代等人。
+
+[npm-check-updates 17.0：将 `package.json` 依赖项更新到最新版本](https://javascriptweekly.com/link/159120/d076523b1d "github.com") — 也就是说，与*指定的*相反版本。它包括一个方便的“-i”交互模式，因此您可以查看潜在的升级，然后一一选择。
+
+雷恩·里维尔
+
+[Code Hike 1.0：将 Markdown 变成丰富的交互式体验](https://javascriptweekly.com/link/159121/d076523b1d "codehike.org") — 针对代码演练和交互式文档等用例，\[Code Hike]\(https ://javascriptweekly.com/link/159122/d076523b1d) 在创建充分利用现代网络的技术内容时弥合了 Markdown 和 React 之间的差距。
+
+罗德里戈·庞博
+
+[Calendar.js：具有拖放功能的日历控件](https://javascriptweekly.com/link/159123/d076523b1d "github.com") — 一个没有依赖项的响应式日历，完全支持拖放（即使在日历之间也是如此） ），以及管理重复事件、导出、假期等事件的多种方式。
+
+威廉·特鲁普
+
+* 📊 [Perspective 3.0](https://javascriptweekly.com/link/159124/d076523b1d) – 数据可视化和分析组件。核心是用 C++ 编写的，并编译为 WebAssembly，可以[从 JavaScript 使用](https://javascriptweekly.com/link/159125/d076523b1d)。他们的[主页](https://javascriptweekly.com/link/159126/d076523b1d)通过一个实例很好地展示了这一点。
+
+* [json-viewer 3.5](https://javascriptweekly.com/link/159127/d076523b1d) – 以可读、用户友好的方式显示 JSON 数据。
+
+* ♟️ [Stockfish.js 16.1](https://javascriptweekly.com/link/159128/d076523b1d) – JavaScript 国际象棋引擎。
+
+* [jest-dom 6.5](https://javascriptweekly.com/link/159129/d076523b1d) – 用于测试 DOM 状态的 Jest 匹配器。
+
+* [标记为 14.1](https://javascriptweekly.com/link/159130/d076523b1d) – 快速 Markdown 编译器/解析器。
+
+* [Javet 3.1.5](https://javascriptweekly.com/link/159131/d076523b1d) – Java + V8。将 JS 嵌入到 Java 中。
+
+* [Pixi.js 8.3.4](https://javascriptweekly.com/link/159132/d076523b1d) – WebGL 引擎上的快速 2D。
+
+由 [Cooperpress](https://cooperpress.com/) 出版，由 [Peter Cooper](https://javascriptweekly.com/link/159133/d076523b1d) 编辑
+
+“JavaScript”是 Oracle Corporation 在美国的商标\
+我们未获得 Oracle 的认可或隶属于 Oracle。
+
+
