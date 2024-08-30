@@ -10,7 +10,8 @@ export const tyler: Adapter = (text, html) => {
 	const middleStartIndex = md.indexOf('![Spot the Bug logo]');
 	const middleEndIndex = md.indexOf('![Cool Bits logo]');
 	const endIndex = md.lastIndexOf('![Spot the Bug logo]');
-	const blogContent = md.slice(startIndex, middleStartIndex).concat(md.slice(middleEndIndex, endIndex));
+	const subEndIndex = md.indexOf('[Unsubscribe from Bytes]');
+	const blogContent = md.slice(startIndex, middleStartIndex).concat(md.slice(middleEndIndex, endIndex === -1 ? subEndIndex : endIndex));
 
 	const $ = load(html, null, false);
 	let origin_url: string | undefined;

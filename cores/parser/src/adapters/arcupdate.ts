@@ -6,7 +6,8 @@ export const arcupdate: Adapter = (text, html) => {
 	// slice content from the main things to sports
 	const startIndex = md.indexOf('[![ARC]') || 0;
 	const endIndex = md.lastIndexOf('We’ll see you on the web');
-	const blogContent = md.slice(startIndex, endIndex);
+	const subendIndex = md.indexOf('[Unsubscribe]');
+	const blogContent = md.slice(startIndex, endIndex === -1 ? subendIndex : endIndex);
 
 	return {
 		blogContent,
