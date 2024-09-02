@@ -17,6 +17,8 @@ import { zhihu } from './adapters/zhihu';
 import { others } from './adapters/others';
 import { javascriptweekly } from './adapters/javascriptweekly';
 import { syntaxfm } from './adapters/syntaxfm';
+import { rnn } from './adapters/rnn';
+import { astro } from './adapters/astro';
 
 import { logger } from './utils/logger';
 
@@ -45,6 +47,8 @@ const adapter: Partial<Record<SenderType, Adapter>> = {
 	frontendfocus: javascriptweekly,
 	reactstatus: javascriptweekly,
 	syntaxfm,
+	rnn,
+	astro,
 };
 
 interface RequestBody {
