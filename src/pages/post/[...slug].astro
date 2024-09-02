@@ -1,6 +1,16 @@
 ---
+import { getCollection } from 'astro:content'
 import { getEntry } from 'astro:content'
+import { allCollectionsEntries } from '@/content/config'
 import { type Collections } from '@/content/config'
+
+export async function getStaticPaths() {
+  const allCollectionPosts = await Promise.all(
+    allCollectionsEntries.map((collection) => getCollection(collection))
+  )
+  return allCollectionPosts.flat().map(({ slug, data: { author } }) => ({ params: { slug: `${author}/${slug}` } }))
+}
+
 
 const { slug } = Astro.params
 

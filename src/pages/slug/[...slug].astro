@@ -4,7 +4,15 @@ import { SITETITLE } from 'astro:env/client'
 import Layout from '@/layouts/Layout.astro'
 import { allCollectionsEntries, type Collections } from '@/content/config'
 import BlogCard from '@/components/BlogCard.astro'
-import { Button } from '@/components/ui/button'
+
+export function getStaticPaths() {
+  return [
+    { params: { slug: undefined } },
+    { params: { slug: 'all' } },
+    ...allCollectionsEntries.map(v => ({ params: { slug: v } }))
+  ]
+}
+
 const { slug } = Astro.params
 
 const allCollectionPosts = await Promise.all(

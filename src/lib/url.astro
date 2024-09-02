@@ -7,9 +7,9 @@ export function generateURI(url: string, relativePublic?: boolean) {
   }
   const realURI = relativePublic ? `/media-source/${url}` : url
   try {
-    return new URL(realURI, Astro.url).toString()
+    return new URL(realURI, Astro.site).toString()
   } catch (e) {
-    console.log(e, realURI)
+    console.log(e, realURI, Astro.site)
     return realURI
   }
 }

@@ -64,6 +64,7 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "date-fns": "^3.6.0",
+    "dayjs": "^1.11.12",
     "embla-carousel-react": "^8.1.8",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.419.0",

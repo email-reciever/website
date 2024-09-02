@@ -21,7 +21,9 @@ const collectionSchema = defineCollection({
     email_recorder: z.string().optional(),
     origin_site: z.string().optional(),
     translated: z.boolean().optional(),
-    banner: z.string().optional()
+    banner: z.string().optional(),
+    pubData: z.date().optional(),
+    link: z.string().url().optional()
   })
 })
 

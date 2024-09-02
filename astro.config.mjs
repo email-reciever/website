@@ -18,8 +18,6 @@ export default defineConfig({
     port: 10990,
     open: true
   },
-  output: 'server',
-  adapter: cloudflare(),
   integrations: [mdx(), sitemap(), react(), tailwind({
     nesting: true
   })],
