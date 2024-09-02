@@ -14,5 +14,7 @@ export const WHITELISTS = {
   NODEWEEKLY: 'node@cooperpress.com',
   REACTSTATUS: 'react@cooperpress.com',
   FRONTENDFOCUS: 'frontend@cooperpress.com',
-  SYNTAXFM: 'crew@syntax.fm'
+  SYNTAXFM: 'crew@syntax.fm',
+  RNN: 'newsletters@infinite.red',
+  ASTRO: 'withastro@buttondown.email'
 } as const
