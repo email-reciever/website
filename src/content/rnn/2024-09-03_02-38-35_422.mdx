@@ -1,0 +1,408 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: React Native Newsletter #184
+description: React Native Newsletter #184
+date: 星期二 02 凌晨 九月 3o 2024
+author: rnn
+origin_url: https://mailchi.mp/infinite.red/react-native-newsletter-184?e=077ac9fa1d
+origin_site: https://mailchi.mp/infinite.red/react-native-newsletter-184?e=077ac9fa1d
+translated: true
+avatar: /media-source/rnn-ico.png
+email_recorder: newsletters@infinite.red
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="React Native Newsletter #184" url="https://mailchi.mp/infinite.red/react-native-newsletter-184?e=077ac9fa1d" />
+
+<Detail client:only="react">
+	Issue 184   •   [Open in browser](https://mailchi.mp/infinite.red/react-native-newsletter-184?e=077ac9fa1d)
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/0dd41a07-bf03-955d-8f0d-9ed8de6e0405.png)
+
+React Native Newsletter
+
+# This issue: Chain React 2024 videos released, Shopify just open-sourced Tophat, the power of Nitro Modules, and why EAS is about to get cheaper.
+
+  
+Welcome to the August issue of the React Native Newsletter!  
+  
+I've got some great news for you. All videos from [Chain React 2024 in Portland, OR](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=ecebd48529&e=077ac9fa1d), have been released and are available [here](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=40199db434&e=077ac9fa1d).  
+  
+Have you heard of [Tophat](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=5596d72d0c&e=077ac9fa1d)? It's [Shopifiy](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=35f8f1005c&e=077ac9fa1d)'s solution for installing and testing any mobile application, and they've released it as open source!  
+  
+Be sure to check out this [game-changer X post](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=1428e4b1b6&e=077ac9fa1d) from [@mrousavy](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=51ca952b7d&e=077ac9fa1d) about using Nitro Modules for writing first-class Swift support, insanely fast C++ bindings, object-oriented/instance-based approach, and much more.  
+  
+Coming up early September, 2024: [Callstack's](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=d179c7d28f&e=077ac9fa1d) [React Universe Conference 2024](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=0f5188b0ed&e=077ac9fa1d) in Wrocław, Poland, held September 5-6. This year, [Infinite Red](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=815cd0ea1d&e=077ac9fa1d)'s co-host of the React Native Radio podcasts, [Mazen Chami](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=8427adcd31&e=077ac9fa1d), will deliver a talk. Take a look at the Top React Native picks section below to find a 15% discount code for purchasing tickets to this exciting event!  
+ 
+
+* * *
+
+The latest React Native release is [0.75.2](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=bae7c42ee7&e=077ac9fa1d)
+
+[](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=8c6700a912&e=077ac9fa1d)
+
+### Added
+
+#### Android specific
+
+*   **codegen:** Add support for handling `com.facebook.react.bridge.Dynamic` as parameter for TurboModules ([45cd81706d](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=7c15c97085&e=077ac9fa1d) by [@cortinico](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=333f2a3ac2&e=077ac9fa1d))
+
+### Changed
+
+#### Android specific
+
+*   **ReactRootView:** Replaced `mLastHeight` with `mVisibleViewArea.height()` since mLastHeight value is not getting updated. For `width` we are already using `mVisibleViewArea.width()` ([603eb94dd9](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=8092bfe702&e=077ac9fa1d) by [@shubhamguptadream11](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=3185e641fb&e=077ac9fa1d))
+
+### Removed
+
+#### iOS specific
+
+*   **RCTBaseTextInputView:** UIReturnKeyDefault ([26aff664c0](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=cce89d2509&e=077ac9fa1d) by [@elencho](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=52c04ba046&e=077ac9fa1d))
+
+### Fixed
+
+*   **codegen:** scripts require `yargs` ([0979921850](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=0c4e654775&e=077ac9fa1d) by [@tido64](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=86f90253b3&e=077ac9fa1d))
+
+#### Android specific
+
+*   **ImageSource:** `open` for inheritance ([02d9979c32](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=20919530af&e=077ac9fa1d) by [@cortinico](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=ab746b77cc&e=077ac9fa1d))
+
+* * *
+
+  
+There's a lot more to discover in today's issue. Enjoy! 
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/1ea7634c-d899-5d98-1548-62645bd6a57a.png)
+
+## Our top React Native picks this month
+
+### React Native articles, tweets, and docs submitted by the community and [Infinite Red’](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=563ed3bd73&e=077ac9fa1d)s team of engineers.
+
+![X thread](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/30da69a0-c8f4-b0d0-22fc-6cdad9a528bc.png)
+
+#### React Native 0.75 Released
+
+[This release](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=6bf3e3e256&e=077ac9fa1d) includes support for percentage values in layout, new architecture stabilization, template & init updates, and more
+
+![X thread](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/89b8bba6-024d-78b1-1819-6b4fdb9103f5.png)
+
+#### EAS is about to get cheaper!
+
+[EAS Update pricing gets cheaper as of September 1st](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=e6f8e81617&e=077ac9fa1d)
+
+You can check out the details on their pricing page. If you’re using EAS Update, no action is required.
+
+![X thread](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/30da69a0-c8f4-b0d0-22fc-6cdad9a528bc.png)
+
+#### Shopify Open-Sourced Tophat
+
+Shopify just open-sourced [Tophat](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=38cb6c8778&e=077ac9fa1d), their one-click mobile app testing tool, similar to Expo Orbit.
+
+![X thread](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/30da69a0-c8f4-b0d0-22fc-6cdad9a528bc.png)
+
+[React Universe Conf 2024](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=ccd6682cb8&e=077ac9fa1d)
+
+[Callstack](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=2143d28071&e=077ac9fa1d) presents its annual conference about all things related to React, particularly React Native. It will be held in Wrocław, Poland, from September 5 to 6, 2024. Before you purchase your ticket, here's a 15% discount code you can use: _IRxFriends15_, courtesy of [Callstack](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=fb71387d92&e=077ac9fa1d)!
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/f0647554-cf0a-bd74-e92c-cc6eeb4c49eb.jpg)
+
+![sponsor](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/faec1638-95a9-103d-8c1d-6e36b10b317c.jpg) 
+
+**This Week in React**
+
+Want to keep up to date with React Native? Subscribe to [This Week In React](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=c17b27928b&e=077ac9fa1d) and join 37478 devs for 1 email per week. Evan Bacon, Krzysztof Magiera, William Candillon, Simon Grimm, Theo... they all read it already!  
+  
+[Subscribe](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=b59f9391a7&e=077ac9fa1d) ⇢
+
+![X thread](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/30da69a0-c8f4-b0d0-22fc-6cdad9a528bc.png)
+
+#### CocoaPods Support & Maintenance Plans
+
+They are still keeping it ticking, but they are being more up-front that CocoaPods is in maintenance mode to support communities like React Native. Read about it [here](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=4670ef2dc2&e=077ac9fa1d).
+
+![X thread](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/89b8bba6-024d-78b1-1819-6b4fdb9103f5.png)
+
+#### React Native WebGPU
+
+React Native 0.76 will ship with a reduced number of dynamic libraries: this reduces app size, and improves performance. This is a breaking change if you’ve been writing C++ libraries for Android. Read about the changes [here](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=68caa7b35f&e=077ac9fa1d)
+
+![X thread](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/30da69a0-c8f4-b0d0-22fc-6cdad9a528bc.png)
+
+#### React Native MacOS
+
+Microsoft announced that React Native MacOS 0.74 is available. [Check it out!](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=6f439ca620&e=077ac9fa1d)
+
+![X thread](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/89b8bba6-024d-78b1-1819-6b4fdb9103f5.png)
+
+#### Tutorial on building an animated story list UI
+
+X post about a Story List UI with a Youtube [React Native Reanimated tutorial](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=91e5ff276c&e=077ac9fa1d). 
+
+![X thread](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/89b8bba6-024d-78b1-1819-6b4fdb9103f5.png)
+
+#### An all-new way to write native code for React Native
+
+"Nitro Modules" will provide first-class Swift support, insanely fast C++ bindings, object-oriented/instance-based approach, and much more coming soon! [Read more](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=878f3393e3&e=077ac9fa1d).
+
+![X thread](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/30da69a0-c8f4-b0d0-22fc-6cdad9a528bc.png)
+
+#### How to Develop a Super App with React Native
+
+[This article](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=93c42e824c&e=077ac9fa1d) explains the concept of a Super App, its advantages, and how to integrate it into a React Native application.
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/7b3377ed-cc5e-2443-99e7-6ebd9a250708.png)
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/74dab3ff-f2bd-60f3-8c94-1a9804a8213c.png)
+
+## Open source highlights from the React Native community
+
+### Open source React Native projects, libraries, node modules, or components submitted by the community.
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/6e9f7e65-6d4c-b012-6e84-f2c278c86f03.png)
+
+![X thread](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/66f6f735-ce68-8343-be6f-3067239ea89d.png)
+
+#### TuneSync
+
+Open Source [serverless track player](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=b54e4abab0&e=077ac9fa1d) to stream music from local and remote
+
+![X thread](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/66f6f735-ce68-8343-be6f-3067239ea89d.png)
+
+#### React Native MLKIT app
+
+[Infinite Red](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=244e20238a&e=077ac9fa1d) has released our react-native-mlkit app to both stores:  
+  
+**iOS**: [https://apps.apple.com/us/app/react-native-mlkit/id6504584042](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=06c0281160&e=077ac9fa1d)  
+**Android**: [https://play.google.com/store/apps/details?id=red.infinite.reactnativemlkit.example](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=97ffdf0cdc&e=077ac9fa1d)  
+  
+Check out the react-native-mlkit [documentation](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=6967c1546b&e=077ac9fa1d)
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/6e9f7e65-6d4c-b012-6e84-f2c278c86f03.png)
+
+![React Native Radio](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/c27d7f8d-f3a9-8539-e9b6-1aff268e60d1.png)
+
+#### ![New!](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/72c75473-6b07-01e4-6667-662c644ca436.jpg)  
+[RNR 303 - Stories from Chain React 2024](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=b3fe8254f1&e=077ac9fa1d)
+
+Join Jamon, Robin, Mazen, and special guest Jed Bartausky as they recap Chain React 2024, sharing highlights, fun stories, and behind-the-scenes chaos that made this year’s conference one of the best!
+
+![React Native Radio](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/c27d7f8d-f3a9-8539-e9b6-1aff268e60d1.png)
+
+#### ![New!](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/72c75473-6b07-01e4-6667-662c644ca436.jpg)  
+[RNR 304 - React Navigation V7 with Satyajit Saho4](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=a671297767&e=077ac9fa1d)
+
+Jamon Holmgren chats with Satyajit Sahoo about React Navigation 7's new features, including the static API, improved deep linking, and enhanced TypeScript support.
+
+![React Native Radio](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/c27d7f8d-f3a9-8539-e9b6-1aff268e60d1.png)
+
+#### ![New!](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/72c75473-6b07-01e4-6667-662c644ca436.jpg)  
+[RNR 305 - On-device AI in React Native with Gant Laborde](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=f8d1709b8c&e=077ac9fa1d)
+
+Robin and Mazen are joined by Gant Laborde to explore on-device AI in React Native, diving into practical applications and I[nfinite Red](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=69c6836fb5&e=077ac9fa1d)'s ML Kit integration.
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/59e33c48-ac40-025f-f588-d66de3862845.png)
+
+**Become a sponsor:** [Send us a few details](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4&id=e89123d133&e=077ac9fa1d) about your event, company, blog, or project and we'll supply the 2,000+ sets of eyeballs.
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/54e069bb-adc7-64d7-1913-7cbedc7656fe.png)
+
+## 
+</Detail>
+
+第 184 期   •   [在浏览器中打开](https://mailchi.mp/infinite.red/react-native-newsletter-184?e=077ac9fa1d)
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/0dd41a07-bf03-955d-8f0d-9ed8de6e0405.png)
+
+反应本机通讯
+
+# 本期：Chain React 2024 视频已发布、Shopify 刚刚开源了 Tophat、Nitro 模块的强大功能以及 EAS 即将变得更便宜的原因。
+
+欢迎阅读 React Native 时事通讯八月号！
+
+我有一些好消息要告诉你。 [Chain React 2024，俄勒冈州波特兰](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=ecebd48529\&e=077ac9fa1d) 的所有视频均已发布并可供观看[此处](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=40199db434\&e=077ac9fa1d)。
+
+您听说过 [Tophat](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=5596d72d0c\&e=077ac9fa1d) 吗？这是 [Shopifiy](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=35f8f1005c\&e=077ac9fa1d) 的用于安装和测试任何移动应用程序的解决方案，并且他们已经将其作为开源发布！
+
+请务必查看来自 [@mrousavy](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=51ca952b7d\&e=077ac9fa1d) 关于使用 Nitro 模块编写一流的 Swift 支持、超快的 C++ 绑定、面向对象/基于实例的方法等等。
+
+将于 2024 年 9 月初推出：[Callstack's](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=d179c7d28f\&e=077ac9fa1d) \[React Universe Conference 2024]\(https: //red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=0f5188b0ed\&e=077ac9fa1d) 于 9 月 5 日至 6 日在波兰弗罗茨瓦夫举行。今年，[Infinite Red](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=815cd0ea1d\&e=077ac9fa1d) 共同主持了 React Native Radio 播客， [Mazen Chami](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=8427adcd31\&e=077ac9fa1d) 将发表演讲。请查看下面的“React Native 热门精选”部分，找到购买这一激动人心的活动门票的 15% 折扣代码！\
+ 
+
+***
+
+最新的 React Native 版本是 [0.75.2](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=bae7c42ee7\&e=077ac9fa1d)
+
+[](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=8c6700a912\&e=077ac9fa1d)
+
+### 添加
+
+#### Android 特定
+
+* **codegen：** 添加对处理“com.facebook.react.bridge.Dynamic”作为 TurboModules 参数的支持 (\[45cd81706d]\(https://red.us3.list-manage.com/track/click?u =78d9e37a94fa0b522939163d4\&id=7c15c97085\&e=077ac9fa1d) 作者：\[@cortinico]\(https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=333f2a3ac2\&e =077ac9fa1d))
+
+### 已更改
+
+#### Android 特定
+
+* **ReactRootView：** 由于 mLastHeight 值未更新，因此将“mLastHeight”替换为“mVisibleViewArea.height()”。对于“width”，我们已经使用了“mVisibleViewArea.width()”([603eb94dd9](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=8092bfe702\&e=077ac9fa1d)作者：[@shubhamguptadream11](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=3185e641fb\&e=077ac9fa1d))
+
+### 已删除
+
+#### iOS 特定
+
+* **RCTBaseTextInputView:** UIReturnKeyDefault ([26aff664c0](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=cce89d2509\&e=077ac9fa1d) 作者：\[@elencho]\(https ://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=52c04ba046\&e=077ac9fa1d))
+
+＃＃＃ 固定的
+
+* \*\*codegen：\*\*脚本需要`yargs`（[0979921850](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=0c4e654775\&e=077ac9fa1d)由[@ tido64](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=86f90253b3\&e=077ac9fa1d))
+
+#### Android 特定
+
+* **ImageSource:** `open` 用于继承 ([02d9979c32](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=20919530af\&e=077ac9fa1d) 由 [@ Cortinico](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=ab746b77cc\&e=077ac9fa1d))
+
+***
+
+在今天的期刊中还有更多值得探索的内容。享受！ 
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/1ea7634c-d899-5d98-1548-62645bd6a57a.png)
+
+## 本月我们精选的 React Native
+
+### React Native 社区提交的文章、推文和文档以及 \[Infinite Red']\(https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=563ed3bd73\&e= 077ac9fa1d) 的工程师团队。
+
+![X 线程](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/30da69a0-c8f4-b0d0-22fc-6cdad9a528bc.png)
+
+#### React Native 0.75 发布
+
+[此版本](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=6bf3e3e256\&e=077ac9fa1d)包括对布局中百分比值、新架构稳定性、模板和初始化的支持更新，以及更多
+
+![X线程](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/89b8bba6-024d-78b1-1819-6b4fdb9103f5.png)
+
+#### EAS 即将变得更便宜！
+
+[自 9 月 1 日起，EAS 更新价格变得更便宜](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=e6f8e81617\&e=077ac9fa1d)
+
+您可以在他们的定价页面上查看详细信息。如果您使用 EAS 更新，则无需执行任何操作。
+
+![X 线程](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/30da69a0-c8f4-b0d0-22fc-6cdad9a528bc.png)
+
+#### Shopify 开源 Tophat
+
+Shopify 刚刚开源了 [Tophat](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=38cb6c8778\&e=077ac9fa1d)，他们的一键式移动应用测试工具，类似前往世博轨道。
+
+![X 线程](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/30da69a0-c8f4-b0d0-22fc-6cdad9a528bc.png)
+
+[React Universe Conf 2024](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=ccd6682cb8\&e=077ac9fa1d)
+
+[Callstack](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=2143d28071\&e=077ac9fa1d) 介绍了与 React（尤其是 React Native）相关的所有内容的年度会议。该活动将于 2024 年 9 月 5 日至 6 日在波兰弗罗茨瓦夫举行。在购买门票之前，您可以使用以下 15% 折扣代码：*IRxFriends15*，由 [Callstack](https://red.us3) 提供.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=fb71387d92\&e=077ac9fa1d)！
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/f0647554-cf0a-bd74-e92c-cc6eeb4c49eb.jpg)
+
+![赞助商](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/faec1638-95a9-103d-8c1d-6e36b10b317c.jpg) 
+
+**本周的 React**
+
+想要了解 React Native 的最新动态吗？订阅[This Week In React](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=c17b27928b\&e=077ac9fa1d)并加入 37478 开发者，每周发送 1 封电子邮件。埃文·培根、克日什托夫·马吉拉、威廉·坎迪隆、西蒙·格林、西奥……他们都读过这本书！
+
+[订阅](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=b59f9391a7\&e=077ac9fa1d) ⇢
+
+![X 线程](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/30da69a0-c8f4-b0d0-22fc-6cdad9a528bc.png)
+
+#### CocoaPods 支持和维护计划
+
+他们仍在保持它的运行，但他们更预先地表明 CocoaPods 处于维护模式以支持 React Native 等社区。请阅读[此处](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=4670ef2dc2\&e=077ac9fa1d)。
+
+![X线程](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/89b8bba6-024d-78b1-1819-6b4fdb9103f5.png)
+
+#### React Native WebGPU
+
+React Native 0.76 将减少动态库的数量：这可以减少应用程序的大小并提高性能。如果您一直在为 Android 编写 C++ 库，那么这是一个重大变化。 [此处](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=68caa7b35f\&e=077ac9fa1d)了解更改
+
+![X 线程](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/30da69a0-c8f4-b0d0-22fc-6cdad9a528bc.png)
+
+#### React Native MacOS
+
+微软宣布 React Native MacOS 0.74 可用。 [看看吧！](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=6f439ca620\&e=077ac9fa1d)
+
+![X线程](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/89b8bba6-024d-78b1-1819-6b4fdb9103f5.png)
+
+#### 构建动画故事列表 UI 的教程
+
+X 发布了关于带有 Youtube 的故事列表 UI [React Native Reanimated 教程](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=91e5ff276c\&e=077ac9fa1d)。 
+
+![X线程](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/89b8bba6-024d-78b1-1819-6b4fdb9103f5.png)
+
+#### 为 React Native 编写本机代码的全新方法
+
+“Nitro Modules”将提供一流的 Swift 支持、极快的 C++ 绑定、面向对象/基于实例的方法，以及即将推出的更多功能！ [阅读更多](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=878f3393e3\&e=077ac9fa1d)。
+
+![X 线程](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/30da69a0-c8f4-b0d0-22fc-6cdad9a528bc.png)
+
+#### 如何使用 React Native 开发超级应用
+
+[本文](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=93c42e824c\&e=077ac9fa1d)解释了超级应用的概念、其优点以及如何集成将其放入 React Native 应用程序中。
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/7b3377ed-cc5e-2443-99e7-6ebd9a250708.png)
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/74dab3ff-f2bd-60f3-8c94-1a9804a8213c.png)
+
+## React Native 社区的开源亮点
+
+### 社区提交的开源 React Native 项目、库、节点模块或组件。
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/6e9f7e65-6d4c-b012-6e84-f2c278c86f03.png)
+
+![X线程](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/66f6f735-ce68-8343-be6f-3067239ea89d.png)
+
+#### 调谐同步
+
+开源 [无服务器曲目播放器](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=b54e4abab0\&e=077ac9fa1d) 可从本地和远程传输音乐
+
+![X线程](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/66f6f735-ce68-8343-be6f-3067239ea89d.png)
+
+#### React Native MLKIT 应用程序
+
+[Infinite Red](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=244e20238a\&e=077ac9fa1d)已向两家商店发布了我们的react-native-mlkit应用：
+
+**iOS**：\[https://apps.apple.com/us/app/react-native-mlkit/id6504584042]\(https://red.us3.list-manage.com/track/click?u= 78d9e37a94fa0b522939163d4\&id=06c0281160\&e=077ac9fa1d)\
+**Android**：[https://play.google.com/store/apps/details?id=red.infinite.reactnativemlkit.example](https://red.us3.list-manage.com/track/点击？u=78d9e37a94fa0b522939163d4\&id=97ffdf0cdc\&e=077ac9fa1d)
+
+查看react-native-mlkit [文档](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=6967c1546b\&e=077ac9fa1d)
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/6e9f7e65-6d4c-b012-6e84-f2c278c86f03.png)
+
+![React Native Radio](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/c27d7f8d-f3a9-8539-e9b6-1aff268e60d1.png)
+
+#### ![新！](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/72c75473-6b07-01e4-6667-662c644ca436.jpg)
+
+[RNR 303 - Chain React 2024 的故事](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=b3fe8254f1\&e=077ac9fa1d)
+
+与 Jamon、Robin、Mazen 和特邀嘉宾 Jed Bartausky 一起回顾 Chain React 2024，分享亮点、有趣的故事和幕后混乱，这些使今年的会议成为最好的会议之一！
+
+![React Native Radio](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/c27d7f8d-f3a9-8539-e9b6-1aff268e60d1.png)
+
+#### ![新！](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/72c75473-6b07-01e4-6667-662c644ca436.jpg)
+
+[RNR 304 - 使用 Satyajit Saho4 反应导航 V7](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=a671297767\&e=077ac9fa1d)
+
+Jamon Holmgren 与 Satyajit Sahoo 讨论 React Navigation 7 的新功能，包括静态 API、改进的深度链接和增强的 TypeScript 支持。
+
+![React Native Radio](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/c27d7f8d-f3a9-8539-e9b6-1aff268e60d1.png)
+
+#### ![新！](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/72c75473-6b07-01e4-6667-662c644ca436.jpg)
+
+[RNR 305 - React Native 中的设备端 AI 与 Gant Laborde](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=f8d1709b8c\&e=077ac9fa1d)
+
+Robin 和 Mazen 与 Gant Laborde 一起探索 React Native 中的设备端 AI，深入研究实际应用和 I\[nfinite Red]\(https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4 \&id=69c6836fb5\&e=077ac9fa1d) 的 ML Kit 集成。
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/59e33c48-ac40-025f-f588-d66de3862845.png)
+
+**成为赞助商：** [向我们发送一些有关您的活动的详细信息](https://red.us3.list-manage.com/track/click?u=78d9e37a94fa0b522939163d4\&id=e89123d133\&e=077ac9fa1d)，公司、博客或项目，我们将提供 2,000 多组眼球。
+
+![](https://mcusercontent.com/78d9e37a94fa0b522939163d4/images/54e069bb-adc7-64d7-1913-7cbedc7656fe.png)
+
+##
+
+
