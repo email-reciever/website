@@ -9,7 +9,7 @@ export const astro: Adapter = (text, html) => {
 	const { md } = html2md(html);
 	// slice content from the main things to sports
 	const startIndex = Math.max(...startKeyWord.map((v) => md.match(v)?.index ?? 0), 0);
-	const endIndex = Math.max(0, ...stopKeyWord.map((v) => md.indexOf(`[${v}`)));
+	const endIndex = Math.max(0, ...stopKeyWord.map((v) => md.indexOf(v)));
 	const blogContent = md.slice(startIndex, endIndex);
 
 	const $ = load(html, null, false);
