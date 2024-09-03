@@ -2,8 +2,8 @@ import { load } from 'cheerio';
 import { html2md } from '../utils/html2md';
 import { Adapter } from '../types';
 
-const startKeyWord = [/That’s a wrap/];
-const stopKeyWord = ['to subscribe.', 'Did someone forward you this'];
+const startKeyWord = [/Did someone forward you this/, /to subscribe\./];
+const stopKeyWord = ['That’s a wrap! ', 'Catch up on everything'];
 
 export const astro: Adapter = (text, html) => {
 	const { md } = html2md(html);
