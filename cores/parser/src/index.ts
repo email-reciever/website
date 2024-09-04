@@ -25,12 +25,13 @@ import { logger } from './utils/logger';
 import { createBlog, createCommonFrontmatter, checkEmailSendValid, getEmailSenderType } from './utils/blog';
 
 import type { frontmatter } from '@email.reciever/types/markdown-extends';
-import type { Adapter, SenderType } from './types';
+import type { SenderType, AdapterMap } from './types';
 import { forward } from './utils/forward';
+import { issue } from './utils/issue';
 
 dayjs.locale('zh-cn');
 
-const adapter: Partial<Record<SenderType, Adapter>> = {
+const adapter: AdapterMap = {
 	reactdigest: rd,
 	tyler,
 	alexkondov,
@@ -96,6 +97,15 @@ export default {
 			// use restful api to update zhihu artical
 			await zhihu('', '', [], env);
 			return Response.json({ fetch: Date.now() });
+		} else if (pathname === '/issue') {
+			const payload = await request.json<Record<string, any>>();
+			try {
+				await issue(env, payload, adapter);
+			} catch (e) {
+				logger(env, 'issue error', e);
+			}
+
+			return Response.json({ code: 200, success: true });
 		}
 
 		return Response.redirect(repoURI);

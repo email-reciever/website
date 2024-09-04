@@ -7,7 +7,10 @@ name = "subscribe-email"
 upload_source_maps = true
 
 [vars]
+OPEN_ACTION = "opened"
+OPEN_USER = "innocces"
 SELF_EMAIL = "jiangjiangjiangxi@gmail.com"
+TR_SERVE = "https://email-reciever.deno.dev"
 
 # Automatically place your workloads in an optimal location to minimize latency.
 # If you are running back-end logic in a Worker, running it closer to your back-end infrastructure

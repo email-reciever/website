@@ -10,6 +10,7 @@ batch/
 node_modules/
 cores/*/node_modules
 packages/*/node_modules
+cores/*/starter-bot.memory-card.json
 
 # logs
 npm-debug.log*

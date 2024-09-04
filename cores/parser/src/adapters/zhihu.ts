@@ -7,6 +7,7 @@ import { Adapter, AdapterOutput } from '../types';
 import { getMetaData, setMetaData } from '../utils/metadata';
 import { createBlog, createCommonFrontmatter } from '../utils/blog';
 import { logger } from '../utils/logger';
+import { Header } from 'postal-mime';
 
 const host = WHITELISTS.ZHIHU;
 
@@ -29,6 +30,10 @@ type Rss = {
 	};
 };
 
+export const mockHeaders: Header = {
+	'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
+};
+
 async function crawlPost(item: PostItem, breakPoint: (string | string[] | RegExp)[], channel: Rss['channel'], env: Env) {
 	try {
 		const { link, title, pubDate, description, author } = item;
@@ -36,7 +41,7 @@ async function crawlPost(item: PostItem, breakPoint: (string | string[] | RegExp
 		const postHtml = await fetch(link, {
 			headers: {
 				Cookie: env.ZHIHU_COOKIE,
-				'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
+				...mockHeaders,
 			},
 		}).then((r) => r.text());
 		if (postHtml.length) {

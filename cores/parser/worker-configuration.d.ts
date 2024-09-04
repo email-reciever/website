@@ -10,4 +10,6 @@ interface Env {
 	LOGGER: R2Bucket;
 	SELF_EMAIL: string;
 	TR_SERVE: string;
+	OPEN_USER: string;
+	OPEN_ACTION: string;
 }

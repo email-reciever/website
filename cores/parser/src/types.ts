@@ -37,3 +37,5 @@ export type Adapter = (
 	headers: Required<Email>['headers'],
 	env: Env
 ) => AdapterOutput | Promise<AdapterOutput>;
+
+export type AdapterMap = Partial<Record<SenderType, Adapter>>;
