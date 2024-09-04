@@ -5,30 +5,28 @@ title: '[Recorder]: '
 assignees: ''
 ---
 
-- title
+# format is yaml! please use yaml gram
 
-<!-- it will use for post title -->
+# it will use for post title
 
-- url
+title:
 
-<!-- it will use for crawl for translate -->
+# it will use for crawl for translate
 
-- author
+url:
 
-<!-- artical author -->
+# artical author
 
-- breakpoints
+author:
 
-<!-- cutoff for split main content, like ['start charactor', 'end one'] -->
+# cutoff for split main content, like ['start charactor', 'end one']
 
-- translate
+breakpoints: ['start charactor', 'end one']
 
-<!-- boolean whether should translate, default true -->
+# boolean whether should translate, default true
 
-true
+translate: true
 
-- adapter
+# use current adapter for collect info, default others
 
-<!-- use current adapter for collect info, default others -->
-
-others
+adapter: others
