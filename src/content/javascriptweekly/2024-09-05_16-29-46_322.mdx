@@ -1,0 +1,340 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Reverse engineering minified JS with ChatGPT
+description: Reverse engineering minified JS with ChatGPT
+date: 星期四 04 下午 九月 5o 2024
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/703
+origin_site: https://javascriptweekly.com/issues/703
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Reverse engineering minified JS with ChatGPT" url="https://javascriptweekly.com/issues/703" />
+
+<Detail client:only="react">
+	#​703 — September 5, 2024
+
+[Read on the Web](https://javascriptweekly.com/issues/703)
+
+Together with 
+
+[![WorkOS](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_514,h_98/e_make_transparent/co_white,e_outline:9/tdfxwgk852ui9leli4wm.png)](https://javascriptweekly.com/link/159375/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vuicuakxpbo9wledbesm.jpg)](https://javascriptweekly.com/link/159376/d076523b1d)
+
+[An SSR Performance Showdown](https://javascriptweekly.com/link/159376/d076523b1d "blog.platformatic.dev") — Fastify’s Matteo Collina set out to find the current state of server-side rendering performance across today’s most popular libraries. The first attempt faced negative feedback due to implementation issues, but the showdown has been improved and re-run.
+
+Matteo Collina
+
+[Announcing Vue 3.5](https://javascriptweekly.com/link/159377/d076523b1d "blog.vuejs.org") — While v3.5 is a _minor_ release, it’s one Vue users will love, with big performance and memory usage improvements in its reactivity system. With no breaking changes, upgrade and watch memory consumption drop.
+
+Evan You
+
+[![](https://copm.s3.amazonaws.com/34b5ae43.png)](https://javascriptweekly.com/link/159375/d076523b1d)
+
+[WorkOS: The Modern Identity Platform for B2B SaaS](https://javascriptweekly.com/link/159375/d076523b1d "workos.com") — WorkOS is a modern identity platform for B2B SaaS, offering flexible and easy-to-use APIs to integrate SSO, SCIM, and RBAC in minutes instead of months. It's trusted by hundreds of high-growth startups such as Perplexity, Vercel, Drata, and Webflow.
+
+WorkOS sponsor
+
+[Reverse Engineering Minified JavaScript with ChatGPT](https://javascriptweekly.com/link/159378/d076523b1d "glama.ai") — _Writing_ new code with AI is one thing, but could it be even better at _understanding_ existing code that you’re struggling to grok? Yes, it seems.
+
+Frank Fiegel
+
+[Inside ECMAScript: JavaScript Standards Get an Extra Stage](https://javascriptweekly.com/link/159379/d076523b1d "thenewstack.io") — After nine years of annual updates, TC39 has tweaked the process to make rolling out new features faster and smoother. The so-called ‘Stage 2.7’ has been around for a while, but this is a neat primer to what it represents.
+
+Mary Branscombe (The New Stack)
+
+**IN BRIEF:**
+
+*   ⭐ Vercel goes [deep into what's new in React 19.](https://javascriptweekly.com/link/159380/d076523b1d)
+    
+*   💰 [Alpine.js](https://javascriptweekly.com/link/159381/d076523b1d) creator Caleb Porzio shares [his tale of passing $1m on GitHub Sponsors.](https://javascriptweekly.com/link/159382/d076523b1d)
+    
+*   Bye NgModules, [the future of Angular is standalone!](https://javascriptweekly.com/link/159383/d076523b1d) Angular v19 will make `standalone: true` the default for components, directives, and pipes. This is already the recommended best practice, however.
+    
+*   Angular's product lead, Minko Gechev, has also [shared a little about what it means to mange the Angular project.](https://javascriptweekly.com/link/159384/d076523b1d)
+    
+*   OpenAI has switched [ChatGPT](https://javascriptweekly.com/link/159385/d076523b1d) from Next.js to a [Remix](https://javascriptweekly.com/link/159386/d076523b1d)\-based app, [according to Remix's Ryan Florence on X.](https://javascriptweekly.com/link/159387/d076523b1d)
+    
+*   🇵🇱 Poland's [WarsawJS](https://javascriptweekly.com/link/159388/d076523b1d) community is holding a 10th anniversary meetup on September 11. They invite you to [▶️ watch live on YouTube.](https://javascriptweekly.com/link/159389/d076523b1d)
+    
+*   🤖 Lee Robinson shows off [▶️ the latest enhancements to Vercel's v0](https://javascriptweekly.com/link/159390/d076523b1d), an AI-based tool for creating apps and components from prompts you supply.
+    
+
+[\[Workshop\] Fix Your Front-End: JavaScript Edition](https://javascriptweekly.com/link/159391/d076523b1d "sentry.io") — Learn practical tips to make debugging more tolerable. Join our JavaScript team live for a masterclass on Sept 24.
+
+Sentry sponsor
+
+**RELEASES:**
+
+*   [Node.js v22.8.0 (Current)](https://javascriptweekly.com/link/159392/d076523b1d) – Adds a new API for enabling on-disk code caching at runtime, as well as options to set thresholds for code coverage success.
+    
+*   [Astro 4.15](https://javascriptweekly.com/link/159394/d076523b1d) – The popular content site framework stabilizes Astro Actions, a solution for fully type-safe backend functions.
+    
+*   [Jimp 1.3](https://javascriptweekly.com/link/159395/d076523b1d) – Pure JS image processing library for Node.
+    
+*   [Turborepo 2.1](https://javascriptweekly.com/link/159396/d076523b1d), [Puppeteer 23.3](https://javascriptweekly.com/link/159398/d076523b1d), [Mermaid 11.1](https://javascriptweekly.com/link/159399/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hg607vaw3gey6geaklkp.jpg)](https://javascriptweekly.com/link/159402/d076523b1d)
+
+▶  [Behind the Scenes: The Making of VS Code](https://javascriptweekly.com/link/159402/d076523b1d "www.youtube.com") — A detailed conversation with two of the popular editor's principal engineers on what makes it tick. VS Code is surely one of the world's most widely distributed JavaScript-powered apps.
+
+Holland, Rieken and Pasero (Microsoft)
+
+[How I Created a 3.78MB Docker Image for a JavaScript Service](https://javascriptweekly.com/link/159403/d076523b1d "shenzilong.cn") — The smallest JavaScript app container images tend to run into tens of megabytes, but tailoring your app to run on a lighter runtime like [llrt](https://javascriptweekly.com/link/159404/d076523b1d) can yield striking results.
+
+Shenzilong
+
+[Leave Forms to SurveyJS and Get Back to What You Love Coding](https://javascriptweekly.com/link/159406/d076523b1d "surveyjs.io") — **Extensible JavaScript libraries for form management.** Drag-and-drop UI, JSON form definitions, and seamless integration with any backend for full data control.
+
+SurveyJS sponsor
+
+[Exploring Goja: A Go-Powered JavaScript Runtime](https://javascriptweekly.com/link/159407/d076523b1d "jtarchie.com") — [Goja](https://javascriptweekly.com/link/159408/d076523b1d) is a pure Go(lang) JS runtime that makes it possible to embed JS into Go apps.
+
+JT Archie
+
+[How to Use React Compiler](https://javascriptweekly.com/link/159409/d076523b1d "www.freecodecamp.org") — The [compiler](https://javascriptweekly.com/link/159411/d076523b1d) feature in React 19 is generating a lot of buzz — this “complete guide”, as described by this author, covers much of what you'll need to get started.
+
+Tapas Adhikary
+
+[Multithreaded Programming in Node.js using Atomics](https://javascriptweekly.com/link/159412/d076523b1d "pavel-romanov.com") — [Worker threads](https://javascriptweekly.com/link/159414/d076523b1d) enable you to write multi-threaded Node apps, but sharing resources across them can quickly become tricky. _Atomics_ can help avoid some of the pain.
+
+Pavel Romanov
+
+📄 [A Complete Guide to Beginning with JavaScript](https://javascriptweekly.com/link/159415/d076523b1d) – A rather epic article packed with background knowledge, context, and third party resources for starting a modern JavaScript learning journey. Cody Lindley
+
+📄 [Implementing Filtered Semantic Search Using pgvector and JavaScript](https://javascriptweekly.com/link/159416/d076523b1d) Team Timescale
+
+📄 [How to Quickly (and Weightlessly) Convert Chrome Extensions to Safari](https://javascriptweekly.com/link/159417/d076523b1d) Nina Torgunakova (Evil Martians)
+
+📄 [How Sentry Uses Mutation Testing on its JavaScript SDKs](https://javascriptweekly.com/link/159418/d076523b1d) Lukas Stracke (Sentry)
+
+🎤 [Talking Deno 2 with Ryan Dahl](https://javascriptweekly.com/link/159419/d076523b1d) Syntax․fm Podcast
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yp0g5atgwppsmzgahudn.jpg)](https://javascriptweekly.com/link/159420/d076523b1d)
+
+[jsdiff 6.0: A JavaScript Text Diffing Implementation](https://javascriptweekly.com/link/159420/d076523b1d "github.com") — Can compare strings for differences in various ways including creating patches. There’s an [online demo](https://javascriptweekly.com/link/159421/d076523b1d). _(Don't worry – we're not going monthly ;-))_
+
+Kevin Decker
+
+[Redwood v8.0 Released](https://javascriptweekly.com/link/159422/d076523b1d "redwoodjs.com") — A long standing, opinionated React & GraphQL (and/or RSC) full-stack framework that covers all the bases for professional dev teams with best-in-class tool support. v8.0 introduces a background jobs system, Docker support, and easier SSR and RSC setup.
+
+Redwood Team
+
+[Tests Are Dead. Meticulous Is Here](https://javascriptweekly.com/link/159423/d076523b1d) — Automatically creates & maintains E2E UI tests. Zero flakes. Backed by YC, CTO of GitHub, CPO of Adobe, CEO of Vercel.
+
+Meticulous sponsor
+
+🇬🇧 [GOV.UK Vue 1.0: Build Vue Apps, the British Way](https://javascriptweekly.com/link/159425/d076523b1d "govukvue.org") — The UK government is known for having [an effective, well-designed site](https://javascriptweekly.com/link/159426/d076523b1d) where Brits can complete various official tasks. Now you can get all of [their components](https://javascriptweekly.com/link/159427/d076523b1d) in Vue 3 form.
+
+UK Government
+
+👀 [style-observer: A Mutation Observer for CSS](https://javascriptweekly.com/link/159428/d076523b1d "www.bram.us") — Attach JavaScript callbacks to changes in computed values of CSS properties.
+
+Bramus Van Damme
+
+[Goxygen: Quickly Generate a Go Backend for a JS Project](https://javascriptweekly.com/link/159429/d076523b1d "github.com") — A tool that sets up a new [Go](https://javascriptweekly.com/link/159430/d076523b1d)\-based project with Angular, React, or Vue in the front-end, and Docker and Docker Compose files to make it all work.
+
+Sasha Shpota
+
+[Typist 7.0: Tiptap-Based Rich Text Editor Component](https://javascriptweekly.com/link/159432/d076523b1d "typist.doist.dev") — Simple and opinionated. You can try several examples in the sidebar. Well suited for basic rich text situations like writing comments or messages and has a single-line mode.
+
+Doist
+
+[Belt: A New Tool for Starting React Native Apps](https://javascriptweekly.com/link/159433/d076523b1d "thoughtbot.com") — A CLI tool for starting a new React Native app that takes various mundane decisions away from you and uses tooling and conventions established by a productive app development team.
+
+Thoughtbot
+
+*   [Tinybase 5.2](https://javascriptweekly.com/link/159434/d076523b1d) – Powerful reactive data store for local‑first apps. Now with Postgres support (which can even work in-browser!)
+    
+*   [jsdoc-to-markdown 9.0](https://javascriptweekly.com/link/159435/d076523b1d) – Generate Markdown docs from JSDoc-annotated code.
+    
+*   [LogTape 0.5](https://javascriptweekly.com/link/159436/d076523b1d) – No-dependency logging lib for Deno, Node, Bun & browsers.
+    
+*   [Plasmo 0.89](https://javascriptweekly.com/link/159437/d076523b1d) – Imagine Next.js but for building browser extensions.
+    
+*   [JsonTree.js 3.0](https://javascriptweekly.com/link/159438/d076523b1d) – Customizable tree views for JSON data.
+    
+*   [Poku 2.6](https://javascriptweekly.com/link/159439/d076523b1d) – Cross-platform JavaScript test runner.
+    
+*   [Faker 9.0](https://javascriptweekly.com/link/159440/d076523b1d) – Generate large amounts of fake data.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/159441/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​703 — 2024 年 9 月 5 日
+
+[网上阅读](https://javascriptweekly.com/issues/703)
+
+连同 
+
+\[![WorkOS](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_514,h_98/e_make_transparent/co_white,e_outline:9/tdfxwgk852ui9leli4wm.png)]\(https://javascriptweekly. com/link/159375/d076523b1d)
+
+JavaScript 周刊
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vuicuakxpbo9wledbesm.jpg)](https://javascriptweekly.com/link/159376/d076523b1d)
+
+[SSR 性能对决](https://javascriptweekly.com/link/159376/d076523b1d "blog.platformatic.dev") — Fastify 的 Matteo Collina 着手寻找当今最流行的库中服务器端渲染性能的当前状态。由于实施问题，第一次尝试面临负面反馈，但对决已得到改进并重新进行。
+
+马泰奥·科里纳
+
+[宣布 Vue 3.5](https://javascriptweekly.com/link/159377/d076523b1d "blog.vuejs.org") — 虽然 v3.5 是一个“次要”版本，但它是 Vue 用户会喜欢的一个版本，具有出色的性能和其反应系统的内存使用改进。在没有重大更改的情况下，升级并观察内存消耗下降。
+
+尤文
+
+[![](https://copm.s3.amazonaws.com/34b5ae43.png)](https://javascriptweekly.com/link/159375/d076523b1d)
+
+[WorkOS：B2B SaaS 的现代身份平台](https://javascriptweekly.com/link/159375/d076523b1d "workos.com") — WorkOS 是 B2B SaaS 的现代身份平台，提供灵活且易于使用的功能API 可在几分钟（而不是几个月）内集成 SSO、SCIM 和 RBAC。它受到 Perplexity、Vercel、Drata 和 Webflow 等数百家高增长初创公司的信任。
+
+WorkOS赞助商
+
+[使用 ChatGPT 进行逆向工程缩小 JavaScript](https://javascriptweekly.com/link/159378/d076523b1d "glama.ai") — *使用 AI 编写*新代码是一回事，但在 *理解* 方面是否可以做得更好您正在努力理解现有的代码吗？是的，看起来是这样。
+
+弗兰克·菲格尔
+
+[ECMAScript 内部：JavaScript 标准获得额外阶段](https://javascriptweekly.com/link/159379/d076523b1d "thenewstack.io") — 经过九年的年度更新，TC39 调整了流程以推出新功能更快更流畅。所谓的“Stage 2.7”已经存在了一段时间，但这是对其所代表内容的简洁入门。
+
+玛丽·布兰斯科姆（新堆栈）
+
+**简而言之：**
+
+* ⭐ Vercel [深入了解 React 19 中的新增功能。](https://javascriptweekly.com/link/159380/d076523b1d)
+
+* 💰 [Alpine.js](https://javascriptweekly.com/link/159381/d076523b1d) 创建者 Caleb Porzio 分享了\[他在 GitHub 赞助商上传递 100 万美元的故事。]\(https://javascriptweekly.com/link/159382 /d076523b1d)
+
+* 再见 NgModules，[Angular 的未来是独立的！](https://javascriptweekly.com/link/159383/d076523b1d) Angular v19 将使 `standalone: true` 成为组件、指令和管道的默认值。不过，这已经是推荐的最佳做法。
+
+* Angular 的产品负责人 Minko Gechev 也[分享了一些关于管理 Angular 项目的意义。](https://javascriptweekly.com/link/159384/d076523b1d)
+
+* OpenAI 已将 [ChatGPT](https://javascriptweekly.com/link/159385/d076523b1d) 从 Next.js 切换为基于 [Remix](https://javascriptweekly.com/link/159386/d076523b1d) 的应用程序， [根据 X 上 Remix 的 Ryan Florence 的说法。](https://javascriptweekly.com/link/159387/d076523b1d)
+
+* 🇵🇱 波兰的 [WarsawJS](https://javascriptweekly.com/link/159388/d076523b1d) 社区将于 9 月 11 日举办 10 周年纪念聚会。他们邀请您\[▶️ 在 YouTube 上观看直播。]\(https:// javascriptweekly.com/link/159389/d076523b1d)
+
+* 🤖 Lee Robinson 展示了 [▶️ Vercel v0 的最新增强功能](https://javascriptweekly.com/link/159390/d076523b1d)，这是一种基于 AI 的工具，用于根据您提供的提示创建应用程序和组件。
+
+[\[研讨会\] 修复你的前端：JavaScript 版](https://javascriptweekly.com/link/159391/d076523b1d "sentry.io") — 学习实用技巧，让调试更容易进行。加入我们的 JavaScript 团队，参加 9 月 24 日的现场大师班。
+
+哨兵赞助商
+
+**发布：**
+
+* [Node.js v22.8.0（当前）](https://javascriptweekly.com/link/159392/d076523b1d) – 添加了一个新的 API，用于在运行时启用磁盘上代码缓存，以及设置阈值的选项代码覆盖率成功。
+
+* [Astro 4.15](https://javascriptweekly.com/link/159394/d076523b1d) – 流行的内容网站框架稳定了 Astro Actions，这是一种完全类型安全的后端功能解决方案。
+
+* [Jimp 1.3](https://javascriptweekly.com/link/159395/d076523b1d) – Node.js 的纯 JS 图像处理库。
+
+* [Turborepo 2.1](https://javascriptweekly.com/link/159396/d076523b1d)、[Puppeteer 23.3](https://javascriptweekly.com/link/159398/d076523b1d)、\[美人鱼 11.1]\(https:// javascriptweekly.com/link/159399/d076523b1d)
+
+📒 文章和教程
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hg607vaw3gey6geaklkp.jpg)](https://javascriptweekly.com/link/159402/d076523b1d)
+
+▶  [幕后花絮：VS Code 的制作](https://javascriptweekly.com/link/159402/d076523b1d "www.youtube.com") — 与两位热门编辑器的首席工程师详细对话，了解 VS Code 的制作原理打钩。 VS Code 无疑是世界上分布最广泛的 JavaScript 应用程序之一。
+
+Holland、Rieken 和 Pasero（微软）
+
+[我如何为 JavaScript 服务创建 3.78MB Docker 镜像](https://javascriptweekly.com/link/159403/d076523b1d "shenzilong.cn") — 最小的 JavaScript 应用容器镜像往往有几十兆字节，但是定制您的应用程序以在更轻的运行时（例如 [llrt](https://javascriptweekly.com/link/159404/d076523b1d)）上运行可以产生惊人的结果。
+
+神子龙
+
+[将表单留给 SurveyJS，然后继续进行您喜欢的编码](https://javascriptweekly.com/link/159406/d076523b1d "surveyjs.io") — **用于表单管理的可扩展 JavaScript 库。** 拖放-删除 UI、JSON 表单定义以及与任何后端的无缝集成，以实现全面的数据控制。
+
+SurveyJS 赞助商
+
+[探索 Goja：Go 驱动的 JavaScript 运行时](https://javascriptweekly.com/link/159407/d076523b1d "jtarchie.com") — [Goja](https://javascriptweekly.com/link/159408/d076523b1d)是一个纯 Go(lang) JS 运行时，可以将 JS 嵌入到 Go 应用中。
+
+JT阿奇
+
+[如何使用 React 编译器](https://javascriptweekly.com/link/159409/d076523b1d "www.freecodecamp.org") — [编译器](https://javascriptweekly.com/link/159411/d076523b1d) 功能React 19 引起了很多关注——正如作者所描述的，这个“完整指南”涵盖了您入门所需的大部分内容。
+
+塔帕斯·阿迪卡里
+
+[使用 Atomics 在 Node.js 中进行多线程编程](https://javascriptweekly.com/link/159412/d076523b1d "pavel-romanov.com") — \[工作线程]\(https://javascriptweekly.com/link/159414/ d076523b1d) 使您能够编写多线程 Node 应用程序，但在它们之间共享资源很快就会变得很棘手。 *原子*可以帮助避免一些痛苦。
+
+帕维尔·罗曼诺夫
+
+📄 [JavaScript 入门完整指南](https://javascriptweekly.com/link/159415/d076523b1d) – 一篇相当史诗般的文章，包含背景知识、上下文和第三方资源，可帮助您开始现代 JavaScript 学习之旅。科迪·林德利
+
+📄 [使用 pgvector 和 JavaScript 实现过滤语义搜索](https://javascriptweekly.com/link/159416/d076523b1d) 团队时间表
+
+📄 [如何快速（轻量）地将 Chrome 扩展转换为 Safari](https://javascriptweekly.com/link/159417/d076523b1d) Nina Torgunakova (邪恶的火星人)
+
+📄 [Sentry 如何在其 JavaScript SDK 上使用变异测试](https://javascriptweekly.com/link/159418/d076523b1d) Lukas Stracke (Sentry)
+
+🎤 [与 Ryan Dahl 谈论 Deno 2](https://javascriptweekly.com/link/159419/d076523b1d) 语法․fm 播客
+
+🛠 代码和工具
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yp0g5atgwppsmzgahudn.jpg)](https://javascriptweekly.com/link/159420/d076523b1d)
+
+[jsdiff 6.0：JavaScript 文本比较实现](https://javascriptweekly.com/link/159420/d076523b1d "github.com") — 可以通过各种方式比较字符串的差异，包括创建补丁。有一个[在线演示](https://javascriptweekly.com/link/159421/d076523b1d)。 *（别担心——我们不会每月一次；-））*
+
+凯文·德克尔
+
+[Redwood v8.0 已发布](https://javascriptweekly.com/link/159422/d076523b1d "redwoodjs.com") — 一个长期存在的、固执己见的 React 和 GraphQL（和/或 RSC）全栈框架，涵盖了所有专业开发团队的基地，提供一流的工具支持。 v8.0 引入了后台作业系统、Docker 支持以及更简单的 SSR 和 RSC 设置。
+
+红木队
+
+[测试已死。细致就在这里](https://javascriptweekly.com/link/159423/d076523b1d) — 自动创建和维护 E2E UI 测试。零片。由 GitHub 首席技术官、Adobe 首席产品官、Vercel 首席执行官 YC 提供支持。
+
+精心赞助
+
+🇬🇧 [GOV.UK Vue 1.0：以英国方式构建 Vue 应用程序](https://javascriptweekly.com/link/159425/d076523b1d "govukvue.org") — 英国政府因拥有 [有效、良好的-设计的网站](https://javascriptweekly.com/link/159426/d076523b1d)英国人可以在这里完成各种官方任务。现在，您可以以 Vue 3 形式获取所有[其组件](https://javascriptweekly.com/link/159427/d076523b1d)。
+
+英国政府
+
+👀 [style-observer：CSS 突变观察器](https://javascriptweekly.com/link/159428/d076523b1d "www.bram.us") — 将 JavaScript 回调附加到 CSS 属性计算值的更改。
+
+布拉姆斯·范·达姆
+
+[Goxygen：为 JS 项目快速生成 Go 后端](https://javascriptweekly.com/link/159429/d076523b1d "github.com") — 一个设置新 \[Go]\(https://javascriptweekly基于 Angular、React 或 Vue 的前端项目，以及 Docker 和 Docker Compose 文件以使其全部正常工作。.com/link/159430/d076523b1d）。
+
+萨莎·什波塔
+
+[Typist 7.0：基于 Tiptap 的富文本编辑器组件](https://javascriptweekly.com/link/159432/d076523b1d "typist.doist.dev") — 简单且固执己见。您可以尝试侧栏中的几个示例。非常适合基本的富文本情况，例如撰写评论或消息，并且具有单行模式。
+
+多伊斯特
+
+[Belt：用于启动 React Native 应用程序的新工具](https://javascriptweekly.com/link/159433/d076523b1d "thoughtbot.com") — 一个用于启动新的 React Native 应用程序的 CLI 工具，可以让您摆脱各种平凡的决策您并使用由高效的应用开发团队建立的工具和约定。
+
+思想机器人
+
+* [Tinybase 5.2](https://javascriptweekly.com/link/159434/d076523b1d) – 适用于本地优先应用的强大反应式数据存储。现在有了 Postgres 支持（甚至可以在浏览器中工作！）
+
+* [jsdoc-to-markdown 9.0](https://javascriptweekly.com/link/159435/d076523b1d) – 从 JSDoc 注释的代码生成 Markdown 文档。
+
+* [LogTape 0.5](https://javascriptweekly.com/link/159436/d076523b1d) – 用于 Deno、Node、Bun 和浏览器的无依赖日志库。
+
+* [Plasmo 0.89](https://javascriptweekly.com/link/159437/d076523b1d) – 想象一下 Next.js，但用于构建浏览器扩展。
+
+* [JsonTree.js 3.0](https://javascriptweekly.com/link/159438/d076523b1d) – JSON 数据的可自定义树视图。
+
+* [Poku 2.6](https://javascriptweekly.com/link/159439/d076523b1d) – 跨平台 JavaScript 测试运行器。
+
+* [Faker 9.0](https://javascriptweekly.com/link/159440/d076523b1d) – 生成大量虚假数据。
+
+由 [Cooperpress](https://cooperpress.com/) 出版，由 [Peter Cooper](https://javascriptweekly.com/link/159441/d076523b1d) 编辑
+
+“JavaScript”是 Oracle Corporation 在美国的商标\
+我们未获得 Oracle 的认可或隶属于 Oracle。
+
+
