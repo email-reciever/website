@@ -4,6 +4,8 @@ import { SITETITLE } from 'astro:env/client'
 import Layout from '@/layouts/Layout.astro'
 import { allCollectionsEntries, type Collections } from '@/content/config'
 import BlogCard from '@/components/BlogCard.astro'
+import dayjs from 'dayjs'
+import 'dayjs/locale/zh-cn'
 
 export function getStaticPaths() {
   return [
@@ -19,7 +21,7 @@ const allCollectionPosts = await Promise.all(
   allCollectionsEntries.map((collection) => getCollection(collection))
 )
 
-let posts = allCollectionPosts.flat()
+let posts = allCollectionPosts.flat().sort((a, b) => dayjs(a.data.date).diff(b.data.date, 'second') > 0 ? -1 : 1)
 let title = '全部'
 
 if (slug !== undefined && slug !== 'all') {
@@ -30,7 +32,7 @@ if (slug !== undefined && slug !== 'all') {
 
 <Layout title={SITETITLE}>
   <main class="px-4 my-0 w-full mx-auto max-w-7xl md:px-6 min-h-[80vh]">
-    <ul class="flex gap-6 list-none m-0 p-0 mt-16">
+    <ul class="gap-6 flex-wrap list-none m-0 p-0 mt-16 hidden md:flex">
       {
         ['全部', ...allCollectionsEntries].map((type) => (
           <li>
