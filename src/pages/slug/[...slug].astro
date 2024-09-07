@@ -11,7 +11,7 @@ export function getStaticPaths() {
   return [
     { params: { slug: undefined } },
     { params: { slug: 'all' } },
-    ...allCollectionsEntries.map(v => ({ params: { slug: v } }))
+    ...allCollectionsEntries.map((v) => ({ params: { slug: v } }))
   ]
 }
 
@@ -21,7 +21,9 @@ const allCollectionPosts = await Promise.all(
   allCollectionsEntries.map((collection) => getCollection(collection))
 )
 
-let posts = allCollectionPosts.flat().sort((a, b) => dayjs(a.data.date).diff(b.data.date, 'second') > 0 ? -1 : 1)
+let posts = allCollectionPosts
+  .flat()
+  .sort((a, b) => (dayjs(a.data.date).diff(b.data.date, 'second') > 0 ? 1 : -1))
 let title = '全部'
 
 if (slug !== undefined && slug !== 'all') {
