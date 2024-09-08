@@ -1,0 +1,103 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#472 How to Use React Compiler
+description: RD#472 How to Use React Compiler
+date: 星期日 06 晚上 九月 8o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/use-react-compiler
+origin_site: https://newsletter.reactdigest.net/p/use-react-compiler
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#472 How to Use React Compiler" url="https://newsletter.reactdigest.net/p/use-react-compiler" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UpZg5ZTlOje6CwzZmCpXPrNbx4-b710fxfkG0pGSObpL-JyOpjOri9iVzZIxmKCdWS2JUHLJe1nV_d9uRw5JwNW6gAEMggbi0cbssXl2W_Wmkx49kXSMhNEFT-9rsq1HM-ePlWfT47MPFswcSAnI2QWxb6H1LBmMCUjPMLtmn_JZF7K2MVkI1eeKwWQojOlGes_QLe5Iw-yUYTkJTpmu6VpRvdUv6LQBJu-6TO7h1575zvYv-cDsiog2GHlWYizaP0HfHZpTle976J8Vk2xiepU-bV_uR8lhIdl7hx70DrCBUgaG1D1yzpQEPpVhGHpkw68iv5zy13BPws0T2xafHuyp2ArWiWETsfsjqKGtAaThN2TfJ1F6bbbjVSL2yqyKhGmjMxxUsQBPYFsyeufPqD5weoYKfB4C6ODpNZcK1VZgvHtnpWfTxUfInp-G-ses86U5s82cW1l2jXe1ZflWEBz1fm38y3iLCzpw-SYt-Tmfstr-7bYqahfUgbk0EzlCZqdw06GQ3sLN36PfaTWeOPo5BcBboCfMNXCMfHE4qx1G8KxyyKmVFz6uoxQYjjjh09cTYthxeTKeVi8rDcmetGcbgsFg-MBHkkOL1-wjRd2hk6jzMyOti6HDxy12G7Tzcsk113hiJ9a60ByRYmfsT0/49l/c9W5AnU0TPm-Q50PoRyajw/h0/h001.T61Y6owP31pugxft-V_gl3hfYUwtWyzCBknKiBa0f-Y)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/49l/c9W5AnU0TPm-Q50PoRyajw/ho.gif)
+
+[How to Use React Compiler](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZX75puZ4wXEN76m9FTH6X-hbT-J6DP1lpcPTZF80IUymrVIBWFDj4kwId0xOlYCELxHqqRHrnQWUkf0svK8b1uBj618R2pMPizEKcauHbrexsRO9bK9hs9zo7GyOXWZJuYA4EuycBZrfDvOGCL457RkkdLZ0QWD3OqAUllVWgaKDinzdYH2ZUE3oDT7aySby5Eoj84qDnqXPncC5rDHiwg8fAI8Y8ql-jPrObc84DFOhiVwlmsuM7uHKhUmJsfCTfjVGjR8r1AZ0_iHf5YwpXP63JEOMDlBA1rUfY6qywA5/49l/c9W5AnU0TPm-Q50PoRyajw/h1/h001.5xsAhjYDUie-bEO_HhgP_4sZkHyCia5-MRDX_mqI6us)  
+_15 minutes_ by Tapas Adhikary
+
+This tutorial explains how the new React compiler in React 19 can automatically optimize React applications without developers needing to manually apply memoization techniques. It covers the compiler's architecture, how to configure it, and demonstrates its benefits through a product page example.
+
+[Feature flagging for B2B with instant customer feedback](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63lLQkNwQmY6W9S8GMcSDxQnaOAGQ6Yt0_IV_oQH_SYViv4De3BzLBhBYRjIqhkyot3NusFfTNpV5eoWSKa0ikJcQUty3tBCPNyQYiHyV-flOzNNPEVbvW5YpcSWWhINBdNLVEZK481s-iryRlHsZfpDpBjHyWAgfpuOtSJXW9liMuPORW8Cc5WecjY6OE7l0nw/49l/c9W5AnU0TPm-Q50PoRyajw/h2/h001.KmodQDUomyAith3rz9aAam446B3a7wWC1kG2ZFdoXXA)  
+_sponsored by Bucket_
+
+Roll out features and get instant feedback and adoption metrics from a single line of code with the Bucket React SDK. Engagement metrics and direct user feedback chase you so you can increase iteration velocity and customer satisfaction. Start for free or get 10% off Pro for 1 year with the React Digest reader promo code: ReactDigest0924.
+
+[Using the inert attribute in React](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqYpsijhnMd_FHiQI3OQGwwAFAZXIvM63bHnbXtwL0fpRa2uj0lNnz9Sq28CHMknIVKy5AnMYJBhJ6j_zbtLXinHIs29HNxBsYd8llE4ENCtNEnBX0onQhZE0k0F4nnrMvztf46yHRVWPJQ37g50nh7KRgpnUM0vvxqXkulwYlMyJ9Z4O53YDI-yE60ADc7KlivZgQk8kd4U4urhjJQ_Ia67o9T-1738ugvGgnz2haurOR_7JJGTI2JDEXu56IPQWeA/49l/c9W5AnU0TPm-Q50PoRyajw/h3/h001.mZIiKQHkszuSBaPY0iz9v2iIp3HNd1Vmt_cUir6fKR4)  
+_4 minutes_ by Mayank
+
+You might have heard of the inert attribute. It makes the content inert to all assistive technologies, without affecting it visually. Mayank highlights the differences between React 19, which natively supports inert, and earlier versions where workarounds are necessary. Various approaches for using inert across different React versions are provided, including conditional rendering and client-side DOM manipulation.
+
+[Build-time Components](https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBOS_MWRB4A-8SDAXDGU8R_m9O9oqIG6vyVNbVED0mza3ADcj4a5ncxpKyqNaHlVy-24Vvyl08mNFUWWUjGAdFaJA1iIAPPy0p_y_wqdJ5X4UNLCSrIm6OP7LDgfubqG8Wkm80Dzy7rajkFg5Q-cl-aKhdxlnmRN1faPXvOj5ksmNFoRuOtSY_YgzPcNAyGYVUJ815Zj_16uUkb1X0OQR2N7Z34_V-4yO3VzAI2idw4xdajg2s8k3U4fKh-S_SeXphVg/49l/c9W5AnU0TPm-Q50PoRyajw/h4/h001.zgYgQFJaT82pCcNxrLW4KpxHHE_ePjbfv2_eZcLo2xQ)  
+_6 minutes_ by Rodrigo Pombo
+
+Why React Server Components are a leap forward for content-driven websites. They combine excellent user experience with superior developer experience, by enabling server-side processing at build time without sacrificing component modularity or ease of use.
+
+[How to Show Task Sequence Progress](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfLlFcsXOFpUrtXNVZnzChxkgclMf0vuUauewWUAD1EOd4j8mOsqtfJF41Zy9CXkW6vgRH8IguA1mQkgLUouRm_-nQ1oyCtyou4TNeQ7no2CT5CqQqh-bHjrcldpTfgtVTBIHcRp7fAfKutGJQUbCnNBhkJFcLQeiTLBERjP6IoEQar8qa6lEXLXAnUhrqZECe19a4d4OAdMkX0_FjPH8vw_6yyU0boQ0QjGzbZfsmTSUmV-b1wrEduO1JDZ2Zf4XE9f_9JunHMzWIyrNN6koIGqFVKzyWkz7ioWgOV5l-l_cgaOF1-EP0MvQWRaDmizKw/49l/c9W5AnU0TPm-Q50PoRyajw/h5/h001.D8591mQL3NRQEpzACuyDusykpdIfBIgpqxzjfVmdXrc)  
+_7 minutes_ by Nico Prananta
+
+With React Suspense and RSC in Next.js. Without useState, useEffect, client side fetch, or any other networking library.
+
+[Why is CSS-in-JS slow?](https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhdXVCnBPdVzcEvEpXRqRgWfodjJXAymrkBguGl5T9OF1UeKUcDrQi49E8o9vRxu3zO1sgzQxZC8C6bdNJV51iWUfnEq0pSCpjDnlhJMAv_LMUvNH-502uSYSMIOH0x6XDLhLen2HBkbzW59_LRDCdh1Z_7-8xjVB6hc2rLkdQx5TZoJwcsOhFRlnFhFUHbFCa94pLprdtICMvdcgEH3m8bcDTVSigCFmUEIEsQB13Ad0w2cNA6t_pU-TfowQRl85wlpIwVPxmNDcsKJr9GngfaQ/49l/c9W5AnU0TPm-Q50PoRyajw/h6/h001.lrcAxIJyc4yB8pAIdtK1A1POLwILx72g-8bkqPhvtNs)  
+_6 minutes_ by Corbin Crutchley
+
+Corbin discusses the performance implications of CSS-in-JS solutions compared to traditional CSS. He explains how CSS is parsed and rendered in browsers, highlighting the potential for slower performance and "Flash of Unstyled Content" issues with CSS-in-JS.
+
+[BrowserStack Bug Capture: Debug Faster with Data-Rich Bug Reports](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXC6g8rjTBMN5E_33cDsBgAI588HBVlQgS9qvH7yIVLeUAReYXDYh4ro0QELiupYtYAQsV56xfzS6KaOwHeeEEABC41ZU0BG0L11y_q45SkWGr9pOJqPvfzNumDSPtem9P-6Uia6uT50RO8pSJhib_G3McwG_ovh8ZdDJzOqMMj_FbM5S5jN3aNpPm1KIIrLdhmK8O42kC6tma4GNJBcNZOPy-efXOZlS3D8yI7ptZWR0iwv0K80NPzn2XxUYuK5Ih3GH006hKbkGnKH25YzKHB61yUIbYXyQWqO5D16m9vaH7zN2PIm5oeAstIOCciYO84hAHzXrO4B1-FXpMVeiBiyBzrvxs1VpCEjRBwtjMRR/49l/c9W5AnU0TPm-Q50PoRyajw/h7/h001.XcBAU2hIv4Jh6ZnAJhRCi1fakvgtYCdRL9XSyLKPfxI)  
+_sponsored by BrowserStack_
+
+Frustrated by incomplete bug reports? Say hello to comprehensive reports that actually tell you what went wrong. BrowserStack Bug Capture helps your team easily capture bugs with DevTools, screen recordings and environment info to help you debug faster. Get everything from console and React/Vue component logs to detailed network requests, all in one place so that you can focus on what matters: ensuring code quality.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UpZg5ZTlOje6CwzZmCpXPrNbx4-b710fxfkG0pGSObpL-JyOpjOri9iVzZIxmKCd WS2JUHLJe1nV\_d9uRw5JwNW6gAEMggbi0cbssXl2W\_Wmkx49kXSMhNEFT-9rsq1HM-ePlWf T47MPFswcSANI2QWxb6H1LBmMCUjPMLtmn\_JZF7K2MVkI1eeKwWQojOlGes\_QLe5Iw-yUYTk JTpmu6VpRvdUv6LQBJu-6TO7h1575zvYv-cDsiog2GHlWYizaP0HfHZpTle976J8Vk2xiepU-bV\_uR8lhIdl7hx70DrCBUgaG1D1yzpQEPpVhGHpkw68iv5zy13BPws0T2xafHuyp2ArWiWETs fsjqKGtAaThN2TfJ1F6bbbjVSL2yqyKhGmjMxxUsQBPYFsyeufPqD5weoYKfB4C6ODpNZcK1VZgvHtnpWfTxUfInp-G-ses86U5s82cW1l2jXe1ZflWEBz1fm38y3iLCzpw-SYt-Tmfstr- 7bYqahfUgbk0EzlCZqdw06GQ3sLN36PfaTWeOPo5BcBboCfMNXCMfHE4qx1G8KxyyKmVFz6uoxQYjjjh09cTYthxetKeVi8rDcmetGcbgsFg -MBHkkOL1-wjRd2hk6jzMyOti6HDxy12G7Tzcsk113hiJ9a60ByRYmfsT0/49l/c9W5AnU0TPm-Q50PoRyajw/h0/h001.T61Y6owP31pugxft-V\_gl3hfYUwtWyzCBknKiBa0f-Y)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/49l/c9W5AnU0TPm-Q50PoRyajw/ho.gif)
+
+\[如何使用React编译器]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZX75puZ4wXEN76m9FTH6X-hbT-J6DP1lpcPTZF80IUymrVIBWFDj4kwId0xOlYCELxHqqRHrnQWUkf0sv K8b1uBj618R2pMPizEKcauHbrexsRO9bK9hs9zo7GyOXWZJuYA4EuycBZrfDvOGCL457RkkdLZ0QW D3OqAUllVWgaKDinzdyYH2ZUE3oDT7aySby5Eoj84qDnqXPncC5rDHiwg8fAI8Y8ql-jPrObc84DFO hiVwlmsuM7uHKhUmJsfCTfjVGjR8r1AZ0\_iHf5YwpXP63JEOMDlBA1rUfY6qywA5/49l/c9W5AnU0TPm-Q50PoRyajw/h1/h001.5xsAhjYDUie-beO\_HhgP\_4sZkHyCia5-MRDX\_mqI6us) \
+*15 分钟* Tapas Adhikary
+
+本教程解释了 React 19 中的新 React 编译器如何自动优化 React 应用程序，而无需开发人员手动应用记忆技术。它涵盖了编译器的体系结构、如何配置它，并通过产品页面示例演示了其优点。
+
+\[带有即时客户反馈的 B2B 功能标记]\(https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63lLQkNwQmY6W9S8GMcSDxQnaOAGQ6Yt0\_IV\_oQH\_SYViv4De3BzLBhBYRjIqhkyot3NusFfTNpV5eoWSKa 0ikJcQUty3tBCPNYQYiHyV-flOzNNPEVbvW5YpcSWWhINBdNLVEZK481s-iryRlHsZfpDpBjHyWAgfpuOtSJXW9liMuPORW8CC5WecjY6OE7l0nw/49l/c9W5AnU0TPm-Q50PoRyajw/h2/h001。 KmodQDUomyAith3rz9aAam446B3a7wWC1kG2ZFdoXXA)\
+*由桶赞助*
+
+使用 Bucket React SDK，通过一行代码推出功能并获取即时反馈和采用指标。参与度指标和直接用户反馈会不断吸引您，以便您可以提高迭代速度和客户满意度。免费开始使用，或者使用 React Digest 阅读器促销代码：ReactDigest0924 获得 Pro 1 年 10% 的折扣。
+
+\[在React中使用惰性属性]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqYpsijhnMd\_FHiQI3OQGwwAFAZXIvM63bHnbXtwL0fpRa2uj0lNnz9Sq28CHMknIVKy5AnMYJBhJ6j\_zbt LXinHIs29HNxBsYd8llE4ENCtNEnBX0onQhZE0k0F4nnrMvztf46yHRVWPJQ37g50nh7KR gpnUM0vvxqXkulwYlMyJ9Z4O53YDI-yE60ADc7KlivZgQk8kd4U4urhjJQ\_Ia67o9T-1738 ugvGgnz2haurOR\_7JJGTI2JDEXu56IPQWeA/49l/c9W5AnU0TPm-Q50PoRyajw/h3/h001.mZIiKQHkszuSBaPY0iz9v2iIp3HNd1Vmt\_cUir6fKR4)\
+*4 分钟* Mayank
+
+您可能听说过惰性属性。它使内容对所有辅助技术都是惰性的，而不影响其视觉效果。 Mayank 强调了 React 19（原生支持惰性）与需要解决方法的早期版本之间的差异。提供了跨不同 React 版本使用 inert 的各种方法，包括条件渲染和客户端 DOM 操作。
+
+\[构建时组件]\(https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBOS\_MWRB4A-8SDAXDGU8R\_m9O9oqIG6vyVNbVED0mza3ADcj4a5ncxpKyqNaHlVy-24Vvyl08mNFUWWUjGAdFaJA1iIAPPy0 p\_y\_wqdJ5X4UNLCSrIm6OP7LDgfubqG8Wkm80Dzy7rajkFg5Q-cl-aKhdxlnmRN1faPXvOj5ksmNFoRuOtSY\_YgzPcNAyGYVUJ815Zj\_16uUkb1X0OQR2N7Z34\_V-4yO3VzAI2idw4xdajg2 s8k3U4fKh-S\_SeXphVg/49l/c9W5AnU0TPm-Q50PoRyajw/h4/h001.zgYgQFJaT82pCcNxrLW4KpxHHE\_ePjbfv2\_eZcLo2xQ )\
+*6 分钟* 罗德里戈·庞博
+
+为什么 React Server Components 是内容驱动网站的一次飞跃。它们通过在构建时启用服务器端处理而不牺牲组件模块化性或易用性，将卓越的用户体验与卓越的开发人员体验结合起来。
+
+\[如何显示任务序列进度]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfLlFcsXOFpUrtXNVZnzChxkgclMf0vuUauewWUAD1EOd4j8mOsqtfJF41Zy9CXkW6vgRH8IguA1mQkgLUouR m\_-nQ1oyCtyou4TNeQ7no2CT5CqQqh-bHjrcldpTfgtVTBIHcRp7fAfKutGJQUbCnNBhkJFcLQeiTLBERjP6IoEQar8qa6lEXLXAnUhrqZECe19a4d4OAdMkX0\_FjPH8vw\_6yyU0boQ0QjGzbZfsmTSUM V-b1wrEduO1JDZ2Zf4XE9f\_9JunHMzWIyrNN6koIGqFVKzyWkz7ioWgOV5l-l\_cgaOF1-EP0MvQWRaDmizKw/49l/c9W5AnU0TPm-Q50PoRyajw/h5/h001.D8591mQL3NRQEpzACuyDusykpdIfBI gpqxzjfVmdXrc )\
+*7 分钟* 尼科·普拉南塔 (Nico Prananta)
+
+在 Next.js 中使用 React Suspense 和 RSC。没有 useState、useEffect、客户端获取或任何其他网络库。
+
+\[为什么CSS-in-JS很慢？]\(https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhdXVCnBPdVzcEvEpXRqRgWfodjJXAymrkBguGl5T9OF1UeKUcDrQi49E8o9vRxu3zO1sgzQxZC8C6bdN JV51iWUfnEq0pSCpjDnlhJMAv\_LMUvNH-502uSYSMIOH0x6XDLhLen2HBkbzW59\_LRDCdh1Z\_7-8xjVB6hc2rLkdQx5TZoJwcsOhFRlnFhFUHbFCa94pLprdtICMvdcgEH3m8bcDTVSigCFmUEIEsQB1 3Ad0w2cNA6t\_PU-TfowQRl85wlpIwVPxmNDcsKJr9GngfaQ/49l/c9W5AnU0TPm-Q50PoRyajw/h6/h001。 lrcAxIJyc4yB8pAIdtK1A1POLwILx72g-8bkqPhvtNs)\
+*6 分钟* Corbin Crutchley
+
+Corbin 讨论了 CSS-in-JS 解决方案与传统 CSS 相比的性能影响。他解释了 CSS 如何在浏览器中解析和渲染，强调了 CSS-in-JS 可能导致性能下降和“无样式内容的 Flash”问题。
+
+\[BrowserStack Bug 捕获：利用数据丰富的 Bug 报告加快调试速度]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXC6g8rjTBMN5E\_33cDsBgAI588HBVlQgS9qvH7yIVLeUAReYXDYh4ro0QELiupYtYAQsV56 xfzS6KaOwHeeEEABC41ZU0BG0L11y\_q45SkWGr9pOJqPvfzNumDSPtem9P-6Uia6ut50RO8pSJ hib\_G3McwG\_ovh8ZdDJzOqMMj\_FbM5S5jN3aNpPm1KIIrLdhmK8O42kC6tma4GNJBcNZOPy-efX OZlS3D8yI7ptZWR0iwv0K80NPzn2XxUYuK5Ih3GH006hKbkGnKH25YzKHB61yUIbYXyQWqO5D 16m9vaH7zN2PIm5oeAstIOCciYO84hAHzXrO4B1-FXpMVeiBiyBzrvxs1VpCEjRBwtjMRR/49l /c9W5AnU0TPm-Q50PoRyajw/h7/h001 .XcBAU2hIv4Jh6ZnAJhRCi1fakvgtYCdRL9XSyLKPfxI)\
+*由BrowserStack赞助*
+
+对不完整的错误报告感到沮丧？向全面的报告问好，这些报告实际上可以告诉您出了什么问题。 BrowserStack Bug Capture 可帮助您的团队使用 DevTools、屏幕录制和环境信息轻松捕获 bug，从而帮助您更快地进行调试。从控制台和 React/Vue 组件日志到详细的网络请求，所有内容都集中在一处，以便您可以专注于重要的事情：确保代码质量。
+
+#
+
+
