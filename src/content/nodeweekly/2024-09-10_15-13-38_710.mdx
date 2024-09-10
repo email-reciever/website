@@ -1,0 +1,231 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Express.js 5.0
+description: Express.js 5.0
+date: 星期二 03 下午 九月 10o 2024
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/547
+origin_site: https://nodeweekly.com/issues/547
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Express.js 5.0" url="https://nodeweekly.com/issues/547" />
+
+<Detail client:only="react">
+	#​547 — September 10, 2024
+
+[Read on the Web](https://nodeweekly.com/issues/547)
+
+Together with 
+
+[![WorkOS](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_514,h_98/e_make_transparent/co_white,e_outline:9/tdfxwgk852ui9leli4wm.png)](https://nodeweekly.com/link/159508/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/aotnwiyag6iy9ffzpwnh.jpg)](https://nodeweekly.com/link/159509/0a4070b383)
+
+[Express.js 5.0 Released; Sort Of](https://nodeweekly.com/link/159509/0a4070b383 "github.com") — After a long period of seeming to merely be on life support, work on Express picked up significantly earlier this year with [a big plan to push ‘Express forward.’](https://nodeweekly.com/link/159510/0a4070b383) The first fruit of this process is now beginning to appear with v5.0. Node 18 is now the minimum support version, there are error handling improvements, improvements to the project’s tooling, the introduction of a [Threat Model](https://nodeweekly.com/link/159511/0a4070b383), and updates to many of its dependencies.
+
+Wesley Todd
+
+💡 We say _sort of_ because there's no official release post yet, and [over on the npm registry](https://nodeweekly.com/link/159512/0a4070b383), 5.0 is still tagged as `next`, so take that into account when installing it.
+
+[![](https://copm.s3.amazonaws.com/be776ba6.png)](https://nodeweekly.com/link/159508/0a4070b383)
+
+[WorkOS: The Modern Identity Platform for B2B SaaS](https://nodeweekly.com/link/159508/0a4070b383 "workos.com") — WorkOS is a modern identity platform for B2B SaaS, offering flexible and easy-to-use APIs to integrate SSO, SCIM, and RBAC in minutes instead of months. It's trusted by hundreds of high-growth startups such as Perplexity, Vercel, Drata, and Webflow.
+
+WorkOS sponsor
+
+**IN BRIEF:**
+
+*   [TypeScript 5.6 has been released](https://nodeweekly.com/link/159513/0a4070b383) with full support for iterator helpers, support for arbitrary module identifiers, a `--noUncheckedSideEffectImports` to import modules without importing any values from them, and [better handling of CommonJS vs ES modules in Node](https://nodeweekly.com/link/159514/0a4070b383).
+    
+*   [Cloudflare Workers has greatly improved its npm package support.](https://nodeweekly.com/link/159515/0a4070b383) The popular serverless platform now supports a lot more Node.js APIs.
+    
+*   [pg-boss](https://nodeweekly.com/link/159516/0a4070b383) is a popular Postgres-based background job system for Node and the folks at Wasp [interviewed its maintainer](https://nodeweekly.com/link/159517/0a4070b383) who shared more details on why it exists, how it works, and why [pg-boss v10.0](https://nodeweekly.com/link/159518/0a4070b383) is worth a look.
+    
+
+[`setImmediate()` vs `setTimeout()`](https://nodeweekly.com/link/159519/0a4070b383 "www.trevorlasn.com") — `setImmediate` is [considered deprecated](https://nodeweekly.com/link/159520/0a4070b383) in the browser space, but its different behavior still has a role to play in Node.
+
+Trevor Lasn
+
+[Set Up a $4/mo Hetzner VM to Skip the 'Serverless Tax'?](https://nodeweekly.com/link/159521/0a4070b383 "shipixen.com") — For many use cases, it can be cheaper and more convenient to spin up a cheap server than go serverless.
+
+Shipixen
+
+[Integrating Slonik with Express.js](https://nodeweekly.com/link/159522/0a4070b383 "contra.com") — [Slonik](https://nodeweekly.com/link/159523/0a4070b383) is a type-safe Node Postgres client that lets you build SQL queries in a composable way.
+
+Gajus Kuizinas
+
+📄 [How to Create a Weekly Google Analytics Report That Posts to Slack](https://nodeweekly.com/link/159524/0a4070b383) Paul Scanlon
+
+📄 [Securing Node Apps from Supply Chain Attacks](https://nodeweekly.com/link/159525/0a4070b383) Leonardo Zanivan (Auth0)
+
+📄 [Implementing Filtered Semantic Search Using pgvector and JavaScript](https://nodeweekly.com/link/159526/0a4070b383) Team Timescale
+
+📄 [How to Detect Broken Links with Playwright](https://nodeweekly.com/link/159527/0a4070b383) Stefan Judis (Checkly)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fqzdvljfymdfj2rgqepi.jpg)](https://nodeweekly.com/link/159528/0a4070b383)
+
+[Jimp 1.6: Image Processing in Node without Native Dependencies](https://nodeweekly.com/link/159528/0a4070b383 "jimp-dev.github.io") — Most image libraries, such as the powerful [Sharp](https://nodeweekly.com/link/159529/0a4070b383), lean on external libraries to do the heavy lifting, but Jimp can handle BMPs, GIFs, JPEGs, PNGs, and TIFFs on its own for blurring, color adjustments, resizing, rotation, etc. [GitHub repo.](https://nodeweekly.com/link/159530/0a4070b383)
+
+jimp Contributors
+
+💡 Being pure JavaScript, Jimp can [also be used in the browser.](https://nodeweekly.com/link/159531/0a4070b383)
+
+[Cut Code Review Time and Bugs in Half with AI](https://nodeweekly.com/link/159532/0a4070b383) — Supercharge your entire team with AI-driven contextual feedback. Supports all languages.
+
+CodeRabbit sponsor
+
+[jsdiff 7.0: A JavaScript Text Diffing Implementation](https://nodeweekly.com/link/159533/0a4070b383 "github.com") — Can compare strings for differences in various ways including creating patches. There’s an [online demo](https://nodeweekly.com/link/159534/0a4070b383).
+
+Kevin Decker
+
+[Rockpack 4.4: An Alternative React App Builder](https://nodeweekly.com/link/159535/0a4070b383 "alexsergey.github.io") — Akin to _Create React App_, the goal is to get project setup time as low as possible, but Rockpack holds different opinions around how far to take things and packs in a lot of ideas including server side rendering, linting, and testing. [GitHub repo.](https://nodeweekly.com/link/159536/0a4070b383)
+
+Alex Sergey
+
+[node-html-to-image 5.0: Generate Images from HTML](https://nodeweekly.com/link/159537/0a4070b383 "github.com") — Wraps around Puppeteer, but also lets you use Handlebars for added logic in your HTML.
+
+Yvonnick Frin
+
+*   [create-fastify 5.0](https://nodeweekly.com/link/159538/0a4070b383) – Rapidly generate a Fastify project. You don't even need to install it first. You can use `npm init fastify app_name_here`.
+    
+*   [file-type 19.5](https://nodeweekly.com/link/159539/0a4070b383) – Detect the file type of a file, stream, or data. Now with WebVTT support.
+    
+*   [better-sqlite 11.3](https://nodeweekly.com/link/159540/0a4070b383) – A neat way to use SQLite from Node. Now with SQLite 3.46.1.
+    
+*   [Faker 9.0](https://nodeweekly.com/link/159541/0a4070b383) – Generate large amounts of fake data. [Upgrade guide.](https://nodeweekly.com/link/159542/0a4070b383)
+    
+*   [pnpm 9.10](https://nodeweekly.com/link/159543/0a4070b383) – The fast, efficiency-focused package manager.
+    
+*   [ESLint 9.10](https://nodeweekly.com/link/159544/0a4070b383) – Now with types _included._
+    
+*   [ini 5.0](https://nodeweekly.com/link/159545/0a4070b383) – npm's INI file parser/serializer.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​547 — 2024 年 9 月 10 日
+
+[网上阅读](https://nodeweekly.com/issues/547)
+
+连同 
+
+\[![WorkOS](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_514,h_98/e_make_transparent/co_white,e_outline:9/tdfxwgk852ui9leli4wm.png)]\(https://nodeweekly. com/link/159508/0a4070b383)
+
+![Node.js 周刊](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/aotnwiyag6iy9ffzpwnh.jpg)](https://nodeweekly.com/link/159509/0a4070b383)
+
+[Express.js 5.0 发布；排序](https://nodeweekly.com/link/159509/0a4070b383 "github.com") — 经过很长一段时间似乎只是依靠生命维持，Express 的工作在今年早些时候显着回升，\[a big]计划推动“Express 前进”。]\(https://nodeweekly.com/link/159510/0a4070b383) 这个过程的第一个成果现在开始在 v5.0 中出现。 Node 18 现在是最低支持版本，有错误处理改进、项目工具改进、[威胁模型](https://nodeweekly.com/link/159511/0a4070b383) 的引入，以及许多内容的更新它的依赖项。
+
+韦斯利·托德
+
+💡 我们说“某种程度上”是因为还没有正式发布的帖子，并且[在 npm 注册表上](https://nodeweekly.com/link/159512/0a4070b383)，5.0 仍然被标记为“next”，所以安装时要考虑到这一点。
+
+[![](https://copm.s3.amazonaws.com/be776ba6.png)](https://nodeweekly.com/link/159508/0a4070b383)
+
+[WorkOS：B2B SaaS 的现代身份平台](https://nodeweekly.com/link/159508/0a4070b383 "workos.com") — WorkOS 是 B2B SaaS 的现代身份平台，提供灵活且易于使用的功能API 可在几分钟（而不是几个月）内集成 SSO、SCIM 和 RBAC。它受到 Perplexity、Vercel、Drata 和 Webflow 等数百家高增长初创公司的信任。
+
+WorkOS赞助商
+
+**简而言之：**
+
+* [TypeScript 5.6 已发布](https://nodeweekly.com/link/159513/0a4070b383) 完全支持迭代器助手、支持任意模块标识符、`--noUncheckedSideEffectImports` 来导入模块而不导入任何值它们，以及[在 Node 中更好地处理 CommonJS 与 ES 模块](https://nodeweekly.com/link/159514/0a4070b383)。
+
+* [Cloudflare Workers 极大地改进了其 npm 包支持。](https://nodeweekly.com/link/159515/0a4070b383) 流行的无服务器平台现在支持更多的 Node.js API。
+
+* [pg-boss](https://nodeweekly.com/link/159516/0a4070b383) 是一个流行的基于 Postgres 的后台作业系统，适用于 Node 和 Wasp 的人们\[采访了它的维护者]\(https://nodeweekly.com /link/159517/0a4070b383）谁分享了更多关于它为什么存在、它如何工作以及为什么 [pg-boss v10.0](https://nodeweekly.com/link/159518/0a4070b383) 值得一看的细节。
+
+[`setImmediate()` 与 `setTimeout()`](https://nodeweekly.com/link/159519/0a4070b383 "www.trevorlasn.com") — `setImmediate` 已\[被认为已弃用]\(https://nodeweekly .com/link/159520/0a4070b383）在浏览器领域中，但其不同的行为在 Node.js 中仍然发挥着作用。
+
+特雷弗·拉森
+
+[设置 4 美元/月的 Hetzner 虚拟机以跳过“无服务器税”？](https://nodeweekly.com/link/159521/0a4070b383 "shipixen.com") — 对于许多用例来说，它可以更便宜、更多启动廉价服务器比无服务器更方便。
+
+希皮克森
+
+[将 Slonik 与 Express.js 集成](https://nodeweekly.com/link/159522/0a4070b383 "contra.com") — [Slonik](https://nodeweekly.com/link/159523/0a4070b383) 是一种类型-安全的 Node Postgres 客户端，可让您以可组合的方式构建 SQL 查询。
+
+加尤斯·库伊兹纳斯
+
+📄 [如何创建发布到 Slack 的每周 Google Analytics 报告](https://nodeweekly.com/link/159524/0a4070b383) Paul Scanlon
+
+📄 [保护节点应用程序免受供应链攻击](https://nodeweekly.com/link/159525/0a4070b383) Leonardo Zanivan (Auth0)
+
+📄 [使用 pgvector 和 JavaScript 实现过滤语义搜索](https://nodeweekly.com/link/159526/0a4070b383) 团队时间表
+
+📄 [如何与 Playwright 检测失效链接](https://nodeweekly.com/link/159527/0a4070b383) Stefan Judis (Checkly)
+
+🛠 代码和工具
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fqzdvljfymdfj2rgqepi.jpg)](https://nodeweekly.com/link/159528/0a4070b383)
+
+[Jimp 1.6：没有本机依赖项的 Node 中的图像处理](https://nodeweekly.com/link/159528/0a4070b383 "jimp-dev.github.io") — 大多数图像库，例如强大的 \[Sharp]\(https ://nodeweekly.com/link/159529/0a4070b383），依靠外部库来完成繁重的工作，但 Jimp 可以自行处理 BMP、GIF、JPEG、PNG 和 TIFF，以进行模糊、颜色调整、调整大小、旋转等 [GitHub 存储库](https://nodeweekly.com/link/159530/0a4070b383)
+
+jimp 贡献者
+
+💡 作为纯 JavaScript，Jimp [也可以在浏览器中使用。](https://nodeweekly.com/link/159531/0a4070b383)
+
+[利用 AI 将代码审查时间和错误减少一半](https://nodeweekly.com/link/159532/0a4070b383) — 通过 AI 驱动的上下文反馈为整个团队提供支持。支持所有语言。
+
+码兔赞助商
+
+[jsdiff 7.0：JavaScript 文本比较实现](https://nodeweekly.com/link/159533/0a4070b383 "github.com") — 可以通过各种方式比较字符串的差异，包括创建补丁。有一个[在线演示](https://nodeweekly.com/link/159534/0a4070b383)。
+
+凯文·德克尔
+
+[Rockpack 4.4：另一种 React App Builder](https://nodeweekly.com/link/159535/0a4070b383 "alexsergey.github.io") — 类似于 *Create React App*，目标是将项目设置时间设置为尽可能低，但 Rockpack 对于要走多远持有不同的意见，并包含许多想法，包括服务器端渲染、linting 和测试。 [GitHub 存储库。](https://nodeweekly.com/link/159536/0a4070b383)
+
+亚历克斯·谢尔盖
+
+[node-html-to-image 5.0: 从 HTML 生成图像](https://nodeweekly.com/link/159537/0a4070b383 "github.com") — 围绕 Puppeteer，但也允许您使用 Handlebars 来添加逻辑您的 HTML。
+
+伊冯尼克·弗林
+
+* [create-fastify 5.0](https://nodeweekly.com/link/159538/0a4070b383) – 快速生成 Fastify 项目。您甚至不需要先安装它。您可以使用“npm init fastify app\_name\_here”。
+
+* [file-type 19.5](https://nodeweekly.com/link/159539/0a4070b383) – 检测文件、流或数据的文件类型。现已支持 WebVTT。
+
+* [better-sqlite 11.3](https://nodeweekly.com/link/159540/0a4070b383) – 从 Node.js 使用 SQLite 的巧妙方法。现在使用 SQLite 3.46.1。
+
+* [Faker 9.0](https://nodeweekly.com/link/159541/0a4070b383) – 生成大量虚假数据。 [升级指南](https://nodeweekly.com/link/159542/0a4070b383)
+
+* [pnpm 9.10](https://nodeweekly.com/link/159543/0a4070b383) – 快速、注重效率的包管理器。
+
+* [ESLint 9.10](https://nodeweekly.com/link/159544/0a4070b383) – 现在包含类型。\*
+
+* [ini 5.0](https://nodeweekly.com/link/159545/0a4070b383) – npm 的 INI 文件解析器/序列化器。
+
+**有我们的链接吗？** 回复并告诉我们。我们无法包含所有内容，但我们会查看您发送的所有内容。 *谢谢！*
+
+***
+
+**赞助：** 发送电子邮件至“&lt;kristina@cooperpress.com>”了解详细信息。
+
+***
+
+由库珀出版社有限公司出版\
+费尔菲尔德企业中心, 劳斯, LN11 0LS, 英国
+
+
