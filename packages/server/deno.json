@@ -10,7 +10,10 @@
     "$dotenvload": "jsr:@std/dotenv/load",
     "$ggta": "npm:@vitalets/google-translate-api",
     "$hpa": "npm:http-proxy-agent",
-    "$ci": "npm:cheerio"
+    "$ci": "npm:cheerio",
+    "$discord": "npm:discord.js",
+    "$gh": "npm:@octokit/rest",
+    "$dayjs": "npm:dayjs"
   },
   "npmRegistry": "https://registry.npmmirror.com",
   "lint": {

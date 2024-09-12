@@ -3,6 +3,7 @@ import { resolve } from 'node:path'
 import '$dotenvload'
 import { batchUpdate } from './router/batchUpdate.ts'
 import { translate } from './router/translate.ts'
+import { discord } from './router/discord.ts'
 
 const app = new Application()
 
@@ -40,6 +41,7 @@ router.post('/read', async (ctx) => {
 
 router.post('/batch-update/:type', batchUpdate)
 router.post('/translate', translate)
+router.post('/discord', discord)
 
 router.get('/', (ctx) => {
   ctx.response.redirect('https://email-reciever.pages.dev/')
