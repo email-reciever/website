@@ -10,20 +10,18 @@ export const allCollectionsEntries = Object.keys(WHITELISTS).map((v) =>
 const collectionSchema = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string(),
-    description: z.string(),
+    title: z.string().optional(),
+    description: z.string().optional(),
     author: z.string().optional(),
     avatar: z.string().optional(),
     subAuthor: z.string().optional(),
-    date: z.string(),
+    date: z.string().optional(),
     layout: z.string().optional(),
     origin_url: z.string().optional(),
     email_recorder: z.string().optional(),
     origin_site: z.string().optional(),
     translated: z.boolean().optional(),
-    banner: z.string().optional(),
-    pubData: z.date().optional(),
-    link: z.string().url().optional()
+    banner: z.string().optional()
   })
 })
 
