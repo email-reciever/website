@@ -1,0 +1,300 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: The heaviest npm packages
+description: The heaviest npm packages
+date: 星期四 06 晚上 九月 12o 2024
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/704
+origin_site: https://javascriptweekly.com/issues/704
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="The heaviest npm packages" url="https://javascriptweekly.com/issues/704" />
+
+<Detail client:only="react">
+	#​704 — September 12, 2024
+
+[Read on the Web](https://javascriptweekly.com/issues/704)
+
+Together with 
+
+[![Blacksmith](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_820,h_100/e_make_transparent/co_white,e_outline:17/uq9yvkqtinkixhiq19mf.png)](https://javascriptweekly.com/link/159750/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nt5ui7ebvyqkffylz2zm.jpg)](https://javascriptweekly.com/link/159751/d076523b1d)
+
+[The State of ES5 on the Web](https://javascriptweekly.com/link/159751/d076523b1d "philipwalton.com") — Some of the earlier JavaScript build tools focused on allowing developers to write modern JavaScript code that could still run on the browsers of the time by compiling code down to ES5. Time has moved on, but have the tools or popular libraries? Philip investigates, and shares some recommendations.
+
+Philip Walton
+
+📊  [The Top 5000 npm Packages by Size, Downloads, and Traffic](https://javascriptweekly.com/link/159752/d076523b1d "docs.google.com") — An interesting Google Sheets spreadsheet listing the top 5000 npm packages by package size, weekly downloads, and weekly traffic. One package is responsible for 278 terabytes of traffic per week, but the top 5000 add up to several _petabytes._
+
+Google Sheets / danhorus
+
+[![](https://copm.s3.amazonaws.com/5743fd62.png)](https://javascriptweekly.com/link/159750/d076523b1d)
+
+[Run GitHub Actions Up to 2x Faster at Half the Cost](https://javascriptweekly.com/link/159750/d076523b1d "blacksmith.sh") — Blacksmith runs your GitHub Actions substantially faster by running them on modern gaming CPUs. Integrating Blacksmith is a one-line code change. 100+ companies like Ashby, Superblocks, and Slope use Blacksmith to help developers merge code faster.
+
+Blacksmith sponsor
+
+[Announcing TypeScript 5.6](https://javascriptweekly.com/link/159753/d076523b1d "devblogs.microsoft.com") — The latest TypeScript has landed with full support for iterator helpers, support for arbitrary module identifiers, `--noUncheckedSideEffectImports` to import modules without importing any values, and more — all covered in the always thorough release post.
+
+Daniel Rosenwasser (Microsoft)
+
+[Is PHP the New JavaScript?](https://javascriptweekly.com/link/159754/d076523b1d "www.mux.com") — I’m no real fan of PHP, but there’s been a lot of discussion on social media around increased interest in PHP by developers who’d usually steer clear of it, largely thanks to [Laravel.](https://javascriptweekly.com/link/159755/d076523b1d) This post tells the basic story and explains what Laravel brings to the table.
+
+Dave Kiss (Mux)
+
+**IN BRIEF:**
+
+*   [Cloudflare Workers has greatly improved its npm package support.](https://javascriptweekly.com/link/159756/d076523b1d) The popular serverless platform now supports a lot more Node.js APIs.
+    
+*   🎉 They don't happen often, but [Frontend Masters is currently running a sale](https://javascriptweekly.com/link/159757/d076523b1d) on its courses, which now includes a JS performance learning path.
+    
+*   The ESLint project has announced [its latest version support policy](https://javascriptweekly.com/link/159758/d076523b1d) with ESLint v8.x going into end of life next month.
+    
+*   📅 Vercel's [Next.js Conf 2024](https://javascriptweekly.com/link/159759/d076523b1d) is taking place this October 24, both in person in San Francisco, as well as online.
+    
+
+**RELEASES:**
+
+*   [Storybook 8.3](https://javascriptweekly.com/link/159760/d076523b1d) – Frontend component and UI workshop. Now with first class Vitest support.
+    
+*   [ESLint 9.10](https://javascriptweekly.com/link/159761/d076523b1d) – Now with types _included._
+    
+*   [pnpm 9.10](https://javascriptweekly.com/link/159762/d076523b1d), [Jasmine 5.3](https://javascriptweekly.com/link/159763/d076523b1d), [Relay 18.0](https://javascriptweekly.com/link/159764/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/okgvxtxoiuzv0zkgj6wn.jpg)](https://javascriptweekly.com/link/159765/d076523b1d)
+
+[The Web's Clipboard, and How It Stores Data of Different Types](https://javascriptweekly.com/link/159765/d076523b1d "alexharri.com") — An interesting exploration of how things currently work with copy and pasting on the web, how different data types are treated, and what the [Web Custom Formats proposal](https://javascriptweekly.com/link/159766/d076523b1d) is putting forward.
+
+Alex Harri Jónsson
+
+[Breakpoints and `console.log` Is the Past, Time Travel Is the Future](https://javascriptweekly.com/link/159767/d076523b1d "wallabyjs.com") — 15x faster JavaScript debugging than with breakpoints and console.log, supports Vitest, jest, karma, jasmine, and more. Just added support for Node.js built-in node:test framework!
+
+Wallaby Team sponsor
+
+[Building the Same App Using Various Web Frameworks](https://javascriptweekly.com/link/159768/d076523b1d "eugeneyan.com") — A scientist at Amazon who usually works in Python with a minimum of JavaScript on the frontend wondered if a more modern web framework would suit him better in 2024. To try this out, he tried Next.js, SvelteKit, and the Python-flavored [FastHTML](https://javascriptweekly.com/link/159769/d076523b1d).
+
+Eugene Yan
+
+[Brand New Performance Features in Chrome DevTools](https://javascriptweekly.com/link/159770/d076523b1d "www.debugbear.com") — A helpful look into Chrome’s updated _Performance Panel_ and all the different metrics it shows off to help you improve the performance of your site.
+
+Umar Hansa (DebugBear)
+
+[React and `FormData`](https://javascriptweekly.com/link/159771/d076523b1d "reacttraining.com") — [FormData](https://javascriptweekly.com/link/159772/d076523b1d) is ironically both the ‘newest and yet oldest’ standard for accessing form data. Here are some practical ways for using it with TypeScript.
+
+Brad Westfall
+
+[Automate Neon Schema Changes with Drizzle and GitHub Actions](https://javascriptweekly.com/link/159773/d076523b1d "go.clerk.com") — Learn about schema migrations and how they can be applied to a Neon database with Drizzle and GitHub Actions.
+
+Clerk sponsor
+
+📄 [The Secrets of JavaScript's `delete` Operator](https://javascriptweekly.com/link/159774/d076523b1d) Zachary Lee
+
+📄 [Deploying a Next.js App to Production on Any Server](https://javascriptweekly.com/link/159775/d076523b1d) Kurta Payjama
+
+📄 [How to Create a Weekly Google Analytics Report That Posts to Slack](https://javascriptweekly.com/link/159776/d076523b1d) Paul Scanlon
+
+📄 [Top 10 Angular Architecture Mistakes You Really Want To Avoid](https://javascriptweekly.com/link/159777/d076523b1d) Tomas Trajan
+
+📄 [How to Fix ESLint Violations with AI Assistance](https://javascriptweekly.com/link/159778/d076523b1d) Docker Labs
+
+📺 [Why You Should Use Redux in 2024](https://javascriptweekly.com/link/159779/d076523b1d) Mark Erikson
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tlzsohktqie0lim4jav6.jpg)](https://javascriptweekly.com/link/159780/d076523b1d)
+
+[Biome v1.9 Released; Turns One Year Old](https://javascriptweekly.com/link/159780/d076523b1d "biomejs.dev") — Biome [started life](https://javascriptweekly.com/link/159781/d076523b1d) as a fork of Rome, a bold attempt to create an all-in-one ‘frontend toolchain’. As of v1.9, Biome can format and lint CSS, GraphQL, _and_ JavaScript, does it _very_ quickly, yet has [97% compatibility with Prettier.](https://javascriptweekly.com/link/159782/d076523b1d)
+
+Victorien Elvinger & Biome Core Team
+
+[Express.js 5.0 Released](https://javascriptweekly.com/link/159783/d076523b1d "github.com") — The seminal Node.js webapp library seemed to take a nap for a few years, but development was [reinvigorated earlier this year.](https://javascriptweekly.com/link/159784/d076523b1d) v5.0 brings a variety of modern tweaks and dependency updates, though it's still tagged `next` [at the npm registry.](https://javascriptweekly.com/link/159785/d076523b1d) ([Official homepage](https://javascriptweekly.com/link/159786/d076523b1d) and [v5.x API docs.](https://javascriptweekly.com/link/159787/d076523b1d))
+
+Wesley Todd
+
+[✂️ Cut Your QA Cycles Down from Hours to Minutes](https://javascriptweekly.com/link/159788/d076523b1d "www.qawolf.com") — [QA Wolf's](https://javascriptweekly.com/link/159788/d076523b1d) AI-native approach gets engineering teams to [80% automated end-to-end test coverage](https://javascriptweekly.com/link/159788/d076523b1d) and helps them ship 2x faster by reducing QA cycles from hours to minutes.
+
+QA Wolf sponsor
+
+[Jimp 1.6: Manipulate Images without Native Dependencies](https://javascriptweekly.com/link/159789/d076523b1d "jimp-dev.github.io") — Most image libraries, such as [Sharp](https://javascriptweekly.com/link/159790/d076523b1d), use native dependencies to do the heavy lifting, but Jimp can handle numerous formats directly for blurring, color tweaks, resizing, rotation, etc. Originally for Node, Jimp now [works in the browser too](https://javascriptweekly.com/link/159791/d076523b1d) – [GitHub repo.](https://javascriptweekly.com/link/159792/d076523b1d)
+
+jimp Contributors
+
+[Valtio 2.0: Proxy State Made Simple](https://javascriptweekly.com/link/159793/d076523b1d "valtio.dev") — Turns objects into self-aware proxies so you can access state and subscribe to changes outside of components, add [computed properties](https://javascriptweekly.com/link/159794/d076523b1d) and more. Designed for React and compatible with Suspense, but can also be [used with vanilla JS.](https://javascriptweekly.com/link/159795/d076523b1d) – [GitHub repo.](https://javascriptweekly.com/link/159796/d076523b1d)
+
+Daishi Kato
+
+[Violentmonkey: A Way to Run Userscripts in the Browser](https://javascriptweekly.com/link/159797/d076523b1d "violentmonkey.github.io") — There have been many extensions to run your own custom JavaScript automatically on certain Web pages over the years, but Violentmonkey seems to currently be one of the better and well maintained open source ones. [GitHub repo.](https://javascriptweekly.com/link/159798/d076523b1d)
+
+Violentmonkey Team
+
+*   🔎 [Orama 2.1](https://javascriptweekly.com/link/159799/d076523b1d) – Dependency-free, full-text and vector search engine for all JS runtimes, with typo tolerance, filters, facets, stemming, and more.
+    
+*   [create-fastify 5.0](https://javascriptweekly.com/link/159800/d076523b1d) – Rapidly generate a [Fastify](https://javascriptweekly.com/link/159801/d076523b1d) project. It just takes `npm init fastify app_name` to get started.
+    
+*   [file-type 19.5](https://javascriptweekly.com/link/159802/d076523b1d) – Detect the file type of a file, stream, or data. Now with WebVTT support.
+    
+*   [TWGL.js 6.1](https://javascriptweekly.com/link/159803/d076523b1d) – Helpers for working with low-level WebGL from JS.
+    
+*   🎨 [Chroma.js 3.1](https://javascriptweekly.com/link/159804/d076523b1d) – JavaScript color manipulation library.
+    
+*   [Pixi.js 8.4](https://javascriptweekly.com/link/159805/d076523b1d) – Fast, flexible 2D WebGL renderer.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/159806/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​704 — 2024 年 9 月 12 日
+
+[网上阅读](https://javascriptweekly.com/issues/704)
+
+连同 
+
+\[![铁匠](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_820,h_100/e_make_transparent/co_white,e_outline:17/uq9yvkqtinkixhiq19mf.png)]\(https:// javascriptweekly.com/link/159750/d076523b1d)
+
+JavaScript 周刊
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nt5ui7ebvyqkffylz2zm.jpg)](https://javascriptweekly.com/link/159751/d076523b1d)
+
+[Web 上 ES5 的状态](https://javascriptweekly.com/link/159751/d076523b1d "philipwalton.com") — 一些早期的 JavaScript 构建工具专注于允许开发人员编写仍然可以运行的现代 JavaScript 代码通过将代码编译为 ES5 来在当时的浏览器上使用。时代在进步，但是有工具或流行的库吗？菲利普进行了调查，并分享了一些建议。
+
+菲利普·沃尔顿
+
+📊  [按大小、下载量和流量排名的前 5000 个 npm 软件包](https://javascriptweekly.com/link/159752/d076523b1d "docs.google.com") — 一个有趣的 Google 表格电子表格，列出了排名前 5000 个的 npm 软件包包大小、每周下载量和每周流量。一个包每周负责 278 TB 的流量，但前 5000 个包加起来可达数个 *PB。*
+
+谷歌表格/danhorus
+
+[![](https://copm.s3.amazonaws.com/5743fd62.png)](https://javascriptweekly.com/link/159750/d076523b1d)
+
+[以一半的成本运行 GitHub Actions 速度提高 2 倍](https://javascriptweekly.com/link/159750/d076523b1d "blacksmith.sh") — Blacksmith 通过在现代游戏 CPU 上运行 GitHub Actions，运行速度大幅提高。集成 Blacksmith 是一项一行代码更改。 Ashby、Superblocks 和 Slope 等 100 多家公司使用 Blacksmith 来帮助开发人员更快地合并代码。
+
+铁匠赞助商
+
+[宣布 TypeScript 5.6](https://javascriptweekly.com/link/159753/d076523b1d "devblogs.microsoft.com") — 最新的 TypeScript 已全面支持迭代器助手、支持任意模块标识符、`--noUncheckedSideEffectImports ` 导入模块而不导入任何值，等等——所有内容都包含在始终详尽的发布帖子中。
+
+丹尼尔·罗森瓦瑟（微软）
+
+[PHP 是新的 JavaScript 吗？](https://javascriptweekly.com/link/159754/d076523b1d "www.mux.com") — 我不是 PHP 的真正粉丝，但社交媒体上有很多讨论开发人员对 PHP 的兴趣日益浓厚，而他们通常会避开 PHP，这在很大程度上要归功于 \[Laravel]。(https://javascriptweekly.com/link/159755/d076523b1d) 这篇文章讲述了基本故事并解释了 Laravel 给我们带来了什么桌子。
+
+戴夫之吻 (Mux)
+
+**简而言之：**
+
+* [Cloudflare Workers 极大地改进了其 npm 包支持。](https://javascriptweekly.com/link/159756/d076523b1d) 流行的无服务器平台现在支持更多的 Node.js API。
+
+* 🎉 这种情况并不经常发生，但[Frontend Masters 目前正在其课程中进行促销](https://javascriptweekly.com/link/159757/d076523b1d)，其中现在包含 JS 性能学习路径。
+
+* ESLint 项目已宣布[其最新版本支持政策](https://javascriptweekly.com/link/159758/d076523b1d)，ESLint v8.x 将于下个月结束生命周期。
+
+* 📅 Vercel 的 [Next.js Conf 2024](https://javascriptweekly.com/link/159759/d076523b1d) 将于今年 10 月 24 日在旧金山举行，同时也在线上举行。
+
+**发布：**
+
+* [Storybook 8.3](https://javascriptweekly.com/link/159760/d076523b1d) – 前端组件和 UI 研讨会。现在拥有一流的 Vitest 支持。
+
+* [ESLint 9.10](https://javascriptweekly.com/link/159761/d076523b1d) – 现在包含类型。\*
+
+* [pnpm 9.10](https://javascriptweekly.com/link/159762/d076523b1d)、[Jasmine 5.3](https://javascriptweekly.com/link/159763/d076523b1d)、\[Relay 18.0]\(https:// javascriptweekly.com/link/159764/d076523b1d)
+
+📒 文章和教程
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/okgvxtxoiuzv0zkgj6wn.jpg)](https://javascriptweekly.com/link/159765/d076523b1d)
+
+[Web 的剪贴板及其如何存储不同类型的数据](https://javascriptweekly.com/link/159765/d076523b1d "alexharri.com") — 对当前 Web 上的复制和粘贴如何工作的有趣探索、如何处理不同的数据类型，以及[网络自定义格式提案](https://javascriptweekly.com/link/159766/d076523b1d) 的提出内容。
+
+亚历克斯·哈里·琼森
+
+[断点和 `console.log` 已成为过去，时间旅行才是未来](https://javascriptweekly.com/link/159767/d076523b1d "wallabyjs.com") — JavaScript 调试速度比断点和 console.log 快 15 倍，支持 Vitest、jest、karma、jasmine 等。刚刚添加了对 Node.js 内置 Node:test 框架的支持！
+
+小袋鼠队赞助商
+
+[使用各种 Web 框架构建相同的应用程序](https://javascriptweekly.com/link/159768/d076523b1d "eugeneyan.com") — 亚马逊的一位科学家通常使用 Python 工作，前端最少使用 JavaScript，他想知道是否到 2024 年，更现代的 Web 框架会更适合他。为了尝试这一点，他尝试了 Next.js、SvelteKit 和 Python 风格的 [FastHTML](https://javascriptweekly.com/link/159769/d076523b1d)。
+
+严尤金
+
+[Chrome DevTools 中的全新性能功能](https://javascriptweekly.com/link/159770/d076523b1d "www.debugbear.com") — 对 Chrome 更新的*性能面板*及其展示的所有不同指标的有用了解帮助您提高网站的性能。
+
+奥马尔·汉萨 (DebugBear)
+
+[React 和 `FormData`](https://javascriptweekly.com/link/159771/d076523b1d "reacttraining.com") — [FormData](https://javascriptweekly.com/link/159772/d076523b1d) 具有讽刺意味的是用于访问表单数据的“最新但最旧”的标准。以下是一些将其与 TypeScript 结合使用的实用方法。
+
+布拉德·韦斯特法尔
+
+[使用 Drizzle 和 GitHub Actions 自动执行 Neon 架构更改](https://javascriptweekly.com/link/159773/d076523b1d "go.clerk.com") — 了解架构迁移以及如何使用 Drizzle 将其应用到 Neon 数据库和 GitHub 操作。
+
+文员赞助人
+
+📄 [JavaScript `delete` 运算符的秘密](https://javascriptweekly.com/link/159774/d076523b1d) Zachary Lee
+
+📄 [在任何服务器上将 Next.js 应用程序部署到生产环境](https://javascriptweekly.com/link/159775/d076523b1d) Kurta Payjama
+
+📄 [如何创建发布到 Slack 的每周 Google Analytics 报告](https://javascriptweekly.com/link/159776/d076523b1d) Paul Scanlon
+
+📄 [您真正想避免的 10 个 Angular 架构错误](https://javascriptweekly.com/link/159777/d076523b1d) Tomas Trajan
+
+📄 [如何利用 AI 协助修复 ESLint 违规](https://javascriptweekly.com/link/159778/d076523b1d) Docker Labs
+
+📺 [为什么你应该在 2024 年使用 Redux](https://javascriptweekly.com/link/159779/d076523b1d) Mark Erikson
+
+🛠 代码和工具
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tlzsohktqie0lim4jav6.jpg)](https://javascriptweekly.com/link/159780/d076523b1d)
+
+[Biome v1.9 发布；一岁了](https://javascriptweekly.com/link/159780/d076523b1d "biomejs.dev") — Biome [开始生命](https://javascriptweekly.com/link/159781/d076523b1d) 作为一个分支罗马，这是创建一体化“前端工具链”的大胆尝试。从 v1.9 开始，Biome 可以对 CSS、GraphQL、*和* JavaScript 进行格式化和 lint，“非常”快速，而且\[与 Prettier 具有 97% 的兼容性。]\(https://javascriptweekly.com/link/159782/ d076523b1d)
+
+Victorien Elvinger 和 Biome 核心团队
+
+[Express.js 5.0 发布](https://javascriptweekly.com/link/159783/d076523b1d "github.com") — 开创性的 Node.js web 应用程序库似乎休息了几年，但开发工作 \[重新焕发了活力]今年早些时候。]\(https://javascriptweekly.com/link/159784/d076523b1d) v5.0 带来了各种现代调整和依赖项更新，尽管它仍然\[在 npm 注册表中标记为“next”。]\(https: //javascriptweekly.com/link/159785/d076523b1d)（[官方主页](https://javascriptweekly.com/link/159786/d076523b1d) 和 [v5.x API 文档](https://javascriptweekly.com/链接/159787/d076523b1d))
+
+韦斯利·托德
+
+[✂️ 将 QA 周期从几小时缩短为几分钟](https://javascriptweekly.com/link/159788/d076523b1d "www.qawolf.com") — \[QA Wolf's]\(https://javascriptweekly.com/link/ 159788/d076523b1d) AI 原生方法让工程团队实现 [80% 自动化端到端测试覆盖率](https://javascriptweekly.com/link/159788/d076523b1d)，并通过减少 QA 周期来帮助他们将交付速度提高 2 倍几小时到几分钟。
+
+QA Wolf 赞助商
+
+[Jimp 1.6：在没有本机依赖项的情况下操作图像](https://javascriptweekly.com/link/159789/d076523b1d "jimp-dev.github.io") — 大多数图像库，例如 \[Sharp]\(https://javascriptweekly .com/link/159790/d076523b1d），使用本机依赖项来完成繁重的工作，但 Jimp 可以直接处理多种格式，以进行模糊、颜色调整、调整大小、旋转等。Jimp 最初用于 Node，现在 [也可以在浏览器中工作](https://javascriptweekly.com/link/159791/d076523b1d) – [GitHub 存储库。](https://javascriptweekly.com/link/159792/d076523b1d)
+
+jimp 贡献者
+
+[Valtio 2.0：代理状态变得简单](https://javascriptweekly.com/link/159793/d076523b1d "valtio.dev") - 将对象转变为自我感知代理，以便您可以访问状态并订阅组件外部的更改，添加[计算属性](https://javascriptweekly.com/link/159794/d076523b1d) 等。专为 React 设计，与 Suspense 兼容，但也可以[与 vanilla JS 一起使用。](https://javascriptweekly.com/link/159795/d076523b1d) – \[GitHub 存储库。]\(https://javascriptweekly.com/link /159796/d076523b1d)
+
+加藤大师
+
+[Violentmonkey：一种在浏览器中运行用户脚本的方法](https://javascriptweekly.com/link/159797/d076523b1d "violentmonkey.github.io") — 有许多扩展可以在某些 Web 上自动运行您自己的自定义 JavaScript多年来，Violentmonkey 似乎是更好且维护良好的开源软件之一。 [GitHub 存储库。](https://javascriptweekly.com/link/159798/d076523b1d)
+
+暴力猴队
+
+* 🔎 [Orama 2.1](https://javascriptweekly.com/link/159799/d076523b1d) – 适用于所有 JS 运行时的无依赖、全文和矢量搜索引擎，具有拼写错误容忍、过滤器、构面、词干提取等功能。
+
+* [create-fastify 5.0](https://javascriptweekly.com/link/159800/d076523b1d) – 快速生成 [Fastify](https://javascriptweekly.com/link/159801/d076523b1d) 项目。只需“npm init fastify app\_name”即可开始。
+
+* [文件类型 19.5](https://javascriptweekly.com/link/159802/d076523b1d) – 检测文件、流或数据的文件类型。现已支持 WebVTT。
+
+* [TWGL.js 6.1](https://javascriptweekly.com/link/159803/d076523b1d) – 用于使用 JS 的低级 WebGL 的帮助程序。
+
+* 🎨 [Chroma.js 3.1](https://javascriptweekly.com/link/159804/d076523b1d) – JavaScript 颜色操作库。
+
+* [Pixi.js 8.4](https://javascriptweekly.com/link/159805/d076523b1d) – 快速、灵活的 2D WebGL 渲染器。
+
+由 [Cooperpress](https://cooperpress.com/) 出版，由 [Peter Cooper](https://javascriptweekly.com/link/159806/d076523b1d) 编辑
+
+“JavaScript”是 Oracle Corporation 在美国的商标\
+我们未获得 Oracle 的认可或隶属于 Oracle。
+
+
