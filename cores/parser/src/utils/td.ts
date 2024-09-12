@@ -1,8 +1,7 @@
-import turndownService from './turndown.es';
-import TurnDown, { type Options, type Node, type Rule } from 'turndown';
+import TurnDown, { type Options, type Node, type Rule } from '@email.reciever/turndown';
 
 // https://mixmark-io.github.io/turndown/
-const td = turndownService as unknown as typeof TurnDown;
+const td = TurnDown;
 
 export { td };
 

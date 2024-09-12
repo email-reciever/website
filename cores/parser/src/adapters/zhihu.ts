@@ -74,11 +74,17 @@ async function getUserLatestArticals(userId: Users, metadata: string[], env: Env
 	try {
 		const {
 			rss: { channel },
-		} = await fetch(`${host}${ZHROUTE.posts}/${userId}`)
+		} = await fetch(`${host}${ZHROUTE.posts}/${userId}`, {
+			headers: {
+				Cookie: env.ZHIHU_COOKIE,
+				...mockHeaders,
+			},
+		})
 			.then((r) => r.text())
 			.then((xml) => new XMLParser().parse(xml) as { rss: Rss });
 
 		const { item } = channel;
+		console.log(item, metadata, userId);
 		// use metadata filter exits artical
 		const updateArticals = item.filter((v) => !metadata.includes(v.title) && (breakPoint[2] as RegExp).test(v.title));
 
@@ -114,7 +120,6 @@ export const zhihu: Adapter = async (text, html, headers, env) => {
 			metaData[user] = [...(metaData[user] ?? []), ...updateFiles];
 		}
 	}
-
 	// update metadata file
 	if (shouldUpdate) {
 		await setMetaData('zhihu', metaData, env, sha);

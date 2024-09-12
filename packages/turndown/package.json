@@ -1,0 +1,37 @@
+{
+  "name": "@email.reciever/turndown",
+  "private": true,
+  "description": "A library that converts HTML to Markdown. [Copy only for self use.]",
+  "version": "7.2.0",
+  "author": "Dom Christie",
+  "main": "./dist/turndown.umd.js",
+  "module": "./dist/turndown.mjs",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@mixmark-io/domino": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/turndown": "^5.0.5",
+    "standard": "^10.0.3",
+    "turndown-attendant": "0.0.3",
+    "vite": "^5.4.1"
+  },
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "keywords": [
+    "converter",
+    "html",
+    "markdown"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mixmark-io/turndown.git"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  }
+}

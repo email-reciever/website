@@ -2,7 +2,10 @@ import { html2md } from '../utils/html2md';
 import { Adapter } from '../types';
 
 export const others: Adapter = (text, html, headers) => {
-	const { md } = html2md(html);
+	const nextOrigin = headers?.find?.((v) => 'nextOrigin' in v) ?? {};
+	const { md } = html2md(html, {
+		...nextOrigin,
+	});
 	// slice content from the main things to sports
 	const startCharactor = headers?.find?.((v) => 'startMark' in v);
 	const startIndex = (startCharactor?.startMark && md.indexOf(startCharactor.startMark)) || 0;
