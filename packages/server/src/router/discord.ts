@@ -134,8 +134,11 @@ export const discord: RouterMiddleware<'/discord'> = async (ctx) => {
     )?.name
 
     const messagePayload: WebhookMessageCreateOptions = {
-      embeds: [embed],
-      components: [actionRow]
+      embeds: [embed]
+    }
+
+    if (withoutTIDLabels?.length) {
+      messagePayload.components = [actionRow]
     }
 
     // if labeled. find tag prefix with  ti:thread_id (the first label must be ti:)
