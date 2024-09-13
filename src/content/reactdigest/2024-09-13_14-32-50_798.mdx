@@ -1,0 +1,93 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#473 Create a Toggle Switch
+description: RD#473 Create a Toggle Switch
+date: 星期五 02 下午 九月 13o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/create-toggle-switch
+origin_site: https://newsletter.reactdigest.net/p/create-toggle-switch
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#473 Create a Toggle Switch" url="https://newsletter.reactdigest.net/p/create-toggle-switch" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UuwS913DaNnC9Pm66va2xTRyX6YC9Loit18cm9U90BtxcaWwYIKep2Ob3oe5Z1rVz_34sU-yzsAvjZO5p4d7Ys5bsLtqTdhj1DqS3TOkzYVKYzZSrUQo5KMOQRtV60Gnv232BZO6h7h5NjOlIfUIT_lxJtav5W_tLuH8zIVlElAjBAwmvfTeZgO9ew9s40W-em6MWYhP7s7F5Pn3PVIHsuUWTKioO9ZRlUYYT2ni9Bwkh56Sy1ZlQ63IkUpQOVudajm2Y_JHibQIOUFEumuc7Z4WtHrFjEQkrJbrgON5cQYsaAbA80VDHwcQOsmKxC9A-79PvF1zbyLVUGQiMQyjWRfnU3qL2ttyIBWPKTQ4lIFtKLvsdb5U3rt7_7S-NMmL8JdG8hiVpwFT6E6vVO7L4L5eGD7RdfP4tN-8UgDSvmerujFbA6uk2OWw90mZrKldWwweIfzI-fw9vmq8xkq8PXKNXIDxx9mCtuaqTBL3H-OVsr359RwXpPk3z2yrPBrZ32YGFBdrL7ZmPFEFMiVNF4QF5tULRDcFOENk5SecCxI5e-rwQHEA5poue0yAiuM9k6cJni40aU0hLWQFQ8m8fr0d4w347B3kGeHQgeZMT8aFQo91K-GYaoQ4rqjGfx_Ob-996sW8lwjPGb3mKYcOoA/49q/LmK31EiKSoCm4c3in-_VmA/h0/h001.tKYucXWsxJMn92uwv5JIppAgPYUCmIEnIhNxMsUlx-A)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/49q/LmK31EiKSoCm4c3in-_VmA/ho.gif)
+
+[Create a Toggle Switch as a Reusable Component](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqf3123FxAOjHAoPC8ylrL2cK6PYEfJ1ofBterScF5rpCkehtjyNfST7OwRLD9Q0mUqd_OT2Akqvog9YHSwIY7EeLl73S8FTG0pM0Mh3pASgw4osKIxEEPLmi-Ak71a6OYI0ijOp00jX88e1P6LIBhZ-aer1rcciPZwQrcgL1mZmsgygglBljzzSMVqb-GcH-z9Y8wSYy8swKYt2-l1cWS8FPuXtoUDQx6aZRzu6hlZ2UWJtMTqLK5s5zE4UFmMYG_I40NUHVOdxbc1u5U-L4pMg/49q/LmK31EiKSoCm4c3in-_VmA/h1/h001.RT3ROmPctz_GbPSl6oQ-_3V_UAv2_dpTAC6cZbMIrks)  
+_20 minutes_ by Praveen Kumar
+
+Learn how to create an iOS-inspired toggle switch using React components, building a simple demo React App for using this custom toggle switch component.
+
+[Enhance React Performance with End-to-End Monitoring and Insights](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfUXhozX8z1JImqztcl4IkczQ-mEQF44w_uyAHpGIEBt858msTS-_E2x-8jyx8OqZZk2akH08tJilWNatqAePTuhwzrv2Oa9o63l19sUVWQlz4xYqOdFdeF6RHp2kG5RgIReI1hvv7_70S88PQcED_jDuDxgYLGhO78C1k9zUKeZrcsEJRBc9M5ymjtZdS4qStIyU6MpxBjc_cV_uQsCdV4I-SvT9ioADEZV_bKTR6UOapH4_PQKpGNPyPf3gBPMybA6rUjHtwaVl8hU8xDwTNAD7ZlFgSVyUJehl8aYW8gj/49q/LmK31EiKSoCm4c3in-_VmA/h2/h001.y6lxNDDnU_vP8INTqAzmlZbcr1ICrCzSI8maqivfP7g)  
+_sponsored by Datadog_
+
+Monitor React to identify performance bottlenecks, track and visualize user journeys across your entire stack, and resolve issues with a comprehensive view of user experience data—all within one unified platform.
+
+[React and FormData](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvtswBk-hMELUbzBdd2Qx-J6Fv4QW5TvMXquvyliIfM5hZ_zJ-ZpXDsmIV9FPmwihu7AJjSmJWwuS2THtgeJBPI_VPoGXB2HQtbC1CdsBZURnTX1iuuXLvyDx--N5fCIP78NHAJiOBI3V-ze-YuySEybB_lftIZ_EqRJeTRBctpOngA3vuXAvxVtTMZSs5fXODdQg7eLJP9Om005dRQsPkhqwYE6QiAW4fQhBCw4jmBHaMjli--I74pbuyIrOomsbxQ/49q/LmK31EiKSoCm4c3in-_VmA/h3/h001.xyMKMNQ2tjTCIHW41yTRWwFA4eOcDrCLTxj5hq8CWNc)  
+_4 minutes_ by Brad Westfall
+
+Learn React's newest and yet oldest standard for accessing form data, and the tricks to use it with TypeScript.
+
+[JSX Evolved: The React Server Components](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfUHjgdD9KJoBTmEARdkpjU0tf_i3KnNGsR8--GwuNdUZd7r0L5qJdiNLTU76o28XsLNWEuqfMIEB1VAq0KGTDqjJeERPq6Y1rAZ06ASfTxrIpwb5GEk8MDEK2UIFGIA9_v3ZuciWEUvaRS66AqjaL6KmibFwAZt9kpLjBbctnbDvfQXafNmtBYbqLauvYHjT6qO6Xq2RP6SZFXbq3HYtVIWWR2bPd_fGZjDlqHW395emMOrgYDehaZLYL8V1bD1GFU5QpqYn_BtWJqUs0sU3Okr2S6jErpIyIP76TLoJklD/49q/LmK31EiKSoCm4c3in-_VmA/h4/h001.cjLjyA8oFZzeR-IUwxRY2nU1LGK8RKU3Zpr0SDQVf88)  
+_16 minutes_ by Mensur Durakovic
+
+In this blog post, Mensur explains how React's rendering has changed over time.
+
+[Search Params in Next.js for URL State](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zKgswDCmR15ksRTg3F4v32AcgmKwABAaa3bKvV_lS_CqhAFVAjhzLT0TpV4wtfsQH-0JWTDY05DJzuYzaCRaeu4l4bjKsrAeS0CaE_uwU8ZXcTaXephl0E0m4-obfHwe5p6gAXAqgXrj8ydFOvpb1L9Cur2x8lnpFI0QwapC3xkuvD1Ipxfz7z5SWbwQqTf9KFqRyy769aL6LuYwjDOzrNiMBAzRQGFkbnlLQOY2PM8rw/49q/LmK31EiKSoCm4c3in-_VmA/h5/h001.pxM1NWLFYUyYgMUQ8KzoC6rHT7Md4e-GEexSDgZX1KI)  
+_19 minutes_ by Robin Wieruch
+
+This tutorial demonstrates how to update and read URL parameters, use typed search params, and implement debouncing for better performance. It also highlights the benefits of storing application state in the URL for easy sharing and bookmarking.
+
+[Replacing React code with CSS :has selector](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqaLHy8G_Zejf_j1U5B-_Zp1Ua5vQqUTKV3LVjP-2AYsZ5N84eNlL_j2dtZeQ-4F2nqIrygl3y0DT-3Gmqw0ZechFns-LLmzoeFDHHmOtS7h-xZUl-6vntWXr8JthBby-1AgtPmPJbxNUztfU9utM306D0_1SNkTa1puAX1ouZ5IxSuWmMq-udtOsWuWCB0tvbWwM_xvuO9X6iJl1kxv4FXK0yvPCKbQHd5ZEJctx4DEVNVezN5_42w1VqEFE9XGoD7LLI4pebpQwaFw2MbpBN5M/49q/LmK31EiKSoCm4c3in-_VmA/h6/h001.2zHh4CSMoli6EBa9-IVmP7kppwYk1O92GoV_K5FBCPc)  
+_10 minutes_ by Nadia Makarevich
+
+Looking into what the new CSS :has selector is and how it can be used to improve our React code. Includes practical and beautiful examples.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UuwS913DaNnC9Pm66va2xTRyX6YC9Loit18cm9U90BtxcaWwYIKep2Ob3oe5Z1rVz\_3 4sU-yzsAvjZO5p4d7Ys5bsLtqTdhj1DqS3TOkzYVKYzZSrUQo5KMOQRtV60Gnv232BZO6h7h5NjOlIfUIT\_lxJtav5W\_tLuH8zIVlElAjBAwmvfTeZgO9ew9s40W-em6MWYhP7s7F 5Pn3PVIHsuUWTKioO9ZRlUYYT2ni9Bwkh56Sy1ZlQ63IkUpQOVudajm2Y\_JHibQIOUFEumuc7Z4Wt HrFjEQkrJbrgON5cQYsaAbA80VDHwcQOsmKxC9A-79PvF1zbyLVUGQiMQyjWRfnU3qL2ttyIBWPKT Q4lIFtKLvsdb5U3rt7\_7S-NMmL8JdG8hiVpwFT6E6vVO7L4L5eGD7RdfP4tN-8UgDSvmerujFbA6uk2OWw90mZrKldWwweIfzI-fw9vmq8xkq8PXKNXIDxx9mCtuaqTBL3H-OVsr359RwXpPk3 z2yrPBrZ32YGFBdrL7ZmPFEFMiVNF4QF5tULRDcFOENk5SecCxI5e-rwQHEA5poue0yAiuM9k 6cJni40aU0hLWQFQ8m8fr0d4w347B3kGeHQgeZMT8aFQo91K-GYaoQ4rqjGfx\_Ob-996sw8lw jPGb3mKYcOoA/49q/LMK31EiKSoCm4c3in-\_VmA /h0/h001.tKYucXWsxJMn92uwv5JIppAgPYUCmIEnIhNxMsUlx-A)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/49q/LmK31EiKSoCm4c3in-_VmA/ho.gif)
+
+\[创建切换开关作为可重用组件]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqf3123FxAOjHAoPC8ylrL2cK6PYEfJ1ofBterScF5rpCkehtjyNfST7OwRLD9Q0mUqd\_OT2Akqvog 9YHSwIY7EeLl73S8FTG0pM0Mh3pASgw4osKIxEEPLmi-Ak71a6OYI0ijOp00jX88e1P6LIBhZ-aer1rcciPZwQrcgL1mZmsgygglBljzzSMVqb-GcH-z9Y8wSYy8swKYt2-l1cWS8FPuXtoUDQx6a ZRzu6hlZ2UWJtMTqLK5s5zE4UFmMYG\_I40NUHVOdxbc1u5U-L4pMg/49q/LmK31EiKSoCm4c3in-\_VmA/h1 /h001.RT3ROmPctz\_GbPSl6oQ-\_3V\_UAv2\_dpTAC6cZbMIrks)\
+*20 分钟* 由 Praveen Kumar
+
+了解如何使用 React 组件创建受 iOS 启发的切换开关，构建一个简单的演示 React 应用程序以使用此自定义切换开关组件。
+
+\[通过端到端监控和洞察增强 React 性能]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfUXhozX8z1JImqztcl4IkczQ-mEQF44w\_uyAHpGIEBt858msTS-\_E2x-8jyx8OqZZk2ak H08tJilWNatqAePTuhwzrv2Oa9o63l19sUVWQlz4xYqOdFdeF6RHp2kG5RgIReI1hvv7\_7 0S88PQcED\_jDuDxgYLGhO78C1k9zUKeZrcsEJRBc9M5ymjtZdS4qStIyU6MpxBjc\_cV\_uQ sCDV4I-SvT9ioADEZV\_bKTR6UOaPH4\_PQKpGNPyPf3gBPMybA6rUjHtwaVl8hU8xDwTNAD7ZlFgSVyUJehl8aYW8gj/49q/LmK31EiKSoCm4c3in-\_VmA/h2 /h001.y6lxNDDnU\_vP8INTqAzmlZbcr1ICrCzSI8maqivfP7g)\
+*由Datadog赞助*
+
+监控 React 以识别性能瓶颈，跟踪和可视化整个堆栈中的用户旅程，并通过全面的用户体验数据视图解决问题——所有这些都在一个统一的平台上进行。
+
+\[React 和 FormData]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvtswBk-hMELUbzBdd2Qx-J6Fv4QW5TvMXquvyliIfM5hZ\_zJ-ZpXDsmIV9FPmwihu7AJjSmJWwuS2THtgeJBPI\_VPoGXB 2HQtbC1CdsBZURnTX1iuuXLvyDx--N5fCIP78NHAJiOBI3V-ze-YuySEybB\_lftIZ\_EqRJeTRBctpOngA3vuXAvxVtTMZSs5fXODdQg7eLJP9Om005dRQsPkhqwYE6QiaW4fQhBCw4j mBHaMjli--I74pbuyIrOomsbxQ/49q/LmK31EiKSoCm4c3in-\_VmA/ h3/h001.xyMKMNQ2tjTCIHW41yTRWwFA4eOcDrCLTxj5hq8CWNc)\
+*4 分钟* 布拉德·韦斯特福尔
+
+了解 React 访问表单数据的最新但最古老的标准，以及将其与 TypeScript 结合使用的技巧。
+
+\[JSX 演变：React 服务器组件]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfUHjgdD9KJoBTmEARdkpjU0tf\_i3KnNGsR8--GwuNdUZd7r0L5qJdiNLTU76o28XsLNWEuqfMIEB1VA q0KGTDqjJeERPq6Y1rAZ06ASfTxrIpwb5GEk8MDEK2UIFGIA9\_v3ZuciWEUvarRS66AqjaL6Kmib FwAZt9kpLjBbctnbDvfQXafNmtBYbqLauvYHjT6qO6Xq2RP6SZFXbq3HYtVIWWR2bPd\_fGZjDlq HW395EMMORGYDehaZLYL8V1bD1GFU5QpqYn\_BtWJqUs0sU3Okr2S6jErpIyIP76TLoJklD/49q/LmK31EiKSoCm4c3in-\_VmA/h4/h001.cjLjyA8oFZzer-IUwxRY2nU1LGK8RKU3Zpr0 SDQVf88)\
+*16 分钟* 由门苏尔·杜拉科维奇 (Mensur Durakovic)
+
+在这篇博文中，Mensur 解释了 React 的渲染如何随着时间的推移而变化。
+
+\[在 Next.js 中搜索参数以获取 URL 状态]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf\_qUprM09yoMPtF27zKgswDCmR15ksRTg3F4v32AcgmKwABAaa3bKvV\_lS\_CqhAFVAjhzLT0TpV4wt fsQH-0JWTDY05DJzuYzaCraeu4l4bjKsrAeS0CaE\_uwU8ZXcTaXephl0E0m4-obfHwe5p6gAXAqgXrj8ydFOvpb1L9Cur2x8lnpFI0QwapC3xkuvD1Ipxfz7z5SWbwQqTf9KFqRyy769aL6LuY wjDOzrNiMBAzRQGFkbnlLQOY2PM8rw/49q/LmK31EiKSoCm4c3in-\_VmA/h5/h001.pxM1NWLFYUyYgMUQ8KzoC6rHT7Md4e-GEexSDgZX1KI) \
+*19 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+本教程演示如何更新和读取 URL 参数、使用类型化搜索参数以及实现去抖动以获得更好的性能。它还强调了在 URL 中存储应用程序状态以方便共享和添加书签的好处。
+
+\[用 CSS :has 选择器替换 React 代码]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqaLHy8G\_Zejf\_j1U5B-\_Zp1Ua5vQqUTKV3LVjP-2AYsZ5N84eNlL\_j2dtZeQ-4F2nqI rygl3y0DT-3Gmqw0ZechFns-LLmzoeFDHHmOtS7h-xZUL-6vntWXr8JthBby-1AgtPmPJbxN UztfU9utM306D0\_1SNkTa1puAX1ouZ5IxSuWmMq-udtOsWuWCB0tvbWwM\_xvuO9X6iJl1kxv4 FXK0yvPCKbQHd5ZEJctx4DEVNVezN5\_42w1VqEFE9XGoD7LLI4pebpQwaFw2MbpBN5M/49q /LmK31EiKSoCm4c3in-\_VmA/h6/h001.2zHh4CSMoli6EBa9-IVmP7kppwYk1O92GoV\_K5FBCPc)\
+*10 分钟* 纳迪亚·马卡列维奇
+
+研究新的 CSS :has 选择器是什么以及如何使用它来改进我们的 React 代码。包括实用且美观的示例。
+
+#
+
+
