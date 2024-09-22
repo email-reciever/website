@@ -1,0 +1,93 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#473 Clean React with TypeScript
+description: RD#473 Clean React with TypeScript
+date: 星期日 06 晚上 九月 22o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/clean-react-with-typescript
+origin_site: https://newsletter.reactdigest.net/p/clean-react-with-typescript
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#473 Clean React with TypeScript" url="https://newsletter.reactdigest.net/p/clean-react-with-typescript" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UhOcsoIC_6c9yzffNGlD1cR8PMi7a6dq2XmaDPW3MJwUxr6Gmrxclh_x6tX9MIYHvm4itgjeYmfPltGhe5JBsJWNN1qgkktV76WAKchttCi3lILiZ7KOgDTY4DFfwinTQXhyM-yYFhp8eHI9C4zqkR1eBqeSFzM71Ni0snfIKjZVPUCOWOI8IYUyTQ8KlujqtEBX8GkKZ3HaWi_ZchDc5eKCIOdTJqk66e6bRt3iDaG-_m4obSIMNAycRC4ioPGx_lD4Cm7GKRBddxKWvn4BczB-k38giaKIQlv7iILmsrwq_ne_mSlczxuIKrSCrWfVD4z-jOmyBAMOSgqBdkeGTFQTlJrL3qbGoBt9VtCK9-kRyJKY6OHvlLGP1ZEiPs6AiEfvBKGVfRlxqKWibMuVcUm4rUBjLGsFW13blope_R_3EJiUA5ORvdyvOM6N_9O7-EMOZu0unRPHnKbTq_XhCmWci7OjFF9fuFJmKxIs9P-uVfnNxz9XJi9fr0rRyHgwC9Q3MEmrrX6l78z06_xMr7qA-1pLqMwzi1-9nvkezyEjm92fCWY0EPX7WXB-nvXCl9iZBfgKtXVaOgANh8ue1L3DbD19D1qSV3bSde7XCSv56awShxoXGH3AXzNrzf67Y6y_qNhHGtloePDLXV_WWS-3PtbFI8EDhRP9YyFvyZtSXJyW_mtVSkCU1XqTKMP5AiIGYuoE4-oND12QajMGkPlb03ekFkqrpzKVl33uU_AEQ76yi1BhWghEE4KdWneR69iciK-RZMmSoEZUYG3RI1/49z/QOZvl02pR423rtPv9b0RIg/h0/h001.-AXFQPR4IaRBrpbMteiUD5uffWg3ioswpBDF4IX6eqg)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/49z/QOZvl02pR423rtPv9b0RIg/ho.gif)
+
+[Clean React with TypeScript](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZ_QBnMxXDCICkGOVudtIts3H_8SgXKUAZpvPcSyLBy5oKtR18MOKQkiBx6NA-QL-Ms7z2W0U2COgbjfPX9Q2dHax8O57Nt_Owz-yG5FCoLIbL0H3Zdx9lcnO6tmbE8_gK-Figky6Dzb2g1Wj8qEcWUSxJLLnm3VFt8QbvMUqoQajmH97eJKNpnbbGCgoPDF60DTFtkuAwYPfcc7IqknYMXK90NHssAgCvzqGneMaUk4MCCKJjO62Hh5iNrLKt1V4Q/49z/QOZvl02pR423rtPv9b0RIg/h1/h001.hpFjlpZKF1RcUSrbfOBerL_-1E9aTs_EwQ5XcBQvszk)  
+_14 minutes_ by Robin Weser
+
+Exploring common React features and patterns and how to seamlessly integrate them with TypeScript. The article explains how to properly type React components, use built-in React types, handle props and children, manage state with hooks, work with refs, and handle events.
+
+[How to measure React component usage by your devs](https://link.mail.beehiiv.com/ss/c/u001.GyLXS_kgZ_zhliVlX2b_SWCnHaEmu0ZUjW34u1J7dvkG4olRn3Sz0yD_F5iiryaJOSEKB1qmku6M6Vt4FBtbuMJ3-9PqtfpCAVa34jsF4x-8vdvdvjko09rI6qtEGZakLPWaWuPXYmyrWklIipBofQagni0qAceJ3N954KblgkOWQhVqGPmbbSg8nmMV5G3W/49z/QOZvl02pR423rtPv9b0RIg/h2/h001.ewkGLC5tBWsyYkGu5H25T71LD4jl6PF_6dwnJHrAqNU)  
+_sponsored by Omlet_
+
+Omlet is a new tool to measure component (and prop) usage in your codebase. Identify which components to improve or deprecate. Increase code quality and consistent component adoption across your team.
+
+[SPA Lazy Loading Pitfalls](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvtswBk-hMELUbzBdd2Qx-J4sn0yMdf80JNzCMp2uMMAwXDuZDbh3Cz74IIpWOq8QJs7QylRNpUinLbudCMEWG_o4U8YTV91-5AfmFbB0jrlJgZMGpQ14_7e-1J6nDsCPD52XXcJmPdJ3ILOXT8Dec_2E9VMBZrExenWtCkFU63XCPN07RuRRnu5B97tUkuajXsS8P2VpBnFjD0h--690JIGW0c-pd9nzo6cMj1n9ctOtX6aRHM_dh6j-KvgfSybg_BVj2IexjisMFQQtCPtozL0/49z/QOZvl02pR423rtPv9b0RIg/h3/h001.4R9kfyzxqALT3r0PTl3rBcPsOBLiTayMVAkrlXJW-1g)  
+_5 minutes_ by Brad Westfall
+
+You should be lazy loading some of your routes. And if you are, you're probably messing up the data-fetching because it's an easy mistake to make.
+
+[Content Layer: A Deep Dive](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw6K_NP20TtQlwZhGPkOShC4JIh-EgNrSNhsHzcAJoUIbcOAHWEUgy6j-F43NmzO-QPfEwPu6U7r-oo0TXxaXuCwnCqtHVtwgQhb4fnOaHajKSACZntQU0-8D_0YvOcn31shO5NkZ591mbYtLqxk2ROJD675VvrkjqINJEbSdXrGJp-rI_fVCIINl6o28kMVptZPSSZBK3eG0UfX9K1ch4FGCvwYRvIcNgPjLz-06C1ONbiVIcuGmxdhFs6K0Q3j8Pg/49z/QOZvl02pR423rtPv9b0RIg/h4/h001.XyLYf5vfQy0xx8WCFSDf6V01aY23Jmkd9ruK_k7Lbo0)  
+_11 minutes_ by Matt Kane
+
+There's a new way to handle content in Astro. Take a deep dive into the Content Layer API, and learn how it can help you build even more kinds of sites using Astro.
+
+[Using callbacks to achieve better component decoupling](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVcmnrlVE51-ilr5V5Vu8zckDt2lBWYMOxJn-IxaMtcw4rIZi8eJgJQ_Qu3O0m6HTaGJCdU_ZwJmgPlOwdcy4hDJld1NAOOngMdHTLtOgJrnWZsHGi4iee4OXdyRWhzTQIk14xt-yq3OcC4jKpvn3-KhJ1W9_jMOQKcRzVFjiPwQwzHwwz0Zbs-3a2F8kR3qZP0r9sDR21N2x4Aci9tJbNnJphKZjbH2VDkrMbn50Zp-D9PXNYm14oYzcxxifSBPhYQ/49z/QOZvl02pR423rtPv9b0RIg/h5/h001.-mUZp-tlXzcl68JiFj_A-fRa2EIFzSwTYO1FwmyUVhc)  
+_3 minutes_ by Dario Djuric
+
+Decouple React components effectively by passing functions the right way, creating more testable and maintainable code.
+
+[How Infinite Queries work](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgFz-vghig9kDerXFm7_WUFWvqNOHIZ3SZyN53VLyoPbSQnvBbm6FQFSO7htZiS-Col8CbSSZuxAytRYGwpuiuyt2M2FGb6ORUGzaLtO1U8grgF9tlhxcNh-gxPTWLmmUHmFhTS-urlC-2auUWKjSaPkruVcxd2U_i6GYwTh7WzWiHXlDA-6pVk_G8FilIby5eCjmbAmHQBRSjZcmy7vRdcv_C3Qv7oKsJZ0ke3J8rqVOpZmwHXrFSWcbYhY1lXoFFzg/49z/QOZvl02pR423rtPv9b0RIg/h6/h001.4xth5bX7qeJLgAvCnLwsI_d9YxmDrzSClwvM887knVc)  
+_7 minutes_ by T.K.Dodo
+
+Infinite queries are React Query's way to make those doom-scrolling pages we all hate so much somewhat simple to implement. In many ways, they are identical to single queries.
+
+#
+</Detail>
+
+\[Read Online]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UhOcsoIC\_6c9yzffNGlD1cR8PMi7a6dq2XmaDPW3MJwUxr6Gmrxclh\_x6tX9MIYHvm4itgjeYmfPltGhe5JBsJWNN1qgkktV76WAKchttCi3lILiZ7KOgDTY4DFfwinTQXhyM-yYFhp8eHI9C4zqkR1eBqeSFzM71Ni0snfIKjZVPUCOWOI8IYUyTQ8KlujqtEBX8GkKZ3HaWi\_ZchDc5eKCIOdTJqk66e6bRt3iDaG-\_m4obSIMNAycRC4ioPGx\_lD4Cm7GKRBddxKWvn4BczB-k38giaKIQlv7iILmsrwq\_ne\_mSlczxuIKrSCrWfVD4z-jOmyBAMOSgqBdkeGTFQTlJrL3qbGoBt9VtCK9-kRyJKY6OHvlLGP1ZEiPs6AiEfvBKGVfRlxqKWibMuVcUm4rUBjLGsFW13blope\_R\_3EJiUA5ORvdyvOM6N\_9O7-EMOZu0unRPHnKbTq\_XhCmWci7OjFF9fuFJmKxIs9P-uVfnNxz9XJi9fr0rRyHgwC9Q3MEmrrX6l78z06\_xMr7qA-1pLqMwzi1-9nvkezyEjm92fCWY0EPX7WXB-nvXCl9iZBfgKtXVaOgANh8ue1L3DbD19D1qSV3bSde7XCSv56awShxoXGH3AXzNrzf67Y6y\_qNhHGtloePDLXV\_WWS-3PtbFI8EDhRP9YyFvyZtSXJyW\_mtVSkCU1XqTKMP5AiIGYuoE4-oND12QajMGkPlb03ekFkqrpzKVl33uU\_AEQ76yi1BhWghEE4KdWneR69iciK-RZMmSoEZUYG3RI1 /49z/QOZvl02pR423rtPv9b0RIg/h0/h001.-AXFQPR4IaRBrpbMteiUD5uffWg3ioswpBDF4IX6eqg)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/49z/QOZvl02pR423rtPv9b0RIg/ho.gif)
+
+\[使用 TypeScript 清洁 React]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZ\_QBnMxXDCICkGOVudtIts3H\_8SgXKUAZpvPcSyLBy5oKtR18MOKQkiBx6NA-QL-Ms7z2W0U2COgbjfPX9Q 2dHax8O57Nt\_Owz-yG5FCoLIbL0H3Zdx9lcnO6tmbE8\_gK-Figky6Dzb2g1Wj8qEcWUSxJLLnm 3VFt8QbvMUqoQajmH97eJKNpnbbGCgoPDF60DTFtkuAwYPfcc7IqknYMXK90NHssAgCvzqGneMa UK4MCCKJjO62Hh5iNrLKt1V4Q/49z/QOZvl02pR423rtPv9b0RIg/h1/h001.hpFjlpZKF1RcUSrbfOBerL\_-1E9aTs\_EwQ5XcBQvszk)\
+*14 分钟* 罗宾·威悉 (Robin Weser)
+
+探索常见的 React 功能和模式以及如何将它们与 TypeScript 无缝集成。本文介绍了如何正确键入 React 组件、使用内置 React 类型、处理 props 和 child、使用 hooks 管理状态、使用 ref 以及处理事件。
+
+\[如何衡量开发人员的 React 组件使用情况]\(https://link.mail.beehiiv.com/ss/c/u001.GyLXS\_kgZ\_zhliVlX2b\_SWCnHaEmu0ZUjW34u1J7dvkG4olRn3Sz0yD\_F5iiryaJOSEKB1qmku6M6Vt4FBtbuMJ3-9PqtfpCAVa34 jsF4x-8vdvdvjko09rI6qtEGZakLPWaWuPXYmyrWklIipBofQagni0qAceJ3N954KblgkOWQhVqGPmbbSg8nmMV5G3W/49z/QOZvl02pR423rtPv9b0RIg/h2/h001.ewkGLC5tBWsyYkGu5H2 5T71LD4jl6PF\_6dwnJHrAqNU)\
+*由欧姆莱特赞助*
+
+Omlet 是一个新工具，用于测量代码库中组件（和 prop）的使用情况。确定要改进或弃用哪些组件。提高整个团队的代码质量和一致的组件采用率。
+
+\[SPA 延迟加载陷阱]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvtswBk-hMELUbzBdd2Qx-J4sn0yMdf80JNzCMp2uMMAwXDuZDbh3Cz74IIpWOq8QJs7QylRNpUinLbudCMEWG \_o4U8YTV91-5AfmFbB0jrlJgZMGpQ14\_7e-1J6nDsCPD52XXcJmPdJ3ILOXT8Dec\_2E9VMBZrExenWtCkFU63XCPN07RuRRnu5B97tUkuajXsS8P2VpBnFjD0h--690JIGW0c-pd9nzo6c Mj1n9ctOtX6aRHM\_dh6j-KvgfSybg\_BVj2IexjisMFQQtCPtozL0/49z/QOZvl02pR423rtPv9b0RIg/h3/ h001.4R9kfyzxqALT3r0PTl3rBcPsOBLiTayMVAkrlXJW-1g)\
+*5 分钟* 布拉德·韦斯特福尔
+
+您应该延迟加载某些路线。如果是的话，您可能会搞乱数据获取，因为这是一个很容易犯的错误。
+
+\[内容层：深入探讨]\(https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw6K\_NP20TtQlwZhGPkOShC4JIh-EgNrSNhsHzcAJoUIbcOAHWEUgy6j-F43NmzO-QPfEwPu6U7r-oo0TXxaXuC WnCqtHVtwgQhb4fnOaHajKSACZntQU0-8D\_0YvOcn31shO5NkZ591mbYtLqxk2ROJD675VvrkjqINJEbSdXrGJp-rI\_fVCIINl6o28kMVptZPSSZBK3eG0UfX9K1ch4FGCvwYRvIcNgP jLz-06C1ONbiVIcuGmxdhFs6K0Q3j8Pg/49z/QOZvl02pR423rtPv9b0RIg/h4/h001 .XyLYf5vfQy0xx8WCFSDf6V01aY23Jmkd9ruK\_k7Lbo0)\
+*11 分钟* 马特·凯恩
+
+Astro 中有一种处理内容的新方法。深入研究内容层 API，了解它如何帮助您使用 Astro 构建更多类型的网站。
+
+【利用回调实现更好的组件解耦】(https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu\_fY2A1vmVcmnrlVE51-ilr5V5Vu8zckDt2lBWYMOxJn-IxaMtcw4rIZi8eJgJQ\_Qu3O0m6HTaGJCdU\_Zw JmgPlOwdcy4hDJld1NAOOngMdHTLtOgJrnWZsHGi4iee4OXdyRWhzTQIk14xt-yq3OcC4jKpvn3-KhJ1W9\_jMOQKcRzVFjiPwQwzHwwz0Zbs-3a2F8kR3qZP0r9sDR21N2x4Aci9tJbN nJphKZjbH2VDkrMbn50Zp-D9PXNYm14oYzcxxifSBPhYQ/49z/QOZvl02pR423rtPv9b0RIg/h5/h001 .-mUZp-tlXzcl68JiFj\_A-fRa2EIFzSwTYO1FwmyUVhc)\
+*3 分钟*达里奥·朱里克 (Dario Djuric)
+
+通过以正确的方式传递函数来有效地解耦 React 组件，创建更多可测试和可维护的代码。
+
+\[无限查询的工作原理]\(https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgFz-vghig9kDerXFm7\_WUFWvqNOHIZ3SZyN53VLyoPbSQnvBbm6FQFSO7htZiS-Col8CbSSZuxAytRYGwpuiuyt 2M2FGb6ORUGzaLtO1U8grgF9tlhxcNh-gxPTWLmmUHmFhTS-urlC-2auUWKjSaPkruVcxd2U\_i 6GYwTh7WzWiHXldA-6pVk\_G8FilIby5eCjmbAmHQBRSjZcmy7vRdcv\_C3Qv7oKsJZ0ke3J8rqVO pZmwHXrFSWcbYhY1lXoFFzg/49z/QOZvl02pR423rtPv9b0RIg/h6/h001.4xth5bX7qeJLgAvCnLwsI\_d9YxmDrzSClwvM887knVc)\
+*7 分钟* T.K.Dodo
+
+无限查询是 React Query 的一种方式，它可以让那些我们都讨厌的滚动页面变得简单一些。在许多方面，它们与单个查询相同。
+
+#
+
+
