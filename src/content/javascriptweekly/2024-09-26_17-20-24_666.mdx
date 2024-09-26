@@ -1,0 +1,304 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Deno gets even better
+description: Deno gets even better
+date: 星期四 05 下午 九月 26o 2024
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/706
+origin_site: https://javascriptweekly.com/issues/706
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Deno gets even better" url="https://javascriptweekly.com/issues/706" />
+
+<Detail client:only="react">
+	#​706 — September 26, 2024
+
+[Read on the Web](https://javascriptweekly.com/issues/706)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/160339/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/iisfvhhppyzgklxe0ve7.jpg)](https://javascriptweekly.com/link/160340/d076523b1d)
+
+[Deno 2.0 Release Candidate](https://javascriptweekly.com/link/160340/d076523b1d "deno.com") — Deno started life as a manifestation of ideas that Node’s original creator, Ryan Dahl, had after his experiences with Node. Deno 2 is the next step: how the Deno team thinks _Deno_ should ultimately be. Many changes await: `window` is gone and Node’s `process` appears, dependency management has been improved, numerous APIs have gone stable (e.g. WebGPU), and both Node.js API and CommonJS support have continued to improve.
+
+Bartek Iwańczuk and Andy Jiang
+
+[Don't Sleep on `AbortController`](https://javascriptweekly.com/link/160341/d076523b1d "kettanaito.com") — [AbortController](https://javascriptweekly.com/link/160342/d076523b1d) is a broadly available mechanism for, originally, aborting Web requests on demand, but you can use it for a lot more than that (or _‘anything!’_, as Artem explains).
+
+Artem Zakharchenko
+
+[![](https://copm.s3.amazonaws.com/838fb753.png)](https://javascriptweekly.com/link/160339/d076523b1d)
+
+[Learn to Build Feature-Rich, Native Mobile Apps Using React Native and Expo](https://javascriptweekly.com/link/160339/d076523b1d "frontendmasters.com") — Join Kadi Kraman for a video course designed to hone your React skills. [Whether a beginner](https://javascriptweekly.com/link/160339/d076523b1d), or looking to [further refine your skill set](https://javascriptweekly.com/link/160344/d076523b1d), you'll learn to create practical iOS and Android apps, covering components, styling, UX, linting, async storage, animation, and much more.
+
+Frontend Masters sponsor
+
+[How Josh W. Comeau Rebuilt His Blog, App Router Style](https://javascriptweekly.com/link/160345/d076523b1d "www.joshwcomeau.com") — We’re huge fans of Josh’s blog and he’s just rebuilt it entirely using Next.js, MDX, Sandpack, and an array of other technologies. Here, he goes into great depth about what's involved. A good look behind the scenes of a modern React-driven project.
+
+Josh W Comeau
+
+**IN BRIEF:**
+
+*   🇪🇺 [NodeConf EU is back.](https://javascriptweekly.com/link/160346/d076523b1d) It takes place in Ireland this November 3-6.
+    
+*   🟨 It also appears [JSConf is coming back](https://javascriptweekly.com/link/160347/d076523b1d) under the care of the OpenJS Foundation.
+    
+*   📊 [Minification Benchmarks](https://javascriptweekly.com/link/160348/d076523b1d) is a frequently updated set of benchmarks for a suite of popular JavaScript minifiers.
+    
+*   🕹️ The most recent [JS13kGames](https://javascriptweekly.com/link/160349/d076523b1d) gamedev contest just ended. If you want to play the entries (or do some judging yourself) [they're all here.](https://javascriptweekly.com/link/160351/d076523b1d) I particularly liked [The Way of the Dodo](https://javascriptweekly.com/link/160352/d076523b1d) and [Deep13.](https://javascriptweekly.com/link/160353/d076523b1d)
+    
+
+**RELEASES:**
+
+*   [Bun v1.1.29](https://javascriptweekly.com/link/160354/d076523b1d) – Its C compilation feature gets N-API support, but is otherwise largely a bugfix release.
+    
+*   [Storybook 8.3](https://javascriptweekly.com/link/160355/d076523b1d) – A popular frontend component workshop is now using [Vitest](https://javascriptweekly.com/link/160356/d076523b1d) to rapidly speed up its component testing features.
+    
+*   [Strapi 5](https://javascriptweekly.com/link/160396/d076523b1d) – Popular open source headless CMS.
+    
+*   [Solid 1.9](https://javascriptweekly.com/link/160357/d076523b1d) – Declarative and performant reactivity for building UIs.
+    
+*   [PostgreSQL 17](https://javascriptweekly.com/link/160358/d076523b1d) – The popular database isn't a JavaScript project, but a lot of you will be using it. _Psst! We have [a Postgres newsletter too!](https://javascriptweekly.com/link/160359/d076523b1d)_
+    
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/chlinmw0zojpzgybvvjg.jpg)](https://javascriptweekly.com/link/160361/d076523b1d)
+
+[A Guide to Destructuring in JavaScript](https://javascriptweekly.com/link/160361/d076523b1d "piccalil.li") — The [destructuring assignment syntax](https://javascriptweekly.com/link/160362/d076523b1d) appeared in ES6 almost ten years ago and has become a central part of modern JavaScript development. This is a good primer/reminder of the potential.
+
+Mat Marquis
+
+[The Nine Node Pillars: Principles for Doing Node Right](https://javascriptweekly.com/link/160363/d076523b1d "www.platformatichq.com") — A group of prolific and productive Node.js contributors have put together a checklist to identify gaps in your current Node development practices, particularly when building large-scale apps.
+
+Snell, Venditto, Dawson, Collina, et al.
+
+[A Complete Guide to Session Management in Next.js](https://javascriptweekly.com/link/160364/d076523b1d "go.clerk.com") — Learn how integrating session management into your app provides robust security and enhances user experience.
+
+Clerk sponsor
+
+[What Are Durable Functions? A Visual JavaScript Primer](https://javascriptweekly.com/link/160365/d076523b1d "www.inngest.com") — This is rather dependent on what Inngest, a durable function service, offers, but is a good primer to the general idea which may well suit your use cases.
+
+Lydia Hallie (Inngest)
+
+[What's New in Express.js 5.0](https://javascriptweekly.com/link/160366/d076523b1d "www.trevorlasn.com") — Express.js 5.0 landed recently with rather brief release notes, so here's a deeper look at what it has to offer. The updates are largely incremental, but set the stage for Express’s future.
+
+Trevor I. Lasn
+
+[Angular Routing Essentials: Everything in One Post](https://javascriptweekly.com/link/160367/d076523b1d "monsterlessons-academy.com") — A bold claim, but it does a pretty good job.
+
+Oleksandr Kocherhin
+
+[Using Reddit's JSON API from a JavaScript App](https://javascriptweekly.com/link/160368/d076523b1d "www.honeybadger.io") — How to pull data from Reddit’s API and display it in a simple web application built with Parcel.
+
+Muhammed Ali
+
+📺 [Create a Donkey Kong Country-ish Platformer in JS](https://javascriptweekly.com/link/160369/d076523b1d) – We don’t see the DKC resemblance, but it’s a solid 4 hour screencast. Chris Courses
+
+📄 [Implementing a 'Like' Button without Authentication](https://javascriptweekly.com/link/160370/d076523b1d) Abhishek Saha
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/uplmoapeoegycrxoygzk.jpg)](https://javascriptweekly.com/link/160371/d076523b1d)
+
+[Schedule-X 2: A Modern Event Calendar Component](https://javascriptweekly.com/link/160371/d076523b1d "schedule-x.dev") — Available in the form of React/Preact, Vue, Svelte, Angular, or plain JS components. Open source but with a premium version with extra features. [GitHub repo.](https://javascriptweekly.com/link/160372/d076523b1d)
+
+Tom Österlund
+
+🧹 [Vue Mess Detector: Code and Quality Analysis for Vue Projects](https://javascriptweekly.com/link/160373/d076523b1d "vue-mess-detector.webmania.cc") — A static analysis tool that can catch various bugs and code quality issues in Vue-based projects, built atop rules from the [Vue.js Style Guide](https://javascriptweekly.com/link/160374/d076523b1d) and others. [GitHub repo.](https://javascriptweekly.com/link/160375/d076523b1d)
+
+Various Contributors
+
+[✂️ Cut Your QA Cycles Down from Hours to Minutes](https://javascriptweekly.com/link/160376/d076523b1d "www.qawolf.com") — [QA Wolf's](https://javascriptweekly.com/link/160376/d076523b1d) AI-native approach gets engineering teams to [80% automated end-to-end test coverage](https://javascriptweekly.com/link/160376/d076523b1d) and helps them ship 2x faster by reducing QA cycles from hours to minutes.
+
+QA Wolf sponsor
+
+[Tesseract.js: Pure JS OCR for 100+ Languages](https://javascriptweekly.com/link/160377/d076523b1d "tesseract.projectnaptha.com") — A port of the C++-based [Tesseract](https://javascriptweekly.com/link/160378/d076523b1d) library commonly used for extract text from images. The homepage has a live demo where you can drop your own images. [GitHub repo.](https://javascriptweekly.com/link/160379/d076523b1d)
+
+Tesseract Team
+
+[HumanifyJS: Deobfuscate JavaScript Code using ChatGPT](https://javascriptweekly.com/link/160380/d076523b1d "github.com") — There’s an in-depth explainer [here](https://javascriptweekly.com/link/160381/d076523b1d). The primary feature is its ability to reverse the loss of meaningful variable and function names based on the context of the code.
+
+Jesse Luoto
+
+[Tests Are Dead. Meticulous Is Here](https://javascriptweekly.com/link/160382/d076523b1d) — Automatically creates & maintains E2E UI tests. Zero flakes. Backed by YC, CTO of GitHub, CPO of Adobe, CEO of Vercel.
+
+Meticulous sponsor
+
+[React Snap Carousel: DOM-First, Headless Carousel](https://javascriptweekly.com/link/160383/d076523b1d "github.com") — Uses native browser scrolling and CSS scroll snap points for performance. Try out some of its features [in its Storybook](https://javascriptweekly.com/link/160384/d076523b1d). The latest version adds support for [infinite carousels.](https://javascriptweekly.com/link/160385/d076523b1d)
+
+Richard Scarrott
+
+💡 For more React projects, check out [our latest React newsletter.](https://javascriptweekly.com/link/160386/d076523b1d)
+
+*   [Perspective 3.1](https://javascriptweekly.com/link/160387/d076523b1d) – Streaming data viz and analytics component. The core is written in C++ and compiled to WebAssembly. The [homepage](https://javascriptweekly.com/link/160388/d076523b1d) shows it off well.
+    
+*   [NeutralinoJS 5.4](https://javascriptweekly.com/link/160389/d076523b1d) – Lightweight cross-platform desktop app framework.
+    
+*   [websocket-as-promised 3.0](https://javascriptweekly.com/link/160390/d076523b1d) – A Promise-based API for WebSockets.
+    
+*   [Verdaccio 6.0](https://javascriptweekly.com/link/160391/d076523b1d) – Lightweight local private npm registry.
+    
+*   [Rspack 1.0.7](https://javascriptweekly.com/link/160392/d076523b1d) – Fast Rust-based web bundler.
+    
+*   [esbuild 0.24](https://javascriptweekly.com/link/160393/d076523b1d)
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/160394/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​706 — 2024 年 9 月 26 日
+
+[网上阅读](https://javascriptweekly.com/issues/706)
+
+连同 
+
+\[![前端大师徽标](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)]\(https:// javascriptweekly.com/link/160339/d076523b1d)
+
+JavaScript 周刊
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/iisfvhhppyzgklxe0ve7.jpg)](https://javascriptweekly.com/link/160340/d076523b1d)
+
+[Deno 2.0 候选版本](https://javascriptweekly.com/link/160340/d076523b1d "deno.com") — Deno 的诞生是 Node 的原始创建者 Ryan Dahl 在使用 Node 后所产生的想法的体现。 Deno 2 是下一步：Deno 团队认为 *Deno* 最终应该是什么样子。许多变化正在等待：“window”消失，Node 的“process”出现，依赖管理得到改进，许多 API 变得稳定（例如 WebGPU），Node.js API 和 CommonJS 支持都在持续改进。
+
+Bartek Iwanczuk 和 Andy Jiang
+
+[不要在 `AbortController` 上睡觉](https://javascriptweekly.com/link/160341/d076523b1d "kettanaito.com") — [AbortController](https://javascriptweekly.com/link/160342/d076523b1d) 是一种广泛可用的机制，最初用于按需中止 Web 请求，但您可以将其用于更多用途（或“任何事情！”\*，正如 Artem 所解释的）。
+
+阿尔乔姆·扎哈琴科
+
+[![](https://copm.s3.amazonaws.com/838fb753.png)](https://javascriptweekly.com/link/160339/d076523b1d)
+
+[学习使用 React Native 和 Expo 构建功能丰富的本机移动应用程序](https://javascriptweekly.com/link/160339/d076523b1d "frontendmasters.com") — 加入 Kadi Kraman 观看旨在磨练 React 的视频课程技能。 [无论是初学者](https://javascriptweekly.com/link/160339/d076523b1d)，还是希望[进一步完善您的技能](https://javascriptweekly.com/link/160344/d076523b1d)，您都会学习创建实用的 iOS 和 Android 应用程序，涵盖组件、样式、UX、linting、异步存储、动画等等。
+
+前端大师赞助商
+
+[Josh W. Comeau 如何重建他的博客，应用程序路由器风格](https://javascriptweekly.com/link/160345/d076523b1d "www.joshwcomeau.com") — 我们是 Josh W. Comeau 博客的忠实粉丝，他刚刚重建了它完全使用 Next.js、MDX、Sandpack 和一系列其他技术。在这里，他深入探讨了所涉及的内容。深入了解现代 React 驱动项目的幕后花絮。
+
+乔什·W·科莫
+
+**简而言之：**
+
+* 🇪🇺 [NodeConf EU 回来了。](https://javascriptweekly.com/link/160346/d076523b1d) 它将于今年 11 月 3 日至 6 日在爱尔兰举行。
+
+* 🟨 [JSConf 即将回归](https://javascriptweekly.com/link/160347/d076523b1d) 在 OpenJS 基金会的关注下。
+
+* 📊 [缩小基准](https://javascriptweekly.com/link/160348/d076523b1d) 是一组经常更新的基准，适用于一组流行的 JavaScript 缩小器。
+
+* 🕹️ 最近的 [JS13kGames](https://javascriptweekly.com/link/160349/d076523b1d) 游戏开发大赛刚刚结束。如果你想玩这些条目（或者自己做一些判断）[它们都在这里。](https://javascriptweekly.com/link/160351/d076523b1d)我特别喜欢\[渡渡鸟之路]\(https: //javascriptweekly.com/link/160352/d076523b1d) 和 [Deep13.](https://javascriptweekly.com/link/160353/d076523b1d)
+
+**发布：**
+
+* [Bun v1.1.29](https://javascriptweekly.com/link/160354/d076523b1d) – 其 C 编译功能获得 N-API 支持，但在其他方面主要是错误修复版本。
+
+* [Storybook 8.3](https://javascriptweekly.com/link/160355/d076523b1d) – 一个流行的前端组件研讨会现在正在使用 [Vitest](https://javascriptweekly.com/link/160356/d076523b1d) 来快速提高速度提高其组件测试功能。
+
+* [Strapi 5](https://javascriptweekly.com/link/160396/d076523b1d) – 流行的开源无头 CMS。
+
+* [Solid 1.9](https://javascriptweekly.com/link/160357/d076523b1d) – 用于构建 UI 的声明性和高性能反应性。
+
+* [PostgreSQL 17](https://javascriptweekly.com/link/160358/d076523b1d) – 流行的数据库不是 JavaScript 项目，但很多人都会使用它。 *嘘！我们还有 [Postgres 时事通讯！](https://javascriptweekly.com/link/160359/d076523b1d)*
+
+📒 文章和教程
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/chlinmw0zojpzgybvvjg.jpg)](https://javascriptweekly.com/link/160361/d076523b1d)
+
+[JavaScript 解构指南](https://javascriptweekly.com/link/160361/d076523b1d "piccalil.li") — [解构赋值语法](https://javascriptweekly.com/link/160362/d076523b1d)大约十年前出现在 ES6 中，并已成为现代 JavaScript 开发的核​​心部分。这是对潜力的良好入门/提醒。
+
+马特·马奎斯
+
+[九个节点支柱：正确执行节点的原则](https://javascriptweekly.com/link/160363/d076523b1d "www.platformatichq.com") — 一群多产且高效的 Node.js 贡献者整理了一份清单找出当前 Node 开发实践中的差距，特别是在构建大型应用程序时。
+
+斯内尔、文迪托、道森、科里纳等人。
+
+[Next.js 中会话管理的完整指南](https://javascriptweekly.com/link/160364/d076523b1d "go.clerk.com") — 了解如何将会话管理集成到您的应用中提供强大的安全性并增强用户体验。
+
+文员赞助人
+
+【什么是耐用功能？可视化 JavaScript 入门]\(https://javascriptweekly.com/link/160365/d076523b1d "www.inngest.com") — 这相当依赖于 Inngest（一项持久功能服务）所提供的内容，但它是一个很好的入门入门可能很适合您的用例的总体想法。
+
+莉迪亚·哈莉（Inngest）
+
+[Express.js 5.0 的新增功能](https://javascriptweekly.com/link/160366/d076523b1d "www.trevorlasn.com") — Express.js 5.0 最近发布，发布说明相当简短，因此这里有更深入的了解它能提供什么。这些更新很大程度上是渐进式的，但为 Express 的未来奠定了基础。
+
+特雷弗·拉森
+
+[Angular Routing Essentials: Everything in One Post](https://javascriptweekly.com/link/160367/d076523b1d "monsterlessons-academy.com") — 这是一个大胆的主张，但效果相当不错。
+
+亚历山大·科切欣
+
+[从 JavaScript 应用程序中使用 Reddit 的 JSON API](https://javascriptweekly.com/link/160368/d076523b1d "www.honeybadger.io") — 如何从 Reddit 的 API 中提取数据并将其显示在使用 构建的简单 Web 应用程序中包裹。
+
+穆罕默德·阿里
+
+📺 [用 JS 创建一个大金刚乡村风格的平台游戏](https://javascriptweekly.com/link/160369/d076523b1d) – 我们没有看到 DKC 的相似之处，但它是一个可靠的 4 小时截屏视频。克里斯课程
+
+📄 [实现无需身份验证的“赞”按钮](https://javascriptweekly.com/link/160370/d076523b1d) Abhishek Saha
+
+🛠 代码和工具
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/uplmoapeoegycrxoygzk.jpg)](https://javascriptweekly.com/link/160371/d076523b1d)
+
+[Schedule-X 2：现代事件日历组件](https://javascriptweekly.com/link/160371/d076523b1d "schedule-x.dev") — 以 React/Preact、Vue、Svelte、Angular 的形式提供，或纯 JS 组件。开源，但有带有额外功能的高级版本。 [GitHub 存储库。](https://javascriptweekly.com/link/160372/d076523b1d)
+
+汤姆·奥斯特伦德
+
+🧹 [Vue Mess Detector：Vue 项目的代码和质量分析](https://javascriptweekly.com/link/160373/d076523b1d "vue-mess- detector.webmania.cc") — 一个静态分析工具，可以捕获各种错误基于 Vue 的项目中的代码质量问题，这些问题是建立在 [Vue.js 样式指南](https://javascriptweekly.com/link/160374/d076523b1d) 等规则之上的。 [GitHub 存储库。](https://javascriptweekly.com/link/160375/d076523b1d)
+
+各种贡献者
+
+[✂️ 将 QA 周期从几小时缩短为几分钟](https://javascriptweekly.com/link/160376/d076523b1d "www.qawolf.com") — \[QA Wolf's]\(https://javascriptweekly.com/link/ 160376/d076523b1d) AI 原生方法让工程团队实现 [80% 自动化端到端测试覆盖率](https://javascriptweekly.com/link/160376/d076523b1d)，并通过减少 QA 周期来帮助他们将交付速度提高 2 倍几小时到几分钟。
+
+QA Wolf 赞助商
+
+[Tesseract.js：适用于 100 多种语言的纯 JS OCR](https://javascriptweekly.com/link/160377/d076523b1d "tesseract.projectnaptha.com") — 基于 C++ 的 \[Tesseract]\(https:// /javascriptweekly.com/link/160378/d076523b1d) 库通常用于从图像中提取文本。主页有一个现场演示，您可以在其中放置自己的图像。 [GitHub 存储库](https://javascriptweekly.com/link/160379/d076523b1d)
+
+宇宙立方团队
+
+[HumanifyJS：使用 ChatGPT 反混淆 JavaScript 代码](https://javascriptweekly.com/link/160380/d076523b1d "github.com") — \[此处]\(https://javascriptweekly.com/link/ 160381/d076523b1d)。主要功能是能够根据代码上下文扭转有意义的变量和函数名称的丢失。
+
+杰西·洛托
+
+[测试已死。细致就在这里](https://javascriptweekly.com/link/160382/d076523b1d) — 自动创建和维护 E2E UI 测试。零片。由 GitHub 首席技术官、Adobe 首席产品官、Vercel 首席执行官 YC 提供支持。
+
+精心赞助
+
+[React Snap Carousel：DOM-First、Headless Carousel](https://javascriptweekly.com/link/160383/d076523b1d "github.com") — 使用本机浏览器滚动和 CSS 滚动捕捉点来提高性能。尝试[在其故事书中](https://javascriptweekly.com/link/160384/d076523b1d) 中的一些功能。最新版本增加了对[无限轮播](https://javascriptweekly.com/link/160385/d076523b1d)的支持。
+
+理查德·斯卡罗特
+
+💡 如需了解更多 React 项目，请查看 [我们最新的 React 时事通讯。](https://javascriptweekly.com/link/160386/d076523b1d)
+
+* [视角 3.1](https://javascriptweekly.com/link/160387/d076523b1d) – 流数据可视化和分析组件。核心是用 C++ 编写并编译为 WebAssembly。 [主页](https://javascriptweekly.com/link/160388/d076523b1d) 很好地展示了这一点。
+
+* [NeutralinoJS 5.4](https://javascriptweekly.com/link/160389/d076523b1d) – 轻量级跨平台桌面应用框架。
+
+* [websocket-as-promised 3.0](https://javascriptweekly.com/link/160390/d076523b1d) – 基于 Promise 的 WebSocket API。
+
+* [Verdaccio 6.0](https://javascriptweekly.com/link/160391/d076523b1d) – 轻量级本地私有 npm 注册表。
+
+* [Rspack 1.0.7](https://javascriptweekly.com/link/160392/d076523b1d) – 基于 Rust 的快速 Web 捆绑器。
+
+* [esbuild 0.24](https://javascriptweekly.com/link/160393/d076523b1d)
+
+由 [Cooperpress](https://cooperpress.com/) 出版，由 [Peter Cooper](https://javascriptweekly.com/link/160394/d076523b1d) 编辑
+
+“JavaScript”是 Oracle Corporation 在美国的商标\
+我们未获得 Oracle 的认可或隶属于 Oracle。
+
+
