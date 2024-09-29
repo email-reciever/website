@@ -1,0 +1,93 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#474 How to fetch data in React
+description: RD#474 How to fetch data in React
+date: 星期日 06 晚上 九月 29o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/how-to-fetch-data-in-react
+origin_site: https://newsletter.reactdigest.net/p/how-to-fetch-data-in-react
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#474 How to fetch data in React" url="https://newsletter.reactdigest.net/p/how-to-fetch-data-in-react" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UzLl1hlsBX6ufCpWakhKXgT9sU4ICxN8gtfm7MuJkdgAdbmBv1S0iNFTyQnnlkaP7FChfJWOufKosDufFB9lx2ITyR0RKz0iXIam5PYmkf7brnOharzwHn2S4TS5N7ppvtoL_MAPGv2bs--N3ErrOtIzLe8g6jQvkB8UyiyoGiYYIj3h5ehUDX2dS3FMQSTzfyCC1Uw9c9ArxqNJQcyTIXT8Mdnok4eF9IGT9n08VwpZVBc9gfLJFdSwEHFZtPrD4qXecDvef8Q00ZiLZIcS-zWhkLPM9BTAw8XU8kh42CwTtwmqe29XJzu-2-pIA_a7KJsKC89caJUf6lgKnrLWTn0lhd50jfQLftnYpnKqTKsTj6CgekBoKBNEaBqhfyvVt0Wcu6XcqJ4n22LlZBHsiICNYupJJf0He10lGuZjSMu3yC86ZYJl1-qkNvOtvQjr6p04Lwt6lSoFrXsQKqiwhyagB0YaozdwxpopuhkTsbGh0lLuKOWdkGIRmoII8ox7jgj96re9cnoelL3ZAf-lKx3xLZLGA4Qlhwt8YWaFLTndmYswsRkLvUoSHJhA6ld8qOYi_m8kby6M7Y6IrUYGVZcphIgOhJ5NSswNli7CXNPOH2t9tFro2b85lVjQM_BeeuJsOVrmFmOKtKQ144gyhwlGXTZqx2IqJk1fmCg0vOzVxsQaIVnZjTAjCDWm-DZ4kiP7BbAraYIqKBZSld2UcMmP_Pfws1DnBY3MfpAelM37hyx3ye9YDpuLdaIzPcKBh9A-I-CEHfnDOlxSKFDgdH/4a6/BmpQDiTDQYuSwvBQoPDpDg/h0/h001.WNZ9PRCOFxWlqdPUYXjkB__X0IWa1bsYE4M_yYz36W4)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4a6/BmpQDiTDQYuSwvBQoPDpDg/ho.gif)
+
+[How to fetch data in React (with Hooks)](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zLfi-IFQAv2YKPvJWkO3zy1Ut4Hr54GBbKGef8d1WOIK3x5A4Eek7q97NkrL51bDW3nXzMqTLv9cyjb3Kckjw1qxQaUtUafh3a2WRFvCV8xmw-FZo3ckhMeyy9MEhl4Jyx37UTJKZD0RzPaufCKzsmGRkx7QR7OXUEyHJ1Zy4vKLJVVG33ajz0DPA3WrnGf18TVP_YGaO904Bw6sSoz1WNZNBT9zJnEK5KK3Ne9_FSjrA/4a6/BmpQDiTDQYuSwvBQoPDpDg/h1/h001.FESYoO90ytDJM5ddSxHSYyMpeZ8bMhMI717y7Mlwl68)  
+_18 minutes_ by Robin Wieruch
+
+Do you want to go beyond a static React application? Then it's about time to fetch data from a third party API. This guide explains you all the basics and tricks to request data. You will reuse functionalities in higher-order components and implement error handling for a more robust application.
+
+[Improve Web Performance by Optimizing JavaScript Bundle Sizes](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZDc6CvoM57HfpmGHktxcZjOeF68lfr4IB1qa12-kOZCUB3kHTw7xlZrfll_TLlvQ2oyycUndCE5gNAnmwmXsoldx7HJfEIBDoT8UQ8JD4XuBRvcn-DCLDV-QTBdstx1Qr96ScG6HMXaNohhPfIQ3b8KWOm02CgzV33mQkchMzXy7ii3FS6d88TjPVLUQ4pJDhsCWlExzuJ-nD1NQN-tJtchv2ZW8XUYmRP9nO6t84c-TIWda72lQuj171_jiNLIONz_au2wqhiXB7ld6qncuvQ/4a6/BmpQDiTDQYuSwvBQoPDpDg/h2/h001.BAjpHwfzTCcNuqwrj_EJmSWvNzalIF1pJzO2WONpOnQ)  
+_sponsored by Sentry_
+
+Nobody likes slow front end response – not you, your users, or search engines. Learn how to get ahead of bloated JavaScript bundles and improve your web performance in this blog.
+
+[React 19: Goodbye to Old Features, Hello to the Future](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw9jFC2GNnrPqrZ_Z_2ERDFpGfAgqHePGbWOo-ylRvBoN5Y0X1ed0ZdfbMyWa-TJcdyWujIfot4wVmb7BH6lo9Ob1R4h3H0Rq8nu8eUQJSr7l9SVzLKAKSRNg9rnWfNanJbQNGu-coO4EFSeMmEP6IU54RFgsUXGZQ1yjWO971lFTdYdQYjm3S51Xd4A7kPexPC9-Sa_fV1uBs4GuvF0J--JZilr3pOQa86M7dQAt_HMJCWhnysK1Q32HySRw4Cs_UKXGnVk2caomQXr-M3rRiOJW6JTEUiz20p3L6p_ELgh25tZZfpdzhWbxNYHmNVkniA/4a6/BmpQDiTDQYuSwvBQoPDpDg/h3/h001.6YueTNO--jxKjQjWsbrW_CnKZTMM2-ghi5GRgdVX-Ts)  
+_7 minutes_ by Adhithi Ravichandran
+
+React 19 is set to be a significant update, enhancing performance and developer experience. Key improvements include advanced concurrent rendering for more responsive UIs, streaming Suspense for faster data fetching, automatic error recovery for smoother app performance, enhanced developer tools for easier debugging, and improved Server Components for better scaling.
+
+[How I Built My Blog](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfyko-iFD6lxTdvug6MbGi-93dJ1Jh9QpQXpGd1Q2QcNigwg1Qxx6Wj6eEwgmN2K7yjiPwfz74ebGz70e-XL0-lqmphNvEKV6w2ZQXFxM-TdsKuNnbHvVD5eFuQJk-Mf1GuEVR_dZhHGti7O8_RVyOK2ieZ--1O7Spku2wm4eb5lXMBqoTg9ZqoVzKL9356FDTIotM2EGXW5jXePsyKXWjZn1MotEi1FNA-Fo9JXQM1hL1nCZGF9SW1armpwMpQxkQL5SPX9wKKc3mpVvaRoGEU/4a6/BmpQDiTDQYuSwvBQoPDpDg/h4/h001.lnzP_GFlyzpv-PaoJltnmqY6KINz5nKIYZGChDM7_1A)  
+_24 minutes_ by Josh W. Comeau
+
+Josh Comeau shares his experience redesigning and rebuilding his blog using modern web technologies.
+
+[How to reset the state of useActionState in React](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfLlFcsXOFpUrtXNVZnzChyrjDri-DpSFHgvC0NQqtdXk39s6md2wMxGEx8D7PRChGu6y7EEzmZMJc-Nhnnc3fF1rU_LWoAPyZNRoHYmzkSzUeR7052syi2wY-b-4iDe8l9-XuRl9muZTXd3Pbxst88U0kpwsbS2Btkj9dpjMo1N2J7w-ASWC9Ml1cjsgiuTN3bmUPy6hCReR2Qh_yG77wUcPdggKMtKkBE-OmiSD44nBYX8grdrD4Johkw8-4jmniMEDo-4YRk1kLlPvMXcm1Y/4a6/BmpQDiTDQYuSwvBQoPDpDg/h5/h001.3hWzofFUzll1u56wSToYPb-E844R_mcLQLXj0Q27hoM)  
+_4 minutes_ by Nico Prananta
+
+It's kinda weird that the state cannot be reseted easily. This article discusses a solution for resetting form state in Next.js when using the useActionState hook. Nico presents a custom hook called useResetableActionState that allows for easy form resetting without page reloading.
+
+[Component Composition is great](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgFz6M2hzyPVm-wzC-j5jbHXk1dPFNfjbIHQdyq2njDQOKgW3o7tlO0FtKmMt3kjTYW9m-DkW0KXcJmTphA28bh7qkmHCnc6xeFph1Qj9OlLdOO2SJ0TybUYbBTjxc4rDoatqQJ9MnBBaKHTfPpMt9YB4NC7Msb6V3KZAxyykah6AGrOA1bKMBNm7ZqJOASBgTAz0lCItdnmjXyqBINUAS4Io-XoWxSNOVY_Bx1U25uqGZG23B9uQ_P8PUpRN_RBnUe55hROALCZW18fctgAD7Rdc/4a6/BmpQDiTDQYuSwvBQoPDpDg/h6/h001.fDKHef7ksbnZiHwRfhn1xPXrTUsWOoF1zgNYQyVlsdw)  
+_8 minutes_ by T. K. Dodo
+
+Component composition is one of the best parts of React, and we should take more time to break our components into manageable parts before littering one component with conditional renderings.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UzLl1hlsBX6ufCpWakhKXgT9sU4ICxN8gtfm7MuJkdgAdbmBv1S0iNFTyQnnlkaP7FChf JWOufKosDufFB9lx2ITyR0RKz0iXIam5PYmkf7brnOharzwHn2S4TS5N7ppvtoL\_MAPGv2bs--N3E rrOtIzLe8g6jQvkB8UyiyoGiYYIj3h5ehUDX2dS3FMQSTzfyCC1Uw9c9ArxqNJQcyTIXT8Mdnok4eF 9IGT9n08VwpZVBc9gfLJFdSwEHFZtPrD4qXecDvef8Q00ZiLZICS-zWhkLPM9BTAw8XU8k h42CwTtwmqe29XJzu-2-pIA\_a7KJsKC89caJUf6lgKnrLWTn0lhd50jfQLftnYpnKqTKsTj 6CgekBoKBNEaBqhfyvVt0Wcu6XcqJ4n22LlZBHsiICNYupJJf0He10lGuZjSMu3yC86ZYJl1-qk NvOtvQjr6p04Lwt6lSoFrXsQKqiwhyagB0YaozdwxpopuhkTsbGh0lLuKOWdkGIRmoII8ox7jgj9 6re9cnoelL3ZAf-lKx3xLZLGA4Qlhwt8YWaFLTndmYswsRkLvUoSHJha6ld8qOYi\_m8kby6M7Y6I ruYGVZcPHIgOhJ5NSswNli7CXNPOH2t9tFro2b85lVjQM\_BeeuJsOVrmFmOKtKQ144gyhwlGXTZq x2IqJk1fmCg0vOzVxsQaIVnZjTAjCDWm-DZ4kiP7BbAraYIqKBZSld2UcMmP\_Pfws1DnBY3MfpAelM37hyx3ye9YDpuLdaIzPcKBh9A-I-CEHfnDOlxSKFDgdH/4a6/BmpQDiTDQYuSwvBQ oPDpDg/h0/ h001.WNZ9PRCOFxWlqdPUYXjkB\_\_X0IWa1bsYE4M\_yYz36W4)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4a6/BmpQDiTDQYuSwvBQoPDpDg/ho.gif)
+
+[How to fetch data in React (with Hooks)](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zLfi-IFQAv2YKPvJWkO3zy1Ut4Hr54GBbKGef8d1WOIK3x5A4Eek7q97NkrL51bDW3nXzMqTLv9cyjb3Kckjw1qxQaUtUafh3a2WRFvCV8xmw-FZo3ckhMeyy9MEhl4Jyx37UTJKZD0RzPaufCKzsmGRkx7QR7OXUEyHJ1Zy4vKLJVVG33ajz0DPA3WrnGf18TVP_YGaO904Bw6sSoz1WNZNBT9zJnEK5KK3Ne9_FSjrA/4a6/BmpQDiTDQYuSwvBQoPDpDg/h1/h001.FESYoO90ytDJM5ddSxHSYyMpeZ8bMhMI717y7Mlwl68)\
+*18 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+您想要超越静态 React 应用程序吗？然后是时候从第三方 API 获取数据了。本指南向您解释了请求数据的所有基础知识和技巧。您将重用高阶组件中的功能并实现错误处理以获得更健壮的应用程序。
+
+\[通过优化 JavaScript 包大小提高 Web 性能]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZDc6CvoM57HfpmGHktxcZjOeF68lfr4IB1qa12-kOZCUB3kHTw7xlZrfll\_TLlvQ2oyycUndCE 5gNAnmwmXsoldx7HJfeIBDoT8UQ8JD4XuBRvcn-DCLDV-QTBdstx1Qr96ScG6HMXaNohhPfIQ3b8KWOm02CgzV33mQkchMzXy7ii3FS6d88TjPVLUQ4pJDhsCWlExzuJ-nD1NQN-tJtchv2ZW8XUY mRP9nO6t84c-TIWda72lQuj171\_jiNLIONz\_au2wqhiXB7ld6qncuvQ/4a6/BmpQDiTDQYuSwvBQoPDpDg/h2/h001 .BAjpHwfzTCcNuqwrj\_EJmSWvNzalIF1pJzO2WONpOnQ)\
+*由哨兵赞助*
+
+没有人喜欢缓慢的前端响应——你、你的用户或搜索引擎都不喜欢。在此博客中了解如何超越臃肿的 JavaScript 捆绑包并提高 Web 性能。
+
+\[React 19：告别旧功能，迎接未来]\(https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw9jFC2GNnrPqrZ\_Z\_2ERDFpGfAgqHePGbWOo-ylRvBoN5Y0X1ed0ZdfbMyWa-TJcdyWujIfot4wVmb7 BH6lo9Ob1R4h3H0Rq8nu8eUQJSr7l9SVzLKAKSRNg9rnWfNanJbQNGu-coO4EFSeMmEP6IU54R FgsUXGZQ1yjWO971lFTdYdQYjm3S51Xd4A7kPexPC9-Sa\_fV1uBs4GuvF0J--JZilr3pOQa86M 7dQAt\_HMJCWhnysK1Q32HySRw4Cs\_UKXGnVk2caomQXr-M3rRiOJW6JTEUiz20p3L6p\_ELgh25tZZfpdzhWbxNYHmNVkniA/4a6/ BmpQDiTDQYuSwvBQoPDpDg/h3/h001.6YueTNO--jxKjQjWsbrW\_CnKZTMM2-ghi5GRgdVX-Ts)\
+*7 分钟* Adhithi Ravichandran
+
+React 19 将是一次重大更新，增强性能和开发人员体验。主要改进包括用于提高 UI 响应速度的高级并发渲染、用于更快数据获取的流式 Suspense、用于更流畅应用程序性能的自动错误恢复、用于更轻松调试的增强型开发人员工具以及用于更好扩展的改进服务器组件。
+
+\[我如何建立我的博客]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfyko-iFD6lxTdvug6MbGi-93dJ1Jh9QpQXpGd1Q2QcNigwg1Qxx6Wj6eEwgmN2K7yjiPwfz74ebGz 70e-XL0-lqmphNveKV6w2ZQXFxM-TdsKuNnbHvVD5eFuQJk-Mf1GuEVR\_dZhHGti7O8\_RVyOK2ieZ--1O7Spku2wm4eb5lXMBqoTg9ZqoVzKL9356FDTIotM2EGXW5jXePsyKXWjZn1MotEi 1FNA-Fo9JXQM1hL1nCZGF9SW1armpwMpQxkQL5SPX9wKKc3mpVvaRoGEU/4a6/BmpQDiTDQYuSwvBQoPDpDg/h4 /h001.lnzP\_GFlyzpv-PaoJltnmqY6KINz5nKIYZGChDM7\_1A)\
+*24 分钟* 乔什·W·科莫 (Josh W. Comeau)
+
+乔什·科莫 (Josh Comeau) 分享了他使用现代网络技术重新设计和重建博客的经验。
+
+\[如何在React中重置useActionState的状态]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfLlFcsXOFpUrtXNVZnzChyrjDri-DpSFHgvC0NQqtdXk39s6md2wMxGEx8D7PRChGu6y7EEzmZMJ c-Nhnnc3fF1rU\_LWoAPyZNRoHYmzkSzUeR7052syi2wY-b-4iDe8l9-XurRl9muZTXd3Pbxst88U0kpwsbS2Btkj9dpjMo1N2J7w-ASWC9Ml1cjsgiutn3bmUPy6hCReR2Qh\_yG77wUcPd ggKMtKkBE-OmiSD44nBYX8grdrD4Johkw8-4jmniMEDo-4YRk1kLlPvMXcm1Y/ 4a6/BmpQDiTDQYuSwvBQoPDpDg/h5/h001.3hWzofFUzll1u56wSToYPb-E844R\_mcLQLXj0Q27hoM)\
+*4 分钟* 尼科·普拉南塔 (Nico Prananta)
+
+状态不能轻易重置，这有点奇怪。本文讨论使用 useActionState 挂钩时在 Next.js 中重置表单状态的解决方案。 Nico 提供了一个名为 useResetableActionState 的自定义挂钩，它允许轻松重置表单而无需重新加载页面。
+
+\[组件构成很棒]\(https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgFz6M2hzyPVm-wzC-j5jbHXk1dPFNfjbIHQdyq2njDQOKgW3o7tlO0FtKmMt3kjTYW9m-DkW0KXcJmTphA28b h7qkmHCnc6xeFph1Qj9OlLdOO2SJ0TybUYbBTjxc4rDoatqQJ9MnBBaKHTfPpMt9YB4NC7Msb6V3KZAxyykah6AGrOA1bKMBNm7ZqJOASBgTAz0lCItdnmjXyqBINUAS4Io-XoWxSNOVY\_Bx1U25u qGZG23B9uQ\_P8PUpRN\_RBnUe55hROALCZW18fctgAD7Rdc/4a6/BmpQDiTDQYuSwvBQoPDpDg/h6/h001.fDKHef7ksbnZiHwRfhn1xPXrTUsWOoF1zgNYQyVlsdw)\
+*8 分钟* T.K. Dodo
+
+组件组合是 React 最好的部分之一，我们应该花更多时间将组件分解为可管理的部分，然后再用条件渲染乱扔一个组件。
+
+#
+
+
