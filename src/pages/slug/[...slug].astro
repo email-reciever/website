@@ -30,6 +30,8 @@ if (slug !== undefined && slug !== 'all') {
   title = slug
   posts = allCollectionPosts[allCollectionsEntries.indexOf(slug as Collections)]
 }
+
+posts = posts.sort((a, b) => (dayjs(a.data.date).diff(b.data.date, 'second') > 0 ? 1 : -1))
 ---
 
 <Layout title={SITETITLE}>
