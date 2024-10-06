@@ -1,0 +1,116 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#475 Intro to CSS animations for React developers
+description: RD#475 Intro to CSS animations for React developers
+date: 星期日 05 下午 十月 6o 2024
+author: reactdigest
+origin_url: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fintro-to-css-animations-f?= =?us-ascii?Q?or-react-developers?=
+origin_site: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fintro-to-css-animations-f?= =?us-ascii?Q?or-react-developers?=
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#475 Intro to CSS animations for React developers" url="=?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fintro-to-css-animations-f?= =?us-ascii?Q?or-react-developers?=" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1VNZ7gfxUtPXkrP6cSYOp2T6VIWu0xAAwoIU3O84T6n12n39F342D3WmUhwGiFf-XM8Qe-ul5J7dtYkmeteoQyvJ09ZD9GdYI3zRf3oyRg6uQHzLhQLNyxbNTJ5utoeZmZo2N7T6C6nKHcoNN_oBk1ZChy9KAt_lV4Oq3DIOZCd1KtvDGiOR6WVMDKfmhiPQxZfGeWWNx2PxW4i7fdhdUTRLuFjJg621mdn3akiDVnVqHRQ4OUOUFLfz_X8p9F7QWarJ3XjYOemBwwHbM7TB41frfAkiZAAnB-eSVC6PJBhdOGjWiPJphCUMDL7P7H4dEN4HnMpIxgU2poZXzklwnUhkx1TAUfSY_uX9P37Wztd7OK_9Vl75cWm0vDfN6Nu8ZZEfahp9xbv0Q1fbEpTGENckxOPc3PIHHNBA8cIAoLvhBxXy-KING2ghDopXHaql8cEXrbip5EzyLv2tW3DEeolletozZiNj5PdChufnex46jasMSriVZXm6t_tnjkiaurM0gBWJjwSn0IYxo5obhF5f5fjhh23Hrv1LSk9uY2PCtJ5iXRt49_aNn0Y6RQqlLBr6-netL44lE2hf-md6HlQPoU_O0yztnaY8Nj1I4eQbkVw0QMtfE7tXIY0pqjGohXFkV9NQ1_3N2tdZBnBSloLRbne1Ra_Hl7Y_dnd4wyebZMI9OJO9jDH-HzjNTJYHSEKE609FXjizooQ9QHc23x80Z0HJd2NWEo3DswV_wdnBDwHyigaRaHJwjAewoqRofC-j7PsvxNv3SeAHBmWKzqrgGNSBx5W4OIsBGWjFcEr_BOMR_lJdwnCiC93l04B7XQ/4ad/B2q-NdABT4iEy9rw2edSow/h0/h001.OHIF8DLS_rQSccngatLPpzT8YfzmmhFsYjjqfxZBuvQ)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4ad/B2q-NdABT4iEy9rw2edSow/ho.gif)
+
+[Intro to CSS animations for React developers](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqaLHy8G_Zejf_j1U5B-_Zp0nSsRxFrbTUvX2NrH5S5ykLZ4XXzlmyfZ9uN0TYLJgwcPrVU77xfYKGce99uGU53lpwyr5Qn9lUM0qPLBUyb0vyFqFdteNDgfCu3Ym07GdNEqv7QVWBA4x0PqP2FS-1jKC_zQfxMPjOvxJ4xbHCxVur0mWhr71LfyaaPY6c4pJJE3FGz5zA6n0cEMexiZTHJuH8tScd_mOTJKPHK4RT409pEycFQqdycjJ13Q62BI3WEDOz1K-IQvcJqevZgpXu6q0mZs_EI6ZGN6xTHkEIpHIdvsj7ZF1OsCdkpxuaXYCQA/4ad/B2q-NdABT4iEy9rw2edSow/h1/h001.ciFsXqpwAYvmc7QKI7ev9fUjKIXcpWD5XISNh-Yr_7g)  
+_13 minutes_ by Nadia Makarevich
+
+Investigating CSS animations in React by building some useful components like slide-in drawers, expandable search field, and fancy hover effects.
+
+[3 key aspects of your single-page apps to monitor](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfUXhozX8z1JImqztcl4IkfynYmY70dh5NQpxd7xB7RdcznByQSipgx6AQOgWvzsHqHUaITmPBrgZGcUOaR-hIm841GX4nMtKs15Sj36M2sd2XVxL5p1XbTzLM91zfNk6oFEyDsI1RqvaF-L9M27R-HLiYGfsNV-yJrc3_2lZfo5NCjAb0GJTln8gm57L8CatL-8lHYmzwuDTQUA4NFfZZObVH3IDcm25wr_-IC0X9KnDrruRhBvneXMJUYoQL8Ne6e9GBZnEmZ5NpPXgaEJl_1sPKKJ2QJloSOHh8fkqNGv/4ad/B2q-NdABT4iEy9rw2edSow/h2/h001.tRrobJ08X12S7045x875z5uAPhRiLUfTZKf7QAZbaGI)  
+_sponsored by Datadog_
+
+When analyzing a new monitoring solution, it's important that the tool meets your requirements. Learn how to monitor three key aspects of your single-page apps to help you optimize your users’ experience in our free best practices guide.
+
+[The unspoken rules of React hooks](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTe4HnVGwdHT4w2rR2FeLKvcqKpcobPYECXMqAfITdRXcpfUfA-HfWqpevyyfgrnLknx0LXZLaG3bFf9iKiCL6OYX5PMCro10vWkSIqYivUzV6LgQn6Io1vJiCYq78LXIC733xEOlqZVIRGrPT2HmFPBSgMxv5KyH184UG2Uc5NjD9MPyQrpnrCZWueYk4AtB0fAu3rfRWdqvHIUhg7VCxvBrG2ABIFVKFhazuC2JCYX1Hq41WX7PtF4pt5FZS1587_RmeI4lefRZzRt1KvWmzRqiV9Gg3cWypUUVSvXNJGnC/4ad/B2q-NdABT4iEy9rw2edSow/h3/h001.fqbQQhx5XGfNNJ1cKrKzCpH3uewvCvor8IaifyxeOqQ)  
+_3 minutes_ by Tom MacWright
+
+This summary discusses the complexity of React hooks, particularly focusing on useEffect and its dependency array. The author highlights that certain values, like state setters and refs, are "stable" and don't need to be included in the dependency array, but this information is not clearly documented in React's official resources.
+
+[Types of React Components](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zI19w83WAkbbFxknNk6ZZdps5dcAuh2dCmI9tp5lTz6023kbT9JKMU98QiMukqE6xzc-Jvzo507MLTJHCsEova1MgLvckKAGGRWOAID8cTVjhkfIhBQ17aC-jBgqWTU8Z-XXXVFBmid3Pv5fQEjYnuXgbwfSO5tUt5AWplQJNhpIdWZdoEun5I7gidFajxLSFnLS31b6jw1tIiq6tURy_0P34DqDF6ilGEulOkKvUNsEef0XKeOLpw7FWnSZhNgxcc/4ad/B2q-NdABT4iEy9rw2edSow/h4/h001.38ELyeTu3h7bC_Pfp6r20wIa0fTnd60plOV6Tuh1RMc)  
+_10 minutes_ by Robin Wieruch
+
+There are many types of React Components that make it difficult for React beginners. This tutorial goes through each React Component Type by example.
+
+[React at Meta Connect 2024](https://link.mail.beehiiv.com/ss/c/u001.HjBpxMuZJ3Xr2cyiPk5rUWBfm8ZHSvoWaAmoRCmOSKaKgv9mL8vfpMyYz5Xdd3XM317Q74ogZeyo7TM9_O64CEOK_wTthzdMEauOSNClwIyidB8vmSOOOmCzNoM37M6pVMgrTHZCsQRbGmOxhS1D63J17c2gGcDayClgfGEufWy2fbR2lrsEtIfW5gAxW6L_-h1wJgpdZrtzgZYxdiwv5SmAHP_Q-MAEN0wuxjkrLFI82djbQyOuKTZhMMbjD4q2gyJOlvHUoRkp3yWNnBfLv_aau41hqcilUMSkF_LbY6fvOh8mKvgMn5A0gun5XWxDmzlnRM4JEFJSzKD5xOoUYw/4ad/B2q-NdABT4iEy9rw2edSow/h5/h001.aLBQtyUWn3LtNmXqd0qeSDA4A77HrONG9H1aXz2CfF4)  
+_8 minutes_ by Blair Vanderhoof and others
+
+Meta has showcased several new applications and technologies at Connect 2024, all built using React and React Native. These include rebuilt versions of Instagram and Facebook for Meta Quest, the Meta Horizon mobile app, an updated Meta Horizon Store, and the new Meta Spatial Editor.
+
+[SSR-friendly Custom React Hook for Local Storage Read and Write](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfLlFcsXOFpUrtXNVZnzChxK9gX0EvH1t1Z0XSLSIHmUC1njUk9f3ZiAzgZXl_Z1HpFVtLDrlHPYoO4ouoNxJZEDmJBggerG6H-OJZfVWHyPod5FunCBxjhiDhkbWM0mjtRvcGBIooFgBQmJPJOiwnDy3TSrXx-ZysO28vnjRkvJZqxu994fZ3JNpHOVDUKqmZtYtpfn3zXHdcKzs8rKs44TWBm0WjmeGvfMnrMZr7E3By-Hw1N4vd_il1Aln4OG7-aEjcytCuiAzaja6T3XQmr3aTyQyoc02MrwDCkdFZ8tegFbuSSftSkCWv1WRfXfMA/4ad/B2q-NdABT4iEy9rw2edSow/h6/h001.fYEmtkN0dipmWokBAzA-0Y-HcTz8lFDtW-Xc_RVJ47Y)  
+_3 minutes_ by Nico Prananta
+
+This article discusses the creation of a custom React hook for accessing local storage using useSyncExternalStore. After learning that the "storage" event only fires when changes occur in different documents, the author modified the hook to include a custom event listener. The final version of the hook listens for both the storage event and a custom "local-storage-change" event, ensuring proper component re-rendering and avoiding hydration mismatch errors.
+
+[✂️ Cut your QA cycles down from hours to minutes with automated testing](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZDc6CvoM57HfpmGHktxcZjUT2x_olXBEOMBidgpG9MpezCnZvAv08DmnZom20rAXgRATgdtvmSVzAwtW9L8_awc_aBXJjaht3vdJskP95Ou2JUQVEMBTjfw_d-o_l3OJCQYLDBXrXqaHnsUbSZpPhbUQQ2RihBgzgnQBtX3lLu9Xw4X2tyw8hFE2ROEGyplG33viKQNFcroRwCDkitKrIMl0HailB1W4yyyllXxWrcQAJ4L-sqJJP4h6bhXKE7fzU9n3YjB0kJcL1iAJiO3KZLIZ6GhdohffivU6us574YK/4ad/B2q-NdABT4iEy9rw2edSow/h7/h001.QEYvIHO3GWRswm0D_qhHkLsGpsZkjDzXxLt7cBDv1Y4)  
+_sponsored by QA Wolf_
+
+If slow QA processes bottleneck you or your software engineering team and you’re releasing slower because of it, you must check out QA Wolf. They get you to 80% automated end-to-end test coverage and help ship 5x faster by reducing QA cycles from hours to minutes. With over 100 5-star reviews on G2 and customer testimonials from Salesloft, Drata, Autotrader, and many more — you’re in good hands.
+
+And today we’ll wrap up with a couple of neat projects:
+
+*   [react-to-print: Print React components in the browser](https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea_eXiYAmBo-05lsCkoJZwe3zz_GH5lfuI5koUSglgVmmuSVPXspR4eEwW8faDNy0c9_--ov7dd7JDVaaFkHUttZlLgjIhKFmOi6QtfgeyWZvmOpBrbW2kapWxmo78ugwB1UBwV3v5dAOQfLdJHal1B0ZpzHqBrw0y6oAX-d0THqwYaoGW4fJrj9AyFl-Mxo73-YxW5AMssxB_7etBgZoKNG6YTbg-Nbf9bhWqMsKYKtuDq5gTjcnz8AvWVFixhF7LlIwgyrkj6xx_Qi94CZeq2lxMJUs8A/4ad/B2q-NdABT4iEy9rw2edSow/h8/h001.NHNg974qCzNXY4PM6UubA1Zz0cji-PmnsEl84dnHIQE)
+    
+*   [Component for rendering shell-like progress indicators](https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea_eXiYAmJRoK35QF9y3xx3szZaxKGf_Uer3pKKI_Srjt1V-EbG_7lHPPzVCedwP6uxUDVdRyjaCEn4e5lgDS4C8nEMO31wajEvwuCPic2PUCTtnlQx2P32SQQ0SRqqBQ7fOqVWfkrCCvkx3pUncBZMqPQeRtyyC-l4HdNSqMO55XkAMSlVj43k7IiV0Pb6h_hHWLdgKTDxzExj3xdeOWrnhn84YDQn6ljz5bPK4QMXoNCPcRNaX2x2jZxztP3R7nJJduIzKGa4oCEDb8V0YqHRAzRCopCgIsg9Mstyc4ibI-Y6ndGrD/4ad/B2q-NdABT4iEy9rw2edSow/h9/h001.KvULBnWJ6NrZ4JswM28ClKXEipvk0J5N-Ds90TFxkzg)
+    
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1VNZ7gfxUtPXkrP6cSYOp2T6VIWu0xAAwoIU3O84T6n12n39F342D3WmUhwGiFf-XM 8Qe-ul5J7dtYkmeteoQyvJ09ZD9GdYI3zRf3oyRg6uQHzLhQLNyxbNTJ5utoeZmZo2N7T6C6 nKHcoNN\_oBk1ZChy9KAt\_lV4Oq3DIOZCd1KtvDGiOR6WVMDKfmhiPQxZfGeWWNx2PxW4i7fdh dUTRLuFjJg621mdn3akiDVnVqHRQ4OUOUFLfz\_X8p9F7QWarJ3XjYOemBwwHbM7TB41frfAkiZAA nB-eSVC6PJBhdOGjWiPJphCUMDL7P7H4dEN4HnMpIxgU2poZXzklwnUhkx1TAUfSY\_uX9P37Wztd7 OK\_9Vl75cWm0vDfN6Nu8ZZEfahp9xbv0Q1fbEpTGENckxOPc3PIHHNBA8CIAoLvhBxXy-KING2ghDopXHaql8cEXrbip5EzyLv2tW3DEeolletozZiNj5PdChufnex46jasMSriVZXm6t\_tnjkiaurM0gBWJ jwSn0IYxo5obhF5f5fjhh23Hrv1LSk9uY2PCtJ5iXRt49\_aNn0Y6RQqlLBr6-netL44lE2hf-md6HlQPoU\_O0yztnaY8Nj1I4eQbkVw0QMtfE7tXIY0pqjGohXFkV9NQ1\_3N2tdZ BnBSloLRbne1Ra\_Hl7Y\_dnd4wyebZMI9OJO9jDH-HzjNTJYHSEKE609FXjizooQ9QHc23x80Z0HJd 2NWEo3DswV\_wdnBDwHyigaRaHJwjAewoqRofC-j7PsvxNv3SeAHBmWKzqrgGNSBx5W4OIsBGWjFcEr \_BOMR\_lJdwnCiC93l04B7XQ/4ad/B2q-NdABT4iEy9rw2​​edSow/h0/h001 .OHIF8DLS\_rQSccngatLPpzT8YfzmmhFsYjjqfxZBuvQ)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4ad/B2q-NdABT4iEy9rw2​​edSow/ho.gif)
+
+\[React 开发人员 CSS 动画简介]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqaLHy8G\_Zejf\_j1U5B-\_Zp0nSsRxFrbTUvX2NrH5S5ykLZ4XXzlmyfZ9uN0TYLJgwcPrVU77 xfYKGce99uGU53lpwyr5Qn9lUM0qPLBUyb0vyFqFdtenNDgfCu3Ym07GdNEqv7QVWBA4x0PqP2F S-1jKC\_zQfxMPjOvxJ4xbHCxVur0mWhr71LfyaaPY6c4pJJE3FGz5zA6n0CEMexiZTHJuH8tSc d\_mOTJKPHK4RT409pEycFQqdycjJ13Q62BI3WEDOz1K-IQvcJqevZgpXu6q0mZs\_EI6ZGN6xTH kEIpHIdvsj7ZF1OsCdkpxuaXYCQA/4ad/B2q-NdABT4iEy9rw2​​edSow/h1/h001.ciFsXqpwAY vmc7QKI7ev9fUjKIXcpWD5XISNh-Yr\_7g) \
+*13 分钟* 纳迪亚·马卡列维奇
+
+通过构建一些有用的组件（例如滑入式抽屉、可扩展搜索字段和精美的悬停效果）来研究 React 中的 CSS 动画。
+
+\[要监控的单页应用程序的 3 个关键方面]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfUXhozX8z1JImqztcl4IkfynYmY70dh5NQpxd7xB7RdcznByQSipgx6AQOgWvzsHqHUaITmPBrgZGcU OAR-HIM841GX4nMtKs15Sj36M2sd2XVxL5p1XbTzLM91zfNk6oFEyDsI1RqvaF-L9M27R-HLiYGfsNV-yJrc3\_2lZfo5NCjAb0GJTln8gm57L8CatL-8lHYmzwuDTQUA4NFfZZObVH3 IDcm25wr\_-IC0X9KnDrruRhBvneXMJUYoQL8Ne6e9GBZnEmZ5NpPXgaEJl\_1sPKKJ2QJloSOHh8fkqNGv/4ad/B2q- NdABT4iEy9rw2​​edSow/h2/h001.tRrobJ08X12S7045x875z5uAPhRiLUfTZKf7QAZbaGI)\
+*由Datadog赞助*
+
+在分析新的监控解决方案时，该工具满足您的要求非常重要。在我们的免费最佳实践指南中了解如何监控单页应用程序的三个关键方面，以帮助您优化用户体验。
+
+[The unspoken rules of React hooks](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTe4HnVGwdHT4w2rR2FeLKvcqKpcobPYECXMqAfITdRXcpfUfA-HfWqpevyyfgrnLknx0LXZLaG3bFf9iKiCL6OYX5PMCro10vWkSIqYivUzV6LgQn6Io1vJiCYq78LXIC733xEOlqZVIRGrPT2HmFPBSgMxv5KyH184UG2Uc5NjD9MPyQrpnrCZWueYk4AtB0fAu3rfRWdqvHIUhg7VCxvBrG2ABIFVKFhazuC2JCYX1Hq41WX7PtF4pt5FZS1587_RmeI4lefRZzRt1KvWmzRqiV9Gg3cWypUUVSvXNJGnC/4ad/B2q-NdABT4iEy9rw2​​edSow/h3/h001.fqbQQhx5XGfNNJ1cKrKzCpH3uewvCvor8IaifyxeOqQ)\
+*3 分钟* 汤姆·麦克赖特
+
+本摘要讨论了 React hooks 的复杂性，特别关注 useEffect 及其依赖项数组。作者强调，某些值（例如状态设置器和引用）是“稳定的”，不需要包含在依赖项数组中，但此信息在 React 的官方资源中没有明确记录。
+
+\[React 组件类型]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf\_qUprM09yoMPtF27zI19w83WAkbbFxknNk6ZZdps5dcAuh2dCmI9tp5lTz6023kbT9JKMU98QiMuk qE6xzc-Jvzo507MLTJHCsEova1MgLvckKAGGRWOAID8cTVjhkfIhBQ17aC-jBgqWTU8Z-XXXVFBmid 3Pv5fQEjYnuXgbwfSO5tUt5AWplQJNhpIdWZdoEun5I7gidFajxLSFnLS31b6jw1tIiq6tURy\_0P34 DqDF6ilGEulOkKvUNsEef0XKeOLpw7FWnSZhNgxcc/4ad/B2q-NdABT4iEy9rw2​​edSow/h4/h001.38ELyeTu3h7bC\_Pfp6r20wIa0fTnd60plOV6Tuh1RMc)\
+*10 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+React 组件种类繁多，对于 React 初学者来说很困难。本教程通过示例介绍每个 React 组件类型。
+
+[React at Meta Connect 2024](https://link.mail.beehiiv.com/ss/c/u001.HjBpxMuZJ3Xr2cyiPk5rUWBfm8ZHSvoWaAmoRCmOSKaKgv9mL8vfpMyYz5Xdd3XM317Q74ogZeyo7TM9_O64CEOK_wTthzdMEauOSNClwIyidB8vmSOOOmCzNoM37M6pVMgrTHZCsQRbGmOxhS1D63J17c2gGcDayClgfGEufWy2fbR2lrsEtIfW5gAxW6L_-h1wJgpdZrtzgZYxdiwv5SmAHP_Q-MAEN0wuxjkrLFI82djbQyOuKTZhMMbjD4q2gyJOlvHUoRkp3yWNnBfLv_aau41hqcilUMSkF_LbY6fvOh8mKvgMn5A0gun5XWxDmzlnRM4JEFJSzKD5xOoUYw/4ad/B2q-NdABT4iEy9rw2​​edSow/h5/h001.aLBQtyUWn3LtNmXqd0qeSDA4A77HrONG9H1aXz2CfF4)\
+*8 分钟* Blair Vanderhoof 等人
+
+Meta 在 Connect 2024 上展示了多种新应用程序和技术，全部使用 React 和 React Native 构建。其中包括 Meta Quest 的 Instagram 和 Facebook 的重建版本、Meta Horizo​​n 移动应用程序、更新的 Meta Horizo​​n 商店以及新的 Meta Spatial 编辑器。
+
+\[用于本地存储读写的 SSR 友好自定义 React Hook]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfLlFcsXOFpUrtXNVZnzChxK9gX0EvH1t1Z0XSLSIHmUC1njUk9f3ZiAzgZXl\_Z1HpFVt LDrlHPYoO4ouoNxJZEDmJBggerG6H-OJZfVWHyPod5FunCBxjhiDhkbWM0mjtRvcGBIooFgB QmJPJOiwnDy3TSrXx-ZysO28vnjRkvJZqxu994fZ3JNpHOVDUKqmZtYtpfn3zXHdcKzs8rks4 4TWBm0WjmeGvfMnrMZr7E3By-Hw1N4vd\_il1Aln4OG7-aEjcytCuiAzaja6T3XQmr3aTyQyoc02MrwDCkdFZ8tegFbuSSftSkCWv1WRfXfMA/4ad/B2q-NdABT4iEy9rw2​​edSow/h6 /h001.fYEmtkN0dipmWokBAzA-0Y-HcTz8lFDtW-Xc\_RVJ47Y)\
+*3 分钟* 尼科·普拉南塔 (Nico Prananta)
+
+本文讨论如何创建自定义 React hook，以使用 useSyncExternalStore 访问本地存储。在了解到“存储”事件仅在不同文档中发生更改时才会触发后，作者修改了挂钩以包含自定义事件侦听器。该钩子的最终版本会侦听存储事件和自定义“本地存储更改”事件，确保正确的组件重新渲染并避免水合不匹配错误。
+
+\[✂️ 通过自动化测试将 QA 周期从几小时缩短为几分钟]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZDc6CvoM57HfpmGHktxcZjUT2x\_olXBEOMBidgpG9MpezCnZvAv08DmnZom20rAXgRATgd tvmSVzAwtW9L8\_awc\_aBXJjaht3vdJskP95Ou2JUQVEMBTjfw\_d-o\_l3OJCQYLDBXrXqaHnsUbSZ pPhbUQQ2RihBgzgnQBtX3lLu9Xw4X2tyw8hFE2ROEGyplG33viKQNFcroRwCDkitKrIMl0HailB1W 4yyyllXxWrcQAJ4L-sqJJP4h6bhXKE7fzU9n3YjB0kJcL1iAJiO3KZLIZ6GhdohffivU6us574YK/4ad/B2q-NdABT4iEy9rw2​​edSow/h7/h001。 QEYviHO3GWRswm​​0D\_qhHkLsGpsZkjDzXxLt7cBDv1Y4)\
+*由 QA Wolf 赞助*
+
+如果缓慢的 QA 流程成为您或您的软件工程团队的瓶颈，并且您因此发布速度变慢，那么您必须查看 QA Wolf。它们使您能够实现 80% 的自动化端到端测试覆盖率，并通过将 QA 周期从几小时缩短到几分钟来帮助交付速度提高 5 倍。 G2 拥有超过 100 条 5 星级评论以及来自 Salesloft、Drata、Autotrader 等的客户推荐 — 您将得到良好的帮助。
+
+今天我们将总结几个简洁的项目：
+
+* \[react-to-print：在浏览器中打印React组件]\(https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea\_eXiYAmBo-05lsCkoJZwe3zz\_GH5lfuI5koUSglgVmmuSVPXspR4eEwW8faDNy0c9\_-ov7dd7JDVaaFkHUttZlLgj IhKFmOi6QtfgeyWZvmOpBrbW2kapWxmo78ugwB1UBwV3v5dAOQfLdJHal1B0ZpzHqBrw0y6oAX-d0THqwYaoGW4fJrj9AyFl-Mxo73-YxW5AMssxB\_7etBgZoKNG6YTbg-Nbf9bhWqMs KYKtuDq5gTjcnz8AvWVFixhF7LlIwgyrkj6xx\_Qi94CZeq2lxMJUs8A /4ad/B2q-NdABT4iEy9rw2​​edSow/h8/h001.NHNg974qCzNXY4PM6UubA1Zz0cji-PmnsEl84dnHIQE)
+
+* \[渲染类shell进度指示器的组件]\(https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea\_eXiYAmJRoK35QF9y3xx3szZaxKGf\_Uer3pKKI\_Srjt1V-EbG\_7lHPPzVCedwP6uxUDVdRyjaCEn4e5lgDS4C8nEMO 31wajEvwuCPic2PUCTtnlQx2P32SQQ0SRqqBQ7fOqVWfkrCCvkx3pUncBZMqPQeRtyyC-l4Hd NSqMO55XkAMSlVj43k7IiV0Pb6h\_hHWLdgKTDxzExj3xdeOWrnhn84YDQn6ljz5bPK4QMXonNCP cRNaX2x2jZxztP3R7nJJduIzKGa4oCEDb8V0YqHRAzRCopCgIsg9Mstyc4ibI-Y6ndGrD/4ad/B2q-NdABT4iEy9rw2​​edSow/h9/h001。 KvULBnWJ6NrZ4JswM28ClKXEipvk0J5N-Ds90TFxkzg)
+
+#
+
+
