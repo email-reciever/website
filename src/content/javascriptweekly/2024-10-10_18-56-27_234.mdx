@@ -1,0 +1,336 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: A huge week for ECMAScript proposals
+description: A huge week for ECMAScript proposals
+date: 星期四 06 晚上 十月 10o 2024
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/708
+origin_site: https://javascriptweekly.com/issues/708
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="A huge week for ECMAScript proposals" url="https://javascriptweekly.com/issues/708" />
+
+<Detail client:only="react">
+	#​708 — October 10, 2024
+
+[Read on the Web](https://javascriptweekly.com/issues/708)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/160913/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/zdxqjaxybukytthlqd56.jpg)](https://javascriptweekly.com/link/160914/d076523b1d)
+
+[TC39 Advances 10+ ECMAScript Proposals](https://javascriptweekly.com/link/160914/d076523b1d "socket.dev") — The architects behind the development of the ECMAScript / JavaScript spec got together again this week (you can [see them in this tweet](https://javascriptweekly.com/link/160915/d076523b1d)) and they had a _packed_ agenda. [Import attributes](https://javascriptweekly.com/link/160916/d076523b1d), [Iterator helpers](https://javascriptweekly.com/link/160917/d076523b1d), [`Promise.try`](https://javascriptweekly.com/link/160918/d076523b1d) and [Regexp modifiers](https://javascriptweekly.com/link/160919/d076523b1d) all made it to stage 4, and more besides.
+
+Sarah Gooding (Socket)
+
+🦖 [Announcing Deno 2](https://javascriptweekly.com/link/160920/d076523b1d "deno.com") — A huge release for the _“what if I reinvented Node again from scratch?”_ runtime. Backwards compatibility with Node is a headline feature, but there’s a lot more baked in. Best, though, is the [▶️ epic ‘Announcing Deno 2’ video](https://javascriptweekly.com/link/160921/d076523b1d). After a slightly bombastic opener, Ryan presents a fantastic ‘keynote’ style tour of everything Deno has to offer – I enjoyed watching it.
+
+Dahl, Belder, Iwańczuk and Jiang
+
+💡 A neat new feature is Deno's Jupyter Notebook support [which Simon Willison checks out here.](https://javascriptweekly.com/link/160922/d076523b1d)
+
+[![](https://copm.s3.amazonaws.com/caddefd9.png)](https://javascriptweekly.com/link/160913/d076523b1d)
+
+[A Deeper Understanding of Web Security](https://javascriptweekly.com/link/160913/d076523b1d "frontendmasters.com") — Steve Kinney hosts this extensive video course on the challenges of web security. You'll gain a deeper understanding of security on the web, developing your mental model on how to approach things, explore common vulnerabilities, get hands-on experience with security tools, and get to grips with best practices.
+
+Frontend Masters sponsor
+
+[Announcing TypeScript 5.7 Beta](https://javascriptweekly.com/link/160923/d076523b1d "devblogs.microsoft.com") — The newest TypeScript is on the way. As always, a true laundry list of enhancements and new features, but the [path rewriting for relative paths](https://javascriptweekly.com/link/160924/d076523b1d) is a particularly welcome addition, enabling easy rewrites of `.ts` imports into `.js` at compile time.
+
+Microsoft
+
+**IN BRIEF:**
+
+*   Ian Grunert writes about work done to [(re)enable JavaScriptCore's JIT mechanisms on Windows.](https://javascriptweekly.com/link/160925/d076523b1d) This is particularly good news for [Bun](https://javascriptweekly.com/link/160926/d076523b1d) users.
+    
+*   Did you know MySQL 9.0 now [natively supports JavaScript stored routines?](https://javascriptweekly.com/link/160927/d076523b1d)
+    
+*   🇺🇸 The next [JSNation](https://javascriptweekly.com/link/160928/d076523b1d) event is taking place in a hybrid form both remotely and in New York City this November 18 and 21. Some [fantastic speakers](https://javascriptweekly.com/link/160929/d076523b1d) await.
+    
+*   [Tenno](https://javascriptweekly.com/link/160930/d076523b1d) is an interesting online Markdown editor that supports adding spreadsheet-like cells that can be populated by JavaScript.
+    
+*   🕹️ [The winners of the latest js13kGames game jam](https://javascriptweekly.com/link/160931/d076523b1d) have been announced. It's amazing what people have managed to achieve in just 13KB.
+    
+
+**RELEASES:**
+
+*   [Bun v1.1.30](https://javascriptweekly.com/link/160932/d076523b1d) – Now includes experimental CSS parsing and bundling, as well as a `bun publish` to publish npm packages, a la `npm publish`. You can also compile code to bytecode to speed up startup times.
+    
+*   [Node.js v20.18.0 (LTS)](https://javascriptweekly.com/link/160933/d076523b1d) – Now with network inspection support.
+    
+*   [React Native Storybook 8.3](https://javascriptweekly.com/link/160934/d076523b1d) – React Native support in the popular component workshop finally gets fully up to speed.
+    
+*   [Rsdoctor 0.4](https://javascriptweekly.com/link/160935/d076523b1d) – Tool for analyzing the Rspack / Webpack build process.
+    
+*   [ESLint 9.12.0](https://javascriptweekly.com/link/160936/d076523b1d), [Electron.js 32.2](https://javascriptweekly.com/link/160937/d076523b1d), [Ember 5.12](https://javascriptweekly.com/link/160938/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[Building a Local Single-Page App with htmx](https://javascriptweekly.com/link/160939/d076523b1d "jakelazaroff.com") — If you have a reasonably simple app to build, using a large framework is probably going to be overkill. [htmx](https://javascriptweekly.com/link/160940/d076523b1d) to the rescue! Jake presents an easily followed practical tutorial packed with code.
+
+Jake Lazaroff
+
+💡 Jake also wrote [an interesting case study of building a local-first app](https://javascriptweekly.com/link/160941/d076523b1d) using SvelteKit and Shoelace, if you want to see something more fully-formed.
+
+[Product for Engineers: A Newsletter Helping Flex Your Product Muscle](https://javascriptweekly.com/link/160942/d076523b1d "newsletter.posthog.com") — Product for Engineers is dedicated to sharing the skills and strategies product engineers need to succeed.
+
+PostHog sponsor
+
+[Build a Static RSS Reader To Fight Your Inner FOMO](https://javascriptweekly.com/link/160944/d076523b1d "www.smashingmagazine.com") — The theme of lightweight JavaScript apps continues with a look at creating a basic RSS feed reader, that updates once a day, with Astro.
+
+Karin Hendrikse
+
+[Node vs Bun: No Backend Performance Difference?](https://javascriptweekly.com/link/160945/d076523b1d "evertheylen.eu") — You can always trust a benchmark to ruffle some feathers, often over the methodology rather than the result. This is no exception, but interesting nonetheless.
+
+Evert Heylen
+
+▶  [Building a Tic-Tac-Toe Game in TypeScript Types](https://javascriptweekly.com/link/160946/d076523b1d "www.youtube.com") — One of those videos I enjoyed simply so I don’t ever feel tempted to try it myself.
+
+Typed Rocks
+
+[Securing Node.js Express APIs with Clerk and React](https://javascriptweekly.com/link/160947/d076523b1d "go.clerk.com") — Secure Express API endpoints and integrate authentication without the complexity of building it from scratch.
+
+Clerk sponsor
+
+📄 [Building a Robust Frontend using Progressive Enhancement](https://javascriptweekly.com/link/160948/d076523b1d) UK Government
+
+📄 [The Popover API: Your New Best Friend for Tooltips](https://javascriptweekly.com/link/160949/d076523b1d) – Supported in all major browsers, except Safari on iOS. Sjoerd Beentjes
+
+📄 [18 Interview Questions Answered by Angular Experts](https://javascriptweekly.com/link/160950/d076523b1d) Angular Space
+
+📄 [Testing CSS Print Media Styles with Cypress](https://javascriptweekly.com/link/160951/d076523b1d) Gleb Bahmutov
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kuhoehtanl4ibtemyt1o.jpg)](https://javascriptweekly.com/link/160952/d076523b1d)
+
+[DOCX 9.0: Generate Word `.docx` Files from JavaScript](https://javascriptweekly.com/link/160952/d076523b1d "docx.js.org") — The code to lay out documents is verbose but there’s a _lot_ of functionality baked in and there aren’t many other options for this task. Here’s a [CodePen-based example](https://javascriptweekly.com/link/160953/d076523b1d) to give you an idea. [GitHub repo.](https://javascriptweekly.com/link/160954/d076523b1d)
+
+Dolan Miu
+
+[TinyJS: A Lightweight Way to Work with DOM Elements](https://javascriptweekly.com/link/160955/d076523b1d "github.com") — Lighter than `querySelector` and friends, you ask? Not in file size, but certainly in code weight. TinyJS offers a jQuery-esque syntax for element selection, adding properties to elements, and more.
+
+Victor Ribeiro
+
+[Breakpoints and `console.log` Is the Past, Time Travel Is the Future](https://javascriptweekly.com/link/160956/d076523b1d "wallabyjs.com") — 15x faster JavaScript debugging than with breakpoints and console.log, supports Vitest, jest, karma, jasmine, and more.
+
+Wallaby Team sponsor
+
+[![](https://res.cloudinary.com/cpress/image/upload/v1728575184/y9jubhswyuomxscsbn1t.png)](https://javascriptweekly.com/link/160957/d076523b1d)
+
+[SVGuitar 2.4: Create SVG-Based Guitar Chord Charts](https://javascriptweekly.com/link/160957/d076523b1d "github.com") — Dynamically generate chord charts / fingerings in the browser. You can experiment with it [in this live demo.](https://javascriptweekly.com/link/160958/d076523b1d)
+
+Raphael Voellmy
+
+[Free Public APIs: A Collection of Free Public APIs for Developers](https://javascriptweekly.com/link/160959/d076523b1d "www.freepublicapis.com") — Categorized and searchable, these are tested daily by bots so if any API is taken down or moved behind a paywall, it's removed from the site.
+
+Nick Schneeberger
+
+[TutorialKit 1.0: Create Interactive Coding Tutorials](https://javascriptweekly.com/link/160960/d076523b1d "tutorialkit.dev") — StackBlitz’s framework for creating interactive coding tutorials, perhaps as a way to boost the adoption of your own libraries or design system. [v1.0](https://javascriptweekly.com/link/160961/d076523b1d) marks TutorialKit as stable.
+
+StackBlitz
+
+[Jeasx: The Ease of JSX with the Power of SSR](https://javascriptweekly.com/link/160962/d076523b1d "www.jeasx.dev") — A new server side rendering framework built on top of JSX and Fastify.
+
+Maik Jablonski
+
+[ip-address 10.0: Library for Parsing and Manipulating IP Addresses](https://javascriptweekly.com/link/160963/d076523b1d "github.com") — Works with both IPv4 and IPv6 addresses.
+
+Beau Gunderson
+
+*   [React-Grid-Layout 1.5](https://javascriptweekly.com/link/160964/d076523b1d) – Draggable/resizable grid layouts for React apps.
+    
+*   🗓️ [Schedule-X 2.4](https://javascriptweekly.com/link/160965/d076523b1d) – Material Design event calendar and date picker.
+    
+*   [eslint-plugin-unicorn 56.0](https://javascriptweekly.com/link/160966/d076523b1d) – 100+ useful ESLint rules in one place.
+    
+*   [Redwood 8.4](https://javascriptweekly.com/link/160967/d076523b1d) – Popular React app framework.
+    
+
+📰 Classifieds
+
+[Automatically creates & maintains E2E UI tests](https://javascriptweekly.com/link/160968/d076523b1d). Zero flakes. Used by Lattice, Bilt Rewards and others. Backed by YC, CTO GitHub and others.
+
+* * *
+
+[Pythagora](https://javascriptweekly.com/link/160969/d076523b1d) is an AI dev tool that builds production-ready tools (not demo apps). It writes the code and talks to you in the process.
+
+* * *
+
+⚙️ Create entire web apps with [Reactile](https://javascriptweekly.com/link/160970/d076523b1d) and let it handle your widgets and windows within a single browser tab. 1-month free trial. [Try it now](https://javascriptweekly.com/link/160970/d076523b1d).
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/160971/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​708 — 2024 年 10 月 10 日
+
+[网上阅读](https://javascriptweekly.com/issues/708)
+
+连同 
+
+\[![前端大师徽标](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)]\(https:// javascriptweekly.com/link/160913/d076523b1d)
+
+JavaScript 周刊
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/zdxqjaxybukytthlqd56.jpg)](https://javascriptweekly.com/link/160914/d076523b1d)
+
+[TC39 提出 10 多项 ECMAScript 提案](https://javascriptweekly.com/link/160914/d076523b1d "socket.dev") — ECMAScript / JavaScript 规范开发背后的架构师本周再次聚在一起（您可以[参见他们在这条推文中](https://javascriptweekly.com/link/160915/d076523b1d))并且他们有一个*紧凑的*议程。 [导入属性](https://javascriptweekly.com/link/160916/d076523b1d)、[迭代器助手](https://javascriptweekly.com/link/160917/d076523b1d)、\[`Promise.try`]\(https: //javascriptweekly.com/link/160918/d076523b1d) 和 [正则表达式修饰符](https://javascriptweekly.com/link/160919/d076523b1d) 都进入了第 4 阶段，此外还有更多。
+
+莎拉·古丁（Socket）
+
+🦖 [宣布 Deno 2](https://javascriptweekly.com/link/160920/d076523b1d "deno.com") — *“如果我从头开始重新发明 Node 会怎样？”* 运行时的一个巨大版本。与 Node 的向后兼容性是一个主要功能，但还有更多内容。不过，最好的是 [▶️ 史诗般的“宣布 Deno 2”视频](https://javascriptweekly.com/link/160921/d076523b1d)。在略显夸张的开场之后，Ryan 为 Deno 提供了精彩的“主题演讲”风格之旅——我很喜欢看它。
+
+达尔、贝尔德、伊万祖克和蒋
+
+💡 一个巧妙的新功能是 Deno 的 Jupyter Notebook 支持 [Simon Willison 在此处查看。](https://javascriptweekly.com/link/160922/d076523b1d)
+
+[![](https://copm.s3.amazonaws.com/caddefd9.png)](https://javascriptweekly.com/link/160913/d076523b1d)
+
+[深入了解网络安全](https://javascriptweekly.com/link/160913/d076523b1d "frontendmasters.com") — Steve Kinney 主持了这个关于网络安全挑战的内容丰富的视频课程。您将对网络安全有更深入的了解，形成关于如何处理问题的心理模型，探索常见漏洞，获得安全工具的实践经验，并掌握最佳实践。
+
+前端大师赞助商
+
+[宣布推出 TypeScript 5.7 Beta](https://javascriptweekly.com/link/160923/d076523b1d "devblogs.microsoft.com") — 最新的 TypeScript 即将推出。与往常一样，这是一份真正的增强功能和新功能清单，但[相对路径的路径重写](https://javascriptweekly.com/link/160924/d076523b1d) 是一个特别受欢迎的补充，可以轻松重写 `.ts ` 在编译时导入到 `.js` 中。
+
+微软
+
+**简而言之：**
+
+* Ian Grunert 撰写了有关[（重新）在 Windows 上启用 JavaScriptCore 的 JIT 机制的工作。](https://javascriptweekly.com/link/160925/d076523b1d) 这对于 [Bun](https://javascriptweekly) 来说是特别好的消息.com/link/160926/d076523b1d）用户。
+
+* 你知道MySQL 9.0现在[原生支持JavaScript存储例程吗？](https://javascriptweekly.com/link/160927/d076523b1d)
+
+* 🇺🇸 下一次 [JSNation](https://javascriptweekly.com/link/160928/d076523b1d) 活动将于今年 11 月 18 日至 21 日以远程和纽约市的混合形式举行。一些\[出色的演讲者]\( https://javascriptweekly.com/link/160929/d076523b1d）等待。
+
+* [Tenno](https://javascriptweekly.com/link/160930/d076523b1d) 是一个有趣的在线 Markdown 编辑器，支持添加可由 JavaScript 填充的类似电子表格的单元格。
+
+* 🕹️【最新一届js13kGames游戏大赛获奖者】(https://javascriptweekly.com/link/160931/d076523b1d)已经公布。人们在短短 13KB 的时间内就取得了如此巨大的成就，真是令人惊叹。
+
+**发布：**
+
+* [Bun v1.1.30](https://javascriptweekly.com/link/160932/d076523b1d) – 现在包括实验性CSS解析和捆绑，以及用于发布npm包的“bunpublish”，即“npmpublish” 。您还可以将代码编译为字节码以加快启动时间。
+
+* [Node.js v20.18.0 (LTS)](https://javascriptweekly.com/link/160933/d076523b1d) – 现在支持网络检查。
+
+* [React Native Storybook 8.3](https://javascriptweekly.com/link/160934/d076523b1d) – 流行的组件研讨会中的 React Native 支持终于完全跟上了速度。
+
+* [Rsdoctor 0.4](https://javascriptweekly.com/link/160935/d076523b1d) – 用于分析 Rspack / Webpack 构建过程的工具。
+
+* [ESLint 9.12.0](https://javascriptweekly.com/link/160936/d076523b1d)、[Electron.js 32.2](https://javascriptweekly.com/link/160937/d076523b1d)、\[Ember 5.12]\( https://javascriptweekly.com/link/160938/d076523b1d）
+
+📒 文章和教程
+
+[使用 htmx 构建本地单页应用程序](https://javascriptweekly.com/link/160939/d076523b1d "jakelazaroff.com") — 如果您要构建一个相当简单的应用程序，那么使用大型框架可能会太过分了。 [htmx](https://javascriptweekly.com/link/160940/d076523b1d) 来救援！ Jake 提供了一个易于理解的实用教程，其中包含代码。
+
+杰克·拉扎罗夫
+
+💡 Jake 还使用 SvelteKit 和 Shoelace 编写了[一个关于构建本地优先应用程序的有趣案例研究](https://javascriptweekly.com/link/160941/d076523b1d)，如果您想查看更完整的内容。
+
+[工程师产品：帮助展示产品实力的时事通讯](https://javascriptweekly.com/link/160942/d076523b1d "newsletter.posthog.com") — 工程师产品致力于分享产品工程师所需的技能和策略成功。
+
+邮报猪赞助商
+
+[构建静态 RSS 阅读器来对抗内心的 FOMO](https://javascriptweekly.com/link/160944/d076523b1d "www.smashingmagazine.com") — 轻量级 JavaScript 应用程序的主题继续介绍如何创建基本的 RSS Feed 阅读器，每天更新一次，使用 Astro。
+
+卡琳·亨德里克斯
+
+[Node vs Bun：没有后端性能差异？](https://javascriptweekly.com/link/160945/d076523b1d "evertheylen.eu") - 你总是可以相信基准测试会激怒一些人，通常是通过方法而不是结果。这也不例外，但仍然很有趣。
+
+埃弗特·海伦
+
+▶  [用 TypeScript 类型构建 Tic-Tac-Toe 游戏](https://javascriptweekly.com/link/160946/d076523b1d "www.youtube.com") — 其中一个我很喜欢的视频，所以我从来没有我很想亲自尝试一下。
+
+类型岩石
+
+[使用 Clerk 和 React 保护 Node.js Express API 的安全](https://javascriptweekly.com/link/160947/d076523b1d "go.clerk.com") — 保护 Express API 端点的安全并集成身份验证，无需从头开始构建它的复杂性。
+
+文员赞助人
+
+📄 [使用渐进增强构建强大的前端](https://javascriptweekly.com/link/160948/d076523b1d) 英国政府
+
+📄 [Popover API：工具提示的新好朋友](https://javascriptweekly.com/link/160949/d076523b1d) – 所有主要浏览器均受支持，iOS 上的 Safari 除外。斯约德·本特杰斯
+
+📄【Angular 专家解答的 18 道面试题】(https://javascriptweekly.com/link/160950/d076523b1d) Angular Space
+
+📄 [使用 Cypress 测试 CSS 打印媒体样式](https://javascriptweekly.com/link/160951/d076523b1d) Gleb Bahmutov
+
+🛠 代码和工具
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kuhoehtanl4ibtemyt1o.jpg)](https://javascriptweekly.com/link/160952/d076523b1d)
+
+[DOCX 9.0：从 JavaScript 生成 Word `.docx` 文件](https://javascriptweekly.com/link/160952/d076523b1d "docx.js.org") — 布置文档的代码很冗长，但有很多\* 内置的功能，并且没有太多其他选项可以完成此任务。这里有一个[基于 CodePen 的示例](https://javascriptweekly.com/link/160953/d076523b1d) 来给您一个想法。 [GitHub 存储库。](https://javascriptweekly.com/link/160954/d076523b1d)
+
+缪多兰
+
+[TinyJS：一种使用 DOM 元素的轻量级方法](https://javascriptweekly.com/link/160955/d076523b1d "github.com") — 你可能会问，比 `querySelector` 和朋友更轻？不是文件大小，而是代码重量。 TinyJS 提供了一种 jQuery 式的语法，用于元素选择、向元素添加属性等。
+
+维克托·里贝罗
+
+[断点和 `console.log` 已成为过去，时间旅行才是未来](https://javascriptweekly.com/link/160956/d076523b1d "wallabyjs.com") — JavaScript 调试速度比断点和 console.log 快 15 倍，支持 Vitest、jest、karma、jasmine 等。
+
+小袋鼠队赞助商
+
+[![](https://res.cloudinary.com/cpress/image/upload/v1728575184/y9jubhswyuomxscsbn1t.png)](https://javascriptweekly.com/link/160957/d076523b1d)
+
+[SVGuitar 2.4：创建基于 SVG 的吉他和弦图表](https://javascriptweekly.com/link/160957/d076523b1d "github.com") — 在浏览器中动态生成和弦图表/指法。您可以[在此现场演示中尝试一下。](https://javascriptweekly.com/link/160958/d076523b1d)
+
+拉斐尔·沃尔米
+
+[免费公共 API：供开发人员使用的免费公共 API 的集合](https://javascriptweekly.com/link/160959/d076523b1d "www.freepublicapis.com") — 已分类且可搜索，这些内容每天都会由机器人进行测试，因此如果有的话API 被下架或移至付费墙后面，并从网站中删除。
+
+尼克·施内伯格
+
+[TutorialKit 1.0：创建交互式编码教程](https://javascriptweekly.com/link/160960/d076523b1d "tutorialkit.dev") — StackBlitz 用于创建交互式编码教程的框架，也许可以作为促进您自己的库采用的一种方式或设计系统。 [v1.0](https://javascriptweekly.com/link/160961/d076523b1d) 将 TutorialKit 标记为稳定。
+
+堆栈闪电战
+
+[Jeasx：借助 SSR 的强大功能，轻松实现 JSX](https://javascriptweekly.com/link/160962/d076523b1d "www.jeasx.dev") — 一个基于 JSX 和 Fastify 构建的新服务器端渲染框架。
+
+迈克·雅布隆斯基
+
+[ip-address 10.0：用于解析和操作 IP 地址的库](https://javascriptweekly.com/link/160963/d076523b1d "github.com") — 适用于 IPv4 和 IPv6 地址。
+
+博·冈德森
+
+* [React-Grid-Layout 1.5](https://javascriptweekly.com/link/160964/d076523b1d) – React 应用程序的可拖动/可调整大小的网格布局。
+
+* 🗓️ [Schedule-X 2.4](https://javascriptweekly.com/link/160965/d076523b1d) – Material Design 活动日历和日期选择器。
+
+* [eslint-plugin-unicorn 56.0](https://javascriptweekly.com/link/160966/d076523b1d) – 100 多个有用的 ESLint 规则集中在一处。
+
+* [Redwood 8.4](https://javascriptweekly.com/link/160967/d076523b1d) – 流行的 React 应用框架。
+
+📰 分类广告
+
+[自动创建和维护 E2E UI 测试](https://javascriptweekly.com/link/160968/d076523b1d)。零片。由 Lattice、Bilt Rewards 等公司使用。由 YC、GitHub 首席技术官和其他人支持。
+
+***
+
+[Pythagora](https://javascriptweekly.com/link/160969/d076523b1d) 是一种 AI 开发工具，用于构建生产就绪工具（不是演示应用程序）。它会编写代码并在此过程中与您对话。
+
+***
+
+⚙️ 使用 [Reactile](https://javascriptweekly.com/link/160970/d076523b1d) 创建整个 Web 应用程序，并让它在单个浏览器选项卡中处理您的小部件和窗口。 1 个月免费试用。 [立即尝试](https://javascriptweekly.com/link/160970/d076523b1d)。
+
+由 [Cooperpress](https://cooperpress.com/) 出版，由 [Peter Cooper](https://javascriptweekly.com/link/160971/d076523b1d) 编辑
+
+“JavaScript”是 Oracle Corporation 在美国的商标\
+我们未获得 Oracle 的认可或隶属于 Oracle。
+
+
