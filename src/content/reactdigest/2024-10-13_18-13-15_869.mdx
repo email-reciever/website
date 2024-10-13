@@ -1,0 +1,103 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#476 React on the server is not PHP
+description: RD#476 React on the server is not PHP
+date: 星期日 06 晚上 十月 13o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/react-on-the-server-is-not-php
+origin_site: https://newsletter.reactdigest.net/p/react-on-the-server-is-not-php
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#476 React on the server is not PHP" url="https://newsletter.reactdigest.net/p/react-on-the-server-is-not-php" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XYEuFVChJelSuJ5XoBpKBQGJjZWlc224qeYBS4701lFoOp56ttOLs69K3AvkSKm1BIyWB2hVfFsypZENE3LjsdtyHLUKsC-gi09-DZI9RxXvM8l5pTkSBVYQDp_qQlCx46rAAxNe4RxxpCUDh1APeAu-SQXKMI_xiZgbDcbleq4hpsjXxYsDPqyXQfi7cYIePouwkXohE5TVfVzM2q7fUtLdNwhkKaNcbjhxJ9qchwaHm-QZFybbII89Du1qihPe3xb5KYlrQHFidl6C5Qks5arQC9cJszIeN-7M5NjqDS04EKBZnf2FHhRSVzOVixxhguMSumJhDyf9Tghs-ZsPYpDbBZMP9ffDTC2HwALGC1KQJ9HF57AzHfrp9rQFARNoWzkeaY6JCmbv9E1rsSGtulKW2QzXXf8aNZOaVeddBpP13cjYpN7B4ve8BmI8jjqgUAZOZ31DD4cIvfmPDtbAeeGVZm_wZ43VcotI9NzXmRuoIpoQ6aieXePZLkZ2QcBtblKa1S1KdisoI7AN9ZN_0XUG9y23CoCkyB0OTrb5BNKj10CffV3tUopROXxkBAIEcJsUDlJSV2n9mPou4s2WjXYhaclgbFRzooYFpgoeCTgKqB2o0i7cV8UaudUiJ-OlkFn1V3TJGXnKl9omMm_4lwdKgJNG217D1Lk8bktEIIXUh6VImG-tqQJgIpd6bNyh7yUKXOV75p1m7cZ5FxO-eOsOgTKTiKkpPoxuQloroA-KnxkFimfePzF9xppM5_z5yhWsZJvDf5GGq_jleuX1Wt/4ak/r157B09kQ2KVWjTzTuBvjQ/h0/h001.KiWbmPMVywm-eIUywyfbdeOKjr1wrd_lnBY_7ZRiBzc)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4ak/r157B09kQ2KVWjTzTuBvjQ/ho.gif)
+
+[React on the server is not PHP](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZDrFuHFzHIDs6I0-qO9mrrqdmnwU9UkBNJ1JTBK7ismJLz7-uOIpYt0rjoqHmm0HzYX2e3VFqdapboq5kFssxtkrRgBW2ZrAm_ymW49Dlmssre4dN_4HFLSfX13Qy1aeFojlvFv2x9-zwNhjo9SGuFKfodzt5Foi0owfMFycwTD5T7CnqVCti3BgKzFU5R9dwl7cuSlyYRkgX-03axX8FMB32Pl1LPvh9we-Hf2AlAXDMZ4g4vAj5So75hsDsb_-zb8PWcsnNFvTftXNIWaQM8/4ak/r157B09kQ2KVWjTzTuBvjQ/h1/h001.AKYIJZAiPboPZXH7aIBiacb1vEkX8SbPO8gBM4j9HkA)  
+_7 minutes_ by Christoffer Artmann
+
+Is server-side JavaScript just PHP all over again? Not so fast! Dive into the evolution of web development from PHP to modern full-stack JavaScript frameworks. Discover why this isn't a step backward but a leap forward in building powerful, efficient web applications.
+
+[Tests are dead. Meticulous AI is here.](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2WqroLgOnA-NgNKtuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4ak/r157B09kQ2KVWjTzTuBvjQ/h2/h001.SLlNt4o7dfh0obmqC0-bOHdNM5dyA5eYwoJWooJPj_A)  
+_sponsored by Meticulous_
+
+Meticulous AI is a tool which automatically creates and maintains a continuously evolving e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Backed by CTO of GitHub, Guillermo Rauch (next.js author), yc and others, it's built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[Handling Form Validation Errors and Resets with useActionState](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw40cKvTfguX8e_fzKhv5jcmhjc3-51BuoIVWE2-JtVkkK7HewI27JstkEbhfKvXHyoyMKbbXignilRpR7La9MdnScvGnZzR4bITzhp_VaPbCsDZpzVduTkJdZVuz-E7nBNUE6iwRnvkoLoMdpO1JlIlqtehts3k9zXpleNRqt6AyseQYERtTjNfKKN34q6BsuKwWhfw0FtYMUNUnip0u37UW3fb8YUbP6oLWSzlYIk-jfy5nCEvZ9bmEF1Xw9ezf-mPgqJS8sPgiaYRuNsbY1Lor7GapTUjfc7fTioG6sVCFHq_B5pc4H5IXVIucbQ91yQ/4ak/r157B09kQ2KVWjTzTuBvjQ/h3/h001.yNvxA6-xsTcT5J9HX2ERQ2d1OXw37fet-kbLxScV2JU)  
+_9 minutes_ by Aurora Scharff
+
+With React 19 RC announced, the `useActionState` hook is a powerful tool for creating a state based on the result of an action, typically useful with form submissions. However, there are unclear usage patterns and some gotchas that can make it hard to work with. In this blog post, we'll create a validated form using the hook, and we'll see how we can handle form resets and errors with it.
+
+[How to prevent re-render in React with Tailwind CSS](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfLlFcsXOFpUrtXNVZnzChxd8IxMggKcxKorTyXjRpBsudaarWePKWowdWbr3Cs8iYLGxc1sdKAcJJLWbgz4TOLd5npkfnP59YGQmgRw28sjLbVIHGlV_QW4yNb43RLe4hbsUyZwCfcGCxyy4CU1dXa6B6YLfLUDBt--HebnYiCxhWHpBWo6aGO_w17MMueRGgPzhfYsoOY8huGn8qVF4zngLvQkqsp_06kXqjBdEz2llvw2XMpRKNXJmNATxUjMoA-v9HYiK-MiHGI254CTiv7KrkWvhoBwyBUv6O2JRqj4/4ak/r157B09kQ2KVWjTzTuBvjQ/h4/h001.rVT_68GLq00vwqiBPQT_YnCnQNq3at3WrJ3g8Ry7wQw)  
+_5 minutes_ by Nico Prananta
+
+A technique for implementing a sticky navigation bar with dynamic background changes based on scroll position in a Next.js website. The author presents two approaches: a traditional React-based solution using useState and useEffect, and an alternative solution using Tailwind CSS and HTML data attributes.
+
+[Liskov's Gun: The parallel evolution of React and Web Components](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqf3IDvV_7VdknejqQNl4Xe-KlmIPD90ouzGnlBmN5H9kJ74MYplC1uDePdVE67zfKVyccndYcRqi9OoYOxafTzcOVS_m8ThlfLYsosctdLe8OAlVSyD5ix1ucT8SLsbI1GgcBW5vRYHiFiTeFvExBC7GZqWz19MXYXP-pNN__HywDR8EjT6HWx-xansZX3d4pXuFl92tubDnBHIsxZ6pCwMG-RMNLr517I3P_6NFmIHPbanhwOSneHTu_6Wj88RwupnFGIplwYfehfNmgxxgwt8/4ak/r157B09kQ2KVWjTzTuBvjQ/h5/h001.q0d5KXrglrrbKJ4Hg2dAmCE8Ezyke_7l0ZGlK7UGZNg)  
+_about 1 hour_ by Baldur Bjarnason
+
+The article discusses the ongoing debate about web components in web development. It explains that web components are a set of standardized web APIs for creating reusable widgets, but their adoption has been controversial.
+
+[Static Typing for MUI React Data Grid Columns](https://link.mail.beehiiv.com/ss/c/u001.aPX4i1CZjyg0TJtq3966ENtvq_odNnpHkpdvDJ2PhR-_HJeh_Dk2C7WXb124Mb6oQc8Qgx-nT-00Vd9Jfbnpg2wscY99EipKiLcUfo0MTv7Zta6nJVHQzdWniM_QS1meiXEz0G0LnOsQl3_ltWdsX3uUcVcicRLFRaSLGnQMdCZ300WI8cvY70afBIhFh_Y9GVFT-N2DLJ8bCoV_jEvlqNxMZWFNzVBsXg-kmVbCYw99BSJCO5Q7IFj8bZjaTY_9NC3eJu90IYN2Nz4BbRNN2778DjpXJwaxf7lE3J2M5VlPpKe5D5yzD99BMyGvnyun/4ak/r157B09kQ2KVWjTzTuBvjQ/h6/h001.VD4GZMVcyYiqkqgLf7NFQSzppMihutLX4046__Tkkjw)  
+_5 minutes_ by John Reilly
+
+The MUI React Data Grid can be used with static typing to ensure the columns you pass to the component are correct. This post will show you how to do that.
+
+[Fast and easy to use file API for your React app](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZDc6CvoM57HfpmGHktxcZio30CBW--d7t8uUufY05JDMwxtQtvmRmHz4By8oJkbE_njXxMDxTmDnEzHF0g9WdXxj6TQZUPXSlRBhkMeoHyZ79h1749t1mqnadZJW-cdOBFNCON_J_uht4lFTIZvg9ai1PFDWvsoimTdTHBiuayYbzKi8U5NTOkZaLiUzr2bzTO80aCUbIzPrfAojSr9MLbx7IgwZt5UO2Bj6_BfTvAJVEBxAiQFXRNw_MWa8MQRW9ofKU2tIusnHiwTddR7C2s/4ak/r157B09kQ2KVWjTzTuBvjQ/h7/h001.43ejCzGz0Lkz1Uru0rItsqhyDj8YbXG-Mz4VR_QJ4Vs)  
+_sponsored by Pinata_
+
+Upload to Pinata! The easiest file api for file uploads and access controls so you can focus on coding your app instead of dealing with infrastructure.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XYEuFVChJelSuJ5XoBpKBQGJjZWlc224qeYBS4701lFoOp56ttOLs69K3AvkSKm1BIyWB2 hVfFsypZENE3LjsdtyHLUKsC-gi09-DZI9RxXvM8l5pTkSBVYQDp\_qQlCx46rAAxNe4RxxpCUD h1APEAu-SQXKMI\_xiZgbDcbleq4hpsjXxYsDPqyXQfi7cYIePouwkXohE5TVfVzM2q7fUtLdNwh kKaNcbjhxJ9qchwaHm-QZFybbII89Du1qihPe3xb5KYlrQHFidl6C5Qks5arQC9cJszIeN-7M5NjqDS04EKBZnf2FHhRSVzOVixxhguMSumJhDyf9Tghs-ZsPYpDbBZMP9ffDTC2HwALGC1KQJ9HF5 7AzHfrp9rQFARNoWzkeaY6JCmbv9E1rsSGtulKW2QzXXf8aNZOaVeddBpP13cjYpN7B4ve8Bm I8jjqguAZOZ31DD4cIvfmPDtbAeeGVZm\_wZ43VcotI9NzXmRuoIpoQ6aieXePZLkZ2QcBtblKa 1S1KdisoI7AN9ZN\_0XUG9y23CoCkyB0OTrb5BNKj10CffV3tUopROXxkBAIEcJsUDlJSV2n9mPou 4s2WjXYhaclgbFRzooYFpgoeCTgKqB2o0i7cV8UaudUiJ-OlkFn1V3TJGXnKl9omMm\_4lwdKgJNG2 17D1Lk8bktEIIXUh6VImG-tqQJgIpd6bNyh7yUKXOV75p1m7cZ5FxO-eOsOgTKTiKkpPox uQloroA-KnxkFimfePzF9xppM5\_z5yhWsZJvDf5GGq\_jleuX1Wt/4ak/r157B09kQ2KVWjT zTuBvjQ/h0 /h001.KiWbmPMVywm-eIUywyfbdeOKjr1wrd\_lnBY\_7ZRiBzc)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4ak/r157B09kQ2KVWjTzTuBvjQ/ho.gif)
+
+\[服务器上的反应不是 PHP]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZDrFuHFzHIDs6I0-qO9mrrqdmnwU9UkBNJ1JTBK7ismJLz7-uOIpYt0rjoqHmm0HzYX2e3VFqdapboq5k FssxtkrRgBW2ZrAm\_ymW49Dlmssre4dN\_4HFLSfX13Qy1aeFojlvFv2x9-zwNhjo9SGuFKfodzt5Foi0owfMFycwTD5T7CnqVCti3BgKzFU5R9dwl7cuSlyYRkgX-03axX8FMB32Pl1LPvh9we -Hf2AlAXDMZ4g4vAj5So75hsDsb\_-zb8PWcsnNFvTftXNIWaQM8/4ak/r157B09kQ2KVWjTzTuBvjQ/h1/h001。 AKYIJZAiPboPZXH7aIBiacb1vEkX8SbPO8gBM4j9HkA)\
+*7 分钟* 克里斯托弗·阿特曼
+
+服务器端 JavaScript 是不是又是 PHP 了？没那么快！深入了解 Web 开发从 PHP 到现代全栈 JavaScript 框架的演变。了解为什么这不是倒退，而是构建强大、高效的 Web 应用程序的飞跃。
+
+\[测试已死。细致的AI就在这里。]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2WqroLgOnA-NgNK tuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4ak/r157B09kQ2KVWjTzTuBvjQ/h2/h001.SLlNt4o7dfh0obmqC0-bOHdNM5dyA5eYwoJWooJPj\_A)\
+*由精心赞助*
+
+Meticulous AI 是一款自动创建和维护不断发展的 e2e UI 测试套件的工具，该套件涵盖应用程序的每个角落 - 无需开发人员进行任何干预。在 GitHub 首席技术官 Guillermo Rauch（next.js 作者）、yc 和其他人的支持下，它是从 Chromium 级别构建的，具有确定性调度引擎 - 使其成为唯一消除碎片的测试工具。
+
+\[使用 useActionState 处理表单验证错误和重置]\(https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw40cKvTfguX8e\_fzKhv5jcmhjc3-51BuoIVWE2-JtVkkK7HewI27JstkEbhfKvXHyoyMKbbXign ilRpR7La9MdnScvGnZzR4bITzhp\_VaPbCsDZpzVduTkJdZVuz-E7nBNUE6iwRnvkoLoMdpO1Jl Ilqtehts3k9zXpleNRqt6AyseQYERtTjNfKKN34q6BsuKwWhfw0FtyMUNUnip0u37UW3fb8YUb P6oLWSzlyIk-jfy5nCEvZ9bmEF1Xw9ezf-mPgqJS8sPgiaYRunsbY1Lor7GapTUjfc7fTioG6sVCFHq\_B5pc4H5IXVIucbQ91yQ/4ak/r157B09kQ2KVWjTzTuBvjQ/h3/h001.yNvxA6 -xsTcT5J9HX2ERQ2d1OXw37fet-kbLxScV2JU)\
+*9 分钟* 奥罗拉·沙夫
+
+随着 React 19 RC 的发布，“useActionState”挂钩是一个强大的工具，用于根据操作结果创建状态，通常在表单提交时有用。然而，不明确的使用模式和一些陷阱可能会使其难以使用。在这篇博文中，我们将使用该钩子创建一个经过验证的表单，并且我们将了解如何使用它处理表单重置和错误。
+
+[How to prevent re-render in React with Tailwind CSS](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfLlFcsXOFpUrtXNVZnzChxd8IxMggKcxKorTyXjRpBsudaarWePKWowdWbr3Cs8iYLGxc1sdKAcJJLWbgz4TOLd5npkfnP59YGQmgRw28sjLbVIHGlV_QW4yNb43RLe4hbsUyZwCfcGCxyy4CU1dXa6B6YLfLUDBt--HebnYiCxhWHpBWo6aGO_w17MMueRGgPzhfYsoOY8huGn8qVF4zngLvQkqsp_06kXqjBdEz2llvw2XMpRKNXJmNATxUjMoA-v9HYiK-MiHGI254CTiv7KrkWvhoBwyBUv6O2JRqj4/4ak/r157B09kQ2KVWjTzTuBvjQ/h4/h001.rVT_68GLq00vwqiBPQT_YnCnQNq3at3WrJ3g8Ry7wQw)\
+*5 分钟* 尼科·普拉南塔 (Nico Prananta)
+
+一种在 Next.js 网站中实现粘性导航栏的技术，该导航栏具有基于滚动位置的动态背景变化。作者提出了两种方法：使用 useState 和 useEffect 的传统基于 React 的解决方案，以及使用 Tailwind CSS 和 HTML 数据属性的替代解决方案。
+
+\[Liskov之枪：React和Web Components的并行进化]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqf3IDvV\_7VdknejqQNl4Xe-KlmIPD90ouzGnlBmN5H9kJ74MYplC1uDePdVE67zfKVyccndY cRqi9OoYOxafTzcoVS\_m8ThlfLYsosctdLe8OAlVSyD5ix1ucT8SLsbI1GgcBW5vRYHiFiTeFvExBC7GZqWz19MXYXP-pNN\_\_HywDR8EjT6HWx-xansZX3d4pXuFl92tubDnBHIsxZ6pCwMG-RMNLr517I3 P\_6NFmIHPbanhwOSneHTu\_6Wj88RwupnFGIplwYfehfNmgxxgwt8/4ak/r157B09kQ2KVWjTzTuBvjQ/h5/h001。 q0d5KXrglrrbKJ4Hg2dAmCE8Ezyke\_7l0ZGlK7UGZNg)\
+*约 1 小时* Baldur Bjarnason 着
+
+本文讨论了有关 Web 开发中的 Web 组件的持续争论。它解释说，Web 组件是一组用于创建可重用小部件的标准化 Web API，但它们的采用一直存在争议。
+
+\[MUI React 数据网格列的静态类型]\(https://link.mail.beehiiv.com/ss/c/u001.aPX4i1CZjyg0TJtq3966ENtvq\_odNnpHkpdvDJ2PhR-\_HJeh\_Dk2C7WXb124Mb6oQc8Qgx-nT-00Vd9Jfbnpg2wscY99 EipKiLcUfo0MTv7Zta6nJVHQzdWniM\_QS1meiXEz0G0LnOsQl3\_ltWdsX3uUcVcicRLFRaSLGnQMdCZ300WI8cvY70afBIhFh\_Y9GVFT-N2DLJ8bCoV\_jEvlqNxMZWFNzVBsXg-kmVbCYw99BSJ CO5Q7IFj8bZjaTY\_9NC3eJu90IYN2Nz4BbRNN2778DjpXJwaxf7lE3J2M5VlPpKe5D5yzD9 9BMyGvnyun/4ak/r157B09kQ2KVWjTzTuBvjQ/h6/h001.VD4GZMVcyYiqkqgLf7NFQSzpp MihutLX4046\_\_Tkkjw )\
+*5 分钟* 约翰·赖利
+
+MUI React 数据网格可以与静态类型一起使用，以确保传递给组件的列是正确的。这篇文章将向您展示如何做到这一点。
+
+\[适用于您的 React 应用程序的快速且易于使用的文件 API]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZDc6CvoM57HfpmGHktxcZio30CBW--d7t8uUufY05JDMwxtQtvmRmHz4By8oJkbE\_njXxMDxTm DnEzHF0g9WdXxj6TQZUPXSlRBhkMeoHyZ79h1749t1mqnadZJW-cdOBFNCON\_J\_uht4lFTIZv g9ai1PFDWvsoimTdTHBiuayYbzKi8U5NTokZaLiUzr2bzTO80aCUbIzPrfaojSr9MLbx7IgwZt 5UO2Bj6\_BfTvAJVEBxAiQFXRNw\_MWa8MQRW9ofKU2tIusnHiwTddR7C2s/4ak/r157B09kQ2KVWjTzTuBvjQ/h7/h001.43ejCzGz0Lkz1Uru0rItsqhyDj8YbXG-Mz4VR\_QJ4Vs )\
+*由皮纳塔赞助*
+
+上传到皮纳塔！用于文件上传和访问控制的最简单的文件 API，因此您可以专注于编写应用程序而不是处理基础设施。
+
+#
+
+
