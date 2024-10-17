@@ -1,0 +1,336 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: JS0 + JSSugar not so sweet?
+description: JS0 + JSSugar not so sweet?
+date: 星期四 06 晚上 十月 17o 2024
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/709
+origin_site: https://javascriptweekly.com/issues/709
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="JS0 + JSSugar not so sweet?" url="https://javascriptweekly.com/issues/709" />
+
+<Detail client:only="react">
+	#​709 — October 17, 2024
+
+[Read on the Web](https://javascriptweekly.com/issues/709)
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_2959,h_645/e_make_transparent/co_white,e_outline:140/mokro9a3rxmnqminzfmk.png)](https://javascriptweekly.com/link/161287/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wq1q17ccqhyiuoverii9.jpg)](https://javascriptweekly.com/link/161228/d076523b1d)
+
+[The Story of Web Framework Hono, By Its Creator](https://javascriptweekly.com/link/161228/d076523b1d "blog.cloudflare.com") — [Hono](https://javascriptweekly.com/link/161229/d076523b1d) is a neat, lightweight framework designed to run on _any_ JavaScript runtime that has been picking up steam in the past year. You can create a simple app reminiscent of Express.js, say, but run it on Cloudflare Workers, Deno, Bun, or Node. It’s in heavy use all over the place, and has lots of interesting features like [letting you write HTML with JSX.](https://javascriptweekly.com/link/161230/d076523b1d)
+
+Yusuke Wada
+
+[![](https://copm.s3.amazonaws.com/0642125d.png)](https://javascriptweekly.com/link/161287/d076523b1d)
+
+[Supercharge Your Node.js Code Reviews with AI](https://javascriptweekly.com/link/161287/d076523b1d) — Tired of event loop bottlenecks, async errors, and dependency vulnerabilities slipping through code reviews? CodeRabbit, an AI-powered code review tool, analyzes your codebase line-by-line, detecting perf issues, optimizing async patterns, and enhancing security with each pull request.
+
+CodeRabbit sponsor
+
+[Node v23.0.0 (Current) Released](https://javascriptweekly.com/link/161231/d076523b1d "nodejs.org") — Say hello to the newest release line of Node.js that gets all the cutting edge features first (Node 22 will soon become an LTS release as per [the usual schedule](https://javascriptweekly.com/link/161232/d076523b1d)). Node v23 notably enables support for loading ES modules with `require()` _by default_, drops 32-bit Windows support, and [`node --run` goes stable.](https://javascriptweekly.com/link/161233/d076523b1d)
+
+Rafael Gonzaga
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gtd6w4p90dhwmzz6orcg.jpg)](https://javascriptweekly.com/link/161234/d076523b1d)
+
+[JS0/JSSugar: 'The Tooling Will Continue Until Morale Improves'](https://javascriptweekly.com/link/161234/d076523b1d "caolan.uk") — In a rather [quirky slidedeck](https://javascriptweekly.com/link/161235/d076523b1d) presented at TC39 recently, an idea was floated to call the language JS engines implement **‘JS0’** and a myriad of features that have to be _compiled_ to JS0 **‘JSSugar’.** It might not surprise you that this idea is considered.. controversial and [▶️ Theo Browne did a 25-minute video](https://javascriptweekly.com/link/161236/d076523b1d) digging into it further.
+
+Caolan
+
+**IN BRIEF:**
+
+*   Greensock's popular JavaScript animation library [_GSAP_ has been acquired by Webflow](https://javascriptweekly.com/link/161237/d076523b1d) – it'll continue to be updated and maintained as before.
+    
+*   Did you know `setTimeout` struggles to set timeouts longer than 25 days (or 2^31 milliseconds) in duration? Never fear: [Evan Hahn unveils `setBigTimeout`.](https://javascriptweekly.com/link/161238/d076523b1d)
+    
+*   [quickjs-cross-compiler](https://javascriptweekly.com/link/161239/d076523b1d) provides a way to generate static binaries of JavaScript apps for x86\_64, i686, ARM 7, and ARM64.
+    
+
+**RELEASES:**
+
+*   [Electron 33](https://javascriptweekly.com/link/161240/d076523b1d) – The popular way to build cross-platform desktop apps gets a bump up to Chromium 30, Node 20.18, V8 13, but drops macOS 10.15 support.
+    
+*   [Wasp 0.15](https://javascriptweekly.com/link/161241/d076523b1d) – [Wasp](https://javascriptweekly.com/link/161242/d076523b1d) is a Rails-like framework using Node, React & Prisma.
+    
+*   [Zustand 5.0](https://javascriptweekly.com/link/161243/d076523b1d) – Simple, flux-inspired state management for React.
+    
+*   [Javet 4.0](https://javascriptweekly.com/link/161244/d076523b1d) – Java + V8. Embed Node.js and V8 into Java.
+    
+*   [Next.js 15 Release Candidate 2](https://javascriptweekly.com/link/161245/d076523b1d), [Node.js 22.10.0 (Current)](https://javascriptweekly.com/link/161246/d076523b1d), [Jasmine 5.4](https://javascriptweekly.com/link/161247/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xurpc3ronedtdexjfssb.jpg)](https://javascriptweekly.com/link/161248/d076523b1d)
+
+[How to Build an Image Search App with CLIP, Postgres & JavaScript](https://javascriptweekly.com/link/161248/d076523b1d "www.timescale.com") — A tutorial that brings together a lot of ideas in one place. CLIP is used to turn images into text descriptions. Postgres is used as a vector database. JavaScript provides the glue for both the frontend (with React) and backend (Node.js).
+
+Haziqa Sajid
+
+[Using Sibling Parameters as Default Values in Functions](https://javascriptweekly.com/link/161249/d076523b1d "macarthur.me") — `function myFunc(arg1, arg2 = arg1)`? A technique safely in the _‘not a lot of people know you can do that’_ pile. Alex digs into it a bit and looks at some use cases.
+
+Alex MacArthur
+
+[\[Guide\] Debugging Microservices & Distributed Systems](https://javascriptweekly.com/link/161250/d076523b1d "sentry.io") — Learn best practices on understanding and debugging modern web applications. [Read the guide](https://javascriptweekly.com/link/161250/d076523b1d).
+
+Sentry sponsor
+
+[Liskov's Gun: The Parallel Evolution of React and Web Components](https://javascriptweekly.com/link/161251/d076523b1d "www.baldurbjarnason.com") — An opinion piece so long there’s [an EPUB version.](https://javascriptweekly.com/link/161252/d076523b1d) Baldur tackles [Web Components](https://javascriptweekly.com/link/161253/d076523b1d), their growing pains, why frameworks like React took a different path, and why the whole topic remains a difficult circle to square.
+
+Baldur Bjarnason
+
+[React Folder Structure in Five Steps, 2024 Edition](https://javascriptweekly.com/link/161254/d076523b1d "www.robinwieruch.de") — Articles about structuring React apps are always popular; this one breaks the idea down to five steps from the simplest of apps to more complex ones. [Bulletproof React](https://javascriptweekly.com/link/161255/d076523b1d) is worth a look too for something broader.
+
+Robin Wieruch
+
+[Optimize Your Builds with Depot’s GitHub Actions Price Calculator](https://javascriptweekly.com/link/161256/d076523b1d "shortclick.link") — Depot just launched a GitHub Actions price calculator. Get a cost breakdown and make your builds faster and cheaper!
+
+Depot / GitHub Actions Price Calculator sponsor
+
+📄 🫣 [Implementing Regular Expressions in TypeScript Types (Badly)](https://javascriptweekly.com/link/161257/d076523b1d) – It’s almost Halloween so scary stories are welcome. Steven Kalt
+
+📄 ['I Interviewed 100 DevTools Founders and This Is What I Learned'](https://javascriptweekly.com/link/161258/d076523b1d) Jack Bridger
+
+📄 [Handling In-Browser Paste Events in JavaScript](https://javascriptweekly.com/link/161259/d076523b1d) Raymond Camden
+
+📄 [The Nuances of Base64 Encoding Strings in JavaScript](https://javascriptweekly.com/link/161260/d076523b1d) Matt Joseph
+
+📄 [How to Convert CommonJS to ESM](https://javascriptweekly.com/link/161261/d076523b1d) Andy Jiang
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/i1zrk0jsaos3shpo2diz.jpg)](https://javascriptweekly.com/link/161262/d076523b1d)
+
+[ApexCharts: Flexible Interactive Charting Library](https://javascriptweekly.com/link/161262/d076523b1d "apexcharts.com") — A mature and frequently updated charting library for creating interactive data visualizations, with sparklines, heatmaps, line charts, funnel charts, pies, and others. Can be used in a vanilla way or alongside Angular, Vue or React and [there are lots of live examples](https://javascriptweekly.com/link/161263/d076523b1d) (with code for each). [GitHub repo.](https://javascriptweekly.com/link/161264/d076523b1d)
+
+ApexCharts
+
+[Over 100 Algorithms and Data Structures Demonstrated in JS](https://javascriptweekly.com/link/161265/d076523b1d "github.com") — Examples of numerous common algorithms (e.g. bit manipulation, Pascal’s triangle, Hamming distance) and data structures (e.g. linked lists, tries, graphs) with explanations.
+
+Oleksii Trekhleb et al.
+
+[Developer Kit: Learn How to Troubleshoot Front-End Issues Faster](https://javascriptweekly.com/link/161266/d076523b1d "www.datadoghq.com") — Get the kit curated to help front-end developers better understand user activity and resolve issues more efficiently.
+
+Datadog sponsor
+
+[fast-grid: The World's Most Performant DOM-Based Web Table?](https://javascriptweekly.com/link/161267/d076523b1d "github.com") — A bold claim, but you can see for yourself using [the online demo](https://javascriptweekly.com/link/161268/d076523b1d), which lets you filter, sort, and scroll simultaneously for a true test.
+
+Gabriel Petersson
+
+🎨 [Color Thief: Grab Color Palettes from Images](https://javascriptweekly.com/link/161269/d076523b1d "lokeshdhakar.com") — Given an image, this uses `canvas` to return a list of the dominant colors. Works in browsers or Node.
+
+Lokesh Dhakar
+
+[Node Version Manager Desktop 4.0](https://javascriptweekly.com/link/161270/d076523b1d "github.com") — A [Tauri](https://javascriptweekly.com/link/161271/d076523b1d)\-powered desktop app for macOS, Windows and Linux to manage multiple installed versions of Node on your system.
+
+rainbow
+
+🎹 [ChordSymbol: Chord Symbol Parser and Renderer](https://javascriptweekly.com/link/161272/d076523b1d "chord-symbol.netlify.app") — Accepts chord names in strings (e.g. G7/B, Cadd9, Asus2) and lets you access the notes those chords are made of. [GitHub repo.](https://javascriptweekly.com/link/161273/d076523b1d)
+
+Christophe Noël
+
+*   [debounce 2.2](https://javascriptweekly.com/link/161274/d076523b1d) – Delay function calls until a set time elapses after the last invocation.
+    
+*   😳 [NSFW.js 4.2](https://javascriptweekly.com/link/161275/d076523b1d) – Client-side NSFW image detection via TensorFlow.js.
+    
+*   [Secretlint 9.0](https://javascriptweekly.com/link/161276/d076523b1d) – Tool to prevent committing credentials/secrets.
+    
+*   ☎︎ [vue-tel-input 9.2](https://javascriptweekly.com/link/161277/d076523b1d) – Telephone number input for Vue. ([Demo.](https://javascriptweekly.com/link/161278/d076523b1d))
+    
+*   🗓️ [Qalendar 3.9](https://javascriptweekly.com/link/161279/d076523b1d) – Event calendar and date picker for Vue 3.
+    
+*   [Vaul 1.1](https://javascriptweekly.com/link/161280/d076523b1d) – Unstyled drawer React component. ([Demo](https://javascriptweekly.com/link/161281/d076523b1d).)
+    
+*   [Mineflayer 4.22](https://javascriptweekly.com/link/161282/d076523b1d) – Create Minecraft bots in JavaScript.
+    
+*   [FxTS 1.1](https://javascriptweekly.com/link/161283/d076523b1d) – Functional programming library for TS/JS.
+    
+
+📰 Classifieds
+
+🎹 [STRICH](https://javascriptweekly.com/link/161284/d076523b1d): Add blazing fast and reliable 1D/2D Barcode Scanning to your web apps. Free demo app and 30-day trial available.
+
+* * *
+
+🪝 [Hookdeck](https://javascriptweekly.com/link/161285/d076523b1d): A serverless queue to reliably send, receive, transform, filter, and route events across your event-driven apps.
+
+* * *
+
+💥 Improve your database performance with AI. [Prisma Optimize automatically analyzes your queries and helps you improve them](https://javascriptweekly.com/link/161286/d076523b1d).
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/161288/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​709 — 2024 年 10 月 17 日
+
+[网上阅读](https://javascriptweekly.com/issues/709)
+
+连同 
+
+\[![代码兔](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_2959,h_645/e_make_transparent/co_white,e_outline:140/mokro9a3rxmnqminzfmk.png)]\(https:// /javascriptweekly.com/link/161287/d076523b1d)
+
+JavaScript 周刊
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wq1q17ccqhyiuoverii9.jpg)](https://javascriptweekly.com/link/161228/d076523b1d)
+
+[Web 框架 Hono 的故事，作者介绍](https://javascriptweekly.com/link/161228/d076523b1d "blog.cloudflare.com") — \[Hono]\(https://javascriptweekly.com/link/161229 /d076523b1d) 是一个简洁、轻量级的框架，旨在在*任何* JavaScript 运行时上运行，该运行时在过去一年中一直在蓬勃发展。例如，您可以创建一个类似于 Express.js 的简单应用程序，但在 Cloudflare Workers、Deno、Bun 或 Node 上运行它。它在各地得到了大量使用，并且具有许多有趣的功能，例如[让您使用 JSX 编写 HTML。](https://javascriptweekly.com/link/161230/d076523b1d)
+
+和田佑介
+
+[![](https://copm.s3.amazonaws.com/0642125d.png)](https://javascriptweekly.com/link/161287/d076523b1d)
+
+[用 AI 增强 Node.js 代码审查能力](https://javascriptweekly.com/link/161287/d076523b1d) — 厌倦了事件循环瓶颈、异步错误和代码审查中漏掉的依赖漏洞？ CodeRabbit 是一款基于 AI 的代码审查工具，可以逐行分析您的代码库、检测性能问题、优化异步模式并增强每个拉取请求的安全性。
+
+码兔赞助商
+
+[Node v23.0.0（当前）已发布](https://javascriptweekly.com/link/161231/d076523b1d "nodejs.org") — 向 Node.js 的最新版本打个招呼，它首先获得了所有前沿功能（按照[通常的时间表](https://javascriptweekly.com/link/161232/d076523b1d)，Node 22 很快就会成为 LTS 版本）。 Node v23 特别支持*默认情况下*使用 `require()` 加载 ES 模块，放弃了 32 位 Windows 支持，并且 \[`node --run` 变得稳定。]\(https://javascriptweekly.com/link/ 161233/d076523b1d)
+
+拉斐尔冈萨加
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gtd6w4p90dhwmzz6orcg.jpg)](https://javascriptweekly.com/link/161234/d076523b1d)
+
+[JS0/JSSugar：“工具将继续使用，直到士气提高”](https://javascriptweekly.com/link/161234/d076523b1d "caolan.uk") — 在一个相当\[古怪的幻灯片]\(https://javascriptweekly. com/link/161235/d076523b1d）最近在 TC39 上提出，提出了一个想法，称 JS 引擎实现 **'JS0'** 以及必须 *编译* 为 JS0 **'JSSugar' 的无数功能.** 这个想法被认为是有争议的，并且 [▶️ Theo Browne 制作了一个 25 分钟的视频](https://javascriptweekly.com/link/161236/d076523b1d) 进一步深入研究，您可能不会感到惊讶。
+
+草栏
+
+**简而言之：**
+
+* Greensock 流行的 JavaScript 动画库 [*GSAP* 已被 Webflow 收购](https://javascriptweekly.com/link/161237/d076523b1d) – 它将像以前一样继续更新和维护。
+
+* 您是否知道“setTimeout”很难设置持续时间超过 25 天（或 2^31 毫秒）的超时？别害怕：[Evan Hahn 推出 `setBigTimeout`。](https://javascriptweekly.com/link/161238/d076523b1d)
+
+* [quickjs-cross-compiler](https://javascriptweekly.com/link/161239/d076523b1d) 提供了一种为 x86\_64、i686、ARM 7 和 ARM64 生成 JavaScript 应用静态二进制文件的方法。
+
+**发布：**
+
+* [Electron 33](https://javascriptweekly.com/link/161240/d076523b1d) – 构建跨平台桌面应用程序的流行方式升级至 Chromium 30、Node 20.18、V8 13，但放弃了 macOS 10.15 支持。
+
+* [Wasp 0.15](https://javascriptweekly.com/link/161241/d076523b1d) – [Wasp](https://javascriptweekly.com/link/161242/d076523b1d) 是一个类似 Rails 的框架，使用 Node、React 和棱镜。
+
+* [Zustand 5.0](https://javascriptweekly.com/link/161243/d076523b1d) – React 的简单、受 Flux 启发的状态管理。
+
+* [Javet 4.0](https://javascriptweekly.com/link/161244/d076523b1d) – Java + V8。将 Node.js 和 V8 嵌入到 Java 中。
+
+* [Next.js 15 候选版本 2](https://javascriptweekly.com/link/161245/d076523b1d)、\[Node.js 22.10.0（当前）]\(https://javascriptweekly.com/link/161246/ d076523b1d), [茉莉花 5.4](https://javascriptweekly.com/link/161247/d076523b1d)
+
+📒 文章和教程
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xurpc3ronedtdexjfssb.jpg)](https://javascriptweekly.com/link/161248/d076523b1d)
+
+[如何使用 CLIP、Postgres 和 JavaScript 构建图像搜索应用程序](https://javascriptweekly.com/link/161248/d076523b1d "www.timescale.com") — 一个将很多想法汇集在一起​​的教程。 CLIP用于将图像转换为文本描述。 Postgres 用作矢量数据库。 JavaScript 为前端（React）和后端（Node.js）提供了粘合剂。
+
+哈兹卡·萨吉德
+
+[在函数中使用同级参数作为默认值](https://javascriptweekly.com/link/161249/d076523b1d "macarthur.me") — `function myFunc(arg1, arg2 = arg1)`？这项技术安全地属于\*“没有很多人知道你可以做到这一点”\*的技术。 Alex 对此进行了深入研究并查看了一些用例。
+
+亚历克斯·麦克阿瑟
+
+[\[指南\] 调试微服务和分布式系统](https://javascriptweekly.com/link/161250/d076523b1d "sentry.io") — 学习了解和调试现代 Web 应用程序的最佳实践。 [阅读指南](https://javascriptweekly.com/link/161250/d076523b1d)。
+
+哨兵赞助商
+
+[Liskov's Gun: The Parallel Evolution of React and Web Components](https://javascriptweekly.com/link/161251/d076523b1d "www.baldurbjarnason.com") - 一篇观点文章，已经有 \[EPUB 版本。]\(https ://javascriptweekly.com/link/161252/d076523b1d) Baldur 解决了 [Web 组件](https://javascriptweekly.com/link/161253/d076523b1d)、他们成长的烦恼、为什么像 React 这样的框架走了不同的道路，以及为什么整个话题仍然是一个难以成方的问题。
+
+巴尔杜尔·比亚纳森
+
+[React 文件夹结构五步走，2024 年版](https://javascriptweekly.com/link/161254/d076523b1d "www.robinwieruch.de") — 有关构建 React 应用程序的文章总是很受欢迎；这个将这个想法分解为从最简单的应用程序到更复杂的应用程序的五个步骤。对于更广泛的内容，[Bulletproof React](https://javascriptweekly.com/link/161255/d076523b1d) 也值得一看。
+
+罗宾·维鲁奇
+
+[使用 Depot 的 GitHub Actions 价格计算器优化您的构建](https://javascriptweekly.com/link/161256/d076523b1d "shortclick.link") — Depot 刚刚推出了 GitHub Actions 价格计算器。获取成本明细，让您的构建更快、更便宜！
+
+Depot / GitHub Actions 价格计算器赞助商
+
+📄 🫣 [在 TypeScript 类型中实现正则表达式（糟糕）](https://javascriptweekly.com/link/161257/d076523b1d) – 万圣节快到了，所以欢迎恐怖故事。史蒂文·卡尔特
+
+📄 [“我采访了 100 位 DevTools 创始人，这就是我学到的东西”](https://javascriptweekly.com/link/161258/d076523b1d) Jack Bridger
+
+📄 [在 JavaScript 中处理浏览器内粘贴事件](https://javascriptweekly.com/link/161259/d076523b1d) Raymond Camden
+
+📄 [JavaScript 中 Base64 编码字符串的细微差别](https://javascriptweekly.com/link/161260/d076523b1d) Matt Joseph
+
+📄 [如何将 CommonJS 转换为 ESM](https://javascriptweekly.com/link/161261/d076523b1d) Andy Jiang
+
+🛠 代码和工具
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/i1zrk0jsaos3shpo2diz.jpg)](https://javascriptweekly.com/link/161262/d076523b1d)
+
+[ApexCharts：灵活的交互式图表库](https://javascriptweekly.com/link/161262/d076523b1d "apexcharts.com") — 一个成熟且经常更新的图表库，用于创建交互式数据可视化，包括迷你图、热图、折线图、漏斗图、饼图等。可以以普通方式使用，也可以与 Angular、Vue 或 React 一起使用，[有很多实例](https://javascriptweekly.com/link/161263/d076523b1d)（每个实例都有代码）。 [GitHub 存储库。](https://javascriptweekly.com/link/161264/d076523b1d)
+
+Apex图表
+
+[用 JS 演示超过 100 种算法和数据结构](https://javascriptweekly.com/link/161265/d076523b1d "github.com") — 众多常见算法的示例（例如位操作、帕斯卡三角形、汉明距离）和数据带有解释的结构（例如链表、尝试、图表）。
+
+奥莱克西·特雷赫莱布 (Oleksii Trekhleb) 等人。
+
+[开发人员套件：了解如何更快地解决前端问题](https://javascriptweekly.com/link/161266/d076523b1d "www.datadoghq.com") — 获取精心策划的套件，帮助前端开发人员更好地了解用户更有效地开展活动并解决问题。
+
+数据狗赞助商
+
+[fast-grid：世界上性能最高的基于 DOM 的 Web 表？](https://javascriptweekly.com/link/161267/d076523b1d "github.com") — 一个大胆的主张，但您可以使用 [在线演示](https://javascriptweekly.com/link/161268/d076523b1d)，它可以让您同时进行过滤、排序和滚动以进行真正的测试。
+
+加布里埃尔彼得森
+
+🎨 [Color Thief：从图像中获取调色板](https://javascriptweekly.com/link/161269/d076523b1d "lokeshdhakar.com") — 给定图像，这使用 `canvas` 返回主色列表。适用于浏览器或 Node。
+
+洛克什·达卡
+
+[Node Version Manager Desktop 4.0](https://javascriptweekly.com/link/161270/d076523b1d "github.com") — 一个 [Tauri](https://javascriptweekly.com/link/161271/d076523b1d) 支持的桌面适用于 macOS、Windows 和 Linux 的应用程序，用于管理系统上已安装的多个 Node 版本。
+
+彩虹
+
+🎹 [ChordSymbol：和弦符号解析器和渲染器](https://javascriptweekly.com/link/161272/d076523b1d "chord-symbol.netlify.app") — 接受字符串中的和弦名称（例如 G7/B、Cadd9、Asus2）并让您访问这些和弦的音符。 [GitHub 存储库。](https://javascriptweekly.com/link/161273/d076523b1d)
+
+克里斯托夫·诺埃尔
+
+* [debounce 2.2](https://javascriptweekly.com/link/161274/d076523b1d) – 延迟函数调用，直到上次调用后经过设定的时间。
+
+* 😳 [NSFW.js 4.2](https://javascriptweekly.com/link/161275/d076523b1d) – 通过 TensorFlow.js 进行客户端 NSFW 图像检测。
+
+* [Secretlint 9.0](https://javascriptweekly.com/link/161276/d076523b1d) – 防止提交凭据/秘密的工具。
+
+* ☎︎ [vue-tel-input 9.2](https://javascriptweekly.com/link/161277/d076523b1d) – Vue 的电话号码输入。 （[演示。](https://javascriptweekly.com/link/161278/d076523b1d))
+
+* 🗓️ [Qalendar 3.9](https://javascriptweekly.com/link/161279/d076523b1d) – Vue 3 的事件日历和日期选择器。
+
+* [Vaul 1.1](https://javascriptweekly.com/link/161280/d076523b1d) – 无样式抽屉 React 组件。 （[演示](https://javascriptweekly.com/link/161281/d076523b1d)。）
+
+* [Mineflayer 4.22](https://javascriptweekly.com/link/161282/d076523b1d) – 使用 JavaScript 创建 Minecraft 机器人。
+
+* [FxTS 1.1](https://javascriptweekly.com/link/161283/d076523b1d) – TS/JS 函数式编程库。
+
+📰 分类广告
+
+🎹 [STRICH](https://javascriptweekly.com/link/161284/d076523b1d)：将快速可靠的一维/二维条形码扫描添加到您的网络应用程序中。提供免费演示应用程序和 30 天试用版。
+
+***
+
+🪝 [Hookdeck](https://javascriptweekly.com/link/161285/d076523b1d)：一个无服务器队列，用于在事件驱动应用中可靠地发送、接收、转换、过滤和路由事件。
+
+***
+
+💥 利用 AI 提高数据库性能。 [Prisma Optimize 会自动分析您的查询并帮助您改进查询](https://javascriptweekly.com/link/161286/d076523b1d)。
+
+由 [Cooperpress](https://cooperpress.com/) 出版，由 [Peter Cooper](https://javascriptweekly.com/link/161288/d076523b1d) 编辑
+
+“JavaScript”是 Oracle Corporation 在美国的商标\
+我们未获得 Oracle 的认可或隶属于 Oracle。
+
+
