@@ -1,0 +1,93 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#477 React Folder Structure in 5 Steps
+description: RD#477 React Folder Structure in 5 Steps
+date: 星期日 06 晚上 十月 20o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/react-folder-structure-in-5-steps
+origin_site: https://newsletter.reactdigest.net/p/react-folder-structure-in-5-steps
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#477 React Folder Structure in 5 Steps" url="https://newsletter.reactdigest.net/p/react-folder-structure-in-5-steps" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XYEuFVChJelSuJ5XoBpKBQ0359FGUxyEvfgK8ONdxf9uY74MjeBpNAZAxgEJPlHi4JXaKtnFluomFtqZZSlLqeoEIa6klDwbocQFJ7Cwmc9p1_yFqKQaRYC6vIcRtocaR0rMBixBmyC_UNXsIAj_5xH8QZnbjN2WzgYkVUWqfJ2KOlVXRe1JjntxymAbbWHEWGwJ8WpCDOI5cRmPL6XVYIMnWA_7Q0icarJThSG-qGO4eA3lTkApuNoOH6S7HCYeiy9Cs5b1EHTxbAKheQnNdjQfn1AWtXPd9q-pn4bSGyzc0_j8oIDhTGQk3CSaZAJfXeWWnhSI703ac85WcXCkjlPu-bbgt0k9k_nTb2dwIiFYDNsW1V32GvIKFnCg_dky-ebRuDAK57_wOnqGOd_JaP_QaTXSN5mHrET0ZjEAPJ-gnDX-MP765vcer1_c9VQ8utk6LWsBI52u3TbpH0ssisymYyCe2paD-PAf-ovwrSgpj-A0Xbxliabb8_mwRvGzThO_ThGw2p5ePMwj6ih0xC2KwUynz1y0Q5uVxZiZaUtbHi7cV47eoGJWZgRYGjzG1Vi0R1CTz5R55RgXVUPUFPkp8ELFpz8CvAhpFM9ueuLCeFvDr3D_p0UxPfnBLNmpb30QywPzZK6pkGlqiNnnOURB7s4rNi5eoMKktwuTxX1i21pM1rqP9N7Pnd_WZe3xVZm6zNp_FRZC-2ggOKhZQzC4Yuu_zstj1myHkzt9O3EjsQy4O1CZ52w_PAmulmOYw2zPd9ScOvBm_SiG2HtfLqGLKytigaPs13sHYmRdS8Uw/4ar/vn36HSHGQ6uuLG5c62qoKg/h0/h001.fq1rOW6f5MVy8iq6GHq695ci1_XE-nEJASLwwPfeGzk)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4ar/vn36HSHGQ6uuLG5c62qoKg/ho.gif)
+
+[React Folder Structure in 5 Steps](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zJFUFktQ3-2_lBoYu6YS4g54zSHWVnPLFiwj6riZcj5EHqbbwIMXAVKHkQerzsilY2-1m49dbMlHM1gENI49JVYhEq_qqSVRAs1WAqJpgNbC7Z8y7AOxl5BQhfCNko1vQQKRz9z-u3oSwxD4le2Vps2vvn8063_5eYouQu-vqjAEwgFuHYec_e7tW6eyEXQ2q3WfGJ6fqCf8TKyPaHybOVgfD3e0B2DONE1x2kFY1MW0hJxCk4aivAF9woDkIVxTrI/4ar/vn36HSHGQ6uuLG5c62qoKg/h1/h001.iTC_N0Pmy0_C1igrTvHcm03kH_s0eLltx1EU-e0bbIE)  
+_18 minutes_ by Robin Wieruch
+
+Organizing large React applications into folders and files is a topic that often sparks strong opinions. I found it challenging to write about this, as there isn't a definitive "correct" approach. However, I frequently get asked how I structure my React projects, from small to large, and I'm happy to share my approach.
+
+[Tests are dead. Meticulous AI is here.](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2WqroLgOnA-NgNKtuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4ar/vn36HSHGQ6uuLG5c62qoKg/h2/h001.6bLmUsHEd-NTdzGd-PsUOq0Y4Cij4PHIX16wqY_szVk)  
+_sponsored by Meticulous_
+
+Meticulous AI is a tool which automatically creates and maintains a continuously evolving e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Backed by CTO of GitHub, Guillermo Rauch (next.js author), yc and others, it's built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[The True Nature of useActionState](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXABCRFLJPvQcubVN3pyo2thn8OI1FnW5iDA1UoJZNA6_NbVH02BzRxLcyWZMPPAj7R1-bhT6BJZ9AUXYrmMZd6GT5LkEbsvTC20Mlw8Uc1XtB0GiNIpLEtVnW9zzTTU5t4dazc_ZUDMPCdsexyZczoZvWjVzZBq0loDjPOUuBlW0e0y4nBsyI8zNakdtNacaHAzyjo1jNM0KOiSQUsOYID93XQlk5x4W92obI5GjnmFLb9Und5XJeHMoqU4LiauJF0On1-VEGdEB3TkNz_MfRjUU96IDtkNUyT5BruQaYAb/4ar/vn36HSHGQ6uuLG5c62qoKg/h3/h001.3EanGXxhaG1_EbPNHBWCLoVEpu-Y3wYkDRstue4Fbrc)  
+_15 minutes_ by Nikhil Snayak
+
+Unlocking powerful async control and state synchronization for smooth UI transitions. Nikhil compares useActionState to the familiar useReducer hook, highlighting similarities in their signatures. The post then explores how to use useActionState to handle asynchronous operations, implement optimistic updates, and manage errors effectively.
+
+[How Microsoft Edge Is Replacing React With Web Components](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgFxkC4quseuj4Xh69hVOCrtnVoHeGM3GRqHk3KbF2aZbEJp7r6o7pC6VRKt778xltCXJoDkVboC3AulzE61pwpsMtrgdHevF6kcbsQ03lII-IyZPZP8hRc4arV3o_dE1Cg6QGlu2GNkE0HgUpVmvH7c-ssgOEerWvhxmxr5C2KM1pI7hxgr2AevamCz_6VoBNLdWN_BbL4GJRK_BLrPgEFBIRhaAVg9rzoI7qNLIAPzPm9E0OwRc99rxNIQZb0HjG6DBEorl6vkAwhv8il3s5v6i5C6YRI100rjwF8n8SeGLTCbCQ_SUvROhKysqZAM_nYA/4ar/vn36HSHGQ6uuLG5c62qoKg/h4/h001.OacxbA2InoPnie842lQAmMSg4ZmjMjrXqq3wMJQ_Qas)  
+_8 minutes_ by Richard MacManus
+
+Microsoft's Edge browser team is transitioning from React to web components with their WebUI 2.0 project, aiming to make Edge faster for users. The goal is to convert about 50% of existing React-based UIs in Edge to web components by the end of the year. This shift is driven by performance issues, particularly on low-end machines, caused by React's implementation in Edge.
+
+[useContextSelector: Speeding Up React Apps With Large Context](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTbHXLp_gPJxoMRgI6RviSwzWQzhik7aFEHEr_o0AXwFxzABXuxZBGWdBBmA6xpiumjpQzy9ZAEVPvHUy2pu4zmtWUNuAj_Po68z6RdX6QEeHvmg4nzdfIrEerMWgyfsZTIoLz7jTNL5vfSxBbHeaH46NE9UkXz0y5Ikdxo2cD4h9CneF-cHcb--IKl0Ffp3hSY_7nsM6MqpBdgD44rOpKFfhQTVX1U1K--c76HtrqlKWRdu3Ljeo8BJhrN6tMz1mKOIUZiF7iaWfTM_wzZ-D-PDn1Oxau3cmoTUl3uL5OAs3w2JycVykznODQRe6HnflvA/4ar/vn36HSHGQ6uuLG5c62qoKg/h5/h001.XM7-obLa6Q8_K1tKkpQZU2tQndySpDqBWWgkZmTc3o0)  
+_8 minutes_ by Guillaume Pierson and François Zaninotto
+
+This text discusses the performance issues associated with large React contexts and proposes several solutions. The main problem is that changes in a large context cause unnecessary re-renders of all dependent components. Solutions include splitting components with memo, using split contexts, employing state management libraries like Redux, and utilizing the use-context-selector library.
+
+[Drag to Select](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqTbOBVb2nf1lhWB8eAomJohQW9tkPJSKZJT_kzkqNE43FwD28SnZ0mCiv1TngEHHIPw9dl9d1bEu3za5nTTtrfY4uCS3Lu1LvgbOAmbPyjTMXNYhyUd05SXaHHAgp01cvKq2hzXrPNB170OBZ7UfOb-vkU0W97kYGvuEt6pUP5gVaVuiOSOoXr9uWwXMvobl1VznJN1SpHnLTTyey47yqSxuyWF9Qfa7XXu6rwMF5VVR3L53LAthl8_SLk86LS1LAbSrJa9hoGTbHEq06p80iDA/4ar/vn36HSHGQ6uuLG5c62qoKg/h6/h001.Q8BIkRNoSB873IxJpliGWDTRSN8ki2kBSNx7W8xNYvs)  
+_22 minutes_ by Joshua Wootonn
+
+Drag selection is the defacto pointer multi-selection. In this guide we'll recreate native-like drag selection in react.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XYEuFVChJelSuJ5XoBpKBQ0359FGUxyEvfgK8ONdxf9uY74MjeBpNAZAxgEJPlHi4JXa KTNFluomFtqZZSlLqeoEIA6klDwbocQFJ7Cwmc9p1\_yFqKQaRYC6vIcRtocaR0rMBixBmyC\_UNXsIAj\_5xH8QZnbjN2WzgYkVUWqfJ2KOlVXRe1JjntxymAbbWHEWGwJ8WpCDOI5cRmPL6XVYIMn WA\_7Q0icarJThSG-qGO4eA3lTkApuNoOH6S7HCYeiy9Cs5b1EHTxbAKheQnNdjQfn1AWtXPd9q -pn4bSGyzc0\_j8oIDhTGQk3CSaZAJfXeWWnhSI703ac85WcXCkjlPu-bbgt0k9k\_nTb2dwIiFY DNSW1V32GvIKFnCg\_dky-ebRuDAK57\_wOnqGOd\_JaP\_QaTXSN5mHrET0ZjEAPJ-gnDX-MP765vcer 1\_c9VQ8utk6LWsBI52u3TbpH0ssisymYyCe2paD-PAf-ovwrSgpj-A0Xbxliabb8\_mwRvGzThO\_Th Gw2p5ePMwj6ih0xC2KwUynz1y0Q5uVxZiZaUtbHi7cV47eoGJWZgRYGjzG1Vi0R1CTz5R55 RgXVUPUFPkp8ELFpz8CvAhpFM9ueuLCeFvDr3D\_p0UxPfnBLNmpb30QywPzZK6pkGlqiNNn OURB7s4rNi5eoMKktwuTxX1i21pM1rqP9N7Pnd\_WZe3xVZm6zNp\_FRZC-2ggOKhZQzC4Yuu\_z stj1myHkzt9O3EjsQy4O1CZ52w\_PAmulmOYw2zPd9ScOvBm\_SiG2HtfLqGLKytigaPs13sHYm RdS8Uw/4ar/vn36HSHGQ6uuLG5c62qoKg/h0 /h001.fq1rOW6f5MVy8iq6GHq695ci1\_XE-nEJASLwwPfeGzk)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4ar/vn36HSHGQ6uuLG5c62qoKg/ho.gif)
+
+\[5步反应文件夹结构]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf\_qUprM09yoMPtF27zJFUFktQ3-2\_lBoYu6YS4g54zSHWVnPLFiwj6riZcj5EHqbbwIMXAVKHkQerz silY2-1m49dbMlHM1gENI49JVYhEq\_qqSVRAs1WAqJpgNbC7Z8y7AOxl5BQhfCNko1vQQKRz9z-u3oSwxD4le2Vps2vvn8063\_5eYouQu-vqjAEwgFuHYec\_e7tW6eyEXQ2q3WfGJ6fqCf8TkyPaHy bOVgfD3e0B2DONE1x2kFY1MW0hJxCk4aivAF9woDkIVxTrI/4ar/vn36HSHGQ6uuLG5c62qoKg/h1/h001.iTC\_N0Pmy0\_C1igrTvHcm03kH\_s0eLltx1EU-e0bbIE)\
+*18 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+将大型 React 应用程序组织到文件夹和文件中是一个经常引发强烈意见的话题。我发现写这个很有挑战性，因为没有明确的“正确”方法。然而，我经常被问到如何从小到大构建我的 React 项目，我很乐意分享我的方法。
+
+\[测试已死。细致的AI就在这里。]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2WqroLgOnA-NgNK tuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4ar/vn36HSHGQ6uuLG5c62qoKg/h2/h001.6bLmUsHEd-NTdzGd-PsUOq0Y4Cij4PHIX16wqY\_szVk)\
+*由精心赞助*
+
+Meticulous AI 是一款自动创建和维护不断发展的 e2e UI 测试套件的工具，该套件涵盖应用程序的每个角落 - 无需开发人员进行任何干预。在 GitHub 首席技术官 Guillermo Rauch（next.js 作者）、yc 和其他人的支持下，它是从 Chromium 级别构建的，具有确定性调度引擎 - 使其成为唯一消除碎片的测试工具。
+
+\[useActionState 的真实本质]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXABCRFLJPvQcubVN3pyo2thn8OI1FnW5iDA1UoJZNA6\_NbVH02BzRxLcyWZMPPAj7R1-bhT6BJZ9AUXYrmM Zd6GT5LkEbsvTC20Mlw8Uc1XtB0GiNIpLEtVnW9zzTTU5t4dazc\_ZUDMPCdsexyZczoZvWjVzZB q0loDjPOUuBlW0e0y4nBsyI8zNakdtNacaHAzyjo1jNM0KOiSQUsOYID93XQlk5x4W92obI5Gjnm FLb9Und5XJeHMoqU4LiauJF0On1-VEGdEB3TkNz\_MfRjUU96IDtkNUyT5BruQaYAb/4ar/vn36HSHGQ6uuLG5c62qoKg/h3/h001.3EanGXxhaG1\_EbPNHBWCLoVEpu-Y3wYkDRstue4Fbrc)\
+*15 分钟* 尼基尔·斯纳亚克 (Nikhil Snayak)
+
+解锁强大的异步控制和状态同步，实现平滑的 UI 转换。 Nikhil 将 useActionState 与熟悉的 useReducer 挂钩进行比较，强调了它们签名的相似之处。然后，本文探讨了如何使用 useActionState 来处理异步操作、实现乐观更新以及有效地管理错误。
+
+\[Microsoft Edge 如何使用 Web 组件取代 React]\(https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgFxkC4quseuj4Xh69hVOCrtnVoHeGM3GRqHk3KbF2aZbEJp7r6o7pC6VRKt778xltCXJoDkVboC3AulzE61p wpsMtrgdHevF6kcbsQ03lII-IyZPZP8hRc4arV3o\_dE1Cg6QGlu2GNkE0HgUpVmvH7c-ssgOEerWvhxmxr5C2KM1pI7hxgr2AevamCz\_6VoBNLdWN\_BbL4GJRK\_BLrPgEFBIRhaAVg9rzoI7 qNLIAPzPm9E0OwRc99rxNIQZb0HjG6DBEorl6vkAwhv8il3s5v6i5C6YRI100rjwF8n8SeGLTCbCQ\_SUvROhKysqZAM\_nYA/4ar/vn36HSHGQ6uuLG5c62qoKg/h4/h001.OacxbA2InoPnie第842章
+*8 分钟* 理查德·麦克马纳斯
+
+Microsoft 的 Edge 浏览器团队正在通过其 WebUI 2.0 项目从 React 过渡到 Web 组件，旨在为用户提供更快的 Edge 体验。目标是到今年年底将 Edge 中约 50% 的现有基于 React 的 UI 转换为 Web 组件。这种转变是由性能问题驱动的，特别是在低端机器上，这是由 React 在 Edge 中的实现引起的。
+
+\[useContextSelector: Speeding Up React Apps With Large Context]\(https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2\_rh17KMcAxCTbHXLp\_gPJxoMRgI6RviSwzWQzhik7aFEHEr\_o0AXwFxzABXuxZBGWdBBmA6xpiumjpQzy9ZAEVPvHUy2pu4zmtWUNuAj\_Po68z6RdX6QEeHvmg4nzdfIrEerMWgyfsZTIoLz7jTNL5vfSxBbHeaH46NE9UkXz0y5Ikdxo2cD4h9CneF-cHcb--IKl0Ffp3hSY\_7nsM6MqpBdgD44rOpKFfhQTVX1U1K--c76HtrqlKWRdu3Ljeo8BJhrN6tMz1mKOIUZiF7iaWfTM\_wzZ-D-PDn1Oxau3cmoTUl3uL5OAs3w2JycVykznODQRe6HnflvA/4ar/vn36HSHGQ6uuLG5c62qoKg/h5/ h001.XM7-obLa6Q8\_K1tKkpQZU2tQndySpDqBWWgkZmTc3o0)\
+*8 分钟* Guillaume Pierson 和 François Zaninotto
+
+本文讨论了与大型 React 上下文相关的性能问题，并提出了几种解决方案。主要问题是大上下文中的更改会导致所有依赖组件不必要的重新渲染。解决方案包括使用备忘录拆分组件、使用拆分上下文、使用 Redux 等状态管理库以及利用 use-context-selector 库。
+
+\[拖动选择]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqTbOBVb2nf1lhWB8eAomJohQW9tkPJSKZJT\_kzkqNE43FwD28SnZ0mCiv1TngEHHIPw9dl9d1bEu3za5nTTtr fY4uCS3Lu1LvgbOAmbPyjTMXNYhyUd05SXaHHAgp01cvKq2hzXrPNB170OBZ7UfOb-vkU0W97 kyGvuEt6pUP5gVaVuiOSOoXr9uWwXMvobl1VznJN1SpHnLTTyey47yqSxuyWF9Qfa7XXu6rwMF 5VVR3L53LAthl8\_SLk86LS1LAbSrJa9hoGTbHEq06p80iDA/4ar/vn36HSHGQ6uuLG5c62qoKg/h6/h001.Q8BIkRNoSB873IxJpliGWDTRSN8ki2kBSNx7W8xNYvs)\
+*22 分钟* 约书亚·伍顿 (Joshua Wootonn)
+
+拖动选择实际上是指针多重选择。在本指南中，我们将在 React 中重新创建类似原生的拖动选择。
+
+#
+
+
