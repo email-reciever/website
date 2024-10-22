@@ -1,0 +1,246 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node v23, and a proper hello to Express v5
+description: Node v23, and a proper hello to Express v5
+date: 星期二 03 下午 十月 22o 2024
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/552
+origin_site: https://nodeweekly.com/issues/552
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node v23, and a proper hello to Express v5" url="https://nodeweekly.com/issues/552" />
+
+<Detail client:only="react">
+	#​552 — October 22, 2024
+
+[Read on the Web](https://nodeweekly.com/issues/552)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/161290/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/q7bv9cjvn34bfj1gvgpr.jpg)](https://nodeweekly.com/link/161291/0a4070b383)
+
+[Node v23.0.0 (Current) Released](https://nodeweekly.com/link/161291/0a4070b383 "nodejs.org") — Say hello to the newest release line of Node.js that gets all the cutting edge features first (Node 22 will soon become the active LTS release). v23 notably enables support for loading ES modules with `require()` _by default_, drops 32-bit Windows support, and [`node --run` goes stable.](https://nodeweekly.com/link/161292/0a4070b383)
+
+Rafael Gonzaga
+
+📣 [Node.js v22.10.0 (Current)](https://nodeweekly.com/link/161295/0a4070b383) has also been released with a major enhancement for ESM package developers, and `node --run` goes stable on v22 too.
+
+[Introducing Express v5: The Official Express v5 Release Post!](https://nodeweekly.com/link/161293/0a4070b383 "expressjs.com") — We first spied the release of Express.js v5 [over a month ago](https://nodeweekly.com/issues/547) but now we get an official release post that tidies up a lot of loose ends and explains the broad plan. For now, v5 is considered a _bleeding edge_ release with work still required in areas of security and overall process, but things are broadly progressing well.
+
+Wes Todd (Express)
+
+[![](https://copm.s3.amazonaws.com/7f31886d.png)](https://nodeweekly.com/link/161290/0a4070b383)
+
+[Memetria K/V: High-Performance Key-Value Hosting](https://nodeweekly.com/link/161290/0a4070b383 "dashboard.memetria.com") — Boost your Node.js apps with Memetria K/V, providing portable, easy-to-use hosting for Redis OSS and Valkey. Scale your applications with ease and achieve high performance. Includes detailed analytics and large key memory tracking.
+
+Memetria sponsor
+
+[How Top-Level `await` Could Break Compatibility](https://nodeweekly.com/link/161296/0a4070b383 "evertpot.com") — Node 23 makes it possible to load ES modules transparently with `require` which is great, but.. only if the module being loaded _isn’t_ using top-level `await`. One for package creators to think carefully about before backwards compatibility issues creep in!
+
+Evert Pot
+
+[The Story of the _Hono_ Web Framework](https://nodeweekly.com/link/161297/0a4070b383 "blog.cloudflare.com") — [Hono](https://nodeweekly.com/link/161298/0a4070b383) is a lightweight framework designed to run on _any_ JavaScript runtime that's been picking up steam in the past year. With it, you can create an app in a Express-like style but run it on Cloudflare Workers, Deno, Bun, or Node.
+
+Yusuke Wada
+
+[Why I’m Skeptical of Rewriting JavaScript Tools in “Faster” Languages](https://nodeweekly.com/link/161299/0a4070b383 "nolanlawson.com") — Rewriting common JavaScript infrastructure / build tools in ‘faster’ languages like Rust, Zig or Go has become popular in the past few years, but is it really necessary, asks Nolan?
+
+Nolan Lawson
+
+[Best Testing Practices in Node.js](https://nodeweekly.com/link/161300/0a4070b383 "blog.appsignal.com") — A quick-fire list of 15 worthwhile testing practices to use in order to write efficient, effective, and easy-to-maintain tests.
+
+Antonello Zanini
+
+🗓️ [Enterprise Ready Conference](https://nodeweekly.com/link/161301/0a4070b383 "www.enterprise-ready.com") — One-day event in SF for prod/eng leaders building enterprise SaaS — with speakers from OpenAI, Vanta, Canva, Dropbox.
+
+WorkOS sponsor
+
+📄 [How Node.js Can Now Run TypeScript](https://nodeweekly.com/link/161302/0a4070b383) Sam Thorogood
+
+📄 [How to Convert CommonJS to ESM](https://nodeweekly.com/link/161303/0a4070b383) Andy Jiang (Deno)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ny0bnuedwfudc7fhqojv.jpg)](https://nodeweekly.com/link/161304/0a4070b383)
+
+[Javet 4.0: Embed Node and V8 in Java Apps](https://nodeweekly.com/link/161304/0a4070b383 "www.caoccao.com") — My JVM knowledge is poor enough that I haven't tried this yet, but it's a fascinating idea. The idea is you can use Node and V8 directly within the JVM, though [platform support](https://nodeweekly.com/link/161305/0a4070b383) is mixed. [GitHub repo.](https://nodeweekly.com/link/161306/0a4070b383)
+
+Sam Cao
+
+[Ultimate ExpressJS Starter](https://nodeweekly.com/link/161307/0a4070b383 "github.com") — Yes, another one! This ‘batteries-included’ TypeScript-based Express.js boilerplate app does include a lot out of the box, though, particularly in the area of file uploading.
+
+GhostLexly
+
+📰 Classifieds
+
+🔁 [How does the Node.js event loop work?](https://nodeweekly.com/link/161308/0a4070b383) What happens when all your requests arrive at once? How do you avoid blocking the event loop?
+
+* * *
+
+[Pythagora](https://nodeweekly.com/link/161309/0a4070b383) is an AI dev tool that builds production-ready tools (not demo apps). It writes the code and talks to you in the process.
+
+* * *
+
+🎓 [Boost your Temporal skills with this free course!](https://nodeweekly.com/link/161310/0a4070b383) Build an app that communicates with an external service using Temporal's TypeScript SDK.
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ztl7mplxxyuymjpxlqvp.jpg)](https://nodeweekly.com/link/161311/0a4070b383)
+
+[route-list: CLI Tool to Display Express/Koa/Hapi/Fastify Routes](https://nodeweekly.com/link/161311/0a4070b383 "github.com") — If you’ve got a Node-based webapp and you want to see all of its endpoints in an elegant way, here’s an option.
+
+Vladimir Mikulic
+
+[Electron 33.0: The Cross-Platform Desktop App Framework](https://nodeweekly.com/link/161312/0a4070b383 "www.electronjs.org") — Electron drops a major release each two months. This one lands no major new features but jumps from Chromium 128 to 130, as well as V8 13.0, and Node 20.18.0.
+
+Charles Kerr
+
+*   [MongoDB Node.js Driver 6.10](https://nodeweekly.com/link/161313/0a4070b383) – The latest official MongoDB driver. Now supports the bulk write API on MongoDB 8.0+.
+    
+*   [better-sqlite 11.5](https://nodeweekly.com/link/161314/0a4070b383) – A neat way to use SQLite from Node. Now supports [SQLite 3.47.0](https://nodeweekly.com/link/161315/0a4070b383) and Node.js v23.0.
+    
+*   [cookie 1.0](https://nodeweekly.com/link/161316/0a4070b383) – The HTTP cookie parser and serializer library.
+    
+*   [js-bson 6.9](https://nodeweekly.com/link/161317/0a4070b383) – MongoDB BSON parser for Node and browsers.
+    
+*   [Fedify 1.1](https://nodeweekly.com/link/161318/0a4070b383) – ActivityPub server framework in TypeScript.
+    
+*   [Strapi 5.1](https://nodeweekly.com/link/161319/0a4070b383) – Popular Node.js headless CMS.
+    
+*   [Pino 9.5](https://nodeweekly.com/link/161320/0a4070b383) – Fast JSON-oriented logger.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​552 — 2024 年 10 月 22 日
+
+[网上阅读](https://nodeweekly.com/issues/552)
+
+连同 
+
+\[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)]\(https://nodeweekly. com/link/161290/0a4070b383)
+
+![Node.js 周刊](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/q7bv9cjvn34bfj1gvgpr.jpg)](https://nodeweekly.com/link/161291/0a4070b383)
+
+[Node v23.0.0（当前）已发布](https://nodeweekly.com/link/161291/0a4070b383 "nodejs.org") — 向 Node.js 的最新版本打个招呼，它首先获得了所有前沿功能（Node 22 很快将成为活跃的 LTS 版本）。 v23 特别支持*默认情况下*使用 `require()` 加载 ES 模块，放弃了 32 位 Windows 支持，并且 \[`node --run` 变得稳定。]\(https://nodeweekly.com/link/161292 /0a4070b383)
+
+拉斐尔冈萨加
+
+📣 [Node.js v22.10.0（当前）](https://nodeweekly.com/link/161295/0a4070b383) 也已发布，为 ESM 包开发人员提供了重大增强，并且 `node --run` 在v22 也是如此。
+
+[介绍 Express v5：官方 Express v5 发布帖子！](https://nodeweekly.com/link/161293/0a4070b383 "expressjs.com") — 我们首先发现了 Express.js v5 的发布 \[一个多月前] （https://nodeweekly.com/issues/547）但现在我们得到了一个官方发布帖子，它整理了许多未解决的问题并解释了总体计划。目前，v5 被认为是“前沿”版本，在安全性和整体流程方面仍需要开展工作，但总体进展顺利。
+
+韦斯·托德（快报）
+
+[![](https://copm.s3.amazonaws.com/7f31886d.png)](https://nodeweekly.com/link/161290/0a4070b383)
+
+[Memetria K/V：高性能键值托管](https://nodeweekly.com/link/161290/0a4070b383 "dashboard.memetria.com") — 使用 Memetria K/V 增强您的 Node.js 应用程序，提供便携式、易于使用的 Redis OSS 和 Valkey 托管。轻松扩展您的应用程序并实现高性能。包括详细的分析和大密钥内存跟踪。
+
+Memetria赞助商
+
+[顶级 `await` 如何破坏兼容性](https://nodeweekly.com/link/161296/0a4070b383 "evertpot.com") — Node 23 使得可以使用 `require` 透明地加载 ES 模块，这很棒，但是..仅当正在加载的模块*不是*使用顶级“await”时。在向后兼容性问题出现之前，软件包创建者需要仔细考虑这一点！
+
+埃弗特·波特
+
+[*Hono* Web 框架的故事](https://nodeweekly.com/link/161297/0a4070b383 "blog.cloudflare.com") — \[Hono]\(https://nodeweekly.com/link/161298/ 0a4070b383）是一个轻量级框架，旨在在*任何* JavaScript 运行时上运行，该框架在过去一年中一直在蓬勃发展。有了它，您可以创建类似 Express 风格的应用程序，但可以在 Cloudflare Workers、Deno、Bun 或 Node 上运行它。
+
+和田佑介
+
+[为什么我对用“更快”的语言重写 JavaScript 工具持怀疑态度](https://nodeweekly.com/link/161299/0a4070b383 "nolanlawson.com") — 用“更快”的语言重写常见的 JavaScript 基础设施/构建工具，例如Rust、Zig 或 Go 在过去几年中变得流行，但诺兰问道，这真的有必要吗？
+
+诺兰·劳森
+
+[Node.js 中的最佳测试实践](https://nodeweekly.com/link/161300/0a4070b383 "blog.appsignal.com") — 快速列出 15 个值得使用的测试实践，以便编写高效、有效且易于维护的测试。
+
+安东内洛·扎尼尼
+
+🗓️ [Enterprise Ready Conference](https://nodeweekly.com/link/161301/0a4070b383 "www.enterprise-ready.com") — 为构建企业 SaaS 的产品/工程领导者在旧金山举办的一日活动 — 来自 OpenAI 的演讲者、Vanta、Canva、Dropbox。
+
+WorkOS赞助商
+
+📄 [Node.js 现在如何运行 TypeScript](https://nodeweekly.com/link/161302/0a4070b383) Sam Thorogood
+
+📄 [如何将 CommonJS 转换为 ESM](https://nodeweekly.com/link/161303/0a4070b383) Andy Jiang (Deno)
+
+🛠 代码和工具
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ny0bnuedwfudc7fhqojv.jpg)](https://nodeweekly.com/link/161304/0a4070b383)
+
+[Javet 4.0：在 Java 应用程序中嵌入 Node 和 V8](https://nodeweekly.com/link/161304/0a4070b383 "www.caoccao.com") — 我的 JVM 知识还很贫乏，所以我还没有尝试过，但这是一个令人着迷的想法。这个想法是你可以直接在 JVM 中使用 Node 和 V8，尽管[平台支持](https://nodeweekly.com/link/161305/0a4070b383) 是混合的。 [GitHub 存储库。](https://nodeweekly.com/link/161306/0a4070b383)
+
+曹三
+
+[终极 ExpressJS 入门](https://nodeweekly.com/link/161307/0a4070b383 "github.com") — 是的，又一个！不过，这个“自带电池”的基于 TypeScript 的 Express.js 样板应用程序确实包含了很多开箱即用的功能，特别是在文件上传方面。
+
+幽灵莱克斯利
+
+📰 分类广告
+
+🔁 [Node.js 事件循环如何工作？](https://nodeweekly.com/link/161308/0a4070b383) 当所有请求同时到达时会发生什么？如何避免阻塞事件循环？
+
+***
+
+[Pythagora](https://nodeweekly.com/link/161309/0a4070b383) 是一个 AI 开发工具，用于构建生产就绪工具（不是演示应用程序）。它会编写代码并在此过程中与您对话。
+
+***
+
+🎓 [通过此免费课程提高您的 Temporal 技能！](https://nodeweekly.com/link/161310/0a4070b383) 使用 Temporal 的 TypeScript SDK 构建一个与外部服务通信的应用。
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ztl7mplxxyuymjpxlqvp.jpg)](https://nodeweekly.com/link/161311/0a4070b383)
+
+[route-list：用于显示 Express/Koa/Hapi/Fastify 路由的 CLI 工具](https://nodeweekly.com/link/161311/0a4070b383 "github.com") — 如果您有一个基于 Node 的 Web 应用程序并且如果您想以优雅的方式查看其所有端点，这里有一个选项。
+
+弗拉基米尔·米库利奇
+
+[Electron 33.0：跨平台桌面应用程序框架](https://nodeweekly.com/link/161312/0a4070b383 "www.electronjs.org") - Electron 每两个月发布一个主要版本。该版本没有重大新功能，但从 Chromium 128 跃升至 130，以及 V8 13.0 和 Node 20.18.0。
+
+查尔斯·克尔
+
+* [MongoDB Node.js 驱动程序 6.10](https://nodeweekly.com/link/161313/0a4070b383) – 最新的官方 MongoDB 驱动程序。现在支持 MongoDB 8.0+ 上的批量写入 API。
+
+* [better-sqlite 11.5](https://nodeweekly.com/link/161314/0a4070b383) – 从 Node.js 使用 SQLite 的巧妙方法。现在支持 [SQLite 3.47.0](https://nodeweekly.com/link/161315/0a4070b383) 和 Node.js v23.0。
+
+* [cookie 1.0](https://nodeweekly.com/link/161316/0a4070b383) – HTTP cookie 解析器和序列化器库。
+
+* [js-bson 6.9](https://nodeweekly.com/link/161317/0a4070b383) – 用于 Node 和浏览器的 MongoDB BSON 解析器。
+
+* [Fedify 1.1](https://nodeweekly.com/link/161318/0a4070b383) – TypeScript 中的 ActivityPub 服务器框架。
+
+* [Strapi 5.1](https://nodeweekly.com/link/161319/0a4070b383) – 流行的 Node.js 无头 CMS。
+
+* [Pino 9.5](https://nodeweekly.com/link/161320/0a4070b383) – 快速的面向 JSON 的记录器。
+
+**有我们的链接吗？** 回复并告诉我们。我们无法包含所有内容，但我们会查看您发送的所有内容。 *谢谢！*
+
+***
+
+**赞助：** 发送电子邮件至“&lt;kristina@cooperpress.com>”了解详细信息。
+
+***
+
+由库珀出版社有限公司出版\
+费尔菲尔德企业中心, 劳斯, LN11 0LS, 英国
+
+
