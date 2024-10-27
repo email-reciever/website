@@ -1,0 +1,107 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#478 Next.js 15
+description: RD#478 Next.js 15
+date: 星期日 08 晚上 十月 27o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/next-js-15
+origin_site: https://newsletter.reactdigest.net/p/next-js-15
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#478 Next.js 15" url="https://newsletter.reactdigest.net/p/next-js-15" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1WNIqQHEs7IF54BqDvuxG1I5qPSs3O7L0KJRZvtPHs6gXItmyVkdfms6h56zkYAqT5VkE_cSu0tLEkyY7idVfV7VLJmluVRsjqdIHJwKvObSG8QJL0mYQLej71Uuaoqs92KzJT-Y9BJM1ZwGBzoowK1ln6st2aus4-gjlUzBROtCq3k3TZpAFO6H8-UpPkH_wiQei-HZtQcK5394mvkxS0QtsGlY0cjlm9Ajz1Md4BbfaSmBMY009z3WMwegxycNthE4kDMd14IRszWxrgU2cFLln__XpZQbsz0gxM3YkS10O3YJEU6lMOwOxEad9Ga8z9hl9xXhpV_symvXJeFlQgqwH-mjTEuM3HoecrDHqiygi4x5NQplsq5c0JIty7L17GxvHSgfPY-6MqZTyTB8ZBaDLZK3LxTyP-IycMn8aJrYPd3YfHwdZkBoWmLyckrlQCFxNdRRAI7dFhUmfKFjdM7XGd-JaWXUeN2Y9korxf78G6PUtKO5BSAM7mzMI4SqcjyM51N5-At4qrpnGYX_q8kLNSU0jgosycNQb0JJNrCcJek5uSceO0rM5rDFNvzjjaFvh2Rnb24OJ8rLLVdwrjJRBddBJuiizu5Mq_UjOkucXmNZaunC0vPRbeJGPjxRI8FcncFJl348ST-4EWbq0UXYBa9NaELmA6EoeMsuDuCiMCKBUZD5v9oyTTvkXkXudXyOdsw1_JX0vbLc8_RaJrHolrfALonF3EQRr9WzdCjjw/4ay/m2gTjF_LTF6UPZJaRIWN4A/h0/h001.BLF8rEAdgu4-ypzUfdOikTZhEP1r2pmd97MD8B9a_Fc)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4ay/m2gTjF_LTF6UPZJaRIWN4A/ho.gif)
+
+[Next.js 15](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8iNZPUX9eQGa8nJffuScClTuQVsqU5pyQyDnunTAah9i9LwQ-JcEhGNPJ-aDs9_wfXifYy7Eul_k8MZRpHTPSlSbv8gQ5pb5prjtDlE2UaBEKcf0N1nbYR8Eo5gACOe43z8hN6-2ntpqFima68sWi49agKHAb_oA0joYJOb20VWonvba7sV8ExV2zBuyu4Pi7bPKfYr-xB8LWLjv2FYmYIE/4ay/m2gTjF_LTF6UPZJaRIWN4A/h1/h001.EBcbAzbwIYwC-f9pgGmSQQPeBd5hCymsVD6WJEFD-Xw)  
+_21 minutes_ by Delba de Oliveira
+
+Next.js 15 introduces React 19 support, caching improvements, a stable release for Turbopack in development, new APIs, and more.
+
+[The Guide to New Hooks in React 19](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqQafazjAZlm2I4qgqy3bDrITlUU4MHPs9-mU67zecbXuBQXm__f74-1UFX8qOIo9Xg1m5j0wE2bQMP_-ZIpVkzBIxDbNtBrm1J0TyHCsBDhhl35sk7D0fRLpaSf4ruRe59pvY9sBzdjZLqaESm6oSzWm6SGHh5XYxNd1Zn_LrkiChXikgVyTLEouEF9u2Ef0SwTAcei_UzUdZQo15uscTHwFRLPqH9o2OupQhz57qoSpt0lQq4wz1Q2d4J8Th7L91ctv53woHv1oRFX3PvEQU5U/4ay/m2gTjF_LTF6UPZJaRIWN4A/h2/h001.GOdiSREOR68SXIAszk9M1RbJwe0zUw6KDu2qGHKTkxM)  
+_sponsored by Progress_
+
+React 19 has recently emerged as a powerful evolution in the React ecosystem, bringing with it a suite of new React Hooks designed to simplify state management, enhance asynchronous operations and optimize performance. In this guide, we’ll dive deep into these new additions: useActionState, useFormStatus and useOptimistic.
+
+[React Compiler Beta Release](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvuMRDy3w85kWf16GtEwWeECPJUyff0u1ye6Gq1OJxxj3JrRbjLvi0EaXWw_2JT9Ros0KPw-TT-aGzZHvA42lRU65X6S8Wa0sCBmPw1WdCbWiphmrB3FhNfHR6GKLzKg4wtlHWSRCX-HOLhNlAQdxJMInXdAXqUU3_8MQ9RiHjy9utxvo19neUyiXIXphBVBQlmJf2eZcjYjvjfF44B3Eymg5Ku9h2rtjaYgK112-fudMyfTVWVxbEsUIep19mF-I1w/4ay/m2gTjF_LTF6UPZJaRIWN4A/h3/h001.kHyoVghLTAcO8LMxT3MOccpPZGvVQkJHB-AUCRc18eU)  
+_7 minutes_ by React Team
+
+React team announces the Beta release of React Compiler, a build-time optimization tool that provides automatic memoization for React applications. The compiler now supports React versions 17+ through an optional runtime package, and the React Compiler Working Group is being opened to the public for broader community feedback.
+
+[Libraries You Should Know When Building with React](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVZux03CDg_E1ZCMKz-ZrdTZzG9iV-WkYtBSAOdiV4AOodQ5VAcHw5YZO04OTZ85qv7wFpjxggv0RzSdw1DWdbZkGWHZsQa5diPEQMmQzRjxUmscwt8v-ZYiMp79QJAm9qbGT2Xqge6qAAIh3W5rx_HR9Ho-WcyKDKlS2idPG1lzsRsKUb9dzr-NWz2DOnS8I-4u4HMDCXXgh21U9vGE8DUv4CQd5ZizCXp6uHVuBF39FT5vwIiSH98jZtUa9HP9MNx5_nhh9_TFcY5vlH_QwDQc/4ay/m2gTjF_LTF6UPZJaRIWN4A/h4/h001.oduW_t0oixz5pxo2jH471nENwxxKbEpYlOREKmpNNEM)  
+_4 minutes_ by Sonay Kara
+
+Sonay provides an overview of 15 essential React libraries that enhance development capabilities. The libraries cover various functionalities including styling (Styled Components), form management (Formik-Yup), data management (TanStack Query, Redux Toolkit, Zustand), animations (React Spring, Framer Motion), testing (Jest, Vitest), multilingual support (React i18next), and HTTP requests (Axios).
+
+[Creating a Keyboard Shortcut Hook in React](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqTHitKRygbU8v7GMUo4SFRsc9lt3eUOgRRpSdbm-0pNQAZoSI4R39yu1qzt650iSn7ojTWyde85_r4z9-WTHMFCjCj2YBqrh7lg42Vv8KNFqm92h2ZEDOVgynuU3U1tIGGD1Jor_WK3-hhDbHTxPDy-SQ8c15hzWSTzISWwhCS7EsKB5tGd5SRok2IN8N0ykU8W9MdUPX0-i3-V5krmYD37234rhuaZ78LtI6XRTWOJKVd3teFUi7yPFlsQN9rSY6A/4ay/m2gTjF_LTF6UPZJaRIWN4A/h5/h001.TTU5IQ2rVZosx0xImGdqzAud7TVCDKYqe9Z1auZqK4k)  
+_12 minutes_ by Tania Rascia
+
+The article presents a detailed implementation of a custom React hook called `useShortcut` for handling keyboard shortcuts in web applications. The hook supports single keypresses, combination keypresses with modifiers (like Command + Shift + X), and key sequences (like the Konami Code).
+
+[Server Side State management in NextJS: a deep dive into React Cache](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXOb9xcgIOKqIqsKojS_M2BwrfVXXwt73_r50khZE2JbJaY1-tC3aYsO7L5AqGUXRxwgsnAl73JzzUzXwdrokZH3Ink5i4C44qNkFMyJOy92HBcWT4I_AD-8fe4hnt1JjbXJN97eJl_oQqJJsASMZx0BvU9K4BVzdazesFn16GHphr3WjC_QOkAkZz2FpsH2UIuGsqqH6Sr2nu5iDWbG7CZzRqI6jy5bv7R06x5Us-v4KAwzHkBFM8ECe2Llo61mYL8zRiP2bLHp7CHD4ux2ajspvoazXVvJqmsMN5RaelxHfoNJ-McOKtFwahNFyZ2CeA/4ay/m2gTjF_LTF6UPZJaRIWN4A/h6/h001.fNZHHYQe3zWrkxGgtJ_BZoiejL-5CYFfzC0KPl8YGEY)  
+_8 minutes_ by Yoseph Radding
+
+The article discusses state management in NextJS server components, explaining how it differs from traditional client-side state management. The author introduces a technique using React's cache function as a mutable store for server-side state, which can help avoid prop drilling in server components.
+
+And we are going to wrap up with some news from [React Native: New Architecture is here](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvg6X08HACLEPkNSKEkWmEp2LWClrSAmdhupkZkqSZOTkfypSyaf5cjyY3NC5qb_V7uBCGF6xQ8jJwbXnrNsyRXtTsDj3YTMbDbGHqVsBCprv_BQTJZhE9aag5e90M7b7SAEKyhqC74qneiL4OUKtF8fnOpeyugG2wbReCFgkGuKawGLXjlON2NwBe2lzQX7nLbsMC_DQE31I-SleLyKqVUW6O3Fnyn696sTcaZIDjaAts7-E4iPG6n6q0SLUFe9y4w/4ay/m2gTjF_LTF6UPZJaRIWN4A/h7/h001.5VJv_wSgL1zKHQXgUu5PUc-WEKGkpRIyFeHWPDvxGXc).
+
+😘 [Kiss Bugs Goodbye](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZDc6CvoM57HfpmGHktxcZi6AOQQ-fnRGeUKX4XBeC-GUCtY4UiWY7oeix6zQIQyvyVwetvnWa_hG-3j6ZhIFhdkyV8OMMTBbAjWSHUxZwMIw8ErWrLnzVfrfWTsfkERR5ajJqflNZcsW1G6ZNhsfXm2IgFgRaNCCkuObwknWqsm13o7BmijjFDPbhfONCA6vOuY1g-uOja2FAcIEB0_SQEmOCBfANLB0--rxZKL8V6dPtmXeIC5iFTXXDEi_pbwOg/4ay/m2gTjF_LTF6UPZJaRIWN4A/h8/h001.wCP_qkhYcu_Sf8WPchbACR0HOpTSvUCtH95MFo3q9tI)  
+_sponsored by QA Wolf_
+
+Bugs sneak out when less than 80% of user flows are tested before shipping. But getting that kind of coverage—and staying there—is hard and pricey for any size team. QA Wolf helps engineering teams get to 80% automated test coverage and ship 5x faster by reducing QA cycles from hours to minutes. Schedule a demo to learn more.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1WNIqQHEs7IF54BqDvuxG1I5qPSs3O7L0KJRZvtPHs6gXItmyVkdfms6h56zkYAqT5Vk E\_cSu0tLEkyY7idVfV7VLJmluVRsjqdIHJwKvObSG8QJL0mYQLej71Uuaoqs92KzJT-Y9BJM1ZwGBzoowK1ln6st2aus4-gjlUzBROtCq3k3TZpAFO6H8-UpPkH\_wiQei-HZtQck5394mvkx S0QtsGlY0cjlm9Ajz1Md4BbfaSmBMY009z3WMwegxycNthE4kDMd14IRszWxrgU2cFLln\_\_XpZQbsz0gxM3YkS10O3YJEU6lMOwOxEad9Ga8z9hl9xXhpV\_symvXJeFlQgqwH-mjTEuM3 HoecrDHqiygi4x5NQplsq5c0JIty7L17GxvHSgfPY-6MqZTyTB8ZBaDLZK3LxTyP-IycMn8aJrYPd3YfHwdZkBOWmLyckrlQCFxNdRRAI7dFhUmfKFjdM7XGd-JaWXUeN2Y9korxf78G6PUtKO5 BSAM7mzMI4SqcjyM51N5-At4qrpnGYX\_q8kLNSU0jgosycNQb0JJNrCcJek5uSceO0rM5rDFNvzjjaFvh2Rnb24OJ8rLLVdwrjJRBddBJuiizu5Mq\_UjOkucXmNZaunC0vPRbeJGPjxRI8FcncFJl3 48ST-4EWbq0UXYBa9NaELmA6EoeMsuDuCiMCKBUZD5v9oyTTvkXkXudXyOdsw1\_JX0vbLc8\_RaJrHolrfALonF3EQRr9WzdCjjw/4ay/m2gTjF\_LTF6UPZJaRIWN4A/h0 /h001.BLF8rEAdgu4-ypzUfdOikTZhEP1r2pmd97MD8B9a\_Fc)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4ay/m2gTjF_LTF6UPZJaRIWN4A/ho.gif)
+
+\[Next.js 15]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8iNZPUX9eQGa8nJffuScClTuQVsqU5pyQyDnunTAah9i9LwQ-JcEhGNPJ-aDs9\_wfXifYy7Eul\_k8MZRpHTPSlSbv8 gQ5pb5prjtDlE2UaBEKcf0N1nbYR8Eo5gACOe43z8hN6-2ntpqFima68sWi49agKHAb\_oA0joYJOb20VWonvba7sV8ExV2zBuyu4Pi7bPKfYr-xB8LWLjv2FYmYIE/4ay/m2gTjF\_LTF6UPZJa RIWN4A/h1/h001.EBcbAzbwIYwC-f9pgGmSQQPeBd5hCymsVD6WJEFD-Xw)\
+*21 分钟* 德尔巴·德·奥利维拉
+
+Next.js 15 引入了 React 19 支持、缓存改进、开发中的 Turbopack 稳定版本、新 API 等等。
+
+\[React 19 中的新 Hook 指南]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqQafazjAZlm2I4qgqy3bDrITlUU4MHPs9-mU67zecbXuBQXm\_\_f74-1UFX8qOIo9Xg1m5j0wE2b QMP\_-ZIpVkzBIxDbNtBrm1J0TyHCsBDhhl35sk7D0fRLpaSf4ruRe59pvY9sBzdjZLqaESm6oSzW m6SGHh5XYxNd1Zn\_LrkiChXikgVyTLEouEF9u2Ef0SwTAcei\_UzUdZQo15uscTHwFRLPqH9o2Oup Qhz57qoSpt0lQq4wz1Q2d4J8Th7L91ctv53woHv1oRFX3PvEQU5U/4ay/m2gTjF\_LTF6UPZJaRIWN4A/h2/h001.GOdiSREOR68SXIAszk9M1RbJwe0zUw6KDu2qGHKTkxM)\
+*由进步赞助*
+
+React 19 最近作为 React 生态系统中的一次强大演变而出现，带来了一套新的 React Hooks，旨在简化状态管理、增强异步操作和优化性能。在本指南中，我们将深入探讨这些新增功能：useActionState、useFormStatus 和 useOptimistic。
+
+[React Compiler Beta Release](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvuMRDy3w85kWf16GtEwWeECPJUyff0u1ye6Gq1OJxxj3JrRbjLvi0EaXWw_2JT9Ros0KPw-TT-aGzZHvA42lRU65X6S8Wa0sCBmPw1WdCbWiphmrB3FhNfHR6GKLzKg4wtlHWSRCX-HOLhNlAQdxJMInXdAXqUU3_8MQ9RiHjy9utxvo19neUyiXIXphBVBQlmJf2eZcjYjvjfF44B3Eymg5Ku9h2rtjaYgK112-fudMyfTVWVxbEsUIep19mF-I1w/4ay/m2gTjF_LTF6UPZJaRIWN4A/h3/h001.kHyoVghLTAcO8LMxT3MOccpPZGvVQkJHB-AUCRc18eU)\
+*7 分钟*，React 团队
+
+React 团队宣布推出 React Compiler 的 Beta 版本，这是一个构建时优化工具，可为 React 应用程序提供自动记忆功能。该编译器现在通过可选的运行时包支持 React 版本 17+，并且 React 编译器工作组正在向公众开放，以获得更广泛的社区反馈。
+
+\[使用 React 构建时应该了解的库]\(https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu\_fY2A1vmVZux03CDg\_E1ZCMKz-ZrdTZzG9iV-WkYtBSAOdiV4AOodQ5VAcHw5YZO04OTZ85qv7wFpjxggv0RzSdw1 DWdbZkGWHZsQa5diPEQMmQzRjxUmscwt8v-ZYiMp79QJAm9qbGT2Xqge6qAAIh3W5rx\_HR9Ho-WcyKDKlS2idPG1lzsRsKUb9dzr-NWz2DOnS8I-4u4HMDCXXgh21U9vGE8DUv4CQd5ZizCXp6 uHVuBF39FT5vwIiSH98jZtUa9HP9MNx5\_nhh9\_TFcY5vlH\_QwDQc/4ay/m2gTjF\_LTF6UPZJaRIWN4A/h4/ h001.oduW\_t0oixz5pxo2jH471nENwxxKbEpYlOREKmpNNEM)\
+*4 分钟* 索奈·卡拉 (Sonay Kara)
+
+Sonay 概述了 15 个增强开发能力的基本 React 库。这些库涵盖各种功能，包括样式（Styled Components）、表单管理（Formik-Yup）、数据管理（TanStack Query、Redux Toolkit、Zustand）、动画（React Spring、Framer Motion）、测试（Jest、Vitest）、多语言支持(React i18next) 和 HTTP 请求 (Axios)。
+
+\[在React中创建键盘快捷键挂钩]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqTHitKRygbU8v7GMUo4SFRsc9lt3eUOgRRpSdbm-0pNQAZoSI4R39yu1qzt650iSn7ojTWyde85\_r4 z9-WTHMFCjCj2YBqrh7lg42Vv8KNFqm92h2ZEDOVgynuU3U1tIGGD1Jor\_WK3-hhDbHTxPDy-SQ8c15hzWSTzISWwhCS7EsKB5tGd5SRok2IN8N0ykU8W9MdUPX0-i3-V5krmYD37234rhuaZ78LtI 6XRTWOJKVd3teFUi7yPFlsQN9rSY6A/4ay/m2gTjF\_LTF6UPZJaRIWN4A/h5/h001。 TTU5IQ2rVZosx0xImGdqzAud7TVCDKYqe9Z1auZqK4k)\
+*12 分钟* 塔尼亚·拉斯西亚 (Tania Rascia)
+
+本文介绍了一个名为“useShortcut”的自定义 React 钩子的详细实现，用于处理 Web 应用程序中的键盘快捷键。该钩子支持单个按键、带修饰符的组合按键（如 Command + Shift + X）和按键序列（如 Konami 代码）。
+
+\[Server Side State management in NextJS: a deep dive into React Cache]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXOb9xcgIOKqIqsKojS\_M2BwrfVXXwt73\_r50khZE2JbJaY1-tC3aYsO7L5AqGUXRxwgsnAl73JzzUzXwdrokZH3Ink5i4C44qNkFMyJOy92HBcWT4I\_AD-8fe4hnt1JjbXJN97eJl\_oQqJJsASMZx0BvU9K4BVzdazesFn16GHphr3WjC\_QOkAkZz2FpsH2UIuGsqqH6Sr2nu5iDWbG7CZzRqI6jy5bv7R06x5Us-v4KAwzHkBFM8ECe2Llo61mYL8zRiP2bLHp7CHD4ux2ajspvoazXVvJqmsMN5RaelxHfoNJ-McOKtFwahNFyZ2CeA/4ay/m2gTjF\_LTF6UPZJaRIWN4A/h6/ h001.fNZHHYQe3zWrkxGgtJ\_BZoiejL-5CYFfzC0KPl8YGEY)\
+*8 分钟* 约瑟夫·雷丁 (Yoseph Radding)
+
+本文讨论了 NextJS 服务器组件中的状态管理，解释了它与传统客户端状态管理的不同之处。作者介绍了一种使用 React 的缓存功能作为服务器端状态的可变存储的技术，这可以帮助避免服务器组件中的 prop 钻取。
+
+我们将以 \[React Native：新架构就在这里]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvg6X08HACLEPkNSKEkWmEp2LWClrSAmdhupkZkqSZOTkfypSyaf5cjyY3NC5qb\_V7uBCGF6xQ8j 的一些消息作为总结JwbXnrNsyRXtTsDj3YTMbDbGHqVsBCprv\_BQTJZhE9aag5e90M7b7SAEKyhqC74qneiL4OUKtF8fnOpeyugG2wbReCFgkGuKawGLXjlON2NwBe2lzQX7nLbsMC\_DQE31I-SleLyKqVUW6O3Fny n696sTcaZIDjaAts7-E4iPG6n6q0SLUFe9y4w/4ay/m2gTjF\_LTF6UPZJaRIWN4A /h7/h001.5VJv\_wSgL1zKHQXgUu5PUc-WEKGkpRIyFeHWPDvxGXc)。
+
+😘 \[吻虫再见]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZDc6CvoM57HfpmGHktxcZi6AOQQ-fnRGeUKX4XBeC-GUCtY4UiWY7oeix6zQIQyvyVwetvnWa\_hG- 3j6ZhIFdkyV8OMMTBbAjWSHUxZwMIw8ErWrLnzVfrfWTsfkERR5ajJqflNZcsW1G6ZNhsfXm2I gFgRaNCCkuObwknWqsm13o7BmijjFDPbhfONCA6vOuY1g-uOja2FAciEB0\_SQEmOCBfANLB0--r xZKL8V6dPtmXeIC5iFTXXDEi\_pbwOg/4ay/m2gTjF\_LTF6UPZJaRIWN4A/h8/h001.wCP\_qkhYcu\_Sf8WPchbACR0HopTSvUCtH95MFO3q9tI)\
+*由 QA Wolf 赞助*
+
+当交付前测试的用户流少于 80% 时，错误就会悄悄出现。但对于任何规模的团队来说，获得这种覆盖并保持在那里都是困难且昂贵的。 QA Wolf 通过将 QA 周期从几小时缩短到几分钟，帮助工程团队实现 80% 的自动化测试覆盖率，并将交付速度提高 5 倍。安排演示以了解更多信息。
+
+#
+
+
