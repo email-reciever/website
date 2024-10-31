@@ -1,0 +1,332 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Cutting JavaScript into two： trick or treat?
+description: Cutting JavaScript into two： trick or treat?
+date: 星期四 07 晚上 十月 31o 2024
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/711
+origin_site: https://javascriptweekly.com/issues/711
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Cutting JavaScript into two： trick or treat?" url="https://javascriptweekly.com/issues/711" />
+
+<Detail client:only="react">
+	#​711 — October 31, 2024
+
+[Read on the Web](https://javascriptweekly.com/issues/711)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://javascriptweekly.com/link/161702/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/opvdpooawsep7ktikltx.jpg)](https://javascriptweekly.com/link/161703/d076523b1d)
+
+[Python Jumps to #1 on GitHub Over JavaScript, But...](https://javascriptweekly.com/link/161703/d076523b1d "github.blog") — [GitHub Universe](https://javascriptweekly.com/link/161704/d076523b1d) took place this week, flooding us with data about how folks are using the platform. Of interest to those on social media was that Python has taken JavaScript's #1 language crown, though many argued that TypeScript (now #3) made an impact here. In positive news, **JS still ranks first for code pushes alone** and there's been a 15% jump in npm package consumption in the past year.
+
+GitHub
+
+🎉 In other GitHub news, their Copilot AI coding tool [can now use alternative LLMs like Gemini and Claude](https://javascriptweekly.com/link/161705/d076523b1d), and [GitHub Spark](https://javascriptweekly.com/link/161706/d076523b1d) is a new AI-powered tool for rapidly creating and deploying small apps.
+
+[![](https://copm.s3.amazonaws.com/889f8c12.png)](https://javascriptweekly.com/link/161702/d076523b1d)
+
+[Implementing Clean Architecture in Next.js](https://javascriptweekly.com/link/161702/d076523b1d "sentry.io") — Learn how to make projects testable and debuggable, independent of UI, framework, database, and external dependencies with the concept of Clean Architecture. Join us live on November 4th.
+
+Sentry sponsor
+
+[Should JavaScript Be Split Into Two Languages?](https://javascriptweekly.com/link/161707/d076523b1d "devclass.com") — Two weeks ago we linked to [an interesting slidedeck](https://javascriptweekly.com/link/161708/d076523b1d) presented at TC39 where it was proposed to split JavaScript into two languages: a basic core and a fully featured version that needs tooling to compile it down. This covers a bit more of the story and led to [a particularly extensive Hacker News discussion](https://javascriptweekly.com/link/161709/d076523b1d) too.
+
+Dev Class
+
+🤔 You could argue TypeScript is _already_ that second language..?
+
+**IN BRIEF:**
+
+*   ✂️ The [latest version of VS Code](https://javascriptweekly.com/link/161710/d076523b1d) has a new experimental feature for updating imports when you copy and paste between JS/TS files.
+    
+*   Lee Robinson and Delba de Oliveira [present a quick recap of last week's _Next.js Conf 2024_](https://javascriptweekly.com/link/161711/d076523b1d) and its main announcements.
+    
+*   🤖 Anthropic's Claude AI system has [introduced an 'analysis' tool](https://javascriptweekly.com/link/161712/d076523b1d) for writing and running JavaScript within a sandbox, so Claude can perform various calculations and analysis before returning answers.
+    
+*   🙋 [The Angular team is considering](https://javascriptweekly.com/link/161713/d076523b1d) implementing a new Angular style guide to bring it up to 2024 standards and wants your input. The [existing style guide](https://javascriptweekly.com/link/161714/d076523b1d) was written in 2016.
+    
+
+**RELEASES:**
+
+*   [Node.js v22.11.0 (LTS)](https://javascriptweekly.com/link/161715/d076523b1d) - Codenamed _Jod_, this marks Node v22 becoming the active LTS release of Node, a status it will maintain until late 2025.
+    
+*   [Node.js v23.1.0 (Current)](https://javascriptweekly.com/link/161716/d076523b1d) – The cutting edge Node release line makes JSON modules, import attributes, and the [`MockTimers` test runner API](https://javascriptweekly.com/link/161717/d076523b1d) stable.
+    
+*   📊 [ApexCharts 4.0](https://javascriptweekly.com/link/161718/d076523b1d) – Popular JS charting library updates its [SVG.js](https://javascriptweekly.com/link/161720/d076523b1d) dependency.
+    
+*   [Chakra UI v3](https://javascriptweekly.com/link/161721/d076523b1d) – A full rewrite for the comprehensive React component suite.
+    
+*   [jQuery UI 1.14.1](https://javascriptweekly.com/link/161722/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[How We Shrunk Our JavaScript Monorepo Git Size by 94%](https://javascriptweekly.com/link/161723/d076523b1d "www.jonathancreamer.com") — And by “we”, the author means Microsoft, which had an extremely large 178 gigabyte JavaScript monorepo on its hands – big enough that many employees had problems cloning it at all. Jonathan tells the full story here.
+
+Jonathan Creamer
+
+[How to Roll Your Own Auth in JavaScript and TypeScript](https://javascriptweekly.com/link/161725/d076523b1d "www.robinwieruch.de") — A snappy look at how to build a session-based authentication system, something Robin notes “_does not have to be complicated_”.
+
+Robin Wieruch
+
+[MongoDB Atlas Search Integration with BuildShip](https://javascriptweekly.com/link/161726/d076523b1d "shortclick.link") — MongoDB Atlas Search offers powerful full-text search, vector search, and hybrid search capabilities.
+
+MongoDB sponsor
+
+[Using shadcn/ui with React 19 (and Next.js 15)](https://javascriptweekly.com/link/161727/d076523b1d "ui.shadcn.com") — Fresh documentation from the [shadcn/ui](https://javascriptweekly.com/link/161728/d076523b1d) project on the specifics of using the popular component library with React 19 generally, though with a slight emphasis on Next.js 15.
+
+shadcn
+
+[Reimplementing JavaScript's `==` in JavaScript](https://javascriptweekly.com/link/161729/d076523b1d "evanhahn.com") — What a trip. Whether or not you’re aware of the ‘quirks’ of JavaScript’s `==` operator, this could boggle your mind.
+
+Evan Hahn
+
+[HTML Form Validation is Heavily Underused](https://javascriptweekly.com/link/161730/d076523b1d "expressionstatement.com") — An exploration of the “_powerful validation mechanisms_” of HTML forms, opining that they’re underused, and proposing why that lack of utilization may be.
+
+everdimension
+
+📄 [Node.js, Pipes, and Disappearing Bytes](https://javascriptweekly.com/link/161731/d076523b1d) – If piping a Node app’s output to another command, mysterious problems can arise.. Sam Lijin
+
+📄 [Introducing the New Svelte CLI Tool: `sv`](https://javascriptweekly.com/link/161732/d076523b1d) Ben McCann
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ecbnaarwsxcm4yaggyn1.jpg)](https://javascriptweekly.com/link/161733/d076523b1d)
+
+[Faker 9.1: Generate Fake, Realistic Data on Demand](https://javascriptweekly.com/link/161733/d076523b1d "fakerjs.dev") — Names, bios, addresses, zip codes, dates, monetary amounts, transactions, and a lot more besides. I really like [the guided DevTools console based demo](https://javascriptweekly.com/link/161734/d076523b1d) you can try – an idea other projects should consider. [GitHub repo.](https://javascriptweekly.com/link/161735/d076523b1d)
+
+Faker.js Team
+
+[Fraction.js: Library for Working with Rational Numbers](https://javascriptweekly.com/link/161736/d076523b1d "github.com") — The imprecise representation of floating point numbers can lead to all sorts of problems, so if you’re working with fractions at all, you might want a little more precision, which Fraction.js offers.
+
+Robert Eisele
+
+[Handsontable: Spreadsheet-Like JavaScript Data Grid for Your App](https://javascriptweekly.com/link/161737/d076523b1d "handsontable.com") — Feature-rich data grid for developers seeking a powerful, customizable, and accessible solution to manage complex data.
+
+Handsontable sponsor
+
+[Fedify: A Framework for Building ActivityPub Servers](https://javascriptweekly.com/link/161738/d076523b1d "fedify.dev") — If you want to join the _fediverse_ with an app of your own (rather than leaning on Mastodon, say), this gives you the building blocks you need.
+
+Hong Minhee
+
+[Yantra: A JavaScript Engine for .NET Standard](https://javascriptweekly.com/link/161739/d076523b1d "github.com") — A managed JS engine for .NET Standard written in C# that supports both CommonJS and ES modules.
+
+Yantra Team
+
+[SVG.js: SVG Manipulation and Animation Library](https://javascriptweekly.com/link/161720/d076523b1d "svgjs.dev") — A lightweight approach without dependencies. There’s [a demo on JSFiddle](https://javascriptweekly.com/link/161741/d076523b1d) you can play with. [GitHub repo.](https://javascriptweekly.com/link/161743/d076523b1d)
+
+Various Authors
+
+[Dependency Cruiser 16.5: A Way to Visualize Dependencies](https://javascriptweekly.com/link/161744/d076523b1d "github.com") — If you want a look at the output, there’s [a whole page of graphs for popular, real world projects](https://javascriptweekly.com/link/161745/d076523b1d) including Chalk, Yarn, and React.
+
+Sander Verweij
+
+[AuthKit: The World’s Best Login Box — Powered by WorkOS & Radix](https://javascriptweekly.com/link/161747/d076523b1d "www.authkit.com") — AuthKit is a complete solution for authentication, authorization, and user management. It’s free up to 1 million MAUs and comes standard with RBAC, bot protection, MFA, and more.
+
+AuthKit sponsor
+
+🔊 [WebAssembly Audio Decoders](https://javascriptweekly.com/link/161748/d076523b1d "github.com") — Targeting both browser and Node.js use cases, this is a collection of WASM-powered audio decoding libraries for formats like MPEG I/II/III, FLAC, Ogg Opus, Ogg FLAC, Opus, and Ogg Vorbis.
+
+Ethan Halsall
+
+*   [📺 YouTube.js 11.0](https://javascriptweekly.com/link/161749/d076523b1d) – Unofficial JS client for YouTube's private API.
+    
+*   [Serverless Express 4.16](https://javascriptweekly.com/link/161750/d076523b1d) – Run Express.js on AWS Lambda, API Gateway, Lambda@Edge, etc. Now supporting Express 5 too.
+    
+*   [Execa 9.5](https://javascriptweekly.com/link/161752/d076523b1d) – Powerful process execution library for Node. When redirecting `stdout` or `stderr` to a file, you can now optionally _append_ rather than replace.
+    
+*   [MUI X 7.22](https://javascriptweekly.com/link/161753/d076523b1d) – Popular React component suite. Now with server-side support for Data Grid row grouping.
+    
+*   🗓️ [react-calendar 5.1](https://javascriptweekly.com/link/161756/d076523b1d) – The 'ultimate' calendar for your React app.
+    
+*   📷 [VisionCamera 4.6](https://javascriptweekly.com/link/161757/d076523b1d) – Advanced camera control for React Native.
+    
+*   [Elliptic 6.6](https://javascriptweekly.com/link/161759/d076523b1d) – Plain JS elliptic curve cryptography implementation.
+    
+*   [Acorn 8.14](https://javascriptweekly.com/link/161760/d076523b1d) – Small, fast, JavaScript-based JavaScript parser.
+    
+*   [Strapi 5.2](https://javascriptweekly.com/link/161761/d076523b1d) – Popular Node.js headless CMS.
+    
+
+📰 Classifieds
+
+🏠 [Remote Senior Developer Experience Engineer](https://javascriptweekly.com/link/161762/d076523b1d) - Passionate about React & GraphQL? Join us as a Developer Experience Engineer to elevate our dev community. Remote, EU timezone.
+
+* * *
+
+[How Google handles authorization at scale](https://javascriptweekly.com/link/161763/d076523b1d). A technical comparison of Google's Relationship-based authz system and Oso's Authz as a Service.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/161764/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​711 — 2024 年 10 月 31 日
+
+[网上阅读](https://javascriptweekly.com/issues/711)
+
+连同 
+
+\[![哨兵标志](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)]\(https:// /javascriptweekly.com/link/161702/d076523b1d)
+
+JavaScript 周刊
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/opvdpooawsep7ktikltx.jpg)](https://javascriptweekly.com/link/161703/d076523b1d)
+
+[Python 在 GitHub 上超越 JavaScript 跃居第一，但是...](https://javascriptweekly.com/link/161703/d076523b1d "github.blog") — \[GitHub Universe]\(https://javascriptweekly.com/ link/161704/d076523b1d）发生在本周，为我们提供了大量有关人们如何使用该平台的数据。社交媒体上的人们感兴趣的是，Python 已经夺得了 JavaScript 的第一语言桂冠，尽管许多人认为 TypeScript（现在排名第三）在这里产生了影响。积极的消息是，**JS 仅在代码推送方面仍然排名第一**，并且去年 npm 包的使用量增长了 15%。
+
+GitHub
+
+🎉 在其他 GitHub 新闻中，他们的 Copilot AI 编码工具 [现在可以使用 Gemini 和 Claude 等替代法学硕士](https://javascriptweekly.com/link/161705/d076523b1d) 和 \[GitHub Spark]\(https://javascriptweekly. com/link/161706/d076523b1d）是一种新的人工智能驱动工具，用于快速创建和部署小型应用程序。
+
+[![](https://copm.s3.amazonaws.com/889f8c12.png)](https://javascriptweekly.com/link/161702/d076523b1d)
+
+[在 Next.js 中实现简洁架构](https://javascriptweekly.com/link/161702/d076523b1d "sentry.io") — 了解如何使项目可测试和可调试，独立于 UI、框架、数据库和外部依赖项秉承清洁建筑的理念。欢迎加入我们 11 月 4 日的直播。
+
+哨兵赞助商
+
+[JavaScript 应该分为两种语言吗？](https://javascriptweekly.com/link/161707/d076523b1d "devclass.com") — 两周前，我们链接到了\[一个有趣的幻灯片]\(https://javascriptweekly.com /link/161708/d076523b1d）在 TC39 上提出，其中建议将 JavaScript 分成两种语言：基本核心和需要工具来编译的全功能版本。这涵盖了更多的故事内容，并引发了[特别广泛的黑客新闻讨论](https://javascriptweekly.com/link/161709/d076523b1d)。
+
+开发类
+
+🤔 你可能会说 TypeScript“已经”是第二语言了……？
+
+**简而言之：**
+
+* ✂️ [最新版本的 VS Code](https://javascriptweekly.com/link/161710/d076523b1d) 有一个新的实验性功能，用于在 JS/TS 文件之间复制和粘贴时更新导入。
+
+* Lee Robinson 和 Delba de Oliveira [快速回顾上周的 *Next.js Conf 2024*](https://javascriptweekly.com/link/161711/d076523b1d) 及其主要公告。
+
+* 🤖 Anthropic 的 Claude AI 系统[引入了一个“分析”工具](https://javascriptweekly.com/link/161712/d076523b1d)，用于在沙箱中编写和运行 JavaScript，因此 Claude 可以在返回答案之前执行各种计算和分析。
+
+* 🙋 [Angular 团队正在考虑](https://javascriptweekly.com/link/161713/d076523b1d) 实施新的 Angular 样式指南以使其达到 2024 年标准，并希望您提供意见。 [现有风格指南](https://javascriptweekly.com/link/161714/d076523b1d) 于 2016 年编写。
+
+**发布：**
+
+* [Node.js v22.11.0 (LTS)](https://javascriptweekly.com/link/161715/d076523b1d) - 代号 *Jod*，这标志着 Node v22 成为 Node 的活跃 LTS 版本，并将维持这一状态直到 2025 年末。
+
+* [Node.js v23.1.0（当前）](https://javascriptweekly.com/link/161716/d076523b1d) – 最前沿的 Node 发布线制作 JSON 模块、导入属性和 [`MockTimers` 测试运行器 API ](https://javascriptweekly.com/link/161717/d076523b1d) 稳定。
+
+* 📊 [ApexCharts 4.0](https://javascriptweekly.com/link/161718/d076523b1d) – 流行的 JS 图表库更新了其 [SVG.js](https://javascriptweekly.com/link/161720/d076523b1d) 依赖项。
+
+* [Chakra UI v3](https://javascriptweekly.com/link/161721/d076523b1d) – 对综合 React 组件套件的完全重写。
+
+* [jQuery UI 1.14.1](https://javascriptweekly.com/link/161722/d076523b1d)
+
+📒 文章和教程
+
+[我们如何将 JavaScript Monorepo Git 大小缩小 94%](https://javascriptweekly.com/link/161723/d076523b1d "www.jonathancreamer.com") — 作者所说的“我们”指的是 Microsoft，它拥有它手上有一个非常大的 178 GB JavaScript monorepo，大到许多员工在克隆它时都遇到了问题。乔纳森在这里讲述了完整的故事。
+
+乔纳森·克里默
+
+[如何在 JavaScript 和 TypeScript 中滚动您自己的身份验证](https://javascriptweekly.com/link/161725/d076523b1d "www.robinwieruch.de") — 快速了解如何构建基于会话的身份验证系统，等等罗宾指出“*不必很复杂*”。
+
+罗宾·维鲁奇
+
+[MongoDB Atlas 搜索与 BuildShip 集成](https://javascriptweekly.com/link/161726/d076523b1d "shortclick.link") — MongoDB Atlas Search 提供强大的全文搜索、矢量搜索和混合搜索功能。
+
+MongoDB 赞助商
+
+[在 React 19（和 Next.js 15）中使用 shadcn/ui](https://javascriptweekly.com/link/161727/d076523b1d "ui.shadcn.com") — 来自 \[shadcn/ui]\(https ://javascriptweekly.com/link/161728/d076523b1d) 项目介绍了在 React 19 中使用流行组件库的具体细节，但稍微强调了 Next.js 15。
+
+沙德网
+
+[在 JavaScript 中重新实现 JavaScript 的 `==`](https://javascriptweekly.com/link/161729/d076523b1d "evanhahn.com") — 真是一次旅行。无论您是否意识到 JavaScript 的“==”运算符的“怪癖”，这都可能会让您感到困惑。
+
+埃文·哈恩
+
+[HTML 表单验证严重未得到充分利用](https://javascriptweekly.com/link/161730/d076523b1d "expressionstatement.com") — 探索 HTML 表单的“*强大的验证机制*”，认为它们未得到充分利用，并提出利用率不足的原因。
+
+任何维度
+
+📄 [Node.js、管道和消失的字节](https://javascriptweekly.com/link/161731/d076523b1d) – 如果将 Node 应用程序的输出通过管道传输到另一个命令，可能会出现神秘的问题.. Sam Lijin
+
+📄 [介绍新的 Svelte CLI 工具：`sv`](https://javascriptweekly.com/link/161732/d076523b1d) Ben McCann
+
+🛠 代码和工具
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ecbnaarwsxcm4yaggyn1.jpg)](https://javascriptweekly.com/link/161733/d076523b1d)
+
+[Faker 9.1：按需生成虚假、真实的数据](https://javascriptweekly.com/link/161733/d076523b1d "fakerjs.dev") — 姓名、个人简介、地址、邮政编码、日期、金额、交易和除此之外还有很多。我真的很喜欢[基于引导式 DevTools 控制台的演示](https://javascriptweekly.com/link/161734/d076523b1d)，你可以尝试 - 这是其他项目应该考虑的想法。 [GitHub 存储库。](https://javascriptweekly.com/link/161735/d076523b1d)
+
+Faker.js 团队
+
+[Fraction.js：用于处理有理数的库](https://javascriptweekly.com/link/161736/d076523b1d "github.com") — 浮点数的不精确表示可能会导致各种问题，所以如果如果您正在使用分数，您可能需要更高的精度，这正是 Fraction.js 所提供的。
+
+罗伯特·艾塞勒
+
+[Handsontable：适用于您的应用程序的类似电子表格的 JavaScript 数据网格](https://javascriptweekly.com/link/161737/d076523b1d "handsontable.com") — 功能丰富的数据网格，适合寻求强大、可定制且可访问的解决方案的开发人员管理复杂的数据。
+
+手工表赞助商
+
+[Fedify：构建 ActivityPub 服务器的框架](https://javascriptweekly.com/link/161738/d076523b1d "fedify.dev") — 如果您想使用自己的应用程序加入 *fediverse*（而不是依靠例如，在乳齿象上），这为您提供了所需的构建块。
+
+洪敏熙
+
+[Yantra：适用于 .NET Standard 的 JavaScript 引擎](https://javascriptweekly.com/link/161739/d076523b1d "github.com") — 用 C# 编写的适用于 .NET Standard 的托管 JS 引擎，支持 CommonJS 和 ES 模块。
+
+扬特拉团队
+
+[SVG.js：SVG 操作和动画库](https://javascriptweekly.com/link/161720/d076523b1d "svgjs.dev") — 一种没有依赖项的轻量级方法。您可以使用 [JSFiddle 上的演示](https://javascriptweekly.com/link/161741/d076523b1d)。 [GitHub 存储库。](https://javascriptweekly.com/link/161743/d076523b1d)
+
+不同的作者
+
+[Dependency Cruiser 16.5：一种可视化依赖关系的方法](https://javascriptweekly.com/link/161744/d076523b1d "github.com") — 如果你想查看输出，这里有一整页流行的图表、现实世界项目]\(https://javascriptweekly.com/link/161745/d076523b1d)，包括 Chalk、Yarn 和 React。
+
+桑德·韦尔韦吉
+
+[AuthKit：世界上最好的登录框 — 由 WorkOS 和 Radix 提供支持](https://javascriptweekly.com/link/161747/d076523b1d "www.authkit.com") — AuthKit 是用于身份验证、授权和用户的完整解决方案管理。它免费提供最多 100 万个 MAU，并标配 RBAC、机器人保护、MFA 等。
+
+AuthKit 赞助商
+
+🔊 [WebAssembly 音频解码器](https://javascriptweekly.com/link/161748/d076523b1d "github.com") — 针对浏览器和 Node.js 用例，这是 WASM 支持的格式音频解码库的集合例如 MPEG I/II/III、FLAC、Ogg Opus、Ogg FLAC、Opus 和 Ogg Vorbis。
+
+伊桑·哈索尔
+
+* [📺 YouTube.js 11.0](https://javascriptweekly.com/link/161749/d076523b1d) – YouTube 私有 API 的非官方 JS 客户端。
+
+* [Serverless Express 4.16](https://javascriptweekly.com/link/161750/d076523b1d) – 在 AWS Lambda、API Gateway、Lambda@Edge 等上运行 Express.js。现在也支持 Express 5。
+
+* [Execa 9.5](https://javascriptweekly.com/link/161752/d076523b1d) – 强大的 Node.js 流程执行库。将“stdout”或“stderr”重定向到文件时，您现在可以选择“追加”而不是替换。
+
+* [MUI X 7.22](https://javascriptweekly.com/link/161753/d076523b1d) – 流行的 React 组件套件。现在，服务器端支持数据网格行分组。
+
+* 🗓️ [react-calendar 5.1](https://javascriptweekly.com/link/161756/d076523b1d) – React 应用程序的“终极”日历。
+
+* 📷 [VisionCamera 4.6](https://javascriptweekly.com/link/161757/d076523b1d) – React Native 的高级相机控制。
+
+* [Elliptic 6.6](https://javascriptweekly.com/link/161759/d076523b1d) – 普通 JS 椭圆曲线加密实现。
+
+* [Acorn 8.14](https://javascriptweekly.com/link/161760/d076523b1d) – 小型、快速、基于 JavaScript 的 JavaScript 解析器。
+
+* [Strapi 5.2](https://javascriptweekly.com/link/161761/d076523b1d) – 流行的 Node.js 无头 CMS。
+
+📰 分类广告
+
+🏠 [远程高级开发体验工程师](https://javascriptweekly.com/link/161762/d076523b1d) - 对 React 和 GraphQL 充满热情？加入我们作为开发者体验工程师来提升我们的开发社区。偏远地区，欧盟时区。
+
+***
+
+[Google 如何大规模处理授权](https://javascriptweekly.com/link/161763/d076523b1d)。 Google 基于关系的 authz 系统和 Oso 的 Authz 即服务的技术比较。
+
+由 [Cooperpress](https://cooperpress.com/) 出版，由 [Peter Cooper](https://javascriptweekly.com/link/161764/d076523b1d) 编辑
+
+“JavaScript”是 Oracle Corporation 在美国的商标\
+我们未获得 Oracle 的认可或隶属于 Oracle。
+
+
