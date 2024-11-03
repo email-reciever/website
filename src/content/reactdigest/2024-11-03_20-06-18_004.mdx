@@ -1,0 +1,93 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#479 HTML Form Validation is heavily underused
+description: RD#479 HTML Form Validation is heavily underused
+date: 星期日 08 晚上 十一月 3o 2024
+author: reactdigest
+origin_url: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fhtml-form-validation-is-h?= =?us-ascii?Q?eavily-underused?=
+origin_site: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fhtml-form-validation-is-h?= =?us-ascii?Q?eavily-underused?=
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#479 HTML Form Validation is heavily underused" url="=?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fhtml-form-validation-is-h?= =?us-ascii?Q?eavily-underused?=" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UWzEEFmB8AzIxG2i1oFcii19kvBHLbR-eW-M8oehNSTGTDQC8CxCDB0Gq7kv9nkZDk7U-rJSYZxWd75sN6Yd0Jm9d0tnDymeaHYx-KRYBED38Go-gVqPSmSeimnp8dZL_0pSnyXARpKcLprpMCo_qaEb5VcZN5qF5ItVF6kkALeFqpnso7xIer6h2uXxIa7HLnyRkzx7RBvaMO_qvet4So6npNWamis3wS6nQ37DeM2fJ_Cj6GKIIFP5uRV3HkgLxtuTdUahPFzUDfGO9zCCrK-mjQNdEYTPEY3lsxcCOZIK_fQ6L7-TgejJvXVMw7cioxk07d8a0Bz5SY2_FP6I3Ev0IB71oiHpiIPTk9h0HZ0Go9Jtz1jMECJdrRJiw853uwHae1qMb6FBFOfbs9Lqv9J5XbtsQ4zXIMro9DpONGdIGG2hFNMttqY2ge-zpNdFhOuGE6Nf65Wy9sQG8OmXF0BNab1RuaTdnqobKctFSM1gFog4ElLJXEPMx3azVfEMrqssCze_jy_WwOt9VeWsuwMsGfngASvZsARiI9d7oNNvAt491jgVnZqIW7f8QB9OxE9QX_MYn9krp1oMuHQkG6XNqut6Ovw5A_2zNjARjV-ZHGibLqMaSxGm-zIPvHwTTjf-5J4qGEXmVrCqcMbm2GJuYXVZSjC0mOzy_RygXLYaWnF68G4h-XK57AV4Yv0BV5V2y2gVBHYvqhzEoB_FFevsPAtJaBpr7pl06jdJah1rjBBHIPsNyI6SxPQcUNnee-FaUlqynNNSLFgKn1yutN2J5wLD3_we7pf66vJGhnPItQliHM050B_dXjgU62q4g/4b5/VCYZTtSJQoOwSmqligQJ8w/h0/h001.DfFN_YTklw3Hms655t1meYxug7tMeWbm7Y2B2KS4AF8)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4b5/VCYZTtSJQoOwSmqligQJ8w/ho.gif)
+
+[HTML Form Validation is heavily underused](https://link.mail.beehiiv.com/ss/c/u001.HjBpxMuZJ3Xr2cyiPk5rUdIZgKaLOCCKcPxgT910q4ppTMd4bN-sDw7lgcKOwISNksvTrfkklMyBCgCK8SVTnTtj-TMmbTZv7pT_rIv1Dswr2tdtvrkKC7a0Lo_xCjikbZ0L2cCYy_ABZXgKW-di1GB_1iKCeHHeJloNrFSDdJT33ObKpuIKPhJ9sEnPn_1U9l_BI1tJ0zHENEEu9NPYngFtKZSXbkAnciUDZolzmvz9pRBx_X3HoVC01z4TNlpDmxRhX5N9JqWya7lsJl1Kqlvffv4k5PWcGnxOjkxDWoyl2-tipK4mHS1XqIlIM7pgzxHM1rL20P7b1fWW_X_oOw/4b5/VCYZTtSJQoOwSmqligQJ8w/h1/h001.gFw4XR3q53PBfxsZvCTVeWx80Kgxxy_eL3LerhT4ieA)  
+_7 minutes_ by everdimension
+
+HTML Forms have powerful validation mechanisms, but they are heavily underused. In fact, not many people even know much about them. Is this because of some flaw in their design? Let’s explore.
+
+[Level Up Your Frontend Skills](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfUXhozX8z1JImqztcl4IkfynYmY70dh5NQpxd7xB7RdksYhKUX56IuSaEkFfI9uEGDakN35Ep57QTp8zxL7uN6V-OCwEuXuj_8v9UpaUfMXhERaEw2FbI6I3ChMlXWkNc6ljgf0RMsykCF6aM3ZJgHsEI-vWQBt71iZ5PbAzGuQ8MEEUfwsWrqwARV-ZH3d_fexCli-4D0otme4BrTy_EEhmfrXMbiBS2DOsYaAslQJ_gHhc5LakeLI-5Od3CvSLw/4b5/VCYZTtSJQoOwSmqligQJ8w/h2/h001.ANxNoz9vkljjz2kPTll6VucXvzBxSsVRsoWIyGLG0X8)  
+_sponsored by Datadog_
+
+Unlock essential tools and best practices for frontend developers. Our Developer Kit provides you with instant access to resources that help you better understand user activity and troubleshoot front-end issues more efficiently.
+
+[Conditional React hooks pattern](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmu4L1TLedig-dSKtVO9Ff4ZsNAZCYbsKi2LNP9ISpyQz6p30Vys1Hf1BekzDhLx73bmciYiAn4ggP64UesmKrVles_Ikt-eSjhFYHRS474_YM-A-yGdpqBD_G5ahorVKMzoGnDTRm1FLxElTnnxa6_Vdlifa786q8Qw7QSjTkdQTQUIgAuXbj7NxqmriGTNWkPHlhYTftxHPgvVg9_3oZOyhjl6A0vCPs49cVdvNzUFKenp4XKlFaZMKNFQ3j7caREs7EEHiN9AUa6refF4-aC7kMmFzTJKLkGdC3K3OCsz/4b5/VCYZTtSJQoOwSmqligQJ8w/h3/h001.aNa2nqryIWOHMeyB-mecDAFyctuAeYYlRzdtnsKMjFU)  
+_5 minutes_ by Robin Malfait
+
+The article discusses a pattern for conditionally enabling React hooks without violating the rules of hooks. The author presents a solution where hooks accept an 'enabled' boolean as their first parameter, allowing developers to control when hooks are active without conditional execution.
+
+[The Art of Dithering and Retro Shading for the Web](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63h8VdnQhW4eeFCQfNo_7bbjxGMobGlxzEPgI5KsK2x5nEsWYcU_CIytPCBMl8G5T3dI6e9H56o2YgCloX9MKLFc5eNlI9cKBxBDX2ejDVHoAyO7HvVTSJ5WLCJqJ6jEbkXIySNrFyAlpSsTtDHpTNzcM1wKkiRGljnICUNMfk_U4s4pS57c8u0StddJm-7Mrx8sbp67ufSioUtp1ygaKbhNbAiNur6uGUveCCr_7GvnTPPVG2fBhHAOAgo33wgQuQxDHTm2KDOjWNl9CnYPtdT9mX2AMPLfLwxGJ2C546NpIiStdSg5P86_jV2jVtFXYNA/4b5/VCYZTtSJQoOwSmqligQJ8w/h4/h001.y67udwA1Wq2ywSzqP0WG8tEEd37Xyil6DCiDasQ0MoE)  
+_24 minutes_ by Maxime Heckel
+
+A detailed walkthrough of the inner workings of dithering and other shading techniques to give a retro look and feel to your WebGL and React Three Fiber work.
+
+[Front-end libraries and the basic principles of how they work](https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea_eXiYAmBVUmBNzJQLH9skblDit-xWkdb5D5c3dR3garVl0ud5ioZoxdlXnHZgpeMLUk-COi6LJ804UEdb6itdrSLjw3F5yDphigERfMAFeEdh9aOKrbFjjXFTrAdrwQnPWk-kg4YOjrGNcIjZY2yeplC91MlQIdSE0grvJDoAW_cuufXwqIO2RYRzlzKZy-wW4BIkjAvsNKT76y7A4M_a1UtR3NukMqEPLwPktDcBpXwEukE0EL9ijN75_xRNEFJ3XwK4V9UzE0803SLoQk7Lp0EeGITQ0TzWYWWCwY6JZDcFYiTzp/4b5/VCYZTtSJQoOwSmqligQJ8w/h5/h001.Ys9na5_V5p-Y48AOHbCi1Q0LPlh62I5O2MJCqfED_F0)  
+_3 minutes_ by faustinoaq
+
+This code demonstrates a minimal implementation of React-like (and Angular and Vue) functionality from scratch, including a virtual DOM, component creation, state management with hooks (useState), and a diffing algorithm for efficient DOM updates.
+
+[When to use redirect() vs. router.push() in Next.js](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVcmnrlVE51-ilr5V5Vu8zckny6d7ltalNwhOp8hWkOwi6EjaqU02q5pGpdbqjGNfJk-3UM69qpY293bmmc9PTg2yfMXoHndnNLkvWqfE_77U6WxjoXvx26LtwVuWAWC3CTUbeoqPcSP3CPzgHj731hCN7I9cC7tHk1soRZ5vWPa8UkuUpyCjnP8mUVkKWaA7Nn-4OMiYRrFmtLIY6qeizyPJVZg6-OA6B1Gv9lB_LNZHDcJ1NAKHLf9RluWfcyyR3T0lFmaz6ERoGG53uYUiH9OYem4QuzfgCz_6EujvS98J/4b5/VCYZTtSJQoOwSmqligQJ8w/h6/h001.TGxhjkqTzu-7AR3RTQie_8bXv7j0RVg9SagHivUty8Y)  
+_3 minutes_ by Dario Djuric
+
+Explaining the two methods for programmatically redirecting a user in Next.js components, server functions, or route handlers.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UWzEEFmB8AzIxG2i1oFcii19kvBHLbR-eW-M8oehNSTGTDQC8CxCDB0Gq7kv9nkZDk7 U-rJSYZxWd75sN6Yd0Jm9d0tnDymeaHYx-KRYBED38Go-gVqPSmSeimnp8dZL\_0pSnyXARpKcL prpMCo\_qaEb5VcZN5qF5ItVF6kkALeFqpnso7xIer6h2uXxIa7HLnyRkzx7RBvaMO\_qvet4So6n pNWamis3wS6nQ37DeM2fJ\_Cj6GKIIFP5uRV3HkgLxtuTdUahPFzUDfGO9zCCrK-mjQNdEYTPEY3ls xcCOZIK\_fQ6L7-TgejJvXVMw7cioxk07d8a0Bz5SY2\_FP6I3Ev0IB71oiHpiIPTk9h0HZ0Go9Jtz1 jMECJdrRJiw853uwHae1qMb6FBFOfbs9Lqv9J5XbtsQ4zXIMro9DpONGdIGG2hFNMttqY2ge-zpNdFhOuGE6Nf65Wy9sQG8OmXF0BNab1RuaTdnqobKctFSM1gFog4ElLJXEPMx3azVfEMrq ssCze\_jy\_WwOt9VeWsuwMsGfngASvZsARiI9d7oNNvAt491jgVnZqIW7f8QB9OxE9QX\_MYn 9krp1oMuHQkG6XNqut6Ovw5A\_2zNjARjV-ZHGibLqMaSxGm-zIPvHwTTjf-5J4qGEXmVrCq cmbm2GJuYXVZSjC0mOzy\_RygXLYaWnF68G4h-XK57AV4Yv0BV5V2y2gVBHYvqhzEoB\_FFevsPA tJaBpr7pl06jdJah1rjBBHIPsNyI6SxPQcUNnee-FaUlqynNNSLFgKn1yutN2J5wLD3\_we7pf6 6vJGhnPItQliHM050B\_dXjgU62q4g /4b5/VCYZTtSJQoOwSmqligQJ8w/h0/h001.DfFN\_YTklw3Hms655t1meYxug7tMeWbm7Y2B2KS4AF8)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4b5/VCYZTtSJQoOwSmqligQJ8w/ho.gif)
+
+\[HTML 表单验证严重未得到充分利用]\(https://link.mail.beehiiv.com/ss/c/u001.HjBpxMuZJ3Xr2cyiPk5rUdIZgKaLOCCKcPxgT910q4ppTMd4bN-sDw7lgcKOwISNksvTrfkklMyBCgCK8SVTnTtj-TMmbTZv7pT\_rIv1Ds wr2tdtvrkKC7a0Lo\_xCjikbZ0L2cCYy\_ABZXgKW-di1GB\_1iKCeHHeJloNrFSDdJT33ObKpuIKPh J9sEnPn\_1U9l\_BI1tJ0zHENEEu9NPYngFtKZSXbkAnciUDZolzmvz9pRBx\_X3HoVC01z4TNlpDMx RhX5N9JqWya7lsJl1Kqlvffv4k5PWcGnxOjkxDWoyl2-tipK4mHS1XqIlIM7pgzxHM1rL20P7b1fWW\_X\_oOw/4b5/VCYZTtSJQoOwSmqligQJ8w/h1/h001.gFw4XR3q53PBfxsZvCTVe Wx80Kgxxy\_eL3LerhT4ieA)\
+*7 分钟*（按各个维度）
+
+HTML 表单具有强大的验证机制，但它们的使用却严重不足。事实上，对于他们了解甚少的人并不多。这是因为他们的设计有缺陷吗？让我们来探索一下。
+
+\[提升您的前端技能]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfUXhozX8z1JImqztcl4IkfynYmY70dh5NQpxd7xB7RdksYhKUX56IuSaEkFfI9uEGDakN35Ep57QTp8zx L7uN6V-OCwEuXuj\_8v9UpaUfMXhERaEw2FbI6I3ChMlXWkNc6ljgf0RMsykCF6aM3ZJgHsEI-vWQBt71iZ5PbAzGuQ8MEEUfwsWrqwARV-ZH3d\_fexCli-4D0otme4BrTy\_EEhmfrXMbiBS2DOs YaAslQJ\_gHhc5LakeLI-5Od3CvSLw/4b5/VCYZTtSJQoOwSmqligQJ8w/h2/h001.ANxNoz9vkljjz2kPTll6VucXvzBxSsVRsoWIyGLG0X8)\
+*由Datadog赞助*
+
+为前端开发人员解锁必要的工具和最佳实践。我们的开发人员工具包让您可以即时访问资源，帮助您更好地了解用户活动并更有效地解决前端问题。
+
+\[条件反应挂钩模式]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmu4L1TLedig-dSKtVO9Ff4ZsNAZCYbsKi2LNP9ISpyQz6p30Vys1Hf1BekzDhLx73bmciYiAn4ggP64UesmKrV les\_Ikt-eSjhFYHRS474\_YM-A-yGdpqBD\_G5ahorVKMzoGnDTRm1FLxElTnnxa6\_Vdlifa7 86q8Qw7QSjTkdQTQUIgAuXbj7NxqmriGTNWkPHlhYTftxHPgvVg9\_3oZOyhjl6A0vCPs49cV dvNzUFKenp4XKlFaZMKNFQ3j7CARES7EEHiN9AUa6refF4-aC7kMmFzTJKLkGdC3K3OCsz/4b5/VCYZTtSJQoOwSmqligQJ8w/h3/h001.aNa2nqryIWOHMeyB-mecDAFyctuAeyylRzdtnsKMjFU )\
+*5 分钟* 罗宾·马尔费特
+
+本文讨论了一种在不违反钩子规则的情况下有条件地启用 React 钩子的模式。作者提出了一种解决方案，其中挂钩接受“启用”布尔值作为其第一个参数，允许开发人员控制挂钩何时处于活动状态，而无需条件执行。
+
+\[网络抖动和复古着色的艺术]\(https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63h8VdnQhW4eeFCQfNo\_7bbjxGMobGlxzEPgI5KsK2x5nEsWYcU\_CIytPCBMl8G5T3dI6e9H56o2 YgCloX9MKLFc5eNlI9cKBxBDX2ejDVHoAyO7HvVTSJ5WLCJqJ6jEbkXIySNrFyAlpSsTtDHpTNzcM1wKkiRGljnICUNMfk\_U4s4pS57c8u0StddJm-7Mrx8sbp67ufSioUtp1ygaKbhNbAiNur6 uGUveCCr\_7GvnTPPVG2fBhHAOAgo33wgQuQxDHTm2KDOjWNl9CnYPtdT9mX2AMPLfLwxGJ2C 546NpiiStdSg5P86\_jV2jVtFXYNA/4b5/VCYZTtSJQoOwSmqligQJ8w/h4/h001.y67udwA1 Wq2ywSzqP0WG8tEEd37Xyil6DCiDasQ0MoE)\
+*24 分钟* 马克西姆·赫克尔
+
+详细介绍了抖动和其他着色技术的内部工作原理，为您的 WebGL 和 React Three Fiber 作品带来复古的外观和感觉。
+
+\[前端库及其工作原理]\(https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea\_eXiYAmBVUmBNzJQLH9skblDit-xWkdb5D5c3dR3garVl0ud5ioZoxdlXnHZgpeMLUk-COi6LJ804UEdb6itdrSL jw3F5yDphigERfMAFeEdh9aOKrbFjjXFTrAdrwQnPWk-kg4YOjrGNcIjZY2yeplC91MlQIdSE0grvJDoAW\_cuufXwqIO2RYRzlzKZy-wW4BIkjAvsNKT76y7A4M\_a1UTR3NukMqEPLwPktDcBpXwE ukE0EL9ijN75\_xRNEFJ3XwK4V9UzE0803SLoQk7Lp0EeGITQ0TzWYWWCwY6JZDcFYiTzp/4b5/VCYZTtSJQoOwSmqligQJ8w/h5 /h001.Ys9na5\_V5p-Y48AOHbCi1Q0LPlh62I5O2MJCqfED\_F0)\
+*3 分钟*，作者：faustinoaq
+
+此代码从头开始演示了类 React（以及 Angular 和 Vue）功能的最小实现，包括虚拟 DOM、组件创建、带钩子的状态管理 (useState) 以及用于高效 DOM 更新的差异算法。
+
+\[何时在Next.js中使用redirect()与router.push()]\(https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu\_fY2A1vmVcmnrlVE51-ilr5V5Vu8zckny6d7ltalNwhOp8hWkOwi6EjaqU02q5pGpdbqjGNfJk-3UM69qp Y293bmmc9PTg2yfMXoHndnNLkvWqfE\_77U6WxjoXvx26LtwVuWAWC3CTUbeoqPcSP3CPzgHj731hCN7I9cC7tHk1soRZ5vWPa8UkuUpyCjnP8mUVkKWaA7NN-4OMiYRrFmtLIY6qeizyPJVZ g6-OA6B1Gv9lB\_LNZHDcJ1NAKHLf9RluWfcyyR3T0lFmaz6ERoGG53uYUiH9OYem4QuzfgCz\_6EujvS98J/4b5 /VCYZTtSJQoOwSmqligQJ8w/h6/h001.TGxhjkqTzu-7AR3RTQie\_8bXv7j0RVg9SagHivUty8Y)\
+*3 分钟*达里奥·朱里克 (Dario Djuric)
+
+解释在 Next.js 组件、服务器函数或路由处理程序中以编程方式重定向用户的两种方法。
+
+#
+
+
