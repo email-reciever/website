@@ -1,0 +1,275 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Running WebAssembly apps inside Node.js
+description: Running WebAssembly apps inside Node.js
+date: 星期二 03 下午 十一月 5o 2024
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/554
+origin_site: https://nodeweekly.com/issues/554
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Running WebAssembly apps inside Node.js" url="https://nodeweekly.com/issues/554" />
+
+<Detail client:only="react">
+	#​554 — November 5, 2024
+
+[Read on the Web](https://nodeweekly.com/issues/554)
+
+Together with 
+
+[![Honeybadger](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_400,h_84/e_make_transparent/co_white,e_outline:7/a5ruvth763xxndgqvll3.png)](https://nodeweekly.com/link/161768/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hr1yn72kbgvkya1jusik.jpg)](https://nodeweekly.com/link/161769/0a4070b383)
+
+[Why Code Security Matters - Even in Hardened Environments](https://nodeweekly.com/link/161769/0a4070b383 "www.sonarsource.com") — A nicely diagrammed deep dive (and it really is deep) into a technique that allows malicious parties to turn a file write vulnerability in a Node app into a remote code execution exploit _even_ when the file system is mounted read-only.
+
+Stefan Schiller (Sonar)
+
+[Wasmer Adds Node.js and Bun Support](https://nodeweekly.com/link/161770/0a4070b383 "wasmer.io") — [Wasmer](https://nodeweekly.com/link/161771/0a4070b383) is a fast, Rust-powered WebAssembly runtime and as of [Wasmer 5.0](https://nodeweekly.com/link/161772/0a4070b383), it has (experimental) V8 backend support, meaning you can try all sorts of curious things like, say, running Clang or Python _inside_ Node.
+
+Syrus Akbary
+
+[![](https://copm.s3.amazonaws.com/2f9b0e66.png)](https://nodeweekly.com/link/161768/0a4070b383)
+
+[Move Fast and Fix Things with Honeybadger](https://nodeweekly.com/link/161768/0a4070b383 "www.honeybadger.io") — Honeybadger transforms your logs into rich events and helps you fix issues before your users know what happened. Get notified instantly and find the root cause faster with your application errors and logs in one place. [Try our free plan!](https://nodeweekly.com/link/161768/0a4070b383)
+
+Honeybadger sponsor
+
+📈 [NPM Chart: Search for a Package to See Its Download Stats Over Time](https://nodeweekly.com/link/161773/0a4070b383 "npm.chart.dev") — The tool allows you to customize the data by selecting a color theme, monthly or weekly view, and a start date. You can download as SVG or PNG or share as a direct link. The charts are attractive and well suited to dropping into a blog post, README, or presentation.
+
+Sébastien Chopin
+
+**IN BRIEF:**
+
+*   🇨🇦 If you're near Vancouver, check out [Vancouver.dev](https://nodeweekly.com/link/161774/0a4070b383) and Platformatic's [Vancouver Node.js Meetup](https://nodeweekly.com/link/161775/0a4070b383) taking place on November 11.
+    
+*   ⚠️ Phylum takes [a look at yet another (ongoing) typosquatting campaign](https://nodeweekly.com/link/161776/0a4070b383) to try and trick JavaScript developers into installing malicious packages.
+    
+*   If you missed the recent release of Node 23 (latest), RisingStack [has a quick update of Node 23's new features.](https://nodeweekly.com/link/161777/0a4070b383)
+    
+*   Josh Sherman is back with [his regular VPS showdown](https://nodeweekly.com/link/161778/0a4070b383) pitting the performance of Digital Ocean, Linode and Vultr against each other.
+    
+
+[Building My Resume in HTML with Eleventy](https://nodeweekly.com/link/161779/0a4070b383 "michaelengen.com") — [Eleventy](https://nodeweekly.com/link/161780/0a4070b383) (a.k.a. 11ty) is a popular Node.js-based static site generator and gives you a very familiar feeling developer experience.
+
+Michael Engen
+
+[Revamping a Five-Year Old Node.js Project](https://nodeweekly.com/link/161781/0a4070b383 "dongdongzhang.me") — It’s a tale as old as time. Your company has built a fast and reliable app which has done its job so well that it hasn’t been touched in years and suddenly you’re asked to rewrite it.
+
+DongDong Zhang
+
+[Reduce Your Apache Kafka Costs by 80+%](https://nodeweekly.com/link/161782/0a4070b383 "www.warpstream.com") — Kafka with no local disks or interzone fees, zero ops auto-scaling and in your cloud with no cross-account access.
+
+WarpStream sponsor
+
+📄 [How to Build Smaller Container Images: Docker Multi-Stage Builds](https://nodeweekly.com/link/161783/0a4070b383) – Including _“How NOT to organize a Node.js application’s Dockerfile”._ Ivan Velichko
+
+📄 [Securing Your Express REST API with Passport.js](https://nodeweekly.com/link/161784/0a4070b383) – A modern take on a classic task. Huseyin Babal
+
+📄 [Deprecating Node.js REST APIs in 6 Frameworks](https://nodeweekly.com/link/161785/0a4070b383) Adrian Machado
+
+🛠 Code & Tools
+
+[Faker 9.2: Generate Massive Amounts of Fake Data](https://nodeweekly.com/link/161786/0a4070b383 "fakerjs.dev") — Names, bios, addresses, zip codes, dates, monetary amounts, transactions and, as of v9.2, pet names and roman numerals! I love [the guided DevTools console based demo](https://nodeweekly.com/link/161787/0a4070b383) you can try – an idea other projects should consider. [GitHub repo.](https://nodeweekly.com/link/161788/0a4070b383)
+
+Faker.js Team
+
+📂 [Yauzl: Yet Another Un-ZIP Library for Node](https://nodeweekly.com/link/161789/0a4070b383 "github.com") — One of those libraries you might not have heard of but which is getting 15 million downloads a week due to being depended upon by popular projects. Yauzl keeps it simple and just provides safe, async unzipping of ZIP archives. [Yazl](https://nodeweekly.com/link/161790/0a4070b383) is its counterpart for _making_ ZIPs.
+
+Josh Wolfe
+
+[Edge.js: Run .NET and Node.js Code In-Process](https://nodeweekly.com/link/161791/0a4070b383 "github.com") — Call .NET functions from Node.js and Node.js functions from .NET and Edge.js takes care of marshalling the data properly. Works with _.NET Core_ on Windows, macOS and Linux.
+
+agracio / Tomasz Janczuk
+
+📰 Classifieds
+
+🪝[Hookdeck](https://nodeweekly.com/link/161808/0a4070b383): The Amazon EventBridge Alternative. Receive, authenticate, transform, filter, route, and send messages across your EDAs.
+
+* * *
+
+👋 Tired of handling failures and outages? Let Temporal keep your code running flawlessly. [Start on Temporal Cloud with $1,000 in free credits](https://nodeweekly.com/link/161793/0a4070b383).
+
+* * *
+
+Searching for an easier search? [Typesense](https://nodeweekly.com/link/161794/0a4070b383) is an open-source alternative to Algolia and Elasticsearch that’s dev-friendly, [fast and free](https://nodeweekly.com/link/161794/0a4070b383).
+
+[Fraction.js: Library for Working with Rational Numbers](https://nodeweekly.com/link/161795/0a4070b383 "github.com") — The imprecise representation of floating point numbers can lead to all sorts of problems, so if you’re working with fractions at all, you might want a little more precision, which Fraction.js offers.
+
+Robert Eisele
+
+💬 [The Lounge: A Modern, Self Hosted Web-Based IRC Client](https://nodeweekly.com/link/161796/0a4070b383 "github.com") — It’s been a few years since we linked to this, so we felt it was about time. It’s a self-hostable Node-powered webapp that acts as a client to IRC chat servers (potentially handy to roll your own self-hosted community chat or support channel).
+
+The Lounge
+
+🐘 [pg-dump-parser: Parses Postgres Dump Files into Arrays of Schema Objects](https://nodeweekly.com/link/161797/0a4070b383 "github.com") — Takes a Postgres database dump, splits it up, and turns the table and view structures into a format you can more easily work on from code (or just use as a reference or check into version control).
+
+Gajus Kuizinas
+
+*   [zx 8.2](https://nodeweekly.com/link/161798/0a4070b383) – Google's tool for better Node shell scripting. v8.2 adds delayed piping and promisified streams.
+    
+*   [ESLint v9.14.0](https://nodeweekly.com/link/161799/0a4070b383) – Now with support for ES2025 Import Attributes and regexp modifiers.
+    
+*   🤖 [node-llama-cpp 3.2](https://nodeweekly.com/link/161800/0a4070b383) – Run AI models locally with Node.js `llama.cpp` bindings.
+    
+*   🤖 [OpenAI Node 4.71.0](https://nodeweekly.com/link/161801/0a4070b383) – Adds support for OpenAI's new [predicted outputs feature.](https://nodeweekly.com/link/161802/0a4070b383)
+    
+*   [Happy DOM 15.9](https://nodeweekly.com/link/161803/0a4070b383) – JS implementation of a web browser _sans_ UI.
+    
+*   [TestCafe 3.7](https://nodeweekly.com/link/161804/0a4070b383) – Automated end-to-end web testing framework.
+    
+*   [Fastify 5.1](https://nodeweekly.com/link/161805/0a4070b383) – The fast, low overhead Node web framework.
+    
+*   [Mongoose 8.8](https://nodeweekly.com/link/161806/0a4070b383) – Popular MongoDB object modeling library.
+    
+*   [Strapi 5.2](https://nodeweekly.com/link/161807/0a4070b383) – Popular Node.js headless CMS.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​554 — 2024 年 11 月 5 日
+
+[网上阅读](https://nodeweekly.com/issues/554)
+
+连同 
+
+\[![Honeybadger](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_400,h_84/e_make_transparent/co_white,e_outline:7/a5ruvth763xxndgqvll3.png)]\(https://nodeweekly. com/link/161768/0a4070b383)
+
+![Node.js 周刊](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hr1yn72kbgvkya1jusik.jpg)](https://nodeweekly.com/link/161769/0a4070b383)
+
+[为什么代码安全很重要 - 即使在强化环境中](https://nodeweekly.com/link/161769/0a4070b383 "www.sonarsource.com") - 一个很好的图表深入探讨（而且确实很深入）技术允许恶意方将 Node 应用程序中的文件写入漏洞转化为远程代码执行漏洞*甚至*当文件系统以只读方式安装时。
+
+斯特凡·席勒（声纳）
+
+[Wasmer 添加 Node.js 和 Bun 支持](https://nodeweekly.com/link/161770/0a4070b383 "wasmer.io") — [Wasmer](https://nodeweekly.com/link/161771/0a4070b383) 是一个快速、由 Rust 驱动的 WebAssembly 运行时，从 [Wasmer 5.0](https://nodeweekly.com/link/161772/0a4070b383) 开始，它具有（实验性）V8 后端支持，这意味着您可以尝试各种奇怪的事情，例如，比方说，*内部* Node 运行 Clang 或 Python。
+
+赛鲁斯·阿克巴里
+
+[![](https://copm.s3.amazonaws.com/2f9b0e66.png)](https://nodeweekly.com/link/161768/0a4070b383)
+
+[使用 Honeybadger 快速移动并修复问题](https://nodeweekly.com/link/161768/0a4070b383 "www.honeybadger.io") — Honeybadger 将您的日志转换为丰富的事件，并帮助您在用户知道发生了什么之前修复问题。通过将应用程序错误和日志集中在一处，立即获得通知并更快地找到根本原因。 [尝试我们的免费计划！](https://nodeweekly.com/link/161768/0a4070b383)
+
+蜜獾赞助商
+
+📈 [NPM 图表：搜索包以查看其随时间的下载统计信息](https://nodeweekly.com/link/161773/0a4070b383 "npm.chart.dev") — 该工具允许您通过选择来自定义数据颜色主题、每月或每周视图以及开始日期。您可以下载为 SVG 或 PNG 格式，也可以作为直接链接进行共享。这些图表很有吸引力，非常适合放入博客文章、自述文件或演示文稿中。
+
+塞巴斯蒂安·肖邦
+
+**简而言之：**
+
+* 🇨🇦 如果您在温哥华附近，请查看 [Vancouver.dev](https://nodeweekly.com/link/161774/0a4070b383) 和 Platformatic 的 \[温哥华 Node.js Meetup]\(https://nodeweekly.com/ link/161775/0a4070b383）于 11 月 11 日举行。
+
+* ⚠️ Phylum [看看另一个（正在进行的）错字抢注活动](https://nodeweekly.com/link/161776/0a4070b383) 试图欺骗 JavaScript 开发人员安装恶意软件包。
+
+* 如果您错过了最近发布的 Node 23（最新），RisingStack [快速更新了 Node 23 的新功能。](https://nodeweekly.com/link/161777/0a4070b383)
+
+* Josh Sherman 带着[他的常规 VPS 对决](https://nodeweekly.com/link/161778/0a4070b383) 回来了，让 Digital Ocean、Linode 和 Vultr 的性能相互较量。
+
+[使用 Eleventy 在 HTML 中构建我的简历](https://nodeweekly.com/link/161779/0a4070b383 "michaelengen.com") — [Eleventy](https://nodeweekly.com/link/161780/0a4070b383) (又名11ty) 是一种流行的基于 Node.js 的静态站点生成器，可为您提供非常熟悉的开发体验。
+
+迈克尔·恩根
+
+[改造五年前的 Node.js 项目](https://nodeweekly.com/link/161781/0a4070b383 "dongdongzhang.me") — 这是一个古老的故事。您的公司开发了一款快速可靠的应用程序，该应用程序的工作表现非常出色，以至于已经多年没有被人碰过，但突然要求您重写它。
+
+张东东
+
+[将您的 Apache Kafka 成本降低 80% 以上](https://nodeweekly.com/link/161782/0a4070b383 "www.warpstream.com") — Kafka 没有本地磁盘或区域间费用、零操作自动缩放和您的云没有跨帐户访问权限。
+
+WarpStream 赞助商
+
+📄 [如何构建更小的容器镜像：Docker 多阶段构建](https://nodeweekly.com/link/161783/0a4070b383) – 包括 *“如何不组织 Node.js 应用程序的 Dockerfile”。* Ivan Velichko
+
+📄 [使用 Passport.js 保护您的 Express REST API](https://nodeweekly.com/link/161784/0a4070b383) – 对经典任务的现代诠释。侯赛因·巴巴尔
+
+📄 [在 6 个框架中弃用 Node.js REST API](https://nodeweekly.com/link/161785/0a4070b383) Adrian Machado
+
+🛠 代码和工具
+
+[Faker 9.2：生成大量虚假数据](https://nodeweekly.com/link/161786/0a4070b383 "fakerjs.dev") — 姓名、个人简介、地址、邮政编码、日期、金额、交易等v9.2，宠物名和罗马数字！我喜欢[基于引导式 DevTools 控制台的演示](https://nodeweekly.com/link/161787/0a4070b383)，你可以尝试 - 这是其他项目应该考虑的想法。 [GitHub 存储库。](https://nodeweekly.com/link/161788/0a4070b383)
+
+Faker.js 团队
+
+📂 [Yauzl：另一个 Node 的 Un-ZIP 库](https://nodeweekly.com/link/161789/0a4070b383 "github.com") — 您可能没有听说过的库之一，但它的下载量已达到 1500 万由于受到热门项目的依赖，每周下载量。 Yauzl 保持简单，只提供 ZIP 档案的安全、异步解压缩。 [Yazl](https://nodeweekly.com/link/161790/0a4070b383) 是“制作”ZIP 的对应项。
+
+乔什·沃尔夫
+
+[Edge.js：在进程中运行 .NET 和 Node.js 代码](https://nodeweekly.com/link/161791/0a4070b383 "github.com") — 从 Node.js 和 Node.js 调用 .NET 函数.NET 和 Edge.js 中的函数负责正确地编组数据。可在 Windows、macOS 和 Linux 上与 *.NET Core* 配合使用。
+
+阿格拉西奥/托马斯·扬祖克
+
+📰 分类广告
+
+🪝[Hookdeck](https://nodeweekly.com/link/161808/0a4070b383)：Amazon EventBridge 替代方案。通过 EDA 接收、验证、转换、过滤、路由和发送消息。
+
+***
+
+👋 厌倦了处理故障和中断？让 Temporal 保持您的代码完美运行。 [开始使用 Temporal Cloud，获得 1,000 美元的免费积分](https://nodeweekly.com/link/161793/0a4070b383)。
+
+***
+
+正在寻找更简单的搜索？ [Typesense](https://nodeweekly.com/link/161794/0a4070b383) 是 Algolia 和 Elasticsearch 的开源替代方案，对开发人员友好、\[快速且免费]\(https://nodeweekly.com/link/161794 /0a4070b383）。
+
+[Fraction.js：用于处理有理数的库](https://nodeweekly.com/link/161795/0a4070b383 "github.com") — 浮点数的不精确表示可能会导致各种问题，所以如果如果您正在使用分数，您可能需要更高的精度，这正是 Fraction.js 所提供的。
+
+罗伯特·艾塞勒
+
+💬 [The Lounge：一个现代的、自托管的基于 Web 的 IRC 客户端](https://nodeweekly.com/link/161796/0a4070b383 "github.com") — 我们链接到这个已经有几年了，所以我们觉得是时候了。它是一个可自托管、由 Node 驱动的 Web 应用程序，充当 IRC 聊天服务器的客户端（可能可以方便地推出您自己的自托管社区聊天或支持频道）。
+
+休息室
+
+🐘 [pg-dump-parser：将 Postgres 转储文件解析为架构对象数组](https://nodeweekly.com/link/161797/0a4070b383 "github.com") — 获取 Postgres 数据库转储，将其分割，然后将表和视图结构转换为您可以更轻松地通过代码处理的格式（或者仅用作参考或签入版本控制）。
+
+加尤斯·库伊兹纳斯
+
+* [zx 8.2](https://nodeweekly.com/link/161798/0a4070b383) – Google 用于更好地编写 Node shell 脚本的工具。 v8.2 添加了延迟管道和承诺流。
+
+* [ESLint v9.14.0](https://nodeweekly.com/link/161799/0a4070b383) – 现在支持 ES2025 导入属性和正则表达式修饰符。
+
+* 🤖 [node-llama-cpp 3.2](https://nodeweekly.com/link/161800/0a4070b383) – 使用 Node.js `llama.cpp` 绑定在本地运行 AI 模型。
+
+* 🤖 [OpenAI Node 4.71.0](https://nodeweekly.com/link/161801/0a4070b383) – 添加对 OpenAI 新的[预测输出功能](https://nodeweekly.com/link/161802/0a4070b383)的支持。 ）
+
+* [Happy DOM 15.9](https://nodeweekly.com/link/161803/0a4070b383) – 网页浏览器 *sans* UI 的 JS 实现。
+
+* [TestCafe 3.7](https://nodeweekly.com/link/161804/0a4070b383) – 自动化端到端网络测试框架。
+
+* [Fastify 5.1](https://nodeweekly.com/link/161805/0a4070b383) – 快速、低开销的 Node Web 框架。
+
+* [Mongoose 8.8](https://nodeweekly.com/link/161806/0a4070b383) – 流行的 MongoDB 对象建模库。
+
+* [Strapi 5.2](https://nodeweekly.com/link/161807/0a4070b383) – 流行的 Node.js 无头 CMS。
+
+**有我们的链接吗？** 回复并告诉我们。我们无法包含所有内容，但我们会查看您发送的所有内容。 *谢谢！*
+
+***
+
+**赞助：** 发送电子邮件至“&lt;kristina@cooperpress.com>”了解详细信息。
+
+***
+
+由库珀出版社有限公司出版\
+费尔菲尔德企业中心, 劳斯, LN11 0LS, 英国
+
+
