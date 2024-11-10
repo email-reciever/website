@@ -1,0 +1,93 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#480 Two ways to the two Reacts
+description: RD#480 Two ways to the two Reacts
+date: 星期日 06 晚上 十一月 10o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/two-ways-to-the-two-reacts
+origin_site: https://newsletter.reactdigest.net/p/two-ways-to-the-two-reacts
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#480 Two ways to the two Reacts" url="https://newsletter.reactdigest.net/p/two-ways-to-the-two-reacts" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1Uj8c6GMccXJC7el1v7A8mLIXQmmmD-leCz89FXdYKI83BADB91yjf5wC4UqRVX2G2Yss5GxAVk4jAVlYw2khp7_hflyd81A64koxUBHVlRmAtw_ZjEYokkWV92yS2QXIZp9hpuwIxuiH6wxm_3ZKppXQzkXoL5azrnvQ2Fy3Gmz35Uw2FjDLZebSjic5mIqQc3nYCB-fIQYi9JC5mKeu8QEeKAOLttlaLKy6Z8u9cRwrm-31IjWGGm7DeDxOnJlq0T8PhkXi-wvNe51V1_kQGVaxoaEW_RjjTYTlsHEzlvLWK5jauvFMwSIMs5VBs9ZQKeFEZy5ocjeV2O6a-E0Zg7TSuQ1NGdqU9gH2C5AmiT563urREGANMjhepelZtDUAOAtOYyf4y_ForDSjo9o1szA7ciO8jlNCULQy61qOFM1uS7Ano8ciXTWnKIifGmVpVWfUjt52QLVVivq_LtinijzHBae6GnXph2RqkaKxozMo4tZbjPuPupSAM2spyTZLdJmHccng4RsQ-S7q78zxo2csK2_5Xg0pOBVm4JXftXhJk9sy0S8p8EKMj8vZA55Hs5gWK6Se-7FhYL1qK_a67lesibJ62foP33lwzkqU3ixHp4yKaTrDxWp3FKzYjs7-p6LqaBYRTOTGI01MMvBMsNN_3nzvNKq1dhw-GvNq10b_BAodPf-ABCb7HFpERMTxmeaGi72WicmmAsG46ckEF_nFsrlW6mhFH0CMyUqkL9A5neU3E2pv0VK_I4aYJwMLaaqKeEaJtLYuwcGb9hR1IG/4bc/tEvuEMNLSte-aiXVy3n4Aw/h0/h001.0kUTIeTjjqGHgxDaOaz9KsnaRWwIhdZWkyyTH2GnYkg)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4bc/tEvuEMNLSte-aiXVy3n4Aw/ho.gif)
+
+[Two ways to the two Reacts](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63rJvwVhne07AblaaahAqv4tAgXIUYFI7vjR93Y5YmS9nSuYn0dMyr-I8Grew65ULt72FwpazuzOAfBvEQgwjUvQisJuTk9co30DE_DUYmvJcuhPLDX9TgW01zLiTe6Xh_DhdVw8XFJs1SMG5saVT3eJXvq8UV3vkz_zj1MjB-J7jp73WOoyCoAKVyHAoghu4dsiDhxRcPK02GZ5-iu-8aRC5dQErRQagX_EfcpczMmGLhrhGtP75GCIIRHsi5LNgtVwIY3Hf8JdKQUdaXx361OI/4bc/tEvuEMNLSte-aiXVy3n4Aw/h1/h001.Dk7xrRGpb4COIzOhF50BoOlDO9L2455ZjdTY-QMgN7s)  
+_7 minutes_ by Bobae Kang
+
+Next.js App Router and TanStack Start represent two distinct ways to the full-stack React. Both approaches have their merits, providing the React ecosystem with valuable options for implementing full-stack applications.
+
+[Tests are dead. Meticulous AI is here.](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2WqroLgOnA-NgNKtuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4bc/tEvuEMNLSte-aiXVy3n4Aw/h2/h001.4t_ya5SH9RCLUiy0rMQWsJR8gsdF9qm7Ry7BOFN8F-A)  
+_sponsored by Meticulous_
+
+Meticulous AI is a tool which automatically creates and maintains a continuously evolving e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Backed by CTO of GitHub, Guillermo Rauch (next.js author), yc and others, it's built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[Build a Public holidays app](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v_DxMTfUzLWUnXrsKgR8G6aOEbNJdGgy35W9kQ7HPuqr90yGNoT7Jc6a243bNELVWv0HXBW051bpECRWfL7f97mSTF7LdWWhQhVFLVIRY8XfrednN5eLHRK8a4V2YCNgsgNR90lGNt-1m7sPd2737xBjWia3orRTlouJ-2lNXVXs0MVJ4ynASDsIijonzkXm5R6pvYs7_zlOOuQHBYCipoWLkTdREo-0unPPy5nxQjHRkXAw2dkYijJyXZ_A292-m8QL1wMtfhc/4bc/tEvuEMNLSte-aiXVy3n4Aw/h3/h001.fwuEbDK5c9b9GppYzXb9tRtK9q1VCldHl6BsW1Vhk58)  
+_20 minutes_ by Corina Udrescu
+
+Build a React application that shows the national holidays for the current year, for a given country. You can retrieve a list of available countries and their holidays from the OpenHolidays API.
+
+[React Query API Design](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF87awdU8DR0ou_NTWoqeJgvDlINjovufs5X1Jj-ZC1GeHr1AWEljOJ6vvbnwg8ipvvckDXGBWY-oIHE90XjPBPJcvKDKxcYvaA1GfLGjxw8iKC5SJhWpIb_GjclL0KAo47jIZYw8wbnEVRgel4Md-BLSohFLS7b7OnpF1c1kThVb5giIwEeD1y9tNy4sAC0WVPcCMltx25aaAgbbHkdJK8eKkpkRQsPylnCW3u6f350q_YYoN1morHNHQroRnXuFvk7PjtN6N1eLr4gHBWT-YyA/4bc/tEvuEMNLSte-aiXVy3n4Aw/h4/h001.l6S5tlx-HliGtWNdLrslKRM3kCFGU9I2EEZrlWr9ff8)  
+_15 minutes_ by T. K. Dodo
+
+This is a comprehensive presentation transcript about React Query API design and open source maintenance lessons. Key points include: the importance of balanced API design (simple yet powerful), challenges with major version releases in open source, the value of TypeScript in initial API design, careful feature addition, and the significance of user feedback during beta testing.
+
+[How to (not) reset a form after a Server Action in React](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zJAhpjifmpUSsFadhTnqj-6WrRN9a-a8glrwg6gsreg-u0k3o22mCH1Bz3iGcDtAnbNB76SvoU7U3G0asbsxQ1ZYkYv1QYTrrhazvsBi8MTNRs8lHTeeZhrChBy9dcaqJ9-ZiSHGIv-qFGJeUluncgbsYgNL4j9k-qbpVplnCeQhtyCwbuou_68cF9Bt1NTJRthLLTdJk4PJdiCXN_GhPWIZFtiwn2lCvhINQpraWXxeJtM947mABAX2Hg_eCnnf9s/4bc/tEvuEMNLSte-aiXVy3n4Aw/h5/h001.QjdCSrls64kdTYoJDaEu-U3hbd0i4YIT-O1bQzZqPTo)  
+_4 minutes_ by Robin Wieruch
+
+When using React Server Actions with forms, the default behavior is to reset the form after submission, regardless of success or failure. To improve user experience, you can prevent form reset after failed submissions by returning the form data from the server action and using it to set default values in the form inputs. This allows users to correct and resubmit forms without re-entering all their data, while successful submissions still trigger a form reset.
+
+[A Friendly Introduction to Container Queries](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfyko-iFD6lxTdvug6MbGi-U17GL2jYQCuAVlFR_Yzn-XphM7ida6L9GEF4Hn36_Q_TUHvoCv2RxJ-oaIQtVFtYAdGAXfM_hbSsEIvW317sdd98ZgTXmWW_MA_7nynhrE6seBQXih9duUs6omBS3dE_clxBE4wbt1qJM05csf7jHU_VQG_Mh-w83HXPeM5UeZktfVWhpAyDkDw6YMqxOSpU6brZ6iKxA8i1nkzkn3i7NESNxZTkc5hd4HrxiVIRoilYBNNw62CO0u6xajAJb1Hw/4bc/tEvuEMNLSte-aiXVy3n4Aw/h6/h001.Zb1x-ncJE20h2Q55cml5f-f_I_SelQVY5xQ2FEZIjRE)  
+_12 minutes_ by Josh W. Comeau
+
+Container queries, a long-awaited CSS feature now supported in all major browsers, allow developers to apply conditional CSS based on an element's container size rather than viewport dimensions. Despite being available for almost two years, adoption has been slow due to complexity and some constraints - particularly the requirement to explicitly define containers using container-type property and understanding the "golden rule" that you can't change what you measure.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1Uj8c6GMccXJC7el1v7A8mLIXQmmmD-leCz89FXdYKI83BADB91yjf5wC4UqRVX2G2Yss5 GxAVk4jAVlYw2khp7\_hflyd81A64koxUBHVlRmAtw\_ZjEYokkWV92yS2QXIZp9hpuwIxuiH6 wxm\_3ZKppXQzkXoL5azrnvQ2Fy3Gmz35Uw2FjDLZebSjic5mIqQc3nYCB-fIQYi9JC5mKeu8Q EeKAOLttlaLKy6Z8u9cRwrm-31IjWGGm7DeDxOnJlq0T8PhkXi-wvNe51V1\_kQGVaxoaEW\_RjjTYTlsHEzlvLWK5jauvFMwSIMs5VBs9ZQKeFEZy5ocjeV2O6a-E0Zg7TSuQ1NGdqU9gH2C5AmiT56 3urREGANMjhepelZtDUAOAtOYyf4y\_ForDSjo9o1szA7ciO8jlNCULQy61qOFM1uS7Ano8ciXTWnKIifG mVpVWfUjt52QLVVivq\_LtinijzHBae6GnXph2RqkaKxozMo4tZbjPuPupSAM2spyTZLdJmHccng4RsQ-S7 q78zxo2csK2\_5Xg0pOBVm4JXftXhJk9sy0S8p8EKMj8vZA55Hs5gWK6Se-7FhYL1qK\_a67lesibJ62foP33lwzkqU3ixHp4yKaTrDxWp3FKzYjs7-p6LqaBYRTOTGI01MMvBMsNN\_3nzvNKq 1dhw-GvNq10b\_BAodPf-ABCb7HFpERMTxmeaGi72WicmmAsG46ckEF\_nFsrlW6mhFH0CMyUqkL9A5neU3E2pv0VK\_I4aYJwMLaaqKeEaJtLYuwcGb9hR1IG/4bc/tEvuEMNLSte-aiXVy3n4Aw /h0/h001.0kUTIeTjjqGHgxDaOaz9KsnaRWwIhdZWkyyTH2GnYkg)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4bc/tEvuEMNLSte-aiXVy3n4Aw/ho.gif)
+
+\[两种反应的两种方法]\(https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63rJvwVhne07AblaaahAqv4tAgXIUYFI7vjR93Y5YmS9nSuYn0dMyr-I8Grew65ULt72FwpazuzOAfBvEQgwjU vQisJuTk9co30DE\_DUYmvJcuhPLDX9TgW01zLiTe6Xh\_DhdVw8XFJs1SMG5saVT3eJXvq8UV3vkz\_zj1MjB-J7jp73WOoyCoAKVyHAoghu4dsiDhxRcPK02GZ5-iu-8aRC5dQErRQagX\_EfcpczMm GLhrhGtP75GCIIRHsi5LNgtVwIY3Hf8JdKQUdaXx361OI/4bc/tEvuEMNLSte-aiXVy3n4Aw/h1/h001.Dk7xrRGpb4COIzOhF50BoOlDO9L2455ZjdTY-QMgN7s )\
+*7 分钟* 作者：Bobae Kang
+
+Next.js App Router 和 TanStack Start 代表了全栈 React 的两种不同方式。这两种方法都有各自的优点，为 React 生态系统提供了实现全栈应用程序的宝贵选择。
+
+\[测试已死。细致的AI就在这里。]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2WqroLgOnA-NgNK tuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4bc/tEvuEMNLSte-aiXVy3n4Aw/h2/h001.4t\_ya5SH9RCLUiy0rMQWsJR8gsdF9qm7Ry7BOFN8F-A)\
+*由精心赞助*
+
+Meticulous AI 是一款自动创建和维护不断发展的 e2e UI 测试套件的工具，该套件涵盖应用程序的每个角落 - 无需开发人员进行任何干预。在 GitHub 首席技术官 Guillermo Rauch（next.js 作者）、yc 和其他人的支持下，它是从 Chromium 级别构建的，具有确定性调度引擎 - 使其成为唯一消除碎片的测试工具。
+
+\[构建公共假期应用程序]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v\_DxMTfUzLWUnXrsKgR8G6aOEbNJdGgy35W9kQ7HPuqr90yGNoT7Jc6a243bNELVWv0HXBW05 1bpECRWfL7f97mSTF7LdWWhQhVFLVIRY8XfrednN5eLHRK8a4V2YCNgsgNR90lGNt-1m7sPd2737xB jWia3orRTlouJ-2lNXVXs0MVJ4ynASDsIijonzkXm5R6pvYs7\_zlOOuQHBYCipoWLkTdREo-0unPPy 5nxQjHRkXAw2dkYijJyXZ\_A292-m8QL1wMtfhc/4bc/tEvuEMNLSte-aiXVy3n4Aw/h3/h001.fwuEbDK5c9b9GppYzXb9tRtK9q1VCldHl6BsW1Vhk58) \
+*20 分钟* Corina Udrescu
+
+构建一个 React 应用程序，显示给定国家/地区今年的国家法定节假日。您可以从 OpenHolidays API 检索可用国家/地区及其假期的列表。
+
+\[React 查询 API 设计]\(https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF87awdU8DR0ou\_NTWoqeJgvDlINjovufs5X1Jj-ZC1GeHr1AWEljOJ6vvbnwg8ipvvckDXGBWY-oIHE90XjPBPJcvKD KxcYvaA1GfLGjxw8iKC5SJhWpIb\_GjclL0KAo47jIZYw8wbnEVRgel4Md-BLSohFLS7b7OnpF 1c1kThVb5giIwEeD1y9tNy4sAC0WVPcCMltx25aaAgbbHkdJK8eKkpkRQsPylnCW3u6f350q\_ YYoN1morHNHQroRnXuFvk7PjtN6N1eLr4gHBWT-YyA/4bc/tEvuEMNLSte-aiXVy3n4Aw/h4/h001.l6S5tlx-HliGtWNdLrslKRM3kCFGU9I2EEZrlWr9ff8)\
+*15 分钟* T.K. Dodo
+
+这是关于 React Query API 设计和开源维护课程的综合演示文稿。要点包括：平衡 API 设计（简单而强大）的重要性、开源主要版本发布的挑战、TypeScript 在初始 API 设计中的价值、仔细的功能添加以及 Beta 测试期间用户反馈的重要性。
+
+\[如何在React中的服务器操作之后重置表单]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf\_qUprM09yoMPtF27zJAhpjifmpUSsFadhTnqj-6WrRN9a-a8glrwg6gsreg-u0k3o22mCH1B z3iGcDtAnbNB76SvoU7U3G0asbsxQ1ZYkYv1QYTrathvsBi8MTNRs8lHTeeZhrChBy9dcaqJ9-ZiSHGIv-qFGJeUluncgbsYgNL4j9k-qbpVplnCeQhtyCwbuou\_68cF9Bt1NTJRthLLTdJk4PJdiCXN\_G hPWIZFtiwn2lCvhINQpraWXxeJtM947mABAX2Hg\_eCnnf9s/4bc /tEvuEMNLSte-aiXVy3n4Aw/h5/h001.QjdCSrls64kdTYoJDaEu-U3hbd0i4YIT-O1bQzZqPTo)\
+*4 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+当将 React Server Actions 与表单一起使用时，默认行为是在提交后重置表单，无论成功还是失败。为了改善用户体验，您可以通过从服务器操作返回表单数据并使用它在表单输入中设置默认值来防止提交失败后重置表单。这允许用户更正并重新提交表单，而无需重新输入所有数据，而成功提交仍会触发表单重置。
+
+\[容器查询友好介绍]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfyko-iFD6lxTdvug6MbGi-U17GL2jYQCuAVlFR\_Yzn-XphM7ida6L9GEF4Hn36\_Q\_TUHvoCv2RxJ-oaIQt VFTYAdGAXfM\_hbSsEIvW317sdd98ZgTXmWW\_MA\_7nynhrE6seBQXih9duUs6omBS3dE\_clxBE4wbt1qJM05csf7jHU\_VQG\_Mh-w83HXPeM5UeZktfVWhpAyDkDw6YMqxOSpU6brZ6iKxA8i 1nkzkn3i7NESNxZTkc5hd4HrxiVIRoilYBNNw62CO0u6xajAJb1Hw/4bc/tEvuEMNLSte-aiXVy3n4Aw/h6/h001.Zb1x -ncJE20h2Q55cml5f-f\_I\_SelQVY5xQ2FEZIjRE)\
+*12 分钟* 乔什·W·科莫 (Josh W. Comeau)
+
+容器查询是一项期待已久的 CSS 功能，现已在所有主要浏览器中得到支持，它允许开发人员根据元素的容器大小而不是视口尺寸应用条件 CSS。尽管已经推出近两年了，但由于复杂性和一些限制，采用速度一直很慢——特别是需要使用容器类型属性显式定义容器，并理解“黄金法则”，即不能改变测量的内容。
+
+#
+
+
