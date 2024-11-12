@@ -1,0 +1,259 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node v23.2 released
+description: Node v23.2 released
+date: 星期二 06 晚上 十一月 12o 2024
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/555
+origin_site: https://nodeweekly.com/issues/555
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node v23.2 released" url="https://nodeweekly.com/issues/555" />
+
+<Detail client:only="react">
+	#​555 — November 12, 2024
+
+[Read on the Web](https://nodeweekly.com/issues/555)
+
+Together with 
+
+[![Datadog](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_700,h_190/e_make_transparent/co_white,e_outline:10/vuhqm1wlyvxuddx1zxr8.png)](https://nodeweekly.com/link/162109/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[Node v23.2.0 (Current) Released](https://nodeweekly.com/link/162110/0a4070b383 "nodejs.org") — On paper, a relatively minor release that updates the root certificates, adding five new ones, but [development of TypeScript support](https://nodeweekly.com/link/162111/0a4070b383) has now moved into _active_ development (as opposed to ‘early development’) and there’s [a new `module.stripTypeScriptTypes` API.](https://nodeweekly.com/link/162112/0a4070b383)
+
+Antoine du Hamel
+
+💡 Erick Wendel [▶️ recorded this helpful 18-minute video](https://nodeweekly.com/link/162113/0a4070b383) showing off Node's new TypeScript-specific functionality and even caught up with Node.js TSC member Marco Ippolito who's leading the type-stripping initiative.
+
+[Introducing the `vlt` Package Manager](https://nodeweekly.com/link/162114/0a4070b383 "blog.vlt.sh") — Made up of an incredibly experienced team, including `npm`’s creator Isaac Schlueter, [Vlt](https://nodeweekly.com/link/162115/0a4070b383) set out to ‘build the future’ of JS package management. The `vlt` tool, explained here, is the first fruit of the project and acts as ‘a drop-in replacement’ to whatever you’re using now.
+
+Vlt
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/283228e0.png)](https://nodeweekly.com/link/162109/0a4070b383)
+
+[Key Learnings From the State of DevSecOps Study](https://nodeweekly.com/link/162109/0a4070b383 "www.datadoghq.com") — To understand the state of DevSecOps adoption in 2024, Datadog evaluated real-world data from thousands of applications. Read the report for key insights on secure application development techniques to improve your security posture.
+
+Datadog sponsor
+
+[Node.js v22 Enters Long Term Support (LTS)](https://nodeweekly.com/link/162116/0a4070b383 "nodesource.com") — This happened in the past couple of weeks, but Lizz has put together a useful update on Node 22’s recent transition to becoming an LTS release and the key features it has baked in.
+
+Lizz Parody (NodeSource)
+
+**IN BRIEF:**
+
+*   [TypeScript 5.7 Release Candidate](https://nodeweekly.com/link/162117/0a4070b383) has been unveiled. The final release [is expected](https://nodeweekly.com/link/162118/0a4070b383) in the next week or two.
+    
+*   🤖 If you're used to working with OpenAI's LLMs using the `openai` package but you'd like to give Google's _Gemini_ models a try, now you can as [Gemini is now accessible from the OpenAI Library.](https://nodeweekly.com/link/162119/0a4070b383)
+    
+*   If _Long Term Support_ (LTS) just isn't long enough for you, the OpenJS Foundation has announced ['Never Ending Support' (NES) for older Node.js versions](https://nodeweekly.com/link/162120/0a4070b383) through a partnership with HeroDevs. Don't dust off that Node 0.1 install from 2009 just yet, though, as it only goes back to Node 12.. 😉
+    
+
+[JavaScript Import Attributes (ES2025) Explained](https://nodeweekly.com/link/162121/0a4070b383 "www.trevorlasn.com") — [Import Attributes](https://nodeweekly.com/link/162122/0a4070b383) (currently stage 3 at TC39 but [supported](https://nodeweekly.com/link/162123/0a4070b383) in Node) add a way to supply useful metadata about modules you’re importing.
+
+Trevor I. Lasn
+
+[Node Implementing Stricter Policies for Pull Requests](https://nodeweekly.com/link/162124/0a4070b383 "socket.dev") — To help bolster the stability and security of major releases, the Node team has introduced a stricter policy around semver-major PRs. If such a PR lands on the default branch within a month prior to a major release, it’ll be far less likely to make it in.
+
+Sarah Gooding
+
+📄 [Essential `tsconfig.json` Options You Should Use](https://nodeweekly.com/link/162125/0a4070b383) Duy NG
+
+📄 [How Bun Supports V8 APIs Without Using V8 (Part 2)](https://nodeweekly.com/link/162126/0a4070b383) Ben Grant (Bun)
+
+📄 [How I Improved Video Streaming with FFmpeg and Node.js](https://nodeweekly.com/link/162127/0a4070b383) Mohamed Mayallo
+
+📄 [Introducing Azure DevOps `npm auth`](https://nodeweekly.com/link/162128/0a4070b383) John Reilly
+
+🛠 Code & Tools
+
+🎵 [music-metadata: Stream and File-Based Music Metadata Parser](https://nodeweekly.com/link/162129/0a4070b383 "github.com") — Supporting formats like MP3, FLAC, Ogg, WAV, WMA, AAC and AIFF, this library extracts metadata like ID3v1 and iTunes tags for processing however you want. Supports streaming and has an async API for efficiency.
+
+Borewit
+
+[Immutable.js 5.0: Immutable Collections for JavaScript](https://nodeweekly.com/link/162130/0a4070b383 "immutable-js.com") — Provides numerous persistent immutable data structures including a list, stack, map, ordered map, set, ordered set, and records.
+
+Lee Byron and Contributors
+
+[Automate Embedding Creation and Syncing in Postgres with pgai Vectorizer](https://nodeweekly.com/link/162131/0a4070b383 "github.com") — 🚀 pgai Vectorizer automates embedding creation and syncing in Postgres with one SQL command — keeps embeddings updated, no tools needed.
+
+Timescale sponsor
+
+[Cron 3.2: Cron-Syntax Job Runner for Node](https://nodeweekly.com/link/162132/0a4070b383 "github.com") — Execute functions whenever your scheduled jobs (defined using standard cron format) triggers.
+
+Nicholas Campbell
+
+[WebAssembly Audio Decoders](https://nodeweekly.com/link/162133/0a4070b383 "github.com") — Targeting both browser and Node.js use cases, this is a collection of WASM-powered audio decoding libraries for formats like MPEG I/II/III, FLAC, Ogg Opus, Ogg FLAC, Opus, and Ogg Vorbis.
+
+Ethan Halsall
+
+📄 [xlsx-parse-table: Parse Tables from Excel Worksheets](https://nodeweekly.com/link/162134/0a4070b383 "github.com") — Takes a very minimal approach compared to, say, [SheetJS.](https://nodeweekly.com/link/162135/0a4070b383)
+
+Jeet Dhandha
+
+📰 Classifieds
+
+💡 Spin up multiple copies of the same thread without code changes. Why? Better app performance & reduced infra costs. How? [With Watt](https://nodeweekly.com/link/162136/0a4070b383).
+
+* * *
+
+Never miss a Shopify, Stripe, GitHub, Paddle… or any webhook again with Hookdeck's serverless queue infrastructure. [Learn more](https://nodeweekly.com/link/162137/0a4070b383).
+
+[graphql-subscriptions: GraphQL Subscriptions for Node.js](https://nodeweekly.com/link/162138/0a4070b383 "github.com") — Wire up GraphQL with a pub/sub system (e.g. Redis) to implement subscriptions in GraphQL.
+
+Apollo GraphQL Project
+
+*   [MikroORM 6.4](https://nodeweekly.com/link/162139/0a4070b383) – A lot of minor improvements have landed in the popular TypeScript ORM.
+    
+*   [Micromark 4.0.1](https://nodeweekly.com/link/162140/0a4070b383) – Small CommonMark / GFM compliant Markdown parser.
+    
+*   [Nightwatch.js 3.9](https://nodeweekly.com/link/162141/0a4070b383) – Integrated end-to-end testing framework.
+    
+*   [Ableton.js 3.5](https://nodeweekly.com/link/162142/0a4070b383) – Control Ableton (a popular DAW) from Node.
+    
+*   [Prisma 5.22](https://nodeweekly.com/link/162143/0a4070b383) – Popular ORM for Node.js and TypeScript.
+    
+*   📊 [Chartbrew 3.9](https://nodeweekly.com/link/162144/0a4070b383) – Create live reporting dashboards.
+    
+*   [DOCX 9.0.3](https://nodeweekly.com/link/162145/0a4070b383) – Generate .docx / Word files.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​555 — 2024 年 11 月 12 日
+
+[网上阅读](https://nodeweekly.com/issues/555)
+
+连同 
+
+\[![Datadog](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_700,h_190/e_make_transparent/co_white,e_outline:10/vuhqm1wlyvxuddx1zxr8.png)]\(https://nodeweekly. com/link/162109/0a4070b383)
+
+![Node.js 周刊](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[Node v23.2.0（当前）已发布](https://nodeweekly.com/link/162110/0a4070b383 "nodejs.org") — 理论上，这是一个相对较小的版本，更新了根证书，添加了五个新证书，但是[TypeScript 支持的开发](https://nodeweekly.com/link/162111/0a4070b383) 现已进入*主动*开发（而不是“早期开发”），并且有[一个新的“module.stripTypeScriptTypes” API。 ](https://nodeweekly.com/link/162112/0a4070b383)
+
+安托万·杜·哈梅尔
+
+💡 Erick Wendel [▶️ 录制了这段有用的 18 分钟视频](https://nodeweekly.com/link/162113/0a4070b383) 展示了 Node 的新 TypeScript 特定功能，甚至赶上了领导者 Node.js TSC 成员 Marco Ippolito类型剥离计划。
+
+[介绍 `vlt` 包管理器](https://nodeweekly.com/link/162114/0a4070b383 "blog.vlt.sh") — 由经验丰富的团队组成，包括 `npm` 的创建者 Isaac Schlueter， [Vlt](https://nodeweekly.com/link/162115/0a4070b383) 着手“构建 JS 包管理的未来”。这里解释的“vlt”工具是该项目的第一个成果，可以作为您现在使用的任何工具的“直接替代品”。
+
+电压
+
+\[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/283228e0.png)]\(https://nodeweekly.com/link/162109/0a4070b383 ）
+
+[DevSecOps 状态研究的主要收获](https://nodeweekly.com/link/162109/0a4070b383 "www.datadoghq.com") — 为了了解 2024 年 DevSecOps 采用的状态，Datadog 评估了来自数以千计的应用程序。阅读该报告，了解有关安全应用程序开发技术的重要见解，以改善您的安全状况。
+
+数据狗赞助商
+
+[Node.js v22 进入长期支持 (LTS)](https://nodeweekly.com/link/162116/0a4070b383 "nodesource.com") — 这发生在过去几周内，但 Lizz 整理了一个有用的有关 Node 22 最近向 LTS 版本过渡的更新及其所包含的关键功能。
+
+Lizz Parody (NodeSource)
+
+**简而言之：**
+
+* [TypeScript 5.7 候选版本](https://nodeweekly.com/link/162117/0a4070b383) 已发布。最终版本[预计](https://nodeweekly.com/link/162118/0a4070b383) 将在未来一两周内发布。
+
+* 🤖 如果您习惯于使用 `openai` 包来处理 OpenAI 的法学硕士，但您想尝试一下 Google 的 *Gemini* 模型，现在您可以，因为 \[Gemini 现在可以从 OpenAI 库访问。]\(https ://nodeweekly.com/link/162119/0a4070b383）
+
+* 如果*长期支持* (LTS) 对您来说还不够长，OpenJS 基金会已宣布\[对旧 Node.js 版本的“永无止境的支持”(NES)]\(https://nodeweekly.com/link /162120/0a4070b383）通过与 HeroDevs 合作。不过，暂时不要清除 2009 年安装的 Node 0.1，因为它只能回溯到 Node 12..😉
+
+[JavaScript 导入属性 (ES2025) 说明](https://nodeweekly.com/link/162121/0a4070b383 "www.trevorlasn.com") — \[导入属性]\(https://nodeweekly.com/link/162122/0a4070b383 ）（目前处于 TC39 的第 3 阶段，但在 Node 中[受支持](https://nodeweekly.com/link/162123/0a4070b383)）添加了一种提供有关您要导入的模块的有用元数据的方法。
+
+特雷弗·拉森
+
+[Node 对 Pull 请求实施更严格的策略](https://nodeweekly.com/link/162124/0a4070b383 "socket.dev") — 为了帮助增强主要版本的稳定性和安全性，Node 团队引入了更严格的策略semver-major PR。如果这样的 PR 在主要版本发布前一个月内到达默认分支，那么它进入的可能性就会大大降低。
+
+萨拉·古丁
+
+📄 [您应该使用的基本 `tsconfig.json` 选项](https://nodeweekly.com/link/162125/0a4070b383) Duy NG
+
+📄 [Bun 如何在不使用 V8 的情况下支持 V8 API（第 2 部分）](https://nodeweekly.com/link/162126/0a4070b383) Ben Grant (Bun)
+
+📄 [我如何使用 FFmpeg 和 Node.js 改进视频流](https://nodeweekly.com/link/162127/0a4070b383) Mohamed Mayallo
+
+📄 [介绍 Azure DevOps `npm auth`](https://nodeweekly.com/link/162128/0a4070b383) John Reilly
+
+🛠 代码和工具
+
+🎵 [music-metadata：基于流和文件的音乐元数据解析器](https://nodeweekly.com/link/162129/0a4070b383 "github.com") — 支持 MP3、FLAC、Ogg、WAV、WMA、AAC 等格式和 AIFF，该库提取 ID3v1 和 iTunes 标签等元数据，以便根据您的需要进行处理。支持流式传输并具有异步 API 以提高效率。
+
+博鲁维特
+
+[Immutable.js 5.0：JavaScript 的不可变集合](https://nodeweekly.com/link/162130/0a4070b383 "immutable-js.com") — 提供大量持久不可变数据结构，包括列表、堆栈、映射、有序映射、集合、有序集合和记录。
+
+李·拜伦和贡献者
+
+[使用 pgai Vectorizer 在 Postgres 中自动创建嵌入并同步](https://nodeweekly.com/link/162131/0a4070b383 "github.com") — 🚀 pgai Vectorizer 使用一个 SQL 命令在 Postgres 中自动创建嵌入和同步 — 保持嵌入已更新，无需任何工具。
+
+时间尺度赞助商
+
+[Cron 3.2：Node 的 Cron 语法作业运行器](https://nodeweekly.com/link/162132/0a4070b383 "github.com") — 每当您的计划作业（使用标准 cron 格式定义）触发时执行函数。
+
+尼古拉斯·坎贝尔
+
+[WebAssembly 音频解码器](https://nodeweekly.com/link/162133/0a4070b383 "github.com") — 针对浏览器和 Node.js 用例，这是 WASM 支持的音频解码库的集合，适用于以下格式MPEG I/II/III、FLAC、Ogg Opus、Ogg FLAC、Opus 和 Ogg Vorbis。
+
+伊森·哈索尔
+
+📄 [xlsx-parse-table：从 Excel 工作表中解析表格](https://nodeweekly.com/link/162134/0a4070b383 "github.com") — 与 \[SheetJS.]\( https://nodeweekly.com/link/162135/0a4070b383）
+
+杰特丹达
+
+📰 分类广告
+
+💡 无需更改代码即可启动同一线程的多个副本。为什么？更好的应用程序性能并降低基础设施成本。如何？ [瓦特](https://nodeweekly.com/link/162136/0a4070b383)。
+
+***
+
+使用 Hookdeck 的无服务器队列基础设施，再也不会错过 Shopify、Stripe、GitHub、Paddle...或任何 Webhook。 [了解更多](https://nodeweekly.com/link/162137/0a4070b383)。
+
+[graphql-subscriptions: Node.js 的 GraphQL 订阅](https://nodeweekly.com/link/162138/0a4070b383 "github.com") — 将 GraphQL 与 pub/sub 系统（例如 Redis）连接起来以实现订阅GraphQL。
+
+Apollo GraphQL 项目
+
+* [MikroORM 6.4](https://nodeweekly.com/link/162139/0a4070b383) – 流行的 TypeScript ORM 中出现了许多小的改进。
+
+* [Micromark 4.0.1](https://nodeweekly.com/link/162140/0a4070b383) – 小型 CommonMark / GFM 兼容的 Markdown 解析器。
+
+* [Nightwatch.js 3.9](https://nodeweekly.com/link/162141/0a4070b383) – 集成的端到端测试框架。
+
+* [Ableton.js 3.5](https://nodeweekly.com/link/162142/0a4070b383) – 从 Node 控制 Ableton（一种流行的 DAW）。
+
+* [Prisma 5.22](https://nodeweekly.com/link/162143/0a4070b383) – 适用于 Node.js 和 TypeScript 的流行 ORM。
+
+* 📊 [Chartbrew 3.9](https://nodeweekly.com/link/162144/0a4070b383) – 创建实时报告仪表板。
+
+* [DOCX 9.0.3](https://nodeweekly.com/link/162145/0a4070b383) – 生成 .docx / Word 文件。
+
+**有我们的链接吗？** 回复并告诉我们。我们无法包含所有内容，但我们会查看您发送的所有内容。 *谢谢！*
+
+***
+
+**赞助：** 发送电子邮件至“&lt;kristina@cooperpress.com>”了解详细信息。
+
+***
+
+由库珀出版社有限公司出版\
+费尔菲尔德企业中心, 劳斯, LN11 0LS, 英国
+
+
