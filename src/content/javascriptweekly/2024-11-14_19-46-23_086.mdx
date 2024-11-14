@@ -1,0 +1,364 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Will we care about frameworks in an AI world?
+description: Will we care about frameworks in an AI world?
+date: 星期四 07 晚上 十一月 14o 2024
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/713
+origin_site: https://javascriptweekly.com/issues/713
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Will we care about frameworks in an AI world?" url="https://javascriptweekly.com/issues/713" />
+
+<Detail client:only="react">
+	#​713 — November 14, 2024
+
+[Read on the Web](https://javascriptweekly.com/issues/713)
+
+Together with 
+
+[![Mescius](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_454,h_111/e_make_transparent/co_white,e_outline:7/iwtw1igi5mjsbp1jqfn5.png)](https://javascriptweekly.com/link/162302/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kbg2tsuwmosurkgvmqiz.jpg)](https://javascriptweekly.com/link/162303/d076523b1d)
+
+[Component Party: A Rosetta Stone of UI Libraries](https://javascriptweekly.com/link/162303/d076523b1d "component-party.dev") — A long-standing comparison of many different frameworks (like React, Vue, Svelte, Angular, Qwik, Solid.js, etc.) by way of simple code snippets to perform various tasks. Now including Svelte 5 and Angular 17/Renaissance.
+
+Mathieu Schimmerling
+
+[Will We Care About Frameworks in the Future?](https://javascriptweekly.com/link/162304/d076523b1d "paul.kinlan.me") — Paul wonders if the increasing use of LLMs and agents in software development will lead to a reduction in the need for new frameworks and extra developer-focused abstractions.
+
+Paul Kinlan
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/5a6a811e.png)](https://javascriptweekly.com/link/162302/d076523b1d)
+
+[Advanced JavaScript Tools to Empower Your Applications](https://javascriptweekly.com/link/162302/d076523b1d "developer.mescius.com") — Build better web applications with powerful JavaScript developer tools including: SpreadJS Excel-like spreadsheet components, ActiveReportsJS reporting tools, Wijmo UI component suite, and Document Solutions viewers for PDF, Excel, Image, and more.
+
+MESCIUS inc sponsor
+
+[The `vlt` Package Manager and Serverless Registry](https://javascriptweekly.com/link/162305/d076523b1d "blog.vlt.sh") — A very experienced team, including npm creator Isaac Schlueter, launched [Vlt](https://javascriptweekly.com/link/162306/d076523b1d) to ‘build the future’ of JavaScript package management. The first results have appeared in the shape of the `vlt` client (which can replace `npm`), as well as a [serverless package registry](https://javascriptweekly.com/link/162307/d076523b1d) you can self host to serve up your own packages.
+
+Clarke, Adorno, Schlueter, and Karrys
+
+💡 Sarah Gooding [shares some more background on Vlt's story here.](https://javascriptweekly.com/link/162308/d076523b1d)
+
+[TypeScript 5.7 Release Candidate](https://javascriptweekly.com/link/162309/d076523b1d "devblogs.microsoft.com") — The popular typed JS superset adds support for ES2024 as a target, can report errors when variables aren't initialized, adds path rewriting for relative paths, and can use Node’s compile caching to save on parsing work. The final release is expected in a week or two.
+
+Microsoft
+
+**IN BRIEF:**
+
+*   🤖 Microsoft has [introduced _Copilot Edits_ in VS Code](https://javascriptweekly.com/link/162310/d076523b1d) – it provides a way to work across multiple files in a project at once.
+    
+*   [Jawsm](https://javascriptweekly.com/link/162311/d076523b1d) is an early-stage, experimental JavaScript to WebAssembly compiler (akin to [Porffor](https://javascriptweekly.com/link/162312/d076523b1d)) but that aims to use the most advanced WASM features off the bat, such as [WasmGC](https://javascriptweekly.com/link/162313/d076523b1d) and [exception handling.](https://javascriptweekly.com/link/162314/d076523b1d)
+    
+*   💜 [CSS now has an official logo!](https://javascriptweekly.com/link/162315/d076523b1d)
+    
+
+**RELEASES:**
+
+*   [Expo SDK 52](https://javascriptweekly.com/link/162316/d076523b1d) – Toolset for building modern React Native apps, now supporting React Native 0.76 and the [_New Architecture._](https://javascriptweekly.com/link/162317/d076523b1d)
+    
+*   [Node.js v18.20.5 (LTS)](https://javascriptweekly.com/link/162318/d076523b1d) – Lots of dependency updates and now import attributes and JSON modules are marked stable.
+    
+*   No announcement, but it looks like [Ember 6.0](https://javascriptweekly.com/link/162319/d076523b1d) is about to land.
+    
+*   [Node.js v23.2.0 (Current)](https://javascriptweekly.com/link/162320/d076523b1d), [pnpm 9.13](https://javascriptweekly.com/link/162321/d076523b1d), [Parcel 2.13.0](https://javascriptweekly.com/link/162322/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/d1zufkmpj5gjvwfosv4n.jpg)](https://javascriptweekly.com/link/162323/d076523b1d)
+
+[JavaScript Import Attributes (ES2025) Explained](https://javascriptweekly.com/link/162323/d076523b1d "www.trevorlasn.com") — [Import Attributes](https://javascriptweekly.com/link/162324/d076523b1d) (now at stage 4 at TC39 and [already supported](https://javascriptweekly.com/link/162325/d076523b1d) in some runtimes) add a way to supply useful metadata about modules you’re importing.
+
+Trevor I. Lasn
+
+💡 Trevor is on quite a run of great posts. He also [digs into `Promise.try`](https://javascriptweekly.com/link/162326/d076523b1d) and [how JavaScript's bitwise shifting operators work.](https://javascriptweekly.com/link/162327/d076523b1d)
+
+[Creating an ASCII Shader Using OGL](https://javascriptweekly.com/link/162328/d076523b1d "tympanus.net") — An incredibly cool effect demonstrated in a great tutorial on getting started with shaders and using [OGL](https://javascriptweekly.com/link/162329/d076523b1d), a lightweight WebGL library.
+
+Andrico Karoulla
+
+[Guide to Error & Exception Handling in React](https://javascriptweekly.com/link/162330/d076523b1d "blog.sentry.io") — Learn common errors and best practices for recovering from them in a user-friendly way.
+
+Sentry sponsor
+
+[How a BBC Navigation Bar Component Broke Depending on Which External Monitor It Was On](https://javascriptweekly.com/link/162331/d076523b1d "www.joshtumath.uk") — A look at an interesting bug related to external monitor positioning. The lesson is that “_browsers have an interoperability issue in how they represent screen coordinates in multi-monitor setups_”.
+
+Josh Tumath
+
+[How to Set Up Next.js 15 for Production in 2024](https://javascriptweekly.com/link/162332/d076523b1d "www.reactsquad.io") — Share in this author’s experience in scaling up Next.js apps to over 100k monthly active users and millions of monthly visitors.
+
+Jan Hesters (ReactSquad)
+
+▶  [From Next.js to htmx: A Real World Example](https://javascriptweekly.com/link/162333/d076523b1d "htmx.org") — An interesting case study explained in a 50-minute screencast: _“Replacing my components with the equivalent HTML elements powered by htmx wasn’t exactly an easy task, but one that was worth the time.”_
+
+Pouria Ezzati
+
+📄 [How to Optimize Performance in Vue Apps](https://javascriptweekly.com/link/162334/d076523b1d) Jakub Andrzejewski
+
+📄 [How to Build a Database App with Drizzle ORM and Deno](https://javascriptweekly.com/link/162335/d076523b1d) Andy Jiang
+
+📄 [Essential `tsconfig.json` Options You Should Use](https://javascriptweekly.com/link/162336/d076523b1d) Duy NG
+
+📺 [Building a Rich Text Editor with Svelte 5](https://javascriptweekly.com/link/162337/d076523b1d) Michael Aufreiter
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/qwfonw0ametgqbvq807q.jpg)](https://javascriptweekly.com/link/162338/d076523b1d)
+
+[Lexical 0.20: An Easy-to-Extend Text Editor Framework from Meta](https://javascriptweekly.com/link/162338/d076523b1d "lexical.dev") — A text editor framework built by Meta with extensibility, accessibility, and cross platform support in mind (there’s even a Swift variant for iOS). There’s [a live playground](https://javascriptweekly.com/link/162339/d076523b1d) if you want to give it a try. React support is first class, but it can be adapted to work elsewhere (as with [svelte-lexical](https://javascriptweekly.com/link/162340/d076523b1d)).
+
+Meta / Facebook
+
+[Introducing `@clerk/nextjs` v6, with Support for Next.js 15](https://javascriptweekly.com/link/162341/d076523b1d "go.clerk.com") — With v6, `auth()` helper is async, `&lt;ClerkProvider>` defaults to static rendering, and partial pre-rendering is supported.
+
+Clerk sponsor
+
+[Storybook 8.4 Released](https://javascriptweekly.com/link/162342/d076523b1d "storybook.js.org") — A minor release for the powerful frontend component workshop but _“one of our most feature-packed minor releases”_ with one click component testing, **Svelte 5 support**, and React Native Storybook 8.
+
+Michael Shilman
+
+🗓️ [Schedule-X 2.5: Material Design Calendar and Date Picker](https://javascriptweekly.com/link/162343/d076523b1d "schedule-x.dev") — Available in the form of React/Preact, Vue, Svelte, Angular, or plain JS components. Open source but with a premium version with extra features. [GitHub repo.](https://javascriptweekly.com/link/162344/d076523b1d)
+
+Tom Österlund
+
+🎵 [music-metadata: Stream and File-Based Music Metadata Parser](https://javascriptweekly.com/link/162345/d076523b1d "github.com") — Supporting formats like MP3, FLAC, Ogg, WAV, WMA, AAC and AIFF, this library extracts metadata like ID3v1 and iTunes tags for processing however you want. Yes, it even works in the browser.
+
+Borewit
+
+[Looking for a DIY Survey Solution? SurveyJS Has You Covered](https://javascriptweekly.com/link/162346/d076523b1d "surveyjs.io") — Build, customize, and store surveys with ease. Total data control, JSON-driven, no backend restrictions—integrates into any JavaScript app.
+
+SurveyJS sponsor
+
+[Micromark 4.0.1: A Small Compliant Markdown Parser](https://javascriptweekly.com/link/162347/d076523b1d "github.com") — 100% compliance with the [CommonMark](https://javascriptweekly.com/link/162348/d076523b1d) standard, supports extensions (such as for GitHub Flavored Markdown), and full test coverage.
+
+Titus Wormer
+
+[jsep 1.4: JavaScript Expression Parser](https://javascriptweekly.com/link/162349/d076523b1d "ericsmekens.github.io") — _“Think of jsep as a tool to parse the kinds of expressions that would be written in individual Excel cells.”_
+
+Stephen Oney
+
+*   📊 [visx 3.12](https://javascriptweekly.com/link/162350/d076523b1d) – Airbnb's suite of React visualization components [now includes a Sankey diagram component.](https://javascriptweekly.com/link/162351/d076523b1d)
+    
+*   🖼️ [Fabric.js 6.5](https://javascriptweekly.com/link/162352/d076523b1d) – Makes HTML5 Canvas elements more interactive with an object model and operations. [GitHub repo.](https://javascriptweekly.com/link/162353/d076523b1d)
+    
+*   [DOMPurify 3.2](https://javascriptweekly.com/link/162354/d076523b1d) – Fast, tolerant XSS sanitizer for HTML and SVG. [Demo.](https://javascriptweekly.com/link/162355/d076523b1d)
+    
+*   [MikroORM 6.4](https://javascriptweekly.com/link/162356/d076523b1d) – Popular TypeScript ORM for Node.js.
+    
+*   [Marked 15.0](https://javascriptweekly.com/link/162357/d076523b1d) – Fast Markdown compiler / parser.
+    
+
+📰 Classifieds
+
+🎹 [STRICH](https://javascriptweekly.com/link/162358/d076523b1d): Add blazing fast and reliable 1D/2D Barcode Scanning to your web apps. Free demo app and 30-day trial available.
+
+* * *
+
+Never miss a Shopify, Stripe, GitHub, Paddle… or any webhook again with Hookdeck's serverless queue infrastructure. [Learn more](https://javascriptweekly.com/link/162359/d076523b1d).
+
+* * *
+
+[Meticulous automatically creates & maintains E2E UI tests](https://javascriptweekly.com/link/162360/d076523b1d). Zero flakes. Used by Lattice, Bilt Rewards and others.
+
+😀 More fun at Val Town
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/anyxrh4uwuqvzzdtyyvu.jpg)](https://javascriptweekly.com/link/162361/d076523b1d)
+
+I've written about [Val Town](https://javascriptweekly.com/link/162361/d076523b1d) several times and am a huge fan. It's a site where you can write and deploy TypeScript from your browser and describes itself as _"if GitHub Gists could run, and AWS Lambda was fun._"
+
+It's been a delight to watch its progression from a prototype to what is now a solid platform used in production use cases and I want to call out some recent posts that keep it on my radar:
+
+[Building a Code-Writing Robot and Keeping it Happy](https://javascriptweekly.com/link/162362/d076523b1d) – [Townie](https://javascriptweekly.com/link/162363/d076523b1d) is an AI assistant for building apps on Val Town. This post digs into how it works, some of the problems encountered in its creation, and how its results are evaluated.
+
+[Val Town Town](https://javascriptweekly.com/link/162364/d076523b1d) – Could you implement something like Val Town _on_ Val Town itself? At the risk of eating its own tail, it turns out you _can._
+
+If you're stuck for something to do or check out, [check out Val Town](https://javascriptweekly.com/link/162361/d076523b1d) – it's fun!
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/162365/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​713 — 2024 年 11 月 14 日
+
+[网上阅读](https://javascriptweekly.com/issues/713)
+
+连同 
+
+\[![Mescius](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_454,h_111/e_make_transparent/co_white,e_outline:7/iwtw1igi5mjsbp1jqfn5.png)]\(https://javascriptweekly. com/link/162302/d076523b1d)
+
+JavaScript 周刊
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kbg2tsuwmosurkgvmqiz.jpg)](https://javascriptweekly.com/link/162303/d076523b1d)
+
+[组件方：UI 库的罗塞塔石碑](https://javascriptweekly.com/link/162303/d076523b1d "component-party.dev") — 对许多不同框架（如 React、Vue、Svelte）的长期比较、Angular、Qwik、Solid.js 等）通过简单的代码片段的方式来执行各种任务。现在包括 Svelte 5 和 Angular 17/Renaissance。
+
+马蒂厄·施默林
+
+[我们将来会关心框架吗？](https://javascriptweekly.com/link/162304/d076523b1d "paul.kinlan.me") — Paul 想知道在软件开发中越来越多地使用 LLM 和代理是否会导致减少对新框架和额外以开发人员为中心的抽象的需求。
+
+保罗·金兰
+
+\[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/5a6a811e.png)]\(https://javascriptweekly.com/link/162302/d076523b1d ）
+
+[高级 JavaScript 工具为您的应用程序提供支持](https://javascriptweekly.com/link/162302/d076523b1d "developer.mescius.com") — 使用强大的 JavaScript 开发工具构建更好的 Web 应用程序，包括：SpreadJS 类似 Excel 的电子表格组件、 ActiveReportsJS 报告工具、Wijmo UI 组件套件以及适用于 PDF、Excel、图像等的文档解决方案查看器。
+
+MESCIUS公司赞助商
+
+[`vlt` 包管理器和无服务器注册表](https://javascriptweekly.com/link/162305/d076523b1d "blog.vlt.sh") — 一个经验丰富的团队，包括 npm 创建者 Isaac Schlueter，推出了 \[Vlt]\( https://javascriptweekly.com/link/162306/d076523b1d）来“构建 JavaScript 包管理的未来”。第一个结果以“vlt”客户端（可以替换“npm”）的形式出现，以及一个[无服务器包注册表](https://javascriptweekly.com/link/162307/d076523b1d)，您可以自行托管来提供您自己的包裹。
+
+克拉克、阿多诺、施鲁特和卡里斯
+
+💡 Sarah Gooding [在此分享有关 Vlt 故事的更多背景信息。](https://javascriptweekly.com/link/162308/d076523b1d)
+
+[TypeScript 5.7 Release Candidate](https://javascriptweekly.com/link/162309/d076523b1d "devblogs.microsoft.com") — 流行的类型化 JS 超集添加了对 ES2024 作为目标的支持，可以在变量不存在时报告错误初始化，添加相对路径的路径重写，并且可以使用 Node 的编译缓存来节省解析工作。最终版本预计将在一两周内发布。
+
+微软
+
+**简而言之：**
+
+* 🤖 Microsoft [在 VS Code 中引入了 *Copilot Edits*](https://javascriptweekly.com/link/162310/d076523b1d) – 它提供了一种同时处理项目中多个文件的方法。
+
+* [Jawsm](https://javascriptweekly.com/link/162311/d076523b1d) 是一个早期的、实验性的 JavaScript 到 WebAssembly 编译器（类似于 [Porffor](https://javascriptweekly.com/link/162312/d076523b1d)) 但这旨在立即使用最先进的 WASM 功能，例如 [WasmGC](https://javascriptweekly.com/link/162313/d076523b1d) 和 \[异常处理]\(https://javascriptweekly.com /链接/162314/d076523b1d)
+
+* 💜 [CSS 现在有了官方徽标！](https://javascriptweekly.com/link/162315/d076523b1d)
+
+**发布：**
+
+* [Expo SDK 52](https://javascriptweekly.com/link/162316/d076523b1d) – 用于构建现代 React Native 应用程序的工具集，现在支持 React Native 0.76 和 \[*新架构。*]\(https://javascriptweekly .com/link/162317/d076523b1d)
+
+* [Node.js v18.20.5 (LTS)](https://javascriptweekly.com/link/162318/d076523b1d) – 大量依赖项更新，现在导入属性和 JSON 模块已标记为稳定。
+
+* 没有公告，但看起来 [Ember 6.0](https://javascriptweekly.com/link/162319/d076523b1d) 即将落地。
+
+* [Node.js v23.2.0（当前）](https://javascriptweekly.com/link/162320/d076523b1d)、[pnpm 9.13](https://javascriptweekly.com/link/162321/d076523b1d)、[包裹2.13.0](https://javascriptweekly.com/link/162322/d076523b1d)
+
+📒 文章和教程
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/d1zufkmpj5gjvwfosv4n.jpg)](https://javascriptweekly.com/link/162323/d076523b1d)
+
+[JavaScript 导入属性 (ES2025) 说明](https://javascriptweekly.com/link/162323/d076523b1d "www.trevorlasn.com") — \[导入属性]\(https://javascriptweekly.com/link/162324/d076523b1d ）（目前处于 TC39 的第 4 阶段，并且在某些运行时[已受支持](https://javascriptweekly.com/link/162325/d076523b1d)）添加了一种提供有关您要导入的模块的有用元数据的方法。
+
+特雷弗·拉森
+
+💡 Trevor 发表了一系列精彩的帖子。他还[深入研究了“Promise.try”](https://javascriptweekly.com/link/162326/d076523b1d) 以及[JavaScript 的按位移位运算符的工作原理。](https://javascriptweekly.com/link/162327/d076523b1d) ）
+
+[使用 OGL 创建 ASCII 着色器](https://javascriptweekly.com/link/162328/d076523b1d "tympanus.net") — 有关着色器入门和使用 [OGL](https) 的精彩教程中展示了令人难以置信的酷炫效果://javascriptweekly.com/link/162329/d076523b1d)，一个轻量级 WebGL 库。
+
+安德里科·卡鲁拉
+
+[React 中的错误和异常处理指南](https://javascriptweekly.com/link/162330/d076523b1d "blog.sentry.io") — 了解常见错误以及以用户友好的方式从中恢复的最佳实践。
+
+哨兵赞助商
+
+[BBC 导航栏组件如何根据其所在的外部显示器而损坏](https://javascriptweekly.com/link/162331/d076523b1d "www.joshtumath.uk") — 看看与外部显示器相关的一个有趣的错误定位。教训是“*浏览器在多显示器设置中如何表示屏幕坐标方面存在互操作性问题*”。
+
+乔什·图马斯
+
+[How to Set Up Next.js 15 for Production in 2024](https://javascriptweekly.com/link/162332/d076523b1d "www.reactsquad.io") — 分享作者将 Next.js 应用扩展到 2024 年的经验超过 10 万月度活跃用户和数百万月度访问者。
+
+简·赫斯特斯 (ReactSquad)
+
+▶  [从 Next.js 到 htmx：一个真实的例子](https://javascriptweekly.com/link/162333/d076523b1d "htmx.org") — 在 50 分钟的截屏视频中解释了一个有趣的案例研究：*“替换我的组件具有由 htmx 提供支持的等效 HTML 元素，这并不完全是一项容易的任务，但值得花时间。”*
+
+普利亚·埃扎蒂
+
+📄 [如何优化 Vue 应用程序的性能](https://javascriptweekly.com/link/162334/d076523b1d) Jakub Andrzejewski
+
+📄 [如何使用 Drizzle ORM 和 Deno 构建数据库应用程序](https://javascriptweekly.com/link/162335/d076523b1d) Andy Jiang
+
+📄 [您应该使用的基本 `tsconfig.json` 选项](https://javascriptweekly.com/link/162336/d076523b1d) Duy NG
+
+📺 [使用 Svelte 5 构建富文本编辑器](https://javascriptweekly.com/link/162337/d076523b1d) Michael Aufreiter
+
+🛠 代码和工具
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/qwfonw0ametgqbvq807q.jpg)](https://javascriptweekly.com/link/162338/d076523b1d)
+
+[Lexical 0.20：来自 Meta 的易于扩展的文本编辑器框架](https://javascriptweekly.com/link/162338/d076523b1d "lexical.dev") — 由 Meta 构建的文本编辑器框架，具有可扩展性、可访问性和考虑到跨平台支持（甚至还有适用于 iOS 的 Swift 变体）。如果您想尝试一下，这里有[现场游乐场](https://javascriptweekly.com/link/162339/d076523b1d)。 React 支持是一流的，但它可以适应其他地方（如 [svelte-lexical](https://javascriptweekly.com/link/162340/d076523b1d)）。
+
+元/脸书
+
+[介绍 `@clerk/nextjs` v6，支持 Next.js 15](https://javascriptweekly.com/link/162341/d076523b1d "go.clerk.com") — 使用 v6、`auth()` 帮助程序是异步的，“&lt;ClerkProvider>”默认为静态渲染，并且支持部分预渲染。
+
+文员赞助人
+
+[Storybook 8.4 已发布](https://javascriptweekly.com/link/162342/d076523b1d "storybook.js.org") — 强大的前端组件研讨会的次要版本，但 \*“我们功能最丰富的次要版本之一” \* 通过一键组件测试、**Svelte 5 支持**和 React Native Storybook 8。
+
+迈克尔·希尔曼
+
+🗓️ [Schedule-X 2.5：Material Design 日历和日期选择器](https://javascriptweekly.com/link/162343/d076523b1d "schedule-x.dev") — 以 React/Preact、Vue、Svelte 的形式提供， Angular 或普通 JS 组件。开源，但有带有额外功能的高级版本。 [GitHub 存储库](https://javascriptweekly.com/link/162344/d076523b1d)
+
+汤姆·奥斯特伦德
+
+🎵 [music-metadata：基于流和文件的音乐元数据解析器](https://javascriptweekly.com/link/162345/d076523b1d "github.com") — 支持 MP3、FLAC、Ogg、WAV、WMA、AAC 等格式和 AIFF，该库提取 ID3v1 和 iTunes 标签等元数据，以便根据您的需要进行处理。是的，它甚至可以在浏览器中运行。
+
+博鲁维特
+
+[正在寻找 DIY 调查解决方案？ SurveyJS 已满足您的需求](https://javascriptweekly.com/link/162346/d076523b1d "surveyjs.io") — 轻松构建、自定义和存储调查。全面的数据控制、JSON 驱动、无后端限制 - 集成到任何 JavaScript 应用程序中。
+
+SurveyJS 赞助商
+
+[Micromark 4.0.1：小型合规 Markdown 解析器](https://javascriptweekly.com/link/162347/d076523b1d "github.com") — 100% 符合 \[CommonMark]\(https://javascriptweekly.com/ link/162348/d076523b1d）标准，支持扩展（例如 GitHub Flavored Markdown）和完整的测试覆盖率。
+
+泰特斯·沃默
+
+[jsep 1.4：JavaScript 表达式解析器](https://javascriptweekly.com/link/162349/d076523b1d "ericsmekens.github.io") — *“将 jsep 视为一种工具来解析将用以下语言编写的各种表达式各个 Excel 单元格。”*
+
+斯蒂芬·奥尼
+
+* 📊 [visx 3.12](https://javascriptweekly.com/link/162350/d076523b1d) – Airbnb 的 React 可视化组件套件\[现在包括 Sankey 图组件。]\(https://javascriptweekly.com/link/162351/ d076523b1d)
+
+* 🖼️ [Fabric.js 6.5](https://javascriptweekly.com/link/162352/d076523b1d) – 使 HTML5 Canvas 元素与对象模型和操作更具交互性。 [GitHub 存储库。](https://javascriptweekly.com/link/162353/d076523b1d)
+
+* [DOMPurify 3.2](https://javascriptweekly.com/link/162354/d076523b1d) – 针对 HTML 和 SVG 的快速、宽容的 XSS 清理程序。 [演示。](https://javascriptweekly.com/link/162355/d076523b1d)
+
+* [MikroORM 6.4](https://javascriptweekly.com/link/162356/d076523b1d) – 适用于 Node.js 的流行 TypeScript ORM。
+
+* [标记为 15.0](https://javascriptweekly.com/link/162357/d076523b1d) – 快速 Markdown 编译器/解析器。
+
+📰 分类广告
+
+🎹 [STRICH](https://javascriptweekly.com/link/162358/d076523b1d)：将快速可靠的一维/二维条形码扫描添加到您的网络应用程序中。提供免费演示应用程序和 30 天试用版。
+
+***
+
+使用 Hookdeck 的无服务器队列基础设施，再也不会错过 Shopify、Stripe、GitHub、Paddle...或任何 Webhook。 [了解更多](https://javascriptweekly.com/link/162359/d076523b1d)。
+
+***
+
+[Meticulous 自动创建和维护 E2E UI 测试](https://javascriptweekly.com/link/162360/d076523b1d)。零片。由 Lattice、Bilt Rewards 等公司使用。
+
+😀 瓦尔镇更多乐趣
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/anyxrh4uwuqvzzdtyyvu.jpg)](https://javascriptweekly.com/link/162361/d076523b1d)
+
+我曾多次写过有关 [Val Town](https://javascriptweekly.com/link/162361/d076523b1d) 的文章，并且是它的超级粉丝。在这个网站上，您可以通过浏览器编写和部署 TypeScript，并将自己描述为“如果 GitHub Gists 可以运行，并且 AWS Lambda 很有趣。\*”
+
+很高兴看到它从原型发展到现在用于生产用例的可靠平台，我想指出一些最近引起我注意的帖子：
+
+[构建一个写代码的机器人并让它保持快乐](https://javascriptweekly.com/link/162362/d076523b1d) – [Townie](https://javascriptweekly.com/link/162363/d076523b1d) 是一个人工智能助手用于在 Val Town 上构建应用程序。这篇文章深入探讨了它的工作原理、创建过程中遇到的一些问题以及如何评估其结果。
+
+[Val Town Town](https://javascriptweekly.com/link/162364/d076523b1d) – 你能在 *Val Town 本身上实现像 Val Town 这样的东西吗？冒着吃掉自己尾巴的风险，事实证明你*可以。\*
+
+如果您想做点什么或出去看看，[看看 Val Town](https://javascriptweekly.com/link/162361/d076523b1d) – 这很有趣！
+
+由 [Cooperpress](https://cooperpress.com/) 出版，由 [Peter Cooper](https://javascriptweekly.com/link/162365/d076523b1d) 编辑
+
+“JavaScript”是 Oracle Corporation 在美国的商标\
+我们未获得 Oracle 的认可或隶属于 Oracle。
+
+
