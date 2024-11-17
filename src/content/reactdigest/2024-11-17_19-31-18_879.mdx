@@ -1,0 +1,93 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#481 React is a programming language
+description: RD#481 React is a programming language
+date: 星期日 07 晚上 十一月 17o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/react-is-a-programming-language
+origin_site: https://newsletter.reactdigest.net/p/react-is-a-programming-language
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#481 React is a programming language" url="https://newsletter.reactdigest.net/p/react-is-a-programming-language" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XYEuFVChJelSuJ5XoBpKBQNTBrsLq7rqp63LTY00BgEpHi9iw3CfmbQmi5Uwlz4PBodzL3I8LiKKwYJXjEPikL_U6ToiaSTFWcTQKjk9uXQPFaLeAvOJWxidTUjUzmIi8h6-M3p_5m0JVD_tK7QwUlu_e327n-Xpm33a4UFOmWliP3MY-pjbanZbo4CWQyOWghuNx6ShQkma_Ew_n7PW7kermeeh-8ink11QbPx9nzbRI2sJRpIUBKozyjxi3m19XwX0Nzfk0m3XrtaIiU4AlLRi9rrSDXF82l7yt_HCnInZmwCX-84uvomwilQWuPqlK8UFU9_yjezpCn1ZBgCwHPFI7XULVo6lmiOXAJQViPoZ7_Rw4bAz_zGP4TbSDqVC1ep10IZYvTOdqAzb2j26G2Xs5SZ97ffV6R_SWu6wL1dY-2_a6LHIVURfQbKJ2GilfOTmpdbje3TXZxyjxe67v10KiRl5ERAOuP3lr3NVMS_PhM3f6hi2cWPY9O2tdLQIrRiqXqZ58mZ29nCwgt_6JZpuUTmyRAL6jNyrZL0JmbD2sN7Yc7cEigKgaxbXE52Qmrwzf1vmA2c8_BM-4Ry_Minwa7RscmPJNx0Kp_XKN0afgeaM-C3Tq_nMqj9hDqUX9o-2xDQ-8iC_EmR1YEPLT_fUPlloldsbi7--7TWWp9A4RZa7XWvXfZb-BAX4iG3HstbKM4GmkeeFS7tuQJVvXNM_l2MvSqG3a76aP_NmKE6Se9qc-9HULa8kl6KrOSEieMarAkKsIYsUzENM5-jzHv/4bj/7aOcoZMPSQiryZSOzwhnRA/h0/h001.2ipbxuPObx0CDWIaFgR-ExtwdDDWKq2uqExMu63htpw)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4bj/7aOcoZMPSQiryZSOzwhnRA/ho.gif)
+
+[React is a programming language, and its rules are syntax](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63njNIysBrcSsLerGLJDSI0P5XrfRDMPpaC7fwDNtPd2ipsJovrklG1LGSXEGGvfxq6CqkNS69RvKXaTOooCJC539HJCNC1iW1ryFtmdGGqOt41vaCRXyRHRnkDOOMG4ZNEFhs1T5Bd9PAvleyV1ozcRD2-_ddphH9ylDg_XLAS2GCjRoM5OFGKVnYAI8wq-BDxdpJCm9M68M-MBRU9NPFqCSTYpkoTT5c7Aaky9QMdDE8a9swbmF8WPeE9DofNa6hgmT6y611SYXuWbjMQxUdP0KQQVosnrCalMv5nkXtWGwLU30_4Fvx9oiYKZ0Am0H2w/4bj/7aOcoZMPSQiryZSOzwhnRA/h1/h001.PhqZCx7uaODANyVeBzR3XOpM0ZUOGimJA120PE2kMh8)  
+_4 minutes_ by Sam Selikoff
+
+The article explains why refs don't work in React Server Components, primarily because DOM nodes don't exist on the server side. It discusses how React's design decisions and constraints, while sometimes frustrating, are intentional to maintain JavaScript's lexical scope benefits and ensure consistent UI behavior.
+
+[What we learned from analyzing 20.2 million CI jobs](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF2ZL2kVFLbdHtthftZGdxVMT1Udt5KWJJBIpY8KS_PAhf2DSSBrh1dckm9Ih1eDcLca8eHggKn5tycx8_pmdR6j9H5_96pT9uUyuULdxJ6cFihcxGbq3zYVEIwgsH5_tCn_ZeaM2PakbH82N-OYwHlbTYyMYCKR3nBxwHXhggtm1d59R-XeuczM7Y5Bpiff3vg/4bj/7aOcoZMPSQiryZSOzwhnRA/h2/h001.9r3EX5NarX8K92A6C_lbvDKut7bCOCxn88Ar_fwSZEA)  
+_sponsored by Trunk_
+
+What causes flaky tests, and how do they impact engineering workflows? Trunk analyzed [20.2 million CI jobs](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF6p6dH4DFVS5w46EiX9zRk0OI-Kc0dOS0OUQegynlJOGrDuWi37bobYUDRWcep-F1yghDXTKjfSgBUqB72vjY8uz9y2IJbUWFsaB9m5bQiQDXEVr0xugWaoH0P5YNjIirXbzrtJpYHKcvhvB1r0vq556gnPCV6VkU4kViTw8gJePY2YqHf276yEYMrAH3OQ7SWIM7JRchJ14j8qIKNCCi489XXj4KBbyybrv-F-CA4ZLZQTlcTSGNQiBWQ4L8SnImfwa98nLkQU3eWUQqcZQIC5_Jeou_OwAKMSYgURP3C1d/4bj/7aOcoZMPSQiryZSOzwhnRA/h3/h001.Dhw4mdHHOhII5ERHX3m0uKyuAQgFRG-zRc3vOkyNx0s) to find the answers. See the trends we uncovered and how Trunk can help you detect, quarantine, and eliminate flaky tests from your codebase. Access is completely free. Check out our getting started guide.
+
+[How to Set Up Next.js 15 for Production in 2024](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXnXFDlpWv22X1tn3wy9S19ROP-JwI6g-aK1alQoLtDQdNTw4tYnPcLawzK8eolzzoXgSCLJ-pcUFO_V18wdF3CMTA41LXI2osJNEwj2EVgBk9hZvhqGPF3fA6xU7cbdB_Ttu3RsGg365agjj5HnxaeeovnsjKFoMRQJjiG8PzLAEn2boMNcd8GiuvonbgezH87KBGQ9UmtcN98OiYFQJwwl5uqzYp7kGTfBYVZOEDWpT4XSDSWaWgIl_z3x-WDagySrhy_4D-FNTaf_lnbiZRPJC810T7ykocSm4F_zNKJS/4bj/7aOcoZMPSQiryZSOzwhnRA/h4/h001.Mn0zGaJxNFruXqvti0kKz4bD-n-a2SCUr6odyzsKwrM)  
+_27 minutes_ by Jan Hesters
+
+This article shows all the steps and packages that you need to set up Nextjs 15 and explain why they're useful, so your app scales smoothly.
+
+[The styling dilemma in React](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF5egyAVqCrZb4B7AmhXLUYOerdqEN5Whk9BE5NgyORZKMBGc5UXM2XCqsTnKgw1tlJ9aQ00PathPcbGgQUyh0IlEfSn1jLbj1B6mxrJtKkpXRsUb7ZKdF9PowU4nE5_Wvz_vPkcQWgHYe8a3uEgOcE5WPFHvAgd8SqExrnE61rMSnfkgMk1gGDR47Wf82x52_oCU-46AMX_jAAg84R1b2Tlzy_N94wMGo7MsvDDE4nCboWoScelItq8G9mYSckCzO0DyYRwBQL3Ph4_xIK6r94k/4bj/7aOcoZMPSQiryZSOzwhnRA/h5/h001.M6d-BVraBPHABmUEUNQ6a0H63q8tTieXGeTLVQOCyiI)  
+_6 minutes_ by Petar Ivanov
+
+The article discusses various approaches to styling React applications, including traditional CSS, preprocessors (SASS/SCSS), Tailwind CSS, CSS Modules, and CSS-in-JS solutions. It compares their advantages and disadvantages, focusing on issues like global scope, maintainability, and developer experience.
+
+[TIL: inline event handlers still fire when passed to React's dangerouslySetInnerHTML](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTXN9A8w7STkHqB5kVbpkl52LQWVfS4ZtR1Hr3y7Mk8YPem3m-GU9SOCmdey7Be4If1Va7WhEQi_Op7Kc3X5Rm3QI3BvvGLGXGHO2JpiygH5xX4k5BVUSnpK8v9c5ab4TI8lKmzWj415Q5aRXO59qaRsJd4A15XMNEf1Y9xm2h5z9BEJlaIEyl_xYGEWEg3mPqCwU-J_pCvfu7SQzqIAVXIjypL-Oxyhcn5EuUxECbgMO4sw5G-A49dg_ZDX55RKYe9WU1dFRPPSA7E1510nvMeM/4bj/7aOcoZMPSQiryZSOzwhnRA/h6/h001.-YBpdCoLSuK_g0OXnXdRGAYLStoMCrIb2tG9_kZsEeE)  
+_5 minutes_ by Alex MacArthur
+
+Even though it won't run script tags, React's dangerouslySetInnerHTML still allows inline event handlers to execute. Here's how you might neutralize that threat.
+
+[React and FormData](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zLIKwaP__Yk70Fsw-pWoWciE-KdKA_1djfLxugZrya-MhecbQWtM_SqvlaiaruawlCzEN5dXf906O_emuHJLACTfeBBIw4Uiyvb7KuQZRLIGji3A0N9T66OIGTtKCv2hETux8X5-FfSCAepcXwAucn6_EwVcj_ibxNsgJwuV9-f3y0COfMy9ZiD685wikq--AJLDoAmd6Rs91zuCj2Oen_M0q3YM0UpkeBDJ1TFQhZisA/4bj/7aOcoZMPSQiryZSOzwhnRA/h7/h001.X3AAZC6ZwMqhxdS-ndWLZJDe9TTEpR9ofkMSRRddlbo)  
+_4 minutes_ by Robin Wieruch
+
+Robin shows how to effectively handle FormData in React form submissions, focusing on converting FormData to JavaScript objects. He demonstrates the evolution from basic form handling to more sophisticated approaches using Object.fromEntries, and shows how to properly handle multiple values with the same key.
+
+#
+</Detail>
+
+\[在线阅读]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XYEuFVChJelSuJ5XoBpKBQNTBrsLq7rqp63LTY00BgEpHi9iw3CfmbQmi5Uwlz4PBodzL3I8 LiKKwYJXjEPikL\_U6ToiaSTFWcTQKjk9uXQPFaLeAvOJWxidTUjUzmIi8h6-M3p\_5m0JVD\_tK7QwUlu\_e327n-Xpm33a4UFOmWliP3MY-pjbanZbo4CWQyOWghuNx6ShQkma\_Ew\_n7PW7kermeeh-8ink 11QbPx9nzbRI2sJRpIUBKozyjxi3m19XwX0Nzfk0m3XrtaIiU4AllLRi9rrSDXF82l7yt\_HCnInZmwCX-84uvomwilQWuPqlK8UFU9\_yjezpCn1ZBgCwHPFI7XULVo6lmiOXAJQViPoZ7\_Rw4bAz\_z GP4TbSDqVC1ep10IZYvTOdqAzb2j26G2Xs5SZ97ffV6R\_SWu6wL1dY-2\_a6LHIVURfQbKJ2Gil fOTmpdbje3TXZxyjxe67v10KiRl5ERAOuP3lr3NVMS\_PhM3f6hi2cWPY9O2tdLQIrRiqXqZ58m Z29nCwgt\_6JZpuUTmyRAL6jNyrZL0JmbD2sN7Yc7cEigKgaxbXE52Qmrwzf1vmA2c8\_BM-4Ry\_Minwa7RscmPJNx0Kp\_XKN0afgeaM-C3Tq\_nMqj9hDqUX9o-2xDQ-8iC\_EmR1YEPLT\_fUPll oldsbi7--7TWWp9A4RZa7XWvXfZb-BAX4iG3HstbKM4GmkeeFS7tuQJVvXNM\_l2MvSqG3a76aP\_NmKE6Se9qc- 9HULa8kl6KrOSEieMarAkksIYsUzENM5-jzHv/4bj/7aOcoZMPSQiryZSOzwhnRA/h0/h001.2ipbxuPObx0CDWIaFgR-ExtwdDDWKq2uqExMu63htpw)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4bj/7aOcoZMPSQiryZSOzwhnRA/ho.gif)
+
+【React是一种编程语言，它的规则就是语法】(https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63njNIysBrcSsLerGLJDSI0P5XrfRDMPpaC7fwDNtPd2ipsJovrklG1LGSXEGGvfxq6CqkNS69RvKXaTOooC JC539HJCNC1iW1ryFtmdGGqOt41vaCRXyRHRnkDOOMG4ZNEFhs1T5Bd9PAvleyV1ozcRD2-\_ddphH9ylDg\_XLAS2GCjRoM5OFGKVnYAI8wq-BDxdpJCm9M68M-MBRU9NPFqCSTYpkoTT5c7Aaky9QMdDE8a 9swbmF8WPE9DofNa6hgmT6y611SYXuWbjMQxUdP0KQQVosnrCalMv5nkXtWGwLU30\_4Fvx9oi YKZ0Am0H2w/4bj/7aOcoZMPSQiryZSOzwhnRA/h1/h001.PhqZCx7uaODANyVeBzR3XOpM0ZUOG imJA120PE2kMh8) \
+*4 分钟* Sam Selikoff
+
+本文解释了为什么 refs 在 React Server Components 中不起作用，主要是因为服务器端不存在 DOM 节点。它讨论了 React 的设计决策和约束（虽然有时令人沮丧）如何有意维护 JavaScript 的词法范围优势并确保一致的 UI 行为。
+
+\[我们从分析 2020 万个 CI 作业中学到了什么]\(https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF2ZL2kVFLbdHtthftZGdxVMT1Udt5KWJJBIpY8KS\_PAhf2DSSBrh1dckm9Ih1eDcLca8eHggKn5tycx8\_ pmdR6j9H5\_96pT9uUyuULdxJ6cFihcxGbq3zYVEIwgsH5\_tCn\_ZeaM2PakbH82N-OYwHlbTYyMYCKR3nBxwHXhggtm1d59R-XeuczM7Y5Bpiff3vg/4bj/7aOcoZMPSQiryZSOzwhnRA/h2/h 001.9r3EX5NarX8K92A6C\_lbvDKut7bCOCxn88Ar\_fwSZEA)\
+*由Trunk赞助*
+
+是什么导致了不稳定的测试，它们如何影响工程工作流程？ Trunk 分析了 \[2020 万个 CI 作业]\(https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF6p6dH4DFVS5w46EiX9zRk0OI-Kc0dOS0OUQegynlJOGrDuWi37bobYUDRWcep-F1yghDXTKjfSgBUqB72vjY8 uz9y2IJbUWFsaB9m5bQiQDXEVr0xugWaoH0P5YNjIirXbzrtJpYHKcvhvB1r0vq556gnPCV6 VkU4kViTw8gJePY2YqHf276yEYMrAH3OQ7SWIM7JRchJ14j8qIKNCCi489XXj4KBbyybrv-F- CA4ZLZQTlcTSGNQiBWQ4L8SnImfwa98nLkQU3eWUQqcZQIC5\_Jeou\_OwAKMSYgURP3C1d/4bj /7aOcoZMPSQiryZSOzwhnRA/h3/h001.Dhw4mdHHOhII5ERHX3m0uKyuAQgFRG-zRc3vOkyNx0 s) 到找到答案。了解我们发现的趋势以及 Trunk 如何帮助您检测、隔离和消除代码库中的不稳定测试。访问完全免费。查看我们的入门指南。
+
+\[如何在 2024 年设置 Next.js 15 进行生产]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXnXFDlpWv22X1tn3wy9S19ROP-JwI6g-aK1alQoLtDQdNTw4tYnPcLawzK8eolzzoX gSCLJ-pcUFO\_V18wdF3CMTA41LXI2osJNEwj2EVgBk9hZvhqGPF3fA6xU7cbdB\_Ttu3RsGg365agjj5HnxaeeovnsjKFoMRQJjiG8PzLAEn2boMNcd8GiuvonbgezH87KBGQ9UmtcN98OiYFQJwwl5u qzYp7kGTfBYVZOEDWpT4XSDSWaWgIl\_z3x-WDagySrhy\_4D-FNTaf\_lnbiZRPJC810T7ykocSm4F\_zNKJS/4bj/7aOcoZMPSQiryZSOzwhnRA/h4 /h001.Mn0zGaJxNFruXqvti0kKz4bD-n-a2SCUR6odyzsKwrM)\
+*27 分钟* Jan Hesters
+
+本文展示了设置 Nextjs 15 所需的所有步骤和包，并解释了它们为何有用，以便您的应用程序顺利扩展。
+
+\[React 中的样式困境]\(https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF5egyAVqCrZb4B7AmhXLUYOerdqEN5Whk9BE5NgyORZKMBGc5UXM2XCqsTnKgw1tlJ9aQ00PathPcbGgQUyh0IlEfS n1jLbj1B6mxrJtKkpXRsUb7ZKdF9PowU4nE5\_Wvz\_vPkcQWgHYe8a3uEgOcE5WPFHvAg d8SqExrnE61rMSnfkgMk1gGDR47Wf82x52\_oCU-46AMX\_jAAg84R1b2Tlzy\_N94wMGo7M svDDE4nCboWoScelItq8G9mYSckCzO0DyYRwBQL3Ph4\_xIK6r94k/4bj/7aOcoZMPSQiryZSOzwhnRA/h5/h001.M6d-BVraBPHABmUEUNQ6a0H63q8tTieXGeTLVQOCyiI)\
+*6 分钟* 佩塔尔·伊万诺夫
+
+本文讨论了 React 应用程序样式的各种方法，包括传统 CSS、预处理器 (SASS/SCSS)、Tailwind CSS、CSS 模块和 CSS-in-JS 解决方案。它比较了它们的优缺点，重点关注全局范围、可维护性和开发人员体验等问题。
+
+\[TIL: inline event handlers still fire when passed to React's dangerouslySetInnerHTML]\(https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2\_rh17KMcAxCTXN9A8w7STkHqB5kVbpkl52LQWVfS4ZtR1Hr3y7Mk8YPem3m-GU9SOCmdey7Be4If1Va7WhEQi\_Op7Kc3X5Rm3QI3BvvGLGXGHO2JpiygH5xX4k5BVUSnpK8v9c5ab4TI8lKmzWj415Q5aRXO59qaRsJd4A15XMNEf1Y9xm2h5z9BEJlaIEyl\_xYGEWEg3mPqCwU-J\_pCvfu7SQzqIAVXIjypL-Oxyhcn5EuUxECbgMO4sw5G-A49dg\_ZDX55RKYe9WU1dFRPPSA7E1510nvMeM/4bj/7aOcoZMPSQiryZSOzwhnRA/h6/h001 .-YBpdCoLSuK\_g0OXnXdRGAYLStoMCrIb2tG9\_kZsEeE)\
+*5 分钟* 亚历克斯·麦克阿瑟
+
+即使它不会运行脚本标签，React 的angerlySetInnerHTML 仍然允许执行内联事件处理程序。以下是消除这种威胁的方法。
+
+\[React 和 FormData]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf\_qUprM09yoMPtF27zLIKwaP\_\_Yk70Fsw-pWoWciE-KdKA\_1djfLxugZrya-MhecbQWtM\_SqvlaiaruawlCzEN5d Xf906O\_emuHJLACTfeBBIw4Uiyvb7KuQZRLIGji3A0N9T66OIGTtKCv2hETux8X5-FfSCAepcXwAucn6\_EwVcj\_ibxNsgJwuV9-f3y0COfMy9ZiD685wikq--AJLDoAmd6Rs91zuCj2Oen\_M0 q3YM0UpkeBDJ1TFQhZisA/4bj/7aOcoZMPSQiryZSOzwhnRA/h7/h001.X3AAZC6ZwMqhxdS-ndWLZJDe9TTEpR9ofkMSRRddlbo )\
+*4 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+Robin 展示了如何有效处理 React 表单提交中的 FormData，重点是将 FormData 转换为 JavaScript 对象。他演示了从基本表单处理到使用 Object.fromEntries 的更复杂方法的演变，并展示了如何使用同一键正确处理多个值。
+
+#
+
+
