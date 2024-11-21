@@ -1,0 +1,320 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Exploring JavaScript symbols
+description: Exploring JavaScript symbols
+date: 星期四 06 晚上 十一月 21o 2024
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/714
+origin_site: https://javascriptweekly.com/issues/714
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Exploring JavaScript symbols" url="https://javascriptweekly.com/issues/714" />
+
+<Detail client:only="react">
+	#​714 — November 21, 2024
+
+[Read on the Web](https://javascriptweekly.com/issues/714)
+
+🦃 **We're taking next week off for Thanksgiving.** We don't celebrate it in our country, but we know many of you do, so it seemed a good time for a break. We'll be back on Thursday December 5.  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/162599/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/q2s34tnzhkga4m0vdjol.jpg)](https://javascriptweekly.com/link/162600/d076523b1d)
+
+[Importing a Frontend JavaScript Library Without a Build System](https://javascriptweekly.com/link/162600/d076523b1d "jvns.ca") — Many developers prefer to eschew complex, modern build processes and use JavaScript in a more old-school way. You can definitely get by without a build system, and Julia explores some ways to import libraries in such a setup.
+
+Julia Evans
+
+[Angular v19 Released](https://javascriptweekly.com/link/162601/d076523b1d "blog.angular.dev") — The latest version of the popular enterprise-scale app framework is here with a [▶️ 22 minute introductory video](https://javascriptweekly.com/link/162602/d076523b1d) running through what’s changed and what’s new, including incremental hydration (in preview), two new core reactivity primitives, event replay, and the ability to specify which routes are rendered server or client side.
+
+Minko Gechev
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/8197d880.png)](https://javascriptweekly.com/link/162599/d076523b1d)
+
+[Ship Code Confidently When You Take Testing Fundamentals](https://javascriptweekly.com/link/162599/d076523b1d "frontendmasters.com") — Join Steve Kinney for this video course on test-driven development workflows and nail the testing fundamentals. You'll learn about automation, equality, mocks and spies, integration testing, the tools to help you along the way, and much more.
+
+Frontend Masters sponsor
+
+**IN BRIEF:**
+
+*   🗳️ [The latest _State of JS_ survey](https://javascriptweekly.com/link/162603/d076523b1d) is now open and taking your responses. It's open until December 3.
+    
+*   🇫🇷 [dotJS 2025](https://javascriptweekly.com/link/162604/d076523b1d) is taking place next April in Paris, France. If you'd like to speak, [the CFP is open](https://javascriptweekly.com/link/162606/d076523b1d) until November 29.
+    
+*   _AWS Lambda_, the serverless functions platform, [turns ten years old this week.](https://javascriptweekly.com/link/162607/d076523b1d) Its first runtime was JavaScript-based.
+    
+*   [Nova is an interesting new JavaScript engine](https://javascriptweekly.com/link/162608/d076523b1d) that takes a CPU cache friendly data-oriented approach.
+    
+
+**RELEASES:**
+
+*   [Bun v1.1.35](https://javascriptweekly.com/link/162609/d076523b1d) – The fast JavaScriptCore-based runtime adds native support for Musl and Alpine Linux, the Bun binary is a lot smaller, `console.group` and `groupEnd` are now supported, and `fs.readFile` is faster on small files.
+    
+*   [Payload 3.0](https://javascriptweekly.com/link/162610/d076523b1d) – Headless Next.js-native CMS platform.
+    
+*   📊 [Mantine v7.14.0](https://javascriptweekly.com/link/162611/d076523b1d) – The popular React component suite adds new 'angle slider', radial bar chart, funnel chart, and stacking modal/drawer components.
+    
+*   [Node.js v23.3.0 (Current)](https://javascriptweekly.com/link/162612/d076523b1d) and [v20.18.1 (LTS)](https://javascriptweekly.com/link/162614/d076523b1d)
+    
+*   [Ionic 8.4](https://javascriptweekly.com/link/162615/d076523b1d), [ESLint v9.15.0](https://javascriptweekly.com/link/162616/d076523b1d), [Turborepo 2.3](https://javascriptweekly.com/link/162617/d076523b1d), [Deno 2.1](https://javascriptweekly.com/link/162618/d076523b1d), [QuickJS 0.7](https://javascriptweekly.com/link/162619/d076523b1d)
+    
+*   🤞 It wasn't released by the time we hit 'send' but we suspect TypeScript 5.7 will be out later today – you can check on [the TypeScript blog.](https://javascriptweekly.com/link/162662/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[Exploring JavaScript Symbols](https://javascriptweekly.com/link/162620/d076523b1d "www.trevorlasn.com") — [Symbols](https://javascriptweekly.com/link/162621/d076523b1d) were a new _‘quirky little primitive’_ (as Trevor puts it) that arrived with ES6 ten years ago, but they continue to be poorly understood. Trevor boils them down really well, including a little side quest into the likely-to-be-deprecated ‘species.’
+
+Trevor I. Lasn
+
+[Breakpoints and `console.log` Is the Past, Time Travel Is the Future](https://javascriptweekly.com/link/162622/d076523b1d "wallabyjs.com") — Next-level testing in any editor, 15x faster with Interactive Time Travel Debugger, real-time insights & advanced coverage in a new UI.
+
+Wallaby Team sponsor
+
+[Building Self-Contained Executable Programs with Deno](https://javascriptweekly.com/link/162623/d076523b1d "deno.com") — One of [Deno](https://javascriptweekly.com/link/162624/d076523b1d)’s compelling features is its `deno compile` command that can turn JavaScript and TypeScript programs into single, easy to distribute cross-platform binaries. Here’s a bit more about what makes it tick.
+
+Ryan Dahl and Andy Jiang
+
+[Mapping Over Promises in JavaScript](https://javascriptweekly.com/link/162625/d076523b1d "www.telerik.com") — A quick look at three approaches: `for..of`, `Promise.all`, and `p-map`
+
+Peter Mbanugo
+
+[Explore Sentry Launch Week: New Products and Community Highlights](https://javascriptweekly.com/link/162626/d076523b1d "sentry.io") — Join us for daily video drops on YouTube at 9am PT, and on Discord to chat live with the engineers building Sentry.
+
+Sentry sponsor
+
+📄 [Migrating from VuePress to VitePress](https://javascriptweekly.com/link/162627/d076523b1d) Henry Bley-Vroman
+
+📄 [Why Alpine is the 'New jQuery' and Why That's Awesome](https://javascriptweekly.com/link/162628/d076523b1d) Raymond Camden
+
+📄 [How to Prerelease an npm Package](https://javascriptweekly.com/link/162629/d076523b1d) Scott Vandehey
+
+📄 [Precise Decimal Math in JavaScript with Fraction.js](https://javascriptweekly.com/link/162630/d076523b1d) Trevor I. Lasn
+
+📄 [How to Avoid Flaky Tests in Playwright](https://javascriptweekly.com/link/162631/d076523b1d) Zanini and Ackerson
+
+📄 [Adding Interactive Charts in Astro](https://javascriptweekly.com/link/162632/d076523b1d) Pavlin BG
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jycvvis1egjnzgebaybw.jpg)](https://javascriptweekly.com/link/162633/d076523b1d)
+
+[Viselect: Let Users Visually Select DOM Elements](https://javascriptweekly.com/link/162633/d076523b1d "simonwep.github.io") — If you’ve got a variety of elements and you want users to be able to select them in groups, individually, or even in _multiple_ groups, this lets you offer that functionality easily. Can be used in a vanilla fashion or with integrations for P/React or Vue.js.
+
+Simon Reinisch
+
+[Perfectionist 4: ESLint Plugin for Sorting Things in Your Code](https://javascriptweekly.com/link/162634/d076523b1d "github.com") — It doesn’t care _what_ you want to sort (props, imports, types, decorators, modules..) but if you want to enforce something _is_ sorted using ESLint, this is for you. It supports alphabetical and natural sorting, plus sorting by _line length_ which results in [this sort of aesthetic.](https://javascriptweekly.com/link/162635/d076523b1d)
+
+Azat S.
+
+[Your Vectors Are Too Big](https://javascriptweekly.com/link/162636/d076523b1d "shortclick.link") — Are your massive full-fidelity vectors slowing down your search? Compress, cut costs, and boost speed with MongoDB Atlas!
+
+MongoDB sponsor
+
+[React Scan: Detect Performance Issues in Your App](https://javascriptweekly.com/link/162637/d076523b1d "react-scan.million.dev") — A pure JavaScript tool you can drop into your app to automatically ‘scan’ for problematic renders without doing lots of integration work. There’s a simple demo on the homepage or you can see Aiden’s [view of Twitter/X being scanned](https://javascriptweekly.com/link/162638/d076523b1d). [GitHub repo.](https://javascriptweekly.com/link/162639/d076523b1d)
+
+Aiden Bai
+
+💬 [Discordeno v19: A Powerful Discord API Library](https://javascriptweekly.com/link/162641/d076523b1d "discordeno.js.org") — A long-standing way to work with, and build bots for, the popular Discord chat system. [v19](https://javascriptweekly.com/link/162643/d076523b1d) is a big update with breaking changes. [GitHub repo.](https://javascriptweekly.com/link/162644/d076523b1d)
+
+Discordeno Team
+
+🤖 [Vercel's AI Chatbot Starter Template](https://javascriptweekly.com/link/162645/d076523b1d "github.com") — An open source AI chatbot app template built using Next.js. It uses Vercel’s AI SDK and other Vercel APIs for the heavy lifting.
+
+Vercel
+
+[Glide.js 3.7: A Dependency-Free Slider and Carousel Control](https://javascriptweekly.com/link/162648/d076523b1d "glidejs.com") — _“Designed to slide. No less, no more”_ says the creator. MIT licensed and mature.
+
+Jędrzej Chałubek
+
+📰 Classifieds
+
+[Meticulous automatically creates & maintains E2E UI tests](https://javascriptweekly.com/link/162649/d076523b1d). Zero flakes. Used by Lattice, Bilt Rewards and others.
+
+* * *
+
+[Hookdeck](https://javascriptweekly.com/link/162652/d076523b1d): An alternative to Amazon API Gateway + Lambda + SQS. With local dev, debugging, and observability built-in.
+
+*   [pretty-ms 9.2](https://javascriptweekly.com/link/162653/d076523b1d) – Convert milliseconds to human readable strings. Now with options to hide years, seconds and days, as preferred.
+    
+*   ☕ [Javet 4.1](https://javascriptweekly.com/link/162654/d076523b1d) – Embed Node.js and V8 into Java. Updates to Node v22.11.0 and adds Float16 support.
+    
+*   [Embla Carousel 8.5](https://javascriptweekly.com/link/162655/d076523b1d) – Lightweight carousel library with fluid motion.
+    
+*   [Sortable 4.0](https://javascriptweekly.com/link/162657/d076523b1d) – Make tables sortable with `class="sortable"`
+    
+*   📊 [Vue Data UI 2.4](https://javascriptweekly.com/link/162658/d076523b1d) – Vue 3 data visualization components.
+    
+*   [Capacitor 6.2](https://javascriptweekly.com/link/162659/d076523b1d) – Build cross-platform native apps with JS.
+    
+*   [Peggy 4.2](https://javascriptweekly.com/link/162660/d076523b1d) – Parser generator for JavaScript.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/162661/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​714 — 2024 年 11 月 21 日
+
+[网上阅读](https://javascriptweekly.com/issues/714)
+
+🦃 **我们下周将休假感恩节。** 我们在我们的国家不庆祝感恩节，但我们知道你们很多人都会庆祝，所以这似乎是休息的好时机。我们将于 12 月 5 日星期四回来。\
+\_\_\
+*您的编辑彼得·库珀*
+
+连同 
+
+\[![前端大师徽标](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)]\(https:// javascriptweekly.com/link/162599/d076523b1d)
+
+JavaScript 周刊
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/q2s34tnzhkga4m0vdjol.jpg)](https://javascriptweekly.com/link/162600/d076523b1d)
+
+[在没有构建系统的情况下导入前端 JavaScript 库](https://javascriptweekly.com/link/162600/d076523b1d "jvns.ca") — 许多开发人员更喜欢避开复杂、现代的构建过程，并在更古老的环境中使用 JavaScript。学校方式。您绝对可以在没有构建系统的情况下完成，Julia 探索了一些在此类设置中导入库的方法。
+
+朱莉娅·埃文斯
+
+[Angular v19 已发布](https://javascriptweekly.com/link/162601/d076523b1d "blog.angular.dev") — 流行的企业级应用程序框架的最新版本在这里，并附有 \[▶️ 22 分钟的介绍视频] (https://javascriptweekly.com/link/162602/d076523b1d) 浏览已更改的内容和新增内容，包括增量水合作用（预览版）、两个新的核心反应原语、事件重播以及指定在服务器或客户端渲染哪些路线的功能。
+
+明科·格切夫
+
+\[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/8197d880.png)]\(https://javascriptweekly.com/link/162599/d076523b1d ）
+
+[学习测试基础知识时自信地发布代码](https://javascriptweekly.com/link/162599/d076523b1d "frontendmasters.com") — 加入 Steve Kinney 的视频课程，了解测试驱动开发工作流程并掌握测试基础知识。您将了解自动化、平等、模拟和间谍、集成测试、一路上为您提供帮助的工具等等。
+
+前端大师赞助商
+
+**简而言之：**
+
+* 🗳️ [最新的 *JS 状态* 调查](https://javascriptweekly.com/link/162603/d076523b1d) 现已开放并接受您的回复。营业至 12 月 3 日。
+
+* 🇫🇷 [dotJS 2025](https://javascriptweekly.com/link/162604/d076523b1d) 将于明年 4 月在法国巴黎举行。如果您想发言，[CFP 开放](https://javascriptweekly.com/link/162606/d076523b1d)，截止时间为 11 月 29 日。
+
+* *AWS Lambda*，无服务器函数平台，[本周迎来十岁生日。](https://javascriptweekly.com/link/162607/d076523b1d) 它的第一个运行时是基于 JavaScript 的。
+
+* [Nova 是一个有趣的新 JavaScript 引擎](https://javascriptweekly.com/link/162608/d076523b1d)，它采用 CPU 缓存友好的面向数据的方法。
+
+**发布：**
+
+* [Bun v1.1.35](https://javascriptweekly.com/link/162609/d076523b1d) – 基于 JavaScriptCore 的快速运行时添加了对 Musl 和 Alpine Linux 的本机支持，Bun 二进制文件要小得多，`console.group现在支持`和`groupEnd`，并且`fs.readFile`在小文件上速度更快。
+
+* [Payload 3.0](https://javascriptweekly.com/link/162610/d076523b1d) – Headless Next.js 原生 CMS 平台。
+
+* 📊 [Mantine v7.14.0](https://javascriptweekly.com/link/162611/d076523b1d) – 流行的 React 组件套件添加了新的“角度滑块”、径向条形图、漏斗图和堆叠模式/抽屉组件。
+
+* [Node.js v23.3.0（当前）](https://javascriptweekly.com/link/162612/d076523b1d) 和 [v20.18.1 (LTS)](https://javascriptweekly.com/link/162614/d076523b1d) ）
+
+* [Ionic 8.4](https://javascriptweekly.com/link/162615/d076523b1d)、[ESLint v9.15.0](https://javascriptweekly.com/link/162616/d076523b1d)、[Turborepo 2.3](https://javascriptweekly.com/link/162617/d076523b1d)、[Deno 2.1](https://javascriptweekly.com/link/162618/d076523b1d)、\[QuickJS 0.7]\(https://javascriptweekly.com /链接/162619/d076523b1d)
+
+* 🤞 当我们点击“发送”时它尚未发布，但我们怀疑 TypeScript 5.7 将在今天晚些时候发布 - 您可以查看 \[TypeScript 博客。]\(https://javascriptweekly.com/link/162662/d076523b1d ）
+
+📒 文章和教程
+
+[探索 JavaScript 符号](https://javascriptweekly.com/link/162620/d076523b1d "www.trevorlasn.com") — [符号](https://javascriptweekly.com/link/162621/d076523b1d) 是一个新的 \* “古怪的小原始”\*（正如 Trevor 所说）十年前随 ES6 一起出现，但它们仍然是不太了解。特雷弗（Trevor）将它们总结得非常好，包括对可能被弃用的“物种”的一些支线探索。
+
+特雷弗·拉森
+
+[断点和 `console.log` 已成为过去，时间旅行才是未来](https://javascriptweekly.com/link/162622/d076523b1d "wallabyjs.com") — 在任何编辑器中进行下一级测试，速度提高 15 倍新用户界面中的交互式时间旅行调试器、实时见解和高级覆盖。
+
+小袋鼠队赞助商
+
+[使用 Deno 构建独立的可执行程序](https://javascriptweekly.com/link/162623/d076523b1d "deno.com") — [Deno](https://javascriptweekly.com/link/162624/d076523b1d) 之一）引人注目的功能是它的“denocompile”命令，可以将 JavaScript 和 TypeScript 程序转换为单个、易于跨平台分发的程序二进制文件。以下是有关其运作原理的更多信息。
+
+瑞恩·达尔和安迪·江
+
+[JavaScript 中的 Promise 映射](https://javascriptweekly.com/link/162625/d076523b1d "www.telerik.com") — 快速浏览三种方法：`for..of`、`Promise.all`、和“p-map”
+
+彼得·姆巴努戈
+
+[探索 Sentry 发布周：新产品和社区亮点](https://javascriptweekly.com/link/162626/d076523b1d "sentry.io") — 加入我们，在太平洋时间上午 9 点在 YouTube 上观看每日视频，并在 Discord 上聊天与构建 Sentry 的工程师一起生活。
+
+哨兵赞助商
+
+📄 [从 VuePress 迁移到 VitePress](https://javascriptweekly.com/link/162627/d076523b1d) Henry Bley-Vroman
+
+📄 [为什么 Alpine 是“新 jQuery”以及为什么它很棒](https://javascriptweekly.com/link/162628/d076523b1d) Raymond Camden
+
+📄 [如何预发布 npm 包](https://javascriptweekly.com/link/162629/d076523b1d) Scott Vandehey
+
+📄 [使用 Fraction.js 在 JavaScript 中进行精确的十进制数学](https://javascriptweekly.com/link/162630/d076523b1d) Trevor I. Lasn
+
+📄 [如何避免剧作家中的不稳定测试](https://javascriptweekly.com/link/162631/d076523b1d) Zanini 和 Ackerson
+
+📄 [在 Astro 中添加交互式图表](https://javascriptweekly.com/link/162632/d076523b1d) Pavlin BG
+
+🛠 代码和工具
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jycvvis1egjnzgebaybw.jpg)](https://javascriptweekly.com/link/162633/d076523b1d)
+
+[Viselect：让用户直观地选择 DOM 元素](https://javascriptweekly.com/link/162633/d076523b1d "simonwep.github.io") — 如果您有多种元素并且希望用户能够分组、单独、甚至*多个*组中选择它们，这使您可以轻松提供该功能。可以以普通方式使用，也可以与 P/React 或 Vue.js 集成一起使用。
+
+西蒙·雷尼斯
+
+[Perfectionist 4：用于对代码中的内容进行排序的 ESLint 插件](https://javascriptweekly.com/link/162634/d076523b1d "github.com") — 它不关心你想要排序的*什么*（props、imports） 、类型、装饰器、模块..），但如果您想强制使用 ESLint 排序某些内容，那么这适合您。它支持字母顺序和自然排序，再加上按*行长度*排序，从而产生[这种美感。](https://javascriptweekly.com/link/162635/d076523b1d)
+
+阿扎特·S。
+
+[您的向量太大](https://javascriptweekly.com/link/162636/d076523b1d "shortclick.link") — 您的大量全保真向量是否会减慢您的搜索速度？使用 MongoDB Atlas 压缩、降低成本并提高速度！
+
+MongoDB 赞助商
+
+[React Scan：检测应用程序中的性能问题](https://javascriptweekly.com/link/162637/d076523b1d "react-scan.million.dev") — 一个纯 JavaScript 工具，您可以将其放入应用程序中以自动“扫描” ' 对于有问题的渲染，无需进行大量集成工作。主页上有一个简单的演示，或者您可以看到 Aiden 的[正在扫描的 Twitter/X 视图](https://javascriptweekly.com/link/162638/d076523b1d)。 [GitHub 存储库。](https://javascriptweekly.com/link/162639/d076523b1d)
+
+艾登·白
+
+💬 [Discordeno v19：强大的 Discord API 库](https://javascriptweekly.com/link/162641/d076523b1d "discordeno.js.org") — 一种长期使用流行的方式并为其构建机器人的方法不和谐聊天系统。 [v19](https://javascriptweekly.com/link/162643/d076523b1d) 是一个重大更新，其中包含重大更改。 [GitHub 存储库。](https://javascriptweekly.com/link/162644/d076523b1d)
+
+迪斯科德诺团队
+
+🤖 [Vercel 的 AI 聊天机器人入门模板](https://javascriptweekly.com/link/162645/d076523b1d "github.com") — 使用 Next.js 构建的开源 AI 聊天机器人应用程序模板。它使用 Vercel 的 AI SDK 和其他 Vercel API 来完成繁重的工作。
+
+韦尔塞尔
+
+[Glide.js 3.7：无依赖滑块和轮播控件](https://javascriptweekly.com/link/162648/d076523b1d "glidejs.com") — *“设计用于滑动。不能少，不能多”* 创作者说道。麻省理工学院许可且成熟。
+
+耶德热·查乌贝克
+
+📰 分类广告
+
+[Meticulous 自动创建和维护 E2E UI 测试](https://javascriptweekly.com/link/162649/d076523b1d)。零片。由 Lattice、Bilt Rewards 等公司使用。
+
+***
+
+[Hookdeck](https://javascriptweekly.com/link/162652/d076523b1d)：Amazon API Gateway + Lambda + SQS 的替代方案。内置本地开发、调试和可观察性。
+
+* [pretty-ms 9.2](https://javascriptweekly.com/link/162653/d076523b1d) – 将毫秒转换为人类可读的字符串。现在可以根据需要选择隐藏年、秒和日。
+
+* ☕ [Javet 4.1](https://javascriptweekly.com/link/162654/d076523b1d) – 将 Node.js 和 V8 嵌入到 Java 中。更新至 Node v22.11.0 并添加 Float16 支持。
+
+* [Embla Carousel 8.5](https://javascriptweekly.com/link/162655/d076523b1d) – 具有流畅运动的轻量级轮播库。
+
+* [Sortable 4.0](https://javascriptweekly.com/link/162657/d076523b1d) – 使用 `class="sortable"` 使表格可排序
+
+* 📊 [Vue Data UI 2.4](https://javascriptweekly.com/link/162658/d076523b1d) – Vue 3 数据可视化组件。
+
+* [Capacitor 6.2](https://javascriptweekly.com/link/162659/d076523b1d) – 使用 JS 构建跨平台本机应用。
+
+* [Peggy 4.2](https://javascriptweekly.com/link/162660/d076523b1d) – JavaScript 解析器生成器。
+
+由 [Cooperpress](https://cooperpress.com/) 出版，由 [Peter Cooper](https://javascriptweekly.com/link/162661/d076523b1d) 编辑
+
+“JavaScript”是 Oracle Corporation 在美国的商标\
+我们未获得 Oracle 的认可或隶属于 Oracle。
+
+
