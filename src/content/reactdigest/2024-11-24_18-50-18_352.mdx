@@ -1,0 +1,103 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#602 What are React Portals?
+description: RD#602 What are React Portals?
+date: 星期日 06 晚上 十一月 24o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/what-are-react-portals
+origin_site: https://newsletter.reactdigest.net/p/what-are-react-portals
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#602 What are React Portals?" url="https://newsletter.reactdigest.net/p/what-are-react-portals" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1WgieWUc2LBVpYjnrG9rwfRIHFDnIlFMz0JLsva10VGB__FYilSJuuvn9SmngGLGPdl_bmk-FR6GkDeoK1MgJogZymYm5K6ci6VqCnieNzMg05EgDB6-m5VWYC21eJ3pxs89li2oKSlBzsiwmDYHq3-1nUkI_pwuNb9O9bVyNXrbYf6iM3HWzFY_a-weWIsG000HbP-RBP6oJ2zF0RNK30ElOb6flTER3_E3iurJfi5Dab6IKDFGNUyefKLLnGzCvZI1BsAk3gNT2gUvDIf3DxbghVrINUAFjfZ5f8bB9pTT82ETx6xELf4Pn2Y6Ezpq5fbSgPeofrWqzZRWhBFLGbhm9U3kTyAOcd0rRh-8JsRZZkpYMfPa-csJa71xEqKgG_87CgOheHdAhnuZgJKRjSw3-_vKglUazUns9KbVFz3WcBFj7vQxKkaLX3yctPhi6uHxBZFgrcjKGZLjvdMJFfiX3q18q5-pLh98t-PsNwY4JTQYBcBjOcc6M7PTIkuxxfF4TVAVKcor98P4vZLV63yqoUl3H6eLPginl1Lss1HCAJu61wNdUAReOSNTU0r48Wz4-MXX9g4HCVY_tVYeRiruNEPUDmXU2vtHc5aO-l7kOl5gA_iCCsaCb-D8z6T4MQ4BjZUzIHO_MaG2usZ5C5yWypfwqw92cNMBtfk-ukOlw0Xv2nUqPoV5LjCfEKEHWSakW74yxp8nv602PBCwYFp8L4kgCyusvSLPLT8HRHh10zna4hUImH6SfEF3NOGUrk/4bq/cecCtgHfThWpOfWpFxdR8w/h0/h001.AqU9kJqtjJGwg8yHkKJ-kMJj3G3kJByVYae3MhnQ09Y)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4bq/cecCtgHfThWpOfWpFxdR8w/ho.gif)
+
+[What are React Portals?](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF9QvXOdh3M1WtnyEbmvUCba4NBC5dwQprQJJDgAaig2-xv1X1PLgWqUTvJIn_kYty0__6j2MRR9jYSlNWPTJIsniTNq3mM4G5ODLx9phNKRIX6jNca6RIv-6L6a_hzoq3prazohd1aJwaobI3H3yb2bNSZaGQV6oYXtMSX5a-FvMJ5XVRdJrdwjDbOiLjndkvmM5hWnJ6DPcT_y4wCw8uUNvISaG-QiPP5y_To6HqjzTbFRGvdt5IZ33tnBedBMBDHSwngl6CWmqr7YW1rbHGQ4/4bq/cecCtgHfThWpOfWpFxdR8w/h1/h001.0iYmTlxqCfokuOtcO5nN8elDw4zj7lAeNRy85viLsJ4)  
+_9 minutes_ by Dave Bitter
+
+Dave explains React Portals, a powerful feature that allows rendering components outside their parent component's DOM hierarchy. This functionality is particularly useful for creating elements like modals, notifications, and overlays that need to appear above other content without being constrained by their parent components' structure.
+
+[Tests are dead. Meticulous AI is here.](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2WqroLgOnA-NgNKtuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4bq/cecCtgHfThWpOfWpFxdR8w/h2/h001.9pgtU5QSveHp-HYcVdZFo4V_7a7hbKpht16NP0L91sE)  
+_sponsored by Meticulous_
+
+Meticulous AI is a tool which automatically creates and maintains a continuously evolving e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Backed by CTO of GitHub, Guillermo Rauch (next.js author), yc and others, it's built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[Uncontrolled or controlled: A matter of perspective](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63njNIysBrcSsLerGLJDSI0PYouP-AoP2vbO11z2Edeknf5tZPoAGhM58Mz-7YqQmqotfsR5BD3JCI0AO5IqziS75xLSIM0a2XOUa8OG4mKRkmOykDmWdFi0PmkaCjgFyxRolK5_7SHxDLY9s-Tvl4sy8bd8STVghgBqNK7YbtDl5bt-j_-Hag_Hvi6FLJfDkXDwVeuyTYBVtfESbkz178DCCVmE9p2dpQ0GWi0SyMmoAft5uNNy3mXduwH34heVpiHVGB_EypWPV8ef3il520md4szCrH-KCZ8eG_dQwEVpF/4bq/cecCtgHfThWpOfWpFxdR8w/h3/h001.9BFJYeM_Mp1eYrnsyhYT_9IYeQATdaC6S0Jk6LinAkY)  
+_3 minutes_ by Sam Selikoff
+
+Sam explains the concepts of controlled and uncontrolled components in React, using examples of both input elements and a Counter component. It demonstrates that a component's classification as controlled or uncontrolled depends on perspective: if it manages its own internal state, it's uncontrolled, but if it receives its state via props from a parent component, it's controlled.
+
+[Building React Forms with Ease Using React Hook Form, Zod and Shadcn](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqVCnV9ZbDUvTMdXGinyqvmFjX5QlY1bSSuZEMdGdtnL9DBUzbbPpGd5Qnzo2Kdu0o8r1f8bjkBYrpvTpcQhfUP1OZ5ip7EuoQE9EFPksbCcyQxWbDevBgDpvsEe73AsUA9TGaRd6_zpD-M93kVkenhFWEI6HN1haWPgNCn2e4soxmZPbQSyY-P0jg9-OiHLakTcLzs_4IfmYPKA2PnqXlDwvLcAc09jQRKoBQoj9lmyUl-RopJzS7NCtcAH6M3mCEAkRYMEBn2pdrBcVQhzCLISr6XPtJVHRo5EcvKuVVxOAoZbjmLB9BlxMdRcKnZD_Zw/4bq/cecCtgHfThWpOfWpFxdR8w/h4/h001.nhpDHCs0PB70Bh2vRmBS7mFNE_CDb2Wb_8Prgm5v42A)  
+_6 minutes_ by Boris Martinović
+
+Forms are something every developer encounters, whether as a user or on the developer side. They’re essential on most websites, but their complexity can vary wildly—from simple 3-field contact forms to giga-monster-t-rex, multi-page forms with 150 fields, dynamic validation, and asynchronous checks.
+
+[Build a Pomodoro app](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v_DxMTfUzLWUnXrsKgR8G6aOEbNJdGgyZ8BJZGJOaDp4hNfiH10VqM9Cg1sl6jtmaYWbwGdlCG8nmGQVR16LDitN8Vq2bJ9qMRpWuCkT-nzae9y18jWmO2UZfE9htsuPCk4GkvcZZT5op1Z1U_v2jL_Q1iqFVZ8QnB_73ZR79xvLi9-mda4sb1R5qpS2sKfLZLtH_9OsEE-3j33roPMi4GcX0qJmCbZKIQlbQIKvM3E_1pF4FpfGJQ/4bq/cecCtgHfThWpOfWpFxdR8w/h5/h001.Dpxi5Nac58f_CaO3VuEtQgi_gL9vb90Tbt2F55npEkU)  
+_45 minutes_ by Corina Udrescu
+
+Build a React app that allows users to track a Pomodoro cycle. You set a timer for 25 minutes, work until it's up, then take a five-minute break—and repeat the whole process three more times. After that, you take a 15- to 30-minute break, depending on how you feel. And that's one full Pomodoro cycle. There are many Pomodoro apps out there (PomoFocus, Forest, Tomito, Pomodor, ZenTimer), and they all have a
+
+[Be careful with useSyncExternalStore](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfLlFcsXOFpUrtXNVZnzChxyeQ8OKqy2hnYpdtzby6mxIHwib5aVNW2tBbnIUnI_exyqXCYQfmv0A6hEhsG6jNbX1Urzeh5m4KKOd_6XcBHQFrY0NgrVjS4poSHKA3NqBYHDvxwSyOZIovutuJ92-PvGIeM5H-p7A1eGeH6wvEaS35hFp4ryR_X4ha9WfBAaKJ0jQIIHZ5pQSK0yF1UaVr_iKn0URK9NYFR74N_KoUMbMJDNJj9UGuEKMY-00UNMdP_XBAldKlQa1cmAeUYavK8/4bq/cecCtgHfThWpOfWpFxdR8w/h6/h001.irViHRF_IBW3sxjniO3sMM1Nn8F6rKY1k5g-gvVM8fg)  
+_5 minutes_ by Nico Prananta
+
+Learn how to avoid infinite render loops when using useSyncExternalStore with non-primitive values in React, and discover a robust solution for storing objects in localStorage with proper type safety.
+
+[✂️ Cut your QA cycles down from hours to minutes with automated testing](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZDc6CvoM57HfpmGHktxcZjJIbi6Y22Nw0seiq6AfO7ZkhnSXVZwu-7kkjljwlrFkK7sDg8RkKeku7UAc7GjZAySAvoLgnt5G05-t6KCwj16tHvAOyCfc9S8CGGFtmLxG7MuwhypU9mB9MYQXKtrF-ed0QPk6jI0bnHYPUhTCh4NQ-UyAOezQxsTPdTIlMSXQDLcdMgk9eKY7nbUttLHNOW6kFc27jYnTQE2-LnI6_MqnpvarG2BFY12chyTupRh5CIWCEDZq8YEOcoCHBqxr7w/4bq/cecCtgHfThWpOfWpFxdR8w/h7/h001.cP7awnpTwdmzSJnxHJx1JLPcAmFK0-2A90uQ96AOz1s)  
+_sponsored by QA Wolf_
+
+If slow QA processes bottleneck your software engineering team and you’re releasing slower because of it, you must check out QA Wolf. They get you to 80% automated end-to-end test coverage and help ship 5x faster by reducing QA cycles from hours to minutes. With over 100 5-star reviews on G2 and customer testimonials from Salesloft, Drata, Autotrader, and many more — you’re in good hands.
+
+#
+</Detail>
+
+\[读在线]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1WgieWUc2LBVpYjnrG9rwfRIHFDn IlFMz0JLsva10VGB\_\_FYilSJuuvn9SmngGLGPdl\_bmk-FR6GkDeoK1MgJogZymYm5K6ci6VqCnieNzMg05EgDB6-m5VWYC21eJ3pxs89li2oKSlBzsiwm DYHq3-1nUkI\_pwuNb9O9bVyNXrbYf6iM3HWzFY\_a-weWIsG000HbP-RBP6oJ2zF0RNK30ElOb6flTER3\_E3iurJfi5Dab6IKDFGNUyefKLLnGzCvZI1Bs Ak3gNT2gUvDIf3DxbghVrINUAFjfZ5f8bB9pTT82ETx6xELf4Pn2Y6Ezpq5fbSgPeofrWqzZRWhBFLGbhm9U3kTyAOcd0rRh-8JsRZZkpYMfPa-csJa71x EqKgG\_87CgOheHdAhnuZgJKRjSw3-\_vKglUazUns9KbVFz3WcBFj7vQxKkaLX3yctPhi6uHxBZFgrcjKGZLjvdMJFfiX3q18q5-pLh98t-PsNwY4JTQYB cBjOcc6M7PTIkuxxfF4TVAVKcor98P4vZLV63yqoUL3H6eLPginl1Lss1HCAJu61wNdUAReOSNTU0r48Wz4-MXX9g4HCVY\_tVYeRiruNEPUDmXU2vtHc5a O-l7kOl5gA\_iCCsaCb-D8z6T4MQ4BjZUzIHO\_MaG2usZ5C5yWypfwqw92cNMBtfk-ukOlw0Xv2nUqPoV5LjCfEKEHWSakW74yxp8nv602PBCwYFp8L4kg CyusvSLPLT8HRHh10zna4hUImH6SfEF3NOGUrk/4bq/cecCtgHfThWpOfWpFxdR8w/h0/h001.AqU9kJqtjJGwg8yHkkKJ-kMJj3G3kJByVYae3MhnQ09Y)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4bq/cecCtgHfThWpOfWpFxdR8w/ho.gif)
+
+\[什么是反应门户？]\(https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF9QvXOdh3M1WtnyEbmvUCba4NBC5dwQprQJJD gaaig2-xv1X1PLgWqUTvJIn\_kYty0\_\_6j2MRR9jYSlNWPTJIsniTNq3mM4G5ODLx9phNKRIX6jNca6RIv-6L6a\_hzoq3prazohd1aJwaobI3 H3yb2bNSZaGQV6oYXtMSX5a-FvMJ5XVRdJrdwjDbOiLjndkvmM5hWnJ6DPcT\_y4wCw8uUNvisaG-QiPP5y\_To6HqjzTbFRGvdt5IZ33tnBe dBMBDHSwngl6CWmqr7YW1rbHGQ4/4bq/cecCtgHfThWpOfWpFxdR8w/h1/h001.0iYmTlxqCfokuOtcO5nN8elDw4zj7lAeNRy85viLsJ4)\
+*9 分钟*戴夫·比特 (Dave Bitter)
+
+Dave 解释了 React Portal，这是一项强大的功能，允许在父组件的 DOM 层次结构之外渲染组件。此功能对于创建需要显示在其他内容上方而不受其父组件结构约束的元素（例如模态、通知和覆盖层）特别有用。
+
+\[测试已死。细致的AI是在这里。]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2 WqroLgOnA-NGNKtuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4bq/cecCtg HfThWpOfWpFxdR8w/h2/h001.9pgtU5QSveHp-HYcVdZFo4V\_7a7hbKpht16NP0L91sE)\
+*由精心赞助*
+
+Meticulous AI 是一款自动创建和维护不断发展的 e2e UI 测试套件的工具，该套件涵盖应用程序的每个角落 - 无需开发人员进行任何干预。在 GitHub 首席技术官 Guillermo Rauch（next.js 作者）、yc 和其他人的支持下，它是从 Chromium 级别构建的，具有确定性调度引擎 - 使其成为唯一消除碎片的测试工具。
+
+\[不受控制或受控制：一个问题透视]\(https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63njNIysBrcSsLerGLJDSI0PYouP-AoP2vbO11z2E deknf5tZPoAGhM58Mz-7YqQmqotfsR5BD3JCI0AO5IqziS75xLSIM0a2XOUa8OG4mKRkmOykDmWdFi0PmkaCjgFyxRolK5\_7SHxDLY9s-Tvl4sy8bd 8STVghgBqNK7YbtDl5bt-j\_-Hag\_Hvi6FLJfDkXDwVeuyTYBVtfESbkz178DCCVmE9p2dpQ0GWi0SyMmoAft5uNNy3mXduwH34heVpiHVGB\_EypWP V8ef3il520md4szCrH-KCZ8eG\_dQwEVpF/4bq/cecCtgHfThWpOfWpFxdR8w/h3/h001.9BFJYeM\_Mp1eYrnsyhYT\_9IYeQATdaC6S0Jk6LinAkY)\
+*3 分钟* Sam Selikoff
+
+Sam 使用输入元素和 Counter 组件的示例解释了 React 中受控组件和非受控组件的概念。它表明组件的分类为受控或不受控取决于视角：如果它管理自己的内部状态，那么它是不受控的，但如果它通过父组件的 props 接收其状态，那么它是受控的。
+
+\[使用 React Hook Form、Zod 和 轻松构建 React Form Shadcn]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqVCnV9ZbDUvTMdXGinyqvmFjX5QlY1bSSuZEMdGdtnL9DBUzb bPpGd5Qnzo2Kdu0o8r1f8bjkBYrpvTpcQhfUP1OZ5ip7EuoQE9EFPksbCcyQxWbDevBgDpvsEe73AsUA9TGaRd6\_zpD-M93kVkenhFWEI6HN1haWPgNCn2 e4soxmZPbQSyY-P0jg9-OiHLakTcLzs\_4IfmYPKA2PnqXlDwvLcAc09jQRKoBQoj9lmyUl-RopJzS7NCtcAH6M3mCEAkRYMEBn2pdrBcVQhzCLISr6XPtJ VHRo5EcvKuVVxOAoZbjmLB9BlxMdRcKnZD\_Zw/4bq/cecCtgHfThWpOfWpFxdR8w/h4/h001.nhpDHCs0PB70Bh2vRmBS7mFNE\_CDb2Wb\_8Prgm5v42A)\
+*6 分钟* 鲍里斯·马蒂诺维奇 (Boris Martinović)
+
+表单是每个开发人员都会遇到的东西，无论是作为用户还是开发人员。它们对于大多数网站来说都是必不可少的，但它们的复杂性可能差别很大——从简单的 3 字段联系表单到 giga-monster-t-rex、具有 150 个字段、动态验证和异步检查的多页表单。
+
+\[建立一个番茄钟应用程序]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v\_DxMTfUzLWUnXrsKgR8G6aO EbNJdGgyZ8BJZGJOaDp4hNfiH10VqM9Cg1sl6jtmaYWbwGdlCG8nmGQVR16LDitN8Vq2bJ9qMRpWuCkT-nzae9y18jWmO2UZfE9ht SUPCK4GkvcZZT5op1Z1U\_v2jL\_Q1iqFVZ8QnB\_73ZR79xvLi9-mda4sb1R5qpS2sKfLZLtH\_9OsEE-3j33roPMi4GcX0qJmCbZKIQ lbQIKvM3E\_1pF4FpfGJQ/4bq/cecCtgHfThWpOfWpFxdR8w/h5/h001.Dpxi5Nac58f\_CaO3VuEtQgi\_gL9vb90Tbt2F55npEkU)\
+*45 分钟* Corina Udrescu
+
+构建一个 React 应用程序，允许用户跟踪番茄周期。你设置一个 25 分钟的计时器，一直工作到时间结束，然后休息 5 分钟，然后再重复整个过程 3 次。之后，您会休息 15 到 30 分钟，具体取决于您的感觉。这就是一个完整的番茄钟周期。有很多番茄工作法应用程序（PomoFocus、Forest、Tomito、Pomodor、ZenTimer），它们都有一个
+
+\[小心useSyncExternalStore]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfLlFcsXOFpUrtXNVZnzChxyeQ8O Kqy2hnYpdtzby6mxIHwib5aVNW2tBbnIUniI\_exyqXCYQfmv0A6hEhsG6jNbX1Urzeh5m4KKOd\_6XcBHQFrY0NgrVjS4poSHKA3NqBYHDvxwSyOZ IovutuJ92-PvGIeM5H-p7A1eGeH6wvEaS35hFp4ryR\_X4ha9WfBAaKJ0jQIIHZ5pQSK0yF1UaVr\_iKn0URK9NYFR74N\_KoUMbMJDNJj9UGuEKM Y-00UNMdP\_XBAldKlQa1cmAeUYavK8/4bq/cecCtgHfThWpOfWpFxdR8w/h6/h001.irViHRF\_IBW3sxjniO3sMM1Nn8F6rKY1k5g-gvVM8fg)\
+*5 分钟* 尼科·普拉南塔 (Nico Prananta)
+
+了解在 React 中将 useSyncExternalStore 与非原始值一起使用时如何避免无限渲染循环，并发现一个稳健的解决方案，用于在具有适当类型安全性的 localStorage 中存储对象。
+
+\[✂️ 通过自动化将您的 QA 周期从几小时缩短至几分钟测试]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZDc6CvoM57HfpmGHktxcZjJIbi6Y22Nw0seiq 6AfO7ZkhnSXVZwu-7kkjljwlrFkK7sDg8RkKeku7UAc7GjZAySAvoLgnt5G05-t6KCwj16tHvAOyCfc9S8CGGFtmLxG7MuwhypU9mB9MYQX KTRF-ed0QPk6jI0bnHYPUhTCH4NQ-UyAOezQxsTPdTIlMSXQDLcdMgk9eKY7nbUttLHNOW6kFc27jYnTQE2-LnI6\_MqnpvarG2BFY12chyT upRh5CIWCEDZq8YEOcoCHBqxr7w/4bq/cecCtgHfThWpOfWpFxdR8w/h7/h001.cP7awnpTwdmzSJnxHJx1JLPcAmFK0-2A90uQ96AOz1s)\
+*由 QA Wolf 赞助*
+
+如果缓慢的 QA 流程成为您的软件工程团队的瓶颈，并且您因此发布速度变慢，那么您必须查看 QA Wolf。它们使您能够实现 80% 的自动化端到端测试覆盖率，并通过将 QA 周期从几小时缩短到几分钟来帮助交付速度提高 5 倍。 G2 拥有超过 100 条 5 星级评论以及来自 Salesloft、Drata、Autotrader 等的客户评价 — 您将得到良好的帮助。
+
+#
+
+
