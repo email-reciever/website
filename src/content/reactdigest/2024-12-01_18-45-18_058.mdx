@@ -1,0 +1,103 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#483 A Perfect Modal Dialog
+description: RD#483 A Perfect Modal Dialog
+date: 星期日 06 晚上 十二月 1o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/a-perfect-modal-dialog
+origin_site: https://newsletter.reactdigest.net/p/a-perfect-modal-dialog
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#483 A Perfect Modal Dialog" url="https://newsletter.reactdigest.net/p/a-perfect-modal-dialog" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1Wz0vUHmEMxr9lg5UsdPUK94cd3J9Sny_Vvvua7KuWWVBPYm5BCK2OBou87ZdGF58p-ggjCmt3inKIcYHm4fsP2BZcWFJZJ8BMX_pyCokslu6RochYeNb4pVJSjzkHaj3WvXec5bjmoUcqPeEnet2M6uPXvYowPzNvqb_h9vIJu65sTXTX7ypF7eNQ-o_KMkvgkqfzArcMKPWvnnnFvkzwdfwwd2GuJ-h81BwYvDKato7jG1_sBFy93uZns3tq3HFMTjcpy4vXmoWqrkFeNnrnZps2BllrBQEEkFvreV36BGMB3hwweTM14Vn_MmqUNyXTELQhE-sg-flwKzZvGDYf7LfLjiyzq6Ta---WdAaXowoYZhBt9L3ka73QVdn08VEfV8W98cQzAyJ8GlpiN7DMuyFlZ3M1wPnorvoDC0qtiv5YHhtozSEoX6D2t5R_V5prH4tCzJXK2I1f6ATzs-dSP-ci3IcuELm-Ql0evgAPa7QiPstjp3_CXQHJb8IGUBLRS-UcY-PXtye5K07_I6TT_ZMLVE-uc2D1YW_xy0acoaO1SLv0Kebt9FULKkhqdl4GUkz_aYt24YHriI5Je030RaW_YwGujr9EG3bNfNP9z82CmPOd0wIb_bZn9zZ6qDSCEo-_XVVp9YhLgoqpHJ36CBtwQNgj79KkLOIJFVV-xEp-MkncB-NOmES6UJ80sECoi2Jyx7tc37HHiZrsXlqGINkoqNs0fgjVpCLG9zZKUvoNj32-hgpf_xCYSA-8FUrU/4bx/tRey6WuqTKSblPyhyxRkRQ/h0/h001.Vxyh9dTUB3ezA8irFYurB9xc_UrQfyvgexHVeMDVF3g)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4bx/tRey6WuqTKSblPyhyxRkRQ/ho.gif)
+
+[Existential React questions and a perfect Modal Dialog](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqaLHy8G_Zejf_j1U5B-_Zp3_nS0ztHpPVUxT8wK9xsh0YBS52gp2G7n0i6vnb6Kh-Qs96gdMUVAqqwF22dDO-Z01POETX3vO-9GscrLB6QPyZmQtRjkrwK56DDRwXijP3fnOZuHljBvLk8OJZHlfGjSu2qkidxTOJlr2CaNsUW4o6cEPlrm3izqYXKeS6jOd4Dtb1IZ3n9weNzNCujZ7JYJ7ZmH61SBDF9KRA2c8PxQ-mcj-VAUNTtvB6tJkuqv3uee3y52CpKi-xuTZrVWYdAY/4bx/tRey6WuqTKSblPyhyxRkRQ/h1/h001.Wp91WUVSk8VxKEAxmLDKMXx_hEXwyhOkP9WQ0nQ5kbU)  
+_21 minutes_ by Nadia Makarevich
+
+A step-by-step process for implementing a new feature from an idea to a production-ready solution using Modal Dialog as an example.
+
+[Implement policy-driven RBAC and ABAC in React](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqdD8mD2LmF4iyQyJj-lNrQ0-4DqSdszxMREOon4iaeJ9dJWK-IhfbznmxXYPCGd0PrVs6iT8mNuYcMVeiaKdbv3NK4teCU3i7oE7X3zoEQrtNX29sUk-i69tAS7lyl8_hRvl_GPjyXSQ7YLwd6c6CX7CcMLTo0qfEELs8Iyj-CloEO_7AzaE2P86lENyVSmJbIoZzNe4F9qv6oBV-6oypIPzm9h-OYh6d8G45Xm32Ov4LWKXw8rWTvSg9RGOWSAUhtPJipoXnWLey-S4ocPZApnKUOd3uYmN3qgNLfmJ7lI3/4bx/tRey6WuqTKSblPyhyxRkRQ/h2/h001.2sjwgj4Sc2jyuTFiMuOwm5SBfm2UpNk3erDyM2nEzbM)  
+_sponsored by Cerbos_
+
+Fine-grained access controls are challenging. We put together a demo on using Cerbos to implement a scalable and maintainable authorization framework, featuring examples and best practices. If you’re looking to simplify your authorization processes while maintaining high security standards, you will find this piece helpful.
+
+[The anatomy of a React Island](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO_l_N44JRwBn02VVaiur6l-WQ2bmhvM1YrXx9efao_ZO2UYh2TuaW6dEpX5lZ3pzkIM89Vq6t6ZgV0ML2GMg9ebGtN0IMEuyHNGBNe1RKgGJMpibm5MPyr0bqK1WgsvYfTlfVnnte-NUUVzUIHDDFblcABQTwlq_JEi0syb9H_1SNz8JwibK191TYB_bu-NrozdYRqH7vIIu0GU2m4pbtCZ-HAkT1Bz44xBdCHCEXXax5nj49Ld3pJaycji7k-icGg/4bx/tRey6WuqTKSblPyhyxRkRQ/h3/h001.Kai31Xr4zP5qvrSd3z7w9924vNK1qBLkhN6GDt51BYk)  
+_6 minutes_ by Swizec Teller
+
+React Islands is a technique for integrating React components into traditionally rendered web projects, allowing developers to modernize legacy codebases incrementally without requiring a complete rewrite. The approach involves rendering React components into designated div elements within existing HTML pages, with each "island" functioning as a self-contained React application that can handle its own data fetching and state management.
+
+[Loading Data with TanStack Router](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfaSOFJc2XPJZaMvVYObtcgMiPY3I3MPuf78fNCTFdwoACgwplAsfa7eScfuyPpk7Xgo2Wd3cRFDwWx3tAQtYTRA33y06XO4bTzFHY4y-ML7EHFMWoU6rTItVroEHGZe1hSRCmHE6hWVznm3qN7LUSsFnhJIeiKuMdaUN8Lhstsn2ffD0A1Fj7MI-44poAhCUA6cvEPcOQLgUNqB2SQWi8jYbq-FZanI7aWBZDscy5aAP0-nk8Jji7R49z27kfJKX6_2jDQHnh-B26K1Y0ytnsJo/4bx/tRey6WuqTKSblPyhyxRkRQ/h4/h001.4q8OMC5hSEgS6cbQo_hlZ3zXUl7QAp4x-G92BAC3FUU)  
+_14 minutes_ by Adam Rackis
+
+We’ll cover the built-in hooks TanStack Router ships with to load and invalidate data. Then we’ll cover how easily TanStack Query (also known as react-query) integrates and see what the tradeoffs of each are.
+
+[The AutoScrollList Component](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXABCRFLJPvQcubVN3pyo2uG6NP2j_3PzxuqDVX_XBSqO7UCWqSHHCOb-d90s5AfhSIXR_XAIu7t3imo8rYNfAoKQsE0YhohkYKVdCi2KVkDmpVWdnu-HDEceGG_B3VyzRw7wwCkRo33-w3EzFUcpNRvSR4UkEcW3O1ZDK4vTEnMlvxys2kB3Tcwc3PziRXZiwxFP2zGWxsGjNuKQa7es9oKkz64hip7h7wX0Yz1PMF8mf73shX4z9PKhPSRz3a0PrcQh9hH7Y9Q6t-1H4LcfgY/4bx/tRey6WuqTKSblPyhyxRkRQ/h5/h001.8STKgA4iifTgO1ymTOLnR_dxJ-5wcOPuaK_lISx8Kdk)  
+_9 minutes_ by Nikhil Snayak
+
+Nikhil presents three iterations: starting with a basic useRef and useEffect implementation, progressing to a callback ref approach with user interaction handling, and finally settling on a vanilla DOM-based solution that offers better performance, mobile support, and simpler code structure. The final version eliminates React-specific state management and uses native DOM events to create a robust, cross-device compatible auto-scrolling behavior.
+
+[Feature-based React Architecture](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zL0r2Mk0cucPtUtrnlhyKVmBbB0ejlRAT3kRMZCltKLRgkk-cYXezqExHyrFkTdMWX0ymDgYuBVV-4RlR40TIPtJET2n_gSYg1K8sombXkWW7dQ4WqmqwCduuwV7EWzso5swvLPh0zPEIq4lefdmEAUvmnxFwiHLKUW-d_ndDomOIVjznUsErZi_bg6nIfi-tLOM_hC68RpZ75e2kcadCeeaUUTmMGNEbZh75myzLpAxA/4bx/tRey6WuqTKSblPyhyxRkRQ/h6/h001.0Aq_Hh2MsbHkAqoTElN1E3_i3GVKIoHO_gHBqezgaWE)  
+_7 minutes_ by Robin Wieruch
+
+The article discusses creating a feature-based architecture in React applications using Server Components and Server Actions. It demonstrates how to decouple features by splitting components and data fetching functions into focused, domain-specific units.
+
+[Introducing &lt;Waitlist /> mode - a virtual queue for your app](https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea_eXiYAmI3aoSqnrpA_OYNG0Cb9K9mg_7QRehkqWZrb2YZyPm8wqh-LbWJN6lCkHDR8TfOd3tikv2bObSHU0uLRrCVzvKNQpRfxvjk4xvOdnKuuI8535xOy_Vcv77fcs86tYAPyhBhic6IX5Ganm9fn3V0G8cDWzvWoYAYi5gs92fKDCrEhfSGo-zvt6YIgpQiIhtq850VAxCAuKLBDXZ2enSCXAyhxPNaZLo8Ilu6DmL1UhXa-/4bx/tRey6WuqTKSblPyhyxRkRQ/h7/h001.hUwy6Qv8UeGOK9Df29p9t7DOn8ltHbhou-k__V5UZL0)  
+_sponsored by Clerk_
+
+Waitlist is a new sign-up mode and component that lets users register interest and join a waitlist for early access to your product. Manage user access and onboarding all within your Clerk Dashboard. Read our changelog announcement for more details.
+
+#
+</Detail>
+
+\[读在线]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1Wz0vUHmEMxr9lg5UsdPUK94cd3J 9Sny\_Vvvua7KuWWVBPYm5BCK2OBou87ZdGF58p-ggjCmt3inKIcYHm4fsP2BZcWFJZJ8BMX\_pyCokslu6RochYeNb4pVJSjzkHaj3WvXec5bjmoUcqPeE net2M6uPXvYowPzNvqb\_h9vIJu65sTXTX7ypF7eNQ-o\_KMkvgkqfzArcMKPWvnnnFvkzwdfwwd2GuJ-h81BwYvDKato7jG1\_sBFy93uZns3tq3HFMTjcp y4vXmoWqrkFeNnrnZps2BllrBQEEkFvreV36BGMB3hwweTM14Vn\_MmqUNyXTELQhE-sg-flwKzZvGDYf7LfLjiyzq6Ta---WdAaXowoYZhBt9L3ka73QVd n08VEfV8W98cQzAyJ8GlpiN7DMuyFlZ3M1wPnorvoDC0qtiv5YHhtozSEoX6D2t5R\_V5prH4tCzJXK2I1f6ATzs-DSP-ci3IcuELm-Ql0evgAPa7QiPst jp3\_CXQHJb8IGUBLRS-UCY-PXtye5K07\_I6TT\_ZMLVE-uc2D1YW\_xy0acoaO1SLv0Kebt9FULKkhqdl4GUkz\_aYt24YHriI5Je030RaW\_YwGujr9EG3bNf NP9z82CmPOd0wIb\_bZn9zZ6qDSCEo-\_XVVp9YhLgoqpHJ36CBtwQNgj79KkLOIJFVV-xEp-MkncB-NOmES6UJ80sECoi2Jyx7tc37HHiZrsXlqGINkoqN s0fgjVpCLG9zZKUvoNj32-hgpf\_xCYSA-8FUrU/4bx/tRey6WuqTKSblPyhyxRkRQ/h0/h001.Vxyh9dTUB3ezA8irFYurB9xc\_UrQfyvgexHVeMDVF3g)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4bx/tRey6WuqTKSblPyhyxRkRQ/ho.gif)
+
+\[存在主义反应问题和完美的模态对话框]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqaLHy8G\_Zejf\_j1U5B-\_Zp3\_nS0ztHpPVUxT8wK 9xsh0YBS52gp2G7n0i6vnb6Kh-Qs96gdMUVAqqwF22dDO-Z01POETX3vO-9GscrLB6QPyZmQtRjkrwK56DDRwXijP3fnOZuHljBvLk8OJZH lfGjSu2qkidxTOJlr2CansUW4o6cEPlrm3izqYXKeS6jOd4Dtb1IZ3n9weNzNCujZ7JYJ7ZmH61SBDF9KRA2c8PxQ-mcj-VAUNTtvB6tJku qv3uee3y52CpKi-xuTZrVWYdAY/4bx/tRey6WuqTKSblPyhyxRkRQ/h1/h001.Wp91WUVSk8VxKEAxmLDKMXx\_hEXwyhOkP9WQ0nQ5kbU)\
+*21 分钟* 纳迪亚·马卡列维奇
+
+以模态对话框为例，逐步实现从想法到生产就绪解决方案的新功能。
+
+\[在中实施政策驱动的 RBAC 和 ABAC反应]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqdD8mD2LmF4iyQyJj-lNrQ0-4DqSdszxMREOon4iaeJ9d JWK-IhfbznmxXYPCGd0PrVs6iT8mNuYcmVeiaKdbv3NK4teCU3i7oE7X3zoEQrtNX29sUk-i69tAS7lyl8\_hRvl\_GPjyXSQ7YLwd6c6CX7CcMLTo 0qfEELs8Iyj-CloEO\_7AzaE2P86lENyVSmJbIoZzNe4F9qv6oBV-6oypIPzm9h-OYh6d8G45Xm32Ov4LWKXw8rWTvSg9RGOWSAUhtPJipoXnWLey -S4ocPZApnKUOd3uYmN3qgNLfmJ7lI3/4bx/tRey6WuqTKSblPyhyxRkRQ/h2/h001.2sjwgj4Sc2jyuTFiMuOwm5SBfm2UpNk3erDyM2nEzbM)\
+*由赛波斯赞助*
+
+细粒度的访问控制具有挑战性。我们制作了一个有关使用 Cerbos 实施可扩展且可维护的授权框架的演示，其中包含示例和最佳实践。如果您希望在保持高安全标准的同时简化授权流程，您会发现本文很有帮助。
+
+\[React 的剖析岛]\(https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn\_0mUAO\_l\_N44JRwBn02VVaiur6l-WQ2bmhvM1Y rXx9efao\_ZO2UYh2TuaW6dEpX5lZ3pzkIM89Vq6t6ZgV0ML2GMg9ebGtN0IMEuyHNGBNe1RKgGJMpibm5MPyr0bqK1WgsvYfTlfVnn te-NUUVzUIHDDFblcABQTwlq\_JEi0syb9H\_1SNz8JwibK191TYB\_bu-NrozdYRqH7vIIu0GU2m4pbtCZ-HAkT1Bz44xBdCHCEXXax5 nj49Ld3pJaycji7k-icGg/4bx/tRey6WuqTKSblPyhyxRkRQ/h3/h001.Kai31Xr4zP5qvrSd3z7w9924vNK1qBLkhN6GDt51BYk)\
+*6 分钟* Swizec Teller
+
+React Island 是一种将 React 组件集成到传统渲染的 Web 项目中的技术，允许开发人员逐步对遗留代码库进行现代化改造，而无需完全重写。该方法涉及将 React 组件渲染到现有 HTML 页面中指定的 div 元素中，每个“岛”充当一个独立的 React 应用程序，可以处理自己的数据获取和状态管理。
+
+\[使用TanStack加载数据路由器]\(https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfaSOFJc2XPJZaMvVYObtcgMiPY3I3MPuf78fNCT FdwoACgwplAsfa7eScfuyPpk7Xgo2Wd3crFDwWx3tAQtYTRA33y06XO4bTzFHY4y-ML7EHFMWoU6rTITVroEHGZe1hSRCmHE6hWVznm3qN7 LUSsFnhJIeiKumdaUN8Lhstsn2ffD0A1Fj7MI-44poAhCUA6cvEPcOQLgUNqB2SQWi8jYbq-FZanI7aWBZDscy5aAP0-nk8Jji7R49z27kf JKX6\_2jDQHnh-B26K1Y0ytnsJo/4bx/tRey6WuqTKSblPyhyxRkRQ/h4/h001.4q8OMC5hSEgS6cbQo\_hlZ3zXUl7QAp4x-G92BAC3FUU)\
+*14 分钟* 亚当·拉基斯 (Adam Rackis)
+
+我们将介绍 TanStack Router 附带的内置钩子，用于加载和使数据无效。然后我们将介绍 TanStack Query（也称为 React-query）集成的难易程度，并了解每种方法的优缺点。
+
+\[自动滚动列表组件]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXABCRFLJPvQcubVN3pyo2uG6NP2j\_3Pzxuq DVX\_XBSqO7UCWqSHHCOb-d90s5AfhSIXR\_XAIu7t3imo8rYNfAoKQsE0YhohkYKVdCi2KVkDmpVWdnu-HDEceGG\_B3VyzRw7wwCkRo33-w3E zFUcpNRvSR4UkEcW3O1ZDK4vTEnMlvxys2kB3Tcwc3PziRXZiwxFP2zGWxsGjNuKQa7es9oKkz64hip7h7wX0Yz1PMF8mf73shX4z9PKhPSR z3a0PrcQh9hH7Y9Q6t-1H4LcfgY/4bx/tRey6WuqTKSblPyhyxRkRQ/h5/h001.8STKgA4iifTgO1ymTOLnR\_dxJ-5wcOPuaK\_lISx8Kdk)\
+*9 分钟* 尼基尔·斯纳亚克 (Nikhil Snayak)
+
+Nikhil 提出了三个迭代：从基本的 useRef 和 useEffect 实现开始，逐步发展到具有用户交互处理的回调 ref 方法，最后确定基于普通 DOM 的解决方案，该解决方案提供更好的性能、移动支持和更简单的代码结构。最终版本消除了特定于 React 的状态管理，并使用本机 DOM 事件来创建强大的、跨设备兼容的自动滚动行为。
+
+\[基于特征的React架构]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf\_qUprM09yoMPtF27zL0r2Mk0 cucPtUtrnlhyKVmBbB0ejlRAT3kRMZCltKLRgkk-cYXezqExHyrFkTdMWX0ymDgYuBVV-4RlR40TIPtJET2n\_gSYg1K8sombXkWW7dQ 4WqmqwCduuwV7EWzso5swvLPh0zPEIq4lefdmEAUvmnxFwiHLKUW-d\_ndDomOIVjznUsErZi\_bg6nIfi-tLOM\_hC68RpZ75e2kcadCe eaUUTmMGNEbZh75myzLpAxA/4bx/tRey6WuqTKSblPyhyxRkRQ/h6/h001.0Aq\_Hh2MsbHkAqoTElN1E3\_i3GVKIoHO\_gHBqezgaWE)\
+*7 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+本文讨论使用服务器组件和服务器操作在 React 应用程序中创建基于功能的架构。它演示了如何通过将组件和数据获取功能拆分为集中的、特定于域的单元来解耦功能。
+
+\[引入 &lt;Waitlist /> 模式 - 为您提供虚拟队列应用程序]\(https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea\_eXiYAmI3aoSqnrpA\_OYNG0Cb9K9mg\_7QReh kqWZrb2YZyPm8wqh-LbWJN6lCkHDR8TfOd3tikv2bObSHU0uLRrCVzvKNQpRfxvjk4xvOdnKuuI8535xOy\_Vcv77fcs86tYA PyhBhic6IX5Ganm9fn3V0G8cDWzvWoYAYi5gs92fKDCrEhfSGo-zvt6YIgpQiIhtq850VAxCAuKLBDXZ2enSCXAyhxPNaZL o8Ilu6DmL1UhXa-/4bx/tRey6WuqTKSblPyhyxRkRQ/h7/h001.hUwy6Qv8UeGOK9Df29p9t7DOn8ltHbhou-k\_\_V5UZL0)\
+*由职员赞助*
+
+候补名单是一种新的注册模式和组件，可让用户注册兴趣并加入候补名单以尽早访问您的产品。 在您的文员仪表板中管理所有用户访问和入职。请阅读我们的变更日志公告以了解更多详细信息。
+
+#
+
+
