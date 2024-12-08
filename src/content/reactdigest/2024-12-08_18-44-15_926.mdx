@@ -1,0 +1,97 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#484 How To Improve Interaction-to-Next-Paint
+description: RD#484 How To Improve Interaction-to-Next-Paint
+date: 星期日 06 晚上 十二月 8o 2024
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/how-to-improve-interaction-to-next-paint
+origin_site: https://newsletter.reactdigest.net/p/how-to-improve-interaction-to-next-paint
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#484 How To Improve Interaction-to-Next-Paint" url="https://newsletter.reactdigest.net/p/how-to-improve-interaction-to-next-paint" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UzLl1hlsBX6ufCpWakhKXg8vqTWwAmyIH2C_ORln-pSIEgcLjbXI0yWTIlyvg8sbGyCiuwgfb20pn2NR99i-4iWnnmGc_iEdRbBOcs0d33okWsz_mtsArRcJvlTvVrHkyh91gG_XPYVU4Q0JMV464L_m6tFMJsz45yBrLP-01rKLlWQ9jjmXYYRoUV0k0Kv8uH_WGZicJy0gYG0Ne4M_nFaxdjkJ_z6QfByzXktn_ijGCaaC8DiQoqVVjMiiQpM2kRyU5GzWX8KW52hgF3wGEe885iHv9eIWy-8N4w2rr90myxfPSeE97v02BAw-BIWFozn_xdW7GPPiN4BGleEPwne3Ic8VoW6s77UDPO7M9iNpBykWO7wBNKU5GyPb-xG7J8TmePiaYy5SuKWt_fRwzkRH8BZDjXUdRGBRHsZbqIVsmSd_Da6XlMOUuoglsh20H8wEwYwTAjPmyJNaKwB3kqJMvbRb0urLBpRZt9xAmXMqxVAsvOeddJLIvdkEkpRig_Wvqnu0le3XWg0vIFQ7EUSdQdD12pwQHgGb1BYjYk-vorBQuZAs6rKWXB2PqA8yDzDU-YxPQwfqGpwK17iLIsCAcrF3FKptU8Thun9t18tii7rh0yfR_aETrm7dUUVw0By9_DsvN2Sr7lnFCyK2zmNDlwKgybTRPgbuaQEh2otHj9TgIPbayWvmO2NN6XLtbtGJ-xhUl2YXJPb6ENysl516YSwlnQHNclM6s1fZMOfHRPO6BBJ-AfVJWj0L7AXFHtc9hXFdPnnIQl1SZtJr9uYxFg4bEkpCWZ-vBOGXHIyw/4c4/RRfexmGfRfOh6gu9b2CJxA/h0/h001.VP_2wg3WJ_uP2ytbjGQsG1K5Al7ySRVVqgPX_EEjkNg)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4c4/RRfexmGfRfOh6gu9b2CJxA/ho.gif)
+
+[Tests are dead. Meticulous AI is here.](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6DvHowMd5fyCwFZ9VlDqtjEN84KnUybgtTkTpy1LBbIcbfcaqZo5OvSOZFSQbEf57gfbUQivOUBCn85E_j8R2DODzK3J8S_5cXlNr_Ik3QLSA/4c4/RRfexmGfRfOh6gu9b2CJxA/h1/h001.nwxC8gZWW6zBC_ANQxIb6jnKx6DOyoFk45EFy5yoixw)  
+_sponsored by Meticulous_
+
+Meticulous AI is a tool which automatically creates and maintains a continuously evolving e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Backed by CTO of GitHub, Guillermo Rauch (next.js author), yc and others, it's built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[How To Improve Interaction-to-Next-Paint](https://link.mail.beehiiv.com/ss/c/u001.K5pvBZzC3tJzgxtI00uQCOV1ZytzmUUHYXTXw2bsr8cp_3odOMjV8H-EEgVPfHauZfUIomRNb9ejNlq4fQ_aXzpPAfPjHMaFG8VLq2MUvMFR9WdUCDDNINneBMrZOqYi4cRrPimU868fpN4qhNN_tPjYd3WzMjJHNXRQDEkeujGDa_itCucHKn3cfCZaIDv_KZDQd1ejRTn5FEABk0fxYqBQQwUc_gYAM3f0Q8BOn1RO0tIF6EDaLDwQuuBQeeGHvZnALim1Dppe9Y6hMi_IGLC2QHQHWhKRtPSgUsiscdw/4c4/RRfexmGfRfOh6gu9b2CJxA/h2/h001.tzNpVdrvDGmdnJNxTNPxX_layOP2BwhKTNaD_MR53gs)  
+_16 minutes_ by Jacob Groß
+
+The article provides detailed guidance on optimizing React applications for better INP performance, which is now a crucial Core Web Vital metric used by Google's search ranking.
+
+[Better Code Rendering Through Virtualization](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO8skwkp8U-l-168vCCs00lvD3MyNugi6lYeZDZRCQbHNJ47uf7ysJV1wuvys79L9DfnswDZmaYe0YLTDsRiUcbCVxx3dUiOXC9rNrhSPK7i07QPsOlmtaXTdnKggrps6w2JAGPx9rez9HMQw5UwW824MJ79ZA5M-qlvTq-lrK0hE-LBEHSJm_YgRejzDaYFJZeMaDpyV8rlnedNwFWE3fIKcjY3E4eNIB-D_jrPGADL2jslZveyc3x1wAU3CFHP-jTNN59oi5kya3fdKaK_txgbFSBt-z9T86pW_HwBWSNSyJG8cUor-3qBTWwHE5g6ddA/4c4/RRfexmGfRfOh6gu9b2CJxA/h3/h001.D0LuKT6FU7njiQAq9lOAnm0CEpSLElHPQadk1_1xrRo)  
+_15 minutes_ by Nicholas Deschenes
+
+Codecov rebuilt their code renderer to handle extremely large files after receiving feedback about crashes with TypeScript's checker.ts file. The team discovered that the main performance bottleneck was React's rendering of numerous elements rather than code tokenization.
+
+[How does the React Compiler perform on real code](https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBOQsPoSRdI-81EfXldG07AwaTPFNqxSNVvV3CzSoXsI9Ka-k8wk6z13GDaKnKlgCHBHwcewzsG6fAhaRjWF3-xKJMRfDNp_LNmqq7b5VGsikj0JWpmX5OeBmFHKuE_YgD7TheL1_MJfuDCKjdQh8QKwqKNiCk_pThxq-ARgU5ncgGkGEfsbV5kHifAr8sgQFatpEe7OMEziha6p3arIRjYEnJitiIR-ZIas_OxjMBCOqT4kIF4IeuenPfmui-AIsHk5S17rCoXxbkwHf39XYuWVOQToDlTpZAqsgdzQ-xH11Vkc4Ffs9Q71r77psKgB-fWA/4c4/RRfexmGfRfOh6gu9b2CJxA/h4/h001.Y9tgfp9vqSDCooGMqQAIicQGLswv--NqPXNCgW_TwZY)  
+_20 minutes_ by Nadia Makarevich
+
+Nadia's article examines React Compiler – a new tool that promises to automatically optimize React app performance by handling memoization and re-renders.
+
+[React Data Fetching Patterns](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zJJSmvhTi4foivEuFKnWVfHVhTLu9xE_pDx3Gx3aQpxtLk7LHD3bK81HUR-kxn063XtNoreqbYLY1PM5WBAc-SPPh7__wuaVGCbMBgq6nQPm4xyy-Ey1PY_GKO0noVX1LRM0XKPcEsCnLdcWS93hgEP2VoVjxm4XHLn8Kw_bDRnpeb2iRRagwQwxgvCT6TqgfjsGjPBTTu5GL4Ku7kdrthSVqJPckpBVO1xiE17MFNmWFhCp7liGDPLuLgVvQz_6hAhGOBnsMDPv_nqcy4ZFdYt/4c4/RRfexmGfRfOh6gu9b2CJxA/h5/h001.QQVmtwWI8z8FSl48I-LB8agg0MAJQ7Hdocb_H0FPVRU)  
+_5 minutes_ by Robin Wieruch
+
+This article discusses various data fetching patterns in React applications, focusing on sequential data fetching, parallel data fetching, and prefetching strategies.
+
+[Cleaning up dead files in your React project](https://link.mail.beehiiv.com/ss/c/u001.HjBpxMuZJ3Xr2cyiPk5rUUGIIkmF21KfvxJ7ERHvwYXn_OlBT8QbcvPXhGWYUU0oLs3G4CQZf5ZlGLygptbrCUgo9jFC21L2um4cCXeBESBoJAsWbcfRz1GLKB5A_R25eS_JW5Ps9KYAL6uGs69RywxkGk93374E0q6RqPKuDcvqkGx490b9ZdqKn1rjTz56Q4ffGFwD3VnNvC1s4yUa_izV54kk1yh8b9tcw6IVTNwDcrLCVM5h4l74_-UKQvkYoJxWDX0jg3-3h24wgR0KqLA40BpFGt83xJXsrIXGNaE5lJLlEkaO2X_STujVkIB3/4c4/RRfexmGfRfOh6gu9b2CJxA/h6/h001.hrhsOIi_uo8RfzswwyXnEZtvdB4oyrLkLiN59JQUUj0)  
+_1 minute_ by Edvins Antonovs
+
+Learn how to identify and remove unused files in your React codebase with tools like knip. Simplify your project and improve maintainability.
+
+And lastly, [React v19 has been released](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvuMRDy3w85kWf16GtEwWeEANfNF03oThDKm-xEbk1yJnwXBgy3zQtuJCnGNejm-GfEg02jW_l-9Q25izKRkYlDhBGWE809jjBQ5a2e1s4ierjvu0ZJo2zOxn0vM33qEwAmVxNB0bTJ44fROIaZo3lqJR_vK2OO-Bxf8g8jJAd84PQVy0fjhQedWncj83kadxlKBDtQSko7ZPgS6iU8uX6Tpy703YNAgy3FSe2Sh8Yv0SO-3tnklB77_GUdX5lLdc2TT_SBd8IswhWnSHhQDC3d8/4c4/RRfexmGfRfOh6gu9b2CJxA/h7/h001.mP91LQL4vlHmKtYmKvdeTAxBAdApk_8_IITbuwWueF4).
+
+#
+</Detail>
+
+\[读在线]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UzLl1hlsBX6ufCpWakhKXg8vqTWwAmyI H2C\_ORln-pSIEgcLjbXI0yWTIlyvg8sbGyCiuwgfb20pn2NR99i-4iWnnmGc\_iEdRbBOcs0d33okWsz\_mtsArRcJvlTvVrHkyh91gG\_XPYVU4Q0JMV464L\_m6tF MJsz45yBrLP-01rKLlWQ9jjmXYYRoUV0k0Kv8uH\_WGZicJy0gYG0Ne4M\_nFaxdjkJ\_z6QfByzXktn\_ijGCaaC8DiQoqVVjMiiQpM2kRyU5GzWX8KW52hgF3wGEe第885章fRwzkRH8BZDjXUdRGBRHsZbqIVsmSd\_Da6XlMOUuoglsh20H8wEwYwTAjPmyJNaKwB3kqJMvbRb0urLBpRZt9xAmXMqxVAsvOeddJLIvdkEkpRig\_Wvqnu0le3 XWg0vIFQ7EUSdQdD12pwQHgGb1BYjYk-vorBQuZAs6rKWXB2PqA8yDzDU-YxPQwfqGpwK17iLIsCAcrF3FKptU8Thun9t18tii7rh0yfR\_aETrm7dUUVw0By9\_D SVN2Sr7lnFCyK2zmNDlwKgybTRPgbuaQEh2otHj9TgIPbayWvmO2NN6XLtbtGJ-xhUL2YXJPb6ENysl516YSwlnQHNclM6s1fZMOfHRPO6BBJ-AfVJWj0L7AXFH tc9hXFdPnnIQl1SZtJr9uYxFg4bEkpCWZ-vBOGXHIyw/4c4/RRfexmGfRfOh6gu9b2CJxA/h0/h001.VP\_2wg3WJ\_uP2ytbjGQsG1K5Al7ySRVVqgPX\_EEjkNg)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4c4/RRfexmGfRfOh6gu9b2CJxA/ho.gif)
+
+\[测试已死。细致的AI是在这里。]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6DvHowMd5fyCwFZ9VlDqtjEN84KnUybgtTkTpy1LBbIcbfcaqZo 5OvSOZFSQbEf57gfbUQivOUBCn85E\_j8R2DODzK3J8S\_5cXlNr\_Ik3QLSA/4c4/RRfexm GfRfOh6gu9b2CJxA/h1/h001.nwxC8gZWW6zBC\_ANQxIb6jnKx6DOyoFk45EFy5yoixw)\
+*由精心赞助*
+
+Meticulous AI 是一款自动创建和维护不断发展的 e2e UI 测试套件的工具，该套件涵盖应用程序的每个角落，无需开发人员进行任何干预。在 GitHub 首席技术官 Guillermo Rauch（next.js 作者）、yc 和其他人的支持下，它是从 Chromium 级别构建的，具有确定性调度引擎 - 使其成为唯一消除碎片的测试工具。
+
+\[如何改进与下一个绘画的交互]\(https://link.mail.beehiiv.com/ss/c/u001.K5pvBZzC3tJzgxtI00uQCOV1ZytzmUUHYXTXw2bsr8cp \_3odOMjV8H-EEgVPfHauZfUIomRNb9ejNlq4fQ\_aXzpPAfPjHMaFG8VLq2MUvMFR9WdUCDDNINneBMrZOqYi4cRrPimU868fpN4qhNN\_tPjYd3Wz MjJHNXRQDEkeujGDa\_itCucHKn3cfCZaIDv\_KZDQd1ejRTn5FEABk0fxYqBQQwUc\_gYAM3f0Q8BOn1RO0tIF6EDaLDwQuuBQeeGHvZnALim1Dppe 9Y6hMi\_IGLC2QHQHWhKRtPSgUsiscdw/4c4/RRfexmGfRfOh6gu9b2CJxA/h2/h001.tzNpVdrvDGmdnJNxTNPxX\_layOP2BwhKTNaD\_MR53gs)\
+*16 分钟* 雅各布·格罗斯 (Jacob Groß)
+
+本文提供了有关优化 React 应用程序以获得更好 INP 性能的详细指导，INP 性能现在是 Google 搜索排名所使用的一个关键的 Core Web Vital 指标。
+
+\[更好的代码渲染通过虚拟化]\(https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn\_0mUAO8skwkp8U-l-168vCCs00lvD3MyNugi6lYeZDZRCQbH NJ47uf7ysJV1wuvys79L9DfnswDZmaYe0YLTDsRiUcbCVxx3dUiOXC9rNrhSPK7i07QPsOlmtaXTdnKggrps6w2JAGPx9rez9HMQw5UwW824MJ79ZA5M-qlv Tq-lrK0hE-LBEHSJm\_YgRejzDaYFJZeMaDpyV8rlnedNwFWE3fIKcjY3E4eNIB-D\_jrPGADL2jslZveyc3x1wAU3CFHP-jTNN59oi5kya3fdKaK\_txgbFSBt -z9T86pW\_HwBWSNSyJG8cUor-3qBTWwHE5g6ddA/4c4/RRfexmGfRfOh6gu9b2CJxA/h3/h001.D0LuKT6FU7njiQAq9lOAnm0CEpSLElHPQadk1\_1xrRo)\
+*15 分钟* 尼古拉斯·德舍尼斯 (Nicholas Deschenes)
+
+在收到有关 TypeScript checker.ts 文件崩溃的反馈后，Codecov 重建了代码渲染器以处理极大的文件。团队发现主要的性能瓶颈是 React 对大量元素的渲染，而不是代码标记化。
+
+\[React编译器在真实环境中的表现如何代码]\(https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBOQsPoSRdI-81EfXldG07AwaTPFNqxSNVvV3CzSoXsI9Ka-k8wk6 z13GDaKnKlgCHBHwcewzsG6fAhaRjWF3-xKJMRfDNp\_LNmqq7b5VGsikj0JWpmX5OeBmFHKuE\_YgD7TheL1\_MJfuDCKjdQh8QKwqKNiCk\_pThxq-ARgU5 ncgGkGEfsbV5kHifAr8sgQFatpEe7OMEziha6p3arIRjYEnJitiIR-ZIas\_OxjMBCOqT4kIF4IeuenPfmui-AISHK5S17rCoXxbkwHf39XYuWVOQToDlT pZAqsgdzQ-xH11Vkc4Ffs9Q71r77psKgB-fWA/4c4/RRfexmGfRfOh6gu9b2CJxA/h4/h001.Y9tgfp9vqSDCooGMqQAIicQGLswv--NqPXNCgW\_TwZY)\
+*20 分钟* 纳迪亚·马卡列维奇
+
+Nadia 的文章研究了 React Compiler——一种新工具，承诺通过处理记忆和重新渲染来自动优化 React 应用程序性能。
+
+\[反应数据获取模式]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf\_qUprM09yoMPtF27zJJSmvhTi4foivEuFKnWV fHVhTLu9xE\_pDx3Gx3aQpxtLk7LHD3bK81HUR-kxn063XtNoreqbYLY1PM5WBAc-SPPh7\_\_wuaVGCbMBgq6nQPm4xyy-Ey1PY\_GKO0noVX1LRM0XK PcEsCnLdcWS93hgEP2VoVjxm4XHLn8Kw\_bDRnpeb2iRRagwQwxgvCT6TqgfjsGjPBTTu5GL4Ku7kdrthSVqJPckpBVO1xiE17MFNmWFhCp7liGDPL uLgVvQz\_6hAhGOBnsMDPv\_nqcy4ZFdYt/4c4/RRfexmGfRfOh6gu9b2CJxA/h5/h001.QQVmtwWI8z8FSl48I-LB8agg0MAJQ7Hdocb\_H0FPVRU)\
+*5 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+本文讨论了 React 应用程序中的各种数据获取模式，重点关注顺序数据获取、并行数据获取和预取策略。
+
+\[清理 React 中的死文件项目]\(https://link.mail.beehiiv.com/ss/c/u001.HjBpxMuZJ3Xr2cyiPk5rUUGIIkmF21KfvxJ7ERHvwYXn\_OlBT8QbcvPXhGWYUU0 OLS3G4CQZf5ZLGLygptbrCUgo9jFC21L2um4cCXeBESBoJAsWbcfRz1GLKB5A\_R25eS\_JW5Ps9KYAL6uGs69RywxkGk93374E0q6RqPkuDcvqkGx4 90b9ZdqKn1rjTz56Q4ffGFwD3VnNvC1s4yUa\_izV54kk1yh8b9tcw6IVTNwDcrLCVM5h4l74\_-UKQvkYoJxWDX0jg3-3h24wgR0KqLA40BpFGt83 xJXsrIXGNaE5lJLlEkaO2X\_STujVkIB3/4c4/RRfexmGfRfOh6gu9b2CJxA/h6/h001.hrhsOIi\_uo8RfzswwyXnEZtvdB4oyrLkLiN59JQUUj0)\
+*1 分钟*，埃德文斯·安东诺夫斯
+
+了解如何使用 knip 等工具识别和删除 React 代码库中未使用的文件。简化您的项目并提高可维护性。
+
+最后，\[React v19 已发布]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvuMRDy3w85kWf16GtEwWeEANfNF03oThDKm-x Ebk1yJnwXBgy3zQtuJCnGNejm-GfEg02jW\_l-9Q25izKRkYlDhBGWE809jjBQ5a2e1s4ierjvu0ZJo2zOxn0vM33qEwAmVxNB0bTJ44fROIa Zo3lqJR\_vK2OO-Bxf8g8jJAd84PQVy0fjhQedWncj83kadxlKBDtQSko7ZPgS6iU8uX6Tpy703YNAgy3FSe2Sh8Yv0SO-3tnklB77\_GUdX5 lLdc2TT\_SBd8IswhWnSHhQDC3d8/4c4/RRfexmGfRfOh6gu9b2CJxA/h7/h001.mP91LQL4vlHmKtYmKvdeTAxBAdApk\_8\_IITbuwWueF4)。
+
+#
+
+
