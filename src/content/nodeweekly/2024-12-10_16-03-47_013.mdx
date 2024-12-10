@@ -1,0 +1,259 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: require(esm) makes it to LTS
+description: require(esm) makes it to LTS
+date: 星期二 04 下午 十二月 10o 2024
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/559
+origin_site: https://nodeweekly.com/issues/559
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="require(esm) makes it to LTS" url="https://nodeweekly.com/issues/559" />
+
+<Detail client:only="react">
+	#​559 — December 10, 2024
+
+[Read on the Web](https://nodeweekly.com/issues/559)
+
+🎄 The Node world is experiencing a post-Thanksgiving _interfestal_ lull, so this issue includes a few items we overlooked earlier this year. Next week brings our usual annual roundup, though, so keep your eyes peeled for that before the festive break :-)  
+\_\_  
+_Peter Cooper, your editor_
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/163185/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/l6refnwd5jr6jl4qn8bs.jpg)](https://nodeweekly.com/link/163186/0a4070b383)
+
+[Node.js Delivers First LTS with `require(esm)` Enabled](https://nodeweekly.com/link/163186/0a4070b383 "socket.dev") — It’s a modest milestone, but [Node v22.12.0 (LTS)](https://nodeweekly.com/link/163187/0a4070b383) has been released and marks Node’s first LTS release with non-flagged support for loading native ES modules with `require()`. It’s _still experimental_, though, and [you’re encouraged](https://nodeweekly.com/link/163188/0a4070b383) to send in feedback and bug reports.
+
+Sarah Gooding
+
+[Node's Corepack: Version Control for Package Managers](https://nodeweekly.com/link/163189/0a4070b383 "www.trevorlasn.com") — A quick intro to a commonly misunderstood (and [mildly contentious](https://nodeweekly.com/link/163227/0a4070b383)) part of the modern Node distribution: [Corepack.](https://nodeweekly.com/link/163190/0a4070b383) It’s a (still) experimental tool for _managing package managers._
+
+Trevor I. Lasn
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2200a2df.png)](https://nodeweekly.com/link/163185/0a4070b383)
+
+[Memetria K/V: High-Performance Key-Value Hosting](https://nodeweekly.com/link/163185/0a4070b383 "dashboard.memetria.com") — Boost your Node.js apps with Memetria K/V, providing portable, easy-to-use hosting for Redis OSS and Valkey. Scale your applications with ease and achieve high performance. Includes detailed analytics and large key memory tracking.
+
+Memetria sponsor
+
+**IN BRIEF:**
+
+*   🎄 Last week we mentioned the fabulous [Advent of Code](https://nodeweekly.com/link/163191/0a4070b383) competition which is taking place again right now. The Deno team want to sweeten the deal by bribing encouraging you to give Deno a go with [some special stickers on offer for completing certain numbers of days.](https://nodeweekly.com/link/163192/0a4070b383)
+    
+*   Just in case you forgot, [Douglas Crockford is Not Your Dad](https://nodeweekly.com/link/163193/0a4070b383) – at least when it comes to putting comments in JSON..
+    
+*   ⚛️ [React 19 has been released.](https://nodeweekly.com/link/163194/0a4070b383) More on this in tomorrow's _[React Status.](https://nodeweekly.com/link/163195/0a4070b383)_
+    
+
+[Implementing Filtered Semantic Search Using `pgvector` and JS](https://nodeweekly.com/link/163196/0a4070b383 "www.timescale.com") — If you need something more sophisticated than keyword search, a _semantic_ approach based upon the _meanings_ of words/queries compared using vector embeddings offers a big step up. Luckily, there are some Postgres extensions that make building such things quite simple..
+
+Timescale Team
+
+📄 [An Introduction to Database Migrations with Drizzle ORM](https://nodeweekly.com/link/163197/0a4070b383) Adam Rackis
+
+📄 [Taking Regular Screenshots of My Website](https://nodeweekly.com/link/163198/0a4070b383) – A nifty robust approach using Playwright and GitHub Actions. Alex Chan
+
+📄 [Building Your Own `npm create` Package](https://nodeweekly.com/link/163199/0a4070b383) – You'll have seen various scaffolding tools using this technique. (A Different) Alex Chan
+
+📄 [I Like Makefiles](https://nodeweekly.com/link/163200/0a4070b383) – I also use this approach to help me organize the various shell incarnations I need for each project I’m working on. Sebastian Witowski
+
+📄 [Requesting Camera and Microphone Permissions in an Electron App](https://nodeweekly.com/link/163201/0a4070b383) Farhan CK
+
+📺 [The V8 JavaScript Engine: Let's Read The Code](https://nodeweekly.com/link/163202/0a4070b383) Ants Are Everywhere
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tox6yml6jnzrpcepjalu.jpg)](https://nodeweekly.com/link/163203/0a4070b383)
+
+🖼️ [wasm-vips: It's `libvips`, Compiled to WebAssembly](https://nodeweekly.com/link/163203/0a4070b383 "github.com") — [libvips](https://nodeweekly.com/link/163204/0a4070b383) is a popular, highly efficient image processing library written in C. You can use it via [Sharp](https://nodeweekly.com/link/163205/0a4070b383) in Node.js, but this offers a more isomorphic route for use in Node, Deno, and modern browsers by way of WebAssembly. (There's a [nifty online demo here.](https://nodeweekly.com/link/163206/0a4070b383))
+
+Kleis Auke Wolthuizen
+
+[Build Fully Functional Apps in Minutes, Not Months](https://nodeweekly.com/link/163207/0a4070b383 "bolt.new") — Create, run, edit, and deploy full-stack web apps with Bolt.
+
+StackBlitz sponsor
+
+[Undici v7.1.0: Now with Stable HTTP/2 Support](https://nodeweekly.com/link/163208/0a4070b383 "github.com") — Last week we featured [the latest major v7 version](https://nodeweekly.com/link/163209/0a4070b383) of Node’s powerful HTTP/1.1 client. Now, after [a little discussion](https://nodeweekly.com/link/163210/0a4070b383), they’re marking Undici’s HTTP/2 support stable too ([notes on HTTP/2 support in the docs](https://nodeweekly.com/link/163211/0a4070b383)).
+
+Matteo Collina et al.
+
+[tldts: Extract Domain Names, Subdomains and Suffixes from URLs](https://nodeweekly.com/link/163212/0a4070b383 "github.com") — A ‘blazing fast’ library for extracting hostnames, domains, public suffixes, and more from URLs, with full Unicode/IDA support, type definitions, and more.
+
+Parisot and Berson
+
+📰 Classifieds
+
+🚨 [Catch flaky tests before they break your build!](https://nodeweekly.com/link/163213/0a4070b383) Learn to flag unreliable tests early and keep your CI/CD pipeline running smoothly.
+
+* * *
+
+📬 [Hookdeck](https://nodeweekly.com/link/163214/0a4070b383): A serverless queue to reliably send, receive, transform, filter, and route events across your event-driven apps.
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qu8vzmylwj1bdgoxtjyt.jpg)](https://nodeweekly.com/link/163215/0a4070b383)
+
+[Pelias 4.0: A Modular, Stand-Alone 'Coarse' Geocoder](https://nodeweekly.com/link/163215/0a4070b383 "github.com") — Given an address or place name this will come up with geographic coordinates, and vice versa. In terms of finding a location, it’s not _super_ accurate (hence the ‘coarse’) but it may be acceptable for your use case. [Demo here.](https://nodeweekly.com/link/163216/0a4070b383)
+
+Pelias
+
+[node-qrcode: Generate QR Codes in Node](https://nodeweekly.com/link/163217/0a4070b383 "github.com") — The ubiquitous 2D barcodes that can store arbitrary data (like URLs).
+
+Ryan Day
+
+*   [Fastify 4.29](https://nodeweekly.com/link/163218/0a4070b383) – An update to the 4.x branch of the fast, low overhead Node.js web framework. Note that [v5.1](https://nodeweekly.com/link/163219/0a4070b383) remains the absolute latest version, however.
+    
+*   [better-sqlite 11.7](https://nodeweekly.com/link/163220/0a4070b383) – Neat way to use SQLite from Node and Electron. SQLite is bumped up to [v3.47.2](https://nodeweekly.com/link/163221/0a4070b383).
+    
+*   [ExpressoTS 3.0](https://nodeweekly.com/link/163222/0a4070b383) – TypeScript framework for server-side apps.
+    
+*   [Piscina 4.8](https://nodeweekly.com/link/163223/0a4070b383) – Efficient worker thread pool implementation.
+    
+*   [pnpm 9.15](https://nodeweekly.com/link/163224/0a4070b383) – The alternative, efficient package manager.
+    
+*   [node-cron 3.3](https://nodeweekly.com/link/163225/0a4070b383) – Run functions / commands on a schedule.
+    
+*   [AlaSQL.js 4.6](https://nodeweekly.com/link/163226/0a4070b383) – Isomorphic JavaScript SQL database.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​559 — 2024 年 12 月 10 日
+
+[网上阅读](https://nodeweekly.com/issues/559)
+
+🎄 Node 世界正在经历感恩节后*节间*的平静，因此本期包括我们今年早些时候忽略的一些项目。不过，下周我们将迎来我们通常的年度综述，所以在节日假期之前请密切关注:-)\
+\_\_\
+*彼得·库珀，你的编辑*
+
+连同 
+
+\[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)]\(https://nodeweekly. com/link/163185/0a4070b383)
+
+![Node.js 周刊](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/l6refnwd5jr6jl4qn8bs.jpg)](https://nodeweekly.com/link/163186/0a4070b383)
+
+[Node.js 交付第一个启用 `require(esm)` 的 LTS](https://nodeweekly.com/link/163186/0a4070b383 "socket.dev") — 这是一个适度的里程碑，但是 [Node v22.12.0 (LTS) )](https://nodeweekly.com/link/163187/0a4070b383) 已发布，标志着 Node 的第一个 LTS 版本，具有使用“require()”加载原生 ES 模块的非标记支持。不过，它“仍处于实验阶段”，[鼓励您](https://nodeweekly.com/link/163188/0a4070b383)发送反馈和错误报告。
+
+萨拉·古丁
+
+[Node 的 Corepack：包管理器的版本控制](https://nodeweekly.com/link/163189/0a4070b383 "www.trevorlasn.com") — 快速介绍一个常见的误解（以及 \[轻微争议]\(https:// /nodeweekly.com/link/163227/0a4070b383)) 现代 Node 发行版的一部分： [Corepack。](https://nodeweekly.com/link/163190/0a4070b383)它是一个（仍然）实验性工具，用于*管理包管理器。*
+
+特雷弗·拉森
+
+\[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2200a2df.png)]\(https://nodeweekly.com/link/163185/0a4070b383 ）
+
+[Memetria K/V：高性能键值托管](https://nodeweekly.com/link/163185/0a4070b383 "dashboard.memetria.com") — 使用 Memetria K/V 增强您的 Node.js 应用程序，提供便携式、易于使用的 Redis OSS 和 Valkey 托管。轻松扩展您的应用程序并实现高性能。包括详细的分析和大密钥内存跟踪。
+
+Memetria赞助商
+
+**简而言之：**
+
+* 🎄 上周我们提到了精彩的 [Advent of Code](https://nodeweekly.com/link/163191/0a4070b383) 竞赛，现在又开始了。 Deno 团队希望通过贿赂鼓励您尝试一下 Deno [为完成特定天数提供一些特殊贴纸](https://nodeweekly.com/link/163192/0a4070b383)
+
+\*以防万一您忘记了，[Douglas Crockford 不是您的爸爸](https://nodeweekly.com/link/163193/0a4070b383) – 至少在以 JSON 格式添加注释时是这样。
+
+* ⚛️ [React 19 已发布。](https://nodeweekly.com/link/163194/0a4070b383) 明天的更多内容\*[React Status。](https://nodeweekly.com/link/163195/0a4070b383)\*
+
+[使用 `pgvector` 和 JS 实现过滤语义搜索](https://nodeweekly.com/link/163196/0a4070b383 "www.timescale.com") — 如果您需要比关键字搜索更复杂的东西，可以使用 *语义* 方法与使用向量嵌入相比，基于单词/查询的*含义*提供了很大的进步。幸运的是，有一些 Postgres 扩展可以让构建这样的东西变得非常简单。
+
+时间尺度团队
+
+📄 [使用 Drizzle ORM 进行数据库迁移简介](https://nodeweekly.com/link/163197/0a4070b383) Adam Rackis
+
+📄 [定期对我的网站进行屏幕截图](https://nodeweekly.com/link/163198/0a4070b383) – 一种使用 Playwright 和 GitHub Actions 的强大方法。亚历克斯·陈
+
+📄 [构建您自己的“npm create”包](https://nodeweekly.com/link/163199/0a4070b383) – 您将看到使用此技术的各种脚手架工具。 （不同）Alex Chan
+
+📄 [我喜欢 Makefiles](https://nodeweekly.com/link/163200/0a4070b383) – 我还使用这种方法来帮助我组织我正在处理的每个项目所需的各种 shell 版本。塞巴斯蒂安·维托夫斯基
+
+📄 [在 Electron 应用程序中请求摄像头和麦克风权限](https://nodeweekly.com/link/163201/0a4070b383) Farhan CK
+
+📺 [V8 JavaScript 引擎：让我们阅读代码](https://nodeweekly.com/link/163202/0a4070b383) 蚂蚁无处不在
+
+🛠 代码和工具
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tox6yml6jnzrpcepjalu.jpg)](https://nodeweekly.com/link/163203/0a4070b383)
+
+🖼️ [wasm-vips：它是 `libvips`，编译为 WebAssembly](https://nodeweekly.com/link/163203/0a4070b383 "github.com") — \[libvips]\(https://nodeweekly.com/link/ 163204/0a4070b383) 是一个用 C 语言编写的流行的、高效的图像处理库。可以通过 Node.js 中的 [Sharp](https://nodeweekly.com/link/163205/0a4070b383) 使用它，但这提供了一种通过 WebAssembly 在 Node、Deno 和现代浏览器中使用的更加同构的途径。 （这里有一个[精彩的在线演示。](https://nodeweekly.com/link/163206/0a4070b383))
+
+克莱斯·奥克·沃尔图伊曾
+
+[在几分钟而不是几个月内构建功能齐全的应用程序](https://nodeweekly.com/link/163207/0a4070b383 "bolt.new") — 使用 Bolt 创建、运行、编辑和部署全栈 Web 应用程序。
+
+StackBlitz 赞助商
+
+[Undici v7.1.0：现在拥有稳定的 HTTP/2 支持](https://nodeweekly.com/link/163208/0a4070b383 "github.com") — 上周我们推荐了[最新的主要 v7 版本](https://nodeweekly.com/link/163208/0a4070b383 "github.com") /nodeweekly.com/link/163209/0a4070b383) Node 强大的 HTTP/1.1 客户端。现在，经过[一点讨论](https://nodeweekly.com/link/163210/0a4070b383)，他们也将 Undici 的 HTTP/2 支持标记为稳定（\[文档中有关 HTTP/2 支持的说明]\(https: //nodeweekly.com/link/163211/0a4070b383))。
+
+马泰奥·科里纳等人。
+
+[tldts：从 URL 中提取域名、子域和后缀](https://nodeweekly.com/link/163212/0a4070b383 "github.com") — 一个“极快”的库，用于提取主机名、域、公共后缀和来自 URL 的更多内容，具有完整的 Unicode/IDA 支持、类型定义等。
+
+帕里索和博森
+
+📰 分类广告
+
+🚨 [在不稳定的测试破坏您的构建之前将其捕获！](https://nodeweekly.com/link/163213/0a4070b383) 了解尽早标记不可靠的测试并保持 CI/CD 管道顺利运行。
+
+***
+
+📬 [Hookdeck](https://nodeweekly.com/link/163214/0a4070b383)：一个无服务器队列，用于在事件驱动应用中可靠地发送、接收、转换、过滤和路由事件。
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qu8vzmylwj1bdgoxtjyt.jpg)](https://nodeweekly.com/link/163215/0a4070b383)
+
+[Pelias 4.0：模块化、独立的“粗略”地理编码器](https://nodeweekly.com/link/163215/0a4070b383 "github.com") - 给定地址或地名，这将得出地理坐标，反之亦然。在查找位置方面，它不是*超级*准确（因此是“粗略”），但对于您的用例来说可能是可以接受的。 [此处演示。](https://nodeweekly.com/link/163216/0a4070b383)
+
+珀利阿斯
+
+[node-qrcode：在 Node 中生成 QR 码](https://nodeweekly.com/link/163217/0a4070b383 "github.com") — 无处不在的二维条形码，可以存储任意数据（例如 URL）。
+
+瑞安·戴
+
+* [Fastify 4.29](https://nodeweekly.com/link/163218/0a4070b383) – 快速、低开销的 Node.js Web 框架 4.x 分支的更新。但请注意，[v5.1](https://nodeweekly.com/link/163219/0a4070b383) 仍然是绝对最新版本。
+
+* [better-sqlite 11.7](https://nodeweekly.com/link/163220/0a4070b383) – 从 Node 和 Electron 使用 SQLite 的好方法。 SQLite 已提升至 [v3.47.2](https://nodeweekly.com/link/163221/0a4070b383)。
+
+* [ExpressoTS 3.0](https://nodeweekly.com/link/163222/0a4070b383) – 用于服务器端应用的 TypeScript 框架。
+
+* [Piscina 4.8](https://nodeweekly.com/link/163223/0a4070b383) – 高效的工作线程池实现。
+
+* [pnpm 9.15](https://nodeweekly.com/link/163224/0a4070b383) – 另一种高效的包管理器。
+
+* [node-cron 3.3](https://nodeweekly.com/link/163225/0a4070b383) – 按计划运行函数/命令。
+
+* [AlaSQL.js 4.6](https://nodeweekly.com/link/163226/0a4070b383) – 同构 JavaScript SQL 数据库。
+
+**有我们的链接吗？** 回复并告诉我们。我们无法包含所有内容，但我们会查看您发送的所有内容。 *谢谢！*
+
+***
+
+**赞助：** 发送电子邮件至“&lt;kristina@cooperpress.com>”了解详细信息。
+
+***
+
+由库珀出版社有限公司出版\
+费尔菲尔德企业中心, 劳斯, LN11 0LS, 英国
+
+
