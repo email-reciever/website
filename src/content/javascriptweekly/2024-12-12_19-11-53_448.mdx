@@ -1,0 +1,312 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Benchmarking Node's recent performance enhancements
+description: Benchmarking Node's recent performance enhancements
+date: 星期四 07 晚上 十二月 12o 2024
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/716
+origin_site: https://javascriptweekly.com/issues/716
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Benchmarking Node's recent performance enhancements" url="https://javascriptweekly.com/issues/716" />
+
+<Detail client:only="react">
+	#​716 — December 12, 2024
+
+[Read on the Web](https://javascriptweekly.com/issues/716)
+
+Together with 
+
+[![Google](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_800,h_271/e_make_transparent/co_white,e_outline:20/u7hgy97824jj4gjk5gok.png)](https://javascriptweekly.com/link/163445/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pwf3ggjktro0rsmoorh7.jpg)](https://javascriptweekly.com/link/163446/d076523b1d)
+
+[Boa v0.20: An Alternative JavaScript Compiler](https://javascriptweekly.com/link/163446/d076523b1d "boajs.dev") — Under development for several years, Boa has a few missions: be a Rust ECMAScript implementation, be easy to embed in Rust projects, and be a fast, safe JS engine overall. v0.20 sees a bump up to 89.92% compliance in the [Test262 suite](https://javascriptweekly.com/link/163447/d076523b1d), improves Temporal support, adds `Atomics.pause`, and more. This is no toy engine.
+
+Boa Developers
+
+[React v19 Now Stable](https://javascriptweekly.com/link/163487/d076523b1d "react.dev") — First teased in [a February 2024 update](https://javascriptweekly.com/link/163488/d076523b1d), React 19 has been in beta for 8 months, so there’s already a wealth of content about it, from the [React 19 upgrade guide](https://javascriptweekly.com/link/163489/d076523b1d) or an [explanation of its compiler](https://javascriptweekly.com/link/163490/d076523b1d) to [cheat sheets](https://javascriptweekly.com/link/163491/d076523b1d) and Vercel’s roundup of [what’s new in React 19.](https://javascriptweekly.com/link/163492/d076523b1d)
+
+The React Team
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/44873aa8.png)](https://javascriptweekly.com/link/163445/d076523b1d)
+
+[Build with Gemini at Lightning Speeds](https://javascriptweekly.com/link/163445/d076523b1d "shortclick.link") — With the largest context window available, Google Gemini provides JavaScript developers multimodal processing of images, videos and text. Start using Google Gemini in minutes using AI Studio.
+
+Google Gemini sponsor
+
+**IN BRIEF:**
+
+*   🎮 If you ever do any game development with JavaScript, it's time to take [the Gamedev.JS Survey 2024.](https://javascriptweekly.com/link/163448/d076523b1d) If you _don't_, you can head to [JS13KGames](https://javascriptweekly.com/link/163449/d076523b1d) and enjoy other people's creative efforts instead :-)
+    
+*   Apple has released [Safari 18.2](https://javascriptweekly.com/link/163450/d076523b1d) which [introduces a few enhancements to JavaScript support](https://javascriptweekly.com/link/163451/d076523b1d) including `Float16Array`, more methods for `Uint8Array`, `Promise.try`, `RegExp.escape`, and more.
+    
+*   Did you know [Douglas Crockford is Not Your Dad?](https://javascriptweekly.com/link/163452/d076523b1d) Well, at least when it comes to putting comments in JSON..
+    
+
+**RELEASES:**
+
+*   [VS Code November Release](https://javascriptweekly.com/link/163502/d076523b1d) – Now when you copy and paste JS/TS code, VS Code can add imports for the pasted code.
+    
+*   [Next.js 15.1](https://javascriptweekly.com/link/163454/d076523b1d) – The popular React framework gets full React 19 support.
+    
+*   [Node v23.4.0 (Current)](https://javascriptweekly.com/link/163455/d076523b1d) – Say hello to `assert.partialDeepStrictEqual` and `--trace-env` for tracing environment variable usage.
+    
+*   [Sheriff v25](https://javascriptweekly.com/link/163493/d076523b1d) - Opinionated TypeScript-first ESLint configuration. Now supporting ESLint v9.
+    
+*   [Undici 7.1](https://javascriptweekly.com/link/163456/d076523b1d) – HTTP/2 support now marked as stable in the Node.js HTTP library.
+    
+*   [pnpm 9.15](https://javascriptweekly.com/link/163457/d076523b1d), [Dependency Cruiser 16.8](https://javascriptweekly.com/link/163494/d076523b1d), [Redux Toolkit 2.5](https://javascriptweekly.com/link/163495/d076523b1d), [YouTube.js 12.2](https://javascriptweekly.com/link/163496/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/r6dljfg4exf3gotybkgc.jpg)](https://javascriptweekly.com/link/163497/d076523b1d)
+
+[The State of Node.js Performance in 2024](https://javascriptweekly.com/link/163497/d076523b1d "nodesource.com") — A thorough set of benchmarks covering recent performance advancements made in Node.js. The improvements between Node 18 and 20 up to version 22 might surprise you - it’s clear the team has put a lot of work into this area.
+
+Gonzaga and Parody (NodeSource)
+
+[How to Reduce TTFB?](https://javascriptweekly.com/link/163458/d076523b1d "blog.sentry.io") — High "time to first byte" affects web vitals. Learn to identify and fix issues slowing your TTFB.
+
+Sentry sponsor
+
+[Publishing a Simple Client-Side JS Package to npm with GitHub Actions](https://javascriptweekly.com/link/163504/d076523b1d "til.simonwillison.net") — As part of the process of building [Prompts.js](https://javascriptweekly.com/link/163505/d076523b1d), a new library for creating simple `await`\-able alternatives to `alert()`, `confirm()` and `prompt()`, Simon wanted to make it easy to publish as an npm package too.
+
+Simon Willison
+
+[How to Build a SolidJS App with Deno](https://javascriptweekly.com/link/163506/d076523b1d "deno.com") — [SolidJS](https://javascriptweekly.com/link/163507/d076523b1d) is a declarative library for creating user interfaces that emphasizes fine-grained reactivity and minimal overhead and it plays well with Deno.
+
+Andy Jiang
+
+[Get Cooking! Generative AI with MongoDB](https://javascriptweekly.com/link/163459/d076523b1d "shortclick.link") — See how MongoDB, the world’s most popular document database, integrates with RAG pipelines and cutting-edge AI agents.
+
+MongoDB sponsor
+
+📄 [Building Your Own `npm create` Package](https://javascriptweekly.com/link/163460/d076523b1d) – You'll have seen (or used) various scaffolding tools using this technique. (A Different) Alex Chan
+
+📄 [What We Learned Migrating From Webpack to Vite](https://javascriptweekly.com/link/163498/d076523b1d) Roman Zaynetdinov
+
+📄 [Understanding the Browser's _Main Thread_](https://javascriptweekly.com/link/163499/d076523b1d) Amrik Malhans
+
+📺 [An Honest Review of TanStack Start vs Next.js](https://javascriptweekly.com/link/163461/d076523b1d) Ankita Kulkarni
+
+📄 [How React Compiler Performs on Real Code](https://javascriptweekly.com/link/163462/d076523b1d) Nadia Makarevich
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lm4btn6txidtflwyoixl.jpg)](https://javascriptweekly.com/link/163463/d076523b1d)
+
+[Termo: An Easy to Use Terminal Control for Websites](https://javascriptweekly.com/link/163463/d076523b1d "termo.rajnandan.com") — If you want to offer a terminal emulator style feature on your site (maybe for advanced users, to enhance your docs, or even just as an easter egg), Termo enhances [Xterm.js](https://javascriptweekly.com/link/163464/d076523b1d) and presents a slick experience.
+
+Raj Nandan Sharma
+
+🖼️ [wasm-vips: `libvips` Image Processing via WebAssembly](https://javascriptweekly.com/link/163469/d076523b1d "github.com") — [libvips](https://javascriptweekly.com/link/163470/d076523b1d) is an efficient image processing library written in C. This build offers an isomorphic route to using it in the browser, as well as Node and Deno, all thanks to WebAssembly. (There's [an interactive demo here.](https://javascriptweekly.com/link/163471/d076523b1d))
+
+Kleis Auke Wolthuizen
+
+[Looking for a DIY Survey Solution? SurveyJS Has You Covered](https://javascriptweekly.com/link/163467/d076523b1d "surveyjs.io") — Build, customize, and store surveys with ease. Total data control, JSON-driven, no backend restrictions—integrates into any JavaScript app.
+
+SurveyJS sponsor
+
+[Civet 0.9: Code More with Less Using a TypeScript Superset](https://javascriptweekly.com/link/163465/d076523b1d "civet.dev") — Two years old and well maintained, Civet offers an interesting approach. Think JavaScript but with Python style indentation, chained comparisons, built-in JSX, & more. [This example alone](https://javascriptweekly.com/link/163466/d076523b1d) shows off the potential for tighter, easier-to-write code.
+
+Daniel X Moore and Contributors
+
+[Rockpack 5.0: An Alternative React App Starter](https://javascriptweekly.com/link/163472/d076523b1d "alexsergey.github.io") — A _Create React App_\-style tool aiming to get React project setup time as low as possible, complete with server side rendering support, bundling, linting and testing. [GitHub repo.](https://javascriptweekly.com/link/163473/d076523b1d)
+
+Alex Sergey
+
+[jsesc: Get a Stringified, ASCII-Safe Representation of Any Data](https://javascriptweekly.com/link/163468/d076523b1d "github.com") — Think `JSON.stringify()` but instead it returns JavaScript meaning it can support things like maps, sets, and `BigInt`s.
+
+Mathias Bynens
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kbn4jwuyqy5fipqtmegf.jpg)](https://javascriptweekly.com/link/163474/d076523b1d)
+
+*   📊 [Perspective 3.2](https://javascriptweekly.com/link/163474/d076523b1d) _(above)_ – Data visualization and analytics component. The core is written in C++ and compiled to WebAssembly where it can [be used from JavaScript](https://javascriptweekly.com/link/163500/d076523b1d). Their [homepage](https://javascriptweekly.com/link/163474/d076523b1d) shows it off well with a live example. Now supports newline delimited JSON (ndjson).
+    
+*   ☎︎ [International Telephone Input 25.2](https://javascriptweekly.com/link/163476/d076523b1d) – Component for entering and validating international phone numbers. Vue, React, and vanilla.
+    
+*   [debug 4.4](https://javascriptweekly.com/link/163477/d076523b1d) – Tiny debugging utility modelled after Node.js core's debugging approach (but for the browser too).
+    
+*   [ExpressoTS 3.0](https://javascriptweekly.com/link/163478/d076523b1d) – TypeScript framework for server-side Node.js apps.
+    
+*   [InversifyJS 6.2](https://javascriptweekly.com/link/163479/d076523b1d) – Inversion of control container for JavaScript.
+    
+*   📊 [ApexCharts 4.2](https://javascriptweekly.com/link/163480/d076523b1d) – Popular JS charting library. ([Demos.](https://javascriptweekly.com/link/163481/d076523b1d))
+    
+*   [Vue3-Carousel 0.9](https://javascriptweekly.com/link/163482/d076523b1d) – Customizable, lightweight Vue 3 carousel component.
+    
+*   [html-react-parser 5.2](https://javascriptweekly.com/link/163483/d076523b1d) – Isomorphic HTML to React parser.
+    
+*   [AlaSQL.js 4.6](https://javascriptweekly.com/link/163484/d076523b1d) – Isomorphic JavaScript SQL database.
+    
+
+📰 Classifieds
+
+[Meticulous automatically creates & maintains E2E UI tests](https://javascriptweekly.com/link/163485/d076523b1d). Zero flakes. Used by Lattice, Bilt Rewards and others.
+
+* * *
+
+If your work leans more towards the _frontend_, be sure to check out [the latest issue of _Frontend Focus_](https://javascriptweekly.com/link/163486/d076523b1d), our sister newsletter focused on all things browser-side.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/163501/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​716 — 2024 年 12 月 12 日
+
+[网上阅读](https://javascriptweekly.com/issues/716)
+
+连同 
+
+\[![Google](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_800,h_271/e_make_transparent/co_white,e_outline:20/u7hgy97824jj4gjk5gok.png)]\(https://javascriptweekly. com/link/163445/d076523b1d)
+
+JavaScript 周刊
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pwf3ggjktro0rsmoorh7.jpg)](https://javascriptweekly.com/link/163446/d076523b1d)
+
+[Boa v0.20：另一种 JavaScript 编译器](https://javascriptweekly.com/link/163446/d076523b1d "boajs.dev") — 经过多年的开发，Boa 有几个使命：成为 Rust ECMAScript 实现，易于嵌入 Rust 项目，并且总体上是一个快速、安全的 JS 引擎。 v0.20 在 [Test262 套件](https://javascriptweekly.com/link/163447/d076523b1d) 中的合规性提升至 89.92%，改进了时间支持，添加了“Atomics.pause”等。这不是玩具引擎。
+
+博阿开发商
+
+[React v19 现已稳定](https://javascriptweekly.com/link/163487/d076523b1d "react.dev") — 首次在 \[2024 年 2 月更新]\(https://javascriptweekly.com/link/163488/d076523b1d ），React 19 已经测试了 8 个月了，所以关于它的内容已经很丰富了，来自[React 19 升级指南](https://javascriptweekly.com/link/163489/d076523b1d) 或 [其编译器的说明](https://javascriptweekly.com/link/163490/d076523b1d) 到 \[备忘单] (https://javascriptweekly.com/link/163491/d076523b1d) 和 Vercel 的\[React 19 中的新增功能] 综述。(https://javascriptweekly.com/link/163492/d076523b1d)
+
+反应团队
+
+\[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/44873aa8.png)]\(https://javascriptweekly.com/link/163445/d076523b1d ）
+
+[以闪电般的速度与 Gemini 一起构建](https://javascriptweekly.com/link/163445/d076523b1d "shortclick.link") — Google Gemini 拥有最大的可用上下文窗口，为 JavaScript 开发人员提供图像、视频和文本的多模式处理。使用 AI Studio 在几分钟内即可开始使用 Google Gemini。
+
+谷歌双子座赞助商
+
+**简而言之：**
+
+* 🎮 如果您曾经使用 JavaScript 进行过任何游戏开发，那么是时候参加 [2024 年 Gamedev.JS 调查。](https://javascriptweekly.com/link/163448/d076523b1d) 如果您*不*，您可以前往 [JS13KGames](https://javascriptweekly.com/link/163449/d076523b1d) 并享受其他相反，人们的创造性努力:-)
+
+* Apple 发布了 [Safari 18.2](https://javascriptweekly.com/link/163450/d076523b1d)，其中 [引入了一些对 JavaScript 支持的增强功能](https://javascriptweekly.com/link/163451/d076523b1d)，包括` Float16Array`，`Uint8Array`的更多方法，`Promise.try`， `RegExp.escape` 等等。
+
+* 你知道吗 [Douglas Crockford 不是你爸爸？](https://javascriptweekly.com/link/163452/d076523b1d) 嗯，至少在以 JSON 格式添加注释时是这样。
+
+**发布：**
+
+* [VS Code 11 月发布](https://javascriptweekly.com/link/163502/d076523b1d) – 现在，当您复制并粘贴 JS/TS 代码时，VS Code 可以为粘贴的代码添加导入。
+
+* [Next.js 15.1](https://javascriptweekly.com/link/163454/d076523b1d) – 流行的 React 框架获得完整的 React 19 支持。
+
+* [Node v23.4.0（当前）](https://javascriptweekly.com/link/163455/d076523b1d) – 向 `assert.partialDeepStrictEqual` 和 `--trace-env` 打个招呼，用于跟踪环境变量的使用情况。
+
+* [Sheriff v25](https://javascriptweekly.com/link/163493/d​​076523b1d) - 固执的 TypeScript-first ESLint 配置。现在支持 ESLint v9。
+
+* [Undici 7.1](https://javascriptweekly.com/link/163456/d076523b1d) – HTTP/2 支持现已在 Node.js HTTP 库中标记为稳定。
+
+* [pnpm 9.15](https://javascriptweekly.com/link/163457/d076523b1d)、[Dependency Cruiser 16.8](https://javascriptweekly.com/link/163494/d076523b1d)、[Redux 工具包2.5](https://javascriptweekly.com/link/163495/d076523b1d)、[YouTube.js 12.2](https://javascriptweekly.com/link/163496/d076523b1d)
+
+📒 文章和教程
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/r6dljfg4exf3gotybkgc.jpg)](https://javascriptweekly.com/link/163497/d076523b1d)
+
+[2024 年 Node.js 性能状况](https://javascriptweekly.com/link/163497/d076523b1d "nodesource.com") — 一套全面的基准测试，涵盖 Node.js 最新的性能进步。 Node 18 和 20 到版本 22 之间的改进可能会让您感到惊讶 - 很明显，团队在这个领域投入了大量的工作。
+
+冈萨加和戏仿 (NodeSource)
+
+[如何减少 TTFB？](https://javascriptweekly.com/link/163458/d076523b1d "blog.sentry.io") — 高“第一个字节时间”会影响 Web Vitals。了解如何识别并解决拖慢 TTFB 速度的问题。
+
+哨兵赞助商
+
+[使用 GitHub Actions 将简单的客户端 JS 包发布到 npm](https://javascriptweekly.com/link/163504/d076523b1d "til.simonwillison.net") — 作为构建 \[Prompts.js] 过程的一部分(https://javascriptweekly.com/link/163505/d076523b1d)，一个用于创建简单的新库Simon 还希望可以使用“await”替代“alert()”、“confirm()”和“prompt()”，从而轻松发布为 npm 包。
+
+西蒙·威利森
+
+[如何使用 Deno 构建 SolidJS 应用程序](https://javascriptweekly.com/link/163506/d076523b1d "deno.com") — [SolidJS](https://javascriptweekly.com/link/163507/d076523b1d) 是一个用于创建用户界面的声明性库，强调细粒度的反应性和最小的开销，并且它与 Deno 配合得很好。
+
+江安迪
+
+[开始做饭吧！使用 MongoDB 生成 AI](https://javascriptweekly.com/link/163459/d076523b1d "shortclick.link") — 了解世界上最受欢迎的文档数据库 MongoDB 如何与 RAG 管道和尖端 AI 代理集成。
+
+MongoDB 赞助商
+
+📄 [构建您自己的“npm create”包](https://javascriptweekly.com/link/163460/d076523b1d) – 您将看到（或使用过）使用此技术的各种脚手架工具。 （不同）Alex Chan
+
+📄 [我们从 Webpack 迁移到 Vite 学到了什么](https://javascriptweekly.com/link/163498/d076523b1d) Roman Zaynetdinov
+
+📄 [了解浏览器的*主线程*](https://javascriptweekly.com/link/163499/d076523b1d) Amrik Malhans
+
+📺 [TanStack Start 与 Next.js 的诚实回顾](https://javascriptweekly.com/link/163461/d076523b1d) Ankita Kulkarni
+
+📄 [React 编译器如何在真实代码上执行](https://javascriptweekly.com/link/163462/d076523b1d) Nadia Makarevich
+
+🛠 代码和工具
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lm4btn6txidtflwyoixl.jpg)](https://javascriptweekly.com/link/163463/d076523b1d)
+
+[Termo：易于使用的网站终端控件](https://javascriptweekly.com/link/163463/d076523b1d "termo.rajnandan.com") — 如果您想在您的网站上提供终端模拟器风格的功能（也许对于高级用户，为了增强您的文档，甚至只是作为一个复活节彩蛋），Termo 增强了[Xterm.js](https://javascriptweekly.com/link/163464/d076523b1d) 并提供流畅的体验。
+
+拉吉·南丹·夏尔马
+
+🖼️ [wasm-vips: `libvips` 通过 WebAssembly 进行图像处理](https://javascriptweekly.com/link/163469/d076523b1d "github.com") — \[libvips]\(https://javascriptweekly.com/link/163470 /d076523b1d) 是一个用 C 编写的高效图像处理库。此构建提供了同构路线在浏览器中使用它，以及 Node 和 Deno，这一切都归功于 WebAssembly。 （这里有一个交互式演示。]\(https://javascriptweekly.com/link/163471/d076523b1d))
+
+克莱斯·奥克·沃尔图伊曾
+
+[正在寻找 DIY 调查解决方案？ SurveyJS 已满足您的需求](https://javascriptweekly.com/link/163467/d076523b1d "surveyjs.io") — 轻松构建、自定义和存储调查。全面的数据控制、JSON 驱动、无后端限制 - 集成到任何 JavaScript 应用程序中。
+
+SurveyJS 赞助商
+
+[Civet 0.9：使用 TypeScript 超集用更少的代码编写更多代码](https://javascriptweekly.com/link/163465/d076523b1d "civet.dev") — Civet 已有两年历史并且维护良好，它提供了一种有趣的方法。想想 JavaScript，但具有 Python 风格的缩进、链式比较、内置 JSX 等等。 [仅此示例](https://javascriptweekly.com/link/163466/d076523b1d) 展示了更紧凑、更易于编写代码的潜力。
+
+丹尼尔·X·摩尔和贡献者
+
+[Rockpack 5.0: 另一种 React App Starter](https://javascriptweekly.com/link/163472/d076523b1d "alexsergey.github.io") — 一个 *Create React App* 风格的工具，旨在将 React 项目设置时间设置为尽可能低，并提供服务器端渲染支持、捆绑、linting 和测试。 [GitHub 存储库。](https://javascriptweekly.com/link/163473/d076523b1d)
+
+亚历克斯·谢尔盖
+
+[jsesc：获取任何数据的字符串化、ASCII 安全表示](https://javascriptweekly.com/link/163468/d076523b1d "github.com") — 想想 `JSON.stringify()` 但它返回 JavaScript 含义它可以支持映射、集合和“BigInt”等内容。
+
+马蒂亚斯·拜恩斯
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kbn4jwuyqy5fipqtmegf.jpg)](https://javascriptweekly.com/link/163474/d076523b1d)
+
+* 📊 [视角 3.2](https://javascriptweekly.com/link/163474/d076523b1d) *（上图）* – 数据可视化和分析组件。核心是用 C++ 编写的，并编译为 WebAssembly，可以[从 JavaScript 使用](https://javascriptweekly.com/link/163500/d076523b1d)。他们的[主页](https://javascriptweekly.com/link/163474/d076523b1d)通过一个实例很好地展示了这一点。现在支持换行符分隔的 JSON (ndjson)。
+
+* ☎︎ [国际电话输入 25.2](https://javascriptweekly.com/link/163476/d076523b1d) – 用于输入和验证国际电话号码的组件。 Vue、React 和 vanilla。
+
+* [debug 4.4](https://javascriptweekly.com/link/163477/d076523b1d) – 仿照 Node.js 核心调试方法建模的小型调试实用程序（但也适用于浏览器）。
+
+* [ExpressoTS 3.0](https://javascriptweekly.com/link/163478/d076523b1d) – 用于服务器端 Node.js 应用的 TypeScript 框架。
+
+* [InversifyJS 6.2](https://javascriptweekly.com/link/163479/d076523b1d) – JavaScript 控制容器的反转。
+
+* 📊 [ApexCharts 4.2](https://javascriptweekly.com/link/163480/d076523b1d) – 流行的 JS 图表库。 （[演示。](https://javascriptweekly.com/link/163481/d076523b1d))
+
+* [Vue3-Carousel 0.9](https://javascriptweekly.com/link/163482/d076523b1d) – 可定制的轻量级 Vue 3 轮播组件。
+
+* [html-react-parser 5.2](https://javascriptweekly.com/link/163483/d076523b1d) – 同构 HTML 到 React 解析器。
+
+* [AlaSQL.js 4.6](https://javascriptweekly.com/link/163484/d076523b1d) – 同构 JavaScript SQL 数据库。
+
+📰 分类广告
+
+[Meticulous 自动创建和维护 E2E UI 测试](https://javascriptweekly.com/link/163485/d076523b1d)。零片。由 Lattice、Bilt Rewards 等公司使用。
+
+***
+
+如果您的工作更倾向于*前端*，请务必查看[最新一期的*前端焦点*](https://javascriptweekly.com/link/163486/d076523b1d)，这是我们专注于浏览器所有内容的姊妹通讯-边。
+
+由 [Cooperpress](https://cooperpress.com/) 出版，由 [Peter Cooper](https://javascriptweekly.com/link/163501/d076523b1d) 编辑
+
+“JavaScript”是 Oracle Corporation 在美国的商标\
+我们未获得 Oracle 的认可或隶属于 Oracle。
+
+
