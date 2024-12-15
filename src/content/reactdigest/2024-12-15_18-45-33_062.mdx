@@ -1,0 +1,93 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#485 Architectures of modern front-end applications
+description: RD#485 Architectures of modern front-end applications
+date: 星期日 06 晚上 十二月 15o 2024
+author: reactdigest
+origin_url: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Farchitectures-of-modern-f?= =?us-ascii?Q?ront-end-applications?=
+origin_site: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Farchitectures-of-modern-f?= =?us-ascii?Q?ront-end-applications?=
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#485 Architectures of modern front-end applications" url="=?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Farchitectures-of-modern-f?= =?us-ascii?Q?ront-end-applications?=" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1VJeeN1K7xlGoG0UotoHc3zQpzpS-F0AkyqS9Xj6BgRoerIc0rQdA7dAKm_OD8AJV2uYCVEgOUxFsHnCPV9M1oFAaDT4wcToikad6M9HzrmBhPLehCEor2YyWG3n8NVMGmeoBW-ma1y7tJ1fPeAs7XHcCc3fHptzLpGJvQ3e3FZpuICK9xVXO84AknW2IRr5iEbc6-GXBWohFA-Lqoru2egZZAe034S19Fs46IquxdNPd52Cn8SD-6n6CE3cOyHy79UxOU1Z0BasCPDzKEHVmicECVncBtnnrvi2NymTnQscoD3N5zsKoYUpFOsgWQHa91ZR-kv1rS9WDuJDOZZjqIEEqTcPwLNGkNQoKylQoDuMbE9B105U6JDm1jw6hjL0dbY1VdkCs34-z-_EW6TvUOEqsn4-VNA8UaeMsjBRyzIprCpEHJhO7kGi6tcuct0g_QZUoVSFTnlZzk7RR_0KC8jYVmrmilx-qkCvZjWgkAQ71XIZOd5OHIyvYGQScZ2QFRO-4XMxQo9sA8FmD_rDtMGIOQtT3zZYiFivuWF4K7e3OODkRPG687zmI5N2BALcDe865iQyIggsV7wyJQKlAjw_BTq7vLz6g9ukxvgIftdIbwiMgbPhlZXcm_mlVoIQzH0yJKx6NC66Fz8QbJdV8TdFiGMZ50Beq_zwMqOyB3WxP-CzwGmumX-5q4k2gPRS1xRq2clFHo3UJRuHDY0FeXsX3t4mB1M9rHtU1XulpP6z9L5FcPWP9zIi2G6kAV6BcU_D3XqYbFN0smjejKRfDrzADaxc7vcFa4LXB0COgFaWmtq44jZp7P9h4AE_CWh124/4cb/KISnb5z4SSmB1Kz6T1V9-Q/h0/h001.7X5sgclC0S9TtJ6rakrGHO0cjWGA8vf3hVziIOt381Q)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4cb/KISnb5z4SSmB1Kz6T1V9-Q/ho.gif)
+
+[Architectures of modern front-end applications](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63hoLuM8rYyN-q4oEYhp4nYcFkld_WBWelTjHiFgp610Q36q4giyFMqfTqfS5_imjznpDoPbVDtX-ClGJHVcET0B6YHf6i7eEMTNcWIC2IAABWkxMDmproH1AIGXEKrNh313dV5NEjDdSL3hXvS7RZ-Lbf6t3ErPmFedcy2GODJ93Ckk7ZQacPZ16hCZOwb_McbIvbiDOopJrhAgXsQoq68xoZOpyQMcIgUc3COcoEb1rvlQ91Pp4Kgmxmx01O81AHGqu7SNDrB2MIx9TtKIWJCNMTd_zG5Mj5DXdYRdmbG0PWm9SSQlbm2F5xVHVjfD0IU6jK7oJBEi3yC6gdJDL-b0/4cb/KISnb5z4SSmB1Kz6T1V9-Q/h1/h001.4T8GqPFmUfJrj9OjePKP_berG2tHXzJmDY2p7PSR0Tc)  
+_6 minutes_ by Dmitry Bobryshev
+
+This post explores the advantages of popular architectures and helps you choose the best solution to meet your unique requirements. We'll explore the differences between classical, modular, and FSD architectures, and discussed their usages.
+
+[Catch flaky tests before they break your build](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZDc6CvoM57HfpmGHktxcZjxKXyKGhQjlz0HBG04tnfoCzQogNQg-DOqIFk_lGjoKe83KTeG17XHT7foAp7HKx141vrAH23FNqbdTz_1V2qXzeoYrPt0XBiRCXJ2BxVGcjVfPjVEikuiA07pchyPR_uUmbsrMoF8PUm4iK3cq3N6FYj9ZUWrfT9sxlbHcCJ2v7iNwg_e-r0v91XEim4_w4sfdJMALCiNiTgL0z8p-UY62XeltWWEPv5T-_qmGpPivhVpWLwc5pk4672RZIClUvSMVVCG9I6xhTc1ERIZYaer/4cb/KISnb5z4SSmB1Kz6T1V9-Q/h2/h001.Z2rtn11H2ZskhopQgIpfPHWvx_a0Q9deCnL8s19IZ24)  
+_sponsored by Sentry_
+
+Flaky tests waste time and erode trust in your test suite. Artem Zakharchenko shares how Codecov’s Test Analytics can help you flag unreliable tests early and keep your CI/CD pipeline running smoothly.
+
+[Debunking the Myth: SSR Isn't Expensive](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF0UtI_QxS16BB53hzPK5Jo_M6vu0LMotdjOtlVuQMXo4T--ISTZvZSdwiMftUNOk8LPSA-nKMxyu-0WpkgUm9MSkri9PmQourVq4hcp4u8sNHKe7gFbKuk-yBbhrmuxPAo07enOn6uF7PR2nR_lH9w_RNE_uCR_4S78ZeeC4vwBmkoakHBBrWh6t6ylJw0T17St0FZqdbLb1_f0Tsd5YuEiK9pTmlYqICwDbfOKxCan5JucHqQU82TFF1qmiyA8oCyAosjOO4DRJdPz0EfeTGh0/4cb/KISnb5z4SSmB1Kz6T1V9-Q/h3/h001.f9cACqdn8bCsXzOQGbfrR1DLFSlQXreEwz-vnwKOwqo)  
+_3 minutes_ by Theo
+
+The article debunks the myth that Server-Side Rendering (SSR) increases cloud costs, arguing that it actually saves money by reducing computational overhead and server round-trips. Theo explains that SSR's rendering time is minimal compared to database queries and authentication checks, and it provides many benefits.
+
+[Why and how I made a 3D terrain renderer with React](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF_U2RIUQ4e2e4Ip3-x-nK5CGj9PML52dzDB1rEmyW6g0aaRNhB0-IOxOqXCHk5M1G2C4mXQjlffaVLWoHcxBjmhn2eWxC0FIbE-7Zm75GA7UAvTYjxHLgwiLC55AItOcwPX0CtRQmGj0LysQ8rB9r6e35t-HDaRlIMfiBQVj5aeQVMEha3qt1wh4R7bbFx3ziM6XQahTpfdw1epCxKMwmtbU_dPvgIaEgzMl-jNS-LamwFxiQzhc77mgzGMZ9a2YJ34zjNSqHkwajFMv9W1MHRJTva5p_75YCYLbLUj1DiFNKVAAQzO64lj-MoAUZeJVfA/4cb/KISnb5z4SSmB1Kz6T1V9-Q/h4/h001.-fqfutQjPM7w5ym8HqGDVX_8Fshd9lfS8dWahgEU5cE)  
+_3 minutes_ by Saman Bemel Benrud
+
+In this article Saman describes the development of a DOM-based 3D terrain renderer built entirely with HTML divs. He details how he overcame previous challenges with 3D graphics in web development, explaining the three-step process of terrain generation: creating a height map, processing neighbor relationships, and rendering tiles using CSS transforms.
+
+[React Tech Stack in 2025](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zIhRMUMru4q2ytzEh7wlOCZYbmKHnlFs-0cA2YYw7_IiyTS-hOmF4ShrA4ZH2GQNURPUu8PAkN4HzNfZHGD--k785hRzachFNcmVo6UJIeKxEpebQ5-yDfEgeiOLBV6z5DhstddPYyzhaQE2IBz9Zsjfo6OQPNi41IPx4j0jG_T1L6pc_kF1weyWFCXVNdZRVOBHX2Qs16_x8_b8oQ7G4k9_tmBPnCkI8fPiL7o48bFZdsD_5KttleHFjdzY8xctfk/4cb/KISnb5z4SSmB1Kz6T1V9-Q/h5/h001.jI2PIm3dmKgVssnCDykJkrVh9qAjI7i0wkTayZgkhOo)  
+_8 minutes_ by Robin Wieruch
+
+This article outlines a comprehensive React tech stack recommendation for full-stack applications in 2025, based on the Robin's experience as a freelance developer and solo founder. He emphasizes choosing stable, maintainable technologies while being mindful of vendor lock-in and provides rationale for each recommended tool.
+
+[Ref Callbacks, React 19 and the Compiler](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF87awdU8DR0ou_NTWoqeJgvwtP53hkp9Y2pZtm0Ig93VEW4zbFaWh0_civDglxRXBIFV_dkszxlnS_kaU_b-yOQngki6xGzzgcyHTtPdHbPwjW_7Anf6gD9PTQ662UxB5F4fsLFb7NPyRbwaPvUqMfilJee_z_-FGkwbvu-LYuSNmxgloq1RiabyEEHvFoL5lwRoB6MggdG51EzRzS62SQfeAfbulgNusC1PLbeoesmNs52Q2ib4lgxoDmZtRxWs_Utoat22vhB5SndeDO7cm7rsvb7UWqbd8XU1ik6GKlhu/4cb/KISnb5z4SSmB1Kz6T1V9-Q/h6/h001.tx6kH5EOgW31OBFMLjfGd77Ga51vNOzhqxyacLIPh28)  
+_6 minutes_ by Dominik Dorfmeister
+
+The article revisits the topic of callback refs in React, discussing best practices and updates in React 19. Dominik explains why using useCallback for ref callbacks isn't always necessary and can be problematic with the upcoming React Compiler.
+
+#
+</Detail>
+
+\[读在线]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1VJeeN1K7xlGoG0UotoHc3zQpzpS-F0AkyqS 9Xj6BgRoerIc0rQdA7dAKm\_OD8AJV2uYCVEgOUxFsHnCPV9M1oFAaDT4wcToikad6M9HzrmBhPLehCEor2YyWG3n8NVMGmeoBW-ma1y7tJ1fPeAs7XHcCc3fHptzL pGJvQ3e3FZpuICK9xVXO84AknW2IRr5iEbc6-GXBWohFA-Lqoru2egZZAe034S19Fs46IquxdNPd52Cn8SD-6n6CE3coyHy79UxOU1Z0BasCPDzKEHVmicECVncBt nnrvi2NymTnQscoD3N5zsKoYUpFOsgWQHa91ZR-kv1rS9WDuJDOZZjqIEEqTcPwLNGkNQoKylQoDuMbE9B105U6JDm1jw6hjL0dbY1VdkCs34-z-\_EW6TvUOEqsn4- VNA8UaeMsjBRyzIprCpEHJhO7kGi6tcuct0g\_QZUoVSFTnlZzk7RR\_0KC8jYVmrmilx-qkCvZjWgkAQ71XIZOd5OHIyvYGQScZ2QFRO-4XMxQo9sA8FmD\_rDtMGIO QtT3zZYiFivuWF4K7e3OODkRPG687zmI5N2BALcDe865iQyIggsV7wyJQKlAjw\_BTq7vLz6g9ukxvgIftdIbwiMgbPhlZXcm\_mlVoIQzH0yJKx6NC66Fz8QbJdV8Td FiGMZ50Beq\_zwMqOyB3WxP-CzwGmumX-5q4k2gPRS1xRq2clFHo3UJRuHDY0FeXsX3t4mB1M9rHtU1XulpP6z9L5FcPWP9zIi2G6kAV6BcU\_D3XqYbFN0smjejKRf DrzADaxc7vcFa4LXB0COgFaWmtq44jZp7P9h4AE\_CWh124/4cb/KISnb5z4SSmB1Kz6T1V9-Q/h0/h001.7X5sgclC0S9TtJ6rakrGHO0cjWGA8vf3hVziIOt381Q)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4cb/KISnb5z4SSmB1Kz6T1V9-Q/ho.gif)
+
+【现代前端架构应用程序]\(https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63hoLuM8rYyN-q4oEYhp4nYcFkld\_WBWelTjHiFgp610Q36q4gi yFMqfTqfS5\_imjznpDoPbVDtX-ClGJHVcET0B6YHf6i7eEMTNcWIC2IAABWkxMDmproH1AIGXEKrNh313dV5NEjDdSL3hXvS7RZ-Lbf6t3ErPmFedcy2GODJ93Ckk 7ZQacPZ16hCZOwb\_McbIvbiDOopJrhAgXsQoq68xoZOpyQMcIgUc3COcoEb1rvlQ91Pp4Kgmxmx01O81AHGqu7SNDRB2MIx9TtKIWJCNMTd\_zG5Mj5DXdYRdmbG0 PWM9SSQlbm2F5xVHVjfD0IU6jK7oJBEi3yC6gdJDL-b0/4cb/KISnb5z4SSmB1Kz6T1V9-Q/h1/h001.4T8GqPFmUfJrj9OjePKP\_berG2tHXzJmDY2p7PSR0Tc)\
+*6 分钟* 德米特里·鲍布里舍夫 (Dmitry Bobryshev)
+
+这篇文章探讨了流行架构的优势，并帮助您选择最佳解决方案来满足您的独特需求。我们将探讨经典、模块化和 FSD 架构之间的差异，并讨论它们的用法。
+
+\[在不稳定的测试破坏您的体验之前抓住它们构建]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZDc6CvoM57HfpmGHktxcZjxKXyKGhQjlz0HBG04tnfoC zQogNQg-DOqIFk\_lGjoKe83KTeG17XHT7foAp7HKx141vrAH23FNqbdTz\_1V2qXzeoYrPt0XBiRCXJ2BxVGcjVfPjVEikuiA07pchyPR\_uUmbsrM ofF8PUm4iK3cq3N6FYj9ZUWrfT9sxlbHcCJ2v7iNwg\_e-r0v91XEim4\_w4sfdJMALCiNiTgL0z8p-UY62XeltWWEPv5T-\_qmGpPivhVpWLwc5pk46 72RZIClUvSMVVCG9I6xhTc1ERIZYaer/4cb/KISnb5z4SSmB1Kz6T1V9-Q/h2/h001.Z2rtn11H2ZskhopQgIpfPHWvx\_a0Q9deCnL8s19IZ24)\
+*由哨兵赞助*
+
+不稳定的测试会浪费时间并削弱对测试套件的信任。 Artem Zakharchenko 分享了 Codecov 的测试分析如何帮助您及早标记不可靠的测试并保持 CI/CD 管道顺利运行。
+
+\[揭穿神话：SSR 不是昂贵]\(https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF0UtI\_QxS16BB53hzPK5Jo\_M6vu0LMotdjOt LVuQMXo4T--ISTZvZSdwiMftUNOk8LPSA-nKMxyu-0WpkgUm9MSkri9PmQourVq4hcp4u8sNHKe7gFbKuk-yBbhrmuxPAo07enOn6uF7PR2n R\_lH9w\_RNE\_uCR\_4S78ZeeC4vwBmkoakHBBrWh6t6ylJw0T17St0FZqdbLb1\_f0Tsd5YuEiK9pTmlYqICwDbfOKxCan5JucHqQU82TFF1qmi yA8oCyAosjOO4DRJdPz0EfeTGh0/4cb/KISnb5z4SSmB1Kz6T1V9-Q/h3/h001.f9cACqdn8bCsXzOQGbfrR1DLFSlQXreEwz-vnwKOwqo)\
+*3 分钟* 西奥
+
+该文章揭穿了服务器端渲染 (SSR) 会增加云成本的神话，认为它实际上通过减少计算开销和服务器往返来节省资金。 Theo 解释说，与数据库查询和身份验证检查相比，SSR 的渲染时间很短，并且提供了许多好处。
+
+\[我为什么以及如何制作 3D 地形渲染器反应]\(https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF\_U2RIUQ4e2e4Ip3-x-nK5CGj9PML52dzDB1rEmyW6g0aaRNhB 0-IOxOqXCHk5M1G2C4mXQjlffaVLWoHcxBjmhn2eWxC0FIbE-7Zm75GA7UAvTYjxHLgwiLC55AItOcwPX0CtRQmGj0LysQ8rB9r6e35t-HDaRlIMfiBQVj 5aeQVMEha3qt1wh4R7bbFx3ziM6XQahTpfdw1epCxKMwmtbU\_dPvgIaEgzMl-jNS-LamwFxiQzhc77mgzGMZ9a2YJ34zjNSqHkwajFMv9W1MHRJTva5p\_ 75YCYLbLUj1DiFNKVAAQzO64lj-MoAUZeJVfA/4cb/KISnb5z4SSmB1Kz6T1V9-Q/h4/h001.-fqfutQjPM7w5ym8HqGDVX\_8Fshd9lfS8dWahgEU5cE)\
+*3 分钟* 萨曼·贝梅尔·本鲁德 (Saman Bemel Benrud)
+
+在本文中，Saman 描述了完全使用 HTML div 构建的基于 DOM 的 3D 地形渲染器的开发。他详细介绍了他如何克服之前 Web 开发中 3D 图形的挑战，解释了地形生成的三步过程：创建高度图、处理邻居关系以及使用 CSS 变换渲染图块。
+
+\[React 技术堆栈2025]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf\_qUprM09yoMPtF27zIhRMUMru4q2ytzEh7w LOCZYbmKHnlFs-0CA2YYw7\_IiyTS-hOMF4ShrA4ZH2GQNURPUu8PAkN4HzNfZHGD--k785hRzachFNcmVo6UJIeKxEpebQ5-yDfEgeiOLBV 6z5DhstddPYyzhaQE2IBz9Zsjfo6OQPNi41IPx4j0jG\_T1L6p​​c\_kF1weyWFCXVNdZRVOBHX2Qs16\_x8\_b8oQ7G4k9\_tmBPnCkI8fPiL7o4 8bFZdsD\_5KttleHFjdzY8xctfk/4cb/KISnb5z4SSmB1Kz6T1V9-Q/h5/h001.jI2PIm3dmKgVssnCDykJkrVh9qAjI7i0wkTayZgkhOo)\
+*8 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+本文根据 Robin 作为自由开发人员和独立创始人的经验，概述了 2025 年全栈应用程序的全面 React 技术堆栈建议。他强调选择稳定、可维护的技术，同时注意供应商锁定，并为每个推荐工具提供理由。
+
+\[参考回调，React 19 和编译器]\(https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF87awdU8DR0ou\_NTWoqeJgvwtP53hkp9Y2pZtm0Ig9 3VEW4zbFaWh0\_civDglxRXBIFV\_dkszxlnS\_kaU\_b-yOQngki6xGzzgcyHTtPdHbPwjW\_7Anf6gD9PTQ662UxB5F4fsLFb7NPyRbwaPvUqMfilJee *z*-FGkwbvu-LYuSNmxgloq1RiabyEEHvFoL5lwRoB6MggdG51EzRzS62SQfeAfbulgNusC1PLbeoesmNs52Q2ib4lgxoDmZtRxWs\_Utoat22vhB5 SndeDO7cm7rsvb7UWqbd8XU1ik6GKlhu/4cb/KISnb5z4SSmB1Kz6T1V9-Q/h6/h001.tx6kH5EOgW31OBFMLjfGd77Ga51vNOzhqxyacLIPh28)\
+*6 分钟* 多米尼克·多夫梅斯特 (Dominik Dorfmeister)
+
+本文重新审视了 React 中的回调引用主题，讨论了 React 19 中的最佳实践和更新。Dominik 解释了为什么使用 useCallback 进行引用回调并不总是必要的，而且可能会在即将推出的 React 编译器中出现问题。
+
+#
+
+
