@@ -1,0 +1,254 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: A look back at Node's 2024
+description: A look back at Node's 2024
+date: 星期二 01 下午 十二月 17o 2024
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/560
+origin_site: https://nodeweekly.com/issues/560
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="A look back at Node's 2024" url="https://nodeweekly.com/issues/560" />
+
+<Detail client:only="react">
+	#​560 — December 17, 2024
+
+[Read on the Web](https://nodeweekly.com/issues/560)
+
+🎄 This week we cover a few news items but quickly get into a 2024 roundup of Node news and the most clicked items of the year. **Then we're taking a Christmas break for two weeks and will be back on January 7, 2025.**  
+  
+We hope you have a Merry Christmas and a Happy New Year!  
+\_\_  
+_Peter Cooper and the Cooperpress team_
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/163509/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/cp2m09qy0onbv9ywfjcx.jpg)
+
+2024 has been a solid year for Node, with the [release of Node.js v22](https://nodeweekly.com/link/163510/0a4070b383) back in April ([now in LTS](https://nodeweekly.com/link/163511/0a4070b383)) and [v23 in October.](https://nodeweekly.com/link/163512/0a4070b383) Node also got a new mascot this year _(above)_, [Express 5.0](https://nodeweekly.com/link/163513/0a4070b383) arrived, Node has [dabbled with type stripping](https://nodeweekly.com/link/163514/0a4070b383) to better support TypeScript, and [a native SQLite module](https://nodeweekly.com/link/163515/0a4070b383) has been under active development. _Fingers crossed for an interesting 2025!_
+
+[Node v23.4.0 (Current) Released](https://nodeweekly.com/link/163516/0a4070b383 "nodejs.org") — There are new `--trace-env`, `--trace-env-js-stack` and `--trace-env-native-stack` options to track environment variable use by a script. Also `assert.partialDeepStrictEqual` has been added as a way to more quickly assert _certain_ properties are present in an object – you don’t have to supply them all.
+
+Antoine du Hamel
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d6bfec43.png)](https://nodeweekly.com/link/163509/0a4070b383)
+
+[Complete Intro to React v9: New Project, Modern Stack](https://nodeweekly.com/link/163509/0a4070b383 "frontendmasters.com") — Join Brian Holt in building a pizza delivery app from scratch. Master hooks, TanStack Router, testing, and React 19 features in this comprehensive guide to modern React development. No prior React experience needed.
+
+Frontend Masters sponsor
+
+[The State of Node.js Performance in 2024](https://nodeweekly.com/link/163517/0a4070b383 "nodesource.com") — A thorough exploration (and benchmark) of recent performance advancements made in Node.js. The enhancements between Node 18 and 20 up to version 22 might surprise you - it’s clear the team has put a lot of work into this area.
+
+Gonzaga and Parody (NodeSource)
+
+📄 [Benchmarking GraphQL Solutions in the JS/TS Landscape](https://nodeweekly.com/link/163518/0a4070b383) Tomasz Nieżurawski
+
+📄 [Exploring the Core Concepts of Node.js Readable Streams](https://nodeweekly.com/link/163519/0a4070b383) Pavel Romanov
+
+📄 [Parallel Computing in Node.js via HPX Addons](https://nodeweekly.com/link/163520/0a4070b383) Harris Brakmić
+
+📄 [A Deep Dive into CommonJS and ES Modules in Node](https://nodeweekly.com/link/163521/0a4070b383) Damilola Olatunji
+
+**QUICK RELEASES:**
+
+*   [Fastify 5.2](https://nodeweekly.com/link/163522/0a4070b383) – The fast, low overhead Node.js web framework.
+    
+*   [express-rate-limit 7.5](https://nodeweekly.com/link/163523/0a4070b383) – Basic rate limiting for Express apps.
+    
+*   [pnpm 10.0 Release Candidate](https://nodeweekly.com/link/163524/0a4070b383) – The alternative, efficient package manager.
+    
+*   [ESLint v9.17.0](https://nodeweekly.com/link/163525/0a4070b383)
+    
+
+🥇 Top Node Items of 2024
+
+From an epic 1694 links we included in _Node Weekly_ this year, we're going to boil it down to the top 8 you clicked on the most:
+
+1. [A Guide to Reading and Writing Node.js Streams](https://nodeweekly.com/link/163526/0a4070b383 "blog.platformatic.dev") — I'm not surprised to see this as our most popular link of the year. While [streams](https://nodeweekly.com/link/163527/0a4070b383) are a long standing Node feature, they're commonly misunderstood, and Matteo did a good job of covering their benefits, use cases, and more.
+
+Matteo Collina
+
+2. [The Nine Node Pillars](https://nodeweekly.com/link/163528/0a4070b383 "www.platformatichq.com") — An interesting list of self-proclaimed 'principles for doing Node.js right in enterprise environments' written by a group of prolific Node contributors. It acts as a checklist to identify gaps in your current practices, particularly when building larger scale apps.
+
+Snell, Venditto, Dawson, Collina, et al.
+
+[Automate Embedding Creation and Syncing in Postgres with pgai Vectorizer](https://nodeweekly.com/link/163529/0a4070b383 "github.com") — 🚀 pgai Vectorizer automates embedding creation and syncing in Postgres with one SQL command—keeps embeddings updated, no tools needed.
+
+Timescale sponsor
+
+3. [10 Modern Node.js Runtime Features to Start Using in 2024](https://nodeweekly.com/link/163530/0a4070b383 "snyk.io") — It's not just Bun and Deno adding new features by the dozen over the past couple of years, there's plenty of new stuff in Node too. How many did you use in 2024?
+
+Liran Tal
+
+4. [Introducing Express v5](https://nodeweekly.com/link/163513/0a4070b383 "expressjs.com") — We first spied the release of Express.js v5 in September but the official blog post eventually dropped in October and explained the broad plan for Node's long standing Web framework. v5 remains a '_bleeding edge_' release with work still required in areas of security (such as [this security audit](https://nodeweekly.com/link/163531/0a4070b383)) and overall processes.
+
+Wes Todd (Express)
+
+5. [TypeSpec: A TypeScript-Inspired Way to Define APIs](https://nodeweekly.com/link/163532/0a4070b383 "typespec.io") — A language for concisely describing cloud service APIs and generating other API description languages (e.g. OpenAPI), client and service code, docs, etc. [v0.63](https://nodeweekly.com/link/163533/0a4070b383) has just been released, by the way.
+
+Microsoft
+
+💡 Nate Totten's '[Bringing Types to APIs with TypeSpec](https://nodeweekly.com/link/163534/0a4070b383)' will give you an idea of the practicalities of using TypeSpec.
+
+6. [zx v8.0: Google's Way to Write Shell Scripts with Node](https://nodeweekly.com/link/163535/0a4070b383 "github.com") — A long standing way to make shell scripting a more pleasant experience with Node. zx provides useful wrappers around `child_process`, escapes arguments and gives sensible defaults. v8.0 made zx _20x smaller_, faster, makes it easier to kill processes, pass input to commands, and more. It remains the latest major version, with [v8.2.4](https://nodeweekly.com/link/163536/0a4070b383) landing a few weeks ago.
+
+Google
+
+7. [The Node.js Best Practices List: 2024 Edition](https://nodeweekly.com/link/163537/0a4070b383 "github.com") — An in-depth guide for Node developers that we link to most years. Divided into eight sections and updated regularly, it digs into areas from error handling and code style to Docker and security practices.
+
+Yoni Goldberg
+
+8. [Announcing AdonisJS v6](https://nodeweekly.com/link/163538/0a4070b383 "adonisjs.com") — A TypeScript-first backend Web framework with [amazing documentation](https://nodeweekly.com/link/163539/0a4070b383) and packed with features out the box. v6 was a huge step forward that moved to using ESM by default and remains the latest major version, despite being released in January.
+
+Harminder Virk
+
+📰 Classifieds
+
+🔍 Uncover the hidden complexities of event-driven systems and the myth of “loose coupling.” Gain insights into building resilient architectures. [Read more](https://nodeweekly.com/link/163540/0a4070b383).
+
+* * *
+
+30% of people we polled said they handle HTTP caching by just “praying it doesn’t break”. [We built something to help](https://nodeweekly.com/link/163541/0a4070b383) 🤯
+
+We hope you have a good break, if you're taking one, and we'll be back on Tuesday, January 7, 2025.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​560 — 2024 年 12 月 17 日
+
+[网上阅读](https://nodeweekly.com/issues/560)
+
+🎄 本周我们将报道一些新闻，但很快就会进入 2024 年 Node 新闻综述和年度点击率最高的新闻。 **然后我们将休假两周，并将于 2025 年 1 月 7 日回来。**
+
+我们希望您圣诞快乐，新年快乐！\
+\_\_\
+*彼得·库珀和 Cooperpress 团队*
+
+连同 
+
+\[![前端大师徽标](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)]\(https:// nodeweekly.com/link/163509/0a4070b383）
+
+![Node.js 周刊](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/cp2m09qy0onbv9ywfjcx.jpg)
+
+2024 年对于 Node 来说是坚实的一年，[Node.js v22 版本](https://nodeweekly.com/link/163510/0a4070b383) 早在 4 月份就发布了（\[现在处于 LTS]\(https://nodeweekly. com/link/163511/0a4070b383)) 和 [v23 10 月。](https://nodeweekly.com/link/163512/0a4070b383) Node 今年也有了一个新的吉祥物\*(上图)\*，\[Express 5.0]\(https://nodeweekly.com/link/163513/0a4070b383 ）到达，节点已经[涉足类型剥离](https://nodeweekly.com/link/163514/0a4070b383)以更好地支持 TypeScript，并且[原生 SQLite 模块](https://nodeweekly.com/link/163515/0a4070b383) 一直在积极开发中。 *祈求 2025 年过得有趣！*
+
+[Node v23.4.0（当前）发布](https://nodeweekly.com/link/163516/0a4070b383 "nodejs.org") — 新增 `--trace-env`、`--trace-env-js -stack` 和 `--trace-env-native-stack` 选项用于跟踪脚本使用的环境变量。此外，还添加了“assert.partialDeepStrictEqual”，作为一种更快速地断言对象中存在*某些*属性的方法 - 您不必提供全部属性。
+
+安托万·杜·哈梅尔
+
+\[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d6bfec43.png)]\(https://nodeweekly.com/link/163509/0a4070b383 ）
+
+[React v9 完整介绍：新项目、现代堆栈](https://nodeweekly.com/link/163509/0a4070b383 "frontendmasters.com") — 与 Brian Holt 一起从头开始构建披萨外卖应用程序。这本现代 React 开发综合指南中掌握了 hooks、TanStack Router、测试和 React 19 功能。无需具备 React 经验。
+
+前端大师赞助商
+
+[2024 年 Node.js 性能状况](https://nodeweekly.com/link/163517/0a4070b383 "nodesource.com") — 对 Node.js 最新性能进步的彻底探索（和基准测试）。 Node 18 和 20 到版本 22 之间的增强可能会让您感到惊讶 - 很明显，团队在这个领域投入了大量的工作。
+
+冈萨加和戏仿 (NodeSource)
+
+📄 [JS/TS 领域中的 GraphQL 解决方案基准测试](https://nodeweekly.com/link/163518/0a4070b383) Tomasz Nieżurawski
+
+📄 【探索 Node.js 可读流的核心概念】(https://nodeweekly.com/link/163519/0a4070b383) Pavel Romanov
+
+📄 [通过 HPX 插件在 Node.js 中进行并行计算](https://nodeweekly.com/link/163520/0a4070b383) Harris Brakmić
+
+📄 [深入探讨 Node 中的 CommonJS 和 ES 模块](https://nodeweekly.com/link/163521/0a4070b383) Damilola Olatunji
+
+**快速发布：**
+
+* [Fastify 5.2](https://nodeweekly.com/link/163522/0a4070b383) – 快速、低开销的 Node.js Web 框架。
+
+* [express-rate-limit 7.5](https://nodeweekly.com/link/163523/0a4070b383) – Express 应用的基本速率限制。
+
+* [pnpm 10.0 候选版本](https://nodeweekly.com/link/163524/0a4070b383) – 另一种高效的包管理器。
+
+* [ESLint v9.17.0](https://nodeweekly.com/link/163525/0a4070b383)
+
+🥇 2024 年顶级节点项目
+
+从我们今年在 *Node Weekly* 中收录的 1694 个史诗般的链接中，我们将其归结为您点击次数最多的前 8 个链接：
+
+1. [读写 Node.js 流指南](https://nodeweekly.com/link/163526/0a4070b383 "blog.platformatic.dev") — 看到这是我们最受欢迎的链接，我并不感到惊讶今年的。虽然 [streams](https://nodeweekly.com/link/163527/0a4070b383) 是一个长期存在的 Node 功能，但它们经常被误解，Matteo 很好地介绍了它们的优点、用例等。
+
+马泰奥·科里纳
+
+2. [九个节点支柱](https://nodeweekly.com/link/163528/0a4070b383 "www.platformatichq.com") — 一个有趣的列表，列出了自称的“在企业环境中正确使用 Node.js 的原则”由一群多产的 Node 贡献者编写。它可以作为一个清单来确定您当前实践中的差距，特别是在构建更大规模的应用时。
+
+斯内尔、文迪托、道森、科里纳等人。
+
+[使用 pgai Vectorizer 在 Postgres 中自动创建嵌入并同步](https://nodeweekly.com/link/163529/0a4070b383 "github.com") — 🚀 pgai Vectorizer 使用一个 SQL 命令在 Postgres 中自动创建嵌入并同步 — 保持嵌入已更新，无需任何工具。
+
+时间尺度赞助商
+
+3. [2024 年开始使用的 10 个现代 Node.js 运行时功能](https://nodeweekly.com/link/163530/0a4070b383 "snyk.io") — 这不仅仅是 Bun 和 Deno 添加了十几个新功能过去几年，Node 中也出现了很多新东西。 2024 年您使用了多少个？
+
+利兰·塔尔
+
+4. [Express v5 简介](https://nodeweekly.com/link/163513/0a4070b383 "expressjs.com") — 我们首次在 9 月份发现 Express.js v5 的发布，但官方博客文章最终在 10 月份发布，解释了 Node 长期存在的 Web 框架的总体计划。 v5 仍然是一个“*前沿*”版本，安全领域（例如[此安全审核](https://nodeweekly.com/link/163531/0a4070b383)）和整体流程仍需要开展工作。
+
+韦斯·托德（快报）
+
+5. [TypeSpec：一种受 TypeScript 启发的 API 定义方法](https://nodeweekly.com/link/163532/0a4070b383 "typespec.io") — 一种用于简明描述云服务 API 并生成其他 API 描述语言的语言 (例如 OpenAPI）、客户端和服务代码、文档等。顺便说一句，[v0.63](https://nodeweekly.com/link/163533/0a4070b383) 刚刚发布。
+
+微软
+
+💡 Nate Totten 的“[使用 TypeSpec 将类型引入 API](https://nodeweekly.com/link/163534/0a4070b383)”将使您了解使用 TypeSpec 的实用性。
+
+6. [zx v8.0：Google 使用 Node 编写 Shell 脚本的方法](https://nodeweekly.com/link/163535/0a4070b383 "github.com") — 一种使 shell 脚本编写成为更愉快体验的长期方法与节点。 zx 围绕“child\_process”提供有用的包装器，转义参数并提供合理的默认值。 v8.0 使 zx *20x 更小*、更快，更容易终止进程、将输入传递给命令等等。它仍然是最新的主要版本，[v8.2.4](https://nodeweekly.com/link/163536/0a4070b383) 已于几周前登陆。
+
+谷歌
+
+7. [Node.js 最佳实践列表：2024 版](https://nodeweekly.com/link/163537/0a4070b383 "github.com") — 我们多年来链接的针对 Node 开发人员的深入指南。它分为八个部分并定期更新，深入探讨了从错误处理和代码风格到 Docker 和安全实践等领域。
+
+约尼·戈德堡
+
+8. [宣布 AdonisJS v6](https://nodeweekly.com/link/163538/0a4070b383 "adonisjs.com") — 一个 TypeScript 优先的后端 Web 框架，具有\[令人惊叹的文档]\(https://nodeweekly.com/link /163539/0a4070b383）并包含开箱即用的功能。 v6 是向前迈出的一大步，默认情况下转为使用 ESM，并且尽管是在一月份发布的，但它仍然是最新的主要版本。
+
+哈明德·维克
+
+📰 分类广告
+
+🔍 揭示事件驱动系统隐藏的复杂性和“松散耦合”的神话。深入了解构建弹性架构。 [阅读更多](https://nodeweekly.com/link/163540/0a4070b383)。
+
+***
+
+我们调查的 30% 的人表示，他们只是“祈祷它不会崩溃”来处理 HTTP 缓存。 [我们构建了一些可以提供帮助的东西](https://nodeweekly.com/link/163541/0a4070b383) 🤯
+
+如果您要休息的话，我们希望您能好好休息，我们将于 2025 年 1 月 7 日星期二回来。
+
+**有我们的链接吗？** 回复并告诉我们。我们无法包含所有内容，但我们会查看您发送的所有内容。 *谢谢！*
+
+***
+
+**赞助：** 发送电子邮件至“&lt;kristina@cooperpress.com>”了解详细信息。
+
+***
+
+由库珀出版社有限公司出版\
+费尔菲尔德企业中心, 劳斯, LN11 0LS, 英国
+
+
