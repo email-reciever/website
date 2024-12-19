@@ -1,0 +1,309 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: A 2024 JavaScript retrospective
+description: A 2024 JavaScript retrospective
+date: 星期四 07 晚上 十二月 19o 2024
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/717
+origin_site: https://javascriptweekly.com/issues/717
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="A 2024 JavaScript retrospective" url="https://javascriptweekly.com/issues/717" />
+
+<Detail client:only="react">
+	#​717 — December 19, 2024
+
+[Read on the Web](https://javascriptweekly.com/issues/717)
+
+🎄 We've made it to the end of 2024! In this issue, we're being reflective, leading with a few news items but then looking at what made 2024 special in the world of JavaScript, and covering some of the biggest things we linked to this year.  
+  
+**Then we're on a Christmas break for two weeks and will be back in your inbox on Friday, January 10, 2025,** — yes, we're moving back to Fridays for 2025! We hope you have a Merry Christmas and a Happy New Year.  
+\_\_  
+_Peter Cooper and the Cooperpress team_
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/163770/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ddyryguiybwsmlihmqjl.jpg)](https://javascriptweekly.com/link/163771/d076523b1d)
+
+[The _State of JavaScript 2024_ Results](https://javascriptweekly.com/link/163771/d076523b1d "2024.stateofjs.com") — We recently encouraged you to take the annual _State of JavaScript_ survey; the results are now out. 14,015 folks took part and we get to see [what language features folks are using](https://javascriptweekly.com/link/163772/d076523b1d), [experiences with popular libraries](https://javascriptweekly.com/link/163773/d076523b1d), [build tool popularity](https://javascriptweekly.com/link/163774/d076523b1d), [AI preferences](https://javascriptweekly.com/link/163775/d076523b1d), [popular podcasts](https://javascriptweekly.com/link/163776/d076523b1d), [runtime usage](https://javascriptweekly.com/link/163777/d076523b1d), and perhaps controversially, [how more JavaScript developers are using TypeScript than not.](https://javascriptweekly.com/link/163778/d076523b1d) There’s a lot to dig through here.
+
+Sacha Greif
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/52281674.png)](https://javascriptweekly.com/link/163770/d076523b1d)
+
+[Complete Intro to React v9: New Project, Modern Stack](https://javascriptweekly.com/link/163770/d076523b1d "frontendmasters.com") — Join Brian Holt in building a pizza delivery app from scratch. Master hooks, TanStack Router, testing, and React 19 features in this comprehensive guide to modern React development. No prior React experience needed.
+
+Frontend Masters sponsor
+
+**IN BRIEF:**
+
+*   🥇 JetBrains' recent _State of Developer Ecosystem_ report shows that [JavaScript is "the most used programming language"](https://javascriptweekly.com/link/163779/d076523b1d), reports _InfoWorld_'s Paul Krill. The report also claims _"despite its gains, TypeScript will not replace JavaScript"_.
+    
+*   🗓️ We've just finished 2024 wrap ups in the [latest issue of Node Weekly](https://javascriptweekly.com/link/163780/d076523b1d) and [React Status](https://javascriptweekly.com/link/163781/d076523b1d), if you want more depth into those topics.
+    
+*   🤖 GitHub has made [its Copilot AI assistant available for free](https://javascriptweekly.com/link/163782/d076523b1d) (with limits). We also learn that there are now 150 million developers on GitHub.
+    
+*   🇵🇱 If you're in Poland, consider heading along to [the next WarsawJS meetup on January 8.](https://javascriptweekly.com/link/163783/d076523b1d) Esteemed Polish computer scientist Andrzej Blikle will be speaking, amongst others.
+    
+*   🤖 Vercel is running a [State of AI developer survey](https://javascriptweekly.com/link/163784/d076523b1d) they'd like you to take.
+    
+
+**RELEASES:**
+
+*   [JerryScript 3.0](https://javascriptweekly.com/link/163786/d076523b1d) – 'Ultra lightweight' JS engine for IoT/embedded use cases with full ES 5.1 compliance and 84% Test262 conformance.
+    
+*   🤖 [Transformers.js v3.2](https://javascriptweekly.com/link/163787/d076523b1d) – Run machine learning models in the browser. Now supporting Moonshine real-time speech recognition and Phi 3.5 Vision.
+    
+*   [Bun 1.1.39](https://javascriptweekly.com/link/163788/d076523b1d) and [1.1.40](https://javascriptweekly.com/link/163789/d076523b1d) – The fast JS runtime gets [a human-readble lockfile format,](https://javascriptweekly.com/link/163785/d076523b1d) `fetch` bodies can now be streams, and Node compatibility improves.
+    
+*   [Prisma 6.1](https://javascriptweekly.com/link/163790/d076523b1d) – Popular ORM for Node.js and TypeScript. Tracing is now GA.
+    
+*   [pnpm 10.0 RC 0](https://javascriptweekly.com/link/163791/d076523b1d), [ESLint v9.17.0](https://javascriptweekly.com/link/163792/d076523b1d), [Recharts 2.15](https://javascriptweekly.com/link/163793/d076523b1d)
+    
+
+[Introducing Authentication Support for React Router](https://javascriptweekly.com/link/163795/d076523b1d "go.clerk.com") — Add authentication and authorization to your React Router application in minutes with pre-built components and more.
+
+Clerk sponsor
+
+📄 [Introducing _TanStack Start_](https://javascriptweekly.com/link/163797/d076523b1d) – A new full-stack React framework powered by TanStack Router. Adam Rackis
+
+📄 [How to Create Multi-Step Forms with Vanilla JS and CSS](https://javascriptweekly.com/link/163798/d076523b1d) Fatuma Abdullaho
+
+📄 [Summarizing Text with Transformers.js](https://javascriptweekly.com/link/163800/d076523b1d) Raymond Camden
+
+🗓️ What Happened to JavaScript in 2024
+
+The JavaScript world has had a busy 2024, as you'd expect for [the world's most used programming language](https://javascriptweekly.com/link/163779/d076523b1d) (despite the threat of [being split into two](https://javascriptweekly.com/link/163801/d076523b1d)). We looked back over the year and remembered some things that occurred:
+
+*   In February, the React team posted [a mega 'React Labs' update](https://javascriptweekly.com/link/163802/d076523b1d) which framed the whole of React's year, explaining the goals of the React Compiler and the eventual React 19 release (which [went stable](https://javascriptweekly.com/link/163803/d076523b1d) this month).
+    
+*   Alternative JavaScript runtimes had a great 2024, particularly Bun which introduced [Bun Shell](https://javascriptweekly.com/link/163804/d076523b1d), [Windows support](https://javascriptweekly.com/link/163805/d076523b1d) and the ability to [compile and run native C from JavaScript.](https://javascriptweekly.com/link/163807/d076523b1d) Deno had a big year too, with [the release of Deno 2](https://javascriptweekly.com/link/163808/d076523b1d) which included stronger Node.js/npm compatibility and package management tooling. Other systems continuing to progress this year include [Boa JS](https://javascriptweekly.com/link/163809/d076523b1d), [QuickJS](https://javascriptweekly.com/link/163810/d076523b1d), and [Porffor](https://javascriptweekly.com/link/163811/d076523b1d).
+    
+*   Over at TC39, [lots of language proposals were advanced](https://javascriptweekly.com/link/163812/d076523b1d) this year (and that's just a sample – [here's some more!](https://javascriptweekly.com/link/163813/d076523b1d)). The ES2025 future is bright.
+    
+
+[Boost Semantic Search with MongoDB Atlas Vector Search](https://javascriptweekly.com/link/163815/d076523b1d "fnf.dev") — Create embeddings, index them, and run semantic queries—just follow the quick start tutorial.
+
+MongoDB sponsor
+
+*   Deno decided to take the JavaScript trademark fight to Oracle and [formally filed a petition with the USPTO to cancel it.](https://javascriptweekly.com/link/163816/d076523b1d) We hope to see some developments here in 2025, but Oracle are prepared to defend it.
+    
+*   Not content to merely work on an edge platform, JS runtime, and fight Oracle, Deno also [unveiled JSR](https://javascriptweekly.com/link/163817/d076523b1d), a fresh attempt at providing a registry for JavaScript packages.
+    
+*   There were lots of big releases generally for major JavaScript projects including [Svelte v5](https://javascriptweekly.com/link/163819/d076523b1d), [Node.js v23.0](https://javascriptweekly.com/link/163820/d076523b1d), [Astro 5.0](https://javascriptweekly.com/link/163821/d076523b1d), [TypeScript 5.7](https://javascriptweekly.com/link/163822/d076523b1d), [Vite 6.0](https://javascriptweekly.com/link/163823/d076523b1d), [React Native 0.76](https://javascriptweekly.com/link/163824/d076523b1d), [Next.js 15](https://javascriptweekly.com/link/163825/d076523b1d), [React Router v7](https://javascriptweekly.com/link/163826/d076523b1d), [Rspack 1.0](https://javascriptweekly.com/link/163827/d076523b1d), [Vue.js 3.5](https://javascriptweekly.com/link/163828/d076523b1d), and [Angular 19](https://javascriptweekly.com/link/163829/d076523b1d).
+    
+*   The OG of JavaScript libraries [jQuery 4.0 went into beta](https://javascriptweekly.com/link/163830/d076523b1d) too! We keep our fingers crossed for a jQuery 4.0 final release in 2025.. ;-)
+    
+
+🥇 Our Top Items of 2024
+
+Next up is a walk through the top items we included in 2024, ordered by level of reader engagement. No editorial judgments here – these are the things you cared about most:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/cybf82tlhtuvrkkvw5xp.jpg)](https://javascriptweekly.com/link/163831/d076523b1d)
+
+1. [`console.delight`](https://javascriptweekly.com/link/163831/d076523b1d "frontendmasters.com") — _By far_ our most popular link of the year with over 20,000 clicks(!) – but who doesn't use and love `console.log`? This post showed us how in the browser console it's not merely for printing plain text, but can be used to render things like SVGs and HTML.
+
+Zach Saucier
+
+2. [JavaScript Visualized: Promise Execution](https://javascriptweekly.com/link/163832/d076523b1d "www.lydiahallie.com") — A well-diagrammed article coupled with an (optional) 8 minute video that went into how promises work under the hood. Hugely popular as most of Lydia's content tends to be.
+
+Lydia Hallie
+
+[WorkOS: Sell to Enterprises with a Few Lines of Code](https://javascriptweekly.com/link/163833/d076523b1d "workos.com") — The modern identity platform for B2B SaaS, offering flexible, easy-to-use APIs to integrate SSO, SCIM, and FGA in minutes instead of months.
+
+WorkOS sponsor
+
+3. [Is htmx Just Another JavaScript Framework?](https://javascriptweekly.com/link/163835/d076523b1d "htmx.org") — Despite being five years old, [htmx](https://javascriptweekly.com/link/163836/d076523b1d) has seen a surge in popularity in 2023 and 2024, partly due to framework fatigue, but also as its simple HTML-oriented approach to adding functionality to pages appeals to a diverse group of developers. [v2.0](https://javascriptweekly.com/link/163837/d076523b1d) landed in June.
+
+Alexander Petros
+
+4. [Ecma International Approves ECMAScript 2024: What’s New?](https://javascriptweekly.com/link/163838/d076523b1d "2ality.com") — In June, the Ecma General Assembly approved the latest ECMAScript / JavaScript spec, officially making it a standard. As with ES2023, it was a reasonably small step forward, but Dr. Axel rounded up what was new.
+
+Dr. Axel Rauschmayer
+
+5. [JavaScript's `??=` Operator: Default Values Made Simple](https://javascriptweekly.com/link/163839/d076523b1d "www.trevorlasn.com") — The `??=` nullish coalescing assignment operator snuck into JavaScript a few years ago via ES2021 and has been [broadly supported](https://javascriptweekly.com/link/163840/d076523b1d) almost everywhere for ages. Trevor showed off how it can tighten up your assignments.
+
+Trevor I. Lasn
+
+6. [Eloquent JavaScript: The Fourth Edition](https://javascriptweekly.com/link/163841/d076523b1d "eloquentjavascript.net") — Coming several years after the third edition, the latest version of what is, perhaps, the best ‘all rounder’ book for learning JavaScript arrived in March _“adjusted to the realities of 2024 and generally touched up.”_
+
+Marijn Haverbeke
+
+7. [33 JavaScript Concepts Every Developer Should Know](https://javascriptweekly.com/link/163842/d076523b1d "github.com") — A curated collection of links to tutorials on 33 different areas it’s worth understanding well, including types, closures, equality, scope, and different engines.
+
+Leonardo Maldonado
+
+8. [How Google Handles JavaScript In Its Indexing Process](https://javascriptweekly.com/link/163843/d076523b1d "vercel.com") — At one point if you wanted Google to index your content it needed to be directly written in HTML and _not_ dynamically rendered with JavaScript. Things have since changed, of course, but by how much?
+
+Zecchini, Moore, Siddle, Ubl (Vercel)
+
+📰 Classifieds
+
+[Meticulous automatically creates & maintains E2E UI tests](https://javascriptweekly.com/link/163844/d076523b1d). Zero flakes. Used by Lattice, Bilt Rewards and others.
+
+* * *
+
+[Hookdeck](https://javascriptweekly.com/link/163845/d076523b1d): An alternative to Amazon API Gateway + Lambda + SQS. With local dev, debugging, and observability built-in.
+
+🤗 Many thanks for reading _JavaScript Weekly_ in 2024, sending in your links, and generally supporting us. We look forward to seeing you again early next year. Remember, we're moving back to Fridays (long term subscribers may remember we used to go out on Fridays for the first several years) so we'll be back on Friday, January 10.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/163846/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​717 — 2024 年 12 月 19 日
+
+[网上阅读](https://javascriptweekly.com/issues/717)
+
+🎄 我们已经到了 2024 年底！在本期中，我们将进行反思，首先介绍一些新闻，然后探讨 2024 年 JavaScript 世界的特殊之处，并涵盖与今年相关的一些最重要的事情。
+
+**然后我们将进行两周的圣诞假期，并将于 2025 年 1 月 10 日星期五回到您的收件箱，** — 是的，我们将在 2025 年回到星期五！ 我们希望您圣诞快乐，新年快乐。\
+\_\_\
+*彼得·库珀和 Cooperpress 团队*
+
+连同 
+
+\[![前端大师徽标](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)]\(https:// javascriptweekly.com/link/163770/d076523b1d)
+
+JavaScript 周刊
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ddyryguiybwsmlihmqjl.jpg)](https://javascriptweekly.com/link/163771/d076523b1d)
+
+[*2024 年 JavaScript 现状* 结果](https://javascriptweekly.com/link/163771/d076523b1d "2024.stateofjs.com") — 我们最近鼓励您参加年度 *JavaScript 现状* 调查；结果现已出来。 14,015 人参与，我们可以了解[人们正在使用哪些语言功能](https://javascriptweekly.com/link/163772/d076523b1d)、\[流行库的经验]\(https://javascriptweekly.com/link/ 163773/d076523b1d), [构建工具流行度](https://javascriptweekly.com/link/163774/d076523b1d)、[人工智能偏好](https://javascriptweekly.com/link/163775/d076523b1d)、\[热门播客]\(https://javascriptweekly.com /link/163776/d076523b1d), [运行时用法](https://javascriptweekly.com/link/163777/d076523b1d)，也许还有争议的是，[使用 TypeScript 的 JavaScript 开发人员比不使用的 JavaScript 开发人员多。](https://javascriptweekly.com/link/163778/d076523b1d)这里有很多值得挖掘的地方。
+
+萨莎·格雷夫
+
+\[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/52281674.png)]\(https://javascriptweekly.com/link/163770/d076523b1d ）
+
+[React v9 完整介绍：新项目、现代堆栈](https://javascriptweekly.com/link/163770/d076523b1d "frontendmasters.com") — 与 Brian Holt 一起从头开始构建披萨外卖应用。这本现代 React 开发综合指南中掌握了 hooks、TanStack Router、测试和 React 19 功能。无需具备 React 经验。
+
+前端大师赞助商
+
+**简而言之：**
+
+* 🥇 JetBrains 最近的 *开发者生态系统状况* 报告显示，[JavaScript 是“最常用的编程语言”](https://javascriptweekly.com/link/163779/d076523b1d)，*InfoWorld* 的 Paul Krill 报道。该报告还声称“尽管 TypeScript 取得了一些进展，但它不会取代 JavaScript”\*。
+
+* 🗓️ 我们刚刚在 [最新一期 Node Weekly](https://javascriptweekly.com/link/163780/d076523b1d) 和 [React Status](https://javascriptweekly.com/link/) 中完成了 2024 年总结163781/d076523b1d），如果您想更深入地了解这些主题。
+
+* 🤖 GitHub 已免费提供[其 Copilot AI 助手](https://javascriptweekly.com/link/163782/d076523b1d)（有限制）。我们还了解到，GitHub 上现在有 1.5 亿开发者。
+
+* 🇵🇱 如果您在波兰，请考虑参加 [1 月 8 日举行的下一次 WarsawJS 聚会](https://javascriptweekly.com/link/163783/d076523b1d) 受人尊敬的波兰计算机科学家 Andrzej Blikle 将发表演讲，其中包括其他的。
+
+* 🤖 Vercel 正在开展一项 [AI 开发者现状调查](https://javascriptweekly.com/link/163784/d076523b1d)，他们希望您参与。
+
+**发布：**
+
+* [JerryScript 3.0](https://javascriptweekly.com/link/163786/d076523b1d) – 用于物联网/嵌入式用例的“超轻量级”JS 引擎，完全符合 ES 5.1 要求，并且符合 84% Test262 标准。
+
+* 🤖 [Transformers.js v3.2](https://javascriptweekly.com/link/163787/d076523b1d) – 在浏览器中运行机器学习模型。现在支持 Moonshine 实时语音识别和 Phi 3.5 Vision。
+
+* [Bun 1.1.39](https://javascriptweekly.com/link/163788/d076523b1d) 和 [1.1.40](https://javascriptweekly.com/link/163789/d076523b1d) – 快速 JS 运行时获得 [人类可读的锁定文件格式，](https://javascriptweekly.com/link/163785/d076523b1d) `fetch` 主体现在可以是流，并且节点兼容性得到改善。
+
+* [Prisma 6.1](https://javascriptweekly.com/link/163790/d076523b1d) – 适用于 Node.js 和 TypeScript 的流行 ORM。追踪现已正式发布。
+
+* [pnpm 10.0 RC 0](https://javascriptweekly.com/link/163791/d076523b1d)、[ESLint v9.17.0](https://javascriptweekly.com/link/163792/d076523b1d)、[图表2.15](https://javascriptweekly.com/link/163793/d076523b1d)
+
+[React Router 身份验证支持简介](https://javascriptweekly.com/link/163795/d076523b1d "go.clerk.com") — 使用预构建组件等在几分钟内向您的 React Router 应用程序添加身份验证和授权。
+
+文员赞助人
+
+📄 [介绍 *TanStack Start*](https://javascriptweekly.com/link/163797/d076523b1d) – 由 TanStack Router 提供支持的新全栈 React 框架。亚当·拉基斯
+
+📄 [如何使用 Vanilla JS 和 CSS 创建多步骤表单](https://javascriptweekly.com/link/163798/d076523b1d) Fatuma Abdullaho
+
+📄 [使用 Transformers.js 总结文本](https://javascriptweekly.com/link/163800/d076523b1d) Raymond Camden
+
+🗓️ 2024 年 JavaScript 发生了什么
+
+正如您对[世界上最常用的编程语言](https://javascriptweekly.com/link/163779/d076523b1d)所期望的那样，JavaScript 世界度过了忙碌的 2024 年（尽管存在\[被一分为二]的威胁）( https://javascriptweekly.com/link/163801/d076523b1d))。回顾这一年，我们想起了一些发生的事情：
+
+* 二月份，React 团队发布了[大型“React Labs”更新](https://javascriptweekly.com/link/163802/d076523b1d)，其中框架了整个 React 的一年，解释了 React 编译器的目标和最终的目标React 19 版本（[稳定](https://javascriptweekly.com/link/163803/d076523b1d) 月）。
+
+* 替代 JavaScript 运行时在 2024 年表现出色，特别是 Bun，它引入了 [Bun Shell](https://javascriptweekly.com/link/163804/d076523b1d)、\[Windows 支持]\(https://javascriptweekly.com/link/163805/ d076523b1d）以及[编译并运行本机 C 的能力JavaScript.](https://javascriptweekly.com/link/163807/d076523b1d) Deno 也度过了重要的一年，[Deno 2 的发布](https://javascriptweekly.com/link/163808/d076523b1d) 其中包括更强的 Node.js/npm 兼容性和包管理工具。今年继续取得进展的其他系统包括 [Boa JS](https://javascriptweekly.com/link/163809/d076523b1d)、[QuickJS](https://javascriptweekly.com/link/163810/d076523b1d) 和 [Porffor ](https://javascriptweekly.com/link/163811/d076523b1d)。
+
+* 在 TC39 上，今年[提出了很多语言提案](https://javascriptweekly.com/link/163812/d076523b1d)（这只是一个示例 - \[这里还有更多！]\(https://javascriptweekly. com/link/163813/d076523b1d))。 ES2025 的未来是光明的。
+
+[使用 MongoDB Atlas 矢量搜索增强语义搜索](https://javascriptweekly.com/link/163815/d076523b1d "fnf.dev") — 创建嵌入、为其建立索引并运行语义查询 — 只需按照快速入门教程进行操作即可。
+
+MongoDB 赞助商
+
+* Deno 决定向 Oracle 提起 JavaScript 商标之争，并[正式向 USPTO 提交请愿书要求取消该商标](https://javascriptweekly.com/link/163816/d076523b1d) 我们希望在 2025 年看到一些进展，但甲骨文已准备好捍卫它。
+
+* Deno 不满足于仅仅在边缘平台、JS 运行时上工作并对抗 Oracle，它还[推出了 JSR](https://javascriptweekly.com/link/163817/d076523b1d)，这是为 JavaScript 包提供注册表的全新尝试。
+
+* 主要 JavaScript 项目通常有很多重大版本，包括 [Svelte v5](https://javascriptweekly.com/link/163819/d076523b1d)、[Node.js v23.0](https://javascriptweekly.com/链接/163820/d076523b1d), [Astro 5.0](https://javascriptweekly.com/link/163821/d076523b1d)、[TypeScript 5.7](https://javascriptweekly.com/link/163822/d076523b1d)、\[Vite 6.0]\(https://javascriptweekly.com /link/163823/d076523b1d), [React Native 0.76](https://javascriptweekly.com/link/163824/d076523b1d)、[Next.js 15](https://javascriptweekly.com/link/163825/d076523b1d)、\[React Router v7]\(https:// javascriptweekly.com/link/163826/d076523b1d), [Rspack 1.0](https://javascriptweekly.com/link/163827/d076523b1d)、[Vue.js 3.5](https://javascriptweekly.com/link/163828/d076523b1d)和\[Angular 19]\(https:// javascriptweekly.com/link/163829/d076523b1d）。
+
+* JavaScript 库的 OG [jQuery 4.0 也进入测试版](https://javascriptweekly.com/link/163830/d076523b1d)！我们祈祷 jQuery 4.0 最终版本能在 2025 年发布..;-)
+
+🥇 我们 2024 年的热门单品
+
+接下来是我们在 2024 年收录的热门项目，按读者参与度排序。这里没有编辑评判——这些是你最关心的事情：
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/cybf82tlhtuvrkkvw5xp.jpg)](https://javascriptweekly.com/link/163831/d076523b1d)
+
+1. [`console.delight`](https://javascriptweekly.com/link/163831/d076523b1d "frontendmasters.com") — *到目前为止*我们年度最受欢迎的链接，点击次数超过 20,000 次(!) – 但是谁不使用并且不喜欢“console.log”？这篇文章向我们展示了如何在浏览器控制台中它不仅用于打印纯文本，还可以用于渲染 SVG 和 HTML 等内容。
+
+扎克·索西尔
+
+2. [JavaScript 可视化：Promise 执行](https://javascriptweekly.com/link/163832/d076523b1d "www.lydiahallie.com") — 一篇图表清晰的文章，附带一个（可选）8 分钟的视频，介绍了如何执行承诺在幕后工作。 Lydia 的大多数内容都非常受欢迎。
+
+莉迪亚·哈莉
+
+[WorkOS：通过几行代码向企业销售](https://javascriptweekly.com/link/163833/d076523b1d "workos.com") — B2B SaaS 的现代身份平台，提供灵活、易于使用的功能用于在几分钟（而不是几个月）内集成 SSO、SCIM 和 FGA 的 API。
+
+WorkOS赞助商
+
+3. [htmx 只是另一个 JavaScript 框架吗？](https://javascriptweekly.com/link/163835/d076523b1d "htmx.org") — 尽管已有 5 年历史，\[htmx]\(https://javascriptweekly.com/ link/163836/d076523b1d）在 2023 年和 2024 年人气激增，部分原因是框架疲劳，而且其简单的面向 HTML 的向页面添加功能的方法吸引了不同的开发人员群体。 [v2.0](https://javascriptweekly.com/link/163837/d076523b1d) 于六月登陆。
+
+亚历山大·佩特罗斯
+
+4. [Ecma International 批准 ECMAScript 2024：有什么新变化？](https://javascriptweekly.com/link/163838/d076523b1d "2ality.com") — 6 月，Ecma 大会正式批准了最新的 ECMAScript / JavaScript 规范使其成为一个标准。与 ES2023 一样，这只是向前迈出了相当小的一步，但 Axel 博士总结了新内容。
+
+阿克塞尔·劳施梅尔博士
+
+5. [JavaScript 的 `??=` 运算符：默认值变得简单](https://javascriptweekly.com/link/163839/d076523b1d "www.trevorlasn.com") — `??=` 无效合并赋值运算符偷偷溜走几年前通过 ES2021 引入 JavaScript，并且已经[广泛支持](https://javascriptweekly.com/link/163840/d076523b1d)几乎无处不在。 Trevor 展示了它如何加强您的作业。
+
+特雷弗·拉森
+
+6. [Eloquent JavaScript: 第四版](https://javascriptweekly.com/link/163841/d076523b1d "eloquentjavascript.net") — 第三版发布几年后，最新版本也许是最好的用于学习 JavaScript 的“全能”书籍已于 3 月上市\*“根据 2024 年的现实进行了调整，总体上进行了修改。”\*
+
+马金·哈弗贝克
+
+7. [每个开发人员都应该知道的 33 个 JavaScript 概念](https://javascriptweekly.com/link/163842/d076523b1d "github.com") — 精选的 33 个值得深入理解的不同领域的教程链接集合，包括类型、闭包、相等、范围和不同的引擎。
+
+莱昂纳多·马尔多纳多
+
+8. [Google 如何在索引过程中处理 JavaScript](https://javascriptweekly.com/link/163843/d076523b1d "vercel.com") — 在某一时刻，如果您希望 Google 将您的内容编入索引，则需要直接编写在 HTML 中，*不*使用 JavaScript 动态呈现。当然，事情已经发生了变化，但变化有多大呢？
+
+泽基尼、摩尔、西德尔、乌布尔 (Vercel)
+
+📰 分类广告
+
+[Meticulous 自动创建和维护 E2E UI 测试](https://javascriptweekly.com/link/163844/d076523b1d)。零片。由 Lattice、Bilt Rewards 等公司使用。
+
+***
+
+[Hookdeck](https://javascriptweekly.com/link/163845/d076523b1d)：Amazon API Gateway + Lambda + SQS 的替代方案。内置本地开发、调试和可观察性。
+
+🤗 非常感谢您阅读 2024 年 *JavaScript Weekly*、发送您的链接并普遍支持我们。我们期待明年初再次见到您。请记住，我们将回到周五（长期订阅者可能还记得前几年我们都是在周五外出），因此我们将在 1 月 10 日周五回来。
+
+由 [Cooperpress](https://cooperpress.com/) 出版，由 [Peter Cooper](https://javascriptweekly.com/link/163846/d076523b1d) 编辑
+
+“JavaScript”是 Oracle Corporation 在美国的商标\
+我们未获得 Oracle 的认可或隶属于 Oracle。
+
+
