@@ -1,0 +1,161 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Bytes： The Laravel–Next.js turf war
+description: Bytes： The Laravel–Next.js turf war
+date: 星期一 10 晚上 十二月 30o 2024
+author: tyler
+origin_url: https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/x0hph3uw45n3gri5/aHR0cHM6Ly9ieXRlcy5kZXYvYXJjaGl2ZXMvMzU1
+origin_site: https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/x0hph3uw45n3gri5/aHR0cHM6Ly9ieXRlcy5kZXYvYXJjaGl2ZXMvMzU1
+translated: true
+avatar: /media-source/tyler-ico.png
+email_recorder: tyler@ui.dev
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Bytes： The Laravel–Next.js turf war" url="https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/x0hph3uw45n3gri5/aHR0cHM6Ly9ieXRlcy5kZXYvYXJjaGl2ZXMvMzU1" />
+
+<Detail client:only="react">
+	![Cool Bits logo](https://bytes.dev/images/content/cool-bits.png)
+
+## Cool Bits
+
+1.  Mitchell Hashimoto just open-sourced [Ghostty](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/qvh8h8url98nxeal/aHR0cHM6Ly9naXRodWIuY29tL2dob3N0dHktb3JnL2dob3N0dHk=), or as I like to call it, the Patrick Swayze of terminals.
+    
+2.  Bramus spent his Christmas vacation adding [examples of scroll animations](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/g3hnhwu304epvrbr/aHR0cHM6Ly9naXRodWIuY29tL3czYy9jc3N3Zy1kcmFmdHMvcHVsbC8xMTQyMQ==) to the CSS spec. Live, laugh, scroll.
+    
+3.  Bun is adding [first-class support for S3](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/9qhzhdupeog97wf9/aHR0cHM6Ly94LmNvbS9idW5qYXZhc2NyaXB0L3N0YXR1cy8xODczMjM0ODAyNjc1MjA0MTA2) that lets you read and write S3 files as if they were part of your local filesystem.
+    
+4.  [Roadmap UI](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/3ohphdu7keqzwgar/aHR0cHM6Ly93d3cucm9hZG1hcC11aS5jb20v) is a collection of composable components for building interactive roadmaps. And like every other component library created from 2022 until the end of time, it’s built on top of shadcn/ui 🙏.
+    
+5.  Evan Bacon cooked up some [new form components](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/wnh2h6uwlergzes7/aHR0cHM6Ly9naXRodWIuY29tL0V2YW5CYWNvbi9leHBvLXJvdXRlci1mb3Jtcy1jb21wb25lbnRz) for you to use in your next React Native project.
+    
+6.  David Sancho wrote about [a strategy for testing CLIs called “Cram Testing”](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/8ghqh3ul7mg948tk/aHR0cHM6Ly9zYW5jaG8uZGV2L2Jsb2cvY3JhbS10ZXN0cy1hLWhpZGRlbi1nZW0tb2YtZHVuZQ==), which coincidentally, is the same strategy that helped me achieve a respectable D+ in Accounting 101.
+    
+7.  [Astro 5.1](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/vqh3hmupqzng55ig/aHR0cHM6Ly9hc3Ryby5idWlsZC9ibG9nL2FzdHJvLTUxMC8=) comes with a new experimental sessions feature, better image caching, and more.
+    
+8.  Roel Nieskens built a fun little tool called [Wakamai Fondue](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/l2heh6u3d8ow55h6/aHR0cHM6Ly93YWthbWFpZm9uZHVlLmNvbS8=) (what can my font do), which feels like a font nerd’s version of 23andMe. I’m just hoping it doesn’t leak my personal DNA data onto the dark web – jk, it’s for sure already there.
+    
+
+* * *
+
+![Pop Quiz logo](https://bytes.dev/images/content/pop-quiz.png)
+
+## Pop Quiz: Answer
+
+#### Sponsored by [StackBlitz](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/25h2h9u2qk7d5nt3/aHR0cHM6Ly94LmNvbS9zdGFja2JsaXR6L3N0YXR1cy8xODY5NzE1NjYxNDQ0MDQzMjQ1)
+
+You can use an `AbortController` to remove all the event listeners at once. When passed a `signal` as an option, the event listener will be removed when the `AbortSignal`’s `abort()` method is called.
+
+```js
+const controller = new AbortController();
+const &lcub; signal } = controller;
+
+element.addEventListener('click', () => &lcub;
+  console.log('clicked');
+}, &lcub; signal });
+
+element.addEventListener('mouseover', () => &lcub;
+  console.log('hovered');
+}, &lcub; signal });
+
+element.addEventListener('mouseout', () => &lcub;
+  console.log('unhovered');
+}, &lcub; signal });
+
+element.addEventListener('focus', () => &lcub;
+  console.log('focused');
+}, &lcub; signal });
+
+controller.abort();
+```
+
+Note: Older browsers may not support the `options` parameter for `addEventListener`, but it is supported in all modern browsers.
+
+![Bytes](https://bytes.dev/images/bytes-icon.png)
+
+##### Want us to say nice things  
+about your company?
+
+[Sponsor Bytes](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/m2h7h6u8ldowkgfm/aHR0cHM6Ly9ieXRlcy5kZXYvYWR2ZXJ0aXNl)
+
+[or share it](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/dphehmu02lqrzoim/aHR0cHM6Ly9ieXRlcy5kZXYvc2hhcmU=)
+
+Built with ❤️ by [ui.dev](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/e0hph0u0d8k59ef8/aHR0cHM6Ly91aS5kZXY=)
+
+50 W Broadway Ste 333 PMB 51647 Salt Lake City, Utah 84101
+
+
+</Detail>
+
+![Cool Bits 徽标](https://bytes.dev/images/content/cool-bits.png)
+
+## 酷点
+
+1. Mitchell Hashimoto 刚刚开源[幽灵](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/qvh8h8url98nxeal/aHR0cHM6Ly9naXRodWIuY29tL2dob3N0dHktb3JnL2dob3N0dHk=)，或者我喜欢称之为帕特里克终端的 Swayze。
+
+2. 布拉姆斯在圣诞节假期里添加了[滚动的例子动画](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/g3hnhwu304epvrbr/aHR0cHM6Ly9naXRodWIuY29tL3czYy9jc3N3Zy1kcmFmdHMvcHVsbC8xMTQyMQ==)到CSS规范。生活、欢笑、滚动。
+
+3. Bun 正在添加 \[一流的支持S3]\(https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/9qhzhdupe og97wf9/aHR0chHM6Ly94LmNvbS9idW5qYXZhc2NyaXB0L3N0YXR1cy8xODczMjM0ODAyNjc1MjA0MTA2)允许您读写 S3 文件，就好像它们是本地文件系统的一部分一样。
+
+4. [路线图 UI](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/3ohphdu7keqzwgar/aHR0cHM6Ly93d3cucm9hZG1hcC11aS5jb20v) 是用于构建交互式路线图的可组合组件的集合。与从 2022 年到世界末日创建的所有其他组件库一样，它构建在 shadcn/ui 之上。
+
+5.埃文培根烹制了一些\[新形式组件]\(https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/wnh2h6u wlergzes7/aHR0CHM6Ly9naXRodWIuY29tL0V2YW5CYWNvbi9leHBvLXJvdXRlci1mb3Jtcy1jb21wb25lbnRz)供您在下一个 React Native 项目中使用。
+
+6. David Sancho 写了一篇关于 \[一种测试 CLI 的策略，称为“Cram测试”]\(https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/8ghqh3ul7 mg948tk/aHR0chHM6Ly9zYW5jaG8uZGV2L2Jsb2cvY3JhbS10ZXN0cy1hLWhpZGRlbi1nZW0tb2YtZHVuZQ==),巧合的是，正是这个策略帮助我在会计 101 中取得了令人尊敬的 D+ 成绩。
+
+7. [Astro 5.1](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/vqh3hmupqzng55ig/aHR0cHM6Ly9hc3Ryby5idWlsZC9ibG9nL2FzdHJvLTUxMC8=)配备了新的实验会话功能，图像更好缓存等等。
+
+8. Roel Nieskens 构建了一个有趣的小工具，名为 [Wakamai Fondue](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/l2heh6u3d8ow55h6/aHR0cHM6Ly93YWthbWFpZm9uZHVlLmNvbS8=)（我的字体可以用什么） do），感觉就像字体迷版本的 23andMe。我只是希望它不会将我的个人 DNA 数据泄露到暗网上 – jk，它肯定已经存在了。
+
+***
+
+![小测验徽标](https://bytes.dev/images/content/pop-quiz.png)
+
+## 小测验：答案
+
+#### 赞助商\[StackBlitz]\(https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/25h 2h9u2qk7d5nt3/aHR0chHM6Ly94LmNvbS9zdGFja2JsaXR6L3N0YXR1cy8xODY5NzE1NjYxNDQ0MDQzMjQ1)
+
+您可以使用“AbortController”一次性删除所有事件侦听器。当将“signal”作为选项传递时，当调用“AbortSignal”的“abort()”方法时，事件侦听器将被删除。
+
+```js
+const controller = new AbortController();
+const &lcub; signal } = controller;
+
+element.addEventListener('click', () => &lcub;
+  console.log('clicked');
+}, &lcub; signal });
+
+element.addEventListener('mouseover', () => &lcub;
+  console.log('hovered');
+}, &lcub; signal });
+
+element.addEventListener('mouseout', () => &lcub;
+  console.log('unhovered');
+}, &lcub; signal });
+
+element.addEventListener('focus', () => &lcub;
+  console.log('focused');
+}, &lcub; signal });
+
+controller.abort();
+```
+
+注意：较旧的浏览器可能不支持“addEventListener”的“options”参数，但所有现代浏览器都支持该参数。
+
+![字节](https://bytes.dev/images/bytes-icon.png)
+
+##### 希望我们说好话
+
+关于你的公司？
+
+[赞助字节](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/m2h7h6u8ldowkgfm/aHR0cHM6Ly9ieXRlcy5kZXYvYWR2ZXJ0aXNl)
+
+[或分享](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/dphehmu02lqrzoim/aHR0cHM6Ly9ieXRlcy5kZXYvc2hhcmU=)
+
+使用 ❤️ 由 [ui.dev](https://click.convertkit-mail4.com/p9unqxnv5mt9h2km3w4urupz86933hr/e0hph0u0d8k59ef8/aHR0cHM6Ly91aS5kZXY=) 构建
+
+50 W Broadway Ste 333 PMB 51647 盐湖城，犹他州 84101
+
+
