@@ -1,0 +1,183 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#487 Instance Hook Pattern
+description: RD#487 Instance Hook Pattern
+date: 星期日 07 晚上 一月 5o 2025
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/instance-hook-pattern
+origin_site: https://newsletter.reactdigest.net/p/instance-hook-pattern
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#487 Instance Hook Pattern" url="https://newsletter.reactdigest.net/p/instance-hook-pattern" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XGBhBazpQM_2TfMd_BSgvmY4ND0eTPw99t5QWWycZ_T93QBoyAAOICM_OJ5jL7DPkwsp_p7-Z_0rneGMcLsVeaymgey8kbzPM7Xj-IX5R9slMo5pHDeWfDSbPK3T95BIFuQq8HWgQvKzj1RdymXLgLSmhepM_5BdvltOqGlAc_0WiUs9NNnGAlTEN3WB4POXYm0t8qiNWOS9z12f1My_HgbtyDhiqTF_mn_1D0927kBZFWwvyvYRp6T9n30xreZAv4lV3EgFjhwZNMovKtVa51E8TcNKHGDeIF3uerOwmvvivmu5TC7_cFjDo5TwD2VlXuLEKwXueQ2hFRBCc3aYW9-z-PU59v-4Sau9MaPv7f93Dcqzj-8FAX0-HmpsDBSd8IAZmkdAEaHLDVIu-2R4A5IWdTg1RTeHBoOXjM7UGWRfMCaK-858Sjgc3EFOoPyl0HT9QLKeud6gmM09q6nwEAuczGUwOncAyx-R-0AvXZDLyh-Dhtm1lk4sgt4h1PM4QzBmoMEnXAc2lP-wiXCYEXNJclHdgG8cy6GiIgKo3Y37spG0AV8Ggn0HLELD8RKTmlnxr8VSFZJZYT-iq81jGVJfRinrXW0TjXjSQL-hWnBe5lkk8qFbKmE9PtenzYJ7SJojc1dB_h5rGqO6cmzVpx0ZuFmimL4Up0dwcQF7eL8yCoVpi9rD6RSOH6E9mzP2gWRzSaekbzGOKHIl5fNI6ehBxq16JFb9tOmQEqmCu6zgvddL9NIKPxGjz8I85lVIQ/4cw/AvHImwaPSbORt7L3vwgWjw/h0/h001.DwdS0dhyz4t84L7vYHe_DG8ltAqM_lKndp1OAe-YsHY)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4cw/AvHImwaPSbORt7L3vwgWjw/ho.gif)
+
+Hello! 👋
+
+We’re back after a short break. I’ll kick off the year with a few of changes to the newsletter format but the core stays the same – top 5 links for React developers.
+
+[Instance Hook Pattern](https://link.mail.beehiiv.com/ss/c/u001.8nbMFOe-__9TtOcNCbiVEg3hzmqHdP1dYvBNW5StiUQyV9DKSsv-Cd_ERyPPediks-Q6rhgEBqZYslkN4M96d-qk_DsEEUVnkZTvZhd1NLz1-VMFDKWvRdlUnfCp9c8tPoBio_xKx7ERKUGlEWB1IaXkyrzS1QDcrJjhLZ61YTpu6rnfTwHRMjnmjN2kqDBwBCLj_UQ7iA8nYt_UqTqS0P6POdk6tq3Pq0GzNDCNv7C2MsQjlv9M6LoxJ47SRJyYlT8lEqXSWPXVVlr4XVgXbQ/4cw/AvHImwaPSbORt7L3vwgWjw/h1/h001.O7MvWX-cTxNXbE8Ofa_WQwpFSRmPAzzqFnP4c9xH3Xw)  
+_5 minutes_ by Sahaj Jain
+
+Make flexible and composable React components with co-located logic and controlled API. It works by tying a component's state and behavior to a custom hook, which acts like a remote control and can be used to manage multiple instances of the same component independently.
+
+[Introducing authentication support for React Router](https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea_eXiYAmJVDbYraja-8i6nE2MFAY9CdpqEEAMLmv3OVEuf-JszsHQh4wOAodNDYruk5uINHIpZPj_y1Lu39bMWfafebhZdaDhLDURlCNrno407pOR0pNgAMZwQd80RdmAQkCJfduHAF40-0wtULt32x-W8baEMdg0vvby-zxhVyNaGPlACejaU_BhZ5o4fvEw-M80qBuYR5P5zYdJnfy1vGassEDNokJOq3-SAXvVhOIibKs_MP/4cw/AvHImwaPSbORt7L3vwgWjw/h2/h001.dDXIGpF8tS1W38hBEFLvx55I2wNkDO2piEal6xLjKmI)  
+_sponsored by Clerk_
+
+Clerk announces beta support for React Router, including pre-built UI components, server utilities, and low level utilities for any of your custom flows. You can use React Router both as a framework or library with Clerk.
+
+[The Benefits of React Router Nobody Told You About](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqQvdoXSZH0Usp8HbeUV8XwkPEMj4983nKGh0ZWS2AR2QMryBrdQCikXFHyFdniAUjoMlu7d8igSNsChjIHbveoN582nPqNkxfsSiYeFalnYVc0p4g0_51JDs6hnyYG09UWIuy1eKlMx3uk9-EN-KzDtChweMsXld2lzB55WK2CNBRcmIxtCbhDtPCE2jTxYGDhI-bf3JCpN4H6lew6gyYsA51ZRxNEPB7lyfCBRnsCfVSvJMC0lAQN5adPw9iyntNA/4cw/AvHImwaPSbORt7L3vwgWjw/h3/h001.CUo-2vZx3E9fAXtveprR_LQzcZP6orvLJ0-yAggj_Zo)  
+_less than a minute_ by Alem Tuzlak
+
+Alem goes over everything you need to know about accessing loader data in react router v7, how it benefits you, how you can approach it in different ways and you come out a better developer at the end of it.
+
+[Replacing Legacy throw in React 19 with Suspense and use](https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhXlgKJTOTD8VgB0UIXoP9VAwm7fa3gvCq5M1fOgNLntuM5DjKZpAo4dh-ft9_PP5kUAEE0pSzqxCy2WsmM7u7rhSuHqiF-5G79KkTSex0AVAdhe9_M0ZCv68kFDfwzH5X4PR4Ko8kYKJeXMNO9O-Hz1tgcrTMOumQfNDYZPbiHKljFVdgLCYxOs4_7mU-Fyzk4Uin9RD9hmSJmyBsTGC0RyZhC9GvOMLvOBgpTL7GbpBKTamYp7hQ61v4DtP9jQ-RBNypaVQ0Jn3AYTkbdRxVKyC7AKc7W82fa6c0wJDz4RZeBi95ZFlJNKq00zWmRIBzw/4cw/AvHImwaPSbORt7L3vwgWjw/h4/h001.ful_yKykN6XUnQoYhDPcG7yyQQpwA7S3SHq6d9Xz59M)  
+_3 minutes_ by Peter Kellner
+
+React 19 introduces a significant change in how Suspense handles asynchronous data loading by transitioning from the legacy "promise throwing" approach to a new `.use()` API. While the traditional method of throwing Promises to trigger Suspense boundaries is still supported for backward compatibility, the new `.use()` API offers a cleaner, more explicit way to handle async resources and is becoming the recommended approach for future React applications.
+
+[React Query: The Bad Parts](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF87awdU8DR0ou_NTWoqeJgtkYwmSVBtKTFnWu5yX_nqZrB7YRiNzvkNe_tnRF9hfghgmYV4yJnV60uAP7MRICxqfHc0PLMrrBKOkU_8Orj29stsN9MCbczmvR4A3KIw3aOQHZbZqqUoVM2ZNHntChZse_A6RLQt-4KUFs-Imxn0wxuaCUN3pQani0gzuSYmx64z1uaBP-eSwt3voHKAB0oTyM51ObgSBVJZDMd2b6lPh-oz0NOCvNcCqHv_mApGhxw/4cw/AvHImwaPSbORt7L3vwgWjw/h5/h001.q08c8DsUcWpexss37R645xSfjyO64x--BtvaaxMatls)  
+_15 minutes_ by Dominik T.K. Dodo
+
+In this talk, maintainer Dominik will explore the other side—the less favorable aspects of React Query and situations where it may not be the best fit. No library is perfect; every choice involves trade-offs. By the end of this talk, you'll have a better understanding of React Query's limitations and why it remains a compelling choice despite them.
+
+[You don't need Next.js](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXd82VL70MZFhA2_xWCrUrwLz7lPjXEdRatqlK0otu2EfzxxHsBotcXlMUrMsM93qhIA2vC3w2U8HHQXJVH87PqXz7zvrcgnuT58d5SNg6V3pG3DDJJpMmRR8zYQu5ktShGYB_XRvJEIJDca7XYrIGNLSHIV7sQN4HIHjJXYF29EaUM3JXGzxAk6ftFBWT2lSES0SYg8PtrKmq6BJkRVT_BtTUQlyrQUG9iBtLH6ls8oY_rQb0EdLZq-082sPHlxFA/4cw/AvHImwaPSbORt7L3vwgWjw/h6/h001.E8Sy2Huongd0saIZJQQHr-eyLs8doFB8DHYN3jRibPw)  
+_5 minutes_ by Benny Kok
+
+A team at ComfyDeploy migrated their dashboard from Next.js to pure React with TanStack Router and Rspack, resulting in dramatic performance improvements. Build times decreased from 3 minutes to 18 seconds, and hot reload times dropped to under 200ms. While they lost some Next.js features like server-side rendering and built-in caching, the migration forced better architectural decisions and improved developer experience.
+
+## webdev
+
+*   [Keyboard access fundamentals](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZqrNRh2LJ5V3SXg3M9xV-j2mU-moLe02XKovYbc4G6XDmAbMf9CEPaeqZR5f_yjagWy-96z43XQDkrRh3QaPoLGBBQuj1JM4JHt63_YN8MPVrHr0mjprVnK-lkKGdJb9W3HHQHdxpotL102c38ysORGTPQqXOZaMN8CupLckaAOghoO3N-J5zmVLZylhBZCFYTWgs4LPDfv8RQSt6-877yZ7I8JLUR55wl4FC8ca0N7/4cw/AvHImwaPSbORt7L3vwgWjw/h7/h001.vFxVuwn6BxIXKixo2Hbl3Jjz6n2rXiMiIRBwYmgVUfk)
+    
+*   [12 Modern CSS One-Line Upgrades](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTUlAPOkv8dP7H-fwzJY027Wya2aCDju4DUO_bduh4HQZbNRoRFG0vMNx6BVAuiG1XmrRKKdAHRXd6ceKm8wT1Yh3OUcPxJ2fxLr4Le7k-R1eyS-Xhjd0E-Azc-3wWToIsUq9BrKQQD4fjwhatMv8DAbMTYlhZoq2w2avyDIYMZZqCeR-1P4IIUwAhd55gSYOZg6VkdVRmLyjUvlGo9k70zfWq0Eyir3cZy2tVBUe8Fa5_3V1pSls6YC0Lnj_e-jVRQ/4cw/AvHImwaPSbORt7L3vwgWjw/h8/h001.GXsGPtEnwJBf5DdlOdMJu44GWCzdlsyo4F4tlL4ydeA)
+    
+*   [Reduce the scope and complexity of style calculations](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZqrNRh2LJ5V3SXg3M9xV-hsCgMWaA-DJmaVXZyTJWTG4DxWviAKxynGXdwxliUCPuAbJjG23D_PZDsit_6dbvPh2Ud1KkAuqaxaKuY0DI1_8-6e9Zn7YmVyIYbdGMkJ1RUPjEleASAT0QseW8_4kpWIGMYkUI_eDxmFJrUqXAOctnxGyIjfhQAjVvgiagulu7nNGD67jb96yig9YawRk4-YQ_475AH5XTYjRPdO4rQcihfVU9IqtMxsc39JDK1T_6Tu1nEFyPA5kFZY-nO6D0J5uBL9OSFYggEqSNMukr9Q/4cw/AvHImwaPSbORt7L3vwgWjw/h9/h001.2uXIOY3bbJGfXWC36dMN0E3agoIgg1mzdpejOTv6GM0)
+    
+*   [Pure CSS Halftone Effect in 3 Declarations](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfaSOFJc2XPJZaMvVYObtcgOH_Uo6c7stE73bOUj_3x981VyuEUI-lNJw6jLDbat5eXYMj-8mJgOnJplkOqaDyKD3g1_CFlB7CKvL4kDZAF6DzCV0b7K_ZJ7KADvpBdSm-rj-FFGXH9S4G3oeY1rpfoA7OPRUE_4NXNJrdFcoFO-r0C7emiDcrYzC5OrQ6oGc2b0R1ikliVUMU8Rwva4WVN2-fFhrXOOAnV5_DnNy0PqqlC9mH-cwtHWYdSkrk5QmwIlPpyTS8yLeclOIfwJK6ujWmzrETRhWHKs6eOKtMRKt/4cw/AvHImwaPSbORt7L3vwgWjw/h10/h001.QjTisoEBT6Bdv7XICDCsUAS9yQWb8G-G5-M0yzKfAlk)
+    
+
+## javascript
+
+*   [Deeply Immutable Data Structures](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO4Nfo0CwV2ljRRQQsAMBMZjsn7Uc8L2Lwt1prMsOYCf1_vdgoKXr5gmbTcvYYvaRvWR-tGA7alGtxBGIu7g0aAscoMhHeQIqLNP-DkOX6XwXv_yJ2zU0N7jHQ4lYCnSssvrfYg4_kDvauqEIIuR36fgTPSmEY1Gf04pfZNDfyM4_SYevN2R-zKnk98gHP16AFjopug0g4NL8PgS0bJbro-K1pFV5k8cvr5cPM2Yf929vL2mVKyA1zBsyUjctNMu_X3rf3GNDkIBZ28nHaNge7ac/4cw/AvHImwaPSbORt7L3vwgWjw/h11/h001.FGUs_bIGw86ymJzPzgoPpEiz_Ps3xdQXJ_HFBEKijaU)
+    
+*   [But what is a DOM node?](https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea_eXiYAmEjuj9hZZ4BnyxkjkRRrpkHiA1YCQh_ExVfkSFat3Za19euo7gdXsvj46P-amGnj0cYXRGJA__Zmznn68HYqbOcILPCVfCchx67f3aLynXmjfVbWGilE9w9_0sWtwE-RdC20tOGiEkpOgEj_q-izKCLBfUt6h2klG65F4Hj_wAnXwXe8ejkOMikveswRqTawEoODqEp6u-DMlZr7-9NMWB9aBTZKGLOvO8QUM_IfErek0h-gzQxDv-yX0UMu7xTPkQ/4cw/AvHImwaPSbORt7L3vwgWjw/h12/h001.f0-WAqInnSZgQZQngSVnlL9i-w3mRxtuRFZJnAMo1w0)
+    
+*   [State of Node.js Performance 2024](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8iCEYW0L3-KAnzAPlyGt8yQadV4fh1JrcUQiNzo_WnOQRQuTToqVKsLPlnB776accRGWFYcP_-B22JnzeAd-6Cmde4Vp_9qUU2nSu1QwmwhpBXZoqOAhiB6654Mc4Ie1xyFvMSS76Spw2P_rqJPIQPXkdcoZAsHQusI0Kpw6Gv9YPwTMnxsf5uz5ku-tSpm0Cr2yCKs6psAMePe3e1STn56RtR29x25dHaLyjwtqDUaYPtRSHnn8Htcf1dKkBEw_uVjsC7A3KGFB9YPthdjE668/4cw/AvHImwaPSbORt7L3vwgWjw/h13/h001.caLD2FbF-h4fctlg8lR6OLPewBIljjcfmudTm6sM2M8)
+    
+
+Next, we’ll look at the most read articles from 2024.
+
+1.  [Data Fetching Patterns in Single-Page Applications](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTRKqYX17ZJ_ExtJFEjYsXqjNfJ2CLMR5yVskCEN6Hl1mJAioWzjQly_UxRjcBp0H_GkOHHErHjOn2gAAVHKOxgshe-89HJ46Sl4VxeuzvaHJzaGHB0DSklAp7VHhjiBBocU9PK0vJQTeHBqOaDZ-h6xOQ7vlX9DsGZyu0cXWtglrozfgchLyRHfKktPCj6N8pi0YqaIkjv9NI_KysZeMgiJHhqTx3uzYEsQf_V0Agd2qpLgYDrtVuT5DoEifMEbP7g/4cw/AvHImwaPSbORt7L3vwgWjw/h14/h001.HRgli6Sf2qHOGto2xAjZEPhnW-fHR7bzcOyvw2c-yPw)
+    
+2.  [React Will Be Compiled](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvtswBk-hMELUbzBdd2Qx-J4sL5xEoja1m48JDvt76A-_f1u6BOAI41tGkg5m7PUDiIO3_NO-FKgZnuuKlAAuhf8gry-ZjtCAfLyHeeNycOM8JL6_avPi26TFtUOD6ihcAF-Bcp-xSc9gASChm8f5wp_mvN4eWZX-QDX5Aw9W2Kp_bpErYMkO5Te0vIROeYszYJk7QKsF0nYW0UMdxak3fUXDV8XQNd_-6AFgg8kbxbTviQoQJlAEIVG4rVPXcO7Smw/4cw/AvHImwaPSbORt7L3vwgWjw/h15/h001.mF-DKgS8JNSKGa7HGTKsdkb577ySOotLqJUQuxnkU1Y)
+    
+3.  [Architectures of modern Front-end applications](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63hoLuM8rYyN-q4oEYhp4nYcFkld_WBWelTjHiFgp610Q36q4giyFMqfTqfS5_imjznpDoPbVDtX-ClGJHVcET0B6YHf6i7eEMTNcWIC2IAABWkxMDmproH1AIGXEKrNh313dV5NEjDdSL3hXvS7RZ-Lbf6t3ErPmFedcy2GODJ93Ckk7ZQacPZ16hCZOwb_MceMgvvWriTm14Nq6mCyakbcDuVo8U19yuG3vOs_MmXcDKsmGdk28e88E8FSty7qvF6tEWp5gUaW7rXGzwjKSxudwgDDaYJh_gJ0DiX0BNuga/4cw/AvHImwaPSbORt7L3vwgWjw/h16/h001.ei-THW7KY5uEhCLTz7AVRWayxjLfahatptews0_h1bU)
+    
+4.  [How Next.js breaks React Fundamentals](https://link.mail.beehiiv.com/ss/c/u001.GyLXS_kgZ_zhliVlX2b_Se5IoGj94xf9Nq-55VNg6sjIGU9FjmXwc_6T9PVURch4SHtzke3E_KRR9g619GybV48-n24kX-L5te7TATt4HKzornP9tdpS48OSDOJuLzXuCa9HL5u2O8NKETKfDsNRDoVSO632CYQSxDjB5EKVscbfgWENcBPWeqDV3gMeqi1mOEVR8tNB8V8rd-LLY80ZokgD-MlebXIJ6USA7kc7GTIbA9M1uX43ezCKPm6Ekm5UowSgJh-EC4ho6uU_wtyD7ItHjyKtSOXpJQqiowIZ80o/4cw/AvHImwaPSbORt7L3vwgWjw/h17/h001.ll6YACZEZ1PWqH90NkhuuuDcisWkZ9rnSrMSVgsQiA0)
+    
+5.  [Path To A Clean React Architecture: API Layer & Fetch Functions](https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhYf6Tadtz5p3wSZz-URRP1uNW-PaCCcTrO6Xvo4Jstu889KBCjI9NC-9EjmqCd9Hvq8yQIzlMZSL2QQQAmlay4AjlbiRPkluTcblemGaW3JpxeiHf63xab9qg3HHtsb5qnKNI5WL8E0OqHtXj-osHDWwq9MvtlL6DXaNz8mIaxYE2TO7OlxtaWlVGFXr5y4E9RFsPBJiAsjQMDeWGGhVlRlICGCxfOMmHuOBJfK3ce9QN9xBrpaXk89XxD_htx214G4Tr3uSsNQibf2V92RvpRXJPIaXMUPKSFjZrozmptHx/4cw/AvHImwaPSbORt7L3vwgWjw/h18/h001.vK9DFi9nfW9yyeocsM2xgcOOl-FKGmPSvUc1ySnvAdg)
+    
+
+And we'll wrap up with the most read article from the last issue.
+
+*   [(React) Things I Regret Not Knowing Earlier](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqQtZUvbjz4EL00G6RqzzLjMH3fnchAx6UJqcCaTW5xEOMj-wKDEtbW_4mqrRqxuaTVjwOb9TRt-qaIS0iR3k_--dyzLGTKGyaGqtLckwNXbfFesjXFvx31QLbpcmQNwhzs82CRA1UtrKUSVQ_NZF85Qi0g6-vatGjRhO_M9HSBXgB7MHqq68j8KpvCzFx7V1oMMZUEQRcFxgxyyoAQiH8utqkQAM5oS5v9ye2mzacDNnVOcs24xZ6FQzL3xnf_GAUWXkpk8oCg7IP3Ei-Bg--y7gf_srWgDrT22t6d_M7hOA/4cw/AvHImwaPSbORt7L3vwgWjw/h19/h001.rz27xzj7lNxKxX8AfMFvbJObgSOVjDzftq-7vnkoMmU)
+    
+
+How do you like the new sections? Would you like me to keep them? Do you get your HTML, CSS and JavaScript news from somewhere else?
+
+Happy New Year,  
+Jakub 🥳
+
+#
+</Detail>
+
+\[读在线]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1XGBhBazpQM\_2TfMd\_BSgvmY4ND0 eTPw99t5QWWycZ\_T93QBoyAAOICM\_OJ5jL7DPkwsp\_p7-Z\_0rneGMcLsVeaymgey8kbzPM7Xj-IX5R9slMo5pHDeWfDSbPK3T95BIFuQq8HWgQvKzj1Rd ymXLgLSmhepM\_5BdvltOqGlAc\_0WiUs9NNnGAlTEN3WB4POXYm0t8qiNWOS9z12f1My\_HgbtyDhiqTF\_mn\_1D0927kBZFWwvyvYRp6T9n30xreZAv4lV3 EgFjhwZNMovKtVa51E8TcNKHGDeIF3uerOwmvvivmu5TC7\_cFjDo5TwD2VlXuLEKwXueQ2hFRBCc3aYW9-z-PU59v-4Sau9MaPv7f93Dcqzj-8FAX0-Hmp SDBSd8IAZmkdaAEaHLDVIu-2R4A5IWdTg1RTeHBoOXjM7UGWRfMCaK-858Sjgc3EFOOPyl0HT9QLKeud6gmM09q6nwEAuczGUwOncAyx-R-0AvXZDLyh-D htm1lk4sgt4h1PM4QzBmoMEnXAc2lP-wiXCYEXNJclHdgG8cy6GiIgKo3Y37spG0AV8Ggn0HLELD8RKTmlnxr8VSFZJZYT-iq81jGVJfRinrXW0TjXjSQL -hWnBe5lkk8qFbKmE9PtenzYJ7SJojc1dB\_h5rGqO6cmzVpx0ZuFmimL4Up0dwcQF7eL8yCoVpi9rD6RSOH6E9mzP2gWRzSaekbzGOKHil5fNI6ehBxq1 6JFb9tOmQEqmCu6zgvddL9NIKPxGjz8I85lVIQ/4cw/AvHImwaPSbORt7L3vwgWjw/h0/h001.DwdS0dhyz4t84L7vYHe\_DG8ltAqM\_lKndp1OAe-YsHY)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4cw/AvHImwaPSbORt7L3vwgWjw/ho.gif)
+
+你好！ 👋
+
+短暂休息后我们回来了。我将在新的一年开始时对时事通讯格式进行一些更改，但核心保持不变——React 开发人员的前 5 个链接。
+
+\[实例挂钩模式]\(https://link.mail.beehiiv.com/ss/c/u001.8nbMFOe-\_\_9TtOcNCbiVEg3hzmqHdP1dYvBNW5StiUQyV9DKSsv-C d\_ERyPPediks-Q6rhgEBqZYslkN4M96d-qk\_DsEEUVnkZTvZhd1NLz1-VMFDKWvRdlUnfCp9c8tPoBio\_xKx7ERKUGlEWB1IaXkyrz S1QDcrJjhLZ61YTpu6rnfTwHRMjnmjN2kqDBwBCLj\_UQ7iA8nYt\_UqTqS0P6POdk6tq3Pq0GzNDCNv7C2MsQjlv9M6LoxJ47SRJyYl T8lEqXSWPXVVlr4XVgXbQ/4cw/AvHImwaPSbORt7L3vwgWjw/h1/h001.O7MvWX-cTxNXbE8Ofa\_WQwpFSRmPAzzqFnP4c9xH3Xw)\
+*5 分钟* Sahaj Jain
+
+使用共置逻辑和受控 API 制作灵活且可组合的 React 组件。它的工作原理是将组件的状态和行为绑定到自定义挂钩，该挂钩的作用类似于遥控器，可用于独立管理同一组件的多个实例。
+
+\[引入对 React 的身份验证支持路由器]\(https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea\_eXiYAmJVDbYraja-8i6nE2MFAY9CdpqEE AMLmv3OVEuf-JszsHQh4wOAodNDYruk5uINHIpZPj\_y1Lu39bMWfafebhZdaDhLDURlCNrno407pOR0pNgAMZwQd80RdmAQk CJfduHAF40-0wtULt32x-W8baEMdg0vvby-zxhVyNaGPlACejaU\_BhZ5o4fvEw-M80qBuYR5P5zYdJnfy1vGassEDNokJOq3 -SAXvVhoIibKs\_MP/4cw/AvHImwaPSbORt7L3vwgWjw/h2/h001.dDXIGpF8tS1W38hBEFLvx55I2wNkDO2piEal6xLjKmI)\
+*由职员赞助*
+
+Clerk 宣布对 React Router 提供测试版支持，包括预构建的 UI 组件、服务器实用程序以及适用于任何自定义流程的低级实用程序。您可以将 React Router 用作 Clerk 的框架或库。
+
+【React Router 的好处没人告诉你关于]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqQvdoXSZH0Usp8HbeUV8XwkPEMj4983nKG h0ZWS2AR2QMryBrdQCikXFHyFdniAUjoMlu7d8igSNsChjIHbveoN582nPqNkxfsSiYeFalnYVc0p4g0\_51JDs6hnyYG09UWIuy1eK lMX3uk9-EN-KzDtChweMsXld2lzB55WK2CNBRcmIxtCbhDtPCE2jTxYGDHI-bf3JCpN4H6lew6gyYsA51ZRxNEPB7lyfCBRnsCfVS vJMC0lAQN5adPw9iyntNA/4cw/AvHImwaPSbORt7L3vwgWjw/h3/h001.CUo-2vZx3E9fAXtveprR\_LQzcZP6orvLJ0-yAggj\_Zo)\
+*不到一分钟* Alem Tuzlak
+
+Alem 详细介绍了您需要了解的有关在 React Router v7 中访问加载器数据的所有信息、它如何为您带来好处、您如何以不同的方式处理它，最后您将成为一个更好的开发人员。
+
+\[React 19 中用 Suspense 和使用]\(https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhXlgKJTOTD8VgB0UIXoP9VAwm7fa3gvCq5M1fOgNLntuM5DjKZpA o4dh-ft9\_PP5kUAEE0pSzqxCy2WsmM7u7rhSuHqiF-5G79KkTSex0AVAdhe9\_M0ZCv68kFDfwzH5X4PR4Ko8kyKJeXMNO9O-Hz1tgcrTMOumQfNDYZPbi HKljFVdgLCYxOs4\_7mU-Fyzk4Uin9RD9hmSJmyBsTGC0RyZhC9GvOMLvOBgpTL7GbpBKTamYp7hQ61v4DtP9jQ-RBNypaVQ0Jn3AYTkbdRxVKyC7AKc7W 82fa6c0wJDz4RZeBi95ZFlJNKq00zWmRIBzw/4cw/AvHImwaPSbORt7L3vwgWjw/h4/h001.ful\_yKykN6XUnQoYhDPcG7yyQQpwA7S3SHq6d9Xz59M)\
+*3 分钟* 彼得·凯尔纳
+
+React 19 通过从传统的“promise throwing”方法过渡到新的“.use()” API，对 Suspense 处理异步数据加载的方式进行了重大更改。虽然为了向后兼容仍然支持抛出 Promises 来触发 Suspense 边界的传统方法，但新的 .use() API 提供了一种更清晰、更明确的方式来处理异步资源，并且正在成为未来 React 应用程序的推荐方法。
+
+\[反应查询：坏处零件]\(https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF87awdU8DR0ou\_NTWoqeJgtkYwmSVBt​​KTF nWu5yX\_nqZrB7YRiNzvkNe\_tnRF9hfghgmYV4yJnV60uAP7MRICxqfHc0PLMrrBKOkU\_8Orj29stsN9MCbczmvR4A3KIw3aOQHZbZq qUoVM2ZNHntChZse\_A6RLQt-4KUFs-Imxn0wxuaCUN3pQani0gzuSYmx64z1uaBP-eSwt3voHKAB0oTyM51ObgSBVJZDMd2b6lPh- oz0NOCvNcCqHv\_mApGhxw/4cw/AvHImwaPSbORt7L3vwgWjw/h5/h001.q08c8DsUcWpexss37R645xSfjyO64x--BtvaaxMatls)\
+*15 分钟* 多米尼克·T.K.渡渡鸟
+
+在本次演讲中，维护者 Dominik 将探讨另一面——React Query 不太有利的方面以及它可能不是最适合的情况。没有一个图书馆是完美的；每一个选择都涉及权衡。在本次演讲结束时，您将更好地理解 React Query 的局限性，以及为什么尽管有这些局限性，它仍然是一个令人信服的选择。
+
+\[你不需要Next.js]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXd82​​VL70MZFhA2\_xWCrUrwLz7lPjXEdR atqlK0otu2EfzxxHsBotcXlMUrMsM93qhIA2vC3w2U8HHQXJVH87PqXz7zvrcgnuT58d5SNg6V3pG3DDJJpMmRR8zYQu5ktShGYB\_X RvJEIJDca7XYrIGNLSHIV7sQN4HIHjJXYF29EaUM3JXGzxAk6ftFBWT2lSES0SYg8PtrKmq6BJkRVT\_BtTUQlyrQUG9iBtLH6ls8oY \_rQb0EdLZq-082sPHlxFA/4cw/AvHImwaPSbORt7L3vwgWjw/h6/h001.E8Sy2Huongd0saIZJQQHr-eyLs8doFB8DHYN3jRibPw)\
+*5 分钟* Benny Kok
+
+ComfyDeploy 的团队将其仪表板从 Next.js 迁移到使用 TanStack Router 和 Rspack 的纯 React，从而显着提高了性能。构建时间从 3 分钟减少到 18 秒，热重载时间减少到 200 毫秒以下。虽然他们失去了一些 Next.js 功能，例如服务器端渲染和内置缓存，但迁移迫使他们做出更好的架构决策并改善开发人员体验。
+
+## 网络开发
+
+* \[键盘访问基础]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZqrNRh2LJ5V3SXg3M9xV-j 2mU-moLe02XKovYbc4G6XDmAbMf9CEPaeqZR5f\_yjagWy-96z43XQDkrRh3QaPoLGBBQuj1JM4JHt63\_YN8MPVrHr0mjprVnK- lkKGdJb9W3HHQHdxpotL102c38ysORGTPQqXOZaMN8CupLckaAOghoO3N-J5zmVLZylhBZCFYTWgs4LPDfv8RQSt6-877yZ7I 8JLUR55wl4FC8ca0N7/4cw/AvHImwaPSbORt7L3vwgWjw/h7/h001.vFxVuwn6BxIXKixo2Hbl3Jjz6n2rXiMiIRBwYmgVUfk)
+
+* \[12 现代 CSS 一行升级]\(https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2\_rh17KMcAxCTUlAPOkv8dP7H-fwzJY027Wya2aCDju4 DUO\_bduh4HQZbNRoRFG0vMNx6BVAuiG1XmrRKKdAHRXd6ceKm8wT1Yh3OUcPxJ2fxLr4Le7k-R1eyS-Xhjd0E-Azc-3wWToIsUq9Br KQQD4fjwhatMv8DAbMTYlhZoq2w2avyDIYMZZqCeR-1P4IIUwAhd55gSYOZg6VkdVRmLyjUvlGo9k70zfWq0Eyir3cZy2tVBUe8Fa5 \_3V1pSls6YC0Lnj\_e-jVRQ/4cw/AvHImwaPSbORt7L3vwgWjw/h8/h001.GXsGPtEnwJBf5DdlOdMJu44GWCzdlsyo4F4tlL4ydeA)
+
+* \[减少样式的范围和复杂性计算]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqZqrNRh2LJ5V3SXg3M9xV-hsCgMWaA-DJmaVXZy TJWTG4DxWviAKxynGXdwxliUCPuAbJjG23D\_PZDsit\_6dbvPh2Ud1KkAuqaxaKuY0DI1\_8-6e9Zn7YmVyIYbdGMkJ1RUPjEleASAT0QseW8\_4kpWIG MYkUI\_eDxmFJrUqXAOctnxGyIjfhQAjVvgiagulu7nNGD67jb96yig9YawRk4-YQ\_475AH5XTYjRPdO4rQcihfVU9IqtMxsc39JDK1T\_6Tu1nEFyP A5kFZY-nO6D0J5uBL9OSFYggEqSNMukr9Q/4cw/AvHImwaPSbORt7L3vwgWjw/h9/h001.2uXIOY3bbJGfXWC36dMN0E3agoIgg1mzdpejOTv6GM0)
+
+\*【纯CSS半色调效果3中声明]\(https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfaSOFJc2XPJZaMvVYObtcgOH\_Uo6c7stE73bOUj \_3x981VyuEUI-lNJw6jLDbat5eXYMj-8mJgOnJplkOqaDyKD3g1\_CFlB7CKvL4kDZAF6DzCV0b7K\_ZJ7KADvpBdSm-rj-FFGXH9S4G3oeY1rpfoA7O PRUE\_4NXNJrdFcoFO-r0C7emiDcrYzC5OrQ6oGc2b0R1ikliVUMU8Rwva4WVN2-fFhrXOOAnV5\_DnNy0PqqlC9mH-cwtHWYdSkrk5QmwIlPpyTS8yL eclOIfwJK6ujWmzrETRhWHKs6eOKtMRKt/4cw/AvHImwaPSbORt7L3vwgWjw/h10/h001.QjTisoEBT6Bdv7XICDCsUAS9yQWb8G-G5-M0yzKfAlk)
+
+## JavaScript
+
+* \[深度不可变数据结构]\(https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn\_0mUAO4Nfo0CwV2ljRRQQsAMBMZjsn7Uc8L2Lwt1p rMsOYCf1\_vdgoKXr5gmbTcvYYvaRvWR-tGA7alGtxBGIu7g0aAscoMhHeQIqLNP-DkOX6XwXv\_yJ2zU0N7jHQ4lYCnSssvrfYg4\_kDvauqEI IuR36fgTPSMEY1Gf04pfZNDfyM4\_SYevN2R-zKnk98gHP16AFjopug0g4NL8PgS0bJbro-K1pFV5k8cvr5cPM2Yf929vL2mVKyA1zBsyUjct NMu\_X3rf3GNDkIBZ28nHaNge7ac/4cw/AvHImwaPSbORt7L3vwgWjw/h11/h001.FGUs\_bIGw86ymJzPzgoPpEiz\_Ps3xdQXJ\_HFBEKijaU)
+
+* \[但是什么是 DOM节点？]\(https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea\_eXiYAmEjuj9hZZ4BnyxkjkRRrpkHiA1YCQ​​h\_ExV fkSFat3Za19euo7gdXsvj46P-amGnj0cYXRGJA\_\_Zmznn68HYqbOcILPCVfCchx67f3aLynXmjfVbWGilE9w9\_0sWTWE-RdC20tOGi EkpOgEj\_q-izKCLBfUt6h2klG65F4Hj\_wAnXwXe8ejkOMikveswRqTawEoODqEp6u-DMlZr7-9NMWB9aBTZKGLOvO8QUM\_IfErek0 h-gzQxDv-yX0UMu7xTPkQ/4cw/AvHImwaPSbORt7L3vwgWjw/h12/h001.f0-WAqInnSZgQZQngSVnlL9i-w3mRxtuRFZJnAMo1w0)
+
+* \[Node.js 性能状况2024]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8iCEYW0L3-KAnzAPlyGt8yQadV4fh1JrcUQiNzo\_ WnOQRQuTToqVKsLPlnB776accRGWFYcP\_-B22JnzeAd-6Cmde4Vp\_9qUU2nSu1QwmwhpBXZoqOAhiB6654Mc4Ie1xyFvMSS76Spw2P\_rqJP IQPXkdcoZAsHQusI0Kpw6Gv9YPwTMnxsf5uz5ku-tSpm0Cr2yCKs6psAMePe3e1STn56RtR29x25dHaLyjwtqDUaYPtRSHnn8Htcf1dKkB Ew\_uVjsC7A3KGFB9YPthdjE668/4cw/AvHImwaPSbORt7L3vwgWjw/h13/h001.caLD2FbF-h4fctlg8lR6OLPewBIljjcfmudTm6sM2M8)
+
+接下来，我们将看看 2024 年阅读次数最多的文章。
+
+1.【单页数据获取模式应用]\(https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2\_rh17KMcAxCTRKqYX17ZJ\_ExtJFEjYsXqjNfJ2CL MR5yVskCEN6Hl1mJAioWzjQly\_UxRjcBp0H\_GkOHHErHjOn2gAAVHKOxgshe-89HJ46Sl4VxeuzvaHJzaGHB0DSklAp7VHhjiBBocU9 PK0vJQTeHBqOaDZ-h6xOQ7vlX9DsGZyu0cXWtglrozfgchLyRHfKktPCj6N8pi0YqaIkjv9NI\_KysZeMgiJHhqTx3uzYEsQf\_V0Agd2 qPLGYDrtVuT5DoEifMEbP7g/4cw/AvHImwaPSbORt7L3vwgWjw/h14/h001.HRgli6Sf2qHOGto2xAjZEPhnW-fHR7bzcOyvw2c-yPw)
+
+2. \[反应将是已编译]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvtswBk-hMELUbzBdd2Qx-J4sL5xEoja1 m48JDvt76A-*f1u6BOAI41tGkg5m7PUDiIO3\_NO-FKgZnuuKlAAuhf8gry-ZjtCAfLyHeeNycOM8JL6\_avPi26TFtUOD6ihcAF-Bcp -xSc9gASChm8f5wp\_mvN4eWZX-QDX5Aw9W2Kp\_bpErYMkO5Te0vIROeYszYJk7QKsF0nYW0UMdxak3fUXDV8XQNd*-6AFgg8kbxbTv iQoQJlAEIVG4rVPXco7Smw/4cw/AvHImwaPSbORt7L3vwgWjw/h15/h001.mF-DKgS8JNSKGa7HGTKsdkb577ySOotLqJUQuxnkU1Y)
+
+3.【现代前端架构应用程序]\(https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63hoLuM8rYyN-q4oEYhp4nYcFkld\_WBWelTjHiFg p610Q36q4giyFMqfTqfS5\_imjznpDoPbVDtX-ClGJHVcET0B6YHf6i7eEMTNcWIC2IAABWkxMDmproH1AIGXEKrNH313dV5NEjDdSL3hXvS7RZ-Lbf 6t3ErPmFedcy2GODJ93Ckk7ZQacPZ16hCZOwb\_MceMgvvWriTm14Nq6mCyakbcDuVo8U19yuG3vOs\_MmXcDKsmGdk28e88E8FSty7qvF6tEWp5gUaW 7rXGzwjKSxudwgDDaYJh\_gJ0DiX0BNuga/4cw/AvHImwaPSbORt7L3vwgWjw/h16/h001.ei-THW7KY5uEhCLTz7AVRWayxjLfahatptews0\_h1bU)
+
+4.【Next.js 如何打破 React基础知识]\(https://link.mail.beehiiv.com/ss/c/u001.GyLXS\_kgZ\_zhliVlX2b\_Se5IoGj94xf9Nq-55VNg6sjIGU9FjmXwc\_ 6T9PVURch4SHtzke3E\_KRR9g619GybV48-n24kX-L5te7TATt4HKzornP9tdpS48OSDOJuLzXuCa9HL5u2O8NKETKfDsNRDoVSO632CYQSxDj B5EKVscbfgWENcBPWeqDV3gMeqi1mOEVR8tNB8V8rd-LLY80ZokgD-MlebXIJ6USA7kc7GTIbA9M1uX43ezCKPm6Ekm5UowSgJh-EC4ho6uU \_wtyD7ItHjyKtSOXpJQqiowIZ80o/4cw/AvHImwaPSbORt7L3vwgWjw/h17/h001.ll6YACZEZ1PWqH90NkhuuuDcisWkZ9rnSrMSVgsQiA0)
+
+5. \[干净的 React 架构之路：API 层和 Fetch功能]\(https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhYf6Tadtz5p3wSZz-URRP1uNW-PaCCcTrO6Xvo4Jst u889KBCjI9NC-9EjmqCd9Hvq8yQIzlMZSL2QQQAmlay4AjlbiRPkluTcblemGaW3JpxeiHf63xab9qg3HHtsb5qnKNI5WL8E0OqHtXj-osHDWwq9M vtlL6DXaNz8mIaxYE2TO7OlxtaWlVGFXr5y4E9RFsPBJiAsjQMDeWGGhVlRlICGCxfOMmHuOBJfK3ce9QN9xBrpaXk89XxD\_htx214G4Tr3uSsNQi bf2V92RvpRXJPIaXMUPKSFjZrozmptHx/4cw/AvHImwaPSbORt7L3vwgWjw/h18/h001.vK9DFi9nfW9yyeocsM2xgcoOl-FKGmPSvUc1ySnvAdg)
+
+我们将以上一期中阅读量最大的文章作为结尾。
+
+* \[（反应）我遗憾不知道的事情较早]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqQtZUvbjz4EL00G6RqzzLjMH3fnchAx6UJqcCaTW5xE OMj-wKDEtbW\_4mqrRqxuaTVjwOb9TRt-qaIS0iR3k\_--dyzLGTKGyaGqtLckwNXbfFesjXFvx31QLbpcmQNwhzs82CRA1UtrKUSVQ\_NZF85Qi0g6- vatGjRhO\_M9HSBXgB7MHqq68j8KpvCzFx7V1oMMZUEQRcFxgxyyoAQiH8utqkQAM5oS5v9ye2mzacDNnVOcs24xZ6FQzL3xnf\_GAUWXkpk8oCg7I P3Ei-Bg--y7gf\_srWgDrT22t6d\_M7hOA/4cw/AvHImwaPSbORt7L3vwgWjw/h19/h001.rz27xzj7lNxKxX8AfMFvbJObgSOVjDzftq-7vnkoMmU)
+
+您觉得新版块怎么样？你想让我保留它们吗？您是否从其他地方获取 HTML、CSS 和 JavaScript 新闻？
+
+新年快乐，\
+雅库布🥳
+
+#
+
+
