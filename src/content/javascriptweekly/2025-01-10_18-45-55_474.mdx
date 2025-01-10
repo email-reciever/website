@@ -1,0 +1,352 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: The projects that shaped JavaScript in 2024
+description: The projects that shaped JavaScript in 2024
+date: 星期五 06 晚上 一月 10o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/718
+origin_site: https://javascriptweekly.com/issues/718
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="The projects that shaped JavaScript in 2024" url="https://javascriptweekly.com/issues/718" />
+
+<Detail client:only="react">
+	#​718 — January 10, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/718)
+
+🗓️ **Friday is the new Thursday!** If you were a JavaScript Weekly reader several years ago, you might remember it always landed on Fridays and after getting caught out by a variety of big news items landing on Thursdays in recent years, we're back ;-)  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![Datadog](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_700,h_190/e_make_transparent/co_white,e_outline:10/vuhqm1wlyvxuddx1zxr8.png)](https://javascriptweekly.com/link/164146/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/csaa8izzxblxo4wgv2tz.jpg)](https://javascriptweekly.com/link/164147/d076523b1d)
+
+⭐ [2024's JavaScript Rising Stars](https://javascriptweekly.com/link/164147/d076523b1d "risingstars.js.org") — It’s time to fully wave goodbye to 2024, but not before Michael Rambeau’s annual analysis of which JavaScript projects fared best on GitHub over the past year. Even if you dislike GitHub stars as a metric for anything, this remains a great way to get a feel for the JavaScript ecosystem and see what libraries and tools have mindshare in a variety of niches. A fantastic roundup as always.
+
+Michael Rambeau
+
+[A Look at Import Attributes](https://javascriptweekly.com/link/164150/d076523b1d "2ality.com") — It’s always a pleasure to see Dr. Axel blogging about JavaScript again, and he’s back with one of his typical deep dives into a newer ECMAScript feature: [import attributes.](https://javascriptweekly.com/link/164151/d076523b1d) This feature provides an inline syntax for attaching metadata to module imports such as for importing non-JavaScript modules (e.g. JSON, WASM or CSS).
+
+Dr. Axel Rauschmayer
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/0bd0f748.png)](https://javascriptweekly.com/link/164146/d076523b1d)
+
+[How to Enable End-to-End Testing with Synthetic Monitoring](https://javascriptweekly.com/link/164146/d076523b1d "www.datadoghq.com") — Synthetic Monitoring helps you launch new features with confidence and speed. Learn how you can create robust end-to-end test suites, spend less time on false positives, and proactively catch errors before they get to production.
+
+Datadog sponsor
+
+[Node’s New Built-in Support for TypeScript](https://javascriptweekly.com/link/164148/d076523b1d "2ality.com") — [Node.js v23.6.0 (Current)](https://javascriptweekly.com/link/164149/d076523b1d) has just been released and makes Node’s new type-stripping features work by default, so you can just run `node file.ts` and it Should Just Work™. Dr. Axel explains how it works and what the limitations are.
+
+Dr. Axel Rauschmayer
+
+**IN BRIEF:**
+
+*   🥊 The Deno vs Oracle fight over the JavaScript™ trademark continues as Oracle has informed Deno [they're not going to voluntarily relinquish the mark.](https://javascriptweekly.com/link/164152/d076523b1d) Deno's job now is to show how JavaScript has long been used as a generic term and hasn't been controlled by Oracle.
+    
+*   The Express.js team has posted [about the project's recent revival and its plans to push Express.js forward in 2025.](https://javascriptweekly.com/link/164153/d076523b1d)
+    
+*   ❄️ The 'WinterCG' _Web Interoperable Runtimes Community Group_, an effort to promote standards around runtime interoperability of JavaScript runtimes, [has moved to Ecma International](https://javascriptweekly.com/link/164154/d076523b1d) and is now known as [WinterTC (TC55).](https://javascriptweekly.com/link/164155/d076523b1d)
+    
+*   📺 Node.js creator Ryan Dahl gave [a talk at _GOTO Chicago 2024_ about Deno 2](https://javascriptweekly.com/link/164156/d076523b1d), covering Deno's differences to Node and what [Deno 2.0](https://javascriptweekly.com/link/164157/d076523b1d) (and JSR) has to offer JavaScript developers, complete with live demos.
+    
+
+**RELEASES:**
+
+*   [pnpm 10](https://javascriptweekly.com/link/164159/d076523b1d) – The efficient `npm` alternative no longer runs lifecycle scripts of dependencies for security reasons, hashing algorithms have been upgraded to SHA256, and lots of minor tweaks.
+    
+*   [Bun v1.1.43](https://javascriptweekly.com/link/164160/d076523b1d) – The high-performance runtime gets first class S3 support, an HTML bundler, and can output V8 heap snapshots (which is quite something as Bun uses JavaScriptCore, not V8).
+    
+*   🔠 [Tesseract.js 6.0](https://javascriptweekly.com/link/164161/d076523b1d) – The popular pure JS multilingual OCR library has resolved a variety of memory leak issues.
+    
+*   [Docusaurus 3.7](https://javascriptweekly.com/link/164162/d076523b1d) – The popular docs-oriented site generator goes full React 19.
+    
+*   [Node.js v22.13.0 (LTS)](https://javascriptweekly.com/link/164163/d076523b1d) – The [permission model system](https://javascriptweekly.com/link/164164/d076523b1d) is now stable.
+    
+*   [Puppeteer 24.0](https://javascriptweekly.com/link/164165/d076523b1d), [RxDB 16.0](https://javascriptweekly.com/link/164166/d076523b1d), [Ember 6.1](https://javascriptweekly.com/link/164167/d076523b1d), [QuickJS 0.8](https://javascriptweekly.com/link/164168/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[The Future of htmx](https://javascriptweekly.com/link/164169/d076523b1d "htmx.org") — [htmx](https://javascriptweekly.com/link/164170/d076523b1d) is an increasingly popular way to enhance HTML and actually write _less_ JavaScript on the frontend. This post reflects on how htmx would like to be ‘the new jQuery’, not least in the sense that one of the project’s goals is to push the ideas of htmx into the HTML standard itself, as in [this set of proposals.](https://javascriptweekly.com/link/164171/d076523b1d)
+
+Gross and Petros
+
+[You Don't _Need_ Next.js](https://javascriptweekly.com/link/164172/d076523b1d "www.comfydeploy.com") — As much as Next.js is considered the React meta-framework of choice, if your requirements are modest, simply going with plain React offers numerous benefits in terms of simplicity and speed, as seen here.
+
+Benny Kok
+
+[Introducing Clerk SDKs for Vue and Nuxt](https://javascriptweekly.com/link/164173/d076523b1d "go.clerk.com") — Official `@clerk/vue` & `@clerk/nuxt` SDKs for authentication integration with pre-built UI components in Vue/Nuxt apps.
+
+Clerk sponsor
+
+[Using TypeScript Without Build Tools](https://javascriptweekly.com/link/164174/d076523b1d "frontendmasters.com") — Chris Coyier enjoys the benefits of TypeScript while developing, but actually compiling it to JavaScript in various scenarios is less endearing. We’ve learnt (above) that Node can now run `.ts` files directly, but what other projects support the use of TypeScript without build tools?
+
+Chris Coyier
+
+📄 [Using a JavaScript Component Inside a Haskell App](https://javascriptweekly.com/link/164175/d076523b1d) – Did you know Haskell’s main compiler supports integrating with JavaScript? Mateusz Goślinowski
+
+📄 [Crafting a Dreamy Particle Effect with Three.js and GPGPU](https://javascriptweekly.com/link/164176/d076523b1d) Dominik Fojcik
+
+📄 [Build Your Own Site Speed Testing Tool with Puppeteer](https://javascriptweekly.com/link/164177/d076523b1d) Henry Price
+
+📄 [Sharing a Variable Across HTML, CSS, and JavaScript](https://javascriptweekly.com/link/164178/d076523b1d) Chris Coyier
+
+📄 [Benchmarking GraphQL Solutions in the JS/TS Landscape](https://javascriptweekly.com/link/164179/d076523b1d) Tomasz Nieżurawski
+
+📄 [Shallow Clones vs Structured Clones](https://javascriptweekly.com/link/164180/d076523b1d) Phil Nash
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/zvkfoikzntewlsdjzeju.jpg)](https://javascriptweekly.com/link/164181/d076523b1d)
+
+[PostalMime: A Universal Email Parsing Library](https://javascriptweekly.com/link/164181/d076523b1d "github.com") — An email parsing library happy in most JS runtimes. Takes the raw source of emails and parses them into their constituent parts.
+
+Postal Systems
+
+[`trimMiddle()`: The Missing String Trim Method?](https://javascriptweekly.com/link/164182/d076523b1d "christianheilmann.com") — If you’ve got a long string and want to keep the start and end and truncate in the middle, this is for you. There’s [a live demo here](https://javascriptweekly.com/link/164183/d076523b1d) and [GitHub repo.](https://javascriptweekly.com/link/164184/d076523b1d)
+
+Christian Heilmann
+
+[Fully Customizable Form Builder that Blends Seamlessly with Your JS App](https://javascriptweekly.com/link/164185/d076523b1d) — Need a survey solution you control? With SurveyJS, customize your form builder’s look and functionality. [Try it for free](https://javascriptweekly.com/link/164186/d076523b1d).
+
+SurveyJS sponsor
+
+[Introducing `@smoores/epub`: A Package for Working with EPUB Files](https://javascriptweekly.com/link/164187/d076523b1d "smoores.dev") — [EPUB](https://javascriptweekly.com/link/164188/d076523b1d) is a popular e-book file format and this new library provides a way to both read and write them. [npm package link.](https://javascriptweekly.com/link/164189/d076523b1d)
+
+Shane Friedman
+
+[Tipex: An Advanced Rich Text Editor for Svelte](https://javascriptweekly.com/link/164190/d076523b1d "github.com") — Based on the popular [Tiptap](https://javascriptweekly.com/link/164191/d076523b1d) editor framework, it’s customizable, has theming support, and is Svelte 5-ready. [Here’s a live example](https://javascriptweekly.com/link/164192/d076523b1d).
+
+Friend of Svelte
+
+[React-Toastify 11: In-Page Notifications Made Easy](https://javascriptweekly.com/link/164193/d076523b1d "github.com") — There’s an elaborate [demo page here](https://javascriptweekly.com/link/164194/d076523b1d) but essentially it’s a flexible, easy to style ‘toast’ style notifications system with many years under its belt. [GitHub repo.](https://javascriptweekly.com/link/164195/d076523b1d)
+
+Fadi Khadra
+
+[Electrobun: A New JS Cross-Platform Desktop App Toolkit](https://javascriptweekly.com/link/164196/d076523b1d "electrobun.dev") — A fresh take on the concept covered by [Electron](https://javascriptweekly.com/link/164197/d076523b1d) and [Neutralinojs](https://javascriptweekly.com/link/164198/d076523b1d), except based around [Bun.](https://javascriptweekly.com/link/164199/d076523b1d) It’s _early days_, though, with only ARM-based Macs supported for now.
+
+Blackboard Technologies inc.
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qanmzcdmxiqzfzsnk6ha.jpg)](https://javascriptweekly.com/link/164200/d076523b1d)
+
+[Tagify 4.33: An Elegant Input Component for Tags](https://javascriptweekly.com/link/164200/d076523b1d "yaireo.github.io") — The polished demos show a lot of effort has been put in here. [GitHub repo.](https://javascriptweekly.com/link/164201/d076523b1d)
+
+Yair Even-Or
+
+*   📊 [Recharts v2.15.0](https://javascriptweekly.com/link/164202/d076523b1d) – D3-powered React chart library now with React 19 support.
+    
+*   [Discordeno 21.0](https://javascriptweekly.com/link/164203/d076523b1d) – Discord API library for Node, Deno and Bun.
+    
+*   [htmlparser2 10.0](https://javascriptweekly.com/link/164204/d076523b1d) – Fast and forgiving HTML and XML parser.
+    
+*   [Ts.ED 8.4](https://javascriptweekly.com/link/164205/d076523b1d) – Node + TypeScript framework on top of Express.
+    
+*   📊 [ApexCharts 4.3](https://javascriptweekly.com/link/164206/d076523b1d) – Popular JS charting library. ([Demos.](https://javascriptweekly.com/link/164207/d076523b1d))
+    
+*   [zx 8.3](https://javascriptweekly.com/link/164208/d076523b1d) – Google's tool for better Node.js shell scripting.
+    
+*   [Octokit.js 4.1](https://javascriptweekly.com/link/164209/d076523b1d) – 'Batteries-included' GitHub SDK.
+    
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/164210/d076523b1d). Relied on by Lattice, Bilt Rewards, etc.
+
+* * *
+
+🔹Sell to enterprise with a few lines of code with [WorkOS — the modern, flexible identity platform for B2B SaaS.](https://javascriptweekly.com/link/164211/d076523b1d) Integrate SSO, SCIM and FGA in minutes, not months.
+
+🎁 And one for fun?
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bkfgxrevi2mxvvlgei4d.jpg)](https://javascriptweekly.com/link/164212/d076523b1d)
+
+📄 [Play Tetris in a PDF File](https://javascriptweekly.com/link/164212/d076523b1d "th0mas.nl") — (direct link to PDF)
+
+I'll let you decide if this one is fun or frightening! Whether or not this will work depends on your PDF reader or browser support, but it works with Chrome and Firefox, at least.
+
+The PDF document format supports embedded JavaScript and this experiment uses it to implement a game of Tetris. The developer, Thomas Rinsma, has [used Python to output the PostScript that includes the game's JavaScript.](https://javascriptweekly.com/link/164213/d076523b1d) Couple that with the fact many browser PDF renderers are _themselves_ implemented in JavaScript (e.g. [PDF.js](https://javascriptweekly.com/link/164214/d076523b1d)) and you have a veritable Matryoshka doll of technologies at play here.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/164215/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​718 — 2025 年 1 月 10 日
+
+[网上阅读](https://javascriptweekly.com/issues/718)
+
+🗓️ **周五是新的周四！** 如果你几年前是《JavaScript Weekly》的读者，你可能还记得它总是在周五登陆，在被近年来登陆周四的各种重大新闻报道所吸引后，我们回来了;-)\
+\_\_\
+*您的编辑彼得·库珀*
+
+连同 
+
+\[![Datadog](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_700,h_190/e_make_transparent/co_white,e_outline:10/vuhqm1wlyvxuddx1zxr8.png)]\(https://javascriptweekly. com/link/164146/d076523b1d)
+
+JavaScript 周刊
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/csaa8izzxblxo4wgv2tz.jpg)](https://javascriptweekly.com/link/164147/d076523b1d)
+
+⭐ [2024 年 JavaScript 新星](https://javascriptweekly.com/link/164147/d076523b1d "risingstars.js.org") — 是时候彻底告别 2024 年了，但在此之前，Michael Rambeau 对 JavaScript 项目进行了年度分析过去一年在 GitHub 上表现最好。即使您不喜欢将 GitHub 星数作为任何事物的衡量标准，这仍然是了解 JavaScript 生态系统并了解哪些库和工具在各种利基市场中占据主导地位的好方法。一如既往的精彩综述。
+
+迈克尔·兰博
+
+[看看导入属性](https://javascriptweekly.com/link/164150/d076523b1d "2ality.com") — 很高兴看到 Axel 博士再次撰写有关 JavaScript 的博客，他带着他的典型之一回来了深入探讨较新的 ECMAScript 功能：[导入](https://javascriptweekly.com/link/164151/d076523b1d) 此功能提供了一种内联语法，用于将元数据附加到模块导入，例如导入非 JavaScript 模块（例如 JSON、WASM 或 CSS）。
+
+阿克塞尔·劳施梅尔博士
+
+\[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/0bd0f748.png)]\(https://javascriptweekly.com/link/164146/d076523b1d ）
+
+[如何通过综合监控启用端到端测试](https://javascriptweekly.com/link/164146/d076523b1d "www.datadoghq.com") — 综合监控可帮助您自信、快速地推出新功能。了解如何创建强大的端到端测试套件，减少误报时间，并在错误投入生产之前主动捕获错误。
+
+数据狗赞助商
+
+[Node 对 TypeScript 的新内置支持](https://javascriptweekly.com/link/164148/d076523b1d "2ality.com") — \[Node.js v23.6.0（当前）]\(https://javascriptweekly.com /link/164149/d076523b1d) 刚刚发布，使 Node 的新类型剥离功能默认工作，因此您可以只运行 `node file.ts` 并且它应该可以工作™。阿克塞尔博士解释了它的工作原理以及局限性。
+
+阿克塞尔·劳施梅尔博士
+
+**简而言之：**
+
+* 🥊 Deno 与 Oracle 围绕 JavaScript™ 商标的斗争仍在继续，Oracle 已通知 Deno [他们不会自愿放弃该商标。](https://javascriptweekly.com/link/164152/d076523b1d) Deno 现在的工作是展示 JavaScript 长期以来如何被用作通用术语并且不受 Oracle 控制。
+
+* Express.js 团队已发布[有关该项目最近的复兴及其在 2025 年推动 Express.js 发展的计划。](https://javascriptweekly.com/link/164153/d076523b1d)
+
+* ❄️ “WinterCG”*Web 互操作运行时社区小组*，致力于促进 JavaScript 运行时的运行时互操作性标准，[已移至 Ecma International](https://javascriptweekly.com/link/164154/d076523b1d)，并且正在现在称为 \[WinterTC （TC55）。]（https://javascriptweekly.com/link/164155/d076523b1d）
+
+* 📺 Node.js 创建者 Ryan Dahl 在 [*GOTO Chicago 2024* 上发表了关于 Deno 2 的演讲](https://javascriptweekly.com/link/164156/d076523b1d)，涵盖了 Deno 与 Node 的差异以及 \[Deno 2.0]\( https://javascriptweekly.com/link/164157/d076523b1d）（和 JSR）有为 JavaScript 开发人员提供完整的现场演示。
+
+**发布：**
+
+* [pnpm 10](https://javascriptweekly.com/link/164159/d076523b1d) – 出于安全原因，高效的“npm”替代方案不再运行依赖项的生命周期脚本，哈希算法已升级到 SHA256，以及许多次要的调整。
+
+* [Bun v1.1.43](https://javascriptweekly.com/link/164160/d076523b1d) – 高性能运行时获得一流的 S3 支持、HTML 捆绑器，并且可以输出 V8 堆快照（这与Bun 使用 JavaScriptCore，而不是 V8）。
+
+* 🔠 [Tesseract.js 6.0](https://javascriptweekly.com/link/164161/d076523b1d) – 流行的纯 JS 多语言 OCR 库解决了各种内存泄漏问题。
+
+* [Docusaurus 3.7](https://javascriptweekly.com/link/164162/d076523b1d) – 流行的面向文档的站点生成器已全面支持 React 19。
+
+* [Node.js v22.13.0 (LTS)](https://javascriptweekly.com/link/164163/d076523b1d) – [权限模型系统](https://javascriptweekly.com/link/164164/d076523b1d)是现在稳定。
+
+* [Puppeteer 24.0](https://javascriptweekly.com/link/164165/d076523b1d)、[RxDB 16.0](https://javascriptweekly.com/link/164166/d076523b1d)、[Ember 6.1](https://javascriptweekly.com/link/164167/d076523b1d), [QuickJS 0.8](https://javascriptweekly.com/link/164168/d076523b1d)
+
+📒 文章和教程
+
+[htmx 的未来](https://javascriptweekly.com/link/164169/d076523b1d "htmx.org") — [htmx](https://javascriptweekly.com/link/164170/d076523b1d) 是一种越来越流行的方式增强 HTML 并在前端实际编写“更少”的 JavaScript。这篇文章反映了 htmx 如何成为“新的 jQuery”，尤其是在该项目的目标之一是将 htmx 的想法推入 HTML 标准本身的意义上，如\[这套提案]\( https://javascriptweekly.com/link/164171/d076523b1d）
+
+格罗斯和佩特罗斯
+
+[你不需要\*Next.js](https://javascriptweekly.com/link/164172/d076523b1d "www.comfydeploy.com") — 尽管 Next.js 被认为是 React 元框架的选择，如果您的要求不高，那么简单地使用简单的 React 在简单性和速度方面提供了许多好处，如下所示。
+
+郭志明
+
+[Vue 和 Nuxt 的 Clerk SDK 简介](https://javascriptweekly.com/link/164173/d076523b1d "go.clerk.com") — 用于身份验证集成的官方 `@clerk/vue` 和 `@clerk/nuxt` SDK使用 Vue/Nuxt 应用程序中预构建的 UI 组件。
+
+文员赞助人
+
+[在没有构建工具的情况下使用 TypeScript](https://javascriptweekly.com/link/164174/d076523b1d "frontendmasters.com") — Chris Coyier 在开发时享受 TypeScript 的好处，但实际上在各种场景下将其编译为 JavaScript 就不那么讨喜了。我们在上面了解到 Node 现在可以直接运行“.ts”文件，但是还有哪些其他项目支持在没有构建工具的情况下使用 TypeScript？
+
+克里斯·科伊尔
+
+📄 [在 Haskell 应用程序中使用 JavaScript 组件](https://javascriptweekly.com/link/164175/d076523b1d) – 您知道 Haskell 的主编译器支持与 JavaScript 集成吗？马特乌什·戈斯利诺夫斯基
+
+📄 [使用 Three.js 和 GPGPU 制作梦幻粒子效果](https://javascriptweekly.com/link/164176/d076523b1d) Dominik Fojcik
+
+📄 [使用 Puppeteer 构建您自己的网站速度测试工具](https://javascriptweekly.com/link/164177/d076523b1d) Henry Price
+
+📄 [跨 HTML、CSS 和 JavaScript 共享变量](https://javascriptweekly.com/link/164178/d076523b1d) Chris Coyier
+
+📄 [JS/TS 领域中的 GraphQL 解决方案基准测试](https://javascriptweekly.com/link/164179/d076523b1d) Tomasz Nieżurawski
+
+📄 [浅层克隆与结构化克隆](https://javascriptweekly.com/link/164180/d076523b1d) Phil Nash
+
+🛠 代码和工具
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/zvkfoikzntewlsdjzeju.jpg)](https://javascriptweekly.com/link/164181/d076523b1d)
+
+[PostalMime：通用电子邮件解析库](https://javascriptweekly.com/link/164181/d076523b1d "github.com") — 适合大多数 JS 运行时的电子邮件解析库。获取电子邮件的原始来源并将其解析为各个组成部分。
+
+邮政系统
+
+[`trimMiddle()`：缺失的字符串修剪方法？](https://javascriptweekly.com/link/164182/d076523b1d "christianheilmann.com") — 如果你有一个很长的字符串并且想要保留开头和结束并在中间截断，这是给你的。这里有[现场演示](https://javascriptweekly.com/link/164183/d076523b1d) 和 [GitHub 存储库](https://javascriptweekly.com/link/164184/d076523b1d)
+
+克里斯蒂安·海尔曼
+
+[与您的 JS 应用程序无缝融合的完全可定制的表单生成器](https://javascriptweekly.com/link/164185/d076523b1d) — 需要您控制的调查解决方案吗？使用 SurveyJS，自定义表单生成器的外观和功能。 [免费试用](https://javascriptweekly.com/link/164186/d076523b1d)。
+
+SurveyJS 赞助商
+
+[介绍`@smoores/epub`：用于处理 EPUB 文件的包](https://javascriptweekly.com/link/164187/d076523b1d "smoores.dev") — \[EPUB]\(https://javascriptweekly.com/ link/164188/d076523b1d）是一种流行的电子书文件格式，这个新库提供了一种读写方式 他们。 [npm 包链接。](https://javascriptweekly.com/link/164189/d076523b1d)
+
+肖恩·弗里德曼
+
+[Tipex：Svelte 的高级富文本编辑器](https://javascriptweekly.com/link/164190/d076523b1d "github.com") — 基于流行的 \[Tiptap]\(https://javascriptweekly.com/link/ 164191/d076523b1d) 编辑器框架，它是可定制的，具有主题支持，并且支持 Svelte 5。 [这是一个实例](https://javascriptweekly.com/link/164192/d076523b1d)。
+
+斯维尔特之友
+
+[React-Toastify 11：页内通知变得简单](https://javascriptweekly.com/link/164193/d076523b1d "github.com") — 这里有一个详细的\[演示页面]\(https://javascriptweekly.com /link/164194/d076523b1d）但本质上它是一个灵活、易于设计的“toast”风格通知系统，已经使用了很多年了 腰带。 [GitHub 存储库。](https://javascriptweekly.com/link/164195/d076523b1d)
+
+法迪·卡德拉
+
+[Electrobun：一个新的 JS 跨平台桌面应用程序工具包](https://javascriptweekly.com/link/164196/d076523b1d " electrobun.dev") — 对 \[Electron]\(https:// javascriptweekly.com/link/164197/d076523b1d) 和[Neutralinojs](https://javascriptweekly.com/link/164198/d076523b1d)，除了基于 [Bun.](https://javascriptweekly.com/link/164199/d076523b1d)，不过，现在还处于*早期*阶段，目前仅支持基于 ARM 的 Mac。
+
+黑板技术公司
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qanmzcdmxiqzfzsnk6ha.jpg)](https://javascriptweekly.com/link/164200/d076523b1d)
+
+[Tagify 4.33：优雅的标签输入组件](https://javascriptweekly.com/link/164200/d076523b1d "yaireo.github.io") — 精美的演示表明这里付出了很多努力。 [GitHub 存储库。](https://javascriptweekly.com/link/164201/d076523b1d)
+
+Yair 双或
+
+* 📊 [Recharts v2.15.0](https://javascriptweekly.com/link/164202/d076523b1d) – 由 D3 驱动的 React 图表库现在支持 React 19。
+
+* [Discordeno 21.0](https://javascriptweekly.com/link/164203/d076523b1d) – 适用于 Node、Deno 和 Bun 的 Discord API 库。
+
+* [htmlparser2 10.0](https://javascriptweekly.com/link/164204/d076523b1d) – 快速且宽容的 HTML 和 XML 解析器。
+
+* [Ts.ED 8.4](https://javascriptweekly.com/link/164205/d076523b1d) – Express 之上的 Node + TypeScript 框架。
+
+* 📊 [ApexCharts 4.3](https://javascriptweekly.com/link/164206/d076523b1d) – 流行的 JS 图表库。 （[演示。](https://javascriptweekly.com/link/164207/d076523b1d))
+
+* [zx 8.3](https://javascriptweekly.com/link/164208/d076523b1d) – Google 用于更好地编写 Node.js shell 脚本的工具。
+
+* [Octokit.js 4.1](https://javascriptweekly.com/link/164209/d076523b1d) –“包含电池”GitHub SDK。
+
+📰 分类广告
+
+[Meticulous 自动创建和维护 E2E UI 测试套件，开发人员零工作量](https://javascriptweekly.com/link/164210/d076523b1d)。受到 Lattice、Bilt Rewards 等的信赖。
+
+***
+
+🔹使用[WorkOS - 适用于 B2B SaaS 的现代、灵活的身份平台](https://javascriptweekly.com/link/164211/d076523b1d)，通过几行代码向企业销售，在几分钟内集成 SSO、SCIM 和 FGA，而不是几个月。
+
+🎁 还有一个好玩的吗？
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bkfgxrevi2mxvvlgei4d.jpg)](https://javascriptweekly.com/link/164212/d076523b1d)
+
+📄 [在 PDF 文件中玩俄罗斯方块](https://javascriptweekly.com/link/164212/d076523b1d "th0mas.nl") —（直接链接到 PDF）
+
+我会让你决定这个是有趣还是可怕！这是否有效取决于您的 PDF 阅读器或浏览器支持，但它至少适用于 Chrome 和 Firefox。
+
+PDF文档格式支持嵌入JavaScript，本实验使用它来实现俄罗斯方块游戏。开发者 Thomas Rinsma [使用 Python 输出包含游戏 JavaScript 的 PostScript。](https://javascriptweekly.com/link/164213/d076523b1d) 事实上，许多浏览器 PDF 渲染器都是“自己”实现的在 JavaScript 中（例如 [PDF.js](https://javascriptweekly.com/link/164214/d076523b1d)）并且您这里有一个名副其实的俄罗斯套娃技术玩偶。
+
+由 [Cooperpress](https://cooperpress.com/) 出版，由 [Peter Cooper](https://javascriptweekly.com/link/164215/d076523b1d) 编辑
+
+“JavaScript”是 Oracle Corporation 在美国的商标\
+我们未获得 Oracle 的认可或隶属于 Oracle。
+
+
