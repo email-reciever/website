@@ -1,0 +1,131 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#488 How to avoid issues with custom Hooks
+description: RD#488 How to avoid issues with custom Hooks
+date: 星期日 06 晚上 一月 12o 2025
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/how-to-avoid-issues-with-custom-hooks
+origin_site: https://newsletter.reactdigest.net/p/how-to-avoid-issues-with-custom-hooks
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#488 How to avoid issues with custom Hooks" url="https://newsletter.reactdigest.net/p/how-to-avoid-issues-with-custom-hooks" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UzLl1hlsBX6ufCpWakhKXgh5D7Bel1SkIm3WJfUrcLG5YyRaLZW_9AcwVucziqf-j7nBRkIq16ybEl9QM3C83Xd63QqajS_MDVBU4N8itKV-t6W0RvBWrhIqhGEd0m5yeXe05bGqyY2iH0nZMpqAULFC1MLXDpsrakBWpQ5Pt2QmBezA8PTWi2B_fS5I6n597f7OmkTIJEB0yLvRkggtlOKhaXIe0NyP6fw2TolwnN0fT-6F6YGoKoyE5qMPsSNjv9JD4aNgmGanccGMGnWmIJgSF0Ej4Bv3094vCFqsl4lPeYujocBX2fkVGZJxM_koHWzX485d_sf0dnvyoqkv7D8CiuTV_wMWfCmLjoCqZdsMKQYDahfON689-dhIuwniFfG8C3CcHYI_AU9pGcZmCwsS0WWQTKDYxTpYyx1Ef6N9Q_XiorJt2BKPcGoiYuE7YyGgWVJF73lVJBkPn8n0Y8vcLA0zB_ikeop7ZluDoHfknCdnutux3US3rFJmGQLoTWI233408cQb3SqGn1batLrelDm0X6MTaVVW3hlhDune19WUx7Ljb0zEDFhYQJYsyMN47vPw5tNu63PJWOx_yLoARpDPp_78cKOkwdEdZqNDZeI3Akhp4Ie5XF5JfrhI8ScbSoWbQ8_AAfDg0_WlHJ6ZhUo97V6SHyS90QktYmTMq9cxMzgJ3-dIegAumQC0CQodB9ZhyYlID7bqTN96xDS-mISQHJqhTuA26KYGhTbYlQ5NGyHoqLVYizZBWsaIQXlrnpR9pVaW2pHCsC3mATteer0vhDm28WZIzZMVfEeg/4d3/_zpnAvRgRTuVWtSjrNQz7Q/h0/h001.hWWNIjD6qwVhcVefsJqRC02B85llPQxCOyeM7mTJiX8)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4d3/_zpnAvRgRTuVWtSjrNQz7Q/ho.gif)
+
+[Custom Hooks possible issues: how to avoid them](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63qP3bky6qNnTxX93Fg0cxwLBe6wJ2XBzif1vHRi9o7mhOSSsSrm3j5wULqKIK-nWJKKTtAqwGitZxMAxvkkiu-BhXlksZrdQJzQdjcHZcnMLAmhXIu_y-ferOZIt9mSSS30kqohxgPFqENgvDzivX4rkoe-MZed7pAeT_mHxsygShUAPeX6t6gHpuC_2Sn6XJx8lsii4oCDg5f_B-MauL24AzfoJCvWtcQh9A7ovuW7IJ_oNyxOu_VJkTd1F-UxT7fqdILhzo2bCvHjYNyC55Xk/4d3/_zpnAvRgRTuVWtSjrNQz7Q/h1/h001.9oIg50tpVFlFtC3dj37J4DWjIlGddw5GcRoSAkkkdvg)  
+_20 minutes_ by Iasmim Cristina
+
+We know custom Hooks are useful in React, but using them carelessly can lead to many problems. Let's find out how to prevent that. This article discusses potential pitfalls and best practices when using custom Hooks in React applications. Iasmim explains that custom Hooks don't share state between different components by default and demonstrates solutions using Context API.
+
+[Tests are dead. Meticulous AI is here.](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2WqroLgOnA-NgNKtuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4d3/_zpnAvRgRTuVWtSjrNQz7Q/h2/h001.iZBxK9IbrecUEX1Ca5YgAhoceoCiXm0K6kAT-hmWnXU)  
+_sponsored by Meticulous_
+
+Meticulous AI is a tool which automatically creates and maintains a continuously evolving e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Backed by CTO of GitHub, Guillermo Rauch (next.js author), yc and others, it's built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[How React's Render, Effects and Refs work under the hood](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF7Q5vn76cs0Imf51jJpv2aHgs-pcBB48aMDxPC8ezMn2a8fMAQGNj_c1x7GM9xD1gGghmDe6JxpOUPlpnRMguKBu_3-KufrsRY8oyC-pVwt6GTkmK56G2FSb33RfG5y-msl941Gh3YsC8R7PVbYYxvKL58KbMLFPlGWEr4Ri9w4k49XKpaBMrJvmE4iY-ZsjtI2S8Qt91F-83tY9Fz2U2axH1yhPLV3upv14tJT2ybu9SvgQ9JqaeqghdvDEd3au5fyJCNyMEi5VzwrPhEjTkgt138gr0aac1H7LdRSjh2BsN7eQ-XWa7F21eFfuQ_kzXQ/4d3/_zpnAvRgRTuVWtSjrNQz7Q/h3/h001.xFdtDbNTd0nLVmSMoqC4aHN52rziihevzgNiNbjuqAo)  
+_10 minutes_ by Tiger Abrodi
+
+Understanding the entire render cycle of React and how it works with the browser isn't easy. In this article Tiger breaks down how React processes updates through render and commit phases, clarifies that Virtual DOM's main purpose is platform independence and update batching, and explains the differences between useRef, callback refs, and when to use useEffect vs useLayoutEffect for DOM measurements.
+
+[Composable Caching with Next.js](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8kc1PjC2QEUC7i09sGT-i9hlo0-EHka5UWX3hdWRXXsXtzM3pkx12ENvyeTMXKZNTOCX10k4frx9e-KLf_7q4tHM8V_ccZ_klPIoVxzvfYYZ6RishEBebFQrjBO7R_nVB3rjVefkM-Vvateh3sXp3AvVe78p9YXRhlQYDDVFT9660fATp8YFpd1Dljy6gU_bXrRkLYiO3yee2UZCW-KYZpJBMFj75fW308k0VRcUqmUcLzC_N5bQJxe7CafoVapD81umWWDzhK4KQgiFP9Y8Pv8/4d3/_zpnAvRgRTuVWtSjrNQz7Q/h4/h001.mfdcMr2HP2MOV_URhjxJf5P-rBBmDe7tuxvf8GV_zDA)  
+_7 minutes_ by Lee Robinson
+
+Learn more about the API design and benefits of 'use cache'. This article discusses Next.js's new 'use cache' directive, which aims to simplify and enhance caching in applications. The directive automatically determines cache dependencies and handles both serializable and non-serializable values, making it more reliable than traditional cache functions.
+
+[The Mental Model of Server Components](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAOzs_YTNpWP-GhjWb5G01gs-0d7ZZWM1rzMPb9lJ0gdjqTGTFvgk4_ZRM8PoOWN3XHcuST2WX5S3WeGyBnyyuybkDddMcDKwbod3QaOIrb4AlhGYOpn8XvJ2oxFj70NDm8br4iZvcTlqhZbAeFe2fTzO5NLP1_CDeaNl6B2HRGTQXttE4DIN-tQehIfde1FJaNaD_LJli42oy95ErPVl0byMNIyx4Y8Ba3ZJe9myDVXq9eXG_Zr8zVA9OBLgTWJNJiADWMKxjf3Wo2ejy8d8yBQI/4d3/_zpnAvRgRTuVWtSjrNQz7Q/h5/h001.rHkHcHa3f9hdXrowBQVFwfYM6EDOC-WbGTysLbCPESQ)  
+_13 minutes_ by Daniel Saewitz
+
+The article explains React Server Components (RSCs) and their advantages in modern web development. Daniel discusses how RSCs solve the costly problem of universal hydration by allowing components to render exclusively on the server, while enabling seamless composition with interactive client components. RSCs provide a balanced solution that combines the benefits of server-side rendering with the compositional power of React, resulting in better performance and developer experience.
+
+[React Router 7 Tutorial](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zI5W75F4U_AM4iXcfNSyLmZReAbYPk-yjeVti91vBo9kUTDb1fnbAiLk43LbYmnLbAIDVkkWChQRISc_uAyhS61aD70zSU5BOeZ2QFEnj_aoEh1WKQUq14_Im6R4pleAScuBC5QZ892aRnn8woHsJtCEp_Wqixfig3sQXyzrqeJBsBnHVKkZwfPC9xDfVUX8YxB_OwD5NYlbVf99B9enzGHhnWTOcmI-9sYrYyvoqs7RA/4d3/_zpnAvRgRTuVWtSjrNQz7Q/h6/h001.8pSWmASRIf-QeAWBkCQwNaHeixsYFaIuvZwLGijAME8)  
+_14 minutes_ by Robin Wieruch
+
+In this article, Robin provides a comprehensive guide to React Router 7. It covers essential concepts like basic routing with Link and Route components, layout routes using Outlet, dynamic and nested routes, as well as how to set up navigation, handle 404 pages, create active links, manage search parameters, and implement both declarative and programmatic navigation. The guide also includes practical examples showing how to structure a React application with client-side routing without making server requests.
+
+## webdev
+
+*   [Lesser Known Uses Of Better Known Attributes](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqdUqvrAcuWP08tYMJ3IAaFOS7GpYBzBOmD2H2GSSFeUcKx7MiroFHvixxuVcVMcmP0hCGaydEuN3kCkWihkFFzUtDANvtylF6oYRda_nvlqIPqfup2XppP8izmZ7b-cvcQb-Gzs3_srUTATWlQyT9BIsLLh9JGIY5MN6YBAMuGajCc1UQQGQG6BMXBWtaw61Xx9MnX6Tn51AifR2MBS7OMGH-H5tzmoHmM7rPuSBQ6OrxpeAljDRj0kZRiXmT4rd4zAcGO66OEkNCUR3YO619XRNXuWk1NlRkkoHYkzYQXZllT9LPZgndOeMl8tN3bbTPw/4d3/_zpnAvRgRTuVWtSjrNQz7Q/h7/h001.oPLJLmbIAwepgYLB1EPCljRr7SLs7QTA-xzqTORGSFo)
+    
+*   [Double-keyed Caching: How Browser Cache Partitioning Changed the Web](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw9KjwiNeE4o8CMNzU2dAaSLWaaavBsd3S-_MOIfuMW-ReIveYv2YDkcnn9MBpivFGrcHPO7VS900DLuZWYMenA9YdYlReGk4iqryQNmtP1ht5WLOQbiNiSlYqBG47o5IFSk66N0cCLvWSuO-f-gEQgMKVsIhumbhy-aeXss8XmX33YCFjFt-cJaQb9yLW5UoNZ9vdxNvwGCZRtPlMIglmENwQs-YUAT1dXHjhn2fGT6EsWTFGBfAs0rKfj7YqTuB9ATEvvQnWemoNq5OxZQaKHk/4d3/_zpnAvRgRTuVWtSjrNQz7Q/h8/h001.9i50MU0uWr7m78iPZnLDecWQqPfwCM5Mh1lHMn95HPQ)
+    
+*   [How to Reduce Initial Server Response Time](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqTDUMhOCAygmomWT6OQvrz8MoJk4zufWm8dlfMY-P6naTsQp4ZSf7i0CQKwKzeXie4vDbKyraoykfCf2dE3Olw0dHJEEPoJWp_GbKyVzFSU0KIAUV6n7LBDYTAaQOixkwMwojr2yHehqg9b7gpHPO0BCL-kG_fzDgURkWJAqTBX8lXoZR3niD6QXadfUEkqKIyjPb5nfcReSvZ81xQC78GMffVhJXGuLkxj7LNCrHhkAB3ZR6rZ66B0ae-PWdZ2tSWmOo1LewVmDhVTYD6U4PE1TSBNxrTUBZ_G9RNAJiDU_/4d3/_zpnAvRgRTuVWtSjrNQz7Q/h9/h001.iePUEdS03X0T_c536MUn2ikto7OH9uLdhn-_0MKLz3g)
+    
+*   [CSS Flexbox Playground](https://link.mail.beehiiv.com/ss/c/u001.Joj4iNosJk-tAANEdBpt3ujrk_keTkzwr3zJuwGZKTHJYme4MakJSrVdlUsPEl8RlueM0Deb6Rseo7iBK2KFlRPegbx-CfpdjXn86Y5WdqXZbAJYm1O0bbvU2ZMxJasmLo3HXDnLdDkwwyUdbfI6BcX6_vb0c_kizg-xbaaVJLEGsOFOIue8AOfWByDdET9UlFivuyNMg8w2b5ugjPY0xWC0FqQjQ3VUplujdiH-kmbfXgqasEhiRDbcuI2SBs1V17IejxMZC9ZHr8XqtQGG9g5qKKGJP_g1b2V7zs2uY2w/4d3/_zpnAvRgRTuVWtSjrNQz7Q/h10/h001.9C5QLJTwqa6uFHgSJ6g1qJ09BfGTYwt3mbMs0r9UXRY)
+    
+
+## javascript
+
+*   [Back to Basics: Why We Chose Long Polling Over WebSockets](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqW3_5YFzJZZExCxotKExapyprSO2JMCpPKKEBXQKwVUcSfKs8_AjgQNwxB8q4FrliYkYY0JJkzVG2oCBe0TbRDZbxk5z2cqxVYH48iAX3oorGMt-AEzTcMA0WfizsPqCt_vPpcI0bQFU4eQN3SU4BbUCF4OkSfepqFET0h6-mWoAlBeTFkWQ0d_FWjxEvJ3O61D2ygC96TxnR49nO6I-xzyhbJ80XSUOnG-s7FZWgjUHXc5w5dDYhzkUhWHgDuQMaNszqfh5FTdspm0_xbcbZWk8h-STKuecydL4rmiHJ7q2/4d3/_zpnAvRgRTuVWtSjrNQz7Q/h11/h001.kkPyUMRqWHDJjN5GMWKDdMoYGBupAHcA-Y0bOkjMLeI)
+    
+*   [2024 JavaScript Rising Stars](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmWl9WAQUjitHIpYNBNsJFpaubThQa-qLt2eQ6Dbt-1ETfFnhrccLvMtoruzbQNClDtLwVo_8FvpOvwCmT1vjvBEltIjUCRTowltMoGLFPZ41pzsOM5ybEytCL5zz8AnI6UnpQ1vle0PcfxyjUfel8XCZX27LlqqP7KafkvG4EsoamxEZXnBp-Pr0fClONFIhv1cl9t6JC_zMwc7ywakgyrGCy9qw67QkeTM0EpjtOajRwglxO4LfBy_JMvW9jpdrw/4d3/_zpnAvRgRTuVWtSjrNQz7Q/h12/h001.x4OgxP3QWiJVyPyTVrCd5jt1mEgUZ5S0VLAxZSPOI44)
+    
+*   [ECMAScript feature: import attributes](https://link.mail.beehiiv.com/ss/c/u001.c2RDt9UGnmAT9r6mLVzaNv46xNQNEoYfC19XDYXTjjJ602OcGs64Qw22cSQVnQhwqfLsWAC1JbTocaaY3mjrpyT4kS-1HC34H7btMH9ebLpU9E6yB1QkgArTJIShNBBejTiDVXEDcHHf2zRVmV7eVN9NdPOmvcZuqOsoKEDEya3LPn3cdoDNHPyclwLgSfv8_vmb4aOmSJivVJJ03-vGSbtdjJQxljemTFo9Y3oILkvdQ8PBMwHfZA-YAJwRU42bq51Xhi2WXZIkJhlGJvNYx7Pd3Lk7E3MSeui59yF0Fh8/4d3/_zpnAvRgRTuVWtSjrNQz7Q/h13/h001.0oLwINp6HqMYz1ApAG_paY9bLDm3iDcahrRn8vL49sQ)
+    
+
+#
+</Detail>
+
+\[读在线]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UzLl1hlsBX6ufCpWakhKXgh5D7Bel1Sk Im3WJfUrcLG5YyRaLZW\_9AcwVucziqf-j7nBRkIq16ybEl9QM3C83Xd63QqajS\_MDVBU4N8itKV-t6W0RvBWrhIqhGEd0m5yeXe05bGqyY2iH0nZMpqAULFC1ML XDpsrakBWpQ5Pt2QmBezA8PTWi2B\_fS5I6n597f7OmkTIJEB0yLvRk​​ggtlOKhaXIe0NyP6fw2TolwnN0fT-6F6YGoKoyE5qMPsSNjv9JD4aNgmGanccGMGnWmIJ gSF0Ej4Bv3094vCFqsl4lPeYujocBX2fkVGZJxM\_koHWzX485d\_sf0dnvyoqkv7D8CiuTV\_wMWfCmLjoCqZdsMKQYDahfON689-dhIuwniFfG8C3CchHYI\_AU9pG cZmCwsS0WWQTKDYxTpYyx1Ef6N9Q\_XiorJt2BKPcGoiYuE7YyGgWVJF73lVJBkPn8n0Y8vcLA0zB\_ikeop7ZluDoHfknCdnutux3US3rFJmGQLoTWI233408cQ b3SqGn1batLrelDm0X6MTaVVW3hlhDune19WUx7Ljb0zEDFhYQJYSYMN47vPw5tNu63PJWOx\_yLoARpDPp\_78cKOkwdEdZqNDZeI3Akhp4Ie5XF5JfrhI8ScbSo WbQ8\_AAfDg0\_WlHJ6ZhUo97V6SHyS90QktYmTMq9cxMzgJ3-dIegAumQC0CQodB9ZhyYlID7bqTN96xDS-mISQHJqhTuA26KYGhTbYlQ5NGyHoqLVYizZBWsaIQ XlrnpR9pVaW2pHCsC3MATEER0vhDm28WZIzZMVfEeg/4d3/\_zpnAvRgRTuVWtSjrNQz7Q/h0/h001.hWWNIjD6qwVhcVefsJqRC02B85llPQxCOyeM7mTJiX8)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4d3/_zpnAvRgRTuVWtSjrNQz7Q/ho.gif)
+
+【自定义 Hooks 可能出现的问题：如何避免他们]\(https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63qP3bky6qNnTxX93Fg0cxwLBe6wJ2XBzif1vHRi9 o7mhOSSsSrm3j5wULqKIK-nWJKKTtAqwGitZxMAxvkkiu-BhXlksZrdQJzQdjcHZcnMLAmhXIu\_y-ferOZIt9mSSS30kqohxgPFqENgvDzi vX4rkoe-MZed7pAeT\_mHxsygShUAPeX6t6gHpuC\_2Sn6XJx8lsii4oCDg5f\_B-MauL24AzfoJCvWtcQh9A7ovuW7IJ\_oNyxOu\_VJkTd1F- UxT7fqdILhzo2bCvHjYNyC55Xk/4d3/\_zpnAvRgRTuVWtSjrNQz7Q/h1/h001.9oIg50tpVFlFtC3dj37J4DWjIlGddw5GcRoSAkkkdvg)\
+*20 分钟*，作者：Iasmim Cristina
+
+我们知道自定义 Hooks 在 React 中很有用，但不小心使用它们可能会导致许多问题。让我们看看如何防止这种情况发生。本文讨论在 React 应用程序中使用自定义 Hook 时的潜在陷阱和最佳实践。 Iasmim 解释说，自定义 Hook 默认情况下不会在不同组件之间共享状态，并演示了使用 Context API 的解决方案。
+
+\[测试已死。细致的AI是在这里。]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2 WqroLgOnA-NGNKtuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4d3/\_zpnAv RgRTuVWtSjrNQz7Q/h2/h001.iZBxK9IbrecUEX1Ca5YgAhoceoCiXm0K6kAT-hmWnXU)\
+*由精心赞助*
+
+Meticulous AI 是一款自动创建和维护不断发展的 e2e UI 测试套件的工具，该套件涵盖应用程序的每个角落 - 无需开发人员进行任何干预。在 GitHub 首席技术官 Guillermo Rauch（next.js 作者）、yc 和其他人的支持下，它是从 Chromium 级别构建的，具有确定性调度引擎 - 使其成为唯一消除碎片的测试工具。
+
+\[React 的 Render、Effects 和 Refs 在罩]\(https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF7Q5vn76cs0Imf51jJpv2aHgs-pcBB48aMDxPC8ezMn2a8fMAQG Nj\_c1x7GM9xD1gGghmDe6JxpOUPlpnRMguKBu\_3-KufrsRY8oyC-pVwt6GTkmK56G2FSb33RfG5y-msl941Gh3YsC8R7PVbYYxvKL58KbMLFPlGWEr4Ri 9w4k49XKpaBMrJvmE4iY-ZsjtI2S8Qt91F-83tY9Fz2U2axH1yhPLV3upv14tJT2ybu9SvgQ9JqaeqghdvDEd3au5fyJCNyMEi5VzwrPhEjTkgt138gr0 aac1H7LdRSjh2BsN7eQ-XWa7F21eFfuQ\_kzXQ/4d3/\_zpnAvRgRTuVWtSjrNQz7Q/h3/h001.xFdtDbNTd0nLVmSMoqC4aHN52rziihevzgNiNbjuqAo)\
+*10 分钟* 泰格·阿布罗迪
+
+了解 React 的整个渲染周期以及它如何与浏览器配合使用并不容易。在本文中，Tiger 详细介绍了 React 如何通过渲染和提交阶段处理更新，阐明虚拟 DOM 的主要目的是平台独立性和更新批处理，并解释 useRef、回调引用之间的差异，以及何时使用 useEffect 与 useLayoutEffect 进行 DOM 测量。
+
+\[可组合缓存Next.js]\(https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe\_1W4fLvRj4unk8kc1PjC2QEUC7i09sGT-i9hlo0-EHka5UWX3hd WRXXsXtzM3pkx12ENvyeTMXKZNTOCX10k4frx9e-KLf\_7q4tHM8V\_ccZ\_klPIoVxzvfYYZ6RishEBebFQrjBO7R\_nVB3rjVefkM-Vvateh3 sXp3AvVe78p9YXRhlQYDDVFT9660fATp8YFpd1Dljy6gU\_bXrRkLYiO3yee2UZCW-KYZpJBMFj75fW308k0VRcUqmUcLzC\_N5bQJxe7Cafo VapD81umWWDzhK4KQgiFP9Y8Pv8/4d3/\_zpnAvRgRTuVWtSjrNQz7Q/h4/h001.mfdcMr2HP2MOV\_URhjxJf5P-rBBmDe7tuxvf8GV\_zDA)\
+*7 分钟* 李·罗宾逊
+
+详细了解 API 设计和“使用缓存”的好处。本文讨论 Next.js 的新“使用缓存”指令，该指令旨在简化和增强应用程序中的缓存。该指令自动确定缓存依赖性并处理可序列化和不可序列化的值，使其比传统缓存函数更可靠。
+
+【服务器心智模型组件]\(https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn\_0mUAOzs\_YTNpWP-GhjWb5G01gs-0d7ZZWM1rzMPb 9lJ0gdjqTGTFvgk4\_ZRM8PoOWN3XHcuST2WX5S3WeGyBnyyuybkDddMcDKwbod3QaOIrb4AlhGYOpn8XvJ2oxFj70NDm8br4iZvcTlqhZbAe Fe2fTzO5NLP1\_CDeaNl6B2HRGTQXttE4DIN-tQehIfde1FJaNaD\_LJli42oy95ErPVl0byMNIyx4Y8Ba3ZJe9myDVXq9eXG\_Zr8zVA9OBLgT WJNJiADWMKxjf3Wo2ejy8d8yBQI/4d3/\_zpnAvRgRTuVWtSjrNQz7Q/h5/h001.rHkHcHa3f9hdXrowBQVFwfYM6EDOC-WbGTysLbCPESQ)\
+*13 分钟* Daniel Saewitz
+
+本文解释了 React 服务器组件 (RSC) 及其在现代 Web 开发中的优势。 Daniel 讨论了 RSC 如何通过允许组件仅在服务器上渲染，同时实现与交互式客户端组件的无缝组合来解决代价高昂的通用水合作用问题。 RSC 提供了一个平衡的解决方案，将服务器端渲染的优势与 React 的组合能力相结合，从而带来更好的性能和开发人员体验。
+
+\[反应路由器7教程]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf\_qUprM09yoMPtF27zI5W75F4U\_A M4iXcfNSyLmZReAbYPk-yjeVti91vBo9kUTDb1fnbAiLk43LbYmnLbAIDVkkWChQRISc\_uAyhS61aD70zSU5BOeZ2QFEnj\_aoEh1WK QUq14\_Im6R4pleAScuBC5QZ892aRnn8woHsJtCEp\_Wqixfig3sQXyzrqeJBsBnHVKkZwfPC9xDfVUX8YxB\_OwD5NYlbVf99B9enzGH hnWTOcmI-9sYrYyvoqs7RA/4d3/\_zpnAvRgRTuVWtSjrNQz7Q/h6/h001.8pSWmASRIf-QeAWBkCQwNaHeixsYFaIuvZwLGijAME8)\
+*14 分钟* 罗宾·维鲁奇 (Robin Wieruch)
+
+在本文中，Robin 提供了 React Router 7 的全面指南。它涵盖了基本概念，例如使用 Link 和 Route 组件的基本路由、使用 Outlet 布局路由、动态和嵌套路由，以及如何设置导航、处理 404 页面、创建活动链接、管理搜索参数以及实现声明式和编程式导航。该指南还包括实际示例，展示如何在不发出服务器请求的情况下使用客户端路由构建 React 应用程序。
+
+## 网络开发
+
+* \[鲜为人知的用途属性]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqdUqvrAcuWP08tYMJ3IAaFOS7GpYBzBOmD2H2GSSFeUcKx 7MiroFHvixxuVcVMcmP0hCGaydEuN3kCkWihkFFzUtDANvtylF6oYRda\_nvlqIPqfup2XppP8izmZ7b-cvcQb-Gzs3\_srUTATWlQyT9BIsLLh9JGIY5MN6Y BAMuGajCc1UQQGQG6BMXBWTaw61Xx9MnX6Tn51AifR2MBS7OMGH-H5tzmoHmM7rPuSBQ6OrxpeAljDRj0kZRiXmT4rd4zAcGO66OEkNCUR3YO619XRNXuW k1NlRkkoHYkzYQXZllT9LPZgndOeMl8tN3bbTPw/4d3/\_zpnAvRgRTuVWtSjrNQz7Q/h7/h001.oPLJLmbIAwepgYLB1EPCljRr7SLs7QTA-xzqTORGSFo)
+
+* \[双键缓存：浏览器​​缓存分区如何改变网页]\(https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw9KjwiNeE4o8CMNzU2dAaSLWaaavBsd3S-\_MOIfuM W-ReIveYv2YDkcnn9MBpivFGrcHPO7VS900DLuZWYMenA9YdYlReGk4iqryQNmtP1ht5WLOQbiNiSlYqBG47o5IFSk66N0cCLvWSuO-f-g EQgMKVsIhumbhy-aeXss8XmX33YCFjFt-cJaQb9yLW5UoNZ9vdxNvwGCZRtPlMIglmENwQs-YUAT1dXHjhn2fGT6EsWTFGBfAs0rKfj7Yq TuB9ATEvvQnWemoNq5OxZQaKHk/4d3/\_zpnAvRgRTuVWtSjrNQz7Q/h8/h001.9i50MU0uWr7m78iPZnLDecWQqPfwCM5Mh1lHMn95HPQ)
+
+* \[如何减少初始服务器响应时间]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqTDUMhOCAygmomWT6OQvrz8MoJk4zufWm8dlfMY-P6naT sQp4ZSf7i0CQKwKzeXie4vDbKyraoykfCf2dE3Olw0dHJEEPoJWp\_GbKyVzFSU0KIAUV6n7LBDYTAaQOixkwMwojr2yHehqg9b7gpHPO0BCL-kG\_ fzDgURkWJAqTBX8lXoZR3niD6QXadfUEkqKIyjPb5nfcReSvZ81xQC78GMffVhJXGuLkxj7LNCrHhkAB3ZR6rZ66B0ae-PWdZ2tSWmOo1LewVmD hVTYD6U4PE1TSBNxrTUBZ\_G9RNAJiDU\_/4d3/\_zpnAvRgRTuVWtSjrNQz7Q/h9/h001.iePUEdS03X0T\_c536MUn2ikto7OH9uLdhn-\_0MKLz3g)
+
+* \[CSS 弹性盒游乐场]\(https://link.mail.beehiiv.com/ss/c/u001.Joj4iNosJk-tAANEdBpt3ujrk\_keTkzwr3zJuwGZKTHJYme4MakJSrVd LUSPEL8RlueM0Deb6Rseo7iBK2KFlRPegbx-CfpdjXn86Y5WdqXZbAJYm1O0bbvU2ZMxJasmLo3HXDnLdDkwwyUdbfI6BcX6\_vb0c\_kizg-x baaVJLEGsOFOIue8AOfWByDdET9UlFivuyNMg8w2b5ugjPY0xWC0FqQjQ3VUplujdiH-kmbfXgqasEhiRDbcuI2SBs1V17IejxMZC9ZHr8Xq tQGG9g5qKKGJP\_g1b2V7zs2uY2w/4d3/\_zpnAvRgRTuVWtSjrNQz7Q/h10/h001.9C5QLJTwqa6uFHgSJ6g1qJ09BfGTYwt3mbMs0r9UXRY)
+
+## JavaScript
+
+* \[回到基础：为什么我们选择长轮询WebSockets]\(https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqW3\_5YFzJZZExCxotKExapyprSO2JMCpPKKEBXQKw VUcSfKs8\_AjgQNwxB8q4FrliYkYY0JJkzVG2oCBe0TbRDZbxk5z2cqxVYH48iAX3oorGMt-AEzTcMA0WfizsPqCt\_vPpcI0bQFU4eQN3SU4BbUCF4 OkSfepqFET0h6-mWoAlBeTFkWQ0d\_FWjxEvJ3O61D2ygC96TxnR49nO6I-xzyhbJ80XSUOnG-s7FZWgjUHXc5w5dDYhzkUhWHgDuQMaNszqfh5FTd spm0\_xbcbZWk8h-STKuecydL4rmiHJ7q2/4d3/\_zpnAvRgRTuVWtSjrNQz7Q/h11/h001.kkPyUMRqWHDJjN5GMWKDdMoYGBupAHca-Y0bOkjMLeI)
+
+* \[2024 JavaScript 崛起星星]\(https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmWl9WAQUjitHIpYNBNsJFpaubThQa-qLt 2eQ6Dbt-1ETfFnhrccLvMtoruzbQNClDtLwVo\_8FvpOvwCmT1vjvBEltIjUCRTowltMoGLFPZ41pzsOM5ybEytCL5zz8AnI6UnpQ1v le0PcfxyjUfel8XCZX27LlqqP7KafkvG4EsoamxEZXnBp-Pr0fClONFIhv1cl9t6JC\_zMwc7ywakgyrGCy9qw67QkeTM0EpjtOajR wglxO4LfBy\_JMvW9jpdrw/4d3/\_zpnAvRgRTuVWtSjrNQz7Q/h12/h001.x4OgxP3QWiJVyPyTVrCd5jt1mEgUZ5S0VLAxZSPOI44)
+
+* \[ECMAScript 功能：导入属性]\(https://link.mail.beehiiv.com/ss/c/u001.c2RDt9UGnmAT9r6mLVzaNv46xNQNEoYfC19XDYXTjjJ602OcGs64Qw22 cSQVnQhwqfLSWAC1JbTocaaY3mjrpyT4kS-1HC34H7btMH9ebLpU9E6yB1QkgArtJIShNBBejTiDVXEDcHHf2zRVmV7eVN9NdPOmvcZuqOso KEDEya3LPn3cdoDNHPyclwLgSfv8\_vmb4aOmSJivVJJ03-vGSbtdjJQxljemTFo9Y3oILkvdQ8PBMwHfZA-YAJwRU42bq51Xhi2WXZIkJhlG JvNYx7Pd3Lk7E3MSeui59yF0Fh8/4d3/\_zpnAvRgRTuVWtSjrNQz7Q/h13/h001.0oLwINp6HqMYz1ApAG\_paY9bLDm3iDcahrRn8vL49sQ)
+
+#
+
+
