@@ -1,0 +1,213 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Fixing 'a glaring animation-sized hole in React's API'
+description: Fixing 'a glaring animation-sized hole in React's API'
+date: 星期三 08 晚上 一月 15o 2025
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/413
+origin_site: https://react.statuscode.com/issues/413
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Fixing 'a glaring animation-sized hole in React's API'" url="https://react.statuscode.com/issues/413" />
+
+<Detail client:only="react">
+	#​413 — January 15, 2025
+
+[Read on the Web](https://react.statuscode.com/issues/413)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://react.statuscode.com/link/164335/5d0bbb4a61)
+
+React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/msojhlftoontl3gufma2.jpg)](https://react.statuscode.com/link/164336/5d0bbb4a61)
+
+[An Early Look at React's Experimental Animations API](https://react.statuscode.com/link/164336/5d0bbb4a61 "motion.dev") — `&lt;ViewTransition />` is based on the powerful browser-based [View Transition API](https://react.statuscode.com/link/164371/5d0bbb4a61) (unsupported in Firefox for now). It’s only in pre-release versions of React so far, but Matt comes armed with examples and demos for you to get an early feel for the potential.
+
+Matt Perry (Motion)
+
+💡 There are more technical details in [the React pull request about `ViewTransition`.](https://react.statuscode.com/link/164337/5d0bbb4a61)
+
+[Five Years of React Native at Shopify](https://react.statuscode.com/link/164338/5d0bbb4a61 "shopify.engineering") — Five years ago, Shopify said [React Native](https://react.statuscode.com/link/164339/5d0bbb4a61) was the future for mobile development at their company and they really meant it with every mobile app moving to RN over time. Here’s what they learnt along the way and why they’re sticking with it.
+
+Mustafa Ali (Shopify)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/3e67e623.png)](https://react.statuscode.com/link/164335/5d0bbb4a61)
+
+[Write CSS Like a Pro](https://react.statuscode.com/link/164335/5d0bbb4a61 "frontendmasters.com") — Kevin Powell shares how to create a responsive website from scratch using modern CSS features (such as nesting, utility classes, custom properties, and more). This detailed video course also dives into adding additional polish via animations, view transitions, and more.
+
+Frontend Masters sponsor
+
+**IN BRIEF:**
+
+*   React Native tooling provider Expo has [shown off a preview of EAS Hosting](https://react.statuscode.com/link/164340/5d0bbb4a61), a way to host Expo server code in the cloud on a Cloudflare Workers-based serverless platform.
+    
+*   Can we consider [Create React App](https://react.statuscode.com/link/164341/5d0bbb4a61) deprecated yet? Its repo's [issues](https://react.statuscode.com/link/164342/5d0bbb4a61) are getting spammed and there almost [500 open pull requests.](https://react.statuscode.com/link/164343/5d0bbb4a61) Is it time to draw a line under CRA in the face of Vite and Next.js?
+    
+*   Ideas from React have seeped into desktop and mobile app development, but Alexander Kondratev ponders [if there could/should be a React for embedded development](https://react.statuscode.com/link/164344/5d0bbb4a61) too?
+    
+*   It took a while, but [the official React site](https://react.statuscode.com/link/164345/5d0bbb4a61) has itself just [upgraded to Next.js 15.1 and React 19.](https://react.statuscode.com/link/164346/5d0bbb4a61)
+    
+
+[Accessibility Essentials Every React Developer Should Know](https://react.statuscode.com/link/164347/5d0bbb4a61 "martijnhols.nl") — If you’re an experienced frontend developer, these might be second nature to you by now, but this is a good roundup of the entry level ‘table stakes’ for frontend accessibility.
+
+Martijn Hols
+
+📄 [LangChain: Using OpenAI in JavaScript with React and Next.js](https://react.statuscode.com/link/164348/5d0bbb4a61) Robin Wieruch
+
+📄 [Consider Avoiding `navigate(-1)` in Remix/React Router](https://react.statuscode.com/link/164349/5d0bbb4a61) David Adams
+
+📄 [Best Practices for Mastering Forms in Next.js 15 and React 19](https://react.statuscode.com/link/164350/5d0bbb4a61) Kolby Sisk (Udacity)
+
+📄 [Implementing Streaming SSR with React Relay and Vite](https://react.statuscode.com/link/164351/5d0bbb4a61) Aqora
+
+📄 [Progressive Forms with React 19](https://react.statuscode.com/link/164352/5d0bbb4a61) Chris Arderne
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/zlftqz18ebqep1uepa9w.jpg)](https://react.statuscode.com/link/164353/5d0bbb4a61)
+
+[react-nil 2.0: A React 'Null Renderer'](https://react.statuscode.com/link/164353/5d0bbb4a61 "github.com") — An interesting experiment to use React in situations where you don’t need it to render anything, but you want to use hooks, suspense, context, and other bits of the React lifecycle. Like in, say, a Node app. Maybe [this CodeSandbox example](https://react.statuscode.com/link/164354/5d0bbb4a61) will provoke some ideas.
+
+Poimandres
+
+[Protect Against Bots, Fraud, and Abuse in Real Time](https://react.statuscode.com/link/164355/5d0bbb4a61 "workos.com") — WorkOS Radar protects your app with advanced device fingerprinting — stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+WorkOS sponsor
+
+[Superglue 1.0: A Way for React to ❤️ Ruby on Rails](https://react.statuscode.com/link/164356/5d0bbb4a61 "thoughtbot.com") — [Superglue](https://react.statuscode.com/link/164357/5d0bbb4a61) is a library for bringing Ruby on Rails and React closer together in a way that feels as natural as Rails’ default Hotwire and Stimulus-based approach to the frontend.
+
+Thoughtbot
+
+[How to Set Up a Basic Ruby Sinatra + React Webapp](https://react.statuscode.com/link/164358/5d0bbb4a61 "gist.github.com") — The barebones steps needed to spin up a Ruby-powered backend serving up a React frontend along with Vite and Tailwind.
+
+Peter Cooper
+
+💡 If you're interested in Ruby or Rails at all, be sure to check out [Ruby Weekly](https://react.statuscode.com/link/164359/5d0bbb4a61) – it was our first ever newsletter and is still going strong 733 issues in!
+
+*   [react-intersection-observer 9.15](https://react.statuscode.com/link/164360/5d0bbb4a61) – Uses the Intersection Observer API to take action when an element enters or leaves the viewport.
+    
+*   [react-highlight-words 0.21](https://react.statuscode.com/link/164361/5d0bbb4a61) – Component to highlight words within bodies of text.
+    
+*   [react-json-view-lite 2.3](https://react.statuscode.com/link/164362/5d0bbb4a61) – Render JSON objects in a tree view, [as here.](https://react.statuscode.com/link/164363/5d0bbb4a61)
+    
+*   [React Native Gesture Handler 2.22](https://react.statuscode.com/link/164364/5d0bbb4a61) – Exposes platform native touch APIs.
+    
+*   🦉 [React Native Owl 1.5](https://react.statuscode.com/link/164365/5d0bbb4a61) – Visual regression testing for React Native.
+    
+*   [Fortune Sheet 0.22](https://react.statuscode.com/link/164366/5d0bbb4a61) – Drop-in Excel-like spreadsheet control.
+    
+*   [React Native 0.78.0 RC 0](https://react.statuscode.com/link/164367/5d0bbb4a61)
+    
+*   [Material UI 6.4](https://react.statuscode.com/link/164368/5d0bbb4a61)
+    
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​413 — 2025 年 1 月 15 日
+
+[网上阅读](https://react.statuscode.com/issues/413)
+
+连同 
+
+\[![前端大师徽标](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)]\(https:// react.statuscode.com/link/164335/5d0bbb4a61)
+
+反应状态
+
+\[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/msojhlftoontl3gufma2.jpg)]\(https://react.statuscode.com/link/164336/5d0bbb4a61 ）
+
+[React 实验动画 API 初探](https://react.statuscode.com/link/164336/5d0bbb4a61 "motion.dev") — `&lt;ViewTransition />` 基于强大的基于浏览器的 [View Transition API](https://react.statuscode.com/link/164371/5d0bbb4a61)（目前 Firefox 不支持）。到目前为止，它仅出现在 React 的预发布版本中，但 Matt 配备了示例和演示，可让您尽早感受到其潜力。
+
+马特·佩里（动作）
+
+💡 \[关于 `ViewTransition` 的 React pull request] 有更多技术细节。]\(https://react.statuscode.com/link/164337/5d0bbb4a61)
+
+[Shopify 的 React Native 五年](https://react.statuscode.com/link/164338/5d0bbb4a61 "shopify.engineering") — 五年前，Shopify 说过 \[React Native]\(https://react.statuscode .com/link/164339/5d0bbb4a61）是他们公司移动开发的未来，他们确实将每个移动应用程序迁移到 RN 随着时间的推移。以下是他们在此过程中学到的东西以及他们坚持下去的原因。
+
+穆斯塔法·阿里 (Shopify)
+
+\[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/3e67e623.png)]\(https://react.statuscode.com/link/164335 /5d0bbb4a61)
+
+[像专业人士一样编写 CSS](https://react.statuscode.com/link/164335/5d0bbb4a61 "frontendmasters.com") — Kevin Powell 分享了如何使用现代 CSS 功能（例如嵌套、实用程序类、自定义属性等等）。这个详细的视频课程还深入探讨了如何通过动画、视图转换等进行额外的润色。
+
+前端大师赞助商
+
+**简而言之：**
+
+* React Native 工具提供商 Expo [展示了 EAS Hosting 的预览](https://react.statuscode.com/link/164340/5d0bbb4a61)，这是一种在基于 Cloudflare Workers 的云中托管 Expo 服务器代码的方法无服务器平台。
+
+* 我们可以认为 [Create React App](https://react.statuscode.com/link/164341/5d0bbb4a61) 已弃用吗？它的存储库的[问题](https://react.statuscode.com/link/164342/5d0bbb4a61)正在收到垃圾邮件，并且几乎有\[500个开放的拉取请求。]\(https://react.statuscode.com/link/164343/ 5d0bbb4a61) 是时候在 Vite 和 Next.js 面前与 CRA 划清界限了吗？
+
+* React 的想法已经渗透到桌面和移动应用程序开发中，但 Alexander Kondratev 也思考[是否可以/应该有一个用于嵌入式开发的 React](https://react.statuscode.com/link/164344/5d0bbb4a61)？
+
+* 花了一段时间，但是 [React 官方网站](https://react.statuscode.com/link/164345/5d0bbb4a61) 本身已经\[升级到 Next.js 15.1 和 React 19。]\(https:// react.statuscode.com/link/164346/5d0bbb4a61)
+
+[每个 React 开发人员都应该知道的辅助功能要点](https://react.statuscode.com/link/164347/5d0bbb4a61 "martijnhols.nl") — 如果您是一位经验丰富的前端开发人员，这些现在可能已经成为您的第二天性，但这是前端可访问性入门级“赌注”的一个很好的总结。
+
+马丁·霍尔斯
+
+📄 [LangChain：在 JavaScript 中通过 React 和 Next.js 使用 OpenAI](https://react.statuscode.com/link/164348/5d0bbb4a61) Robin Wieruch
+
+📄 [考虑避免在 Remix/React Router 中使用 `navigate(-1)`](https://react.statuscode.com/link/164349/5d0bbb4a61) David Adams
+
+📄 [Next.js 15 和 React 19 中掌握表单的最佳实践](https://react.statuscode.com/link/164350/5d0bbb4a61) Kolby Sisk (Udacity)
+
+📄 【使用 React Relay 和 Vite 实现流式 SSR】(https://react.statuscode.com/link/164351/5d0bbb4a61) Aqora
+
+📄 [React 19 的渐进式形式](https://react.statuscode.com/link/164352/5d0bbb4a61) Chris Arderne
+
+🛠 代码、工具和库
+
+\[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/zlftqz18ebqep1uepa9w.jpg)]\(https://react.statuscode.com/link/164353/5d0bbb4a61 ）
+
+[react-nil 2.0: A React 'Null Renderer'](https://react.statuscode.com/link/164353/5d0bbb4a61 "github.com") — 一个在不需要的情况下使用 React 的有趣实验它可以渲染任何内容，但您想要使用钩子、悬念、上下文和 React 生命周期的其他部分。就像 Node 应用程序一样。也许[此 CodeSandbox 示例](https://react.statuscode.com/link/164354/5d0bbb4a61) 会激发一些想法。
+
+普瓦芒德雷斯
+
+[实时防范机器人、欺诈和滥用](https://react.statuscode.com/link/164355/5d0bbb4a61 "workos.com") — WorkOS Radar 通过高级设备指纹识别保护您的应用 — 阻止虚假注册，今天的免费套餐滥用、机器人攻击和暴力尝试。
+
+WorkOS赞助商
+
+[Superglue 1.0：一种对 ❤️ Ruby on Rails 做出反应的方法](https://react.statuscode.com/link/164356/5d0bbb4a61 "thoughtbot.com") — \[Superglue]\(https://react.statuscode.com /link/164357/5d0bbb4a61) 是一个库，用于以一种感觉上的方式将 Ruby on Rails 和 React 更紧密地结合在一起就像 Rails 默认的基于 Hotwire 和 Stimulus 的前端方法一样自然。
+
+思想机器人
+
+[如何设置基本的 Ruby Sinatra + React Webapp](https://react.statuscode.com/link/164358/5d0bbb4a61 "gist.github.com") — 启动 Ruby 驱动的后端所需的基本步骤与 Vite 和 Tailwind 一起提供 React 前端。
+
+彼得·库珀
+
+💡 如果您对 Ruby 或 Rails 感兴趣，请务必查看 [Ruby Weekly](https://react.statuscode.com/link/164359/5d0bbb4a61) – 这是我们的第一份时事通讯，并且仍在继续强 733 问题！
+
+* [react-intersection-observer 9.15](https://react.statuscode.com/link/164360/5d0bbb4a61) – 使用 Intersection Observer API 在元素进入或离开视口时采取操作。
+
+* [react-highlight-words 0.21](https://react.statuscode.com/link/164361/5d0bbb4a61) – 用于突出显示文本正文中的单词的组件。
+
+* [react-json-view-lite 2.3](https://react.statuscode.com/link/164362/5d0bbb4a61) – 在树视图中渲染 JSON 对象，\[如此处。]\(https://react.statuscode .com/link/164363/5d0bbb4a61)
+
+* [React Native Gesture Handler 2.22](https://react.statuscode.com/link/164364/5d0bbb4a61) – 公开平台本机触摸 API。
+
+* 🦉 [React Native Owl 1.5](https://react.statuscode.com/link/164365/5d0bbb4a61) – React Native 的可视化回归测试。
+
+* [Fortune Sheet 0.22](https://react.statuscode.com/link/164366/5d0bbb4a61) – 类似 Excel 的嵌入式电子表格控件。
+
+* [React Native 0.78.0 RC 0](https://react.statuscode.com/link/164367/5d0bbb4a61)
+
+* [材质 UI 6.4](https://react.statuscode.com/link/164368/5d0bbb4a61)
+
+由彼得·库珀和特伦斯·C·甘农策划。
+
+**[Cooperpress](https://cooperpress.com/)** 出版物。
+
+
