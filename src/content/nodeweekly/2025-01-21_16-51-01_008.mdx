@@ -1,0 +1,268 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: NodeBB, the Node.js powered forum system
+description: NodeBB, the Node.js powered forum system
+date: 星期二 04 下午 一月 21o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/563
+origin_site: https://nodeweekly.com/issues/563
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="NodeBB, the Node.js powered forum system" url="https://nodeweekly.com/issues/563" />
+
+<Detail client:only="react">
+	#​563 — January 21, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/563)
+
+Together with 
+
+[![Stytch logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_250,h_100/e_make_transparent/co_white,e_outline:7/ybmf19rrsbnymq3rn7n3.png)](https://nodeweekly.com/link/164508/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/oju3qygxxqjehtvwpayn.jpg)](https://nodeweekly.com/link/164509/0a4070b383)
+
+[NodeBB v4.0.0 Released: Node.js Powered Forums](https://nodeweekly.com/link/164509/0a4070b383 "community.nodebb.org") — Now almost 12 years old, NodeBB continues to offer a classic forum experience in a modern Node.js-shaped guise. The big update for v4 is [support for _federation_](https://nodeweekly.com/link/164510/0a4070b383) between NodeBB instances and the wider fediverse generally. Note that the open source project ([repo](https://nodeweekly.com/link/164511/0a4070b383)) is GPL licensed with [NodeBB Inc](https://nodeweekly.com/link/164512/0a4070b383) providing a hosted service.
+
+NodeBB, Inc.
+
+[The January 21, 2025 Security Releases](https://nodeweekly.com/link/164513/0a4070b383 "nodejs.org") — Not yet released at the time of publication, but coming to you any moment soon, are fresh releases of the Node 23.x, 22.x, 20.x, and 18.x release lines to tackle some as yet undisclosed security issues.
+
+The Node.js Project
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/c4bf8464.png)](https://nodeweekly.com/link/164508/0a4070b383)
+
+[Skip the Auth0 Headaches](https://nodeweekly.com/link/164508/0a4070b383) — [Stytch](https://nodeweekly.com/link/164508/0a4070b383) cuts engineering time for auth and fraud, while giving you more control with pre-built UIs, [headless SDKs](https://nodeweekly.com/link/164514/0a4070b383), backend SDKs, and APIs. Plus, no rate limits or price gouging, and expert support on every plan. [Check out our Node quickstart guide](https://nodeweekly.com/link/164515/0a4070b383).
+
+Stytch sponsor
+
+**IN BRIEF:**
+
+*   [Version 11.0](https://nodeweekly.com/link/164516/0a4070b383) of the popular [NestJS framework](https://nodeweekly.com/link/164517/0a4070b383) has been released. We're waiting for the full blog post to land, but it seems to be a big update (and now uses Express v5). There's [a v10 to v11 migration guide.](https://nodeweekly.com/link/164518/0a4070b383)
+    
+*   [Vercel is deprecating the use of Node 18](https://nodeweekly.com/link/164519/0a4070b383) on August 1, 2025.
+    
+*   GitHub's Dependabot (the automated dependency update system) [no longer supports npm 6](https://nodeweekly.com/link/164520/0a4070b383) and demands npm 9 or later.
+    
+
+[TypeScript Enums: Use Cases and Alternatives](https://nodeweekly.com/link/164521/0a4070b383 "2ality.com") — A look into one of TypeScript’s features that has no direct JavaScript parallel (and hence _won’t_ survive Node’s type stripping approach, though there’s always `--experimental-transform-types` or [tsx](https://nodeweekly.com/link/164522/0a4070b383)).
+
+Dr. Axel Rauschmayer
+
+[Kill Switch Hidden in npm Packages Typosquatting Chalk and Chokidar](https://nodeweekly.com/link/164523/0a4070b383 "socket.dev") — Recent research has found several malicious packages ‘typosquatting’ the terminal string styling library [Chalk](https://nodeweekly.com/link/164524/0a4070b383) and file-watching library [Chokidar](https://nodeweekly.com/link/164525/0a4070b383) — targeting Node devs with security issues.
+
+Kush Pandya (Socket)
+
+📄 [`Promise.race` and `Promise.all` Are Not “Fair”](https://nodeweekly.com/link/164526/0a4070b383) – That is to say, they have bias and aren’t entirely random. Chris Krycho
+
+📄 [Fetch and HTTP/2 Support in Node, Bun and Deno](https://nodeweekly.com/link/164527/0a4070b383) Georges Haidar
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kc1c5w6dgduqvg5apbcd.jpg)](https://nodeweekly.com/link/164528/0a4070b383)
+
+[ArkType 2.0: Runtime Validation Library](https://nodeweekly.com/link/164528/0a4070b383 "arktype.io") — An [easy-to-deploy](https://nodeweekly.com/link/164553/0a4070b383) solution for schema validation that can infer TypeScript definitions 1:1 and use them as optimized validators for your data, both at runtime and for immediate type-level feedback in your editor.
+
+ArkType
+
+[react-nil 2.0: A React 'Null Renderer'](https://nodeweekly.com/link/164529/0a4070b383 "github.com") — An interesting experiment to use React in situations where you don’t need it to render anything, but you want to use hooks, suspense, context, and other bits of the React lifecycle. Like in, say, a Node app.
+
+Poimandres
+
+[Protect Against Bots, Fraud, and Abuse in Real Time](https://nodeweekly.com/link/164530/0a4070b383 "workos.com") — WorkOS Radar protects your app with advanced device fingerprinting — stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+WorkOS sponsor
+
+[Electron 34.0.0](https://nodeweekly.com/link/164531/0a4070b383 "www.electronjs.org") — The JS, HTML and CSS desktop app framework updates to Chromium 132, Node 20.18.1, and adds a way to access the JavaScript call stack of unresponsive renderers.
+
+Electron Team
+
+[file-type 20.0: Detect the File Type of a Buffer, Uint8Array or ArrayBuffer](https://nodeweekly.com/link/164532/0a4070b383 "github.com") — For example, give it the raw data from a PNG file, and it’ll tell you it’s a PNG file. Uses a ‘magic number’ approach so is targeted solely at non text-based formats. v20 adds support for yet more formats, including JARs, Word/Excel templates, and now supports ZIP decompression.
+
+Sindre Sorhus
+
+*   😀 [Happy DOM 16.7](https://nodeweekly.com/link/164533/0a4070b383) – Cross-runtime JS implementation of a web browser _sans_ UI. Now with support for [simulating local HTTP servers](https://nodeweekly.com/link/164534/0a4070b383) that serve files from the local fileNBSPsystem.
+    
+*   [better-sqlite 11.8](https://nodeweekly.com/link/164535/0a4070b383) – A neat way to use SQLite from Node. Now supporting [SQLite 3.48.0](https://nodeweekly.com/link/164536/0a4070b383).
+    
+*   [Faker 9.4](https://nodeweekly.com/link/164537/0a4070b383) – Generate fabricated data to your heart's content.
+    
+*   🎶 [Ableton.js 3.6](https://nodeweekly.com/link/164538/0a4070b383) – Control instances of the Ableton DAW from Node.
+    
+*   [Nightwatch.js 3.11](https://nodeweekly.com/link/164539/0a4070b383) – Node.js end-to-end testing framework.
+    
+*   [pg-diff 3.0](https://nodeweekly.com/link/164540/0a4070b383) – PostgreSQL schema and data comparing tool.
+    
+*   [qs 6.14](https://nodeweekly.com/link/164541/0a4070b383) – Query string parsing and stringifying library.
+    
+*   [YouTube.js 13.0](https://nodeweekly.com/link/164542/0a4070b383) – JS client for YouTube's private API.
+    
+*   [Commander.js 13.1](https://nodeweekly.com/link/164543/0a4070b383) – Node.js CLI app framework.
+    
+
+📰 Classifieds
+
+💭 How can I help my Node.js app to [adapt to changing demand?](https://nodeweekly.com/link/164544/0a4070b383) A simple how-to-guide, in three parts.
+
+* * *
+
+🚀 Master Fullstack, JS Backends & DevOps [at Node Congress 2025!](https://nodeweekly.com/link/164545/0a4070b383) Join 5K devs worldwide on April 17-18. 2 days of talks & workshops!
+
+📢  Elsewhere in JavaScript
+
+A quick roundup of some of other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   [Learn Yjs](https://nodeweekly.com/link/164546/0a4070b383) is a nifty, still in-development, set of tutorials for learning how to build realtime collaborative apps using the [Yjs CDRT library.](https://nodeweekly.com/link/164547/0a4070b383)
+    
+*   [The latest version of Bun](https://nodeweekly.com/link/164548/0a4070b383) has added on-demand front-end bundling to its `Bun.serve()` feature.
+    
+*   If you've not worked with WASM yet, [Hemath has an accessible introduction to the basics of WebAssembly.](https://nodeweekly.com/link/164549/0a4070b383)
+    
+*   The popular [Astro](https://nodeweekly.com/link/164550/0a4070b383) framework has published [a review of what happened with Astro in 2024.](https://nodeweekly.com/link/164551/0a4070b383)
+    
+*   Google has [begun to _require_ JavaScript](https://nodeweekly.com/link/164552/0a4070b383) for users making searches.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​563 — 2025 年 1 月 21 日
+
+[网上阅读](https://nodeweekly.com/issues/563)
+
+连同 
+
+\[！[缝合标志](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_250,h_100/e_make_transparent/co_white,e_outline:7/ybmf19rrsbnymq3rn7n3.png)]\(https://nodeweekly.com /链接/164508/0a4070b383）
+
+![Node.js 周刊](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/oju3qygxxqjehtvwpayn.jpg)](https://nodeweekly.com/link/164509/0a4070b383)
+
+[NodeBB v4.0.0 发布：Node.js 支持的论坛](https://nodeweekly.com/link/164509/0a4070b383 "community.nodebb.org") — NodeBB 已经快 12 岁了，继续提供经典的论坛体验采用现代 Node.js 形式。 v4 的重大更新是 [支持 NodeBB 实例和更广泛的联盟之间的 *federation*](https://nodeweekly.com/link/164510/0a4070b383)。请注意，开源项目 ([repo](https://nodeweekly.com/link/164511/0a4070b383)) 已获得 [NodeBB Inc](https://nodeweekly.com/link/164512/0a4070b383) 的 GPL 许可，提供托管服务。
+
+节点BB公司
+
+[2025 年 1 月 21 日安全版本](https://nodeweekly.com/link/164513/0a4070b383 "nodejs.org") — 发布时尚未发布，但很快就会发布，都是新版本Node 23.x、22.x、20.x 和 18.x 版本系列的一部分，以解决一些尚未公开的安全问题。
+
+Node.js 项目
+
+\[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/c4bf8464.png)]\(https://nodeweekly.com/link/164508/0a4070b383 ）
+
+[跳过 Auth0 头痛](https://nodeweekly.com/link/164508/0a4070b383) — [Stytch](https://nodeweekly.com/link/164508/0a4070b383) 减少了身份验证和欺诈的工程时间，同时提供您可以通过预构建的 UI 进行更多控制，[无头SDK](https://nodeweekly.com/link/164514/0a4070b383)、后端 SDK 和 API。此外，没有费率限制或哄抬价格，并且每个计划都有专家支持。 [查看我们的 Node 快速入门指南](https://nodeweekly.com/link/164515/0a4070b383)。
+
+史蒂奇赞助商
+
+**简而言之：**
+
+* 流行的[NestJS框架](https://nodeweekly.com/link/164517/0a4070b383)的[版本11.0](https://nodeweekly.com/link/164516/0a4070b383)已经发布。我们正在等待完整的博客文章发布，但这似乎是一个重大更新（现在使用 Express v5）。有 [v10 到 v11 迁移指南。](https://nodeweekly.com/link/164518/0a4070b383)
+
+* [Vercel 将于 2025 年 8 月 1 日弃用 Node 18](https://nodeweekly.com/link/164519/0a4070b383)。
+
+* GitHub 的 Dependabot（自动依赖更新系统）[不再支持 npm 6](https://nodeweekly.com/link/164520/0a4070b383) 并要求 npm 9 或更高版本。
+
+[TypeScript 枚举：用例和替代方案](https://nodeweekly.com/link/164521/0a4070b383 "2ality.com") — 探究 TypeScript 的一项功能，它与 JavaScript 没有直接的并行性（因此 *不会* 尽管总是存在“--experimental-transform-types”或[tsx](https://nodeweekly.com/link/164522/0a4070b383))。
+
+阿克塞尔·劳施梅尔博士
+
+[隐藏在 npm 软件包误植 Chalk 和 Chokidar 中的终止开关](https://nodeweekly.com/link/164523/0a4070b383 "socket.dev") — 最近的研究发现了几个恶意软件包对终端字符串样式库进行了误植 [Chalk ](https://nodeweekly.com/link/164524/0a4070b383) 和文件监视库 [Chokidar](https://nodeweekly.com/link/164525/0a4070b383) — 针对存在安全问题的 Node 开发人员。
+
+库什潘迪亚（插座）
+
+📄 [`Promise.race` 和 `Promise.all` 并不“公平”](https://nodeweekly.com/link/164526/0a4070b383) – 也就是说，它们有偏见并且不完全随机。克里斯·克莱乔
+
+📄 [Node、Bun 和 Deno 中的获取和 HTTP/2 支持](https://nodeweekly.com/link/164527/0a4070b383) Georges Haidar
+
+🛠 代码和工具
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kc1c5w6dgduqvg5apbcd.jpg)](https://nodeweekly.com/link/164528/0a4070b383)
+
+[ArkType 2.0：运行时验证库](https://nodeweekly.com/link/164528/0a4070b383 "arktype.io") — 一个\[易于部署]\(https://nodeweekly.com/link/164553/ 0a4070b383）模式验证解决方案，可以 1:1 推断 TypeScript 定义并将其用作数据的优化验证器，无论是在运行时还是在编辑器中立即获得类型级反馈。
+
+方舟型
+
+[react-nil 2.0: A React 'Null Renderer'](https://nodeweekly.com/link/164529/0a4070b383 "github.com") - 一个有趣的实验，可以在不需要的情况下使用 React渲染任何东西，但你想使用钩子、悬念、上下文和 React 生命周期的其他部分。就像 Node 应用程序一样。
+
+普瓦芒德雷斯
+
+[实时防范机器人、欺诈和滥用](https://nodeweekly.com/link/164530/0a4070b383 "workos.com") — WorkOS Radar 通过高级设备指纹识别保护您的应用程序 — 停止虚假注册、免费套餐今天的滥用、机器人攻击和暴力尝试。
+
+WorkOS赞助商
+
+[Electron 34.0.0](https://nodeweekly.com/link/164531/0a4070b383 "www. Electronjs.org") — JS、HTML 和 CSS 桌面应用程序框架更新至 Chromium 132、Node 20.18.1，并添加了一种访问无响应渲染器的 JavaScript 调用堆栈的方法。
+
+电子团队
+
+[file-type 20.0：检测缓冲区、Uint8Array 或 ArrayBuffer 的文件类型](https://nodeweekly.com/link/164532/0a4070b383 "github.com") — 例如，为其提供 PNG 的原始数据文件，它会告诉你这是一个 PNG 文件。使用“幻数”方法，因此仅针对非文本格式。 v20 增加了对更多格式的支持，包括 JAR、Word/Excel 模板，现在支持 ZIP 解压缩。
+
+辛德·索尔胡斯
+
+* 😀 [Happy DOM 16.7](https://nodeweekly.com/link/164533/0a4070b383) – Web 浏览器 *sans* UI 的跨运行时 JS 实现。现在支持[模拟本地 HTTP 服务器](https://nodeweekly.com/link/164534/0a4070b383)，这些服务器从本地文件NBSP系统提供文件。
+
+* [better-sqlite 11.8](https://nodeweekly.com/link/164535/0a4070b383) – 从 Node.js 使用 SQLite 的巧妙方法。现在支持 [SQLite 3.48.0](https://nodeweekly.com/link/164536/0a4070b383)。
+
+* [Faker 9.4](https://nodeweekly.com/link/164537/0a4070b383) – 生成随心所欲的捏造数据。
+
+* 🎶 [Ableton.js 3.6](https://nodeweekly.com/link/164538/0a4070b383) – 从 Node.js 控制 Ableton DAW 的实例。
+
+* [Nightwatch.js 3.11](https://nodeweekly.com/link/164539/0a4070b383) – Node.js 端到端测试框架。
+
+* [pg-diff 3.0](https://nodeweekly.com/link/164540/0a4070b383) – PostgreSQL 模式和数据比较工具。
+
+* [qs 6.14](https://nodeweekly.com/link/164541/0a4070b383) – 查询字符串解析和字符串化库。
+
+* [YouTube.js 13.0](https://nodeweekly.com/link/164542/0a4070b383) – YouTube 私有 API 的 JS 客户端。
+
+* [Commander.js 13.1](https://nodeweekly.com/link/164543/0a4070b383) – Node.js CLI 应用框架。
+
+📰 分类广告
+
+💭 如何帮助我的 Node.js 应用[适应不断变化的需求？](https://nodeweekly.com/link/164544/0a4070b383) 一个简单的操作指南，分为三个部分。
+
+***
+
+🚀 掌握全栈、JS 后端和 DevOps [在 2025 年节点大会上！](https://nodeweekly.com/link/164545/0a4070b383) 于 4 月 17 日至 18 日加入全球 5000 名开发者。为期 2 天的讲座和研讨会！
+
+📢 JavaScript 中的其他地方
+
+快速总结更广泛的 JavaScript 领域中的一些其他有趣的故事，以防您错过了它们：
+
+* [学习 Yjs](https://nodeweekly.com/link/164546/0a4070b383) 是一组仍在开发中的精美教程，用于学习如何使用 \[Yjs CDRT 库构建实时协作应用程序。]\(https ://nodeweekly.com/link/164547/0a4070b383）
+
+* [最新版本的Bun](https://nodeweekly.com/link/164548/0a4070b383)在其“Bun.serve()”功能中添加了按需前端捆绑。
+
+* 如果您还没有使用过 WASM，[Hemath 提供了有关 WebAssembly 基础知识的简单易懂的介绍。](https://nodeweekly.com/link/164549/0a4070b383)
+
+* 流行的 [Astro](https://nodeweekly.com/link/164550/0a4070b383) 框架已经发布了 \[2024 年 Astro 发生的事情的回顾。]\(https://nodeweekly.com/link/164551/0a4070b383 ）
+
+* Google 已[开始*要求* JavaScript](https://nodeweekly.com/link/164552/0a4070b383) 供用户进行搜索。
+
+**有我们的链接吗？** 回复并告诉我们。我们无法包含所有内容，但我们会查看您发送的所有内容。 *谢谢！*
+
+***
+
+**赞助：** 发送电子邮件至“&lt;kristina@cooperpress.com>”了解详细信息。
+
+***
+
+由库珀出版社有限公司出版\
+费尔菲尔德企业中心, 劳斯, LN11 0LS, 英国
+
+
