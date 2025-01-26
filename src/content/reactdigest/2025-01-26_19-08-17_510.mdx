@@ -1,0 +1,148 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#490 Initial load performance for React developers
+description: RD#490 Initial load performance for React developers
+date: 星期日 07 晚上 一月 26o 2025
+author: reactdigest
+origin_url: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Finitial-load-performance-?= =?us-ascii?Q?for-react-developers?=
+origin_site: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Finitial-load-performance-?= =?us-ascii?Q?for-react-developers?=
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#490 Initial load performance for React developers" url="=?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Finitial-load-performance-?= =?us-ascii?Q?for-react-developers?=" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1WGEVdwKA2r7LuX2_oH35yBrc56RSywtzxQE6Vu6PBE2Cg7SZAqGaiAJp5LMHzJrr_eWiwt14H5duwBgFUevgybM95sXAaytW28dnyeDG2aUjk61DOc1-LtoPEzRq2IAi9_4O-IMJUalw3kGIHaoKofF3TEpnsl0_zdI_ug1zf4na8vi2G-ETBNBKINb2vsVK0xocyn88TwHve3NduRT0dlCzq7QPJhMdQu3ROQlf7syx0Kx1fS1ypK_3Zaj9IsVdWBALJSKlWQuhfwsfIDDQUr1TyKIIua8b6FZKlv6fCMBJXXxldWgzRfCB5kBSHq-YcnxaJwnO6wnVPVA5oZwtavGTBhE-iV8VQLVUKFPoOfUEE1POBha0zT6bQ29QXhkjSFQyvRoFT1J8K7-EqcPd3k0zVXsbL8U4Vbn9vd3-WLH9TauF_QQat6Eg1K3tESPdmW021eYmveyL5Je3tLfjSObcOLeVYtZjq71ZJGE17j5bruGNdmM0ZXZED-F_By0xqAp_X9sQnI24ofBNUZp1atW4An_sFJ_11IWs_u0h9DTRe3ZmYTD4_ImC2VnxCcN8Nbgqk0st2IeEjO0Dok63TT7gd_K-MgRgMoCF0gH-o25ptWbMVoBGUjKK9LVaSwNSnorxaE2BUUi2yIg5FpCwnfRvwpbQxkl9e0JinGKmZm-sf3zvyTZRepJ0mzrs3Jz35VYzUCXLunfqP1UJYG1qZ2huAg5xx7kRZ96Jg6huLuEDE4YAnEdkIhZUvaU-p44_qoUh-j9bTzRl2D1EhMiE9mdfMJvqU08_dKY5Q_g-Tu-6vke9bDMbsdiAahV2MvhJ0/4dh/jPt0NDwtQx2FSJYfDChtfQ/h0/h001.yzEZTLjLUd4sjCBs0qRMlrqLq3szjjwa_TdLbIP_obQ)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4dh/jPt0NDwtQx2FSJYfDChtfQ/ho.gif)
+
+[Initial load performance for React developers: investigative deep dive](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqaLHy8G_Zejf_j1U5B-_Zp2rbP01AkX10rc2TELs3OEQsWtA5E5msZhX5QEN8G7w96CRI8vSq-VmZn-f5T1UntZP8i1I9HZCjV4Sv7tNHE-l0E7qqm3JJi8aHrFi9mbIN7tTlMID2DIAMxqd2wwiJTLzehizBDOl911rLScL-Nchx4Z0f8e2mzPcOs4MOK_EofYiYSGcyTd-ddzTkW4XFG5mrY-2j-vtnfX5PetNt1SeGGJNoqdkYLrpAvZ5e96rBCU_gBXumlaTcm-uPm-uqyhgPRJmgJYrWllYkPTUFxdO/4dh/jPt0NDwtQx2FSJYfDChtfQ/h1/h001.JddfbVJmhPmqo1KZBzqsmjGMY1QFGxdrHpBThB6PnsU)  
+_27 minutes_ by Nadia Makarevich
+
+In this article Nadia explores fundamental aspects of web performance, focusing on initial load metrics like First Paint, First Contentful Paint, and Largest Contentful Paint. It provides a detailed walkthrough of Chrome DevTools' Performance and Lighthouse panels, explaining how to measure and analyze these metrics. She also demonstrates how different network conditions, server response times, and caching strategies impact performance, emphasizing the importance of CDNs and proper cache-control headers for optimizing load times.
+
+[Tests are dead. Meticulous AI is here.](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2WqroLgOnA-NgNKtuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4dh/jPt0NDwtQx2FSJYfDChtfQ/h2/h001.uGgOeiczXVUPgPT5xuwDQnVokmOf5WNnUib-WW4YIXg)  
+_sponsored by Meticulous_
+
+Meticulous AI is a tool which automatically creates and maintains a continuously evolving e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Backed by CTO of GitHub, Guillermo Rauch (next.js author), yc and others, it's built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[What You Need to Know About View Transitions in React](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63qP3bky6qNnTxX93Fg0cxwLLIJNbNeMUY3BYHBYPzbenEEDzNM6FoIMusU8Ksv9xDv7nzSofpiYd20U5IP7_86MNnBFnnoQSxDnBGfQk05-bVCR8wOQJJN6vj154gUbMHo-PEKEgjeb--VUZpH5tZLZl7xAt4b1NOUK4eEvDwChovXmFfOL8I3_TsznJghEI6bF5fApuMk5lwntSjA4Om3jXmi4MsM2wr3AQPwXs1B_f-pVeiw6W1ZgXgPEUNJRCxLQgL3Y3SHb2YHhOpD1EPlDZpdTBNQrScuzc0vtL95DmLu9CjO53OLVcJj8fJ5EjXm-SVUYEPrU0DHFuTt6puRQ/4dh/jPt0NDwtQx2FSJYfDChtfQ/h3/h001.7AqZ5IYTDw0wkDOOUnDjcb6aru1Wk6syhtHqpzbBbqI)  
+_4 minutes_ by João Victor Vogler
+
+Have you heard the news? React is about to officially support View Transitions! In this article João discusses React's support for the View Transitions API, a new browser feature that enables smooth animated transitions between website views, pages, and DOM states.
+
+[What’s Next for Modern React Web Development?](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw9jFC2GNnrPqrZ_Z_2ERDFpHPXBzqotfYXfu5Vs7kgp1f1I7kyikyK-JTfUurPjeQOezGl63a5t0UkS4m5rAgKUAjeu_xV8KQ_35d6CUtZxoudEryT27aSDSXXndUPSYrfZawUe7xhHdnjh8LPtBqwjgX2kx7_XyKFbryhYEQtov4-r62v_Sa_wW02YikWNDZu-T4Xrzm00SkIrInUW0r9n8FRxEtiD_JtCiulsMtgpZsHQ70tu_9E3vqbtsz1wjUZuYlZJkTrQKocwR6CCeexCuUtt6pL36W8PedKbprPYoVHViLH2WZJgDYymFaH_EYpDCl2HV8hR1vEAaqYsa7lV4ILIwTfNyd9ztufJfaKFN/4dh/jPt0NDwtQx2FSJYfDChtfQ/h4/h001.LyEJOtJIjmqEeSKNni4cXJ_Ge667rUcJ2e2VgoE4f4I)  
+_4 minutes_ by Adhithi Ravichandran
+
+In this article Adhithi introduces several significant improvements to modern web development, including enhanced React Server Components for efficient server-side rendering, stable Turbopack for faster development experience, built-in AI integration capabilities, and improved caching mechanisms. These advancements represent a significant step forward in making web development more efficient and future-proof.
+
+[LangChain: Streaming in JavaScript with React.js & Next.js](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zKjGg8lq3ayTXITzOK2mGhAAIVgHrMjtLiClpUqtMr-G61SIHtCncIN47htiVgux20_UVEaCmeFkfgPybAnidOQdLMDTUiZn0rVFwj2N5GAH2qTOCCOqJszP1AqMg5QXS8rON7Eq7W2XZAgLxPkr_4vWkCpDCFzW8t5X2uCxoN4lLWpp6uju3BjoMdOTk5OmnJH7DqcWfCdiiGjjEfCqlrS0goXSaYbYdEKZqpkYBGJvK4OgBtYAKAcNsi3_-xm_rh6wXTV_ZVZgkw_PZh2BdaN/4dh/jPt0NDwtQx2FSJYfDChtfQ/h5/h001.yWm8kidYy4RTbZhutTuFqEW-awcdsOrWfWvirwjO_ZM)  
+_2 minutes_ by Robin Wieruch
+
+In this tutorial Robin demonstrates how to implement streaming responses in a chatbot application using LangChain with JavaScript, Next.js, and OpenAI. It covers modifying both frontend and backend code to handle real-time message streaming, using TextDecoderStream for processing streamed responses, and implementing a chat interface that displays messages as they arrive from the API.
+
+[Why Server Functions Matter In A Server Component World](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqRx1AXI5yRysa54hwKp3flqkplZMyOUM0idOWHGxzkxCYmeQmPs3Ox3oW9iTdDhJtpj5nqtjRyD_zUHWQkgm3OUK3yH5z3vW7jsMYbNSkWfXUqGVHPZTIGj5GlGbxiXDosqFnmQ3agBuP08XN0_BNDNDu2xPldP442pI4jZ70gxLtIiJnPn54m0tfqp2g65INamVm3ahveGcK98W5R8_ILBhwueJvIfXgXwIg_SIrpi08FOjRtHMrxM5320EIBPTneei0F1rbHIipRhIqz06bYuzhCD5PYnvWWuz1fDuNxghRT5bhent9ReHq9lmJ3YdzHHtp4llNSvQFVw9gOQior0/4dh/jPt0NDwtQx2FSJYfDChtfQ/h6/h001.L0ND5CWF9kvBoovSSZ3JMyjTi4ROlohtNuGJ-yvUTkU)  
+_7 minutes_ by Brenley Dueck
+
+In this article Brenley explores Tanstack Start, a new React framework that introduces server functions as an alternative to server components and server actions. Tanstack Start adopts a client-by-default architecture where server functions can be used for both data fetching and mutations.
+
+And [React Native 0.77](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvg6X08HACLEPkNSKEkWmEp0IRkyMF0jlyHq6oYcH7PnJxPtnPIYnf0-GbVq8I4HnhVnkzN9x-ij3dxE9ix0NOtp5GwgonahnPa16j5MzL8l_GACQTYR7xbJBkrOOmldKRQx-urITYI5OZmOZXEh2T0NGHlW639YgScDJjs96j0boptJ8GqTuPSf5tqJxLs_pVqS4RyNf8ldosO57eyRZDTzy9h9Er_A0lRFgGIm_Sfp5SlGVPQ4_Ka97mUynKaCHCq4drbn0x7RTI-QVTMcyWHnSBJXOrgvVtddWP1OH-gNj/4dh/jPt0NDwtQx2FSJYfDChtfQ/h7/h001.EubvA-wS8uyA5BG6rJ5mboyllcOViolA9cMhC-lj6Vc) was released.
+
+## webdev
+
+*   [Technologies and frameworks we use in our design studio](https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhf31T844dZHx34QmBfO47UoNsyZgrySUO6MLfLZY966DHcdConZdQZaw5uAjJ0QPtth_3rkZw1gdXFIc3Kk1OjgBt4FOpMGmb3zc9p0Mua3QW0Qz0XrnASUBZ8b5olk3wCJlIuKRK6LAGR8wMG31oql9DasaUd5wwZUXpIgJDy0GwJhjgBfz2Yr3Tok8tGXB5UufQNJ0jmmVJjfkNO2CL8_j8sRwfqsyIfTo0fwofmpQpbh3MfcRND2AYTqnSri4WxZjRdq220lTpjdmsFUVCHkHor1HKsRdp31Z3dUvzndLNCBPDPY6BN_FQd7iZyfMjQ/4dh/jPt0NDwtQx2FSJYfDChtfQ/h8/h001.i9YOiuk7pGi1WRwIzTFtoyjd_iyw7iSTFHEreYH5PSs)
+    
+*   [What Are Network Latency And Round Trip Time (RTT)?](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqTDUMhOCAygmomWT6OQvrz-fuIEQv-dVPtBl_c0-OioVlFpniZqR3-OlhwJTOE3u-vthSClJVlMcD8d4IwX7bG7vaX_3o3QoSFPua5QRSLiBwkR6ErITnPqz5ShbPh395g1CPCKDywS-QLbghTsDzX-IaZcWk7X7pqUMKoKLT7tkq9E1YO1hCTQcZTPuB6L5G8o_hTDdeMlTwGlITWnWLqM1oOHsfDnfnZF_qwannDibkX0gozChFWVjfofMqCLYQW5hX2Zf9Lw3kOCXywPqPei6LAXwMTMRfK8WMtdxhLjb/4dh/jPt0NDwtQx2FSJYfDChtfQ/h9/h001.mPeLYW9rGTQx-3aDkqjGZhHkcnoAO0kyosq9Y6HVaf8)
+    
+*   [CSS Snippets Every Front-End Developer Should Know](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hgNqZxrYQTXakpGzSdfqPDC9IoYBEE5kACRogJGePsIzaSWkYap6PqkPFQVB1bin4-UpnTPgfu5MTRwKmGdLZjWM1YdMCx2SH8y4q8oXbe1eXZ5UrqhhUEIGtEy7A2S24ZZ_zzutF4YmhLoYJnmubDO5V4Wuk8goajTZK1v9fnKOfRAY3Q07ke3cihh_YpLVjgMRkLfrDjMdt0fXWMkQkMzcNTt3S28duOKRxkr7McTEiM7LGvlhVoqcI5DmP5vpsIBZEDJkmFUFsV_zJ5jfhjX08e3pt5u1WNSlidfApvIPP6QtrAUEvKP4NxvY9FQXw/4dh/jPt0NDwtQx2FSJYfDChtfQ/h10/h001.5agfZ_tBh7VmNE_8SAAn95J_LHQ7hB59JANYu9d2RNQ)
+    
+*   [Don’t Wrap Figure in a Link](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw6zfKfsh59KwXoNayELUujo8f7Fs7v9z9KhDvOgZa1PqHh32M1_HYvFPelft5RAnMDcmJHLgl45phXvwzouaRcdfPXQEqlh4EOBAnVLEq8ku8qo86H2wwlyEj9f5QKZmqEmmh6E4_xuEQaWobEYhdYKfUCrXRxrFbogLUFvuU17INu37EdNJtyDxOtvb6HLrFpOkUz4dkOCiaIE6Ne1LkjPn78P-N3Hc6-OVSbbTu_v_EBBPBH7r8acqE0TCOP1K0SOwHMBxHMHjrorLOf6ZtNMLDjpJMBHmQph985rt4aIz/4dh/jPt0NDwtQx2FSJYfDChtfQ/h11/h001.v1VTSsmoaFsLfMUcFVxfAjRu3b2GuxjvsUACoPqO53E)
+    
+*   [New capabilities for attr()](https://link.mail.beehiiv.com/ss/c/u001.wjjBWwWz4938-Ka4Q4QVgJ7LnkjegV_qY37p9Yu6x1YTBzIbL72Ag561y9jKB4hX0iItgEPebsQGORdunWADiB1XM6yBGmCYZbaLvoagnZtgQmW-YSrOGK2n1tVUY55ZQRFQKeICnLtrsA8EpL9q4gaH8H9_DSfNS4ZM6MhMxbpttQPzR3EFRL6XxgjOaKmWiVG4t3KraOplO40nxw5Y8Oo-SzbVGmAlAaZ8MP1TR8LHUZj5IGYkcXg-csIDej0VltuoJsc7aL_OSpVTKGnm-A/4dh/jPt0NDwtQx2FSJYfDChtfQ/h12/h001.-qbOMmj7QgFor6I2EEpcwTEgJONwxBEz5_yUXMbTpgw)
+    
+
+## javascript
+
+*   [JavaScript Temporal is coming](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVUl-PVEeM1cVSFBmo2SeoKLDBiP9u4269Ri9jdBawWoFfL9aOxTlSV7QhMDkU_V6OdeYr40kiHDDMtMKTYBAzB62_d-Uu3CUoN-RK8VH7HOTOhUndxRdlr6Y_JUxU7okfc2_yBSTTDTPSHUsilZZb_ECUm3l-glNv2cZeXrw-BqtG0_tyOiKXMksAXMhnqQM-EZzvy4F7lrkPeJB1v6B3k5PH2GMEXiQHtaGWz7oGCFK2Joxech6ySW47672qZ9jhS0fltdoKab51711MAyMi9YrUe4NdyQOlAujrG2w5yGPAcH1XbO2e2QIz_M11a55SQ/4dh/jPt0NDwtQx2FSJYfDChtfQ/h13/h001.bzIQe6w7nsYQASV9z1D4qkYy0uKK-4aT_MetKHGf9QY)
+    
+*   [Introduction to WebAssembly](https://link.mail.beehiiv.com/ss/c/u001.ISKsUK8pSbTPPDpSBuWPwjfzWIMtN0iQowR9H0RpLHgPMbif-Jr_0g_xU6jgmrDJbnJapOJnD5zV96mgzzLVWHdHJx740VaZBP0t1RNUv5tRrhvCp-3pQqGc7Rg6APBbRzvUJuCS8auZU_8LYoJvhcRlkNK1vxtlnzdLeHaNI2usIIwuKpdGpY7StJfRwEjNP4nKTE3uGvxvTYydNo8ZYYRoRdOEO8c_aW1ojLKkEwrOQnNfMjwoEZmJixgqCSpoI7N4_QYjD1gELDgpnEmftsVJ8vp248KqeU1ADX22FbfHujv7DGJSvnoonJbQ6J6j/4dh/jPt0NDwtQx2FSJYfDChtfQ/h14/h001.NBlN8os8UWzd_pIyXmcxSJpmZ-2QF4l8PYIgdtRbhUI)
+    
+*   [The Object Nature of JavaScript: Why Everything Is an Object](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO1ylAZWoFDAYhVC1rEYyNHx9u7QwPTZ4oCjfxBQzhArzMKM3bs230KE009XIZOarM4_2k6R0k4TpssQ9NM1z-q6PgFe0Cun9llP-zDFAHz1Sw4QVavv9MdmnHFmmX7wSHp28dkE5ugpKGiOouEvla3KJnaCL37DW-ekzn-i46RBSsYjLjR5kd8Q1tmbq9sPn-1mHRKc2Em8uGrMmSl4ibxs7YbsZfS-1N28ES3igWYypZOqS5_4LQYvktzX1yRPqlMFPPkCr8OjPb7kckjklDyHO6Myn636T8nT6W9kWLi7Kr9hFNkfiYpSkr7peftqD9iI1Kt6M03sJwJmxLmdRoXDHu2IQiCSW_WhhEQ2gX8eI/4dh/jPt0NDwtQx2FSJYfDChtfQ/h15/h001.qvVagGAh1RStdhtEoRuhUM9HE1RL-ToVnXWBXLYqyUc)
+    
+
+And the most popular article from the last issue:
+
+*   [Five years of React Native at Shopify](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO8NxTYv91_w_an9Qr2WKky7XsCnQbOZn0dJAaCVdBQ1Rp1A_Y2kx9gEdq0hZ8nLfQyv4lErrZgP6bJn39DT_w7SjhbKMTjtm3IcpEoP4_zwSbUtBrJbdV-pXLIsduHjCjOBwPyMXRQJcO8N0css8S-hIsGSrbitn6CeevdLHP2Gtylp27lGY2LRq64HHEt0gOUtaAy5OogzQY739kchn-1ogtNLXl6ArbOyQJHFQBjeR2m_mtcnUU6z4kZ_ywHKUYa2avLC5SCuS0LpWP2xWVJ9llnTaZ5AA_yj3nMHH49Uk/4dh/jPt0NDwtQx2FSJYfDChtfQ/h16/h001.aj3_olOiUoa10ZXqmb1ajl6Gpx5Aqb-_BmlQkNhx4UU)
+    
+
+#
+</Detail>
+
+[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1WGEVdwKA2r7LuX2_oH35yBrc56RSywtzxQE6Vu6PBE2Cg7SZAqGaiAJp5LMHzJrr_eWiwt14H5duwBgFUevgybM95sXAaytW28dnyeDG2aUjk61DOc1-LtoPEzRq2IAi9_4O-IMJUalw3kGIHaoKofF3TEpnsl0_zdI_ug1zf4na8vi2G-ETBNBKINb2vsVK0xocyn88TwHve3NduRT0dlCzq7QPJhMdQu3ROQlf7syx0Kx1fS1ypK_3Zaj9IsVdWBALJSKlWQuhfwsfIDDQUr1TyKIIua8b6FZKlv6fCMBJXXxldWgzRfCB5kBSHq-YcnxaJwnO6wnVPVA5oZwtavGTBhE-iV8VQLVUKFPoOfUEE1POBha0zT6bQ29QXhkjSFQyvRoFT1J8K7-EqcPd3k0zVXsbL8U4Vbn9vd3-WLH9TauF_QQat6Eg1K3tESPdmW021eYmveyL5Je3tLfjSObcOLeVYtZjq71ZJGE17j5bruGNdmM0ZXZED-F_By0xqAp_X9sQnI24ofBNUZp1atW4An_sFJ_11IWs_u0h9DTRe3ZmYTD4_ImC2VnxCcN8Nbgqk0st2IeEjO0Dok63TT7gd_K-MgRgMoCF0gH-o25ptWbMVoBGUjKK9LVaSwNSnorxaE2BUUi2yIg5FpCwnfRvwpbQxkl9e0JinGKmZm-sf3zvyTZRepJ0mzrs3Jz35VYzUCXLunfqP1UJYG1qZ2huAg5xx7kRZ96Jg6huLuEDE4YAnEdkIhZUvaU-p44_qoUh-j9bTzRl2D1EhMiE9mdfMJvqU08_dKY5Q_g-Tu-6vke9bDMbsdiAahV2MvhJ0/4dh/jPt0NDwtQx2FSJYfDChtfQ/h0/h001.yzEZTLjLUd4sjCBs0qRMlrqLq3szjjwa_TdLbIP_obQ)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4dh/jPt0NDwtQx2FSJYfDChtfQ/ho.gif)
+
+[Initial load performance for React developers: investigative deep dive](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqaLHy8G_Zejf_j1U5B-_Zp2rbP01AkX10rc2TELs3OEQsWtA5E5msZhX5QEN8G7w96CRI8vSq-VmZn-f5T1UntZP8i1I9HZCjV4Sv7tNHE-l0E7qqm3JJi8aHrFi9mbIN7tTlMID2DIAMxqd2wwiJTLzehizBDOl911rLScL-Nchx4Z0f8e2mzPcOs4MOK_EofYiYSGcyTd-ddzTkW4XFG5mrY-2j-vtnfX5PetNt1SeGGJNoqdkYLrpAvZ5e96rBCU_gBXumlaTcm-uPm-uqyhgPRJmgJYrWllYkPTUFxdO/4dh/jPt0NDwtQx2FSJYfDChtfQ/h1/h001.JddfbVJmhPmqo1KZBzqsmjGMY1QFGxdrHpBThB6PnsU)\
+*27 minutes* by Nadia Makarevich
+
+In this article Nadia explores fundamental aspects of web performance, focusing on initial load metrics like First Paint, First Contentful Paint, and Largest Contentful Paint. It provides a detailed walkthrough of Chrome DevTools' Performance and Lighthouse panels, explaining how to measure and analyze these metrics. She also demonstrates how different network conditions, server response times, and caching strategies impact performance, emphasizing the importance of CDNs and proper cache-control headers for optimizing load times.
+
+[Tests are dead. Meticulous AI is here.](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2WqroLgOnA-NgNKtuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4dh/jPt0NDwtQx2FSJYfDChtfQ/h2/h001.uGgOeiczXVUPgPT5xuwDQnVokmOf5WNnUib-WW4YIXg)\
+*sponsored by Meticulous*
+
+Meticulous AI is a tool which automatically creates and maintains a continuously evolving e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Backed by CTO of GitHub, Guillermo Rauch (next.js author), yc and others, it's built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[What You Need to Know About View Transitions in React](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63qP3bky6qNnTxX93Fg0cxwLLIJNbNeMUY3BYHBYPzbenEEDzNM6FoIMusU8Ksv9xDv7nzSofpiYd20U5IP7_86MNnBFnnoQSxDnBGfQk05-bVCR8wOQJJN6vj154gUbMHo-PEKEgjeb--VUZpH5tZLZl7xAt4b1NOUK4eEvDwChovXmFfOL8I3_TsznJghEI6bF5fApuMk5lwntSjA4Om3jXmi4MsM2wr3AQPwXs1B_f-pVeiw6W1ZgXgPEUNJRCxLQgL3Y3SHb2YHhOpD1EPlDZpdTBNQrScuzc0vtL95DmLu9CjO53OLVcJj8fJ5EjXm-SVUYEPrU0DHFuTt6puRQ/4dh/jPt0NDwtQx2FSJYfDChtfQ/h3/h001.7AqZ5IYTDw0wkDOOUnDjcb6aru1Wk6syhtHqpzbBbqI)\
+*4 minutes* by João Victor Vogler
+
+Have you heard the news? React is about to officially support View Transitions! In this article João discusses React's support for the View Transitions API, a new browser feature that enables smooth animated transitions between website views, pages, and DOM states.
+
+[What’s Next for Modern React Web Development?](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw9jFC2GNnrPqrZ_Z_2ERDFpHPXBzqotfYXfu5Vs7kgp1f1I7kyikyK-JTfUurPjeQOezGl63a5t0UkS4m5rAgKUAjeu_xV8KQ_35d6CUtZxoudEryT27aSDSXXndUPSYrfZawUe7xhHdnjh8LPtBqwjgX2kx7_XyKFbryhYEQtov4-r62v_Sa_wW02YikWNDZu-T4Xrzm00SkIrInUW0r9n8FRxEtiD_JtCiulsMtgpZsHQ70tu_9E3vqbtsz1wjUZuYlZJkTrQKocwR6CCeexCuUtt6pL36W8PedKbprPYoVHViLH2WZJgDYymFaH_EYpDCl2HV8hR1vEAaqYsa7lV4ILIwTfNyd9ztufJfaKFN/4dh/jPt0NDwtQx2FSJYfDChtfQ/h4/h001.LyEJOtJIjmqEeSKNni4cXJ_Ge667rUcJ2e2VgoE4f4I)\
+*4 minutes* by Adhithi Ravichandran
+
+In this article Adhithi introduces several significant improvements to modern web development, including enhanced React Server Components for efficient server-side rendering, stable Turbopack for faster development experience, built-in AI integration capabilities, and improved caching mechanisms. These advancements represent a significant step forward in making web development more efficient and future-proof.
+
+[LangChain: Streaming in JavaScript with React.js & Next.js](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfQAf_qUprM09yoMPtF27zKjGg8lq3ayTXITzOK2mGhAAIVgHrMjtLiClpUqtMr-G61SIHtCncIN47htiVgux20_UVEaCmeFkfgPybAnidOQdLMDTUiZn0rVFwj2N5GAH2qTOCCOqJszP1AqMg5QXS8rON7Eq7W2XZAgLxPkr_4vWkCpDCFzW8t5X2uCxoN4lLWpp6uju3BjoMdOTk5OmnJH7DqcWfCdiiGjjEfCqlrS0goXSaYbYdEKZqpkYBGJvK4OgBtYAKAcNsi3_-xm_rh6wXTV_ZVZgkw_PZh2BdaN/4dh/jPt0NDwtQx2FSJYfDChtfQ/h5/h001.yWm8kidYy4RTbZhutTuFqEW-awcdsOrWfWvirwjO_ZM)\
+*2 minutes* by Robin Wieruch
+
+In this tutorial Robin demonstrates how to implement streaming responses in a chatbot application using LangChain with JavaScript, Next.js, and OpenAI. It covers modifying both frontend and backend code to handle real-time message streaming, using TextDecoderStream for processing streamed responses, and implementing a chat interface that displays messages as they arrive from the API.
+
+[Why Server Functions Matter In A Server Component World](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqRx1AXI5yRysa54hwKp3flqkplZMyOUM0idOWHGxzkxCYmeQmPs3Ox3oW9iTdDhJtpj5nqtjRyD_zUHWQkgm3OUK3yH5z3vW7jsMYbNSkWfXUqGVHPZTIGj5GlGbxiXDosqFnmQ3agBuP08XN0_BNDNDu2xPldP442pI4jZ70gxLtIiJnPn54m0tfqp2g65INamVm3ahveGcK98W5R8_ILBhwueJvIfXgXwIg_SIrpi08FOjRtHMrxM5320EIBPTneei0F1rbHIipRhIqz06bYuzhCD5PYnvWWuz1fDuNxghRT5bhent9ReHq9lmJ3YdzHHtp4llNSvQFVw9gOQior0/4dh/jPt0NDwtQx2FSJYfDChtfQ/h6/h001.L0ND5CWF9kvBoovSSZ3JMyjTi4ROlohtNuGJ-yvUTkU)\
+*7 minutes* by Brenley Dueck
+
+In this article Brenley explores Tanstack Start, a new React framework that introduces server functions as an alternative to server components and server actions. Tanstack Start adopts a client-by-default architecture where server functions can be used for both data fetching and mutations.
+
+And [React Native 0.77](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvg6X08HACLEPkNSKEkWmEp0IRkyMF0jlyHq6oYcH7PnJxPtnPIYnf0-GbVq8I4HnhVnkzN9x-ij3dxE9ix0NOtp5GwgonahnPa16j5MzL8l_GACQTYR7xbJBkrOOmldKRQx-urITYI5OZmOZXEh2T0NGHlW639YgScDJjs96j0boptJ8GqTuPSf5tqJxLs_pVqS4RyNf8ldosO57eyRZDTzy9h9Er_A0lRFgGIm_Sfp5SlGVPQ4_Ka97mUynKaCHCq4drbn0x7RTI-QVTMcyWHnSBJXOrgvVtddWP1OH-gNj/4dh/jPt0NDwtQx2FSJYfDChtfQ/h7/h001.EubvA-wS8uyA5BG6rJ5mboyllcOViolA9cMhC-lj6Vc) was released.
+
+## webdev
+
+* [Technologies and frameworks we use in our design studio](https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhf31T844dZHx34QmBfO47UoNsyZgrySUO6MLfLZY966DHcdConZdQZaw5uAjJ0QPtth_3rkZw1gdXFIc3Kk1OjgBt4FOpMGmb3zc9p0Mua3QW0Qz0XrnASUBZ8b5olk3wCJlIuKRK6LAGR8wMG31oql9DasaUd5wwZUXpIgJDy0GwJhjgBfz2Yr3Tok8tGXB5UufQNJ0jmmVJjfkNO2CL8_j8sRwfqsyIfTo0fwofmpQpbh3MfcRND2AYTqnSri4WxZjRdq220lTpjdmsFUVCHkHor1HKsRdp31Z3dUvzndLNCBPDPY6BN_FQd7iZyfMjQ/4dh/jPt0NDwtQx2FSJYfDChtfQ/h8/h001.i9YOiuk7pGi1WRwIzTFtoyjd_iyw7iSTFHEreYH5PSs)
+
+* [What Are Network Latency And Round Trip Time (RTT)?](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqTDUMhOCAygmomWT6OQvrz-fuIEQv-dVPtBl_c0-OioVlFpniZqR3-OlhwJTOE3u-vthSClJVlMcD8d4IwX7bG7vaX_3o3QoSFPua5QRSLiBwkR6ErITnPqz5ShbPh395g1CPCKDywS-QLbghTsDzX-IaZcWk7X7pqUMKoKLT7tkq9E1YO1hCTQcZTPuB6L5G8o_hTDdeMlTwGlITWnWLqM1oOHsfDnfnZF_qwannDibkX0gozChFWVjfofMqCLYQW5hX2Zf9Lw3kOCXywPqPei6LAXwMTMRfK8WMtdxhLjb/4dh/jPt0NDwtQx2FSJYfDChtfQ/h9/h001.mPeLYW9rGTQx-3aDkqjGZhHkcnoAO0kyosq9Y6HVaf8)
+
+* [CSS Snippets Every Front-End Developer Should Know](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hgNqZxrYQTXakpGzSdfqPDC9IoYBEE5kACRogJGePsIzaSWkYap6PqkPFQVB1bin4-UpnTPgfu5MTRwKmGdLZjWM1YdMCx2SH8y4q8oXbe1eXZ5UrqhhUEIGtEy7A2S24ZZ_zzutF4YmhLoYJnmubDO5V4Wuk8goajTZK1v9fnKOfRAY3Q07ke3cihh_YpLVjgMRkLfrDjMdt0fXWMkQkMzcNTt3S28duOKRxkr7McTEiM7LGvlhVoqcI5DmP5vpsIBZEDJkmFUFsV_zJ5jfhjX08e3pt5u1WNSlidfApvIPP6QtrAUEvKP4NxvY9FQXw/4dh/jPt0NDwtQx2FSJYfDChtfQ/h10/h001.5agfZ_tBh7VmNE_8SAAn95J_LHQ7hB59JANYu9d2RNQ)
+
+* [Don’t Wrap Figure in a Link](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw6zfKfsh59KwXoNayELUujo8f7Fs7v9z9KhDvOgZa1PqHh32M1_HYvFPelft5RAnMDcmJHLgl45phXvwzouaRcdfPXQEqlh4EOBAnVLEq8ku8qo86H2wwlyEj9f5QKZmqEmmh6E4_xuEQaWobEYhdYKfUCrXRxrFbogLUFvuU17INu37EdNJtyDxOtvb6HLrFpOkUz4dkOCiaIE6Ne1LkjPn78P-N3Hc6-OVSbbTu_v_EBBPBH7r8acqE0TCOP1K0SOwHMBxHMHjrorLOf6ZtNMLDjpJMBHmQph985rt4aIz/4dh/jPt0NDwtQx2FSJYfDChtfQ/h11/h001.v1VTSsmoaFsLfMUcFVxfAjRu3b2GuxjvsUACoPqO53E)
+
+* [New capabilities for attr()](https://link.mail.beehiiv.com/ss/c/u001.wjjBWwWz4938-Ka4Q4QVgJ7LnkjegV_qY37p9Yu6x1YTBzIbL72Ag561y9jKB4hX0iItgEPebsQGORdunWADiB1XM6yBGmCYZbaLvoagnZtgQmW-YSrOGK2n1tVUY55ZQRFQKeICnLtrsA8EpL9q4gaH8H9_DSfNS4ZM6MhMxbpttQPzR3EFRL6XxgjOaKmWiVG4t3KraOplO40nxw5Y8Oo-SzbVGmAlAaZ8MP1TR8LHUZj5IGYkcXg-csIDej0VltuoJsc7aL_OSpVTKGnm-A/4dh/jPt0NDwtQx2FSJYfDChtfQ/h12/h001.-qbOMmj7QgFor6I2EEpcwTEgJONwxBEz5_yUXMbTpgw)
+
+## javascript
+
+* [JavaScript Temporal is coming](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVUl-PVEeM1cVSFBmo2SeoKLDBiP9u4269Ri9jdBawWoFfL9aOxTlSV7QhMDkU_V6OdeYr40kiHDDMtMKTYBAzB62_d-Uu3CUoN-RK8VH7HOTOhUndxRdlr6Y_JUxU7okfc2_yBSTTDTPSHUsilZZb_ECUm3l-glNv2cZeXrw-BqtG0_tyOiKXMksAXMhnqQM-EZzvy4F7lrkPeJB1v6B3k5PH2GMEXiQHtaGWz7oGCFK2Joxech6ySW47672qZ9jhS0fltdoKab51711MAyMi9YrUe4NdyQOlAujrG2w5yGPAcH1XbO2e2QIz_M11a55SQ/4dh/jPt0NDwtQx2FSJYfDChtfQ/h13/h001.bzIQe6w7nsYQASV9z1D4qkYy0uKK-4aT_MetKHGf9QY)
+
+* [Introduction to WebAssembly](https://link.mail.beehiiv.com/ss/c/u001.ISKsUK8pSbTPPDpSBuWPwjfzWIMtN0iQowR9H0RpLHgPMbif-Jr_0g_xU6jgmrDJbnJapOJnD5zV96mgzzLVWHdHJx740VaZBP0t1RNUv5tRrhvCp-3pQqGc7Rg6APBbRzvUJuCS8auZU_8LYoJvhcRlkNK1vxtlnzdLeHaNI2usIIwuKpdGpY7StJfRwEjNP4nKTE3uGvxvTYydNo8ZYYRoRdOEO8c_aW1ojLKkEwrOQnNfMjwoEZmJixgqCSpoI7N4_QYjD1gELDgpnEmftsVJ8vp248KqeU1ADX22FbfHujv7DGJSvnoonJbQ6J6j/4dh/jPt0NDwtQx2FSJYfDChtfQ/h14/h001.NBlN8os8UWzd_pIyXmcxSJpmZ-2QF4l8PYIgdtRbhUI)
+
+* [The Object Nature of JavaScript: Why Everything Is an Object](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO1ylAZWoFDAYhVC1rEYyNHx9u7QwPTZ4oCjfxBQzhArzMKM3bs230KE009XIZOarM4_2k6R0k4TpssQ9NM1z-q6PgFe0Cun9llP-zDFAHz1Sw4QVavv9MdmnHFmmX7wSHp28dkE5ugpKGiOouEvla3KJnaCL37DW-ekzn-i46RBSsYjLjR5kd8Q1tmbq9sPn-1mHRKc2Em8uGrMmSl4ibxs7YbsZfS-1N28ES3igWYypZOqS5_4LQYvktzX1yRPqlMFPPkCr8OjPb7kckjklDyHO6Myn636T8nT6W9kWLi7Kr9hFNkfiYpSkr7peftqD9iI1Kt6M03sJwJmxLmdRoXDHu2IQiCSW_WhhEQ2gX8eI/4dh/jPt0NDwtQx2FSJYfDChtfQ/h15/h001.qvVagGAh1RStdhtEoRuhUM9HE1RL-ToVnXWBXLYqyUc)
+
+And the most popular article from the last issue:
+
+* [Five years of React Native at Shopify](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO8NxTYv91_w_an9Qr2WKky7XsCnQbOZn0dJAaCVdBQ1Rp1A_Y2kx9gEdq0hZ8nLfQyv4lErrZgP6bJn39DT_w7SjhbKMTjtm3IcpEoP4_zwSbUtBrJbdV-pXLIsduHjCjOBwPyMXRQJcO8N0css8S-hIsGSrbitn6CeevdLHP2Gtylp27lGY2LRq64HHEt0gOUtaAy5OogzQY739kchn-1ogtNLXl6ArbOyQJHFQBjeR2m_mtcnUU6z4kZ_ywHKUYa2avLC5SCuS0LpWP2xWVJ9llnTaZ5AA_yj3nMHH49Uk/4dh/jPt0NDwtQx2FSJYfDChtfQ/h16/h001.aj3_olOiUoa10ZXqmb1ajl6Gpx5Aqb-_BmlQkNhx4UU)
+
+#
+
+
