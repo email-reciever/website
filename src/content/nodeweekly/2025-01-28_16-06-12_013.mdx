@@ -1,0 +1,260 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Things people get wrong about Electron
+description: Things people get wrong about Electron
+date: 星期二 04 下午 一月 28o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/564
+origin_site: https://nodeweekly.com/issues/564
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Things people get wrong about Electron" url="https://nodeweekly.com/issues/564" />
+
+<Detail client:only="react">
+	#​564 — January 28, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/564)
+
+Together with 
+
+[![WarpStream](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_480,h_100/e_make_transparent/co_white,e_outline:7/lgfmvw76y3fcgqb6ayfo.png)](https://nodeweekly.com/link/164828/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/e6vavazclsfsxtkyovfv.jpg)](https://nodeweekly.com/link/164829/0a4070b383)
+
+[A Failed Attempt to Shrink All npm Packages by 5%](https://nodeweekly.com/link/164829/0a4070b383 "evanhahn.com") — What if you could shrink all npm package sizes by 5%.. wouldn’t that benefit all of us? Here’s how one developer did just that using Zopfli compression and then made a proposal to the npm maintainers to implement it. While promising, the proposal was ultimately rejected due to [a variety of challenges and trade-offs,](https://nodeweekly.com/link/164830/0a4070b383) such as slower publishing speeds. Nonetheless, it’s a good story packed with things to learn from.
+
+Evan Hahn
+
+[Things People Get Wrong About Electron](https://nodeweekly.com/link/164831/0a4070b383 "felixrieseberg.com") — A proud maintainer of the wildly successful Electron cross-platform app framework stands by [the technical choices](https://nodeweekly.com/link/164832/0a4070b383) made over the years and defends it against some of the more common criticisms here. If an hour of Netflix is 7 gigabytes, what’s 100MB for an app?
+
+Felix Rieseberg
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/501aa43c.png)](https://nodeweekly.com/link/164828/0a4070b383)
+
+[Reduce Your Apache Kafka Costs + Ops Burden with WarpStream](https://nodeweekly.com/link/164828/0a4070b383 "www.warpstream.com") — WarpStream reduces Kafka costs by 80+% by eliminating disks and interzone networking fees and features zero ops auto-scaling. It runs in your private cloud and data is stored in your object storage buckets, so raw data never leaves your environment.
+
+WarpStream sponsor
+
+[The January 21, 2025 Security Releases Arrived](https://nodeweekly.com/link/164833/0a4070b383 "nodejs.org") — Security updates for versions 18.x, 20.x, 22.x, and 23.x, addressing vulnerabilities including a high-severity worker permission bypass. Patches also cover path traversal issues on Windows & HTTP/2 memory leaks.
+
+The Node.js Project
+
+**IN BRIEF:**
+
+*   We mentioned [NestJS](https://nodeweekly.com/link/164834/0a4070b383) 11's release last week, but now [there's a full release post](https://nodeweekly.com/link/164835/0a4070b383) explaining what's new with the popular Node backend app framework.
+    
+*   [Some security experts have dubbed](https://nodeweekly.com/link/164836/0a4070b383) a recent Node-related CVE warning people against using end-of-life versions of Node.js as the 'worst CVE' of 2024 due to being a 'hypothetic CVE' when there are already plenty of real ones to tackle.
+    
+
+[Troubles with Multipart Form Data and `fetch` in Node](https://nodeweekly.com/link/164837/0a4070b383 "philna.sh") — One developer’s pain in debugging somethng that ‘should have just worked’ could be your relief if you run into issues where using `fetch` for `multipart/form-data` requests simply isn’t working (due to a missing trailing CRLF).
+
+Phil Nash
+
+[How I Open-Sourced My Secret Access Tokens from GitHub, Slack, and NPM (and Who Cared)](https://nodeweekly.com/link/164838/0a4070b383 "adminforth.dev") — A developer accidentally published API tokens to npm via a misconfigured CI pipeline. npm and Slack detected and revoked said tokens, though GitHub did not. The author shares his tale and some advice.
+
+Ivan Borshcho
+
+[Is Heroku Still Worth It in 2025? 💸](https://nodeweekly.com/link/164839/0a4070b383 "judoscale.com") — You might want to give this guide a read — we took a tour through PaaS alley and found some worthy (💵) alternatives.
+
+Judoscale sponsor
+
+📄 [A Deeper Look into Node.js Docker Images](https://nodeweekly.com/link/164840/0a4070b383) – Which Docker image should you choose? And just what do they contain anyway? Ivan Velichko
+
+📄 [A WebAssembly Compiler That Fits in a Tweet](https://nodeweekly.com/link/164841/0a4070b383) – A look into a fantastic little bit of hacking. And, yes, it runs in Node. Mariano Guerra and Patrick Dubroy
+
+🛠 Code & Tools
+
+[DBOS Transact v2: Lightweight Durable Execution in TypeScript](https://nodeweekly.com/link/164842/0a4070b383 "github.com") — An open source library for lightweight durable execution built on Postgres. Durable execution means persisting the execution state of your program while it runs, so if it’s interrupted or crashes, it resumes from where it left off – ideal for long-running or business-critical workflows. [Docs.](https://nodeweekly.com/link/164843/0a4070b383)
+
+DBOS, Inc.
+
+[Bun 1.2: A Big Step Forward for the Fast JS/TS Runtime](https://nodeweekly.com/link/164844/0a4070b383 "bun.sh") — I _know_ it's not Node, but _JavaScriptCore_ based Bun continues to up the server-side runtime game with major strides forward in Node.js compatibility in particular with this release. I often try Node scripts with `bun` and it Just Works™ – this is a good thing.
+
+Ashcon Partovi and the Bun Team
+
+🎨 [node-canvas 3.1: A Cairo-Backed Canvas Implementation](https://nodeweekly.com/link/164845/0a4070b383 "github.com") — We recently linked to [Skia Canvas](https://nodeweekly.com/link/164846/0a4070b383), a Skia and GPU-powered canvas drawing API for Node, but node-canvas is the longer standing library and is particularly easy to deploy and use, especially as it no longer has libuv or V8 dependencies.
+
+Automattic
+
+[Emittery: A Simple, Modern Async Event Emitter](https://nodeweekly.com/link/164847/0a4070b383 "github.com") — A small, async event emitter for Node and the browser, and now with support for `AbortController`.
+
+Sindre Sorhus
+
+*   [Nock 14.0](https://nodeweekly.com/link/164848/0a4070b383) – HTTP server mocking and expectations library.
+    
+*   [pnpm 10.1](https://nodeweekly.com/link/164849/0a4070b383) – The alternative, efficient package manager.
+    
+*   [Poku 3.0](https://nodeweekly.com/link/164850/0a4070b383) – Cross-platform JavaScript test runner.
+    
+*   [np 10.2](https://nodeweekly.com/link/164851/0a4070b383) – A better `npm publish`. Adds support for Bun's new lock file.
+    
+*   [Node File Router 0.7](https://nodeweekly.com/link/164852/0a4070b383) – File-based routing for API services.
+    
+*   [JSPyBridge 1.2.2](https://nodeweekly.com/link/164853/0a4070b383) – Run Python from Node or vice versa.
+    
+*   [OpenAI Node 4.80](https://nodeweekly.com/link/164854/0a4070b383), [Undici 7.3](https://nodeweekly.com/link/164855/0a4070b383), [ESLint 9.19.0](https://nodeweekly.com/link/164856/0a4070b383)
+    
+
+📰 Classifieds
+
+Protect your SaaS app with advanced device fingerprinting from [WorkOS Radar](https://nodeweekly.com/link/164857/0a4070b383). Stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+* * *
+
+🚀 Master Fullstack, JS Backends & DevOps [at Node Congress 2025!](https://nodeweekly.com/link/164858/0a4070b383) Join 5K devs worldwide on April 17-18. 2 days of talks & workshops!
+
+📢  Elsewhere in JavaScript
+
+A quick roundup of some of other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   🗓️ Implementations of the [_Temporal_](https://nodeweekly.com/link/164859/0a4070b383) object are beginning to appear in experimental browser releases. Brian Smith takes a look at [how Temporal will modernize the way we deal with dates in JavaScript.](https://nodeweekly.com/link/164860/0a4070b383)
+    
+*   🕒 On the topic of time, Iago Lastra ponders: [how long is a second in JavaScript?](https://nodeweekly.com/link/164861/0a4070b383) Luckily most of the time you won't need to worry about the complexities explained here.
+    
+*   Node competitor Deno (they share a dad!) did [a 2024 roundup of what happened with Deno](https://nodeweekly.com/link/164862/0a4070b383) with a large focus on Node and npm compatibility.
+    
+*   Nicholas C. Zakas [took a look back at the year 2024](https://nodeweekly.com/link/164863/0a4070b383) and what happened with ESLint during the year.
+    
+*   [SRCL](https://nodeweekly.com/link/164864/0a4070b383) is a neat new suite of React components for creating webapps with a monospaced, terminal-style aesthetic.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​564 — January 28, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/564)
+
+Together with 
+
+[![WarpStream](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_480,h_100/e_make_transparent/co_white,e_outline:7/lgfmvw76y3fcgqb6ayfo.png)](https://nodeweekly.com/link/164828/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/e6vavazclsfsxtkyovfv.jpg)](https://nodeweekly.com/link/164829/0a4070b383)
+
+[A Failed Attempt to Shrink All npm Packages by 5%](https://nodeweekly.com/link/164829/0a4070b383 "evanhahn.com") — What if you could shrink all npm package sizes by 5%.. wouldn’t that benefit all of us? Here’s how one developer did just that using Zopfli compression and then made a proposal to the npm maintainers to implement it. While promising, the proposal was ultimately rejected due to [a variety of challenges and trade-offs,](https://nodeweekly.com/link/164830/0a4070b383) such as slower publishing speeds. Nonetheless, it’s a good story packed with things to learn from.
+
+Evan Hahn
+
+[Things People Get Wrong About Electron](https://nodeweekly.com/link/164831/0a4070b383 "felixrieseberg.com") — A proud maintainer of the wildly successful Electron cross-platform app framework stands by [the technical choices](https://nodeweekly.com/link/164832/0a4070b383) made over the years and defends it against some of the more common criticisms here. If an hour of Netflix is 7 gigabytes, what’s 100MB for an app?
+
+Felix Rieseberg
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/501aa43c.png)](https://nodeweekly.com/link/164828/0a4070b383)
+
+[Reduce Your Apache Kafka Costs + Ops Burden with WarpStream](https://nodeweekly.com/link/164828/0a4070b383 "www.warpstream.com") — WarpStream reduces Kafka costs by 80+% by eliminating disks and interzone networking fees and features zero ops auto-scaling. It runs in your private cloud and data is stored in your object storage buckets, so raw data never leaves your environment.
+
+WarpStream sponsor
+
+[The January 21, 2025 Security Releases Arrived](https://nodeweekly.com/link/164833/0a4070b383 "nodejs.org") — Security updates for versions 18.x, 20.x, 22.x, and 23.x, addressing vulnerabilities including a high-severity worker permission bypass. Patches also cover path traversal issues on Windows & HTTP/2 memory leaks.
+
+The Node.js Project
+
+**IN BRIEF:**
+
+* We mentioned [NestJS](https://nodeweekly.com/link/164834/0a4070b383) 11's release last week, but now [there's a full release post](https://nodeweekly.com/link/164835/0a4070b383) explaining what's new with the popular Node backend app framework.
+
+* [Some security experts have dubbed](https://nodeweekly.com/link/164836/0a4070b383) a recent Node-related CVE warning people against using end-of-life versions of Node.js as the 'worst CVE' of 2024 due to being a 'hypothetic CVE' when there are already plenty of real ones to tackle.
+
+[Troubles with Multipart Form Data and `fetch` in Node](https://nodeweekly.com/link/164837/0a4070b383 "philna.sh") — One developer’s pain in debugging somethng that ‘should have just worked’ could be your relief if you run into issues where using `fetch` for `multipart/form-data` requests simply isn’t working (due to a missing trailing CRLF).
+
+Phil Nash
+
+[How I Open-Sourced My Secret Access Tokens from GitHub, Slack, and NPM (and Who Cared)](https://nodeweekly.com/link/164838/0a4070b383 "adminforth.dev") — A developer accidentally published API tokens to npm via a misconfigured CI pipeline. npm and Slack detected and revoked said tokens, though GitHub did not. The author shares his tale and some advice.
+
+Ivan Borshcho
+
+[Is Heroku Still Worth It in 2025? 💸](https://nodeweekly.com/link/164839/0a4070b383 "judoscale.com") — You might want to give this guide a read — we took a tour through PaaS alley and found some worthy (💵) alternatives.
+
+Judoscale sponsor
+
+📄 [A Deeper Look into Node.js Docker Images](https://nodeweekly.com/link/164840/0a4070b383) – Which Docker image should you choose? And just what do they contain anyway? Ivan Velichko
+
+📄 [A WebAssembly Compiler That Fits in a Tweet](https://nodeweekly.com/link/164841/0a4070b383) – A look into a fantastic little bit of hacking. And, yes, it runs in Node. Mariano Guerra and Patrick Dubroy
+
+🛠 Code & Tools
+
+[DBOS Transact v2: Lightweight Durable Execution in TypeScript](https://nodeweekly.com/link/164842/0a4070b383 "github.com") — An open source library for lightweight durable execution built on Postgres. Durable execution means persisting the execution state of your program while it runs, so if it’s interrupted or crashes, it resumes from where it left off – ideal for long-running or business-critical workflows. [Docs.](https://nodeweekly.com/link/164843/0a4070b383)
+
+DBOS, Inc.
+
+[Bun 1.2: A Big Step Forward for the Fast JS/TS Runtime](https://nodeweekly.com/link/164844/0a4070b383 "bun.sh") — I *know* it's not Node, but *JavaScriptCore* based Bun continues to up the server-side runtime game with major strides forward in Node.js compatibility in particular with this release. I often try Node scripts with `bun` and it Just Works™ – this is a good thing.
+
+Ashcon Partovi and the Bun Team
+
+🎨 [node-canvas 3.1: A Cairo-Backed Canvas Implementation](https://nodeweekly.com/link/164845/0a4070b383 "github.com") — We recently linked to [Skia Canvas](https://nodeweekly.com/link/164846/0a4070b383), a Skia and GPU-powered canvas drawing API for Node, but node-canvas is the longer standing library and is particularly easy to deploy and use, especially as it no longer has libuv or V8 dependencies.
+
+Automattic
+
+[Emittery: A Simple, Modern Async Event Emitter](https://nodeweekly.com/link/164847/0a4070b383 "github.com") — A small, async event emitter for Node and the browser, and now with support for `AbortController`.
+
+Sindre Sorhus
+
+* [Nock 14.0](https://nodeweekly.com/link/164848/0a4070b383) – HTTP server mocking and expectations library.
+
+* [pnpm 10.1](https://nodeweekly.com/link/164849/0a4070b383) – The alternative, efficient package manager.
+
+* [Poku 3.0](https://nodeweekly.com/link/164850/0a4070b383) – Cross-platform JavaScript test runner.
+
+* [np 10.2](https://nodeweekly.com/link/164851/0a4070b383) – A better `npm publish`. Adds support for Bun's new lock file.
+
+* [Node File Router 0.7](https://nodeweekly.com/link/164852/0a4070b383) – File-based routing for API services.
+
+* [JSPyBridge 1.2.2](https://nodeweekly.com/link/164853/0a4070b383) – Run Python from Node or vice versa.
+
+* [OpenAI Node 4.80](https://nodeweekly.com/link/164854/0a4070b383), [Undici 7.3](https://nodeweekly.com/link/164855/0a4070b383), [ESLint 9.19.0](https://nodeweekly.com/link/164856/0a4070b383)
+
+📰 Classifieds
+
+Protect your SaaS app with advanced device fingerprinting from [WorkOS Radar](https://nodeweekly.com/link/164857/0a4070b383). Stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+***
+
+🚀 Master Fullstack, JS Backends & DevOps [at Node Congress 2025!](https://nodeweekly.com/link/164858/0a4070b383) Join 5K devs worldwide on April 17-18. 2 days of talks & workshops!
+
+📢  Elsewhere in JavaScript
+
+A quick roundup of some of other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* 🗓️ Implementations of the [*Temporal*](https://nodeweekly.com/link/164859/0a4070b383) object are beginning to appear in experimental browser releases. Brian Smith takes a look at [how Temporal will modernize the way we deal with dates in JavaScript.](https://nodeweekly.com/link/164860/0a4070b383)
+
+* 🕒 On the topic of time, Iago Lastra ponders: [how long is a second in JavaScript?](https://nodeweekly.com/link/164861/0a4070b383) Luckily most of the time you won't need to worry about the complexities explained here.
+
+* Node competitor Deno (they share a dad!) did [a 2024 roundup of what happened with Deno](https://nodeweekly.com/link/164862/0a4070b383) with a large focus on Node and npm compatibility.
+
+* Nicholas C. Zakas [took a look back at the year 2024](https://nodeweekly.com/link/164863/0a4070b383) and what happened with ESLint during the year.
+
+* [SRCL](https://nodeweekly.com/link/164864/0a4070b383) is a neat new suite of React components for creating webapps with a monospaced, terminal-style aesthetic.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
