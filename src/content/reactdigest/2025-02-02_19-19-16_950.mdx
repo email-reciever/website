@@ -1,0 +1,140 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#491 Why are React Server Components beneficial?
+description: RD#491 Why are React Server Components beneficial?
+date: 星期日 07 晚上 二月 2o 2025
+author: reactdigest
+origin_url: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fwhy-are-react-server-comp?= =?us-ascii?Q?onents-beneficial?=
+origin_site: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fwhy-are-react-server-comp?= =?us-ascii?Q?onents-beneficial?=
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#491 Why are React Server Components beneficial?" url="=?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fwhy-are-react-server-comp?= =?us-ascii?Q?onents-beneficial?=" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UzqN62s7Uc_d8MHGk_Y2RcuVCtgmKvZzsRV9tAYfBTbMtHiGrV0ay_eqCvLm9TL4_ZMdKxiFFgxA7eoTUdxoxi1YY4JODwIeMQm9qVDNXRf-cBJslQ3oHlC1gWN7gQSBLgeG-QrHrjthaX5bOAfcHLH4VMrGJeXAG__YlXwopcCdQ4V84N--t9VFA2yh8ZdW-BimCemC96LxCiIGuQqyVwdERFlNE9X1cZ7znlwTpGLiQyXRIcuHBlge5tMctpbWa1qFQJaSlzDqmyfYpzEIfhS7XQfAMtUaWm92AGTxGlYlyGsGnVEfQyRbushce83Pl4vAV6yIQzZzcUAuzMzOcwLzvJHcVjn_9wQtPEezAUdFi5NGznsDjqmLWDkFWEuTjq2tVsGatisnn6lVsQtfTTnu9W7u04bFwZJz280-xV3U5a1zcGkU6NQ1AbYY7QJ3MT4gVj7y0HqrpCj8BQZl5eBG3U5ac_YRh0CF1iI2v1Rwrtl_hKMgtqSdMmQYOpXpRX0M6IJUQkoVQ5uDDLq8U_Tj0uj6Q_nlh6i4Eks_jZ4UEeLfIssYxNbp0IgAHlJndT9I_xn-K9ZU9JG3LHcrp8pDo6aLcSxfZZ5BOIkR2wLKJgcN7MV4bA-hD4FpTKSI6xanaPbBb13ezoj5xYwxbroH4T0fVZMRPCxf9S6jB2sjdO9x6PG_kesooTVMeNEJT6ccv8cifIldgyMNLhryks1oUovOHCkuWHOt6oIxDlnwQCgnyhS9w3544fA1IUvFf4S0R49NNMutfsLDXVD9WtsmaIj1liw7iR0ZCvFibV6WF0Fd5XgEDQ1St4kZ2Z1cs/4do/CMfIq1hnTCSWHhaNjdtNwg/h0/h001.mIRqNixMGk3OQeXIrk2SqDRS2Y1zIRGjYL93SgVhIBQ)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4do/CMfIq1hnTCSWHhaNjdtNwg/ho.gif)
+
+[Why are React Server Components actually beneficial?](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF7Q5vn76cs0Imf51jJpv2aFZmhmTGE8OE6H4u2RulhD-uOY-1xF4Li-SiqYtAywEpkeP5AMvdVa9oLDQYQJN5TUq1z1nNqp2Oj_97ojqweplycmpf_egx0lucVXly4UyQzc7H1PW2nAfDKtP_Nzt8I83Ji-bQWX-q7GLGHorh0ihWle1PvU3espRqQ15A7yf14klEOESGBcX5DSryJwqPQTlrgT3UMnclxgD1rryBvh3ZGgkR_mK2AJDWexDp6qu_HO-zimJKBv166w6XF8J6Hs9fLgjaZGZiClq50V-7IwS-Mww49L3YWatwMtEVuAQ1mDOzy8e1A07YkFkkXAwYY0/4do/CMfIq1hnTCSWHhaNjdtNwg/h1/h001.Kvlur7ohTjieVKwxZl9K14rxWBF_Cl6CfUi83Iar3iw)  
+_22 minutes_ by Tiger Abrodi
+
+Let's take a step back and really understand the "why" behind React Server Components. In this article Tiger describes React Server Components (RSCs) which represent a fundamental shift in React's architecture, addressing the core problem of excessive JavaScript being sent to clients in traditional React applications.
+
+[Tests are dead. Meticulous AI is here.](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2WqroLgOnA-NgNKtuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4do/CMfIq1hnTCSWHhaNjdtNwg/h2/h001.3-6Pdu85o-Cyk6yL2Wbfmoj9u_yzdsKVo5qAoT1S5eU)  
+_sponsored by Meticulous_
+
+Meticulous AI is a tool which automatically creates and maintains a continuously evolving e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Backed by CTO of GitHub, Guillermo Rauch (next.js author), yc and others, it's built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[Next.js: An honest review](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63mo4SBWu2hDw9C1IkMlXAe0g3H9odre_19lMGI6CW3jw1Jbd6rSmORvNEk6fGkRyicfatIkC3eefMtFbmWKiTn-lM6oAh2ZqJQU7rJkiMMwkumnTH1eXAyTj_WGKPpcQnOTTDjf-A6eenR3PutO8u1nGwlAImEKEnZltaCVl2BHuP7f9hq2LoF6TICT-VOSqS082qxWTSrgjcJtDzICvMeQ9wUrrZ8qDdIoqe3hfXKLt1wSslLHc4xkMEdyGnkJT_aJu_ghrgb4YttPaeRrDZS8/4do/CMfIq1hnTCSWHhaNjdtNwg/h3/h001.qcBlu76iszt52_qmAewXA7bO2z6jXcnhjMlm2zTjOZ8)  
+_9 minutes_ by Josef Erben
+
+Next.js 14 is praised for its performance, extensive ecosystem, and excellent integration with Vercel's hosting platform, but comes with notable challenges. While it excels at static sites and offers great developer experience, the App Router introduces complexity with several caveats around server/client components, middleware limitations, and security concerns with Server Actions.
+
+[Open-Closed Principle in React: Building Extensible Components](https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBOUcG_1yJ6DaWsvT-l50pRj20PQ2xn-x4uvf_k9OFMHKSQ6Yzz1O3j9giP81sEzH_avZO45ySo6cMf6pGRZSirnihUU3wPR463zUJWq2BLziR5c7NSPhJ7-uvAXOR1Q-For24NaBuxLKQ_QkV9laiVN1MFhoQQwiZhE-pnORzvFjh82jxWhGojUKwG_lQYWSf2vNo00aZeHuaMC8k8wzqkgJoJmMeVxUTSXkT1HqGtYKDkiBM_uvGZFe9b2RXV-0dZ3VZAW0b6INms55DprR4UfLt4U9bU7zlRKEZ6Bk1u-9_/4do/CMfIq1hnTCSWHhaNjdtNwg/h4/h001.5XKiArLRlwxRgvzXxBSxaub1QvOcT9l_ds2AOJoMXVI)  
+_4 minutes_ by Christian Ekrem
+
+In this article Christian discusses the Open-Closed Principle (OCP) in React applications, which states that software components should be open for extension but closed for modification. He demonstrates how to refactor React components using composition, Higher-Order Components (HOCs), and custom hooks to make them more extensible without changing existing code. He also provides practical examples of transforming "closed" components into "open" ones using TypeScript, showing how this approach leads to better maintainability, easier testing, and alignment with React's "composition over inheritance" philosophy.
+
+[Passing Generics to JSX Elements in TypeScript](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTZsGnc6XDC3J5Gx2K00G3AlDdi-jvz6j6GgccrdC73j8E-vikntb2P2mI7xIqZpIfYA4XwhBHf29aKFUq2CLbAfRCtKjZViZXfYigzYf5GLYhEDV0TLKxhP5Mch0FDAqfawKEZn41QTxfOAmcOOQjSRqH2RjAguPtzC-mz4oWjDO8EzrR7vRflK_22XklrahxVxDnsF3sfmlhKNbvkYosiXvryIb21YkVV1j9KGKrHlIHetY1AHDO8Uk3dTBGimhXoAH0hn4Fi60-NZLZV2gOGkHmPOuSi0NnxxUjcWs4clRkS0xZx-oKaFb_JKnxXP5XQ/4do/CMfIq1hnTCSWHhaNjdtNwg/h5/h001.an91IvQyoIhOcU5eiJELDYo-ohCGAjIbYRVnFvu5hV8)  
+_9 minutes_ by Marius Schulz
+
+Marius explains how to implement a type-safe Select component in React using TypeScript 2.9's support for generic JSX elements. He demonstrates the evolution from a basic JavaScript implementation to a fully typed TypeScript version, showing how to use generics to handle both string and number values while maintaining type safety.
+
+[The Hidden Complexity of Scaling WebSockets](https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBOZEvFKyoVjJn4meNllR7epZNnqd53-dC3FuKTtrflK_Pzalc8-sjDMnl0Dtq7N__NQi1bQdlE4eolJMz0feVpzwE2wJPWMu4rlh5JNkiDUXa2isaLsBghXWnP-xZMsP2G8untBE9WMLaHnDoPtM990eEQ7Hv4hVsVjeZjQiq2aJUf3-Tr1s6WSeKHMG9OENjEm366U9M23-iTSnPWt3IwtD_CW8cURvZhOKbx0qoTv20-BzQJRWlw0JN7PGmllaW7Q5JcM1s1_dmikamOrMN0ooZAe8yibHh8_oaUCdxrika/4do/CMfIq1hnTCSWHhaNjdtNwg/h6/h001.2j2v-CS6TJekZhHEzjKpkZeDOyK_sMSPSzJF5t-APJ0)  
+_5 minutes_ by Atul Jalan
+
+In this article Atul discusses key lessons learned in scaling WebSocket implementations at Compose, a platform that heavily relies on WebSockets for real-time features. The main challenges addressed include managing graceful deployments without disrupting user connections, establishing efficient message schemas, detecting connection issues through heartbeat mechanisms, and implementing HTTP fallbacks using server-sent events for environments where WebSockets are blocked.
+
+## webdev
+
+*   [Considerations for making a tree view component accessible](https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea_eXiYAmDUhp1J9-02IxqRtonQ-p3wE1yfzhKLvT62mQapr4XhZz5la-B5uApBMfnTidNn-XIMDnnunPctyKMEttrEMjpW0Gz4gynnFlz_l-aLpUt3OxttDs7bpsVILIcVIpDMi-xssWd-kBSlNh5WFSzNEVrmU-M-cCSYcEhHGpvDB9d4CPmej_svqAzerrgHlIm-PjgzA4gusnV0Iw2SqJrgJE3uqncQpqmIWugnbJmybTGXVNhxlMVoNTnTrz-2rp2eK7JuFTZPOcm8BCvS-ZGay1VfVZKFCNd7NtltgvZ--JGEkgJq2_U8bKLWplpgxWYvEpWZ7vQaGBgVXvAsfycPxIDBYB9-VLOjf8ULMr6z36420/4do/CMfIq1hnTCSWHhaNjdtNwg/h7/h001.U-X5zqogu8UCIQ1SNNWvYtcySevepFHzgqGGA2PsDTU)
+    
+*   [Creating an Angled Slider](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfaSOFJc2XPJZaMvVYObtcgP5BPs8v1r3SE6jbVw2oNOG_6O7GVTBYsF4aIQZSE1kfGivEbHaMoE-9o0dS5O5h50rypa1H9x3vZz0F4igYmWnfe2B6go6QGaWfNBKeJyHZwvxw0PCiPRHDD3aTwgsBvOWyVT1OJ9KXIAhtzlXWpLPjQhi0SnGPwJUBNpaIG5L0wphtYOYauL0k2h4MB9jW1L-qAvY_egnapl1pceaDQrLJg2wkeFy7zKDI21Ih-L4_4j-ZOOsnVE3k1xarK9pHe4XigcrbT6PS6QDRMrChd88/4do/CMfIq1hnTCSWHhaNjdtNwg/h8/h001.-tg-mNno5c3fZNOfgJWYQ6_07zuZ972MVfOodsh2pXQ)
+    
+*   [Container Queries Unleashed](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfyko-iFD6lxTdvug6MbGi-U17GL2jYQCuAVlFR_Yzn-RXzEGqkU3eDATWGcT-UhaMgYJwwbZ3Kgao6GZji5Miv-2MjXy83Atx_mVu93LZJDuP9D_OC6m4bQ6bg5L-_kGbbmw3PdSSV_eR5D_hYJweLnaz0oo5YCptEArZQXTPT9QSKwzNp-Uo1uEArPJjUqP0njVtwcCmB998UhZw4nltB85Upgh3TumTOH2tWRiCj9RVbjttn22xuO_XAIY7w6cONRCkgfFqLgkKWwvN3_xgMfEl3w8dLN_bJTlkWUXKLx/4do/CMfIq1hnTCSWHhaNjdtNwg/h9/h001.vcYCOPugs7y_F7ntO6dvPcgc7_gj6En3LK6QLgk-2Ws)
+    
+
+## javascript
+
+*   [How long is a second in JavaScript?](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVcLUL6y5T-W5s92_vTsdASd9wO4wqcUD3nJbMtO8KsVhvPXwdyyUALp5dm1YE3EoxA6TaBPYP_vEq5JBfI0kDzgfvm7jL91Dk6hqkv587FAg5HQ1YHbOeYytl1GAL4Z_r2ZaQGU5uwdJNLjp_gLCbalI6ADcCqnJFjU4eTLYHFsmJjSJY4yIgzDdnyt9yqKoxR1-RydoJlYXiYsxXuvWG1qRRtYxd1oN95vf4GjYQv29m-fYlh5bFyS_6ixoI5UGxXWAZEK6-Psv3K8nGaSVnqVqBY6Qpcm1mu3uJzQoDQWL/4do/CMfIq1hnTCSWHhaNjdtNwg/h10/h001.UF9N48VXOm8UNh-ucIXqBAVpO_IjOcS5BGUtur5TnjE)
+    
+*   [The Little I Know About Monads](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVZzfNOYpLQvugODVnEhbHpi5wiK5RWQMGkdhK-wu3d77PILSJ5rkt84E3LyHelt3_ehp897uMdioGtzP3MTjJYBhHR454iQq8smny_NAxKESNlkukoMsY-BDHasmrkL2f6NhlWkfNKc2hO3Jut6JqpI0j3Lu3ZcFbaGNb-mCp2jZnIm1CF3RodEWpPVIduyjCaFqMC4tt5OXuXTKgBR70X_snGrkWKdzEHpsT8TP13ULk37R0wOtrRZ-nn8070-lpaesflbvFEWt-FVy7vxGUSM_1ZWQU-AgcGj65L3UmZq7/4do/CMfIq1hnTCSWHhaNjdtNwg/h11/h001.H4Mms1je1ARxpPiSvvrGQsHLEZ93_UAxFsSZSnJx0v4)
+    
+*   [A WebAssembly compiler that fits in a tweet](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqbytDyZTfKUfzW86c-CWw0_xibbrIdR5BvMhifpaEdAjrMFae8NzPGf4G0buLzQ_9VtyTSF9kP7sSXxoRoPBJQ0Mv3xNhaoQncz2LWXUd2z9RQipfLZl91TlN5GJkXxQYUpKMCKhUE4WSTlL54W8jFCqifHwI3Je8fToOz6JpgIwo281ORT2xVahQ8uAOutdfrf_QCI6UkUCoD1MbxF-Pcm4DUIFMZFhVFRIpmf3oXW3bWoAvniYB9lo-cwyt1SQb6R7oPQR4R67gyAJ62P0nEXrW36Yv-K4kyhcTpLBW2qX/4do/CMfIq1hnTCSWHhaNjdtNwg/h12/h001.IjkcgL1qbcWAsWpKSSSHZuKS1pUcsibFtE7oM1gCjiw)
+    
+*   [My failed attempt to shrink all npm packages by 5%](https://link.mail.beehiiv.com/ss/c/u001.HjBpxMuZJ3Xr2cyiPk5rUS5Fj5MjlZmAwKPCHQQgFXDFAS6fYvZaqfQCgCvVPMK2fsaVUv0kgPve-aQ6_EW6jhHVvaEF7YDheoKuAUfiwpmbxqy9yZYjJhJRhczGSe0UKKn081k_p29TPwmf41gQmGBsPyPHwdDOkPXT8brJh1KVvnYf1rzxhcCLq3YCIoEFysET4nU8OiRWhDWPdVX8dpVccpV5XNmOVHvosKpr8fo4ALsbfKNBT35tI1w-6BTwZw0MJqHPT5l67bLexYkK8keDaVN6lYg-4MGF_hEXjvyVsJcatgdpfa0u9lgi2g7RWXpTNSfvtOrEGclixqC13g/4do/CMfIq1hnTCSWHhaNjdtNwg/h13/h001.uut9fhEhWTqFJjqawo--1qjDv-TQhDoJrZl36EOluZk)
+    
+
+And the most popular article from the last issue:
+
+*   [Initial load performance for React developers](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqaLHy8G_Zejf_j1U5B-_Zp2rbP01AkX10rc2TELs3OEQsWtA5E5msZhX5QEN8G7w96CRI8vSq-VmZn-f5T1UntZP8i1I9HZCjV4Sv7tNHE-l0E7qqm3JJi8aHrFi9mbIN7tTlMID2DIAMxqd2wwiJTK3sk9vm3cYeDDDk_3uvUB3vo6NPI60QWPAFw8JwbjQXswtyAmrd0wN7Ho_xklHNm9puU2TnQLlc8ciZpwaAcSmMbZ4CDy3cKsQ_ITCdpn8oVgPM6DEaVDHxTLOFp_oE9YQrrOV5cHYCh_NwjIT0di5/4do/CMfIq1hnTCSWHhaNjdtNwg/h14/h001.lqGPU4nkNHFSjIZVXEPWo6kYmrJt3ygjr49-D3ozU3w)
+    
+
+#
+</Detail>
+
+[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UzqN62s7Uc_d8MHGk_Y2RcuVCtgmKvZzsRV9tAYfBTbMtHiGrV0ay_eqCvLm9TL4_ZMdKxiFFgxA7eoTUdxoxi1YY4JODwIeMQm9qVDNXRf-cBJslQ3oHlC1gWN7gQSBLgeG-QrHrjthaX5bOAfcHLH4VMrGJeXAG__YlXwopcCdQ4V84N--t9VFA2yh8ZdW-BimCemC96LxCiIGuQqyVwdERFlNE9X1cZ7znlwTpGLiQyXRIcuHBlge5tMctpbWa1qFQJaSlzDqmyfYpzEIfhS7XQfAMtUaWm92AGTxGlYlyGsGnVEfQyRbushce83Pl4vAV6yIQzZzcUAuzMzOcwLzvJHcVjn_9wQtPEezAUdFi5NGznsDjqmLWDkFWEuTjq2tVsGatisnn6lVsQtfTTnu9W7u04bFwZJz280-xV3U5a1zcGkU6NQ1AbYY7QJ3MT4gVj7y0HqrpCj8BQZl5eBG3U5ac_YRh0CF1iI2v1Rwrtl_hKMgtqSdMmQYOpXpRX0M6IJUQkoVQ5uDDLq8U_Tj0uj6Q_nlh6i4Eks_jZ4UEeLfIssYxNbp0IgAHlJndT9I_xn-K9ZU9JG3LHcrp8pDo6aLcSxfZZ5BOIkR2wLKJgcN7MV4bA-hD4FpTKSI6xanaPbBb13ezoj5xYwxbroH4T0fVZMRPCxf9S6jB2sjdO9x6PG_kesooTVMeNEJT6ccv8cifIldgyMNLhryks1oUovOHCkuWHOt6oIxDlnwQCgnyhS9w3544fA1IUvFf4S0R49NNMutfsLDXVD9WtsmaIj1liw7iR0ZCvFibV6WF0Fd5XgEDQ1St4kZ2Z1cs/4do/CMfIq1hnTCSWHhaNjdtNwg/h0/h001.mIRqNixMGk3OQeXIrk2SqDRS2Y1zIRGjYL93SgVhIBQ)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4do/CMfIq1hnTCSWHhaNjdtNwg/ho.gif)
+
+[Why are React Server Components actually beneficial?](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF7Q5vn76cs0Imf51jJpv2aFZmhmTGE8OE6H4u2RulhD-uOY-1xF4Li-SiqYtAywEpkeP5AMvdVa9oLDQYQJN5TUq1z1nNqp2Oj_97ojqweplycmpf_egx0lucVXly4UyQzc7H1PW2nAfDKtP_Nzt8I83Ji-bQWX-q7GLGHorh0ihWle1PvU3espRqQ15A7yf14klEOESGBcX5DSryJwqPQTlrgT3UMnclxgD1rryBvh3ZGgkR_mK2AJDWexDp6qu_HO-zimJKBv166w6XF8J6Hs9fLgjaZGZiClq50V-7IwS-Mww49L3YWatwMtEVuAQ1mDOzy8e1A07YkFkkXAwYY0/4do/CMfIq1hnTCSWHhaNjdtNwg/h1/h001.Kvlur7ohTjieVKwxZl9K14rxWBF_Cl6CfUi83Iar3iw)\
+*22 minutes* by Tiger Abrodi
+
+Let's take a step back and really understand the "why" behind React Server Components. In this article Tiger describes React Server Components (RSCs) which represent a fundamental shift in React's architecture, addressing the core problem of excessive JavaScript being sent to clients in traditional React applications.
+
+[Tests are dead. Meticulous AI is here.](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2WqroLgOnA-NgNKtuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4do/CMfIq1hnTCSWHhaNjdtNwg/h2/h001.3-6Pdu85o-Cyk6yL2Wbfmoj9u_yzdsKVo5qAoT1S5eU)\
+*sponsored by Meticulous*
+
+Meticulous AI is a tool which automatically creates and maintains a continuously evolving e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Backed by CTO of GitHub, Guillermo Rauch (next.js author), yc and others, it's built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[Next.js: An honest review](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63mo4SBWu2hDw9C1IkMlXAe0g3H9odre_19lMGI6CW3jw1Jbd6rSmORvNEk6fGkRyicfatIkC3eefMtFbmWKiTn-lM6oAh2ZqJQU7rJkiMMwkumnTH1eXAyTj_WGKPpcQnOTTDjf-A6eenR3PutO8u1nGwlAImEKEnZltaCVl2BHuP7f9hq2LoF6TICT-VOSqS082qxWTSrgjcJtDzICvMeQ9wUrrZ8qDdIoqe3hfXKLt1wSslLHc4xkMEdyGnkJT_aJu_ghrgb4YttPaeRrDZS8/4do/CMfIq1hnTCSWHhaNjdtNwg/h3/h001.qcBlu76iszt52_qmAewXA7bO2z6jXcnhjMlm2zTjOZ8)\
+*9 minutes* by Josef Erben
+
+Next.js 14 is praised for its performance, extensive ecosystem, and excellent integration with Vercel's hosting platform, but comes with notable challenges. While it excels at static sites and offers great developer experience, the App Router introduces complexity with several caveats around server/client components, middleware limitations, and security concerns with Server Actions.
+
+[Open-Closed Principle in React: Building Extensible Components](https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBOUcG_1yJ6DaWsvT-l50pRj20PQ2xn-x4uvf_k9OFMHKSQ6Yzz1O3j9giP81sEzH_avZO45ySo6cMf6pGRZSirnihUU3wPR463zUJWq2BLziR5c7NSPhJ7-uvAXOR1Q-For24NaBuxLKQ_QkV9laiVN1MFhoQQwiZhE-pnORzvFjh82jxWhGojUKwG_lQYWSf2vNo00aZeHuaMC8k8wzqkgJoJmMeVxUTSXkT1HqGtYKDkiBM_uvGZFe9b2RXV-0dZ3VZAW0b6INms55DprR4UfLt4U9bU7zlRKEZ6Bk1u-9_/4do/CMfIq1hnTCSWHhaNjdtNwg/h4/h001.5XKiArLRlwxRgvzXxBSxaub1QvOcT9l_ds2AOJoMXVI)\
+*4 minutes* by Christian Ekrem
+
+In this article Christian discusses the Open-Closed Principle (OCP) in React applications, which states that software components should be open for extension but closed for modification. He demonstrates how to refactor React components using composition, Higher-Order Components (HOCs), and custom hooks to make them more extensible without changing existing code. He also provides practical examples of transforming "closed" components into "open" ones using TypeScript, showing how this approach leads to better maintainability, easier testing, and alignment with React's "composition over inheritance" philosophy.
+
+[Passing Generics to JSX Elements in TypeScript](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTZsGnc6XDC3J5Gx2K00G3AlDdi-jvz6j6GgccrdC73j8E-vikntb2P2mI7xIqZpIfYA4XwhBHf29aKFUq2CLbAfRCtKjZViZXfYigzYf5GLYhEDV0TLKxhP5Mch0FDAqfawKEZn41QTxfOAmcOOQjSRqH2RjAguPtzC-mz4oWjDO8EzrR7vRflK_22XklrahxVxDnsF3sfmlhKNbvkYosiXvryIb21YkVV1j9KGKrHlIHetY1AHDO8Uk3dTBGimhXoAH0hn4Fi60-NZLZV2gOGkHmPOuSi0NnxxUjcWs4clRkS0xZx-oKaFb_JKnxXP5XQ/4do/CMfIq1hnTCSWHhaNjdtNwg/h5/h001.an91IvQyoIhOcU5eiJELDYo-ohCGAjIbYRVnFvu5hV8)\
+*9 minutes* by Marius Schulz
+
+Marius explains how to implement a type-safe Select component in React using TypeScript 2.9's support for generic JSX elements. He demonstrates the evolution from a basic JavaScript implementation to a fully typed TypeScript version, showing how to use generics to handle both string and number values while maintaining type safety.
+
+[The Hidden Complexity of Scaling WebSockets](https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBOZEvFKyoVjJn4meNllR7epZNnqd53-dC3FuKTtrflK_Pzalc8-sjDMnl0Dtq7N__NQi1bQdlE4eolJMz0feVpzwE2wJPWMu4rlh5JNkiDUXa2isaLsBghXWnP-xZMsP2G8untBE9WMLaHnDoPtM990eEQ7Hv4hVsVjeZjQiq2aJUf3-Tr1s6WSeKHMG9OENjEm366U9M23-iTSnPWt3IwtD_CW8cURvZhOKbx0qoTv20-BzQJRWlw0JN7PGmllaW7Q5JcM1s1_dmikamOrMN0ooZAe8yibHh8_oaUCdxrika/4do/CMfIq1hnTCSWHhaNjdtNwg/h6/h001.2j2v-CS6TJekZhHEzjKpkZeDOyK_sMSPSzJF5t-APJ0)\
+*5 minutes* by Atul Jalan
+
+In this article Atul discusses key lessons learned in scaling WebSocket implementations at Compose, a platform that heavily relies on WebSockets for real-time features. The main challenges addressed include managing graceful deployments without disrupting user connections, establishing efficient message schemas, detecting connection issues through heartbeat mechanisms, and implementing HTTP fallbacks using server-sent events for environments where WebSockets are blocked.
+
+## webdev
+
+* [Considerations for making a tree view component accessible](https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea_eXiYAmDUhp1J9-02IxqRtonQ-p3wE1yfzhKLvT62mQapr4XhZz5la-B5uApBMfnTidNn-XIMDnnunPctyKMEttrEMjpW0Gz4gynnFlz_l-aLpUt3OxttDs7bpsVILIcVIpDMi-xssWd-kBSlNh5WFSzNEVrmU-M-cCSYcEhHGpvDB9d4CPmej_svqAzerrgHlIm-PjgzA4gusnV0Iw2SqJrgJE3uqncQpqmIWugnbJmybTGXVNhxlMVoNTnTrz-2rp2eK7JuFTZPOcm8BCvS-ZGay1VfVZKFCNd7NtltgvZ--JGEkgJq2_U8bKLWplpgxWYvEpWZ7vQaGBgVXvAsfycPxIDBYB9-VLOjf8ULMr6z36420/4do/CMfIq1hnTCSWHhaNjdtNwg/h7/h001.U-X5zqogu8UCIQ1SNNWvYtcySevepFHzgqGGA2PsDTU)
+
+* [Creating an Angled Slider](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfaSOFJc2XPJZaMvVYObtcgP5BPs8v1r3SE6jbVw2oNOG_6O7GVTBYsF4aIQZSE1kfGivEbHaMoE-9o0dS5O5h50rypa1H9x3vZz0F4igYmWnfe2B6go6QGaWfNBKeJyHZwvxw0PCiPRHDD3aTwgsBvOWyVT1OJ9KXIAhtzlXWpLPjQhi0SnGPwJUBNpaIG5L0wphtYOYauL0k2h4MB9jW1L-qAvY_egnapl1pceaDQrLJg2wkeFy7zKDI21Ih-L4_4j-ZOOsnVE3k1xarK9pHe4XigcrbT6PS6QDRMrChd88/4do/CMfIq1hnTCSWHhaNjdtNwg/h8/h001.-tg-mNno5c3fZNOfgJWYQ6_07zuZ972MVfOodsh2pXQ)
+
+* [Container Queries Unleashed](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfyko-iFD6lxTdvug6MbGi-U17GL2jYQCuAVlFR_Yzn-RXzEGqkU3eDATWGcT-UhaMgYJwwbZ3Kgao6GZji5Miv-2MjXy83Atx_mVu93LZJDuP9D_OC6m4bQ6bg5L-_kGbbmw3PdSSV_eR5D_hYJweLnaz0oo5YCptEArZQXTPT9QSKwzNp-Uo1uEArPJjUqP0njVtwcCmB998UhZw4nltB85Upgh3TumTOH2tWRiCj9RVbjttn22xuO_XAIY7w6cONRCkgfFqLgkKWwvN3_xgMfEl3w8dLN_bJTlkWUXKLx/4do/CMfIq1hnTCSWHhaNjdtNwg/h9/h001.vcYCOPugs7y_F7ntO6dvPcgc7_gj6En3LK6QLgk-2Ws)
+
+## javascript
+
+* [How long is a second in JavaScript?](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVcLUL6y5T-W5s92_vTsdASd9wO4wqcUD3nJbMtO8KsVhvPXwdyyUALp5dm1YE3EoxA6TaBPYP_vEq5JBfI0kDzgfvm7jL91Dk6hqkv587FAg5HQ1YHbOeYytl1GAL4Z_r2ZaQGU5uwdJNLjp_gLCbalI6ADcCqnJFjU4eTLYHFsmJjSJY4yIgzDdnyt9yqKoxR1-RydoJlYXiYsxXuvWG1qRRtYxd1oN95vf4GjYQv29m-fYlh5bFyS_6ixoI5UGxXWAZEK6-Psv3K8nGaSVnqVqBY6Qpcm1mu3uJzQoDQWL/4do/CMfIq1hnTCSWHhaNjdtNwg/h10/h001.UF9N48VXOm8UNh-ucIXqBAVpO_IjOcS5BGUtur5TnjE)
+
+* [The Little I Know About Monads](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVZzfNOYpLQvugODVnEhbHpi5wiK5RWQMGkdhK-wu3d77PILSJ5rkt84E3LyHelt3_ehp897uMdioGtzP3MTjJYBhHR454iQq8smny_NAxKESNlkukoMsY-BDHasmrkL2f6NhlWkfNKc2hO3Jut6JqpI0j3Lu3ZcFbaGNb-mCp2jZnIm1CF3RodEWpPVIduyjCaFqMC4tt5OXuXTKgBR70X_snGrkWKdzEHpsT8TP13ULk37R0wOtrRZ-nn8070-lpaesflbvFEWt-FVy7vxGUSM_1ZWQU-AgcGj65L3UmZq7/4do/CMfIq1hnTCSWHhaNjdtNwg/h11/h001.H4Mms1je1ARxpPiSvvrGQsHLEZ93_UAxFsSZSnJx0v4)
+
+* [A WebAssembly compiler that fits in a tweet](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqbytDyZTfKUfzW86c-CWw0_xibbrIdR5BvMhifpaEdAjrMFae8NzPGf4G0buLzQ_9VtyTSF9kP7sSXxoRoPBJQ0Mv3xNhaoQncz2LWXUd2z9RQipfLZl91TlN5GJkXxQYUpKMCKhUE4WSTlL54W8jFCqifHwI3Je8fToOz6JpgIwo281ORT2xVahQ8uAOutdfrf_QCI6UkUCoD1MbxF-Pcm4DUIFMZFhVFRIpmf3oXW3bWoAvniYB9lo-cwyt1SQb6R7oPQR4R67gyAJ62P0nEXrW36Yv-K4kyhcTpLBW2qX/4do/CMfIq1hnTCSWHhaNjdtNwg/h12/h001.IjkcgL1qbcWAsWpKSSSHZuKS1pUcsibFtE7oM1gCjiw)
+
+* [My failed attempt to shrink all npm packages by 5%](https://link.mail.beehiiv.com/ss/c/u001.HjBpxMuZJ3Xr2cyiPk5rUS5Fj5MjlZmAwKPCHQQgFXDFAS6fYvZaqfQCgCvVPMK2fsaVUv0kgPve-aQ6_EW6jhHVvaEF7YDheoKuAUfiwpmbxqy9yZYjJhJRhczGSe0UKKn081k_p29TPwmf41gQmGBsPyPHwdDOkPXT8brJh1KVvnYf1rzxhcCLq3YCIoEFysET4nU8OiRWhDWPdVX8dpVccpV5XNmOVHvosKpr8fo4ALsbfKNBT35tI1w-6BTwZw0MJqHPT5l67bLexYkK8keDaVN6lYg-4MGF_hEXjvyVsJcatgdpfa0u9lgi2g7RWXpTNSfvtOrEGclixqC13g/4do/CMfIq1hnTCSWHhaNjdtNwg/h13/h001.uut9fhEhWTqFJjqawo--1qjDv-TQhDoJrZl36EOluZk)
+
+And the most popular article from the last issue:
+
+* [Initial load performance for React developers](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqaLHy8G_Zejf_j1U5B-_Zp2rbP01AkX10rc2TELs3OEQsWtA5E5msZhX5QEN8G7w96CRI8vSq-VmZn-f5T1UntZP8i1I9HZCjV4Sv7tNHE-l0E7qqm3JJi8aHrFi9mbIN7tTlMID2DIAMxqd2wwiJTK3sk9vm3cYeDDDk_3uvUB3vo6NPI60QWPAFw8JwbjQXswtyAmrd0wN7Ho_xklHNm9puU2TnQLlc8ciZpwaAcSmMbZ4CDy3cKsQ_ITCdpn8oVgPM6DEaVDHxTLOFp_oE9YQrrOV5cHYCh_NwjIT0di5/4do/CMfIq1hnTCSWHhaNjdtNwg/h14/h001.lqGPU4nkNHFSjIZVXEPWo6kYmrJt3ygjr49-D3ozU3w)
+
+#
+
+
