@@ -1,0 +1,296 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: A TypeScript release targeted at Node developers
+description: A TypeScript release targeted at Node developers
+date: 星期二 03 下午 二月 4o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/565
+origin_site: https://nodeweekly.com/issues/565
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="A TypeScript release targeted at Node developers" url="https://nodeweekly.com/issues/565" />
+
+<Detail client:only="react">
+	#​565 — February 4, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/565)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/165173/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/isfqg93lyk2bvjz1digt.jpg)](https://nodeweekly.com/link/165174/0a4070b383)
+
+[Announcing TypeScript 5.8 Beta: A Big One for Node Developers](https://nodeweekly.com/link/165174/0a4070b383 "devblogs.microsoft.com") — It's unusual for a TypeScript beta to be exciting for Node developers in particular, but while TypeScript 5.8 is low on features generally, it's _really_ Node focused with [support for `require()` of ES modules in the `nodenext` mode](https://nodeweekly.com/link/165175/0a4070b383), a [stable `--module node18`](https://nodeweekly.com/link/165176/0a4070b383), and most notably [a `--erasableSyntaxOnly` option](https://nodeweekly.com/link/165177/0a4070b383) for ensuring the use of TypeScript that Node 22.6+'s type-stripping features can deal with.
+
+Daniel Rosenwasser
+
+[Introducing Mentoss: The `fetch` Mocker](https://nodeweekly.com/link/165178/0a4070b383 "humanwhocodes.com") — A new approach to mocking global `fetch()` calls (in both browsers and server-side runtimes) inspired by previous attempts like Nock and MSW.
+
+Nicholas C. Zakas
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/ce990271.png)](https://nodeweekly.com/link/165173/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/165173/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics to manage and optimize application data effectively.
+
+Memetria sponsor
+
+[Standard Schema: A Common Interface to Schema / Validation Libraries](https://nodeweekly.com/link/165179/0a4070b383 "standardschema.dev") — From the creators of [Zod](https://nodeweekly.com/link/165180/0a4070b383), [Valibot](https://nodeweekly.com/link/165181/0a4070b383) and [ArkType](https://nodeweekly.com/link/165182/0a4070b383) comes a fantastic bit of collaboration to define a common interface to use JavaScript and TypeScript schema libraries.
+
+McDonnell, Hiller, and Blass
+
+**IN BRIEF:**
+
+*   [Node.js v23.7.0 (Current) has been released](https://nodeweekly.com/link/165183/0a4070b383) with many bug fixes and tweaks. You can now [use glob patterns in the `exclude` option](https://nodeweekly.com/link/165184/0a4070b383) of glob functions and [there's a new error](https://nodeweekly.com/link/165185/0a4070b383) to let TypeScript users know unsupported TypeScript features are present in their code.
+    
+*   Josh Goldberg explains [the differences between ESLint and TypeScript,](https://nodeweekly.com/link/165186/0a4070b383) beyond the obvious.
+    
+*   [Publican](https://nodeweekly.com/link/165187/0a4070b383) is a promising, new, Node.js-powered static site generator.
+    
+*   [Harmony](https://nodeweekly.com/link/165227/0a4070b383), from [Bit](https://nodeweekly.com/link/165228/0a4070b383), describes itself as a 'minimalistic stitching layer for composable architectures' – think a cross between monoliths and microservices without the downsides of each.
+    
+
+[The Modern Way to Write JavaScript Servers?](https://nodeweekly.com/link/165188/0a4070b383 "marvinh.dev") — The irony is that while Node popularized JavaScript on the server (if we ignore Netscape's attempts in the 90s) this modern, standardized cross-runtime approach _doesn’t_ quite work on bare Node (yet – though you can [polyfill it.](https://nodeweekly.com/link/165189/0a4070b383))
+
+Marvin Hagemeister
+
+[Start Selling to Enterprise Faster with WorkOS](https://nodeweekly.com/link/165190/0a4070b383 "workos.com") — Add SSO, SCIM, and RBAC to your B2B SaaS app in minutes—not months.
+
+WorkOS sponsor
+
+📄 [How We Share Secrets at a Fully-Remote Startup](https://nodeweekly.com/link/165191/0a4070b383) – And, curiously, it involves using Node. Dmitry Sagalovskiy
+
+📄 [Keep Your Node Apps Secure with `npx is-my-node-vulnerable`](https://nodeweekly.com/link/165192/0a4070b383) Trevor I. Lasn
+
+📄 [How to Use Node's `fs` in the Browser for Custom Playgrounds](https://nodeweekly.com/link/165193/0a4070b383) Ivan Chebykin
+
+📄 [Distributed Tracing in Node.js with OpenTelemetry](https://nodeweekly.com/link/165194/0a4070b383) Ayooluwa Isaiah
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rsxwxsxrvyu0hsltwpfd.jpg)](https://nodeweekly.com/link/165195/0a4070b383)
+
+[parse-duration 2.0: Convert a Human Readable Duration to Milliseconds](https://nodeweekly.com/link/165195/0a4070b383 "github.com") — You might wonder why a library that converts `1hr 20mins` into `4800000` needs a version 2. Well, it now supports more units (`mo`, `mth`, `microsec`, and `nanosec`), has moved to ESM, and supports locales.
+
+Jake Rosoman
+
+[Node File Trace (NFT): Node Dependency Tracing Utility](https://nodeweekly.com/link/165196/0a4070b383 "github.com") — A tool to determine exactly which files are necessary for an app to run. Finally, a type of NFT I can actually comprehend!
+
+Vercel
+
+[Feluda: A Tool to Analyze the Licences of Dependencies](https://nodeweekly.com/link/165197/0a4070b383 "github.com") — It’s a Rust-powered project but one which can be used to process the dependencies of Node, Go, or Rust projects and return a report (or show a TUI interface) on potentially restrictive licenses that apply.
+
+Kumar Anirudha
+
+📄 [docxtemplater: Generate `docx` and `pptx` Documents from Templates](https://nodeweekly.com/link/165198/0a4070b383 "docxtemplater.com") — Generate Word and PowerPoint files dynamically by merging against template documents (e.g. invoices, contracts, certificates) It’s open source (MIT/GPLv3) but the creator offers commercial extensions (such as for supporting Excel). [GitHub repo](https://nodeweekly.com/link/165199/0a4070b383) and [feature demos.](https://nodeweekly.com/link/165200/0a4070b383)
+
+Edgar Hipp
+
+[http-status: Another Way to Work with HTTP Status Codes](https://nodeweekly.com/link/165201/0a4070b383 "github.com") — For example: `status[418]` returns `"I'm a teapot"` and `status.IM_A_TEAPOT` returns `418`.
+
+Adaltas
+
+*   [get-value 4.0](https://nodeweekly.com/link/165202/0a4070b383) – Use property paths (`a.b.c`) get a nested value from an object.
+    
+*   🤖 [OpenAI Node 4.82](https://nodeweekly.com/link/165203/0a4070b383) – The official Node library for OpenAI's API adds support for their new `o3-mini` model.
+    
+*   [sqs-consumer 11.5](https://nodeweekly.com/link/165204/0a4070b383) – The BBC's solution to building AWS Simple Queue Service (SQS) apps _sans_ boilerplate.
+    
+*   [exiftool-vendored 29.1](https://nodeweekly.com/link/165205/0a4070b383) – Cross-platform access to ExifTool for managing metadata in multimedia files.
+    
+*   [Wasp 0.16](https://nodeweekly.com/link/165206/0a4070b383) – [Wasp](https://nodeweekly.com/link/165207/0a4070b383) is a Rails-like framework using Node, React & Prisma.
+    
+*   🤖 [node-llama-cpp 3.5](https://nodeweekly.com/link/165208/0a4070b383) – Run LLMs locally with bindings to `llama.cpp`.
+    
+*   [Neutralinojs 5.6](https://nodeweekly.com/link/165209/0a4070b383) – Lightweight cross-platform desktop app approach.
+    
+*   [MongoDB Node.js Driver 6.13](https://nodeweekly.com/link/165210/0a4070b383) – The latest official MongoDB driver.
+    
+*   [pnpm 10.2](https://nodeweekly.com/link/165211/0a4070b383) – The alternative, efficient package manager.
+    
+*   [Prisma 6.3](https://nodeweekly.com/link/165212/0a4070b383) – Popular ORM for Node.js and TypeScript.
+    
+*   [pino-http 10.4](https://nodeweekly.com/link/165213/0a4070b383) – High-speed HTTP logger for Node.
+    
+
+📰 Classifieds
+
+[Learn about Node.js environment variables](https://nodeweekly.com/link/165214/0a4070b383), how they are used, and the many ways to set them.
+
+* * *
+
+[Ship faster, fix quicker!](https://nodeweekly.com/link/165215/0a4070b383) 🛠️ Our workshop shows you how code-level visibility helps you squash bugs & slowdowns before release. [Register >>](https://nodeweekly.com/link/165215/0a4070b383)
+
+📢  Elsewhere in JavaScript
+
+A quick roundup of some of other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   🤣 The Deno vs Oracle [JavaScript™ trademark case](https://nodeweekly.com/link/165216/0a4070b383) rolls on with Oracle just barely meeting a deadline to [file a motion to dismiss the case.](https://nodeweekly.com/link/165217/0a4070b383) Oracle asserts that _"relevant consumers do not perceive JAVASCRIPT as a generic term"_ and implies JavaScript is quite _clearly_ theirs in the eyes of the public thanks to the popularity of their [Oracle JavaScript Extension Toolkit (JET)](https://nodeweekly.com/link/165218/0a4070b383).
+    
+*   The [JSR](https://nodeweekly.com/link/165219/0a4070b383) open source registry, created by the Deno team, [now has an independent governing board of directors](https://nodeweekly.com/link/165220/0a4070b383) with a policy of 'open governance' in order to provide value to the entire JavaScript community.
+    
+*   📊 [Vercel has acquired the team](https://nodeweekly.com/link/165221/0a4070b383) behind [Tremor](https://nodeweekly.com/link/165222/0a4070b383), a popular suite of React components for building charts and dashboards. The plan is to enhance [v0](https://nodeweekly.com/link/165223/0a4070b383) with Tremor's work and to open-source more components.
+    
+*   The creator of [SolidJS](https://nodeweekly.com/link/165224/0a4070b383) says that [Angular and Vue are the frameworks to watch in 2025](https://nodeweekly.com/link/165225/0a4070b383), while reflecting on JS framework progress generally.
+    
+*   [Bun 1.2.2](https://nodeweekly.com/link/165226/0a4070b383) has been released with big drops in idle memory usage.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​565 — February 4, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/565)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/165173/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/isfqg93lyk2bvjz1digt.jpg)](https://nodeweekly.com/link/165174/0a4070b383)
+
+[Announcing TypeScript 5.8 Beta: A Big One for Node Developers](https://nodeweekly.com/link/165174/0a4070b383 "devblogs.microsoft.com") — It's unusual for a TypeScript beta to be exciting for Node developers in particular, but while TypeScript 5.8 is low on features generally, it's *really* Node focused with [support for `require()` of ES modules in the `nodenext` mode](https://nodeweekly.com/link/165175/0a4070b383), a [stable `--module node18`](https://nodeweekly.com/link/165176/0a4070b383), and most notably [a `--erasableSyntaxOnly` option](https://nodeweekly.com/link/165177/0a4070b383) for ensuring the use of TypeScript that Node 22.6+'s type-stripping features can deal with.
+
+Daniel Rosenwasser
+
+[Introducing Mentoss: The `fetch` Mocker](https://nodeweekly.com/link/165178/0a4070b383 "humanwhocodes.com") — A new approach to mocking global `fetch()` calls (in both browsers and server-side runtimes) inspired by previous attempts like Nock and MSW.
+
+Nicholas C. Zakas
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/ce990271.png)](https://nodeweekly.com/link/165173/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/165173/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics to manage and optimize application data effectively.
+
+Memetria sponsor
+
+[Standard Schema: A Common Interface to Schema / Validation Libraries](https://nodeweekly.com/link/165179/0a4070b383 "standardschema.dev") — From the creators of [Zod](https://nodeweekly.com/link/165180/0a4070b383), [Valibot](https://nodeweekly.com/link/165181/0a4070b383) and [ArkType](https://nodeweekly.com/link/165182/0a4070b383) comes a fantastic bit of collaboration to define a common interface to use JavaScript and TypeScript schema libraries.
+
+McDonnell, Hiller, and Blass
+
+**IN BRIEF:**
+
+* [Node.js v23.7.0 (Current) has been released](https://nodeweekly.com/link/165183/0a4070b383) with many bug fixes and tweaks. You can now [use glob patterns in the `exclude` option](https://nodeweekly.com/link/165184/0a4070b383) of glob functions and [there's a new error](https://nodeweekly.com/link/165185/0a4070b383) to let TypeScript users know unsupported TypeScript features are present in their code.
+
+* Josh Goldberg explains [the differences between ESLint and TypeScript,](https://nodeweekly.com/link/165186/0a4070b383) beyond the obvious.
+
+* [Publican](https://nodeweekly.com/link/165187/0a4070b383) is a promising, new, Node.js-powered static site generator.
+
+* [Harmony](https://nodeweekly.com/link/165227/0a4070b383), from [Bit](https://nodeweekly.com/link/165228/0a4070b383), describes itself as a 'minimalistic stitching layer for composable architectures' – think a cross between monoliths and microservices without the downsides of each.
+
+[The Modern Way to Write JavaScript Servers?](https://nodeweekly.com/link/165188/0a4070b383 "marvinh.dev") — The irony is that while Node popularized JavaScript on the server (if we ignore Netscape's attempts in the 90s) this modern, standardized cross-runtime approach *doesn’t* quite work on bare Node (yet – though you can [polyfill it.](https://nodeweekly.com/link/165189/0a4070b383))
+
+Marvin Hagemeister
+
+[Start Selling to Enterprise Faster with WorkOS](https://nodeweekly.com/link/165190/0a4070b383 "workos.com") — Add SSO, SCIM, and RBAC to your B2B SaaS app in minutes—not months.
+
+WorkOS sponsor
+
+📄 [How We Share Secrets at a Fully-Remote Startup](https://nodeweekly.com/link/165191/0a4070b383) – And, curiously, it involves using Node. Dmitry Sagalovskiy
+
+📄 [Keep Your Node Apps Secure with `npx is-my-node-vulnerable`](https://nodeweekly.com/link/165192/0a4070b383) Trevor I. Lasn
+
+📄 [How to Use Node's `fs` in the Browser for Custom Playgrounds](https://nodeweekly.com/link/165193/0a4070b383) Ivan Chebykin
+
+📄 [Distributed Tracing in Node.js with OpenTelemetry](https://nodeweekly.com/link/165194/0a4070b383) Ayooluwa Isaiah
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rsxwxsxrvyu0hsltwpfd.jpg)](https://nodeweekly.com/link/165195/0a4070b383)
+
+[parse-duration 2.0: Convert a Human Readable Duration to Milliseconds](https://nodeweekly.com/link/165195/0a4070b383 "github.com") — You might wonder why a library that converts `1hr 20mins` into `4800000` needs a version 2. Well, it now supports more units (`mo`, `mth`, `microsec`, and `nanosec`), has moved to ESM, and supports locales.
+
+Jake Rosoman
+
+[Node File Trace (NFT): Node Dependency Tracing Utility](https://nodeweekly.com/link/165196/0a4070b383 "github.com") — A tool to determine exactly which files are necessary for an app to run. Finally, a type of NFT I can actually comprehend!
+
+Vercel
+
+[Feluda: A Tool to Analyze the Licences of Dependencies](https://nodeweekly.com/link/165197/0a4070b383 "github.com") — It’s a Rust-powered project but one which can be used to process the dependencies of Node, Go, or Rust projects and return a report (or show a TUI interface) on potentially restrictive licenses that apply.
+
+Kumar Anirudha
+
+📄 [docxtemplater: Generate `docx` and `pptx` Documents from Templates](https://nodeweekly.com/link/165198/0a4070b383 "docxtemplater.com") — Generate Word and PowerPoint files dynamically by merging against template documents (e.g. invoices, contracts, certificates) It’s open source (MIT/GPLv3) but the creator offers commercial extensions (such as for supporting Excel). [GitHub repo](https://nodeweekly.com/link/165199/0a4070b383) and [feature demos.](https://nodeweekly.com/link/165200/0a4070b383)
+
+Edgar Hipp
+
+[http-status: Another Way to Work with HTTP Status Codes](https://nodeweekly.com/link/165201/0a4070b383 "github.com") — For example: `status[418]` returns `"I'm a teapot"` and `status.IM_A_TEAPOT` returns `418`.
+
+Adaltas
+
+* [get-value 4.0](https://nodeweekly.com/link/165202/0a4070b383) – Use property paths (`a.b.c`) get a nested value from an object.
+
+* 🤖 [OpenAI Node 4.82](https://nodeweekly.com/link/165203/0a4070b383) – The official Node library for OpenAI's API adds support for their new `o3-mini` model.
+
+* [sqs-consumer 11.5](https://nodeweekly.com/link/165204/0a4070b383) – The BBC's solution to building AWS Simple Queue Service (SQS) apps *sans* boilerplate.
+
+* [exiftool-vendored 29.1](https://nodeweekly.com/link/165205/0a4070b383) – Cross-platform access to ExifTool for managing metadata in multimedia files.
+
+* [Wasp 0.16](https://nodeweekly.com/link/165206/0a4070b383) – [Wasp](https://nodeweekly.com/link/165207/0a4070b383) is a Rails-like framework using Node, React & Prisma.
+
+* 🤖 [node-llama-cpp 3.5](https://nodeweekly.com/link/165208/0a4070b383) – Run LLMs locally with bindings to `llama.cpp`.
+
+* [Neutralinojs 5.6](https://nodeweekly.com/link/165209/0a4070b383) – Lightweight cross-platform desktop app approach.
+
+* [MongoDB Node.js Driver 6.13](https://nodeweekly.com/link/165210/0a4070b383) – The latest official MongoDB driver.
+
+* [pnpm 10.2](https://nodeweekly.com/link/165211/0a4070b383) – The alternative, efficient package manager.
+
+* [Prisma 6.3](https://nodeweekly.com/link/165212/0a4070b383) – Popular ORM for Node.js and TypeScript.
+
+* [pino-http 10.4](https://nodeweekly.com/link/165213/0a4070b383) – High-speed HTTP logger for Node.
+
+📰 Classifieds
+
+[Learn about Node.js environment variables](https://nodeweekly.com/link/165214/0a4070b383), how they are used, and the many ways to set them.
+
+***
+
+[Ship faster, fix quicker!](https://nodeweekly.com/link/165215/0a4070b383) 🛠️ Our workshop shows you how code-level visibility helps you squash bugs & slowdowns before release. [Register >>](https://nodeweekly.com/link/165215/0a4070b383)
+
+📢  Elsewhere in JavaScript
+
+A quick roundup of some of other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* 🤣 The Deno vs Oracle [JavaScript™ trademark case](https://nodeweekly.com/link/165216/0a4070b383) rolls on with Oracle just barely meeting a deadline to [file a motion to dismiss the case.](https://nodeweekly.com/link/165217/0a4070b383) Oracle asserts that *"relevant consumers do not perceive JAVASCRIPT as a generic term"* and implies JavaScript is quite *clearly* theirs in the eyes of the public thanks to the popularity of their [Oracle JavaScript Extension Toolkit (JET)](https://nodeweekly.com/link/165218/0a4070b383).
+
+* The [JSR](https://nodeweekly.com/link/165219/0a4070b383) open source registry, created by the Deno team, [now has an independent governing board of directors](https://nodeweekly.com/link/165220/0a4070b383) with a policy of 'open governance' in order to provide value to the entire JavaScript community.
+
+* 📊 [Vercel has acquired the team](https://nodeweekly.com/link/165221/0a4070b383) behind [Tremor](https://nodeweekly.com/link/165222/0a4070b383), a popular suite of React components for building charts and dashboards. The plan is to enhance [v0](https://nodeweekly.com/link/165223/0a4070b383) with Tremor's work and to open-source more components.
+
+* The creator of [SolidJS](https://nodeweekly.com/link/165224/0a4070b383) says that [Angular and Vue are the frameworks to watch in 2025](https://nodeweekly.com/link/165225/0a4070b383), while reflecting on JS framework progress generally.
+
+* [Bun 1.2.2](https://nodeweekly.com/link/165226/0a4070b383) has been released with big drops in idle memory usage.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
