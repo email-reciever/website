@@ -1,0 +1,340 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Oracle dabbles in some JavaScript comedy
+description: Oracle dabbles in some JavaScript comedy
+date: 星期五 04 下午 二月 7o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/722
+origin_site: https://javascriptweekly.com/issues/722
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Oracle dabbles in some JavaScript comedy" url="https://javascriptweekly.com/issues/722" />
+
+<Detail client:only="react">
+	#​722 — February 7, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/722)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://javascriptweekly.com/link/165455/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hvef4hxbh6jwwkw1qgry.jpg)](https://javascriptweekly.com/link/165456/d076523b1d)
+
+[Oracle Claims 'JavaScript' Isn't a Generic Term, and More](https://javascriptweekly.com/link/165456/d076523b1d "deno.com") — In [this 'motion to dismiss'](https://javascriptweekly.com/link/165457/d076523b1d) Oracle has responded to [Deno’s attempt to prove Oracle shouldn't hold the JavaScript™ trademark](https://javascriptweekly.com/link/165458/d076523b1d) with the argument that _“relevant consumers do not perceive JAVASCRIPT as a generic term”_ (does Oracle only consider people who give it money to be relevant?) among other comedic insights.
+
+Ryan Dahl
+
+[There Are a Lot of Ways to Break Up Long Tasks in JavaScript](https://javascriptweekly.com/link/165459/d076523b1d "macarthur.me") — Due to how browsers and the event loop work, letting a single task hog the main thread is a quick way to freeze up your site’s UI. Alex explains the problem and uses a simple example to walk through the pros and cons of different solutions from basic use of `setTimeout()` to `requestAnimationFrame()`, channel messaging, and Web Workers.
+
+Alex MacArthur
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/166bb32c.jpg)](https://javascriptweekly.com/link/165455/d076523b1d)
+
+[Debugging Shopping Cart Issues Faster](https://javascriptweekly.com/link/165455/d076523b1d "blog.sentry.io") — Vue/Nuxt devs: Get full insight into your shopping cart errors! Capture Pinia State wherever errors occur. Learn how on the [Sentry blog »](https://javascriptweekly.com/link/165455/d076523b1d).
+
+Sentry sponsor
+
+▶  [Angular: The Documentary](https://javascriptweekly.com/link/165460/d076523b1d "www.youtube.com") — From the creators of the fantastic [▶️ Node.js](https://javascriptweekly.com/link/165461/d076523b1d) and [▶️ Ruby on Rails](https://javascriptweekly.com/link/165462/d076523b1d) documentaries comes this fresh story covering the ups and downs of the popular [Angular](https://javascriptweekly.com/link/165463/d076523b1d) (née AngularJS) framework starring a cast of veritable JavaScript luminaries.
+
+Honeypot
+
+**IN BRIEF:**
+
+*   Chrome is shipping [a new `moveBefore` DOM method](https://javascriptweekly.com/link/165464/d076523b1d) for moving elements around a DOM tree _without_ resetting the element's state. [React is already working on using it.](https://javascriptweekly.com/link/165465/d076523b1d)
+    
+*   Would you like to write PHP inside Vue or React components? You might if you're a Laravel user, and [Aaron Francis shows off a way to do it.](https://javascriptweekly.com/link/165467/d076523b1d) It's not open source yet, but his demo is pretty cool.
+    
+*   [Nx](https://javascriptweekly.com/link/165512/d076523b1d) user? [Nx has a whole new experience for Nx workspaces](https://javascriptweekly.com/link/165468/d076523b1d) that's faster, more efficient, and solves a variety of issues with TypeScript editor support for large monorepos.
+    
+*   Josh Goldberg explains [the differences between ESLint and TypeScript,](https://javascriptweekly.com/link/165466/d076523b1d) beyond the obvious.
+    
+
+**RELEASES:**
+
+*   [ES Module Shims 2.0](https://javascriptweekly.com/link/165469/d076523b1d) – Polyfills import maps and other ES Modules features on top of the baseline native ESM support in browsers.
+    
+*   [pnpm 10.2](https://javascriptweekly.com/link/165470/d076523b1d) – The alternative, efficient package manager.
+    
+*   [Turborepo 2.4](https://javascriptweekly.com/link/165471/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ftotqvnh8oxzvzqz5z53.jpg)](https://javascriptweekly.com/link/165472/d076523b1d)
+
+[Which Rich Text Editor Framework Should You Choose in 2025?](https://javascriptweekly.com/link/165472/d076523b1d "liveblocks.io") — A round-up of actively developed WYSIWYG editor options you can drop into your apps along with the pros and cons of each.
+
+Dexemple and Rowny (Liveblocks)
+
+[How to Publish ESM-Based npm Packages with TypeScript](https://javascriptweekly.com/link/165473/d076523b1d "2ality.com") — Now that you can use the ES modules (almost) everywhere, it’s worth understanding how to package them up for use with npm. Axel digs into everything you need to know and shares some useful tools too.
+
+Dr. Axel Rauschmayer
+
+[Locate and Resolve JavaScript Errors Instantly with Datadog](https://javascriptweekly.com/link/165474/d076523b1d "www.datadoghq.com") — Troubleshoot frontend JavaScript errors faster with frontend to backend correlation and automatic error tracking.
+
+Datadog sponsor
+
+[An Introduction to WebAssembly in Deno](https://javascriptweekly.com/link/165475/d076523b1d "deno.com") — How to build a simple WASM module and use it to call Rust code from JavaScript.
+
+Jiang and Sherret (Deno)
+
+[Vite with TypeScript](https://javascriptweekly.com/link/165476/d076523b1d "www.robinwieruch.de") — If you’ve created a JavaScript-based React project with Vite and want to get on the TypeScript train, here are the basic steps.
+
+Robin Wieruch
+
+📄 [Building a Playful Stop-Motion Crayon Cursor in p5.js](https://javascriptweekly.com/link/165477/d076523b1d) Jorge Toloza
+
+📄 [Keep Your Node Apps Secure with `npx is-my-node-vulnerable`](https://javascriptweekly.com/link/165478/d076523b1d) Trevor I. Lasn
+
+📄 [Read-Only Accessibility in TypeScript](https://javascriptweekly.com/link/165479/d076523b1d) – How to use the `readonly` keyword. Dr. Axel Rauschmayer
+
+📄 [How to Set WebGL Shader Colors with CSS and JavaScript](https://javascriptweekly.com/link/165480/d076523b1d) Nicolas Mattia
+
+🛠 Code & Tools
+
+[RE2JS 1.0: Linear Time Matching for Regular Expressions](https://javascriptweekly.com/link/165481/d076523b1d "github.com") — RE2 is a regular expression engine built by Google designed to operate in time proportional to the size of the input, in order to avoid so-called ‘ReDoS’ problems caused by backtracking, and this brings such protection to the browser too.
+
+Oleksii Vasyliev
+
+[Fuse.js 7.1: Lightweight Fuzzy-Search with No Dependencies](https://javascriptweekly.com/link/165482/d076523b1d "fusejs.io") — Want a simple search feature _without_ a dedicated backend? This mature solution could help. [Here’s a live demo.](https://javascriptweekly.com/link/165483/d076523b1d)
+
+Kiro Risk
+
+[Start Selling to Enterprise Faster with WorkOS](https://javascriptweekly.com/link/165484/d076523b1d "workos.com") — Add SSO, SCIM, and RBAC to your B2B SaaS app in minutes—not months.
+
+WorkOS sponsor
+
+🎨 [tinygradient 2.0: A Gradient Generation Library](https://javascriptweekly.com/link/165485/d076523b1d "mistic100.github.io") — Generate color gradients with an unlimited number of color stops and steps in JavaScript to use as you wish. Supports named colors, hex colors, RGV, HSVa, and RGB CSS strings. [GitHub repo.](https://javascriptweekly.com/link/165486/d076523b1d)
+
+Damien Sorel
+
+[parse-duration 2.0: Convert a Human Readable Duration to Milliseconds](https://javascriptweekly.com/link/165487/d076523b1d "github.com") — You might wonder why a library that converts `1hr 20mins` into `4800000` needs a version 2. Well, it now supports more units (`mo`, `mth`, `microsec`, and `nanosec`), has moved to ESM, and supports locales.
+
+Jake Rosoman
+
+[Waveform Renderer](https://javascriptweekly.com/link/165488/d076523b1d "waveform-renderer.vercel.app") — Quickly create a visual waveform from a MP3 or WAV — you can also edit the look. Think of it as a lighter alternative to [Wavesurfer.js](https://javascriptweekly.com/link/165489/d076523b1d). [GitHub repo.](https://javascriptweekly.com/link/165490/d076523b1d)
+
+Andres Felipe Alarcon
+
+📰 Classifieds
+
+🎹 [STRICH](https://javascriptweekly.com/link/165491/d076523b1d): Add blazing fast and reliable 1D/2D Barcode Scanning to your web apps. Free demo app and 30-day trial available.
+
+* * *
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/165492/d076523b1d). Relied on by Lattice, Bilt Rewards, etc.
+
+* * *
+
+🌎 [Get your FREE remote pass to 50% of the talks at the 2025 JS Nation conference](https://javascriptweekly.com/link/165493/d076523b1d). Invite 3 friends to unlock full access — including talks from Evan You, Thomas Steiner, and 50+ speakers.
+
+* * *
+
+[Meet Harmony](https://javascriptweekly.com/link/165494/d076523b1d): An open source library for composing consistent and highly performant platforms from independent business features.
+
+*   🍪 [CookieConsent 3.1](https://javascriptweekly.com/link/165495/d076523b1d) – A lightweight, pure JS, GDPR-compliant cookie consent mechanism with which to annoy all your users meet regulatory requirements.
+    
+*   [Happy DOM 17.0](https://javascriptweekly.com/link/165496/d076523b1d) – Cross-runtime JS implementation of a web browser _sans_ UI. Now supports ES modules.
+    
+*   [remove-unused-vars 0.0.4](https://javascriptweekly.com/link/165497/d076523b1d) – An experimental new tool for removing unused variables from code.
+    
+*   [get-value 4.0](https://javascriptweekly.com/link/165498/d076523b1d) – Use property paths (`a.b.c`) get a nested value from an object.
+    
+*   [mp4-muxer 5.2](https://javascriptweekly.com/link/165499/d076523b1d) – MP4 multiplexer in pure TypeScript with support for the WebCodecs API, video and audio.
+    
+*   🗺️ [react-map-gl 8.0](https://javascriptweekly.com/link/165500/d076523b1d) – React friendly API wrapper around MapboxGL JS. ([Demo.](https://javascriptweekly.com/link/165501/d076523b1d))
+    
+*   🗓️ [Schedule-X 2.17](https://javascriptweekly.com/link/165502/d076523b1d) – Material Design event calendar and date picker.
+    
+*   [Wasp 0.16](https://javascriptweekly.com/link/165503/d076523b1d) – [Wasp](https://javascriptweekly.com/link/165504/d076523b1d) is a Rails-like framework using Node, React & Prisma.
+    
+*   [web-worker 1.5](https://javascriptweekly.com/link/165505/d076523b1d) – Consistent Web Workers in browser and Node.
+    
+*   [Js\_of\_ocaml (jsoo) 6.0](https://javascriptweekly.com/link/165506/d076523b1d) – An OCaml to JavaScript compiler.
+    
+*   [RxDB 16.5](https://javascriptweekly.com/link/165507/d076523b1d) – Offline-first, reactive database for JS apps.
+    
+
+🎵 A quick musical number..
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qc70fmows5g5myql3ryg.jpg)](https://javascriptweekly.com/link/165508/d076523b1d)
+
+[A Protracker Module Player in Pure JavaScript](https://javascriptweekly.com/link/165508/d076523b1d "dittytoy.net") — I’m a sucker for 90s tracker music, JavaScript experiments, and cool Web experiences, and this has all three. If you’re not familiar with [tracker music](https://javascriptweekly.com/link/165509/d076523b1d), it’s a way to write music on a grid which triggers the playing of samples. This code manages to parse and play a [Protracker](https://javascriptweekly.com/link/165510/d076523b1d) file in pure JavaScript. _(Note: The image above is of the original Protracker app, this experiment is more minimal and about the code.)_
+
+srtuss
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/165511/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​722 — February 7, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/722)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://javascriptweekly.com/link/165455/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hvef4hxbh6jwwkw1qgry.jpg)](https://javascriptweekly.com/link/165456/d076523b1d)
+
+[Oracle Claims 'JavaScript' Isn't a Generic Term, and More](https://javascriptweekly.com/link/165456/d076523b1d "deno.com") — In [this 'motion to dismiss'](https://javascriptweekly.com/link/165457/d076523b1d) Oracle has responded to [Deno’s attempt to prove Oracle shouldn't hold the JavaScript™ trademark](https://javascriptweekly.com/link/165458/d076523b1d) with the argument that *“relevant consumers do not perceive JAVASCRIPT as a generic term”* (does Oracle only consider people who give it money to be relevant?) among other comedic insights.
+
+Ryan Dahl
+
+[There Are a Lot of Ways to Break Up Long Tasks in JavaScript](https://javascriptweekly.com/link/165459/d076523b1d "macarthur.me") — Due to how browsers and the event loop work, letting a single task hog the main thread is a quick way to freeze up your site’s UI. Alex explains the problem and uses a simple example to walk through the pros and cons of different solutions from basic use of `setTimeout()` to `requestAnimationFrame()`, channel messaging, and Web Workers.
+
+Alex MacArthur
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/166bb32c.jpg)](https://javascriptweekly.com/link/165455/d076523b1d)
+
+[Debugging Shopping Cart Issues Faster](https://javascriptweekly.com/link/165455/d076523b1d "blog.sentry.io") — Vue/Nuxt devs: Get full insight into your shopping cart errors! Capture Pinia State wherever errors occur. Learn how on the [Sentry blog »](https://javascriptweekly.com/link/165455/d076523b1d).
+
+Sentry sponsor
+
+▶  [Angular: The Documentary](https://javascriptweekly.com/link/165460/d076523b1d "www.youtube.com") — From the creators of the fantastic [▶️ Node.js](https://javascriptweekly.com/link/165461/d076523b1d) and [▶️ Ruby on Rails](https://javascriptweekly.com/link/165462/d076523b1d) documentaries comes this fresh story covering the ups and downs of the popular [Angular](https://javascriptweekly.com/link/165463/d076523b1d) (née AngularJS) framework starring a cast of veritable JavaScript luminaries.
+
+Honeypot
+
+**IN BRIEF:**
+
+* Chrome is shipping [a new `moveBefore` DOM method](https://javascriptweekly.com/link/165464/d076523b1d) for moving elements around a DOM tree *without* resetting the element's state. [React is already working on using it.](https://javascriptweekly.com/link/165465/d076523b1d)
+
+* Would you like to write PHP inside Vue or React components? You might if you're a Laravel user, and [Aaron Francis shows off a way to do it.](https://javascriptweekly.com/link/165467/d076523b1d) It's not open source yet, but his demo is pretty cool.
+
+* [Nx](https://javascriptweekly.com/link/165512/d076523b1d) user? [Nx has a whole new experience for Nx workspaces](https://javascriptweekly.com/link/165468/d076523b1d) that's faster, more efficient, and solves a variety of issues with TypeScript editor support for large monorepos.
+
+* Josh Goldberg explains [the differences between ESLint and TypeScript,](https://javascriptweekly.com/link/165466/d076523b1d) beyond the obvious.
+
+**RELEASES:**
+
+* [ES Module Shims 2.0](https://javascriptweekly.com/link/165469/d076523b1d) – Polyfills import maps and other ES Modules features on top of the baseline native ESM support in browsers.
+
+* [pnpm 10.2](https://javascriptweekly.com/link/165470/d076523b1d) – The alternative, efficient package manager.
+
+* [Turborepo 2.4](https://javascriptweekly.com/link/165471/d076523b1d)
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ftotqvnh8oxzvzqz5z53.jpg)](https://javascriptweekly.com/link/165472/d076523b1d)
+
+[Which Rich Text Editor Framework Should You Choose in 2025?](https://javascriptweekly.com/link/165472/d076523b1d "liveblocks.io") — A round-up of actively developed WYSIWYG editor options you can drop into your apps along with the pros and cons of each.
+
+Dexemple and Rowny (Liveblocks)
+
+[How to Publish ESM-Based npm Packages with TypeScript](https://javascriptweekly.com/link/165473/d076523b1d "2ality.com") — Now that you can use the ES modules (almost) everywhere, it’s worth understanding how to package them up for use with npm. Axel digs into everything you need to know and shares some useful tools too.
+
+Dr. Axel Rauschmayer
+
+[Locate and Resolve JavaScript Errors Instantly with Datadog](https://javascriptweekly.com/link/165474/d076523b1d "www.datadoghq.com") — Troubleshoot frontend JavaScript errors faster with frontend to backend correlation and automatic error tracking.
+
+Datadog sponsor
+
+[An Introduction to WebAssembly in Deno](https://javascriptweekly.com/link/165475/d076523b1d "deno.com") — How to build a simple WASM module and use it to call Rust code from JavaScript.
+
+Jiang and Sherret (Deno)
+
+[Vite with TypeScript](https://javascriptweekly.com/link/165476/d076523b1d "www.robinwieruch.de") — If you’ve created a JavaScript-based React project with Vite and want to get on the TypeScript train, here are the basic steps.
+
+Robin Wieruch
+
+📄 [Building a Playful Stop-Motion Crayon Cursor in p5.js](https://javascriptweekly.com/link/165477/d076523b1d) Jorge Toloza
+
+📄 [Keep Your Node Apps Secure with `npx is-my-node-vulnerable`](https://javascriptweekly.com/link/165478/d076523b1d) Trevor I. Lasn
+
+📄 [Read-Only Accessibility in TypeScript](https://javascriptweekly.com/link/165479/d076523b1d) – How to use the `readonly` keyword. Dr. Axel Rauschmayer
+
+📄 [How to Set WebGL Shader Colors with CSS and JavaScript](https://javascriptweekly.com/link/165480/d076523b1d) Nicolas Mattia
+
+🛠 Code & Tools
+
+[RE2JS 1.0: Linear Time Matching for Regular Expressions](https://javascriptweekly.com/link/165481/d076523b1d "github.com") — RE2 is a regular expression engine built by Google designed to operate in time proportional to the size of the input, in order to avoid so-called ‘ReDoS’ problems caused by backtracking, and this brings such protection to the browser too.
+
+Oleksii Vasyliev
+
+[Fuse.js 7.1: Lightweight Fuzzy-Search with No Dependencies](https://javascriptweekly.com/link/165482/d076523b1d "fusejs.io") — Want a simple search feature *without* a dedicated backend? This mature solution could help. [Here’s a live demo.](https://javascriptweekly.com/link/165483/d076523b1d)
+
+Kiro Risk
+
+[Start Selling to Enterprise Faster with WorkOS](https://javascriptweekly.com/link/165484/d076523b1d "workos.com") — Add SSO, SCIM, and RBAC to your B2B SaaS app in minutes—not months.
+
+WorkOS sponsor
+
+🎨 [tinygradient 2.0: A Gradient Generation Library](https://javascriptweekly.com/link/165485/d076523b1d "mistic100.github.io") — Generate color gradients with an unlimited number of color stops and steps in JavaScript to use as you wish. Supports named colors, hex colors, RGV, HSVa, and RGB CSS strings. [GitHub repo.](https://javascriptweekly.com/link/165486/d076523b1d)
+
+Damien Sorel
+
+[parse-duration 2.0: Convert a Human Readable Duration to Milliseconds](https://javascriptweekly.com/link/165487/d076523b1d "github.com") — You might wonder why a library that converts `1hr 20mins` into `4800000` needs a version 2. Well, it now supports more units (`mo`, `mth`, `microsec`, and `nanosec`), has moved to ESM, and supports locales.
+
+Jake Rosoman
+
+[Waveform Renderer](https://javascriptweekly.com/link/165488/d076523b1d "waveform-renderer.vercel.app") — Quickly create a visual waveform from a MP3 or WAV — you can also edit the look. Think of it as a lighter alternative to [Wavesurfer.js](https://javascriptweekly.com/link/165489/d076523b1d). [GitHub repo.](https://javascriptweekly.com/link/165490/d076523b1d)
+
+Andres Felipe Alarcon
+
+📰 Classifieds
+
+🎹 [STRICH](https://javascriptweekly.com/link/165491/d076523b1d): Add blazing fast and reliable 1D/2D Barcode Scanning to your web apps. Free demo app and 30-day trial available.
+
+***
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/165492/d076523b1d). Relied on by Lattice, Bilt Rewards, etc.
+
+***
+
+🌎 [Get your FREE remote pass to 50% of the talks at the 2025 JS Nation conference](https://javascriptweekly.com/link/165493/d076523b1d). Invite 3 friends to unlock full access — including talks from Evan You, Thomas Steiner, and 50+ speakers.
+
+***
+
+[Meet Harmony](https://javascriptweekly.com/link/165494/d076523b1d): An open source library for composing consistent and highly performant platforms from independent business features.
+
+* 🍪 [CookieConsent 3.1](https://javascriptweekly.com/link/165495/d076523b1d) – A lightweight, pure JS, GDPR-compliant cookie consent mechanism with which to annoy all your users meet regulatory requirements.
+
+* [Happy DOM 17.0](https://javascriptweekly.com/link/165496/d076523b1d) – Cross-runtime JS implementation of a web browser *sans* UI. Now supports ES modules.
+
+* [remove-unused-vars 0.0.4](https://javascriptweekly.com/link/165497/d076523b1d) – An experimental new tool for removing unused variables from code.
+
+* [get-value 4.0](https://javascriptweekly.com/link/165498/d076523b1d) – Use property paths (`a.b.c`) get a nested value from an object.
+
+* [mp4-muxer 5.2](https://javascriptweekly.com/link/165499/d076523b1d) – MP4 multiplexer in pure TypeScript with support for the WebCodecs API, video and audio.
+
+* 🗺️ [react-map-gl 8.0](https://javascriptweekly.com/link/165500/d076523b1d) – React friendly API wrapper around MapboxGL JS. ([Demo.](https://javascriptweekly.com/link/165501/d076523b1d))
+
+* 🗓️ [Schedule-X 2.17](https://javascriptweekly.com/link/165502/d076523b1d) – Material Design event calendar and date picker.
+
+* [Wasp 0.16](https://javascriptweekly.com/link/165503/d076523b1d) – [Wasp](https://javascriptweekly.com/link/165504/d076523b1d) is a Rails-like framework using Node, React & Prisma.
+
+* [web-worker 1.5](https://javascriptweekly.com/link/165505/d076523b1d) – Consistent Web Workers in browser and Node.
+
+* [Js\_of\_ocaml (jsoo) 6.0](https://javascriptweekly.com/link/165506/d076523b1d) – An OCaml to JavaScript compiler.
+
+* [RxDB 16.5](https://javascriptweekly.com/link/165507/d076523b1d) – Offline-first, reactive database for JS apps.
+
+🎵 A quick musical number..
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qc70fmows5g5myql3ryg.jpg)](https://javascriptweekly.com/link/165508/d076523b1d)
+
+[A Protracker Module Player in Pure JavaScript](https://javascriptweekly.com/link/165508/d076523b1d "dittytoy.net") — I’m a sucker for 90s tracker music, JavaScript experiments, and cool Web experiences, and this has all three. If you’re not familiar with [tracker music](https://javascriptweekly.com/link/165509/d076523b1d), it’s a way to write music on a grid which triggers the playing of samples. This code manages to parse and play a [Protracker](https://javascriptweekly.com/link/165510/d076523b1d) file in pure JavaScript. *(Note: The image above is of the original Protracker app, this experiment is more minimal and about the code.)*
+
+srtuss
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/165511/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
