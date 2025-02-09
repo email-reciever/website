@@ -1,0 +1,136 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#492 The Most Common React Design Patterns
+description: RD#492 The Most Common React Design Patterns
+date: 星期日 07 晚上 二月 9o 2025
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/the-most-common-react-design-patterns
+origin_site: https://newsletter.reactdigest.net/p/the-most-common-react-design-patterns
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#492 The Most Common React Design Patterns" url="https://newsletter.reactdigest.net/p/the-most-common-react-design-patterns" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1VWhbksCqZy2GNLem5HS7BG5IPIVVRI6AkWgHq71p3mv31clHUzEvi-5b_FJsEkVhAzBduW7AKUaBbpPXybzLi7xkbH7ygO4xFaA0qqKhceRRUXPRIrOsnEK9F51x1JkIMqlLk16acy1mZvrF0rygkEJ_jYuMRLg7y7m_yh7yhNnAJ-gtYTw4AMN4G9YtCMZfE0v1DMmMH4juOd0NpRKFoLXinJ0ENvI_nZ4EYH_a96NTqV8zhoxP2SxRnAhlFy3ljWTTUHyiXUVf0jyH6ECFaSCA9sjDz2yPHT10FePyc8AzAcIQPp4ylApIy3Fx1imWZKyvBZM58hp7q4ISSF65lMCFKiFfqtwRy_tXGW2HpWy3RfSk0-fRCdtvJy5tE-ZUpY7A6iUUQRFlZ61-IwzVFZItGIfeQxgAk4BQsaiXu5r3K2aNYYW1lPG5ekA1ADYlc56HSwXYtAeIwpB0XHPiDxa5xZ9y5cHl846JFEnjGpDn1Rlq64W70ZCKrsE_oO8AMt2m7lM4vdhoQ7Te-m_b9ZApxrLdwOVZoww1_XoarXrGMC7RbtqSjYQc3rEWTizRubxA4LBcartNXT7Gt22fzEkVADL--Kkf0xH1l0eHGtTj8zwFODiByWavlXdx4yxz1EFucnwscy2QYYVwEciV0DiFudOm9CquRIgvPjJRFTsA9OwO6wamoDRXoRgIk0GJzGBVox_wxQzF8fvpL7uIF58w96HUZPCDwh7u3XLJrxOKPQBmDOmNZM3CJB2LAl9kyT7u2sEFVmcgViQgALf8F4gL3P39o-Gnca3chku0HFpg/4dv/BN0PnguKTLeYbZH9utkkgw/h0/h001.4o-dnQ8UQXziwPO_pRYn3e1_Wv0Owq7t5lKL6a9FylM)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4dv/BN0PnguKTLeYbZH9utkkgw/ho.gif)
+
+[The Most Common React Design Patterns](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfUHjgdD9KJoBTmEARdkpjXsW8XAYKYwDwK7exdt4LVVFpmCJOPIzhOISnoxdqA8L_ZyXSY6ESDxboCOJYptWMRa3LrHf-lhL05QQvaOnuWUqdFR2e2g_5nrrF1ZpboLl9nHKqydqYb8kczIS9bCP0Amv68XI5wJc-EuKv9UPHoqz7Jk1Zd1jz9NykKhkPVUgsFEV6y8ZYLm3yCf3eU0MHPqeoOGjqf03g5qelZouONaXK2E651MrLuCfcyoI9kPjdvm6Ul8M7w62LJ3hdPB7dHFAyHk0IAcgaEW7u38Npc1/4dv/BN0PnguKTLeYbZH9utkkgw/h1/h001.mngDK48dI07GBzAucvWdAoHeqIOehzaNN7UcQlrHQuY)  
+_9 minutes_ by Mensur Durakovic
+
+Have you ever played the League of Legends? If you have, you know that playing with its character Caitlyn is simple to start but complex to master. Same with coding in React. In this article Mensur discusses five key React design patterns and examines each pattern's benefits and drawbacks.
+
+[Build a Next.js sign-up form with React Hook Form](https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea_eXiYAmDmOA4OCdMAmztpffme9t_VNuEG2j8ETE5mgAAP4KEO4jb2qkai8-IRo8hbKl_WZnRZ3gikXTyTGuIriHqb6kokPUIh5WtAhdLsv_k6xMJSwFL-5lzAqdXwcnuGaJt023VMFgrfQD98mXfOha68plsJsap3y-998IjvNBABWkWrz6E0l_gRcqrF-xCwWPifboMyQZgg6Yx0p3xpz3WSX-x3z2GyJ30MTR0ho72AUZLlFXcds2Z0SlNQB4lTDL1JNVQ/4dv/BN0PnguKTLeYbZH9utkkgw/h2/h001.105Dnsw6LlfrcO45pBSMUhKF_wT54tZOJzCYNGc2rJQ)  
+_sponsored by Clerk_
+
+Learn how to build a fully-functional and secure user registration form with React Hook Form and server actions - featuring progressive enhancement, dynamic validation, and secure password handling with Argon2.
+
+[How to Load Dynamic Stylesheets in React Router](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO7sQgzyszJucC5x7a-ReVIvop_zJMQIdcLZFRxMUuMktNvzBOdXXPzpbfmdpgFJjXLQzlw06NWa0q074jo_OrVxA7xUE4OvbrTDZzE622LFFoiK2dLtUiIfw5SHRquZTwLVxadmS30PuJTnKrCdeFJAUf2qVk8_99o3-YaOznOJfxD212YwIMQSOOvyXH0pE3MOoRhnxys1tL8onnRiN-4uuB_h9K6YpiOrEEReYKrDEVVdRUwxkPsVUVPDTZr8e9jLLE21_sLV2oBBjHnmis8hFQUH2eGosfrB4mdaU4S36/4dv/BN0PnguKTLeYbZH9utkkgw/h3/h001.NNxMKceJyZW2Gqzy_ptgq96_OhhB3fpnOEnKEhmmePY)  
+_3 minutes_ by Sergio Xalambrí
+
+In this article Sergio explains different approaches to dynamically loading CSS styles in a web application using Remix framework. It covers three main methods: generating CSS on-demand based on user data, loading predefined static CSS files conditionally, and creating user-specific CSS files with dynamic URLs. Each approach involves creating specific routes, implementing loader functions, and configuring the application to serve the appropriate stylesheets based on user preferences or organizational settings.
+
+[How to build a library in React](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF7Q5vn76cs0Imf51jJpv2aEF_8RmnPKzMCFjEoR5CNuVr0fqjwcjBN5WFliqlBSJIpn8cIUt5eCAdR_kd1CYgt6pAMTeQyRvJYhwuPPTeC2XASEQa2NQ01x_5Yu24OJt1xtz9WL5d4tQNwkrAYNBSDsbSd96SId0gF7avpSvzBZM0Xs8ipdz1i_O-dufbsp6Q_jCB3ofvyP-sPrF_EhibvSE9wOPpI5koI7bZncjxPn_e_BI525XNR8YgkpfHXGat-2ahIV8mQQoMSZYpaKkIw0/4dv/BN0PnguKTLeYbZH9utkkgw/h4/h001.2XWkKA8Hz4cSxHTw52XJbb0CIQq8Pu0vzAtvMcbVEDE)  
+_9 minutes_ by Tiger Abrodi
+
+Tiger describes the creation of React Context Selector, a library that adds selector functionality to React's context system. The library leverages React's useSyncExternalStore hook to efficiently manage state updates and re-renders, allowing components to subscribe only to specific parts of the context state they need. Tiger details the implementation process, including the use of tsup for building, the core architecture of the library, and provides a comprehensive guide on publishing the package to npm.
+
+[Persisting Form Data in React: A Modern Approach with Nuqs](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw__yl9DaIhxW8yUchs12SNFcO306jbvb0Lr_Nj2S3a4CWTk9bG3sCMJCIMDEN8Dkk67MwQTuOgUjkBPFffmDnl2DGUTVr-bFv3iisEhWBv5uul7M05UWBul686Gj9Hz3gh8ytsfHZwzDRwVui_9XcormqEZJHEhfotREUEe-dYUFgUwhzfb6RxNlasG79H7PY57FdUDlsOYyBJVJAHlAXr8yRBi3JvaT--B-LtBGk5HWMQHIMJr1V1b8ULIeiWQEYidn6yyQrK2PLzDowBwhLbZist3ylACEr20D6EMR44HasXO3Vtgwx7qNDjs8Kb9jEw/4dv/BN0PnguKTLeYbZH9utkkgw/h5/h001.Gyz1PInMZG_jzCDg89NOIj4S7gUbro-rohUXZgbmpN8)  
+_4 minutes_ by Armand Sallé
+
+Discover how to persist and share form data in React using Nuqs, a modern type-safe URL state manager. Move beyond localStorage limitations to create shareable, type-safe forms with zero backend requirements. In this article Armand demonstrates how to implement form persistence using Nuqs alongside React Hook Form and Zod, highlighting its integration with React routers and features like browser history navigation and default value handling.
+
+[Single Responsibility Principle in React: The Art of Component Focus](https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBOUcG_1yJ6DaWsvT-l50pRj0dw70X1uI3nAbiV0LHpp6aoa_ecdxq9q-bSK3mBiILy8iL974lHechmzrnF0a0qZzs8oFx4UWhCKhZ98qrIDDH9sYKZPANaPrNKNzgcbn6cqmE1lUB_rrHZrVdZcCIQ1LmuuHVPALbaTXaUdOqGWq9--mLcc917xZimFOP2yf9fAX5cKJqOINfRDbSIiIp66-DW-1D6vdsckvxge3bWqtmIvyMiEBnywhE5uZ6vGHlEebu1jIVvCb-3TObUL5ymbPSqsZ0GjfEEuOuoh_PHoR5/4dv/BN0PnguKTLeYbZH9utkkgw/h6/h001.pu2kW_1xzGk-2tQVO2zV4MR_chOXsmxA2aaxfAVvLdM)  
+_4 minutes_ by Christian Ekrem
+
+In this article Christian discusses the Single Responsibility Principle (SRP), one of the SOLID principles in software architecture. He demonstrates how to refactor a React component that violates SRP by handling multiple responsibilities into separate, focused components. He also shows how to split the functionality into a custom hook for data fetching, a presentation component, and a container component, emphasizing that components should have only one reason to change to improve maintainability, testability, and flexibility.
+
+## webdev
+
+*   [How to gif in 2025](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfZsRhMA7J2bHRSPYd1mGZcIgmG6CiLVQPywuXVhmmYV9fmTcJY6rdrxbAX_usEJ5PtVsB3AFo0unCpBDKNLyt3umLuP2I_n2hLn_7isG0Gwk31k4m26YnR_M-a3NAWPL35YT1ds6rnE2PvB9wBj-cqfSp_Aq5xm153VqZvOLjMqARryXnqYsZWQCn16DwZ17D5D76_O3Ejk1pUgAbhwlqzd95vA1zyfj7P4tDDGnauFBTIW48pSB_NzUZFIY0kFn5g/4dv/BN0PnguKTLeYbZH9utkkgw/h7/h001.JLOahCisbTqEIAu6PRZ7bq4uzLKdKdQd74af2sTQ-2k)
+    
+*   [How to Favicon in 2025](https://link.mail.beehiiv.com/ss/c/u001.HjBpxMuZJ3Xr2cyiPk5rUdwO5HKA5z-VgTw8Rqt9zJ6zpGVyPCuQJXcW3uF9ZlnpuM1pys-WT8coSScyVntGo6ve_95YmiCpW1O-znf7j1Pkoy15UejYmGBmqemkAOG18UkzyO7P09Oa1aTY6o_HLwa74zdQeR6JCmqu6ThbqtFpc3FmIk3-lrP1vxVN6FLSkarxvBqbuXy37lJSipZV8xEwOSH1KwM2WRyoK1gFWbKKCC2bsMHgFwbbLJpjZdZfj6hj-Km8eA9GVtod03xpoUfKK6tDPh_ZD5X4WsnQQ7MQVrEqlizBO1EbKz0_NiXvTPzg7TKEGZZMF4yl98RItg/4dv/BN0PnguKTLeYbZH9utkkgw/h8/h001.SoQvE3h8nqMojAEEDtK58XS9E5LomkUFf1xB68ev1bA)
+    
+
+## javascript
+
+*   [Using at() method in JavaScript to get the last item from an array](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw3gk49AV0NBavdb5To71cJzH1g94RQG22kjPSLceVkIWuoD0xi_tjCCV1hZuYwz1krjdHAAO5QDJrAEYFToEEjXskT2_5nKkVXjFkGeD8M1QniKboZtz0pkkx4mJQ_yVEcE8yVKhZPGv_reJX7rfD3qLyJtLbWiaVRvu4PmiIOZ7SuHVvDG3HiLUklugtiGQqfLbK1vny1kn-s0esRMikMEHu9uKIkQ7fsyp4Ve2UKo1Jw0su1--aoVn_188BcgLGbq3eQuIZ_AZGHSwyRfYo0gddWQZ_cpJrYirAQxQFSDr/4dv/BN0PnguKTLeYbZH9utkkgw/h9/h001.O7Yyp0W7Qi6OlLRX4xz2cDQZmWKQ42oCKsSJ8-5zweI)
+    
+*   [Learn Shader Programming with Rick and Morty](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVaEBiwv7ed5rJtkJJxAoGLrT2IIH7UzVlqNhGe0lERMZeHyKduJZbOACHKVnOzolXVpQlOx5r4q5JU3baeeAR0zpCrUXwK0kXumpiaHACVw6651BX2trJHdkwJBBMzrRFfzPwy1aRuCHJ9IAiG11dyi22jIYW6KoVu3lZtxM76EH7JIpf__ebwKUEdANASPf9_q2l2pefYzuiDBdReUMiuSWb22qfskQ7zcSQi3wuVHwqux_WRtIorOA-w3L4Ai2eBcCtrNo8DKVb0i3xc690_s/4dv/BN0PnguKTLeYbZH9utkkgw/h10/h001.rBqvrnfbvUfHZQlAlTc2wwHPCW4wx7xsD3Mhtb2M7kU)
+    
+*   [Simplify Lazy Loading With Intersection Observer’s ScrollMargin](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfaSOFJc2XPJZaMvVYObtcgMKEoSu5ICE1BhCW6UXOmpDewjWNT_ZYwOIWGWPRFrKAwFOIWAwgiUyVtt-s0FIjc8nA_IZ6Lxwyu8iAhSKL4u6fveNrlPFSiHJZd0-gLEGq7w32nf-CUWafm9vWhfWRq6K_8i-zQOKHwIHcEhlUtyypusrhkGxBb2tUgB800R8URrEo7F_wQIiafzyLi5G5sCNpk1S3wTBEaCtN3CB_z9eLyffhrFVoHkEBwDKHrUR31eJm7dZMYtecojYrc9JBoc139e-4i8a7tkYQHfVnbetNbgJwRr_IXoUD2z2fwUUqNLQokMuDzHUYJkaEpBXS_Q/4dv/BN0PnguKTLeYbZH9utkkgw/h11/h001.LveMzp6pBzIexl_cbzyYuOYnJHUz-i5o0W1AlNH1dS4)
+    
+*   [What's new in Astro - January 2025](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw6K_NP20TtQlwZhGPkOShC4Gj9DyAYj7D72WT8z7Z3bXw7R-jlDLGInP9-MA74p4Kg5XJEF0u-ezV6uEJ3LEJF-LOqa3tF_ieqSHdOR6vkMF2PLXxUWDjZr8ukz34NvrQLO6SKY2OXrlXKr63ZYvJZR8xcSP7SxvdNZMUWGnQapLOs50tdNqU8ze2knIlaBJtjefRx76RamMADYDvn0zES-6uJtDfaOhHF8N5goTZnNrWgcqW_vYu58gYEHbMqzJ8s4RnpDcxm8u65k61OrJuBw/4dv/BN0PnguKTLeYbZH9utkkgw/h12/h001.YYjmer_RkcwPwrkE4KnTvAdsJA84KvgnIraegWcwGB8)
+    
+
+And the most popular article from the last issue:
+
+*   [Why are React Server Components actually beneficial?](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF7Q5vn76cs0Imf51jJpv2aFZmhmTGE8OE6H4u2RulhD-uOY-1xF4Li-SiqYtAywEpkeP5AMvdVa9oLDQYQJN5TUq1z1nNqp2Oj_97ojqweplycmpf_egx0lucVXly4UyQzc7H1PW2nAfDKtP_Nzt8I83Ji-bQWX-q7GLGHorh0ihWle1PvU3espRqQ15A7yf19O0OjRi1ZJstxotdB9-DeFqJc90MBJ3GGfGh4MEQr9nN-5A4a7hqFYs2uXmQj1UnT8cCdAPYjafU4emHn1Ifgii69yBV69PrcGCRVxApYLBGAmlXMTE4yqYZoNDV5IHUA/4dv/BN0PnguKTLeYbZH9utkkgw/h13/h001.O7g7W-3Y6E-GVgFgwro3TT2FDVErqejv1x8pVz7o4qU)
+    
+
+#
+</Detail>
+
+[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1VWhbksCqZy2GNLem5HS7BG5IPIVVRI6AkWgHq71p3mv31clHUzEvi-5b_FJsEkVhAzBduW7AKUaBbpPXybzLi7xkbH7ygO4xFaA0qqKhceRRUXPRIrOsnEK9F51x1JkIMqlLk16acy1mZvrF0rygkEJ_jYuMRLg7y7m_yh7yhNnAJ-gtYTw4AMN4G9YtCMZfE0v1DMmMH4juOd0NpRKFoLXinJ0ENvI_nZ4EYH_a96NTqV8zhoxP2SxRnAhlFy3ljWTTUHyiXUVf0jyH6ECFaSCA9sjDz2yPHT10FePyc8AzAcIQPp4ylApIy3Fx1imWZKyvBZM58hp7q4ISSF65lMCFKiFfqtwRy_tXGW2HpWy3RfSk0-fRCdtvJy5tE-ZUpY7A6iUUQRFlZ61-IwzVFZItGIfeQxgAk4BQsaiXu5r3K2aNYYW1lPG5ekA1ADYlc56HSwXYtAeIwpB0XHPiDxa5xZ9y5cHl846JFEnjGpDn1Rlq64W70ZCKrsE_oO8AMt2m7lM4vdhoQ7Te-m_b9ZApxrLdwOVZoww1_XoarXrGMC7RbtqSjYQc3rEWTizRubxA4LBcartNXT7Gt22fzEkVADL--Kkf0xH1l0eHGtTj8zwFODiByWavlXdx4yxz1EFucnwscy2QYYVwEciV0DiFudOm9CquRIgvPjJRFTsA9OwO6wamoDRXoRgIk0GJzGBVox_wxQzF8fvpL7uIF58w96HUZPCDwh7u3XLJrxOKPQBmDOmNZM3CJB2LAl9kyT7u2sEFVmcgViQgALf8F4gL3P39o-Gnca3chku0HFpg/4dv/BN0PnguKTLeYbZH9utkkgw/h0/h001.4o-dnQ8UQXziwPO_pRYn3e1_Wv0Owq7t5lKL6a9FylM)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4dv/BN0PnguKTLeYbZH9utkkgw/ho.gif)
+
+[The Most Common React Design Patterns](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfUHjgdD9KJoBTmEARdkpjXsW8XAYKYwDwK7exdt4LVVFpmCJOPIzhOISnoxdqA8L_ZyXSY6ESDxboCOJYptWMRa3LrHf-lhL05QQvaOnuWUqdFR2e2g_5nrrF1ZpboLl9nHKqydqYb8kczIS9bCP0Amv68XI5wJc-EuKv9UPHoqz7Jk1Zd1jz9NykKhkPVUgsFEV6y8ZYLm3yCf3eU0MHPqeoOGjqf03g5qelZouONaXK2E651MrLuCfcyoI9kPjdvm6Ul8M7w62LJ3hdPB7dHFAyHk0IAcgaEW7u38Npc1/4dv/BN0PnguKTLeYbZH9utkkgw/h1/h001.mngDK48dI07GBzAucvWdAoHeqIOehzaNN7UcQlrHQuY)\
+*9 minutes* by Mensur Durakovic
+
+Have you ever played the League of Legends? If you have, you know that playing with its character Caitlyn is simple to start but complex to master. Same with coding in React. In this article Mensur discusses five key React design patterns and examines each pattern's benefits and drawbacks.
+
+[Build a Next.js sign-up form with React Hook Form](https://link.mail.beehiiv.com/ss/c/u001.TY9TQ8C6l-P2ea_eXiYAmDmOA4OCdMAmztpffme9t_VNuEG2j8ETE5mgAAP4KEO4jb2qkai8-IRo8hbKl_WZnRZ3gikXTyTGuIriHqb6kokPUIh5WtAhdLsv_k6xMJSwFL-5lzAqdXwcnuGaJt023VMFgrfQD98mXfOha68plsJsap3y-998IjvNBABWkWrz6E0l_gRcqrF-xCwWPifboMyQZgg6Yx0p3xpz3WSX-x3z2GyJ30MTR0ho72AUZLlFXcds2Z0SlNQB4lTDL1JNVQ/4dv/BN0PnguKTLeYbZH9utkkgw/h2/h001.105Dnsw6LlfrcO45pBSMUhKF_wT54tZOJzCYNGc2rJQ)\
+*sponsored by Clerk*
+
+Learn how to build a fully-functional and secure user registration form with React Hook Form and server actions - featuring progressive enhancement, dynamic validation, and secure password handling with Argon2.
+
+[How to Load Dynamic Stylesheets in React Router](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO7sQgzyszJucC5x7a-ReVIvop_zJMQIdcLZFRxMUuMktNvzBOdXXPzpbfmdpgFJjXLQzlw06NWa0q074jo_OrVxA7xUE4OvbrTDZzE622LFFoiK2dLtUiIfw5SHRquZTwLVxadmS30PuJTnKrCdeFJAUf2qVk8_99o3-YaOznOJfxD212YwIMQSOOvyXH0pE3MOoRhnxys1tL8onnRiN-4uuB_h9K6YpiOrEEReYKrDEVVdRUwxkPsVUVPDTZr8e9jLLE21_sLV2oBBjHnmis8hFQUH2eGosfrB4mdaU4S36/4dv/BN0PnguKTLeYbZH9utkkgw/h3/h001.NNxMKceJyZW2Gqzy_ptgq96_OhhB3fpnOEnKEhmmePY)\
+*3 minutes* by Sergio Xalambrí
+
+In this article Sergio explains different approaches to dynamically loading CSS styles in a web application using Remix framework. It covers three main methods: generating CSS on-demand based on user data, loading predefined static CSS files conditionally, and creating user-specific CSS files with dynamic URLs. Each approach involves creating specific routes, implementing loader functions, and configuring the application to serve the appropriate stylesheets based on user preferences or organizational settings.
+
+[How to build a library in React](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF7Q5vn76cs0Imf51jJpv2aEF_8RmnPKzMCFjEoR5CNuVr0fqjwcjBN5WFliqlBSJIpn8cIUt5eCAdR_kd1CYgt6pAMTeQyRvJYhwuPPTeC2XASEQa2NQ01x_5Yu24OJt1xtz9WL5d4tQNwkrAYNBSDsbSd96SId0gF7avpSvzBZM0Xs8ipdz1i_O-dufbsp6Q_jCB3ofvyP-sPrF_EhibvSE9wOPpI5koI7bZncjxPn_e_BI525XNR8YgkpfHXGat-2ahIV8mQQoMSZYpaKkIw0/4dv/BN0PnguKTLeYbZH9utkkgw/h4/h001.2XWkKA8Hz4cSxHTw52XJbb0CIQq8Pu0vzAtvMcbVEDE)\
+*9 minutes* by Tiger Abrodi
+
+Tiger describes the creation of React Context Selector, a library that adds selector functionality to React's context system. The library leverages React's useSyncExternalStore hook to efficiently manage state updates and re-renders, allowing components to subscribe only to specific parts of the context state they need. Tiger details the implementation process, including the use of tsup for building, the core architecture of the library, and provides a comprehensive guide on publishing the package to npm.
+
+[Persisting Form Data in React: A Modern Approach with Nuqs](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw__yl9DaIhxW8yUchs12SNFcO306jbvb0Lr_Nj2S3a4CWTk9bG3sCMJCIMDEN8Dkk67MwQTuOgUjkBPFffmDnl2DGUTVr-bFv3iisEhWBv5uul7M05UWBul686Gj9Hz3gh8ytsfHZwzDRwVui_9XcormqEZJHEhfotREUEe-dYUFgUwhzfb6RxNlasG79H7PY57FdUDlsOYyBJVJAHlAXr8yRBi3JvaT--B-LtBGk5HWMQHIMJr1V1b8ULIeiWQEYidn6yyQrK2PLzDowBwhLbZist3ylACEr20D6EMR44HasXO3Vtgwx7qNDjs8Kb9jEw/4dv/BN0PnguKTLeYbZH9utkkgw/h5/h001.Gyz1PInMZG_jzCDg89NOIj4S7gUbro-rohUXZgbmpN8)\
+*4 minutes* by Armand Sallé
+
+Discover how to persist and share form data in React using Nuqs, a modern type-safe URL state manager. Move beyond localStorage limitations to create shareable, type-safe forms with zero backend requirements. In this article Armand demonstrates how to implement form persistence using Nuqs alongside React Hook Form and Zod, highlighting its integration with React routers and features like browser history navigation and default value handling.
+
+[Single Responsibility Principle in React: The Art of Component Focus](https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBOUcG_1yJ6DaWsvT-l50pRj0dw70X1uI3nAbiV0LHpp6aoa_ecdxq9q-bSK3mBiILy8iL974lHechmzrnF0a0qZzs8oFx4UWhCKhZ98qrIDDH9sYKZPANaPrNKNzgcbn6cqmE1lUB_rrHZrVdZcCIQ1LmuuHVPALbaTXaUdOqGWq9--mLcc917xZimFOP2yf9fAX5cKJqOINfRDbSIiIp66-DW-1D6vdsckvxge3bWqtmIvyMiEBnywhE5uZ6vGHlEebu1jIVvCb-3TObUL5ymbPSqsZ0GjfEEuOuoh_PHoR5/4dv/BN0PnguKTLeYbZH9utkkgw/h6/h001.pu2kW_1xzGk-2tQVO2zV4MR_chOXsmxA2aaxfAVvLdM)\
+*4 minutes* by Christian Ekrem
+
+In this article Christian discusses the Single Responsibility Principle (SRP), one of the SOLID principles in software architecture. He demonstrates how to refactor a React component that violates SRP by handling multiple responsibilities into separate, focused components. He also shows how to split the functionality into a custom hook for data fetching, a presentation component, and a container component, emphasizing that components should have only one reason to change to improve maintainability, testability, and flexibility.
+
+## webdev
+
+* [How to gif in 2025](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfZsRhMA7J2bHRSPYd1mGZcIgmG6CiLVQPywuXVhmmYV9fmTcJY6rdrxbAX_usEJ5PtVsB3AFo0unCpBDKNLyt3umLuP2I_n2hLn_7isG0Gwk31k4m26YnR_M-a3NAWPL35YT1ds6rnE2PvB9wBj-cqfSp_Aq5xm153VqZvOLjMqARryXnqYsZWQCn16DwZ17D5D76_O3Ejk1pUgAbhwlqzd95vA1zyfj7P4tDDGnauFBTIW48pSB_NzUZFIY0kFn5g/4dv/BN0PnguKTLeYbZH9utkkgw/h7/h001.JLOahCisbTqEIAu6PRZ7bq4uzLKdKdQd74af2sTQ-2k)
+
+* [How to Favicon in 2025](https://link.mail.beehiiv.com/ss/c/u001.HjBpxMuZJ3Xr2cyiPk5rUdwO5HKA5z-VgTw8Rqt9zJ6zpGVyPCuQJXcW3uF9ZlnpuM1pys-WT8coSScyVntGo6ve_95YmiCpW1O-znf7j1Pkoy15UejYmGBmqemkAOG18UkzyO7P09Oa1aTY6o_HLwa74zdQeR6JCmqu6ThbqtFpc3FmIk3-lrP1vxVN6FLSkarxvBqbuXy37lJSipZV8xEwOSH1KwM2WRyoK1gFWbKKCC2bsMHgFwbbLJpjZdZfj6hj-Km8eA9GVtod03xpoUfKK6tDPh_ZD5X4WsnQQ7MQVrEqlizBO1EbKz0_NiXvTPzg7TKEGZZMF4yl98RItg/4dv/BN0PnguKTLeYbZH9utkkgw/h8/h001.SoQvE3h8nqMojAEEDtK58XS9E5LomkUFf1xB68ev1bA)
+
+## javascript
+
+* [Using at() method in JavaScript to get the last item from an array](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw3gk49AV0NBavdb5To71cJzH1g94RQG22kjPSLceVkIWuoD0xi_tjCCV1hZuYwz1krjdHAAO5QDJrAEYFToEEjXskT2_5nKkVXjFkGeD8M1QniKboZtz0pkkx4mJQ_yVEcE8yVKhZPGv_reJX7rfD3qLyJtLbWiaVRvu4PmiIOZ7SuHVvDG3HiLUklugtiGQqfLbK1vny1kn-s0esRMikMEHu9uKIkQ7fsyp4Ve2UKo1Jw0su1--aoVn_188BcgLGbq3eQuIZ_AZGHSwyRfYo0gddWQZ_cpJrYirAQxQFSDr/4dv/BN0PnguKTLeYbZH9utkkgw/h9/h001.O7Yyp0W7Qi6OlLRX4xz2cDQZmWKQ42oCKsSJ8-5zweI)
+
+* [Learn Shader Programming with Rick and Morty](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVaEBiwv7ed5rJtkJJxAoGLrT2IIH7UzVlqNhGe0lERMZeHyKduJZbOACHKVnOzolXVpQlOx5r4q5JU3baeeAR0zpCrUXwK0kXumpiaHACVw6651BX2trJHdkwJBBMzrRFfzPwy1aRuCHJ9IAiG11dyi22jIYW6KoVu3lZtxM76EH7JIpf__ebwKUEdANASPf9_q2l2pefYzuiDBdReUMiuSWb22qfskQ7zcSQi3wuVHwqux_WRtIorOA-w3L4Ai2eBcCtrNo8DKVb0i3xc690_s/4dv/BN0PnguKTLeYbZH9utkkgw/h10/h001.rBqvrnfbvUfHZQlAlTc2wwHPCW4wx7xsD3Mhtb2M7kU)
+
+* [Simplify Lazy Loading With Intersection Observer’s ScrollMargin](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfaSOFJc2XPJZaMvVYObtcgMKEoSu5ICE1BhCW6UXOmpDewjWNT_ZYwOIWGWPRFrKAwFOIWAwgiUyVtt-s0FIjc8nA_IZ6Lxwyu8iAhSKL4u6fveNrlPFSiHJZd0-gLEGq7w32nf-CUWafm9vWhfWRq6K_8i-zQOKHwIHcEhlUtyypusrhkGxBb2tUgB800R8URrEo7F_wQIiafzyLi5G5sCNpk1S3wTBEaCtN3CB_z9eLyffhrFVoHkEBwDKHrUR31eJm7dZMYtecojYrc9JBoc139e-4i8a7tkYQHfVnbetNbgJwRr_IXoUD2z2fwUUqNLQokMuDzHUYJkaEpBXS_Q/4dv/BN0PnguKTLeYbZH9utkkgw/h11/h001.LveMzp6pBzIexl_cbzyYuOYnJHUz-i5o0W1AlNH1dS4)
+
+* [What's new in Astro - January 2025](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw6K_NP20TtQlwZhGPkOShC4Gj9DyAYj7D72WT8z7Z3bXw7R-jlDLGInP9-MA74p4Kg5XJEF0u-ezV6uEJ3LEJF-LOqa3tF_ieqSHdOR6vkMF2PLXxUWDjZr8ukz34NvrQLO6SKY2OXrlXKr63ZYvJZR8xcSP7SxvdNZMUWGnQapLOs50tdNqU8ze2knIlaBJtjefRx76RamMADYDvn0zES-6uJtDfaOhHF8N5goTZnNrWgcqW_vYu58gYEHbMqzJ8s4RnpDcxm8u65k61OrJuBw/4dv/BN0PnguKTLeYbZH9utkkgw/h12/h001.YYjmer_RkcwPwrkE4KnTvAdsJA84KvgnIraegWcwGB8)
+
+And the most popular article from the last issue:
+
+* [Why are React Server Components actually beneficial?](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF7Q5vn76cs0Imf51jJpv2aFZmhmTGE8OE6H4u2RulhD-uOY-1xF4Li-SiqYtAywEpkeP5AMvdVa9oLDQYQJN5TUq1z1nNqp2Oj_97ojqweplycmpf_egx0lucVXly4UyQzc7H1PW2nAfDKtP_Nzt8I83Ji-bQWX-q7GLGHorh0ihWle1PvU3espRqQ15A7yf19O0OjRi1ZJstxotdB9-DeFqJc90MBJ3GGfGh4MEQr9nN-5A4a7hqFYs2uXmQj1UnT8cCdAPYjafU4emHn1Ifgii69yBV69PrcGCRVxApYLBGAmlXMTE4yqYZoNDV5IHUA/4dv/BN0PnguKTLeYbZH9utkkgw/h13/h001.O7g7W-3Y6E-GVgFgwro3TT2FDVErqejv1x8pVz7o4qU)
+
+#
+
+
