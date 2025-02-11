@@ -1,0 +1,294 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Why it's time to go 'ESM only'
+description: Why it's time to go 'ESM only'
+date: 星期二 04 下午 二月 11o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/566
+origin_site: https://nodeweekly.com/issues/566
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Why it's time to go 'ESM only'" url="https://nodeweekly.com/issues/566" />
+
+<Detail client:only="react">
+	#​566 — February 11, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/566)
+
+🏖️ We're taking next week off, so the next issue will be on Tuesday, February 25. Feel free to hit reply and send in any submissions!  
+\_\_  
+_Peter Cooper, your editor._
+
+Together with 
+
+[![Datadog](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_700,h_190/e_make_transparent/co_white,e_outline:10/vuhqm1wlyvxuddx1zxr8.png)](https://nodeweekly.com/link/165514/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qwcihiujj5ssgoesrfix.jpg)](https://nodeweekly.com/link/165515/0a4070b383)
+
+[How to Publish ESM-Based npm Packages with TypeScript](https://nodeweekly.com/link/165515/0a4070b383 "2ality.com") — Now that you can use the ES modules (almost) everywhere, it’s worth understanding how to package them up for use with npm. Axel digs into everything you need to know and shares some useful tools too.
+
+Dr. Axel Rauschmayer
+
+[Node v22.14.0 (LTS) Released](https://nodeweekly.com/link/165516/0a4070b383 "nodejs.org") — The latest stable/LTS release of Node gets the usual raft of bug fixes and tweaks. Among the more notable ones are [TypeScript support for code evalled via `stdin`](https://nodeweekly.com/link/165517/0a4070b383), a new [`--disable-sigusr1` flag](https://nodeweekly.com/link/165518/0a4070b383), [`assert.register()`](https://nodeweekly.com/link/165519/0a4070b383), and [`t.assert.fileSnapshot()`.](https://nodeweekly.com/link/165520/0a4070b383)
+
+Antoine du Hamel
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/46756bfb.png)](https://nodeweekly.com/link/165514/0a4070b383)
+
+[Troubleshoot Node.js App Performance with Datadog APM](https://nodeweekly.com/link/165514/0a4070b383 "www.datadoghq.com") — Datadog’s distributed tracing provides end-to-end visibility into requests wherever they go, across hosts, containers, and service boundaries. With rich dashboards, and algorithmic alerts, Datadog provides your team with the tools they need to optimize modern applications.
+
+Datadog sponsor
+
+**IN BRIEF:**
+
+*   🎥 I wanted to turn some CSS animations into MP4 videos, but didn't want to do the screen recording myself. Puppeteer, Node and `fluent-ffmpeg` to the rescue! [Here's my code to headlessly turn HTML into video.](https://nodeweekly.com/link/165521/0a4070b383)
+    
+*   🔠 [GitHub has updated](https://nodeweekly.com/link/165522/0a4070b383) its fantastic family of [Monaspace](https://nodeweekly.com/link/165523/0a4070b383) monospace coding fonts to support Nerd Fonts and include many more glyphs, extra 0 character designs, extra ligatures, and more.
+    
+*   Unflagged support for `require(esm)` is [being backported to Node 20.](https://nodeweekly.com/link/165524/0a4070b383)
+    
+
+[Why to Move On to 'ESM-Only'](https://nodeweekly.com/link/165525/0a4070b383 "antfu.me") — The march to using ES modules has been going on for years now and if you’re still holding out, there’s probably a good reason why. While you can maintain packages that support both ESM and CommonJS approaches, Anthony thinks it’s finally time to go ‘ESM only’ and explains why here.
+
+Anthony Fu
+
+[Node v20.18.3 (LTS) Released](https://nodeweekly.com/link/165526/0a4070b383 "nodejs.org") — The main update is the backporting of import attributes and JSON modules is now considered stable.
+
+Marco Ippolito
+
+[Want to Roll Your Own Autoscaling? Here Are Our Secrets 🤫](https://nodeweekly.com/link/165527/0a4070b383 "judoscale.com") — Does it make sense for us to write this guide? No! Did we do it anyway? Yes! We did it for you ❤️
+
+Judoscale sponsor
+
+📄 [A Checklist for Your `tsconfig.json`](https://nodeweekly.com/link/165528/0a4070b383) Dr. Axel Rauschmayer
+
+📄 [Do I Need This Node Dependency?](https://nodeweekly.com/link/165529/0a4070b383) Brian Muenzenmeyer
+
+📄 [How to Write Cypress Tests That Don't Suck](https://nodeweekly.com/link/165530/0a4070b383) Jonathan Chaffer
+
+🛠 Code & Tools
+
+[import-in-the-middle: A Module Loading Interceptor](https://nodeweekly.com/link/165531/0a4070b383 "github.com") — Back in my day _Malcolm_ was in the middle, but now you can intercept the loading of ES modules in Node with this – handy if you want to modify them in some way. There’s also [require-in-the-middle](https://nodeweekly.com/link/165532/0a4070b383) if you’re a bit more oldschool.
+
+Node.js Team
+
+[ffast: An Experimental Node.js FFI Library](https://nodeweekly.com/link/165533/0a4070b383 "github.com") — A _proof of concept_ for bringing all the low level bindings necessary into JS-land for creating FFI wrappers from JavaScript itself, without needing things like libffi. Works (with many caveats, the author says) on Linux x64/ARM64 and macOS/ARM64.
+
+Billy Whizz
+
+[Human Regex: Human-Friendly Regular Expression Builder with English-Like Syntax](https://nodeweekly.com/link/165534/0a4070b383 "github.com") — After 8 years of Perl, regexes are my bread and butter, but I’d say _most_ developers aren’t big fans ;-) This library offers a more natural fluent-style option. [Magic Regexp](https://nodeweekly.com/link/165535/0a4070b383) and [Super Expressive](https://nodeweekly.com/link/165536/0a4070b383) are other options in this space.
+
+Ridwan Ajibola
+
+[Pundit-TS: Organize Your Authorization Logic with Full Type-Safety](https://nodeweekly.com/link/165537/0a4070b383 "github.com") — Inspired by Ruby’s [Pundit](https://nodeweekly.com/link/165538/0a4070b383) library, Pundit-TS offers a TypeScript flavored way to implement role-based and attribute-based access control models in your app.
+
+Fatih Kaya
+
+[web-worker 1.5: Consistent Web Workers for the Browser and Node](https://nodeweekly.com/link/165539/0a4070b383 "github.com") — Want to publish npm modules that use Web Workers and that work in both Node anbd client-side? In Node, it works as a web-compatible Worker implementation atop `worker_threads`. In the browser, it’s an alias for `Worker`.
+
+Jason Miller
+
+[fast-folder-size: Calculate the Total Size of a Directory](https://nodeweekly.com/link/165540/0a4070b383) — Works as both a CLI app or Node module.  
+Simone Busoli
+
+[ioredis 5.5: Robust, Performant, Full-Featured Redis Client for Node](https://nodeweekly.com/link/165541/0a4070b383)  
+Zihua Li
+
+[remove-unused-vars](https://nodeweekly.com/link/165542/0a4070b383) — An experimental new tool for removing unused variables from code.  
+Lars Kappert
+
+📰 Classifieds
+
+[Start selling to enterprise faster with WorkOS](https://nodeweekly.com/link/165543/0a4070b383) by Adding SSO, SCIM, and RBAC to your B2B SaaS app in minutes—not months.
+
+* * *
+
+📈 Is your app facing a traffic spike (e.g. fintechs facing the upcoming tax season)? [Join Matteo Collina](https://nodeweekly.com/link/165544/0a4070b383) for tips on scaling Node.js apps during high-pressure periods.
+
+* * *
+
+[Register your badge for Node Congress!](https://nodeweekly.com/link/165545/0a4070b383) Learn Fullstack, JS backends & DevOps from top Node.js experts, including TSC members & 15+ speakers!
+
+*   [pnpm 10.3](https://nodeweekly.com/link/165546/0a4070b383) – The fast, efficiency-focused package manager adds a `strict-dep-builds` option to exit with a non-zero exit code if any dependencies have unreviewed build scripts.
+    
+*   [Express Zod API 22.8](https://nodeweekly.com/link/165547/0a4070b383) – Quick schema validation and custom middleware.
+    
+*   [Mongoose 8.10](https://nodeweekly.com/link/165548/0a4070b383) – Popular MongoDB object modeling library.
+    
+*   [Typegoose 12.11](https://nodeweekly.com/link/165549/0a4070b383) – Define Mongoose 8.10 models as TypeScript classes.
+    
+*   [Jasmine 5.6](https://nodeweekly.com/link/165550/0a4070b383) – Testing framework for browsers & Node.
+    
+*   [Globby 14.1](https://nodeweekly.com/link/165551/0a4070b383) – User-friendly glob matching.
+    
+
+📢  Elsewhere in JavaScript
+
+A quick roundup of some of other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   Alex MacArthur [shows off seven different ways to break up long tasks](https://nodeweekly.com/link/165552/0a4070b383) in JavaScript. Only a few of them work in Node, with the focus being on browser use cases where freezing up the UI is a true no go.
+    
+*   Beej, author of [numerous popular guides](https://nodeweekly.com/link/165553/0a4070b383) to programming concept, has [released _Beej's Guide to Git_](https://nodeweekly.com/link/165554/0a4070b383), a great zero-to-expert online resource for using the world's most popular DVCS.
+    
+*   [Nx](https://nodeweekly.com/link/165555/0a4070b383) user? [Nx has a whole new experience for Nx workspaces](https://nodeweekly.com/link/165556/0a4070b383) that's faster, more efficient, and solves a variety of issues with TypeScript editor support for large monorepos.
+    
+*   📺 From the creators of the fantastic [▶️ _Node.js: The Documentary_](https://nodeweekly.com/link/165557/0a4070b383) comes [▶️ a new documentary about the Angular framework.](https://nodeweekly.com/link/165558/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​566 — February 11, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/566)
+
+🏖️ We're taking next week off, so the next issue will be on Tuesday, February 25. Feel free to hit reply and send in any submissions!\
+\_\_\
+*Peter Cooper, your editor.*
+
+Together with 
+
+[![Datadog](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_700,h_190/e_make_transparent/co_white,e_outline:10/vuhqm1wlyvxuddx1zxr8.png)](https://nodeweekly.com/link/165514/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qwcihiujj5ssgoesrfix.jpg)](https://nodeweekly.com/link/165515/0a4070b383)
+
+[How to Publish ESM-Based npm Packages with TypeScript](https://nodeweekly.com/link/165515/0a4070b383 "2ality.com") — Now that you can use the ES modules (almost) everywhere, it’s worth understanding how to package them up for use with npm. Axel digs into everything you need to know and shares some useful tools too.
+
+Dr. Axel Rauschmayer
+
+[Node v22.14.0 (LTS) Released](https://nodeweekly.com/link/165516/0a4070b383 "nodejs.org") — The latest stable/LTS release of Node gets the usual raft of bug fixes and tweaks. Among the more notable ones are [TypeScript support for code evalled via `stdin`](https://nodeweekly.com/link/165517/0a4070b383), a new [`--disable-sigusr1` flag](https://nodeweekly.com/link/165518/0a4070b383), [`assert.register()`](https://nodeweekly.com/link/165519/0a4070b383), and [`t.assert.fileSnapshot()`.](https://nodeweekly.com/link/165520/0a4070b383)
+
+Antoine du Hamel
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/46756bfb.png)](https://nodeweekly.com/link/165514/0a4070b383)
+
+[Troubleshoot Node.js App Performance with Datadog APM](https://nodeweekly.com/link/165514/0a4070b383 "www.datadoghq.com") — Datadog’s distributed tracing provides end-to-end visibility into requests wherever they go, across hosts, containers, and service boundaries. With rich dashboards, and algorithmic alerts, Datadog provides your team with the tools they need to optimize modern applications.
+
+Datadog sponsor
+
+**IN BRIEF:**
+
+* 🎥 I wanted to turn some CSS animations into MP4 videos, but didn't want to do the screen recording myself. Puppeteer, Node and `fluent-ffmpeg` to the rescue! [Here's my code to headlessly turn HTML into video.](https://nodeweekly.com/link/165521/0a4070b383)
+
+* 🔠 [GitHub has updated](https://nodeweekly.com/link/165522/0a4070b383) its fantastic family of [Monaspace](https://nodeweekly.com/link/165523/0a4070b383) monospace coding fonts to support Nerd Fonts and include many more glyphs, extra 0 character designs, extra ligatures, and more.
+
+* Unflagged support for `require(esm)` is [being backported to Node 20.](https://nodeweekly.com/link/165524/0a4070b383)
+
+[Why to Move On to 'ESM-Only'](https://nodeweekly.com/link/165525/0a4070b383 "antfu.me") — The march to using ES modules has been going on for years now and if you’re still holding out, there’s probably a good reason why. While you can maintain packages that support both ESM and CommonJS approaches, Anthony thinks it’s finally time to go ‘ESM only’ and explains why here.
+
+Anthony Fu
+
+[Node v20.18.3 (LTS) Released](https://nodeweekly.com/link/165526/0a4070b383 "nodejs.org") — The main update is the backporting of import attributes and JSON modules is now considered stable.
+
+Marco Ippolito
+
+[Want to Roll Your Own Autoscaling? Here Are Our Secrets 🤫](https://nodeweekly.com/link/165527/0a4070b383 "judoscale.com") — Does it make sense for us to write this guide? No! Did we do it anyway? Yes! We did it for you ❤️
+
+Judoscale sponsor
+
+📄 [A Checklist for Your `tsconfig.json`](https://nodeweekly.com/link/165528/0a4070b383) Dr. Axel Rauschmayer
+
+📄 [Do I Need This Node Dependency?](https://nodeweekly.com/link/165529/0a4070b383) Brian Muenzenmeyer
+
+📄 [How to Write Cypress Tests That Don't Suck](https://nodeweekly.com/link/165530/0a4070b383) Jonathan Chaffer
+
+🛠 Code & Tools
+
+[import-in-the-middle: A Module Loading Interceptor](https://nodeweekly.com/link/165531/0a4070b383 "github.com") — Back in my day *Malcolm* was in the middle, but now you can intercept the loading of ES modules in Node with this – handy if you want to modify them in some way. There’s also [require-in-the-middle](https://nodeweekly.com/link/165532/0a4070b383) if you’re a bit more oldschool.
+
+Node.js Team
+
+[ffast: An Experimental Node.js FFI Library](https://nodeweekly.com/link/165533/0a4070b383 "github.com") — A *proof of concept* for bringing all the low level bindings necessary into JS-land for creating FFI wrappers from JavaScript itself, without needing things like libffi. Works (with many caveats, the author says) on Linux x64/ARM64 and macOS/ARM64.
+
+Billy Whizz
+
+[Human Regex: Human-Friendly Regular Expression Builder with English-Like Syntax](https://nodeweekly.com/link/165534/0a4070b383 "github.com") — After 8 years of Perl, regexes are my bread and butter, but I’d say *most* developers aren’t big fans ;-) This library offers a more natural fluent-style option. [Magic Regexp](https://nodeweekly.com/link/165535/0a4070b383) and [Super Expressive](https://nodeweekly.com/link/165536/0a4070b383) are other options in this space.
+
+Ridwan Ajibola
+
+[Pundit-TS: Organize Your Authorization Logic with Full Type-Safety](https://nodeweekly.com/link/165537/0a4070b383 "github.com") — Inspired by Ruby’s [Pundit](https://nodeweekly.com/link/165538/0a4070b383) library, Pundit-TS offers a TypeScript flavored way to implement role-based and attribute-based access control models in your app.
+
+Fatih Kaya
+
+[web-worker 1.5: Consistent Web Workers for the Browser and Node](https://nodeweekly.com/link/165539/0a4070b383 "github.com") — Want to publish npm modules that use Web Workers and that work in both Node anbd client-side? In Node, it works as a web-compatible Worker implementation atop `worker_threads`. In the browser, it’s an alias for `Worker`.
+
+Jason Miller
+
+[fast-folder-size: Calculate the Total Size of a Directory](https://nodeweekly.com/link/165540/0a4070b383) — Works as both a CLI app or Node module.\
+Simone Busoli
+
+[ioredis 5.5: Robust, Performant, Full-Featured Redis Client for Node](https://nodeweekly.com/link/165541/0a4070b383)\
+Zihua Li
+
+[remove-unused-vars](https://nodeweekly.com/link/165542/0a4070b383) — An experimental new tool for removing unused variables from code.\
+Lars Kappert
+
+📰 Classifieds
+
+[Start selling to enterprise faster with WorkOS](https://nodeweekly.com/link/165543/0a4070b383) by Adding SSO, SCIM, and RBAC to your B2B SaaS app in minutes—not months.
+
+***
+
+📈 Is your app facing a traffic spike (e.g. fintechs facing the upcoming tax season)? [Join Matteo Collina](https://nodeweekly.com/link/165544/0a4070b383) for tips on scaling Node.js apps during high-pressure periods.
+
+***
+
+[Register your badge for Node Congress!](https://nodeweekly.com/link/165545/0a4070b383) Learn Fullstack, JS backends & DevOps from top Node.js experts, including TSC members & 15+ speakers!
+
+* [pnpm 10.3](https://nodeweekly.com/link/165546/0a4070b383) – The fast, efficiency-focused package manager adds a `strict-dep-builds` option to exit with a non-zero exit code if any dependencies have unreviewed build scripts.
+
+* [Express Zod API 22.8](https://nodeweekly.com/link/165547/0a4070b383) – Quick schema validation and custom middleware.
+
+* [Mongoose 8.10](https://nodeweekly.com/link/165548/0a4070b383) – Popular MongoDB object modeling library.
+
+* [Typegoose 12.11](https://nodeweekly.com/link/165549/0a4070b383) – Define Mongoose 8.10 models as TypeScript classes.
+
+* [Jasmine 5.6](https://nodeweekly.com/link/165550/0a4070b383) – Testing framework for browsers & Node.
+
+* [Globby 14.1](https://nodeweekly.com/link/165551/0a4070b383) – User-friendly glob matching.
+
+📢  Elsewhere in JavaScript
+
+A quick roundup of some of other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* Alex MacArthur [shows off seven different ways to break up long tasks](https://nodeweekly.com/link/165552/0a4070b383) in JavaScript. Only a few of them work in Node, with the focus being on browser use cases where freezing up the UI is a true no go.
+
+* Beej, author of [numerous popular guides](https://nodeweekly.com/link/165553/0a4070b383) to programming concept, has [released *Beej's Guide to Git*](https://nodeweekly.com/link/165554/0a4070b383), a great zero-to-expert online resource for using the world's most popular DVCS.
+
+* [Nx](https://nodeweekly.com/link/165555/0a4070b383) user? [Nx has a whole new experience for Nx workspaces](https://nodeweekly.com/link/165556/0a4070b383) that's faster, more efficient, and solves a variety of issues with TypeScript editor support for large monorepos.
+
+* 📺 From the creators of the fantastic [▶️ *Node.js: The Documentary*](https://nodeweekly.com/link/165557/0a4070b383) comes [▶️ a new documentary about the Angular framework.](https://nodeweekly.com/link/165558/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
