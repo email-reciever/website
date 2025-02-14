@@ -1,0 +1,332 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: It's time to go ESM-only
+description: It's time to go ESM-only
+date: 星期五 06 晚上 二月 14o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/723
+origin_site: https://javascriptweekly.com/issues/723
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="It's time to go ESM-only" url="https://javascriptweekly.com/issues/723" />
+
+<Detail client:only="react">
+	#​723 — February 14, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/723)
+
+Together with 
+
+[![AWS](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_700/e_make_transparent/co_white,e_outline:10/v4cjjkcunep8a0x8edt9.png)](https://javascriptweekly.com/link/165774/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lobuc80xxqp4gb8f7eg3.jpg)](https://javascriptweekly.com/link/165775/d076523b1d)
+
+[Style Observer: A Library to Observe CSS Property Changes](https://javascriptweekly.com/link/165775/d076523b1d "lea.verou.me") — Lea Verou is a developer who’s easy to admire because whenever she sets out to solve a problem, the results are always fully formed with no cut corners. So it goes with this ‘exhaustively tested’ JS library for observing changes to CSS properties which deftly handles lots of browser quirks. See [the project homepage](https://javascriptweekly.com/link/165776/d076523b1d) for more. (TIL there’s a `.style` TLD!)
+
+Lea Verou
+
+💡 Lea has [many other projects](https://javascriptweekly.com/link/165777/d076523b1d) to check out, including [Color.js](https://javascriptweekly.com/link/165778/d076523b1d) which similarly nails the whole process of handling and manipulating colors in JS and the browser.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/61fd5e47.png)](https://javascriptweekly.com/link/165774/d076523b1d)
+
+[Build Better with AWS, Using Tips and Tools from the Developer Center](https://javascriptweekly.com/link/165774/d076523b1d "fnf.dev") — Get hands-on with DevOps, Data & ML, and Generative AI. Use any language, level up your skills. Connect with like-minded devs all over the world on AWS Communities. [The AWS Developer Center](https://javascriptweekly.com/link/165774/d076523b1d) has everything you need in one place. Don’t miss out!
+
+AWS sponsor
+
+[Why to Move On to 'ESM-Only'](https://javascriptweekly.com/link/165779/d076523b1d "antfu.me") — The march to using ES modules has been going on for years, but if you’re still holding out, there’s probably a good reason why? However, while you can maintain packages supporting _both_ ESM and CommonJS, Anthony thinks it’s time to go ‘ESM only’ and explains why.
+
+Anthony Fu
+
+💡 On that topic, Sarah Gooding writes [about `require(esm)` being backported and stable on Node.js 20](https://javascriptweekly.com/link/165780/d076523b1d) which makes the transition even easier to justify.
+
+**IN BRIEF:**
+
+*   🤔 Developer industry analyst Kate Holterhoff asks ["Is npm enough?" and questions why there are so many attempts](https://javascriptweekly.com/link/165781/d076523b1d) to replace or extend npm in the JS package registry space.
+    
+*   📱 The React Native team has [a roundup of what happened at the most recent contributor summit.](https://javascriptweekly.com/link/165782/d076523b1d) Must read for React Native devs.
+    
+*   [The Popover API is _now_ considered a 'baseline' browser feature](https://javascriptweekly.com/link/165783/d076523b1d) with broad support across all major browsers.
+    
+*   🤖 Reader Ishan Anand has been working on implementing GPT2 (a precursor to OpenAI's current offerings) entirely in the browser to power [some interesting browser-based spreadsheet data processing experiments.](https://javascriptweekly.com/link/165784/d076523b1d)
+    
+
+**RELEASES:**
+
+*   [Node.js v23.8.0 (Current)](https://javascriptweekly.com/link/165785/d076523b1d) and [Node.js v22.14.0 (LTS)](https://javascriptweekly.com/link/165786/d076523b1d)
+    
+*   [Node.js v20.18.3 (LTS)](https://javascriptweekly.com/link/165787/d076523b1d) – The backporting of import attributes and JSON modules is now stable.
+    
+*   [pnpm 10.3](https://javascriptweekly.com/link/165788/d076523b1d) – The fast, efficiency-focused package manager adds a `strict-dep-builds` option to exit with a non-zero exit code if any dependencies have unreviewed build scripts.
+    
+*   [Pixi.js 8.8](https://javascriptweekly.com/link/165789/d076523b1d) – Fast, flexible 2D WebGL renderer.
+    
+*   [Astro 5.3](https://javascriptweekly.com/link/165790/d076523b1d), [Prettier 3.5](https://javascriptweekly.com/link/165791/d076523b1d), [Electron 34.2](https://javascriptweekly.com/link/165792/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lnlqvx33nqatwo0inw5v.jpg)](https://javascriptweekly.com/link/165793/d076523b1d)
+
+[How and Why to Build 'Copy Code' Buttons](https://javascriptweekly.com/link/165793/d076523b1d "whitep4nth3r.com") — A commonly encountered way to give readers easier access to source shared on the Web. David Bushell has [an interesting followup](https://javascriptweekly.com/link/165794/d076523b1d) reflecting on his own experiences implementing the same feature.
+
+Salma Alam-Naylor
+
+[The RegExp Escaping ECMAScript Proposal](https://javascriptweekly.com/link/165795/d076523b1d "2ality.com") — `RegExp.escape()` is a function to create an escaped version of a supplied text that matches itself when used as, or in, a regular expression. Axel has also written [an implementation in plain JS](https://javascriptweekly.com/link/165796/d076523b1d) to get a feel for how it works.
+
+Dr. Axel Rauschmayer
+
+[Build a Next.js Sign-Up Form with React Hook Form](https://javascriptweekly.com/link/165797/d076523b1d "go.clerk.com") — Features progressive enhancement, dynamic validation, and secure password handling with Argon2.
+
+Clerk sponsor
+
+[How to Start a React Project in 2025](https://javascriptweekly.com/link/165798/d076523b1d "www.robinwieruch.de") — While there are many ways to start a React project, Robin examines the pros and cons of a few popular approaches.
+
+Robin Wieruch
+
+[Learning How to Build Modern Web Extensions](https://javascriptweekly.com/link/165799/d076523b1d "chenhuijing.com") — It’s easy to run into outdated docs when building extensions. Lucky for us, Hui has been through the process and shares some tips.
+
+Hui Jing
+
+[Testing 10 JavaScript Frameworks on Their HTML Defaults](https://javascriptweekly.com/link/165800/d076523b1d "meiert.com") — Using a JavaScript framework is now ‘the way’ for many Web site developers, but how do the popular options fare at producing valid, error free HTML?
+
+Jens Oliver Meiert
+
+📄 [Using `Intl.DurationFormat` for Localized Durations](https://javascriptweekly.com/link/165801/d076523b1d) Raymond Camden
+
+📄 [How to Refactor Code with GitHub Copilot](https://javascriptweekly.com/link/165802/d076523b1d) Anthony Grutta (GitHub)
+
+📄 [Using RxDB as a Database in a Vue.js Application](https://javascriptweekly.com/link/165803/d076523b1d) RxDB
+
+📄 [Supporting Pasting Files into the Browser](https://javascriptweekly.com/link/165804/d076523b1d) Fileber
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xi9zwkvukskgqoxx7y4q.jpg)](https://javascriptweekly.com/link/165805/d076523b1d)
+
+[Ohm: A Parsing Toolkit for JavaScript and TypeScript](https://javascriptweekly.com/link/165805/d076523b1d "ohmjs.org") — It’s been a few years since we covered this project and it’s come along a lot. It’s a library for building PEG-based parsers you can use in interpreter, compilers, analysis tools, etc. and you can even [play with its grammar online.](https://javascriptweekly.com/link/165806/d076523b1d)
+
+Warth, Dubroy, et al.
+
+[Start Selling to Enterprise Faster with WorkOS](https://javascriptweekly.com/link/165807/d076523b1d "workos.com") — Add SSO, SCIM, and RBAC to your B2B SaaS app in minutes—not months.
+
+WorkOS sponsor
+
+[Human Regex: Human-Friendly Regular Expression Builder with English Syntax](https://javascriptweekly.com/link/165808/d076523b1d "github.com") — After 8 years of Perl, regexes are my friend, but _most_ developers aren’t big fans? This library offers a natural, fluent approach. [Magic Regexp](https://javascriptweekly.com/link/165809/d076523b1d) and [Super Expressive](https://javascriptweekly.com/link/165810/d076523b1d) are alternatives to consider.
+
+Ridwan Ajibola
+
+[Svader: Create GPU-Rendered Svelte Components](https://javascriptweekly.com/link/165811/d076523b1d "github.com") — [The examples](https://javascriptweekly.com/link/165812/d076523b1d) are a good way to get a feel for what this offers.
+
+Holger Dal Mogensen
+
+[web-worker 1.5: Consistent Web Workers for the Browser and Node](https://javascriptweekly.com/link/165813/d076523b1d "github.com") — Want to publish npm modules that use Web Workers and that work in both Node and client-side? In Node, it works as a web-compatible Worker implementation atop `worker_threads`. In the browser, it’s an alias for `Worker`.
+
+Jason Miller
+
+[The React Data Table I Always Wanted](https://javascriptweekly.com/link/165814/d076523b1d "www.openstatus.dev") — A look into a particularly fast and clean _shadcn/ui_\-based data table component ([GitHub repo](https://javascriptweekly.com/link/165815/d076523b1d)). [See a live demo.](https://javascriptweekly.com/link/165816/d076523b1d)
+
+Maximilian Kaske
+
+📰 Classifieds
+
+[Telling the Bit story: Celebrating 10 Years of Composability](https://javascriptweekly.com/link/165817/d076523b1d). Ran Mizrahi reveals how Bit shifted from development stagnation to exponential progress using Composability.
+
+* * *
+
+🤯 Pfft, vehicle data is a joke without [CarsXE](https://javascriptweekly.com/link/165818/d076523b1d). API goes brrrrr. VIN decoding, plate lookup, market value reports. [Get Serious!](https://javascriptweekly.com/link/165818/d076523b1d)
+
+* * *
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/165819/d076523b1d). Relied on by 1000s of orgs, including Lattice, Bilt Rewards and many more.
+
+* * *
+
+Other PDF SDKs promise a lot — then break at scale. [Nutrient’s SDK doesn't, handling billion-page workloads for over 10k devs](https://javascriptweekly.com/link/165820/d076523b1d) — meaning you don’t have to debug PDFs.
+
+*   [Kaluma 1.2](https://javascriptweekly.com/link/165821/d076523b1d) – Tiny JavaScript runtime for the RP2040 (Raspberry Pi Pico).
+    
+*   [bcrypt.js 3.0](https://javascriptweekly.com/link/165822/d076523b1d) – Optimized bcrypt in pure JS. Even in the browser.
+    
+*   [Jasmine 5.6](https://javascriptweekly.com/link/165823/d076523b1d) – Testing framework for browsers & Node.
+    
+*   🤖 [Midscene.js 0.11](https://javascriptweekly.com/link/165824/d076523b1d) – Let AI be your browser operator.
+    
+
+🔠 And a little typography bonus
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/n8wrmadr5rxl7vjx82u2.jpg)](https://javascriptweekly.com/link/165825/d076523b1d)
+
+[GitHub Extends Its _Monaspace_ Font Family](https://javascriptweekly.com/link/165825/d076523b1d "github.com") — [Monaspace](https://javascriptweekly.com/link/165826/d076523b1d) is a fantastic set of monospaced fonts from GitHub targeted at coding use cases. Its new [v1.2 release](https://javascriptweekly.com/link/165825/d076523b1d) ups the ante by including [Nerd Fonts](https://javascriptweekly.com/link/165827/d076523b1d) support and symbols, new box drawing glyphs, characters, character variants, ligatures, and more.
+
+GitHub
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/165828/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​723 — February 14, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/723)
+
+Together with 
+
+[![AWS](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_700/e_make_transparent/co_white,e_outline:10/v4cjjkcunep8a0x8edt9.png)](https://javascriptweekly.com/link/165774/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lobuc80xxqp4gb8f7eg3.jpg)](https://javascriptweekly.com/link/165775/d076523b1d)
+
+[Style Observer: A Library to Observe CSS Property Changes](https://javascriptweekly.com/link/165775/d076523b1d "lea.verou.me") — Lea Verou is a developer who’s easy to admire because whenever she sets out to solve a problem, the results are always fully formed with no cut corners. So it goes with this ‘exhaustively tested’ JS library for observing changes to CSS properties which deftly handles lots of browser quirks. See [the project homepage](https://javascriptweekly.com/link/165776/d076523b1d) for more. (TIL there’s a `.style` TLD!)
+
+Lea Verou
+
+💡 Lea has [many other projects](https://javascriptweekly.com/link/165777/d076523b1d) to check out, including [Color.js](https://javascriptweekly.com/link/165778/d076523b1d) which similarly nails the whole process of handling and manipulating colors in JS and the browser.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/61fd5e47.png)](https://javascriptweekly.com/link/165774/d076523b1d)
+
+[Build Better with AWS, Using Tips and Tools from the Developer Center](https://javascriptweekly.com/link/165774/d076523b1d "fnf.dev") — Get hands-on with DevOps, Data & ML, and Generative AI. Use any language, level up your skills. Connect with like-minded devs all over the world on AWS Communities. [The AWS Developer Center](https://javascriptweekly.com/link/165774/d076523b1d) has everything you need in one place. Don’t miss out!
+
+AWS sponsor
+
+[Why to Move On to 'ESM-Only'](https://javascriptweekly.com/link/165779/d076523b1d "antfu.me") — The march to using ES modules has been going on for years, but if you’re still holding out, there’s probably a good reason why? However, while you can maintain packages supporting *both* ESM and CommonJS, Anthony thinks it’s time to go ‘ESM only’ and explains why.
+
+Anthony Fu
+
+💡 On that topic, Sarah Gooding writes [about `require(esm)` being backported and stable on Node.js 20](https://javascriptweekly.com/link/165780/d076523b1d) which makes the transition even easier to justify.
+
+**IN BRIEF:**
+
+* 🤔 Developer industry analyst Kate Holterhoff asks ["Is npm enough?" and questions why there are so many attempts](https://javascriptweekly.com/link/165781/d076523b1d) to replace or extend npm in the JS package registry space.
+
+* 📱 The React Native team has [a roundup of what happened at the most recent contributor summit.](https://javascriptweekly.com/link/165782/d076523b1d) Must read for React Native devs.
+
+* [The Popover API is *now* considered a 'baseline' browser feature](https://javascriptweekly.com/link/165783/d076523b1d) with broad support across all major browsers.
+
+* 🤖 Reader Ishan Anand has been working on implementing GPT2 (a precursor to OpenAI's current offerings) entirely in the browser to power [some interesting browser-based spreadsheet data processing experiments.](https://javascriptweekly.com/link/165784/d076523b1d)
+
+**RELEASES:**
+
+* [Node.js v23.8.0 (Current)](https://javascriptweekly.com/link/165785/d076523b1d) and [Node.js v22.14.0 (LTS)](https://javascriptweekly.com/link/165786/d076523b1d)
+
+* [Node.js v20.18.3 (LTS)](https://javascriptweekly.com/link/165787/d076523b1d) – The backporting of import attributes and JSON modules is now stable.
+
+* [pnpm 10.3](https://javascriptweekly.com/link/165788/d076523b1d) – The fast, efficiency-focused package manager adds a `strict-dep-builds` option to exit with a non-zero exit code if any dependencies have unreviewed build scripts.
+
+* [Pixi.js 8.8](https://javascriptweekly.com/link/165789/d076523b1d) – Fast, flexible 2D WebGL renderer.
+
+* [Astro 5.3](https://javascriptweekly.com/link/165790/d076523b1d), [Prettier 3.5](https://javascriptweekly.com/link/165791/d076523b1d), [Electron 34.2](https://javascriptweekly.com/link/165792/d076523b1d)
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lnlqvx33nqatwo0inw5v.jpg)](https://javascriptweekly.com/link/165793/d076523b1d)
+
+[How and Why to Build 'Copy Code' Buttons](https://javascriptweekly.com/link/165793/d076523b1d "whitep4nth3r.com") — A commonly encountered way to give readers easier access to source shared on the Web. David Bushell has [an interesting followup](https://javascriptweekly.com/link/165794/d076523b1d) reflecting on his own experiences implementing the same feature.
+
+Salma Alam-Naylor
+
+[The RegExp Escaping ECMAScript Proposal](https://javascriptweekly.com/link/165795/d076523b1d "2ality.com") — `RegExp.escape()` is a function to create an escaped version of a supplied text that matches itself when used as, or in, a regular expression. Axel has also written [an implementation in plain JS](https://javascriptweekly.com/link/165796/d076523b1d) to get a feel for how it works.
+
+Dr. Axel Rauschmayer
+
+[Build a Next.js Sign-Up Form with React Hook Form](https://javascriptweekly.com/link/165797/d076523b1d "go.clerk.com") — Features progressive enhancement, dynamic validation, and secure password handling with Argon2.
+
+Clerk sponsor
+
+[How to Start a React Project in 2025](https://javascriptweekly.com/link/165798/d076523b1d "www.robinwieruch.de") — While there are many ways to start a React project, Robin examines the pros and cons of a few popular approaches.
+
+Robin Wieruch
+
+[Learning How to Build Modern Web Extensions](https://javascriptweekly.com/link/165799/d076523b1d "chenhuijing.com") — It’s easy to run into outdated docs when building extensions. Lucky for us, Hui has been through the process and shares some tips.
+
+Hui Jing
+
+[Testing 10 JavaScript Frameworks on Their HTML Defaults](https://javascriptweekly.com/link/165800/d076523b1d "meiert.com") — Using a JavaScript framework is now ‘the way’ for many Web site developers, but how do the popular options fare at producing valid, error free HTML?
+
+Jens Oliver Meiert
+
+📄 [Using `Intl.DurationFormat` for Localized Durations](https://javascriptweekly.com/link/165801/d076523b1d) Raymond Camden
+
+📄 [How to Refactor Code with GitHub Copilot](https://javascriptweekly.com/link/165802/d076523b1d) Anthony Grutta (GitHub)
+
+📄 [Using RxDB as a Database in a Vue.js Application](https://javascriptweekly.com/link/165803/d076523b1d) RxDB
+
+📄 [Supporting Pasting Files into the Browser](https://javascriptweekly.com/link/165804/d076523b1d) Fileber
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xi9zwkvukskgqoxx7y4q.jpg)](https://javascriptweekly.com/link/165805/d076523b1d)
+
+[Ohm: A Parsing Toolkit for JavaScript and TypeScript](https://javascriptweekly.com/link/165805/d076523b1d "ohmjs.org") — It’s been a few years since we covered this project and it’s come along a lot. It’s a library for building PEG-based parsers you can use in interpreter, compilers, analysis tools, etc. and you can even [play with its grammar online.](https://javascriptweekly.com/link/165806/d076523b1d)
+
+Warth, Dubroy, et al.
+
+[Start Selling to Enterprise Faster with WorkOS](https://javascriptweekly.com/link/165807/d076523b1d "workos.com") — Add SSO, SCIM, and RBAC to your B2B SaaS app in minutes—not months.
+
+WorkOS sponsor
+
+[Human Regex: Human-Friendly Regular Expression Builder with English Syntax](https://javascriptweekly.com/link/165808/d076523b1d "github.com") — After 8 years of Perl, regexes are my friend, but *most* developers aren’t big fans? This library offers a natural, fluent approach. [Magic Regexp](https://javascriptweekly.com/link/165809/d076523b1d) and [Super Expressive](https://javascriptweekly.com/link/165810/d076523b1d) are alternatives to consider.
+
+Ridwan Ajibola
+
+[Svader: Create GPU-Rendered Svelte Components](https://javascriptweekly.com/link/165811/d076523b1d "github.com") — [The examples](https://javascriptweekly.com/link/165812/d076523b1d) are a good way to get a feel for what this offers.
+
+Holger Dal Mogensen
+
+[web-worker 1.5: Consistent Web Workers for the Browser and Node](https://javascriptweekly.com/link/165813/d076523b1d "github.com") — Want to publish npm modules that use Web Workers and that work in both Node and client-side? In Node, it works as a web-compatible Worker implementation atop `worker_threads`. In the browser, it’s an alias for `Worker`.
+
+Jason Miller
+
+[The React Data Table I Always Wanted](https://javascriptweekly.com/link/165814/d076523b1d "www.openstatus.dev") — A look into a particularly fast and clean *shadcn/ui*-based data table component ([GitHub repo](https://javascriptweekly.com/link/165815/d076523b1d)). [See a live demo.](https://javascriptweekly.com/link/165816/d076523b1d)
+
+Maximilian Kaske
+
+📰 Classifieds
+
+[Telling the Bit story: Celebrating 10 Years of Composability](https://javascriptweekly.com/link/165817/d076523b1d). Ran Mizrahi reveals how Bit shifted from development stagnation to exponential progress using Composability.
+
+***
+
+🤯 Pfft, vehicle data is a joke without [CarsXE](https://javascriptweekly.com/link/165818/d076523b1d). API goes brrrrr. VIN decoding, plate lookup, market value reports. [Get Serious!](https://javascriptweekly.com/link/165818/d076523b1d)
+
+***
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/165819/d076523b1d). Relied on by 1000s of orgs, including Lattice, Bilt Rewards and many more.
+
+***
+
+Other PDF SDKs promise a lot — then break at scale. [Nutrient’s SDK doesn't, handling billion-page workloads for over 10k devs](https://javascriptweekly.com/link/165820/d076523b1d) — meaning you don’t have to debug PDFs.
+
+* [Kaluma 1.2](https://javascriptweekly.com/link/165821/d076523b1d) – Tiny JavaScript runtime for the RP2040 (Raspberry Pi Pico).
+
+* [bcrypt.js 3.0](https://javascriptweekly.com/link/165822/d076523b1d) – Optimized bcrypt in pure JS. Even in the browser.
+
+* [Jasmine 5.6](https://javascriptweekly.com/link/165823/d076523b1d) – Testing framework for browsers & Node.
+
+* 🤖 [Midscene.js 0.11](https://javascriptweekly.com/link/165824/d076523b1d) – Let AI be your browser operator.
+
+🔠 And a little typography bonus
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/n8wrmadr5rxl7vjx82u2.jpg)](https://javascriptweekly.com/link/165825/d076523b1d)
+
+[GitHub Extends Its *Monaspace* Font Family](https://javascriptweekly.com/link/165825/d076523b1d "github.com") — [Monaspace](https://javascriptweekly.com/link/165826/d076523b1d) is a fantastic set of monospaced fonts from GitHub targeted at coding use cases. Its new [v1.2 release](https://javascriptweekly.com/link/165825/d076523b1d) ups the ante by including [Nerd Fonts](https://javascriptweekly.com/link/165827/d076523b1d) support and symbols, new box drawing glyphs, characters, character variants, ligatures, and more.
+
+GitHub
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/165828/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
