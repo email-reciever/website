@@ -1,0 +1,146 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#493 Why I rebuilt ProseMirror’s renderer in React
+description: RD#493 Why I rebuilt ProseMirror’s renderer in React
+date: 星期日 06 晚上 二月 16o 2025
+author: reactdigest
+origin_url: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fwhy-i-rebuilt-prosemirror?= =?us-ascii?Q?-s-renderer-in-react?=
+origin_site: =?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fwhy-i-rebuilt-prosemirror?= =?us-ascii?Q?-s-renderer-in-react?=
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#493 Why I rebuilt ProseMirror’s renderer in React" url="=?us-ascii?Q?https=3A=2F=2Fnewsletter=2Ereactdigest=2Enet=2Fp=2Fwhy-i-rebuilt-prosemirror?= =?us-ascii?Q?-s-renderer-in-react?=" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UzqN62s7Uc_d8MHGk_Y2RcmMTsUmpXvHLABTcW0TGUeCNenTJS8ql9kO1WP986c-PPE0QEeiA9kPEju5gC8qnok8FPiuZn3krp_Fv9CJLn3yFpU7d_kn2B44SuhVgYiSoNLyQKqUxlod42yMZ7IB6douWgwykqRutDDclG-7YpM0F-b_QJ7lpxMHmkWFWKziQTF-tp8R-87zUoSka6loaXUnt08FlIh1JBnHh_5D4zV3Ix5KpE6YpNwwVn6MagSfSbyNSAzYb-X830NI-fZlmLtEMQ7QZcZQsGo-NyLzcQP727OfF3eXBpezPjzx-5xHteQ1yX5TqT2FBj__CSLc6Kz2PxDxoo6TDzqFDb43K6o4ty5_kn90b5B2T5TcPOzwanOgpz161QF6ItozRi9_F2RNor-EjS5PyN5JOzFJT0m9HS72NbNtXVZcvtyO5HMjBi2RMmzFqXe6TIQWi51qo6uY0KSWozO4QRTFDJj6DR7JtNk38fZtjkTYOxZ7kGtqSPSfWoMqn_9YBPm8U67uLm9m7qtUHGqvRbWhdLpB1WIWT1gGx93c2DHTowTLwjk9pwogGdmaFeAK5T2gMN_Iv7dT6l89cFgbE-g_ARJwx3ZOuTKDoKZpDvH1_EpWum5TztoHj0-8AR0GVTSbg454uPvTFqXinlvjOV9xhv_gcHB_MYDZph5gKwjtpBxSk22ht2NeyayKIm1EJKs6HayRPbWLuibXaHb8VN71Qk33uub8Ai6q2tKg5OQ44cxYbsHn4ErPghRefAtkOBCXvty83XXs26Jku3IZxp4MdXzaq4JTxbPjD2VVt_x4ogcK0JM3U/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h0/h001.Q5g27jm1XupdQcCNbEeNyY-zBfhAsjX1wUs3wroSRuw)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4e2/i2bfI9RaQh6gHIQ1AHmzTw/ho.gif)
+
+[Why I rebuilt ProseMirror’s renderer in React](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO0u-frL1LyfZOyb7E0lrDMfuhdOOu6LxMud1Sch4E8WiC3LdEusIwhYyUrukHKobRVG-AMmPyY9aopFWI93w5KAVNYM6T1GNMxTqk_KkRXXt8ch24m4NrmhOHKQUmDepy02eS-y0We6lZ9YA8hwZp-DG5h-QNjmTF-kIwN_XO4odbgKOfaMN-MoyC9aKWZqCKE09aFVaA2TgnClojhXEjBKJAjdpfaotjhGNtFgLoChCcvBA19JtQTvPxMGB47pdIfGPZh7UDN-RxMU85cxeUfqyyJLLhuVUXNykdsdk_-6i/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h1/h001.VnVT7gr8ovvjlcoeD0t5b_Z__roKoa7-iKjGtxpAH3k)  
+_28 minutes_ by Shane Friedman
+
+This article discusses Shane experience rebuilding ProseMirror's renderer in React while working on the New York Times' rich text editor. After an initial attempt that still had subtle bugs, he created a new solution by subclassing ProseMirror's EditorView and reimplementing its rendering engine using React. The final solution successfully resolved the integration issues while maintaining compatibility with existing ProseMirror code. The new implementation supports server-side rendering and offers good performance even with complex documents and custom node views.
+
+[Build React Apps with Authentication Pre-Integrated](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO36OzDd6sT0hYeiTPjgWjGOQUqfX9IBbip4oM7VJG1G2pp7EQo3YU0iMuEkvAHGK5lh_fd-xU4XHuS8B0zUUuGIU2npcJ8QP7sJogyXQpZKw3cngGL5f9I9WRNFtS0aP1g/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h2/h001.FMUXmK3dFcntD5qvgsNJmlJZ3cdwFH5TcylReDZH6mE)  
+_sponsored by SuperTokens_
+
+Skip the hassle of integrating authentication. With SuperTokens, you can start your React or NextJS app with email + password,  social logins, and more, ready to go. Just run: npx create-supertokens-app@latest.
+
+[What Do We Do with You, Old React?](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqYVi9S1HJlB9_K44BjJftUg1OUrOyr-_X6WIYV2-mIFk2S9So4YGskY6dwvFgQJPqULseQGfPq3J8TC43LAYruTJtm8WMwu9nNJ1wJ2FCo5PGY31hDGAxABhma2dUESRCmVe12bkgcZ3kJzTAQf-UUK37iWhSLuZtaimrLUOSoxJCK-YacCdCUfcF4BNXYnd0_UZdpuzhJelqw6EZMih78-Iu4otILXuyik1ppv5nbDVoDSCCeXTeoeP03LmdPXxaM13Q6K9vB0pgkmIiNW33K3R-ikvM8JfGXM9szJQMquCgAL0bnvencksEqK3y59wc658Rha1vXcYpd0mQshCxvA/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h3/h001.3dVhkEk69XfKm_K0vvKqveIKEMaiiXD1m4vj_QnLwoA)  
+_6 minutes_ by Manuel Sánchez
+
+In this post Manuel provides a Fun Guide to Upgrading Class-Based React & Redux Stores. Class components and outdated Redux? Discover how to modernize your code with React Hooks and @reduxjs/toolkit, complete with code examples and project structure tips.
+
+[How React Router works under the hood](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF7Q5vn76cs0Imf51jJpv2aHnKTg3sWz2hWO0aiQw61kPYli2Xtctdh-Raj45w1Pfb73ipATPbnNzD6BIwQUyPpNWtRqvPQzZV9m-xj4B9INhGs56kgLfjbi7eyH6uB62T0gl02Neu21Ek4n9zXvyI0_LsXAP0oxjKvjz1yqYY-8b5OuRiB6yYUNQ82SA-3ITqDLLXmDTwKUZcbe1M7j5Pu1vKn529moDMTVbRtSR4l8GHtih12C8IEtQiXgPydU6Vx6wQZNj68HmRltViBzYq1aakdkQR4lfZAgeDuj3NUPm/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h4/h001.87Y_Ge99hFGjCrtd7aFQIZDysI96J6_GiVr3Woe_vfg)  
+_7 minutes_ by Tiger Abrodi
+
+Tiger provides a deep dive into React Router's internal workings as a full-stack web framework following its merger with Remix. He explains how React Router handles different types of requests, implements Fog of War for performance optimization, manages server-side rendering and hydration, handles client-side navigation with a single-fetch strategy, and deals with state management and race conditions.
+
+[Promises across the void: Streaming data with RSC](https://link.mail.beehiiv.com/ss/c/u001.HjBpxMuZJ3Xr2cyiPk5rURdptDYkNG4Fv7SYByZGIMfxlNQmqPbZNteGYB3gMqEmSjnq5ykiMs5XcaCFGbcnO8TqFLd1xdOdsFHk2Zy6EbTQrW0WX6qTMgAMxLbj36SnoIBerC6NhY1tbk_Rl-B95Pr0lrH2HRHltWrnks21nlwW6v2DN2pG4cjkvJM5uyyXvXP6pj0b7EEX4PsWuBA8-04j5EUFLBl5foiUjSZeXGDFR6obn6d9peD3qImhDREDrjYFFKjWwdthrJ5MmyPMnCaD1gXra6CDVQVJSqfuub2GcEfeeKHWQAWVjW9y52r9_G29VbrcY2Msc7LbIaza-Q/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h5/h001.AyyAc8q2SD2zcS5GOjn0Y-KjYqdSOFlYQlJy6H29QAI)  
+_10 minutes_ by Edward Spencer
+
+In this blog post Edward explains how React Server Components can send unresolved promises from server to client, enabling better performance through streaming. He demonstrates how to use the React 'use' hook to handle these promises, and shows how the server can start a promise while letting it resolve on the client side.
+
+[React How to Add Minimum Loading Delay](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63u_A-vB1s6g9jtS51Q8ShJLfD-tAZLYnZqdr4AXUIGdcxwUkETXzNozoncjMfMQ9DbVdrEKtxy8Z03BuXI6TPqrZepONKu9Smr6MciztYHqdvDdnAhpbBHrVr-fmBsIUu_IT--zIo5k0GSUNUq9jh12G1dg2JfvW7NbFv9A0kmUa2ojaOH-UCoqLZ1rVFvsVyGJaLxD-iH91SNoDAp-w3HSmx9Dyn6Y9dWASMPWnAsGsYSM8bWa1lxf3AQwhyMIGxwM6dpFmtcEE9lou6fHiz0AM5d7qp2ls5yQbGtR1mcefUJ2PYID8Ca6hS8fVySXQqg/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h6/h001.BiDRboo0b8yPHWVPuNQmfbmrMxbs0YLfx-Q6fgrrXIs)  
+_2 minutes_ by Elijah Lopez
+
+In this article Elijah presents a solution for implementing a minimum-duration loading spinner in React applications, specifically addressing the issue of quick-loading states that can create unpleasant UI flickering. He describes a simple approach using throttle hooks that works independently of the data fetching method, doesn't add unnecessary delays beyond the minimum duration, and only delays the transition from loading to complete state, not vice versa.
+
+[Meet Harmony](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63jF12uLEeECpz0fYJcghzi5ZqLk45EEyEXB9anC1NBNeodeSwIRxeLxcAbFdulOdeOfWEHCWXM7PdPCUbjP2upuAGqE8q7iVG-LPX2DqSvrB5lnSJ4agvWqlLkNSCwk4jSxECZZK6GFESeO5C64t4exhILkwT2QR7XSNOZDt_cjBtc8_SWC8Gc5_W54kpND5H8CvyXXbrUyMMC1QEfrubTc4yEz830ApiUKtyxRCm3te/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h7/h001.vC_1gKMrkZSzYd4YWxaD11en1RCJ98_wRkgZn0b-Kjc)  
+_sponsored by bit_
+
+Harmony is an open source library for composing consistent and highly performant platforms from independent business features. It empowers React developers to seamlessly integrate API-centric features into shell applications while maintaining optimal user experience, performance, safety, and developer experience.
+
+## webdev
+
+*   [CSS nesting: use with caution](https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhf31T844dZHx34QmBfO47UrN17l3FK5oMCvCelDLh8hYKoKAQ3vSN1ACagAFwyAWysa2CEPv6h98S6Rj33TMgOxHd0kNlyvSJlIQg3eo1sW2zqErtRRimafb3ZNgbcmgbIxnGUvIF6nd-cKczr4TyMdf1cv1lhvoqt-lNICbKNKzhiDIKs0A79L25M3AHol9DEREeP5RYsMdMS9A9ngMf7TLadECgpIvddoHjv1Pqvz6szqNYHboyKFBdYCbnzgHJdgsfY3Jqmiyuta-RoMUHnODPyIo78QzkOusiigtw2u7/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h8/h001.ZjlNh75xxJVgPoROMbVJj5To2qUHZxyXXrbjzvOT4Tw)
+    
+*   [Gradient borders in CSS](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfZsRhMA7J2bHRSPYd1mGZcL53f8kpxObd9ST_eglWeB6w0VusyiI6cb4Z5CMCrPFq6bYNeq9_fvHB_XUijDfNLj313rhPTbVxChKgxoHutkQd-E3lwP-hopL70whMzA-rRzCngtj_S2JHN0c_u1ZKjnch0i1I5CVtPhmel5YsvR00KVHbdGBi-mJVCZf7cbczwa5CcA7By-nrSb3Af3n0t7Uz0rFEi_pMGqU6zEfeOWYCHrmBLyE214TQbB5VMtu49pVGIbICouThxC4XCokK-g/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h9/h001.VYpF5y5KZdOcsabYfHbxgwRdEeJI3B4eVvDrVjXf8PI)
+    
+*   [We Replaced Our React Frontend with Go and WebAssembly](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVROhDW1NljBvjCLdxRFiCJ9eWcYreqCRIMzCvA7Yqs-30iq-_QTl78T6LnUrlyVU3elsMH_dzzXe4Q0OZqyxh1zw1mVltbkojtQKRd1jrZ84XO_ELL9z7yXYYaXvybvceM7PQOxgg9vx1YYN_MN43PdVrGYdGKJ8gmlFqvikjNmGD_aRRwL2rKtpVb9-HjumlrZh6dSiRnbdsjIabcI1uO6JQDfGvfMVhR4DZ7CIX5V6ObYy2AT41XEd37N9XPpEFIYT_LVvVtrsDS1rVvDdSds/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h10/h001.uYLMISijz7OWoSKpYm_gqBhoyjE3yhLgK5ZxgOaY2e0)
+    
+
+## javascript
+
+*   [Style-observer: JS to observe CSS property changes, for reals](https://link.mail.beehiiv.com/ss/c/u001.Pom5Ld_MyoPRljVGUP3R70hIGueUohKb1FTc0vVZJqcnh0PB4FWN--BFdFmZl_pBYJjwL4TEzVp_8G0fJvpSj2qG4KKrsF6hMM3SsetYsw_pFQ6_H91NUiDjJzHkZMHRkcx88ECibG_oAV_znoLUFrwEhImgjOaX9odfEwSh9IiFInISoJrQUY83u3wfIrPHT7jWnItEy9rhOn31xrTkdhCJ_YYZOwTIthaKB3bw_pCKwFOuJlCN2_O6_WBPct__YNZp226bq3QwWfBE7Ny7l50nlVGcVEA1s4uZ_aPnngs/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h11/h001.UhWaZ9sf5FktASomlHASiKkvI4ko-xPtRbrXCHgaAD0)
+    
+*   [Which rich text editor framework should you choose in 2025?](https://link.mail.beehiiv.com/ss/c/u001.Pom5Ld_MyoPRljVGUP3R77rNkXLciV2GcL54ESoczYiNhEx0G_cLNrPt6D5-dr-RkfygkYGgbvolfH7T_U4txCPZ4pkiGaDRJtMn_1w2TLOcvSkT9zkx8Yr2a_UdYls893LEjgf2PJLf7zJuvoa_ejrjfxTsc_xl-JVOi2Zmyp0VHb1ky3eRwTxox0RaJ0_8jCP_0Xl-h8FIMaMD0DufIwRt4rTMNpz09TaZqIEkqQx77NkM99uVP8HYKadKg6HBGfg6xJdkLx_HbcEfe2HpoS3TewY2zSS74MD2ky97SF_vhlYRkMQQ47H41g4S4N7NLj70Ulb0-0mguAlBI_NF3db9-oHcRioRWhAtpMlBKBo/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h12/h001.JBRj5goGWLpbsyas08B6XbukvVmfzlH5uFdX7pELdf0)
+    
+*   [There are a lot of ways to break up long tasks in JavaScript](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTXN9A8w7STkHqB5kVbpkl50hwfJp5EQqHxRj7ImE6gNol0eXGEAAI9qqGG00-G0avS-IglKk6Ppc8KKBFPFP4vlyHsfjCQ074Q3t8WJLZH79FFdOgS94kDkRbYJ1GPwdgHZ2RU1cW5jEwENRSxhBstKCz15yNuTPTylaTwnWR45aieELC5EZOJ-Xq5hSBo_9IH4SvGxxfctnehZq0YAuQ87ATYfn5kGVrFWuEwnsZaLzPLUZfvtcoSN3Ds8nZOLpMbzOeXmY1HL71wBx1k0Hwog/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h13/h001.VS1OzUomR0b3IA_kQRM4vRS1vpPNARs1fM9FOGq3tGI)
+    
+
+And the most popular article from the last issue:
+
+*   [The Most Common React Design Patterns](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfUHjgdD9KJoBTmEARdkpjXsW8XAYKYwDwK7exdt4LVVFpmCJOPIzhOISnoxdqA8L_ZyXSY6ESDxboCOJYptWMRa3LrHf-lhL05QQvaOnuWUqdFR2e2g_5nrrF1ZpboLl9nHKqydqYb8kczIS9bCP0Amv68XI5wJc-EuKv9UPHoqFzKl1pHWH3mgwAiIS-4O6dK5gBvWd9PNLvfpCkQUtwjg5bK0OkPbfkviV1N2UhVyC17qHUQHBbhgubPJPpOZrKZhNvaV239i9Vgl06ioqfucFZHjzQuKbsjEtbeqcp0WREFhOgwUZ4h9ubIv1k7sSA/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h14/h001.3MHFfkYzPLSGdBncd1aMLUVGHEJ1qX47b8puMeFyWaQ)
+    
+
+#
+</Detail>
+
+[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1UzqN62s7Uc_d8MHGk_Y2RcmMTsUmpXvHLABTcW0TGUeCNenTJS8ql9kO1WP986c-PPE0QEeiA9kPEju5gC8qnok8FPiuZn3krp_Fv9CJLn3yFpU7d_kn2B44SuhVgYiSoNLyQKqUxlod42yMZ7IB6douWgwykqRutDDclG-7YpM0F-b_QJ7lpxMHmkWFWKziQTF-tp8R-87zUoSka6loaXUnt08FlIh1JBnHh_5D4zV3Ix5KpE6YpNwwVn6MagSfSbyNSAzYb-X830NI-fZlmLtEMQ7QZcZQsGo-NyLzcQP727OfF3eXBpezPjzx-5xHteQ1yX5TqT2FBj__CSLc6Kz2PxDxoo6TDzqFDb43K6o4ty5_kn90b5B2T5TcPOzwanOgpz161QF6ItozRi9_F2RNor-EjS5PyN5JOzFJT0m9HS72NbNtXVZcvtyO5HMjBi2RMmzFqXe6TIQWi51qo6uY0KSWozO4QRTFDJj6DR7JtNk38fZtjkTYOxZ7kGtqSPSfWoMqn_9YBPm8U67uLm9m7qtUHGqvRbWhdLpB1WIWT1gGx93c2DHTowTLwjk9pwogGdmaFeAK5T2gMN_Iv7dT6l89cFgbE-g_ARJwx3ZOuTKDoKZpDvH1_EpWum5TztoHj0-8AR0GVTSbg454uPvTFqXinlvjOV9xhv_gcHB_MYDZph5gKwjtpBxSk22ht2NeyayKIm1EJKs6HayRPbWLuibXaHb8VN71Qk33uub8Ai6q2tKg5OQ44cxYbsHn4ErPghRefAtkOBCXvty83XXs26Jku3IZxp4MdXzaq4JTxbPjD2VVt_x4ogcK0JM3U/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h0/h001.Q5g27jm1XupdQcCNbEeNyY-zBfhAsjX1wUs3wroSRuw)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4e2/i2bfI9RaQh6gHIQ1AHmzTw/ho.gif)
+
+[Why I rebuilt ProseMirror’s renderer in React](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO0u-frL1LyfZOyb7E0lrDMfuhdOOu6LxMud1Sch4E8WiC3LdEusIwhYyUrukHKobRVG-AMmPyY9aopFWI93w5KAVNYM6T1GNMxTqk_KkRXXt8ch24m4NrmhOHKQUmDepy02eS-y0We6lZ9YA8hwZp-DG5h-QNjmTF-kIwN_XO4odbgKOfaMN-MoyC9aKWZqCKE09aFVaA2TgnClojhXEjBKJAjdpfaotjhGNtFgLoChCcvBA19JtQTvPxMGB47pdIfGPZh7UDN-RxMU85cxeUfqyyJLLhuVUXNykdsdk_-6i/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h1/h001.VnVT7gr8ovvjlcoeD0t5b_Z__roKoa7-iKjGtxpAH3k)\
+*28 minutes* by Shane Friedman
+
+This article discusses Shane experience rebuilding ProseMirror's renderer in React while working on the New York Times' rich text editor. After an initial attempt that still had subtle bugs, he created a new solution by subclassing ProseMirror's EditorView and reimplementing its rendering engine using React. The final solution successfully resolved the integration issues while maintaining compatibility with existing ProseMirror code. The new implementation supports server-side rendering and offers good performance even with complex documents and custom node views.
+
+[Build React Apps with Authentication Pre-Integrated](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO36OzDd6sT0hYeiTPjgWjGOQUqfX9IBbip4oM7VJG1G2pp7EQo3YU0iMuEkvAHGK5lh_fd-xU4XHuS8B0zUUuGIU2npcJ8QP7sJogyXQpZKw3cngGL5f9I9WRNFtS0aP1g/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h2/h001.FMUXmK3dFcntD5qvgsNJmlJZ3cdwFH5TcylReDZH6mE)\
+*sponsored by SuperTokens*
+
+Skip the hassle of integrating authentication. With SuperTokens, you can start your React or NextJS app with email + password,  social logins, and more, ready to go. Just run: npx create-supertokens-app@latest.
+
+[What Do We Do with You, Old React?](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqYVi9S1HJlB9_K44BjJftUg1OUrOyr-_X6WIYV2-mIFk2S9So4YGskY6dwvFgQJPqULseQGfPq3J8TC43LAYruTJtm8WMwu9nNJ1wJ2FCo5PGY31hDGAxABhma2dUESRCmVe12bkgcZ3kJzTAQf-UUK37iWhSLuZtaimrLUOSoxJCK-YacCdCUfcF4BNXYnd0_UZdpuzhJelqw6EZMih78-Iu4otILXuyik1ppv5nbDVoDSCCeXTeoeP03LmdPXxaM13Q6K9vB0pgkmIiNW33K3R-ikvM8JfGXM9szJQMquCgAL0bnvencksEqK3y59wc658Rha1vXcYpd0mQshCxvA/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h3/h001.3dVhkEk69XfKm_K0vvKqveIKEMaiiXD1m4vj_QnLwoA)\
+*6 minutes* by Manuel Sánchez
+
+In this post Manuel provides a Fun Guide to Upgrading Class-Based React & Redux Stores. Class components and outdated Redux? Discover how to modernize your code with React Hooks and @reduxjs/toolkit, complete with code examples and project structure tips.
+
+[How React Router works under the hood](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF7Q5vn76cs0Imf51jJpv2aHnKTg3sWz2hWO0aiQw61kPYli2Xtctdh-Raj45w1Pfb73ipATPbnNzD6BIwQUyPpNWtRqvPQzZV9m-xj4B9INhGs56kgLfjbi7eyH6uB62T0gl02Neu21Ek4n9zXvyI0_LsXAP0oxjKvjz1yqYY-8b5OuRiB6yYUNQ82SA-3ITqDLLXmDTwKUZcbe1M7j5Pu1vKn529moDMTVbRtSR4l8GHtih12C8IEtQiXgPydU6Vx6wQZNj68HmRltViBzYq1aakdkQR4lfZAgeDuj3NUPm/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h4/h001.87Y_Ge99hFGjCrtd7aFQIZDysI96J6_GiVr3Woe_vfg)\
+*7 minutes* by Tiger Abrodi
+
+Tiger provides a deep dive into React Router's internal workings as a full-stack web framework following its merger with Remix. He explains how React Router handles different types of requests, implements Fog of War for performance optimization, manages server-side rendering and hydration, handles client-side navigation with a single-fetch strategy, and deals with state management and race conditions.
+
+[Promises across the void: Streaming data with RSC](https://link.mail.beehiiv.com/ss/c/u001.HjBpxMuZJ3Xr2cyiPk5rURdptDYkNG4Fv7SYByZGIMfxlNQmqPbZNteGYB3gMqEmSjnq5ykiMs5XcaCFGbcnO8TqFLd1xdOdsFHk2Zy6EbTQrW0WX6qTMgAMxLbj36SnoIBerC6NhY1tbk_Rl-B95Pr0lrH2HRHltWrnks21nlwW6v2DN2pG4cjkvJM5uyyXvXP6pj0b7EEX4PsWuBA8-04j5EUFLBl5foiUjSZeXGDFR6obn6d9peD3qImhDREDrjYFFKjWwdthrJ5MmyPMnCaD1gXra6CDVQVJSqfuub2GcEfeeKHWQAWVjW9y52r9_G29VbrcY2Msc7LbIaza-Q/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h5/h001.AyyAc8q2SD2zcS5GOjn0Y-KjYqdSOFlYQlJy6H29QAI)\
+*10 minutes* by Edward Spencer
+
+In this blog post Edward explains how React Server Components can send unresolved promises from server to client, enabling better performance through streaming. He demonstrates how to use the React 'use' hook to handle these promises, and shows how the server can start a promise while letting it resolve on the client side.
+
+[React How to Add Minimum Loading Delay](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63u_A-vB1s6g9jtS51Q8ShJLfD-tAZLYnZqdr4AXUIGdcxwUkETXzNozoncjMfMQ9DbVdrEKtxy8Z03BuXI6TPqrZepONKu9Smr6MciztYHqdvDdnAhpbBHrVr-fmBsIUu_IT--zIo5k0GSUNUq9jh12G1dg2JfvW7NbFv9A0kmUa2ojaOH-UCoqLZ1rVFvsVyGJaLxD-iH91SNoDAp-w3HSmx9Dyn6Y9dWASMPWnAsGsYSM8bWa1lxf3AQwhyMIGxwM6dpFmtcEE9lou6fHiz0AM5d7qp2ls5yQbGtR1mcefUJ2PYID8Ca6hS8fVySXQqg/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h6/h001.BiDRboo0b8yPHWVPuNQmfbmrMxbs0YLfx-Q6fgrrXIs)\
+*2 minutes* by Elijah Lopez
+
+In this article Elijah presents a solution for implementing a minimum-duration loading spinner in React applications, specifically addressing the issue of quick-loading states that can create unpleasant UI flickering. He describes a simple approach using throttle hooks that works independently of the data fetching method, doesn't add unnecessary delays beyond the minimum duration, and only delays the transition from loading to complete state, not vice versa.
+
+[Meet Harmony](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63jF12uLEeECpz0fYJcghzi5ZqLk45EEyEXB9anC1NBNeodeSwIRxeLxcAbFdulOdeOfWEHCWXM7PdPCUbjP2upuAGqE8q7iVG-LPX2DqSvrB5lnSJ4agvWqlLkNSCwk4jSxECZZK6GFESeO5C64t4exhILkwT2QR7XSNOZDt_cjBtc8_SWC8Gc5_W54kpND5H8CvyXXbrUyMMC1QEfrubTc4yEz830ApiUKtyxRCm3te/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h7/h001.vC_1gKMrkZSzYd4YWxaD11en1RCJ98_wRkgZn0b-Kjc)\
+*sponsored by bit*
+
+Harmony is an open source library for composing consistent and highly performant platforms from independent business features. It empowers React developers to seamlessly integrate API-centric features into shell applications while maintaining optimal user experience, performance, safety, and developer experience.
+
+## webdev
+
+* [CSS nesting: use with caution](https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhf31T844dZHx34QmBfO47UrN17l3FK5oMCvCelDLh8hYKoKAQ3vSN1ACagAFwyAWysa2CEPv6h98S6Rj33TMgOxHd0kNlyvSJlIQg3eo1sW2zqErtRRimafb3ZNgbcmgbIxnGUvIF6nd-cKczr4TyMdf1cv1lhvoqt-lNICbKNKzhiDIKs0A79L25M3AHol9DEREeP5RYsMdMS9A9ngMf7TLadECgpIvddoHjv1Pqvz6szqNYHboyKFBdYCbnzgHJdgsfY3Jqmiyuta-RoMUHnODPyIo78QzkOusiigtw2u7/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h8/h001.ZjlNh75xxJVgPoROMbVJj5To2qUHZxyXXrbjzvOT4Tw)
+
+* [Gradient borders in CSS](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfZsRhMA7J2bHRSPYd1mGZcL53f8kpxObd9ST_eglWeB6w0VusyiI6cb4Z5CMCrPFq6bYNeq9_fvHB_XUijDfNLj313rhPTbVxChKgxoHutkQd-E3lwP-hopL70whMzA-rRzCngtj_S2JHN0c_u1ZKjnch0i1I5CVtPhmel5YsvR00KVHbdGBi-mJVCZf7cbczwa5CcA7By-nrSb3Af3n0t7Uz0rFEi_pMGqU6zEfeOWYCHrmBLyE214TQbB5VMtu49pVGIbICouThxC4XCokK-g/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h9/h001.VYpF5y5KZdOcsabYfHbxgwRdEeJI3B4eVvDrVjXf8PI)
+
+* [We Replaced Our React Frontend with Go and WebAssembly](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVROhDW1NljBvjCLdxRFiCJ9eWcYreqCRIMzCvA7Yqs-30iq-_QTl78T6LnUrlyVU3elsMH_dzzXe4Q0OZqyxh1zw1mVltbkojtQKRd1jrZ84XO_ELL9z7yXYYaXvybvceM7PQOxgg9vx1YYN_MN43PdVrGYdGKJ8gmlFqvikjNmGD_aRRwL2rKtpVb9-HjumlrZh6dSiRnbdsjIabcI1uO6JQDfGvfMVhR4DZ7CIX5V6ObYy2AT41XEd37N9XPpEFIYT_LVvVtrsDS1rVvDdSds/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h10/h001.uYLMISijz7OWoSKpYm_gqBhoyjE3yhLgK5ZxgOaY2e0)
+
+## javascript
+
+* [Style-observer: JS to observe CSS property changes, for reals](https://link.mail.beehiiv.com/ss/c/u001.Pom5Ld_MyoPRljVGUP3R70hIGueUohKb1FTc0vVZJqcnh0PB4FWN--BFdFmZl_pBYJjwL4TEzVp_8G0fJvpSj2qG4KKrsF6hMM3SsetYsw_pFQ6_H91NUiDjJzHkZMHRkcx88ECibG_oAV_znoLUFrwEhImgjOaX9odfEwSh9IiFInISoJrQUY83u3wfIrPHT7jWnItEy9rhOn31xrTkdhCJ_YYZOwTIthaKB3bw_pCKwFOuJlCN2_O6_WBPct__YNZp226bq3QwWfBE7Ny7l50nlVGcVEA1s4uZ_aPnngs/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h11/h001.UhWaZ9sf5FktASomlHASiKkvI4ko-xPtRbrXCHgaAD0)
+
+* [Which rich text editor framework should you choose in 2025?](https://link.mail.beehiiv.com/ss/c/u001.Pom5Ld_MyoPRljVGUP3R77rNkXLciV2GcL54ESoczYiNhEx0G_cLNrPt6D5-dr-RkfygkYGgbvolfH7T_U4txCPZ4pkiGaDRJtMn_1w2TLOcvSkT9zkx8Yr2a_UdYls893LEjgf2PJLf7zJuvoa_ejrjfxTsc_xl-JVOi2Zmyp0VHb1ky3eRwTxox0RaJ0_8jCP_0Xl-h8FIMaMD0DufIwRt4rTMNpz09TaZqIEkqQx77NkM99uVP8HYKadKg6HBGfg6xJdkLx_HbcEfe2HpoS3TewY2zSS74MD2ky97SF_vhlYRkMQQ47H41g4S4N7NLj70Ulb0-0mguAlBI_NF3db9-oHcRioRWhAtpMlBKBo/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h12/h001.JBRj5goGWLpbsyas08B6XbukvVmfzlH5uFdX7pELdf0)
+
+* [There are a lot of ways to break up long tasks in JavaScript](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTXN9A8w7STkHqB5kVbpkl50hwfJp5EQqHxRj7ImE6gNol0eXGEAAI9qqGG00-G0avS-IglKk6Ppc8KKBFPFP4vlyHsfjCQ074Q3t8WJLZH79FFdOgS94kDkRbYJ1GPwdgHZ2RU1cW5jEwENRSxhBstKCz15yNuTPTylaTwnWR45aieELC5EZOJ-Xq5hSBo_9IH4SvGxxfctnehZq0YAuQ87ATYfn5kGVrFWuEwnsZaLzPLUZfvtcoSN3Ds8nZOLpMbzOeXmY1HL71wBx1k0Hwog/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h13/h001.VS1OzUomR0b3IA_kQRM4vRS1vpPNARs1fM9FOGq3tGI)
+
+And the most popular article from the last issue:
+
+* [The Most Common React Design Patterns](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqfUHjgdD9KJoBTmEARdkpjXsW8XAYKYwDwK7exdt4LVVFpmCJOPIzhOISnoxdqA8L_ZyXSY6ESDxboCOJYptWMRa3LrHf-lhL05QQvaOnuWUqdFR2e2g_5nrrF1ZpboLl9nHKqydqYb8kczIS9bCP0Amv68XI5wJc-EuKv9UPHoqFzKl1pHWH3mgwAiIS-4O6dK5gBvWd9PNLvfpCkQUtwjg5bK0OkPbfkviV1N2UhVyC17qHUQHBbhgubPJPpOZrKZhNvaV239i9Vgl06ioqfucFZHjzQuKbsjEtbeqcp0WREFhOgwUZ4h9ubIv1k7sSA/4e2/i2bfI9RaQh6gHIQ1AHmzTw/h14/h001.3MHFfkYzPLSGdBncd1aMLUVGHEJ1qX47b8puMeFyWaQ)
+
+#
+
+
