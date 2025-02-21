@@ -1,0 +1,345 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: The latest from TC39's recent meeting
+description: The latest from TC39's recent meeting
+date: 星期五 03 下午 二月 21o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/724
+origin_site: https://javascriptweekly.com/issues/724
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="The latest from TC39's recent meeting" url="https://javascriptweekly.com/issues/724" />
+
+<Detail client:only="react">
+	#​724 — February 21, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/724)
+
+Together with 
+
+[![Mescius](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_454,h_111/e_make_transparent/co_white,e_outline:7/iwtw1igi5mjsbp1jqfn5.png)](https://javascriptweekly.com/link/165964/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jfmsfkg1bfwlcxgcerhc.jpg)](https://javascriptweekly.com/link/165965/d076523b1d)
+
+[TC39 Advances 3 Proposals to Stage 4](https://javascriptweekly.com/link/165965/d076523b1d "socket.dev") — I love seeing [Rob Palmer’s tweets](https://javascriptweekly.com/link/165966/d076523b1d) about TC39’s progression of JavaScript proposals and this is a good roundup from this week’s meeting in Seattle. Areas covered include near-term features like `Float16Array` and `import defer` to more distant things like `Math.clamp` and `Error.captureStackTrace` entering stage 1.
+
+Sarah Gooding
+
+[Deno 2.2 Released with Quality of Life Improvements](https://javascriptweekly.com/link/165968/d076523b1d "deno.com") — The Deno team took a break from [taking on Oracle](https://javascriptweekly.com/link/165969/d076523b1d) to get a new feature-packed release of its JavaScript runtime out. We get built-in OpenTelemetry integration, linter updates, a new interactive way to update dependencies, `node:sqlite` support, TypeScript 5.7, V8 13.4, and much more.
+
+Iwańczuk and Jiang
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/21c67ff8.png)](https://javascriptweekly.com/link/165964/d076523b1d)
+
+[A Powerful JavaScript Reporting Tool Built for the Web](https://javascriptweekly.com/link/165964/d076523b1d "developer.mescius.com") — ActiveReportsJS is the premier JavaScript reporting tool designed for advanced data visualizations in web applications. With many different advanced report builders and viewers, insights can be seamlessly shared with your entire user base.
+
+MESCIUS Inc. sponsor
+
+[Interop 2025: Features Browser Devs Will Focus on This Year](https://javascriptweekly.com/link/165970/d076523b1d "webkit.org") — _Interop_ is an ongoing process where browser devs cooperate on improving features in concert so more Web users can use those features sooner. This year’s focus points include the [Storage Access API](https://javascriptweekly.com/link/165971/d076523b1d), pointer/mouse events, phasing out old mutation events, the `scrollend` event, [`URLPattern`](https://javascriptweekly.com/link/165972/d076523b1d), and more JS/WASM integration.
+
+Nicole Sullivan (WebKit)
+
+**IN BRIEF:**
+
+*   Last year, ESLint unveiled a plan to become a more general purpose linter and added JSON and Markdown linting in due course. The latest addition? [ESLint is now a CSS linter too!](https://javascriptweekly.com/link/165973/d076523b1d)
+    
+*   🕹️ [Running Pong across 240 browser tabs](https://javascriptweekly.com/link/165974/d076523b1d) is a creative combination of AppleScript and JavaScript. Next stop - Tetris?
+    
+
+**RELEASES:**
+
+*   [React Native 0.78](https://javascriptweekly.com/link/165975/d076523b1d) – Now complete with React 19.
+    
+*   [Nano ID 5.1](https://javascriptweekly.com/link/165976/d076523b1d) – Tiny URL-friendly unique string ID generator.
+    
+*   [TypeScript 5.8 RC](https://javascriptweekly.com/link/165977/d076523b1d), [Node.js v18.20.7 (LTS)](https://javascriptweekly.com/link/165978/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kadlz3p2mqgmzxzkrjdx.jpg)](https://javascriptweekly.com/link/165979/d076523b1d)
+
+[Do Lake Names Reflect Their Properties?](https://javascriptweekly.com/link/165979/d076523b1d "ivanludvig.dev") — I know this sounds like a geographical piece, but this developer’s curiosity led to a fun blend of JavaScript and the always useful [Overpass Turbo](https://javascriptweekly.com/link/165980/d076523b1d) mapping tool.
+
+Ivan Ludvig
+
+[React Officially Sunsetting Create React App](https://javascriptweekly.com/link/165981/d076523b1d "react.dev") — This move has been bubbling for a long time now, but the React team is now officially recommending CRA-powered apps migrate to a framework (like Next.js) or build tools like Vite.
+
+Matt Carroll and Ricky Hanlon
+
+[Which AI Model Is Best for Fixing Unit Test Errors? Claude, o3-mini, GPT-4o?](https://javascriptweekly.com/link/165982/d076523b1d "wallabyjs.com") — Better context wins every time. Wallaby enters the chat to give AI what it needs - test coverage and runtime values - to debug smarter.
+
+Wallaby Team sponsor
+
+[Why TypeScript 5.8's `--erasableSyntaxOnly` Matters](https://javascriptweekly.com/link/165983/d076523b1d "www.totaltypescript.com") — _“It disables a bunch of features that I don’t think should ever have been part of TypeScript.”_
+
+Matt Pocock
+
+📄 [Svelte 5 and the Future of Frameworks: A Chat with Rich Harris](https://javascriptweekly.com/link/165984/d076523b1d) Frederick O'Brien
+
+📄 [Implementing a Dissolve Effect with Shaders and Particles in Three.js](https://javascriptweekly.com/link/165985/d076523b1d) Jatin Chopra
+
+📄 [How to Move the First Element to the End in JavaScript](https://javascriptweekly.com/link/165986/d076523b1d) Josh Sherman
+
+📄 [Deeply Understand Currying in 7 Minutes](https://javascriptweekly.com/link/165987/d076523b1d) Yazeed Bzadough
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ugrby2sdeciddjbums8g.jpg)](https://javascriptweekly.com/link/165988/d076523b1d)
+
+[Mastra: A TypeScript AI Framework from the Gatsby Team](https://javascriptweekly.com/link/165988/d076523b1d "mastra.ai") — From some of the folks behind the [Gatsby](https://javascriptweekly.com/link/165989/d076523b1d) React framework comes a new way to build LLM-powered agents that perform various tasks, use knowledge bases, and hold memory. Think a meta-framework like Next.js but for AI agents. [GitHub repo.](https://javascriptweekly.com/link/165990/d076523b1d)
+
+Mastra
+
+[upfetch: An Advanced `fetch` Client Builder](https://javascriptweekly.com/link/165991/d076523b1d "github.com") — A TypeScript library to enhance `fetch` with schema validation, automatic response parsing, and type-safety, while maintaining the familiar `fetch` API.
+
+Laurent Blondy
+
+[Find. Fix. Test: An Intro to App Monitoring with Sentry](https://javascriptweekly.com/link/165992/d076523b1d "sentry.io") — Code-level visibility, from pre- to post-release, lets devs find and fix errors and slowdowns and deploy with confidence.
+
+Sentry sponsor
+
+📄 [jsPDF 3.0: Client-Side JavaScript PDF Generation](https://javascriptweekly.com/link/165993/d076523b1d "github.com") — Create tickets, documents, certificates, etc. all on the fly. There’s a live demo on [the project’s homepage.](https://javascriptweekly.com/link/165994/d076523b1d)
+
+Parallax
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/b70vartvft7osyh0d5iy.jpg)](https://javascriptweekly.com/link/165995/d076523b1d)
+
+[Heat.js: A Heat Map Visualization Library](https://javascriptweekly.com/link/165995/d076523b1d "www.william-troup.com") — Think the GitHub contributions heat map. No dependencies, small, responsive, and theme-able. There’s a [live demo](https://javascriptweekly.com/link/165996/d076523b1d) or its [GitHub repo.](https://javascriptweekly.com/link/165997/d076523b1d)
+
+William Troup
+
+[Zoompinch: A Pinch-and-Zoom Experience for Vue 3 Apps](https://javascriptweekly.com/link/165998/d076523b1d "github.com") — Designed to ‘feel native’ on mobile devices. [Demo.](https://javascriptweekly.com/link/165999/d076523b1d)
+
+Elya Maurice Conrad
+
+[swrv: 'stale-while-revalidate' Data Fetching for Vue 3](https://javascriptweekly.com/link/166000/d076523b1d "github.com") — Uses a ‘stale-with-revalidate’ cache invalidation strategy (i.e. data is returned from cache immediately but then updated behind the scenes).
+
+Kong
+
+[ExcellentExport.js: Export Table Data to Excel or CSV](https://javascriptweekly.com/link/166001/d076523b1d "github.com") — If your app/page has some data in HTML tables and you’d like to export it to CSV or XLSX without any server involvement, this could help.
+
+Jordi Burgos
+
+*   [Ts.ED 8.5](https://javascriptweekly.com/link/166002/d076523b1d) – Node + TypeScript framework on top of Express.
+    
+*   🖼️ [pixelmatch 7.0](https://javascriptweekly.com/link/166003/d076523b1d) – Small, fast pixel-level image comparison library.
+    
+*   [dash.js 5.0](https://javascriptweekly.com/link/166004/d076523b1d) – A reference implementation for playback of MPEG DASH.
+    
+*   [DOCX 9.2](https://javascriptweekly.com/link/166005/d076523b1d) – Generate .docx / Word files from JavaScript.
+    
+*   [ApexCharts 4.5](https://javascriptweekly.com/link/166006/d076523b1d) – Popular JS charting library. ([Demos.](https://javascriptweekly.com/link/166007/d076523b1d))
+    
+*   [Middy 6.1](https://javascriptweekly.com/link/166008/d076523b1d) – Node.js middleware engine for AWS Lambda.
+    
+*   [Size Limit 11.2](https://javascriptweekly.com/link/166009/d076523b1d) – Performance budget tool for JavaScript.
+    
+*   🔈 [useSound 5.0](https://javascriptweekly.com/link/166010/d076523b1d) – React hook for playing sound effects.
+    
+
+📰 Classifieds
+
+[Learn how to build session-based authentication into a Next.js application](https://javascriptweekly.com/link/166011/d076523b1d), including the sign-in/sign-up pages, and how to protect routes.
+
+* * *
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/166012/d076523b1d). Relied on by 1000s of orgs, including Dropbox, Lattice, Bilt Rewards and many more.
+
+* * *
+
+[Design Meets Development:](https://javascriptweekly.com/link/166013/d076523b1d) Amir Shalev shares his unique journey bridging the gap and seamlessly collaborating with developers using [Bit](https://javascriptweekly.com/link/166013/d076523b1d).
+
+* * *
+
+😰 Is your vehicle data giving you anxiety? Mine too. That's why I built [CarsXE](https://javascriptweekly.com/link/166014/d076523b1d). Now I just have existential dread. Progress! [Start for Free Now!](https://javascriptweekly.com/link/166014/d076523b1d)
+
+📢  Elsewhere
+
+A quick roundup of some of other interesting updates or useful resources in the broader developer landscape:
+
+*   [The XOR operator, and logic gate, explained.](https://javascriptweekly.com/link/166015/d076523b1d) (You can use XOR yourself in JavaScript with the `^` operator.)
+    
+*   [Learn Shader Programming with Rick and Morty](https://javascriptweekly.com/link/166016/d076523b1d) is a fun and accessible way to learn a bit about shaders and GLSL and, in particular, rendering _shapes_ with shaders.
+    
+*   Beej, author of [several popular guides](https://javascriptweekly.com/link/166017/d076523b1d) to different programming concepts, has [released _Beej's Guide to Git_](https://javascriptweekly.com/link/166018/d076523b1d), a great zero-to-expert online resource for using the world's most popular DVCS.
+    
+*   Most of them don't apply to JavaScript, but I found [this walkthrough of NASA's "10 rules for software development"](https://javascriptweekly.com/link/166019/d076523b1d) quite interesting.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/166020/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​724 — February 21, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/724)
+
+Together with 
+
+[![Mescius](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_454,h_111/e_make_transparent/co_white,e_outline:7/iwtw1igi5mjsbp1jqfn5.png)](https://javascriptweekly.com/link/165964/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jfmsfkg1bfwlcxgcerhc.jpg)](https://javascriptweekly.com/link/165965/d076523b1d)
+
+[TC39 Advances 3 Proposals to Stage 4](https://javascriptweekly.com/link/165965/d076523b1d "socket.dev") — I love seeing [Rob Palmer’s tweets](https://javascriptweekly.com/link/165966/d076523b1d) about TC39’s progression of JavaScript proposals and this is a good roundup from this week’s meeting in Seattle. Areas covered include near-term features like `Float16Array` and `import defer` to more distant things like `Math.clamp` and `Error.captureStackTrace` entering stage 1.
+
+Sarah Gooding
+
+[Deno 2.2 Released with Quality of Life Improvements](https://javascriptweekly.com/link/165968/d076523b1d "deno.com") — The Deno team took a break from [taking on Oracle](https://javascriptweekly.com/link/165969/d076523b1d) to get a new feature-packed release of its JavaScript runtime out. We get built-in OpenTelemetry integration, linter updates, a new interactive way to update dependencies, `node:sqlite` support, TypeScript 5.7, V8 13.4, and much more.
+
+Iwańczuk and Jiang
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/21c67ff8.png)](https://javascriptweekly.com/link/165964/d076523b1d)
+
+[A Powerful JavaScript Reporting Tool Built for the Web](https://javascriptweekly.com/link/165964/d076523b1d "developer.mescius.com") — ActiveReportsJS is the premier JavaScript reporting tool designed for advanced data visualizations in web applications. With many different advanced report builders and viewers, insights can be seamlessly shared with your entire user base.
+
+MESCIUS Inc. sponsor
+
+[Interop 2025: Features Browser Devs Will Focus on This Year](https://javascriptweekly.com/link/165970/d076523b1d "webkit.org") — *Interop* is an ongoing process where browser devs cooperate on improving features in concert so more Web users can use those features sooner. This year’s focus points include the [Storage Access API](https://javascriptweekly.com/link/165971/d076523b1d), pointer/mouse events, phasing out old mutation events, the `scrollend` event, [`URLPattern`](https://javascriptweekly.com/link/165972/d076523b1d), and more JS/WASM integration.
+
+Nicole Sullivan (WebKit)
+
+**IN BRIEF:**
+
+* Last year, ESLint unveiled a plan to become a more general purpose linter and added JSON and Markdown linting in due course. The latest addition? [ESLint is now a CSS linter too!](https://javascriptweekly.com/link/165973/d076523b1d)
+
+* 🕹️ [Running Pong across 240 browser tabs](https://javascriptweekly.com/link/165974/d076523b1d) is a creative combination of AppleScript and JavaScript. Next stop - Tetris?
+
+**RELEASES:**
+
+* [React Native 0.78](https://javascriptweekly.com/link/165975/d076523b1d) – Now complete with React 19.
+
+* [Nano ID 5.1](https://javascriptweekly.com/link/165976/d076523b1d) – Tiny URL-friendly unique string ID generator.
+
+* [TypeScript 5.8 RC](https://javascriptweekly.com/link/165977/d076523b1d), [Node.js v18.20.7 (LTS)](https://javascriptweekly.com/link/165978/d076523b1d)
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kadlz3p2mqgmzxzkrjdx.jpg)](https://javascriptweekly.com/link/165979/d076523b1d)
+
+[Do Lake Names Reflect Their Properties?](https://javascriptweekly.com/link/165979/d076523b1d "ivanludvig.dev") — I know this sounds like a geographical piece, but this developer’s curiosity led to a fun blend of JavaScript and the always useful [Overpass Turbo](https://javascriptweekly.com/link/165980/d076523b1d) mapping tool.
+
+Ivan Ludvig
+
+[React Officially Sunsetting Create React App](https://javascriptweekly.com/link/165981/d076523b1d "react.dev") — This move has been bubbling for a long time now, but the React team is now officially recommending CRA-powered apps migrate to a framework (like Next.js) or build tools like Vite.
+
+Matt Carroll and Ricky Hanlon
+
+[Which AI Model Is Best for Fixing Unit Test Errors? Claude, o3-mini, GPT-4o?](https://javascriptweekly.com/link/165982/d076523b1d "wallabyjs.com") — Better context wins every time. Wallaby enters the chat to give AI what it needs - test coverage and runtime values - to debug smarter.
+
+Wallaby Team sponsor
+
+[Why TypeScript 5.8's `--erasableSyntaxOnly` Matters](https://javascriptweekly.com/link/165983/d076523b1d "www.totaltypescript.com") — *“It disables a bunch of features that I don’t think should ever have been part of TypeScript.”*
+
+Matt Pocock
+
+📄 [Svelte 5 and the Future of Frameworks: A Chat with Rich Harris](https://javascriptweekly.com/link/165984/d076523b1d) Frederick O'Brien
+
+📄 [Implementing a Dissolve Effect with Shaders and Particles in Three.js](https://javascriptweekly.com/link/165985/d076523b1d) Jatin Chopra
+
+📄 [How to Move the First Element to the End in JavaScript](https://javascriptweekly.com/link/165986/d076523b1d) Josh Sherman
+
+📄 [Deeply Understand Currying in 7 Minutes](https://javascriptweekly.com/link/165987/d076523b1d) Yazeed Bzadough
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ugrby2sdeciddjbums8g.jpg)](https://javascriptweekly.com/link/165988/d076523b1d)
+
+[Mastra: A TypeScript AI Framework from the Gatsby Team](https://javascriptweekly.com/link/165988/d076523b1d "mastra.ai") — From some of the folks behind the [Gatsby](https://javascriptweekly.com/link/165989/d076523b1d) React framework comes a new way to build LLM-powered agents that perform various tasks, use knowledge bases, and hold memory. Think a meta-framework like Next.js but for AI agents. [GitHub repo.](https://javascriptweekly.com/link/165990/d076523b1d)
+
+Mastra
+
+[upfetch: An Advanced `fetch` Client Builder](https://javascriptweekly.com/link/165991/d076523b1d "github.com") — A TypeScript library to enhance `fetch` with schema validation, automatic response parsing, and type-safety, while maintaining the familiar `fetch` API.
+
+Laurent Blondy
+
+[Find. Fix. Test: An Intro to App Monitoring with Sentry](https://javascriptweekly.com/link/165992/d076523b1d "sentry.io") — Code-level visibility, from pre- to post-release, lets devs find and fix errors and slowdowns and deploy with confidence.
+
+Sentry sponsor
+
+📄 [jsPDF 3.0: Client-Side JavaScript PDF Generation](https://javascriptweekly.com/link/165993/d076523b1d "github.com") — Create tickets, documents, certificates, etc. all on the fly. There’s a live demo on [the project’s homepage.](https://javascriptweekly.com/link/165994/d076523b1d)
+
+Parallax
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/b70vartvft7osyh0d5iy.jpg)](https://javascriptweekly.com/link/165995/d076523b1d)
+
+[Heat.js: A Heat Map Visualization Library](https://javascriptweekly.com/link/165995/d076523b1d "www.william-troup.com") — Think the GitHub contributions heat map. No dependencies, small, responsive, and theme-able. There’s a [live demo](https://javascriptweekly.com/link/165996/d076523b1d) or its [GitHub repo.](https://javascriptweekly.com/link/165997/d076523b1d)
+
+William Troup
+
+[Zoompinch: A Pinch-and-Zoom Experience for Vue 3 Apps](https://javascriptweekly.com/link/165998/d076523b1d "github.com") — Designed to ‘feel native’ on mobile devices. [Demo.](https://javascriptweekly.com/link/165999/d076523b1d)
+
+Elya Maurice Conrad
+
+[swrv: 'stale-while-revalidate' Data Fetching for Vue 3](https://javascriptweekly.com/link/166000/d076523b1d "github.com") — Uses a ‘stale-with-revalidate’ cache invalidation strategy (i.e. data is returned from cache immediately but then updated behind the scenes).
+
+Kong
+
+[ExcellentExport.js: Export Table Data to Excel or CSV](https://javascriptweekly.com/link/166001/d076523b1d "github.com") — If your app/page has some data in HTML tables and you’d like to export it to CSV or XLSX without any server involvement, this could help.
+
+Jordi Burgos
+
+* [Ts.ED 8.5](https://javascriptweekly.com/link/166002/d076523b1d) – Node + TypeScript framework on top of Express.
+
+* 🖼️ [pixelmatch 7.0](https://javascriptweekly.com/link/166003/d076523b1d) – Small, fast pixel-level image comparison library.
+
+* [dash.js 5.0](https://javascriptweekly.com/link/166004/d076523b1d) – A reference implementation for playback of MPEG DASH.
+
+* [DOCX 9.2](https://javascriptweekly.com/link/166005/d076523b1d) – Generate .docx / Word files from JavaScript.
+
+* [ApexCharts 4.5](https://javascriptweekly.com/link/166006/d076523b1d) – Popular JS charting library. ([Demos.](https://javascriptweekly.com/link/166007/d076523b1d))
+
+* [Middy 6.1](https://javascriptweekly.com/link/166008/d076523b1d) – Node.js middleware engine for AWS Lambda.
+
+* [Size Limit 11.2](https://javascriptweekly.com/link/166009/d076523b1d) – Performance budget tool for JavaScript.
+
+* 🔈 [useSound 5.0](https://javascriptweekly.com/link/166010/d076523b1d) – React hook for playing sound effects.
+
+📰 Classifieds
+
+[Learn how to build session-based authentication into a Next.js application](https://javascriptweekly.com/link/166011/d076523b1d), including the sign-in/sign-up pages, and how to protect routes.
+
+***
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/166012/d076523b1d). Relied on by 1000s of orgs, including Dropbox, Lattice, Bilt Rewards and many more.
+
+***
+
+[Design Meets Development:](https://javascriptweekly.com/link/166013/d076523b1d) Amir Shalev shares his unique journey bridging the gap and seamlessly collaborating with developers using [Bit](https://javascriptweekly.com/link/166013/d076523b1d).
+
+***
+
+😰 Is your vehicle data giving you anxiety? Mine too. That's why I built [CarsXE](https://javascriptweekly.com/link/166014/d076523b1d). Now I just have existential dread. Progress! [Start for Free Now!](https://javascriptweekly.com/link/166014/d076523b1d)
+
+📢  Elsewhere
+
+A quick roundup of some of other interesting updates or useful resources in the broader developer landscape:
+
+* [The XOR operator, and logic gate, explained.](https://javascriptweekly.com/link/166015/d076523b1d) (You can use XOR yourself in JavaScript with the `^` operator.)
+
+* [Learn Shader Programming with Rick and Morty](https://javascriptweekly.com/link/166016/d076523b1d) is a fun and accessible way to learn a bit about shaders and GLSL and, in particular, rendering *shapes* with shaders.
+
+* Beej, author of [several popular guides](https://javascriptweekly.com/link/166017/d076523b1d) to different programming concepts, has [released *Beej's Guide to Git*](https://javascriptweekly.com/link/166018/d076523b1d), a great zero-to-expert online resource for using the world's most popular DVCS.
+
+* Most of them don't apply to JavaScript, but I found [this walkthrough of NASA's "10 rules for software development"](https://javascriptweekly.com/link/166019/d076523b1d) quite interesting.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/166020/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
