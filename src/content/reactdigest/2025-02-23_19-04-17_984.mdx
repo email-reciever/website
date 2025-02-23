@@ -1,0 +1,140 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#494 Sunsetting Create React App
+description: RD#494 Sunsetting Create React App
+date: 星期日 07 晚上 二月 23o 2025
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/sunsetting-create-react-app
+origin_site: https://newsletter.reactdigest.net/p/sunsetting-create-react-app
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#494 Sunsetting Create React App" url="https://newsletter.reactdigest.net/p/sunsetting-create-react-app" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1VKIV8T_2ODG34uwUSTaWlEOoVmtqfiVkoHiZBiZ1mCHK_ltInzq_dn9dePsKQuvqnwlWg0ok_-MU1KjAXD28RycxEENVYKiRBWIbqvYz7g--fL2lkFp1hdT0Z4IyZDvryspsWeSaq4QUwM-4Bk-fK_ooYuEL1lzrD8k8Xix4K6nTFooppoJQZ7wBRwxZ9JpPCmin3TUCxkR4aPiqM-skKilRxrxBu02bftadWR8u0zAXu-7ioHIDNCG7nNWJ4zQWLgBKouCnxdBxBp1nE76A0krSgtclnO-pYcKkk03qguNFwv-6lYDEvAqqfPWx6yrxRFYdJdGfhZ1mKTJi1f3W5EmiwyCNpdpiBEfP-Rf_9DDn6bwaSTMYkdUrdftEJ_IXEIZpgdWSn0hPoOac-hvlRNTSj_DdsdpS5VANzCm65htTErdVpLJ52fhklQX33q7Iypzp8FUYWDhZcVVCXxcehV9n0j_xi5x2-Ub3vLeQPmPSgHT-13LsywGQJZVlEZizU9T0qgIQy1YxirDIrCpKzWWgU7vv5JPALbrDBvovzSxqSN3O0oI4kXiDxs1sHyleUYTVs5TAJJz-3U1AaaJU5o3E_QJkq8_ZkJFK3MU_GIVlebda_p5iawNKfDYAIE3QTF_HT8dlvvTWtQh5znpaDeLC-ieoqodZwOoK5gwPizXp3MopF_6Udxqof6GIvJPz_bBmBfiiOYsi-j0rlQmy2IsmnyFM42wT2TYPO3DFLiKSD8NUFRHas5J9fHX7Jgr3uJNwfxa1KmHtM0OzgY8GSm/4e9/hw9Y0E18QTSUIf_8B0D8og/h0/h001.SQ7vZcKHVkLN1i_jLZWGfrATFXbquG1W2ok2VmSE5mQ)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4e9/hw9Y0E18QTSUIf_8B0D8og/ho.gif)
+
+[Sunsetting Create React App](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvuMRDy3w85kWf16GtEwWeECFbyHlqOXGp-QCYgt94G1pePci9dVo57r_w7uq_TmUmWAVWRUN2eopyW5usyrb2b9g9xqOI9NgPzRXWcfqYS5bFuI0PTWSpve5t2M4a8VG5WVALniW9QQucagRxNkehUB5oeVgUyRVYdDMYK1oljhQb07TJvGcv7emGSSTHJkMsuMauI6UMw2sq1Pp6SQlIDAu907cwgYOJw2yXb-QFaI6Sa0qaMs8CJx4Sn01jR_9O1DewYl1mTtUKhk1dYjFdsc/4e9/hw9Y0E18QTSUIf_8B0D8og/h1/h001.SLwGrrncW1XDuy4WGKNMJFAQDMNiOslTdjFmiq8Wq7U)  
+_12 minutes_ by Matt Carroll, Ricky Hanlon
+
+In this post Matt and Ricky announced the deprecation of Create React App and recommends using frameworks like Next.js, React Router, or Expo for new projects. While CRA made it easy to start React projects since 2016, it lacks solutions for essential production needs like routing, data fetching, and code splitting. Authors emphasize that modern frameworks provide better integration of these features and offer improved user experience, including optional server-side rendering capabilities.
+
+[Tests are dead. Meticulous AI is here.](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2WqroLgOnA-NgNKtuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4e9/hw9Y0E18QTSUIf_8B0D8og/h2/h001.IK-2vDg_LOVY2VkX6aF8HvZ2FmpGXFhE_kH58KL2knc)  
+_sponsored by Meticulous_
+
+Meticulous automatically creates and maintains an exhaustive e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Dropbox, Lattice, Bilt Rewards and hundreds of organisations rely on Meticulous for their frontend testing. It is built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[Designing backgrounds with LLMs and React](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqbGF_k7ZIqYeeQfFNhZS0yAFP-wJdu07vd-DbReFrd1X1TwANOln4FyRG_3DcupfZ4pBaRDrQw5PfKVgozz0on9tfqTMlcdNpaA302yklAjZNFXu5o1fSJPLx90Kz0-e6C7Oc6JNwXOtmaZre_TF5n45keo3K-_C7J4jVCy7VmATD4cEHLxVc7I0vztyXtz7ctHdBNUnfD2rS_K651GBCZIDcc2w-GxEmCx3z4u-SAQMB3end5if59hDm6WSGqOIQUst5l-zawGoq5kOCRGAS9NqWsvPRNQs4rWeyf0enIWx/4e9/hw9Y0E18QTSUIf_8B0D8og/h3/h001.ScrjnWfnr2jUy1eF-1eSjc8CBkp2lhODgzh313CB_rs)  
+_7 minutes_ by Ben Shumaker
+
+In this post Ben brings a manual for creating an interactive background.
+
+[Introducing the new TanStack React Query integration](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgFxK8_5CYH84rOyQkKiuPnAOLZda2ml3I_H9L53yVmZS62oK7biplihjWy3QLwrGHIdnqSTefvIYabHb1YKn9MyNK6gaqCbuzaAMutDegsTdNfQ2k5hPO-HmG9s2XywtlKpeIJZLfAYgupixJJNhjeoFx384E2x7bGZItlB1PZ-8MU_qpvcLFuvXjAdZ7JlfcrKLAdXWvak36zBo0XmpIZreupS7V8cVdGrhqt9xsDJZOwC_RRuwf2hUh8X8nXtjbMeQ5jJl95Qy48JYeGY5gj1o/4e9/hw9Y0E18QTSUIf_8B0D8og/h4/h001.WVhqovRgbWN54DYU8mhbJAQtW20vyXQswaYk61Ujjh8)  
+_3 minutes_ by Julius Marminge, Nick Lucas
+
+In this post Julius and Nick announce a new TanStack React Query integration that simplifies the implementation by removing a layer of abstraction and utilizing native QueryOptions and MutationOptions interfaces. The new integration offers better maintainability, improved familiarity for TanStack Query users, and a lower learning curve, while the classic integration will continue to be maintained but won't receive significant new features. Both integrations can coexist in the same application, allowing for gradual migration.
+
+[React "as" Prop Using TypeScript](https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhdXVCnBPdVzcEvEpXRqRgWd-ClnQ-451q3t_vCbNg-zArKTARV-wgIL1IUAeNwPTzq2oDyfAIBhZx3Lynji9BXnQrqCUvVf0e1d8WtwDm9j0ElkSLzc4ft1lQBJvX0S0MKyMs445zb5VNeSU0ThNCNha59VqGhXnHfijwsrgCqP5SMzsfC0X-K4DuLTVHHJZwTAY5Mm--rfdkLLZs4iAmf5Nn4pwTdEK0QJ6wYbg10qcvq3w8jV_zWAvwTXWCxdNjw/4e9/hw9Y0E18QTSUIf_8B0D8og/h5/h001.dCN6AvzOk5MQxPvHH0ylv4up1fi0QImRDZtK8opYQAA)  
+_2 minutes_ by Christian Velez
+
+Learn how to type the "as" prop in React to dynamically change the rendered HTML tag. In this post Christian explains how to create flexible and type-safe React components using the "as" prop pattern in TypeScript. It demonstrates how to implement polymorphic components that can render different HTML tags while maintaining proper type checking and autocompletion. The tutorial shows how to create a reusable `Typography` component that can be rendered as various HTML elements while preserving their specific properties and maintaining consistent styling.
+
+[Build a custom useFetch hook](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v_DxMTfUzLWUnXrsKgR8G6aOEbNJdGgyc-a8s-cXndcWsi1yOECLV7_Lv9N06HMlKbeWrz6lKI0iWZVzYUBbvf7Mv2Fi05UPxVSGjPQPQ0GGy7Dlw79ppCt75EegtJrmYcY5PyuzMzM3tVilLd0kd1W2UmgovV9mkJxtvtKz2vpB3qC_ciNoc6hfHNvfW33CoqBj-mSt6pPSw4Xm2c5SdgMnAntgUU6iZIjpw4ekm6Re6VkdtgLByClvIbF_sOl9bhNduBZRmtw/4e9/hw9Y0E18QTSUIf_8B0D8og/h6/h001.sQLsIURIRe9EN7jpkV4WxrXdw80WX3haiy1g_F_p8vA)  
+_10 minutes_ by Corina Udrescu
+
+In this guide Corina explains how to create a custom React hook called `useFetch` that manages data fetching, loading states, and error handling. The hook is designed to be TypeScript-compatible and supports various HTTP methods and custom headers. She includes a practical example using a PokemonList component that fetches and displays Pokemon data, along with unit tests for verification.
+
+## webdev
+
+*   [Three Approaches to the & Selector in CSS](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfaSOFJc2XPJZaMvVYObtcgPkn1oHCSCr-DwxTAU2a1hjtsBYGXipGQbReAiYN4QLuVfzAX6oWnnTGEwyiTNwmoaVrozGMfygGbNy5NhhVpFCyjpNNTCp4I148Uty0m1G0Us9g-39Oyc38pX4inunN0Qw3e9pPQPDkxMb0NFmbsD_0pXhQZuZ-vVb_8wFDtqnmoAHnW9Hzi6X1rRyqdQ7vb0PV0erzsVGDRQUg4ctZ5CFzsEw7xrdOuMi9p-5htitSR2Bhw1rSlcmt-S0C1V_rcwNe2n8cmalhEBT9GoSVuYc/4e9/hw9Y0E18QTSUIf_8B0D8og/h7/h001._KIJ5fvyC20VyifHFyfgLABWqDBHitRa7f_216pBK5Q)
+    
+*   [CSS Space Toggles](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63ia1iZFBPaOGI2PpVm-q76narEMYCXf2X2Ecx3ET4j0ODhs1_hOPAXH1ExvUpwG2eKnHBm5qkJ-m8vJf7AuTgI9dQGJ2EEF_xuzHn4GUAC3xzFRqcyNY9A7cgR-V8Isl11dpNeXnNjIzXGsYs7VaMhYDiio6mtTZTdfNi7wBRJI_su2M6tEuzCd4B7ScumjdqaBz9UPrN7zlaJ29uhZC4lgREiaoCi62PJEcbSzncwCVwJ6jtTThxO7HAWgoIfoj_sa-uaC-x8WlsuTSvRsoVaM/4e9/hw9Y0E18QTSUIf_8B0D8og/h8/h001.P49Ijv8mrP8X1hFqHe5ATDZ2gBjkVmtWuU0LlHe2e5M)
+    
+*   [Using the step and pattern attributes to make number inputs more useful](https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhf31T844dZHx34QmBfO47UqPz6Igrj69Rl2nbkTjCd_9-MtUWmfPVKy-6zqzE-iOh0wIzoCDmlkpFryqfHJEyuC_W2AkYuHJJArRXLKnwpzb1EDfC2L5gLXslgaGQDHQibcPx908WPq8z8EtXa-GTN_CzIHMWDs0xinLmbBOAyO9uxffSqA622YuXTVhvXp7Nc9zGlfCzu7WI6KOvyFFVz31wzRjjqt20LaGqW5hkzsU3-esgO4WEoNGEnffi9lu_paIrSVHoQsCwEfLVaKmklT8ImauzUBZcjGnQHZqJVJ1r3eZvAX9YHZ7iB3kejPtFQ/4e9/hw9Y0E18QTSUIf_8B0D8og/h9/h001.rFTI660B6-dp5fKsLMq_RmZViYXMoAwQftlX10Q9LM8)
+    
+*   [Showing different images in light mode and dark mode with CSS media queries](https://link.mail.beehiiv.com/ss/c/u001.aPX4i1CZjyg0TJtq3966EFm8vj-w9f7L9fghDMd9nNUdmyWZMIXl4_-dljTwnTHfe3lzmCnNQ0jgMRAsmCoOt2hTxrnOA0uM_ie5-pnZblVV2AhRWOFJlN4HDaamgbGxE3mum-2sJB-znZnIn1xQeUHFQGEmKrWYTEvjjm4yvT5PmXO4GjNF3hAxD6QtyeG2M940Rg4Dwx3scAK4sPM7SoRHVQfC5tPLrQPRKCMcVmO6lY6ZYrNb6H12-gsQmvJJFT0y_4rn6A8RpY7sDaay7Fq4Kie5iNhAs7AVcdnXLpo/4e9/hw9Y0E18QTSUIf_8B0D8og/h10/h001.F4GckN7fhWKocv6dSc-RypKM_KkySx2k0UVbPNu6WME)
+    
+
+## javascript
+
+*   [Testing 10 JavaScript Frameworks on Their HTML Defaults](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTdU-UDp_RKZe_nL2ztFfBlOCepPdgA6KdfV9LovBNtWpLgFZ3EBhpNHyf-0nqPuLuYJ9X1t9ynampPEX5E0KEpMxOY53FBNNbSB8OQv3-nIWlYgs3-yx7njXiybZEm1bIE9BrrnXCjwNziV_PmPn-MUhyGgGahJ_2Sb1Gf1l9Sbu3GJdIk2CkUN7WPmE06720C26GKXurNrXjqYYrLcuRqEsvJAAxow87OGH2kDDx9Su7lDMi6b2oBNW_lndIyWjQFHooaDc-X-HtvBoIckp1VQ/4e9/hw9Y0E18QTSUIf_8B0D8og/h11/h001.SvQNQqxTkwyO47oJKYJCEEV1oyrrGXjL6ZQ9kc-H-kQ)
+    
+*   [How to write effective and clean unit tests in JavaScript](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF9QvXOdh3M1WtnyEbmvUCbZ3C-Qp2jBDeigxM3_P7Ni42pXw6Z9Z3N8hwU_GQEjLiD6W-M_T-FNmrfjXumr0Pnm_we_MZN6-CP1pHUHCOwBwe2vJT5c6veUfD0Mfe3j-i9dhzqulXmjh2Z5iPmeDc2Zd1nHmuQj0cBTLJALaait7SmwOEP7aoyOYjRkrk9PJqknCOVOZmBv75D8cgatpo10sOlDzsZNTW_uRc_iG7XXB8MM-W6f-5Vkl5pbru0_zMSs_X0YFxSZ03P2Wm8nMP11TEuTW0BMx_1E6Xn1VsNN5/4e9/hw9Y0E18QTSUIf_8B0D8og/h12/h001.6kr-iZcZ20NB2qj32m7s7M7nqny54-xNPauLFatKtBc)
+    
+*   [How OWASP Helps You Secure Your Full-Stack Web Applications](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqdUqvrAcuWP08tYMJ3IAaFPfaw3u0PunC8gfpG12t5MFBFjCWcBkWV4pMX6ozYhLN1hWnx29SeH6GHs8jd7X1WwwUyf1xUxuGiWRba-HBgBLLQguGn82uhT5WoK8EH4FCsyNJ4V9OoQfoNKKpTaELRYMhEVEKHYHFM1XCauOUt4mFA0uK3OSSltGVTq83KqYrBs-uYR2Y7IsKiGpioLN6BuVinY0NEH5u8WbtUBM06RFT7HcdFg3Nm37tAilqvfBxUveFVsH4kP-RNZJ8gPw_JJ3jhQuQe5OL9zfFZngIn6poy5BlVrRLT-MyZFtBXy9tw/4e9/hw9Y0E18QTSUIf_8B0D8og/h13/h001.sZ1WnAA_8DVuhJX84J56max3TOJ2uBRiJkSohZZjwv8)
+    
+
+And the most popular article from the last issue:
+
+*   [Why I rebuilt ProseMirror’s renderer in React](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO0u-frL1LyfZOyb7E0lrDMfuhdOOu6LxMud1Sch4E8WiC3LdEusIwhYyUrukHKobRVG-AMmPyY9aopFWI93w5KAVNYM6T1GNMxTqk_KkRXXt8ch24m4NrmhOHKQUmDepy02eS-y0We6lZ9YA8hwZp-AyW1CeAP2hRceIsJamAQOI0pqA5Utkzm7xBR0QNgIRNQxknJuuWAP5s9ocGsTnRvrfb_4kUlXOjgBsyvX7buO3-9iUuc76gYehr6BkGtnwROOeJ7FDmp6uMz8mZLbf4Iw/4e9/hw9Y0E18QTSUIf_8B0D8og/h14/h001.jC60WAceKDlzzPV6Im2FfagoJNXZdZk4QF9FvzTP-4o)
+    
+
+#
+</Detail>
+
+[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1VKIV8T_2ODG34uwUSTaWlEOoVmtqfiVkoHiZBiZ1mCHK_ltInzq_dn9dePsKQuvqnwlWg0ok_-MU1KjAXD28RycxEENVYKiRBWIbqvYz7g--fL2lkFp1hdT0Z4IyZDvryspsWeSaq4QUwM-4Bk-fK_ooYuEL1lzrD8k8Xix4K6nTFooppoJQZ7wBRwxZ9JpPCmin3TUCxkR4aPiqM-skKilRxrxBu02bftadWR8u0zAXu-7ioHIDNCG7nNWJ4zQWLgBKouCnxdBxBp1nE76A0krSgtclnO-pYcKkk03qguNFwv-6lYDEvAqqfPWx6yrxRFYdJdGfhZ1mKTJi1f3W5EmiwyCNpdpiBEfP-Rf_9DDn6bwaSTMYkdUrdftEJ_IXEIZpgdWSn0hPoOac-hvlRNTSj_DdsdpS5VANzCm65htTErdVpLJ52fhklQX33q7Iypzp8FUYWDhZcVVCXxcehV9n0j_xi5x2-Ub3vLeQPmPSgHT-13LsywGQJZVlEZizU9T0qgIQy1YxirDIrCpKzWWgU7vv5JPALbrDBvovzSxqSN3O0oI4kXiDxs1sHyleUYTVs5TAJJz-3U1AaaJU5o3E_QJkq8_ZkJFK3MU_GIVlebda_p5iawNKfDYAIE3QTF_HT8dlvvTWtQh5znpaDeLC-ieoqodZwOoK5gwPizXp3MopF_6Udxqof6GIvJPz_bBmBfiiOYsi-j0rlQmy2IsmnyFM42wT2TYPO3DFLiKSD8NUFRHas5J9fHX7Jgr3uJNwfxa1KmHtM0OzgY8GSm/4e9/hw9Y0E18QTSUIf_8B0D8og/h0/h001.SQ7vZcKHVkLN1i_jLZWGfrATFXbquG1W2ok2VmSE5mQ)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4e9/hw9Y0E18QTSUIf_8B0D8og/ho.gif)
+
+[Sunsetting Create React App](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvuMRDy3w85kWf16GtEwWeECFbyHlqOXGp-QCYgt94G1pePci9dVo57r_w7uq_TmUmWAVWRUN2eopyW5usyrb2b9g9xqOI9NgPzRXWcfqYS5bFuI0PTWSpve5t2M4a8VG5WVALniW9QQucagRxNkehUB5oeVgUyRVYdDMYK1oljhQb07TJvGcv7emGSSTHJkMsuMauI6UMw2sq1Pp6SQlIDAu907cwgYOJw2yXb-QFaI6Sa0qaMs8CJx4Sn01jR_9O1DewYl1mTtUKhk1dYjFdsc/4e9/hw9Y0E18QTSUIf_8B0D8og/h1/h001.SLwGrrncW1XDuy4WGKNMJFAQDMNiOslTdjFmiq8Wq7U)\
+*12 minutes* by Matt Carroll, Ricky Hanlon
+
+In this post Matt and Ricky announced the deprecation of Create React App and recommends using frameworks like Next.js, React Router, or Expo for new projects. While CRA made it easy to start React projects since 2016, it lacks solutions for essential production needs like routing, data fetching, and code splitting. Authors emphasize that modern frameworks provide better integration of these features and offer improved user experience, including optional server-side rendering capabilities.
+
+[Tests are dead. Meticulous AI is here.](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqa3JwGFc7SR4VfYwt4lGl6BqJbWmR8Zr6peVAmAulyzAx6j18FNSq9WHzwlFlFYko39HgeM2WqroLgOnA-NgNKtuzp4tf-DgVOEWVwRvFa5DXLsOCNqCDWRtzYUUGTVsKQ/4e9/hw9Y0E18QTSUIf_8B0D8og/h2/h001.IK-2vDg_LOVY2VkX6aF8HvZ2FmpGXFhE_kH58KL2knc)\
+*sponsored by Meticulous*
+
+Meticulous automatically creates and maintains an exhaustive e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Dropbox, Lattice, Bilt Rewards and hundreds of organisations rely on Meticulous for their frontend testing. It is built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[Designing backgrounds with LLMs and React](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqbGF_k7ZIqYeeQfFNhZS0yAFP-wJdu07vd-DbReFrd1X1TwANOln4FyRG_3DcupfZ4pBaRDrQw5PfKVgozz0on9tfqTMlcdNpaA302yklAjZNFXu5o1fSJPLx90Kz0-e6C7Oc6JNwXOtmaZre_TF5n45keo3K-_C7J4jVCy7VmATD4cEHLxVc7I0vztyXtz7ctHdBNUnfD2rS_K651GBCZIDcc2w-GxEmCx3z4u-SAQMB3end5if59hDm6WSGqOIQUst5l-zawGoq5kOCRGAS9NqWsvPRNQs4rWeyf0enIWx/4e9/hw9Y0E18QTSUIf_8B0D8og/h3/h001.ScrjnWfnr2jUy1eF-1eSjc8CBkp2lhODgzh313CB_rs)\
+*7 minutes* by Ben Shumaker
+
+In this post Ben brings a manual for creating an interactive background.
+
+[Introducing the new TanStack React Query integration](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgFxK8_5CYH84rOyQkKiuPnAOLZda2ml3I_H9L53yVmZS62oK7biplihjWy3QLwrGHIdnqSTefvIYabHb1YKn9MyNK6gaqCbuzaAMutDegsTdNfQ2k5hPO-HmG9s2XywtlKpeIJZLfAYgupixJJNhjeoFx384E2x7bGZItlB1PZ-8MU_qpvcLFuvXjAdZ7JlfcrKLAdXWvak36zBo0XmpIZreupS7V8cVdGrhqt9xsDJZOwC_RRuwf2hUh8X8nXtjbMeQ5jJl95Qy48JYeGY5gj1o/4e9/hw9Y0E18QTSUIf_8B0D8og/h4/h001.WVhqovRgbWN54DYU8mhbJAQtW20vyXQswaYk61Ujjh8)\
+*3 minutes* by Julius Marminge, Nick Lucas
+
+In this post Julius and Nick announce a new TanStack React Query integration that simplifies the implementation by removing a layer of abstraction and utilizing native QueryOptions and MutationOptions interfaces. The new integration offers better maintainability, improved familiarity for TanStack Query users, and a lower learning curve, while the classic integration will continue to be maintained but won't receive significant new features. Both integrations can coexist in the same application, allowing for gradual migration.
+
+[React "as" Prop Using TypeScript](https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhdXVCnBPdVzcEvEpXRqRgWd-ClnQ-451q3t_vCbNg-zArKTARV-wgIL1IUAeNwPTzq2oDyfAIBhZx3Lynji9BXnQrqCUvVf0e1d8WtwDm9j0ElkSLzc4ft1lQBJvX0S0MKyMs445zb5VNeSU0ThNCNha59VqGhXnHfijwsrgCqP5SMzsfC0X-K4DuLTVHHJZwTAY5Mm--rfdkLLZs4iAmf5Nn4pwTdEK0QJ6wYbg10qcvq3w8jV_zWAvwTXWCxdNjw/4e9/hw9Y0E18QTSUIf_8B0D8og/h5/h001.dCN6AvzOk5MQxPvHH0ylv4up1fi0QImRDZtK8opYQAA)\
+*2 minutes* by Christian Velez
+
+Learn how to type the "as" prop in React to dynamically change the rendered HTML tag. In this post Christian explains how to create flexible and type-safe React components using the "as" prop pattern in TypeScript. It demonstrates how to implement polymorphic components that can render different HTML tags while maintaining proper type checking and autocompletion. The tutorial shows how to create a reusable `Typography` component that can be rendered as various HTML elements while preserving their specific properties and maintaining consistent styling.
+
+[Build a custom useFetch hook](https://link.mail.beehiiv.com/ss/c/u001.UBh74i5ibvpiWu-3SxqXvmT1tfMGfxA3v_DxMTfUzLWUnXrsKgR8G6aOEbNJdGgyc-a8s-cXndcWsi1yOECLV7_Lv9N06HMlKbeWrz6lKI0iWZVzYUBbvf7Mv2Fi05UPxVSGjPQPQ0GGy7Dlw79ppCt75EegtJrmYcY5PyuzMzM3tVilLd0kd1W2UmgovV9mkJxtvtKz2vpB3qC_ciNoc6hfHNvfW33CoqBj-mSt6pPSw4Xm2c5SdgMnAntgUU6iZIjpw4ekm6Re6VkdtgLByClvIbF_sOl9bhNduBZRmtw/4e9/hw9Y0E18QTSUIf_8B0D8og/h6/h001.sQLsIURIRe9EN7jpkV4WxrXdw80WX3haiy1g_F_p8vA)\
+*10 minutes* by Corina Udrescu
+
+In this guide Corina explains how to create a custom React hook called `useFetch` that manages data fetching, loading states, and error handling. The hook is designed to be TypeScript-compatible and supports various HTTP methods and custom headers. She includes a practical example using a PokemonList component that fetches and displays Pokemon data, along with unit tests for verification.
+
+## webdev
+
+* [Three Approaches to the & Selector in CSS](https://link.mail.beehiiv.com/ss/c/u001.KaMW3WmNMB7SepvbqFCmfaSOFJc2XPJZaMvVYObtcgPkn1oHCSCr-DwxTAU2a1hjtsBYGXipGQbReAiYN4QLuVfzAX6oWnnTGEwyiTNwmoaVrozGMfygGbNy5NhhVpFCyjpNNTCp4I148Uty0m1G0Us9g-39Oyc38pX4inunN0Qw3e9pPQPDkxMb0NFmbsD_0pXhQZuZ-vVb_8wFDtqnmoAHnW9Hzi6X1rRyqdQ7vb0PV0erzsVGDRQUg4ctZ5CFzsEw7xrdOuMi9p-5htitSR2Bhw1rSlcmt-S0C1V_rcwNe2n8cmalhEBT9GoSVuYc/4e9/hw9Y0E18QTSUIf_8B0D8og/h7/h001._KIJ5fvyC20VyifHFyfgLABWqDBHitRa7f_216pBK5Q)
+
+* [CSS Space Toggles](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63ia1iZFBPaOGI2PpVm-q76narEMYCXf2X2Ecx3ET4j0ODhs1_hOPAXH1ExvUpwG2eKnHBm5qkJ-m8vJf7AuTgI9dQGJ2EEF_xuzHn4GUAC3xzFRqcyNY9A7cgR-V8Isl11dpNeXnNjIzXGsYs7VaMhYDiio6mtTZTdfNi7wBRJI_su2M6tEuzCd4B7ScumjdqaBz9UPrN7zlaJ29uhZC4lgREiaoCi62PJEcbSzncwCVwJ6jtTThxO7HAWgoIfoj_sa-uaC-x8WlsuTSvRsoVaM/4e9/hw9Y0E18QTSUIf_8B0D8og/h8/h001.P49Ijv8mrP8X1hFqHe5ATDZ2gBjkVmtWuU0LlHe2e5M)
+
+* [Using the step and pattern attributes to make number inputs more useful](https://link.mail.beehiiv.com/ss/c/u001.XGHModMy7yto-RjzmaUKhf31T844dZHx34QmBfO47UqPz6Igrj69Rl2nbkTjCd_9-MtUWmfPVKy-6zqzE-iOh0wIzoCDmlkpFryqfHJEyuC_W2AkYuHJJArRXLKnwpzb1EDfC2L5gLXslgaGQDHQibcPx908WPq8z8EtXa-GTN_CzIHMWDs0xinLmbBOAyO9uxffSqA622YuXTVhvXp7Nc9zGlfCzu7WI6KOvyFFVz31wzRjjqt20LaGqW5hkzsU3-esgO4WEoNGEnffi9lu_paIrSVHoQsCwEfLVaKmklT8ImauzUBZcjGnQHZqJVJ1r3eZvAX9YHZ7iB3kejPtFQ/4e9/hw9Y0E18QTSUIf_8B0D8og/h9/h001.rFTI660B6-dp5fKsLMq_RmZViYXMoAwQftlX10Q9LM8)
+
+* [Showing different images in light mode and dark mode with CSS media queries](https://link.mail.beehiiv.com/ss/c/u001.aPX4i1CZjyg0TJtq3966EFm8vj-w9f7L9fghDMd9nNUdmyWZMIXl4_-dljTwnTHfe3lzmCnNQ0jgMRAsmCoOt2hTxrnOA0uM_ie5-pnZblVV2AhRWOFJlN4HDaamgbGxE3mum-2sJB-znZnIn1xQeUHFQGEmKrWYTEvjjm4yvT5PmXO4GjNF3hAxD6QtyeG2M940Rg4Dwx3scAK4sPM7SoRHVQfC5tPLrQPRKCMcVmO6lY6ZYrNb6H12-gsQmvJJFT0y_4rn6A8RpY7sDaay7Fq4Kie5iNhAs7AVcdnXLpo/4e9/hw9Y0E18QTSUIf_8B0D8og/h10/h001.F4GckN7fhWKocv6dSc-RypKM_KkySx2k0UVbPNu6WME)
+
+## javascript
+
+* [Testing 10 JavaScript Frameworks on Their HTML Defaults](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTdU-UDp_RKZe_nL2ztFfBlOCepPdgA6KdfV9LovBNtWpLgFZ3EBhpNHyf-0nqPuLuYJ9X1t9ynampPEX5E0KEpMxOY53FBNNbSB8OQv3-nIWlYgs3-yx7njXiybZEm1bIE9BrrnXCjwNziV_PmPn-MUhyGgGahJ_2Sb1Gf1l9Sbu3GJdIk2CkUN7WPmE06720C26GKXurNrXjqYYrLcuRqEsvJAAxow87OGH2kDDx9Su7lDMi6b2oBNW_lndIyWjQFHooaDc-X-HtvBoIckp1VQ/4e9/hw9Y0E18QTSUIf_8B0D8og/h11/h001.SvQNQqxTkwyO47oJKYJCEEV1oyrrGXjL6ZQ9kc-H-kQ)
+
+* [How to write effective and clean unit tests in JavaScript](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgF9QvXOdh3M1WtnyEbmvUCbZ3C-Qp2jBDeigxM3_P7Ni42pXw6Z9Z3N8hwU_GQEjLiD6W-M_T-FNmrfjXumr0Pnm_we_MZN6-CP1pHUHCOwBwe2vJT5c6veUfD0Mfe3j-i9dhzqulXmjh2Z5iPmeDc2Zd1nHmuQj0cBTLJALaait7SmwOEP7aoyOYjRkrk9PJqknCOVOZmBv75D8cgatpo10sOlDzsZNTW_uRc_iG7XXB8MM-W6f-5Vkl5pbru0_zMSs_X0YFxSZ03P2Wm8nMP11TEuTW0BMx_1E6Xn1VsNN5/4e9/hw9Y0E18QTSUIf_8B0D8og/h12/h001.6kr-iZcZ20NB2qj32m7s7M7nqny54-xNPauLFatKtBc)
+
+* [How OWASP Helps You Secure Your Full-Stack Web Applications](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqdUqvrAcuWP08tYMJ3IAaFPfaw3u0PunC8gfpG12t5MFBFjCWcBkWV4pMX6ozYhLN1hWnx29SeH6GHs8jd7X1WwwUyf1xUxuGiWRba-HBgBLLQguGn82uhT5WoK8EH4FCsyNJ4V9OoQfoNKKpTaELRYMhEVEKHYHFM1XCauOUt4mFA0uK3OSSltGVTq83KqYrBs-uYR2Y7IsKiGpioLN6BuVinY0NEH5u8WbtUBM06RFT7HcdFg3Nm37tAilqvfBxUveFVsH4kP-RNZJ8gPw_JJ3jhQuQe5OL9zfFZngIn6poy5BlVrRLT-MyZFtBXy9tw/4e9/hw9Y0E18QTSUIf_8B0D8og/h13/h001.sZ1WnAA_8DVuhJX84J56max3TOJ2uBRiJkSohZZjwv8)
+
+And the most popular article from the last issue:
+
+* [Why I rebuilt ProseMirror’s renderer in React](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO0u-frL1LyfZOyb7E0lrDMfuhdOOu6LxMud1Sch4E8WiC3LdEusIwhYyUrukHKobRVG-AMmPyY9aopFWI93w5KAVNYM6T1GNMxTqk_KkRXXt8ch24m4NrmhOHKQUmDepy02eS-y0We6lZ9YA8hwZp-AyW1CeAP2hRceIsJamAQOI0pqA5Utkzm7xBR0QNgIRNQxknJuuWAP5s9ocGsTnRvrfb_4kUlXOjgBsyvX7buO3-9iUuc76gYehr6BkGtnwROOeJ7FDmp6uMz8mZLbf4Iw/4e9/hw9Y0E18QTSUIf_8B0D8og/h14/h001.jC60WAceKDlzzPV6Im2FfagoJNXZdZk4QF9FvzTP-4o)
+
+#
+
+
