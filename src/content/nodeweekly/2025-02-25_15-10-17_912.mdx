@@ -1,0 +1,300 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node 23.8 introduces the URL Pattern API
+description: Node 23.8 introduces the URL Pattern API
+date: 星期二 03 下午 二月 25o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/567
+origin_site: https://nodeweekly.com/issues/567
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node 23.8 introduces the URL Pattern API" url="https://nodeweekly.com/issues/567" />
+
+<Detail client:only="react">
+	#​567 — February 25, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/567)
+
+👋 Just in case you missed the message, we took last week off but we're back now until Easter, so you didn't miss anything. :-)  
+\_\_  
+_Peter Cooper, your editor._
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/166023/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/b4y8qgcabdwa7zx9jfxd.jpg)](https://nodeweekly.com/link/166024/0a4070b383)
+
+[Subverting Control with Weak References](https://nodeweekly.com/link/166024/0a4070b383 "jlongster.com") — Node supports `WeakMap` and [`WeakRef`](https://nodeweekly.com/link/166025/0a4070b383) for working with weak references and James is a big fan of the extra abstractions they unlock. A weak reference differs from a normal reference in that it _doesn’t_ prevent a referenced object from being garbage collected – this might sound like it has limited value, but is quite useful in certain scenarios.
+
+James Long
+
+[Node v23.8.0 (Current) Released](https://nodeweekly.com/link/166026/0a4070b383 "nodejs.org") — You can now tell Node to use the system’s trusted CA certificate store with `--use-system-ca` and there’s an implementation of the [URL Pattern API](https://nodeweekly.com/link/166027/0a4070b383) (`URLPattern` will become a global in Node 24). Other minor enhancements include an update to Node’s timezone data and initial support for the zstd compression algorithm (via `node:zlib`).
+
+Michaël Zasso
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a6c34f22.png)](https://nodeweekly.com/link/166023/0a4070b383)
+
+[Functional JavaScript First Steps, v2](https://nodeweekly.com/link/166023/0a4070b383 "frontendmasters.com") — A friendly, practical introduction to functional programming fundamentals in JavaScript. Learn the power of the pure function while exploring functional programming paradigms.
+
+Frontend Masters sponsor
+
+[Migrating 160K Lines of Production JS to TypeScript Without Downtime](https://nodeweekly.com/link/166028/0a4070b383 "benhowdle.im") — A quick look at the motivation, strategy developed, and a few of the tools that made it a less painful process. But was it worth it? _“Absolutely,”_ Ben says.
+
+Ben Howdle
+
+**IN BRIEF:**
+
+*   Cloud platforms like Cloudflare Workers, Vercel Edge and Deno Deploy boast some partial level of Node.js compatibility, but how much? [Pooya Parsa has created a test suite to find out](https://nodeweekly.com/link/166029/0a4070b383) which results in [reports like this.](https://nodeweekly.com/link/166030/0a4070b383)
+    
+*   [Deno 2.2 has arrived](https://nodeweekly.com/link/166031/0a4070b383), boasting yet more Node.js ecosystem compatibility.
+    
+*   [Node v18.20.7 (LTS)](https://nodeweekly.com/link/166032/0a4070b383) was released. Note that v18's maintenance phase ends in just a couple of months.
+    
+
+[A Demo of Running TypeScript Directly in Node.js](https://nodeweekly.com/link/166033/0a4070b383 "2ality.com") — _“I have published the repository [`nodejs-type-stripping`](https://nodeweekly.com/link/166034/0a4070b383) which demonstrates how to implement a package with a bin script that is written directly in TypeScript (no transpilation).”_
+
+Dr. Axel Rauschmayer
+
+[Why TypeScript 5.8's `--erasableSyntaxOnly` Matters](https://nodeweekly.com/link/166035/0a4070b383 "www.totaltypescript.com") — _“It disables a bunch of features that I don’t think should ever have been part of TypeScript.”_
+
+Matt Pocock
+
+[Optimize Your BullMQ Workers](https://nodeweekly.com/link/166036/0a4070b383 "judoscale.com") — Queues backed up? Workers over-provisioned? Automatic scaling based on queues is the answer!
+
+Judoscale sponsor
+
+📄 [Building a Simple Interactive CLI App with Node.js](https://nodeweekly.com/link/166037/0a4070b383) – And TypeScript.. Robin Wieruch
+
+📄 [Cloudflare, Unikernels and Bare Metal: The Life of a Prisma Postgres Query](https://nodeweekly.com/link/166038/0a4070b383) Nikolas Burk (Prisma)
+
+📄 [Node.js Tracing for Better Visibility and Performance with N|Solid](https://nodeweekly.com/link/166039/0a4070b383) Lizz Parody (NodeSource)
+
+📄 [How to Refactor Code with GitHub Copilot](https://nodeweekly.com/link/166040/0a4070b383) Anthony Grutta (GitHub)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dy1p5dqbuf4vdyzjnqes.jpg)](https://nodeweekly.com/link/166041/0a4070b383)
+
+[upfetch: An Advanced `fetch` Client Builder](https://nodeweekly.com/link/166041/0a4070b383 "github.com") — A TypeScript library to enhance `fetch` with schema validation, automatic response parsing, and type-safety, while maintaining the familiar `fetch` API.
+
+Laurent Blondy
+
+[Mastra: A TypeScript AI Framework from the Gatsby Team](https://nodeweekly.com/link/166042/0a4070b383 "mastra.ai") — From some of the folks behind the [Gatsby](https://nodeweekly.com/link/166043/0a4070b383) React framework comes a new way to build LLM-powered agents that perform various tasks, use knowledge bases, and hold memory. Think a meta-framework like Next.js but for AI agents. [GitHub repo.](https://nodeweekly.com/link/166044/0a4070b383)
+
+Mastra
+
+[Opus 0.10: Native Opus Bindings for Node](https://nodeweekly.com/link/166045/0a4070b383 "github.com") — Bindings for `libopus`, a library for working with the Opus lossy audio codec.
+
+Discord.js Team
+
+♟️ [Chess.js 1.1: A Library to Manage a Chess Game](https://nodeweekly.com/link/166046/0a4070b383 "github.com") — Move generation/validation, piece placement, check/checkmate/stalemate detection – _“basically everything but the AI”_!
+
+Jeff Hlywa
+
+📰 Classifieds
+
+🔒 [Protect your SaaS app with advanced device fingerprinting from WorkOS Radar](https://nodeweekly.com/link/166047/0a4070b383). Stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+* * *
+
+[Telling the Bit story:](https://nodeweekly.com/link/166048/0a4070b383) Celebrating 10 Years of Composability. Ran Mizrahi reveals how Bit shifted from development stagnation to exponential progress using Composability.
+
+* * *
+
+☁️ Questions about serverless & its hidden costs & complexities? Is it an illusion? [Join Matteo Collina for a webinar exploring this & more](https://nodeweekly.com/link/166049/0a4070b383).
+
+*   [node-cron 4.1](https://nodeweekly.com/link/166050/0a4070b383) – Run functions/commands on cron-defined schedules.
+    
+*   [Mercurius 16.1](https://nodeweekly.com/link/166051/0a4070b383) – Implement GraphQL servers on top of Fastify.
+    
+*   [DOCX 9.2](https://nodeweekly.com/link/166052/0a4070b383) – Generate .docx / Word files from JavaScript.
+    
+*   [Middy 6.1](https://nodeweekly.com/link/166053/0a4070b383) – Node.js AWS Lambda middleware engine.
+    
+*   [Faker 9.5](https://nodeweekly.com/link/166054/0a4070b383) – Generate fabricated data to your heart's content.
+    
+*   [Bunchee 6.4](https://nodeweekly.com/link/166055/0a4070b383) – Zero config bundler for npm packages.
+    
+*   [Secretlint 9.2](https://nodeweekly.com/link/166056/0a4070b383) – Tool to prevent committing credentials/secrets.
+    
+*   [Colyseus 0.16](https://nodeweekly.com/link/166057/0a4070b383) – WebSocket-based multiplayer framework.
+    
+*   [file-type 20.2](https://nodeweekly.com/link/166058/0a4070b383) – Detect the file type of a file, stream, or data.
+    
+*   [Light My Request 6.6](https://nodeweekly.com/link/166059/0a4070b383) – Fake HTTP injection library
+    
+*   🎹 [JZZ 1.9](https://nodeweekly.com/link/166060/0a4070b383) – MIDI library for Node and browsers.
+    
+
+📢  Elsewhere in JavaScript
+
+A quick roundup of some of other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   Last week, TC39 (the committee responsible for progressing JavaScript's underlying spec) [advanced several proposals](https://nodeweekly.com/link/166061/0a4070b383) bringing new features to JavaScript, including `Float16Array`, `import defer`, `Math.clamp` and `Error.captureStackTrace`.
+    
+*   [ESLint now officially supports CSS linting](https://nodeweekly.com/link/166062/0a4070b383) (in addition to JSON and Markdown, as added last year).
+    
+*   The React team has now [officially deprecated _Create React App._](https://nodeweekly.com/link/166063/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​567 — February 25, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/567)
+
+👋 Just in case you missed the message, we took last week off but we're back now until Easter, so you didn't miss anything. :-)\
+\_\_\
+*Peter Cooper, your editor.*
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/166023/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/b4y8qgcabdwa7zx9jfxd.jpg)](https://nodeweekly.com/link/166024/0a4070b383)
+
+[Subverting Control with Weak References](https://nodeweekly.com/link/166024/0a4070b383 "jlongster.com") — Node supports `WeakMap` and [`WeakRef`](https://nodeweekly.com/link/166025/0a4070b383) for working with weak references and James is a big fan of the extra abstractions they unlock. A weak reference differs from a normal reference in that it *doesn’t* prevent a referenced object from being garbage collected – this might sound like it has limited value, but is quite useful in certain scenarios.
+
+James Long
+
+[Node v23.8.0 (Current) Released](https://nodeweekly.com/link/166026/0a4070b383 "nodejs.org") — You can now tell Node to use the system’s trusted CA certificate store with `--use-system-ca` and there’s an implementation of the [URL Pattern API](https://nodeweekly.com/link/166027/0a4070b383) (`URLPattern` will become a global in Node 24). Other minor enhancements include an update to Node’s timezone data and initial support for the zstd compression algorithm (via `node:zlib`).
+
+Michaël Zasso
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a6c34f22.png)](https://nodeweekly.com/link/166023/0a4070b383)
+
+[Functional JavaScript First Steps, v2](https://nodeweekly.com/link/166023/0a4070b383 "frontendmasters.com") — A friendly, practical introduction to functional programming fundamentals in JavaScript. Learn the power of the pure function while exploring functional programming paradigms.
+
+Frontend Masters sponsor
+
+[Migrating 160K Lines of Production JS to TypeScript Without Downtime](https://nodeweekly.com/link/166028/0a4070b383 "benhowdle.im") — A quick look at the motivation, strategy developed, and a few of the tools that made it a less painful process. But was it worth it? *“Absolutely,”* Ben says.
+
+Ben Howdle
+
+**IN BRIEF:**
+
+* Cloud platforms like Cloudflare Workers, Vercel Edge and Deno Deploy boast some partial level of Node.js compatibility, but how much? [Pooya Parsa has created a test suite to find out](https://nodeweekly.com/link/166029/0a4070b383) which results in [reports like this.](https://nodeweekly.com/link/166030/0a4070b383)
+
+* [Deno 2.2 has arrived](https://nodeweekly.com/link/166031/0a4070b383), boasting yet more Node.js ecosystem compatibility.
+
+* [Node v18.20.7 (LTS)](https://nodeweekly.com/link/166032/0a4070b383) was released. Note that v18's maintenance phase ends in just a couple of months.
+
+[A Demo of Running TypeScript Directly in Node.js](https://nodeweekly.com/link/166033/0a4070b383 "2ality.com") — *“I have published the repository [`nodejs-type-stripping`](https://nodeweekly.com/link/166034/0a4070b383) which demonstrates how to implement a package with a bin script that is written directly in TypeScript (no transpilation).”*
+
+Dr. Axel Rauschmayer
+
+[Why TypeScript 5.8's `--erasableSyntaxOnly` Matters](https://nodeweekly.com/link/166035/0a4070b383 "www.totaltypescript.com") — *“It disables a bunch of features that I don’t think should ever have been part of TypeScript.”*
+
+Matt Pocock
+
+[Optimize Your BullMQ Workers](https://nodeweekly.com/link/166036/0a4070b383 "judoscale.com") — Queues backed up? Workers over-provisioned? Automatic scaling based on queues is the answer!
+
+Judoscale sponsor
+
+📄 [Building a Simple Interactive CLI App with Node.js](https://nodeweekly.com/link/166037/0a4070b383) – And TypeScript.. Robin Wieruch
+
+📄 [Cloudflare, Unikernels and Bare Metal: The Life of a Prisma Postgres Query](https://nodeweekly.com/link/166038/0a4070b383) Nikolas Burk (Prisma)
+
+📄 [Node.js Tracing for Better Visibility and Performance with N|Solid](https://nodeweekly.com/link/166039/0a4070b383) Lizz Parody (NodeSource)
+
+📄 [How to Refactor Code with GitHub Copilot](https://nodeweekly.com/link/166040/0a4070b383) Anthony Grutta (GitHub)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dy1p5dqbuf4vdyzjnqes.jpg)](https://nodeweekly.com/link/166041/0a4070b383)
+
+[upfetch: An Advanced `fetch` Client Builder](https://nodeweekly.com/link/166041/0a4070b383 "github.com") — A TypeScript library to enhance `fetch` with schema validation, automatic response parsing, and type-safety, while maintaining the familiar `fetch` API.
+
+Laurent Blondy
+
+[Mastra: A TypeScript AI Framework from the Gatsby Team](https://nodeweekly.com/link/166042/0a4070b383 "mastra.ai") — From some of the folks behind the [Gatsby](https://nodeweekly.com/link/166043/0a4070b383) React framework comes a new way to build LLM-powered agents that perform various tasks, use knowledge bases, and hold memory. Think a meta-framework like Next.js but for AI agents. [GitHub repo.](https://nodeweekly.com/link/166044/0a4070b383)
+
+Mastra
+
+[Opus 0.10: Native Opus Bindings for Node](https://nodeweekly.com/link/166045/0a4070b383 "github.com") — Bindings for `libopus`, a library for working with the Opus lossy audio codec.
+
+Discord.js Team
+
+♟️ [Chess.js 1.1: A Library to Manage a Chess Game](https://nodeweekly.com/link/166046/0a4070b383 "github.com") — Move generation/validation, piece placement, check/checkmate/stalemate detection – *“basically everything but the AI”*!
+
+Jeff Hlywa
+
+📰 Classifieds
+
+🔒 [Protect your SaaS app with advanced device fingerprinting from WorkOS Radar](https://nodeweekly.com/link/166047/0a4070b383). Stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+***
+
+[Telling the Bit story:](https://nodeweekly.com/link/166048/0a4070b383) Celebrating 10 Years of Composability. Ran Mizrahi reveals how Bit shifted from development stagnation to exponential progress using Composability.
+
+***
+
+☁️ Questions about serverless & its hidden costs & complexities? Is it an illusion? [Join Matteo Collina for a webinar exploring this & more](https://nodeweekly.com/link/166049/0a4070b383).
+
+* [node-cron 4.1](https://nodeweekly.com/link/166050/0a4070b383) – Run functions/commands on cron-defined schedules.
+
+* [Mercurius 16.1](https://nodeweekly.com/link/166051/0a4070b383) – Implement GraphQL servers on top of Fastify.
+
+* [DOCX 9.2](https://nodeweekly.com/link/166052/0a4070b383) – Generate .docx / Word files from JavaScript.
+
+* [Middy 6.1](https://nodeweekly.com/link/166053/0a4070b383) – Node.js AWS Lambda middleware engine.
+
+* [Faker 9.5](https://nodeweekly.com/link/166054/0a4070b383) – Generate fabricated data to your heart's content.
+
+* [Bunchee 6.4](https://nodeweekly.com/link/166055/0a4070b383) – Zero config bundler for npm packages.
+
+* [Secretlint 9.2](https://nodeweekly.com/link/166056/0a4070b383) – Tool to prevent committing credentials/secrets.
+
+* [Colyseus 0.16](https://nodeweekly.com/link/166057/0a4070b383) – WebSocket-based multiplayer framework.
+
+* [file-type 20.2](https://nodeweekly.com/link/166058/0a4070b383) – Detect the file type of a file, stream, or data.
+
+* [Light My Request 6.6](https://nodeweekly.com/link/166059/0a4070b383) – Fake HTTP injection library
+
+* 🎹 [JZZ 1.9](https://nodeweekly.com/link/166060/0a4070b383) – MIDI library for Node and browsers.
+
+📢  Elsewhere in JavaScript
+
+A quick roundup of some of other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* Last week, TC39 (the committee responsible for progressing JavaScript's underlying spec) [advanced several proposals](https://nodeweekly.com/link/166061/0a4070b383) bringing new features to JavaScript, including `Float16Array`, `import defer`, `Math.clamp` and `Error.captureStackTrace`.
+
+* [ESLint now officially supports CSS linting](https://nodeweekly.com/link/166062/0a4070b383) (in addition to JSON and Markdown, as added last year).
+
+* The React team has now [officially deprecated *Create React App.*](https://nodeweekly.com/link/166063/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
