@@ -1,0 +1,353 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Doom for TypeScript types
+description: Doom for TypeScript types
+date: 星期五 06 晚上 二月 28o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/725
+origin_site: https://javascriptweekly.com/issues/725
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Doom for TypeScript types" url="https://javascriptweekly.com/issues/725" />
+
+<Detail client:only="react">
+	#​725 — February 28, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/725)
+
+✏️ Whenever we include more than a few links about TypeScript, we get complaints from people who _don't like it._ We get that, we love you folks, and we're aware. TypeScript isn't our _main focus_ but we do cover it, including critical pieces. That in mind, prepare yourself for our top feature... but the rest of the issue is mostly JavaScript, promise! 😅  
+\_\_  
+_Peter Cooper, your editor_
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/166287/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/brxtjibm9xfdhg9joum7.jpg)](https://javascriptweekly.com/link/166288/d076523b1d)
+
+[Developer Implements 'Doom' in TypeScript's Type System](https://javascriptweekly.com/link/166288/d076523b1d "socket.dev") — A curious quirk of TypeScript’s type system is that [it is Turing-complete](https://javascriptweekly.com/link/166289/d076523b1d) which has led some developers to implement apps entirely _in_ the type system. One such developer has spent eighteen months producing 177 _terabytes_ of types to get 1993’s Doom running with them. Ridiculous and amazing in equal measure, he [▶️ explains the project in this widely lauded 7-minute video.](https://javascriptweekly.com/link/166290/d076523b1d) 👏
+
+Sarah Gooding (Socket)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/b47ce204.png)](https://javascriptweekly.com/link/166287/d076523b1d)
+
+[Functional JavaScript First Steps, v2](https://javascriptweekly.com/link/166287/d076523b1d "frontendmasters.com") — A friendly, practical introduction to functional programming fundamentals in JavaScript. Learn the power of the pure function while exploring functional programming paradigms.
+
+Frontend Masters sponsor
+
+[Bun v1.2.3 and v1.2.4 Released](https://javascriptweekly.com/link/166291/d076523b1d "bun.sh") — The rapid pace of progress on the JavaScriptCore-based runtime is only increasing. [v1.2.3](https://javascriptweekly.com/link/166291/d076523b1d) pushes frontend dev server features (run `bun ./index.html` and all the bundling is done for you). `bun init` can now be used to create a new React project. Meanwhile, [Bun 1.2.4](https://javascriptweekly.com/link/166292/d076523b1d) builds macOS apps 60% faster and macOS executables can now be code signed.
+
+Jarred Sumner et al.
+
+[What _is_ TypeScript? An Overview for JavaScript Programmers](https://javascriptweekly.com/link/166293/d076523b1d "2ality.com") — You may have noticed esteemed JavaScript developer and author Dr. Axel has been on a TypeScript odyssey recently. Here he does a good job at boiling down the _what_ (rather than the ‘why’) of TypeScript. A handy primer on what’s going on, even if you don’t plan to use it, since you'll end up interacting with it _somewhere.._
+
+Dr. Axel Rauschmayer
+
+**IN BRIEF:**
+
+*   ⭐ The Chromium team is progressing with [shipping the Observable API.](https://javascriptweekly.com/link/166294/d076523b1d) This is a big deal, especially for libraries like [RxJS.](https://javascriptweekly.com/link/166295/d076523b1d)
+    
+*   📊 [BenchJS](https://javascriptweekly.com/link/166296/d076523b1d) is an online JavaScript benchmarking sandbox worth playing with.
+    
+*   A look behind the scenes at [recent progress on the records & tuples proposal](https://javascriptweekly.com/link/166297/d076523b1d) for JavaScript (currently stage 2 at TC39). You can [play with the feature here.](https://javascriptweekly.com/link/166298/d076523b1d)
+    
+*   [Windows 95 in Electron](https://javascriptweekly.com/link/166299/d076523b1d) is, unsurprisingly, Windows 95 running in an Electron app! v4.0 adds Office 95 and IE 5.5 for some (limited) browsing of the Web.
+    
+*   📊 [The results of the _State of React Native 2024_ survey](https://javascriptweekly.com/link/166300/d076523b1d) are out.
+    
+
+**RELEASES:**
+
+*   [Next.js 15.2](https://javascriptweekly.com/link/166302/d076523b1d) – Now with a redesigned debugging experience and experimental support for React's new View Transitions API and using the Node.js runtime in middleware.
+    
+*   [Astro 5.4](https://javascriptweekly.com/link/166303/d076523b1d) – Now with remote image optimization and experimental responsive image support in Markdown.
+    
+*   [ESLint v9.21.0](https://javascriptweekly.com/link/166304/d076523b1d) – Now with a `--ext` CLI option to lint files with a particular extension.
+    
+*   [Ember.js 6.2](https://javascriptweekly.com/link/166305/d076523b1d), [Angular 19.2](https://javascriptweekly.com/link/166307/d076523b1d), [Node.js v23.9 (Current)](https://javascriptweekly.com/link/166308/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[React Libraries for 2025](https://javascriptweekly.com/link/166310/d076523b1d "www.robinwieruch.de") — Each year, prolific React blogger Robin updates his post covering his opinionated list of essential React ecosystem libraries. He covers a lot of angles from project creation and package management through to state management, animation, form creation, auth, and i18n.
+
+Robin Wieruch
+
+[Turbocharging V8 with Mutable Heap Numbers](https://javascriptweekly.com/link/166311/d076523b1d "v8.dev") — The V8 team uses the JetStream2 benchmark suite to investigate performance issues and has implemented a new optimization yielding not just a 2.5x improvement in the `async-fs` benchmark but in other areas too.
+
+Victor Gomes (V8)
+
+[Wish Your AI Co-Pilot Actually Knew Your Codebase?](https://javascriptweekly.com/link/166312/d076523b1d "augmentcode.com") — Try the most context-aware Developer AI. Augment deeply understands your codebase, documentation, and dependencies.
+
+Augment Code sponsor
+
+[Subverting Control with Weak References](https://javascriptweekly.com/link/166313/d076523b1d "jlongster.com") — A weak reference differs from a normal reference in that it _doesn’t_ prevent a referenced object from being garbage collected. Most modern JS runtimes support them and James shows how they can be useful.
+
+James Long
+
+⭐ [How JIT (Just In Time) Compilation Makes JavaScript Faster](https://javascriptweekly.com/link/166314/d076523b1d) Royal Bhati
+
+📄 [Using AI in the Browser for Typo Rewriting](https://javascriptweekly.com/link/166315/d076523b1d) – A poke around one of Chrome’s newest AI features. Raymond Camden
+
+📄 [A Mere Mortal's Introduction to JIT Vulnerabilities in JS Engines](https://javascriptweekly.com/link/166317/d076523b1d) Josiah Pierce
+
+📄 [How to Do Visual Regression Testing in Vue with Vitest](https://javascriptweekly.com/link/166318/d076523b1d) Alexander Opalic
+
+📄 [Why We Ditched Next.js and Never Looked Back](https://javascriptweekly.com/link/166320/d076523b1d) Stewart and Snelling
+
+📄 [Micro Frontends with Angular and Native Federation](https://javascriptweekly.com/link/166321/d076523b1d) Manfred Steyer (Angular Blog)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hsugc44c7irehakiif9l.jpg)](https://javascriptweekly.com/link/166322/d076523b1d)
+
+[Svelvet 11: Build Node-Based UIs with Svelte](https://javascriptweekly.com/link/166322/d076523b1d "svelvet.mintlify.app") — A mature Svelte component library for creating interactive node-based UIs and diagrams. v11 adds the ability to toggle between ‘snap grid’ and freeform modes for manipulating elements. (There’s a live demo at the bottom of the homepage.)
+
+Open Source Labs
+
+[React Native 0.78 Released](https://javascriptweekly.com/link/166323/d076523b1d "reactnative.dev") — A big release for React Native as it ships React 19 support (which [requires some tweaks when upgrading](https://javascriptweekly.com/link/166324/d076523b1d)) and some more minor tweaks.
+
+Novak, Cucci, Gupta and Cipolleschi (Meta)
+
+[🔒 Protect Against Bots, Fraud, and Abuse in Real Time](https://javascriptweekly.com/link/166325/d076523b1d "workos.com") — WorkOS Radar protects your app with advanced device fingerprinting — stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+WorkOS sponsor
+
+[Random: Seedable Random Number Generator](https://javascriptweekly.com/link/166326/d076523b1d "github.com") — You’ve got `Math.random` but this library takes things a few steps further with easy ways to create random values of various types and using different distributions (e.g. normal distribution, Bernoulli, Poisson, Pareto and Weibull).
+
+Travis Fischer
+
+[QuickJS Sandbox 2.0: Execute JS/TS in a QuickJS Powered Sandbox](https://javascriptweekly.com/link/166327/d076523b1d "sebastianwessel.github.io") — [QuickJS](https://javascriptweekly.com/link/166328/d076523b1d) is a small, embeddable JavaScript engine built by Fabrice Bellard and this extends it to make it easy to run code in an isolated sandboxed environment, along with some basic Node module support and a virtual file system. [GitHub repo.](https://javascriptweekly.com/link/166329/d076523b1d)
+
+Sebastian Wessel
+
+*   [PrimeVue 4.3](https://javascriptweekly.com/link/166330/d076523b1d) – A UI component suite for Vue, now with a new 'theme designer' tool including a Figma-to-code feature.
+    
+*   🗓️ [React Big Calendar 1.18](https://javascriptweekly.com/link/166331/d076523b1d) – Google Calendar/Outlook-like calendar component. Now with React 19 support.
+    
+*   [InversifyJS 7.0](https://javascriptweekly.com/link/166332/d076523b1d) – Inversion of control container for JavaScript. There's a [v6-to-v7 upgrade guide.](https://javascriptweekly.com/link/166333/d076523b1d)
+    
+*   [React Markdown 10.0](https://javascriptweekly.com/link/166335/d076523b1d) – Component to render markdown. ([Demo.](https://javascriptweekly.com/link/166336/d076523b1d))
+    
+*   [fast-png 6.3](https://javascriptweekly.com/link/166338/d076523b1d) – Pure JavaScript PNG image decoder and encoder.
+    
+*   [Mercurius 16.1](https://javascriptweekly.com/link/166339/d076523b1d) – Implement GraphQL servers on top of Fastify.
+    
+*   [Varlet 3.9](https://javascriptweekly.com/link/166340/d076523b1d) – Material Design-inspired component library for Vue 3.
+    
+*   [file-type 20.4](https://javascriptweekly.com/link/166341/d076523b1d) – Detect the file type of a file, stream, or data.
+    
+*   [FxTS 1.5](https://javascriptweekly.com/link/166343/d076523b1d) – Functional library for TS/JS devs.
+    
+
+📰 Classifieds
+
+🎹 [STRICH](https://javascriptweekly.com/link/166344/d076523b1d): Add blazing fast and reliable 1D/2D Barcode Scanning to your web apps. Free demo app and 30-day trial available.
+
+* * *
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/166345/d076523b1d). Relied on by 1000s of orgs, including Dropbox, Lattice, Bilt Rewards and many more.
+
+* * *
+
+📣 [Creators of the State of JS, Vue.js, Vite, Pino & Fastify](https://javascriptweekly.com/link/166346/d076523b1d) — have you seen the new JSNation speakers? Get 10% off with code `JSWEEKLY`.
+
+* * *
+
+[Bit - A build system framework for development of composable software](https://javascriptweekly.com/link/166347/d076523b1d). Natively to Harmony, and support Node.js, React apps (with Vite), NextJS, Angular, Vue and more.
+
+📢  Elsewhere
+
+A quick roundup of some of other interesting updates or useful resources in the broader developer landscape:
+
+*   Remember [Ajax?](https://javascriptweekly.com/link/166348/d076523b1d) The popular term bringing together several technologies involving asychronous JavaScript making dynamic updates by calling the server [was coined in this article 20 years ago this month.](https://javascriptweekly.com/link/166349/d076523b1d)
+    
+*   🤖 [Is it viable to have LLMs write `alt`\-text for your images?](https://javascriptweekly.com/link/166350/d076523b1d) Dries Buytaert put a few models through their paces.
+    
+*   GitHub is getting involved with the AI developer agent game and [shows off a preview of its new Copilot 'agent mode'.](https://javascriptweekly.com/link/166351/d076523b1d)
+    
+*   🌊 A detailed look at the techniques behind [high-performance, real-time fluid simulations with WebGPU.](https://javascriptweekly.com/link/166352/d076523b1d)
+    
+*   Electronic Arts certainly doesn't make a habit of open sourcing old games, but [it's just done that for 1996's _Command and Conquer: Red Alert_](https://javascriptweekly.com/link/166353/d076523b1d), one of the pioneering games in the real time strategy genre.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/166354/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​725 — February 28, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/725)
+
+✏️ Whenever we include more than a few links about TypeScript, we get complaints from people who *don't like it.* We get that, we love you folks, and we're aware. TypeScript isn't our *main focus* but we do cover it, including critical pieces. That in mind, prepare yourself for our top feature... but the rest of the issue is mostly JavaScript, promise! 😅\
+\_\_\
+*Peter Cooper, your editor*
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/166287/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/brxtjibm9xfdhg9joum7.jpg)](https://javascriptweekly.com/link/166288/d076523b1d)
+
+[Developer Implements 'Doom' in TypeScript's Type System](https://javascriptweekly.com/link/166288/d076523b1d "socket.dev") — A curious quirk of TypeScript’s type system is that [it is Turing-complete](https://javascriptweekly.com/link/166289/d076523b1d) which has led some developers to implement apps entirely *in* the type system. One such developer has spent eighteen months producing 177 *terabytes* of types to get 1993’s Doom running with them. Ridiculous and amazing in equal measure, he [▶️ explains the project in this widely lauded 7-minute video.](https://javascriptweekly.com/link/166290/d076523b1d) 👏
+
+Sarah Gooding (Socket)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/b47ce204.png)](https://javascriptweekly.com/link/166287/d076523b1d)
+
+[Functional JavaScript First Steps, v2](https://javascriptweekly.com/link/166287/d076523b1d "frontendmasters.com") — A friendly, practical introduction to functional programming fundamentals in JavaScript. Learn the power of the pure function while exploring functional programming paradigms.
+
+Frontend Masters sponsor
+
+[Bun v1.2.3 and v1.2.4 Released](https://javascriptweekly.com/link/166291/d076523b1d "bun.sh") — The rapid pace of progress on the JavaScriptCore-based runtime is only increasing. [v1.2.3](https://javascriptweekly.com/link/166291/d076523b1d) pushes frontend dev server features (run `bun ./index.html` and all the bundling is done for you). `bun init` can now be used to create a new React project. Meanwhile, [Bun 1.2.4](https://javascriptweekly.com/link/166292/d076523b1d) builds macOS apps 60% faster and macOS executables can now be code signed.
+
+Jarred Sumner et al.
+
+[What *is* TypeScript? An Overview for JavaScript Programmers](https://javascriptweekly.com/link/166293/d076523b1d "2ality.com") — You may have noticed esteemed JavaScript developer and author Dr. Axel has been on a TypeScript odyssey recently. Here he does a good job at boiling down the *what* (rather than the ‘why’) of TypeScript. A handy primer on what’s going on, even if you don’t plan to use it, since you'll end up interacting with it *somewhere..*
+
+Dr. Axel Rauschmayer
+
+**IN BRIEF:**
+
+* ⭐ The Chromium team is progressing with [shipping the Observable API.](https://javascriptweekly.com/link/166294/d076523b1d) This is a big deal, especially for libraries like [RxJS.](https://javascriptweekly.com/link/166295/d076523b1d)
+
+* 📊 [BenchJS](https://javascriptweekly.com/link/166296/d076523b1d) is an online JavaScript benchmarking sandbox worth playing with.
+
+* A look behind the scenes at [recent progress on the records & tuples proposal](https://javascriptweekly.com/link/166297/d076523b1d) for JavaScript (currently stage 2 at TC39). You can [play with the feature here.](https://javascriptweekly.com/link/166298/d076523b1d)
+
+* [Windows 95 in Electron](https://javascriptweekly.com/link/166299/d076523b1d) is, unsurprisingly, Windows 95 running in an Electron app! v4.0 adds Office 95 and IE 5.5 for some (limited) browsing of the Web.
+
+* 📊 [The results of the *State of React Native 2024* survey](https://javascriptweekly.com/link/166300/d076523b1d) are out.
+
+**RELEASES:**
+
+* [Next.js 15.2](https://javascriptweekly.com/link/166302/d076523b1d) – Now with a redesigned debugging experience and experimental support for React's new View Transitions API and using the Node.js runtime in middleware.
+
+* [Astro 5.4](https://javascriptweekly.com/link/166303/d076523b1d) – Now with remote image optimization and experimental responsive image support in Markdown.
+
+* [ESLint v9.21.0](https://javascriptweekly.com/link/166304/d076523b1d) – Now with a `--ext` CLI option to lint files with a particular extension.
+
+* [Ember.js 6.2](https://javascriptweekly.com/link/166305/d076523b1d), [Angular 19.2](https://javascriptweekly.com/link/166307/d076523b1d), [Node.js v23.9 (Current)](https://javascriptweekly.com/link/166308/d076523b1d)
+
+📒 Articles & Tutorials
+
+[React Libraries for 2025](https://javascriptweekly.com/link/166310/d076523b1d "www.robinwieruch.de") — Each year, prolific React blogger Robin updates his post covering his opinionated list of essential React ecosystem libraries. He covers a lot of angles from project creation and package management through to state management, animation, form creation, auth, and i18n.
+
+Robin Wieruch
+
+[Turbocharging V8 with Mutable Heap Numbers](https://javascriptweekly.com/link/166311/d076523b1d "v8.dev") — The V8 team uses the JetStream2 benchmark suite to investigate performance issues and has implemented a new optimization yielding not just a 2.5x improvement in the `async-fs` benchmark but in other areas too.
+
+Victor Gomes (V8)
+
+[Wish Your AI Co-Pilot Actually Knew Your Codebase?](https://javascriptweekly.com/link/166312/d076523b1d "augmentcode.com") — Try the most context-aware Developer AI. Augment deeply understands your codebase, documentation, and dependencies.
+
+Augment Code sponsor
+
+[Subverting Control with Weak References](https://javascriptweekly.com/link/166313/d076523b1d "jlongster.com") — A weak reference differs from a normal reference in that it *doesn’t* prevent a referenced object from being garbage collected. Most modern JS runtimes support them and James shows how they can be useful.
+
+James Long
+
+⭐ [How JIT (Just In Time) Compilation Makes JavaScript Faster](https://javascriptweekly.com/link/166314/d076523b1d) Royal Bhati
+
+📄 [Using AI in the Browser for Typo Rewriting](https://javascriptweekly.com/link/166315/d076523b1d) – A poke around one of Chrome’s newest AI features. Raymond Camden
+
+📄 [A Mere Mortal's Introduction to JIT Vulnerabilities in JS Engines](https://javascriptweekly.com/link/166317/d076523b1d) Josiah Pierce
+
+📄 [How to Do Visual Regression Testing in Vue with Vitest](https://javascriptweekly.com/link/166318/d076523b1d) Alexander Opalic
+
+📄 [Why We Ditched Next.js and Never Looked Back](https://javascriptweekly.com/link/166320/d076523b1d) Stewart and Snelling
+
+📄 [Micro Frontends with Angular and Native Federation](https://javascriptweekly.com/link/166321/d076523b1d) Manfred Steyer (Angular Blog)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hsugc44c7irehakiif9l.jpg)](https://javascriptweekly.com/link/166322/d076523b1d)
+
+[Svelvet 11: Build Node-Based UIs with Svelte](https://javascriptweekly.com/link/166322/d076523b1d "svelvet.mintlify.app") — A mature Svelte component library for creating interactive node-based UIs and diagrams. v11 adds the ability to toggle between ‘snap grid’ and freeform modes for manipulating elements. (There’s a live demo at the bottom of the homepage.)
+
+Open Source Labs
+
+[React Native 0.78 Released](https://javascriptweekly.com/link/166323/d076523b1d "reactnative.dev") — A big release for React Native as it ships React 19 support (which [requires some tweaks when upgrading](https://javascriptweekly.com/link/166324/d076523b1d)) and some more minor tweaks.
+
+Novak, Cucci, Gupta and Cipolleschi (Meta)
+
+[🔒 Protect Against Bots, Fraud, and Abuse in Real Time](https://javascriptweekly.com/link/166325/d076523b1d "workos.com") — WorkOS Radar protects your app with advanced device fingerprinting — stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+WorkOS sponsor
+
+[Random: Seedable Random Number Generator](https://javascriptweekly.com/link/166326/d076523b1d "github.com") — You’ve got `Math.random` but this library takes things a few steps further with easy ways to create random values of various types and using different distributions (e.g. normal distribution, Bernoulli, Poisson, Pareto and Weibull).
+
+Travis Fischer
+
+[QuickJS Sandbox 2.0: Execute JS/TS in a QuickJS Powered Sandbox](https://javascriptweekly.com/link/166327/d076523b1d "sebastianwessel.github.io") — [QuickJS](https://javascriptweekly.com/link/166328/d076523b1d) is a small, embeddable JavaScript engine built by Fabrice Bellard and this extends it to make it easy to run code in an isolated sandboxed environment, along with some basic Node module support and a virtual file system. [GitHub repo.](https://javascriptweekly.com/link/166329/d076523b1d)
+
+Sebastian Wessel
+
+* [PrimeVue 4.3](https://javascriptweekly.com/link/166330/d076523b1d) – A UI component suite for Vue, now with a new 'theme designer' tool including a Figma-to-code feature.
+
+* 🗓️ [React Big Calendar 1.18](https://javascriptweekly.com/link/166331/d076523b1d) – Google Calendar/Outlook-like calendar component. Now with React 19 support.
+
+* [InversifyJS 7.0](https://javascriptweekly.com/link/166332/d076523b1d) – Inversion of control container for JavaScript. There's a [v6-to-v7 upgrade guide.](https://javascriptweekly.com/link/166333/d076523b1d)
+
+* [React Markdown 10.0](https://javascriptweekly.com/link/166335/d076523b1d) – Component to render markdown. ([Demo.](https://javascriptweekly.com/link/166336/d076523b1d))
+
+* [fast-png 6.3](https://javascriptweekly.com/link/166338/d076523b1d) – Pure JavaScript PNG image decoder and encoder.
+
+* [Mercurius 16.1](https://javascriptweekly.com/link/166339/d076523b1d) – Implement GraphQL servers on top of Fastify.
+
+* [Varlet 3.9](https://javascriptweekly.com/link/166340/d076523b1d) – Material Design-inspired component library for Vue 3.
+
+* [file-type 20.4](https://javascriptweekly.com/link/166341/d076523b1d) – Detect the file type of a file, stream, or data.
+
+* [FxTS 1.5](https://javascriptweekly.com/link/166343/d076523b1d) – Functional library for TS/JS devs.
+
+📰 Classifieds
+
+🎹 [STRICH](https://javascriptweekly.com/link/166344/d076523b1d): Add blazing fast and reliable 1D/2D Barcode Scanning to your web apps. Free demo app and 30-day trial available.
+
+***
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/166345/d076523b1d). Relied on by 1000s of orgs, including Dropbox, Lattice, Bilt Rewards and many more.
+
+***
+
+📣 [Creators of the State of JS, Vue.js, Vite, Pino & Fastify](https://javascriptweekly.com/link/166346/d076523b1d) — have you seen the new JSNation speakers? Get 10% off with code `JSWEEKLY`.
+
+***
+
+[Bit - A build system framework for development of composable software](https://javascriptweekly.com/link/166347/d076523b1d). Natively to Harmony, and support Node.js, React apps (with Vite), NextJS, Angular, Vue and more.
+
+📢  Elsewhere
+
+A quick roundup of some of other interesting updates or useful resources in the broader developer landscape:
+
+* Remember [Ajax?](https://javascriptweekly.com/link/166348/d076523b1d) The popular term bringing together several technologies involving asychronous JavaScript making dynamic updates by calling the server [was coined in this article 20 years ago this month.](https://javascriptweekly.com/link/166349/d076523b1d)
+
+* 🤖 [Is it viable to have LLMs write `alt`-text for your images?](https://javascriptweekly.com/link/166350/d076523b1d) Dries Buytaert put a few models through their paces.
+
+* GitHub is getting involved with the AI developer agent game and [shows off a preview of its new Copilot 'agent mode'.](https://javascriptweekly.com/link/166351/d076523b1d)
+
+* 🌊 A detailed look at the techniques behind [high-performance, real-time fluid simulations with WebGPU.](https://javascriptweekly.com/link/166352/d076523b1d)
+
+* Electronic Arts certainly doesn't make a habit of open sourcing old games, but [it's just done that for 1996's *Command and Conquer: Red Alert*](https://javascriptweekly.com/link/166353/d076523b1d), one of the pioneering games in the real time strategy genre.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/166354/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
