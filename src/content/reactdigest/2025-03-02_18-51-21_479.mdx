@@ -1,0 +1,142 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#495 Functional programming in React
+description: RD#495 Functional programming in React
+date: 星期日 06 晚上 三月 2o 2025
+author: reactdigest
+origin_url: https://newsletter.reactdigest.net/p/functional-programming-in-react
+origin_site: https://newsletter.reactdigest.net/p/functional-programming-in-react
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#495 Functional programming in React" url="https://newsletter.reactdigest.net/p/functional-programming-in-react" />
+
+<Detail client:only="react">
+	[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1X2gJSBabUBOOyZ2snGcVdxolfOsokFjLYDsGzr5jyDIrJ_Um0smgwOc2s7ytJbBosNz13_bV_5GpwDmnHu5kQgWWejsSgxReV2ec9_S5bxCeekpH4vjmSqUE0Y58RGLWaW94TtFb7nT6yuyxQ85gzO_JnLkjWBfhwzTc5cFSsGAMARq_KWtCLTHQpsOYYj8yJ6emzVBFZXbD3LnYj4ZofgdIfM_CSbfiVzE0uePJ52VJ6vydmEovfybzQFMnJRVRDfFdgvThIKXsjrd0TfB6FBoVU-_exFhEdrPvEnnrHLL_jtQKq0DXcpkLk-mgaGhCabYSXVH9DQ2hl19EBSNxcFxTaq2DR9h4W_pcnlZwjDwIPXfJYRda-jZgPtw71eNrK9ZcUxzh_c-Hr_vxc58A1kRfRBBpNDekm3altlX7ASfN3GuJ6CHznzfR1a_I6B3gBKWTjIdSRAH9zINlF8LTG-f_ANQZix9uURqFAua24KwngV36QJzKO5vryb19TSMh9iy9QOaBppsk76Kj-jdEXaL8X_sV8xIys2albbh9MKJU8JM-IFU52UnkxfykmXY5caM0GuVHyayVITqtImzxka88AHkZi7SuSqSMmzZKnVTowFKTSSe0I37UPe5FL_TpmxJluPu-1Rpdz5zIPDYfwHWXOpYxsOkfp3wFNngUs_fauxIRRA0CLnr-EKUxtsp5CZftNFFXfAWt_AS8Pstza7OfNfigLWiPddlBo4OTeTaIC2HxR_G3msjqX3W775GnvolLPgL5IJkioEEzm1Gt-c/4eg/V8AA-qssQO6ag9hfc2xrKA/h0/h001.rBfXCwYtjOK3IZyDubtry5bpXtw7nG2OVn85kWV2YK0)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4eg/V8AA-qssQO6ag9hfc2xrKA/ho.gif)
+
+[Functional programming in React](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXDciRrbT2gPMfoj8eOG2zlyGysr-QP13wPbH_kedjBkKJpn2p7_fkgow8S2PMxRihl8eicwmjCCji4XK_hVL1kWY5IcgcHHK0GXAckdXxEdC8NvZUE33QMwRPCYWDTnjYc802YsABwe5sjDfXsPVuA-mjc13RstHkvTKcCfYGxtByArCpvY9c-MUMrXNJuIMa8bmMRvhTlyYaiJCQ9mHhrWknOA8LU-WSHay8Axay6xGmNUZNJlceEKpM0n7eSAQlBhkC8WBncsuU7LJVRFLHy_OxXB5qiuz6Bp_I_UXyrm/4eg/V8AA-qssQO6ag9hfc2xrKA/h1/h001.jeKFvovaja19nxtOFemmHWNcKZojzqvEKx20_tHc-a8)  
+_14 minutes_ by Flavien Beninca
+
+Learn how functional programming principles power React development. This practical guide explores first-class functions, pure functions, immutability, currying and composition with clear examples. Discover how these concepts lead to more predictable, testable and maintainable React applications.
+
+[React Native CI/CD with CodePush, 8x faster builds, and easy distribution to testers and stores.](https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBORFcXZFppv1y-zIxSZQ3wfMs27exQqpCVJAvXlV-lRs9JlsOFXxvqwzBuIBo4els7yrB4Uzkk0mcIIccOV1xdq9zTEhI2QOKZ9t2lLpIjFYFZQMVID_B6FMTpD4CT3090PJfyUrUHLetYeh-dhubhvYRy37LOEW8AwmqUXS8KoAnPmyM6qdfAYkIkvXkt3YcYs-zy7qFgmYPqUiVdGL1Zi2ho-DXMIV7lsU-wBHL7bMh/4eg/V8AA-qssQO6ag9hfc2xrKA/h2/h001.2c69RdNUoqXx2j5gz_sIuAnsn3wcN-ziRWMqklKPYac)  
+_sponsored by Codemagic_
+
+Codemagic delivers fast builds on Apple Silicon M4 machines, cutting 40-min Azure/App Center builds to 5 mins! Our CodePush server enables true OTA updates for React Native apps, free with annual plans or as an add-on for PAYG customers. Enjoy simplified code signing and seamless distribution to devs, testers, and app stores via email, dashboards, or messaging apps. Free 1-month trial available.
+
+[Avoiding Server Component Waterfall Fetching with React 19 cache()](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw40cKvTfguX8e_fzKhv5jclqjJCsl1Rhm7968CR0Ppw2Gt_yXGZuSOavXkislzKMveIgPmtXi1lJsPWQqgf7S4ddcaI8q6lSJjODs07eSBjyiZb2NeBV9ZVnEwBlYl9vr8uw3l0VLrvh1NPsRHKp7eFkf5dSs-4LRMwFiRqUOAkQplcm5DLAoGV0ApsXD9RRQuG5hYAjHfOostAhZJeznnT9krIHt3SQz4BqCk0eO73DUZUU1eGTZr9LXYIwJApVR2p7ngGwf_HGy9SYMWACCXWh68Jf56GZFDUVkOneDpPzRYKA4xhw3W8nxbXwInjQoCVb8Rdfj9bM1Lhge8FYa7k/4eg/V8AA-qssQO6ag9hfc2xrKA/h3/h001.ZSXyZvMr1PXez9wo0T1wmSEAJP3sWEOZwrd1CKJ3MU8)  
+_7 minutes_ by Aurora Scharff
+
+This article explains how to use React 19's new cache() API in Next.js App Router to optimize data fetching and improve performance. The API enables per-render caching of data fetches, helping reduce data coupling between components and avoid duplicate fetches.
+
+[Migrating from Create React App to Vite: A Modern Approach](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw9jFC2GNnrPqrZ_Z_2ERDFqn91SNrCOLRVpdpshvVpBrV94uZjWignlVMUA_ywMBkDJy4K7Zl8UdqRsPt4rxlv2DRexzSt3f1x9eT2q1e1a3zB-c9tsQZau4qmGd12TrtMHqxEhWHS-AdW-yAyhT1jggJJ-SlPeN_lWNUbLhsZLGIK_Hs11UOm5oxzYYcMXNHhGc1f-SwNZ3rVdoDDn8-HmpvgwiAjkdc0a0x5WNpQuRQ6gzLWWxfJ55dpD_y5SsSHY3HQlIddCdYvS1DzGoKH7ozwADK7Bg1HMdh7XL3FWFIwJoPm5IZ93q2cOL2gKQ_Jqz5D3cdgk_qUZVOWAHQQI/4eg/V8AA-qssQO6ag9hfc2xrKA/h4/h001.H-37dW-WsFckfAhdah1BHfqy_zaDGu5hMHilEg7TSSQ)  
+_4 minutes_ by Adhithi Ravichandran
+
+Create React App was deprecated last week so it's time to move on. In this guide, Adhithi walks through how to migrate your existing CRA project to Vite in just a few simple steps.
+
+[How to improved INP on a Next.js application](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTQgQoL0taEr8uJ6G4kK3KpqGApTfpKgWjjMCQdBcEqxsICsJzmOGz-DjBNhLtsosUY9kSdqoNuCn1-3GcBGm1dEcMXdNB1QaotObwJXDt5TKKfxO2l_-NX2bJ1sbtDI-Z1QERKP-bk8X6XK6hGE9JSoNLuEyCM02rfuhmRYI2omqF9iCUunTIvcdU9laAvqIz7g6arjZqz36is3b0xir7f7ZXQYWRAgGiteg1AIk-RofysQiYj-_hxrL-ApG-4JrrQOX02PkGr1_q70WUa-Qek_aDEfKbYZC6cyUT5XJuEkhdX1OOUJBc02CX39SuK5by2ywlF_-u8qF6JbVXwDomBC-x3tiYBvbF4RV1anBnlrPLafM0HRBwJNA8_S2HmX9Bv4b3B220wOeW7uJYhlxLEs/4eg/V8AA-qssQO6ag9hfc2xrKA/h5/h001.IOSSKBRJXsN4MvUbILKRReE4q_LjFnE2rLJOGplZdwY)  
+_25 minutes_ by Stefano Magni
+
+This article describes how Preply improved their Interaction to Next Paint (INP) metric on their two most important pages. The team implemented various optimizations including React 18 upgrade, virtualizing long lists, debouncing keyboard events, memoizing heavy components, and fixing state management issues.
+
+[How to Download a file from a React Router route](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO7sQgzyszJucC5x7a-ReVIt6kOBvQZMKmp_uTojW5MZrolT_d4bxNMbrE4yTtc9rJq5F8UsIwMxaW57JqvcgP5BIUjPCYZ4rkKoioVdtrc4uzYsQv9fxVhbOPjlsAj49SuzYDzAN_BXRljkroqgyWtcp83eGDS61qGcTno-O4corV9qiuen5sNvd1lXwtQc1_e7WzzHL0sBz-tw0pivyuWsP8bMbrvAtZsejhhigZVJy9E3Y4Kzkr4q9p9KQ-7Iz0Bks33I02wWFBOyBt7c7hgx-spAorH35iUzPq1m6cQtx/4eg/V8AA-qssQO6ag9hfc2xrKA/h6/h001.X5GiVoFEa3LjTgGcgE9C0X7yYnPV7rQMR-rpT5ZLNuc)  
+_5 minutes_ by Sergio Xalambrí
+
+Let's say you need to dynamically generate a file, like an XML, CSV or PDF, how could you trigger a download? There are two ways to do it. The simplest way using a loader. The not so simple way using an action. Let's look at both of them.
+
+[The intelligent terminal with AI built for Mac, Linux, and now Windows](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqRItdnDCTNTjp6DQPAgG1OfnSvm5iXPYEUu1M4ULoQUwW0yEjru9DEclczCeScH2yaUe4QLIamK2Kvz3Y6YbJQGBlN5yAWPRF3d2E57ADMSGfC4vzQQ-LvIeuH2whxyw13dnXdJkjuqBsSyhPBHsQTeeTjsELhsyjZLoRQEl_MCayqCXXylntgN1BG4KD_ZGvg/4eg/V8AA-qssQO6ag9hfc2xrKA/h7/h001.M8DW8HESqpyi3u0nlrRuARqaTcqDQcoaHra6PfNr6bM)  
+_sponsored by Warp_
+
+Never forget a command or struggle with syntax again. Warps Agent Mode allows you to type in natural language to accomplish any task right in the terminal. Store and share resources, from repeatable runbooks to templatized commands with Warp Drive.
+
+## webdev
+
+*   [Better Anchor Positioning with position-area](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqWuXG_FfstJkxDzFo_W8kh2G6xKkvZdX4Pb0MRBFZEabLuK3r1whbVCCf7-cOb0JQx_X78E0Lwf8EjBcnyemffzsnUHQJgCyhjjNDSY4_VqPmLE4hpcmjnO-Rq57AO6i5OZe3MGeZ8ZiPCLJZHx243PYynYHLFnay2m8x9v4vcFp80Mpg0mOO0oLmqV1E-J0uJ1sgvKVFl2879lvj8h7DwkBebM0QVWt0KiKPEVjU2JMDOTjcEx_RMafAeK_0uNWijBJIackzsy53uyC4oiVXy0/4eg/V8AA-qssQO6ag9hfc2xrKA/h8/h001.V77nN1N9QuzYX-1pSUHrwhVL7d6hCRv8EvuHuuGH4qo)
+    
+*   [Comparing local large language models for alt-text generation](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVWxRa3SHMnjUbPAE1DInz569HPVMrWHGPBj80pjnY0GtRrZk0yoWloORXw_ohNzcuktK6V6T9111-ShLXlFkz2ykUBq0jx4Ou7fEK1x8q-yngqMNAiYSu0OidLh4z1AIvAZ_qxXT500lrx8-T036czoA2B59ukePANOmS5b2CL5ClfwlvSK4doalMxDGWWJ8RNpLLw8qeoljPasP_z3McaZ1aXGaSkKO6DH5Nn43jHKTxSTV2duaW3xfsoqD4I92x0RT_bZ6RzqtXPtLYS74cLs/4eg/V8AA-qssQO6ag9hfc2xrKA/h9/h001.M5sUxcnJoWkxmalllrJQ2ioOpBlOyJg2DUwWGRNUF9w)
+    
+*   [CSS @function + CSS if()](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXav0w3QWrBKy0KmjVGAggarG3bSWclv9XTF0ZL3-ZD7dzA3iQ0CiC_QIJXrygFhKkFndtTtYIM7--DM5ew0XHnMfuP3sywtkNoNmiuFe3wABYtdTPEoPsh8RFFLzJ6r325aHhiOLdQjwfdPSwgrtYQjXS20FN8wRPWYZHnALqdnDgslwcgbjM4kfguXsN6SJH_YeIpK63VXpBHF2Y9rrFUffjVxDA2nlGV3A7uXEH-i16HqGPAj4cZOecHzjrLQiwoQk1jbT9rpOqjuu5JDWdo/4eg/V8AA-qssQO6ag9hfc2xrKA/h10/h001.DetLEC1Gic7nXNqcV6mjjtu_8tmbcDMt9f4TYwtfi3w)
+    
+
+## javascript
+
+*   [Run, compare, and share JavaScript benchmarks in your browser](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63v3bHO0RkZWhD5UH5j0IWjrLMSpIynYHfVx0zPbhZOtZYm6PWwNq07j3nG2eetLfa3wZwqJJ7SM-7nceGKdGuH6RHCtG-FQKKB6Zdd2v_A06eDB0BBZP0r6C_3WmHqN5OFOo2nTV5KuDFVIW6qJ_bUrmUbSEdDt0Zi1elF_LASbGrRLzfo_DGgsc--vIt8fNagnrjjODE4pQkqzkWxQsKe5Oh4L9L7UYSLyulgOTtfeV/4eg/V8AA-qssQO6ag9hfc2xrKA/h11/h001.Sm6-5uJlTpWRauj3p_pei-TgVeZEF8BBBFpaWYd6W7o)
+    
+*   [Why is JavaScript fast?](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqVrXSvvhX4i1F6zz9LOSyefX3cTbHbGdy-fFJIOG4eZ_y9KW66kkZrwbd4suW8TG7rHjI-2aE2jjjl30umgn9FFbb333GmZuXkIAJpfsaeDVoDsBcB9cfO5PVT4hXSRIpdXBLGjWqA2zCXDiAyou_lI0wCSNkPsthOr8EhPftv07ht7u1q2J7oLuTWECCIz38WrjZPBPjlTi_rZaBdsfrhG3vZycz2cCyu3TqnvziX4-5Uf8FkWi0_C3jAG1XmkZ5A/4eg/V8AA-qssQO6ag9hfc2xrKA/h12/h001._JuYhGqIiBEo5FAvYobyO06PoqsIDwjKmOmTgYS3eHc)
+    
+
+And the most popular article from the last issue:
+
+*   [Introducing the new TanStack React Query integration](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgFxK8_5CYH84rOyQkKiuPnAOLZda2ml3I_H9L53yVmZS62oK7biplihjWy3QLwrGHIdnqSTefvIYabHb1YKn9MyNK6gaqCbuzaAMutDegsTdNfQ2k5hPO-HmG9s2XywtlKpeIJZLfAYgupixJJNhjeoFeYtHStLIWSUHi3Y8Z1Gc7JOIh4e_UVhkfrDGto48wmvhOoE7l_Uy_6AhnE0qIPbLLRMFijwImW6XTx9jkRnBPUS_6imLWMG0MsSwZSN-kjo2Z1sj-dgRYp_udU3kSvcg/4eg/V8AA-qssQO6ag9hfc2xrKA/h13/h001.TdNLekcd2WJy5p7vfS0xOE7cmTiLH9CwYYnjPSPgXv0)
+    
+
+#
+</Detail>
+
+[Read Online](https://link.mail.beehiiv.com/ss/c/u001.3mTwTBe_1W4fLvRj4unk8hErXB2vrDHg5DYaj51xP1X2gJSBabUBOOyZ2snGcVdxolfOsokFjLYDsGzr5jyDIrJ_Um0smgwOc2s7ytJbBosNz13_bV_5GpwDmnHu5kQgWWejsSgxReV2ec9_S5bxCeekpH4vjmSqUE0Y58RGLWaW94TtFb7nT6yuyxQ85gzO_JnLkjWBfhwzTc5cFSsGAMARq_KWtCLTHQpsOYYj8yJ6emzVBFZXbD3LnYj4ZofgdIfM_CSbfiVzE0uePJ52VJ6vydmEovfybzQFMnJRVRDfFdgvThIKXsjrd0TfB6FBoVU-_exFhEdrPvEnnrHLL_jtQKq0DXcpkLk-mgaGhCabYSXVH9DQ2hl19EBSNxcFxTaq2DR9h4W_pcnlZwjDwIPXfJYRda-jZgPtw71eNrK9ZcUxzh_c-Hr_vxc58A1kRfRBBpNDekm3altlX7ASfN3GuJ6CHznzfR1a_I6B3gBKWTjIdSRAH9zINlF8LTG-f_ANQZix9uURqFAua24KwngV36QJzKO5vryb19TSMh9iy9QOaBppsk76Kj-jdEXaL8X_sV8xIys2albbh9MKJU8JM-IFU52UnkxfykmXY5caM0GuVHyayVITqtImzxka88AHkZi7SuSqSMmzZKnVTowFKTSSe0I37UPe5FL_TpmxJluPu-1Rpdz5zIPDYfwHWXOpYxsOkfp3wFNngUs_fauxIRRA0CLnr-EKUxtsp5CZftNFFXfAWt_AS8Pstza7OfNfigLWiPddlBo4OTeTaIC2HxR_G3msjqX3W775GnvolLPgL5IJkioEEzm1Gt-c/4eg/V8AA-qssQO6ag9hfc2xrKA/h0/h001.rBfXCwYtjOK3IZyDubtry5bpXtw7nG2OVn85kWV2YK0)
+
+![](https://link.mail.beehiiv.com/ss/o/u001.Btu2bd7uwPPtNpvEhFUmtA/4eg/V8AA-qssQO6ag9hfc2xrKA/ho.gif)
+
+[Functional programming in React](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXDciRrbT2gPMfoj8eOG2zlyGysr-QP13wPbH_kedjBkKJpn2p7_fkgow8S2PMxRihl8eicwmjCCji4XK_hVL1kWY5IcgcHHK0GXAckdXxEdC8NvZUE33QMwRPCYWDTnjYc802YsABwe5sjDfXsPVuA-mjc13RstHkvTKcCfYGxtByArCpvY9c-MUMrXNJuIMa8bmMRvhTlyYaiJCQ9mHhrWknOA8LU-WSHay8Axay6xGmNUZNJlceEKpM0n7eSAQlBhkC8WBncsuU7LJVRFLHy_OxXB5qiuz6Bp_I_UXyrm/4eg/V8AA-qssQO6ag9hfc2xrKA/h1/h001.jeKFvovaja19nxtOFemmHWNcKZojzqvEKx20_tHc-a8)\
+*14 minutes* by Flavien Beninca
+
+Learn how functional programming principles power React development. This practical guide explores first-class functions, pure functions, immutability, currying and composition with clear examples. Discover how these concepts lead to more predictable, testable and maintainable React applications.
+
+[React Native CI/CD with CodePush, 8x faster builds, and easy distribution to testers and stores.](https://link.mail.beehiiv.com/ss/c/u001.H7TV3nVHQvyVqifzthtBORFcXZFppv1y-zIxSZQ3wfMs27exQqpCVJAvXlV-lRs9JlsOFXxvqwzBuIBo4els7yrB4Uzkk0mcIIccOV1xdq9zTEhI2QOKZ9t2lLpIjFYFZQMVID_B6FMTpD4CT3090PJfyUrUHLetYeh-dhubhvYRy37LOEW8AwmqUXS8KoAnPmyM6qdfAYkIkvXkt3YcYs-zy7qFgmYPqUiVdGL1Zi2ho-DXMIV7lsU-wBHL7bMh/4eg/V8AA-qssQO6ag9hfc2xrKA/h2/h001.2c69RdNUoqXx2j5gz_sIuAnsn3wcN-ziRWMqklKPYac)\
+*sponsored by Codemagic*
+
+Codemagic delivers fast builds on Apple Silicon M4 machines, cutting 40-min Azure/App Center builds to 5 mins! Our CodePush server enables true OTA updates for React Native apps, free with annual plans or as an add-on for PAYG customers. Enjoy simplified code signing and seamless distribution to devs, testers, and app stores via email, dashboards, or messaging apps. Free 1-month trial available.
+
+[Avoiding Server Component Waterfall Fetching with React 19 cache()](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw40cKvTfguX8e_fzKhv5jclqjJCsl1Rhm7968CR0Ppw2Gt_yXGZuSOavXkislzKMveIgPmtXi1lJsPWQqgf7S4ddcaI8q6lSJjODs07eSBjyiZb2NeBV9ZVnEwBlYl9vr8uw3l0VLrvh1NPsRHKp7eFkf5dSs-4LRMwFiRqUOAkQplcm5DLAoGV0ApsXD9RRQuG5hYAjHfOostAhZJeznnT9krIHt3SQz4BqCk0eO73DUZUU1eGTZr9LXYIwJApVR2p7ngGwf_HGy9SYMWACCXWh68Jf56GZFDUVkOneDpPzRYKA4xhw3W8nxbXwInjQoCVb8Rdfj9bM1Lhge8FYa7k/4eg/V8AA-qssQO6ag9hfc2xrKA/h3/h001.ZSXyZvMr1PXez9wo0T1wmSEAJP3sWEOZwrd1CKJ3MU8)\
+*7 minutes* by Aurora Scharff
+
+This article explains how to use React 19's new cache() API in Next.js App Router to optimize data fetching and improve performance. The API enables per-render caching of data fetches, helping reduce data coupling between components and avoid duplicate fetches.
+
+[Migrating from Create React App to Vite: A Modern Approach](https://link.mail.beehiiv.com/ss/c/u001.DNYuWskNLZN5iE3d5ylPw9jFC2GNnrPqrZ_Z_2ERDFqn91SNrCOLRVpdpshvVpBrV94uZjWignlVMUA_ywMBkDJy4K7Zl8UdqRsPt4rxlv2DRexzSt3f1x9eT2q1e1a3zB-c9tsQZau4qmGd12TrtMHqxEhWHS-AdW-yAyhT1jggJJ-SlPeN_lWNUbLhsZLGIK_Hs11UOm5oxzYYcMXNHhGc1f-SwNZ3rVdoDDn8-HmpvgwiAjkdc0a0x5WNpQuRQ6gzLWWxfJ55dpD_y5SsSHY3HQlIddCdYvS1DzGoKH7ozwADK7Bg1HMdh7XL3FWFIwJoPm5IZ93q2cOL2gKQ_Jqz5D3cdgk_qUZVOWAHQQI/4eg/V8AA-qssQO6ag9hfc2xrKA/h4/h001.H-37dW-WsFckfAhdah1BHfqy_zaDGu5hMHilEg7TSSQ)\
+*4 minutes* by Adhithi Ravichandran
+
+Create React App was deprecated last week so it's time to move on. In this guide, Adhithi walks through how to migrate your existing CRA project to Vite in just a few simple steps.
+
+[How to improved INP on a Next.js application](https://link.mail.beehiiv.com/ss/c/u001.9rj0kBGH2_rh17KMcAxCTQgQoL0taEr8uJ6G4kK3KpqGApTfpKgWjjMCQdBcEqxsICsJzmOGz-DjBNhLtsosUY9kSdqoNuCn1-3GcBGm1dEcMXdNB1QaotObwJXDt5TKKfxO2l_-NX2bJ1sbtDI-Z1QERKP-bk8X6XK6hGE9JSoNLuEyCM02rfuhmRYI2omqF9iCUunTIvcdU9laAvqIz7g6arjZqz36is3b0xir7f7ZXQYWRAgGiteg1AIk-RofysQiYj-_hxrL-ApG-4JrrQOX02PkGr1_q70WUa-Qek_aDEfKbYZC6cyUT5XJuEkhdX1OOUJBc02CX39SuK5by2ywlF_-u8qF6JbVXwDomBC-x3tiYBvbF4RV1anBnlrPLafM0HRBwJNA8_S2HmX9Bv4b3B220wOeW7uJYhlxLEs/4eg/V8AA-qssQO6ag9hfc2xrKA/h5/h001.IOSSKBRJXsN4MvUbILKRReE4q_LjFnE2rLJOGplZdwY)\
+*25 minutes* by Stefano Magni
+
+This article describes how Preply improved their Interaction to Next Paint (INP) metric on their two most important pages. The team implemented various optimizations including React 18 upgrade, virtualizing long lists, debouncing keyboard events, memoizing heavy components, and fixing state management issues.
+
+[How to Download a file from a React Router route](https://link.mail.beehiiv.com/ss/c/u001.umaHyWnMavjtWWn_0mUAO7sQgzyszJucC5x7a-ReVIt6kOBvQZMKmp_uTojW5MZrolT_d4bxNMbrE4yTtc9rJq5F8UsIwMxaW57JqvcgP5BIUjPCYZ4rkKoioVdtrc4uzYsQv9fxVhbOPjlsAj49SuzYDzAN_BXRljkroqgyWtcp83eGDS61qGcTno-O4corV9qiuen5sNvd1lXwtQc1_e7WzzHL0sBz-tw0pivyuWsP8bMbrvAtZsejhhigZVJy9E3Y4Kzkr4q9p9KQ-7Iz0Bks33I02wWFBOyBt7c7hgx-spAorH35iUzPq1m6cQtx/4eg/V8AA-qssQO6ag9hfc2xrKA/h6/h001.X5GiVoFEa3LjTgGcgE9C0X7yYnPV7rQMR-rpT5ZLNuc)\
+*5 minutes* by Sergio Xalambrí
+
+Let's say you need to dynamically generate a file, like an XML, CSV or PDF, how could you trigger a download? There are two ways to do it. The simplest way using a loader. The not so simple way using an action. Let's look at both of them.
+
+[The intelligent terminal with AI built for Mac, Linux, and now Windows](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqRItdnDCTNTjp6DQPAgG1OfnSvm5iXPYEUu1M4ULoQUwW0yEjru9DEclczCeScH2yaUe4QLIamK2Kvz3Y6YbJQGBlN5yAWPRF3d2E57ADMSGfC4vzQQ-LvIeuH2whxyw13dnXdJkjuqBsSyhPBHsQTeeTjsELhsyjZLoRQEl_MCayqCXXylntgN1BG4KD_ZGvg/4eg/V8AA-qssQO6ag9hfc2xrKA/h7/h001.M8DW8HESqpyi3u0nlrRuARqaTcqDQcoaHra6PfNr6bM)\
+*sponsored by Warp*
+
+Never forget a command or struggle with syntax again. Warps Agent Mode allows you to type in natural language to accomplish any task right in the terminal. Store and share resources, from repeatable runbooks to templatized commands with Warp Drive.
+
+## webdev
+
+* [Better Anchor Positioning with position-area](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqWuXG_FfstJkxDzFo_W8kh2G6xKkvZdX4Pb0MRBFZEabLuK3r1whbVCCf7-cOb0JQx_X78E0Lwf8EjBcnyemffzsnUHQJgCyhjjNDSY4_VqPmLE4hpcmjnO-Rq57AO6i5OZe3MGeZ8ZiPCLJZHx243PYynYHLFnay2m8x9v4vcFp80Mpg0mOO0oLmqV1E-J0uJ1sgvKVFl2879lvj8h7DwkBebM0QVWt0KiKPEVjU2JMDOTjcEx_RMafAeK_0uNWijBJIackzsy53uyC4oiVXy0/4eg/V8AA-qssQO6ag9hfc2xrKA/h8/h001.V77nN1N9QuzYX-1pSUHrwhVL7d6hCRv8EvuHuuGH4qo)
+
+* [Comparing local large language models for alt-text generation](https://link.mail.beehiiv.com/ss/c/u001.-6zc62lCDQsu_fY2A1vmVWxRa3SHMnjUbPAE1DInz569HPVMrWHGPBj80pjnY0GtRrZk0yoWloORXw_ohNzcuktK6V6T9111-ShLXlFkz2ykUBq0jx4Ou7fEK1x8q-yngqMNAiYSu0OidLh4z1AIvAZ_qxXT500lrx8-T036czoA2B59ukePANOmS5b2CL5ClfwlvSK4doalMxDGWWJ8RNpLLw8qeoljPasP_z3McaZ1aXGaSkKO6DH5Nn43jHKTxSTV2duaW3xfsoqD4I92x0RT_bZ6RzqtXPtLYS74cLs/4eg/V8AA-qssQO6ag9hfc2xrKA/h9/h001.M5sUxcnJoWkxmalllrJQ2ioOpBlOyJg2DUwWGRNUF9w)
+
+* [CSS @function + CSS if()](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqXav0w3QWrBKy0KmjVGAggarG3bSWclv9XTF0ZL3-ZD7dzA3iQ0CiC_QIJXrygFhKkFndtTtYIM7--DM5ew0XHnMfuP3sywtkNoNmiuFe3wABYtdTPEoPsh8RFFLzJ6r325aHhiOLdQjwfdPSwgrtYQjXS20FN8wRPWYZHnALqdnDgslwcgbjM4kfguXsN6SJH_YeIpK63VXpBHF2Y9rrFUffjVxDA2nlGV3A7uXEH-i16HqGPAj4cZOecHzjrLQiwoQk1jbT9rpOqjuu5JDWdo/4eg/V8AA-qssQO6ag9hfc2xrKA/h10/h001.DetLEC1Gic7nXNqcV6mjjtu_8tmbcDMt9f4TYwtfi3w)
+
+## javascript
+
+* [Run, compare, and share JavaScript benchmarks in your browser](https://link.mail.beehiiv.com/ss/c/u001.0APXl0QZL7fWOKx6hVh63v3bHO0RkZWhD5UH5j0IWjrLMSpIynYHfVx0zPbhZOtZYm6PWwNq07j3nG2eetLfa3wZwqJJ7SM-7nceGKdGuH6RHCtG-FQKKB6Zdd2v_A06eDB0BBZP0r6C_3WmHqN5OFOo2nTV5KuDFVIW6qJ_bUrmUbSEdDt0Zi1elF_LASbGrRLzfo_DGgsc--vIt8fNagnrjjODE4pQkqzkWxQsKe5Oh4L9L7UYSLyulgOTtfeV/4eg/V8AA-qssQO6ag9hfc2xrKA/h11/h001.Sm6-5uJlTpWRauj3p_pei-TgVeZEF8BBBFpaWYd6W7o)
+
+* [Why is JavaScript fast?](https://link.mail.beehiiv.com/ss/c/u001.96pnkUdR2Et9YTtP31beqVrXSvvhX4i1F6zz9LOSyefX3cTbHbGdy-fFJIOG4eZ_y9KW66kkZrwbd4suW8TG7rHjI-2aE2jjjl30umgn9FFbb333GmZuXkIAJpfsaeDVoDsBcB9cfO5PVT4hXSRIpdXBLGjWqA2zCXDiAyou_lI0wCSNkPsthOr8EhPftv07ht7u1q2J7oLuTWECCIz38WrjZPBPjlTi_rZaBdsfrhG3vZycz2cCyu3TqnvziX4-5Uf8FkWi0_C3jAG1XmkZ5A/4eg/V8AA-qssQO6ag9hfc2xrKA/h12/h001._JuYhGqIiBEo5FAvYobyO06PoqsIDwjKmOmTgYS3eHc)
+
+And the most popular article from the last issue:
+
+* [Introducing the new TanStack React Query integration](https://link.mail.beehiiv.com/ss/c/u001.JtHN9HflllQ513MF6IlgFxK8_5CYH84rOyQkKiuPnAOLZda2ml3I_H9L53yVmZS62oK7biplihjWy3QLwrGHIdnqSTefvIYabHb1YKn9MyNK6gaqCbuzaAMutDegsTdNfQ2k5hPO-HmG9s2XywtlKpeIJZLfAYgupixJJNhjeoFeYtHStLIWSUHi3Y8Z1Gc7JOIh4e_UVhkfrDGto48wmvhOoE7l_Uy_6AhnE0qIPbLLRMFijwImW6XTx9jkRnBPUS_6imLWMG0MsSwZSN-kjo2Z1sj-dgRYp_udU3kSvcg/4eg/V8AA-qssQO6ag9hfc2xrKA/h13/h001.TdNLekcd2WJy5p7vfS0xOE7cmTiLH9CwYYnjPSPgXv0)
+
+#
+
+
