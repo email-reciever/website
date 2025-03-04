@@ -1,0 +1,284 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: TypeScript gets on board with Node's type stripping
+description: TypeScript gets on board with Node's type stripping
+date: 星期二 04 下午 三月 4o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/568
+origin_site: https://nodeweekly.com/issues/568
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="TypeScript gets on board with Node's type stripping" url="https://nodeweekly.com/issues/568" />
+
+<Detail client:only="react">
+	#​568 — March 4, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/568)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://nodeweekly.com/link/166357/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/aoylx2p1gsk05f2csa4p.jpg)](https://nodeweekly.com/link/166358/0a4070b383)
+
+[Announcing TypeScript 5.8](https://nodeweekly.com/link/166358/0a4070b383 "devblogs.microsoft.com") — Four months in the making, TypeScript 5.8 lands with a strong Node focus. You can now [use `require()` for ES modules in the `nodenext` module](https://nodeweekly.com/link/166359/0a4070b383), there’s [a new `node18` module](https://nodeweekly.com/link/166399/0a4070b383) for developers who want to keep targeting Node 18, and most notably there’s now [an `--erasableSyntaxOnly` option](https://nodeweekly.com/link/166360/0a4070b383) to ensure no TypeScript-only runtime semantics can be used (ideal if you’re using [Node’s type stripping features](https://nodeweekly.com/link/166361/0a4070b383) to run TypeScript code directly).
+
+Microsoft
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v1741097342/ejw1jj6fi4ifzbvyy3uk.jpg)](https://nodeweekly.com/link/166357/0a4070b383)
+
+[Instrument, Monitor, Fix: A Hands-On Debugging Class](https://nodeweekly.com/link/166357/0a4070b383 "sentry.io") — Join us live for a hands-on session where you’ll build it, watch it break, debug it, and go from “no idea what’s wrong” to fixing issues—all in one go. [Save your spot here »](https://nodeweekly.com/link/166357/0a4070b383).
+
+Sentry sponsor
+
+[Turbocharging V8 with Mutable Heap Numbers](https://nodeweekly.com/link/166362/0a4070b383 "v8.dev") — The V8 team uses the JetStream2 benchmark suite to investigate performance issues and has implemented a new optimization yielding not just a 2.5x improvement in the `async-fs` benchmark but in other areas too. A demonstration that not only does the Node team make Node faster, the V8 team does too.
+
+Victor Gomes (V8)
+
+**IN BRIEF:**
+
+*   [Node v23.9.0 (Current)](https://nodeweekly.com/link/166363/0a4070b383) has been released – it's a very minor release, however, focused mostly on bug fixes and incremental tweaks.
+    
+*   Next.js 15.2 has been released [with support for using Node.js for Next.js' Middleware.](https://nodeweekly.com/link/166364/0a4070b383)
+    
+*   Node is introducing [an experimental JSON-based configuration option](https://nodeweekly.com/link/166365/0a4070b383) to simplify the use of features (like the [test runner](https://nodeweekly.com/link/166366/0a4070b383)) that otherwise tend to use a lot of configuration flags.
+    
+*   [An unfortunate update on QUIC support in Node.js.](https://nodeweekly.com/link/166367/0a4070b383)
+    
+
+[Web Scraping with Playwright](https://nodeweekly.com/link/166368/0a4070b383 "wanago.io") — I’d be surprised if you got away with scraping YouTube like this for long (let’s say Google aren’t big fans of the approach) but the techniques demonstrated are useful more generally too.
+
+Marcin Wanago
+
+[Harnessing Data at Scale: Character.AI's Transition to WarpStream](https://nodeweekly.com/link/166369/0a4070b383 "www.warpstream.com") — Character.AI used WarpStream to make a 3 GiB/s Apache Kafka-compatible data pipeline and reduced their analytics costs.
+
+WarpStream sponsor
+
+📄 [Creating a CLI Chatbot with LangChain and OpenAI](https://nodeweekly.com/link/166370/0a4070b383) Robin Wieruch
+
+📄 [Node.js Writable Streams: A Practical Guide](https://nodeweekly.com/link/166371/0a4070b383) Pavel Romanov
+
+📄 [Simple TypeScript Playgrounds with `node --watch`](https://nodeweekly.com/link/166372/0a4070b383) Dr. Axel Rauschmayer
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tsokz4lz7fnri7veambj.jpg)](https://nodeweekly.com/link/166373/0a4070b383)
+
+[Electron App Boilerplate with Modern Dependencies](https://nodeweekly.com/link/166373/0a4070b383 "github.com") — A basic template app that uses React 19, Tailwind CSS 4, shadcn/ui, Electron Vite, Biome, and includes a GitHub Actions release workflow.
+
+Dalton Menezes
+
+[fast-png 6.3: Pure JS PNG Image Decoder and Encoder](https://nodeweekly.com/link/166374/0a4070b383 "github.com") — Pass it a PNG to decode via a TypedArray or Buffer, or a Canvas ImageData (or compatible object) to encode into PNG.
+
+Michaël Zasso
+
+[Jira.js 4.1: A Wrapper for Atlassian Jira's Cloud APIs](https://nodeweekly.com/link/166375/0a4070b383 "github.com") — Are you lucky enough to use [Jira](https://nodeweekly.com/link/166376/0a4070b383)? Increase your joy even more by interacting with it from code. [Further docs and examples.](https://nodeweekly.com/link/166377/0a4070b383)
+
+Vladislav Tupikin
+
+[InversifyJS 7.0: Inversion of Control Container](https://nodeweekly.com/link/166378/0a4070b383 "inversify.io") — A lightweight [inversion of control (IoC)](https://nodeweekly.com/link/166379/0a4070b383) container to help you adhere to OO best practices.
+
+Remo H. Jansen
+
+[Malibu: Framework-Agnostic CSRF Middleware](https://nodeweekly.com/link/166380/0a4070b383 "github.com") — ESM only, zero-dependency, and TypeScript types are included. It’s compatible with Express, Tinyhttp, and most modern frameworks based around the core HTTP package.
+
+Reinaldy Rafli
+
+[wacat 1.4: Tests Your Webapp Against 'Cat Chaos'](https://nodeweekly.com/link/166381/0a4070b383 "github.com") — Uses a virtual ‘cat walking across your keyboard’ approach to tormenting apps with random clicks and form submissions, now with a stronger focus on using AI to generate both valid and invalid inputs.
+
+Mika Tapanainen
+
+*   [LogTape 0.9.0](https://nodeweekly.com/link/166382/0a4070b383) – Logging library for JavaScript and TypeScript with zero dependencies and support for multiple environments.
+    
+*   [node-oracledb 6.8](https://nodeweekly.com/link/166383/0a4070b383) – _Oracle Database_ driver for Node. Now with interval data type and sparse vector support.
+    
+*   [sqs-consumer 11.6](https://nodeweekly.com/link/166384/0a4070b383) – Build Amazon SQS-based applications without boilerplate by defining an async message processing function.
+    
+*   [Typegoose 12.13](https://nodeweekly.com/link/166385/0a4070b383) – Define [Mongoose](https://nodeweekly.com/link/166386/0a4070b383) models with TypeScript classes.
+    
+*   [Mongoose 8.12.0](https://nodeweekly.com/link/166387/0a4070b383) – MongoDB object modeling approach.
+    
+*   [NodeBB 4.1](https://nodeweekly.com/link/166388/0a4070b383) – Node.js-powered forum software.
+    
+*   [Nano ID 5.1](https://nodeweekly.com/link/166389/0a4070b383) – Unique string ID generator.
+    
+*   [pnpm v10.5.2](https://nodeweekly.com/link/166390/0a4070b383)
+    
+
+📰 Classifieds
+
+I'm not saying **CarsXE’s VIN decoder** is perfect, but it's sure better than asking your mechanic's cousin Vinny (Vinny's a great guy, though). [Try CarsXE!](https://nodeweekly.com/link/166391/0a4070b383)
+
+* * *
+
+🎤 [Over 15 speakers revealed for Node Congress!](https://nodeweekly.com/link/166392/0a4070b383) Learn Fullstack, JS backends, DevOps & more on April 17-18. Get 10% off with code `NODEWEEKLY`.
+
+* * *
+
+[Bit - A build system framework for development of composable software](https://nodeweekly.com/link/166393/0a4070b383). Natively to Harmony, and support Node.js, React apps (with Vite), NextJS, Angular, Vue and more.
+
+📢  Elsewhere in JavaScript
+
+A quick roundup of some of other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   The term 'Ajax' was coined twenty years ago [in this article.](https://nodeweekly.com/link/166395/0a4070b383)
+    
+*   [Windows 95 in Electron](https://nodeweekly.com/link/166396/0a4070b383) is, unsurprisingly, Windows 95 running in an Electron app! v4.0 adds Office 95 and IE 5.5 for some (limited) browsing of the Web.
+    
+*   📊 [BenchJS](https://nodeweekly.com/link/166397/0a4070b383) is an online JavaScript benchmarking sandbox worth playing with.
+    
+*   [free-for.dev](https://nodeweekly.com/link/166398/0a4070b383) is a handy and huge (over 1000 items) list of hosted tools and online services with free developer tiers.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​568 — March 4, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/568)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://nodeweekly.com/link/166357/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/aoylx2p1gsk05f2csa4p.jpg)](https://nodeweekly.com/link/166358/0a4070b383)
+
+[Announcing TypeScript 5.8](https://nodeweekly.com/link/166358/0a4070b383 "devblogs.microsoft.com") — Four months in the making, TypeScript 5.8 lands with a strong Node focus. You can now [use `require()` for ES modules in the `nodenext` module](https://nodeweekly.com/link/166359/0a4070b383), there’s [a new `node18` module](https://nodeweekly.com/link/166399/0a4070b383) for developers who want to keep targeting Node 18, and most notably there’s now [an `--erasableSyntaxOnly` option](https://nodeweekly.com/link/166360/0a4070b383) to ensure no TypeScript-only runtime semantics can be used (ideal if you’re using [Node’s type stripping features](https://nodeweekly.com/link/166361/0a4070b383) to run TypeScript code directly).
+
+Microsoft
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v1741097342/ejw1jj6fi4ifzbvyy3uk.jpg)](https://nodeweekly.com/link/166357/0a4070b383)
+
+[Instrument, Monitor, Fix: A Hands-On Debugging Class](https://nodeweekly.com/link/166357/0a4070b383 "sentry.io") — Join us live for a hands-on session where you’ll build it, watch it break, debug it, and go from “no idea what’s wrong” to fixing issues—all in one go. [Save your spot here »](https://nodeweekly.com/link/166357/0a4070b383).
+
+Sentry sponsor
+
+[Turbocharging V8 with Mutable Heap Numbers](https://nodeweekly.com/link/166362/0a4070b383 "v8.dev") — The V8 team uses the JetStream2 benchmark suite to investigate performance issues and has implemented a new optimization yielding not just a 2.5x improvement in the `async-fs` benchmark but in other areas too. A demonstration that not only does the Node team make Node faster, the V8 team does too.
+
+Victor Gomes (V8)
+
+**IN BRIEF:**
+
+* [Node v23.9.0 (Current)](https://nodeweekly.com/link/166363/0a4070b383) has been released – it's a very minor release, however, focused mostly on bug fixes and incremental tweaks.
+
+* Next.js 15.2 has been released [with support for using Node.js for Next.js' Middleware.](https://nodeweekly.com/link/166364/0a4070b383)
+
+* Node is introducing [an experimental JSON-based configuration option](https://nodeweekly.com/link/166365/0a4070b383) to simplify the use of features (like the [test runner](https://nodeweekly.com/link/166366/0a4070b383)) that otherwise tend to use a lot of configuration flags.
+
+* [An unfortunate update on QUIC support in Node.js.](https://nodeweekly.com/link/166367/0a4070b383)
+
+[Web Scraping with Playwright](https://nodeweekly.com/link/166368/0a4070b383 "wanago.io") — I’d be surprised if you got away with scraping YouTube like this for long (let’s say Google aren’t big fans of the approach) but the techniques demonstrated are useful more generally too.
+
+Marcin Wanago
+
+[Harnessing Data at Scale: Character.AI's Transition to WarpStream](https://nodeweekly.com/link/166369/0a4070b383 "www.warpstream.com") — Character.AI used WarpStream to make a 3 GiB/s Apache Kafka-compatible data pipeline and reduced their analytics costs.
+
+WarpStream sponsor
+
+📄 [Creating a CLI Chatbot with LangChain and OpenAI](https://nodeweekly.com/link/166370/0a4070b383) Robin Wieruch
+
+📄 [Node.js Writable Streams: A Practical Guide](https://nodeweekly.com/link/166371/0a4070b383) Pavel Romanov
+
+📄 [Simple TypeScript Playgrounds with `node --watch`](https://nodeweekly.com/link/166372/0a4070b383) Dr. Axel Rauschmayer
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tsokz4lz7fnri7veambj.jpg)](https://nodeweekly.com/link/166373/0a4070b383)
+
+[Electron App Boilerplate with Modern Dependencies](https://nodeweekly.com/link/166373/0a4070b383 "github.com") — A basic template app that uses React 19, Tailwind CSS 4, shadcn/ui, Electron Vite, Biome, and includes a GitHub Actions release workflow.
+
+Dalton Menezes
+
+[fast-png 6.3: Pure JS PNG Image Decoder and Encoder](https://nodeweekly.com/link/166374/0a4070b383 "github.com") — Pass it a PNG to decode via a TypedArray or Buffer, or a Canvas ImageData (or compatible object) to encode into PNG.
+
+Michaël Zasso
+
+[Jira.js 4.1: A Wrapper for Atlassian Jira's Cloud APIs](https://nodeweekly.com/link/166375/0a4070b383 "github.com") — Are you lucky enough to use [Jira](https://nodeweekly.com/link/166376/0a4070b383)? Increase your joy even more by interacting with it from code. [Further docs and examples.](https://nodeweekly.com/link/166377/0a4070b383)
+
+Vladislav Tupikin
+
+[InversifyJS 7.0: Inversion of Control Container](https://nodeweekly.com/link/166378/0a4070b383 "inversify.io") — A lightweight [inversion of control (IoC)](https://nodeweekly.com/link/166379/0a4070b383) container to help you adhere to OO best practices.
+
+Remo H. Jansen
+
+[Malibu: Framework-Agnostic CSRF Middleware](https://nodeweekly.com/link/166380/0a4070b383 "github.com") — ESM only, zero-dependency, and TypeScript types are included. It’s compatible with Express, Tinyhttp, and most modern frameworks based around the core HTTP package.
+
+Reinaldy Rafli
+
+[wacat 1.4: Tests Your Webapp Against 'Cat Chaos'](https://nodeweekly.com/link/166381/0a4070b383 "github.com") — Uses a virtual ‘cat walking across your keyboard’ approach to tormenting apps with random clicks and form submissions, now with a stronger focus on using AI to generate both valid and invalid inputs.
+
+Mika Tapanainen
+
+* [LogTape 0.9.0](https://nodeweekly.com/link/166382/0a4070b383) – Logging library for JavaScript and TypeScript with zero dependencies and support for multiple environments.
+
+* [node-oracledb 6.8](https://nodeweekly.com/link/166383/0a4070b383) – *Oracle Database* driver for Node. Now with interval data type and sparse vector support.
+
+* [sqs-consumer 11.6](https://nodeweekly.com/link/166384/0a4070b383) – Build Amazon SQS-based applications without boilerplate by defining an async message processing function.
+
+* [Typegoose 12.13](https://nodeweekly.com/link/166385/0a4070b383) – Define [Mongoose](https://nodeweekly.com/link/166386/0a4070b383) models with TypeScript classes.
+
+* [Mongoose 8.12.0](https://nodeweekly.com/link/166387/0a4070b383) – MongoDB object modeling approach.
+
+* [NodeBB 4.1](https://nodeweekly.com/link/166388/0a4070b383) – Node.js-powered forum software.
+
+* [Nano ID 5.1](https://nodeweekly.com/link/166389/0a4070b383) – Unique string ID generator.
+
+* [pnpm v10.5.2](https://nodeweekly.com/link/166390/0a4070b383)
+
+📰 Classifieds
+
+I'm not saying **CarsXE’s VIN decoder** is perfect, but it's sure better than asking your mechanic's cousin Vinny (Vinny's a great guy, though). [Try CarsXE!](https://nodeweekly.com/link/166391/0a4070b383)
+
+***
+
+🎤 [Over 15 speakers revealed for Node Congress!](https://nodeweekly.com/link/166392/0a4070b383) Learn Fullstack, JS backends, DevOps & more on April 17-18. Get 10% off with code `NODEWEEKLY`.
+
+***
+
+[Bit - A build system framework for development of composable software](https://nodeweekly.com/link/166393/0a4070b383). Natively to Harmony, and support Node.js, React apps (with Vite), NextJS, Angular, Vue and more.
+
+📢  Elsewhere in JavaScript
+
+A quick roundup of some of other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* The term 'Ajax' was coined twenty years ago [in this article.](https://nodeweekly.com/link/166395/0a4070b383)
+
+* [Windows 95 in Electron](https://nodeweekly.com/link/166396/0a4070b383) is, unsurprisingly, Windows 95 running in an Electron app! v4.0 adds Office 95 and IE 5.5 for some (limited) browsing of the Web.
+
+* 📊 [BenchJS](https://nodeweekly.com/link/166397/0a4070b383) is an online JavaScript benchmarking sandbox worth playing with.
+
+* [free-for.dev](https://nodeweekly.com/link/166398/0a4070b383) is a handy and huge (over 1000 items) list of hosted tools and online services with free developer tiers.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
