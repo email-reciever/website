@@ -1,0 +1,169 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#496 Signals in React?
+description: RD#496 Signals in React?
+date: 星期日 07 晚上 三月 9o 2025
+author: reactdigest
+origin_url: javascript:;
+origin_site: javascript:;
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#496 Signals in React?" url="javascript:;" />
+
+<Detail client:only="react">
+	  
+
+Not a good idea according to Filipe
+
+͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­
+
+[Signals in React? Not a good idea](https://reactdigest.net/links/18660/d0444622-e98b-430a-9e1d-e3d73625b90d/email)  
+_5 minutes_ by Felipe Gustavo
+
+In this article Filipe explores signals, a fine-grained reactivity approach growing in popularity among frontend frameworks but missing from React. Using signals in React requires complex workarounds for raw data handling, passing props, and conditional rendering, essentially hacking React's core behavior. Filipe suggests developers who value fine-grained reactivity should consider frameworks that natively support it rather than forcing React to behave against its design.
+
+[Tests are dead. Meticulous AI is here.](https://reactdigest.net/links/18661/d0444622-e98b-430a-9e1d-e3d73625b90d/email)  
+_sponsored by Meticulous_
+
+Meticulous automatically creates and maintains an exhaustive e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Dropbox, Lattice, Bilt Rewards and hundreds of organisations rely on Meticulous for their frontend testing. It is built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[Minimal state management tools](https://reactdigest.net/links/18662/d0444622-e98b-430a-9e1d-e3d73625b90d/email)  
+_8 minutes_ by Audrey Behiels
+
+Modern web applications require effective state management solutions, but choosing between Redux, Zustand, Nano Stores, Context API, Recoil, Jotai, and other options can be overwhelming. Audrey compares some of these state management tools based on complexity, performance, developer experience, and uses cases to help you select the right one for your specific project needs.
+
+[&lcub;transitions} = f(state)](https://reactdigest.net/links/18663/d0444622-e98b-430a-9e1d-e3d73625b90d/email)  
+_4 minutes_ by Jordan Eldredge
+
+In this post Jordan explores the relationship between state machines and React applications, emphasizing how React’s rendering model implicitly defines valid state transitions. He discusses strategies such as optimistic and pending state updates to mitigate these issues and ensure that invalid actions are prevented.
+
+[React Server Actions with Toast Feedback](https://reactdigest.net/links/18664/d0444622-e98b-430a-9e1d-e3d73625b90d/email)  
+_12 minutes_ by Robin Wieruch
+
+In this tutorial, Robin explores how to implement toast notifications when calling Server Actions in React. He demonstrates creating a React application where users can upvote, downvote, and delete user data entries. Key implementation points include returning a message and timestamp from Server Actions, using useActionState to manage action states, preventing duplicate toasts with timestamp tracking, and handling toast display when page refreshes occur.
+
+[There’s no such thing as an isomorphic layout effect](https://reactdigest.net/links/18665/d0444622-e98b-430a-9e1d-e3d73625b90d/email)  
+_11 minutes_ by Shane Friedman
+
+In this post Shane explains how "isomorphic layout effect" hooks, commonly used to resolve React's useLayoutEffect warnings in server-side rendering, are widely misunderstood. He details how useLayoutEffect executes after DOM changes but before browser painting, making it useful for layout calculations, but cannot run during server rendering.
+
+## webdev
+
+*   [Functions in CSS?!](https://reactdigest.net/links/18666/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+*   [Styling the HTML details and summary elements](https://reactdigest.net/links/18667/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+*   [A Million Little Secrets](https://reactdigest.net/links/18668/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+
+## javascript
+
+*   [TypeScript Founder Successfully Runs Doom Inside TypeScript's Type System](https://reactdigest.net/links/18669/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+*   [Subverting control with weak references](https://reactdigest.net/links/18670/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+*   [Inline rendering with document​.currentScript](https://reactdigest.net/links/18671/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+
+And the most popular article from the last issue was:
+
+*   [Functional programming in React](https://reactdigest.net/links/18672/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+
+## newsletters
+
+*   [Programming Digest](https://programmingdigest.net/?utm_medium=campaign&utm_source=react)
+*   [Leadership in Tech](https://leadershipintech.com/?utm_medium=campaign&utm_source=react)
+*   [C# Digest](https://csharpdigest.net/?utm_medium=campaign&utm_source=react)
+
+* * *
+
+Would you like to [advertise](https://bonobopress.com/) in the newsletter? Check out our [media kit](https://bonobopress.com/media-kit/) and get in touch.
+
+* * *
+
+© 2025 [Bonobo Press](https://bonobopress.com/)
+
+Jakub Chodounsky (dba. Bonobo Press)  
+1/25 Mana Street  
+Wellington, New Zealand  
+[Privacy Policy](https://reactdigest.net/privacy)
+
+If you no longer wish to receive these emails, click to [unsubscribe](https://reactdigest.net/subscribers/d0444622-e98b-430a-9e1d-e3d73625b90d/unsubscribe).
+
+![](https://reactdigest.net/newsletters/2017/open/d0444622-e98b-430a-9e1d-e3d73625b90d.gif
+</Detail>
+
+Not a good idea according to Filipe
+
+͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­ ͏ ‌     ­
+
+[Signals in React? Not a good idea](https://reactdigest.net/links/18660/d0444622-e98b-430a-9e1d-e3d73625b90d/email)\
+*5 minutes* by Felipe Gustavo
+
+In this article Filipe explores signals, a fine-grained reactivity approach growing in popularity among frontend frameworks but missing from React. Using signals in React requires complex workarounds for raw data handling, passing props, and conditional rendering, essentially hacking React's core behavior. Filipe suggests developers who value fine-grained reactivity should consider frameworks that natively support it rather than forcing React to behave against its design.
+
+[Tests are dead. Meticulous AI is here.](https://reactdigest.net/links/18661/d0444622-e98b-430a-9e1d-e3d73625b90d/email)\
+*sponsored by Meticulous*
+
+Meticulous automatically creates and maintains an exhaustive e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Dropbox, Lattice, Bilt Rewards and hundreds of organisations rely on Meticulous for their frontend testing. It is built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[Minimal state management tools](https://reactdigest.net/links/18662/d0444622-e98b-430a-9e1d-e3d73625b90d/email)\
+*8 minutes* by Audrey Behiels
+
+Modern web applications require effective state management solutions, but choosing between Redux, Zustand, Nano Stores, Context API, Recoil, Jotai, and other options can be overwhelming. Audrey compares some of these state management tools based on complexity, performance, developer experience, and uses cases to help you select the right one for your specific project needs.
+
+[&lcub;transitions} = f(state)](https://reactdigest.net/links/18663/d0444622-e98b-430a-9e1d-e3d73625b90d/email)\
+*4 minutes* by Jordan Eldredge
+
+In this post Jordan explores the relationship between state machines and React applications, emphasizing how React’s rendering model implicitly defines valid state transitions. He discusses strategies such as optimistic and pending state updates to mitigate these issues and ensure that invalid actions are prevented.
+
+[React Server Actions with Toast Feedback](https://reactdigest.net/links/18664/d0444622-e98b-430a-9e1d-e3d73625b90d/email)\
+*12 minutes* by Robin Wieruch
+
+In this tutorial, Robin explores how to implement toast notifications when calling Server Actions in React. He demonstrates creating a React application where users can upvote, downvote, and delete user data entries. Key implementation points include returning a message and timestamp from Server Actions, using useActionState to manage action states, preventing duplicate toasts with timestamp tracking, and handling toast display when page refreshes occur.
+
+[There’s no such thing as an isomorphic layout effect](https://reactdigest.net/links/18665/d0444622-e98b-430a-9e1d-e3d73625b90d/email)\
+*11 minutes* by Shane Friedman
+
+In this post Shane explains how "isomorphic layout effect" hooks, commonly used to resolve React's useLayoutEffect warnings in server-side rendering, are widely misunderstood. He details how useLayoutEffect executes after DOM changes but before browser painting, making it useful for layout calculations, but cannot run during server rendering.
+
+## webdev
+
+* [Functions in CSS?!](https://reactdigest.net/links/18666/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+* [Styling the HTML details and summary elements](https://reactdigest.net/links/18667/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+* [A Million Little Secrets](https://reactdigest.net/links/18668/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+
+## javascript
+
+* [TypeScript Founder Successfully Runs Doom Inside TypeScript's Type System](https://reactdigest.net/links/18669/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+* [Subverting control with weak references](https://reactdigest.net/links/18670/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+* [Inline rendering with document​.currentScript](https://reactdigest.net/links/18671/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+
+And the most popular article from the last issue was:
+
+* [Functional programming in React](https://reactdigest.net/links/18672/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+
+## newsletters
+
+* [Programming Digest](https://programmingdigest.net/?utm_medium=campaign\&utm_source=react)
+* [Leadership in Tech](https://leadershipintech.com/?utm_medium=campaign\&utm_source=react)
+* [C# Digest](https://csharpdigest.net/?utm_medium=campaign\&utm_source=react)
+
+***
+
+Would you like to [advertise](https://bonobopress.com/) in the newsletter? Check out our [media kit](https://bonobopress.com/media-kit/) and get in touch.
+
+***
+
+© 2025 [Bonobo Press](https://bonobopress.com/)
+
+Jakub Chodounsky (dba. Bonobo Press)\
+1/25 Mana Street\
+Wellington, New Zealand\
+[Privacy Policy](https://reactdigest.net/privacy)
+
+If you no longer wish to receive these emails, click to [unsubscribe](https://reactdigest.net/subscribers/d0444622-e98b-430a-9e1d-e3d73625b90d/unsubscribe).
+
+!\[]\(https://reactdigest.net/newsletters/2017/open/d0444622-e98b-430a-9e1d-e3d73625b90d.gif
+
+
