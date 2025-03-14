@@ -1,0 +1,305 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Can you understand this JavaScript?
+description: Can you understand this JavaScript?
+date: 星期五 07 晚上 三月 14o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/727
+origin_site: https://javascriptweekly.com/issues/727
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Can you understand this JavaScript?" url="https://javascriptweekly.com/issues/727" />
+
+<Detail client:only="react">
+	#​727 — March 14, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/727)
+
+Together with 
+
+[![Clerk](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_220,h_64/e_make_transparent/co_white,e_outline:5/j3vhv1hnwqeffgkzzlvu.png)](https://javascriptweekly.com/link/166883/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ssfidifg2hmcjrvpv92s.jpg)](https://javascriptweekly.com/link/166884/d076523b1d)
+
+[A Perplexing JavaScript Parsing Puzzle](https://javascriptweekly.com/link/166884/d076523b1d "www.hillelwayne.com") — It looks deceptively simple – just 14 characters of JavaScript – but after working with JavaScript for 29 years, I got it wrong. A clue: it goes back to a browser-related quirk from _30_ years ago..
+
+Hillel Wayne
+
+[TypeScript's Compiler to Get 10x Faster](https://javascriptweekly.com/link/166885/d076523b1d "devblogs.microsoft.com") — TypeScript has shaken up the JavaScript ecosystem in recent years with an increasing number of developers relying on its strong typing and added structure. TypeScript’s compiler isn’t particularly fast, though, but the TypeScript team at Microsoft are changing that by porting it to Go!
+
+Anders Hejlsberg (Microsoft)
+
+💡 Dr. Axel Rauschmayer [takes a closer look at the details](https://javascriptweekly.com/link/166886/d076523b1d) behind the port.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/1588b39c.png)](https://javascriptweekly.com/link/166883/d076523b1d)
+
+[Build a Secure Project Management](https://javascriptweekly.com/link/166883/d076523b1d "go.clerk.com") — Learn a security-first approach to building web applications by building a secure project management platform with Next.js.
+
+Clerk sponsor
+
+**IN BRIEF:**
+
+*   [Node.js v20.19.0 (LTS)](https://javascriptweekly.com/link/166887/d076523b1d) is a notable release for a maintenance branch of Node as an exception has been made to the maintenance policy for backporting `require(esm)` support, which is now enabled by default.
+    
+*   The latest version of Chrome (and preview versions of Firefox and Safari) support [two new HTML attributes, `command` and `commandfor`](https://javascriptweekly.com/link/166888/d076523b1d), for adding declarative actions to HTML buttons without directly requiring JavaScript.
+    
+
+**RELEASES:**
+
+*   [Nuxt 3.16](https://javascriptweekly.com/link/166889/d076523b1d) – Popular Vue meta-framework. Now with a new `create-nuxt` tool for starting projects.
+    
+*   [Bun 1.2.5](https://javascriptweekly.com/link/166890/d076523b1d) – Now with much better Node-API compatibility, CSRF generation and verification, plus numerous perf improvements and fixes.
+    
+*   [Melange 5](https://javascriptweekly.com/link/166891/d076523b1d) – An OCaml-to-JavaScript compiler.
+    
+*   [Astro 5.5](https://javascriptweekly.com/link/166892/d076523b1d), [Transformers.js 3.4](https://javascriptweekly.com/link/166893/d076523b1d), [Capacitor 7.1](https://javascriptweekly.com/link/166894/d076523b1d), [Nuxt UI v3](https://javascriptweekly.com/link/166895/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[Building APIs with Next.js](https://javascriptweekly.com/link/166896/d076523b1d "nextjs.org") — A detailed, official introduction to the concepts behind using Next.js’ App Router and route handlers to build public APIs you can expose to web, mobile, and third-party clients.
+
+Lee Robinson
+
+[How _The New York Times_ Migrated from Enzyme to React Testing Library](https://javascriptweekly.com/link/166897/d076523b1d "open.nytimes.com") — A thorough look at the technical challenges and strategies the NYT used to perform a piecemeal upgrade of its React testing approach without disrupting either end users or other developers.
+
+Felipe Buenaño (NYT Open Team)
+
+[Which AI Model Is Best for Fixing Unit Test Errors? Claude, o3-mini, GPT-4o?](https://javascriptweekly.com/link/166898/d076523b1d "wallabyjs.com") — Better context wins every time. Wallaby enters the chat to give AI what it needs - test coverage and runtime values - to debug smarter.
+
+Wallaby Team sponsor
+
+[How ECMAScript Engines Optimize Your Variables](https://javascriptweekly.com/link/166899/d076523b1d "boajs.dev") — From the authors of the [Boa JS](https://javascriptweekly.com/link/166900/d076523b1d) Rust-powered JavaScript engine.
+
+Boa Developers
+
+📄 [Use Cases for the Document Picture-in-Picture API](https://javascriptweekly.com/link/166901/d076523b1d) – A way to open a floating, always-on-top window (‘picture-in-picture’) that can display arbitrary HTML content. Chrome only, though. Jad Joubran
+
+📄 [Using `Intl.DurationFormat` to Format Time Durations with Locale Support](https://javascriptweekly.com/link/166902/d076523b1d) Trevor I. Lasn
+
+📄 [Learn Zod So You Can Trust Your Data and Your Types](https://javascriptweekly.com/link/166903/d076523b1d) Diana MacDonald
+
+📄 [10 Hidden Gems in Angular That You Should Use](https://javascriptweekly.com/link/166904/d076523b1d) IE 33
+
+📄 [Underrated Angular Features](https://javascriptweekly.com/link/166905/d076523b1d) Armen Vardanyan
+
+🛠 Code & Tools
+
+[Refractor 5.0: Robust Virtual Syntax Highlighting using Prism](https://javascriptweekly.com/link/166906/d076523b1d "github.com") — Wraps the powerful [Prism](https://javascriptweekly.com/link/166907/d076523b1d) syntax highlighter to output objects instead of an HTML string so you can manipulate and render it as you wish (e.g. in a VDOM or at the terminal). [Lowlight](https://javascriptweekly.com/link/166908/d076523b1d), by the same author, offers the same functionality but backed by [highlight.js.](https://javascriptweekly.com/link/166909/d076523b1d)
+
+Titus Wormer
+
+[svg2pdf.js: SVG to PDF Conversion in the Browser](https://javascriptweekly.com/link/166910/d076523b1d "github.com") — There’s an [online playground](https://javascriptweekly.com/link/166911/d076523b1d) to give you a feel for what it can do.
+
+yWorks GmbH
+
+[🔒 Protect Against AI Bots, Fraud, and Abuse in Real Time](https://javascriptweekly.com/link/166912/d076523b1d "workos.com") — WorkOS Radar protects your app with advanced device fingerprinting — stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+WorkOS sponsor
+
+[⌘K: A Fast, Composable, Unstyled 'Command Menu' Control](https://javascriptweekly.com/link/166913/d076523b1d "cmdk.paco.me") — The home page includes some neat examples in a variety of styles. [GitHub repo](https://javascriptweekly.com/link/166914/d076523b1d). Needs React 18+.
+
+Paco Coursey
+
+🔎 [Node Modules Inspector](https://javascriptweekly.com/link/166915/d076523b1d "node-modules.dev") — A tool that runs pnpm _inside your browser_, “installs” a package, then analyzes its dependencies. This can be useful for analyzing packages you already use, but also for simplifying your own projects, as [11ty’s Zach Leatherman did here.](https://javascriptweekly.com/link/166916/d076523b1d)
+
+Anthony Fu
+
+[PGlite: Run Postgres in WebAssembly](https://javascriptweekly.com/link/166917/d076523b1d "github.com") — PGlite packages a WASM build of Postgres into a TypeScript library that can be run directly from Node.js (or Bun, Deno, and even the browser) and it’s only a few megabytes in size.
+
+ElectricSQL / Neon
+
+*   [Gleam 1.9](https://javascriptweekly.com/link/166918/d076523b1d) – Type-safe functional programming language that targets both the Erlang VM and JavaScript runtime.
+    
+*   [&lt;css-doodle> 0.42](https://javascriptweekly.com/link/166919/d076523b1d) – Web component for drawing patterns with CSS.
+    
+*   [Faker 9.6](https://javascriptweekly.com/link/166920/d076523b1d) – Generate fabricated data to your heart's content.
+    
+*   [Choices 11.1](https://javascriptweekly.com/link/166921/d076523b1d) – Configurable select box/text input plugin.
+    
+*   🕒 [Spacetime 7.8](https://javascriptweekly.com/link/166922/d076523b1d) – Lightweight timezone library.
+    
+*   [Ink 5.2](https://javascriptweekly.com/link/166923/d076523b1d) – Use React to build CLI apps.
+    
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/166924/d076523b1d). Relied on by 1000s of orgs, including Dropbox, Lattice, Bilt Rewards and many more.
+
+* * *
+
+Current PDF setup slowing you down? [Try Nutrient's PDF SDK](https://javascriptweekly.com/link/166925/d076523b1d) — it's used by IBM, SAP, DocuSign and countless others to open, edit, and customize with ease across platforms.
+
+* * *
+
+👀 Give your eyes a break! [MonoLisa](https://javascriptweekly.com/link/166926/d076523b1d) is a font optimized for developers. [Try now](https://javascriptweekly.com/link/166926/d076523b1d).
+
+📢  Elsewhere
+
+A quick roundup of some of other interesting updates or useful resources in the broader developer landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/r4iv0h0uumlxzsw0hyu4.jpg)](https://javascriptweekly.com/link/166927/d076523b1d)
+
+*   ⭐ [A fantastic introduction to latency in IO devices](https://javascriptweekly.com/link/166927/d076523b1d) _(above)_ over on the _PlanetScale_ blog, complete with _very_ useful interactive diagrams built in JavaScript.
+    
+*   The _Evil Martians_ explain [things you can consider to make your open source project more popular.](https://javascriptweekly.com/link/166928/d076523b1d)
+    
+*   🤖 Esteemed LLM-whisperer Simon Willison [drops a ton of insights and tips](https://javascriptweekly.com/link/166929/d076523b1d) on how he uses LLMs to help him write code.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/166930/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​727 — March 14, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/727)
+
+Together with 
+
+[![Clerk](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_220,h_64/e_make_transparent/co_white,e_outline:5/j3vhv1hnwqeffgkzzlvu.png)](https://javascriptweekly.com/link/166883/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ssfidifg2hmcjrvpv92s.jpg)](https://javascriptweekly.com/link/166884/d076523b1d)
+
+[A Perplexing JavaScript Parsing Puzzle](https://javascriptweekly.com/link/166884/d076523b1d "www.hillelwayne.com") — It looks deceptively simple – just 14 characters of JavaScript – but after working with JavaScript for 29 years, I got it wrong. A clue: it goes back to a browser-related quirk from *30* years ago..
+
+Hillel Wayne
+
+[TypeScript's Compiler to Get 10x Faster](https://javascriptweekly.com/link/166885/d076523b1d "devblogs.microsoft.com") — TypeScript has shaken up the JavaScript ecosystem in recent years with an increasing number of developers relying on its strong typing and added structure. TypeScript’s compiler isn’t particularly fast, though, but the TypeScript team at Microsoft are changing that by porting it to Go!
+
+Anders Hejlsberg (Microsoft)
+
+💡 Dr. Axel Rauschmayer [takes a closer look at the details](https://javascriptweekly.com/link/166886/d076523b1d) behind the port.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/1588b39c.png)](https://javascriptweekly.com/link/166883/d076523b1d)
+
+[Build a Secure Project Management](https://javascriptweekly.com/link/166883/d076523b1d "go.clerk.com") — Learn a security-first approach to building web applications by building a secure project management platform with Next.js.
+
+Clerk sponsor
+
+**IN BRIEF:**
+
+* [Node.js v20.19.0 (LTS)](https://javascriptweekly.com/link/166887/d076523b1d) is a notable release for a maintenance branch of Node as an exception has been made to the maintenance policy for backporting `require(esm)` support, which is now enabled by default.
+
+* The latest version of Chrome (and preview versions of Firefox and Safari) support [two new HTML attributes, `command` and `commandfor`](https://javascriptweekly.com/link/166888/d076523b1d), for adding declarative actions to HTML buttons without directly requiring JavaScript.
+
+**RELEASES:**
+
+* [Nuxt 3.16](https://javascriptweekly.com/link/166889/d076523b1d) – Popular Vue meta-framework. Now with a new `create-nuxt` tool for starting projects.
+
+* [Bun 1.2.5](https://javascriptweekly.com/link/166890/d076523b1d) – Now with much better Node-API compatibility, CSRF generation and verification, plus numerous perf improvements and fixes.
+
+* [Melange 5](https://javascriptweekly.com/link/166891/d076523b1d) – An OCaml-to-JavaScript compiler.
+
+* [Astro 5.5](https://javascriptweekly.com/link/166892/d076523b1d), [Transformers.js 3.4](https://javascriptweekly.com/link/166893/d076523b1d), [Capacitor 7.1](https://javascriptweekly.com/link/166894/d076523b1d), [Nuxt UI v3](https://javascriptweekly.com/link/166895/d076523b1d)
+
+📒 Articles & Tutorials
+
+[Building APIs with Next.js](https://javascriptweekly.com/link/166896/d076523b1d "nextjs.org") — A detailed, official introduction to the concepts behind using Next.js’ App Router and route handlers to build public APIs you can expose to web, mobile, and third-party clients.
+
+Lee Robinson
+
+[How *The New York Times* Migrated from Enzyme to React Testing Library](https://javascriptweekly.com/link/166897/d076523b1d "open.nytimes.com") — A thorough look at the technical challenges and strategies the NYT used to perform a piecemeal upgrade of its React testing approach without disrupting either end users or other developers.
+
+Felipe Buenaño (NYT Open Team)
+
+[Which AI Model Is Best for Fixing Unit Test Errors? Claude, o3-mini, GPT-4o?](https://javascriptweekly.com/link/166898/d076523b1d "wallabyjs.com") — Better context wins every time. Wallaby enters the chat to give AI what it needs - test coverage and runtime values - to debug smarter.
+
+Wallaby Team sponsor
+
+[How ECMAScript Engines Optimize Your Variables](https://javascriptweekly.com/link/166899/d076523b1d "boajs.dev") — From the authors of the [Boa JS](https://javascriptweekly.com/link/166900/d076523b1d) Rust-powered JavaScript engine.
+
+Boa Developers
+
+📄 [Use Cases for the Document Picture-in-Picture API](https://javascriptweekly.com/link/166901/d076523b1d) – A way to open a floating, always-on-top window (‘picture-in-picture’) that can display arbitrary HTML content. Chrome only, though. Jad Joubran
+
+📄 [Using `Intl.DurationFormat` to Format Time Durations with Locale Support](https://javascriptweekly.com/link/166902/d076523b1d) Trevor I. Lasn
+
+📄 [Learn Zod So You Can Trust Your Data and Your Types](https://javascriptweekly.com/link/166903/d076523b1d) Diana MacDonald
+
+📄 [10 Hidden Gems in Angular That You Should Use](https://javascriptweekly.com/link/166904/d076523b1d) IE 33
+
+📄 [Underrated Angular Features](https://javascriptweekly.com/link/166905/d076523b1d) Armen Vardanyan
+
+🛠 Code & Tools
+
+[Refractor 5.0: Robust Virtual Syntax Highlighting using Prism](https://javascriptweekly.com/link/166906/d076523b1d "github.com") — Wraps the powerful [Prism](https://javascriptweekly.com/link/166907/d076523b1d) syntax highlighter to output objects instead of an HTML string so you can manipulate and render it as you wish (e.g. in a VDOM or at the terminal). [Lowlight](https://javascriptweekly.com/link/166908/d076523b1d), by the same author, offers the same functionality but backed by [highlight.js.](https://javascriptweekly.com/link/166909/d076523b1d)
+
+Titus Wormer
+
+[svg2pdf.js: SVG to PDF Conversion in the Browser](https://javascriptweekly.com/link/166910/d076523b1d "github.com") — There’s an [online playground](https://javascriptweekly.com/link/166911/d076523b1d) to give you a feel for what it can do.
+
+yWorks GmbH
+
+[🔒 Protect Against AI Bots, Fraud, and Abuse in Real Time](https://javascriptweekly.com/link/166912/d076523b1d "workos.com") — WorkOS Radar protects your app with advanced device fingerprinting — stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+WorkOS sponsor
+
+[⌘K: A Fast, Composable, Unstyled 'Command Menu' Control](https://javascriptweekly.com/link/166913/d076523b1d "cmdk.paco.me") — The home page includes some neat examples in a variety of styles. [GitHub repo](https://javascriptweekly.com/link/166914/d076523b1d). Needs React 18+.
+
+Paco Coursey
+
+🔎 [Node Modules Inspector](https://javascriptweekly.com/link/166915/d076523b1d "node-modules.dev") — A tool that runs pnpm *inside your browser*, “installs” a package, then analyzes its dependencies. This can be useful for analyzing packages you already use, but also for simplifying your own projects, as [11ty’s Zach Leatherman did here.](https://javascriptweekly.com/link/166916/d076523b1d)
+
+Anthony Fu
+
+[PGlite: Run Postgres in WebAssembly](https://javascriptweekly.com/link/166917/d076523b1d "github.com") — PGlite packages a WASM build of Postgres into a TypeScript library that can be run directly from Node.js (or Bun, Deno, and even the browser) and it’s only a few megabytes in size.
+
+ElectricSQL / Neon
+
+* [Gleam 1.9](https://javascriptweekly.com/link/166918/d076523b1d) – Type-safe functional programming language that targets both the Erlang VM and JavaScript runtime.
+
+* [&lt;css-doodle> 0.42](https://javascriptweekly.com/link/166919/d076523b1d) – Web component for drawing patterns with CSS.
+
+* [Faker 9.6](https://javascriptweekly.com/link/166920/d076523b1d) – Generate fabricated data to your heart's content.
+
+* [Choices 11.1](https://javascriptweekly.com/link/166921/d076523b1d) – Configurable select box/text input plugin.
+
+* 🕒 [Spacetime 7.8](https://javascriptweekly.com/link/166922/d076523b1d) – Lightweight timezone library.
+
+* [Ink 5.2](https://javascriptweekly.com/link/166923/d076523b1d) – Use React to build CLI apps.
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/166924/d076523b1d). Relied on by 1000s of orgs, including Dropbox, Lattice, Bilt Rewards and many more.
+
+***
+
+Current PDF setup slowing you down? [Try Nutrient's PDF SDK](https://javascriptweekly.com/link/166925/d076523b1d) — it's used by IBM, SAP, DocuSign and countless others to open, edit, and customize with ease across platforms.
+
+***
+
+👀 Give your eyes a break! [MonoLisa](https://javascriptweekly.com/link/166926/d076523b1d) is a font optimized for developers. [Try now](https://javascriptweekly.com/link/166926/d076523b1d).
+
+📢  Elsewhere
+
+A quick roundup of some of other interesting updates or useful resources in the broader developer landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/r4iv0h0uumlxzsw0hyu4.jpg)](https://javascriptweekly.com/link/166927/d076523b1d)
+
+* ⭐ [A fantastic introduction to latency in IO devices](https://javascriptweekly.com/link/166927/d076523b1d) *(above)* over on the *PlanetScale* blog, complete with *very* useful interactive diagrams built in JavaScript.
+
+* The *Evil Martians* explain [things you can consider to make your open source project more popular.](https://javascriptweekly.com/link/166928/d076523b1d)
+
+* 🤖 Esteemed LLM-whisperer Simon Willison [drops a ton of insights and tips](https://javascriptweekly.com/link/166929/d076523b1d) on how he uses LLMs to help him write code.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/166930/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
