@@ -1,0 +1,256 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node 20 gains require(esm) support by default
+description: Node 20 gains require(esm) support by default
+date: 星期二 03 下午 三月 18o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/570
+origin_site: https://nodeweekly.com/issues/570
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node 20 gains require(esm) support by default" url="https://nodeweekly.com/issues/570" />
+
+<Detail client:only="react">
+	#​570 — March 18, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/570)
+
+Together with 
+
+[![Stytch logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_686,h_212/e_make_transparent/co_white,e_outline:17/sxadrfitso54gphepg4p.png)](https://nodeweekly.com/link/166933/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/es4ot1nhiakan1kafkrh.jpg)](https://nodeweekly.com/link/166934/0a4070b383)
+
+[Node.js Gets an Official Community Space on Discord](https://nodeweekly.com/link/166934/0a4070b383 "nodejs.org") — While there have been numerous IRC channels and Discord and Slack servers where Node developers can congregate, the Nodeiflux Discord server has been promoted to being _an official one_ – [here’s the invite link](https://nodeweekly.com/link/166935/0a4070b383) if you’re a Discord user. There are already 15k members, so it’s hopping.
+
+Vitullo and Wunder
+
+[Node v23.10.0 (Current) Released](https://nodeweekly.com/link/166936/0a4070b383 "nodejs.org") — Node gains a new `--experimental-config-file` option for writing a JSON-based config file that contains options that would otherwise litter your command line flags – ideal for configuring the test runner, say.
+
+Antoine du Hamel
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/6362d727.jpg)](https://nodeweekly.com/link/166933/0a4070b383)
+
+[Prepare Your App for AI Agents](https://nodeweekly.com/link/166933/0a4070b383) — [Stytch](https://nodeweekly.com/link/166933/0a4070b383) extends auth to handle permissions for AI agents—so your app can securely delegate [access to agents](https://nodeweekly.com/link/166937/0a4070b383) or protect against [agent-powered threats](https://nodeweekly.com/link/166938/0a4070b383). [See our Node quickstart guide](https://nodeweekly.com/link/166939/0a4070b383).
+
+Stytch sponsor
+
+[Node v20.19.0 (LTS) Released with `require(esm)`](https://nodeweekly.com/link/166940/0a4070b383 "nodejs.org") — Node v20 is in maintenance mode, which usually means no new features, but it lands a significant one here: support for `require(esm)` enabled by default. This means all Node v20+ releases now support loading native ES modules with `require` out of the box. Ideal if you have dependencies to update and you’re still on v20.
+
+Marco Ippolito
+
+💡 A year ago, Node contributor [Joyee Cheung wrote about the technical aspects](https://nodeweekly.com/link/166941/0a4070b383) of how `require(esm)` support came together.
+
+**IN BRIEF:**
+
+*   📉 It's been big news for the past week, but [TypeScript is rewriting its compiler in Go](https://nodeweekly.com/link/166942/0a4070b383) for ~10x build time performance.
+    
+*   🔒 If you're using `xml-crypto` (or a SAML implementation that uses it) you should immediately update it as [a critical authentication bypass vulnerability has been found.](https://nodeweekly.com/link/166943/0a4070b383)
+    
+
+[How to Get Deep Traces in Your Node Backend with OTel and Deno](https://nodeweekly.com/link/166944/0a4070b383 "deno.com") — The Deno project turns up the heat by demonstrating how to add [OpenTelemetry](https://nodeweekly.com/link/166945/0a4070b383) to a Node app before showing how much easier it is with Deno (as long as your Node app runs well under it).
+
+Andy Jiang
+
+[🔒 Protect Against AI Bots, Fraud, and Abuse in Real Time](https://nodeweekly.com/link/166946/0a4070b383 "workos.com") — WorkOS Radar protects your app with advanced device fingerprinting — stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+WorkOS sponsor
+
+📄 [Web Scraping with Cheerio in 2025](https://nodeweekly.com/link/166947/0a4070b383) – [Cheerio](https://nodeweekly.com/link/166948/0a4070b383) is a long-standing library for working with HTML and XML in Node. Usama Jamil (Apify)
+
+📄 [Retrieval-Augmented Generation (RAG) with Node, Podman AI Lab & React](https://nodeweekly.com/link/166949/0a4070b383) Michael Dawson (Red Hat)
+
+📄 [Learn Zod So You Can Trust Your Data and Your Types](https://nodeweekly.com/link/166950/0a4070b383) Diana MacDonald
+
+📄 [Building Robust Data Synchronization Code in Node.js](https://nodeweekly.com/link/166951/0a4070b383) Ashley Davis
+
+📄 [How GitHub Engineers Learn New Codebases](https://nodeweekly.com/link/166952/0a4070b383) Brittany Ellich (GitHub)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rusaywetnovtggtykdp8.jpg)](https://nodeweekly.com/link/166953/0a4070b383)
+
+🔐 [Protect.js: 'Encryption in Use' for Data in Node Apps](https://nodeweekly.com/link/166953/0a4070b383 "cipherstash.com") — Designed to work with any Node framework or ORM, Protect.js provides AES-256 based ‘encryption in use’ functionality. [GitHub repo.](https://nodeweekly.com/link/166954/0a4070b383)
+
+CipherStash
+
+[Piscina 4.9: A Fast Worker Thread Pool Implementation](https://nodeweekly.com/link/166955/0a4070b383 "github.com") — Node’s [worker threads](https://nodeweekly.com/link/166956/0a4070b383) bring true multithreading to Node apps and Piscina is a _pool_ for tracking and controlling the number of such threads.
+
+Piscina
+
+[Refractor 5.0: Virtual Syntax Highlighting using Prism](https://nodeweekly.com/link/166957/0a4070b383 "github.com") — Wraps the powerful [Prism](https://nodeweekly.com/link/166958/0a4070b383) syntax highlighter to output objects instead of an HTML string so you can manipulate and render it as you wish (e.g. in a VDOM or at the terminal). [Lowlight](https://nodeweekly.com/link/166959/0a4070b383), by the same author, offers the same functionality but backed by [highlight.js.](https://nodeweekly.com/link/166960/0a4070b383)
+
+Titus Wormer
+
+[OTPAuth: One Time Password (HOTP/TOTP) Library](https://nodeweekly.com/link/166961/0a4070b383 "github.com") — When you log in to a site with 2FA and you’re asked for six digits from your authentication app, that’s a Time-based One-Time Password (or TOTP). This library for Node, Deno, Bun _and_ the browser lets you work with both TOTPs and HOTPs (HMAC-based OTPs) from JavaScript.
+
+Héctor Molinero Fernández
+
+*   [svg2pdf.js v2.5](https://nodeweekly.com/link/166962/0a4070b383) – JavaScript-only SVG to PDF conversion.
+    
+*   [MTKruto 0.60.0](https://nodeweekly.com/link/166963/0a4070b383) – Cross-runtime library for building Telegram clients.
+    
+*   [strong-soap v4.1.10](https://nodeweekly.com/link/166964/0a4070b383) – SOAP client with mock server capabilities.
+    
+*   [Git 2.49](https://nodeweekly.com/link/166965/0a4070b383) – Not Node specific, but plenty of enhancements.
+    
+
+📰 Classifieds
+
+🇫🇷 The Node & Conquer Conference. In person, in Paris. 4 April 2025. Come learn how to best run Node.js at scale. [Sign up here](https://nodeweekly.com/link/166966/0a4070b383).
+
+* * *
+
+👀 Give your eyes a break! [MonoLisa](https://nodeweekly.com/link/166967/0a4070b383) is a font optimized for developers. [Try now](https://nodeweekly.com/link/166967/0a4070b383).
+
+📢  Elsewhere in JavaScript
+
+A quick roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   [Oxlint, a Rust-powered JavaScript and TSX linter, is now in beta.](https://nodeweekly.com/link/166968/0a4070b383) It has over 500 rules out of the box and manages to lint Microsoft's entire TypeScript repo in under a second.
+    
+*   [It's just 14 characters of JavaScript, but can you parse it?](https://nodeweekly.com/link/166969/0a4070b383) A fun puzzle from Hillel Wayne, from which you'll learn a little ancient JavaScript history..
+    
+*   Lee Robinson gives us [the tour of building modern APIs with Next.js](https://nodeweekly.com/link/166970/0a4070b383) using the App Router and route handlers.
+    
+*   [Astro 5.5](https://nodeweekly.com/link/166971/0a4070b383), the latest version of the popular content site framework, has been released.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​570 — March 18, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/570)
+
+Together with 
+
+[![Stytch logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_686,h_212/e_make_transparent/co_white,e_outline:17/sxadrfitso54gphepg4p.png)](https://nodeweekly.com/link/166933/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/es4ot1nhiakan1kafkrh.jpg)](https://nodeweekly.com/link/166934/0a4070b383)
+
+[Node.js Gets an Official Community Space on Discord](https://nodeweekly.com/link/166934/0a4070b383 "nodejs.org") — While there have been numerous IRC channels and Discord and Slack servers where Node developers can congregate, the Nodeiflux Discord server has been promoted to being *an official one* – [here’s the invite link](https://nodeweekly.com/link/166935/0a4070b383) if you’re a Discord user. There are already 15k members, so it’s hopping.
+
+Vitullo and Wunder
+
+[Node v23.10.0 (Current) Released](https://nodeweekly.com/link/166936/0a4070b383 "nodejs.org") — Node gains a new `--experimental-config-file` option for writing a JSON-based config file that contains options that would otherwise litter your command line flags – ideal for configuring the test runner, say.
+
+Antoine du Hamel
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/6362d727.jpg)](https://nodeweekly.com/link/166933/0a4070b383)
+
+[Prepare Your App for AI Agents](https://nodeweekly.com/link/166933/0a4070b383) — [Stytch](https://nodeweekly.com/link/166933/0a4070b383) extends auth to handle permissions for AI agents—so your app can securely delegate [access to agents](https://nodeweekly.com/link/166937/0a4070b383) or protect against [agent-powered threats](https://nodeweekly.com/link/166938/0a4070b383). [See our Node quickstart guide](https://nodeweekly.com/link/166939/0a4070b383).
+
+Stytch sponsor
+
+[Node v20.19.0 (LTS) Released with `require(esm)`](https://nodeweekly.com/link/166940/0a4070b383 "nodejs.org") — Node v20 is in maintenance mode, which usually means no new features, but it lands a significant one here: support for `require(esm)` enabled by default. This means all Node v20+ releases now support loading native ES modules with `require` out of the box. Ideal if you have dependencies to update and you’re still on v20.
+
+Marco Ippolito
+
+💡 A year ago, Node contributor [Joyee Cheung wrote about the technical aspects](https://nodeweekly.com/link/166941/0a4070b383) of how `require(esm)` support came together.
+
+**IN BRIEF:**
+
+* 📉 It's been big news for the past week, but [TypeScript is rewriting its compiler in Go](https://nodeweekly.com/link/166942/0a4070b383) for ~10x build time performance.
+
+* 🔒 If you're using `xml-crypto` (or a SAML implementation that uses it) you should immediately update it as [a critical authentication bypass vulnerability has been found.](https://nodeweekly.com/link/166943/0a4070b383)
+
+[How to Get Deep Traces in Your Node Backend with OTel and Deno](https://nodeweekly.com/link/166944/0a4070b383 "deno.com") — The Deno project turns up the heat by demonstrating how to add [OpenTelemetry](https://nodeweekly.com/link/166945/0a4070b383) to a Node app before showing how much easier it is with Deno (as long as your Node app runs well under it).
+
+Andy Jiang
+
+[🔒 Protect Against AI Bots, Fraud, and Abuse in Real Time](https://nodeweekly.com/link/166946/0a4070b383 "workos.com") — WorkOS Radar protects your app with advanced device fingerprinting — stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+WorkOS sponsor
+
+📄 [Web Scraping with Cheerio in 2025](https://nodeweekly.com/link/166947/0a4070b383) – [Cheerio](https://nodeweekly.com/link/166948/0a4070b383) is a long-standing library for working with HTML and XML in Node. Usama Jamil (Apify)
+
+📄 [Retrieval-Augmented Generation (RAG) with Node, Podman AI Lab & React](https://nodeweekly.com/link/166949/0a4070b383) Michael Dawson (Red Hat)
+
+📄 [Learn Zod So You Can Trust Your Data and Your Types](https://nodeweekly.com/link/166950/0a4070b383) Diana MacDonald
+
+📄 [Building Robust Data Synchronization Code in Node.js](https://nodeweekly.com/link/166951/0a4070b383) Ashley Davis
+
+📄 [How GitHub Engineers Learn New Codebases](https://nodeweekly.com/link/166952/0a4070b383) Brittany Ellich (GitHub)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rusaywetnovtggtykdp8.jpg)](https://nodeweekly.com/link/166953/0a4070b383)
+
+🔐 [Protect.js: 'Encryption in Use' for Data in Node Apps](https://nodeweekly.com/link/166953/0a4070b383 "cipherstash.com") — Designed to work with any Node framework or ORM, Protect.js provides AES-256 based ‘encryption in use’ functionality. [GitHub repo.](https://nodeweekly.com/link/166954/0a4070b383)
+
+CipherStash
+
+[Piscina 4.9: A Fast Worker Thread Pool Implementation](https://nodeweekly.com/link/166955/0a4070b383 "github.com") — Node’s [worker threads](https://nodeweekly.com/link/166956/0a4070b383) bring true multithreading to Node apps and Piscina is a *pool* for tracking and controlling the number of such threads.
+
+Piscina
+
+[Refractor 5.0: Virtual Syntax Highlighting using Prism](https://nodeweekly.com/link/166957/0a4070b383 "github.com") — Wraps the powerful [Prism](https://nodeweekly.com/link/166958/0a4070b383) syntax highlighter to output objects instead of an HTML string so you can manipulate and render it as you wish (e.g. in a VDOM or at the terminal). [Lowlight](https://nodeweekly.com/link/166959/0a4070b383), by the same author, offers the same functionality but backed by [highlight.js.](https://nodeweekly.com/link/166960/0a4070b383)
+
+Titus Wormer
+
+[OTPAuth: One Time Password (HOTP/TOTP) Library](https://nodeweekly.com/link/166961/0a4070b383 "github.com") — When you log in to a site with 2FA and you’re asked for six digits from your authentication app, that’s a Time-based One-Time Password (or TOTP). This library for Node, Deno, Bun *and* the browser lets you work with both TOTPs and HOTPs (HMAC-based OTPs) from JavaScript.
+
+Héctor Molinero Fernández
+
+* [svg2pdf.js v2.5](https://nodeweekly.com/link/166962/0a4070b383) – JavaScript-only SVG to PDF conversion.
+
+* [MTKruto 0.60.0](https://nodeweekly.com/link/166963/0a4070b383) – Cross-runtime library for building Telegram clients.
+
+* [strong-soap v4.1.10](https://nodeweekly.com/link/166964/0a4070b383) – SOAP client with mock server capabilities.
+
+* [Git 2.49](https://nodeweekly.com/link/166965/0a4070b383) – Not Node specific, but plenty of enhancements.
+
+📰 Classifieds
+
+🇫🇷 The Node & Conquer Conference. In person, in Paris. 4 April 2025. Come learn how to best run Node.js at scale. [Sign up here](https://nodeweekly.com/link/166966/0a4070b383).
+
+***
+
+👀 Give your eyes a break! [MonoLisa](https://nodeweekly.com/link/166967/0a4070b383) is a font optimized for developers. [Try now](https://nodeweekly.com/link/166967/0a4070b383).
+
+📢  Elsewhere in JavaScript
+
+A quick roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* [Oxlint, a Rust-powered JavaScript and TSX linter, is now in beta.](https://nodeweekly.com/link/166968/0a4070b383) It has over 500 rules out of the box and manages to lint Microsoft's entire TypeScript repo in under a second.
+
+* [It's just 14 characters of JavaScript, but can you parse it?](https://nodeweekly.com/link/166969/0a4070b383) A fun puzzle from Hillel Wayne, from which you'll learn a little ancient JavaScript history..
+
+* Lee Robinson gives us [the tour of building modern APIs with Next.js](https://nodeweekly.com/link/166970/0a4070b383) using the App Router and route handlers.
+
+* [Astro 5.5](https://nodeweekly.com/link/166971/0a4070b383), the latest version of the popular content site framework, has been released.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
