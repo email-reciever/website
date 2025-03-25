@@ -1,0 +1,256 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node gets the URLPattern API
+description: Node gets the URLPattern API
+date: 星期二 02 下午 三月 25o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/571
+origin_site: https://nodeweekly.com/issues/571
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node gets the URLPattern API" url="https://nodeweekly.com/issues/571" />
+
+<Detail client:only="react">
+	#​571 — March 25, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/571)
+
+Together with 
+
+[![Clerk](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_220,h_64/e_make_transparent/co_white,e_outline:5/j3vhv1hnwqeffgkzzlvu.png)](https://nodeweekly.com/link/167201/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kg0d6ws7v15nxdpct4jg.jpg)](https://nodeweekly.com/link/167202/0a4070b383)
+
+[Node.js TSC Votes to Stop Distributing Corepack](https://nodeweekly.com/link/167202/0a4070b383 "socket.dev") — [Corepack](https://nodeweekly.com/link/167203/0a4070b383) was introduced as an (experimental) tool _bundled with Node_ to help with managing versions of your package managers. Corepack will live on as a separately installable tool, but will be phased out from future Node releases following [a recent TSC vote](https://nodeweekly.com/link/167204/0a4070b383).
+
+Sarah Gooding
+
+[New URLPattern API Brings Improved Pattern Matching to Node](https://nodeweekly.com/link/167205/0a4070b383 "blog.cloudflare.com") — The Cloudflare Workers team has implemented the [URLPattern API](https://nodeweekly.com/link/167206/0a4070b383) in the [Ada](https://nodeweekly.com/link/167207/0a4070b383) URL parser, used by both Node.js and Cloudflare Workers. The API lets you take patterns like `/blog/:year/:month/:slug` and test whether URLs match against them. If you’re using Node 23.8+, you can start using it today.
+
+Nizipli, Snell, Lemire (Cloudflare)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v1742813939/o2aklwxyjkx8oibhxk7v.jpg)](https://nodeweekly.com/link/167201/0a4070b383)
+
+[Securing Node.js Express APIs with Clerk and React](https://nodeweekly.com/link/167201/0a4070b383 "go.clerk.com") — Learn to secure Node.js/Express APIs with Clerk & React. Implement JWT authentication, protect routes, manage users, and handle sessions seamlessly. Ideal for scalable full-stack apps.
+
+Clerk sponsor
+
+**IN BRIEF:**
+
+*   [Bun 1.2.6 has been released](https://nodeweekly.com/link/167208/0a4070b383) with notable performance improvements for Express and Fastify, improved `node:crypto` compatibility, and even initial support for `node:test`. Now's a great time to see how your Node apps work (or not) on the fast JavaScriptCore-based runtime.
+    
+*   🤖 [MCP Node.js Debugger](https://nodeweekly.com/link/167209/0a4070b383) is an attempt to make Node's debugger more accessible to third-party AI coding tools (such as Cursor or Claude Code).
+    
+
+📄 [Node Now Supports TypeScript Natively: Everything You Need to Know](https://nodeweekly.com/link/167210/0a4070b383) Lizz Parody
+
+📄 [Building Node.js on Windows with `clang-cl`](https://nodeweekly.com/link/167211/0a4070b383) Joyee Cheung
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/j4j4g4cnkqtgku8ou3q3.jpg)](https://nodeweekly.com/link/167212/0a4070b383)
+
+[Errsole.js: Collect, Store, and Visualize Node App Logs](https://nodeweekly.com/link/167212/0a4070b383 "github.com") — Rather than leaning on a third-party service for log monitoring, the idea of Errsole is you just drop its package into your app and you get logging and a basic UI for looking at those logs all ‘out of the box’. It supports numerous storage mechanisms, from SQLite in dev to MySQL, Postgres and MongoDB in production.
+
+Green Code Software Private Limited
+
+[SuperTest 7.1: HTTP Assertions Made Easy](https://nodeweekly.com/link/167213/0a4070b383 "github.com") — Got an HTTP API to test? SuperTest provides a fluent API for chaining together requests and expectations. See [some examples here.](https://nodeweekly.com/link/167214/0a4070b383)
+
+TJ Holowaychuk et al.
+
+[The Ultimate PaaS Pricing Calculator](https://nodeweekly.com/link/167215/0a4070b383 "judoscale.com") — We wanted a tool to compare prices between Heroku, Render, Fly.io, and more. So we built one.
+
+Judoscale sponsor
+
+[node-rate-limiter-flexible 6.2: Limit Number of Actions by Key and Protect Apps from Brute Force Attacks](https://nodeweekly.com/link/167216/0a4070b383 "github.com") — Can use Redis, in-process memory, memcached, MongoDB, Postgres or, newly, SQLite, to count actions in either a single process or distributed environment.
+
+Roman Animir
+
+[gosync: Go-Style Channels and WaitGroup for Node](https://nodeweekly.com/link/167217/0a4070b383 "github.com") — Possibly of interest to you if you’re familiar with Go and channels.
+
+stanback3
+
+*   🤖 [OpenAI v4.89.0](https://nodeweekly.com/link/167218/0a4070b383) – OpenAI API client. Now with support for OpenAI's new TTS and audio models.
+    
+*   [ESLint 9.23.0](https://nodeweekly.com/link/167219/0a4070b383) – Adds full TypeScript syntax support for three core rules.
+    
+*   [NATS.js 3.0](https://nodeweekly.com/link/167220/0a4070b383) – JavaScript client for the NATS messaging system. v3 is a major refactor with Node, Deno, Bun, and WebSockets all under one roof.
+    
+*   [MongoDB Node.js Driver 6.15](https://nodeweekly.com/link/167221/0a4070b383) – The latest official MongoDB driver. Now with support for custom AWS credential providers.
+    
+*   [Mongoose 8.13](https://nodeweekly.com/link/167222/0a4070b383) – Popular MongoDB object modeling library.
+    
+*   [Verdaccio 6.1](https://nodeweekly.com/link/167223/0a4070b383) – Lightweight local private npm registry.
+    
+*   [Mineflayer 4.27](https://nodeweekly.com/link/167224/0a4070b383) – Create Minecraft bots in JavaScript.
+    
+*   [NodeBB 4.2](https://nodeweekly.com/link/167225/0a4070b383) – Node.js-powered forum system.
+    
+
+📰 Classifieds
+
+🔒 [Protect your SaaS app with advanced device fingerprinting from WorkOS Radar](https://nodeweekly.com/link/167226/0a4070b383). Stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+* * *
+
+🟢 Want to learn about deploying Node.js on AWS EKS while prioritizing scalability & performance? [Sign up to Platformatic’s free webinar](https://nodeweekly.com/link/167227/0a4070b383).
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ybj9g8hkl3v0xoxmec7q.jpg)](https://nodeweekly.com/link/167228/0a4070b383)
+
+*   [This automatically updated runtime compatibility table](https://nodeweekly.com/link/167228/0a4070b383) _(above)_ lets you see how/if different server-side JavaScript runtimes support different APIs.
+    
+*   [The Next.js team has patched a critical middleware vulnerability](https://nodeweekly.com/link/167229/0a4070b383) that allowed attackers to bypass middleware-based security checks. More on this in tomorrow's [_React Status._](https://nodeweekly.com/link/167230/0a4070b383)
+    
+*   ⚡ Can JavaScript help you save the environment, or at least some money on your electricity bill? Rob Tweed thinks so and [has coded up a way to automatically optimize his electricity tariff use.](https://nodeweekly.com/link/167231/0a4070b383)
+    
+*   🛠️ [Make Bookmarklets](https://nodeweekly.com/link/167232/0a4070b383) is a handy tool for turning JavaScript into bookmarklet code that you can use directly in a browser bookmark.
+    
+*   [Building AI for a 'snake' game with Tensorflow.js](https://nodeweekly.com/link/167233/0a4070b383) looks at a way to use simple AI concepts from JavaScript.
+    
+*   A look at [building a Lisp interpreter in 66 lines of JavaScript.](https://nodeweekly.com/link/167234/0a4070b383)
+    
+*   [How WebAssembly Components can replace JavaScript SDKs.](https://nodeweekly.com/link/167235/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​571 — March 25, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/571)
+
+Together with 
+
+[![Clerk](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_220,h_64/e_make_transparent/co_white,e_outline:5/j3vhv1hnwqeffgkzzlvu.png)](https://nodeweekly.com/link/167201/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kg0d6ws7v15nxdpct4jg.jpg)](https://nodeweekly.com/link/167202/0a4070b383)
+
+[Node.js TSC Votes to Stop Distributing Corepack](https://nodeweekly.com/link/167202/0a4070b383 "socket.dev") — [Corepack](https://nodeweekly.com/link/167203/0a4070b383) was introduced as an (experimental) tool *bundled with Node* to help with managing versions of your package managers. Corepack will live on as a separately installable tool, but will be phased out from future Node releases following [a recent TSC vote](https://nodeweekly.com/link/167204/0a4070b383).
+
+Sarah Gooding
+
+[New URLPattern API Brings Improved Pattern Matching to Node](https://nodeweekly.com/link/167205/0a4070b383 "blog.cloudflare.com") — The Cloudflare Workers team has implemented the [URLPattern API](https://nodeweekly.com/link/167206/0a4070b383) in the [Ada](https://nodeweekly.com/link/167207/0a4070b383) URL parser, used by both Node.js and Cloudflare Workers. The API lets you take patterns like `/blog/:year/:month/:slug` and test whether URLs match against them. If you’re using Node 23.8+, you can start using it today.
+
+Nizipli, Snell, Lemire (Cloudflare)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v1742813939/o2aklwxyjkx8oibhxk7v.jpg)](https://nodeweekly.com/link/167201/0a4070b383)
+
+[Securing Node.js Express APIs with Clerk and React](https://nodeweekly.com/link/167201/0a4070b383 "go.clerk.com") — Learn to secure Node.js/Express APIs with Clerk & React. Implement JWT authentication, protect routes, manage users, and handle sessions seamlessly. Ideal for scalable full-stack apps.
+
+Clerk sponsor
+
+**IN BRIEF:**
+
+* [Bun 1.2.6 has been released](https://nodeweekly.com/link/167208/0a4070b383) with notable performance improvements for Express and Fastify, improved `node:crypto` compatibility, and even initial support for `node:test`. Now's a great time to see how your Node apps work (or not) on the fast JavaScriptCore-based runtime.
+
+* 🤖 [MCP Node.js Debugger](https://nodeweekly.com/link/167209/0a4070b383) is an attempt to make Node's debugger more accessible to third-party AI coding tools (such as Cursor or Claude Code).
+
+📄 [Node Now Supports TypeScript Natively: Everything You Need to Know](https://nodeweekly.com/link/167210/0a4070b383) Lizz Parody
+
+📄 [Building Node.js on Windows with `clang-cl`](https://nodeweekly.com/link/167211/0a4070b383) Joyee Cheung
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/j4j4g4cnkqtgku8ou3q3.jpg)](https://nodeweekly.com/link/167212/0a4070b383)
+
+[Errsole.js: Collect, Store, and Visualize Node App Logs](https://nodeweekly.com/link/167212/0a4070b383 "github.com") — Rather than leaning on a third-party service for log monitoring, the idea of Errsole is you just drop its package into your app and you get logging and a basic UI for looking at those logs all ‘out of the box’. It supports numerous storage mechanisms, from SQLite in dev to MySQL, Postgres and MongoDB in production.
+
+Green Code Software Private Limited
+
+[SuperTest 7.1: HTTP Assertions Made Easy](https://nodeweekly.com/link/167213/0a4070b383 "github.com") — Got an HTTP API to test? SuperTest provides a fluent API for chaining together requests and expectations. See [some examples here.](https://nodeweekly.com/link/167214/0a4070b383)
+
+TJ Holowaychuk et al.
+
+[The Ultimate PaaS Pricing Calculator](https://nodeweekly.com/link/167215/0a4070b383 "judoscale.com") — We wanted a tool to compare prices between Heroku, Render, Fly.io, and more. So we built one.
+
+Judoscale sponsor
+
+[node-rate-limiter-flexible 6.2: Limit Number of Actions by Key and Protect Apps from Brute Force Attacks](https://nodeweekly.com/link/167216/0a4070b383 "github.com") — Can use Redis, in-process memory, memcached, MongoDB, Postgres or, newly, SQLite, to count actions in either a single process or distributed environment.
+
+Roman Animir
+
+[gosync: Go-Style Channels and WaitGroup for Node](https://nodeweekly.com/link/167217/0a4070b383 "github.com") — Possibly of interest to you if you’re familiar with Go and channels.
+
+stanback3
+
+* 🤖 [OpenAI v4.89.0](https://nodeweekly.com/link/167218/0a4070b383) – OpenAI API client. Now with support for OpenAI's new TTS and audio models.
+
+* [ESLint 9.23.0](https://nodeweekly.com/link/167219/0a4070b383) – Adds full TypeScript syntax support for three core rules.
+
+* [NATS.js 3.0](https://nodeweekly.com/link/167220/0a4070b383) – JavaScript client for the NATS messaging system. v3 is a major refactor with Node, Deno, Bun, and WebSockets all under one roof.
+
+* [MongoDB Node.js Driver 6.15](https://nodeweekly.com/link/167221/0a4070b383) – The latest official MongoDB driver. Now with support for custom AWS credential providers.
+
+* [Mongoose 8.13](https://nodeweekly.com/link/167222/0a4070b383) – Popular MongoDB object modeling library.
+
+* [Verdaccio 6.1](https://nodeweekly.com/link/167223/0a4070b383) – Lightweight local private npm registry.
+
+* [Mineflayer 4.27](https://nodeweekly.com/link/167224/0a4070b383) – Create Minecraft bots in JavaScript.
+
+* [NodeBB 4.2](https://nodeweekly.com/link/167225/0a4070b383) – Node.js-powered forum system.
+
+📰 Classifieds
+
+🔒 [Protect your SaaS app with advanced device fingerprinting from WorkOS Radar](https://nodeweekly.com/link/167226/0a4070b383). Stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+***
+
+🟢 Want to learn about deploying Node.js on AWS EKS while prioritizing scalability & performance? [Sign up to Platformatic’s free webinar](https://nodeweekly.com/link/167227/0a4070b383).
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ybj9g8hkl3v0xoxmec7q.jpg)](https://nodeweekly.com/link/167228/0a4070b383)
+
+* [This automatically updated runtime compatibility table](https://nodeweekly.com/link/167228/0a4070b383) *(above)* lets you see how/if different server-side JavaScript runtimes support different APIs.
+
+* [The Next.js team has patched a critical middleware vulnerability](https://nodeweekly.com/link/167229/0a4070b383) that allowed attackers to bypass middleware-based security checks. More on this in tomorrow's [*React Status.*](https://nodeweekly.com/link/167230/0a4070b383)
+
+* ⚡ Can JavaScript help you save the environment, or at least some money on your electricity bill? Rob Tweed thinks so and [has coded up a way to automatically optimize his electricity tariff use.](https://nodeweekly.com/link/167231/0a4070b383)
+
+* 🛠️ [Make Bookmarklets](https://nodeweekly.com/link/167232/0a4070b383) is a handy tool for turning JavaScript into bookmarklet code that you can use directly in a browser bookmark.
+
+* [Building AI for a 'snake' game with Tensorflow.js](https://nodeweekly.com/link/167233/0a4070b383) looks at a way to use simple AI concepts from JavaScript.
+
+* A look at [building a Lisp interpreter in 66 lines of JavaScript.](https://nodeweekly.com/link/167234/0a4070b383)
+
+* [How WebAssembly Components can replace JavaScript SDKs.](https://nodeweekly.com/link/167235/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
