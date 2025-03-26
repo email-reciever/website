@@ -1,0 +1,153 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: A common sense take on LLMs
+description: A common sense take on LLMs
+date: 星期三 12 中午 三月 26o 2025
+author: alexkondov
+origin_url: https://mailchi.mp/67b8e9b9b437/a-common-sense-take-on-llms?e=6955ce1080
+origin_site: https://mailchi.mp/67b8e9b9b437/a-common-sense-take-on-llms?e=6955ce1080
+translated: true
+avatar: /media-source/alexkondov-ico.png
+email_recorder: alexkondov38@147790190.mailchimpapp.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="A common sense take on LLMs" url="https://mailchi.mp/67b8e9b9b437/a-common-sense-take-on-llms?e=6955ce1080" />
+
+<Detail client:only="react">
+	![](https://mcusercontent.com/fca75767fa83fa3473478b4ca/images/38ca00ab-a0f7-cb3d-ecc8-8766da856ac2.png)
+
+# **A Realistic Take on LLMs**
+
+Hey all, I know you haven’t subscribed to this newsletter so you can read about AI but I wanted to give a level-headed explanations about how our industry is changing that’s not driven by hype, fear or marketing budgets.
+
+I’ve been building products and AI agents in the last month or so and here’s what I’ll be writing about today:
+
+Here's what I've prepared:
+
+1.  Why it’s important to focus on patterns
+2.  Why software design is so important right now
+3.  Reflections on working on a vibe coded codebase
+
+Let’s go.
+
+##   
+Focus on patterns
+
+I wouldn’t focus on MCP, RAGs or AI agents right now. I just don’t think they are that important as patterns and I expect them to evolve in the next few years. They’re all specific implementations of abstract solutions that we’ve been working on as an industry for a long time.
+
+RAGs are essentially a data pipeline that has some level of non-determinism because of the LLM calls. AI agents are distributed workflows that again have the non-deterministic element to them. We’ve been building similar things in the past but instead of relying on strict conditional logic, we now use LLMs to draw intent our of natural language. The novel bit is a small part of the whole implementation.
+
+If you’ve ever designed a data ingestion pipeline before, you won’t have any trouble designing one now. If you haven’t, you’d get more valuable information researching best practices around data pipelines instead of focusing on RAGs specifically. 
+
+If you have to build an AI agent or work on a RAG implementation, don’t focus on the calls you make to the models. Think about how you can build a composable pipeline that you can modify and extend. Think about how you can get updates from the pipeline at every stage and get a level of transparency into what’s happening. 
+
+**Always think about the high-level problem**; don’t get AI tunnel vision.  
+ 
+
+## The importance of software design
+
+The same rules that have helped us build maintainable software help LLMs make sense of our codebases. You will notice better suggestions in a codebase where related logic is colocated, static types are used, abstractions wrap complex logic, and descriptive comments are present.
+
+*   Co-location makes your codebase modular. It means you can understand isolated parts of the codebase without relying on external context. This means that the LLM will be able to give you better suggestions because it will be examining a smaller part of the codebase at a time.
+*   Static types are a way to document your data structures and functions inside the codebase. In the same way they help you avoid runtime errors, LLMs will hallucinate less if they can refer to a type or an interface when they’re making suggestions.
+*   By creating abstractions, we can reason about complex code by calling a single function, for example. By giving LLMs primitives and building blocks, we give them a more powerful way to express the logic we need. If we go back to the pipeline example again, we can define a primitive for a stage of the pipeline and have the LLM build the different steps using our building blocks.
+
+There’s no substitute for good software design. Code is not yet abstracted away.
+
+LLMs can become so good in the future that code becomes an implementation detail that we almost never look at, but we’re not there yet.  
+ 
+
+## Reflections on working on a vibe-coded project
+
+I helped a friend solve some obscure edge cases in what you would call a vibe-coded codebase. It was a project created mostly with AI with the aim of solving a specific business problem. The directions that were given to the AI were focused on product features instead of code-level details.
+
+The result was very good. It was a great-functioning proof of concept.
+
+But it wasn’t built with extensibility in mind. So when the team wanted to take it beyond the prototype level, they started experiencing problems. The LLM was no longer capable of adding new functionality without breaking something else and sometimes its changes weren’t working at all. The AI was only given instructions about what to build, not how to structure the code, and how to make sure that certain parts can be changed without affecting others.
+
+I made an experiment and decided to attempt to fix the problems entirely with Cursor without writing the code myself.
+
+🔴 Describing the bug the users are facing **didn’t work**. It rarely gave good suggestions at all.  
+🟡 Describing the bug in a technical way **gave better results**. However it often started refactoring whole files while there was a simpler solution available. It needed more guidance.  
+🟢 Telling it what technical change you want to make **gave the best result**. I basically designed the solution in my head, described it to the LLM and it implemented it, taking care of edge cases.
+
+Typing the code becomes a solved problem with every passing day, designing solutions however, is still hard. This is the difference between creating a data pipeline in a single file and having an extensible solution that you can use an LLM to enrich and extend.  
+  
+_Well, that's about it. Let's go create something!_
+
+  
+  
+  
+  
+  
+  
+
+
+</Detail>
+
+![](https://mcusercontent.com/fca75767fa83fa3473478b4ca/images/38ca00ab-a0f7-cb3d-ecc8-8766da856ac2.png)
+
+# **A Realistic Take on LLMs**
+
+Hey all, I know you haven’t subscribed to this newsletter so you can read about AI but I wanted to give a level-headed explanations about how our industry is changing that’s not driven by hype, fear or marketing budgets.
+
+I’ve been building products and AI agents in the last month or so and here’s what I’ll be writing about today:
+
+Here's what I've prepared:
+
+1. Why it’s important to focus on patterns
+2. Why software design is so important right now
+3. Reflections on working on a vibe coded codebase
+
+Let’s go.
+
+##
+
+Focus on patterns
+
+I wouldn’t focus on MCP, RAGs or AI agents right now. I just don’t think they are that important as patterns and I expect them to evolve in the next few years. They’re all specific implementations of abstract solutions that we’ve been working on as an industry for a long time.
+
+RAGs are essentially a data pipeline that has some level of non-determinism because of the LLM calls. AI agents are distributed workflows that again have the non-deterministic element to them. We’ve been building similar things in the past but instead of relying on strict conditional logic, we now use LLMs to draw intent our of natural language. The novel bit is a small part of the whole implementation.
+
+If you’ve ever designed a data ingestion pipeline before, you won’t have any trouble designing one now. If you haven’t, you’d get more valuable information researching best practices around data pipelines instead of focusing on RAGs specifically. 
+
+If you have to build an AI agent or work on a RAG implementation, don’t focus on the calls you make to the models. Think about how you can build a composable pipeline that you can modify and extend. Think about how you can get updates from the pipeline at every stage and get a level of transparency into what’s happening. 
+
+**Always think about the high-level problem**; don’t get AI tunnel vision.\
+ 
+
+## The importance of software design
+
+The same rules that have helped us build maintainable software help LLMs make sense of our codebases. You will notice better suggestions in a codebase where related logic is colocated, static types are used, abstractions wrap complex logic, and descriptive comments are present.
+
+* Co-location makes your codebase modular. It means you can understand isolated parts of the codebase without relying on external context. This means that the LLM will be able to give you better suggestions because it will be examining a smaller part of the codebase at a time.
+* Static types are a way to document your data structures and functions inside the codebase. In the same way they help you avoid runtime errors, LLMs will hallucinate less if they can refer to a type or an interface when they’re making suggestions.
+* By creating abstractions, we can reason about complex code by calling a single function, for example. By giving LLMs primitives and building blocks, we give them a more powerful way to express the logic we need. If we go back to the pipeline example again, we can define a primitive for a stage of the pipeline and have the LLM build the different steps using our building blocks.
+
+There’s no substitute for good software design. Code is not yet abstracted away.
+
+LLMs can become so good in the future that code becomes an implementation detail that we almost never look at, but we’re not there yet.\
+ 
+
+## Reflections on working on a vibe-coded project
+
+I helped a friend solve some obscure edge cases in what you would call a vibe-coded codebase. It was a project created mostly with AI with the aim of solving a specific business problem. The directions that were given to the AI were focused on product features instead of code-level details.
+
+The result was very good. It was a great-functioning proof of concept.
+
+But it wasn’t built with extensibility in mind. So when the team wanted to take it beyond the prototype level, they started experiencing problems. The LLM was no longer capable of adding new functionality without breaking something else and sometimes its changes weren’t working at all. The AI was only given instructions about what to build, not how to structure the code, and how to make sure that certain parts can be changed without affecting others.
+
+I made an experiment and decided to attempt to fix the problems entirely with Cursor without writing the code myself.
+
+🔴 Describing the bug the users are facing **didn’t work**. It rarely gave good suggestions at all.\
+🟡 Describing the bug in a technical way **gave better results**. However it often started refactoring whole files while there was a simpler solution available. It needed more guidance.\
+🟢 Telling it what technical change you want to make **gave the best result**. I basically designed the solution in my head, described it to the LLM and it implemented it, taking care of edge cases.
+
+Typing the code becomes a solved problem with every passing day, designing solutions however, is still hard. This is the difference between creating a data pipeline in a single file and having an extensible solution that you can use an LLM to enrich and extend.
+
+*Well, that's about it. Let's go create something!*
+
+
