@@ -1,0 +1,317 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: The tale of a bizarre bug encountered in Google Docs
+description: The tale of a bizarre bug encountered in Google Docs
+date: 星期五 06 晚上 三月 28o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/729
+origin_site: https://javascriptweekly.com/issues/729
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="The tale of a bizarre bug encountered in Google Docs" url="https://javascriptweekly.com/issues/729" />
+
+<Detail client:only="react">
+	#​729 — March 28, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/729)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/167442/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/zzc1abyhqafbilwcbga2.jpg)](https://javascriptweekly.com/link/167443/d076523b1d)
+
+⭐ [The State of Vue.js Report 2025](https://javascriptweekly.com/link/167443/d076523b1d "www.monterail.com") — Created with the support of the Vue and Nuxt teams, this is no mere collection of statistics and charts (though there’s plenty of both) but a thorough update on the state of both projects and an interview with Evan You on Vue (and Vite's) latest developments. Essential reading for any Vue, Vite, or Nuxt user and a one-stop shop for understanding Vue and Nuxt as they stand right now.
+
+Monterail
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/4f0c55c9.png)](https://javascriptweekly.com/link/167442/d076523b1d)
+
+[Master Chrome's DevTools](https://javascriptweekly.com/link/167442/d076523b1d "frontendmasters.com") — Join Jon Kuperman for this video course diving into Chrome's DevTools. You'll go beyond console.log(), learning how to inspect, debug, and audit your web apps — tracking performance, identifying bottlenecks, making performance gains, and more. [Level up your DevTools skills](https://javascriptweekly.com/link/167442/d076523b1d).
+
+Frontend Masters sponsor
+
+[War Story: The Hardest Bug I Ever Debugged](https://javascriptweekly.com/link/167444/d076523b1d "www.clientserver.dev") — A former engineer on the Google Docs team tells the tale of a bizarre error that afflicted Google Docs out of the blue about ten years ago. It’s a gnarly one and was only solved due to his swift access to V8’s engineers. If you’ve ever spent hours digging into a bug, you’ll feel glad you weren’t dealing with this one!
+
+Jacob Voytko
+
+[Next.js's Recent Middleware Security Woes](https://javascriptweekly.com/link/167445/d076523b1d "socket.dev") — Last weekend, a new version of Next.js landed to resolve a security vulnerability that could allow middleware to be bypassed. Self-hosted Next.js deployments need to be upgraded _immediately_. The news led to many responses including [deep dives into the vulnerability](https://javascriptweekly.com/link/167446/d076523b1d) and [criticism of how it was all handled.](https://javascriptweekly.com/link/167447/d076523b1d)
+
+Lee Robinson (Vercel)
+
+**IN BRIEF:**
+
+*   Cloudflare has done some work to [bring the `URLPattern` URL matching API to Node.js and Cloudflare Workers.](https://javascriptweekly.com/link/167448/d076523b1d)
+    
+*   🤖 If you haven't checked out [Google's _Gemini_ AI tool](https://javascriptweekly.com/link/167449/d076523b1d) recently (or ever), it now supports generating HTML, JavaScript, and React code in a 'canvas' mode for building components on the fly.
+    
+*   🤖 [MCP Node.js Debugger](https://javascriptweekly.com/link/167450/d076523b1d) is an attempt to make Node's debugger more accessible to third-party AI coding tools (such as Cursor or Claude Code).
+    
+*   📊 [Is Vite faster than Turbopack?](https://javascriptweekly.com/link/167451/d076523b1d) _"Well, it depends."_
+    
+
+**RELEASES:**
+
+*   [Bun v1.2.7](https://javascriptweekly.com/link/167452/d076523b1d) – Bun's HTTP server now has built-in support for reading and writing cookies using a Map-like API.
+    
+*   [Node v18.20.8 (LTS)](https://javascriptweekly.com/link/167453/d076523b1d) – Note that Node 18 reaches 'end-of-life' next month.
+    
+*   [Sinon 20.0](https://javascriptweekly.com/link/167454/d076523b1d) – Test spies, stubs and mocks library.
+    
+*   [pnpm 10.7](https://javascriptweekly.com/link/167455/d076523b1d), [Babel 7.27.0](https://javascriptweekly.com/link/167456/d076523b1d), [ESLint 9.23.0](https://javascriptweekly.com/link/167457/d076523b1d), [Neutralinojs 6.0](https://javascriptweekly.com/link/167458/d076523b1d), [Material UI v7](https://javascriptweekly.com/link/167459/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ela5dydqhlmggsjleaju.jpg)](https://javascriptweekly.com/link/167460/d076523b1d)
+
+[Writing a Tiny Undo/Redo Stack in JavaScript](https://javascriptweekly.com/link/167460/d076523b1d "blog.julik.nl") — You might prefer to lean upon an established approach (using [Immer patches](https://javascriptweekly.com/link/167461/d076523b1d) perhaps), but if you want to implement something small yourself, this might help.
+
+Julik Tarkhanov
+
+[Land Ahoy: Leaving the Sea of Nodes](https://javascriptweekly.com/link/167462/d076523b1d "v8.dev") — A deeply technical post from a core member of the V8 JavaScript engine team that explains the limitations of Turbofan, one of V8’s optimizing compilers. If you don’t care for the internals of how your JavaScript is compiled and run, just be assured the V8 team is working to make it run even faster.
+
+Darius Mercadier (V8)
+
+[Which AI Model Is Best for Fixing Unit Test Errors? Claude, O3-Mini, GPT-4o?](https://javascriptweekly.com/link/167463/d076523b1d "wallabyjs.com") — Better context wins every time. Wallaby provides AI with test coverage and runtime values to debug smarter. MCP support coming soon.
+
+Wallaby Team sponsor
+
+[Mission jQuery Zero: How FreeAgent Removed jQuery From Its App](https://javascriptweekly.com/link/167464/d076523b1d "engineering.freeagent.com") — Despite popular developer sentiment, jQuery’s prevalence on the Web continues to be significant but _“sometimes legends need to retire”._
+
+Colin Gemmell
+
+▶  [React Query API Design: Lessons Learned](https://javascriptweekly.com/link/167465/d076523b1d "www.youtube.com") — You might know Dominik for all his work on React Query, TanStack Router, and his epic [React Query - The Bad Parts](https://javascriptweekly.com/link/167466/d076523b1d) series. Here, he walks us through the design choices made while building React Query and shares lessons and mistakes valuable to anyone building their own libraries. _(30 minutes.)_
+
+Dominik Dorfmeister (TkDodo)
+
+[Deploying a Next.js App to Production on Any Server](https://javascriptweekly.com/link/167467/d076523b1d "www.saybackend.com") — A popular article from last year that’s been updated for 2025 and Next.js 15.
+
+Kamrannetic
+
+[🔒 Protect Against AI Bots, Fraud, and Abuse in Real Time](https://javascriptweekly.com/link/167468/d076523b1d "workos.com") — WorkOS Radar protects your app with advanced device fingerprinting — stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+WorkOS sponsor
+
+📄 [Expressing Japanese Grammar in the TypeScript Type System](https://javascriptweekly.com/link/167469/d076523b1d) – A curious project out of left field. Yifeng Wang
+
+📄 [Directives: A Core Feature of the Angular Toolkit](https://javascriptweekly.com/link/167470/d076523b1d) Vyacheslav Borodin
+
+📄 [You Should Know This Before Choosing Next.js](https://javascriptweekly.com/link/167471/d076523b1d) Eduardo Bouças
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/iwy5nu8kkpvcwitzirnv.jpg)](https://javascriptweekly.com/link/167472/d076523b1d)
+
+[Babylon.js 8.0: Microsoft's JavaScript 3D Engine](https://javascriptweekly.com/link/167472/d076523b1d "blogs.windows.com") — 8.0 adds support for improved ‘image based lighting’ and ‘area lights’ for environmental lighting and shadows, extra control of the render pipeline, and a new lightweight viewer. And, as always, they have [▶️ a short video](https://javascriptweekly.com/link/167473/d076523b1d) showing it all off.
+
+Microsoft
+
+🤖 [An MCP Server for Playwright and Browser Automation](https://javascriptweekly.com/link/167474/d076523b1d "github.com") — MCP (Model Context Protocol) servers enable certain LLM-based agents (such as Claude, Claude Code, and Cursor) to perform actions on a system outside of their usual sandbox. This new project from Microsoft enables such LLMs to interact with browsers via Playwright.
+
+Microsoft
+
+[Lexical 0.29: An Easy-to-Extend Text Editor Framework from Meta](https://javascriptweekly.com/link/167475/d076523b1d "lexical.dev") — A text editor framework built by Meta with extensibility, accessibility, and cross platform support in mind (there’s even a Swift variant for iOS). There’s [a live playground](https://javascriptweekly.com/link/167476/d076523b1d) if you want to give it a try.
+
+Meta / Facebook
+
+🔎 [Fuzzball: Fuzzy String Matching Library](https://javascriptweekly.com/link/167477/d076523b1d "github.com") — To tackle those cases where what’s typed isn’t _quite_ what’s wanted. There’s a neat tree-themed [Web-based demo.](https://javascriptweekly.com/link/167478/d076523b1d)
+
+Nolan
+
+*   [Axios 0.30](https://javascriptweekly.com/link/167479/d076523b1d) – Long-standing, promise-based isomorphic HTTP client.
+    
+*   [Solito 4.4](https://javascriptweekly.com/link/167480/d076523b1d) – React Native + Next.js. Now supporting Next.js 15.
+    
+*   [InversifyJS 7.2](https://javascriptweekly.com/link/167481/d076523b1d) – Inversion of control container for JavaScript.
+    
+*   [jscodeshift 17.3](https://javascriptweekly.com/link/167482/d076523b1d) – JavaScript codemod toolkit from Facebook.
+    
+*   [Verdaccio 6.1](https://javascriptweekly.com/link/167483/d076523b1d) – Lightweight Node.js private proxy registry.
+    
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/167484/d076523b1d). Relied on by 1000s of orgs, including Dropbox, Lattice, Bilt Rewards and many more.
+
+* * *
+
+📊 [Jspreadsheet](https://javascriptweekly.com/link/167485/d076523b1d) – Lightweight JS data grid with Excel-like controls. Create rich web spreadsheets fast. [Try it now](https://javascriptweekly.com/link/167485/d076523b1d).
+
+📢  Elsewhere
+
+A quick roundup of other interesting updates and useful resources from across the broader developer landscape:
+
+*   `&lt;select>` elements have always been notoriously tricky to style with CSS but [there's a new standardized approach beginning to become available.](https://javascriptweekly.com/link/167486/d076523b1d)
+    
+*   [ls-lint](https://javascriptweekly.com/link/167487/d076523b1d) is a mature tool for linting file and directory names.
+    
+*   Someone's managed to get [Go code to compile and run on the PlayStation 2.](https://javascriptweekly.com/link/167488/d076523b1d)
+    
+*   👑 People's experiments with TypeScript's type system continue with the latest creation being [a chess engine built from TypeScript types.](https://javascriptweekly.com/link/167489/d076523b1d)
+    
+*   LLM wrangler Simon Willison was getting annoyed at being unable to easily visualize incomplete JSON documents so [he built an 'incomplete JSON' pretty printer.](https://javascriptweekly.com/link/167490/d076523b1d)
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/167491/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​729 — March 28, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/729)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/167442/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/zzc1abyhqafbilwcbga2.jpg)](https://javascriptweekly.com/link/167443/d076523b1d)
+
+⭐ [The State of Vue.js Report 2025](https://javascriptweekly.com/link/167443/d076523b1d "www.monterail.com") — Created with the support of the Vue and Nuxt teams, this is no mere collection of statistics and charts (though there’s plenty of both) but a thorough update on the state of both projects and an interview with Evan You on Vue (and Vite's) latest developments. Essential reading for any Vue, Vite, or Nuxt user and a one-stop shop for understanding Vue and Nuxt as they stand right now.
+
+Monterail
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/4f0c55c9.png)](https://javascriptweekly.com/link/167442/d076523b1d)
+
+[Master Chrome's DevTools](https://javascriptweekly.com/link/167442/d076523b1d "frontendmasters.com") — Join Jon Kuperman for this video course diving into Chrome's DevTools. You'll go beyond console.log(), learning how to inspect, debug, and audit your web apps — tracking performance, identifying bottlenecks, making performance gains, and more. [Level up your DevTools skills](https://javascriptweekly.com/link/167442/d076523b1d).
+
+Frontend Masters sponsor
+
+[War Story: The Hardest Bug I Ever Debugged](https://javascriptweekly.com/link/167444/d076523b1d "www.clientserver.dev") — A former engineer on the Google Docs team tells the tale of a bizarre error that afflicted Google Docs out of the blue about ten years ago. It’s a gnarly one and was only solved due to his swift access to V8’s engineers. If you’ve ever spent hours digging into a bug, you’ll feel glad you weren’t dealing with this one!
+
+Jacob Voytko
+
+[Next.js's Recent Middleware Security Woes](https://javascriptweekly.com/link/167445/d076523b1d "socket.dev") — Last weekend, a new version of Next.js landed to resolve a security vulnerability that could allow middleware to be bypassed. Self-hosted Next.js deployments need to be upgraded *immediately*. The news led to many responses including [deep dives into the vulnerability](https://javascriptweekly.com/link/167446/d076523b1d) and [criticism of how it was all handled.](https://javascriptweekly.com/link/167447/d076523b1d)
+
+Lee Robinson (Vercel)
+
+**IN BRIEF:**
+
+* Cloudflare has done some work to [bring the `URLPattern` URL matching API to Node.js and Cloudflare Workers.](https://javascriptweekly.com/link/167448/d076523b1d)
+
+* 🤖 If you haven't checked out [Google's *Gemini* AI tool](https://javascriptweekly.com/link/167449/d076523b1d) recently (or ever), it now supports generating HTML, JavaScript, and React code in a 'canvas' mode for building components on the fly.
+
+* 🤖 [MCP Node.js Debugger](https://javascriptweekly.com/link/167450/d076523b1d) is an attempt to make Node's debugger more accessible to third-party AI coding tools (such as Cursor or Claude Code).
+
+* 📊 [Is Vite faster than Turbopack?](https://javascriptweekly.com/link/167451/d076523b1d) *"Well, it depends."*
+
+**RELEASES:**
+
+* [Bun v1.2.7](https://javascriptweekly.com/link/167452/d076523b1d) – Bun's HTTP server now has built-in support for reading and writing cookies using a Map-like API.
+
+* [Node v18.20.8 (LTS)](https://javascriptweekly.com/link/167453/d076523b1d) – Note that Node 18 reaches 'end-of-life' next month.
+
+* [Sinon 20.0](https://javascriptweekly.com/link/167454/d076523b1d) – Test spies, stubs and mocks library.
+
+* [pnpm 10.7](https://javascriptweekly.com/link/167455/d076523b1d), [Babel 7.27.0](https://javascriptweekly.com/link/167456/d076523b1d), [ESLint 9.23.0](https://javascriptweekly.com/link/167457/d076523b1d), [Neutralinojs 6.0](https://javascriptweekly.com/link/167458/d076523b1d), [Material UI v7](https://javascriptweekly.com/link/167459/d076523b1d)
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ela5dydqhlmggsjleaju.jpg)](https://javascriptweekly.com/link/167460/d076523b1d)
+
+[Writing a Tiny Undo/Redo Stack in JavaScript](https://javascriptweekly.com/link/167460/d076523b1d "blog.julik.nl") — You might prefer to lean upon an established approach (using [Immer patches](https://javascriptweekly.com/link/167461/d076523b1d) perhaps), but if you want to implement something small yourself, this might help.
+
+Julik Tarkhanov
+
+[Land Ahoy: Leaving the Sea of Nodes](https://javascriptweekly.com/link/167462/d076523b1d "v8.dev") — A deeply technical post from a core member of the V8 JavaScript engine team that explains the limitations of Turbofan, one of V8’s optimizing compilers. If you don’t care for the internals of how your JavaScript is compiled and run, just be assured the V8 team is working to make it run even faster.
+
+Darius Mercadier (V8)
+
+[Which AI Model Is Best for Fixing Unit Test Errors? Claude, O3-Mini, GPT-4o?](https://javascriptweekly.com/link/167463/d076523b1d "wallabyjs.com") — Better context wins every time. Wallaby provides AI with test coverage and runtime values to debug smarter. MCP support coming soon.
+
+Wallaby Team sponsor
+
+[Mission jQuery Zero: How FreeAgent Removed jQuery From Its App](https://javascriptweekly.com/link/167464/d076523b1d "engineering.freeagent.com") — Despite popular developer sentiment, jQuery’s prevalence on the Web continues to be significant but *“sometimes legends need to retire”.*
+
+Colin Gemmell
+
+▶  [React Query API Design: Lessons Learned](https://javascriptweekly.com/link/167465/d076523b1d "www.youtube.com") — You might know Dominik for all his work on React Query, TanStack Router, and his epic [React Query - The Bad Parts](https://javascriptweekly.com/link/167466/d076523b1d) series. Here, he walks us through the design choices made while building React Query and shares lessons and mistakes valuable to anyone building their own libraries. *(30 minutes.)*
+
+Dominik Dorfmeister (TkDodo)
+
+[Deploying a Next.js App to Production on Any Server](https://javascriptweekly.com/link/167467/d076523b1d "www.saybackend.com") — A popular article from last year that’s been updated for 2025 and Next.js 15.
+
+Kamrannetic
+
+[🔒 Protect Against AI Bots, Fraud, and Abuse in Real Time](https://javascriptweekly.com/link/167468/d076523b1d "workos.com") — WorkOS Radar protects your app with advanced device fingerprinting — stop fake signups, free tier abuse, bot attacks and brute force attempts today.
+
+WorkOS sponsor
+
+📄 [Expressing Japanese Grammar in the TypeScript Type System](https://javascriptweekly.com/link/167469/d076523b1d) – A curious project out of left field. Yifeng Wang
+
+📄 [Directives: A Core Feature of the Angular Toolkit](https://javascriptweekly.com/link/167470/d076523b1d) Vyacheslav Borodin
+
+📄 [You Should Know This Before Choosing Next.js](https://javascriptweekly.com/link/167471/d076523b1d) Eduardo Bouças
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/iwy5nu8kkpvcwitzirnv.jpg)](https://javascriptweekly.com/link/167472/d076523b1d)
+
+[Babylon.js 8.0: Microsoft's JavaScript 3D Engine](https://javascriptweekly.com/link/167472/d076523b1d "blogs.windows.com") — 8.0 adds support for improved ‘image based lighting’ and ‘area lights’ for environmental lighting and shadows, extra control of the render pipeline, and a new lightweight viewer. And, as always, they have [▶️ a short video](https://javascriptweekly.com/link/167473/d076523b1d) showing it all off.
+
+Microsoft
+
+🤖 [An MCP Server for Playwright and Browser Automation](https://javascriptweekly.com/link/167474/d076523b1d "github.com") — MCP (Model Context Protocol) servers enable certain LLM-based agents (such as Claude, Claude Code, and Cursor) to perform actions on a system outside of their usual sandbox. This new project from Microsoft enables such LLMs to interact with browsers via Playwright.
+
+Microsoft
+
+[Lexical 0.29: An Easy-to-Extend Text Editor Framework from Meta](https://javascriptweekly.com/link/167475/d076523b1d "lexical.dev") — A text editor framework built by Meta with extensibility, accessibility, and cross platform support in mind (there’s even a Swift variant for iOS). There’s [a live playground](https://javascriptweekly.com/link/167476/d076523b1d) if you want to give it a try.
+
+Meta / Facebook
+
+🔎 [Fuzzball: Fuzzy String Matching Library](https://javascriptweekly.com/link/167477/d076523b1d "github.com") — To tackle those cases where what’s typed isn’t *quite* what’s wanted. There’s a neat tree-themed [Web-based demo.](https://javascriptweekly.com/link/167478/d076523b1d)
+
+Nolan
+
+* [Axios 0.30](https://javascriptweekly.com/link/167479/d076523b1d) – Long-standing, promise-based isomorphic HTTP client.
+
+* [Solito 4.4](https://javascriptweekly.com/link/167480/d076523b1d) – React Native + Next.js. Now supporting Next.js 15.
+
+* [InversifyJS 7.2](https://javascriptweekly.com/link/167481/d076523b1d) – Inversion of control container for JavaScript.
+
+* [jscodeshift 17.3](https://javascriptweekly.com/link/167482/d076523b1d) – JavaScript codemod toolkit from Facebook.
+
+* [Verdaccio 6.1](https://javascriptweekly.com/link/167483/d076523b1d) – Lightweight Node.js private proxy registry.
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/167484/d076523b1d). Relied on by 1000s of orgs, including Dropbox, Lattice, Bilt Rewards and many more.
+
+***
+
+📊 [Jspreadsheet](https://javascriptweekly.com/link/167485/d076523b1d) – Lightweight JS data grid with Excel-like controls. Create rich web spreadsheets fast. [Try it now](https://javascriptweekly.com/link/167485/d076523b1d).
+
+📢  Elsewhere
+
+A quick roundup of other interesting updates and useful resources from across the broader developer landscape:
+
+* `&lt;select>` elements have always been notoriously tricky to style with CSS but [there's a new standardized approach beginning to become available.](https://javascriptweekly.com/link/167486/d076523b1d)
+
+* [ls-lint](https://javascriptweekly.com/link/167487/d076523b1d) is a mature tool for linting file and directory names.
+
+* Someone's managed to get [Go code to compile and run on the PlayStation 2.](https://javascriptweekly.com/link/167488/d076523b1d)
+
+* 👑 People's experiments with TypeScript's type system continue with the latest creation being [a chess engine built from TypeScript types.](https://javascriptweekly.com/link/167489/d076523b1d)
+
+* LLM wrangler Simon Willison was getting annoyed at being unable to easily visualize incomplete JSON documents so [he built an 'incomplete JSON' pretty printer.](https://javascriptweekly.com/link/167490/d076523b1d)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/167491/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
