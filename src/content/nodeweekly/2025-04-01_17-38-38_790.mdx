@@ -1,0 +1,236 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Express 5.x enters the limelight
+description: Express 5.x enters the limelight
+date: 星期二 05 下午 四月 1o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/572
+origin_site: https://nodeweekly.com/issues/572
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Express 5.x enters the limelight" url="https://nodeweekly.com/issues/572" />
+
+<Detail client:only="react">
+	#​572 — April 1, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/572)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/167494/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[Express 5.1: Express 5 Finally Becomes the 'Latest' Release](https://nodeweekly.com/link/167495/0a4070b383 "expressjs.com") — After a period of some dormancy, [Express 5.0](https://nodeweekly.com/link/167496/0a4070b383) was released last year, but remained a somewhat experimental ‘edge’ release as it went through [a security audit](https://nodeweekly.com/link/167497/0a4070b383) and process of building up new governance. With 5.1, however, Express 5.x finally becomes the ‘`latest`’ tagged release on npm, so be careful with those upgrades (luckily there’s [a migration guide](https://nodeweekly.com/link/167498/0a4070b383)).
+
+Express Technical Committee
+
+💬 I was amused by [some discussion about the release](https://nodeweekly.com/link/167499/0a4070b383) on Reddit, where maintainer Wes Todd said: _"We tried to kill \[Express\] over and over and it keeps on getting up and converting more people into zombies for the zombie mob. So we did the best we could to research a way to bring it back from zombie status."_
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a0dc67fb.png)](https://nodeweekly.com/link/167494/0a4070b383)
+
+[ThePrimeagen's Dev Setup Is Better Than Yours](https://nodeweekly.com/link/167494/0a4070b383 "frontendmasters.com") — See why simpler dev tooling is better by hand-crafting an environment with bash scripts. You'll learn common Unix tools for managing libraries, interacting with the OS, window management, and more in this course.
+
+Frontend Masters sponsor
+
+[Land Ahoy: Leaving the Sea of Nodes](https://nodeweekly.com/link/167500/0a4070b383 "v8.dev") — A deeply technical post from a core member of the V8 JavaScript engine team that explains the limitations of Turbofan, one of V8’s optimizing compilers. If you don’t care for the internals of how your JavaScript is compiled and run, just be assured the V8 team is working to make it run even faster!
+
+Darius Mercadier (V8)
+
+**IN BRIEF:**
+
+*   [Node v18.20.8 (LTS)](https://nodeweekly.com/link/167501/0a4070b383) has been released. It's noteworthy mostly due to v18 going 'end of life' later this month. OpenSSL and root certificates get a bump to keep you going for a little longer, but you should update from v18 to v20 or v22 whenever you can.
+    
+*   [Access to Node.js's test CI infrastructure has been restricted](https://nodeweekly.com/link/167502/0a4070b383) due to an as-yet-undisclosed vulnerability. A full report of the incident is forthcoming.
+    
+
+📄 [Malware Found on npm Infecting Local Package with Reverse Shell](https://nodeweekly.com/link/167503/0a4070b383) – _“For the first time, RL researchers discover malicious locally-installed npm packages infecting other legitimate packages.”_ Lucija Valentić (ReversingLabs)
+
+📄 [5 GitHub Actions Every Maintainer Needs to Know](https://nodeweekly.com/link/167504/0a4070b383) Finley and Davis (GitHub)
+
+📄 [How to Set Up TypeScript with Node.js and Express](https://nodeweekly.com/link/167505/0a4070b383) Aman Mittal
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ekl8zdyxyhf9z4mjfbyp.jpg)](https://nodeweekly.com/link/167506/0a4070b383)
+
+[Teable: Open Source Airtable Alternative atop Postgres](https://nodeweekly.com/link/167506/0a4070b383 "teable.io") — _Airtable_ is a popular data table database SaaS, but here’s a NestJS-powered open-source alternative in a similar manner that sits atop Postgres. [GitHub repo.](https://nodeweekly.com/link/167507/0a4070b383)
+
+Teable Team
+
+[Nōdo: A Way to Call Node.js from Ruby](https://nodeweekly.com/link/167508/0a4070b383 "github.com") — A mechanism for letting Ruby scripts make calls to Node.js-based functions via a Unix socket-based IPC approach. (We also learn that “ノード” means “node” in Japanese.)
+
+Matthias Grosser
+
+[Playwright MCP: Connect LLMs to Browsers with Playwright](https://nodeweekly.com/link/167509/0a4070b383 "github.com") — MCP (Model Context Protocol) servers enable certain LLM-based agents (such as Claude Desktop, Claude Code, and Cursor) to perform actions on systems outside of their usual sandbox. This new project from Microsoft enables such LLMs to interact with Web pages via Playwright.
+
+Microsoft
+
+[Neutralinojs 6.0: Alternative Cross-Platform Desktop App Approach](https://nodeweekly.com/link/167510/0a4070b383 "neutralino.js.org") — [Neutralinojs](https://nodeweekly.com/link/167511/0a4070b383) offers an interesting lightweight alternative to something like Electron, as it still lets you build apps that run on Linux, Windows and macOS, but Chromium isn’t bundled – instead the existing installed browser engine is used.
+
+CodeZri
+
+*   ⭐ [zx 8.5](https://nodeweekly.com/link/167512/0a4070b383) – Google's tool for better Node shell scripting.
+    
+*   🤖 [node-llama-cpp 3.7](https://nodeweekly.com/link/167513/0a4070b383) – Run LLMs locally with bindings to `llama.cpp`.
+    
+*   [Axios 0.30](https://nodeweekly.com/link/167514/0a4070b383) – Long-standing, promise-based isomorphic HTTP client.
+    
+*   [Fastify 5.2.2](https://nodeweekly.com/link/167515/0a4070b383) – The fast, low overhead Node.js web framework.
+    
+*   [serve-static 2.2](https://nodeweekly.com/link/167516/0a4070b383) – A quick way to serve static files from Node.
+    
+*   [Verdaccio 6.1](https://nodeweekly.com/link/167517/0a4070b383) – Lightweight Node.js private proxy registry.
+    
+*   [pnpm 10.7](https://nodeweekly.com/link/167518/0a4070b383) – The fast, efficiency-focused package manager.
+    
+*   [Babel 7.27.0](https://nodeweekly.com/link/167519/0a4070b383)
+    
+
+📰 Classifieds
+
+🇫🇷 The _Node & Conquer_ mini-conf hits Paris 4 April! Free talks on running Node in prod, great food & speakers from Sanofi, Allianz, Platformatic & Heal.dev. [Sign up!](https://nodeweekly.com/link/167520/0a4070b383)
+
+* * *
+
+📸 **From Image to Insights** – Upload a photo, get a license plate decoded. Our **Plate Image Recognition API** does it fast and accurately. [Try CarsXE Now!](https://nodeweekly.com/link/167521/0a4070b383)
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   [The State of Vue.js Report 2025](https://nodeweekly.com/link/167522/0a4070b383) is one of the best writeups of a community survey I've seen, complete with thorough interviews with Evan You and members of the Nuxt core team, as well as the usual stats.
+    
+*   🤖 If you haven't checked out [Google's _Gemini_ AI tool](https://nodeweekly.com/link/167523/0a4070b383) recently, it now supports generating HTML, JavaScript, and React code in a 'canvas' mode for building components on the fly.
+    
+*   [ls-lint](https://nodeweekly.com/link/167524/0a4070b383) is a mature tool for linting file and directory names in projects.
+    
+*   LLM wrangler Simon Willison was getting annoyed at being unable to easily visualize incomplete JSON documents so [he built an 'incomplete JSON' pretty printer.](https://nodeweekly.com/link/167525/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​572 — April 1, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/572)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/167494/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[Express 5.1: Express 5 Finally Becomes the 'Latest' Release](https://nodeweekly.com/link/167495/0a4070b383 "expressjs.com") — After a period of some dormancy, [Express 5.0](https://nodeweekly.com/link/167496/0a4070b383) was released last year, but remained a somewhat experimental ‘edge’ release as it went through [a security audit](https://nodeweekly.com/link/167497/0a4070b383) and process of building up new governance. With 5.1, however, Express 5.x finally becomes the ‘`latest`’ tagged release on npm, so be careful with those upgrades (luckily there’s [a migration guide](https://nodeweekly.com/link/167498/0a4070b383)).
+
+Express Technical Committee
+
+💬 I was amused by [some discussion about the release](https://nodeweekly.com/link/167499/0a4070b383) on Reddit, where maintainer Wes Todd said: *"We tried to kill \[Express] over and over and it keeps on getting up and converting more people into zombies for the zombie mob. So we did the best we could to research a way to bring it back from zombie status."*
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a0dc67fb.png)](https://nodeweekly.com/link/167494/0a4070b383)
+
+[ThePrimeagen's Dev Setup Is Better Than Yours](https://nodeweekly.com/link/167494/0a4070b383 "frontendmasters.com") — See why simpler dev tooling is better by hand-crafting an environment with bash scripts. You'll learn common Unix tools for managing libraries, interacting with the OS, window management, and more in this course.
+
+Frontend Masters sponsor
+
+[Land Ahoy: Leaving the Sea of Nodes](https://nodeweekly.com/link/167500/0a4070b383 "v8.dev") — A deeply technical post from a core member of the V8 JavaScript engine team that explains the limitations of Turbofan, one of V8’s optimizing compilers. If you don’t care for the internals of how your JavaScript is compiled and run, just be assured the V8 team is working to make it run even faster!
+
+Darius Mercadier (V8)
+
+**IN BRIEF:**
+
+* [Node v18.20.8 (LTS)](https://nodeweekly.com/link/167501/0a4070b383) has been released. It's noteworthy mostly due to v18 going 'end of life' later this month. OpenSSL and root certificates get a bump to keep you going for a little longer, but you should update from v18 to v20 or v22 whenever you can.
+
+* [Access to Node.js's test CI infrastructure has been restricted](https://nodeweekly.com/link/167502/0a4070b383) due to an as-yet-undisclosed vulnerability. A full report of the incident is forthcoming.
+
+📄 [Malware Found on npm Infecting Local Package with Reverse Shell](https://nodeweekly.com/link/167503/0a4070b383) – *“For the first time, RL researchers discover malicious locally-installed npm packages infecting other legitimate packages.”* Lucija Valentić (ReversingLabs)
+
+📄 [5 GitHub Actions Every Maintainer Needs to Know](https://nodeweekly.com/link/167504/0a4070b383) Finley and Davis (GitHub)
+
+📄 [How to Set Up TypeScript with Node.js and Express](https://nodeweekly.com/link/167505/0a4070b383) Aman Mittal
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ekl8zdyxyhf9z4mjfbyp.jpg)](https://nodeweekly.com/link/167506/0a4070b383)
+
+[Teable: Open Source Airtable Alternative atop Postgres](https://nodeweekly.com/link/167506/0a4070b383 "teable.io") — *Airtable* is a popular data table database SaaS, but here’s a NestJS-powered open-source alternative in a similar manner that sits atop Postgres. [GitHub repo.](https://nodeweekly.com/link/167507/0a4070b383)
+
+Teable Team
+
+[Nōdo: A Way to Call Node.js from Ruby](https://nodeweekly.com/link/167508/0a4070b383 "github.com") — A mechanism for letting Ruby scripts make calls to Node.js-based functions via a Unix socket-based IPC approach. (We also learn that “ノード” means “node” in Japanese.)
+
+Matthias Grosser
+
+[Playwright MCP: Connect LLMs to Browsers with Playwright](https://nodeweekly.com/link/167509/0a4070b383 "github.com") — MCP (Model Context Protocol) servers enable certain LLM-based agents (such as Claude Desktop, Claude Code, and Cursor) to perform actions on systems outside of their usual sandbox. This new project from Microsoft enables such LLMs to interact with Web pages via Playwright.
+
+Microsoft
+
+[Neutralinojs 6.0: Alternative Cross-Platform Desktop App Approach](https://nodeweekly.com/link/167510/0a4070b383 "neutralino.js.org") — [Neutralinojs](https://nodeweekly.com/link/167511/0a4070b383) offers an interesting lightweight alternative to something like Electron, as it still lets you build apps that run on Linux, Windows and macOS, but Chromium isn’t bundled – instead the existing installed browser engine is used.
+
+CodeZri
+
+* ⭐ [zx 8.5](https://nodeweekly.com/link/167512/0a4070b383) – Google's tool for better Node shell scripting.
+
+* 🤖 [node-llama-cpp 3.7](https://nodeweekly.com/link/167513/0a4070b383) – Run LLMs locally with bindings to `llama.cpp`.
+
+* [Axios 0.30](https://nodeweekly.com/link/167514/0a4070b383) – Long-standing, promise-based isomorphic HTTP client.
+
+* [Fastify 5.2.2](https://nodeweekly.com/link/167515/0a4070b383) – The fast, low overhead Node.js web framework.
+
+* [serve-static 2.2](https://nodeweekly.com/link/167516/0a4070b383) – A quick way to serve static files from Node.
+
+* [Verdaccio 6.1](https://nodeweekly.com/link/167517/0a4070b383) – Lightweight Node.js private proxy registry.
+
+* [pnpm 10.7](https://nodeweekly.com/link/167518/0a4070b383) – The fast, efficiency-focused package manager.
+
+* [Babel 7.27.0](https://nodeweekly.com/link/167519/0a4070b383)
+
+📰 Classifieds
+
+🇫🇷 The *Node & Conquer* mini-conf hits Paris 4 April! Free talks on running Node in prod, great food & speakers from Sanofi, Allianz, Platformatic & Heal.dev. [Sign up!](https://nodeweekly.com/link/167520/0a4070b383)
+
+***
+
+📸 **From Image to Insights** – Upload a photo, get a license plate decoded. Our **Plate Image Recognition API** does it fast and accurately. [Try CarsXE Now!](https://nodeweekly.com/link/167521/0a4070b383)
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* [The State of Vue.js Report 2025](https://nodeweekly.com/link/167522/0a4070b383) is one of the best writeups of a community survey I've seen, complete with thorough interviews with Evan You and members of the Nuxt core team, as well as the usual stats.
+
+* 🤖 If you haven't checked out [Google's *Gemini* AI tool](https://nodeweekly.com/link/167523/0a4070b383) recently, it now supports generating HTML, JavaScript, and React code in a 'canvas' mode for building components on the fly.
+
+* [ls-lint](https://nodeweekly.com/link/167524/0a4070b383) is a mature tool for linting file and directory names in projects.
+
+* LLM wrangler Simon Willison was getting annoyed at being unable to easily visualize incomplete JSON documents so [he built an 'incomplete JSON' pretty printer.](https://nodeweekly.com/link/167525/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
