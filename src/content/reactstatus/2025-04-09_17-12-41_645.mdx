@@ -1,0 +1,189 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: How React's reconciliation algorithm works
+description: How React's reconciliation algorithm works
+date: 星期三 05 下午 四月 9o 2025
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/<!--%20\id%20-->
+origin_site: https://react.statuscode.com/issues/<!--%20\id%20-->
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="How React's reconciliation algorithm works" url="https://react.statuscode.com/issues/<!--%20\id%20-->" />
+
+<Detail client:only="react">
+	#​424 — April 9, 2025
+
+[Read on the Web](https://react.statuscode.com/issues/&lt;!--%20\id%20-->)
+
+Together with 
+
+[![Tonkotsu logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_313/e_make_transparent/co_white,e_outline:5/c4v6bk3uzcf36sutppl2.jpg)](https://react.statuscode.com/link/167854/5d0bbb4a61)
+
+React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gcwhkumzhfr2gu9ky3id.jpg)](https://react.statuscode.com/link/167855/5d0bbb4a61)
+
+[React for Two Computers](https://react.statuscode.com/link/167855/5d0bbb4a61 "overreacted.io") — Dan Abramov returns to some deep thoughts that arose while putting together the popular [▶️ React for Two Computers talk](https://react.statuscode.com/link/167856/5d0bbb4a61) he gave at React Conf 2024. You’ll need a _very_ large coffee to make it through this post in one sitting, but it’s a technically-rich meditation on the architecture and theory underpinning ideas like React Server Components.
+
+Dan Abramov
+
+🎟️ On the topic of React Conf, [the ticket lottery for React Conf 2025](https://react.statuscode.com/link/167857/5d0bbb4a61) is set to take place starting April 25, so if you want a chance to get a ticket, you can submit your details now. The event takes place this October just outside Las Vegas, as in 2024.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/387c1b78.jpg)](https://react.statuscode.com/link/167854/5d0bbb4a61)
+
+[🍜 Tonkotsu is a Reimagined IDE for JavaScript & TypeScript Developers](https://react.statuscode.com/link/167854/5d0bbb4a61) — We've built a new developer experience that makes you the tech lead for a team of AI agents. We just started our FREE early access program and want to hear directly from early adopters. [Sign up today](https://react.statuscode.com/link/167854/5d0bbb4a61).
+
+Tonkotsu sponsor
+
+[React Reconciliation: The Hidden Engine Behind Your Components](https://react.statuscode.com/link/167858/5d0bbb4a61 "cekrem.github.io") — React’s reconciliation algorithm is the process by which React knows how to update the DOM based on changes to the virtual DOM and understanding how it works is essential for producing fast, efficient apps. A great look behind the scenes.
+
+Christian Ekrem
+
+[Deploy Your Next.js App to Cloudflare Workers with the Cloudflare Adapter for OpenNext](https://react.statuscode.com/link/167859/5d0bbb4a61 "blog.cloudflare.com") — [OpenNext](https://react.statuscode.com/link/167860/5d0bbb4a61) is a build tool that transforms Next.js apps into packages optimized for development on platforms including AWS Lambda, Cloudflare Workers, and Netlify.
+
+Cloudflare
+
+[Accelerating Large-Scale Test Migration with LLMs](https://react.statuscode.com/link/167861/5d0bbb4a61 "medium.com") — How Airbnb completed its first large-scale, LLM-driven code migration in moving from Enzyme to React Testing Library.
+
+Charles Covey-Brandt (Airbnb)
+
+📄 [&lcub;transitions} = f(state)](https://react.statuscode.com/link/167862/5d0bbb4a61) – _“Thinking about the component tree as modelling a state machine can help clarify the implications of asynchronous updates and React’s concurrent features.”_ Jordan Eldredge
+
+📄 [How I Reduced My React Bundle Size by Thirty Percent](https://react.statuscode.com/link/167863/5d0bbb4a61) – Relatively basic stuff, but worth doing. Ndeye Fatou Diop
+
+📄 [How a Steam Locomotive from 1993 Broke My Yarn Test](https://react.statuscode.com/link/167864/5d0bbb4a61) – A fun story that does deliver on its title. Yew Leong
+
+📄 [Authorization in Next.js](https://react.statuscode.com/link/167865/5d0bbb4a61) Robin Wieruch
+
+🛠  Code, Tools & Libraries
+
+[React Native 0.79: Faster Tooling and Much More](https://react.statuscode.com/link/167866/5d0bbb4a61 "reactnative.dev") — Metro, the React Native bundler, now starts much faster and makes `package.json` exports and imports field resolution stable. Android app startup also gets significantly faster.
+
+React Native Team
+
+[Fancy Components: A Growing Library of Ready-to-Use Animated React Components](https://react.statuscode.com/link/167867/5d0bbb4a61 "www.fancycomponents.dev") — Includes a whole slew of components for doing various text animations, along with others for backgrounds, physics-related animations, SVG filters, and more. [Try them out here](https://react.statuscode.com/link/167868/5d0bbb4a61).
+
+Daniel Petho
+
+[Konva: A JavaScript 2D Canvas Library](https://react.statuscode.com/link/167869/5d0bbb4a61 "konvajs.org") — The native Canvas API is good, but Konva is an abstraction that sits on top and provides a more structured way to work with shapes, styling, events, and animations ([demos with code](https://react.statuscode.com/link/167870/5d0bbb4a61)). It also has extra integration libraries for [Vue](https://react.statuscode.com/link/167871/5d0bbb4a61), [Svelte](https://react.statuscode.com/link/167872/5d0bbb4a61) and [React.](https://react.statuscode.com/link/167873/5d0bbb4a61)
+
+Konva
+
+*   [React Testing Library 16.3](https://react.statuscode.com/link/167874/5d0bbb4a61) – DOM testing utils that encourage good practices.
+    
+*   [TanStack Form 1.3](https://react.statuscode.com/link/167875/5d0bbb4a61) – Powerful, type-safe Web form state management.
+    
+*   [Embla Carousel 8.6](https://react.statuscode.com/link/167876/5d0bbb4a61) – Lightweight carousel library with fluid motion.
+    
+*   [simpleParallax.js 6.1](https://react.statuscode.com/link/167877/5d0bbb4a61) – Add parallax effects to any image.
+    
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   [This article on using notebook-style programming](https://react.statuscode.com/link/167878/5d0bbb4a61) to visualize data is a great look at how notebooks can integrate with the JavaScript world, along with a little React.
+    
+*   [A detailed guide to modern testing with Node.js](https://react.statuscode.com/link/167879/5d0bbb4a61), packed with over 50 best practices.
+    
+*   ⚖️ [Ryan Dahl gives us an update](https://react.statuscode.com/link/167880/5d0bbb4a61) on the state of the Deno vs Oracle fight over Oracle's holding of the 'JavaScript' trademark.
+    
+*   🇷🇴 The annual [JSHeroes conference](https://react.statuscode.com/link/167881/5d0bbb4a61) is taking place this May 29-30 in Cluj, Romania.
+    
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​424 — April 9, 2025
+
+[Read on the Web](https://react.statuscode.com/issues/&lt;!--%20\id%20-->)
+
+Together with 
+
+[![Tonkotsu logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_313/e_make_transparent/co_white,e_outline:5/c4v6bk3uzcf36sutppl2.jpg)](https://react.statuscode.com/link/167854/5d0bbb4a61)
+
+React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gcwhkumzhfr2gu9ky3id.jpg)](https://react.statuscode.com/link/167855/5d0bbb4a61)
+
+[React for Two Computers](https://react.statuscode.com/link/167855/5d0bbb4a61 "overreacted.io") — Dan Abramov returns to some deep thoughts that arose while putting together the popular [▶️ React for Two Computers talk](https://react.statuscode.com/link/167856/5d0bbb4a61) he gave at React Conf 2024. You’ll need a *very* large coffee to make it through this post in one sitting, but it’s a technically-rich meditation on the architecture and theory underpinning ideas like React Server Components.
+
+Dan Abramov
+
+🎟️ On the topic of React Conf, [the ticket lottery for React Conf 2025](https://react.statuscode.com/link/167857/5d0bbb4a61) is set to take place starting April 25, so if you want a chance to get a ticket, you can submit your details now. The event takes place this October just outside Las Vegas, as in 2024.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/387c1b78.jpg)](https://react.statuscode.com/link/167854/5d0bbb4a61)
+
+[🍜 Tonkotsu is a Reimagined IDE for JavaScript & TypeScript Developers](https://react.statuscode.com/link/167854/5d0bbb4a61) — We've built a new developer experience that makes you the tech lead for a team of AI agents. We just started our FREE early access program and want to hear directly from early adopters. [Sign up today](https://react.statuscode.com/link/167854/5d0bbb4a61).
+
+Tonkotsu sponsor
+
+[React Reconciliation: The Hidden Engine Behind Your Components](https://react.statuscode.com/link/167858/5d0bbb4a61 "cekrem.github.io") — React’s reconciliation algorithm is the process by which React knows how to update the DOM based on changes to the virtual DOM and understanding how it works is essential for producing fast, efficient apps. A great look behind the scenes.
+
+Christian Ekrem
+
+[Deploy Your Next.js App to Cloudflare Workers with the Cloudflare Adapter for OpenNext](https://react.statuscode.com/link/167859/5d0bbb4a61 "blog.cloudflare.com") — [OpenNext](https://react.statuscode.com/link/167860/5d0bbb4a61) is a build tool that transforms Next.js apps into packages optimized for development on platforms including AWS Lambda, Cloudflare Workers, and Netlify.
+
+Cloudflare
+
+[Accelerating Large-Scale Test Migration with LLMs](https://react.statuscode.com/link/167861/5d0bbb4a61 "medium.com") — How Airbnb completed its first large-scale, LLM-driven code migration in moving from Enzyme to React Testing Library.
+
+Charles Covey-Brandt (Airbnb)
+
+📄 [&lcub;transitions} = f(state)](https://react.statuscode.com/link/167862/5d0bbb4a61) – *“Thinking about the component tree as modelling a state machine can help clarify the implications of asynchronous updates and React’s concurrent features.”* Jordan Eldredge
+
+📄 [How I Reduced My React Bundle Size by Thirty Percent](https://react.statuscode.com/link/167863/5d0bbb4a61) – Relatively basic stuff, but worth doing. Ndeye Fatou Diop
+
+📄 [How a Steam Locomotive from 1993 Broke My Yarn Test](https://react.statuscode.com/link/167864/5d0bbb4a61) – A fun story that does deliver on its title. Yew Leong
+
+📄 [Authorization in Next.js](https://react.statuscode.com/link/167865/5d0bbb4a61) Robin Wieruch
+
+🛠  Code, Tools & Libraries
+
+[React Native 0.79: Faster Tooling and Much More](https://react.statuscode.com/link/167866/5d0bbb4a61 "reactnative.dev") — Metro, the React Native bundler, now starts much faster and makes `package.json` exports and imports field resolution stable. Android app startup also gets significantly faster.
+
+React Native Team
+
+[Fancy Components: A Growing Library of Ready-to-Use Animated React Components](https://react.statuscode.com/link/167867/5d0bbb4a61 "www.fancycomponents.dev") — Includes a whole slew of components for doing various text animations, along with others for backgrounds, physics-related animations, SVG filters, and more. [Try them out here](https://react.statuscode.com/link/167868/5d0bbb4a61).
+
+Daniel Petho
+
+[Konva: A JavaScript 2D Canvas Library](https://react.statuscode.com/link/167869/5d0bbb4a61 "konvajs.org") — The native Canvas API is good, but Konva is an abstraction that sits on top and provides a more structured way to work with shapes, styling, events, and animations ([demos with code](https://react.statuscode.com/link/167870/5d0bbb4a61)). It also has extra integration libraries for [Vue](https://react.statuscode.com/link/167871/5d0bbb4a61), [Svelte](https://react.statuscode.com/link/167872/5d0bbb4a61) and [React.](https://react.statuscode.com/link/167873/5d0bbb4a61)
+
+Konva
+
+* [React Testing Library 16.3](https://react.statuscode.com/link/167874/5d0bbb4a61) – DOM testing utils that encourage good practices.
+
+* [TanStack Form 1.3](https://react.statuscode.com/link/167875/5d0bbb4a61) – Powerful, type-safe Web form state management.
+
+* [Embla Carousel 8.6](https://react.statuscode.com/link/167876/5d0bbb4a61) – Lightweight carousel library with fluid motion.
+
+* [simpleParallax.js 6.1](https://react.statuscode.com/link/167877/5d0bbb4a61) – Add parallax effects to any image.
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* [This article on using notebook-style programming](https://react.statuscode.com/link/167878/5d0bbb4a61) to visualize data is a great look at how notebooks can integrate with the JavaScript world, along with a little React.
+
+* [A detailed guide to modern testing with Node.js](https://react.statuscode.com/link/167879/5d0bbb4a61), packed with over 50 best practices.
+
+* ⚖️ [Ryan Dahl gives us an update](https://react.statuscode.com/link/167880/5d0bbb4a61) on the state of the Deno vs Oracle fight over Oracle's holding of the 'JavaScript' trademark.
+
+* 🇷🇴 The annual [JSHeroes conference](https://react.statuscode.com/link/167881/5d0bbb4a61) is taking place this May 29-30 in Cluj, Romania.
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
