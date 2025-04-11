@@ -1,0 +1,321 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Comparing Tauri and Electron
+description: Comparing Tauri and Electron
+date: 星期五 04 下午 四月 11o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/731
+origin_site: https://javascriptweekly.com/issues/731
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Comparing Tauri and Electron" url="https://javascriptweekly.com/issues/731" />
+
+<Detail client:only="react">
+	#​731 — April 11, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/731)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/168045/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ytvxb5j5lbtn839nds5l.jpg)](https://javascriptweekly.com/link/167990/d076523b1d)
+
+🤖 [Firebase Studio: Google's New Agentic AI-Powered Development Environment](https://javascriptweekly.com/link/167990/d076523b1d "firebase.studio") — Buzzing from the success of [Gemini 2.5 Pro](https://javascriptweekly.com/link/167991/d076523b1d) for dev tasks, Google’s Firebase team gets in on the AI development action with a Cursor/v0/Lovable-a-like of its own for building apps in the browser.
+
+Google
+
+[Some Features Every JavaScript Developer Should Know in 2025](https://javascriptweekly.com/link/167992/d076523b1d "waspdev.com") — A quick list post breezing through a few more modern areas of JavaScript including iterator helpers, `structuredClone()`, and set operations.
+
+Suren Enfiajyan
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2cc64f7b.png)](https://javascriptweekly.com/link/168045/d076523b1d)
+
+[Next.js Fundamentals, v4](https://javascriptweekly.com/link/168045/d076523b1d "frontendmasters.com") — Master Next.js with Scott Moss. Learn React Server Components, Server Actions, dynamic routing, authentication, caching, and edge functions. Create a modern React app, deploy it to Vercel, and level up your skills.
+
+Frontend Masters sponsor
+
+[Node.js Testing Best Practices](https://javascriptweekly.com/link/167993/d076523b1d "github.com") — A detailed guide to modern testing in Node from a group of developers who know all about it. It’s on GitHub, but essentially written like a free book covering over 50 battle-tested tips covering areas as diverse as the ‘Testing Diamond’, testing microservices, and simulating flaky networks.
+
+Goldberg, Salomon, and Gluskin
+
+**IN BRIEF:**
+
+*   There's [speculation](https://javascriptweekly.com/link/167994/d076523b1d) that the npm registry may have wiped all access tokens. If you're having problems, [the status update](https://javascriptweekly.com/link/167995/d076523b1d) recommends creating new tokens while they attempt to restore them.
+    
+*   ☁️ It's been a busy week for Cloudflare! It now has an easy way to [deploy Next.js apps to Cloudflare Workers](https://javascriptweekly.com/link/167996/d076523b1d), you can add a ['deploy to Workers' button](https://javascriptweekly.com/link/167997/d076523b1d) to your Git repos, [v1 of their Cloudflare Vite plugin](https://javascriptweekly.com/link/167998/d076523b1d) has been released, and you can now [deploy an entire frontend, backend, and database](https://javascriptweekly.com/link/167999/d076523b1d) (supporting React Router, Astro, Vue.js, Svelte and more) in one Worker.
+    
+*   [The RedwoodJS team has an update](https://javascriptweekly.com/link/168000/d076523b1d) on the future of Redwood and what the 'next epoch' holds for the React-based framework.
+    
+*   [p5.js](https://javascriptweekly.com/link/168001/d076523b1d) 2.0 looks like it'll be with us soon – its eighth beta has just landed. [The release notes](https://javascriptweekly.com/link/168002/d076523b1d) for beta 2 give an extensive idea of what's coming.
+    
+*   🇷🇴 The annual [JSHeroes conference](https://javascriptweekly.com/link/168003/d076523b1d) is taking place this May 29-30 in Cluj, Romania.
+    
+
+**RELEASES:**
+
+*   [TypeSpec 1.0-RC](https://javascriptweekly.com/link/168004/d076523b1d) – Microsoft's language for defining cloud service APIs and shapes.
+    
+*   [pnpm 10.8](https://javascriptweekly.com/link/168005/d076523b1d) – The alternative, efficient package manager.
+    
+*   [Prisma 6.6](https://javascriptweekly.com/link/168006/d076523b1d) – Popular ORM for Node.js and TypeScript.
+    
+*   [React Native 0.79](https://javascriptweekly.com/link/168007/d076523b1d) – Faster, faster, faster.
+    
+*   [Bun 1.2.9](https://javascriptweekly.com/link/168008/d076523b1d), [Tailwind CSS 4.1](https://javascriptweekly.com/link/168009/d076523b1d), [CKEditor5 45](https://javascriptweekly.com/link/168010/d076523b1d), [Zod 4 Beta](https://javascriptweekly.com/link/168011/d076523b1d)
+    
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/cn4kt4kohqe8hwebptdq.jpg)](https://javascriptweekly.com/link/168012/d076523b1d)
+
+[Comparing Tauri and Electron for Building Desktop Apps](https://javascriptweekly.com/link/168012/d076523b1d "gethopp.app") — [Electron](https://javascriptweekly.com/link/168013/d076523b1d) is a natural choice for building JS and HTML-powered cross-platform desktop apps but numerous alternatives have appeared like [Neutralinojs](https://javascriptweekly.com/link/168014/d076523b1d) and the Rust-based [Tauri.](https://javascriptweekly.com/link/168015/d076523b1d) This post does a good job of quickly showing how Tauri differs and why you might choose it.
+
+Costa Alexoglou
+
+[Mastering Default Values with Nullish Coalescing (`??`)](https://javascriptweekly.com/link/168016/d076523b1d "allthingssmitty.com") — Matt’s a big fan of the `??` operator over the `||` approach, largely due to JavaScript’s ideas of what it considers ‘falsy’.
+
+Matt Smith
+
+[How Clerk Integrates with a Next.js Application Using Supabase](https://javascriptweekly.com/link/168017/d076523b1d "go.clerk.com") — Learn how Supabase + Clerk work with Next.js to increase security and reduce development hours.
+
+Clerk sponsor
+
+[Accelerating Large-Scale Test Migration with LLMs](https://javascriptweekly.com/link/168018/d076523b1d "medium.com") — How Airbnb completed its first large-scale, LLM-driven code migration in moving from Enzyme to React Testing Library.
+
+Charles Covey-Brandt (Airbnb)
+
+[React Reconciliation: The Hidden Engine Behind Your Components](https://javascriptweekly.com/link/168019/d076523b1d "cekrem.github.io") — React uses a reconciliation algorithm to update the DOM based on changes to the virtual DOM. Understanding how it works is essential for producing faster apps.
+
+Christian Ekrem
+
+[Hiding Elements That Require JavaScript _Without_ Using JavaScript](https://javascriptweekly.com/link/168020/d076523b1d "0xda.de") — If you’ve got non-essential features that require JavaScript and you want to hide them for users who have JavaScript disabled for whatever reason, this is a tidy old-school way to do it.
+
+Dade
+
+📄 [Debugging JavaScript Memory Leaks in Bun](https://javascriptweekly.com/link/168021/d076523b1d) Jarred Sumner
+
+📄 [Using Chrome's (Preview) Prompt API for Data Summarization](https://javascriptweekly.com/link/168022/d076523b1d) Raymond Camden
+
+📄 [How to Easily Reproduce a Flaky Test in Playwright](https://javascriptweekly.com/link/168023/d076523b1d) Nicolas Charpentier
+
+📄 [Securing a Vue App with OpenID Connect and the BFF Pattern](https://javascriptweekly.com/link/168024/d076523b1d) – That’s Backend-for-Frontend, not Best Friends Forever. Khalid Abuhakmeh
+
+📄 [The Case for Web Components with Lit](https://javascriptweekly.com/link/168025/d076523b1d) Philipp Kunz
+
+🛠 Code & Tools
+
+[Next.js 15.3: Now Including Turbopack Builds](https://javascriptweekly.com/link/168026/d076523b1d "nextjs.org") — The popular React framework now includes alpha support for using Turbopack for much faster production builds (especially if you have lots of cores available), community support for Rspack, and new navigation hooks.
+
+The Vercel / Next.js Team
+
+[Chrono 2.8: A Natural Language Date Parser](https://javascriptweekly.com/link/168027/d076523b1d "github.com") — Give it a string like “today”, “last Friday”, “2 weeks from now”, or even an entire date and time, and it’ll come up with a date object to suit.
+
+Wanasit Tanakitrungruang
+
+[Breakpoints and `console.log` Is the Past, Time Travel Is the Future](https://javascriptweekly.com/link/168028/d076523b1d "wallabyjs.com") — 15x faster JavaScript debugging than with breakpoints and console.log, supports Vitest, Jest, Karma, Jasmine, and more.
+
+Wallaby Team sponsor
+
+🎵 [Communicate with Ableton Live via WebSockets](https://javascriptweekly.com/link/168029/d076523b1d "github.com") — [Ableton Live](https://javascriptweekly.com/link/168030/d076523b1d) is a popular DAW (digital audio workstation) and this opens up a way to control it from JavaScript.
+
+Ricardo Matias
+
+*   🕒 [Spacetime 7.9](https://javascriptweekly.com/link/168031/d076523b1d) – Lightweight timezone library. Now supporting formatting times [in SQL ISO format.](https://javascriptweekly.com/link/168032/d076523b1d)
+    
+*   📊 [Perspective 3.5](https://javascriptweekly.com/link/168033/d076523b1d) – Streaming data viz and analytics component. The core is written in C++ and compiled to WASM.
+    
+*   [Embla Carousel 8.6](https://javascriptweekly.com/link/168034/d076523b1d) – Lightweight carousel library with fluid motion and swipe precision.
+    
+*   [simpleParallax.js 6.1](https://javascriptweekly.com/link/168035/d076523b1d) – Add parallax effects to any image.
+    
+*   [Tesseract.js 6.0.1](https://javascriptweekly.com/link/168036/d076523b1d) – Pure JS OCR for 100+ languages.
+    
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/168037/d076523b1d). Relied on by Dropbox, Lattice, Bilt Rewards, etc.
+
+* * *
+
+Working on the frontend? 🚀 [Frontend Focus](https://javascriptweekly.com/link/168038/d076523b1d) is a weekly update — trusted by 75,000+ devs — covering the essential trends, tools and tips that matter.
+
+📢  Elsewhere
+
+A quick roundup of other interesting updates and useful resources from across the broader developer landscape:
+
+*   Git has turned 20 years old and [GitHub's Taylor Blau caught up with Linus Torvalds](https://javascriptweekly.com/link/168039/d076523b1d) to discuss the milestone and the background to the project.
+    
+*   Tired of hearing about TypeScript? Why not experiment with [programming in PostScript](https://javascriptweekly.com/link/168040/d076523b1d) and running games on your printer?
+    
+*   [Minimal CSS-only Blurry Image Placeholders](https://javascriptweekly.com/link/168041/d076523b1d) is an article showing off a _very_ clever technique for using CSS to dynamically create blurry image placeholders prior to an image loading in.
+    
+*   Mozilla's Simon Pieters tells us that [default styles for H1 elements are changing](https://javascriptweekly.com/link/168042/d076523b1d) and browsers are starting to roll out changes in default styles for nested section headings.
+    
+*   [Docker has released a new extension for VS Code](https://javascriptweekly.com/link/168043/d076523b1d) in a collaboration with the Microsoft Container Tools team.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/168044/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​731 — April 11, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/731)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/168045/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ytvxb5j5lbtn839nds5l.jpg)](https://javascriptweekly.com/link/167990/d076523b1d)
+
+🤖 [Firebase Studio: Google's New Agentic AI-Powered Development Environment](https://javascriptweekly.com/link/167990/d076523b1d "firebase.studio") — Buzzing from the success of [Gemini 2.5 Pro](https://javascriptweekly.com/link/167991/d076523b1d) for dev tasks, Google’s Firebase team gets in on the AI development action with a Cursor/v0/Lovable-a-like of its own for building apps in the browser.
+
+Google
+
+[Some Features Every JavaScript Developer Should Know in 2025](https://javascriptweekly.com/link/167992/d076523b1d "waspdev.com") — A quick list post breezing through a few more modern areas of JavaScript including iterator helpers, `structuredClone()`, and set operations.
+
+Suren Enfiajyan
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2cc64f7b.png)](https://javascriptweekly.com/link/168045/d076523b1d)
+
+[Next.js Fundamentals, v4](https://javascriptweekly.com/link/168045/d076523b1d "frontendmasters.com") — Master Next.js with Scott Moss. Learn React Server Components, Server Actions, dynamic routing, authentication, caching, and edge functions. Create a modern React app, deploy it to Vercel, and level up your skills.
+
+Frontend Masters sponsor
+
+[Node.js Testing Best Practices](https://javascriptweekly.com/link/167993/d076523b1d "github.com") — A detailed guide to modern testing in Node from a group of developers who know all about it. It’s on GitHub, but essentially written like a free book covering over 50 battle-tested tips covering areas as diverse as the ‘Testing Diamond’, testing microservices, and simulating flaky networks.
+
+Goldberg, Salomon, and Gluskin
+
+**IN BRIEF:**
+
+* There's [speculation](https://javascriptweekly.com/link/167994/d076523b1d) that the npm registry may have wiped all access tokens. If you're having problems, [the status update](https://javascriptweekly.com/link/167995/d076523b1d) recommends creating new tokens while they attempt to restore them.
+
+* ☁️ It's been a busy week for Cloudflare! It now has an easy way to [deploy Next.js apps to Cloudflare Workers](https://javascriptweekly.com/link/167996/d076523b1d), you can add a ['deploy to Workers' button](https://javascriptweekly.com/link/167997/d076523b1d) to your Git repos, [v1 of their Cloudflare Vite plugin](https://javascriptweekly.com/link/167998/d076523b1d) has been released, and you can now [deploy an entire frontend, backend, and database](https://javascriptweekly.com/link/167999/d076523b1d) (supporting React Router, Astro, Vue.js, Svelte and more) in one Worker.
+
+* [The RedwoodJS team has an update](https://javascriptweekly.com/link/168000/d076523b1d) on the future of Redwood and what the 'next epoch' holds for the React-based framework.
+
+* [p5.js](https://javascriptweekly.com/link/168001/d076523b1d) 2.0 looks like it'll be with us soon – its eighth beta has just landed. [The release notes](https://javascriptweekly.com/link/168002/d076523b1d) for beta 2 give an extensive idea of what's coming.
+
+* 🇷🇴 The annual [JSHeroes conference](https://javascriptweekly.com/link/168003/d076523b1d) is taking place this May 29-30 in Cluj, Romania.
+
+**RELEASES:**
+
+* [TypeSpec 1.0-RC](https://javascriptweekly.com/link/168004/d076523b1d) – Microsoft's language for defining cloud service APIs and shapes.
+
+* [pnpm 10.8](https://javascriptweekly.com/link/168005/d076523b1d) – The alternative, efficient package manager.
+
+* [Prisma 6.6](https://javascriptweekly.com/link/168006/d076523b1d) – Popular ORM for Node.js and TypeScript.
+
+* [React Native 0.79](https://javascriptweekly.com/link/168007/d076523b1d) – Faster, faster, faster.
+
+* [Bun 1.2.9](https://javascriptweekly.com/link/168008/d076523b1d), [Tailwind CSS 4.1](https://javascriptweekly.com/link/168009/d076523b1d), [CKEditor5 45](https://javascriptweekly.com/link/168010/d076523b1d), [Zod 4 Beta](https://javascriptweekly.com/link/168011/d076523b1d)
+
+📒 Articles & Tutorials
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/cn4kt4kohqe8hwebptdq.jpg)](https://javascriptweekly.com/link/168012/d076523b1d)
+
+[Comparing Tauri and Electron for Building Desktop Apps](https://javascriptweekly.com/link/168012/d076523b1d "gethopp.app") — [Electron](https://javascriptweekly.com/link/168013/d076523b1d) is a natural choice for building JS and HTML-powered cross-platform desktop apps but numerous alternatives have appeared like [Neutralinojs](https://javascriptweekly.com/link/168014/d076523b1d) and the Rust-based [Tauri.](https://javascriptweekly.com/link/168015/d076523b1d) This post does a good job of quickly showing how Tauri differs and why you might choose it.
+
+Costa Alexoglou
+
+[Mastering Default Values with Nullish Coalescing (`??`)](https://javascriptweekly.com/link/168016/d076523b1d "allthingssmitty.com") — Matt’s a big fan of the `??` operator over the `||` approach, largely due to JavaScript’s ideas of what it considers ‘falsy’.
+
+Matt Smith
+
+[How Clerk Integrates with a Next.js Application Using Supabase](https://javascriptweekly.com/link/168017/d076523b1d "go.clerk.com") — Learn how Supabase + Clerk work with Next.js to increase security and reduce development hours.
+
+Clerk sponsor
+
+[Accelerating Large-Scale Test Migration with LLMs](https://javascriptweekly.com/link/168018/d076523b1d "medium.com") — How Airbnb completed its first large-scale, LLM-driven code migration in moving from Enzyme to React Testing Library.
+
+Charles Covey-Brandt (Airbnb)
+
+[React Reconciliation: The Hidden Engine Behind Your Components](https://javascriptweekly.com/link/168019/d076523b1d "cekrem.github.io") — React uses a reconciliation algorithm to update the DOM based on changes to the virtual DOM. Understanding how it works is essential for producing faster apps.
+
+Christian Ekrem
+
+[Hiding Elements That Require JavaScript *Without* Using JavaScript](https://javascriptweekly.com/link/168020/d076523b1d "0xda.de") — If you’ve got non-essential features that require JavaScript and you want to hide them for users who have JavaScript disabled for whatever reason, this is a tidy old-school way to do it.
+
+Dade
+
+📄 [Debugging JavaScript Memory Leaks in Bun](https://javascriptweekly.com/link/168021/d076523b1d) Jarred Sumner
+
+📄 [Using Chrome's (Preview) Prompt API for Data Summarization](https://javascriptweekly.com/link/168022/d076523b1d) Raymond Camden
+
+📄 [How to Easily Reproduce a Flaky Test in Playwright](https://javascriptweekly.com/link/168023/d076523b1d) Nicolas Charpentier
+
+📄 [Securing a Vue App with OpenID Connect and the BFF Pattern](https://javascriptweekly.com/link/168024/d076523b1d) – That’s Backend-for-Frontend, not Best Friends Forever. Khalid Abuhakmeh
+
+📄 [The Case for Web Components with Lit](https://javascriptweekly.com/link/168025/d076523b1d) Philipp Kunz
+
+🛠 Code & Tools
+
+[Next.js 15.3: Now Including Turbopack Builds](https://javascriptweekly.com/link/168026/d076523b1d "nextjs.org") — The popular React framework now includes alpha support for using Turbopack for much faster production builds (especially if you have lots of cores available), community support for Rspack, and new navigation hooks.
+
+The Vercel / Next.js Team
+
+[Chrono 2.8: A Natural Language Date Parser](https://javascriptweekly.com/link/168027/d076523b1d "github.com") — Give it a string like “today”, “last Friday”, “2 weeks from now”, or even an entire date and time, and it’ll come up with a date object to suit.
+
+Wanasit Tanakitrungruang
+
+[Breakpoints and `console.log` Is the Past, Time Travel Is the Future](https://javascriptweekly.com/link/168028/d076523b1d "wallabyjs.com") — 15x faster JavaScript debugging than with breakpoints and console.log, supports Vitest, Jest, Karma, Jasmine, and more.
+
+Wallaby Team sponsor
+
+🎵 [Communicate with Ableton Live via WebSockets](https://javascriptweekly.com/link/168029/d076523b1d "github.com") — [Ableton Live](https://javascriptweekly.com/link/168030/d076523b1d) is a popular DAW (digital audio workstation) and this opens up a way to control it from JavaScript.
+
+Ricardo Matias
+
+* 🕒 [Spacetime 7.9](https://javascriptweekly.com/link/168031/d076523b1d) – Lightweight timezone library. Now supporting formatting times [in SQL ISO format.](https://javascriptweekly.com/link/168032/d076523b1d)
+
+* 📊 [Perspective 3.5](https://javascriptweekly.com/link/168033/d076523b1d) – Streaming data viz and analytics component. The core is written in C++ and compiled to WASM.
+
+* [Embla Carousel 8.6](https://javascriptweekly.com/link/168034/d076523b1d) – Lightweight carousel library with fluid motion and swipe precision.
+
+* [simpleParallax.js 6.1](https://javascriptweekly.com/link/168035/d076523b1d) – Add parallax effects to any image.
+
+* [Tesseract.js 6.0.1](https://javascriptweekly.com/link/168036/d076523b1d) – Pure JS OCR for 100+ languages.
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/168037/d076523b1d). Relied on by Dropbox, Lattice, Bilt Rewards, etc.
+
+***
+
+Working on the frontend? 🚀 [Frontend Focus](https://javascriptweekly.com/link/168038/d076523b1d) is a weekly update — trusted by 75,000+ devs — covering the essential trends, tools and tips that matter.
+
+📢  Elsewhere
+
+A quick roundup of other interesting updates and useful resources from across the broader developer landscape:
+
+* Git has turned 20 years old and [GitHub's Taylor Blau caught up with Linus Torvalds](https://javascriptweekly.com/link/168039/d076523b1d) to discuss the milestone and the background to the project.
+
+* Tired of hearing about TypeScript? Why not experiment with [programming in PostScript](https://javascriptweekly.com/link/168040/d076523b1d) and running games on your printer?
+
+* [Minimal CSS-only Blurry Image Placeholders](https://javascriptweekly.com/link/168041/d076523b1d) is an article showing off a *very* clever technique for using CSS to dynamically create blurry image placeholders prior to an image loading in.
+
+* Mozilla's Simon Pieters tells us that [default styles for H1 elements are changing](https://javascriptweekly.com/link/168042/d076523b1d) and browsers are starting to roll out changes in default styles for nested section headings.
+
+* [Docker has released a new extension for VS Code](https://javascriptweekly.com/link/168043/d076523b1d) in a collaboration with the Microsoft Container Tools team.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/168044/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
