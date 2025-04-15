@@ -1,0 +1,236 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Another way to package Node apps into small executables
+description: Another way to package Node apps into small executables
+date: 星期二 03 下午 四月 15o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/574
+origin_site: https://nodeweekly.com/issues/574
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Another way to package Node apps into small executables" url="https://nodeweekly.com/issues/574" />
+
+<Detail client:only="react">
+	#​574 — April 15, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/574)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://nodeweekly.com/link/168047/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/icqzhvv69adcouhj9dam.jpg)](https://nodeweekly.com/link/168048/0a4070b383)
+
+[Fastify + React – 7x Faster than Next.js?](https://nodeweekly.com/link/168048/0a4070b383 "hire.jonasgalvez.com.br") — Node’s [Fastify](https://nodeweekly.com/link/168049/0a4070b383) framework has a mature plugin for Vite integration ([explained in detail here](https://nodeweekly.com/link/168050/0a4070b383)), including [@fastify/react](https://nodeweekly.com/link/168051/0a4070b383) which [just hit version 1.0](https://nodeweekly.com/link/168051/0a4070b383) and makes it easy to create fast, featureful (though obviously less so than Next.js) React apps atop Fastify. How fast? Very, it seems.
+
+Jonas Galvez
+
+💡 [Waku](https://nodeweekly.com/link/168086/0a4070b383) is also worth checking out if you're looking for something lighter than Next.js but with fantastic docs.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/61c62d35.png)](https://nodeweekly.com/link/168047/0a4070b383)
+
+[Bi-Weekly Demo: Find & Fix Errors in Your Application](https://nodeweekly.com/link/168047/0a4070b383 "sentry.io") — In this fast-paced 25-min demo, see how Sentry (and Codecov) help you catch Node errors, spot slowdowns, and ship cleaner code—without getting buried in logs. Hosted biweekly by a real human who’s broken plenty of apps, too. 👉 [Save your spot](https://nodeweekly.com/link/168047/0a4070b383).
+
+Sentry sponsor
+
+**IN BRIEF:**
+
+*   📘 Dr. Axel Rauschmayer has released [_Exploring TypeScript: TS 5.8 Edition_](https://nodeweekly.com/link/168052/0a4070b383) – you can buy it, but also read it all online for free [in HTML form.](https://nodeweekly.com/link/168053/0a4070b383)
+    
+*   [ESLint has added support for 'bulk suppressions'](https://nodeweekly.com/link/168054/0a4070b383), a way to make adopting stricter linting rules more manageable.
+    
+*   If you had problems with npm late last week, the npm registry [accidentally wiped everyone's access tokens.](https://nodeweekly.com/link/168055/0a4070b383) The incident, [rounded up here](https://nodeweekly.com/link/168056/0a4070b383), is now over and everything should be working again.
+    
+*   [Bun 1.2.9](https://nodeweekly.com/link/168057/0a4070b383) has been released. As usual, the alternative JS runtime continues to enhance its Node.js compatibility.
+    
+
+[Comparing Tauri and Electron for Building Desktop Apps](https://nodeweekly.com/link/168058/0a4070b383 "gethopp.app") — [Electron](https://nodeweekly.com/link/168059/0a4070b383) is a natural choice for building JS and HTML-powered cross-platform desktop apps but numerous alternatives have appeared like [Neutralinojs](https://nodeweekly.com/link/168060/0a4070b383) and the Rust-based [Tauri.](https://nodeweekly.com/link/168061/0a4070b383) This post does a good job of quickly showing how Tauri differs and why you might choose it.
+
+Costa Alexoglou
+
+[Some Features Every JavaScript Developer Should Know in 2025](https://nodeweekly.com/link/168062/0a4070b383 "waspdev.com") — A quick list post breezing through a few more modern areas of JavaScript including iterator helpers, `structuredClone()`, and set operations.
+
+Suren Enfiajyan
+
+📄 [Master Docker and VS Code: Supercharge Your Dev Workflow](https://nodeweekly.com/link/168087/0a4070b383) – With a Node.js example. Vladimir Mikhalev
+
+📄 [Deploying TypeScript: Recent Advances and Possible Future Directions](https://nodeweekly.com/link/168063/0a4070b383) Dr. Axel Rauschmayer
+
+📄 [NPM Security Best Practices](https://nodeweekly.com/link/168064/0a4070b383) OWASP Cheat Sheet Series
+
+📄 [Debugging JavaScript Memory Leaks in Bun](https://nodeweekly.com/link/168065/0a4070b383) Jarred Sumner
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ebviqgc3bdlprefqloi6.jpg)](https://nodeweekly.com/link/168066/0a4070b383)
+
+[Lexe: Package a Node App into a Single Executable](https://nodeweekly.com/link/168066/0a4070b383 "github.com") — Node actually has [a mechanism for creating single executable applications](https://nodeweekly.com/link/168067/0a4070b383) and there are numerous other tools to do it, but Lexe takes the approach of using Amazon’s lightweight [LLRT](https://nodeweekly.com/link/168068/0a4070b383) engine to make binaries of under 10MB in size. Note, however, _"Lexe is not a drop-in replacement for Node.js. It only supports a subset of Node.js APIs."_
+
+Ray-D-Song
+
+[Prisma ORM 6.6.0 Released](https://nodeweekly.com/link/168069/0a4070b383 "www.prisma.io") — Introduces a new `prisma-client` generator that’s more flexible and comes with ESM support, plus a preview of an MCP server to let AI agents and tools manage Postgres.
+
+Nikolas Burk
+
+[Chrono 2.8: A Natural Language Date Parser](https://nodeweekly.com/link/168070/0a4070b383 "github.com") — Give it a string like “today”, “last Friday”, “2 weeks from now”, or even an entire date and time, and it’ll come up with a date object to suit.
+
+Wanasit Tanakitrungruang
+
+*   🤖 [openai-node 4.94](https://nodeweekly.com/link/168071/0a4070b383) – The official Node library for OpenAI's API adds support for their newest API-only [GPT 4.1 models.](https://nodeweekly.com/link/168072/0a4070b383)
+    
+*   🕒 [Spacetime 7.9](https://nodeweekly.com/link/168073/0a4070b383) – Lightweight timezone library. Now supporting formatting times [in SQL ISO format.](https://nodeweekly.com/link/168074/0a4070b383)
+    
+*   [xero-node 11.0](https://nodeweekly.com/link/168075/0a4070b383) – Node SDK for the popular _Xero_ accounting system.
+    
+*   [Tesseract.js 6.0.1](https://nodeweekly.com/link/168076/0a4070b383) – Pure JS OCR for 100+ languages.
+    
+*   [Javet 4.1.2](https://nodeweekly.com/link/168077/0a4070b383) – Embed Node.js and V8 into Java.
+    
+
+📰 Classifieds
+
+📥 [The Node.js Book for Enterprise is here](https://nodeweekly.com/link/168078/0a4070b383): Years of experience helping Fortune 500 companies build & scale their Node apps, distilled into one book by Matteo Collina & Platformatic.
+
+* * *
+
+🤖 Tonkotsu makes you the tech lead for a team of AI agents and just started a free early access program for JS/TS developers. [Sign up today](https://nodeweekly.com/link/168079/0a4070b383).
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   Matt Smith showed off a [better way to apply default values using nullish coalescing with `??`](https://nodeweekly.com/link/168080/0a4070b383) rather than using `||`.
+    
+*   🤖 Last week, Google unveiled [Firebase Studio](https://nodeweekly.com/link/168081/0a4070b383), an online agentic AI development environment somewhat akin to things you might have seen from v0, Cursor or Lovable.
+    
+*   ☁️ Cloudflare had a busy time with its 'Developer Week' last week: there's now an easy way to [deploy Next.js apps to Cloudflare Workers](https://nodeweekly.com/link/168082/0a4070b383), you can add a ['deploy to Workers' button](https://nodeweekly.com/link/168083/0a4070b383) to your git repos, you can now [deploy an entire frontend, backend, and database](https://nodeweekly.com/link/168084/0a4070b383) (supporting React Router, Astro, Vue.js, Svelte and more) in one Worker, and [a lot more.](https://nodeweekly.com/link/168085/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​574 — April 15, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/574)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://nodeweekly.com/link/168047/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/icqzhvv69adcouhj9dam.jpg)](https://nodeweekly.com/link/168048/0a4070b383)
+
+[Fastify + React – 7x Faster than Next.js?](https://nodeweekly.com/link/168048/0a4070b383 "hire.jonasgalvez.com.br") — Node’s [Fastify](https://nodeweekly.com/link/168049/0a4070b383) framework has a mature plugin for Vite integration ([explained in detail here](https://nodeweekly.com/link/168050/0a4070b383)), including [@fastify/react](https://nodeweekly.com/link/168051/0a4070b383) which [just hit version 1.0](https://nodeweekly.com/link/168051/0a4070b383) and makes it easy to create fast, featureful (though obviously less so than Next.js) React apps atop Fastify. How fast? Very, it seems.
+
+Jonas Galvez
+
+💡 [Waku](https://nodeweekly.com/link/168086/0a4070b383) is also worth checking out if you're looking for something lighter than Next.js but with fantastic docs.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/61c62d35.png)](https://nodeweekly.com/link/168047/0a4070b383)
+
+[Bi-Weekly Demo: Find & Fix Errors in Your Application](https://nodeweekly.com/link/168047/0a4070b383 "sentry.io") — In this fast-paced 25-min demo, see how Sentry (and Codecov) help you catch Node errors, spot slowdowns, and ship cleaner code—without getting buried in logs. Hosted biweekly by a real human who’s broken plenty of apps, too. 👉 [Save your spot](https://nodeweekly.com/link/168047/0a4070b383).
+
+Sentry sponsor
+
+**IN BRIEF:**
+
+* 📘 Dr. Axel Rauschmayer has released [*Exploring TypeScript: TS 5.8 Edition*](https://nodeweekly.com/link/168052/0a4070b383) – you can buy it, but also read it all online for free [in HTML form.](https://nodeweekly.com/link/168053/0a4070b383)
+
+* [ESLint has added support for 'bulk suppressions'](https://nodeweekly.com/link/168054/0a4070b383), a way to make adopting stricter linting rules more manageable.
+
+* If you had problems with npm late last week, the npm registry [accidentally wiped everyone's access tokens.](https://nodeweekly.com/link/168055/0a4070b383) The incident, [rounded up here](https://nodeweekly.com/link/168056/0a4070b383), is now over and everything should be working again.
+
+* [Bun 1.2.9](https://nodeweekly.com/link/168057/0a4070b383) has been released. As usual, the alternative JS runtime continues to enhance its Node.js compatibility.
+
+[Comparing Tauri and Electron for Building Desktop Apps](https://nodeweekly.com/link/168058/0a4070b383 "gethopp.app") — [Electron](https://nodeweekly.com/link/168059/0a4070b383) is a natural choice for building JS and HTML-powered cross-platform desktop apps but numerous alternatives have appeared like [Neutralinojs](https://nodeweekly.com/link/168060/0a4070b383) and the Rust-based [Tauri.](https://nodeweekly.com/link/168061/0a4070b383) This post does a good job of quickly showing how Tauri differs and why you might choose it.
+
+Costa Alexoglou
+
+[Some Features Every JavaScript Developer Should Know in 2025](https://nodeweekly.com/link/168062/0a4070b383 "waspdev.com") — A quick list post breezing through a few more modern areas of JavaScript including iterator helpers, `structuredClone()`, and set operations.
+
+Suren Enfiajyan
+
+📄 [Master Docker and VS Code: Supercharge Your Dev Workflow](https://nodeweekly.com/link/168087/0a4070b383) – With a Node.js example. Vladimir Mikhalev
+
+📄 [Deploying TypeScript: Recent Advances and Possible Future Directions](https://nodeweekly.com/link/168063/0a4070b383) Dr. Axel Rauschmayer
+
+📄 [NPM Security Best Practices](https://nodeweekly.com/link/168064/0a4070b383) OWASP Cheat Sheet Series
+
+📄 [Debugging JavaScript Memory Leaks in Bun](https://nodeweekly.com/link/168065/0a4070b383) Jarred Sumner
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ebviqgc3bdlprefqloi6.jpg)](https://nodeweekly.com/link/168066/0a4070b383)
+
+[Lexe: Package a Node App into a Single Executable](https://nodeweekly.com/link/168066/0a4070b383 "github.com") — Node actually has [a mechanism for creating single executable applications](https://nodeweekly.com/link/168067/0a4070b383) and there are numerous other tools to do it, but Lexe takes the approach of using Amazon’s lightweight [LLRT](https://nodeweekly.com/link/168068/0a4070b383) engine to make binaries of under 10MB in size. Note, however, *"Lexe is not a drop-in replacement for Node.js. It only supports a subset of Node.js APIs."*
+
+Ray-D-Song
+
+[Prisma ORM 6.6.0 Released](https://nodeweekly.com/link/168069/0a4070b383 "www.prisma.io") — Introduces a new `prisma-client` generator that’s more flexible and comes with ESM support, plus a preview of an MCP server to let AI agents and tools manage Postgres.
+
+Nikolas Burk
+
+[Chrono 2.8: A Natural Language Date Parser](https://nodeweekly.com/link/168070/0a4070b383 "github.com") — Give it a string like “today”, “last Friday”, “2 weeks from now”, or even an entire date and time, and it’ll come up with a date object to suit.
+
+Wanasit Tanakitrungruang
+
+* 🤖 [openai-node 4.94](https://nodeweekly.com/link/168071/0a4070b383) – The official Node library for OpenAI's API adds support for their newest API-only [GPT 4.1 models.](https://nodeweekly.com/link/168072/0a4070b383)
+
+* 🕒 [Spacetime 7.9](https://nodeweekly.com/link/168073/0a4070b383) – Lightweight timezone library. Now supporting formatting times [in SQL ISO format.](https://nodeweekly.com/link/168074/0a4070b383)
+
+* [xero-node 11.0](https://nodeweekly.com/link/168075/0a4070b383) – Node SDK for the popular *Xero* accounting system.
+
+* [Tesseract.js 6.0.1](https://nodeweekly.com/link/168076/0a4070b383) – Pure JS OCR for 100+ languages.
+
+* [Javet 4.1.2](https://nodeweekly.com/link/168077/0a4070b383) – Embed Node.js and V8 into Java.
+
+📰 Classifieds
+
+📥 [The Node.js Book for Enterprise is here](https://nodeweekly.com/link/168078/0a4070b383): Years of experience helping Fortune 500 companies build & scale their Node apps, distilled into one book by Matteo Collina & Platformatic.
+
+***
+
+🤖 Tonkotsu makes you the tech lead for a team of AI agents and just started a free early access program for JS/TS developers. [Sign up today](https://nodeweekly.com/link/168079/0a4070b383).
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* Matt Smith showed off a [better way to apply default values using nullish coalescing with `??`](https://nodeweekly.com/link/168080/0a4070b383) rather than using `||`.
+
+* 🤖 Last week, Google unveiled [Firebase Studio](https://nodeweekly.com/link/168081/0a4070b383), an online agentic AI development environment somewhat akin to things you might have seen from v0, Cursor or Lovable.
+
+* ☁️ Cloudflare had a busy time with its 'Developer Week' last week: there's now an easy way to [deploy Next.js apps to Cloudflare Workers](https://nodeweekly.com/link/168082/0a4070b383), you can add a ['deploy to Workers' button](https://nodeweekly.com/link/168083/0a4070b383) to your git repos, you can now [deploy an entire frontend, backend, and database](https://nodeweekly.com/link/168084/0a4070b383) (supporting React Router, Astro, Vue.js, Svelte and more) in one Worker, and [a lot more.](https://nodeweekly.com/link/168085/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
