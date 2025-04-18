@@ -1,0 +1,224 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: TC39： No to records and tuples, yes to enums
+description: TC39： No to records and tuples, yes to enums
+date: 星期五 04 下午 四月 18o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/732
+origin_site: https://javascriptweekly.com/issues/732
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="TC39： No to records and tuples, yes to enums" url="https://javascriptweekly.com/issues/732" />
+
+<Detail client:only="react">
+	#​732 — April 18, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/732)
+
+🥚 A Good Friday, if you celebrate Easter at all. We're taking a little break but didn't want to take the _entire_ week off, so we have a slimline issue for you today :-) We'll be back to full service next Friday!  
+\_\_  
+_Peter Cooper, your editor_
+
+Together with 
+
+[![Pintura logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_459/e_make_transparent/co_white,e_outline:17/sx1iccw5grwaqxgi21lv.png)](https://javascriptweekly.com/link/168196/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qhmdk7uzmxbk6yntbapd.jpg)](https://javascriptweekly.com/link/168197/d076523b1d)
+
+[The ECMAScript Records and Tuples Proposal Has Been Withdrawn](https://javascriptweekly.com/link/168197/d076523b1d "github.com") — Several years in the making, the [record and tuples proposal](https://javascriptweekly.com/link/168198/d076523b1d) offered two new deeply immutable data structures to JavaScript, but at this week’s TC39 meeting, the consensus was to drop it.
+
+There have, however, been some more positive updates:
+
+*   [A proposal for introducing enums to JavaScript](https://javascriptweekly.com/link/168199/d076523b1d) has advanced to stage 1. It seeks the adoption of a compatible form of TypeScript's `enum` declaration. [Slidedeck here.](https://javascriptweekly.com/link/168200/d076523b1d)
+    
+*   The [Deferred re-exports proposal](https://javascriptweekly.com/link/168201/d076523b1d) has advanced to stage 2. There's [a slidedeck walking through the feature.](https://javascriptweekly.com/link/168202/d076523b1d)
+    
+*   The [Upsert](https://javascriptweekly.com/link/168203/d076523b1d) and [Composites](https://javascriptweekly.com/link/168204/d076523b1d) proposals have been advanced.
+    
+
+It's worth [following Rob Palmer](https://javascriptweekly.com/link/168205/d076523b1d) if you want to keep up to date with TC39 goings-on as he's always sharing the latest news.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d33fb589.png)](https://javascriptweekly.com/link/168196/d076523b1d)
+
+[Plug & Play Image Editor For Your Web App](https://javascriptweekly.com/link/168196/d076523b1d "pqina.nl") — Save yourself the headache of building an image editor. Import the pintura module, give it an image source, and instantly get features like cropping, rotating, resizing, and annotation. Need help? Support has you covered. [Try it for free today](https://javascriptweekly.com/link/168196/d076523b1d).
+
+Pintura sponsor
+
+[Hako: A New High-Performance Embeddable JavaScript Engine](https://javascriptweekly.com/link/168206/d076523b1d "andrews.substack.com") — A fork of [PrimJS](https://javascriptweekly.com/link/168207/d076523b1d) (which is, itself, built on top of [QuickJS](https://javascriptweekly.com/link/168208/d076523b1d)) that compiles down to WebAssembly and can act as a portable, embeddable JavaScript engine for other apps (here’s [an example of using it in a Go app](https://javascriptweekly.com/link/168209/d076523b1d)).
+
+Andrew Sampson
+
+**IN BRIEF:**
+
+*   [Mozilla has enabled its Temporal implementation by default](https://javascriptweekly.com/link/168210/d076523b1d) as of Firefox 139.
+    
+*   📘 Dr. Axel Rauschmayer has [released _Exploring TypeScript: TS 5.8 edition_](https://javascriptweekly.com/link/168211/d076523b1d), a book bringing together all of his recent research into modern TypeScript development. You can buy the book but also [read it all online for free](https://javascriptweekly.com/link/168212/d076523b1d) in HTML form, if you prefer.
+    
+*   [ESLint has added support for 'bulk suppressions'](https://javascriptweekly.com/link/168213/d076523b1d), a way to make adopting stricter linting rules more manageable.
+    
+*   Dan Abramov is back with [JSX Over The Wire](https://javascriptweekly.com/link/168214/d076523b1d), a fantastic meditation on the evolution of passing data and behavior between servers and clients and how things could get even better.
+    
+*   🤖 Microsoft's Burke Holland [▶️ shows off VS Code's new 'agent mode' feature](https://javascriptweekly.com/link/168215/d076523b1d) which really makes Copilot far more powerful and a fine alternative to dedicated AI-powered editors. I've been using it a lot this week.
+    
+*   [Google has made Firebase App Hosting generally available.](https://javascriptweekly.com/link/168216/d076523b1d) It offers a streamlined, fully-managed deployment process for Angular and Next.js apps.
+    
+*   Sacha Greif, the name behind the State of JavaScript survey, has [just launched](https://javascriptweekly.com/link/168237/d076523b1d) the first 'State of Devs' survey. 🗳️ [You can fill it out here](https://javascriptweekly.com/link/168238/d076523b1d).
+    
+
+**RELEASES:**
+
+*   [Astro 5.7](https://javascriptweekly.com/link/168217/d076523b1d) – The popular content framework gains an experimental fonts API, its sessions API is now stable, and there's support for using local SVG files as components.
+    
+*   [WebStorm 2025.1](https://javascriptweekly.com/link/168218/d076523b1d) – JetBrains' JavaScript IDE – fresh with big AI, Angular, monorepo, and Next.js enhancements.
+    
+*   [tldts 7.0](https://javascriptweekly.com/link/168219/d076523b1d) – URL parsing library to extract domains, subdomains, suffixes, etc.
+    
+*   [gridstack.js 12.0](https://javascriptweekly.com/link/168220/d076523b1d) – Build responsive interactive dashboards quickly.
+    
+*   [Lexe](https://javascriptweekly.com/link/168221/d076523b1d) – Package a Node app into a single, small executable.
+    
+*   [DOCX 9.4](https://javascriptweekly.com/link/168222/d076523b1d) – Generate Word documents from JavaScript.
+    
+*   [Redux Toolkit 2.7](https://javascriptweekly.com/link/168223/d076523b1d), [Bun v1.2.10](https://javascriptweekly.com/link/168224/d076523b1d), [Babylon.js 8.3](https://javascriptweekly.com/link/168225/d076523b1d), [Rambda 10.0](https://javascriptweekly.com/link/168226/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v97ntglsq0dyuhan59q5.jpg)](https://javascriptweekly.com/link/168227/d076523b1d)
+
+[A Flowing WebGL Gradient, Deconstructed](https://javascriptweekly.com/link/168227/d076523b1d "alexharri.com") — Even if you don’t want to render a neat plasma-style effect on the Web, this is a wonderfully deep exploration of the math and technology behind doing so using simple GLSL code that could be easily understood by any JavaScript developer.
+
+Alex Harri
+
+💡 If you like stuff like this, [this CodePen of a GLSL-based swirl effect](https://javascriptweekly.com/link/168228/d076523b1d) is neat too.
+
+[Advanced React in the Wild](https://javascriptweekly.com/link/168229/d076523b1d "largeapps.dev") — A round-up of case studies showing how five different engineering teams have pushed React to the limit in production and their real-world wins in areas like performance, Core Web Vitals, caching, and more. A lot to enjoy here.
+
+Addy Osmani and Hassan Djirdeh
+
+📺 [Building Single Page Apps with SvelteKit](https://javascriptweekly.com/link/168230/d076523b1d) – And not only that, you can create SvelteKit apps in a single HTML file that can run without a Web server. _(15 minutes)_ Stanislav Khromov
+
+📄 [How I Track My Blog’s Analytics with Val Town](https://javascriptweekly.com/link/168231/d076523b1d) Orestis Papadopoulos
+
+📄 [Deploying TypeScript: Recent Advances and Possible Future Directions](https://javascriptweekly.com/link/168232/d076523b1d) Dr. Axel Rauschmayer
+
+📄 [Zero-Config Debugging with Deno and OpenTelemetry](https://javascriptweekly.com/link/168233/d076523b1d) Casonato and Jiang (Deno)
+
+📄 [Creating an AI Chat Experience with React and OpenAI](https://javascriptweekly.com/link/168234/d076523b1d) Robin Wieruch
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/168235/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​732 — April 18, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/732)
+
+🥚 A Good Friday, if you celebrate Easter at all. We're taking a little break but didn't want to take the *entire* week off, so we have a slimline issue for you today :-) We'll be back to full service next Friday!\
+\_\_\
+*Peter Cooper, your editor*
+
+Together with 
+
+[![Pintura logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_459/e_make_transparent/co_white,e_outline:17/sx1iccw5grwaqxgi21lv.png)](https://javascriptweekly.com/link/168196/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qhmdk7uzmxbk6yntbapd.jpg)](https://javascriptweekly.com/link/168197/d076523b1d)
+
+[The ECMAScript Records and Tuples Proposal Has Been Withdrawn](https://javascriptweekly.com/link/168197/d076523b1d "github.com") — Several years in the making, the [record and tuples proposal](https://javascriptweekly.com/link/168198/d076523b1d) offered two new deeply immutable data structures to JavaScript, but at this week’s TC39 meeting, the consensus was to drop it.
+
+There have, however, been some more positive updates:
+
+* [A proposal for introducing enums to JavaScript](https://javascriptweekly.com/link/168199/d076523b1d) has advanced to stage 1. It seeks the adoption of a compatible form of TypeScript's `enum` declaration. [Slidedeck here.](https://javascriptweekly.com/link/168200/d076523b1d)
+
+* The [Deferred re-exports proposal](https://javascriptweekly.com/link/168201/d076523b1d) has advanced to stage 2. There's [a slidedeck walking through the feature.](https://javascriptweekly.com/link/168202/d076523b1d)
+
+* The [Upsert](https://javascriptweekly.com/link/168203/d076523b1d) and [Composites](https://javascriptweekly.com/link/168204/d076523b1d) proposals have been advanced.
+
+It's worth [following Rob Palmer](https://javascriptweekly.com/link/168205/d076523b1d) if you want to keep up to date with TC39 goings-on as he's always sharing the latest news.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d33fb589.png)](https://javascriptweekly.com/link/168196/d076523b1d)
+
+[Plug & Play Image Editor For Your Web App](https://javascriptweekly.com/link/168196/d076523b1d "pqina.nl") — Save yourself the headache of building an image editor. Import the pintura module, give it an image source, and instantly get features like cropping, rotating, resizing, and annotation. Need help? Support has you covered. [Try it for free today](https://javascriptweekly.com/link/168196/d076523b1d).
+
+Pintura sponsor
+
+[Hako: A New High-Performance Embeddable JavaScript Engine](https://javascriptweekly.com/link/168206/d076523b1d "andrews.substack.com") — A fork of [PrimJS](https://javascriptweekly.com/link/168207/d076523b1d) (which is, itself, built on top of [QuickJS](https://javascriptweekly.com/link/168208/d076523b1d)) that compiles down to WebAssembly and can act as a portable, embeddable JavaScript engine for other apps (here’s [an example of using it in a Go app](https://javascriptweekly.com/link/168209/d076523b1d)).
+
+Andrew Sampson
+
+**IN BRIEF:**
+
+* [Mozilla has enabled its Temporal implementation by default](https://javascriptweekly.com/link/168210/d076523b1d) as of Firefox 139.
+
+* 📘 Dr. Axel Rauschmayer has [released *Exploring TypeScript: TS 5.8 edition*](https://javascriptweekly.com/link/168211/d076523b1d), a book bringing together all of his recent research into modern TypeScript development. You can buy the book but also [read it all online for free](https://javascriptweekly.com/link/168212/d076523b1d) in HTML form, if you prefer.
+
+* [ESLint has added support for 'bulk suppressions'](https://javascriptweekly.com/link/168213/d076523b1d), a way to make adopting stricter linting rules more manageable.
+
+* Dan Abramov is back with [JSX Over The Wire](https://javascriptweekly.com/link/168214/d076523b1d), a fantastic meditation on the evolution of passing data and behavior between servers and clients and how things could get even better.
+
+* 🤖 Microsoft's Burke Holland [▶️ shows off VS Code's new 'agent mode' feature](https://javascriptweekly.com/link/168215/d076523b1d) which really makes Copilot far more powerful and a fine alternative to dedicated AI-powered editors. I've been using it a lot this week.
+
+* [Google has made Firebase App Hosting generally available.](https://javascriptweekly.com/link/168216/d076523b1d) It offers a streamlined, fully-managed deployment process for Angular and Next.js apps.
+
+* Sacha Greif, the name behind the State of JavaScript survey, has [just launched](https://javascriptweekly.com/link/168237/d076523b1d) the first 'State of Devs' survey. 🗳️ [You can fill it out here](https://javascriptweekly.com/link/168238/d076523b1d).
+
+**RELEASES:**
+
+* [Astro 5.7](https://javascriptweekly.com/link/168217/d076523b1d) – The popular content framework gains an experimental fonts API, its sessions API is now stable, and there's support for using local SVG files as components.
+
+* [WebStorm 2025.1](https://javascriptweekly.com/link/168218/d076523b1d) – JetBrains' JavaScript IDE – fresh with big AI, Angular, monorepo, and Next.js enhancements.
+
+* [tldts 7.0](https://javascriptweekly.com/link/168219/d076523b1d) – URL parsing library to extract domains, subdomains, suffixes, etc.
+
+* [gridstack.js 12.0](https://javascriptweekly.com/link/168220/d076523b1d) – Build responsive interactive dashboards quickly.
+
+* [Lexe](https://javascriptweekly.com/link/168221/d076523b1d) – Package a Node app into a single, small executable.
+
+* [DOCX 9.4](https://javascriptweekly.com/link/168222/d076523b1d) – Generate Word documents from JavaScript.
+
+* [Redux Toolkit 2.7](https://javascriptweekly.com/link/168223/d076523b1d), [Bun v1.2.10](https://javascriptweekly.com/link/168224/d076523b1d), [Babylon.js 8.3](https://javascriptweekly.com/link/168225/d076523b1d), [Rambda 10.0](https://javascriptweekly.com/link/168226/d076523b1d)
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v97ntglsq0dyuhan59q5.jpg)](https://javascriptweekly.com/link/168227/d076523b1d)
+
+[A Flowing WebGL Gradient, Deconstructed](https://javascriptweekly.com/link/168227/d076523b1d "alexharri.com") — Even if you don’t want to render a neat plasma-style effect on the Web, this is a wonderfully deep exploration of the math and technology behind doing so using simple GLSL code that could be easily understood by any JavaScript developer.
+
+Alex Harri
+
+💡 If you like stuff like this, [this CodePen of a GLSL-based swirl effect](https://javascriptweekly.com/link/168228/d076523b1d) is neat too.
+
+[Advanced React in the Wild](https://javascriptweekly.com/link/168229/d076523b1d "largeapps.dev") — A round-up of case studies showing how five different engineering teams have pushed React to the limit in production and their real-world wins in areas like performance, Core Web Vitals, caching, and more. A lot to enjoy here.
+
+Addy Osmani and Hassan Djirdeh
+
+📺 [Building Single Page Apps with SvelteKit](https://javascriptweekly.com/link/168230/d076523b1d) – And not only that, you can create SvelteKit apps in a single HTML file that can run without a Web server. *(15 minutes)* Stanislav Khromov
+
+📄 [How I Track My Blog’s Analytics with Val Town](https://javascriptweekly.com/link/168231/d076523b1d) Orestis Papadopoulos
+
+📄 [Deploying TypeScript: Recent Advances and Possible Future Directions](https://javascriptweekly.com/link/168232/d076523b1d) Dr. Axel Rauschmayer
+
+📄 [Zero-Config Debugging with Deno and OpenTelemetry](https://javascriptweekly.com/link/168233/d076523b1d) Casonato and Jiang (Deno)
+
+📄 [Creating an AI Chat Experience with React and OpenAI](https://javascriptweekly.com/link/168234/d076523b1d) Robin Wieruch
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/168235/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
