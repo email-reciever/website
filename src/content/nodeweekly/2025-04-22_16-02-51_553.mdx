@@ -1,0 +1,207 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Handling V8's memory usage and GC
+description: Handling V8's memory usage and GC
+date: 星期二 04 下午 四月 22o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/575
+origin_site: https://nodeweekly.com/issues/575
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Handling V8's memory usage and GC" url="https://nodeweekly.com/issues/575" />
+
+<Detail client:only="react">
+	#​575 — April 22, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/575)
+
+Together with 
+
+[![Tonkotsu logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_313/e_make_transparent/co_white,e_outline:5/c4v6bk3uzcf36sutppl2.jpg)](https://nodeweekly.com/link/168240/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rnhdr40yiid6akl6jlgr.jpg)](https://nodeweekly.com/link/168241/0a4070b383)
+
+[Optimizing Node Performance with V8 GC Optimization](https://nodeweekly.com/link/168241/0a4070b383 "blog.platformatic.dev") — Matteo recently [▶️ gave a talk](https://nodeweekly.com/link/168242/0a4070b383) at dotJS about Node’s memory usage and decided to write it up into a blog post too. Matteo notes that high memory usage doesn’t necessarily mean you have a memory leak, explains how V8’s garbage collector works, and how you can tune things specifically for your own use case.
+
+Matteo Collina
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f6f428ff.jpg)](https://nodeweekly.com/link/168240/0a4070b383)
+
+[🍜 Tonkotsu Is a Reimagined IDE for JavaScript & TypeScript Developers](https://nodeweekly.com/link/168240/0a4070b383) — We've built a new developer experience that makes you the tech lead for a team of AI agents. We just started our FREE early access program and want to hear directly from early adopters. [Sign up today](https://nodeweekly.com/link/168240/0a4070b383).
+
+Tonkotsu sponsor
+
+[Microsoft Warns About Node.js' Role in Modern Malware](https://nodeweekly.com/link/168243/0a4070b383 "www.microsoft.com") — Microsoft’s security team is observing a sharp increase in the use of Node.js to deliver malware and other malicious payloads. This post digs into a couple of examples and what's going on behind the scenes.
+
+Microsoft
+
+[Node v20.19.1 (LTS) Released](https://nodeweekly.com/link/168244/0a4070b383 "nodejs.org") — You know it’s a quiet week when a .1 release is feature-worthy news. Little here except dependency bumps, though, but it’s always good to see an update of what remains a popular Node version (though Node 22 ‘Jod’ should now be your LTS version of choice, ideally).
+
+Ulises Gascón
+
+📄 [Dependency-Free Command-Line Apps Powered by Node's Core Modules](https://nodeweekly.com/link/168245/0a4070b383) – How far can you get without pulling in external modules? Liran Tal
+
+📄 [Float16Array in JavaScript](https://nodeweekly.com/link/168246/0a4070b383) – Understanding the 16-bit floating point array type. Coming to Node soon. Trevor I. Lasn
+
+📄 [The Best Node.js Observability Tools in 2025](https://nodeweekly.com/link/168247/0a4070b383) – A comparison of seven approaches. Lizz Parody (NodeSource)
+
+📄 [When to Use `map()` vs. `forEach()`](https://nodeweekly.com/link/168248/0a4070b383) Matt Smith
+
+🛠 Code & Tools
+
+🤖 [node-mlx 0.4: Machine Learning Framework for Node.js](https://nodeweekly.com/link/168249/0a4070b383 "github.com") — Based upon Apple’s [MLX framework](https://nodeweekly.com/link/168250/0a4070b383) targeting Apple’s own chips, node-mlx brings its power into the Node world.
+
+zcbenz
+
+[Repomix: Pack Your Codebase Into AI-Friendly Formats](https://nodeweekly.com/link/168251/0a4070b383 "repomix.com") — Enter a GitHub URL and choose various settings for the output (XML, MD, etc). It’s Node.js-based and available to use in a library-like form for your own tooling creations too. [GitHub repo.](https://nodeweekly.com/link/168252/0a4070b383)
+
+Kazuki Yamada
+
+*   ⭐ [pnpm 10.9](https://nodeweekly.com/link/168253/0a4070b383) – The alternative, efficient package manager. It can now be used to install [JSR packages.](https://nodeweekly.com/link/168254/0a4070b383)
+    
+*   [WebStorm 2025.1](https://nodeweekly.com/link/168255/0a4070b383) – JetBrains' JavaScript IDE – fresh with big AI, Angular, monorepo, and Next.js enhancements.
+    
+*   [node-base64-image 2.1](https://nodeweekly.com/link/168256/0a4070b383) – Encode/decode images to/from Base64 strings or Buffer objects.
+    
+*   [express-sse 1.0](https://nodeweekly.com/link/168257/0a4070b383) – Express middleware for _'quick'n'easy'_ Server-Sent Events.
+    
+*   [MongoDB Node.js Driver 6.16](https://nodeweekly.com/link/168258/0a4070b383) – The latest official MongoDB driver.
+    
+*   [Dax 0.43](https://nodeweekly.com/link/168259/0a4070b383) – `zx`\-inspired cross-platform shell tools for Deno and Node.
+    
+*   [Gitbeaker 42.4](https://nodeweekly.com/link/168260/0a4070b383) – Comprehensive typed library for GitLab's SDK.
+    
+*   [Schedule 6.0](https://nodeweekly.com/link/168261/0a4070b383) – Scheduling module for the [NestJS](https://nodeweekly.com/link/168262/0a4070b383) framework.
+    
+*   [Fastify 5.3.2](https://nodeweekly.com/link/168263/0a4070b383) – The fast, low overhead Node web framework.
+    
+*   [zx 8.5.3](https://nodeweekly.com/link/168264/0a4070b383) – Google's tool for better Node shell scripting.
+    
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   [The 'Records and Tuples' ECMAScript proposal has been withdrawn](https://nodeweekly.com/link/168265/0a4070b383) due to lack of consensus within TC39. [A proposal for introducing enums](https://nodeweekly.com/link/168266/0a4070b383) to JavaScript has, however, been advanced.
+    
+*   [Mozilla has enabled its Temporal implementation by default](https://nodeweekly.com/link/168267/0a4070b383) as of Firefox 139.
+    
+*   [Hako](https://nodeweekly.com/link/168268/0a4070b383) is a new JavaScript engine forked from PrimJS and built atop QuickJS. Its main feature is that it compiles down to WebAssembly so you can run JavaScript within embedded environments, such as within apps written in non-JS languages.
+    
+*   🤖 Microsoft's Burke Holland [▶️ shows off VS Code's new 'agent mode' feature](https://nodeweekly.com/link/168269/0a4070b383) which really makes Copilot far more powerful and a fine alternative to dedicated AI-powered editors. I've been using it a lot recently and it's worth a try if you're bored of Cursor, etc.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​575 — April 22, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/575)
+
+Together with 
+
+[![Tonkotsu logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_313/e_make_transparent/co_white,e_outline:5/c4v6bk3uzcf36sutppl2.jpg)](https://nodeweekly.com/link/168240/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rnhdr40yiid6akl6jlgr.jpg)](https://nodeweekly.com/link/168241/0a4070b383)
+
+[Optimizing Node Performance with V8 GC Optimization](https://nodeweekly.com/link/168241/0a4070b383 "blog.platformatic.dev") — Matteo recently [▶️ gave a talk](https://nodeweekly.com/link/168242/0a4070b383) at dotJS about Node’s memory usage and decided to write it up into a blog post too. Matteo notes that high memory usage doesn’t necessarily mean you have a memory leak, explains how V8’s garbage collector works, and how you can tune things specifically for your own use case.
+
+Matteo Collina
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f6f428ff.jpg)](https://nodeweekly.com/link/168240/0a4070b383)
+
+[🍜 Tonkotsu Is a Reimagined IDE for JavaScript & TypeScript Developers](https://nodeweekly.com/link/168240/0a4070b383) — We've built a new developer experience that makes you the tech lead for a team of AI agents. We just started our FREE early access program and want to hear directly from early adopters. [Sign up today](https://nodeweekly.com/link/168240/0a4070b383).
+
+Tonkotsu sponsor
+
+[Microsoft Warns About Node.js' Role in Modern Malware](https://nodeweekly.com/link/168243/0a4070b383 "www.microsoft.com") — Microsoft’s security team is observing a sharp increase in the use of Node.js to deliver malware and other malicious payloads. This post digs into a couple of examples and what's going on behind the scenes.
+
+Microsoft
+
+[Node v20.19.1 (LTS) Released](https://nodeweekly.com/link/168244/0a4070b383 "nodejs.org") — You know it’s a quiet week when a .1 release is feature-worthy news. Little here except dependency bumps, though, but it’s always good to see an update of what remains a popular Node version (though Node 22 ‘Jod’ should now be your LTS version of choice, ideally).
+
+Ulises Gascón
+
+📄 [Dependency-Free Command-Line Apps Powered by Node's Core Modules](https://nodeweekly.com/link/168245/0a4070b383) – How far can you get without pulling in external modules? Liran Tal
+
+📄 [Float16Array in JavaScript](https://nodeweekly.com/link/168246/0a4070b383) – Understanding the 16-bit floating point array type. Coming to Node soon. Trevor I. Lasn
+
+📄 [The Best Node.js Observability Tools in 2025](https://nodeweekly.com/link/168247/0a4070b383) – A comparison of seven approaches. Lizz Parody (NodeSource)
+
+📄 [When to Use `map()` vs. `forEach()`](https://nodeweekly.com/link/168248/0a4070b383) Matt Smith
+
+🛠 Code & Tools
+
+🤖 [node-mlx 0.4: Machine Learning Framework for Node.js](https://nodeweekly.com/link/168249/0a4070b383 "github.com") — Based upon Apple’s [MLX framework](https://nodeweekly.com/link/168250/0a4070b383) targeting Apple’s own chips, node-mlx brings its power into the Node world.
+
+zcbenz
+
+[Repomix: Pack Your Codebase Into AI-Friendly Formats](https://nodeweekly.com/link/168251/0a4070b383 "repomix.com") — Enter a GitHub URL and choose various settings for the output (XML, MD, etc). It’s Node.js-based and available to use in a library-like form for your own tooling creations too. [GitHub repo.](https://nodeweekly.com/link/168252/0a4070b383)
+
+Kazuki Yamada
+
+* ⭐ [pnpm 10.9](https://nodeweekly.com/link/168253/0a4070b383) – The alternative, efficient package manager. It can now be used to install [JSR packages.](https://nodeweekly.com/link/168254/0a4070b383)
+
+* [WebStorm 2025.1](https://nodeweekly.com/link/168255/0a4070b383) – JetBrains' JavaScript IDE – fresh with big AI, Angular, monorepo, and Next.js enhancements.
+
+* [node-base64-image 2.1](https://nodeweekly.com/link/168256/0a4070b383) – Encode/decode images to/from Base64 strings or Buffer objects.
+
+* [express-sse 1.0](https://nodeweekly.com/link/168257/0a4070b383) – Express middleware for *'quick'n'easy'* Server-Sent Events.
+
+* [MongoDB Node.js Driver 6.16](https://nodeweekly.com/link/168258/0a4070b383) – The latest official MongoDB driver.
+
+* [Dax 0.43](https://nodeweekly.com/link/168259/0a4070b383) – `zx`-inspired cross-platform shell tools for Deno and Node.
+
+* [Gitbeaker 42.4](https://nodeweekly.com/link/168260/0a4070b383) – Comprehensive typed library for GitLab's SDK.
+
+* [Schedule 6.0](https://nodeweekly.com/link/168261/0a4070b383) – Scheduling module for the [NestJS](https://nodeweekly.com/link/168262/0a4070b383) framework.
+
+* [Fastify 5.3.2](https://nodeweekly.com/link/168263/0a4070b383) – The fast, low overhead Node web framework.
+
+* [zx 8.5.3](https://nodeweekly.com/link/168264/0a4070b383) – Google's tool for better Node shell scripting.
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* [The 'Records and Tuples' ECMAScript proposal has been withdrawn](https://nodeweekly.com/link/168265/0a4070b383) due to lack of consensus within TC39. [A proposal for introducing enums](https://nodeweekly.com/link/168266/0a4070b383) to JavaScript has, however, been advanced.
+
+* [Mozilla has enabled its Temporal implementation by default](https://nodeweekly.com/link/168267/0a4070b383) as of Firefox 139.
+
+* [Hako](https://nodeweekly.com/link/168268/0a4070b383) is a new JavaScript engine forked from PrimJS and built atop QuickJS. Its main feature is that it compiles down to WebAssembly so you can run JavaScript within embedded environments, such as within apps written in non-JS languages.
+
+* 🤖 Microsoft's Burke Holland [▶️ shows off VS Code's new 'agent mode' feature](https://nodeweekly.com/link/168269/0a4070b383) which really makes Copilot far more powerful and a fine alternative to dedicated AI-powered editors. I've been using it a lot recently and it's worth a try if you're bored of Cursor, etc.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
