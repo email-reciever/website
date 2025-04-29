@@ -1,0 +1,256 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Koa 3.0, Node 22.15.0, and a V8 boost
+description: Koa 3.0, Node 22.15.0, and a V8 boost
+date: 星期二 04 下午 四月 29o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/576
+origin_site: https://nodeweekly.com/issues/576
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Koa 3.0, Node 22.15.0, and a V8 boost" url="https://nodeweekly.com/issues/576" />
+
+<Detail client:only="react">
+	#​576 — April 29, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/576)
+
+Together with 
+
+[![Tonkotsu logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_313/e_make_transparent/co_white,e_outline:5/c4v6bk3uzcf36sutppl2.jpg)](https://nodeweekly.com/link/168538/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/y9hwqs99t1p5mgumv3lt.jpg)](https://nodeweekly.com/link/168539/0a4070b383)
+
+[Koa 3.0: The Expressive HTTP Middleware Framework](https://nodeweekly.com/link/168539/0a4070b383 "koajs.com") — Koa first appeared over a decade ago as a ‘next-generation’ Web framework that shared some of the lineage (and team) of Express.js, but leaning on more modern JavaScript features and ideas of the time. While Express has [been making a comeback recently](https://nodeweekly.com/link/168540/0a4070b383), Koa has progressed too and offers a compelling alternative. [v3.0 release notes.](https://nodeweekly.com/link/168541/0a4070b383)
+
+Koa contributors
+
+[Node v22.15.0 (LTS) Released](https://nodeweekly.com/link/168542/0a4070b383 "nodejs.org") — With over 300 commits, this is a meaty update for the most up to date LTS release of Node, though with no _huge_ features. You can now use system certificates on Windows and macOS, numerous dependencies are updated, doc tweaks, and [`process.execve`](https://nodeweekly.com/link/168543/0a4070b383) makes an appearance.
+
+Ulises Gascón
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/312a4c8f.jpg)](https://nodeweekly.com/link/168538/0a4070b383)
+
+[🍜 Tonkotsu Is a Natural Language IDE for JS & TS Developers](https://nodeweekly.com/link/168538/0a4070b383) — Write out your work in bullet points and delegate to Tonkotsu. You're the tech lead and approver. We just started our FREE early access program and want to hear directly from early adopters. [Sign up today](https://nodeweekly.com/link/168538/0a4070b383).
+
+Tonkotsu sponsor
+
+**IN BRIEF:**
+
+*   ⏰ A reminder that [Node.js v18 reaches its 'End-Of-Life' _tomorrow!_](https://nodeweekly.com/link/168544/0a4070b383) There is an ongoing commercial support option, but if you can upgrade to Node v22, now's the time.
+    
+*   In related news, Node.js v23 is now in 'maintenance' mode with no planned further releases. v24 is due to land soon, though, and will become the new 'Current' release.
+    
+*   [Bun](https://nodeweekly.com/link/168545/0a4070b383) continues with its march to Node.js compatibility with [100% of the Node.js tests for the `events` module](https://nodeweekly.com/link/168546/0a4070b383) now passing.
+    
+*   In other Bun news, Bun has [a `llms-full.txt` file](https://nodeweekly.com/link/168547/0a4070b383) of plain text documentation that can be fed into LLMs to help you work with Bun using AI agents, etc.
+    
+*   Vercel Functions that use Node.js can now [detect cancelled requests and stop execution](https://nodeweekly.com/link/168548/0a4070b383) before completion.
+    
+
+[The Node.js Test CI Security Incident Explained](https://nodeweekly.com/link/168549/0a4070b383 "nodejs.org") — The Node.js project recently experienced a critical security incident with its test CI infrastructure. Attackers exploited a flaw in the Jenkins pipeline and this post goes into detail about how it came about and was resolved.
+
+Node.js Technical Steering Committee
+
+[Giving V8 a Heads-Up: Faster Startup with Explicit Compile Hints](https://nodeweekly.com/link/168550/0a4070b383 "v8.dev") — Not Node specific but a look at a V8 optimization that may become relevant in time. Explicit Compile Hints let you direct V8 to eagerly compile specific files as a way to speed up startup. It ships with Chrome 136.
+
+Marja Hölttä
+
+📄 [A Decade of Impact: How Our npm Packages Hit 1 Billion Downloads and Shaped JavaScript](https://nodeweekly.com/link/168551/0a4070b383) – A bold title for sure, but with a neat story behind it. Forward Email
+
+📄 [Making a Static Site Generator Even Smaller using `async-tree`](https://nodeweekly.com/link/168552/0a4070b383) Jan Miksovsky
+
+📄 [How To Write Unit Tests in Node with Mocha](https://nodeweekly.com/link/168553/0a4070b383) Antonello Zanini
+
+🛠 Code & Tools
+
+[Seyfert: A Framework for Building Discord Bots](https://nodeweekly.com/link/168554/0a4070b383 "www.seyfert.dev") — Create bots for the popular chat system starting from bots that [respond to simple commands](https://nodeweekly.com/link/168555/0a4070b383) up to creating components and getting user input. Started life being Node only but recent versions support Deno and Bun too. [GitHub repo.](https://nodeweekly.com/link/168556/0a4070b383)
+
+socram03
+
+[Demo: Find & Fix Errors in Your App With Sentry](https://nodeweekly.com/link/168557/0a4070b383 "sentry.io") — See how Sentry can help catch Node errors, spot slowdowns, and ship cleaner code in this 25-min demo (hosted by a real human who's broken plenty of apps). [Save your spot](https://nodeweekly.com/link/168557/0a4070b383).
+
+Sentry sponsor
+
+[Scala.js 1.19.0: Bringing Scala and JavaScript Together](https://nodeweekly.com/link/168558/0a4070b383 "www.scala-js.org") — [Scala](https://nodeweekly.com/link/168559/0a4070b383) is a powerful language that has grown beyond its JVM roots to also have JavaScript and native runtimes. Scala.js is a Scala to JS compiler and [the homepage](https://nodeweekly.com/link/168560/0a4070b383) has some neat code and feature comparisons.
+
+Scala.js Team
+
+*   🤖 [OpenAI Node 4.96](https://nodeweekly.com/link/168561/0a4070b383) – The official Node library for OpenAI's API. Adds support for the new [gpt-image-1 model.](https://nodeweekly.com/link/168562/0a4070b383)
+    
+*   [Nest 11.1](https://nodeweekly.com/link/168563/0a4070b383) – Popular Node.js framework for building enterprise-grade apps.
+    
+*   [Electron 36.0](https://nodeweekly.com/link/168564/0a4070b383) – The cross-platform desktop app framework.
+    
+*   [Mongoose 8.14](https://nodeweekly.com/link/168565/0a4070b383) – Popular MongoDB object modeling library.
+    
+*   [file-type 20.5](https://nodeweekly.com/link/168566/0a4070b383) – Detect the file type of a file, stream, or data.
+    
+*   [node-argon2 0.43](https://nodeweekly.com/link/168567/0a4070b383) – Bindings for the Argon2 hashing algorithm.
+    
+*   [Middy 6.2](https://nodeweekly.com/link/168568/0a4070b383) – Node.js AWS Lambda middleware engine.
+    
+*   [Jasmine 5.7](https://nodeweekly.com/link/168569/0a4070b383) – Testing framework for browsers & Node.
+    
+*   📊 [Chartbrew 4.0](https://nodeweekly.com/link/168570/0a4070b383) – Create live reporting dashboards.
+    
+*   [pnpm 10.10](https://nodeweekly.com/link/168571/0a4070b383) – Fast, space efficient package manager.
+    
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vxo36brzjqthik6vcam0.jpg)](https://nodeweekly.com/link/168572/0a4070b383)
+
+*   I've been dabbling with a little C# recently and enjoyed this [_TypeScript is Like C#_ guide](https://nodeweekly.com/link/168572/0a4070b383) oriented largely around showing TypeScript/JavaScript vs C# examples of doing the same things.
+    
+*   I was intrigued to [see this experiment of using DuckDB-WASM from JavaScript](https://nodeweekly.com/link/168573/0a4070b383) to create a basic '3D' game. This sort of integration could easily be used for more practical data-processing ends.
+    
+*   The latest version of the popular creative coding library [p5.js 2.0 was released](https://nodeweekly.com/link/168574/0a4070b383) recently – it's being rolled out _very_ slowly, though, as it's such a major upgrade.
+    
+*   With Deno 2.3 just around the corner, the Deno team shared [a few updates on recent Deno improvements.](https://nodeweekly.com/link/168575/0a4070b383)
+    
+*   If you want to create completely free software for others to use, [static HTML and JavaScript is the best approach](https://nodeweekly.com/link/168576/0a4070b383) says Simon Willison.
+    
+*   You can now [use JSR packages with pnpm and Yarn.](https://nodeweekly.com/link/168577/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​576 — April 29, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/576)
+
+Together with 
+
+[![Tonkotsu logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_313/e_make_transparent/co_white,e_outline:5/c4v6bk3uzcf36sutppl2.jpg)](https://nodeweekly.com/link/168538/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/y9hwqs99t1p5mgumv3lt.jpg)](https://nodeweekly.com/link/168539/0a4070b383)
+
+[Koa 3.0: The Expressive HTTP Middleware Framework](https://nodeweekly.com/link/168539/0a4070b383 "koajs.com") — Koa first appeared over a decade ago as a ‘next-generation’ Web framework that shared some of the lineage (and team) of Express.js, but leaning on more modern JavaScript features and ideas of the time. While Express has [been making a comeback recently](https://nodeweekly.com/link/168540/0a4070b383), Koa has progressed too and offers a compelling alternative. [v3.0 release notes.](https://nodeweekly.com/link/168541/0a4070b383)
+
+Koa contributors
+
+[Node v22.15.0 (LTS) Released](https://nodeweekly.com/link/168542/0a4070b383 "nodejs.org") — With over 300 commits, this is a meaty update for the most up to date LTS release of Node, though with no *huge* features. You can now use system certificates on Windows and macOS, numerous dependencies are updated, doc tweaks, and [`process.execve`](https://nodeweekly.com/link/168543/0a4070b383) makes an appearance.
+
+Ulises Gascón
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/312a4c8f.jpg)](https://nodeweekly.com/link/168538/0a4070b383)
+
+[🍜 Tonkotsu Is a Natural Language IDE for JS & TS Developers](https://nodeweekly.com/link/168538/0a4070b383) — Write out your work in bullet points and delegate to Tonkotsu. You're the tech lead and approver. We just started our FREE early access program and want to hear directly from early adopters. [Sign up today](https://nodeweekly.com/link/168538/0a4070b383).
+
+Tonkotsu sponsor
+
+**IN BRIEF:**
+
+* ⏰ A reminder that [Node.js v18 reaches its 'End-Of-Life' *tomorrow!*](https://nodeweekly.com/link/168544/0a4070b383) There is an ongoing commercial support option, but if you can upgrade to Node v22, now's the time.
+
+* In related news, Node.js v23 is now in 'maintenance' mode with no planned further releases. v24 is due to land soon, though, and will become the new 'Current' release.
+
+* [Bun](https://nodeweekly.com/link/168545/0a4070b383) continues with its march to Node.js compatibility with [100% of the Node.js tests for the `events` module](https://nodeweekly.com/link/168546/0a4070b383) now passing.
+
+* In other Bun news, Bun has [a `llms-full.txt` file](https://nodeweekly.com/link/168547/0a4070b383) of plain text documentation that can be fed into LLMs to help you work with Bun using AI agents, etc.
+
+* Vercel Functions that use Node.js can now [detect cancelled requests and stop execution](https://nodeweekly.com/link/168548/0a4070b383) before completion.
+
+[The Node.js Test CI Security Incident Explained](https://nodeweekly.com/link/168549/0a4070b383 "nodejs.org") — The Node.js project recently experienced a critical security incident with its test CI infrastructure. Attackers exploited a flaw in the Jenkins pipeline and this post goes into detail about how it came about and was resolved.
+
+Node.js Technical Steering Committee
+
+[Giving V8 a Heads-Up: Faster Startup with Explicit Compile Hints](https://nodeweekly.com/link/168550/0a4070b383 "v8.dev") — Not Node specific but a look at a V8 optimization that may become relevant in time. Explicit Compile Hints let you direct V8 to eagerly compile specific files as a way to speed up startup. It ships with Chrome 136.
+
+Marja Hölttä
+
+📄 [A Decade of Impact: How Our npm Packages Hit 1 Billion Downloads and Shaped JavaScript](https://nodeweekly.com/link/168551/0a4070b383) – A bold title for sure, but with a neat story behind it. Forward Email
+
+📄 [Making a Static Site Generator Even Smaller using `async-tree`](https://nodeweekly.com/link/168552/0a4070b383) Jan Miksovsky
+
+📄 [How To Write Unit Tests in Node with Mocha](https://nodeweekly.com/link/168553/0a4070b383) Antonello Zanini
+
+🛠 Code & Tools
+
+[Seyfert: A Framework for Building Discord Bots](https://nodeweekly.com/link/168554/0a4070b383 "www.seyfert.dev") — Create bots for the popular chat system starting from bots that [respond to simple commands](https://nodeweekly.com/link/168555/0a4070b383) up to creating components and getting user input. Started life being Node only but recent versions support Deno and Bun too. [GitHub repo.](https://nodeweekly.com/link/168556/0a4070b383)
+
+socram03
+
+[Demo: Find & Fix Errors in Your App With Sentry](https://nodeweekly.com/link/168557/0a4070b383 "sentry.io") — See how Sentry can help catch Node errors, spot slowdowns, and ship cleaner code in this 25-min demo (hosted by a real human who's broken plenty of apps). [Save your spot](https://nodeweekly.com/link/168557/0a4070b383).
+
+Sentry sponsor
+
+[Scala.js 1.19.0: Bringing Scala and JavaScript Together](https://nodeweekly.com/link/168558/0a4070b383 "www.scala-js.org") — [Scala](https://nodeweekly.com/link/168559/0a4070b383) is a powerful language that has grown beyond its JVM roots to also have JavaScript and native runtimes. Scala.js is a Scala to JS compiler and [the homepage](https://nodeweekly.com/link/168560/0a4070b383) has some neat code and feature comparisons.
+
+Scala.js Team
+
+* 🤖 [OpenAI Node 4.96](https://nodeweekly.com/link/168561/0a4070b383) – The official Node library for OpenAI's API. Adds support for the new [gpt-image-1 model.](https://nodeweekly.com/link/168562/0a4070b383)
+
+* [Nest 11.1](https://nodeweekly.com/link/168563/0a4070b383) – Popular Node.js framework for building enterprise-grade apps.
+
+* [Electron 36.0](https://nodeweekly.com/link/168564/0a4070b383) – The cross-platform desktop app framework.
+
+* [Mongoose 8.14](https://nodeweekly.com/link/168565/0a4070b383) – Popular MongoDB object modeling library.
+
+* [file-type 20.5](https://nodeweekly.com/link/168566/0a4070b383) – Detect the file type of a file, stream, or data.
+
+* [node-argon2 0.43](https://nodeweekly.com/link/168567/0a4070b383) – Bindings for the Argon2 hashing algorithm.
+
+* [Middy 6.2](https://nodeweekly.com/link/168568/0a4070b383) – Node.js AWS Lambda middleware engine.
+
+* [Jasmine 5.7](https://nodeweekly.com/link/168569/0a4070b383) – Testing framework for browsers & Node.
+
+* 📊 [Chartbrew 4.0](https://nodeweekly.com/link/168570/0a4070b383) – Create live reporting dashboards.
+
+* [pnpm 10.10](https://nodeweekly.com/link/168571/0a4070b383) – Fast, space efficient package manager.
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vxo36brzjqthik6vcam0.jpg)](https://nodeweekly.com/link/168572/0a4070b383)
+
+* I've been dabbling with a little C# recently and enjoyed this [*TypeScript is Like C#* guide](https://nodeweekly.com/link/168572/0a4070b383) oriented largely around showing TypeScript/JavaScript vs C# examples of doing the same things.
+
+* I was intrigued to [see this experiment of using DuckDB-WASM from JavaScript](https://nodeweekly.com/link/168573/0a4070b383) to create a basic '3D' game. This sort of integration could easily be used for more practical data-processing ends.
+
+* The latest version of the popular creative coding library [p5.js 2.0 was released](https://nodeweekly.com/link/168574/0a4070b383) recently – it's being rolled out *very* slowly, though, as it's such a major upgrade.
+
+* With Deno 2.3 just around the corner, the Deno team shared [a few updates on recent Deno improvements.](https://nodeweekly.com/link/168575/0a4070b383)
+
+* If you want to create completely free software for others to use, [static HTML and JavaScript is the best approach](https://nodeweekly.com/link/168576/0a4070b383) says Simon Willison.
+
+* You can now [use JSR packages with pnpm and Yarn.](https://nodeweekly.com/link/168577/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
