@@ -1,0 +1,313 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Making V8 eager to compile your JavaScript
+description: Making V8 eager to compile your JavaScript
+date: 星期五 05 下午 五月 2o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/734
+origin_site: https://javascriptweekly.com/issues/734
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Making V8 eager to compile your JavaScript" url="https://javascriptweekly.com/issues/734" />
+
+<Detail client:only="react">
+	#​734 — May 2, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/734)
+
+Together with 
+
+[![AG Grid](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_326/e_make_transparent/co_white,e_outline:17/ak1lyph26nvgpusvrxli.png)](https://javascriptweekly.com/link/168765/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nl1oqicmqajon09vs3bn.jpg)](https://javascriptweekly.com/link/168817/d076523b1d)
+
+[GSAP v3.13: JavaScript Animation Set Free](https://javascriptweekly.com/link/168817/d076523b1d "gsap.com") — Last year the popular GSAP (a.k.a. _GreenSock_) animation library [was acquired by Webflow](https://javascriptweekly.com/link/168818/d076523b1d) and as of this new version the entire GSAP toolkit is freely available (including formerly paid addons like [MorphSVG](https://javascriptweekly.com/link/168819/d076523b1d) and [SplitText](https://javascriptweekly.com/link/168820/d076523b1d)) even for commercial use. If you're unfamiliar with GSAP and want to see some of what it can do, [they have a showcase](https://javascriptweekly.com/link/168821/d076523b1d), [lots of code demos](https://javascriptweekly.com/link/168822/d076523b1d), and [amazing docs.](https://javascriptweekly.com/link/168823/d076523b1d)
+
+Cassie Evans and Jack Doyle
+
+💡 Take care with the license though. GSAP is not formally 'open source' but has [a ‘no charge’ license](https://javascriptweekly.com/link/168824/d076523b1d) that prevents you using it to directly compete with Webflow.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2629cb2f.png)](https://javascriptweekly.com/link/168765/d076523b1d)
+
+[AG Charts: The Best JavaScript Charting Library in the World](https://javascriptweekly.com/link/168765/d076523b1d "ag-grid.com") — Create beautiful JavaScript Charts in minutes with our open-source library. Built by AG Grid, AG Charts has an intuitive, flexible API, 20+ series types and advanced features, including Financial Charts. Supports React, Angular & Vue. [Try for free](https://javascriptweekly.com/link/168765/d076523b1d).
+
+AG Charts sponsor
+
+[Converting Values to Strings in JavaScript](https://javascriptweekly.com/link/168766/d076523b1d "2ality.com") — When Dr. Axel says _“converting values to strings in JavaScript is more complicated than it might seem”_, I’m inclined to believe him. An interesting poke about into something seemingly simple you might not think about very much.
+
+Dr. Axel Rauschmayer
+
+📉 [Giving V8 a Heads-Up: Faster Startup with Explicit Compile Hints](https://javascriptweekly.com/link/168767/d076523b1d "v8.dev") — A look at a V8 optimization that lets you direct V8 to eagerly compile specific files as a way to speed up startup. It ships with Chrome 136 and the performance gains are more compelling than you might expect.
+
+Marja Hölttä
+
+**IN BRIEF:**
+
+*   [Node.js's releases](https://javascriptweekly.com/link/168768/d076523b1d) are currently shifting around a little. v18 has _just_ gone 'end of life', v23 has entered 'maintenance' mode and v24 is soon to land as the new 'current' release.
+    
+*   🤠 jQuery was first released in 2006 and to celebrate its 20th anniversary, there's a [jQuery Reunion event](https://javascriptweekly.com/link/168769/d076523b1d) in Texas on January 16-17, 2026.
+    
+*   The Svelte team has a look at [what's new in Svelte](https://javascriptweekly.com/link/168804/d076523b1d) lately, and [the Astro team has a similar update for Astro too.](https://javascriptweekly.com/link/168806/d076523b1d)
+    
+*   You can now [install JSR packages with pnpm and Yarn.](https://javascriptweekly.com/link/168770/d076523b1d)
+    
+*   [Learn about JavaScript's numerous operators](https://javascriptweekly.com/link/168807/d076523b1d) with a handy online reference.
+    
+
+**RELEASES:**
+
+*   [Deno 2.3](https://javascriptweekly.com/link/168808/d076523b1d) – The alternative JavaScript runtime improves its single binary compilation feature to support FFI and Node native addons.
+    
+*   [Prisma 6.7](https://javascriptweekly.com/link/168771/d076523b1d) – Popular ORM for Node.js and TypeScript.
+    
+*   [Bun v1.2.11](https://javascriptweekly.com/link/168772/d076523b1d), [Electron 36](https://javascriptweekly.com/link/168773/d076523b1d), [pnpm 10.10](https://javascriptweekly.com/link/168774/d076523b1d)
+    
+
+📖  Articles
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lj4lnj3rwjvgtqolo1jg.jpg)](https://javascriptweekly.com/link/168775/d076523b1d)
+
+[Export Google Analytics Data to Google Sheets via Apps Script](https://javascriptweekly.com/link/168775/d076523b1d "technicalwriting.dev") — [Google Apps Script](https://javascriptweekly.com/link/168776/d076523b1d) is a JavaScript-based platform for dynamically automating tasks in all sorts of Google apps. Here’s how to use it to bring Google Analytics data into a Google Sheet.
+
+Kayce Basques
+
+[Building an Offline-Friendly Image Upload System](https://javascriptweekly.com/link/168809/d076523b1d "www.smashingmagazine.com") — How to leverage PWA tech such as IndexedDB, service workers, and the Background Sync API to help improve the reliability of web apps for users, particularly those with unreliable internet connectivity.
+
+Amejimaobari Ollornwi
+
+[How to Take Clerk to Production](https://javascriptweekly.com/link/168777/d076523b1d "go.clerk.com") — How to take a Clerk app to production with custom domains, OAuth credentials, and DNS setup.
+
+Clerk sponsor
+
+[What Does React's `'use client'` Do?](https://javascriptweekly.com/link/168778/d076523b1d "overreacted.io") — Dan Abramov takes a practical look at how to think about the `use client` and `use server` directives React Server Components introduced and how they let you elegantly structure a client/server app as _“a single program spanning two environments”_ – a concept that Dan thinks could be more widely used, even outside of React.
+
+Dan Abramov
+
+📄 [Deno’s Decline?](https://javascriptweekly.com/link/168810/d076523b1d) – A critical view of Deno’s _Deno Deploy_ edge platform which has been steadily dropping regions. David Bushell
+
+📺 [How to Detect Memory Leaks in Your Web App](https://javascriptweekly.com/link/168812/d076523b1d) Decoded Frontend
+
+📄 [Pwning the Ladybird Browser](https://javascriptweekly.com/link/168779/d076523b1d) – The vector is Ladybird’s LibJS JavaScript engine. Jess
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/uuam1nc2s7juu9zxsnzz.jpg)](https://javascriptweekly.com/link/168780/d076523b1d)
+
+[PDFSlick 3.0: View and Interact with PDF Documents in JS Apps](https://javascriptweekly.com/link/168780/d076523b1d "pdfslick.dev") — A full-featured PDF viewer for React, Solid, Svelte and vanilla JS apps. Built on top of PDF.js, it offers a wide array of features from simple PDF viewing to working with multiple and large documents with annotations. [Demo.](https://javascriptweekly.com/link/168781/d076523b1d) v3.0 bumps up to PDF.js v5 with ICC profile support, better JPEG 2000 support, and improved rendering of large pages.
+
+Vancho Stojkov
+
+[Koa 3.0: The Expressive HTTP Middleware Framework](https://javascriptweekly.com/link/168782/d076523b1d "koajs.com") — Koa first appeared a decade ago as a ‘next-generation’ Web framework that shared some of the lineage of Express.js, but leaning on more modern JS features. While Express has [been making a comeback](https://javascriptweekly.com/link/168783/d076523b1d), Koa remains a compelling alternative.
+
+Koa contributors
+
+[Your Terminal, Evolved](https://javascriptweekly.com/link/168784/d076523b1d "fnf.dev") — The new agentic CLI from AWS works with you to write files locally, run bash commands, or call AWS APIs. [Start for free!](https://javascriptweekly.com/link/168784/d076523b1d)
+
+Amazon sponsor
+
+[Seyfert: A Framework for Building Discord Bots](https://javascriptweekly.com/link/168785/d076523b1d "www.seyfert.dev") — Create bots for the popular chat system starting from bots that [respond to simple commands](https://javascriptweekly.com/link/168786/d076523b1d) up to creating components and getting user input. Supports Deno, Bun, and Node.
+
+socram03
+
+[Storybook 9 Beta](https://javascriptweekly.com/link/168788/d076523b1d "storybook.js.org") — A strong step forward for the UI ‘frontend workshop’ with several experimental features from Storybook 8 becoming stable. v9 has a strong focus on component testing, plus React Native support.
+
+Michael Shilman
+
+[PGlite 0.3: Postgres but in WebAssembly](https://javascriptweekly.com/link/168813/d076523b1d "pglite.dev") — A WebAssembly-based build of the Postgres SQL database meaning you can run it wherever WebAssembly can be run (such as in the browser [as in this demo](https://javascriptweekly.com/link/168814/d076523b1d)).
+
+ElectricSQL
+
+*   [pretty-bytes 7.0](https://javascriptweekly.com/link/168815/d076523b1d) – Convert a size in bytes into a human readable equivalent (e.g. 1337 → 1.34 kB).
+    
+*   [QuickJS 2.2](https://javascriptweekly.com/link/168789/d076523b1d) – Execute JavaScript code in a WebAssembly [QuickJS](https://javascriptweekly.com/link/168790/d076523b1d) sandbox.
+    
+*   [Piscina 5.0](https://javascriptweekly.com/link/168791/d076523b1d) – Popular Node.js worker thread pool.
+    
+*   [Jira.js 5.0](https://javascriptweekly.com/link/168792/d076523b1d) – A wrapper for Jira's numerous APIs.
+    
+*   [NodeBB 4.3](https://javascriptweekly.com/link/168793/d076523b1d) – Node.js-powered forum system.
+    
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/168794/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+* * *
+
+🎹 [STRICH:](https://javascriptweekly.com/link/168795/d076523b1d) Add blazing fast and reliable 1D/2D Barcode Scanning to your web apps. Free demo app and 30-day trial available.
+
+📢  Elsewhere
+
+A quick roundup of other interesting updates and useful resources from across the broader developer landscape:
+
+*   **Redis is open source again!** The popular [Redis](https://javascriptweekly.com/link/168796/d076523b1d) in-memory data store ran into [a bit of drama in recent years with a license change](https://javascriptweekly.com/link/168797/d076523b1d) following its acquisition. The good news is that [an AGPL license is now an option](https://javascriptweekly.com/link/168798/d076523b1d) for the new [Redis 8 release](https://javascriptweekly.com/link/168799/d076523b1d) making Redis truly _'open source again.'_
+    
+*   **TypeScript ←→ C#:** I've been dabbling with a little C# recently (it's the main language used in Unity game development) and enjoyed this [_TypeScript is Like C#_ guide](https://javascriptweekly.com/link/168800/d076523b1d) oriented largely around showing TypeScript/JavaScript vs C# examples of doing the same things.
+    
+*   **❤️ JS + HTML:** It's a simple thing, but [Simon Willison reminds us](https://javascriptweekly.com/link/168801/d076523b1d) that static HTML enriched with JavaScript and served up on GitHub Pages is one of the best ways you can give software freely for the world to use.
+    
+*   **Emulators-a-plenty:** [Tiny Emus](https://javascriptweekly.com/link/168802/d076523b1d) is a showcase of almost 200 emulators that run in the browser, largely for 8 bit platforms, games, and even some visual CPU demos.
+    
+*   **CSS shapes:** Did you know [CSS now has a `shape()` function](https://javascriptweekly.com/link/168803/d076523b1d) for drawing complex shapes for clipping paths?
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/168816/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​734 — May 2, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/734)
+
+Together with 
+
+[![AG Grid](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_326/e_make_transparent/co_white,e_outline:17/ak1lyph26nvgpusvrxli.png)](https://javascriptweekly.com/link/168765/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nl1oqicmqajon09vs3bn.jpg)](https://javascriptweekly.com/link/168817/d076523b1d)
+
+[GSAP v3.13: JavaScript Animation Set Free](https://javascriptweekly.com/link/168817/d076523b1d "gsap.com") — Last year the popular GSAP (a.k.a. *GreenSock*) animation library [was acquired by Webflow](https://javascriptweekly.com/link/168818/d076523b1d) and as of this new version the entire GSAP toolkit is freely available (including formerly paid addons like [MorphSVG](https://javascriptweekly.com/link/168819/d076523b1d) and [SplitText](https://javascriptweekly.com/link/168820/d076523b1d)) even for commercial use. If you're unfamiliar with GSAP and want to see some of what it can do, [they have a showcase](https://javascriptweekly.com/link/168821/d076523b1d), [lots of code demos](https://javascriptweekly.com/link/168822/d076523b1d), and [amazing docs.](https://javascriptweekly.com/link/168823/d076523b1d)
+
+Cassie Evans and Jack Doyle
+
+💡 Take care with the license though. GSAP is not formally 'open source' but has [a ‘no charge’ license](https://javascriptweekly.com/link/168824/d076523b1d) that prevents you using it to directly compete with Webflow.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2629cb2f.png)](https://javascriptweekly.com/link/168765/d076523b1d)
+
+[AG Charts: The Best JavaScript Charting Library in the World](https://javascriptweekly.com/link/168765/d076523b1d "ag-grid.com") — Create beautiful JavaScript Charts in minutes with our open-source library. Built by AG Grid, AG Charts has an intuitive, flexible API, 20+ series types and advanced features, including Financial Charts. Supports React, Angular & Vue. [Try for free](https://javascriptweekly.com/link/168765/d076523b1d).
+
+AG Charts sponsor
+
+[Converting Values to Strings in JavaScript](https://javascriptweekly.com/link/168766/d076523b1d "2ality.com") — When Dr. Axel says *“converting values to strings in JavaScript is more complicated than it might seem”*, I’m inclined to believe him. An interesting poke about into something seemingly simple you might not think about very much.
+
+Dr. Axel Rauschmayer
+
+📉 [Giving V8 a Heads-Up: Faster Startup with Explicit Compile Hints](https://javascriptweekly.com/link/168767/d076523b1d "v8.dev") — A look at a V8 optimization that lets you direct V8 to eagerly compile specific files as a way to speed up startup. It ships with Chrome 136 and the performance gains are more compelling than you might expect.
+
+Marja Hölttä
+
+**IN BRIEF:**
+
+* [Node.js's releases](https://javascriptweekly.com/link/168768/d076523b1d) are currently shifting around a little. v18 has *just* gone 'end of life', v23 has entered 'maintenance' mode and v24 is soon to land as the new 'current' release.
+
+* 🤠 jQuery was first released in 2006 and to celebrate its 20th anniversary, there's a [jQuery Reunion event](https://javascriptweekly.com/link/168769/d076523b1d) in Texas on January 16-17, 2026.
+
+* The Svelte team has a look at [what's new in Svelte](https://javascriptweekly.com/link/168804/d076523b1d) lately, and [the Astro team has a similar update for Astro too.](https://javascriptweekly.com/link/168806/d076523b1d)
+
+* You can now [install JSR packages with pnpm and Yarn.](https://javascriptweekly.com/link/168770/d076523b1d)
+
+* [Learn about JavaScript's numerous operators](https://javascriptweekly.com/link/168807/d076523b1d) with a handy online reference.
+
+**RELEASES:**
+
+* [Deno 2.3](https://javascriptweekly.com/link/168808/d076523b1d) – The alternative JavaScript runtime improves its single binary compilation feature to support FFI and Node native addons.
+
+* [Prisma 6.7](https://javascriptweekly.com/link/168771/d076523b1d) – Popular ORM for Node.js and TypeScript.
+
+* [Bun v1.2.11](https://javascriptweekly.com/link/168772/d076523b1d), [Electron 36](https://javascriptweekly.com/link/168773/d076523b1d), [pnpm 10.10](https://javascriptweekly.com/link/168774/d076523b1d)
+
+📖  Articles
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lj4lnj3rwjvgtqolo1jg.jpg)](https://javascriptweekly.com/link/168775/d076523b1d)
+
+[Export Google Analytics Data to Google Sheets via Apps Script](https://javascriptweekly.com/link/168775/d076523b1d "technicalwriting.dev") — [Google Apps Script](https://javascriptweekly.com/link/168776/d076523b1d) is a JavaScript-based platform for dynamically automating tasks in all sorts of Google apps. Here’s how to use it to bring Google Analytics data into a Google Sheet.
+
+Kayce Basques
+
+[Building an Offline-Friendly Image Upload System](https://javascriptweekly.com/link/168809/d076523b1d "www.smashingmagazine.com") — How to leverage PWA tech such as IndexedDB, service workers, and the Background Sync API to help improve the reliability of web apps for users, particularly those with unreliable internet connectivity.
+
+Amejimaobari Ollornwi
+
+[How to Take Clerk to Production](https://javascriptweekly.com/link/168777/d076523b1d "go.clerk.com") — How to take a Clerk app to production with custom domains, OAuth credentials, and DNS setup.
+
+Clerk sponsor
+
+[What Does React's `'use client'` Do?](https://javascriptweekly.com/link/168778/d076523b1d "overreacted.io") — Dan Abramov takes a practical look at how to think about the `use client` and `use server` directives React Server Components introduced and how they let you elegantly structure a client/server app as *“a single program spanning two environments”* – a concept that Dan thinks could be more widely used, even outside of React.
+
+Dan Abramov
+
+📄 [Deno’s Decline?](https://javascriptweekly.com/link/168810/d076523b1d) – A critical view of Deno’s *Deno Deploy* edge platform which has been steadily dropping regions. David Bushell
+
+📺 [How to Detect Memory Leaks in Your Web App](https://javascriptweekly.com/link/168812/d076523b1d) Decoded Frontend
+
+📄 [Pwning the Ladybird Browser](https://javascriptweekly.com/link/168779/d076523b1d) – The vector is Ladybird’s LibJS JavaScript engine. Jess
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/uuam1nc2s7juu9zxsnzz.jpg)](https://javascriptweekly.com/link/168780/d076523b1d)
+
+[PDFSlick 3.0: View and Interact with PDF Documents in JS Apps](https://javascriptweekly.com/link/168780/d076523b1d "pdfslick.dev") — A full-featured PDF viewer for React, Solid, Svelte and vanilla JS apps. Built on top of PDF.js, it offers a wide array of features from simple PDF viewing to working with multiple and large documents with annotations. [Demo.](https://javascriptweekly.com/link/168781/d076523b1d) v3.0 bumps up to PDF.js v5 with ICC profile support, better JPEG 2000 support, and improved rendering of large pages.
+
+Vancho Stojkov
+
+[Koa 3.0: The Expressive HTTP Middleware Framework](https://javascriptweekly.com/link/168782/d076523b1d "koajs.com") — Koa first appeared a decade ago as a ‘next-generation’ Web framework that shared some of the lineage of Express.js, but leaning on more modern JS features. While Express has [been making a comeback](https://javascriptweekly.com/link/168783/d076523b1d), Koa remains a compelling alternative.
+
+Koa contributors
+
+[Your Terminal, Evolved](https://javascriptweekly.com/link/168784/d076523b1d "fnf.dev") — The new agentic CLI from AWS works with you to write files locally, run bash commands, or call AWS APIs. [Start for free!](https://javascriptweekly.com/link/168784/d076523b1d)
+
+Amazon sponsor
+
+[Seyfert: A Framework for Building Discord Bots](https://javascriptweekly.com/link/168785/d076523b1d "www.seyfert.dev") — Create bots for the popular chat system starting from bots that [respond to simple commands](https://javascriptweekly.com/link/168786/d076523b1d) up to creating components and getting user input. Supports Deno, Bun, and Node.
+
+socram03
+
+[Storybook 9 Beta](https://javascriptweekly.com/link/168788/d076523b1d "storybook.js.org") — A strong step forward for the UI ‘frontend workshop’ with several experimental features from Storybook 8 becoming stable. v9 has a strong focus on component testing, plus React Native support.
+
+Michael Shilman
+
+[PGlite 0.3: Postgres but in WebAssembly](https://javascriptweekly.com/link/168813/d076523b1d "pglite.dev") — A WebAssembly-based build of the Postgres SQL database meaning you can run it wherever WebAssembly can be run (such as in the browser [as in this demo](https://javascriptweekly.com/link/168814/d076523b1d)).
+
+ElectricSQL
+
+* [pretty-bytes 7.0](https://javascriptweekly.com/link/168815/d076523b1d) – Convert a size in bytes into a human readable equivalent (e.g. 1337 → 1.34 kB).
+
+* [QuickJS 2.2](https://javascriptweekly.com/link/168789/d076523b1d) – Execute JavaScript code in a WebAssembly [QuickJS](https://javascriptweekly.com/link/168790/d076523b1d) sandbox.
+
+* [Piscina 5.0](https://javascriptweekly.com/link/168791/d076523b1d) – Popular Node.js worker thread pool.
+
+* [Jira.js 5.0](https://javascriptweekly.com/link/168792/d076523b1d) – A wrapper for Jira's numerous APIs.
+
+* [NodeBB 4.3](https://javascriptweekly.com/link/168793/d076523b1d) – Node.js-powered forum system.
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/168794/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+***
+
+🎹 [STRICH:](https://javascriptweekly.com/link/168795/d076523b1d) Add blazing fast and reliable 1D/2D Barcode Scanning to your web apps. Free demo app and 30-day trial available.
+
+📢  Elsewhere
+
+A quick roundup of other interesting updates and useful resources from across the broader developer landscape:
+
+* **Redis is open source again!** The popular [Redis](https://javascriptweekly.com/link/168796/d076523b1d) in-memory data store ran into [a bit of drama in recent years with a license change](https://javascriptweekly.com/link/168797/d076523b1d) following its acquisition. The good news is that [an AGPL license is now an option](https://javascriptweekly.com/link/168798/d076523b1d) for the new [Redis 8 release](https://javascriptweekly.com/link/168799/d076523b1d) making Redis truly *'open source again.'*
+
+* **TypeScript ←→ C#:** I've been dabbling with a little C# recently (it's the main language used in Unity game development) and enjoyed this [*TypeScript is Like C#* guide](https://javascriptweekly.com/link/168800/d076523b1d) oriented largely around showing TypeScript/JavaScript vs C# examples of doing the same things.
+
+* **❤️ JS + HTML:** It's a simple thing, but [Simon Willison reminds us](https://javascriptweekly.com/link/168801/d076523b1d) that static HTML enriched with JavaScript and served up on GitHub Pages is one of the best ways you can give software freely for the world to use.
+
+* **Emulators-a-plenty:** [Tiny Emus](https://javascriptweekly.com/link/168802/d076523b1d) is a showcase of almost 200 emulators that run in the browser, largely for 8 bit platforms, games, and even some visual CPU demos.
+
+* **CSS shapes:** Did you know [CSS now has a `shape()` function](https://javascriptweekly.com/link/168803/d076523b1d) for drawing complex shapes for clipping paths?
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/168816/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
