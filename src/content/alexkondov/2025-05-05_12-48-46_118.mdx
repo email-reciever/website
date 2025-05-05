@@ -1,0 +1,243 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Everything you need to know about managing complexity
+description: Everything you need to know about managing complexity
+date: 星期一 12 中午 五月 5o 2025
+author: alexkondov
+origin_url: https://mailchi.mp/9a0d1cb65994/everything-you-need-to-know-about-managing-complexity?e=6955ce1080
+origin_site: https://mailchi.mp/9a0d1cb65994/everything-you-need-to-know-about-managing-complexity?e=6955ce1080
+translated: true
+avatar: /media-source/alexkondov-ico.png
+email_recorder: alexkondov38@147790190.mailchimpapp.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Everything you need to know about managing complexity" url="https://mailchi.mp/9a0d1cb65994/everything-you-need-to-know-about-managing-complexity?e=6955ce1080" />
+
+<Detail client:only="react">
+	![](https://mcusercontent.com/fca75767fa83fa3473478b4ca/images/38ca00ab-a0f7-cb3d-ecc8-8766da856ac2.png)
+
+# Everything you need to know about managing complexity
+
+ 
+
+Rules will help you solve some problems, principles will help you solve all of them. 
+
+Following specific design patterns will only be useful if you keep facing the same problems, but this is rarely true in software engineering. We change companies, domains, and language ecosystems. If we rely on specifics, we will keep re-learning the same ideas again and again.
+
+What we need are principles.
+
+A principle is a solution to a problem that we don’t have to think about. Today I’ll share some of the fundamental software design principles I follow regardless of language or framework.  
+ 
+
+## Colocate related functionality
+
+Having to jump from one file to another, from one part of the app to another adds a lot of mental strain when we’re trying to understand something.
+
+This may make an already complex implementation even harder to understand.
+
+The solution is to keep related logic together.
+
+Keep a component in the same folder together with a custom hook it’s using. Keep all stock management functions (for example) in the same file. Define a variable close to where it’s used.
+
+If things have to change together, they should live together.
+
+##   
+Hide complexity with abstractions
+
+I try to write everything in the simplest possible way.
+
+But some things you can only simplify so much.
+
+If you need to implement a complex algorithm good variable names and comments will make it easier to understand but there’s inherent complexity in that logic that you can’t change.
+
+What you can do is wrap it in a function, give it a good name, and create a simple API people can interact with.
+
+Don’t make it too configurable, give it nice sensible defaults and allow developers to control complex logic with only a few parameters - that’s how you eliminate complexity.
+
+##   
+Spread complexity around
+
+Sometimes putting everything together in one function is not good enough.
+
+The logic may be too long and unrelated.
+
+In these cases, splitting it in smaller functions and chaining them is better.
+
+Follow the principle of colocation - keep that related logic together, but spread it around in multiple places.
+
+##   
+Avoid hypotheticals
+
+The words _“but what if we need to”_ are the bane of my existence.
+
+Too many times I’ve seen developers commit self harm by creating unnecessary abstractions that they’ll never use to their full potential because they’re preparing for a hypothetical problem in the future.
+
+If you ever need to change your database, the APIs in your code will be the least of your problems.
+
+Don’t sweat it, don’t think years into the future.
+
+There’s a chance your company or team won’t exist 10 years down the line to handle the scenario you’re preparing for now.  
+ 
+
+## Simple and easy are different things
+
+It’s easy to write all your logic in one function.
+
+This doesn’t make it simple, though.
+
+Simple means it requires less effort to understand, so focus on what would make it easy for the reader, not the writer of the code.  
+ 
+
+## Stick to the domain language
+
+The business you’re building software for probably uses specific terminology, every domain has them.
+
+Try to stick to the same language in your implementation.
+
+Don’t create a bunch of Scheduler, Manager, and Facilitator objects.
+
+Don’t create technical terminology on top of the business terms, stick to what already exists and people understand.
+
+Otherwise you’d have to learn two things to understand the application.
+
+This is unnecessary complexity.  
+ 
+
+## “Are you writing this because it has to be complex, or you’re just trying to prove you’re smart?”
+
+Most businesses’ logic can be implemented in a very simple way.
+
+Using mostly pure functions and objects can take you very far.
+
+When you’re reaching for a design pattern or you catch yourself implementing something in a complex way ask yourself the question above.
+
+There’s a high chance you’re overdoing it because you’re finding a more complex implementation more interesting.
+
+I’ve done this a lot.
+
+Still do sometimes.
+
+But if you can avoid the complexity, you should.
+
+  
+  
+  
+  
+  
+  
+
+
+</Detail>
+
+![](https://mcusercontent.com/fca75767fa83fa3473478b4ca/images/38ca00ab-a0f7-cb3d-ecc8-8766da856ac2.png)
+
+# Everything you need to know about managing complexity
+
+ 
+
+Rules will help you solve some problems, principles will help you solve all of them. 
+
+Following specific design patterns will only be useful if you keep facing the same problems, but this is rarely true in software engineering. We change companies, domains, and language ecosystems. If we rely on specifics, we will keep re-learning the same ideas again and again.
+
+What we need are principles.
+
+A principle is a solution to a problem that we don’t have to think about. Today I’ll share some of the fundamental software design principles I follow regardless of language or framework.\
+ 
+
+## Colocate related functionality
+
+Having to jump from one file to another, from one part of the app to another adds a lot of mental strain when we’re trying to understand something.
+
+This may make an already complex implementation even harder to understand.
+
+The solution is to keep related logic together.
+
+Keep a component in the same folder together with a custom hook it’s using. Keep all stock management functions (for example) in the same file. Define a variable close to where it’s used.
+
+If things have to change together, they should live together.
+
+##
+
+Hide complexity with abstractions
+
+I try to write everything in the simplest possible way.
+
+But some things you can only simplify so much.
+
+If you need to implement a complex algorithm good variable names and comments will make it easier to understand but there’s inherent complexity in that logic that you can’t change.
+
+What you can do is wrap it in a function, give it a good name, and create a simple API people can interact with.
+
+Don’t make it too configurable, give it nice sensible defaults and allow developers to control complex logic with only a few parameters - that’s how you eliminate complexity.
+
+##
+
+Spread complexity around
+
+Sometimes putting everything together in one function is not good enough.
+
+The logic may be too long and unrelated.
+
+In these cases, splitting it in smaller functions and chaining them is better.
+
+Follow the principle of colocation - keep that related logic together, but spread it around in multiple places.
+
+##
+
+Avoid hypotheticals
+
+The words *“but what if we need to”* are the bane of my existence.
+
+Too many times I’ve seen developers commit self harm by creating unnecessary abstractions that they’ll never use to their full potential because they’re preparing for a hypothetical problem in the future.
+
+If you ever need to change your database, the APIs in your code will be the least of your problems.
+
+Don’t sweat it, don’t think years into the future.
+
+There’s a chance your company or team won’t exist 10 years down the line to handle the scenario you’re preparing for now.\
+ 
+
+## Simple and easy are different things
+
+It’s easy to write all your logic in one function.
+
+This doesn’t make it simple, though.
+
+Simple means it requires less effort to understand, so focus on what would make it easy for the reader, not the writer of the code.\
+ 
+
+## Stick to the domain language
+
+The business you’re building software for probably uses specific terminology, every domain has them.
+
+Try to stick to the same language in your implementation.
+
+Don’t create a bunch of Scheduler, Manager, and Facilitator objects.
+
+Don’t create technical terminology on top of the business terms, stick to what already exists and people understand.
+
+Otherwise you’d have to learn two things to understand the application.
+
+This is unnecessary complexity.\
+ 
+
+## “Are you writing this because it has to be complex, or you’re just trying to prove you’re smart?”
+
+Most businesses’ logic can be implemented in a very simple way.
+
+Using mostly pure functions and objects can take you very far.
+
+When you’re reaching for a design pattern or you catch yourself implementing something in a complex way ask yourself the question above.
+
+There’s a high chance you’re overdoing it because you’re finding a more complex implementation more interesting.
+
+I’ve done this a lot.
+
+Still do sometimes.
+
+But if you can avoid the complexity, you should.
+
+
