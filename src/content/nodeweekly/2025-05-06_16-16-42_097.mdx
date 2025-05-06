@@ -1,0 +1,280 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node.js 24 released
+description: Node.js 24 released
+date: 星期二 04 下午 五月 6o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/577
+origin_site: https://nodeweekly.com/issues/577
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node.js 24 released" url="https://nodeweekly.com/issues/577" />
+
+<Detail client:only="react">
+	#​577 — May 6, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/577)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/168826/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/aa220wshnioso3x4yzym.jpg)](https://nodeweekly.com/link/168866/0a4070b383)
+
+[Node 24 (Current) Released](https://nodeweekly.com/link/168866/0a4070b383 "nodejs.org") — [Node’s release lines](https://nodeweekly.com/link/168867/0a4070b383) are in flux – v18 has just gone EOL and now v23 bows out to let v24 be the ‘Current’ release for when you want all the cutting edge features. It comes with npm 11, V8 13.6 (hello `RegExp.escape`, `Float16Array`, `Error.isError` and more), the [`URLPattern` API](https://nodeweekly.com/link/168868/0a4070b383) exposed as a default object, and Undici 7.
+
+Node.js Team
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/23b42ef7.png)](https://nodeweekly.com/link/168826/0a4070b383)
+
+[Create Your Own AI Agent](https://nodeweekly.com/link/168826/0a4070b383 "frontendmasters.com") — Join Scott Moss for this detailed video course and discover how to build an AI agent from scratch. You'll explore LLMs, chat history management, tokens, memory, agent loops, and much more — coming away with know-how and resources for building modern agent-based API apps.
+
+Frontend Masters sponsor
+
+[Take the Latest Node.js _Next 10_ Survey](https://nodeweekly.com/link/168827/0a4070b383 "linuxfoundation.research.net") — The Node.js core team and the Linux Foundation are keen for you to take part in the latest Node.js Next 10 Survey. [‘Next 10’](https://nodeweekly.com/link/168828/0a4070b383) is a term the Node team uses to refer to strategizing Node’s direction over the next ten years, and the survey helps them get your input into this.
+
+The Linux Foundation
+
+**IN BRIEF:**
+
+*   [Bun v1.2.12 is out](https://nodeweekly.com/link/168829/0a4070b383) with, surprise, surprise, yet more Node.js compatibility enhancements :-) As part of Bun's new full-stack focus, you can now also stream _browser_ console logs back through Bun at the terminal.
+    
+*   In other alternative runtime news, [Deno 2.3 has been released](https://nodeweekly.com/link/168830/0a4070b383) with improvements to its single-binary compilation feature which now supports FFI and Node native add-ons, as well as support for using local npm packages.
+    
+*   The OpenJS Foundation has [announced its new board of directors](https://nodeweekly.com/link/168831/0a4070b383) which includes numerous JavaScript and Node luminaries including Jordan Harband and Matteo Collina.
+    
+
+[Retrieval-Augmented Generation (RAG) with Llama Stack and Node](https://nodeweekly.com/link/168832/0a4070b383 "developers.redhat.com") — Meta’s [Llama Stack](https://nodeweekly.com/link/168833/0a4070b383) is a unified set of APIs for working with numerous parts of the modern LLM-powered stack, including RAG, as demonstrated here.
+
+Michael Dawson
+
+💡 Michael presents a broader overview of Llama Stack in: [A practical guide to Llama Stack for Node.js developers.](https://nodeweekly.com/link/168834/0a4070b383)
+
+[Converting Values to Strings in JavaScript](https://nodeweekly.com/link/168835/0a4070b383 "2ality.com") — When Dr. Axel says _“converting values to strings in JavaScript is more complicated than it might seem”_, I’m going to believe him. An interesting poke around into something simple that you might not think about very much.
+
+Dr. Axel Rauschmayer
+
+[Plug Enterprise SSO to Your Node App in Minutes](https://nodeweekly.com/link/168836/0a4070b383 "www.scalekit.com") — Add SAML and OIDC SSO on top of your existing auth using Scalekit’s Node SDK — no rewrites required. [Learn more](https://nodeweekly.com/link/168836/0a4070b383).
+
+Scalekit sponsor
+
+📄 ['Electron Ain't Bad, Actually'](https://nodeweekly.com/link/168837/0a4070b383) – Worth re-reading next time you see the clichéd criticisms of Electron. Vaxry
+
+📄 [npm Targeted by Malware Campaign Mimicking Familiar Library Names](https://nodeweekly.com/link/168838/0a4070b383) Socket
+
+📄 [npm Should Remove the Default License From New Packages](https://nodeweekly.com/link/168839/0a4070b383) extremq
+
+📄 [Node.js Streams with TypeScript](https://nodeweekly.com/link/168840/0a4070b383) Raju Dandigam
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xs8pnyekbm7ccuqqdmb3.jpg)](https://nodeweekly.com/link/168841/0a4070b383)
+
+[Why We Created Another Kafka Client for Node.js](https://nodeweekly.com/link/168841/0a4070b383 "blog.platformatic.dev") — [Apache Kafka](https://nodeweekly.com/link/168842/0a4070b383) is a popular distributed event streaming platform but the existing client libraries have various flaws, leading Platformatic to release a new one built around modern Node best practices.
+
+Paolo Insogna
+
+[mono-jsx: `&lt;html>` as a `Response`](https://nodeweekly.com/link/168843/0a4070b383 "github.com") — A server-side JSX runtime that renders `&lt;html>` to a `Response` with no build step needed and works across numerous server-side JS runtimes.
+
+Je Xia
+
+[PGlite 0.3: Postgres but in WebAssembly](https://nodeweekly.com/link/168844/0a4070b383 "pglite.dev") — A WebAssembly-based build of the Postgres SQL database meaning you can run it wherever WebAssembly can be run (such as [in the browser](https://nodeweekly.com/link/168845/0a4070b383) or directly from Node).
+
+ElectricSQL
+
+*   [Prisma v6.7](https://nodeweekly.com/link/168846/0a4070b383) – The popular ORM's attempts to move away from Rust to TypeScript are picking up pace.
+    
+*   [Piscina 5.0](https://nodeweekly.com/link/168847/0a4070b383) – Popular Node.js worker thread pool.
+    
+*   [DOCX 9.5](https://nodeweekly.com/link/168848/0a4070b383) – Generate Word documents from JavaScript.
+    
+*   [LDAPts 8.0](https://nodeweekly.com/link/168849/0a4070b383) – Query LDAP servers from Node.
+    
+*   [NodeBB 4.3](https://nodeweekly.com/link/168850/0a4070b383) – Node.js-powered forum system.
+    
+*   [RedisSMQ 8.3](https://nodeweekly.com/link/168851/0a4070b383) – Simple high-perf Redis message queue for Node.
+    
+*   🤖 [OpenAI Node 4.97](https://nodeweekly.com/link/168852/0a4070b383) – The official Node library for OpenAI's API.
+    
+*   [SVGO 4.0.0 RC4](https://nodeweekly.com/link/168853/0a4070b383) – Node.js-powered SVG optimizer.
+    
+*   [Jira.js 5.1](https://nodeweekly.com/link/168854/0a4070b383) – A wrapper for Jira's numerous APIs.
+    
+*   [noblox.js 6.2](https://nodeweekly.com/link/168855/0a4070b383) – A Node.js API wrapper for Roblox.
+    
+*   [AVA 6.3](https://nodeweekly.com/link/168856/0a4070b383) – Popular test runner for Node.
+    
+
+📰 Classifieds
+
+🚀 [Node.js Kafka client:](https://nodeweekly.com/link/168857/0a4070b383) Why we built the most performant, DX-friendly Kafka client with native TypeScript support and ease of integration.
+
+* * *
+
+Mastra is a new TypeScript framework for building AI agents – [here's a quick start guide to building an AI agent](https://nodeweekly.com/link/168858/0a4070b383) with Mastra and Node.
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   Currently at stage 3 at TC39, the [ECMAScript Explicit Resource Management proposal](https://nodeweekly.com/link/168859/0a4070b383) has been implemented in Chrome 134+ and Node 24.
+    
+*   Google Apps Script brings a lot of JavaScript power to automating actions across Google's various services, but I find it a little opaque sometimes, so [this tutorial on exporting Google Analytics data to Google Sheets](https://nodeweekly.com/link/168860/0a4070b383) is refreshing.
+    
+*   The popular commercial GSAP animation library [has become free to use for all](https://nodeweekly.com/link/168861/0a4070b383), including commercial use cases. It always amazes me [what it can do.](https://nodeweekly.com/link/168862/0a4070b383)
+    
+*   Josh Comeau's [Operator Lookup](https://nodeweekly.com/link/168863/0a4070b383) site makes it easy to look up with a JavaScript operator does, or even find ones you haven't encountered before, like [\>>>=](https://nodeweekly.com/link/168864/0a4070b383) perhaps.
+    
+*   If you've been avoiding Redis after the license controversy in 2024, you'll be happy to know [Redis is now open source again](https://nodeweekly.com/link/168865/0a4070b383) as of version 8.0.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​577 — May 6, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/577)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/168826/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/aa220wshnioso3x4yzym.jpg)](https://nodeweekly.com/link/168866/0a4070b383)
+
+[Node 24 (Current) Released](https://nodeweekly.com/link/168866/0a4070b383 "nodejs.org") — [Node’s release lines](https://nodeweekly.com/link/168867/0a4070b383) are in flux – v18 has just gone EOL and now v23 bows out to let v24 be the ‘Current’ release for when you want all the cutting edge features. It comes with npm 11, V8 13.6 (hello `RegExp.escape`, `Float16Array`, `Error.isError` and more), the [`URLPattern` API](https://nodeweekly.com/link/168868/0a4070b383) exposed as a default object, and Undici 7.
+
+Node.js Team
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/23b42ef7.png)](https://nodeweekly.com/link/168826/0a4070b383)
+
+[Create Your Own AI Agent](https://nodeweekly.com/link/168826/0a4070b383 "frontendmasters.com") — Join Scott Moss for this detailed video course and discover how to build an AI agent from scratch. You'll explore LLMs, chat history management, tokens, memory, agent loops, and much more — coming away with know-how and resources for building modern agent-based API apps.
+
+Frontend Masters sponsor
+
+[Take the Latest Node.js *Next 10* Survey](https://nodeweekly.com/link/168827/0a4070b383 "linuxfoundation.research.net") — The Node.js core team and the Linux Foundation are keen for you to take part in the latest Node.js Next 10 Survey. [‘Next 10’](https://nodeweekly.com/link/168828/0a4070b383) is a term the Node team uses to refer to strategizing Node’s direction over the next ten years, and the survey helps them get your input into this.
+
+The Linux Foundation
+
+**IN BRIEF:**
+
+* [Bun v1.2.12 is out](https://nodeweekly.com/link/168829/0a4070b383) with, surprise, surprise, yet more Node.js compatibility enhancements :-) As part of Bun's new full-stack focus, you can now also stream *browser* console logs back through Bun at the terminal.
+
+* In other alternative runtime news, [Deno 2.3 has been released](https://nodeweekly.com/link/168830/0a4070b383) with improvements to its single-binary compilation feature which now supports FFI and Node native add-ons, as well as support for using local npm packages.
+
+* The OpenJS Foundation has [announced its new board of directors](https://nodeweekly.com/link/168831/0a4070b383) which includes numerous JavaScript and Node luminaries including Jordan Harband and Matteo Collina.
+
+[Retrieval-Augmented Generation (RAG) with Llama Stack and Node](https://nodeweekly.com/link/168832/0a4070b383 "developers.redhat.com") — Meta’s [Llama Stack](https://nodeweekly.com/link/168833/0a4070b383) is a unified set of APIs for working with numerous parts of the modern LLM-powered stack, including RAG, as demonstrated here.
+
+Michael Dawson
+
+💡 Michael presents a broader overview of Llama Stack in: [A practical guide to Llama Stack for Node.js developers.](https://nodeweekly.com/link/168834/0a4070b383)
+
+[Converting Values to Strings in JavaScript](https://nodeweekly.com/link/168835/0a4070b383 "2ality.com") — When Dr. Axel says *“converting values to strings in JavaScript is more complicated than it might seem”*, I’m going to believe him. An interesting poke around into something simple that you might not think about very much.
+
+Dr. Axel Rauschmayer
+
+[Plug Enterprise SSO to Your Node App in Minutes](https://nodeweekly.com/link/168836/0a4070b383 "www.scalekit.com") — Add SAML and OIDC SSO on top of your existing auth using Scalekit’s Node SDK — no rewrites required. [Learn more](https://nodeweekly.com/link/168836/0a4070b383).
+
+Scalekit sponsor
+
+📄 ['Electron Ain't Bad, Actually'](https://nodeweekly.com/link/168837/0a4070b383) – Worth re-reading next time you see the clichéd criticisms of Electron. Vaxry
+
+📄 [npm Targeted by Malware Campaign Mimicking Familiar Library Names](https://nodeweekly.com/link/168838/0a4070b383) Socket
+
+📄 [npm Should Remove the Default License From New Packages](https://nodeweekly.com/link/168839/0a4070b383) extremq
+
+📄 [Node.js Streams with TypeScript](https://nodeweekly.com/link/168840/0a4070b383) Raju Dandigam
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xs8pnyekbm7ccuqqdmb3.jpg)](https://nodeweekly.com/link/168841/0a4070b383)
+
+[Why We Created Another Kafka Client for Node.js](https://nodeweekly.com/link/168841/0a4070b383 "blog.platformatic.dev") — [Apache Kafka](https://nodeweekly.com/link/168842/0a4070b383) is a popular distributed event streaming platform but the existing client libraries have various flaws, leading Platformatic to release a new one built around modern Node best practices.
+
+Paolo Insogna
+
+[mono-jsx: `&lt;html>` as a `Response`](https://nodeweekly.com/link/168843/0a4070b383 "github.com") — A server-side JSX runtime that renders `&lt;html>` to a `Response` with no build step needed and works across numerous server-side JS runtimes.
+
+Je Xia
+
+[PGlite 0.3: Postgres but in WebAssembly](https://nodeweekly.com/link/168844/0a4070b383 "pglite.dev") — A WebAssembly-based build of the Postgres SQL database meaning you can run it wherever WebAssembly can be run (such as [in the browser](https://nodeweekly.com/link/168845/0a4070b383) or directly from Node).
+
+ElectricSQL
+
+* [Prisma v6.7](https://nodeweekly.com/link/168846/0a4070b383) – The popular ORM's attempts to move away from Rust to TypeScript are picking up pace.
+
+* [Piscina 5.0](https://nodeweekly.com/link/168847/0a4070b383) – Popular Node.js worker thread pool.
+
+* [DOCX 9.5](https://nodeweekly.com/link/168848/0a4070b383) – Generate Word documents from JavaScript.
+
+* [LDAPts 8.0](https://nodeweekly.com/link/168849/0a4070b383) – Query LDAP servers from Node.
+
+* [NodeBB 4.3](https://nodeweekly.com/link/168850/0a4070b383) – Node.js-powered forum system.
+
+* [RedisSMQ 8.3](https://nodeweekly.com/link/168851/0a4070b383) – Simple high-perf Redis message queue for Node.
+
+* 🤖 [OpenAI Node 4.97](https://nodeweekly.com/link/168852/0a4070b383) – The official Node library for OpenAI's API.
+
+* [SVGO 4.0.0 RC4](https://nodeweekly.com/link/168853/0a4070b383) – Node.js-powered SVG optimizer.
+
+* [Jira.js 5.1](https://nodeweekly.com/link/168854/0a4070b383) – A wrapper for Jira's numerous APIs.
+
+* [noblox.js 6.2](https://nodeweekly.com/link/168855/0a4070b383) – A Node.js API wrapper for Roblox.
+
+* [AVA 6.3](https://nodeweekly.com/link/168856/0a4070b383) – Popular test runner for Node.
+
+📰 Classifieds
+
+🚀 [Node.js Kafka client:](https://nodeweekly.com/link/168857/0a4070b383) Why we built the most performant, DX-friendly Kafka client with native TypeScript support and ease of integration.
+
+***
+
+Mastra is a new TypeScript framework for building AI agents – [here's a quick start guide to building an AI agent](https://nodeweekly.com/link/168858/0a4070b383) with Mastra and Node.
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* Currently at stage 3 at TC39, the [ECMAScript Explicit Resource Management proposal](https://nodeweekly.com/link/168859/0a4070b383) has been implemented in Chrome 134+ and Node 24.
+
+* Google Apps Script brings a lot of JavaScript power to automating actions across Google's various services, but I find it a little opaque sometimes, so [this tutorial on exporting Google Analytics data to Google Sheets](https://nodeweekly.com/link/168860/0a4070b383) is refreshing.
+
+* The popular commercial GSAP animation library [has become free to use for all](https://nodeweekly.com/link/168861/0a4070b383), including commercial use cases. It always amazes me [what it can do.](https://nodeweekly.com/link/168862/0a4070b383)
+
+* Josh Comeau's [Operator Lookup](https://nodeweekly.com/link/168863/0a4070b383) site makes it easy to look up with a JavaScript operator does, or even find ones you haven't encountered before, like [>>>=](https://nodeweekly.com/link/168864/0a4070b383) perhaps.
+
+* If you've been avoiding Redis after the license controversy in 2024, you'll be happy to know [Redis is now open source again](https://nodeweekly.com/link/168865/0a4070b383) as of version 8.0.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
