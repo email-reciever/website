@@ -1,0 +1,325 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Big Node, VS Code, and Mantine updates
+description: Big Node, VS Code, and Mantine updates
+date: 星期五 04 下午 五月 9o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/735
+origin_site: https://javascriptweekly.com/issues/735
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Big Node, VS Code, and Mantine updates" url="https://javascriptweekly.com/issues/735" />
+
+<Detail client:only="react">
+	#​735 — May 9, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/735)
+
+Together with 
+
+[![SurveyJS logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1000,h_410/e_make_transparent/co_white,e_outline:20/yrja59qflovcjwojxypq.png)](https://javascriptweekly.com/link/169090/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ko6yive6iuok2s5hadep.jpg)](https://javascriptweekly.com/link/169091/d076523b1d)
+
+[k6 1.0: Go-Powered Load Testing with JavaScript](https://javascriptweekly.com/link/169091/d076523b1d "github.com") — A full-featured, configurable load generation tool that uses the [Sobek](https://javascriptweekly.com/link/169092/d076523b1d) Go-powered JavaScript engine to support writing test scripts in JavaScript. [v1.0](https://javascriptweekly.com/link/169093/d076523b1d) promises stability, first-class TypeScript support, and better extensibility.
+
+Grafana Labs
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/c5d68214.png)](https://javascriptweekly.com/link/169090/d076523b1d)
+
+[JSON-Powered White-Label Form Builder for Your JavaScript App](https://javascriptweekly.com/link/169090/d076523b1d) — Build dynamic JSON-driven forms in your JavaScript application with [SurveyJS](https://javascriptweekly.com/link/169090/d076523b1d) — a fully customizable, drag-and-drop form-building UI component. It integrates seamlessly with React, Angular, and Vue 3, and has no backend limitations. Perfect for form-heavy apps.
+
+SurveyJS sponsor
+
+[Node 24 (Current) Released](https://javascriptweekly.com/link/169094/d076523b1d "nodejs.org") — [Node’s release lines](https://javascriptweekly.com/link/169095/d076523b1d) are shifting a little lately – v18 has gone EOL and now v23 gives way to v24 as the ‘Current’ release for when you need the cutting edge features. It comes with npm 11, V8 13.6 (hello `RegExp.escape`, `Float16Array`, and `Error.isError`), the [`URLPattern` API](https://javascriptweekly.com/link/169096/d076523b1d) exposed by default, plus Undici 7.
+
+Node.js Team
+
+💡 Technically, [Node v24.0.1](https://javascriptweekly.com/link/169097/d076523b1d) is the latest version temporarily reintroducing an EOL feature due to breakages in popular dependencies.
+
+[Visual Studio Code Version 1.100](https://javascriptweekly.com/link/169098/d076523b1d "code.visualstudio.com") — Not to be confused with a _1.1_ release, this update to VS Code has quite a few goodies for JavaScript developers with improved ‘Next Edit Suggestions’ that will suggest adding missing imports, [support](https://javascriptweekly.com/link/169099/d076523b1d) for Node’s enhanced network debugging capabilities, improved visibility of type information, remote MCP server support, GPT 4.1 as the new default base model, and more.
+
+Microsoft
+
+**IN BRIEF:**
+
+*   The Node.js team is keen for you to [take the latest Node.js _Next 10_ survey](https://javascriptweekly.com/link/169100/d076523b1d) to help guide Node's future priorities.
+    
+*   [Polycompiler](https://javascriptweekly.com/link/169101/d076523b1d) uses a cute trick to let you merge Python and JavaScript into the same source file.
+    
+*   The OpenJS Foundation has [announced its new board of directors.](https://javascriptweekly.com/link/169102/d076523b1d)
+    
+
+**RELEASES:**
+
+*   🤖 [ESLint v9.26.0](https://javascriptweekly.com/link/169103/d076523b1d) – An interesting release for the popular static analysis tool as it adds support for [MCP](https://javascriptweekly.com/link/169104/d076523b1d) as a way for ESLint to be used directly by AI models and coding agents.
+    
+*   🗾 [Mapbox GL JS 3.12](https://javascriptweekly.com/link/169105/d076523b1d) – Interactive, customizable vector maps in the browser, rendered with WebGL.
+    
+*   [Relay v19](https://javascriptweekly.com/link/169106/d076523b1d) – Facebook's declarative React/GraphQL framework.
+    
+*   [Material UI 7.1](https://javascriptweekly.com/link/169107/d076523b1d) – React components using Material Design. Now Tailwind CSS 4 compatible
+    
+*   [Rspack 1.3.9](https://javascriptweekly.com/link/169108/d076523b1d), [Babylon.js 8.7](https://javascriptweekly.com/link/169109/d076523b1d), [Electron 36](https://javascriptweekly.com/link/169110/d076523b1d) (official blog post)
+    
+
+📖  Articles
+
+[The Power of the Spread and Rest Syntax](https://javascriptweekly.com/link/169112/d076523b1d "allthingssmitty.com") — A quick run through the opportunities opened up with just three little dots `...`
+
+Matt Smith
+
+[React Server Components for Astro Developers](https://javascriptweekly.com/link/169113/d076523b1d "overreacted.io") — [Astro](https://javascriptweekly.com/link/169114/d076523b1d)’s ‘island’ architecture and React Server Components share a strikingly similar mental model. Dan compares the two, digs into some of the quirks, and suggests Astro offers a ‘gentler onramp’ to some of RSC’s ideas if you’re struggling with them.
+
+Dan Abramov
+
+[Wallaby MCP: Deep Runtime Context for Your AI Agent](https://javascriptweekly.com/link/169116/d076523b1d "wallabyjs.com") — Wallaby gives your AI agent live execution data, dynamic coverage, and real-time insights to fix and generate tests, and write code with confidence.
+
+Wallaby Team sponsor
+
+[Migrating a Project from Prettier and ESLint to Biome](https://javascriptweekly.com/link/169117/d076523b1d "blog.appsignal.com") — Prettier and ESLint are staples in many JavaScript build processes, but [Biome](https://javascriptweekly.com/link/169118/d076523b1d) offers an interesting ‘one stop shop’ alternative.
+
+Damilola Olatunji
+
+📄 ['Electron Ain't Bad, Actually'](https://javascriptweekly.com/link/169120/d076523b1d) – Worth re-reading next time you see the clichéd criticisms of Electron. Vaxry
+
+📺 [The React Compiler Explained in Three Minutes](https://javascriptweekly.com/link/169123/d076523b1d) Better Stack
+
+📄 [You're Misunderstanding DDD in Angular](https://javascriptweekly.com/link/169125/d076523b1d) Tomasz Ducin
+
+📄 [The Story of Fastify + Vue](https://javascriptweekly.com/link/169127/d076523b1d) Jonas Galvez
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/obngtn14xvu16titykz2.jpg)](https://javascriptweekly.com/link/169130/d076523b1d)
+
+[HelloCSV: A Drop-In, CSV Importing Workflow for JS Apps](https://javascriptweekly.com/link/169130/d076523b1d "hellocsv.github.io") — If you or your users have CSV files to import, here’s a complete CSV importing workflow for the frontend that you can drop into your app. [Basic docs.](https://javascriptweekly.com/link/169132/d076523b1d)
+
+HelloCSV
+
+[PptxGenJS 4.0: Build PowerPoint Presentations with JavaScript](https://javascriptweekly.com/link/169133/d076523b1d "github.com") — A mature library that outputs standards-compliant Open Office XML files compatible with PowerPoint, Apple Keynote, and other common presentation tools. Supports graphics, text, tables, and other typical slide objects. [Lots of demos.](https://javascriptweekly.com/link/169134/d076523b1d)
+
+Brent Ely
+
+[Introducing Clerk Billing](https://javascriptweekly.com/link/169135/d076523b1d "go.clerk.com") — Clerk Billing lets you add B2C/B2B subscriptions with no payment code or UI work—just drop in components and go.
+
+Clerk sponsor
+
+[Mantine 8.0: The Full Featured React Components Library](https://javascriptweekly.com/link/169136/d076523b1d "mantine.dev") — [Mantine](https://javascriptweekly.com/link/169137/d076523b1d) is one of the most celebrated React components libraries, and for good reason: it’s full featured, modern, and looks great. v8.0 ups its chart game with a little _Recharts_ magic, adds over twenty new components (including a GitHub-style [Heatmap](https://javascriptweekly.com/link/169138/d076523b1d), [Tree](https://javascriptweekly.com/link/169139/d076523b1d) and [SemiCircleProgress](https://javascriptweekly.com/link/169140/d076523b1d)), submenus, and much more.
+
+Vitaly Rtishchev et al.
+
+[Hyparquet: Parquet File Parser for JavaScript](https://javascriptweekly.com/link/169141/d076523b1d "github.com") — Parquet is a popular column-oriented data file format frequently used for storing large datasets for analysis. Hyparquet is a dependency-free JavaScript library for working with Parquet files, even in the browser (as in [this demo](https://javascriptweekly.com/link/169142/d076523b1d)).
+
+Hyperparam
+
+🔊 [react-sounds: Add Sound Effects to React Apps](https://javascriptweekly.com/link/169143/d076523b1d "www.reactsounds.com") — Having sound effects on the Web might sound like your idea of a nightmare, but this is a well put together project with delicate, well thought out examples that strike the right _tone._
+
+Aedilic Inc.
+
+[mono-jsx: `&lt;html>` as a `Response`](https://javascriptweekly.com/link/169144/d076523b1d "github.com") — A server-side JSX runtime that renders `&lt;html>` to a `Response` with no build step needed and works across numerous server-side JS runtimes.
+
+Je Xia
+
+*   [Prisma v6.7](https://javascriptweekly.com/link/169145/d076523b1d) – The popular ORM's attempts to move away from Rust to TypeScript are picking up pace.
+    
+*   [Slack Send GitHub Action 2.1](https://javascriptweekly.com/link/169146/d076523b1d) – Send data into Slack from GitHub Actions.
+    
+*   [openid-client 6.5](https://javascriptweekly.com/link/169147/d076523b1d) – OAuth 2/OpenID Connect client API for JS runtimes.
+    
+*   📄 [DOCX 9.5](https://javascriptweekly.com/link/169148/d076523b1d) – Generate Word documents from JavaScript.
+    
+*   [eslint-plugin-prettier 5.4](https://javascriptweekly.com/link/169149/d076523b1d) – Runs Prettier as an ESLint rule.
+    
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/169150/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+* * *
+
+🕹️ Craft delightful games that change how the world learns as an engineer at Brilliant. Remote/NYC/SF: [brilliant.org/careers/](https://javascriptweekly.com/link/169151/d076523b1d)
+
+👀  Elsewhere..
+
+Here's a selection of things from the broader ecosystem we've noticed this week:
+
+*   The CSS Overflow 5 spec enables the creation of [pure CSS scroll and 'carousel' experiences](https://javascriptweekly.com/link/169152/d076523b1d) on the Web, and Sara Soueidan has dug in deep and done [an accessibility and usability analysis of the feature.](https://javascriptweekly.com/link/169153/d076523b1d) Is it time to give up your JavaScript-based approach? Not yet, says Sara.
+    
+*   Sam Rose is back with another fantastic visual essay - [this time looking at 'reservoir sampling.'](https://javascriptweekly.com/link/169154/d076523b1d) As well as getting to learn a useful programming technique in a visual way, you can also check out [all the JavaScript code he built](https://javascriptweekly.com/link/169155/d076523b1d) that powers the article.
+    
+*   One team decided to move away from Next.js and migrate to Ruby on Rails, while still maintaining a React frontend – [here's their tale of why and how.](https://javascriptweekly.com/link/169156/d076523b1d)
+    
+*   [Postgres 18 Beta 1](https://javascriptweekly.com/link/169157/d076523b1d) was released. IO performance on Linux is a big focus. The final release is due in September or October.
+    
+*   🤖 [Google has updated its Gemini 2.5 Pro model](https://javascriptweekly.com/link/169158/d076523b1d) – they claim it's now far better at building frontend apps in particular with 'a real taste for aesthetic web development'.
+    
+
+P.S. If you're into React or Node.js, we focus more directly on those in [React Status](https://javascriptweekly.com/link/169159/d076523b1d) and [Node Weekly](https://javascriptweekly.com/link/169160/d076523b1d) respectively, so check out the latest issues of those too :-)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/169161/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​735 — May 9, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/735)
+
+Together with 
+
+[![SurveyJS logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1000,h_410/e_make_transparent/co_white,e_outline:20/yrja59qflovcjwojxypq.png)](https://javascriptweekly.com/link/169090/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ko6yive6iuok2s5hadep.jpg)](https://javascriptweekly.com/link/169091/d076523b1d)
+
+[k6 1.0: Go-Powered Load Testing with JavaScript](https://javascriptweekly.com/link/169091/d076523b1d "github.com") — A full-featured, configurable load generation tool that uses the [Sobek](https://javascriptweekly.com/link/169092/d076523b1d) Go-powered JavaScript engine to support writing test scripts in JavaScript. [v1.0](https://javascriptweekly.com/link/169093/d076523b1d) promises stability, first-class TypeScript support, and better extensibility.
+
+Grafana Labs
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/c5d68214.png)](https://javascriptweekly.com/link/169090/d076523b1d)
+
+[JSON-Powered White-Label Form Builder for Your JavaScript App](https://javascriptweekly.com/link/169090/d076523b1d) — Build dynamic JSON-driven forms in your JavaScript application with [SurveyJS](https://javascriptweekly.com/link/169090/d076523b1d) — a fully customizable, drag-and-drop form-building UI component. It integrates seamlessly with React, Angular, and Vue 3, and has no backend limitations. Perfect for form-heavy apps.
+
+SurveyJS sponsor
+
+[Node 24 (Current) Released](https://javascriptweekly.com/link/169094/d076523b1d "nodejs.org") — [Node’s release lines](https://javascriptweekly.com/link/169095/d076523b1d) are shifting a little lately – v18 has gone EOL and now v23 gives way to v24 as the ‘Current’ release for when you need the cutting edge features. It comes with npm 11, V8 13.6 (hello `RegExp.escape`, `Float16Array`, and `Error.isError`), the [`URLPattern` API](https://javascriptweekly.com/link/169096/d076523b1d) exposed by default, plus Undici 7.
+
+Node.js Team
+
+💡 Technically, [Node v24.0.1](https://javascriptweekly.com/link/169097/d076523b1d) is the latest version temporarily reintroducing an EOL feature due to breakages in popular dependencies.
+
+[Visual Studio Code Version 1.100](https://javascriptweekly.com/link/169098/d076523b1d "code.visualstudio.com") — Not to be confused with a *1.1* release, this update to VS Code has quite a few goodies for JavaScript developers with improved ‘Next Edit Suggestions’ that will suggest adding missing imports, [support](https://javascriptweekly.com/link/169099/d076523b1d) for Node’s enhanced network debugging capabilities, improved visibility of type information, remote MCP server support, GPT 4.1 as the new default base model, and more.
+
+Microsoft
+
+**IN BRIEF:**
+
+* The Node.js team is keen for you to [take the latest Node.js *Next 10* survey](https://javascriptweekly.com/link/169100/d076523b1d) to help guide Node's future priorities.
+
+* [Polycompiler](https://javascriptweekly.com/link/169101/d076523b1d) uses a cute trick to let you merge Python and JavaScript into the same source file.
+
+* The OpenJS Foundation has [announced its new board of directors.](https://javascriptweekly.com/link/169102/d076523b1d)
+
+**RELEASES:**
+
+* 🤖 [ESLint v9.26.0](https://javascriptweekly.com/link/169103/d076523b1d) – An interesting release for the popular static analysis tool as it adds support for [MCP](https://javascriptweekly.com/link/169104/d076523b1d) as a way for ESLint to be used directly by AI models and coding agents.
+
+* 🗾 [Mapbox GL JS 3.12](https://javascriptweekly.com/link/169105/d076523b1d) – Interactive, customizable vector maps in the browser, rendered with WebGL.
+
+* [Relay v19](https://javascriptweekly.com/link/169106/d076523b1d) – Facebook's declarative React/GraphQL framework.
+
+* [Material UI 7.1](https://javascriptweekly.com/link/169107/d076523b1d) – React components using Material Design. Now Tailwind CSS 4 compatible
+
+* [Rspack 1.3.9](https://javascriptweekly.com/link/169108/d076523b1d), [Babylon.js 8.7](https://javascriptweekly.com/link/169109/d076523b1d), [Electron 36](https://javascriptweekly.com/link/169110/d076523b1d) (official blog post)
+
+📖  Articles
+
+[The Power of the Spread and Rest Syntax](https://javascriptweekly.com/link/169112/d076523b1d "allthingssmitty.com") — A quick run through the opportunities opened up with just three little dots `...`
+
+Matt Smith
+
+[React Server Components for Astro Developers](https://javascriptweekly.com/link/169113/d076523b1d "overreacted.io") — [Astro](https://javascriptweekly.com/link/169114/d076523b1d)’s ‘island’ architecture and React Server Components share a strikingly similar mental model. Dan compares the two, digs into some of the quirks, and suggests Astro offers a ‘gentler onramp’ to some of RSC’s ideas if you’re struggling with them.
+
+Dan Abramov
+
+[Wallaby MCP: Deep Runtime Context for Your AI Agent](https://javascriptweekly.com/link/169116/d076523b1d "wallabyjs.com") — Wallaby gives your AI agent live execution data, dynamic coverage, and real-time insights to fix and generate tests, and write code with confidence.
+
+Wallaby Team sponsor
+
+[Migrating a Project from Prettier and ESLint to Biome](https://javascriptweekly.com/link/169117/d076523b1d "blog.appsignal.com") — Prettier and ESLint are staples in many JavaScript build processes, but [Biome](https://javascriptweekly.com/link/169118/d076523b1d) offers an interesting ‘one stop shop’ alternative.
+
+Damilola Olatunji
+
+📄 ['Electron Ain't Bad, Actually'](https://javascriptweekly.com/link/169120/d076523b1d) – Worth re-reading next time you see the clichéd criticisms of Electron. Vaxry
+
+📺 [The React Compiler Explained in Three Minutes](https://javascriptweekly.com/link/169123/d076523b1d) Better Stack
+
+📄 [You're Misunderstanding DDD in Angular](https://javascriptweekly.com/link/169125/d076523b1d) Tomasz Ducin
+
+📄 [The Story of Fastify + Vue](https://javascriptweekly.com/link/169127/d076523b1d) Jonas Galvez
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/obngtn14xvu16titykz2.jpg)](https://javascriptweekly.com/link/169130/d076523b1d)
+
+[HelloCSV: A Drop-In, CSV Importing Workflow for JS Apps](https://javascriptweekly.com/link/169130/d076523b1d "hellocsv.github.io") — If you or your users have CSV files to import, here’s a complete CSV importing workflow for the frontend that you can drop into your app. [Basic docs.](https://javascriptweekly.com/link/169132/d076523b1d)
+
+HelloCSV
+
+[PptxGenJS 4.0: Build PowerPoint Presentations with JavaScript](https://javascriptweekly.com/link/169133/d076523b1d "github.com") — A mature library that outputs standards-compliant Open Office XML files compatible with PowerPoint, Apple Keynote, and other common presentation tools. Supports graphics, text, tables, and other typical slide objects. [Lots of demos.](https://javascriptweekly.com/link/169134/d076523b1d)
+
+Brent Ely
+
+[Introducing Clerk Billing](https://javascriptweekly.com/link/169135/d076523b1d "go.clerk.com") — Clerk Billing lets you add B2C/B2B subscriptions with no payment code or UI work—just drop in components and go.
+
+Clerk sponsor
+
+[Mantine 8.0: The Full Featured React Components Library](https://javascriptweekly.com/link/169136/d076523b1d "mantine.dev") — [Mantine](https://javascriptweekly.com/link/169137/d076523b1d) is one of the most celebrated React components libraries, and for good reason: it’s full featured, modern, and looks great. v8.0 ups its chart game with a little *Recharts* magic, adds over twenty new components (including a GitHub-style [Heatmap](https://javascriptweekly.com/link/169138/d076523b1d), [Tree](https://javascriptweekly.com/link/169139/d076523b1d) and [SemiCircleProgress](https://javascriptweekly.com/link/169140/d076523b1d)), submenus, and much more.
+
+Vitaly Rtishchev et al.
+
+[Hyparquet: Parquet File Parser for JavaScript](https://javascriptweekly.com/link/169141/d076523b1d "github.com") — Parquet is a popular column-oriented data file format frequently used for storing large datasets for analysis. Hyparquet is a dependency-free JavaScript library for working with Parquet files, even in the browser (as in [this demo](https://javascriptweekly.com/link/169142/d076523b1d)).
+
+Hyperparam
+
+🔊 [react-sounds: Add Sound Effects to React Apps](https://javascriptweekly.com/link/169143/d076523b1d "www.reactsounds.com") — Having sound effects on the Web might sound like your idea of a nightmare, but this is a well put together project with delicate, well thought out examples that strike the right *tone.*
+
+Aedilic Inc.
+
+[mono-jsx: `&lt;html>` as a `Response`](https://javascriptweekly.com/link/169144/d076523b1d "github.com") — A server-side JSX runtime that renders `&lt;html>` to a `Response` with no build step needed and works across numerous server-side JS runtimes.
+
+Je Xia
+
+* [Prisma v6.7](https://javascriptweekly.com/link/169145/d076523b1d) – The popular ORM's attempts to move away from Rust to TypeScript are picking up pace.
+
+* [Slack Send GitHub Action 2.1](https://javascriptweekly.com/link/169146/d076523b1d) – Send data into Slack from GitHub Actions.
+
+* [openid-client 6.5](https://javascriptweekly.com/link/169147/d076523b1d) – OAuth 2/OpenID Connect client API for JS runtimes.
+
+* 📄 [DOCX 9.5](https://javascriptweekly.com/link/169148/d076523b1d) – Generate Word documents from JavaScript.
+
+* [eslint-plugin-prettier 5.4](https://javascriptweekly.com/link/169149/d076523b1d) – Runs Prettier as an ESLint rule.
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/169150/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+***
+
+🕹️ Craft delightful games that change how the world learns as an engineer at Brilliant. Remote/NYC/SF: [brilliant.org/careers/](https://javascriptweekly.com/link/169151/d076523b1d)
+
+👀  Elsewhere..
+
+Here's a selection of things from the broader ecosystem we've noticed this week:
+
+* The CSS Overflow 5 spec enables the creation of [pure CSS scroll and 'carousel' experiences](https://javascriptweekly.com/link/169152/d076523b1d) on the Web, and Sara Soueidan has dug in deep and done [an accessibility and usability analysis of the feature.](https://javascriptweekly.com/link/169153/d076523b1d) Is it time to give up your JavaScript-based approach? Not yet, says Sara.
+
+* Sam Rose is back with another fantastic visual essay - [this time looking at 'reservoir sampling.'](https://javascriptweekly.com/link/169154/d076523b1d) As well as getting to learn a useful programming technique in a visual way, you can also check out [all the JavaScript code he built](https://javascriptweekly.com/link/169155/d076523b1d) that powers the article.
+
+* One team decided to move away from Next.js and migrate to Ruby on Rails, while still maintaining a React frontend – [here's their tale of why and how.](https://javascriptweekly.com/link/169156/d076523b1d)
+
+* [Postgres 18 Beta 1](https://javascriptweekly.com/link/169157/d076523b1d) was released. IO performance on Linux is a big focus. The final release is due in September or October.
+
+* 🤖 [Google has updated its Gemini 2.5 Pro model](https://javascriptweekly.com/link/169158/d076523b1d) – they claim it's now far better at building frontend apps in particular with 'a real taste for aesthetic web development'.
+
+P.S. If you're into React or Node.js, we focus more directly on those in [React Status](https://javascriptweekly.com/link/169159/d076523b1d) and [Node Weekly](https://javascriptweekly.com/link/169160/d076523b1d) respectively, so check out the latest issues of those too :-)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/169161/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
