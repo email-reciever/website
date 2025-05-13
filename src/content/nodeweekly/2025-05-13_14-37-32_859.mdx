@@ -1,0 +1,264 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Making and parsing RSS and Atom feeds
+description: Making and parsing RSS and Atom feeds
+date: 星期二 02 下午 五月 13o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/578
+origin_site: https://nodeweekly.com/issues/578
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Making and parsing RSS and Atom feeds" url="https://nodeweekly.com/issues/578" />
+
+<Detail client:only="react">
+	#​578 — May 13, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/578)
+
+🖊️ I'm going to [Google I/O](https://nodeweekly.com/link/169164/0a4070b383) next week, so Node Weekly will be taking a break and will return on May 27. If you happen to be at I/O too, say hi if you see an Englishman rambling on about newsletters!  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/169165/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/o2ob8hwexnwceevgwjn4.jpg)](https://nodeweekly.com/link/169166/0a4070b383)
+
+[Feedsmith: A Fresh New Web Feed Parser and Generator](https://nodeweekly.com/link/169166/0a4070b383 "github.com") — The creator of Feedsmith ran into numerous problems with existing libraries, so created this new, modern way to both parse and generate RSS, Atom, JSON Feed, OPML, and RDF feeds with support for common namespaces as used in podcast, media, and other niche types of feed. It’s still early days but the essentials are there.
+
+Maciej Lamberski
+
+💡 At over a decade old, Jean-Philippe Monette's mature [_Feed_ library](https://nodeweekly.com/link/169167/0a4070b383) has just had a major update too (v5.0) if you want something focused on feed _generation._
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/5c5cc176.png)](https://nodeweekly.com/link/169165/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/169165/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics to manage and optimize application data effectively.
+
+Memetria sponsor
+
+[Node v24.0.1 (Current) Released](https://nodeweekly.com/link/169168/0a4070b383 "nodejs.org") — [Node 24.0 was released](https://nodeweekly.com/link/169169/0a4070b383) last week, but now we have a patch release to reintroduce the long-deprecated [SlowBuffer](https://nodeweekly.com/link/169170/0a4070b383) which was removed in Node 24. Why? There are still popular packages using it.
+
+Antoine du Hamel
+
+💡 If you need a reminder of what's new in Node 24, Lizz Parody gives us the big picture in [Node.js 24 is Here: What You Need to Know.](https://nodeweekly.com/link/169171/0a4070b383)
+
+**IN BRIEF:**
+
+*   Node performance hero Yagiz Nizipli [is now turning his hand](https://nodeweekly.com/link/169172/0a4070b383) to improving Node's HTTP performance.
+    
+*   [Bun v1.2.13](https://nodeweekly.com/link/169173/0a4070b383) has been released with more Node.js compatibility improvements, most notably to `worker_threads` support.
+    
+*   [The latest release of VS Code](https://nodeweekly.com/link/169174/0a4070b383) has [added support](https://nodeweekly.com/link/169175/0a4070b383) for Node's recent network debugging enhancements in its experimental network view.
+    
+*   We featured it last week, but you can still take [the latest Node.js Next 10 Survey](https://nodeweekly.com/link/169176/0a4070b383). It'll help the Node core team focus on high demand priorities.
+    
+
+[Best Practices for Creating a Modern npm Package](https://nodeweekly.com/link/169177/0a4070b383 "snyk.io") — A step-by-step “as of 2025” walkthrough of creating your own npm package using current best practices. We’ve linked to this before but it’s just been updated.
+
+Brian Clark (Snyk)
+
+[Common Downtime Causes (With Real Node.js Examples)](https://nodeweekly.com/link/169178/0a4070b383 "blog.sentry.io") — Bad deploys, traffic spikes, dependency fails—our guide shows how to spot downtime early with real-world Node.js examples and smarter monitoring.
+
+Sentry sponsor
+
+📄 [Working with File System Paths and File URLs in Node](https://nodeweekly.com/link/169179/0a4070b383) Dr. Axel Rauschmayer
+
+📄 [Migrating a Project from Prettier and ESLint to Biome](https://nodeweekly.com/link/169180/0a4070b383) Damilola Olatunji
+
+📄 [Working with Regular Expressions in JavaScript](https://nodeweekly.com/link/169181/0a4070b383) Adebayo Adams
+
+📄 [The Story of Fastify + Vue](https://nodeweekly.com/link/169182/0a4070b383) Jonas Galvez
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/btvugirh6hsmfnpjqnfc.jpg)](https://nodeweekly.com/link/169183/0a4070b383)
+
+[PptxGenJS: Build PowerPoint Presentations with JavaScript](https://nodeweekly.com/link/169183/0a4070b383 "github.com") — A mature library that outputs standards-compliant Open Office XML files compatible with PowerPoint, Apple Keynote, and other common presentation tools. Supports graphics, text, tables, and other typical slide objects. [Demos.](https://nodeweekly.com/link/169184/0a4070b383)
+
+Brent Ely
+
+[ANSIS 4.0: ANSI Color Library for Everywhere](https://nodeweekly.com/link/169185/0a4070b383 "github.com") — A ESM _and_ CommonJS library to use the power of ANSI escape sequences for coloring and styling text in numerous environments including the terminal, Chromium-based browsers, Node, Bun, Deno, and even Next.js. [v4.0](https://nodeweekly.com/link/169186/0a4070b383) is a big upgrade with enough breaking changes to warrant a [migration guide](https://nodeweekly.com/link/169187/0a4070b383) for existing users.
+
+webdiscus
+
+[Hyparquet: Parquet File Parser for JavaScript](https://nodeweekly.com/link/169188/0a4070b383 "github.com") — Parquet is a popular column-oriented data file format frequently used for storing large datasets for analysis. Hyparquet is a dependency-free JavaScript library for working with Parquet files, even in the browser (as in [this demo](https://nodeweekly.com/link/169189/0a4070b383)).
+
+Hyperparam
+
+[jsdiff 8.0: A JavaScript Text Diffing Implementation](https://nodeweekly.com/link/169190/0a4070b383 "github.com") — Can compare strings for differences in various ways including creating patches. There’s an [online demo](https://nodeweekly.com/link/169191/0a4070b383).
+
+Kevin Decker
+
+[Glob 11: Match Files Using Shell-Style Patterns](https://nodeweekly.com/link/169192/0a4070b383 "github.com") — _“The most correct and second fastest glob implementation in JavaScript.”_
+
+Isaac Z. Schlueter
+
+*   [sqs-consumer 12.0](https://nodeweekly.com/link/169193/0a4070b383) – Build Amazon SQS-based applications without boilerplate by defining an async message processing function. Built and used by the BBC.
+    
+*   [express-openapi-validator 5.5](https://nodeweekly.com/link/169194/0a4070b383) – Auto-validate API requests and responses in Express against an OpenAPI 3.x spec.
+    
+*   🤖 [OpenAI Node 4.98](https://nodeweekly.com/link/169195/0a4070b383) – The official Node library for OpenAI's API. Adds support for the [reinforcement fine-tuning](https://nodeweekly.com/link/169196/0a4070b383) API.
+    
+*   [dnt (Deno to Node Transform) 0.42](https://nodeweekly.com/link/169197/0a4070b383) – Deno to npm package build tool.
+    
+*   [cron-parser 5.2](https://nodeweekly.com/link/169198/0a4070b383) – JS library for parsing cron schedules.
+    
+*   [Undici 7.9](https://nodeweekly.com/link/169199/0a4070b383) – Node's powerful HTTP client library.
+    
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   It's written in Go, but [k6](https://nodeweekly.com/link/169200/0a4070b383) is a powerful load balancing tool from Grafana where you write the scripts in JavaScript or TypeScript – it's just reached [version 1.0.](https://nodeweekly.com/link/169201/0a4070b383)
+    
+*   Matt Smith reminds us of [the power of the spread and rest syntax `...`](https://nodeweekly.com/link/169202/0a4070b383)
+    
+*   The popular [Mantine](https://nodeweekly.com/link/169203/0a4070b383) suite of React components has reached [version 8.0.](https://nodeweekly.com/link/169204/0a4070b383)
+    
+*   [Pinkerton](https://nodeweekly.com/link/169205/0a4070b383) is a Python-powered security auditing tool for looking through a site's JavaScript files for accidentally included secrets and tokens.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​578 — May 13, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/578)
+
+🖊️ I'm going to [Google I/O](https://nodeweekly.com/link/169164/0a4070b383) next week, so Node Weekly will be taking a break and will return on May 27. If you happen to be at I/O too, say hi if you see an Englishman rambling on about newsletters!\
+\_\_\
+*Your editor, Peter Cooper*
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/169165/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/o2ob8hwexnwceevgwjn4.jpg)](https://nodeweekly.com/link/169166/0a4070b383)
+
+[Feedsmith: A Fresh New Web Feed Parser and Generator](https://nodeweekly.com/link/169166/0a4070b383 "github.com") — The creator of Feedsmith ran into numerous problems with existing libraries, so created this new, modern way to both parse and generate RSS, Atom, JSON Feed, OPML, and RDF feeds with support for common namespaces as used in podcast, media, and other niche types of feed. It’s still early days but the essentials are there.
+
+Maciej Lamberski
+
+💡 At over a decade old, Jean-Philippe Monette's mature [*Feed* library](https://nodeweekly.com/link/169167/0a4070b383) has just had a major update too (v5.0) if you want something focused on feed *generation.*
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/5c5cc176.png)](https://nodeweekly.com/link/169165/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/169165/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics to manage and optimize application data effectively.
+
+Memetria sponsor
+
+[Node v24.0.1 (Current) Released](https://nodeweekly.com/link/169168/0a4070b383 "nodejs.org") — [Node 24.0 was released](https://nodeweekly.com/link/169169/0a4070b383) last week, but now we have a patch release to reintroduce the long-deprecated [SlowBuffer](https://nodeweekly.com/link/169170/0a4070b383) which was removed in Node 24. Why? There are still popular packages using it.
+
+Antoine du Hamel
+
+💡 If you need a reminder of what's new in Node 24, Lizz Parody gives us the big picture in [Node.js 24 is Here: What You Need to Know.](https://nodeweekly.com/link/169171/0a4070b383)
+
+**IN BRIEF:**
+
+* Node performance hero Yagiz Nizipli [is now turning his hand](https://nodeweekly.com/link/169172/0a4070b383) to improving Node's HTTP performance.
+
+* [Bun v1.2.13](https://nodeweekly.com/link/169173/0a4070b383) has been released with more Node.js compatibility improvements, most notably to `worker_threads` support.
+
+* [The latest release of VS Code](https://nodeweekly.com/link/169174/0a4070b383) has [added support](https://nodeweekly.com/link/169175/0a4070b383) for Node's recent network debugging enhancements in its experimental network view.
+
+* We featured it last week, but you can still take [the latest Node.js Next 10 Survey](https://nodeweekly.com/link/169176/0a4070b383). It'll help the Node core team focus on high demand priorities.
+
+[Best Practices for Creating a Modern npm Package](https://nodeweekly.com/link/169177/0a4070b383 "snyk.io") — A step-by-step “as of 2025” walkthrough of creating your own npm package using current best practices. We’ve linked to this before but it’s just been updated.
+
+Brian Clark (Snyk)
+
+[Common Downtime Causes (With Real Node.js Examples)](https://nodeweekly.com/link/169178/0a4070b383 "blog.sentry.io") — Bad deploys, traffic spikes, dependency fails—our guide shows how to spot downtime early with real-world Node.js examples and smarter monitoring.
+
+Sentry sponsor
+
+📄 [Working with File System Paths and File URLs in Node](https://nodeweekly.com/link/169179/0a4070b383) Dr. Axel Rauschmayer
+
+📄 [Migrating a Project from Prettier and ESLint to Biome](https://nodeweekly.com/link/169180/0a4070b383) Damilola Olatunji
+
+📄 [Working with Regular Expressions in JavaScript](https://nodeweekly.com/link/169181/0a4070b383) Adebayo Adams
+
+📄 [The Story of Fastify + Vue](https://nodeweekly.com/link/169182/0a4070b383) Jonas Galvez
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/btvugirh6hsmfnpjqnfc.jpg)](https://nodeweekly.com/link/169183/0a4070b383)
+
+[PptxGenJS: Build PowerPoint Presentations with JavaScript](https://nodeweekly.com/link/169183/0a4070b383 "github.com") — A mature library that outputs standards-compliant Open Office XML files compatible with PowerPoint, Apple Keynote, and other common presentation tools. Supports graphics, text, tables, and other typical slide objects. [Demos.](https://nodeweekly.com/link/169184/0a4070b383)
+
+Brent Ely
+
+[ANSIS 4.0: ANSI Color Library for Everywhere](https://nodeweekly.com/link/169185/0a4070b383 "github.com") — A ESM *and* CommonJS library to use the power of ANSI escape sequences for coloring and styling text in numerous environments including the terminal, Chromium-based browsers, Node, Bun, Deno, and even Next.js. [v4.0](https://nodeweekly.com/link/169186/0a4070b383) is a big upgrade with enough breaking changes to warrant a [migration guide](https://nodeweekly.com/link/169187/0a4070b383) for existing users.
+
+webdiscus
+
+[Hyparquet: Parquet File Parser for JavaScript](https://nodeweekly.com/link/169188/0a4070b383 "github.com") — Parquet is a popular column-oriented data file format frequently used for storing large datasets for analysis. Hyparquet is a dependency-free JavaScript library for working with Parquet files, even in the browser (as in [this demo](https://nodeweekly.com/link/169189/0a4070b383)).
+
+Hyperparam
+
+[jsdiff 8.0: A JavaScript Text Diffing Implementation](https://nodeweekly.com/link/169190/0a4070b383 "github.com") — Can compare strings for differences in various ways including creating patches. There’s an [online demo](https://nodeweekly.com/link/169191/0a4070b383).
+
+Kevin Decker
+
+[Glob 11: Match Files Using Shell-Style Patterns](https://nodeweekly.com/link/169192/0a4070b383 "github.com") — *“The most correct and second fastest glob implementation in JavaScript.”*
+
+Isaac Z. Schlueter
+
+* [sqs-consumer 12.0](https://nodeweekly.com/link/169193/0a4070b383) – Build Amazon SQS-based applications without boilerplate by defining an async message processing function. Built and used by the BBC.
+
+* [express-openapi-validator 5.5](https://nodeweekly.com/link/169194/0a4070b383) – Auto-validate API requests and responses in Express against an OpenAPI 3.x spec.
+
+* 🤖 [OpenAI Node 4.98](https://nodeweekly.com/link/169195/0a4070b383) – The official Node library for OpenAI's API. Adds support for the [reinforcement fine-tuning](https://nodeweekly.com/link/169196/0a4070b383) API.
+
+* [dnt (Deno to Node Transform) 0.42](https://nodeweekly.com/link/169197/0a4070b383) – Deno to npm package build tool.
+
+* [cron-parser 5.2](https://nodeweekly.com/link/169198/0a4070b383) – JS library for parsing cron schedules.
+
+* [Undici 7.9](https://nodeweekly.com/link/169199/0a4070b383) – Node's powerful HTTP client library.
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* It's written in Go, but [k6](https://nodeweekly.com/link/169200/0a4070b383) is a powerful load balancing tool from Grafana where you write the scripts in JavaScript or TypeScript – it's just reached [version 1.0.](https://nodeweekly.com/link/169201/0a4070b383)
+
+* Matt Smith reminds us of [the power of the spread and rest syntax `...`](https://nodeweekly.com/link/169202/0a4070b383)
+
+* The popular [Mantine](https://nodeweekly.com/link/169203/0a4070b383) suite of React components has reached [version 8.0.](https://nodeweekly.com/link/169204/0a4070b383)
+
+* [Pinkerton](https://nodeweekly.com/link/169205/0a4070b383) is a Python-powered security auditing tool for looking through a site's JavaScript files for accidentally included secrets and tokens.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
