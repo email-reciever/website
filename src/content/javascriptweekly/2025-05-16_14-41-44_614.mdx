@@ -1,0 +1,308 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: The power of generators
+description: The power of generators
+date: 星期五 02 下午 五月 16o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/736
+origin_site: https://javascriptweekly.com/issues/736
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="The power of generators" url="https://javascriptweekly.com/issues/736" />
+
+<Detail client:only="react">
+	#​736 — May 16, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/736)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/169424/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nb5aitpeai80cowtck7m.jpg)](https://javascriptweekly.com/link/169425/d076523b1d)
+
+['I Think the Ergonomics of Generators is Growing on Me'](https://javascriptweekly.com/link/169425/d076523b1d "macarthur.me") — The author notes [generator functions](https://javascriptweekly.com/link/169426/d076523b1d) have been widely available in JavaScript for a long time, yet _“their practicality hasn’t exactly caught on.”_ This is a great look at what they are and where they _can_ be useful.
+
+Alex MacArthur
+
+[JavaScript's New Superpower? Explicit Resource Management](https://javascriptweekly.com/link/169427/d076523b1d "v8.dev") — V8 v13.8 introduces the idea of deterministic resource cleanup. Among a range of new symbols and objects for the task, the basic idea is you can wrap any file handle, stream or connection in a `using`/`await using` block and the runtime will handle any cleanup once resources go out of scope.
+
+Rezvan Mahdavi Hezaveh (V8)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2286faca.png)](https://javascriptweekly.com/link/169424/d076523b1d)
+
+[Write CSS Like a Pro](https://javascriptweekly.com/link/169424/d076523b1d "frontendmasters.com") — Kevin Powell shares how to create a responsive website from scratch using modern CSS features (such as nesting, utility classes, custom properties, and more). This detailed video course also dives into adding additional polish via animations, view transitions, and more.
+
+Frontend Masters sponsor
+
+[Basecoat: `shadcn/ui`'s Magic, But Minus React](https://javascriptweekly.com/link/169428/d076523b1d "basecoatui.com") — [shadcn/ui](https://javascriptweekly.com/link/169429/d076523b1d) is a popular suite of well designed React components, but if you’d like to use them in _other_ contexts too, Basecoat is for you. Basecoat ports the components to a more vanilla form you can use with your framework (or not) of choice.
+
+Ronan Berder
+
+**IN BRIEF:**
+
+*   Did you know that [`console.log` supports format strings?](https://javascriptweekly.com/link/169430/d076523b1d) I didn't!
+    
+*   The Deno team [shares an update on the _Fresh_ framework](https://javascriptweekly.com/link/169431/d076523b1d).
+    
+*   The [Angular](https://javascriptweekly.com/link/169432/d076523b1d) team is teasing the release of Angular 20 to be on May 29, but we might learn a lot more at [Google I/O](https://javascriptweekly.com/link/169433/d076523b1d) next week. I'm going to be there, say hi if you see me! :-)
+    
+*   Microsoft announced [a round of layoffs](https://javascriptweekly.com/link/169434/d076523b1d) this week and, much to the community’s disappointment, Ron Buckton, a key TypeScript contributor, [was among those affected.](https://javascriptweekly.com/link/169435/d076523b1d)
+    
+*   Brian Clark shares some [best practices for creating a modern npm package.](https://javascriptweekly.com/link/169436/d076523b1d)
+    
+
+**RELEASES:**
+
+*   [May 14 Security Releases of Node.js](https://javascriptweekly.com/link/169437/d076523b1d) – Including [v24.0.2 (Current)](https://javascriptweekly.com/link/169438/d076523b1d), [v23.11.1 (Current)](https://javascriptweekly.com/link/169439/d076523b1d), [v22.15.1 (LTS)](https://javascriptweekly.com/link/169440/d076523b1d), and [v20.19.2 (LTS)](https://javascriptweekly.com/link/169441/d076523b1d).
+    
+*   [Nuxt 3.17](https://javascriptweekly.com/link/169479/d076523b1d) – The full-stack Vue.js-based framework.
+    
+*   [Parcel v2.15.0](https://javascriptweekly.com/link/169442/d076523b1d) – The popular build tool gets a new transformer and minifier for HTML and SVG that also supports converting SVGs to JSX for use in React components.
+    
+*   [React Router 7.6](https://javascriptweekly.com/link/169443/d076523b1d), [MUI X 8.3](https://javascriptweekly.com/link/169444/d076523b1d), [Mithril.js 2.3](https://javascriptweekly.com/link/169445/d076523b1d)
+    
+
+📖  Articles
+
+[JavaScript, When (and What) is `this`?](https://javascriptweekly.com/link/169446/d076523b1d "piccalil.li") — Dives into the complexities of the `this` keyword, explaining how its value is ultimately determined by the context in which a function is called, rather than where it’s defined. It’s been many years since we’ve covered this elementary topic, but this is a fantastic, fresh two-part take.
+
+Mat 'Wilto' Marquis
+
+[How We Debugged a Broken Checkout Flow in Flask + React](https://javascriptweekly.com/link/169447/d076523b1d "blog.sentry.io") — Dropped carts = lost revenue. See how Sentry tracing can catch a full-stack bug in a Flask + React checkout flow—before it can become a support fire drill.
+
+Sentry sponsor
+
+[Building a React App with GitHub Copilot](https://javascriptweekly.com/link/169448/d076523b1d "github.blog") — A good walkthrough, complete with video, if you prefer, of bringing together several of GitHub Copilot’s features for building a modern JavaScript app quickly.
+
+Kedasha Kerr (GitHub)
+
+[Regular Expressions in JavaScript](https://javascriptweekly.com/link/169449/d076523b1d "www.honeybadger.io") — Powerful but often misunderstood, many will benefit from this roundup of the potential regexes offer to JavaScript developers.
+
+Adebayo Adams
+
+📄 [Robust Data Fetching Architecture for Complex React/Next.js Apps](https://javascriptweekly.com/link/169450/d076523b1d) Trevor I. Lasn
+
+▶️ [Native and RxJS Observables: A Direct Comparison](https://javascriptweekly.com/link/169451/d076523b1d) Rainer Hahnekamp
+
+📄 [Angular's `httpResource` in the Wild](https://javascriptweekly.com/link/169452/d076523b1d) – A modern way to [make HTTP requests](https://javascriptweekly.com/link/169453/d076523b1d) in Angular. DrDreo
+
+📄 [Node.js 24 is Here: What You Need to Know](https://javascriptweekly.com/link/169454/d076523b1d) Lizz Parody
+
+📄 [Building the Bridge: Running JavaScript Modules from Dart](https://javascriptweekly.com/link/169455/d076523b1d) Chima Precious
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ewlerdnyfdtkbij4ln1b.jpg)](https://javascriptweekly.com/link/169456/d076523b1d)
+
+[ANSIS 4.0: ANSI Color Library for Everywhere](https://javascriptweekly.com/link/169456/d076523b1d "github.com") — A library to use the power of ANSI escape sequences for coloring and styling text in many environments including the terminal, Chromium-based browsers, Node, Bun, Deno, and even Next.js. [v4.0](https://javascriptweekly.com/link/169457/d076523b1d) is a big upgrade with enough breaking changes to warrant a [migration guide](https://javascriptweekly.com/link/169458/d076523b1d) for existing users.
+
+webdiscus
+
+[TanStack DB: A Reactive Client Store with Fast Real-Time Sync](https://javascriptweekly.com/link/169459/d076523b1d "github.com") — A new entry to the [TanStack family](https://javascriptweekly.com/link/169460/d076523b1d) of libraries that extends TanStack Query with collections, live queries and optimistic mutations.
+
+TanStack
+
+[Introducing Clerk Billing](https://javascriptweekly.com/link/169461/d076523b1d "go.clerk.com") — Set up subscriptions in your B2B or B2C app without writing custom payment code or building your own UI.
+
+Clerk sponsor
+
+[Svelte Sonner: A Toast Notification Component for Svelte](https://javascriptweekly.com/link/169462/d076523b1d "github.com") — You may be familiar with the fantastic [Sonner](https://javascriptweekly.com/link/169463/d076523b1d) in the React world – now there’s a Svelte version.
+
+Robert Soriano
+
+[tscircuit: Use React for Building Electronics Projects](https://javascriptweekly.com/link/169464/d076523b1d "tscircuit.com") — An interesting way to design and lay out electronic circuit boards using a JSX-based approach. [GitHub repo.](https://javascriptweekly.com/link/169465/d076523b1d)
+
+tscircuit Inc.
+
+[jsdiff 8.0: A JavaScript Text Diffing Implementation](https://javascriptweekly.com/link/169466/d076523b1d "github.com") — Can compare strings for differences in various ways including creating patches. There’s an [online demo](https://javascriptweekly.com/link/169467/d076523b1d).
+
+Kevin Decker
+
+[Feedsmith: A Fresh New Web Feed Parser and Generator](https://javascriptweekly.com/link/169468/d076523b1d "github.com") — A new, modern way to both parse and generate RSS, Atom, JSON Feed, OPML, and RDF feeds with support for common namespaces as used in podcast, media, and other niche types of feed.
+
+Maciej Lamberski
+
+*   [Faker 9.8](https://javascriptweekly.com/link/169469/d076523b1d) – Generate fabricated data to your heart's content.
+    
+*   [ngx-vflow 1.8](https://javascriptweekly.com/link/169470/d076523b1d) – Angular library to create node-based apps.
+    
+*   🎨 [color-convert 3.1](https://javascriptweekly.com/link/169471/d076523b1d) – Plain color conversion functions.
+    
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/169472/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+* * *
+
+Build a professional design system in less than a day, [using Hope AI, new model by Bit.Cloud](https://javascriptweekly.com/link/169473/d076523b1d). Enjoy reusable UI components ready for import.
+
+👀 This could be useful..
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/uvgzjoqkkowrmnovw5j7.jpg)](https://javascriptweekly.com/link/169474/d076523b1d)
+
+[Fx 36.0: A Command-Line JSON Viewer & Processing Tool](https://javascriptweekly.com/link/169474/d076523b1d "fx.wtf") — It's written in Go, but if you’ve got some files full of JSON that you want to slice and dice, Fx is for you (it's [easy to install](https://javascriptweekly.com/link/169475/d076523b1d)). This week's [v36 release](https://javascriptweekly.com/link/169476/d076523b1d) adds support for streaming JSON and tailing such streams, it’s also much faster and less memory hungry when parsing large JSON files. A solid update for a handy tool.
+
+Anton Medvedev
+
+P.S. If you're into React or Node.js, we focus more directly on those in [React Status](https://javascriptweekly.com/link/169477/d076523b1d) and [Node Weekly](https://javascriptweekly.com/link/169478/d076523b1d) respectively, so check out the latest issues of those too :-)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/169480/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​736 — May 16, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/736)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/169424/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nb5aitpeai80cowtck7m.jpg)](https://javascriptweekly.com/link/169425/d076523b1d)
+
+['I Think the Ergonomics of Generators is Growing on Me'](https://javascriptweekly.com/link/169425/d076523b1d "macarthur.me") — The author notes [generator functions](https://javascriptweekly.com/link/169426/d076523b1d) have been widely available in JavaScript for a long time, yet *“their practicality hasn’t exactly caught on.”* This is a great look at what they are and where they *can* be useful.
+
+Alex MacArthur
+
+[JavaScript's New Superpower? Explicit Resource Management](https://javascriptweekly.com/link/169427/d076523b1d "v8.dev") — V8 v13.8 introduces the idea of deterministic resource cleanup. Among a range of new symbols and objects for the task, the basic idea is you can wrap any file handle, stream or connection in a `using`/`await using` block and the runtime will handle any cleanup once resources go out of scope.
+
+Rezvan Mahdavi Hezaveh (V8)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2286faca.png)](https://javascriptweekly.com/link/169424/d076523b1d)
+
+[Write CSS Like a Pro](https://javascriptweekly.com/link/169424/d076523b1d "frontendmasters.com") — Kevin Powell shares how to create a responsive website from scratch using modern CSS features (such as nesting, utility classes, custom properties, and more). This detailed video course also dives into adding additional polish via animations, view transitions, and more.
+
+Frontend Masters sponsor
+
+[Basecoat: `shadcn/ui`'s Magic, But Minus React](https://javascriptweekly.com/link/169428/d076523b1d "basecoatui.com") — [shadcn/ui](https://javascriptweekly.com/link/169429/d076523b1d) is a popular suite of well designed React components, but if you’d like to use them in *other* contexts too, Basecoat is for you. Basecoat ports the components to a more vanilla form you can use with your framework (or not) of choice.
+
+Ronan Berder
+
+**IN BRIEF:**
+
+* Did you know that [`console.log` supports format strings?](https://javascriptweekly.com/link/169430/d076523b1d) I didn't!
+
+* The Deno team [shares an update on the *Fresh* framework](https://javascriptweekly.com/link/169431/d076523b1d).
+
+* The [Angular](https://javascriptweekly.com/link/169432/d076523b1d) team is teasing the release of Angular 20 to be on May 29, but we might learn a lot more at [Google I/O](https://javascriptweekly.com/link/169433/d076523b1d) next week. I'm going to be there, say hi if you see me! :-)
+
+* Microsoft announced [a round of layoffs](https://javascriptweekly.com/link/169434/d076523b1d) this week and, much to the community’s disappointment, Ron Buckton, a key TypeScript contributor, [was among those affected.](https://javascriptweekly.com/link/169435/d076523b1d)
+
+* Brian Clark shares some [best practices for creating a modern npm package.](https://javascriptweekly.com/link/169436/d076523b1d)
+
+**RELEASES:**
+
+* [May 14 Security Releases of Node.js](https://javascriptweekly.com/link/169437/d076523b1d) – Including [v24.0.2 (Current)](https://javascriptweekly.com/link/169438/d076523b1d), [v23.11.1 (Current)](https://javascriptweekly.com/link/169439/d076523b1d), [v22.15.1 (LTS)](https://javascriptweekly.com/link/169440/d076523b1d), and [v20.19.2 (LTS)](https://javascriptweekly.com/link/169441/d076523b1d).
+
+* [Nuxt 3.17](https://javascriptweekly.com/link/169479/d076523b1d) – The full-stack Vue.js-based framework.
+
+* [Parcel v2.15.0](https://javascriptweekly.com/link/169442/d076523b1d) – The popular build tool gets a new transformer and minifier for HTML and SVG that also supports converting SVGs to JSX for use in React components.
+
+* [React Router 7.6](https://javascriptweekly.com/link/169443/d076523b1d), [MUI X 8.3](https://javascriptweekly.com/link/169444/d076523b1d), [Mithril.js 2.3](https://javascriptweekly.com/link/169445/d076523b1d)
+
+📖  Articles
+
+[JavaScript, When (and What) is `this`?](https://javascriptweekly.com/link/169446/d076523b1d "piccalil.li") — Dives into the complexities of the `this` keyword, explaining how its value is ultimately determined by the context in which a function is called, rather than where it’s defined. It’s been many years since we’ve covered this elementary topic, but this is a fantastic, fresh two-part take.
+
+Mat 'Wilto' Marquis
+
+[How We Debugged a Broken Checkout Flow in Flask + React](https://javascriptweekly.com/link/169447/d076523b1d "blog.sentry.io") — Dropped carts = lost revenue. See how Sentry tracing can catch a full-stack bug in a Flask + React checkout flow—before it can become a support fire drill.
+
+Sentry sponsor
+
+[Building a React App with GitHub Copilot](https://javascriptweekly.com/link/169448/d076523b1d "github.blog") — A good walkthrough, complete with video, if you prefer, of bringing together several of GitHub Copilot’s features for building a modern JavaScript app quickly.
+
+Kedasha Kerr (GitHub)
+
+[Regular Expressions in JavaScript](https://javascriptweekly.com/link/169449/d076523b1d "www.honeybadger.io") — Powerful but often misunderstood, many will benefit from this roundup of the potential regexes offer to JavaScript developers.
+
+Adebayo Adams
+
+📄 [Robust Data Fetching Architecture for Complex React/Next.js Apps](https://javascriptweekly.com/link/169450/d076523b1d) Trevor I. Lasn
+
+▶️ [Native and RxJS Observables: A Direct Comparison](https://javascriptweekly.com/link/169451/d076523b1d) Rainer Hahnekamp
+
+📄 [Angular's `httpResource` in the Wild](https://javascriptweekly.com/link/169452/d076523b1d) – A modern way to [make HTTP requests](https://javascriptweekly.com/link/169453/d076523b1d) in Angular. DrDreo
+
+📄 [Node.js 24 is Here: What You Need to Know](https://javascriptweekly.com/link/169454/d076523b1d) Lizz Parody
+
+📄 [Building the Bridge: Running JavaScript Modules from Dart](https://javascriptweekly.com/link/169455/d076523b1d) Chima Precious
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ewlerdnyfdtkbij4ln1b.jpg)](https://javascriptweekly.com/link/169456/d076523b1d)
+
+[ANSIS 4.0: ANSI Color Library for Everywhere](https://javascriptweekly.com/link/169456/d076523b1d "github.com") — A library to use the power of ANSI escape sequences for coloring and styling text in many environments including the terminal, Chromium-based browsers, Node, Bun, Deno, and even Next.js. [v4.0](https://javascriptweekly.com/link/169457/d076523b1d) is a big upgrade with enough breaking changes to warrant a [migration guide](https://javascriptweekly.com/link/169458/d076523b1d) for existing users.
+
+webdiscus
+
+[TanStack DB: A Reactive Client Store with Fast Real-Time Sync](https://javascriptweekly.com/link/169459/d076523b1d "github.com") — A new entry to the [TanStack family](https://javascriptweekly.com/link/169460/d076523b1d) of libraries that extends TanStack Query with collections, live queries and optimistic mutations.
+
+TanStack
+
+[Introducing Clerk Billing](https://javascriptweekly.com/link/169461/d076523b1d "go.clerk.com") — Set up subscriptions in your B2B or B2C app without writing custom payment code or building your own UI.
+
+Clerk sponsor
+
+[Svelte Sonner: A Toast Notification Component for Svelte](https://javascriptweekly.com/link/169462/d076523b1d "github.com") — You may be familiar with the fantastic [Sonner](https://javascriptweekly.com/link/169463/d076523b1d) in the React world – now there’s a Svelte version.
+
+Robert Soriano
+
+[tscircuit: Use React for Building Electronics Projects](https://javascriptweekly.com/link/169464/d076523b1d "tscircuit.com") — An interesting way to design and lay out electronic circuit boards using a JSX-based approach. [GitHub repo.](https://javascriptweekly.com/link/169465/d076523b1d)
+
+tscircuit Inc.
+
+[jsdiff 8.0: A JavaScript Text Diffing Implementation](https://javascriptweekly.com/link/169466/d076523b1d "github.com") — Can compare strings for differences in various ways including creating patches. There’s an [online demo](https://javascriptweekly.com/link/169467/d076523b1d).
+
+Kevin Decker
+
+[Feedsmith: A Fresh New Web Feed Parser and Generator](https://javascriptweekly.com/link/169468/d076523b1d "github.com") — A new, modern way to both parse and generate RSS, Atom, JSON Feed, OPML, and RDF feeds with support for common namespaces as used in podcast, media, and other niche types of feed.
+
+Maciej Lamberski
+
+* [Faker 9.8](https://javascriptweekly.com/link/169469/d076523b1d) – Generate fabricated data to your heart's content.
+
+* [ngx-vflow 1.8](https://javascriptweekly.com/link/169470/d076523b1d) – Angular library to create node-based apps.
+
+* 🎨 [color-convert 3.1](https://javascriptweekly.com/link/169471/d076523b1d) – Plain color conversion functions.
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/169472/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+***
+
+Build a professional design system in less than a day, [using Hope AI, new model by Bit.Cloud](https://javascriptweekly.com/link/169473/d076523b1d). Enjoy reusable UI components ready for import.
+
+👀 This could be useful..
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/uvgzjoqkkowrmnovw5j7.jpg)](https://javascriptweekly.com/link/169474/d076523b1d)
+
+[Fx 36.0: A Command-Line JSON Viewer & Processing Tool](https://javascriptweekly.com/link/169474/d076523b1d "fx.wtf") — It's written in Go, but if you’ve got some files full of JSON that you want to slice and dice, Fx is for you (it's [easy to install](https://javascriptweekly.com/link/169475/d076523b1d)). This week's [v36 release](https://javascriptweekly.com/link/169476/d076523b1d) adds support for streaming JSON and tailing such streams, it’s also much faster and less memory hungry when parsing large JSON files. A solid update for a handy tool.
+
+Anton Medvedev
+
+P.S. If you're into React or Node.js, we focus more directly on those in [React Status](https://javascriptweekly.com/link/169477/d076523b1d) and [Node Weekly](https://javascriptweekly.com/link/169478/d076523b1d) respectively, so check out the latest issues of those too :-)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/169480/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
