@@ -1,0 +1,329 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: How Remix is shaking things up
+description: How Remix is shaking things up
+date: 星期五 05 下午 五月 30o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/738
+origin_site: https://javascriptweekly.com/issues/738
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="How Remix is shaking things up" url="https://javascriptweekly.com/issues/738" />
+
+<Detail client:only="react">
+	#​738 — May 30, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/738)
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1238,h_192/e_make_transparent/co_white,e_outline:37/fcshbu9d17nd8smej96j.png)](https://javascriptweekly.com/link/169918/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qouongcfhjdkbdpc7gyz.jpg)](https://javascriptweekly.com/link/169919/d076523b1d)
+
+[_Wake Up, Remix!_ Everything's Changing..](https://javascriptweekly.com/link/169919/d076523b1d "remix.run") — Big news from the [Remix](https://javascriptweekly.com/link/169920/d076523b1d) camp this week. About a year ago, [Remix and React Router merged together](https://javascriptweekly.com/link/169921/d076523b1d) reflecting their shared goals and code, but now it’s _all change_ again. [React Router](https://javascriptweekly.com/link/169922/d076523b1d) is now basically what Remix originally intended to be, and so ‘Remix’ is rebooting as a model-first, low-dependency, Web API-centric full-stack framework built on [Preact](https://javascriptweekly.com/link/169923/d076523b1d). It’ll no longer be a 'React framework' _per se_.
+
+Michael Jackson and Ryan Florence
+
+🕒 [The Upcoming Temporal API and What Problems It Will Solve](https://javascriptweekly.com/link/169924/d076523b1d "waspdev.com") — The [Temporal API](https://javascriptweekly.com/link/169925/d076523b1d) has been cooking for many years now as a new way to work with dates and times in JavaScript. It’s just been [enabled in Firefox 139 by default](https://javascriptweekly.com/link/169926/d076523b1d) and sure to come to more runtimes ASAP. Here’s why it matters and what it offers.
+
+Suren Enfiajyan
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/37aaf2d7.png)](https://javascriptweekly.com/link/169918/d076523b1d)
+
+[CodeRabbit’s Free AI Code Reviews in IDE - VS Code, Cursor, Windsurf](https://javascriptweekly.com/link/169918/d076523b1d "coderabbit.link") — Code Rabbit brings AI code reviews to VS Code, Cursor & Windsurf. Get line-by-line reviews, one-click fixes & codebase-aware feedback - all free in your IDE. Seamlessly integrates with git workflows. [Install the extension & start reviewing!](https://javascriptweekly.com/link/169918/d076523b1d)
+
+CodeRabbit sponsor
+
+[Announcing Angular v20](https://javascriptweekly.com/link/169927/d076523b1d "blog.angular.dev") — A big release for the Google backed framework where a lot of the more recent experimental features (like signals and incremental hydration) have received a lot of polish and been promoted as stable. There are new experimental APIs too, including resource streaming and `httpResource` for making HTTP requests with a signal-based reactive API.
+
+Minko Gechev
+
+💡 While the official release post (above) is packed with content, you might appreciate [this brief magic-themed roundup of what's new in Angular 20.](https://javascriptweekly.com/link/169928/d076523b1d)
+
+**IN BRIEF:**
+
+*   Matteo Collina has unveiled [php-node](https://javascriptweekly.com/link/169929/d076523b1d), a way to run PHP apps within the same process as Node.js. Run WordPress with a Next.js frontend? Sure.
+    
+*   [TC39's 108th meeting](https://javascriptweekly.com/link/169930/d076523b1d) is currently taking place with many proposals being advanced, such as [Seeded Pseudo-Random Numbers](https://javascriptweekly.com/link/169931/d076523b1d) moving to stage 2 and [`Error.isError`](https://javascriptweekly.com/link/169932/d076523b1d) moving to stage 4.
+    
+*   [The OpenJS Foundation is now a CVE Numbering Authority (CNA)](https://javascriptweekly.com/link/169933/d076523b1d) for over 40 popular JavaScript projects it hosts, including ESLint, Express, and Electron.
+    
+*   Node's technical steering committee has [decided against instituting an official bounty program.](https://javascriptweekly.com/link/169934/d076523b1d)
+    
+
+**RELEASES:**
+
+*   [Bun v1.2.15](https://javascriptweekly.com/link/169935/d076523b1d) – Gains a `bun audit` tool for performing security audits of project dependencies.
+    
+*   [Ink 6.0](https://javascriptweekly.com/link/169936/d076523b1d) – Use React to build CLI apps. Now supporting React 19.
+    
+*   [Docusaurus v3.8](https://javascriptweekly.com/link/169937/d076523b1d) – Popular docs-oriented static site generator.
+    
+*   [Ember 6.4](https://javascriptweekly.com/link/169938/d076523b1d), [JSPM 4.0](https://javascriptweekly.com/link/169940/d076523b1d)
+    
+
+📖  Articles
+
+[Why Are 2025/05/28 and 2025-05-28 Different Days in JavaScript?](https://javascriptweekly.com/link/169941/d076523b1d "brandondong.github.io") — An interesting ‘[Wat](https://javascriptweekly.com/link/169942/d076523b1d)’-like moment in just the first few lines of this post, which Brandon decided to dig into and explain.
+
+Brandon Dong
+
+▶  [Modern Performance Debugging in Chrome DevTools](https://javascriptweekly.com/link/169943/d076523b1d "www.youtube.com") — Paul shares a look at the reimagined Chrome DevTools Performance panel, showing off new features, how they work, and how to use them to make performance gains.
+
+Paul Irish
+
+[Build an LMS SaaS App from Scratch](https://javascriptweekly.com/link/169944/d076523b1d "go.clerk.com") — Learn to build a production-ready AI SaaS using Next.js with auth, billing, and an AI voice agent.
+
+Clerk sponsor
+
+[React, Visualized: A Visual Exploration of React Concepts](https://javascriptweekly.com/link/169945/d076523b1d "react.gg") — The creators of a React course have updated their popular visual explainer of numerous core React concepts to cover React 19 and features like actions, transitions, and Server Components too.
+
+Tyler McGinnis et al.
+
+▶  [The 3 Ways JavaScript Frameworks Render the DOM](https://javascriptweekly.com/link/169946/d076523b1d "www.youtube.com") — The creator of the SolidJS framework looks at the different approaches frameworks take to render what they produce. A good look under the hood that isn’t _too_ complex. _(16 minutes.)_
+
+Ryan Carniato
+
+[Build a Blog with Angular in Under 30 Minutes Using Analog](https://javascriptweekly.com/link/169947/d076523b1d "www.telerik.com") — [Analog](https://javascriptweekly.com/link/169948/d076523b1d) is a meta-framework for Angular (think along the lines of Next.js or Nuxt).
+
+Peter Mbanugo
+
+[Your React Meta-Framework Feels Broken, Here's Why](https://javascriptweekly.com/link/169949/d076523b1d "rwsdk.com") — _“Sometimes you’ve got to burn it all down, start from ash, and rebuild from first principles. This is what we did with RedwoodSDK.”_
+
+Redwood Team
+
+📄 [No Server, No Database: Smarter Related Posts in Astro with Transformers.js](https://javascriptweekly.com/link/169950/d076523b1d) Alexander Opalic
+
+📄 [A Thought on JavaScript 'Proof of Work' Anti-Scraper Systems](https://javascriptweekly.com/link/169951/d076523b1d) Chris Siebenmann
+
+📄 [Multithreading in JavaScript with Web Workers](https://javascriptweekly.com/link/169952/d076523b1d) Badmus Kola
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rmdinxlutuicysrrjj7l.jpg)](https://javascriptweekly.com/link/169953/d076523b1d)
+
+[Svelte Flow 1.0: Create Node-Based UIs and Diagrams in Svelte](https://javascriptweekly.com/link/169953/d076523b1d "xyflow.com") — From the creators of the similar [React Flow](https://javascriptweekly.com/link/169954/d076523b1d) comes a customizable Svelte component for building node-based editors and interactive diagrams. [Want examples?](https://javascriptweekly.com/link/169955/d076523b1d)
+
+webkid GmbH
+
+[Cap: A Lightweight, Modern Open Source CAPTCHA Alternative](https://javascriptweekly.com/link/169956/d076523b1d "capjs.js.org") — This solution boasts a method called “proof-of-work” which attempts to make automated CAPTCHA solving more expensive. It uses a Web Component and you can [try out a few demos here](https://javascriptweekly.com/link/169957/d076523b1d). [GitHub repo.](https://javascriptweekly.com/link/169958/d076523b1d)
+
+Cap
+
+[Enterprise Requirements Slowing You Down? There’s a Better Way](https://javascriptweekly.com/link/169959/d076523b1d) — WorkOS lets devs ship SSO, SCIM, audit logs & more—fast. Trusted by industry-leading teams like OpenAI, Vercel & Plaid.
+
+WorkOS sponsor
+
+[Google Gen AI SDK for TypeScript and JavaScript v1](https://javascriptweekly.com/link/169960/d076523b1d "github.com") — Why let Python developers have all the fun? Now you can harness the full power of Google’s Gemini API (and Vertex platform) from Node.js too.
+
+Google
+
+[ReactJust: Server Components Without a Framework](https://javascriptweekly.com/link/169961/d076523b1d "reactjust.dev") — If, for some reason, you don’t want to adopt a full-scale framework like Next.js or React Router to use or experiment with RSCs, this ‘vanilla RSC’ approach could be of interest.
+
+almadoro
+
+*   [NeutralinoJS 6.1](https://javascriptweekly.com/link/169962/d076523b1d) – Lightweight cross-platform desktop app framework.
+    
+*   [Linkify 4.3](https://javascriptweekly.com/link/169963/d076523b1d) – Turn links, hashtags, and mentions in text to HTML links.
+    
+*   [image-type 6.0](https://javascriptweekly.com/link/169964/d076523b1d) – Detect the image type of a Buffer/Uint8Array.
+    
+*   [Faker 9.8](https://javascriptweekly.com/link/169965/d076523b1d) – Generate fabricated data to your heart's content.
+    
+*   [file-type 21.0](https://javascriptweekly.com/link/169966/d076523b1d) – Detect the file type of a file, stream, or data.
+    
+*   [Mineflayer 4.29](https://javascriptweekly.com/link/169967/d076523b1d) – Create Minecraft bots in JavaScript.
+    
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/169968/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+* * *
+
+How Notion’s engineering team tackled viral user growth to [run PostgreSQL at scale](https://javascriptweekly.com/link/169969/d076523b1d) on Amazon RDS with pganalyze.
+
+👀  Elsewhere..
+
+Here's a selection of things from the broader ecosystem this week:
+
+*   [The annual Stack Overflow Developer Survey is back](https://javascriptweekly.com/link/169970/d076523b1d) for a fifteenth year.
+    
+*   [A Minecraft-style building experience in pure CSS](https://javascriptweekly.com/link/169971/d076523b1d) – no JavaScript at all!
+    
+*   Simon Willison writes about [how GitHub Issues works really well as a personal notebook](https://javascriptweekly.com/link/169972/d076523b1d) for taking notes, linking them together, and generally organizing whatever sort of information you want. It doesn't have to just be for code projects.
+    
+*   I just discovered that Matthias Bynens, who you might know for his work on everything V8, ECMAScript specs, and more, keeps [a repo of the 'smallest possible syntactically valid files'](https://javascriptweekly.com/link/169973/d076523b1d) in many different formats.
+    
+*   Did you know you can [style `alt` text like any other text](https://javascriptweekly.com/link/169974/d076523b1d) on Web pages?
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/169975/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​738 — May 30, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/738)
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1238,h_192/e_make_transparent/co_white,e_outline:37/fcshbu9d17nd8smej96j.png)](https://javascriptweekly.com/link/169918/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qouongcfhjdkbdpc7gyz.jpg)](https://javascriptweekly.com/link/169919/d076523b1d)
+
+[*Wake Up, Remix!* Everything's Changing..](https://javascriptweekly.com/link/169919/d076523b1d "remix.run") — Big news from the [Remix](https://javascriptweekly.com/link/169920/d076523b1d) camp this week. About a year ago, [Remix and React Router merged together](https://javascriptweekly.com/link/169921/d076523b1d) reflecting their shared goals and code, but now it’s *all change* again. [React Router](https://javascriptweekly.com/link/169922/d076523b1d) is now basically what Remix originally intended to be, and so ‘Remix’ is rebooting as a model-first, low-dependency, Web API-centric full-stack framework built on [Preact](https://javascriptweekly.com/link/169923/d076523b1d). It’ll no longer be a 'React framework' *per se*.
+
+Michael Jackson and Ryan Florence
+
+🕒 [The Upcoming Temporal API and What Problems It Will Solve](https://javascriptweekly.com/link/169924/d076523b1d "waspdev.com") — The [Temporal API](https://javascriptweekly.com/link/169925/d076523b1d) has been cooking for many years now as a new way to work with dates and times in JavaScript. It’s just been [enabled in Firefox 139 by default](https://javascriptweekly.com/link/169926/d076523b1d) and sure to come to more runtimes ASAP. Here’s why it matters and what it offers.
+
+Suren Enfiajyan
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/37aaf2d7.png)](https://javascriptweekly.com/link/169918/d076523b1d)
+
+[CodeRabbit’s Free AI Code Reviews in IDE - VS Code, Cursor, Windsurf](https://javascriptweekly.com/link/169918/d076523b1d "coderabbit.link") — Code Rabbit brings AI code reviews to VS Code, Cursor & Windsurf. Get line-by-line reviews, one-click fixes & codebase-aware feedback - all free in your IDE. Seamlessly integrates with git workflows. [Install the extension & start reviewing!](https://javascriptweekly.com/link/169918/d076523b1d)
+
+CodeRabbit sponsor
+
+[Announcing Angular v20](https://javascriptweekly.com/link/169927/d076523b1d "blog.angular.dev") — A big release for the Google backed framework where a lot of the more recent experimental features (like signals and incremental hydration) have received a lot of polish and been promoted as stable. There are new experimental APIs too, including resource streaming and `httpResource` for making HTTP requests with a signal-based reactive API.
+
+Minko Gechev
+
+💡 While the official release post (above) is packed with content, you might appreciate [this brief magic-themed roundup of what's new in Angular 20.](https://javascriptweekly.com/link/169928/d076523b1d)
+
+**IN BRIEF:**
+
+* Matteo Collina has unveiled [php-node](https://javascriptweekly.com/link/169929/d076523b1d), a way to run PHP apps within the same process as Node.js. Run WordPress with a Next.js frontend? Sure.
+
+* [TC39's 108th meeting](https://javascriptweekly.com/link/169930/d076523b1d) is currently taking place with many proposals being advanced, such as [Seeded Pseudo-Random Numbers](https://javascriptweekly.com/link/169931/d076523b1d) moving to stage 2 and [`Error.isError`](https://javascriptweekly.com/link/169932/d076523b1d) moving to stage 4.
+
+* [The OpenJS Foundation is now a CVE Numbering Authority (CNA)](https://javascriptweekly.com/link/169933/d076523b1d) for over 40 popular JavaScript projects it hosts, including ESLint, Express, and Electron.
+
+* Node's technical steering committee has [decided against instituting an official bounty program.](https://javascriptweekly.com/link/169934/d076523b1d)
+
+**RELEASES:**
+
+* [Bun v1.2.15](https://javascriptweekly.com/link/169935/d076523b1d) – Gains a `bun audit` tool for performing security audits of project dependencies.
+
+* [Ink 6.0](https://javascriptweekly.com/link/169936/d076523b1d) – Use React to build CLI apps. Now supporting React 19.
+
+* [Docusaurus v3.8](https://javascriptweekly.com/link/169937/d076523b1d) – Popular docs-oriented static site generator.
+
+* [Ember 6.4](https://javascriptweekly.com/link/169938/d076523b1d), [JSPM 4.0](https://javascriptweekly.com/link/169940/d076523b1d)
+
+📖  Articles
+
+[Why Are 2025/05/28 and 2025-05-28 Different Days in JavaScript?](https://javascriptweekly.com/link/169941/d076523b1d "brandondong.github.io") — An interesting ‘[Wat](https://javascriptweekly.com/link/169942/d076523b1d)’-like moment in just the first few lines of this post, which Brandon decided to dig into and explain.
+
+Brandon Dong
+
+▶  [Modern Performance Debugging in Chrome DevTools](https://javascriptweekly.com/link/169943/d076523b1d "www.youtube.com") — Paul shares a look at the reimagined Chrome DevTools Performance panel, showing off new features, how they work, and how to use them to make performance gains.
+
+Paul Irish
+
+[Build an LMS SaaS App from Scratch](https://javascriptweekly.com/link/169944/d076523b1d "go.clerk.com") — Learn to build a production-ready AI SaaS using Next.js with auth, billing, and an AI voice agent.
+
+Clerk sponsor
+
+[React, Visualized: A Visual Exploration of React Concepts](https://javascriptweekly.com/link/169945/d076523b1d "react.gg") — The creators of a React course have updated their popular visual explainer of numerous core React concepts to cover React 19 and features like actions, transitions, and Server Components too.
+
+Tyler McGinnis et al.
+
+▶  [The 3 Ways JavaScript Frameworks Render the DOM](https://javascriptweekly.com/link/169946/d076523b1d "www.youtube.com") — The creator of the SolidJS framework looks at the different approaches frameworks take to render what they produce. A good look under the hood that isn’t *too* complex. *(16 minutes.)*
+
+Ryan Carniato
+
+[Build a Blog with Angular in Under 30 Minutes Using Analog](https://javascriptweekly.com/link/169947/d076523b1d "www.telerik.com") — [Analog](https://javascriptweekly.com/link/169948/d076523b1d) is a meta-framework for Angular (think along the lines of Next.js or Nuxt).
+
+Peter Mbanugo
+
+[Your React Meta-Framework Feels Broken, Here's Why](https://javascriptweekly.com/link/169949/d076523b1d "rwsdk.com") — *“Sometimes you’ve got to burn it all down, start from ash, and rebuild from first principles. This is what we did with RedwoodSDK.”*
+
+Redwood Team
+
+📄 [No Server, No Database: Smarter Related Posts in Astro with Transformers.js](https://javascriptweekly.com/link/169950/d076523b1d) Alexander Opalic
+
+📄 [A Thought on JavaScript 'Proof of Work' Anti-Scraper Systems](https://javascriptweekly.com/link/169951/d076523b1d) Chris Siebenmann
+
+📄 [Multithreading in JavaScript with Web Workers](https://javascriptweekly.com/link/169952/d076523b1d) Badmus Kola
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rmdinxlutuicysrrjj7l.jpg)](https://javascriptweekly.com/link/169953/d076523b1d)
+
+[Svelte Flow 1.0: Create Node-Based UIs and Diagrams in Svelte](https://javascriptweekly.com/link/169953/d076523b1d "xyflow.com") — From the creators of the similar [React Flow](https://javascriptweekly.com/link/169954/d076523b1d) comes a customizable Svelte component for building node-based editors and interactive diagrams. [Want examples?](https://javascriptweekly.com/link/169955/d076523b1d)
+
+webkid GmbH
+
+[Cap: A Lightweight, Modern Open Source CAPTCHA Alternative](https://javascriptweekly.com/link/169956/d076523b1d "capjs.js.org") — This solution boasts a method called “proof-of-work” which attempts to make automated CAPTCHA solving more expensive. It uses a Web Component and you can [try out a few demos here](https://javascriptweekly.com/link/169957/d076523b1d). [GitHub repo.](https://javascriptweekly.com/link/169958/d076523b1d)
+
+Cap
+
+[Enterprise Requirements Slowing You Down? There’s a Better Way](https://javascriptweekly.com/link/169959/d076523b1d) — WorkOS lets devs ship SSO, SCIM, audit logs & more—fast. Trusted by industry-leading teams like OpenAI, Vercel & Plaid.
+
+WorkOS sponsor
+
+[Google Gen AI SDK for TypeScript and JavaScript v1](https://javascriptweekly.com/link/169960/d076523b1d "github.com") — Why let Python developers have all the fun? Now you can harness the full power of Google’s Gemini API (and Vertex platform) from Node.js too.
+
+Google
+
+[ReactJust: Server Components Without a Framework](https://javascriptweekly.com/link/169961/d076523b1d "reactjust.dev") — If, for some reason, you don’t want to adopt a full-scale framework like Next.js or React Router to use or experiment with RSCs, this ‘vanilla RSC’ approach could be of interest.
+
+almadoro
+
+* [NeutralinoJS 6.1](https://javascriptweekly.com/link/169962/d076523b1d) – Lightweight cross-platform desktop app framework.
+
+* [Linkify 4.3](https://javascriptweekly.com/link/169963/d076523b1d) – Turn links, hashtags, and mentions in text to HTML links.
+
+* [image-type 6.0](https://javascriptweekly.com/link/169964/d076523b1d) – Detect the image type of a Buffer/Uint8Array.
+
+* [Faker 9.8](https://javascriptweekly.com/link/169965/d076523b1d) – Generate fabricated data to your heart's content.
+
+* [file-type 21.0](https://javascriptweekly.com/link/169966/d076523b1d) – Detect the file type of a file, stream, or data.
+
+* [Mineflayer 4.29](https://javascriptweekly.com/link/169967/d076523b1d) – Create Minecraft bots in JavaScript.
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/169968/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+***
+
+How Notion’s engineering team tackled viral user growth to [run PostgreSQL at scale](https://javascriptweekly.com/link/169969/d076523b1d) on Amazon RDS with pganalyze.
+
+👀  Elsewhere..
+
+Here's a selection of things from the broader ecosystem this week:
+
+* [The annual Stack Overflow Developer Survey is back](https://javascriptweekly.com/link/169970/d076523b1d) for a fifteenth year.
+
+* [A Minecraft-style building experience in pure CSS](https://javascriptweekly.com/link/169971/d076523b1d) – no JavaScript at all!
+
+* Simon Willison writes about [how GitHub Issues works really well as a personal notebook](https://javascriptweekly.com/link/169972/d076523b1d) for taking notes, linking them together, and generally organizing whatever sort of information you want. It doesn't have to just be for code projects.
+
+* I just discovered that Matthias Bynens, who you might know for his work on everything V8, ECMAScript specs, and more, keeps [a repo of the 'smallest possible syntactically valid files'](https://javascriptweekly.com/link/169973/d076523b1d) in many different formats.
+
+* Did you know you can [style `alt` text like any other text](https://javascriptweekly.com/link/169974/d076523b1d) on Web pages?
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/169975/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
