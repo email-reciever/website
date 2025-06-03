@@ -1,0 +1,252 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: PHP + Node： The odd couple of backend?
+description: PHP + Node： The odd couple of backend?
+date: 星期二 05 下午 六月 3o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/580
+origin_site: https://nodeweekly.com/issues/580
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="PHP + Node： The odd couple of backend?" url="https://nodeweekly.com/issues/580" />
+
+<Detail client:only="react">
+	#​580 — June 3, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/580)
+
+Together with 
+
+[![Tonkotsu logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_313/e_make_transparent/co_white,e_outline:5/c4v6bk3uzcf36sutppl2.jpg)](https://nodeweekly.com/link/169977/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/iyy6abwhatt8agpa4dva.jpg)](https://nodeweekly.com/link/169978/0a4070b383)
+
+[php-node: A New Way to Bring PHP and Node Together](https://nodeweekly.com/link/169978/0a4070b383 "blog.platformatic.dev") — I bet some readers have strong feelings about the idea of mixing PHP and Node.js, but this is a neat project. [php-node](https://nodeweekly.com/link/170014/0a4070b383) is a native module for Node that enables the running of PHP apps within the Node environment. Why? For migrating legacy apps, building hybrid PHP/JS apps, or Node apps that simply need to call out to PHP for some reason (WordPress, maybe, as we see in this post).
+
+Matteo Collina et al.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/999f91d4.jpg)](https://nodeweekly.com/link/169977/0a4070b383)
+
+[🍜 Tonkotsu Makes You the Tech Lead for a Team of Agents](https://nodeweekly.com/link/169977/0a4070b383) — Tonkotsu helps plan your project and break tasks down. You choose which coding tasks to delegate to Tonkotsu - it can do multiple tasks in parallel. You're the tech lead and approver for Tonkotsu's work. [Join our free early access program to try](https://nodeweekly.com/link/169977/0a4070b383).
+
+Tonkotsu sponsor
+
+**IN BRIEF:**
+
+*   Joyee Cheung has shared her slides on a recent talk [about bridging CommonJS and ESM in Node.](https://nodeweekly.com/link/169979/0a4070b383)
+    
+*   [The OpenJS Foundation is now a CVE Numbering Authority (CNA)](https://nodeweekly.com/link/169980/0a4070b383) for over 40 popular JavaScript projects it hosts, including ESLint, Express, and Electron.
+    
+*   [SQLite-JS](https://nodeweekly.com/link/169981/0a4070b383) is an interesting SQLite extension that adds the ability to write custom SQLite functions using JavaScript.
+    
+*   [DigitalOcean shows off its new Node-powered MCP server](https://nodeweekly.com/link/169982/0a4070b383) which lets you manage DO hosted apps from AI agents / Claude, etc.
+    
+
+[Implement AI Safeguards with Node.js and Llama Stack](https://nodeweekly.com/link/169983/0a4070b383 "developers.redhat.com") — [Llama Stack](https://nodeweekly.com/link/169984/0a4070b383) is Meta’s framework for building AI apps in Node, Python, Swift or Kotlin.
+
+Michael Dawson (Red Hat)
+
+📄 [Managing Feature Flags in Express with Trunker](https://nodeweekly.com/link/169985/0a4070b383) – [Trunker](https://nodeweekly.com/link/169986/0a4070b383) is middleware for Express for implementing feature flags. Miguel Migliorelli
+
+📄 [Write More Reliable JavaScript with Optional Chaining](https://nodeweekly.com/link/169987/0a4070b383) – It `might?.be?.a?.good?.idea` Matt Smith
+
+📄 [Building a Linux Electron App](https://nodeweekly.com/link/169988/0a4070b383) – Electron is cross-platform, but there are still platform specific quirks to be aware of. Liu Liu (DoltHub)
+
+📄 [Production-Grade Logging in Node.js with Pino](https://nodeweekly.com/link/169989/0a4070b383) Ayooluwa Isaiah (Dash0)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vndetmkzebjpznxbhjqj.jpg)](https://nodeweekly.com/link/169990/0a4070b383)
+
+[qnm: A CLI Tool to Look Into `node_modules`](https://nodeweekly.com/link/169990/0a4070b383 "github.com") — If you’ve ever been overwhelmed by what’s in `node_modules`, this tool lets you dig around with some guidance as to what is what. You can use fuzzy search to find specific things as well as see which modules are using the most space (you can try it right now with `npx qnm doctor`).
+
+Ran Yitzhaki
+
+[Zigar: Write and Use Zig Code in Node and Electron Projects](https://nodeweekly.com/link/169991/0a4070b383 "github.com") — [Zig](https://nodeweekly.com/link/169992/0a4070b383) is a systems language that’s essentially a superset of C/C++ ([Bun](https://nodeweekly.com/link/169993/0a4070b383) is written in it). _Zigar_ makes it possible to write and use C/C++/Zig code more easily within JavaScript projects.
+
+Chung Leong
+
+🤖 [OpenAI Client 5.x: Use OpenAI's Models from Node](https://nodeweekly.com/link/169994/0a4070b383 "github.com") — The latest version of OpenAI’s official JavaScript library for its various APIs now has support for all its latest models and the Realtime API ([v5.0 changelog](https://nodeweekly.com/link/169995/0a4070b383)). It also supports Deno and Bun.
+
+OpenAI
+
+[Opossum 8.5: A Circuit Breaker for Async Functions](https://nodeweekly.com/link/169996/0a4070b383 "nodeshift.dev") — You can do things like trigger a failure after a certain timeout, fail entirely if a certain error threshold is reached, etc. [GitHub repo.](https://nodeweekly.com/link/169997/0a4070b383)
+
+Red Hat
+
+🏖️ [Beachpatrol: A CLI Tool to Automate Your Everyday Web Browser](https://nodeweekly.com/link/169998/0a4070b383 "github.com") — A higher level way to use Playwright on macOS or Linux to control a regular non-headless browser instance. It’s essentially an approach where you still want a visible browser you can use in a normal way but with added automation possibilities.
+
+Sebastian Carlos
+
+*   [ESLint v9.28.0](https://nodeweekly.com/link/169999/0a4070b383) – The popular linter/static analysis tool adds even more TypeScript syntax support to core rules.
+    
+*   [Express Zod API 24.0](https://nodeweekly.com/link/170000/0a4070b383) – Quick schema validation and custom middleware. Supports the new [Zod 4.](https://nodeweekly.com/link/170001/0a4070b383)
+    
+*   [Bun v1.2.15](https://nodeweekly.com/link/170002/0a4070b383) – Gains a `bun audit` tool for performing security audits of project dependencies.
+    
+*   📄 [pdf2html 4.0](https://nodeweekly.com/link/170003/0a4070b383) – Convert PDFs to HTML using Apache Tika and PDFBox (so needs a JRE present).
+    
+*   [Ink 6.0](https://nodeweekly.com/link/170004/0a4070b383) – Use React to build CLI apps. Now supports React 19 and requires Node.js 20.
+    
+*   [Ts.ED 8.11](https://nodeweekly.com/link/170005/0a4070b383) – Node + TypeScript framework on top of Express.
+    
+*   [Tinypool 1.1](https://nodeweekly.com/link/170006/0a4070b383) – Small, minimal Node worker thread pool implementation.
+    
+
+📰 Classifieds
+
+[Bit Cloud](https://nodeweekly.com/link/170007/0a4070b383) - AI Software Composition Platform. Compose high-quality professional software with AI for simplicity, speed and control. Build for Developers.
+
+* * *
+
+🤝 Run legacy PHP & modern Node in one pipeline for a new, modern, and seamless developer experience. [Try it now!](https://nodeweekly.com/link/169978/0a4070b383)
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   [TC39's 108th meeting](https://nodeweekly.com/link/170008/0a4070b383) took place last week with many proposals advanced, such as [Seeded Pseudo-Random Numbers](https://nodeweekly.com/link/170009/0a4070b383) moving to stage 2 and [`Error.isError`](https://nodeweekly.com/link/170010/0a4070b383) moving to stage 4.
+    
+*   [The annual Stack Overflow Developer Survey is back](https://nodeweekly.com/link/170011/0a4070b383) for a fifteenth year.
+    
+*   [A look at the upcoming Temporal API](https://nodeweekly.com/link/170012/0a4070b383) and the problems it will help solve in JavaScript when it comes to working with dates and times.
+    
+*   Sean Gillespie ponders [the ingredients of a productive monorepo.](https://nodeweekly.com/link/170013/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​580 — June 3, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/580)
+
+Together with 
+
+[![Tonkotsu logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_313/e_make_transparent/co_white,e_outline:5/c4v6bk3uzcf36sutppl2.jpg)](https://nodeweekly.com/link/169977/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/iyy6abwhatt8agpa4dva.jpg)](https://nodeweekly.com/link/169978/0a4070b383)
+
+[php-node: A New Way to Bring PHP and Node Together](https://nodeweekly.com/link/169978/0a4070b383 "blog.platformatic.dev") — I bet some readers have strong feelings about the idea of mixing PHP and Node.js, but this is a neat project. [php-node](https://nodeweekly.com/link/170014/0a4070b383) is a native module for Node that enables the running of PHP apps within the Node environment. Why? For migrating legacy apps, building hybrid PHP/JS apps, or Node apps that simply need to call out to PHP for some reason (WordPress, maybe, as we see in this post).
+
+Matteo Collina et al.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/999f91d4.jpg)](https://nodeweekly.com/link/169977/0a4070b383)
+
+[🍜 Tonkotsu Makes You the Tech Lead for a Team of Agents](https://nodeweekly.com/link/169977/0a4070b383) — Tonkotsu helps plan your project and break tasks down. You choose which coding tasks to delegate to Tonkotsu - it can do multiple tasks in parallel. You're the tech lead and approver for Tonkotsu's work. [Join our free early access program to try](https://nodeweekly.com/link/169977/0a4070b383).
+
+Tonkotsu sponsor
+
+**IN BRIEF:**
+
+* Joyee Cheung has shared her slides on a recent talk [about bridging CommonJS and ESM in Node.](https://nodeweekly.com/link/169979/0a4070b383)
+
+* [The OpenJS Foundation is now a CVE Numbering Authority (CNA)](https://nodeweekly.com/link/169980/0a4070b383) for over 40 popular JavaScript projects it hosts, including ESLint, Express, and Electron.
+
+* [SQLite-JS](https://nodeweekly.com/link/169981/0a4070b383) is an interesting SQLite extension that adds the ability to write custom SQLite functions using JavaScript.
+
+* [DigitalOcean shows off its new Node-powered MCP server](https://nodeweekly.com/link/169982/0a4070b383) which lets you manage DO hosted apps from AI agents / Claude, etc.
+
+[Implement AI Safeguards with Node.js and Llama Stack](https://nodeweekly.com/link/169983/0a4070b383 "developers.redhat.com") — [Llama Stack](https://nodeweekly.com/link/169984/0a4070b383) is Meta’s framework for building AI apps in Node, Python, Swift or Kotlin.
+
+Michael Dawson (Red Hat)
+
+📄 [Managing Feature Flags in Express with Trunker](https://nodeweekly.com/link/169985/0a4070b383) – [Trunker](https://nodeweekly.com/link/169986/0a4070b383) is middleware for Express for implementing feature flags. Miguel Migliorelli
+
+📄 [Write More Reliable JavaScript with Optional Chaining](https://nodeweekly.com/link/169987/0a4070b383) – It `might?.be?.a?.good?.idea` Matt Smith
+
+📄 [Building a Linux Electron App](https://nodeweekly.com/link/169988/0a4070b383) – Electron is cross-platform, but there are still platform specific quirks to be aware of. Liu Liu (DoltHub)
+
+📄 [Production-Grade Logging in Node.js with Pino](https://nodeweekly.com/link/169989/0a4070b383) Ayooluwa Isaiah (Dash0)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vndetmkzebjpznxbhjqj.jpg)](https://nodeweekly.com/link/169990/0a4070b383)
+
+[qnm: A CLI Tool to Look Into `node_modules`](https://nodeweekly.com/link/169990/0a4070b383 "github.com") — If you’ve ever been overwhelmed by what’s in `node_modules`, this tool lets you dig around with some guidance as to what is what. You can use fuzzy search to find specific things as well as see which modules are using the most space (you can try it right now with `npx qnm doctor`).
+
+Ran Yitzhaki
+
+[Zigar: Write and Use Zig Code in Node and Electron Projects](https://nodeweekly.com/link/169991/0a4070b383 "github.com") — [Zig](https://nodeweekly.com/link/169992/0a4070b383) is a systems language that’s essentially a superset of C/C++ ([Bun](https://nodeweekly.com/link/169993/0a4070b383) is written in it). *Zigar* makes it possible to write and use C/C++/Zig code more easily within JavaScript projects.
+
+Chung Leong
+
+🤖 [OpenAI Client 5.x: Use OpenAI's Models from Node](https://nodeweekly.com/link/169994/0a4070b383 "github.com") — The latest version of OpenAI’s official JavaScript library for its various APIs now has support for all its latest models and the Realtime API ([v5.0 changelog](https://nodeweekly.com/link/169995/0a4070b383)). It also supports Deno and Bun.
+
+OpenAI
+
+[Opossum 8.5: A Circuit Breaker for Async Functions](https://nodeweekly.com/link/169996/0a4070b383 "nodeshift.dev") — You can do things like trigger a failure after a certain timeout, fail entirely if a certain error threshold is reached, etc. [GitHub repo.](https://nodeweekly.com/link/169997/0a4070b383)
+
+Red Hat
+
+🏖️ [Beachpatrol: A CLI Tool to Automate Your Everyday Web Browser](https://nodeweekly.com/link/169998/0a4070b383 "github.com") — A higher level way to use Playwright on macOS or Linux to control a regular non-headless browser instance. It’s essentially an approach where you still want a visible browser you can use in a normal way but with added automation possibilities.
+
+Sebastian Carlos
+
+* [ESLint v9.28.0](https://nodeweekly.com/link/169999/0a4070b383) – The popular linter/static analysis tool adds even more TypeScript syntax support to core rules.
+
+* [Express Zod API 24.0](https://nodeweekly.com/link/170000/0a4070b383) – Quick schema validation and custom middleware. Supports the new [Zod 4.](https://nodeweekly.com/link/170001/0a4070b383)
+
+* [Bun v1.2.15](https://nodeweekly.com/link/170002/0a4070b383) – Gains a `bun audit` tool for performing security audits of project dependencies.
+
+* 📄 [pdf2html 4.0](https://nodeweekly.com/link/170003/0a4070b383) – Convert PDFs to HTML using Apache Tika and PDFBox (so needs a JRE present).
+
+* [Ink 6.0](https://nodeweekly.com/link/170004/0a4070b383) – Use React to build CLI apps. Now supports React 19 and requires Node.js 20.
+
+* [Ts.ED 8.11](https://nodeweekly.com/link/170005/0a4070b383) – Node + TypeScript framework on top of Express.
+
+* [Tinypool 1.1](https://nodeweekly.com/link/170006/0a4070b383) – Small, minimal Node worker thread pool implementation.
+
+📰 Classifieds
+
+[Bit Cloud](https://nodeweekly.com/link/170007/0a4070b383) - AI Software Composition Platform. Compose high-quality professional software with AI for simplicity, speed and control. Build for Developers.
+
+***
+
+🤝 Run legacy PHP & modern Node in one pipeline for a new, modern, and seamless developer experience. [Try it now!](https://nodeweekly.com/link/169978/0a4070b383)
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* [TC39's 108th meeting](https://nodeweekly.com/link/170008/0a4070b383) took place last week with many proposals advanced, such as [Seeded Pseudo-Random Numbers](https://nodeweekly.com/link/170009/0a4070b383) moving to stage 2 and [`Error.isError`](https://nodeweekly.com/link/170010/0a4070b383) moving to stage 4.
+
+* [The annual Stack Overflow Developer Survey is back](https://nodeweekly.com/link/170011/0a4070b383) for a fifteenth year.
+
+* [A look at the upcoming Temporal API](https://nodeweekly.com/link/170012/0a4070b383) and the problems it will help solve in JavaScript when it comes to working with dates and times.
+
+* Sean Gillespie ponders [the ingredients of a productive monorepo.](https://nodeweekly.com/link/170013/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
