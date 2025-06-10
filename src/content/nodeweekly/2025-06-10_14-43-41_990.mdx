@@ -1,0 +1,276 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node 24.2, and some EOL warnings
+description: Node 24.2, and some EOL warnings
+date: 星期二 02 下午 六月 10o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/581
+origin_site: https://nodeweekly.com/issues/581
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node 24.2, and some EOL warnings" url="https://nodeweekly.com/issues/581" />
+
+<Detail client:only="react">
+	#​581 — June 10, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/581)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/170179/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/m9kxekcbm9ir9nmnftvx.jpg)](https://nodeweekly.com/link/170180/0a4070b383)
+
+[PSA: Beware of End-of-Life Node.js Versions](https://nodeweekly.com/link/170180/0a4070b383 "nodejs.org") — Matteo Collina notes the Node.js ecosystem is _“at a critical juncture”_, with v18 and earlier now ‘End-of-Life’. He breaks down what that really means for users of legacy versions, and why you should skip Active LTS v20 and leap straight to v22 for maximum future-proofing. If you _have_ to stay on older versions, though, Matteo shares an option to consider.
+
+Matteo Collina
+
+💡 As an aside, Matteo Collina asks the question of [whether TypeScript support should be backported to Node.js 22.](https://nodeweekly.com/link/170181/0a4070b383)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/5c5cc176.png)](https://nodeweekly.com/link/170179/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/170179/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics to manage and optimize application data effectively.
+
+Memetria sponsor
+
+[Node v24.2.0 (Current) Released](https://nodeweekly.com/link/170182/0a4070b383 "nodejs.org") — `import.meta.main` is a new boolean value available in ES modules that tells you if the current module was the entry point of the current process (so you could run specific code only if a module is run directly, say). Support for HTTP/2 priority signalling has also been removed from nghttp2.
+
+Antoine du Hamel
+
+💡 [This change](https://nodeweekly.com/link/170183/0a4070b383) also means you don't need to pass the entrypoint of your app to `--allow-fs-read` if using [the permissions system.](https://nodeweekly.com/link/170184/0a4070b383)
+
+**IN BRIEF:**
+
+*   Sarah Gooding gives a good roundup of [the proposals discussed and advanced at TC39's recent meeting](https://nodeweekly.com/link/170185/0a4070b383) including `Array.fromAsync`, `Error.isError`, and explicit resource management.
+    
+*   It's been a few years since the last major release of the popular testing framework, but [Jest 30 is out now](https://nodeweekly.com/link/170216/0a4070b383) with a raft of significant improvements.
+    
+*   [SQLite-JS](https://nodeweekly.com/link/170186/0a4070b383) is an interesting SQLite extension that adds the ability to write custom SQLite functions using JavaScript.
+    
+
+[Native Hot Module Reloading in Node via Module Hooks](https://nodeweekly.com/link/170187/0a4070b383 "immaculata.dev") — A clever use of module hooks to implement ‘hot module’ functionality natively _and_ efficiently.
+
+Immaculata
+
+[Unpacking Config and Environment Variables in Node](https://nodeweekly.com/link/170188/0a4070b383 "blog.platformatic.dev") — A blog post recapping a recent session led by Liran Tal about the trickiness, and some best practices around, working with configuration and env variables in Node.
+
+Luca Maraschi
+
+[Drop in OAuth for Your MCP Server](https://nodeweekly.com/link/170189/0a4070b383 "docs.scalekit.com") — Agentic systems and internal services need more than API keys. [Scalekit’s MCP Auth module](https://nodeweekly.com/link/170189/0a4070b383) is a drop-in solution that issues short-lived, scoped tokens to isolate access per org and simplify traceability.
+
+Scalekit sponsor
+
+📄 [A Way to Handle Postgres Migrations in Node](https://nodeweekly.com/link/170190/0a4070b383) – A recommendation for `node-pg-migrate`. Boas Falke
+
+📄 [Building APIs with Node.js and gRPC](https://nodeweekly.com/link/170191/0a4070b383) Salem Olorundare
+
+📄 [Using SQL in Node with Sequelize](https://nodeweekly.com/link/170192/0a4070b383) Damilola Olatunji
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jorgbedurpaizlyuejrt.jpg)](https://nodeweekly.com/link/170193/0a4070b383)
+
+🍊 [Orange ORM: A Neat ORM for Node and TypeScript](https://nodeweekly.com/link/170193/0a4070b383 "orange-orm.io") — A powerful ORM for Node, Bun and Deno, supporting both TypeScript and JavaScript, and both CommonJS and ESM. It follows an Active Record-style querying approach, is well documented, and certainly worth a look if working with most of the popular SQL databases.
+
+Lars-Erik Roald
+
+[Mock Service Worker: REST/GraphQL API Mocking Library](https://nodeweekly.com/link/170194/0a4070b383 "mswjs.io") — Intercepts requests which you can then mock. Capture outgoing requests using an Express-like routing syntax, complete with parameters, wildcards, and regexes. It’s had some significant releases recently. [GitHub repo.](https://nodeweekly.com/link/170195/0a4070b383)
+
+Artem Zakharchenko
+
+🌐 [tz-lookup: Fast Time Zone Estimations from Lat/Long](https://nodeweekly.com/link/170196/0a4070b383 "github.com") — _“This package trades speed and size for accuracy.”_ Nonetheless, this might be accurate enough for your timezone inference use cases.
+
+Matthew McEachen
+
+*   [Babel 8 Beta](https://nodeweekly.com/link/170197/0a4070b383) – Follows on _two years_ from the alpha, but _"All the breaking changes we were planning to include in Babel 8 are done"_.
+    
+*   [Prisma 6.9](https://nodeweekly.com/link/170198/0a4070b383) – Next-gen Node.js + TypeScript ORM. The Rust-free Prisma ORM for PostgreSQL and SQLite is now in preview.
+    
+*   [OpenAI Node 5.2](https://nodeweekly.com/link/170199/0a4070b383) – The official Node library for OpenAI's API.
+    
+*   [MongoDB Node.js Driver 6.17](https://nodeweekly.com/link/170200/0a4070b383) – The latest official MongoDB driver.
+    
+*   [node-llama-cpp 3.9](https://nodeweekly.com/link/170201/0a4070b383) – Run LLMs locally with bindings to `llama.cpp`.
+    
+*   [Firewalk 2.3](https://nodeweekly.com/link/170202/0a4070b383) – Efficient collection traversal library for Firestore.
+    
+*   [Rewire 8.0](https://nodeweekly.com/link/170203/0a4070b383) – Easy monkey-patching for Node unit tests.
+    
+*   [Jasmine 5.8](https://nodeweekly.com/link/170204/0a4070b383) – Testing framework for browsers & Node.
+    
+*   [node-hid 3.2](https://nodeweekly.com/link/170205/0a4070b383) – Access USB & Bluetooth HID devices.
+    
+*   [Mocha 11.6](https://nodeweekly.com/link/170206/0a4070b383) – Test framework for Node & browsers.
+    
+*   [JsBarcode 3.12](https://nodeweekly.com/link/170207/0a4070b383) – Barcode generation library.
+    
+*   [AVA 6.4](https://nodeweekly.com/link/170208/0a4070b383) – Popular test runner for Node.
+    
+
+📰 Classifieds
+
+⚡ [@platformatic/kafka-hooks:](https://nodeweekly.com/link/170209/0a4070b383) A powerful, lightweight library that connects your Apache Kafka infrastructure to HTTP services.
+
+* * *
+
+[Mastering Node.js Streams](https://nodeweekly.com/link/170210/0a4070b383) is a new, practical course from Erick Wendel focusing on Node's most powerful feature for processing data on-demand.
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   [Rolldown](https://nodeweekly.com/link/170211/0a4070b383) is a fast, Rust-based JavaScript bundler intended to eventually be used by Vite — so it's exciting that Evan You has [announced Rolldown-Vite](https://nodeweekly.com/link/170212/0a4070b383), an alternative Vite package you can use to try out Rolldown-powered Vite today. Many developers are reporting large build time reductions.
+    
+*   [Gleam](https://nodeweekly.com/link/170213/0a4070b383) is a neat, easy to read/write language that targets both Erlang and JavaScript runtimes. The big news is that [Gleam compiled to JS is now 30% faster.](https://nodeweekly.com/link/170214/0a4070b383)
+    
+*   [The _State of CSS 2025_ survey](https://nodeweekly.com/link/170215/0a4070b383) is now open to take.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​581 — June 10, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/581)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/170179/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/m9kxekcbm9ir9nmnftvx.jpg)](https://nodeweekly.com/link/170180/0a4070b383)
+
+[PSA: Beware of End-of-Life Node.js Versions](https://nodeweekly.com/link/170180/0a4070b383 "nodejs.org") — Matteo Collina notes the Node.js ecosystem is *“at a critical juncture”*, with v18 and earlier now ‘End-of-Life’. He breaks down what that really means for users of legacy versions, and why you should skip Active LTS v20 and leap straight to v22 for maximum future-proofing. If you *have* to stay on older versions, though, Matteo shares an option to consider.
+
+Matteo Collina
+
+💡 As an aside, Matteo Collina asks the question of [whether TypeScript support should be backported to Node.js 22.](https://nodeweekly.com/link/170181/0a4070b383)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/5c5cc176.png)](https://nodeweekly.com/link/170179/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/170179/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics to manage and optimize application data effectively.
+
+Memetria sponsor
+
+[Node v24.2.0 (Current) Released](https://nodeweekly.com/link/170182/0a4070b383 "nodejs.org") — `import.meta.main` is a new boolean value available in ES modules that tells you if the current module was the entry point of the current process (so you could run specific code only if a module is run directly, say). Support for HTTP/2 priority signalling has also been removed from nghttp2.
+
+Antoine du Hamel
+
+💡 [This change](https://nodeweekly.com/link/170183/0a4070b383) also means you don't need to pass the entrypoint of your app to `--allow-fs-read` if using [the permissions system.](https://nodeweekly.com/link/170184/0a4070b383)
+
+**IN BRIEF:**
+
+* Sarah Gooding gives a good roundup of [the proposals discussed and advanced at TC39's recent meeting](https://nodeweekly.com/link/170185/0a4070b383) including `Array.fromAsync`, `Error.isError`, and explicit resource management.
+
+* It's been a few years since the last major release of the popular testing framework, but [Jest 30 is out now](https://nodeweekly.com/link/170216/0a4070b383) with a raft of significant improvements.
+
+* [SQLite-JS](https://nodeweekly.com/link/170186/0a4070b383) is an interesting SQLite extension that adds the ability to write custom SQLite functions using JavaScript.
+
+[Native Hot Module Reloading in Node via Module Hooks](https://nodeweekly.com/link/170187/0a4070b383 "immaculata.dev") — A clever use of module hooks to implement ‘hot module’ functionality natively *and* efficiently.
+
+Immaculata
+
+[Unpacking Config and Environment Variables in Node](https://nodeweekly.com/link/170188/0a4070b383 "blog.platformatic.dev") — A blog post recapping a recent session led by Liran Tal about the trickiness, and some best practices around, working with configuration and env variables in Node.
+
+Luca Maraschi
+
+[Drop in OAuth for Your MCP Server](https://nodeweekly.com/link/170189/0a4070b383 "docs.scalekit.com") — Agentic systems and internal services need more than API keys. [Scalekit’s MCP Auth module](https://nodeweekly.com/link/170189/0a4070b383) is a drop-in solution that issues short-lived, scoped tokens to isolate access per org and simplify traceability.
+
+Scalekit sponsor
+
+📄 [A Way to Handle Postgres Migrations in Node](https://nodeweekly.com/link/170190/0a4070b383) – A recommendation for `node-pg-migrate`. Boas Falke
+
+📄 [Building APIs with Node.js and gRPC](https://nodeweekly.com/link/170191/0a4070b383) Salem Olorundare
+
+📄 [Using SQL in Node with Sequelize](https://nodeweekly.com/link/170192/0a4070b383) Damilola Olatunji
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jorgbedurpaizlyuejrt.jpg)](https://nodeweekly.com/link/170193/0a4070b383)
+
+🍊 [Orange ORM: A Neat ORM for Node and TypeScript](https://nodeweekly.com/link/170193/0a4070b383 "orange-orm.io") — A powerful ORM for Node, Bun and Deno, supporting both TypeScript and JavaScript, and both CommonJS and ESM. It follows an Active Record-style querying approach, is well documented, and certainly worth a look if working with most of the popular SQL databases.
+
+Lars-Erik Roald
+
+[Mock Service Worker: REST/GraphQL API Mocking Library](https://nodeweekly.com/link/170194/0a4070b383 "mswjs.io") — Intercepts requests which you can then mock. Capture outgoing requests using an Express-like routing syntax, complete with parameters, wildcards, and regexes. It’s had some significant releases recently. [GitHub repo.](https://nodeweekly.com/link/170195/0a4070b383)
+
+Artem Zakharchenko
+
+🌐 [tz-lookup: Fast Time Zone Estimations from Lat/Long](https://nodeweekly.com/link/170196/0a4070b383 "github.com") — *“This package trades speed and size for accuracy.”* Nonetheless, this might be accurate enough for your timezone inference use cases.
+
+Matthew McEachen
+
+* [Babel 8 Beta](https://nodeweekly.com/link/170197/0a4070b383) – Follows on *two years* from the alpha, but *"All the breaking changes we were planning to include in Babel 8 are done"*.
+
+* [Prisma 6.9](https://nodeweekly.com/link/170198/0a4070b383) – Next-gen Node.js + TypeScript ORM. The Rust-free Prisma ORM for PostgreSQL and SQLite is now in preview.
+
+* [OpenAI Node 5.2](https://nodeweekly.com/link/170199/0a4070b383) – The official Node library for OpenAI's API.
+
+* [MongoDB Node.js Driver 6.17](https://nodeweekly.com/link/170200/0a4070b383) – The latest official MongoDB driver.
+
+* [node-llama-cpp 3.9](https://nodeweekly.com/link/170201/0a4070b383) – Run LLMs locally with bindings to `llama.cpp`.
+
+* [Firewalk 2.3](https://nodeweekly.com/link/170202/0a4070b383) – Efficient collection traversal library for Firestore.
+
+* [Rewire 8.0](https://nodeweekly.com/link/170203/0a4070b383) – Easy monkey-patching for Node unit tests.
+
+* [Jasmine 5.8](https://nodeweekly.com/link/170204/0a4070b383) – Testing framework for browsers & Node.
+
+* [node-hid 3.2](https://nodeweekly.com/link/170205/0a4070b383) – Access USB & Bluetooth HID devices.
+
+* [Mocha 11.6](https://nodeweekly.com/link/170206/0a4070b383) – Test framework for Node & browsers.
+
+* [JsBarcode 3.12](https://nodeweekly.com/link/170207/0a4070b383) – Barcode generation library.
+
+* [AVA 6.4](https://nodeweekly.com/link/170208/0a4070b383) – Popular test runner for Node.
+
+📰 Classifieds
+
+⚡ [@platformatic/kafka-hooks:](https://nodeweekly.com/link/170209/0a4070b383) A powerful, lightweight library that connects your Apache Kafka infrastructure to HTTP services.
+
+***
+
+[Mastering Node.js Streams](https://nodeweekly.com/link/170210/0a4070b383) is a new, practical course from Erick Wendel focusing on Node's most powerful feature for processing data on-demand.
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* [Rolldown](https://nodeweekly.com/link/170211/0a4070b383) is a fast, Rust-based JavaScript bundler intended to eventually be used by Vite — so it's exciting that Evan You has [announced Rolldown-Vite](https://nodeweekly.com/link/170212/0a4070b383), an alternative Vite package you can use to try out Rolldown-powered Vite today. Many developers are reporting large build time reductions.
+
+* [Gleam](https://nodeweekly.com/link/170213/0a4070b383) is a neat, easy to read/write language that targets both Erlang and JavaScript runtimes. The big news is that [Gleam compiled to JS is now 30% faster.](https://nodeweekly.com/link/170214/0a4070b383)
+
+* [The *State of CSS 2025* survey](https://nodeweekly.com/link/170215/0a4070b383) is now open to take.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
