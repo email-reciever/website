@@ -1,0 +1,325 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Everybody's gone lintin'
+description: Everybody's gone lintin'
+date: 星期五 05 下午 六月 13o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/740
+origin_site: https://javascriptweekly.com/issues/740
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Everybody's gone lintin'" url="https://javascriptweekly.com/issues/740" />
+
+<Detail client:only="react">
+	#​740 — June 13, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/740)
+
+Together with 
+
+[![Palette](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_339/co_white,e_outline:7/dowxdvuogpggbf84je5w.png)](https://javascriptweekly.com/link/170429/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pzit9npfrfb67yzwgh99.jpg)](https://javascriptweekly.com/link/170430/d076523b1d)
+
+[The State of React and the Community in 2025](https://javascriptweekly.com/link/170430/d076523b1d "blog.isquaredsoftware.com") — React continues to be a major dependency in the JavaScript world but recent innovations have led to much discussion about how it should move forward. Redux maintainer Mark Erikson gives an overview of React’s development over time, what led to some of its innovations, and dispels some ‘FUD and confusion’ about where it's headed.
+
+Mark Erikson
+
+💡 While we cover the biggest React stories in JavaScript Weekly, [React Status](https://javascriptweekly.com/link/170431/d076523b1d) is our weekly newsletter _dedicated_ to React, so check it out for more depth.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/7713148e.png)](https://javascriptweekly.com/link/170429/d076523b1d)
+
+[How Notion Cut Typing Latency By 15%](https://javascriptweekly.com/link/170429/d076523b1d "palette.dev") — Stop guessing why your web app is slow. Palette’s production JS profiler tells you why, down to the line of code. [Get started for free today](https://javascriptweekly.com/link/170429/d076523b1d).
+
+Palette sponsor
+
+[Announcing Oxlint 1.0: The Super Fast Linter](https://javascriptweekly.com/link/170477/d076523b1d "voidzero.dev") — First appearing just 18 months ago, Oxlint has made an impact by being an _incredibly fast_ Rust-powered linter for JavaScript and TypeScript, boasting a 50~100x performance improvement over ESLint while still having support for hundreds of its rules. Now, it’s gone stable.
+
+Boshen Chen and Cameron Clark
+
+[pnpm 10.12 Introduces an Experimental Global Virtual Store](https://javascriptweekly.com/link/170461/d076523b1d "socket.dev") — [pnpm](https://javascriptweekly.com/link/170462/d076523b1d) has long been prized for its speed and efficiency over `npm`. [v10.12](https://javascriptweekly.com/link/170463/d076523b1d) takes things further introducing a ‘global virtual store’ that `node_modules` symlinks to, enabling projects to share dependencies without them being installed numerous times.
+
+Sarah Gooding (Socket)
+
+**IN BRIEF:**
+
+*   **Surfin' Safari?** Apple's WWDC25 event this week saw numerous developments that _aren't_ 'liquid glass' related, including [a look at what's new in Safari 26 (beta)](https://javascriptweekly.com/link/170435/d076523b1d) including support for pattern modifiers in `RegExp` objects.
+    
+*   A writeup of [a vulnerability found in OpenPGP.js.](https://javascriptweekly.com/link/170478/d076523b1d)
+    
+*   Matteo Collina gives us [a public service announcement around the end-of-life of some recent Node.js versions](https://javascriptweekly.com/link/170432/d076523b1d) and some tips on upgrading to v22.
+    
+*   [Gleam](https://javascriptweekly.com/link/170433/d076523b1d) is an easy to read/write language targeting both Erlang and JS runtimes. The big news is that [Gleam compiled to JS is now 30% faster.](https://javascriptweekly.com/link/170434/d076523b1d)
+    
+
+**RELEASES:**
+
+*   [H3 v2 Beta](https://javascriptweekly.com/link/170464/d076523b1d) – Cross-runtime Web standards focused HTTP server framework.
+    
+*   [Node.js v24.2 (Current)](https://javascriptweekly.com/link/170436/d076523b1d) – `import.meta.main` is a new boolean value available in ES modules that tells you if the current module was the entry point of the current process.
+    
+*   [Visual Studio Code May 2025](https://javascriptweekly.com/link/170437/d076523b1d) – Big enhancements to MCP support, but VS Code extensions [can now](https://javascriptweekly.com/link/170438/d076523b1d) also use ES modules.
+    
+*   [Deno 2.3.6](https://javascriptweekly.com/link/170465/d076523b1d), [Rollup v4.43](https://javascriptweekly.com/link/170439/d076523b1d), [Jasmine 5.8](https://javascriptweekly.com/link/170440/d076523b1d), [Vue DevTools v7 for Firefox](https://javascriptweekly.com/link/170466/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[Suppressions of Suppressions](https://javascriptweekly.com/link/170467/d076523b1d "overreacted.io") — If you’re using a linter to keep your code clean, you may have silenced rules that feel too strict or irrelevant. But those suppressions can bury serious bugs. Dan Abramov argues for adding a rule to forbid disabling your most critical checks.
+
+Dan Abramov
+
+[How JavaScript Was Written Back in the Day](https://javascriptweekly.com/link/170441/d076523b1d "www.trevorlasn.com") — It’s not the _earliest_ JavaScript, but Trevor looks back at code written in the 2006-2015 pre-ES6 era.
+
+Trevor I. Lasn
+
+[The Only Test Runner Fully Integrated with AI Agents](https://javascriptweekly.com/link/170442/d076523b1d "wallabyjs.com") — Wallaby upgrades your AI agent to an expert debugging partner with runtime data, coverage, execution paths, runtime dependencies and real-time insights.
+
+Wallaby Team sponsor
+
+[Native Hot Module Reloading in Node via Module Hooks](https://javascriptweekly.com/link/170443/d076523b1d "immaculata.dev") — A clever use of module hooks to implement ‘hot module’ functionality natively _and_ efficiently.
+
+Immaculata
+
+📺 [Don't Use `JSON.parse` & `JSON.stringify`](https://javascriptweekly.com/link/170444/d076523b1d) – Jack points out some of these functions’ shortcomings and possible workarounds. Jack Herrington
+
+📄 [How ESLint Language Plugins Enhance DSL Usability](https://javascriptweekly.com/link/170445/d076523b1d) Nicholas C. Zakas
+
+📄 [Things to Avoid in JavaScript](https://javascriptweekly.com/link/170468/d076523b1d) – A reminder of some basics. Suren Enfiajyan
+
+📄 [Angular 20 Might Seem Boring — 6 Reasons It’s Not](https://javascriptweekly.com/link/170469/d076523b1d) Yan Sun
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ndksybgvl78ihuxomdnz.jpg)](https://javascriptweekly.com/link/170446/d076523b1d)
+
+[npmgraph: A Tool to Visualize npm Module Dependencies](https://javascriptweekly.com/link/170446/d076523b1d "npmgraph.js.org") — Give this Web-based tool one or more npm package names (or even your `package.json` file) and you can see a visualization of the dependency graphs for those packages, including where they intersect. Packages can be colored by various criteria (such as number of maintainers) and you can download SVGs of the graphs.
+
+Kieffer, Brigante, et al.
+
+[Jest 30: Faster, Leaner, and Better JS Testing](https://javascriptweekly.com/link/170470/d076523b1d "jestjs.io") — A ‘noticeably faster’ release of this popular testing framework, adding improved ESM and TypeScript support, performance improvements and more. [Upgrade docs here](https://javascriptweekly.com/link/170471/d076523b1d).
+
+Zaytsev & Nakazawa
+
+[Sync Clerk User Data to Supabase in Real Time with Webhooks](https://javascriptweekly.com/link/170447/d076523b1d "go.clerk.com") — Stop polling and start syncing. This guide shows how to stream Clerk user updates into Supabase with ease.
+
+Clerk sponsor
+
+🍊 [Orange ORM: An Active Record ORM for JavaScript and TypeScript](https://javascriptweekly.com/link/170448/d076523b1d "orange-orm.io") — A powerful ORM for Node, Bun and Deno, supporting both TypeScript and JavaScript, and both CommonJS and ESM. It follows an Active Record-style querying approach, is well documented, and certainly worth a look if working with most of the popular SQL databases.
+
+Lars-Erik Roald
+
+[Vue Equipment: A Toolkit for Nuxt and Vue.js](https://javascriptweekly.com/link/170472/d076523b1d "www.vue.equipment") — A collection of ready-to-use plugins and composables for building modern web apps with both Vue and Nuxt. [Explained here.](https://javascriptweekly.com/link/170473/d076523b1d)
+
+Magic as a Service
+
+🌓 [DarkModeJS 2.0: A Utility Package for Managing Dark Mode](https://javascriptweekly.com/link/170449/d076523b1d "github.com") — Uses the `matchMedia` API and the `prefers-color-scheme` media query to fire functions whenever a user is in dark mode (or changes the mode).
+
+Assortment
+
+🕹️ [Odyc.js: A JS Library for Pixel Games/Stories](https://javascriptweekly.com/link/170450/d076523b1d "odyc.dev") — Has a bit of a 8-bit Game Boy Color vibe to it. You can create games, and try some examples, [in this online playground](https://javascriptweekly.com/link/170451/d076523b1d).
+
+Charles Cailleteau
+
+*   🤖 [Midscene.js 0.18](https://javascriptweekly.com/link/170452/d076523b1d) – Let AI and JavaScript be your browser operator.
+    
+*   [Acorn 8.15](https://javascriptweekly.com/link/170453/d076523b1d) – Small, fast, JavaScript-based JavaScript parser.
+    
+*   [xo 1.1](https://javascriptweekly.com/link/170454/d076523b1d) – Opinionated but configurable ESLint wrapper.
+    
+*   [Mocha 11.6](https://javascriptweekly.com/link/170455/d076523b1d) – Test framework for Node & browsers.
+    
+*   [JsBarcode 3.12](https://javascriptweekly.com/link/170456/d076523b1d) – Barcode generation library.
+    
+
+📰 Classifieds
+
+_"Change is just a merge away"_ - ✨ Automate code reviews with **Infinitcode AI**: [Try free now](https://javascriptweekly.com/link/170457/d076523b1d).
+
+* * *
+
+🎹 [STRICH:](https://javascriptweekly.com/link/170458/d076523b1d) Add blazing fast and reliable 1D/2D Barcode Scanning to your web apps. Free demo app and 30-day trial available.
+
+* * *
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/170459/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+👀  Fun, fun, fun..
+
+Here's a selection of things from the broader ecosystem this week:
+
+*   [The _billionth_ repo on GitHub](https://javascriptweekly.com/link/170460/d076523b1d) (be warned, it has a mildly NSFW name) has just been created to much celebration.
+    
+*   [Shopify explains its work on making import maps easier to use,](https://javascriptweekly.com/link/170474/d076523b1d) including work on shims, the HTML spec, and encouraging browser developers to implement improvements.
+    
+*   [GitHub's remote MCP server](https://javascriptweekly.com/link/170475/d076523b1d) is now in public preview. It enables AI agents and tools to access live GitHub context and work with various concepts like issues and pull requests.
+    
+*   You may recall the TypeScript team is [porting the TypeScript compiler to Go](https://javascriptweekly.com/link/170479/d076523b1d) to take advantage of both native compilation speedups and Go's concurrency features. John Reilly and Ashley Claymore [explain why Go is a 'pragmatic choice' for this project.](https://javascriptweekly.com/link/170476/d076523b1d)
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/170480/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​740 — June 13, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/740)
+
+Together with 
+
+[![Palette](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_339/co_white,e_outline:7/dowxdvuogpggbf84je5w.png)](https://javascriptweekly.com/link/170429/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pzit9npfrfb67yzwgh99.jpg)](https://javascriptweekly.com/link/170430/d076523b1d)
+
+[The State of React and the Community in 2025](https://javascriptweekly.com/link/170430/d076523b1d "blog.isquaredsoftware.com") — React continues to be a major dependency in the JavaScript world but recent innovations have led to much discussion about how it should move forward. Redux maintainer Mark Erikson gives an overview of React’s development over time, what led to some of its innovations, and dispels some ‘FUD and confusion’ about where it's headed.
+
+Mark Erikson
+
+💡 While we cover the biggest React stories in JavaScript Weekly, [React Status](https://javascriptweekly.com/link/170431/d076523b1d) is our weekly newsletter *dedicated* to React, so check it out for more depth.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/7713148e.png)](https://javascriptweekly.com/link/170429/d076523b1d)
+
+[How Notion Cut Typing Latency By 15%](https://javascriptweekly.com/link/170429/d076523b1d "palette.dev") — Stop guessing why your web app is slow. Palette’s production JS profiler tells you why, down to the line of code. [Get started for free today](https://javascriptweekly.com/link/170429/d076523b1d).
+
+Palette sponsor
+
+[Announcing Oxlint 1.0: The Super Fast Linter](https://javascriptweekly.com/link/170477/d076523b1d "voidzero.dev") — First appearing just 18 months ago, Oxlint has made an impact by being an *incredibly fast* Rust-powered linter for JavaScript and TypeScript, boasting a 50~100x performance improvement over ESLint while still having support for hundreds of its rules. Now, it’s gone stable.
+
+Boshen Chen and Cameron Clark
+
+[pnpm 10.12 Introduces an Experimental Global Virtual Store](https://javascriptweekly.com/link/170461/d076523b1d "socket.dev") — [pnpm](https://javascriptweekly.com/link/170462/d076523b1d) has long been prized for its speed and efficiency over `npm`. [v10.12](https://javascriptweekly.com/link/170463/d076523b1d) takes things further introducing a ‘global virtual store’ that `node_modules` symlinks to, enabling projects to share dependencies without them being installed numerous times.
+
+Sarah Gooding (Socket)
+
+**IN BRIEF:**
+
+* **Surfin' Safari?** Apple's WWDC25 event this week saw numerous developments that *aren't* 'liquid glass' related, including [a look at what's new in Safari 26 (beta)](https://javascriptweekly.com/link/170435/d076523b1d) including support for pattern modifiers in `RegExp` objects.
+
+* A writeup of [a vulnerability found in OpenPGP.js.](https://javascriptweekly.com/link/170478/d076523b1d)
+
+* Matteo Collina gives us [a public service announcement around the end-of-life of some recent Node.js versions](https://javascriptweekly.com/link/170432/d076523b1d) and some tips on upgrading to v22.
+
+* [Gleam](https://javascriptweekly.com/link/170433/d076523b1d) is an easy to read/write language targeting both Erlang and JS runtimes. The big news is that [Gleam compiled to JS is now 30% faster.](https://javascriptweekly.com/link/170434/d076523b1d)
+
+**RELEASES:**
+
+* [H3 v2 Beta](https://javascriptweekly.com/link/170464/d076523b1d) – Cross-runtime Web standards focused HTTP server framework.
+
+* [Node.js v24.2 (Current)](https://javascriptweekly.com/link/170436/d076523b1d) – `import.meta.main` is a new boolean value available in ES modules that tells you if the current module was the entry point of the current process.
+
+* [Visual Studio Code May 2025](https://javascriptweekly.com/link/170437/d076523b1d) – Big enhancements to MCP support, but VS Code extensions [can now](https://javascriptweekly.com/link/170438/d076523b1d) also use ES modules.
+
+* [Deno 2.3.6](https://javascriptweekly.com/link/170465/d076523b1d), [Rollup v4.43](https://javascriptweekly.com/link/170439/d076523b1d), [Jasmine 5.8](https://javascriptweekly.com/link/170440/d076523b1d), [Vue DevTools v7 for Firefox](https://javascriptweekly.com/link/170466/d076523b1d)
+
+📖  Articles and Videos
+
+[Suppressions of Suppressions](https://javascriptweekly.com/link/170467/d076523b1d "overreacted.io") — If you’re using a linter to keep your code clean, you may have silenced rules that feel too strict or irrelevant. But those suppressions can bury serious bugs. Dan Abramov argues for adding a rule to forbid disabling your most critical checks.
+
+Dan Abramov
+
+[How JavaScript Was Written Back in the Day](https://javascriptweekly.com/link/170441/d076523b1d "www.trevorlasn.com") — It’s not the *earliest* JavaScript, but Trevor looks back at code written in the 2006-2015 pre-ES6 era.
+
+Trevor I. Lasn
+
+[The Only Test Runner Fully Integrated with AI Agents](https://javascriptweekly.com/link/170442/d076523b1d "wallabyjs.com") — Wallaby upgrades your AI agent to an expert debugging partner with runtime data, coverage, execution paths, runtime dependencies and real-time insights.
+
+Wallaby Team sponsor
+
+[Native Hot Module Reloading in Node via Module Hooks](https://javascriptweekly.com/link/170443/d076523b1d "immaculata.dev") — A clever use of module hooks to implement ‘hot module’ functionality natively *and* efficiently.
+
+Immaculata
+
+📺 [Don't Use `JSON.parse` & `JSON.stringify`](https://javascriptweekly.com/link/170444/d076523b1d) – Jack points out some of these functions’ shortcomings and possible workarounds. Jack Herrington
+
+📄 [How ESLint Language Plugins Enhance DSL Usability](https://javascriptweekly.com/link/170445/d076523b1d) Nicholas C. Zakas
+
+📄 [Things to Avoid in JavaScript](https://javascriptweekly.com/link/170468/d076523b1d) – A reminder of some basics. Suren Enfiajyan
+
+📄 [Angular 20 Might Seem Boring — 6 Reasons It’s Not](https://javascriptweekly.com/link/170469/d076523b1d) Yan Sun
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ndksybgvl78ihuxomdnz.jpg)](https://javascriptweekly.com/link/170446/d076523b1d)
+
+[npmgraph: A Tool to Visualize npm Module Dependencies](https://javascriptweekly.com/link/170446/d076523b1d "npmgraph.js.org") — Give this Web-based tool one or more npm package names (or even your `package.json` file) and you can see a visualization of the dependency graphs for those packages, including where they intersect. Packages can be colored by various criteria (such as number of maintainers) and you can download SVGs of the graphs.
+
+Kieffer, Brigante, et al.
+
+[Jest 30: Faster, Leaner, and Better JS Testing](https://javascriptweekly.com/link/170470/d076523b1d "jestjs.io") — A ‘noticeably faster’ release of this popular testing framework, adding improved ESM and TypeScript support, performance improvements and more. [Upgrade docs here](https://javascriptweekly.com/link/170471/d076523b1d).
+
+Zaytsev & Nakazawa
+
+[Sync Clerk User Data to Supabase in Real Time with Webhooks](https://javascriptweekly.com/link/170447/d076523b1d "go.clerk.com") — Stop polling and start syncing. This guide shows how to stream Clerk user updates into Supabase with ease.
+
+Clerk sponsor
+
+🍊 [Orange ORM: An Active Record ORM for JavaScript and TypeScript](https://javascriptweekly.com/link/170448/d076523b1d "orange-orm.io") — A powerful ORM for Node, Bun and Deno, supporting both TypeScript and JavaScript, and both CommonJS and ESM. It follows an Active Record-style querying approach, is well documented, and certainly worth a look if working with most of the popular SQL databases.
+
+Lars-Erik Roald
+
+[Vue Equipment: A Toolkit for Nuxt and Vue.js](https://javascriptweekly.com/link/170472/d076523b1d "www.vue.equipment") — A collection of ready-to-use plugins and composables for building modern web apps with both Vue and Nuxt. [Explained here.](https://javascriptweekly.com/link/170473/d076523b1d)
+
+Magic as a Service
+
+🌓 [DarkModeJS 2.0: A Utility Package for Managing Dark Mode](https://javascriptweekly.com/link/170449/d076523b1d "github.com") — Uses the `matchMedia` API and the `prefers-color-scheme` media query to fire functions whenever a user is in dark mode (or changes the mode).
+
+Assortment
+
+🕹️ [Odyc.js: A JS Library for Pixel Games/Stories](https://javascriptweekly.com/link/170450/d076523b1d "odyc.dev") — Has a bit of a 8-bit Game Boy Color vibe to it. You can create games, and try some examples, [in this online playground](https://javascriptweekly.com/link/170451/d076523b1d).
+
+Charles Cailleteau
+
+* 🤖 [Midscene.js 0.18](https://javascriptweekly.com/link/170452/d076523b1d) – Let AI and JavaScript be your browser operator.
+
+* [Acorn 8.15](https://javascriptweekly.com/link/170453/d076523b1d) – Small, fast, JavaScript-based JavaScript parser.
+
+* [xo 1.1](https://javascriptweekly.com/link/170454/d076523b1d) – Opinionated but configurable ESLint wrapper.
+
+* [Mocha 11.6](https://javascriptweekly.com/link/170455/d076523b1d) – Test framework for Node & browsers.
+
+* [JsBarcode 3.12](https://javascriptweekly.com/link/170456/d076523b1d) – Barcode generation library.
+
+📰 Classifieds
+
+*"Change is just a merge away"* - ✨ Automate code reviews with **Infinitcode AI**: [Try free now](https://javascriptweekly.com/link/170457/d076523b1d).
+
+***
+
+🎹 [STRICH:](https://javascriptweekly.com/link/170458/d076523b1d) Add blazing fast and reliable 1D/2D Barcode Scanning to your web apps. Free demo app and 30-day trial available.
+
+***
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/170459/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+👀  Fun, fun, fun..
+
+Here's a selection of things from the broader ecosystem this week:
+
+* [The *billionth* repo on GitHub](https://javascriptweekly.com/link/170460/d076523b1d) (be warned, it has a mildly NSFW name) has just been created to much celebration.
+
+* [Shopify explains its work on making import maps easier to use,](https://javascriptweekly.com/link/170474/d076523b1d) including work on shims, the HTML spec, and encouraging browser developers to implement improvements.
+
+* [GitHub's remote MCP server](https://javascriptweekly.com/link/170475/d076523b1d) is now in public preview. It enables AI agents and tools to access live GitHub context and work with various concepts like issues and pull requests.
+
+* You may recall the TypeScript team is [porting the TypeScript compiler to Go](https://javascriptweekly.com/link/170479/d076523b1d) to take advantage of both native compilation speedups and Go's concurrency features. John Reilly and Ashley Claymore [explain why Go is a 'pragmatic choice' for this project.](https://javascriptweekly.com/link/170476/d076523b1d)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/170480/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
