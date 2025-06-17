@@ -1,0 +1,236 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: One step closer to TypeScript
+description: One step closer to TypeScript
+date: 星期二 04 下午 六月 17o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/582
+origin_site: https://nodeweekly.com/issues/582
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="One step closer to TypeScript" url="https://nodeweekly.com/issues/582" />
+
+<Detail client:only="react">
+	#​582 — June 17, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/582)
+
+Together with 
+
+[![Tonkotsu logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_313/e_make_transparent/co_white,e_outline:5/c4v6bk3uzcf36sutppl2.jpg)](https://nodeweekly.com/link/170483/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[Node.js Moves Toward Stable TypeScript Support with Amaro 1.0](https://nodeweekly.com/link/170484/0a4070b383 "socket.dev") — [Amaro](https://nodeweekly.com/link/170485/0a4070b383) is Node’s official way to strip types out of TypeScript code so that Node can run it (though you can also use Amaro as a library, if you prefer). The [1.0 release](https://nodeweekly.com/link/170486/0a4070b383) is a key milestone on the way to moving TypeScript support in Node.js from experimental to stable in a release later this year. Sarah rounds up the entire story.
+
+Sarah Gooding (Socket)
+
+💡 If you want to dig deeper, Marco Ippolito [▶️ gave a talk called _The Path to Native TypeScript_](https://nodeweekly.com/link/170487/0a4070b383) at Node Congress 2025. By the end of it, you'll know everything you need to know about how TypeScript support in Node works and what its limitations are.
+
+[pnpm 10.12 Introduces an Experimental Global Virtual Store](https://nodeweekly.com/link/170488/0a4070b383 "socket.dev") — [pnpm](https://nodeweekly.com/link/170489/0a4070b383) has long been prized for its speed and efficiency over `npm`. [v10.12](https://nodeweekly.com/link/170490/0a4070b383) takes things further introducing a ‘global virtual store’ that `node_modules` symlinks to, enabling projects to share dependencies without them being installed numerous times.
+
+Sarah Gooding (Socket)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/9456493b.png)](https://nodeweekly.com/link/170483/0a4070b383)
+
+[🍜 Tonkotsu is Your Natural Language IDE](https://nodeweekly.com/link/170483/0a4070b383) — Tonkotsu helps you build your project plan and break work down. You choose which coding tasks to delegate to Tonkotsu - it can do multiple tasks in parallel. You're the tech lead and approver for Tonkotsu's work. Download the app for FREE during our early access program.
+
+Tonkotsu AI sponsor
+
+**IN BRIEF:**
+
+*   Isaac Z. Schlueter shares [a tribute to Mikeal Rogers](https://nodeweekly.com/link/170491/0a4070b383), someone heavily involved in Node over the years, who died last week.
+    
+*   Dylan Goings of Atomic Object [celebrates JavaScript's 30th birthday.](https://nodeweekly.com/link/170492/0a4070b383)
+    
+
+[Using `await` at the Top Level in ES Modules](https://nodeweekly.com/link/170520/0a4070b383 "allthingssmitty.com") — Top-level await is supported in all modern browsers and in Node.js (beyond v16) in `.mjs` files or `.js` files specified as modules.
+
+Matt Smith
+
+📄 [The Best JavaScript Web Scraping Libraries](https://nodeweekly.com/link/170493/0a4070b383) – A few options to consider including Crawlee, Cheerio, and using browsers from Node. Theo Vasilis (Apify)
+
+📺 [The Creator of Hono on Bringing It to Node.js](https://nodeweekly.com/link/170494/0a4070b383) – [Hono](https://nodeweekly.com/link/170495/0a4070b383) is a lightweight webapp framework built on Web Standards. Yusuke Wada
+
+📄 [Performance and Stress Testing in Node.js](https://nodeweekly.com/link/170496/0a4070b383) – A look at three different testing tools (AutoCannon, Artillery, k6). Antonello Zanini
+
+📄 [Building an MCP Server with Nx](https://nodeweekly.com/link/170522/0a4070b383) Nx Team
+
+🛠 Code & Tools
+
+[WelsonJS: Build Windows Apps Using Windows' Built-In JS Engine](https://nodeweekly.com/link/170497/0a4070b383 "github.com") — WelsonJS = **W**indows + **El**ectr**on**\-like + **JS**. Optimized for environments with limited computing power, Welson has built-in transpilers for several JS alternatives, RPC clients, and [much more.](https://nodeweekly.com/link/170498/0a4070b383)
+
+Go Namhyeon
+
+🕒 [Croner 9.1: 'Cron' Triggering and Evaluation](https://nodeweekly.com/link/170499/0a4070b383 "croner.56k.guru") — Trigger functions upon the schedule of your choice using [cron syntax.](https://nodeweekly.com/link/170500/0a4070b383) It can also evaluate cron expressions to give you a list of upcoming times. [v9](https://nodeweekly.com/link/170501/0a4070b383) moved the project to TypeScript and introduced a few breaking changes.
+
+Hexagon
+
+[log-vwer: A Dashboard for Monitoring Node.js App Logs](https://nodeweekly.com/link/170502/0a4070b383 "github.com") — It’s quite common to use third-party services for storing, searching, and monitoring logs, but this gives you a basic self-hosted dashboard, built atop Node itself.
+
+Qitmeer Raza
+
+*   **&amp;** [Entities 6.0](https://nodeweekly.com/link/170503/0a4070b383) – Encode/decode HTML and XML entities. Used by many popular libraries.
+    
+*   [ESLint v9.29.0](https://nodeweekly.com/link/170504/0a4070b383) – Now supports the syntax used for explicit resource management (`using` and `await using`).
+    
+*   [LogTape 0.12](https://nodeweekly.com/link/170521/0a4070b383) – Logging library for JavaScript and TypeScript with zero dependencies and support for multiple environments.
+    
+*   [fast-png 7.0](https://nodeweekly.com/link/170506/0a4070b383) – Pure JavaScript PNG image decoder and encoder.
+    
+*   🤖 [node-llama-cpp 3.10](https://nodeweekly.com/link/170507/0a4070b383) – Run LLMs locally with bindings to `llama.cpp`.
+    
+*   [Discord.js 14.20](https://nodeweekly.com/link/170508/0a4070b383) – Official library for interacting with Discord's API.
+    
+*   [Ableton.js 3.7](https://nodeweekly.com/link/170509/0a4070b383) – Control instances of the Ableton DAW from Node.
+    
+*   [Fastify 5.4](https://nodeweekly.com/link/170510/0a4070b383) – The fast, low overhead Node web framework.
+    
+*   [Mongoose 8.16](https://nodeweekly.com/link/170511/0a4070b383) – Popular MongoDB object modeling library.
+    
+*   [Piscina 5.1](https://nodeweekly.com/link/170512/0a4070b383) – Popular Node.js worker thread pool.
+    
+*   [tiff 7.0](https://nodeweekly.com/link/170513/0a4070b383) – Pure JS TIFF image decoding library.
+    
+
+✂︎  Deep cuts from the queue
+
+As it's a quieter week than usual, we went back to look through our (extensive!) queue of items which hadn't yet made it into the newsletter for one reason or another. Here are some of the things that jumped out at us:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/itwvjjqnjltcbyafeisq.jpg)](https://nodeweekly.com/link/170514/0a4070b383)
+
+*   [FIGLet.js](https://nodeweekly.com/link/170514/0a4070b383) is a library that can use the FIGfont spec to render text using FIG's ASCII-only textual forms (as above). There's [a live demo on the Web here.](https://nodeweekly.com/link/170515/0a4070b383) Might be useful for your next CLI tool?
+    
+*   Bloomberg's Michael Molisani [introduces us to _Stricli_](https://nodeweekly.com/link/170516/0a4070b383), a framework for building CLI tools that's used at Bloomberg. [GitHub repo.](https://nodeweekly.com/link/170517/0a4070b383)
+    
+*   [Pyodide](https://nodeweekly.com/link/170518/0a4070b383) is a WebAssembly-based Python distribution targeting both the browser and Node.js as runtimes.
+    
+*   Pavel Romanov demonstrates how you can do [basic profiling of Node apps in VS Code.](https://nodeweekly.com/link/170519/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​582 — June 17, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/582)
+
+Together with 
+
+[![Tonkotsu logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_313/e_make_transparent/co_white,e_outline:5/c4v6bk3uzcf36sutppl2.jpg)](https://nodeweekly.com/link/170483/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[Node.js Moves Toward Stable TypeScript Support with Amaro 1.0](https://nodeweekly.com/link/170484/0a4070b383 "socket.dev") — [Amaro](https://nodeweekly.com/link/170485/0a4070b383) is Node’s official way to strip types out of TypeScript code so that Node can run it (though you can also use Amaro as a library, if you prefer). The [1.0 release](https://nodeweekly.com/link/170486/0a4070b383) is a key milestone on the way to moving TypeScript support in Node.js from experimental to stable in a release later this year. Sarah rounds up the entire story.
+
+Sarah Gooding (Socket)
+
+💡 If you want to dig deeper, Marco Ippolito [▶️ gave a talk called *The Path to Native TypeScript*](https://nodeweekly.com/link/170487/0a4070b383) at Node Congress 2025. By the end of it, you'll know everything you need to know about how TypeScript support in Node works and what its limitations are.
+
+[pnpm 10.12 Introduces an Experimental Global Virtual Store](https://nodeweekly.com/link/170488/0a4070b383 "socket.dev") — [pnpm](https://nodeweekly.com/link/170489/0a4070b383) has long been prized for its speed and efficiency over `npm`. [v10.12](https://nodeweekly.com/link/170490/0a4070b383) takes things further introducing a ‘global virtual store’ that `node_modules` symlinks to, enabling projects to share dependencies without them being installed numerous times.
+
+Sarah Gooding (Socket)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/9456493b.png)](https://nodeweekly.com/link/170483/0a4070b383)
+
+[🍜 Tonkotsu is Your Natural Language IDE](https://nodeweekly.com/link/170483/0a4070b383) — Tonkotsu helps you build your project plan and break work down. You choose which coding tasks to delegate to Tonkotsu - it can do multiple tasks in parallel. You're the tech lead and approver for Tonkotsu's work. Download the app for FREE during our early access program.
+
+Tonkotsu AI sponsor
+
+**IN BRIEF:**
+
+* Isaac Z. Schlueter shares [a tribute to Mikeal Rogers](https://nodeweekly.com/link/170491/0a4070b383), someone heavily involved in Node over the years, who died last week.
+
+* Dylan Goings of Atomic Object [celebrates JavaScript's 30th birthday.](https://nodeweekly.com/link/170492/0a4070b383)
+
+[Using `await` at the Top Level in ES Modules](https://nodeweekly.com/link/170520/0a4070b383 "allthingssmitty.com") — Top-level await is supported in all modern browsers and in Node.js (beyond v16) in `.mjs` files or `.js` files specified as modules.
+
+Matt Smith
+
+📄 [The Best JavaScript Web Scraping Libraries](https://nodeweekly.com/link/170493/0a4070b383) – A few options to consider including Crawlee, Cheerio, and using browsers from Node. Theo Vasilis (Apify)
+
+📺 [The Creator of Hono on Bringing It to Node.js](https://nodeweekly.com/link/170494/0a4070b383) – [Hono](https://nodeweekly.com/link/170495/0a4070b383) is a lightweight webapp framework built on Web Standards. Yusuke Wada
+
+📄 [Performance and Stress Testing in Node.js](https://nodeweekly.com/link/170496/0a4070b383) – A look at three different testing tools (AutoCannon, Artillery, k6). Antonello Zanini
+
+📄 [Building an MCP Server with Nx](https://nodeweekly.com/link/170522/0a4070b383) Nx Team
+
+🛠 Code & Tools
+
+[WelsonJS: Build Windows Apps Using Windows' Built-In JS Engine](https://nodeweekly.com/link/170497/0a4070b383 "github.com") — WelsonJS = **W**indows + **El**ectr**on**-like + **JS**. Optimized for environments with limited computing power, Welson has built-in transpilers for several JS alternatives, RPC clients, and [much more.](https://nodeweekly.com/link/170498/0a4070b383)
+
+Go Namhyeon
+
+🕒 [Croner 9.1: 'Cron' Triggering and Evaluation](https://nodeweekly.com/link/170499/0a4070b383 "croner.56k.guru") — Trigger functions upon the schedule of your choice using [cron syntax.](https://nodeweekly.com/link/170500/0a4070b383) It can also evaluate cron expressions to give you a list of upcoming times. [v9](https://nodeweekly.com/link/170501/0a4070b383) moved the project to TypeScript and introduced a few breaking changes.
+
+Hexagon
+
+[log-vwer: A Dashboard for Monitoring Node.js App Logs](https://nodeweekly.com/link/170502/0a4070b383 "github.com") — It’s quite common to use third-party services for storing, searching, and monitoring logs, but this gives you a basic self-hosted dashboard, built atop Node itself.
+
+Qitmeer Raza
+
+* **&** [Entities 6.0](https://nodeweekly.com/link/170503/0a4070b383) – Encode/decode HTML and XML entities. Used by many popular libraries.
+
+* [ESLint v9.29.0](https://nodeweekly.com/link/170504/0a4070b383) – Now supports the syntax used for explicit resource management (`using` and `await using`).
+
+* [LogTape 0.12](https://nodeweekly.com/link/170521/0a4070b383) – Logging library for JavaScript and TypeScript with zero dependencies and support for multiple environments.
+
+* [fast-png 7.0](https://nodeweekly.com/link/170506/0a4070b383) – Pure JavaScript PNG image decoder and encoder.
+
+* 🤖 [node-llama-cpp 3.10](https://nodeweekly.com/link/170507/0a4070b383) – Run LLMs locally with bindings to `llama.cpp`.
+
+* [Discord.js 14.20](https://nodeweekly.com/link/170508/0a4070b383) – Official library for interacting with Discord's API.
+
+* [Ableton.js 3.7](https://nodeweekly.com/link/170509/0a4070b383) – Control instances of the Ableton DAW from Node.
+
+* [Fastify 5.4](https://nodeweekly.com/link/170510/0a4070b383) – The fast, low overhead Node web framework.
+
+* [Mongoose 8.16](https://nodeweekly.com/link/170511/0a4070b383) – Popular MongoDB object modeling library.
+
+* [Piscina 5.1](https://nodeweekly.com/link/170512/0a4070b383) – Popular Node.js worker thread pool.
+
+* [tiff 7.0](https://nodeweekly.com/link/170513/0a4070b383) – Pure JS TIFF image decoding library.
+
+✂︎  Deep cuts from the queue
+
+As it's a quieter week than usual, we went back to look through our (extensive!) queue of items which hadn't yet made it into the newsletter for one reason or another. Here are some of the things that jumped out at us:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/itwvjjqnjltcbyafeisq.jpg)](https://nodeweekly.com/link/170514/0a4070b383)
+
+* [FIGLet.js](https://nodeweekly.com/link/170514/0a4070b383) is a library that can use the FIGfont spec to render text using FIG's ASCII-only textual forms (as above). There's [a live demo on the Web here.](https://nodeweekly.com/link/170515/0a4070b383) Might be useful for your next CLI tool?
+
+* Bloomberg's Michael Molisani [introduces us to *Stricli*](https://nodeweekly.com/link/170516/0a4070b383), a framework for building CLI tools that's used at Bloomberg. [GitHub repo.](https://nodeweekly.com/link/170517/0a4070b383)
+
+* [Pyodide](https://nodeweekly.com/link/170518/0a4070b383) is a WebAssembly-based Python distribution targeting both the browser and Node.js as runtimes.
+
+* Pavel Romanov demonstrates how you can do [basic profiling of Node apps in VS Code.](https://nodeweekly.com/link/170519/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
