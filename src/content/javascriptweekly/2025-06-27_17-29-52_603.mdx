@@ -1,0 +1,345 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Say hello to ECMAScript 2025
+description: Say hello to ECMAScript 2025
+date: 星期五 05 下午 六月 27o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/742
+origin_site: https://javascriptweekly.com/issues/742
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Say hello to ECMAScript 2025" url="https://javascriptweekly.com/issues/742" />
+
+<Detail client:only="react">
+	#​742 — June 27, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/742)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/171040/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mmqoweyhp6b07c0vgja3.jpg)](https://javascriptweekly.com/link/171041/d076523b1d)
+
+[Ecma International Approves ECMAScript 2025: What’s New?](https://javascriptweekly.com/link/171041/d076523b1d "2ality.com") — It’s that time of year again. The Ecma General Assembly has approved the ES2025 language specification, which you can [read in full here](https://javascriptweekly.com/link/171042/d076523b1d) if you have a gallon of coffee to hand — _or you can enjoy Dr. Axel’s more succinct explainer instead_.
+
+Dr. Axel Rauschmayer
+
+[What's Coming to JavaScript](https://javascriptweekly.com/link/171043/d076523b1d "deno.com") — The ES2025 spec is great, but what else is coming down the pike? The Deno team has put together a look, complete with code samples, at nine proposals progressing through TC39’s process right now.
+
+Casonato and Jiang (Deno)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/07a84afb.png)](https://javascriptweekly.com/link/171040/d076523b1d)
+
+[Fullstack without Frameworks](https://javascriptweekly.com/link/171040/d076523b1d "frontendmasters.com") — Maximiliano Firtman combines vanilla JavaScript and Go to create high-performance apps from scratch. Follow along in this video course and learn more about web components, dynamic client-side routing, authentication, logging and everything in between.
+
+Frontend Masters sponsor
+
+[Vite 7.0 Released](https://javascriptweekly.com/link/171044/d076523b1d "vite.dev") — At five years old, [Vite](https://javascriptweekly.com/link/171045/d076523b1d) has radically changed the frontend building experience and is an essential tool for many. v7 is an evolutionary step more than a revolutionary one and should prove [an easy upgrade from v6.](https://javascriptweekly.com/link/171046/d076523b1d)
+
+VoidZero Inc.
+
+**IN BRIEF:**
+
+*   [The speaker lineup for JSConf 2025](https://javascriptweekly.com/link/171047/d076523b1d) has been announced. It takes place in Maryland this October.
+    
+*   If you love the V8 team's deep dives, they have a new one [looking at two new optimizations introduced into V8](https://javascriptweekly.com/link/171048/d076523b1d) for speeding up WebAssembly.
+    
+*   Shopify's William Candillon [reflects on the future of advanced graphics in React Native](https://javascriptweekly.com/link/171049/d076523b1d) using React Native Skia, and how WebGPU, Three.js, and a new backend called _Skia Graphite_ are changing the game.
+    
+*   The popular and long standing [Construct](https://javascriptweekly.com/link/171050/d076523b1d) HTML5 + JavaScript game development environment [now has full built-in support for TypeScript too.](https://javascriptweekly.com/link/171051/d076523b1d)
+    
+*   The Angular team has created [a set of LLM prompts and AI IDE rules files](https://javascriptweekly.com/link/171052/d076523b1d) to help Angular developers get better code out of LLMs.
+    
+*   Vercel hosted its annual _Vercel Ship_ event this week and they made so many announcements, [you'll need this recap post](https://javascriptweekly.com/link/171053/d076523b1d) to get through them all.
+    
+*   🕒 [The Temporal API proposal](https://javascriptweekly.com/link/171054/d076523b1d) is now a Stage 3 Draft.
+    
+
+**RELEASES:**
+
+*   [Transformers.js 3.6](https://javascriptweekly.com/link/171055/d076523b1d) – Run machine learning models in the browser, Node, Deno & Bun. Now supporting Gemma 3n (though not in-browser _yet_).
+    
+*   [zx 8.6](https://javascriptweekly.com/link/171056/d076523b1d) – Google's tool for better Node shell scripting.
+    
+*   [Node.js v22.17.0 (LTS)](https://javascriptweekly.com/link/171057/d076523b1d), [v24.3.0 (Current)](https://javascriptweekly.com/link/171058/d076523b1d) and [v20.19.3 (LTS)](https://javascriptweekly.com/link/171059/d076523b1d)
+    
+*   [Prettier 3.6](https://javascriptweekly.com/link/171060/d076523b1d), [Bun v1.2.17](https://javascriptweekly.com/link/171061/d076523b1d), [SVGO 4.0](https://javascriptweekly.com/link/171062/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wt66b4b1i40k2pwe6hqz.jpg)](https://javascriptweekly.com/link/171063/d076523b1d)
+
+[Tips for Making Regular Expressions Easier to Use in JavaScript](https://javascriptweekly.com/link/171063/d076523b1d "2ality.com") — Dr. Axel asks us to imagine if we had to write JavaScript without any whitespace or comments, so why should we have to write regexes that way? He has some tips for making the process more pleasant.
+
+Dr. Axel Rauschmayer
+
+[Creating a Simple RSS Server Side Reader](https://javascriptweekly.com/link/171064/d076523b1d "matklad.github.io") — Alex likes that blogs have feeds, but isn’t so keen on modern feed readers, so he put together a surprisingly simple Deno-based approach to scrape feeds and produce an automatically updated HTML page linking to the latest items.
+
+Alex Kladov
+
+[How OAuth Works](https://javascriptweekly.com/link/171065/d076523b1d "go.clerk.com") — A practical guide to OAuth Scoped Access with code examples, security tips, and how third-party integrations really work.
+
+Clerk sponsor
+
+📄 [Implementing an Undo/Redo System in a Complex Visual Application](https://javascriptweekly.com/link/171066/d076523b1d) mlacast
+
+📄 [No Time To Learn (Web) Framework X](https://javascriptweekly.com/link/171067/d076523b1d) – How can you judge when it’s worth the time to learn something new? Wouter Groeneveld
+
+📄 [Comparing Rust, JavaScript and Go for Authoring WASM Components](https://javascriptweekly.com/link/171068/d076523b1d) Obelisk
+
+📄 [How to Write Compelling Software Release Announcements](https://javascriptweekly.com/link/171069/d076523b1d) Michael Lynch
+
+📺 [Generating Playwright Tests with AI: Let's Try the New Playwright MCP Server](https://javascriptweekly.com/link/171070/d076523b1d) Stefan Judis
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/cvn44dyqn2bctceqtwt5.jpg)](https://javascriptweekly.com/link/171071/d076523b1d)
+
+[Hono 4.8: A Cross-Runtime Standards-Oriented Web Framework](https://javascriptweekly.com/link/171071/d076523b1d "github.com") — [Hono](https://javascriptweekly.com/link/171072/d076523b1d) is a framework well worth exploring. It’s fast, lightweight, built on Web Standards, and can be used to build apps that work on numerous platforms from Node or Bun to Cloudflare or Fastly. v4.8 adds new route helper functions, improvements to JSX streaming and CORS, a new plugin system for static site generation, and more.
+
+Yusuke Wada and Contributors
+
+[LogTape 1.0.0: Universal Logging for JavaScript Apps](https://javascriptweekly.com/link/171073/d076523b1d "hackers.pub") — Whether it’s in Node, the browser, or edge functions, LogTape is here for you. It’s particularly aimed at library developers who want to add logging in a low hassle way for end users – [learn more here.](https://javascriptweekly.com/link/171074/d076523b1d)
+
+Hong Minhee
+
+💡 If you want the full sales pitch, Hong Minhee explains [why you'll (probably) love LogTape if you're a JavaScript library builder.](https://javascriptweekly.com/link/171075/d076523b1d)
+
+🤖 [Google Unveils _Gemini CLI_: An Open-Source AI Agent](https://javascriptweekly.com/link/171076/d076523b1d "blog.google") — Google has dipped its toe into the rapidly growing AI dev agent game with a terminal-based agent, [built in TypeScript](https://javascriptweekly.com/link/171077/d076523b1d), with a striking high free usage allowance, making it a good way to give such tools a try if you haven’t so far.
+
+Mullen and Salva (Google)
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/171078/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+* * *
+
+🚀 Build VueJS forms your way with [Enforma](https://javascriptweekly.com/link/171079/d076523b1d) — UI-agnostic (PrimeVue, Vuetify, Quasar), schema-ready, repeatable fields, powerful validation.
+
+* * *
+
+🪐 Learn from Bun & SolidJS creators, Syntax.fm co-host & more JS stars at the West’s biggest planetarium! [See you Nov 17–20 in NYC & online](https://javascriptweekly.com/link/171080/d076523b1d).
+
+[PLJS 1.0: JavaScript Language Plugin for Postgres](https://javascriptweekly.com/link/171081/d076523b1d "github.com") — [PLV8](https://javascriptweekly.com/link/171082/d076523b1d) has been the ‘go to’ way to use JavaScript as a procedural language within Postgres for years, but this [QuickJS](https://javascriptweekly.com/link/171083/d076523b1d)\-based variant, from the same maintainer, has a far lighter footprint, is easier to maintain, and may be enough for your needs.
+
+Jerry Sievert
+
+[Marked 16.0: A Fast Markdown Parser and Compiler](https://javascriptweekly.com/link/171084/d076523b1d "marked.js.org") — [Demo here](https://javascriptweekly.com/link/171085/d076523b1d) to see it in action. [GitHub repo.](https://javascriptweekly.com/link/171086/d076523b1d)
+
+Christopher Jeffrey
+
+[Vue Infinity: Virtualized Rendering for Large Datasets](https://javascriptweekly.com/link/171087/d076523b1d "tewolde.co") — The idea is simple: if it’s not visible, it doesn’t get rendered. A handy way to keep things fast when dealing with large feeds, carousels, dashboards, etc. [GitHub repo.](https://javascriptweekly.com/link/171088/d076523b1d)
+
+Isaac Tewolde
+
+[Spark: Advanced 3D Gaussian Splatting Renderer for Three.js](https://javascriptweekly.com/link/171089/d076523b1d "sparkjs.dev") — Check out the [live examples.](https://javascriptweekly.com/link/171090/d076523b1d)
+
+World Labs Technologies, Inc.
+
+*   📊 [Billboard.js 3.16.0](https://javascriptweekly.com/link/171091/d076523b1d) – The popular chart library adds 'trending lines' to bar charts, perf improvements, and other tweaks.
+    
+*   [Hako 1.0](https://javascriptweekly.com/link/171092/d076523b1d) – An embeddable, lightweight, high-performance JavaScript engine built atop QuickJS.
+    
+*   [React Admin 5.9](https://javascriptweekly.com/link/171093/d076523b1d) – Framework for building B2B frontend interfaces.
+    
+*   📊 [AG Charts 12.0](https://javascriptweekly.com/link/171094/d076523b1d) – Full-featured, customizable charting library.
+    
+*   📈 [Recharts 3.0](https://javascriptweekly.com/link/171095/d076523b1d) – D3-powered chart library for React.
+    
+
+🎁 A few bonus items..
+
+Just some things I've seen that didn't fit anywhere else, but I wanted to give a quick mention:
+
+*   🤖 [Google has released Gemma 3n](https://javascriptweekly.com/link/171096/d076523b1d), its latest locally-runnable LLM. It performs very well for its size (5B and 8B parameter counts) and if you've got the right hardware, you can [run it easily with Ollama](https://javascriptweekly.com/link/171097/d076523b1d) and similar tools.
+    
+*   Coder extraordinare _Bisqwit_ is back from a long hiatus with [▶️ a video on cracking game passwords in 1980s NES games.](https://javascriptweekly.com/link/171098/d076523b1d)
+    
+*   David Heinemeier Hansson, of _Ruby on Rails_ fame, has released [Omarchy](https://javascriptweekly.com/link/171099/d076523b1d) – an 'opinionated Arch/Hyprland setup' to get Linux working in an aesthetically pleasing way for software developers, whether using Ruby or not.
+    
+*   A notably buff John Carmack recently gave a talk (complete with his first slide deck _ever_) about [▶️ his team's work and research directions](https://javascriptweekly.com/link/171100/d076523b1d) around machine learning, multi-task learning, and getting AI to play Atari games.
+    
+*   How to [disable `zsh` history for a given shell session](https://javascriptweekly.com/link/171101/d076523b1d) – a handy trick.
+    
+
+P.S. Yes, I actually wrote with a sharpie on my bookshelf for today's header graphic and it doesn't come off so easily. But it was worth it.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/171102/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​742 — June 27, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/742)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/171040/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mmqoweyhp6b07c0vgja3.jpg)](https://javascriptweekly.com/link/171041/d076523b1d)
+
+[Ecma International Approves ECMAScript 2025: What’s New?](https://javascriptweekly.com/link/171041/d076523b1d "2ality.com") — It’s that time of year again. The Ecma General Assembly has approved the ES2025 language specification, which you can [read in full here](https://javascriptweekly.com/link/171042/d076523b1d) if you have a gallon of coffee to hand — *or you can enjoy Dr. Axel’s more succinct explainer instead*.
+
+Dr. Axel Rauschmayer
+
+[What's Coming to JavaScript](https://javascriptweekly.com/link/171043/d076523b1d "deno.com") — The ES2025 spec is great, but what else is coming down the pike? The Deno team has put together a look, complete with code samples, at nine proposals progressing through TC39’s process right now.
+
+Casonato and Jiang (Deno)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/07a84afb.png)](https://javascriptweekly.com/link/171040/d076523b1d)
+
+[Fullstack without Frameworks](https://javascriptweekly.com/link/171040/d076523b1d "frontendmasters.com") — Maximiliano Firtman combines vanilla JavaScript and Go to create high-performance apps from scratch. Follow along in this video course and learn more about web components, dynamic client-side routing, authentication, logging and everything in between.
+
+Frontend Masters sponsor
+
+[Vite 7.0 Released](https://javascriptweekly.com/link/171044/d076523b1d "vite.dev") — At five years old, [Vite](https://javascriptweekly.com/link/171045/d076523b1d) has radically changed the frontend building experience and is an essential tool for many. v7 is an evolutionary step more than a revolutionary one and should prove [an easy upgrade from v6.](https://javascriptweekly.com/link/171046/d076523b1d)
+
+VoidZero Inc.
+
+**IN BRIEF:**
+
+* [The speaker lineup for JSConf 2025](https://javascriptweekly.com/link/171047/d076523b1d) has been announced. It takes place in Maryland this October.
+
+* If you love the V8 team's deep dives, they have a new one [looking at two new optimizations introduced into V8](https://javascriptweekly.com/link/171048/d076523b1d) for speeding up WebAssembly.
+
+* Shopify's William Candillon [reflects on the future of advanced graphics in React Native](https://javascriptweekly.com/link/171049/d076523b1d) using React Native Skia, and how WebGPU, Three.js, and a new backend called *Skia Graphite* are changing the game.
+
+* The popular and long standing [Construct](https://javascriptweekly.com/link/171050/d076523b1d) HTML5 + JavaScript game development environment [now has full built-in support for TypeScript too.](https://javascriptweekly.com/link/171051/d076523b1d)
+
+* The Angular team has created [a set of LLM prompts and AI IDE rules files](https://javascriptweekly.com/link/171052/d076523b1d) to help Angular developers get better code out of LLMs.
+
+* Vercel hosted its annual *Vercel Ship* event this week and they made so many announcements, [you'll need this recap post](https://javascriptweekly.com/link/171053/d076523b1d) to get through them all.
+
+* 🕒 [The Temporal API proposal](https://javascriptweekly.com/link/171054/d076523b1d) is now a Stage 3 Draft.
+
+**RELEASES:**
+
+* [Transformers.js 3.6](https://javascriptweekly.com/link/171055/d076523b1d) – Run machine learning models in the browser, Node, Deno & Bun. Now supporting Gemma 3n (though not in-browser *yet*).
+
+* [zx 8.6](https://javascriptweekly.com/link/171056/d076523b1d) – Google's tool for better Node shell scripting.
+
+* [Node.js v22.17.0 (LTS)](https://javascriptweekly.com/link/171057/d076523b1d), [v24.3.0 (Current)](https://javascriptweekly.com/link/171058/d076523b1d) and [v20.19.3 (LTS)](https://javascriptweekly.com/link/171059/d076523b1d)
+
+* [Prettier 3.6](https://javascriptweekly.com/link/171060/d076523b1d), [Bun v1.2.17](https://javascriptweekly.com/link/171061/d076523b1d), [SVGO 4.0](https://javascriptweekly.com/link/171062/d076523b1d)
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wt66b4b1i40k2pwe6hqz.jpg)](https://javascriptweekly.com/link/171063/d076523b1d)
+
+[Tips for Making Regular Expressions Easier to Use in JavaScript](https://javascriptweekly.com/link/171063/d076523b1d "2ality.com") — Dr. Axel asks us to imagine if we had to write JavaScript without any whitespace or comments, so why should we have to write regexes that way? He has some tips for making the process more pleasant.
+
+Dr. Axel Rauschmayer
+
+[Creating a Simple RSS Server Side Reader](https://javascriptweekly.com/link/171064/d076523b1d "matklad.github.io") — Alex likes that blogs have feeds, but isn’t so keen on modern feed readers, so he put together a surprisingly simple Deno-based approach to scrape feeds and produce an automatically updated HTML page linking to the latest items.
+
+Alex Kladov
+
+[How OAuth Works](https://javascriptweekly.com/link/171065/d076523b1d "go.clerk.com") — A practical guide to OAuth Scoped Access with code examples, security tips, and how third-party integrations really work.
+
+Clerk sponsor
+
+📄 [Implementing an Undo/Redo System in a Complex Visual Application](https://javascriptweekly.com/link/171066/d076523b1d) mlacast
+
+📄 [No Time To Learn (Web) Framework X](https://javascriptweekly.com/link/171067/d076523b1d) – How can you judge when it’s worth the time to learn something new? Wouter Groeneveld
+
+📄 [Comparing Rust, JavaScript and Go for Authoring WASM Components](https://javascriptweekly.com/link/171068/d076523b1d) Obelisk
+
+📄 [How to Write Compelling Software Release Announcements](https://javascriptweekly.com/link/171069/d076523b1d) Michael Lynch
+
+📺 [Generating Playwright Tests with AI: Let's Try the New Playwright MCP Server](https://javascriptweekly.com/link/171070/d076523b1d) Stefan Judis
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/cvn44dyqn2bctceqtwt5.jpg)](https://javascriptweekly.com/link/171071/d076523b1d)
+
+[Hono 4.8: A Cross-Runtime Standards-Oriented Web Framework](https://javascriptweekly.com/link/171071/d076523b1d "github.com") — [Hono](https://javascriptweekly.com/link/171072/d076523b1d) is a framework well worth exploring. It’s fast, lightweight, built on Web Standards, and can be used to build apps that work on numerous platforms from Node or Bun to Cloudflare or Fastly. v4.8 adds new route helper functions, improvements to JSX streaming and CORS, a new plugin system for static site generation, and more.
+
+Yusuke Wada and Contributors
+
+[LogTape 1.0.0: Universal Logging for JavaScript Apps](https://javascriptweekly.com/link/171073/d076523b1d "hackers.pub") — Whether it’s in Node, the browser, or edge functions, LogTape is here for you. It’s particularly aimed at library developers who want to add logging in a low hassle way for end users – [learn more here.](https://javascriptweekly.com/link/171074/d076523b1d)
+
+Hong Minhee
+
+💡 If you want the full sales pitch, Hong Minhee explains [why you'll (probably) love LogTape if you're a JavaScript library builder.](https://javascriptweekly.com/link/171075/d076523b1d)
+
+🤖 [Google Unveils *Gemini CLI*: An Open-Source AI Agent](https://javascriptweekly.com/link/171076/d076523b1d "blog.google") — Google has dipped its toe into the rapidly growing AI dev agent game with a terminal-based agent, [built in TypeScript](https://javascriptweekly.com/link/171077/d076523b1d), with a striking high free usage allowance, making it a good way to give such tools a try if you haven’t so far.
+
+Mullen and Salva (Google)
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/171078/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+***
+
+🚀 Build VueJS forms your way with [Enforma](https://javascriptweekly.com/link/171079/d076523b1d) — UI-agnostic (PrimeVue, Vuetify, Quasar), schema-ready, repeatable fields, powerful validation.
+
+***
+
+🪐 Learn from Bun & SolidJS creators, Syntax.fm co-host & more JS stars at the West’s biggest planetarium! [See you Nov 17–20 in NYC & online](https://javascriptweekly.com/link/171080/d076523b1d).
+
+[PLJS 1.0: JavaScript Language Plugin for Postgres](https://javascriptweekly.com/link/171081/d076523b1d "github.com") — [PLV8](https://javascriptweekly.com/link/171082/d076523b1d) has been the ‘go to’ way to use JavaScript as a procedural language within Postgres for years, but this [QuickJS](https://javascriptweekly.com/link/171083/d076523b1d)-based variant, from the same maintainer, has a far lighter footprint, is easier to maintain, and may be enough for your needs.
+
+Jerry Sievert
+
+[Marked 16.0: A Fast Markdown Parser and Compiler](https://javascriptweekly.com/link/171084/d076523b1d "marked.js.org") — [Demo here](https://javascriptweekly.com/link/171085/d076523b1d) to see it in action. [GitHub repo.](https://javascriptweekly.com/link/171086/d076523b1d)
+
+Christopher Jeffrey
+
+[Vue Infinity: Virtualized Rendering for Large Datasets](https://javascriptweekly.com/link/171087/d076523b1d "tewolde.co") — The idea is simple: if it’s not visible, it doesn’t get rendered. A handy way to keep things fast when dealing with large feeds, carousels, dashboards, etc. [GitHub repo.](https://javascriptweekly.com/link/171088/d076523b1d)
+
+Isaac Tewolde
+
+[Spark: Advanced 3D Gaussian Splatting Renderer for Three.js](https://javascriptweekly.com/link/171089/d076523b1d "sparkjs.dev") — Check out the [live examples.](https://javascriptweekly.com/link/171090/d076523b1d)
+
+World Labs Technologies, Inc.
+
+* 📊 [Billboard.js 3.16.0](https://javascriptweekly.com/link/171091/d076523b1d) – The popular chart library adds 'trending lines' to bar charts, perf improvements, and other tweaks.
+
+* [Hako 1.0](https://javascriptweekly.com/link/171092/d076523b1d) – An embeddable, lightweight, high-performance JavaScript engine built atop QuickJS.
+
+* [React Admin 5.9](https://javascriptweekly.com/link/171093/d076523b1d) – Framework for building B2B frontend interfaces.
+
+* 📊 [AG Charts 12.0](https://javascriptweekly.com/link/171094/d076523b1d) – Full-featured, customizable charting library.
+
+* 📈 [Recharts 3.0](https://javascriptweekly.com/link/171095/d076523b1d) – D3-powered chart library for React.
+
+🎁 A few bonus items..
+
+Just some things I've seen that didn't fit anywhere else, but I wanted to give a quick mention:
+
+* 🤖 [Google has released Gemma 3n](https://javascriptweekly.com/link/171096/d076523b1d), its latest locally-runnable LLM. It performs very well for its size (5B and 8B parameter counts) and if you've got the right hardware, you can [run it easily with Ollama](https://javascriptweekly.com/link/171097/d076523b1d) and similar tools.
+
+* Coder extraordinare *Bisqwit* is back from a long hiatus with [▶️ a video on cracking game passwords in 1980s NES games.](https://javascriptweekly.com/link/171098/d076523b1d)
+
+* David Heinemeier Hansson, of *Ruby on Rails* fame, has released [Omarchy](https://javascriptweekly.com/link/171099/d076523b1d) – an 'opinionated Arch/Hyprland setup' to get Linux working in an aesthetically pleasing way for software developers, whether using Ruby or not.
+
+* A notably buff John Carmack recently gave a talk (complete with his first slide deck *ever*) about [▶️ his team's work and research directions](https://javascriptweekly.com/link/171100/d076523b1d) around machine learning, multi-task learning, and getting AI to play Atari games.
+
+* How to [disable `zsh` history for a given shell session](https://javascriptweekly.com/link/171101/d076523b1d) – a handy trick.
+
+P.S. Yes, I actually wrote with a sharpie on my bookshelf for today's header graphic and it doesn't come off so easily. But it was worth it.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/171102/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
