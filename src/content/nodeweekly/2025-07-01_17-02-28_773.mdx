@@ -1,0 +1,292 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Running Gemma 3n from Node
+description: Running Gemma 3n from Node
+date: 星期二 05 下午 七月 1o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/584
+origin_site: https://nodeweekly.com/issues/584
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Running Gemma 3n from Node" url="https://nodeweekly.com/issues/584" />
+
+<Detail client:only="react">
+	#​584 — July 1, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/584)
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1238,h_192/e_make_transparent/co_white,e_outline:37/fcshbu9d17nd8smej96j.png)](https://nodeweekly.com/link/171104/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gkovmujk3n62qzny2jjo.jpg)](https://nodeweekly.com/link/171105/0a4070b383)
+
+[Modern Node.js Patterns for 2025](https://nodeweekly.com/link/171105/0a4070b383 "kashw1n.com") — We’ve reached the half way point for the year, so why not take a moment to reflect on the potential of Node as it stands right now? Ashwin reminds us of various aspects including the use of ES modules, built-in Web APIs, the test runner, watch mode, the permission model, import maps, and more.
+
+Ashwin
+
+[Node v22.17.0 (LTS) Released](https://nodeweekly.com/link/171106/0a4070b383 "nodejs.org") — A notable LTS release as `assert.partialDeepStrictEqual()` gets promoted to stable along with numerous long-time experimental APIs/functions, and a few Node 24 features get backported.
+
+Antoine du Hamel
+
+💡 [Node v24.3.0 (Current)](https://nodeweekly.com/link/171107/0a4070b383) has been released, with no significant new features.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/6e3b2159.png)](https://nodeweekly.com/link/171104/0a4070b383)
+
+[CodeRabbit’s Free AI Code Reviews in IDE - VS Code, Cursor, Windsurf](https://nodeweekly.com/link/171104/0a4070b383 "coderabbit.link") — Code Rabbit brings AI code reviews to VS Code, Cursor & Windsurf. Get line-by-line reviews, one-click fixes & codebase-aware feedback - all free in your IDE. Seamlessly integrates with git workflows. [Install the extension & start reviewing!](https://nodeweekly.com/link/171104/0a4070b383)
+
+CodeRabbit sponsor
+
+[Ecma International Approves ECMAScript 2025: What’s New?](https://nodeweekly.com/link/171108/0a4070b383 "2ality.com") — The Ecma General Assembly has approved the ES2025 language specification, which you can [read in full here](https://nodeweekly.com/link/171109/0a4070b383), or you can enjoy Dr. Axel’s more succinct explainer instead.
+
+Dr. Axel Rauschmayer
+
+[Secure Your Express APIs in 5 Minutes with Cedar](https://nodeweekly.com/link/171110/0a4070b383 "aws.amazon.com") — [Cedar](https://nodeweekly.com/link/171111/0a4070b383) is a language and spec for defining permissions and evaluating them. Its new [authorization-for-expressjs](https://nodeweekly.com/link/171112/0a4070b383) enables Cedar-based authorization for Express.js apps.
+
+Trevor Schiavone (AWS)
+
+**IN BRIEF:**
+
+*   🦋 The Node.js project has [an official Bluesky account](https://nodeweekly.com/link/171113/0a4070b383) where updates are shared, but the team [wants your input into what sort of content they should post.](https://nodeweekly.com/link/171114/0a4070b383)
+    
+*   Ryan Dahl checks in with [a quick update on the ongoing JavaScript™ trademark dispute](https://nodeweekly.com/link/171115/0a4070b383). Oracle has about a month to respond in full to Deno's cancellation petition.
+    
+*   The official Node blog is celebrating June's Pride Month with [a look at the concept of identity](https://nodeweekly.com/link/171116/0a4070b383) and [a profile of Emilia Smith](https://nodeweekly.com/link/171117/0a4070b383) who made some early, notable contributions to Node.js.
+    
+
+V8: [Speculative Optimizations for WebAssembly using Deopts and Inlining](https://nodeweekly.com/link/171118/0a4070b383 "v8.dev") — A **very** technical post from the V8 team about two significant new optimizations in the V8 engine that make WebAssembly code run much faster.
+
+Daniel Lehmann and Matthias Liedtke (V8)
+
+📄 [How to Use NestJS as a Signaling Server for WebRTC Video Chat](https://nodeweekly.com/link/171119/0a4070b383) Christian Nwamba
+
+📄 [How to Write Compelling Software Release Announcements](https://nodeweekly.com/link/171120/0a4070b383) Michael Lynch
+
+📺 [Using Claude Code to Build a GitHub Actions Workflow](https://nodeweekly.com/link/171121/0a4070b383) – Simon takes a Python-oriented approach but you could just as easily tell Claude to use JavaScript or even shell scripting here. Simon Willison
+
+💬 [Why Does My Node Multiplayer Game Lag at 500 Players with Low CPU?](https://nodeweekly.com/link/171122/0a4070b383) – A public discussion. Hacker News
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fnkdemds4eyfo7q5d7c9.jpg)](https://nodeweekly.com/link/171123/0a4070b383)
+
+[Transformers.js 3.6: Now You Can Run Gemma 3n from Node](https://nodeweekly.com/link/171123/0a4070b383 "github.com") — _Transformers.js_ brings the power of Hugging Face’s popular Python _Transformers_ library into the world of JavaScript, enabling the use of various machine learning models for NLP, vision, audio processing, and more. The big feature in v3.6 is support for Google’s new [Gemma 3n model.](https://nodeweekly.com/link/171124/0a4070b383)
+
+Hugging Face
+
+💡 In mildly related news, Meridius Labs has been building [an unofficial library for working with the new Apple Foundation models](https://nodeweekly.com/link/171125/0a4070b383) on macOS Tahoe.
+
+[Real-Device Testing for iOS Safari, Now Playwright-Friendly](https://nodeweekly.com/link/171126/0a4070b383 "www.browserstack.com") — Curious how your web app behaves on iOS Safari? You can now run Playwright tests on real iOS devices via BrowserStack.
+
+BrowserStack sponsor
+
+[Repomix 1.0: Pack Your Codebase Into AI-Friendly Formats](https://nodeweekly.com/link/171127/0a4070b383 "repomix.com") — Enter a GitHub URL and choose various settings for the output (XML, MD, etc). It’s Node.js-based and available to use in a library-like form for your own tooling creations too. [v1.0](https://nodeweekly.com/link/171128/0a4070b383) is essentially a _‘this is stable and complete now’_ release. [GitHub repo.](https://nodeweekly.com/link/171129/0a4070b383)
+
+Kazuki Yamada
+
+[Marked 16.0: A Fast Markdown Parser and Compiler](https://nodeweekly.com/link/171130/0a4070b383 "marked.js.org") — [Demo here](https://nodeweekly.com/link/171131/0a4070b383) to see it in action. [GitHub repo.](https://nodeweekly.com/link/171132/0a4070b383)
+
+Christopher Jeffrey
+
+[whatsapp-api-js: A Library for Whatsapp's Official API](https://nodeweekly.com/link/171133/0a4070b383 "github.com") — For those with a Meta Business App with WhatsApp API activated.
+
+Tomás Raiti
+
+*   [dotenv v17.0](https://nodeweekly.com/link/171134/0a4070b383) – Module to load environment variables from `.env` if you're not using [Node's built-in mechanism](https://nodeweekly.com/link/171135/0a4070b383) to do this yet.
+    
+*   [Electron v37.0.0](https://nodeweekly.com/link/171136/0a4070b383) – The cross-platform desktop app toolkit.
+    
+*   [npm-package-json-lint 9.0](https://nodeweekly.com/link/171137/0a4070b383) – A `package.json` linter for Node projects.
+    
+*   🤖 [OpenAI v5.8.0](https://nodeweekly.com/link/171138/0a4070b383) – Adds support for the OpenAI API's new [webhooks](https://nodeweekly.com/link/171139/0a4070b383) and 'deep research' features.
+    
+*   [better-sqlite3 v12.2](https://nodeweekly.com/link/171140/0a4070b383) – The popular powerful SQLite library gets updated to the latest SQLite 3.50.2.
+    
+*   [xero-node 13.0](https://nodeweekly.com/link/171141/0a4070b383) – Node SDK for the _Xero_ accounting system.
+    
+*   [Mineflayer 4.30](https://nodeweekly.com/link/171142/0a4070b383) – Create Minecraft bots in JavaScript.
+    
+*   [Undici 7.11](https://nodeweekly.com/link/171143/0a4070b383) – Node's powerful HTTP client library.
+    
+
+📰 Classifieds
+
+🐱 [ConfigCat Feature Flag Service](https://nodeweekly.com/link/171144/0a4070b383) lets you run gradual rollouts, A/B tests & target users without code changes. Use coupon NODE25 & save 25%!
+
+* * *
+
+🎧 The Node (and more) Banter – a weekly, uncensored dive into Node and scale, where Luca Maraschi and Matteo Collina share war stories, anti-patterns, and laughs. [Subscribe!](https://nodeweekly.com/link/171145/0a4070b383)
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   The Deno team takes [a look at what's coming to JavaScript](https://nodeweekly.com/link/171146/0a4070b383) with some quick explainers and sample code covering nine proposals advanced at recent TC39 meetings.
+    
+*   🐘 [PLJS](https://nodeweekly.com/link/171147/0a4070b383) is an extension for Postgres for writing database functions in JavaScript (powered by QuickJS) instead of PL/pgSQL.
+    
+*   [The speaker lineup for JSConf 2025](https://nodeweekly.com/link/171148/0a4070b383) has been announced. It takes place in Maryland this October.
+    
+*   If Cloudflare Workers are just too limited for your use case, Cloudflare now has a new option: [Cloudflare Containers](https://nodeweekly.com/link/171149/0a4070b383). _Containers_ is integrated with Workers but, unsurprisingly, lets you package up your app in container images and run them in a flexible way.
+    
+*   Alex Kladov shows [how easy it is to create a server-side statically generated RSS feed reader](https://nodeweekly.com/link/171150/0a4070b383) – he uses Deno, but you could quite easily use Node here too.
+    
+*   🕒 [The Temporal API proposal](https://nodeweekly.com/link/171151/0a4070b383) is now a Stage 3 Draft.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​584 — July 1, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/584)
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1238,h_192/e_make_transparent/co_white,e_outline:37/fcshbu9d17nd8smej96j.png)](https://nodeweekly.com/link/171104/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gkovmujk3n62qzny2jjo.jpg)](https://nodeweekly.com/link/171105/0a4070b383)
+
+[Modern Node.js Patterns for 2025](https://nodeweekly.com/link/171105/0a4070b383 "kashw1n.com") — We’ve reached the half way point for the year, so why not take a moment to reflect on the potential of Node as it stands right now? Ashwin reminds us of various aspects including the use of ES modules, built-in Web APIs, the test runner, watch mode, the permission model, import maps, and more.
+
+Ashwin
+
+[Node v22.17.0 (LTS) Released](https://nodeweekly.com/link/171106/0a4070b383 "nodejs.org") — A notable LTS release as `assert.partialDeepStrictEqual()` gets promoted to stable along with numerous long-time experimental APIs/functions, and a few Node 24 features get backported.
+
+Antoine du Hamel
+
+💡 [Node v24.3.0 (Current)](https://nodeweekly.com/link/171107/0a4070b383) has been released, with no significant new features.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/6e3b2159.png)](https://nodeweekly.com/link/171104/0a4070b383)
+
+[CodeRabbit’s Free AI Code Reviews in IDE - VS Code, Cursor, Windsurf](https://nodeweekly.com/link/171104/0a4070b383 "coderabbit.link") — Code Rabbit brings AI code reviews to VS Code, Cursor & Windsurf. Get line-by-line reviews, one-click fixes & codebase-aware feedback - all free in your IDE. Seamlessly integrates with git workflows. [Install the extension & start reviewing!](https://nodeweekly.com/link/171104/0a4070b383)
+
+CodeRabbit sponsor
+
+[Ecma International Approves ECMAScript 2025: What’s New?](https://nodeweekly.com/link/171108/0a4070b383 "2ality.com") — The Ecma General Assembly has approved the ES2025 language specification, which you can [read in full here](https://nodeweekly.com/link/171109/0a4070b383), or you can enjoy Dr. Axel’s more succinct explainer instead.
+
+Dr. Axel Rauschmayer
+
+[Secure Your Express APIs in 5 Minutes with Cedar](https://nodeweekly.com/link/171110/0a4070b383 "aws.amazon.com") — [Cedar](https://nodeweekly.com/link/171111/0a4070b383) is a language and spec for defining permissions and evaluating them. Its new [authorization-for-expressjs](https://nodeweekly.com/link/171112/0a4070b383) enables Cedar-based authorization for Express.js apps.
+
+Trevor Schiavone (AWS)
+
+**IN BRIEF:**
+
+* 🦋 The Node.js project has [an official Bluesky account](https://nodeweekly.com/link/171113/0a4070b383) where updates are shared, but the team [wants your input into what sort of content they should post.](https://nodeweekly.com/link/171114/0a4070b383)
+
+* Ryan Dahl checks in with [a quick update on the ongoing JavaScript™ trademark dispute](https://nodeweekly.com/link/171115/0a4070b383). Oracle has about a month to respond in full to Deno's cancellation petition.
+
+* The official Node blog is celebrating June's Pride Month with [a look at the concept of identity](https://nodeweekly.com/link/171116/0a4070b383) and [a profile of Emilia Smith](https://nodeweekly.com/link/171117/0a4070b383) who made some early, notable contributions to Node.js.
+
+V8: [Speculative Optimizations for WebAssembly using Deopts and Inlining](https://nodeweekly.com/link/171118/0a4070b383 "v8.dev") — A **very** technical post from the V8 team about two significant new optimizations in the V8 engine that make WebAssembly code run much faster.
+
+Daniel Lehmann and Matthias Liedtke (V8)
+
+📄 [How to Use NestJS as a Signaling Server for WebRTC Video Chat](https://nodeweekly.com/link/171119/0a4070b383) Christian Nwamba
+
+📄 [How to Write Compelling Software Release Announcements](https://nodeweekly.com/link/171120/0a4070b383) Michael Lynch
+
+📺 [Using Claude Code to Build a GitHub Actions Workflow](https://nodeweekly.com/link/171121/0a4070b383) – Simon takes a Python-oriented approach but you could just as easily tell Claude to use JavaScript or even shell scripting here. Simon Willison
+
+💬 [Why Does My Node Multiplayer Game Lag at 500 Players with Low CPU?](https://nodeweekly.com/link/171122/0a4070b383) – A public discussion. Hacker News
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fnkdemds4eyfo7q5d7c9.jpg)](https://nodeweekly.com/link/171123/0a4070b383)
+
+[Transformers.js 3.6: Now You Can Run Gemma 3n from Node](https://nodeweekly.com/link/171123/0a4070b383 "github.com") — *Transformers.js* brings the power of Hugging Face’s popular Python *Transformers* library into the world of JavaScript, enabling the use of various machine learning models for NLP, vision, audio processing, and more. The big feature in v3.6 is support for Google’s new [Gemma 3n model.](https://nodeweekly.com/link/171124/0a4070b383)
+
+Hugging Face
+
+💡 In mildly related news, Meridius Labs has been building [an unofficial library for working with the new Apple Foundation models](https://nodeweekly.com/link/171125/0a4070b383) on macOS Tahoe.
+
+[Real-Device Testing for iOS Safari, Now Playwright-Friendly](https://nodeweekly.com/link/171126/0a4070b383 "www.browserstack.com") — Curious how your web app behaves on iOS Safari? You can now run Playwright tests on real iOS devices via BrowserStack.
+
+BrowserStack sponsor
+
+[Repomix 1.0: Pack Your Codebase Into AI-Friendly Formats](https://nodeweekly.com/link/171127/0a4070b383 "repomix.com") — Enter a GitHub URL and choose various settings for the output (XML, MD, etc). It’s Node.js-based and available to use in a library-like form for your own tooling creations too. [v1.0](https://nodeweekly.com/link/171128/0a4070b383) is essentially a *‘this is stable and complete now’* release. [GitHub repo.](https://nodeweekly.com/link/171129/0a4070b383)
+
+Kazuki Yamada
+
+[Marked 16.0: A Fast Markdown Parser and Compiler](https://nodeweekly.com/link/171130/0a4070b383 "marked.js.org") — [Demo here](https://nodeweekly.com/link/171131/0a4070b383) to see it in action. [GitHub repo.](https://nodeweekly.com/link/171132/0a4070b383)
+
+Christopher Jeffrey
+
+[whatsapp-api-js: A Library for Whatsapp's Official API](https://nodeweekly.com/link/171133/0a4070b383 "github.com") — For those with a Meta Business App with WhatsApp API activated.
+
+Tomás Raiti
+
+* [dotenv v17.0](https://nodeweekly.com/link/171134/0a4070b383) – Module to load environment variables from `.env` if you're not using [Node's built-in mechanism](https://nodeweekly.com/link/171135/0a4070b383) to do this yet.
+
+* [Electron v37.0.0](https://nodeweekly.com/link/171136/0a4070b383) – The cross-platform desktop app toolkit.
+
+* [npm-package-json-lint 9.0](https://nodeweekly.com/link/171137/0a4070b383) – A `package.json` linter for Node projects.
+
+* 🤖 [OpenAI v5.8.0](https://nodeweekly.com/link/171138/0a4070b383) – Adds support for the OpenAI API's new [webhooks](https://nodeweekly.com/link/171139/0a4070b383) and 'deep research' features.
+
+* [better-sqlite3 v12.2](https://nodeweekly.com/link/171140/0a4070b383) – The popular powerful SQLite library gets updated to the latest SQLite 3.50.2.
+
+* [xero-node 13.0](https://nodeweekly.com/link/171141/0a4070b383) – Node SDK for the *Xero* accounting system.
+
+* [Mineflayer 4.30](https://nodeweekly.com/link/171142/0a4070b383) – Create Minecraft bots in JavaScript.
+
+* [Undici 7.11](https://nodeweekly.com/link/171143/0a4070b383) – Node's powerful HTTP client library.
+
+📰 Classifieds
+
+🐱 [ConfigCat Feature Flag Service](https://nodeweekly.com/link/171144/0a4070b383) lets you run gradual rollouts, A/B tests & target users without code changes. Use coupon NODE25 & save 25%!
+
+***
+
+🎧 The Node (and more) Banter – a weekly, uncensored dive into Node and scale, where Luca Maraschi and Matteo Collina share war stories, anti-patterns, and laughs. [Subscribe!](https://nodeweekly.com/link/171145/0a4070b383)
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* The Deno team takes [a look at what's coming to JavaScript](https://nodeweekly.com/link/171146/0a4070b383) with some quick explainers and sample code covering nine proposals advanced at recent TC39 meetings.
+
+* 🐘 [PLJS](https://nodeweekly.com/link/171147/0a4070b383) is an extension for Postgres for writing database functions in JavaScript (powered by QuickJS) instead of PL/pgSQL.
+
+* [The speaker lineup for JSConf 2025](https://nodeweekly.com/link/171148/0a4070b383) has been announced. It takes place in Maryland this October.
+
+* If Cloudflare Workers are just too limited for your use case, Cloudflare now has a new option: [Cloudflare Containers](https://nodeweekly.com/link/171149/0a4070b383). *Containers* is integrated with Workers but, unsurprisingly, lets you package up your app in container images and run them in a flexible way.
+
+* Alex Kladov shows [how easy it is to create a server-side statically generated RSS feed reader](https://nodeweekly.com/link/171150/0a4070b383) – he uses Deno, but you could quite easily use Node here too.
+
+* 🕒 [The Temporal API proposal](https://nodeweekly.com/link/171151/0a4070b383) is now a Stage 3 Draft.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
