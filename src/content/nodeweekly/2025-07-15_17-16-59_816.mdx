@@ -1,0 +1,260 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Should Node switch to annual major releases?
+description: Should Node switch to annual major releases?
+date: 星期二 05 下午 七月 15o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/586
+origin_site: https://nodeweekly.com/issues/586
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Should Node switch to annual major releases?" url="https://nodeweekly.com/issues/586" />
+
+<Detail client:only="react">
+	#​586 — July 15, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/586)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/171729/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dfroipebzcruk3naelgf.jpg)](https://nodeweekly.com/link/171730/0a4070b383)
+
+[Node v24.4.0 (Current) Released](https://nodeweekly.com/link/171730/0a4070b383 "nodejs.org") — You can now use `--watch-kill-signal` to specify which signal is sent to a process being restarted by [Node’s ‘watch mode’](https://nodeweekly.com/link/171731/0a4070b383); `spawn` and `spawnSync` now propagate permission model flags; plus the usual V8 and dependency updates.
+
+Rafael Gonzaga
+
+💡 The Node team has also [announced there are new releases of v24.x, 22.x, and 20.x](https://nodeweekly.com/link/171732/0a4070b383) in the next day or two to resolve some security issues, so keep an eye out for those.
+
+[Proposal: Shift Node.js to Annual Major Releases](https://nodeweekly.com/link/171771/0a4070b383 "github.com") — A discussion is currently taking place around whether Node could move to having annual major releases and then reducing the LTS duration of the even-numbered releases from the current 30 months down to 24. Community feedback is encouraged on this thread.
+
+Rafael Gonzaga et al.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/43dda6de.png)](https://nodeweekly.com/link/171729/0a4070b383)
+
+[Deploy Node in Docker the Right Way](https://nodeweekly.com/link/171729/0a4070b383 "frontendmasters.com") — Don’t settle for surface-level tutorials. Learn how containers are built, how to run Node apps properly inside them, and how to use Docker Compose and Kubernetes with confidence.
+
+Frontend Masters sponsor
+
+[Announcing TypeScript 5.9 Beta](https://nodeweekly.com/link/171733/0a4070b383 "devblogs.microsoft.com") — Perhaps the biggest introduction is [support for `import defer`](https://nodeweekly.com/link/171734/0a4070b383), but there’s also [a new `node20` mode](https://nodeweekly.com/link/171733/0a4070b383) which is like `nodenext` [but targeting ES2023.](https://nodeweekly.com/link/171735/0a4070b383) We also learn that the [Go-powered ‘native port’](https://nodeweekly.com/link/171736/0a4070b383) of TypeScript will eventually be available as TypeScript 7.
+
+Microsoft
+
+**IN BRIEF:**
+
+*   Node.js v18 went 'end of life' in April 2025, but Canonical (the maintainers of Ubuntu) have announced [Ubuntu Pro users will now get support till 2032.](https://nodeweekly.com/link/171737/0a4070b383)
+    
+*   Callstack has [announced Node-API support for React Native](https://nodeweekly.com/link/171738/0a4070b383), opening up many more options for writing and sharing native code across platforms.
+    
+*   The Igalia team has shared [a detailed summary of the latest TC39 plenary](https://nodeweekly.com/link/171739/0a4070b383), packed with interesting tidbits about developments to ECMAScript.
+    
+*   North Korean 'threat actors' have deployed 67 malicious npm packages and [Kirill Boychenko tells us what they are and explains how they work.](https://nodeweekly.com/link/171740/0a4070b383)
+    
+
+📊 [The 500x Performance Gap Between Node Version Managers (and Why You Might Not Care)](https://nodeweekly.com/link/171741/0a4070b383 "nodevibe.substack.com") — _“Your choice of Node.js version manager can make your shell startup 500x slower,”_ starts Pavel, who shares some benchmarks, but concludes it might not matter _too_ much unless you’re spawning a lot of new shells.
+
+Pavel Romanov
+
+📄 [JavaScript Scope Hoisting is Broken](https://nodeweekly.com/link/171742/0a4070b383) – The creator of [Parcel](https://nodeweekly.com/link/171743/0a4070b383) argues that [scope hoisting](https://nodeweekly.com/link/171744/0a4070b383) conflicts with modern JS patterns. Devon Govett
+
+📄 [Modern Async Iteration with `Array.fromAsync()`](https://nodeweekly.com/link/171745/0a4070b383) Matt Smith
+
+📄 [Typed Query Builders: Comparing Kysely and Drizzle](https://nodeweekly.com/link/171746/0a4070b383) Guillaume Billey
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yfcwjrbd6zg8lcpf4kvj.jpg)](https://nodeweekly.com/link/171747/0a4070b383)
+
+[Necord: A Framework for Creating Discord Bots](https://nodeweekly.com/link/171747/0a4070b383 "necord.org") — It uses Nest and Discord.js under the hood. Some example apps show [how easy it is](https://nodeweekly.com/link/171748/0a4070b383) to deploy bot functions. [GitHub repo.](https://nodeweekly.com/link/171749/0a4070b383)
+
+Necord
+
+✉️ [Upyo: A Simple Cross-Runtime Email Sending Library](https://nodeweekly.com/link/171750/0a4070b383 "upyo.org") — A cross-runtime email library that provides a unified, type-safe API for sending emails both on SMTP and HTTP-based (e.g. SendGrid or Amazon SES) providers. _TIL that ‘upyo’ (우표) means ‘postage stamp’ in Korean._
+
+Hong Minhee
+
+[Your Playwright Tests, Now on Real iOS Safari Devices](https://nodeweekly.com/link/171751/0a4070b383 "www.browserstack.com") — Stop missing Safari bugs. Run tests on real iOS devices with BrowserStack, capture logs, and ship with confidence.
+
+BrowserStack sponsor
+
+[Rewire 9.0: Easier Monkey-Patching for Unit Tests](https://nodeweekly.com/link/171752/0a4070b383 "github.com") — Enhances CommonJS (only) modules with special setters and getters, for injecting mocks, inspecting private variables, and overriding module internals.
+
+Johannes Ewald
+
+[Envalid 8.1: Environment Variable Validation](https://nodeweekly.com/link/171753/0a4070b383 "github.com") — Ensure your program only runs when all of its environment dependencies are met. [v8.1](https://nodeweekly.com/link/171754/0a4070b383) is a minor update, though the first in two years.
+
+Aaron Franks
+
+[cRonstrue 3.0: Convert Cron Expressions into Natural Language](https://nodeweekly.com/link/171755/0a4070b383 "github.com") — Not just English either - it supports about [thirty locales.](https://nodeweekly.com/link/171756/0a4070b383) There’s also [an online demo.](https://nodeweekly.com/link/171757/0a4070b383)
+
+Brady Holt
+
+*   [ESLint v9.31.0](https://nodeweekly.com/link/171758/0a4070b383) – Four core rules have been updated to support explicit resource management.
+    
+*   [Serverless Express 4.17](https://nodeweekly.com/link/171759/0a4070b383) – Run Express.js on AWS Lambda, API Gateway, Lambda@Edge, etc.
+    
+*   [NATS.js 3.1](https://nodeweekly.com/link/171760/0a4070b383) – JavaScript client for the NATS messaging system.
+    
+*   [open 10.2](https://nodeweekly.com/link/171761/0a4070b383) – Open URLs, files and executables – cross-platform.
+    
+*   🤖 [OpenAI Node 5.9](https://nodeweekly.com/link/171762/0a4070b383) – The official Node library for OpenAI.
+    
+*   [snakecase-keys 9.0](https://nodeweekly.com/link/171763/0a4070b383) – Convert object keys to snake case.
+    
+*   [Poolifier 5.1](https://nodeweekly.com/link/171764/0a4070b383) – Worker threads and cluster worker pool.
+    
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape, in case you've missed them:
+
+*   📅 [new Date("wtf")](https://nodeweekly.com/link/171765/0a4070b383) – How well do you know JavaScript's Date class and how date parsing works in JavaScript? Find out with this hair-raising quiz.
+    
+*   [ANSI.tools](https://nodeweekly.com/link/171766/0a4070b383) is a handy online tool for analyzing ANSI escape codes/sequences and [a lookup](https://nodeweekly.com/link/171767/0a4070b383) of common codes.
+    
+*   [Tae Kim explains how he tackled the _1 Billion Row Challenge_](https://nodeweekly.com/link/171768/0a4070b383) in Bun, and was able to process a 1 billion row file in under 10 seconds.
+    
+*   The [Nginx](https://nodeweekly.com/link/171769/0a4070b383) HTTP server has a module (`njs`) for extending its functionality using JavaScript, but it only supported ES5. Now, [`njs` uses QuickJS for a more modern, powerful experience](https://nodeweekly.com/link/171770/0a4070b383) with full ES2023 support.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​586 — July 15, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/586)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/171729/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dfroipebzcruk3naelgf.jpg)](https://nodeweekly.com/link/171730/0a4070b383)
+
+[Node v24.4.0 (Current) Released](https://nodeweekly.com/link/171730/0a4070b383 "nodejs.org") — You can now use `--watch-kill-signal` to specify which signal is sent to a process being restarted by [Node’s ‘watch mode’](https://nodeweekly.com/link/171731/0a4070b383); `spawn` and `spawnSync` now propagate permission model flags; plus the usual V8 and dependency updates.
+
+Rafael Gonzaga
+
+💡 The Node team has also [announced there are new releases of v24.x, 22.x, and 20.x](https://nodeweekly.com/link/171732/0a4070b383) in the next day or two to resolve some security issues, so keep an eye out for those.
+
+[Proposal: Shift Node.js to Annual Major Releases](https://nodeweekly.com/link/171771/0a4070b383 "github.com") — A discussion is currently taking place around whether Node could move to having annual major releases and then reducing the LTS duration of the even-numbered releases from the current 30 months down to 24. Community feedback is encouraged on this thread.
+
+Rafael Gonzaga et al.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/43dda6de.png)](https://nodeweekly.com/link/171729/0a4070b383)
+
+[Deploy Node in Docker the Right Way](https://nodeweekly.com/link/171729/0a4070b383 "frontendmasters.com") — Don’t settle for surface-level tutorials. Learn how containers are built, how to run Node apps properly inside them, and how to use Docker Compose and Kubernetes with confidence.
+
+Frontend Masters sponsor
+
+[Announcing TypeScript 5.9 Beta](https://nodeweekly.com/link/171733/0a4070b383 "devblogs.microsoft.com") — Perhaps the biggest introduction is [support for `import defer`](https://nodeweekly.com/link/171734/0a4070b383), but there’s also [a new `node20` mode](https://nodeweekly.com/link/171733/0a4070b383) which is like `nodenext` [but targeting ES2023.](https://nodeweekly.com/link/171735/0a4070b383) We also learn that the [Go-powered ‘native port’](https://nodeweekly.com/link/171736/0a4070b383) of TypeScript will eventually be available as TypeScript 7.
+
+Microsoft
+
+**IN BRIEF:**
+
+* Node.js v18 went 'end of life' in April 2025, but Canonical (the maintainers of Ubuntu) have announced [Ubuntu Pro users will now get support till 2032.](https://nodeweekly.com/link/171737/0a4070b383)
+
+* Callstack has [announced Node-API support for React Native](https://nodeweekly.com/link/171738/0a4070b383), opening up many more options for writing and sharing native code across platforms.
+
+* The Igalia team has shared [a detailed summary of the latest TC39 plenary](https://nodeweekly.com/link/171739/0a4070b383), packed with interesting tidbits about developments to ECMAScript.
+
+* North Korean 'threat actors' have deployed 67 malicious npm packages and [Kirill Boychenko tells us what they are and explains how they work.](https://nodeweekly.com/link/171740/0a4070b383)
+
+📊 [The 500x Performance Gap Between Node Version Managers (and Why You Might Not Care)](https://nodeweekly.com/link/171741/0a4070b383 "nodevibe.substack.com") — *“Your choice of Node.js version manager can make your shell startup 500x slower,”* starts Pavel, who shares some benchmarks, but concludes it might not matter *too* much unless you’re spawning a lot of new shells.
+
+Pavel Romanov
+
+📄 [JavaScript Scope Hoisting is Broken](https://nodeweekly.com/link/171742/0a4070b383) – The creator of [Parcel](https://nodeweekly.com/link/171743/0a4070b383) argues that [scope hoisting](https://nodeweekly.com/link/171744/0a4070b383) conflicts with modern JS patterns. Devon Govett
+
+📄 [Modern Async Iteration with `Array.fromAsync()`](https://nodeweekly.com/link/171745/0a4070b383) Matt Smith
+
+📄 [Typed Query Builders: Comparing Kysely and Drizzle](https://nodeweekly.com/link/171746/0a4070b383) Guillaume Billey
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yfcwjrbd6zg8lcpf4kvj.jpg)](https://nodeweekly.com/link/171747/0a4070b383)
+
+[Necord: A Framework for Creating Discord Bots](https://nodeweekly.com/link/171747/0a4070b383 "necord.org") — It uses Nest and Discord.js under the hood. Some example apps show [how easy it is](https://nodeweekly.com/link/171748/0a4070b383) to deploy bot functions. [GitHub repo.](https://nodeweekly.com/link/171749/0a4070b383)
+
+Necord
+
+✉️ [Upyo: A Simple Cross-Runtime Email Sending Library](https://nodeweekly.com/link/171750/0a4070b383 "upyo.org") — A cross-runtime email library that provides a unified, type-safe API for sending emails both on SMTP and HTTP-based (e.g. SendGrid or Amazon SES) providers. *TIL that ‘upyo’ (우표) means ‘postage stamp’ in Korean.*
+
+Hong Minhee
+
+[Your Playwright Tests, Now on Real iOS Safari Devices](https://nodeweekly.com/link/171751/0a4070b383 "www.browserstack.com") — Stop missing Safari bugs. Run tests on real iOS devices with BrowserStack, capture logs, and ship with confidence.
+
+BrowserStack sponsor
+
+[Rewire 9.0: Easier Monkey-Patching for Unit Tests](https://nodeweekly.com/link/171752/0a4070b383 "github.com") — Enhances CommonJS (only) modules with special setters and getters, for injecting mocks, inspecting private variables, and overriding module internals.
+
+Johannes Ewald
+
+[Envalid 8.1: Environment Variable Validation](https://nodeweekly.com/link/171753/0a4070b383 "github.com") — Ensure your program only runs when all of its environment dependencies are met. [v8.1](https://nodeweekly.com/link/171754/0a4070b383) is a minor update, though the first in two years.
+
+Aaron Franks
+
+[cRonstrue 3.0: Convert Cron Expressions into Natural Language](https://nodeweekly.com/link/171755/0a4070b383 "github.com") — Not just English either - it supports about [thirty locales.](https://nodeweekly.com/link/171756/0a4070b383) There’s also [an online demo.](https://nodeweekly.com/link/171757/0a4070b383)
+
+Brady Holt
+
+* [ESLint v9.31.0](https://nodeweekly.com/link/171758/0a4070b383) – Four core rules have been updated to support explicit resource management.
+
+* [Serverless Express 4.17](https://nodeweekly.com/link/171759/0a4070b383) – Run Express.js on AWS Lambda, API Gateway, Lambda@Edge, etc.
+
+* [NATS.js 3.1](https://nodeweekly.com/link/171760/0a4070b383) – JavaScript client for the NATS messaging system.
+
+* [open 10.2](https://nodeweekly.com/link/171761/0a4070b383) – Open URLs, files and executables – cross-platform.
+
+* 🤖 [OpenAI Node 5.9](https://nodeweekly.com/link/171762/0a4070b383) – The official Node library for OpenAI.
+
+* [snakecase-keys 9.0](https://nodeweekly.com/link/171763/0a4070b383) – Convert object keys to snake case.
+
+* [Poolifier 5.1](https://nodeweekly.com/link/171764/0a4070b383) – Worker threads and cluster worker pool.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape, in case you've missed them:
+
+* 📅 [new Date("wtf")](https://nodeweekly.com/link/171765/0a4070b383) – How well do you know JavaScript's Date class and how date parsing works in JavaScript? Find out with this hair-raising quiz.
+
+* [ANSI.tools](https://nodeweekly.com/link/171766/0a4070b383) is a handy online tool for analyzing ANSI escape codes/sequences and [a lookup](https://nodeweekly.com/link/171767/0a4070b383) of common codes.
+
+* [Tae Kim explains how he tackled the *1 Billion Row Challenge*](https://nodeweekly.com/link/171768/0a4070b383) in Bun, and was able to process a 1 billion row file in under 10 seconds.
+
+* The [Nginx](https://nodeweekly.com/link/171769/0a4070b383) HTTP server has a module (`njs`) for extending its functionality using JavaScript, but it only supported ES5. Now, [`njs` uses QuickJS for a more modern, powerful experience](https://nodeweekly.com/link/171770/0a4070b383) with full ES2023 support.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
