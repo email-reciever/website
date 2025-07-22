@@ -1,0 +1,262 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Running Laravel apps in the Node.js world
+description: Running Laravel apps in the Node.js world
+date: 星期二 05 下午 七月 22o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/587
+origin_site: https://nodeweekly.com/issues/587
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Running Laravel apps in the Node.js world" url="https://nodeweekly.com/issues/587" />
+
+<Detail client:only="react">
+	#​587 — July 22, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/587)
+
+Together with 
+
+[![Fusion Auth](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_316/e_make_transparent/co_white,e_outline:15/wm1gvx8cub0d4gmmabev.png)](https://nodeweekly.com/link/172021/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rcrfrghyegqtu4xwoag5.jpg)](https://nodeweekly.com/link/172022/0a4070b383)
+
+[Laravel and Node.js: PHP in Watt Runtime](https://nodeweekly.com/link/172022/0a4070b383 "blog.platformatic.dev") — In June we featured [php-node](https://nodeweekly.com/link/172023/0a4070b383), a new way to ‘bridge the gap’ between PHP and Node.js by being able to embed PHP into Node apps. Now they’ve gone a step further by using php-node and the [Watt](https://nodeweekly.com/link/172024/0a4070b383) app server to enable the running of [Laravel](https://nodeweekly.com/link/172025/0a4070b383) apps too. A curious meeting of ecosystems!
+
+Stephen Belanger (Platformatic)
+
+[The Node.js July 15 Security Releases](https://nodeweekly.com/link/172026/0a4070b383 "nodejs.org") — Mentioned in passing last week, but landing hours after we sent the newsletter came the releases of [Node.js v24.4.1 (Current)](https://nodeweekly.com/link/172027/0a4070b383), [v22.17.1 (LTS)](https://nodeweekly.com/link/172028/0a4070b383) and [v20.19.4](https://nodeweekly.com/link/172029/0a4070b383) to resolve some security vulnerabilities (a path traversal issue on Windows, and an issue related to hashing in V8).
+
+The Node.js Project
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a96ce80a.png)](https://nodeweekly.com/link/172021/0a4070b383)
+
+[Skip Building Auth from Scratch in Your Node.js App](https://nodeweekly.com/link/172021/0a4070b383 "fusionauth.link") — FusionAuth integrates with Express, Fastify, and Node.js backends. Add enterprise-grade auth in minutes, not months. Download locally, test in CI/CD pipelines. API-first design lets you focus on your app logic. [Start Building for free](https://nodeweekly.com/link/172021/0a4070b383).
+
+FusionAuth sponsor
+
+**IN BRIEF:**
+
+*   [The eslint-config-prettier package was recently compromised](https://nodeweekly.com/link/172030/0a4070b383) and we get a pretty thorough analysis of how it worked and how it happened.
+    
+*   [Node's `http` and `https` built-ins are gaining support for proxies](https://nodeweekly.com/link/172066/0a4070b383), enabled by way of an environment variable.
+    
+*   [Bun v1.2.19 has been released](https://nodeweekly.com/link/172031/0a4070b383) with a new option to use a pnpm-style isolated, symlinked `node_modules` with `bun install`, an interactive package updater, a VS Code Test Explorer integration, a faster integrated Postgres client, and more.
+    
+*   The next version of [`pnpm` will let you lock your Node.js version in the lockfile](https://nodeweekly.com/link/172032/0a4070b383), like with any other dependency.
+    
+
+[How to Create an NPM Package in 2025](https://nodeweekly.com/link/172033/0a4070b383 "www.totaltypescript.com") — One of JavaScript’s most essential tasks, but one with numerous steps involved if you want to follow best practices, integrate useful tools, and get things just right. Matt Pocock rounds up the overall process and, notably, drops CommonJS in this 2025 update.
+
+Matt Pocock
+
+[Endor: Add Services (Like Postgres) as Node Dependencies](https://nodeweekly.com/link/172034/0a4070b383 "endor.dev") — A curious new effort to make it possible to spin up quick, sandboxed environments and servers, covering things like Postgres, MariaDB and Valkey, with a simple `npm install` and `endor run`.
+
+Angel M Miguel (Endor)
+
+📄 [We Migrated Our Site to Eleventy and Increased Performance by 24%](https://nodeweekly.com/link/172035/0a4070b383) – [Eleventy (11ty)](https://nodeweekly.com/link/172036/0a4070b383) is a popular Node-based static site generator. Dan Webb
+
+📄 [Build Your Own Font Search Engine](https://nodeweekly.com/link/172037/0a4070b383) – Using vision language models to index and search the fonts. Lúí Smyth
+
+📄 [A Full Code Agent in 200 Lines – Here’s How](https://nodeweekly.com/link/172038/0a4070b383) Clément Thiriet
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yhwtmaqt1yph1ueg03yo.jpg)](https://nodeweekly.com/link/172039/0a4070b383)
+
+[npq: Safely Install Packages by Auditing Them Pre-Install](https://nodeweekly.com/link/172039/0a4070b383 "github.com") — `npq` performs several extra steps compared to `npm`. It consults Snyk’s database of vulnerabilities, looks at the package’s age, download count, and docs, and tries to paint a better picture of what you’re really installing.
+
+Liran Tal
+
+[Announcing NAPI-RS v3: The Way to Build Node Addons in Rust](https://nodeweekly.com/link/172040/0a4070b383 "napi.rs") — [NAPI-RS](https://nodeweekly.com/link/172041/0a4070b383) is a framework for building compiled Node.js add-ons in Rust via [Node-API.](https://nodeweekly.com/link/172042/0a4070b383) v3 adds support for targeting WebAssembly, which opens up some interesting possibilities shown in the post, along with numerous DX improvements including easier cross compilation.
+
+NAPI-RS Team
+
+[Product for Engineers Newsletter](https://nodeweekly.com/link/172043/0a4070b383) — Build better products, not just better code. Learn how to build features users love. [Subscribe for free](https://nodeweekly.com/link/172044/0a4070b383).
+
+PostHog sponsor
+
+[YouTube.js 15.0: A Very Unofficial YouTube API Client](https://nodeweekly.com/link/172045/0a4070b383 "github.com") — ‘InnerTube’ is an API used by YouTube’s clients, and you can use it too, although YouTube might not be a fan of that.. Nonetheless, it runs on Node.js, Deno, and modern browsers, and [v15.0](https://nodeweekly.com/link/172046/0a4070b383) drops CommonJS support.
+
+LuanRT
+
+[stripe-sync-engine: A Stripe-To-Postgres Sync Engine as a Standalone Library](https://nodeweekly.com/link/172047/0a4070b383)  
+Kevin Grüneberg (Supabase)
+
+*   [NeutralinoJS 6.2](https://nodeweekly.com/link/172048/0a4070b383) – Lightweight cross-platform desktop app framework.
+    
+*   [node-oidc-provider 9.4](https://nodeweekly.com/link/172049/0a4070b383) – OpenID Certified™ OAuth 2.0 Authorization Server implementation, now with experimental Attestation-Based Client Authentication support.
+    
+*   [Corepack 0.34](https://nodeweekly.com/link/172050/0a4070b383) – Node's zero-runtime-dependency bridge between projects and package managers. v0.34 drops Node 18 and 23 support.
+    
+*   [ESLint Markdown Language Plugin 7.0](https://nodeweekly.com/link/172051/0a4070b383) – Lint Markdown with ESLint, as well JS, JSX, TypeScript, and more inside Markdown.
+    
+*   [Multer 2.0.2](https://nodeweekly.com/link/172052/0a4070b383) – Node middleware for handling `multipart/form-data`. Fixes [a security vulnerability](https://nodeweekly.com/link/172053/0a4070b383).
+    
+*   [on-headers 1.1](https://nodeweekly.com/link/172054/0a4070b383) – Execute a listener when a response is about to write headers.
+    
+*   [express-rate-limit 8.0](https://nodeweekly.com/link/172055/0a4070b383) – Basic rate limiting for Express apps.
+    
+*   [Jasmine 5.9](https://nodeweekly.com/link/172056/0a4070b383) – Testing framework for browsers & Node.
+    
+*   [node-oracledb 6.9](https://nodeweekly.com/link/172057/0a4070b383) – _Oracle Database_ driver for Node.
+    
+*   [Undici 7.12](https://nodeweekly.com/link/172058/0a4070b383) – Node's powerful HTTP client library.
+    
+*   [node-soap 1.2](https://nodeweekly.com/link/172059/0a4070b383) – [SOAP](https://nodeweekly.com/link/172060/0a4070b383) client and server library.
+    
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape, in case you've missed them:
+
+*   In an article for ACM Queue, JS and WASM engine expert Andy Wingo [presented a round up of the state of WebAssembly](https://nodeweekly.com/link/172061/0a4070b383), both in browser and server-side use cases.
+    
+*   The Deno team has [▶️ shared an eight minute video](https://nodeweekly.com/link/172062/0a4070b383) digging into some of the 'untold story of JavaScript' based around its recently popular [A Brief History of JavaScript](https://nodeweekly.com/link/172063/0a4070b383) timeline.
+    
+*   🔎 [git-quick-stats.sh](https://nodeweekly.com/link/172064/0a4070b383) is a shell-based way to get a lot of statistics about your current Git repo.
+    
+*   [Phishers are now targeting npm package developers](https://nodeweekly.com/link/172065/0a4070b383) – be alert to this.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​587 — July 22, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/587)
+
+Together with 
+
+[![Fusion Auth](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_316/e_make_transparent/co_white,e_outline:15/wm1gvx8cub0d4gmmabev.png)](https://nodeweekly.com/link/172021/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rcrfrghyegqtu4xwoag5.jpg)](https://nodeweekly.com/link/172022/0a4070b383)
+
+[Laravel and Node.js: PHP in Watt Runtime](https://nodeweekly.com/link/172022/0a4070b383 "blog.platformatic.dev") — In June we featured [php-node](https://nodeweekly.com/link/172023/0a4070b383), a new way to ‘bridge the gap’ between PHP and Node.js by being able to embed PHP into Node apps. Now they’ve gone a step further by using php-node and the [Watt](https://nodeweekly.com/link/172024/0a4070b383) app server to enable the running of [Laravel](https://nodeweekly.com/link/172025/0a4070b383) apps too. A curious meeting of ecosystems!
+
+Stephen Belanger (Platformatic)
+
+[The Node.js July 15 Security Releases](https://nodeweekly.com/link/172026/0a4070b383 "nodejs.org") — Mentioned in passing last week, but landing hours after we sent the newsletter came the releases of [Node.js v24.4.1 (Current)](https://nodeweekly.com/link/172027/0a4070b383), [v22.17.1 (LTS)](https://nodeweekly.com/link/172028/0a4070b383) and [v20.19.4](https://nodeweekly.com/link/172029/0a4070b383) to resolve some security vulnerabilities (a path traversal issue on Windows, and an issue related to hashing in V8).
+
+The Node.js Project
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a96ce80a.png)](https://nodeweekly.com/link/172021/0a4070b383)
+
+[Skip Building Auth from Scratch in Your Node.js App](https://nodeweekly.com/link/172021/0a4070b383 "fusionauth.link") — FusionAuth integrates with Express, Fastify, and Node.js backends. Add enterprise-grade auth in minutes, not months. Download locally, test in CI/CD pipelines. API-first design lets you focus on your app logic. [Start Building for free](https://nodeweekly.com/link/172021/0a4070b383).
+
+FusionAuth sponsor
+
+**IN BRIEF:**
+
+* [The eslint-config-prettier package was recently compromised](https://nodeweekly.com/link/172030/0a4070b383) and we get a pretty thorough analysis of how it worked and how it happened.
+
+* [Node's `http` and `https` built-ins are gaining support for proxies](https://nodeweekly.com/link/172066/0a4070b383), enabled by way of an environment variable.
+
+* [Bun v1.2.19 has been released](https://nodeweekly.com/link/172031/0a4070b383) with a new option to use a pnpm-style isolated, symlinked `node_modules` with `bun install`, an interactive package updater, a VS Code Test Explorer integration, a faster integrated Postgres client, and more.
+
+* The next version of [`pnpm` will let you lock your Node.js version in the lockfile](https://nodeweekly.com/link/172032/0a4070b383), like with any other dependency.
+
+[How to Create an NPM Package in 2025](https://nodeweekly.com/link/172033/0a4070b383 "www.totaltypescript.com") — One of JavaScript’s most essential tasks, but one with numerous steps involved if you want to follow best practices, integrate useful tools, and get things just right. Matt Pocock rounds up the overall process and, notably, drops CommonJS in this 2025 update.
+
+Matt Pocock
+
+[Endor: Add Services (Like Postgres) as Node Dependencies](https://nodeweekly.com/link/172034/0a4070b383 "endor.dev") — A curious new effort to make it possible to spin up quick, sandboxed environments and servers, covering things like Postgres, MariaDB and Valkey, with a simple `npm install` and `endor run`.
+
+Angel M Miguel (Endor)
+
+📄 [We Migrated Our Site to Eleventy and Increased Performance by 24%](https://nodeweekly.com/link/172035/0a4070b383) – [Eleventy (11ty)](https://nodeweekly.com/link/172036/0a4070b383) is a popular Node-based static site generator. Dan Webb
+
+📄 [Build Your Own Font Search Engine](https://nodeweekly.com/link/172037/0a4070b383) – Using vision language models to index and search the fonts. Lúí Smyth
+
+📄 [A Full Code Agent in 200 Lines – Here’s How](https://nodeweekly.com/link/172038/0a4070b383) Clément Thiriet
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yhwtmaqt1yph1ueg03yo.jpg)](https://nodeweekly.com/link/172039/0a4070b383)
+
+[npq: Safely Install Packages by Auditing Them Pre-Install](https://nodeweekly.com/link/172039/0a4070b383 "github.com") — `npq` performs several extra steps compared to `npm`. It consults Snyk’s database of vulnerabilities, looks at the package’s age, download count, and docs, and tries to paint a better picture of what you’re really installing.
+
+Liran Tal
+
+[Announcing NAPI-RS v3: The Way to Build Node Addons in Rust](https://nodeweekly.com/link/172040/0a4070b383 "napi.rs") — [NAPI-RS](https://nodeweekly.com/link/172041/0a4070b383) is a framework for building compiled Node.js add-ons in Rust via [Node-API.](https://nodeweekly.com/link/172042/0a4070b383) v3 adds support for targeting WebAssembly, which opens up some interesting possibilities shown in the post, along with numerous DX improvements including easier cross compilation.
+
+NAPI-RS Team
+
+[Product for Engineers Newsletter](https://nodeweekly.com/link/172043/0a4070b383) — Build better products, not just better code. Learn how to build features users love. [Subscribe for free](https://nodeweekly.com/link/172044/0a4070b383).
+
+PostHog sponsor
+
+[YouTube.js 15.0: A Very Unofficial YouTube API Client](https://nodeweekly.com/link/172045/0a4070b383 "github.com") — ‘InnerTube’ is an API used by YouTube’s clients, and you can use it too, although YouTube might not be a fan of that.. Nonetheless, it runs on Node.js, Deno, and modern browsers, and [v15.0](https://nodeweekly.com/link/172046/0a4070b383) drops CommonJS support.
+
+LuanRT
+
+[stripe-sync-engine: A Stripe-To-Postgres Sync Engine as a Standalone Library](https://nodeweekly.com/link/172047/0a4070b383)\
+Kevin Grüneberg (Supabase)
+
+* [NeutralinoJS 6.2](https://nodeweekly.com/link/172048/0a4070b383) – Lightweight cross-platform desktop app framework.
+
+* [node-oidc-provider 9.4](https://nodeweekly.com/link/172049/0a4070b383) – OpenID Certified™ OAuth 2.0 Authorization Server implementation, now with experimental Attestation-Based Client Authentication support.
+
+* [Corepack 0.34](https://nodeweekly.com/link/172050/0a4070b383) – Node's zero-runtime-dependency bridge between projects and package managers. v0.34 drops Node 18 and 23 support.
+
+* [ESLint Markdown Language Plugin 7.0](https://nodeweekly.com/link/172051/0a4070b383) – Lint Markdown with ESLint, as well JS, JSX, TypeScript, and more inside Markdown.
+
+* [Multer 2.0.2](https://nodeweekly.com/link/172052/0a4070b383) – Node middleware for handling `multipart/form-data`. Fixes [a security vulnerability](https://nodeweekly.com/link/172053/0a4070b383).
+
+* [on-headers 1.1](https://nodeweekly.com/link/172054/0a4070b383) – Execute a listener when a response is about to write headers.
+
+* [express-rate-limit 8.0](https://nodeweekly.com/link/172055/0a4070b383) – Basic rate limiting for Express apps.
+
+* [Jasmine 5.9](https://nodeweekly.com/link/172056/0a4070b383) – Testing framework for browsers & Node.
+
+* [node-oracledb 6.9](https://nodeweekly.com/link/172057/0a4070b383) – *Oracle Database* driver for Node.
+
+* [Undici 7.12](https://nodeweekly.com/link/172058/0a4070b383) – Node's powerful HTTP client library.
+
+* [node-soap 1.2](https://nodeweekly.com/link/172059/0a4070b383) – [SOAP](https://nodeweekly.com/link/172060/0a4070b383) client and server library.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape, in case you've missed them:
+
+* In an article for ACM Queue, JS and WASM engine expert Andy Wingo [presented a round up of the state of WebAssembly](https://nodeweekly.com/link/172061/0a4070b383), both in browser and server-side use cases.
+
+* The Deno team has [▶️ shared an eight minute video](https://nodeweekly.com/link/172062/0a4070b383) digging into some of the 'untold story of JavaScript' based around its recently popular [A Brief History of JavaScript](https://nodeweekly.com/link/172063/0a4070b383) timeline.
+
+* 🔎 [git-quick-stats.sh](https://nodeweekly.com/link/172064/0a4070b383) is a shell-based way to get a lot of statistics about your current Git repo.
+
+* [Phishers are now targeting npm package developers](https://nodeweekly.com/link/172065/0a4070b383) – be alert to this.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
