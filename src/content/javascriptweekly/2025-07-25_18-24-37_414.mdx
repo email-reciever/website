@@ -1,0 +1,301 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Will WebAssembly ever get DOM support?
+description: Will WebAssembly ever get DOM support?
+date: 星期五 06 晚上 七月 25o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/746
+origin_site: https://javascriptweekly.com/issues/746
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Will WebAssembly ever get DOM support?" url="https://javascriptweekly.com/issues/746" />
+
+<Detail client:only="react">
+	#​746 — July 25, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/746)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/172277/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/izyu0u05uha4s7mq58hb.jpg)](https://javascriptweekly.com/link/172278/d076523b1d)
+
+[es-toolkit: A Modern JavaScript Utility Library](https://javascriptweekly.com/link/172278/d076523b1d "es-toolkit.dev") — Boasts being both faster and ‘97% smaller’ than the ubiquitous [Lodash](https://javascriptweekly.com/link/172279/d076523b1d), for which it is a direct 'seamless' replacement **(and now boasting 100% Lodash compatibility).** The [reference guide](https://javascriptweekly.com/link/172280/d076523b1d) shows off all it can do, and it’s widely adopted — being used by Storybook, CKEditor, and recommended by Nuxt. [GitHub repo.](https://javascriptweekly.com/link/172281/d076523b1d)
+
+Viva Republica, Inc
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d9079196.webp)](https://javascriptweekly.com/link/172277/d076523b1d)
+
+[Avoid Common Mistakes in React and Next.js](https://javascriptweekly.com/link/172277/d076523b1d "frontendmasters.com") — Avoid redundant useState and useEffect, deeply nested data, unscalable forms, and hidden shared state bugs. David Khourshid teaches practical patterns to refactor complex apps and scale with confidence!
+
+Frontend Masters sponsor
+
+[When is WebAssembly Going to Get DOM Support?](https://javascriptweekly.com/link/172282/d076523b1d "queue.acm.org") — Working with the DOM from JavaScript is straightforward, but WebAssembly requires glue code to do it. Is this going to change? Daniel of the TC39 committee digs into the issue here and says that modern build toolchains and WASM’s evolution are making things easier all the time.
+
+Daniel Ehrenberg
+
+**IN BRIEF:**
+
+*   Over on X, Feross Aboukhadijeh [explains a major supply chain breach in the JS ecosystem](https://javascriptweekly.com/link/172283/d076523b1d) where popular packages, including `is`, were hijacked to ship malware. [Here's an article on the specifics](https://javascriptweekly.com/link/172284/d076523b1d), if you'd prefer.
+    
+*   [npm took down the `stylus` package](https://javascriptweekly.com/link/172285/d076523b1d) for a while, due to security issues, which caused quite a few problems.. this is a rather extensive story.
+    
+*   🇪🇸 ¿Hablas español? [EsJS](https://javascriptweekly.com/link/172286/d076523b1d) is a strikingly well-presented experiment – complete with [online playground](https://javascriptweekly.com/link/172287/d076523b1d) – to let you write JavaScript _in Spanish._
+    
+*   [A comparison of Biome and Oxlint](https://javascriptweekly.com/link/172288/d076523b1d) when it comes to offering fast, type-aware linting rules.
+    
+
+**RELEASES:**
+
+*   [Bun v1.2.19](https://javascriptweekly.com/link/172289/d076523b1d) – The fast JS runtime now supports pnpm-style isolated `node_modules` with `bun install`, offers an interactive dependency updating feature, and more. Bun 1.3 is also expected very soon.
+    
+*   [PythonMonkey 1.2](https://javascriptweekly.com/link/172291/d076523b1d) – Embed the SpiderMonkey JS engine into Python's VM.
+    
+*   [React Native Reanimated 4.0](https://javascriptweekly.com/link/172292/d076523b1d) – React Native's Animated _reimplemented._
+    
+*   [Oxlint 1.8](https://javascriptweekly.com/link/172293/d076523b1d), [Jasmine 5.9](https://javascriptweekly.com/link/172294/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ybmt1ew0xl4hflkdowz2.jpg)](https://javascriptweekly.com/link/172295/d076523b1d)
+
+[A JS 'Numbers Station' in 1 Kilobyte](https://javascriptweekly.com/link/172295/d076523b1d "shkspr.mobi") — We’ve recently promoted the [js1024](https://javascriptweekly.com/link/172296/d076523b1d) JavaScript code golfing contest – it’s now over, but Terence breaks down [his interesting entry](https://javascriptweekly.com/link/172297/d076523b1d) which recreates the vibe of real-life [numbers stations](https://javascriptweekly.com/link/172298/d076523b1d).
+
+Terence Eden
+
+💡 You can also [look through all the other js1024 submissions.](https://javascriptweekly.com/link/172299/d076523b1d)
+
+[Revisiting My 2010 JavaScript Library](https://javascriptweekly.com/link/172300/d076523b1d "idiallo.com") — A developer looks back at code he wrote 15 years ago, the ‘clever solutions’ he used, and why most of it is redundant in 2025.
+
+Ibrahim Diallo
+
+[Build an MCP Server in Your Next.js Application with Clerk](https://javascriptweekly.com/link/172301/d076523b1d "go.clerk.com") — Add a spec-compliant MCP endpoint in minutes, allowing LLMs to access user data with user consent.
+
+Clerk sponsor
+
+[Web Serial: The Only Reason I’ll Admit JavaScript Isn’t All Bad](https://javascriptweekly.com/link/172302/d076523b1d "theexceptioncatcher.com") — The author isn’t a fan of JavaScript but likes the power the [Web Serial API](https://javascriptweekly.com/link/172303/d076523b1d) provides for working with external devices.
+
+Steven Hicks
+
+📄 ['It's Time for Modern CSS to Kill the SPA'](https://javascriptweekly.com/link/172304/d076523b1d) – _“Use modern server rendering. Use actual pages. Animate with CSS. Preload with intent”_ Jono Alderson
+
+📄 [We Migrated Our Next.js Site to Eleventy and Increased Performance by 24%](https://javascriptweekly.com/link/172305/d076523b1d) – [Eleventy (11ty)](https://javascriptweekly.com/link/172306/d076523b1d) is a popular Node-based static site generator. Dan Webb
+
+📄 [Handling JavaScript Event Listeners with Parameters](https://javascriptweekly.com/link/172307/d076523b1d) Amejimaobari Ollornwi
+
+📄 [Build Your Own Font Search Engine](https://javascriptweekly.com/link/172308/d076523b1d) – Using vision language models to index and search the fonts. Lúí Smyth
+
+📄 [Interactive Text Destruction with Three.js, WebGPU, and Three Shader Language](https://javascriptweekly.com/link/172309/d076523b1d) Lolo Armdz
+
+📄 [React Router and React Server Components: The Path Forward](https://javascriptweekly.com/link/172310/d076523b1d) Ebey and Dalgleish
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/iuxutwjujdv5najywbmd.jpg)](https://javascriptweekly.com/link/172311/d076523b1d)
+
+[Transformers.js 3.7: Machine Learning and Models for the Web](https://javascriptweekly.com/link/172311/d076523b1d "github.com") — Brings the ability to run powerful pretrained models in the browser, thanks to the ONNX runtime. v3.7 adds Voxtral (speech transcription and audio understanding), LFM2 and ModernBERT support.
+
+Hugging Face
+
+[npq: Safely Install Packages by Auditing Them Pre-Install](https://javascriptweekly.com/link/172312/d076523b1d "github.com") — `npq` performs several extra steps compared to `npm`. It consults Snyk’s database of vulnerabilities, looks at the package’s age, download count, and docs, and tries to paint a better picture of what you’re really installing.
+
+Liran Tal
+
+[Measure Web Performance Based on Real User Impact](https://javascriptweekly.com/link/172313/d076523b1d "embrace.io") — With Embrace, get full session timelines, Core Web Vitals and JS exceptions in context, and user journey analysis.
+
+Embrace sponsor
+
+[Untitled UI React: A Fresh UI Component Library](https://javascriptweekly.com/link/172314/d076523b1d "www.untitledui.com") — A giant collection of open-source (MIT) components built around Tailwind CSS and React Aria – there’s [a full introduction here.](https://javascriptweekly.com/link/172315/d076523b1d) It's not _only_ open source, with a ‘PRO’ offering with more components, examples, and Figma integration.
+
+Untitled UI
+
+[ts-regexp: A Statically Typed Alternative to JavaScript's RegExp](https://javascriptweekly.com/link/172316/d076523b1d "github.com") — A new approach for bringing strict typing to regular expressions in TypeScript.
+
+Danilo Furrer
+
+*   📊 [ApexCharts 5.3](https://javascriptweekly.com/link/172317/d076523b1d) – Popular JS charting library. Now with [data parsing abilities](https://javascriptweekly.com/link/172318/d076523b1d) for directly mapping raw data objects to charts.  ([Demos.](https://javascriptweekly.com/link/172319/d076523b1d))
+    
+*   [vue-multiselect 3.3](https://javascriptweekly.com/link/172320/d076523b1d) – Universal select/multiselect/tagging component for Vue.
+    
+*   [eslint-plugin-unicorn 60.0](https://javascriptweekly.com/link/172321/d076523b1d) – 100+ useful ESLint rules in one place.
+    
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/172322/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+* * *
+
+🔍 [Discover KeyLines](https://javascriptweekly.com/link/172323/d076523b1d) - a scalable JavaScript graph visualization toolkit that turns complex data into actionable insights.
+
+🎁 Some Bonus Items
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yg22aoncalw9nxpf0ac6.jpg)](https://javascriptweekly.com/link/172324/d076523b1d)
+
+*   SVG (Scalable Vector Graphics) is a widely supported and powerful graphics format and Josh W Comeau has [put together a fantastic 'friendly' introduction to SVG](https://javascriptweekly.com/link/172324/d076523b1d) showing off what you can do with it.
+    
+*   [The _State of HTML 2025_ survey](https://javascriptweekly.com/link/172325/d076523b1d) is now open to take – it's not just a survey; you'll probably learn a few things at the same time too.
+    
+*   [Google has unveiled OSS Rebuild](https://javascriptweekly.com/link/172326/d076523b1d), a new attempt to make open source ecosystems (like npm) more secure by allowing the comparison of packages with upstream artifacts.
+    
+*   🎉 Popular developer resource [MDN is celebrating its 20th birthday.](https://javascriptweekly.com/link/172328/d076523b1d)
+    
+*   [Three HTTP versions later, forms are still a mess.](https://javascriptweekly.com/link/172329/d076523b1d)
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/172330/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​746 — July 25, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/746)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/172277/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/izyu0u05uha4s7mq58hb.jpg)](https://javascriptweekly.com/link/172278/d076523b1d)
+
+[es-toolkit: A Modern JavaScript Utility Library](https://javascriptweekly.com/link/172278/d076523b1d "es-toolkit.dev") — Boasts being both faster and ‘97% smaller’ than the ubiquitous [Lodash](https://javascriptweekly.com/link/172279/d076523b1d), for which it is a direct 'seamless' replacement **(and now boasting 100% Lodash compatibility).** The [reference guide](https://javascriptweekly.com/link/172280/d076523b1d) shows off all it can do, and it’s widely adopted — being used by Storybook, CKEditor, and recommended by Nuxt. [GitHub repo.](https://javascriptweekly.com/link/172281/d076523b1d)
+
+Viva Republica, Inc
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d9079196.webp)](https://javascriptweekly.com/link/172277/d076523b1d)
+
+[Avoid Common Mistakes in React and Next.js](https://javascriptweekly.com/link/172277/d076523b1d "frontendmasters.com") — Avoid redundant useState and useEffect, deeply nested data, unscalable forms, and hidden shared state bugs. David Khourshid teaches practical patterns to refactor complex apps and scale with confidence!
+
+Frontend Masters sponsor
+
+[When is WebAssembly Going to Get DOM Support?](https://javascriptweekly.com/link/172282/d076523b1d "queue.acm.org") — Working with the DOM from JavaScript is straightforward, but WebAssembly requires glue code to do it. Is this going to change? Daniel of the TC39 committee digs into the issue here and says that modern build toolchains and WASM’s evolution are making things easier all the time.
+
+Daniel Ehrenberg
+
+**IN BRIEF:**
+
+* Over on X, Feross Aboukhadijeh [explains a major supply chain breach in the JS ecosystem](https://javascriptweekly.com/link/172283/d076523b1d) where popular packages, including `is`, were hijacked to ship malware. [Here's an article on the specifics](https://javascriptweekly.com/link/172284/d076523b1d), if you'd prefer.
+
+* [npm took down the `stylus` package](https://javascriptweekly.com/link/172285/d076523b1d) for a while, due to security issues, which caused quite a few problems.. this is a rather extensive story.
+
+* 🇪🇸 ¿Hablas español? [EsJS](https://javascriptweekly.com/link/172286/d076523b1d) is a strikingly well-presented experiment – complete with [online playground](https://javascriptweekly.com/link/172287/d076523b1d) – to let you write JavaScript *in Spanish.*
+
+* [A comparison of Biome and Oxlint](https://javascriptweekly.com/link/172288/d076523b1d) when it comes to offering fast, type-aware linting rules.
+
+**RELEASES:**
+
+* [Bun v1.2.19](https://javascriptweekly.com/link/172289/d076523b1d) – The fast JS runtime now supports pnpm-style isolated `node_modules` with `bun install`, offers an interactive dependency updating feature, and more. Bun 1.3 is also expected very soon.
+
+* [PythonMonkey 1.2](https://javascriptweekly.com/link/172291/d076523b1d) – Embed the SpiderMonkey JS engine into Python's VM.
+
+* [React Native Reanimated 4.0](https://javascriptweekly.com/link/172292/d076523b1d) – React Native's Animated *reimplemented.*
+
+* [Oxlint 1.8](https://javascriptweekly.com/link/172293/d076523b1d), [Jasmine 5.9](https://javascriptweekly.com/link/172294/d076523b1d)
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ybmt1ew0xl4hflkdowz2.jpg)](https://javascriptweekly.com/link/172295/d076523b1d)
+
+[A JS 'Numbers Station' in 1 Kilobyte](https://javascriptweekly.com/link/172295/d076523b1d "shkspr.mobi") — We’ve recently promoted the [js1024](https://javascriptweekly.com/link/172296/d076523b1d) JavaScript code golfing contest – it’s now over, but Terence breaks down [his interesting entry](https://javascriptweekly.com/link/172297/d076523b1d) which recreates the vibe of real-life [numbers stations](https://javascriptweekly.com/link/172298/d076523b1d).
+
+Terence Eden
+
+💡 You can also [look through all the other js1024 submissions.](https://javascriptweekly.com/link/172299/d076523b1d)
+
+[Revisiting My 2010 JavaScript Library](https://javascriptweekly.com/link/172300/d076523b1d "idiallo.com") — A developer looks back at code he wrote 15 years ago, the ‘clever solutions’ he used, and why most of it is redundant in 2025.
+
+Ibrahim Diallo
+
+[Build an MCP Server in Your Next.js Application with Clerk](https://javascriptweekly.com/link/172301/d076523b1d "go.clerk.com") — Add a spec-compliant MCP endpoint in minutes, allowing LLMs to access user data with user consent.
+
+Clerk sponsor
+
+[Web Serial: The Only Reason I’ll Admit JavaScript Isn’t All Bad](https://javascriptweekly.com/link/172302/d076523b1d "theexceptioncatcher.com") — The author isn’t a fan of JavaScript but likes the power the [Web Serial API](https://javascriptweekly.com/link/172303/d076523b1d) provides for working with external devices.
+
+Steven Hicks
+
+📄 ['It's Time for Modern CSS to Kill the SPA'](https://javascriptweekly.com/link/172304/d076523b1d) – *“Use modern server rendering. Use actual pages. Animate with CSS. Preload with intent”* Jono Alderson
+
+📄 [We Migrated Our Next.js Site to Eleventy and Increased Performance by 24%](https://javascriptweekly.com/link/172305/d076523b1d) – [Eleventy (11ty)](https://javascriptweekly.com/link/172306/d076523b1d) is a popular Node-based static site generator. Dan Webb
+
+📄 [Handling JavaScript Event Listeners with Parameters](https://javascriptweekly.com/link/172307/d076523b1d) Amejimaobari Ollornwi
+
+📄 [Build Your Own Font Search Engine](https://javascriptweekly.com/link/172308/d076523b1d) – Using vision language models to index and search the fonts. Lúí Smyth
+
+📄 [Interactive Text Destruction with Three.js, WebGPU, and Three Shader Language](https://javascriptweekly.com/link/172309/d076523b1d) Lolo Armdz
+
+📄 [React Router and React Server Components: The Path Forward](https://javascriptweekly.com/link/172310/d076523b1d) Ebey and Dalgleish
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/iuxutwjujdv5najywbmd.jpg)](https://javascriptweekly.com/link/172311/d076523b1d)
+
+[Transformers.js 3.7: Machine Learning and Models for the Web](https://javascriptweekly.com/link/172311/d076523b1d "github.com") — Brings the ability to run powerful pretrained models in the browser, thanks to the ONNX runtime. v3.7 adds Voxtral (speech transcription and audio understanding), LFM2 and ModernBERT support.
+
+Hugging Face
+
+[npq: Safely Install Packages by Auditing Them Pre-Install](https://javascriptweekly.com/link/172312/d076523b1d "github.com") — `npq` performs several extra steps compared to `npm`. It consults Snyk’s database of vulnerabilities, looks at the package’s age, download count, and docs, and tries to paint a better picture of what you’re really installing.
+
+Liran Tal
+
+[Measure Web Performance Based on Real User Impact](https://javascriptweekly.com/link/172313/d076523b1d "embrace.io") — With Embrace, get full session timelines, Core Web Vitals and JS exceptions in context, and user journey analysis.
+
+Embrace sponsor
+
+[Untitled UI React: A Fresh UI Component Library](https://javascriptweekly.com/link/172314/d076523b1d "www.untitledui.com") — A giant collection of open-source (MIT) components built around Tailwind CSS and React Aria – there’s [a full introduction here.](https://javascriptweekly.com/link/172315/d076523b1d) It's not *only* open source, with a ‘PRO’ offering with more components, examples, and Figma integration.
+
+Untitled UI
+
+[ts-regexp: A Statically Typed Alternative to JavaScript's RegExp](https://javascriptweekly.com/link/172316/d076523b1d "github.com") — A new approach for bringing strict typing to regular expressions in TypeScript.
+
+Danilo Furrer
+
+* 📊 [ApexCharts 5.3](https://javascriptweekly.com/link/172317/d076523b1d) – Popular JS charting library. Now with [data parsing abilities](https://javascriptweekly.com/link/172318/d076523b1d) for directly mapping raw data objects to charts.  ([Demos.](https://javascriptweekly.com/link/172319/d076523b1d))
+
+* [vue-multiselect 3.3](https://javascriptweekly.com/link/172320/d076523b1d) – Universal select/multiselect/tagging component for Vue.
+
+* [eslint-plugin-unicorn 60.0](https://javascriptweekly.com/link/172321/d076523b1d) – 100+ useful ESLint rules in one place.
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/172322/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+***
+
+🔍 [Discover KeyLines](https://javascriptweekly.com/link/172323/d076523b1d) - a scalable JavaScript graph visualization toolkit that turns complex data into actionable insights.
+
+🎁 Some Bonus Items
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yg22aoncalw9nxpf0ac6.jpg)](https://javascriptweekly.com/link/172324/d076523b1d)
+
+* SVG (Scalable Vector Graphics) is a widely supported and powerful graphics format and Josh W Comeau has [put together a fantastic 'friendly' introduction to SVG](https://javascriptweekly.com/link/172324/d076523b1d) showing off what you can do with it.
+
+* [The *State of HTML 2025* survey](https://javascriptweekly.com/link/172325/d076523b1d) is now open to take – it's not just a survey; you'll probably learn a few things at the same time too.
+
+* [Google has unveiled OSS Rebuild](https://javascriptweekly.com/link/172326/d076523b1d), a new attempt to make open source ecosystems (like npm) more secure by allowing the comparison of packages with upstream artifacts.
+
+* 🎉 Popular developer resource [MDN is celebrating its 20th birthday.](https://javascriptweekly.com/link/172328/d076523b1d)
+
+* [Three HTTP versions later, forms are still a mess.](https://javascriptweekly.com/link/172329/d076523b1d)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/172330/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
