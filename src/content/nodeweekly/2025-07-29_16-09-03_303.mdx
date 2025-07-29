@@ -1,0 +1,252 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: An epic rundown of JavaScript engines and runtimes
+description: An epic rundown of JavaScript engines and runtimes
+date: 星期二 04 下午 七月 29o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/588
+origin_site: https://nodeweekly.com/issues/588
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="An epic rundown of JavaScript engines and runtimes" url="https://nodeweekly.com/issues/588" />
+
+<Detail client:only="react">
+	#​588 — July 29, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/588)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://nodeweekly.com/link/172333/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mkglla1raa4zrhsni7nz.jpg)](https://nodeweekly.com/link/172334/0a4070b383)
+
+[The Many, Many, Many JavaScript Runtimes of the Last Decade](https://nodeweekly.com/link/172334/0a4070b383 "buttondown.com") — A meaty article (which took a year to put together) covering the myriad of JavaScript runtimes and engines both past and present, from obvious picks like Node.js to cloud platforms and lesser known ‘honorable mentions’. This is a great summary to round out your JS ecosystem knowledge.
+
+Whatever, Jamie
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/0053ee4a.png)](https://nodeweekly.com/link/172333/0a4070b383)
+
+[Running LLMs in prod? Prompt logs ≠ monitoring](https://nodeweekly.com/link/172333/0a4070b383 "blog.sentry.io") — Trace full request lifecycle, track cost/latency/retries, monitor drift & RAG relevance. If you can’t answer “what changed & what did it cost?”, you’re flying blind. Read the blog to learn more.
+
+Sentry sponsor
+
+**IN BRIEF:**
+
+*   [TypeScript 5.9 RC](https://nodeweekly.com/link/172335/0a4070b383) has been released, with the final release due later this week. Support for `import defer` and the new `--module node20` feature are amongst the highlights.
+    
+*   It's early days but [Google has unveiled OSS Rebuild](https://nodeweekly.com/link/172336/0a4070b383), an attempt to make open source ecosystems (like npm) more secure by allowing the comparison of packages with upstream artifacts.
+    
+*   Attacks on the npm ecosystem have continued with [the `is` package getting hijacked](https://nodeweekly.com/link/172337/0a4070b383) through an npm-related typosquatted domain being used to [phish login details.](https://nodeweekly.com/link/172338/0a4070b383)
+    
+
+[The Node Developer's Guide to Unix Domain Sockets](https://nodeweekly.com/link/172339/0a4070b383 "nodevibe.substack.com") — The TLDR: _“Unix domain sockets deliver ~50% lower latency than TCP loopback for Node.js IPC.”_
+
+Pavel Romanov
+
+▶  [The Creator of Bun on Building Bun and Node.js Compatibility](https://nodeweekly.com/link/172340/0a4070b383 "www.youtube.com") — A roughly half hour chat in which Patrick Akil speaks with Jarred Sumner, creator of [Bun](https://nodeweekly.com/link/172341/0a4070b383). “_We intend for Bun to be a drop-in replacement for the existing Node.js ecosystem. Most of our engineering time is not actually spent on new features — it’s spent on Node.js compatibility_”.
+
+React Conferences by GitNation
+
+📄 [How to Build Node.js MCP Servers that Expose Data Resources to LLMs](https://nodeweekly.com/link/172342/0a4070b383) Liran Tal
+
+📄 [The Multi-Repository TypeScript Problem](https://nodeweekly.com/link/172343/0a4070b383) – Solving cross-repo type safety. David Moores
+
+📄 [Logical Assignment Operators in JavaScript: Small Syntax, Big Wins](https://nodeweekly.com/link/172344/0a4070b383) Matt Smith
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/uqibw1avhnsohbwufezt.jpg)](https://nodeweekly.com/link/172345/0a4070b383)
+
+[AudioTee.js: macOS System Audio Capture for Node.js](https://nodeweekly.com/link/172345/0a4070b383 "stronglytyped.uk") — Wrapping around an (included) Swift-powered binary, this captures Mac system audio output and emits it as PCM encoded chunks at regular intervals. [GitHub repo.](https://nodeweekly.com/link/172346/0a4070b383)
+
+Nick Payne
+
+[Transformers.js 3.7: Machine Learning and Models for the Web](https://nodeweekly.com/link/172347/0a4070b383 "github.com") — Brings the ability to run powerful pretrained models in the browser via ONNX, but [you can do server-side inference with Node.js too](https://nodeweekly.com/link/172348/0a4070b383). v3.7 adds Voxtral (speech transcription and audio understanding), LFM2 and ModernBERT support.
+
+Hugging Face
+
+[Find & Fix Async Bugs Fast in Node.js with AppSignal](https://nodeweekly.com/link/172349/0a4070b383 "www.appsignal.com") — AppSignal helps Node.js devs fix bugs and performance issues fast. Easy to set up, a joy to use. [Start your free trial today](https://nodeweekly.com/link/172349/0a4070b383).
+
+AppSignal sponsor
+
+[match-sorter 8.1: Deterministic Best-Match Array Sorting](https://nodeweekly.com/link/172350/0a4070b383 "github.com") — If you have an array of items you want to filter and sort deterministically, match-sorter provides a specified, predictable algorithm. Play with [a live demo here.](https://nodeweekly.com/link/172351/0a4070b383)
+
+Kent C. Dodds
+
+*   [Inquirer 12.9](https://nodeweekly.com/link/172352/0a4070b383) – Collection of common interactive terminal app input prompts.
+    
+*   [Node File Trace 0.30](https://nodeweekly.com/link/172353/0a4070b383) – Dependency tracing utility to determine exactly which files are necessary for an app to run.
+    
+*   [MongoDB Node.js Driver 6.18](https://nodeweekly.com/link/172354/0a4070b383) – The latest official MongoDB driver lands with its always-thorough release notes.
+    
+*   [node-rate-limiter-flexible 7.2](https://nodeweekly.com/link/172355/0a4070b383) – Atomic counters and rate limiting tools. Now with [Drizzle ORM support.](https://nodeweekly.com/link/172356/0a4070b383)
+    
+*   [Ghost 6.0 RC](https://nodeweekly.com/link/172357/0a4070b383) – The popular blogging / publishing platform approaches its next major release.
+    
+*   [@google-cloud/bigtable 6.2](https://nodeweekly.com/link/172358/0a4070b383) – Node client for Google Cloud Bigtable.
+    
+*   [Axios 1.11](https://nodeweekly.com/link/172359/0a4070b383) – Long-standing, promise-based isomorphic HTTP client.
+    
+*   [TIFF 7.1](https://nodeweekly.com/link/172360/0a4070b383) – Pure JS TIFF image decoding library.
+    
+*   [ESLint v9.32.0](https://nodeweekly.com/link/172361/0a4070b383)
+    
+
+📰 Classifieds
+
+Discover [Platformatic AI-Warp 1.0.0](https://nodeweekly.com/link/172362/0a4070b383) – seamless AI integration, easy provider switching & robust session management!
+
+* * *
+
+📌 Deploy with [PinMe](https://nodeweekly.com/link/172363/0a4070b383): Host Your Front-End Without Servers. No sign-up. No cost.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+*   A look at how a developer [built an email-controlled Game Boy emulator](https://nodeweekly.com/link/172364/0a4070b383) using Node.js and Postmark. [More info here](https://nodeweekly.com/link/172365/0a4070b383) including a link to the code if you want to reproduce it.
+    
+*   [es-toolkit](https://nodeweekly.com/link/172366/0a4070b383) is now a 100% compatible drop-in replacement for Lodash.
+    
+*   [The _State of HTML 2025_ survey](https://nodeweekly.com/link/172367/0a4070b383) is now open to take – it's not just a survey; you'll probably learn a few things at the same time too.
+    
+*   A developer [claims the tabs vs spaces debate is over](https://nodeweekly.com/link/172368/0a4070b383) with the majority of languages leaning towards spaces.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​588 — July 29, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/588)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://nodeweekly.com/link/172333/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mkglla1raa4zrhsni7nz.jpg)](https://nodeweekly.com/link/172334/0a4070b383)
+
+[The Many, Many, Many JavaScript Runtimes of the Last Decade](https://nodeweekly.com/link/172334/0a4070b383 "buttondown.com") — A meaty article (which took a year to put together) covering the myriad of JavaScript runtimes and engines both past and present, from obvious picks like Node.js to cloud platforms and lesser known ‘honorable mentions’. This is a great summary to round out your JS ecosystem knowledge.
+
+Whatever, Jamie
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/0053ee4a.png)](https://nodeweekly.com/link/172333/0a4070b383)
+
+[Running LLMs in prod? Prompt logs ≠ monitoring](https://nodeweekly.com/link/172333/0a4070b383 "blog.sentry.io") — Trace full request lifecycle, track cost/latency/retries, monitor drift & RAG relevance. If you can’t answer “what changed & what did it cost?”, you’re flying blind. Read the blog to learn more.
+
+Sentry sponsor
+
+**IN BRIEF:**
+
+* [TypeScript 5.9 RC](https://nodeweekly.com/link/172335/0a4070b383) has been released, with the final release due later this week. Support for `import defer` and the new `--module node20` feature are amongst the highlights.
+
+* It's early days but [Google has unveiled OSS Rebuild](https://nodeweekly.com/link/172336/0a4070b383), an attempt to make open source ecosystems (like npm) more secure by allowing the comparison of packages with upstream artifacts.
+
+* Attacks on the npm ecosystem have continued with [the `is` package getting hijacked](https://nodeweekly.com/link/172337/0a4070b383) through an npm-related typosquatted domain being used to [phish login details.](https://nodeweekly.com/link/172338/0a4070b383)
+
+[The Node Developer's Guide to Unix Domain Sockets](https://nodeweekly.com/link/172339/0a4070b383 "nodevibe.substack.com") — The TLDR: *“Unix domain sockets deliver ~50% lower latency than TCP loopback for Node.js IPC.”*
+
+Pavel Romanov
+
+▶  [The Creator of Bun on Building Bun and Node.js Compatibility](https://nodeweekly.com/link/172340/0a4070b383 "www.youtube.com") — A roughly half hour chat in which Patrick Akil speaks with Jarred Sumner, creator of [Bun](https://nodeweekly.com/link/172341/0a4070b383). “*We intend for Bun to be a drop-in replacement for the existing Node.js ecosystem. Most of our engineering time is not actually spent on new features — it’s spent on Node.js compatibility*”.
+
+React Conferences by GitNation
+
+📄 [How to Build Node.js MCP Servers that Expose Data Resources to LLMs](https://nodeweekly.com/link/172342/0a4070b383) Liran Tal
+
+📄 [The Multi-Repository TypeScript Problem](https://nodeweekly.com/link/172343/0a4070b383) – Solving cross-repo type safety. David Moores
+
+📄 [Logical Assignment Operators in JavaScript: Small Syntax, Big Wins](https://nodeweekly.com/link/172344/0a4070b383) Matt Smith
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/uqibw1avhnsohbwufezt.jpg)](https://nodeweekly.com/link/172345/0a4070b383)
+
+[AudioTee.js: macOS System Audio Capture for Node.js](https://nodeweekly.com/link/172345/0a4070b383 "stronglytyped.uk") — Wrapping around an (included) Swift-powered binary, this captures Mac system audio output and emits it as PCM encoded chunks at regular intervals. [GitHub repo.](https://nodeweekly.com/link/172346/0a4070b383)
+
+Nick Payne
+
+[Transformers.js 3.7: Machine Learning and Models for the Web](https://nodeweekly.com/link/172347/0a4070b383 "github.com") — Brings the ability to run powerful pretrained models in the browser via ONNX, but [you can do server-side inference with Node.js too](https://nodeweekly.com/link/172348/0a4070b383). v3.7 adds Voxtral (speech transcription and audio understanding), LFM2 and ModernBERT support.
+
+Hugging Face
+
+[Find & Fix Async Bugs Fast in Node.js with AppSignal](https://nodeweekly.com/link/172349/0a4070b383 "www.appsignal.com") — AppSignal helps Node.js devs fix bugs and performance issues fast. Easy to set up, a joy to use. [Start your free trial today](https://nodeweekly.com/link/172349/0a4070b383).
+
+AppSignal sponsor
+
+[match-sorter 8.1: Deterministic Best-Match Array Sorting](https://nodeweekly.com/link/172350/0a4070b383 "github.com") — If you have an array of items you want to filter and sort deterministically, match-sorter provides a specified, predictable algorithm. Play with [a live demo here.](https://nodeweekly.com/link/172351/0a4070b383)
+
+Kent C. Dodds
+
+* [Inquirer 12.9](https://nodeweekly.com/link/172352/0a4070b383) – Collection of common interactive terminal app input prompts.
+
+* [Node File Trace 0.30](https://nodeweekly.com/link/172353/0a4070b383) – Dependency tracing utility to determine exactly which files are necessary for an app to run.
+
+* [MongoDB Node.js Driver 6.18](https://nodeweekly.com/link/172354/0a4070b383) – The latest official MongoDB driver lands with its always-thorough release notes.
+
+* [node-rate-limiter-flexible 7.2](https://nodeweekly.com/link/172355/0a4070b383) – Atomic counters and rate limiting tools. Now with [Drizzle ORM support.](https://nodeweekly.com/link/172356/0a4070b383)
+
+* [Ghost 6.0 RC](https://nodeweekly.com/link/172357/0a4070b383) – The popular blogging / publishing platform approaches its next major release.
+
+* [@google-cloud/bigtable 6.2](https://nodeweekly.com/link/172358/0a4070b383) – Node client for Google Cloud Bigtable.
+
+* [Axios 1.11](https://nodeweekly.com/link/172359/0a4070b383) – Long-standing, promise-based isomorphic HTTP client.
+
+* [TIFF 7.1](https://nodeweekly.com/link/172360/0a4070b383) – Pure JS TIFF image decoding library.
+
+* [ESLint v9.32.0](https://nodeweekly.com/link/172361/0a4070b383)
+
+📰 Classifieds
+
+Discover [Platformatic AI-Warp 1.0.0](https://nodeweekly.com/link/172362/0a4070b383) – seamless AI integration, easy provider switching & robust session management!
+
+***
+
+📌 Deploy with [PinMe](https://nodeweekly.com/link/172363/0a4070b383): Host Your Front-End Without Servers. No sign-up. No cost.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+* A look at how a developer [built an email-controlled Game Boy emulator](https://nodeweekly.com/link/172364/0a4070b383) using Node.js and Postmark. [More info here](https://nodeweekly.com/link/172365/0a4070b383) including a link to the code if you want to reproduce it.
+
+* [es-toolkit](https://nodeweekly.com/link/172366/0a4070b383) is now a 100% compatible drop-in replacement for Lodash.
+
+* [The *State of HTML 2025* survey](https://nodeweekly.com/link/172367/0a4070b383) is now open to take – it's not just a survey; you'll probably learn a few things at the same time too.
+
+* A developer [claims the tabs vs spaces debate is over](https://nodeweekly.com/link/172368/0a4070b383) with the majority of languages leaning towards spaces.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
