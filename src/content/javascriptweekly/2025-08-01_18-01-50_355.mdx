@@ -1,0 +1,321 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Jumbo-sized JavaScript for issue 747
+description: Jumbo-sized JavaScript for issue 747
+date: 星期五 06 晚上 八月 1o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/747
+origin_site: https://javascriptweekly.com/issues/747
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Jumbo-sized JavaScript for issue 747" url="https://javascriptweekly.com/issues/747" />
+
+<Detail client:only="react">
+	#​747 — August 1, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/747)
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1238,h_192/e_make_transparent/co_white,e_outline:37/fcshbu9d17nd8smej96j.png)](https://javascriptweekly.com/link/172585/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vxattzy1t1iltl6oscnt.jpg)](https://javascriptweekly.com/link/172645/d076523b1d)
+
+[Observable Notebooks 2.0 Technology Preview](https://javascriptweekly.com/link/172645/d076523b1d "observablehq.com") — The [Observable Framework](https://javascriptweekly.com/link/172646/d076523b1d) and the new [Notebook Kit](https://javascriptweekly.com/link/172653/d076523b1d) are just two parts of a rich ecosystem of [reactive](https://javascriptweekly.com/link/172647/d076523b1d) JavaScript ‘notebook’-style tools for creating data visualizations ([example](https://javascriptweekly.com/link/172648/d076523b1d)) and dashboards, originally created by [Mike Bostock](https://javascriptweekly.com/link/172649/d076523b1d). This v2 release previews a big step forward with a new notebook file format based on HTML and, for the first time, support for true vanilla JavaScript, complete with the ability to import libraries with `import`. [Here’s another neat example](https://javascriptweekly.com/link/172650/d076523b1d) showing off the potential. There are a lot of parts here, so dig in.
+
+Observable, Inc.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f6637e60.png)](https://javascriptweekly.com/link/172585/d076523b1d)
+
+[CodeRabbit’s Free AI Code Reviews in IDE - VS Code, Cursor, Windsurf](https://javascriptweekly.com/link/172585/d076523b1d "coderabbit.link") — Code Rabbit brings AI code reviews to VS Code, Cursor & Windsurf. Get line-by-line reviews, one-click fixes & codebase-aware feedback - all free in your IDE. Seamlessly integrates with git workflows. [Install the extension & start reviewing!](https://javascriptweekly.com/link/172585/d076523b1d)
+
+CodeRabbit sponsor
+
+[The Many JavaScript Runtimes of the Last Decade](https://javascriptweekly.com/link/172630/d076523b1d "buttondown.com") — A fantastic, well-researched look at the myriad of JavaScript runtimes and engines both past and present, from mainstream picks like Node.js and Bun, to cloud platforms and some more obscure ‘honorable mentions’. A perfect way to round out your knowledge of JavaScript’s runtime story.
+
+Whatever, Jamie
+
+[Node.js v22.18 (LTS) Gets Type Stripping by Default](https://javascriptweekly.com/link/172586/d076523b1d "nodejs.org") — We wouldn’t normally feature a minor Node.js LTS release, but this one comes with a big tweak: type stripping/TypeScript support is enabled by default, making `node app.ts` a reality, much as with Bun or Deno.
+
+Antoine du Hamel
+
+💡 [Node v24.5 (Current)](https://javascriptweekly.com/link/172587/d076523b1d) has also been released, with `node:http(s)` now supporting proxies, OpenSSL 3.5, and `--experimental-wasm-modules` unflagged.
+
+**IN BRIEF:**
+
+*   🕹️ LLM whisperer Simon Willison shows off [how he used the new GLM-4.5 Air model](https://javascriptweekly.com/link/172588/d076523b1d) running locally on his MacBook Pro to implement a JavaScript 'Space Invaders' game in one shot. You can [play it here.](https://javascriptweekly.com/link/172589/d076523b1d)
+    
+*   [npm now lets you securely publish npm packages](https://javascriptweekly.com/link/172631/d076523b1d) from CI/CD workflows using OpenID Connect (OIDC) for authentication.
+    
+*   📊 [The Stack Overflow 2025 survey results](https://javascriptweekly.com/link/172590/d076523b1d) are out, and JavaScript sits at #1 in [the most used languages](https://javascriptweekly.com/link/172591/d076523b1d), React holds the [top frontend library spot](https://javascriptweekly.com/link/172592/d076523b1d), with jQuery at number two.
+    
+*   [Tailwind Plus has added support for vanilla JavaScript](https://javascriptweekly.com/link/172632/d076523b1d) – no Vue or React needed.
+    
+
+**RELEASES:**
+
+*   ⭐ [pnpm 10.14](https://javascriptweekly.com/link/172633/d076523b1d) – The alternative, efficient package manager adds the ability to declare a Node.js, Deno or Bun version in `package.json` and have it installed and pinned automatically.
+    
+*   [Node-RED 4.1](https://javascriptweekly.com/link/172594/d076523b1d) – Powerful JS-based low-code flow-based platform for building event-driven apps.
+    
+*   [Ionic 8.7](https://javascriptweekly.com/link/172595/d076523b1d) – Cross-platform mobile app development framework.
+    
+*   [Storybook 9.1](https://javascriptweekly.com/link/172596/d076523b1d) – Frontend component and UI workshop.
+    
+*   [TypeScript 5.9 RC](https://javascriptweekly.com/link/172634/d076523b1d) – The final release is imminent (most likely later today).
+    
+*   [ESLint v9.32.0](https://javascriptweekly.com/link/172597/d076523b1d), [Preact 10.27](https://javascriptweekly.com/link/172598/d076523b1d), [Angular 20.1.4](https://javascriptweekly.com/link/172599/d076523b1d), [Deno 2.4.3](https://javascriptweekly.com/link/172600/d076523b1d), [React 19.1.1](https://javascriptweekly.com/link/172601/d076523b1d)
+    
+
+📖  Articles and Videos
+
+▶  [Zod vs. Valibot: A JS/TS Validator Battle](https://javascriptweekly.com/link/172602/d076523b1d "www.youtube.com") — You know it’s good when the creator of [Zod](https://javascriptweekly.com/link/172635/d076523b1d) comments: _“incredible video. honestly blown away by how succinct and clear you made everything.”_ (12 minutes.)
+
+Jack Herrington
+
+[Compile Svelte 5 in Your Head](https://javascriptweekly.com/link/172636/d076523b1d "lihautan.com") — [Svelte](https://javascriptweekly.com/link/172637/d076523b1d) does things a little differently to most UI frameworks by compiling code to components ahead-of-time, but what is it _actually_ doing at the code level?
+
+Tan Li Hau
+
+[Choosing The Right SaaS Architecture: Multi-Tenant Vs. Single-Tenant](https://javascriptweekly.com/link/172604/d076523b1d "go.clerk.com") — Choosing between multi-tenant and single-tenant? This guide breaks down the tradeoffs clearly.
+
+Clerk sponsor
+
+[Logical Assignment Operators in JavaScript: Small Syntax, Big Wins](https://javascriptweekly.com/link/172638/d076523b1d "allthingssmitty.com") — A handy post if you need to get a grip on your `||=`, `&&=` and `??=`s.
+
+Matt Smith
+
+[Making Sense of the Performance Extensibility API](https://javascriptweekly.com/link/172603/d076523b1d "csswizardry.com") — The Performance Extensibility API allows us to create custom tracks in Chrome DevTools’ Performance panel — here’s how to make use of it.
+
+Harry Roberts
+
+📺 [The Creator of Bun on Building Bun and its Node.js Compatibility](https://javascriptweekly.com/link/172605/d076523b1d) Patrick Akil and Jarred Sumner
+
+📄 [The Multi-Repository TypeScript Problem](https://javascriptweekly.com/link/172606/d076523b1d) – Solving cross-repo type safety. David Moores
+
+📄 [`vi.mock` is a Footgun: Why `vi.spyOn` Should Be Your Default](https://javascriptweekly.com/link/172639/d076523b1d) Brendan McLoughlin
+
+📄 [How to Build 2D Game-Style Physics with Matter.js and React Native Skia](https://javascriptweekly.com/link/172607/d076523b1d) Daniel Friyia (Expo Blog)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/phs2tw0r4n6juyims62n.jpg)](https://javascriptweekly.com/link/172608/d076523b1d)
+
+[Dependency Cruiser 17: A Way to Visualize Dependencies](https://javascriptweekly.com/link/172608/d076523b1d "github.com") — If you want a look at the output, there’s [a whole page of graphs for popular, real world projects](https://javascriptweekly.com/link/172640/d076523b1d) including Chalk, Yarn, and React.
+
+Sander Verweij
+
+[TanStack DB: The Embedded Client Database for TanStack Query](https://javascriptweekly.com/link/172610/d076523b1d "tanstack.com") — One for team React! TanStack DB is an embedded client‑side database that uses _differential dataflow_ to power live, relational queries, sub‑ms incremental updates, and optimistic writes. This post is a great pitch, and the first beta is available now.
+
+Kyle Mathews and Sam Willis
+
+[Connect Performance and Reliability to User Engagement](https://javascriptweekly.com/link/172611/d076523b1d "embrace.io") — With Embrace, see where technical issues cause dropoff, along with attribute correlations to surface affected cohorts.
+
+Embrace sponsor
+
+[AudioTee.js: macOS System Audio Capture for Node.js](https://javascriptweekly.com/link/172612/d076523b1d "stronglytyped.uk") — Wrapping around an (included) Swift-powered binary, this captures Mac system audio output and emits it as PCM encoded chunks at regular intervals. [GitHub repo.](https://javascriptweekly.com/link/172613/d076523b1d)
+
+Nick Payne
+
+*   [Ghost 6.0 RC](https://javascriptweekly.com/link/172614/d076523b1d) – The popular Node.js-powered blogging / publishing platform approaches its next major release.
+    
+*   [Ink 6.1](https://javascriptweekly.com/link/172615/d076523b1d) – Use React to build CLI apps, as used by Claude Code, Gemini CLI, and [many other apps.](https://javascriptweekly.com/link/172616/d076523b1d)
+    
+*   [Cytoscape.js 3.33](https://javascriptweekly.com/link/172617/d076523b1d) – Graph theory/network visualization and analysis library.
+    
+*   [eslint-plugin-vue 10.4](https://javascriptweekly.com/link/172618/d076523b1d) – Official ESLint plugin for Vue.js. ([Homepage](https://javascriptweekly.com/link/172619/d076523b1d).)
+    
+*   [Axios 1.11](https://javascriptweekly.com/link/172620/d076523b1d) – Long-standing, promise-based isomorphic HTTP client.
+    
+*   [InversifyJS 7.7](https://javascriptweekly.com/link/172621/d076523b1d) – Lightweight inversion of control container.
+    
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/172622/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+* * *
+
+🔍 [Discover KeyLines](https://javascriptweekly.com/link/172623/d076523b1d) - a scalable JavaScript graph visualization toolkit that turns complex data into actionable insights.
+
+🎁 Some Bonus Items
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/llwyctid6spenmchjece.jpg)](https://javascriptweekly.com/link/172624/d076523b1d)
+
+*   Google has unveiled a new open-licensed code font called [Google Sans Code.](https://javascriptweekly.com/link/172624/d076523b1d) It has a 'soft' feel to it and is inspired by Google's branding. It's [available on Google Fonts](https://javascriptweekly.com/link/172625/d076523b1d) too, if you want to quickly plug it into a site.
+    
+*   [NPKILL](https://javascriptweekly.com/link/172626/d076523b1d) is a popular tool for digging into, and cleaning up, those heavy `node_modules` folders you've accumulated. v1.0 is nearly here and its author is thinking about [how it could be extended to cleaning up other types of clutter.](https://javascriptweekly.com/link/172627/d076523b1d)
+    
+*   Pete Matsyburka demonstrates [how just a few lines of code can make sites load faster,](https://javascriptweekly.com/link/172641/d076523b1d) thanks to the [Speculation Rules API](https://javascriptweekly.com/link/172642/d076523b1d) (currently only supported by Chromium-based browsers).
+    
+*   Got a big JavaScript project that needs some serious attention from someone experienced? npm creator Isaac Z. Schlueter is [available for hire.](https://javascriptweekly.com/link/172643/d076523b1d)
+    
+*   📺 If you've never thought about what might go into making a text editor, [▶️ Computerphile's latest video will be an eye opener.](https://javascriptweekly.com/link/172644/d076523b1d)
+    
+*   I have to admire someone who [builds their blog using C preprocessor macros.](https://javascriptweekly.com/link/172629/d076523b1d)
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/172652/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​747 — August 1, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/747)
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1238,h_192/e_make_transparent/co_white,e_outline:37/fcshbu9d17nd8smej96j.png)](https://javascriptweekly.com/link/172585/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vxattzy1t1iltl6oscnt.jpg)](https://javascriptweekly.com/link/172645/d076523b1d)
+
+[Observable Notebooks 2.0 Technology Preview](https://javascriptweekly.com/link/172645/d076523b1d "observablehq.com") — The [Observable Framework](https://javascriptweekly.com/link/172646/d076523b1d) and the new [Notebook Kit](https://javascriptweekly.com/link/172653/d076523b1d) are just two parts of a rich ecosystem of [reactive](https://javascriptweekly.com/link/172647/d076523b1d) JavaScript ‘notebook’-style tools for creating data visualizations ([example](https://javascriptweekly.com/link/172648/d076523b1d)) and dashboards, originally created by [Mike Bostock](https://javascriptweekly.com/link/172649/d076523b1d). This v2 release previews a big step forward with a new notebook file format based on HTML and, for the first time, support for true vanilla JavaScript, complete with the ability to import libraries with `import`. [Here’s another neat example](https://javascriptweekly.com/link/172650/d076523b1d) showing off the potential. There are a lot of parts here, so dig in.
+
+Observable, Inc.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f6637e60.png)](https://javascriptweekly.com/link/172585/d076523b1d)
+
+[CodeRabbit’s Free AI Code Reviews in IDE - VS Code, Cursor, Windsurf](https://javascriptweekly.com/link/172585/d076523b1d "coderabbit.link") — Code Rabbit brings AI code reviews to VS Code, Cursor & Windsurf. Get line-by-line reviews, one-click fixes & codebase-aware feedback - all free in your IDE. Seamlessly integrates with git workflows. [Install the extension & start reviewing!](https://javascriptweekly.com/link/172585/d076523b1d)
+
+CodeRabbit sponsor
+
+[The Many JavaScript Runtimes of the Last Decade](https://javascriptweekly.com/link/172630/d076523b1d "buttondown.com") — A fantastic, well-researched look at the myriad of JavaScript runtimes and engines both past and present, from mainstream picks like Node.js and Bun, to cloud platforms and some more obscure ‘honorable mentions’. A perfect way to round out your knowledge of JavaScript’s runtime story.
+
+Whatever, Jamie
+
+[Node.js v22.18 (LTS) Gets Type Stripping by Default](https://javascriptweekly.com/link/172586/d076523b1d "nodejs.org") — We wouldn’t normally feature a minor Node.js LTS release, but this one comes with a big tweak: type stripping/TypeScript support is enabled by default, making `node app.ts` a reality, much as with Bun or Deno.
+
+Antoine du Hamel
+
+💡 [Node v24.5 (Current)](https://javascriptweekly.com/link/172587/d076523b1d) has also been released, with `node:http(s)` now supporting proxies, OpenSSL 3.5, and `--experimental-wasm-modules` unflagged.
+
+**IN BRIEF:**
+
+* 🕹️ LLM whisperer Simon Willison shows off [how he used the new GLM-4.5 Air model](https://javascriptweekly.com/link/172588/d076523b1d) running locally on his MacBook Pro to implement a JavaScript 'Space Invaders' game in one shot. You can [play it here.](https://javascriptweekly.com/link/172589/d076523b1d)
+
+* [npm now lets you securely publish npm packages](https://javascriptweekly.com/link/172631/d076523b1d) from CI/CD workflows using OpenID Connect (OIDC) for authentication.
+
+* 📊 [The Stack Overflow 2025 survey results](https://javascriptweekly.com/link/172590/d076523b1d) are out, and JavaScript sits at #1 in [the most used languages](https://javascriptweekly.com/link/172591/d076523b1d), React holds the [top frontend library spot](https://javascriptweekly.com/link/172592/d076523b1d), with jQuery at number two.
+
+* [Tailwind Plus has added support for vanilla JavaScript](https://javascriptweekly.com/link/172632/d076523b1d) – no Vue or React needed.
+
+**RELEASES:**
+
+* ⭐ [pnpm 10.14](https://javascriptweekly.com/link/172633/d076523b1d) – The alternative, efficient package manager adds the ability to declare a Node.js, Deno or Bun version in `package.json` and have it installed and pinned automatically.
+
+* [Node-RED 4.1](https://javascriptweekly.com/link/172594/d076523b1d) – Powerful JS-based low-code flow-based platform for building event-driven apps.
+
+* [Ionic 8.7](https://javascriptweekly.com/link/172595/d076523b1d) – Cross-platform mobile app development framework.
+
+* [Storybook 9.1](https://javascriptweekly.com/link/172596/d076523b1d) – Frontend component and UI workshop.
+
+* [TypeScript 5.9 RC](https://javascriptweekly.com/link/172634/d076523b1d) – The final release is imminent (most likely later today).
+
+* [ESLint v9.32.0](https://javascriptweekly.com/link/172597/d076523b1d), [Preact 10.27](https://javascriptweekly.com/link/172598/d076523b1d), [Angular 20.1.4](https://javascriptweekly.com/link/172599/d076523b1d), [Deno 2.4.3](https://javascriptweekly.com/link/172600/d076523b1d), [React 19.1.1](https://javascriptweekly.com/link/172601/d076523b1d)
+
+📖  Articles and Videos
+
+▶  [Zod vs. Valibot: A JS/TS Validator Battle](https://javascriptweekly.com/link/172602/d076523b1d "www.youtube.com") — You know it’s good when the creator of [Zod](https://javascriptweekly.com/link/172635/d076523b1d) comments: *“incredible video. honestly blown away by how succinct and clear you made everything.”* (12 minutes.)
+
+Jack Herrington
+
+[Compile Svelte 5 in Your Head](https://javascriptweekly.com/link/172636/d076523b1d "lihautan.com") — [Svelte](https://javascriptweekly.com/link/172637/d076523b1d) does things a little differently to most UI frameworks by compiling code to components ahead-of-time, but what is it *actually* doing at the code level?
+
+Tan Li Hau
+
+[Choosing The Right SaaS Architecture: Multi-Tenant Vs. Single-Tenant](https://javascriptweekly.com/link/172604/d076523b1d "go.clerk.com") — Choosing between multi-tenant and single-tenant? This guide breaks down the tradeoffs clearly.
+
+Clerk sponsor
+
+[Logical Assignment Operators in JavaScript: Small Syntax, Big Wins](https://javascriptweekly.com/link/172638/d076523b1d "allthingssmitty.com") — A handy post if you need to get a grip on your `||=`, `&&=` and `??=`s.
+
+Matt Smith
+
+[Making Sense of the Performance Extensibility API](https://javascriptweekly.com/link/172603/d076523b1d "csswizardry.com") — The Performance Extensibility API allows us to create custom tracks in Chrome DevTools’ Performance panel — here’s how to make use of it.
+
+Harry Roberts
+
+📺 [The Creator of Bun on Building Bun and its Node.js Compatibility](https://javascriptweekly.com/link/172605/d076523b1d) Patrick Akil and Jarred Sumner
+
+📄 [The Multi-Repository TypeScript Problem](https://javascriptweekly.com/link/172606/d076523b1d) – Solving cross-repo type safety. David Moores
+
+📄 [`vi.mock` is a Footgun: Why `vi.spyOn` Should Be Your Default](https://javascriptweekly.com/link/172639/d076523b1d) Brendan McLoughlin
+
+📄 [How to Build 2D Game-Style Physics with Matter.js and React Native Skia](https://javascriptweekly.com/link/172607/d076523b1d) Daniel Friyia (Expo Blog)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/phs2tw0r4n6juyims62n.jpg)](https://javascriptweekly.com/link/172608/d076523b1d)
+
+[Dependency Cruiser 17: A Way to Visualize Dependencies](https://javascriptweekly.com/link/172608/d076523b1d "github.com") — If you want a look at the output, there’s [a whole page of graphs for popular, real world projects](https://javascriptweekly.com/link/172640/d076523b1d) including Chalk, Yarn, and React.
+
+Sander Verweij
+
+[TanStack DB: The Embedded Client Database for TanStack Query](https://javascriptweekly.com/link/172610/d076523b1d "tanstack.com") — One for team React! TanStack DB is an embedded client‑side database that uses *differential dataflow* to power live, relational queries, sub‑ms incremental updates, and optimistic writes. This post is a great pitch, and the first beta is available now.
+
+Kyle Mathews and Sam Willis
+
+[Connect Performance and Reliability to User Engagement](https://javascriptweekly.com/link/172611/d076523b1d "embrace.io") — With Embrace, see where technical issues cause dropoff, along with attribute correlations to surface affected cohorts.
+
+Embrace sponsor
+
+[AudioTee.js: macOS System Audio Capture for Node.js](https://javascriptweekly.com/link/172612/d076523b1d "stronglytyped.uk") — Wrapping around an (included) Swift-powered binary, this captures Mac system audio output and emits it as PCM encoded chunks at regular intervals. [GitHub repo.](https://javascriptweekly.com/link/172613/d076523b1d)
+
+Nick Payne
+
+* [Ghost 6.0 RC](https://javascriptweekly.com/link/172614/d076523b1d) – The popular Node.js-powered blogging / publishing platform approaches its next major release.
+
+* [Ink 6.1](https://javascriptweekly.com/link/172615/d076523b1d) – Use React to build CLI apps, as used by Claude Code, Gemini CLI, and [many other apps.](https://javascriptweekly.com/link/172616/d076523b1d)
+
+* [Cytoscape.js 3.33](https://javascriptweekly.com/link/172617/d076523b1d) – Graph theory/network visualization and analysis library.
+
+* [eslint-plugin-vue 10.4](https://javascriptweekly.com/link/172618/d076523b1d) – Official ESLint plugin for Vue.js. ([Homepage](https://javascriptweekly.com/link/172619/d076523b1d).)
+
+* [Axios 1.11](https://javascriptweekly.com/link/172620/d076523b1d) – Long-standing, promise-based isomorphic HTTP client.
+
+* [InversifyJS 7.7](https://javascriptweekly.com/link/172621/d076523b1d) – Lightweight inversion of control container.
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/172622/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+***
+
+🔍 [Discover KeyLines](https://javascriptweekly.com/link/172623/d076523b1d) - a scalable JavaScript graph visualization toolkit that turns complex data into actionable insights.
+
+🎁 Some Bonus Items
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/llwyctid6spenmchjece.jpg)](https://javascriptweekly.com/link/172624/d076523b1d)
+
+* Google has unveiled a new open-licensed code font called [Google Sans Code.](https://javascriptweekly.com/link/172624/d076523b1d) It has a 'soft' feel to it and is inspired by Google's branding. It's [available on Google Fonts](https://javascriptweekly.com/link/172625/d076523b1d) too, if you want to quickly plug it into a site.
+
+* [NPKILL](https://javascriptweekly.com/link/172626/d076523b1d) is a popular tool for digging into, and cleaning up, those heavy `node_modules` folders you've accumulated. v1.0 is nearly here and its author is thinking about [how it could be extended to cleaning up other types of clutter.](https://javascriptweekly.com/link/172627/d076523b1d)
+
+* Pete Matsyburka demonstrates [how just a few lines of code can make sites load faster,](https://javascriptweekly.com/link/172641/d076523b1d) thanks to the [Speculation Rules API](https://javascriptweekly.com/link/172642/d076523b1d) (currently only supported by Chromium-based browsers).
+
+* Got a big JavaScript project that needs some serious attention from someone experienced? npm creator Isaac Z. Schlueter is [available for hire.](https://javascriptweekly.com/link/172643/d076523b1d)
+
+* 📺 If you've never thought about what might go into making a text editor, [▶️ Computerphile's latest video will be an eye opener.](https://javascriptweekly.com/link/172644/d076523b1d)
+
+* I have to admire someone who [builds their blog using C preprocessor macros.](https://javascriptweekly.com/link/172629/d076523b1d)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/172652/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
