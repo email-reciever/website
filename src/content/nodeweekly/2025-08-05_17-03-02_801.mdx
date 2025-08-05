@@ -1,0 +1,272 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: How JSON.stringify is about to get much faster
+description: How JSON.stringify is about to get much faster
+date: 星期二 05 下午 八月 5o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/589
+origin_site: https://nodeweekly.com/issues/589
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="How JSON.stringify is about to get much faster" url="https://nodeweekly.com/issues/589" />
+
+<Detail client:only="react">
+	#​589 — August 5, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/589)
+
+☀️ **We're taking next week off,** so this will be the last issue until Tuesday, August 19. Just a little summer vacation.  
+\_\_  
+_Peter Cooper, your editor_
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1238,h_192/e_make_transparent/co_white,e_outline:37/fcshbu9d17nd8smej96j.png)](https://nodeweekly.com/link/172655/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wbunvxfhalm0lsmzrnwd.jpg)](https://nodeweekly.com/link/172656/0a4070b383)
+
+[How V8 is Making `JSON.stringify` More Than Twice as Fast](https://nodeweekly.com/link/172656/0a4070b383 "v8.dev") — The V8 team has made `JSON.stringify` over twice as fast, giving your apps an automatic performance boost for common tasks like API responses and caching, at least once Node upgrades to V8 13.8 (Node 24 uses V8 13.6). This article unpacks the low-level work behind the speedup.
+
+Patrick Thier (V8)
+
+[Node.js v24.5.0 (Current) Released](https://nodeweekly.com/link/172657/0a4070b383 "nodejs.org") — The cutting edge Node release line gets an update to OpenSSL 3.5, `--experimental-wasm-modules` is now unflagged, and `node:http` and `node:https` now support proxies.
+
+Antoine du Hamel
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/6e3b2159.png)](https://nodeweekly.com/link/172655/0a4070b383)
+
+[CodeRabbit’s Free AI Code Reviews in IDE - VS Code, Cursor, Windsurf](https://nodeweekly.com/link/172655/0a4070b383 "coderabbit.link") — Code Rabbit brings AI code reviews to VS Code, Cursor & Windsurf. Get line-by-line reviews, one-click fixes & codebase-aware feedback - all free in your IDE. Seamlessly integrates with git workflows. [Install the extension & start reviewing!](https://nodeweekly.com/link/172655/0a4070b383)
+
+CodeRabbit sponsor
+
+[Announcing TypeScript 5.9](https://nodeweekly.com/link/172658/0a4070b383 "devblogs.microsoft.com") — v5.9 is one of TypeScript's gentler evolutionary steps, with no big features, but we do get [support for `import defer`](https://nodeweekly.com/link/172659/0a4070b383), a [new `--module node20`](https://nodeweekly.com/link/172660/0a4070b383) option, and ‘expandable hovers’ in editors like VS Code to see expanded type information. We also learn a little about TypeScript 6.0 which will act as a ‘transition point’ to get prepared for [the Go-powered ‘native port’ of TypeScript](https://nodeweekly.com/link/172661/0a4070b383) which will become TypeScript 7.0.
+
+Microsoft
+
+**IN BRIEF:**
+
+*   🔒 [npm now lets you securely publish npm packages](https://nodeweekly.com/link/172662/0a4070b383) from CI/CD workflows using OpenID Connect (OIDC) for authentication.
+    
+*   [NPKILL](https://nodeweekly.com/link/172663/0a4070b383) is a popular tool for digging into, and cleaning up, those heavy `node_modules` folders you've accumulated. v1.0 is nearly here and its author is thinking about [how it could be extended to cleaning up other types of clutter.](https://nodeweekly.com/link/172664/0a4070b383)
+    
+*   npm creator Isaac Z. Schlueter is [available for hire](https://nodeweekly.com/link/172665/0a4070b383) and [his homepage](https://nodeweekly.com/link/172666/0a4070b383) implies he might no longer be working at [vlt.](https://nodeweekly.com/link/172667/0a4070b383)
+    
+*   We featured [Modern Node.js Patterns for 2025](https://nodeweekly.com/link/172668/0a4070b383) over a month ago, but it seems to be blowing up all over social media right now, so is worth a look if you missed it at the time. It gives a good roundup of some of Node's more recently added features.
+    
+
+[Node.js v22.18 (LTS) Gets Type Stripping by Default](https://nodeweekly.com/link/172669/0a4070b383 "nodejs.org") — A big tweak for an LTS release: type stripping/TypeScript support is enabled by default, making `node app.ts` a reality, much as with Bun or Deno. It is, however, still considered ‘experimental.’
+
+Antoine du Hamel
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/frnw0j3fthdxrzn6fbvf.jpg)](https://nodeweekly.com/link/172670/0a4070b383)
+
+[pnpm 10.14: Adds Support for JavaScript Runtime Installation](https://nodeweekly.com/link/172670/0a4070b383 "pnpm.io") — The popular, efficiency-focused package installer now lets you define Node.js, Deno or Bun versions in `package.json` and `pnpm` will then download and pin them automatically.
+
+Zoltan Kochan
+
+[Level Up Your Auth for Not Only Your Users, but Also Your AI Agents](https://nodeweekly.com/link/172671/0a4070b383 "www.auth0.com") — Auth0 is a full IdP that provides robust security and control over the user experience, from sign-up flows to advanced authorization.
+
+Auth0 sponsor
+
+[Dependency Cruiser 17: A Way to Visualize Dependencies](https://nodeweekly.com/link/172672/0a4070b383 "github.com") — If you want a look at the output, there’s [a whole page of graphs for popular, real world projects](https://nodeweekly.com/link/172673/0a4070b383) including Chalk, Yarn, and React.
+
+Sander Verweij
+
+[pgline: Another Fast Postgres Node.js Driver](https://nodeweekly.com/link/172674/0a4070b383 "github.com") — A fresh attempt at creating an even faster Postgres driver for Node, written in TypeScript. [A quick benchmark is provided](https://nodeweekly.com/link/172675/0a4070b383) showing its prowess against other options.
+
+stanNthe5
+
+[Express Slow Down 3.0: Slow Down Repeated Requests](https://nodeweekly.com/link/172676/0a4070b383 "github.com") — For when you don’t want Express to be quite _so_ ‘express.’ Use to slow repeated requests to public APIs and/or endpoints such as password resets.
+
+Express Rate Limit
+
+*   [aws-lambda-fastify 6.0](https://nodeweekly.com/link/172677/0a4070b383) – Run Fastify apps on AWS Lambda more quickly using Fastify's `inject` function.
+    
+*   [ioredis 5.7](https://nodeweekly.com/link/172678/0a4070b383) – Performance-focused, full-featured Redis client library.
+    
+*   [node-redis 5.8](https://nodeweekly.com/link/172679/0a4070b383) – Sticking to Redis, the official Node.js Redis client library has also just received an update.
+    
+*   [CsvToMarkdownTable 1.6](https://nodeweekly.com/link/172680/0a4070b383) – Simple CSV to Markdown table converter.
+    
+*   🤖 [OpenAI Node 5.11](https://nodeweekly.com/link/172681/0a4070b383) – The official Node library for OpenAI's API.
+    
+*   [Mongoose 8.17](https://nodeweekly.com/link/172682/0a4070b383) – Popular MongoDB object modeling library.
+    
+*   [InversifyJS 7.7](https://nodeweekly.com/link/172683/0a4070b383) – Lightweight inversion of control container.
+    
+*   [Undici 7.13](https://nodeweekly.com/link/172684/0a4070b383) – Node's powerful HTTP client library.
+    
+*   [Chalk 5.5](https://nodeweekly.com/link/172685/0a4070b383) – Popular terminal string styling library.
+    
+*   [noblox.js 7.0](https://nodeweekly.com/link/172686/0a4070b383) – A Node API wrapper for Roblox.
+    
+*   [node-gtk 1.0](https://nodeweekly.com/link/172687/0a4070b383) – GTK+ bindings for Node.
+    
+*   [Node.js Adapter for Hono v1.18](https://nodeweekly.com/link/172688/0a4070b383)
+    
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qfn6jtpzkauvkbqjqfgi.jpg)](https://nodeweekly.com/link/172689/0a4070b383)
+
+*   ⚖️ The Deno team has put together [▶️ a brief video summarizing the Deno vs Oracle JavaScript™ trademark fight.](https://nodeweekly.com/link/172689/0a4070b383) You can also learn a bit more about it in [this open letter to Oracle](https://nodeweekly.com/link/172690/0a4070b383) asking it to 'free JavaScript.'
+    
+*   [A quick update of 'what's new in ViteLand'](https://nodeweekly.com/link/172691/0a4070b383), including Vite 7.0, Rolldown improvements, Oxlint, Vitest, and other tools in the Vite space.
+    
+*   ['Compile Svelte 5 in your head'](https://nodeweekly.com/link/172692/0a4070b383) provides a neat look under the hood of what Svelte's compiler is actually doing to your code.
+    
+*   One developer predicts [Rust, Python and TypeScript will become a trifecta of dominant languages](https://nodeweekly.com/link/172693/0a4070b383) going forward.
+    
+
+As mentioned at the top of the issue, we're taking next week off, so we'll see you again on Tuesday, August 19. Feel free to hit reply and send in your submissions for the next issue though!
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​589 — August 5, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/589)
+
+☀️ **We're taking next week off,** so this will be the last issue until Tuesday, August 19. Just a little summer vacation.\
+\_\_\
+*Peter Cooper, your editor*
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1238,h_192/e_make_transparent/co_white,e_outline:37/fcshbu9d17nd8smej96j.png)](https://nodeweekly.com/link/172655/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wbunvxfhalm0lsmzrnwd.jpg)](https://nodeweekly.com/link/172656/0a4070b383)
+
+[How V8 is Making `JSON.stringify` More Than Twice as Fast](https://nodeweekly.com/link/172656/0a4070b383 "v8.dev") — The V8 team has made `JSON.stringify` over twice as fast, giving your apps an automatic performance boost for common tasks like API responses and caching, at least once Node upgrades to V8 13.8 (Node 24 uses V8 13.6). This article unpacks the low-level work behind the speedup.
+
+Patrick Thier (V8)
+
+[Node.js v24.5.0 (Current) Released](https://nodeweekly.com/link/172657/0a4070b383 "nodejs.org") — The cutting edge Node release line gets an update to OpenSSL 3.5, `--experimental-wasm-modules` is now unflagged, and `node:http` and `node:https` now support proxies.
+
+Antoine du Hamel
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/6e3b2159.png)](https://nodeweekly.com/link/172655/0a4070b383)
+
+[CodeRabbit’s Free AI Code Reviews in IDE - VS Code, Cursor, Windsurf](https://nodeweekly.com/link/172655/0a4070b383 "coderabbit.link") — Code Rabbit brings AI code reviews to VS Code, Cursor & Windsurf. Get line-by-line reviews, one-click fixes & codebase-aware feedback - all free in your IDE. Seamlessly integrates with git workflows. [Install the extension & start reviewing!](https://nodeweekly.com/link/172655/0a4070b383)
+
+CodeRabbit sponsor
+
+[Announcing TypeScript 5.9](https://nodeweekly.com/link/172658/0a4070b383 "devblogs.microsoft.com") — v5.9 is one of TypeScript's gentler evolutionary steps, with no big features, but we do get [support for `import defer`](https://nodeweekly.com/link/172659/0a4070b383), a [new `--module node20`](https://nodeweekly.com/link/172660/0a4070b383) option, and ‘expandable hovers’ in editors like VS Code to see expanded type information. We also learn a little about TypeScript 6.0 which will act as a ‘transition point’ to get prepared for [the Go-powered ‘native port’ of TypeScript](https://nodeweekly.com/link/172661/0a4070b383) which will become TypeScript 7.0.
+
+Microsoft
+
+**IN BRIEF:**
+
+* 🔒 [npm now lets you securely publish npm packages](https://nodeweekly.com/link/172662/0a4070b383) from CI/CD workflows using OpenID Connect (OIDC) for authentication.
+
+* [NPKILL](https://nodeweekly.com/link/172663/0a4070b383) is a popular tool for digging into, and cleaning up, those heavy `node_modules` folders you've accumulated. v1.0 is nearly here and its author is thinking about [how it could be extended to cleaning up other types of clutter.](https://nodeweekly.com/link/172664/0a4070b383)
+
+* npm creator Isaac Z. Schlueter is [available for hire](https://nodeweekly.com/link/172665/0a4070b383) and [his homepage](https://nodeweekly.com/link/172666/0a4070b383) implies he might no longer be working at [vlt.](https://nodeweekly.com/link/172667/0a4070b383)
+
+* We featured [Modern Node.js Patterns for 2025](https://nodeweekly.com/link/172668/0a4070b383) over a month ago, but it seems to be blowing up all over social media right now, so is worth a look if you missed it at the time. It gives a good roundup of some of Node's more recently added features.
+
+[Node.js v22.18 (LTS) Gets Type Stripping by Default](https://nodeweekly.com/link/172669/0a4070b383 "nodejs.org") — A big tweak for an LTS release: type stripping/TypeScript support is enabled by default, making `node app.ts` a reality, much as with Bun or Deno. It is, however, still considered ‘experimental.’
+
+Antoine du Hamel
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/frnw0j3fthdxrzn6fbvf.jpg)](https://nodeweekly.com/link/172670/0a4070b383)
+
+[pnpm 10.14: Adds Support for JavaScript Runtime Installation](https://nodeweekly.com/link/172670/0a4070b383 "pnpm.io") — The popular, efficiency-focused package installer now lets you define Node.js, Deno or Bun versions in `package.json` and `pnpm` will then download and pin them automatically.
+
+Zoltan Kochan
+
+[Level Up Your Auth for Not Only Your Users, but Also Your AI Agents](https://nodeweekly.com/link/172671/0a4070b383 "www.auth0.com") — Auth0 is a full IdP that provides robust security and control over the user experience, from sign-up flows to advanced authorization.
+
+Auth0 sponsor
+
+[Dependency Cruiser 17: A Way to Visualize Dependencies](https://nodeweekly.com/link/172672/0a4070b383 "github.com") — If you want a look at the output, there’s [a whole page of graphs for popular, real world projects](https://nodeweekly.com/link/172673/0a4070b383) including Chalk, Yarn, and React.
+
+Sander Verweij
+
+[pgline: Another Fast Postgres Node.js Driver](https://nodeweekly.com/link/172674/0a4070b383 "github.com") — A fresh attempt at creating an even faster Postgres driver for Node, written in TypeScript. [A quick benchmark is provided](https://nodeweekly.com/link/172675/0a4070b383) showing its prowess against other options.
+
+stanNthe5
+
+[Express Slow Down 3.0: Slow Down Repeated Requests](https://nodeweekly.com/link/172676/0a4070b383 "github.com") — For when you don’t want Express to be quite *so* ‘express.’ Use to slow repeated requests to public APIs and/or endpoints such as password resets.
+
+Express Rate Limit
+
+* [aws-lambda-fastify 6.0](https://nodeweekly.com/link/172677/0a4070b383) – Run Fastify apps on AWS Lambda more quickly using Fastify's `inject` function.
+
+* [ioredis 5.7](https://nodeweekly.com/link/172678/0a4070b383) – Performance-focused, full-featured Redis client library.
+
+* [node-redis 5.8](https://nodeweekly.com/link/172679/0a4070b383) – Sticking to Redis, the official Node.js Redis client library has also just received an update.
+
+* [CsvToMarkdownTable 1.6](https://nodeweekly.com/link/172680/0a4070b383) – Simple CSV to Markdown table converter.
+
+* 🤖 [OpenAI Node 5.11](https://nodeweekly.com/link/172681/0a4070b383) – The official Node library for OpenAI's API.
+
+* [Mongoose 8.17](https://nodeweekly.com/link/172682/0a4070b383) – Popular MongoDB object modeling library.
+
+* [InversifyJS 7.7](https://nodeweekly.com/link/172683/0a4070b383) – Lightweight inversion of control container.
+
+* [Undici 7.13](https://nodeweekly.com/link/172684/0a4070b383) – Node's powerful HTTP client library.
+
+* [Chalk 5.5](https://nodeweekly.com/link/172685/0a4070b383) – Popular terminal string styling library.
+
+* [noblox.js 7.0](https://nodeweekly.com/link/172686/0a4070b383) – A Node API wrapper for Roblox.
+
+* [node-gtk 1.0](https://nodeweekly.com/link/172687/0a4070b383) – GTK+ bindings for Node.
+
+* [Node.js Adapter for Hono v1.18](https://nodeweekly.com/link/172688/0a4070b383)
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qfn6jtpzkauvkbqjqfgi.jpg)](https://nodeweekly.com/link/172689/0a4070b383)
+
+* ⚖️ The Deno team has put together [▶️ a brief video summarizing the Deno vs Oracle JavaScript™ trademark fight.](https://nodeweekly.com/link/172689/0a4070b383) You can also learn a bit more about it in [this open letter to Oracle](https://nodeweekly.com/link/172690/0a4070b383) asking it to 'free JavaScript.'
+
+* [A quick update of 'what's new in ViteLand'](https://nodeweekly.com/link/172691/0a4070b383), including Vite 7.0, Rolldown improvements, Oxlint, Vitest, and other tools in the Vite space.
+
+* ['Compile Svelte 5 in your head'](https://nodeweekly.com/link/172692/0a4070b383) provides a neat look under the hood of what Svelte's compiler is actually doing to your code.
+
+* One developer predicts [Rust, Python and TypeScript will become a trifecta of dominant languages](https://nodeweekly.com/link/172693/0a4070b383) going forward.
+
+As mentioned at the top of the issue, we're taking next week off, so we'll see you again on Tuesday, August 19. Feel free to hit reply and send in your submissions for the next issue though!
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
