@@ -1,0 +1,242 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Jack Herrington's tRPC vs oRPC battle
+description: Jack Herrington's tRPC vs oRPC battle
+date: 星期三 06 晚上 八月 6o 2025
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/<!--%20\id%20-->
+origin_site: https://react.statuscode.com/issues/<!--%20\id%20-->
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Jack Herrington's tRPC vs oRPC battle" url="https://react.statuscode.com/issues/<!--%20\id%20-->" />
+
+<Detail client:only="react">
+	#​439 — August 6, 2025
+
+[Read on the Web](https://react.statuscode.com/issues/&lt;!--%20\id%20-->)
+
+☀️ **We're taking next week off,** so this will be the last issue until Wednesday, August 20. Just a little summer vacation.  
+\_\_  
+_Peter Cooper, your editor_
+
+Together with 
+
+[![Embrace](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_245/e_make_transparent/co_white,e_outline:15/pbgm3swuyhvj6v43zpgj.png)](https://react.statuscode.com/link/172778/5d0bbb4a61)
+
+⚛️ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fkrhm7ylolnskggpc1v9.jpg)](https://react.statuscode.com/link/172779/5d0bbb4a61)
+
+["JavaScript Isn’t the Problem, Replacing the Browser Was"](https://react.statuscode.com/link/172779/5d0bbb4a61 "rwsdk.com") — The creator of [RedwoodSDK](https://react.statuscode.com/link/172780/5d0bbb4a61), now pitching itself as a React framework for building server-side apps on Cloudflare, suggests SPA-style development was a compromise to work around platform limitations, but now a server-first approach makes good sense.
+
+Peter Pistorius
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f49a8009.png)](https://react.statuscode.com/link/172778/5d0bbb4a61)
+
+[Embrace: User-Focused Observability for Mobile and Web](https://react.statuscode.com/link/172778/5d0bbb4a61 "embrace.io") — Check out User Journeys, the best way to connect performance to user engagement in your web apps. Track any user flow without needing to add more instrumentation, and prioritize issues based on how they impact completion, abandon, and error rates.
+
+Embrace sponsor
+
+[Building a Full-Stack App with React and Aspire](https://react.statuscode.com/link/172781/5d0bbb4a61 "devblogs.microsoft.com") — [Aspire](https://react.statuscode.com/link/172782/5d0bbb4a61) is a .NET-based toolchain for building distributed apps, and this is a walkthrough of using it to build a C#-backed React app.
+
+Sayed Ibrahim Hashimi (Microsoft)
+
+**IN BRIEF:**
+
+*   [TypeScript 5.9 has been released](https://react.statuscode.com/link/172783/5d0bbb4a61) – it's a relatively gentle release, but there is now [support for `import defer`](https://react.statuscode.com/link/172784/5d0bbb4a61), as well as 'expandable hovers' in editors like VS Code to see expanded type information.
+    
+*   ⭐ Last week, we mentioned Jack Herrington's [▶️ Zod vs Valibot battle](https://react.statuscode.com/link/172785/5d0bbb4a61) – he's back with a new heads-up, [▶️ pitching tRPC against oRPC in a type-safe API battle.](https://react.statuscode.com/link/172786/5d0bbb4a61)
+    
+*   [Vercel has unveiled AI SDK 5](https://react.statuscode.com/link/172787/5d0bbb4a61), the latest version of its AI app toolkit for JavaScript and TypeScript.
+    
+*   Minimal React framework [Waku has adopted Vite's official RSC plugin `@vitejs/plugin-rsc`.](https://react.statuscode.com/link/172788/5d0bbb4a61)
+    
+*   A curious attempt to [reproduce the macOS UI with React](https://react.statuscode.com/link/172789/5d0bbb4a61) ([code](https://react.statuscode.com/link/172790/5d0bbb4a61)).
+    
+
+[Unlocking Web Workers with React: A Step-by-Step Guide](https://react.statuscode.com/link/172791/5d0bbb4a61 "www.rahuljuliato.com") — [Web Workers](https://react.statuscode.com/link/172792/5d0bbb4a61) provide a way to run certain code in background threads, rather than blocking things on the main thread. This adds some complexity and isn’t always a best first step, but it’s worth knowing how it works.
+
+Rahul M. Juliato
+
+[React Query Selectors, Supercharged](https://react.statuscode.com/link/172793/5d0bbb4a61 "tkdodo.eu") — The latest in Dominik’s [epic series](https://react.statuscode.com/link/172794/5d0bbb4a61) of React Query articles.
+
+Dominik Dorfmeister (TkDodo)
+
+[How Teams Like Cursor Stop Bots from Abusing Free Trials](https://react.statuscode.com/link/172795/5d0bbb4a61 "workos.com") — WorkOS Radar blocks bots, fraud, and abuse using device fingerprinting, brute force detection, and real-time defenses.
+
+WorkOS sponsor
+
+📄 [Component Testing with Storybook 9 and Vitest](https://react.statuscode.com/link/172796/5d0bbb4a61) Dominic Nguyen (Storybook)
+
+📄 [How to Build An AI Assistant with LangGraph, Next.js, and Auth0](https://react.statuscode.com/link/172797/5d0bbb4a61) Deepu K Sasidharan (Auth0)
+
+📄 [Introducing Stan: A New State Management Library for TypeScript](https://react.statuscode.com/link/172798/5d0bbb4a61) Rafał Krupiński
+
+📄 [We’ve Moved From TanStack Start to Next.js: Here's Why](https://react.statuscode.com/link/172799/5d0bbb4a61) LLM Gateway
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/snqisw3x7i32l442twbj.jpg)](https://react.statuscode.com/link/172800/5d0bbb4a61)
+
+[FlashList v2: A High Performance List for React Native](https://react.statuscode.com/link/172800/5d0bbb4a61 "shopify.engineering") — A highly optimized list approach using view recycling to ensure smooth scrolling without visible blank areas, with v2 being a ground-up rewrite based on React Native’s _New Architecture_. [Docs site](https://react.statuscode.com/link/172801/5d0bbb4a61) and [GitHub repo.](https://react.statuscode.com/link/172802/5d0bbb4a61)
+
+Shopify
+
+🔊 [React Native Audio API](https://react.statuscode.com/link/172803/5d0bbb4a61 "docs.swmansion.com") — Get the power and flexibility of the Web Audio API in your React Native apps, whether on iOS, Android or the Web. It's explained in [much more detail in this blog post.](https://react.statuscode.com/link/172804/5d0bbb4a61)
+
+Software Mansion
+
+🗓️ [React-Date-Picker 12.0](https://react.statuscode.com/link/172805/5d0bbb4a61 "projects.wojtekmaj.pl") — A long-standing straightforward date-picking component. Note that it’s now ESM-only.
+
+Wojciech Maj
+
+*   [Relay 20.1](https://react.statuscode.com/link/172806/5d0bbb4a61) – Facebook's GraphQL-powered React framework.
+    
+*   [Storybook 9.1](https://react.statuscode.com/link/172807/5d0bbb4a61) – The frontend component and UI workshop.
+    
+*   [React Stripe.js 3.9](https://react.statuscode.com/link/172808/5d0bbb4a61) – Components for Stripe.js and Stripe Elements.
+    
+*   [react-json-view 1.27](https://react.statuscode.com/link/172809/5d0bbb4a61) – JSON viewer for React ([demo](https://react.statuscode.com/link/172810/5d0bbb4a61)).
+    
+
+📰 Classifieds
+
+⚡️Add lightning-fast barcode & QR scanning to your web app with [STRICH](https://react.statuscode.com/link/172811/5d0bbb4a61), a sleek JS library. Clear, predictable pricing. [Free trial and demo!](https://react.statuscode.com/link/172811/5d0bbb4a61)
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+*   [There's a quick update of 'what's new in ViteLand'](https://react.statuscode.com/link/172812/5d0bbb4a61), including Vite 7.0, Rolldown improvements, Oxlint, Vitest, and other tools in the Vite space.
+    
+*   📊 Patrick Thier of the V8 team has written about [some significant performance improvements made to `JSON.stringify`](https://react.statuscode.com/link/172813/5d0bbb4a61) in V8 13.8 (available in Chrome 138, and a future version of Node.js).
+    
+*   [Node.js v22.18.0 (LTS)](https://react.statuscode.com/link/172814/5d0bbb4a61) has been released and is the first Node LTS release to be able to execute TypeScript without any additional flags or configuration (using Node's new type stripping feature).
+    
+*   It's nothing to do with React, but Dan Abramov is blogging again, this time [digging into the _Lean_ programming language](https://react.statuscode.com/link/172815/5d0bbb4a61), a language for proving mathematical theorems. If you enjoy Dan's blogging style, you'll find this very accessible, despite the topic.
+    
+
+👋 We'll see you again on Wednesday, August 20, but feel free to hit reply and send in any submissions you have for the next issue :-)
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​439 — August 6, 2025
+
+[Read on the Web](https://react.statuscode.com/issues/&lt;!--%20\id%20-->)
+
+☀️ **We're taking next week off,** so this will be the last issue until Wednesday, August 20. Just a little summer vacation.\
+\_\_\
+*Peter Cooper, your editor*
+
+Together with 
+
+[![Embrace](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_245/e_make_transparent/co_white,e_outline:15/pbgm3swuyhvj6v43zpgj.png)](https://react.statuscode.com/link/172778/5d0bbb4a61)
+
+⚛️ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fkrhm7ylolnskggpc1v9.jpg)](https://react.statuscode.com/link/172779/5d0bbb4a61)
+
+["JavaScript Isn’t the Problem, Replacing the Browser Was"](https://react.statuscode.com/link/172779/5d0bbb4a61 "rwsdk.com") — The creator of [RedwoodSDK](https://react.statuscode.com/link/172780/5d0bbb4a61), now pitching itself as a React framework for building server-side apps on Cloudflare, suggests SPA-style development was a compromise to work around platform limitations, but now a server-first approach makes good sense.
+
+Peter Pistorius
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f49a8009.png)](https://react.statuscode.com/link/172778/5d0bbb4a61)
+
+[Embrace: User-Focused Observability for Mobile and Web](https://react.statuscode.com/link/172778/5d0bbb4a61 "embrace.io") — Check out User Journeys, the best way to connect performance to user engagement in your web apps. Track any user flow without needing to add more instrumentation, and prioritize issues based on how they impact completion, abandon, and error rates.
+
+Embrace sponsor
+
+[Building a Full-Stack App with React and Aspire](https://react.statuscode.com/link/172781/5d0bbb4a61 "devblogs.microsoft.com") — [Aspire](https://react.statuscode.com/link/172782/5d0bbb4a61) is a .NET-based toolchain for building distributed apps, and this is a walkthrough of using it to build a C#-backed React app.
+
+Sayed Ibrahim Hashimi (Microsoft)
+
+**IN BRIEF:**
+
+* [TypeScript 5.9 has been released](https://react.statuscode.com/link/172783/5d0bbb4a61) – it's a relatively gentle release, but there is now [support for `import defer`](https://react.statuscode.com/link/172784/5d0bbb4a61), as well as 'expandable hovers' in editors like VS Code to see expanded type information.
+
+* ⭐ Last week, we mentioned Jack Herrington's [▶️ Zod vs Valibot battle](https://react.statuscode.com/link/172785/5d0bbb4a61) – he's back with a new heads-up, [▶️ pitching tRPC against oRPC in a type-safe API battle.](https://react.statuscode.com/link/172786/5d0bbb4a61)
+
+* [Vercel has unveiled AI SDK 5](https://react.statuscode.com/link/172787/5d0bbb4a61), the latest version of its AI app toolkit for JavaScript and TypeScript.
+
+* Minimal React framework [Waku has adopted Vite's official RSC plugin `@vitejs/plugin-rsc`.](https://react.statuscode.com/link/172788/5d0bbb4a61)
+
+* A curious attempt to [reproduce the macOS UI with React](https://react.statuscode.com/link/172789/5d0bbb4a61) ([code](https://react.statuscode.com/link/172790/5d0bbb4a61)).
+
+[Unlocking Web Workers with React: A Step-by-Step Guide](https://react.statuscode.com/link/172791/5d0bbb4a61 "www.rahuljuliato.com") — [Web Workers](https://react.statuscode.com/link/172792/5d0bbb4a61) provide a way to run certain code in background threads, rather than blocking things on the main thread. This adds some complexity and isn’t always a best first step, but it’s worth knowing how it works.
+
+Rahul M. Juliato
+
+[React Query Selectors, Supercharged](https://react.statuscode.com/link/172793/5d0bbb4a61 "tkdodo.eu") — The latest in Dominik’s [epic series](https://react.statuscode.com/link/172794/5d0bbb4a61) of React Query articles.
+
+Dominik Dorfmeister (TkDodo)
+
+[How Teams Like Cursor Stop Bots from Abusing Free Trials](https://react.statuscode.com/link/172795/5d0bbb4a61 "workos.com") — WorkOS Radar blocks bots, fraud, and abuse using device fingerprinting, brute force detection, and real-time defenses.
+
+WorkOS sponsor
+
+📄 [Component Testing with Storybook 9 and Vitest](https://react.statuscode.com/link/172796/5d0bbb4a61) Dominic Nguyen (Storybook)
+
+📄 [How to Build An AI Assistant with LangGraph, Next.js, and Auth0](https://react.statuscode.com/link/172797/5d0bbb4a61) Deepu K Sasidharan (Auth0)
+
+📄 [Introducing Stan: A New State Management Library for TypeScript](https://react.statuscode.com/link/172798/5d0bbb4a61) Rafał Krupiński
+
+📄 [We’ve Moved From TanStack Start to Next.js: Here's Why](https://react.statuscode.com/link/172799/5d0bbb4a61) LLM Gateway
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/snqisw3x7i32l442twbj.jpg)](https://react.statuscode.com/link/172800/5d0bbb4a61)
+
+[FlashList v2: A High Performance List for React Native](https://react.statuscode.com/link/172800/5d0bbb4a61 "shopify.engineering") — A highly optimized list approach using view recycling to ensure smooth scrolling without visible blank areas, with v2 being a ground-up rewrite based on React Native’s *New Architecture*. [Docs site](https://react.statuscode.com/link/172801/5d0bbb4a61) and [GitHub repo.](https://react.statuscode.com/link/172802/5d0bbb4a61)
+
+Shopify
+
+🔊 [React Native Audio API](https://react.statuscode.com/link/172803/5d0bbb4a61 "docs.swmansion.com") — Get the power and flexibility of the Web Audio API in your React Native apps, whether on iOS, Android or the Web. It's explained in [much more detail in this blog post.](https://react.statuscode.com/link/172804/5d0bbb4a61)
+
+Software Mansion
+
+🗓️ [React-Date-Picker 12.0](https://react.statuscode.com/link/172805/5d0bbb4a61 "projects.wojtekmaj.pl") — A long-standing straightforward date-picking component. Note that it’s now ESM-only.
+
+Wojciech Maj
+
+* [Relay 20.1](https://react.statuscode.com/link/172806/5d0bbb4a61) – Facebook's GraphQL-powered React framework.
+
+* [Storybook 9.1](https://react.statuscode.com/link/172807/5d0bbb4a61) – The frontend component and UI workshop.
+
+* [React Stripe.js 3.9](https://react.statuscode.com/link/172808/5d0bbb4a61) – Components for Stripe.js and Stripe Elements.
+
+* [react-json-view 1.27](https://react.statuscode.com/link/172809/5d0bbb4a61) – JSON viewer for React ([demo](https://react.statuscode.com/link/172810/5d0bbb4a61)).
+
+📰 Classifieds
+
+⚡️Add lightning-fast barcode & QR scanning to your web app with [STRICH](https://react.statuscode.com/link/172811/5d0bbb4a61), a sleek JS library. Clear, predictable pricing. [Free trial and demo!](https://react.statuscode.com/link/172811/5d0bbb4a61)
+
+📢  Elsewhere in JavaScript
+
+A roundup of some other interesting stories in the broader JavaScript landscape, in case you've missed them:
+
+* [There's a quick update of 'what's new in ViteLand'](https://react.statuscode.com/link/172812/5d0bbb4a61), including Vite 7.0, Rolldown improvements, Oxlint, Vitest, and other tools in the Vite space.
+
+* 📊 Patrick Thier of the V8 team has written about [some significant performance improvements made to `JSON.stringify`](https://react.statuscode.com/link/172813/5d0bbb4a61) in V8 13.8 (available in Chrome 138, and a future version of Node.js).
+
+* [Node.js v22.18.0 (LTS)](https://react.statuscode.com/link/172814/5d0bbb4a61) has been released and is the first Node LTS release to be able to execute TypeScript without any additional flags or configuration (using Node's new type stripping feature).
+
+* It's nothing to do with React, but Dan Abramov is blogging again, this time [digging into the *Lean* programming language](https://react.statuscode.com/link/172815/5d0bbb4a61), a language for proving mathematical theorems. If you enjoy Dan's blogging style, you'll find this very accessible, despite the topic.
+
+👋 We'll see you again on Wednesday, August 20, but feel free to hit reply and send in any submissions you have for the next issue :-)
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
