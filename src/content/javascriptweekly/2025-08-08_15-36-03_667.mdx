@@ -1,0 +1,312 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: How JavaScript really evolves, the inside story
+description: How JavaScript really evolves, the inside story
+date: 星期五 03 下午 八月 8o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/748
+origin_site: https://javascriptweekly.com/issues/748
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="How JavaScript really evolves, the inside story" url="https://javascriptweekly.com/issues/748" />
+
+<Detail client:only="react">
+	#​748 — August 8, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/748)
+
+☀️ **We're taking next week off,** so this will be the last issue until Friday, August 22. Just a little summer vacation.  
+\_\_  
+_Peter Cooper, your editor_
+
+Together with 
+
+[![Mescius](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_284/e_make_transparent/co_white,e_outline:7/mqrpcwpbl3os6si25hoe.jpg)](https://javascriptweekly.com/link/172900/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yllm5jvnk1nbingw72rh.jpg)](https://javascriptweekly.com/link/172901/d076523b1d)
+
+[Apache ECharts 6.0: The Powerful Data Visualization Library](https://javascriptweekly.com/link/172901/d076523b1d "echarts.apache.org") — 12 years on from its first release, ECharts takes another big step forward. Visualization types span from line, bar and pie charts to 3D graphs, calendars and Sankey diagrams. v6 brings an all-new design language, dynamic theme switching, dark mode support, even more chart types, and more. Be sure to enjoy the [100+ demos](https://javascriptweekly.com/link/172902/d076523b1d) and the [GitHub repo.](https://javascriptweekly.com/link/172903/d076523b1d)
+
+Apache Software Foundation
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d38061a3.png)](https://javascriptweekly.com/link/172900/d076523b1d)
+
+[Add Excel-like Spreadsheet Functionality to Your JavaScript Apps](https://javascriptweekly.com/link/172900/d076523b1d "developer.mescius.com") — SpreadJS is the industry-leading JavaScript spreadsheet for adding advanced spreadsheet features to your enterprise apps. Build finance, analysis, budget, and other apps. Excel I/O, 500+ calc functions, tables, charts, and more. [View demos now](https://javascriptweekly.com/link/172900/d076523b1d).
+
+SpreadJS from MESCIUS inc sponsor
+
+[Announcing TypeScript 5.9](https://javascriptweekly.com/link/172904/d076523b1d "devblogs.microsoft.com") — One of TypeScript's gentlest steps forward, with [support for `import defer`](https://javascriptweekly.com/link/172905/d076523b1d), [`--module node20`](https://javascriptweekly.com/link/172906/d076523b1d), and ‘expandable hovers’ _(below)_ to see expanded type information in IDEs. We also learn v6.0 will act as a ‘transition point’ to get prepared for [the Go-powered ‘native port’ of TypeScript](https://javascriptweekly.com/link/172907/d076523b1d) due to arrive as TypeScript 7.0.
+
+Microsoft
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wphnwzpvmrkuoeec4ekq.jpg)](https://javascriptweekly.com/link/172908/d076523b1d)
+
+💡 The [latest version of VS Code](https://javascriptweekly.com/link/172909/d076523b1d) has also just landed with TypeScript 5.9 included and offering the 'expandable hovers' feature, [explained in more depth here.](https://javascriptweekly.com/link/172908/d076523b1d)
+
+⚖️ [Oracle's Latest Move in the JavaScript™ Trademark Case](https://javascriptweekly.com/link/172910/d076523b1d "ttabvue.uspto.gov") — Oracle’s latest response to [Deno’s petition to cancel the JavaScript trademark](https://javascriptweekly.com/link/172911/d076523b1d) includes a _denial_ of the assertion that _“there is broad industry and public consensus that the term ‘JavaScript’ is generic.”_ We've been told!
+
+United States Patent and Trademark Office
+
+**IN BRIEF:**
+
+*   Sarah Gooding gives [an update on the latest proposal advancements at TC39](https://javascriptweekly.com/link/172912/d076523b1d), including `Math.sumPrecise`, Uint8Array/base64 conversion functions, and `Iterator.concat`.
+    
+*   [A mega roundup of _What's New in Viteland_](https://javascriptweekly.com/link/172913/d076523b1d) covering a variety of Vite ecosystem projects including Vite 7, Rolldown, Oxlint, and Vitest.
+    
+*   SvelteKit has added an experimental [remote functions feature](https://javascriptweekly.com/link/172914/d076523b1d) – server-side functions that can be called from anywhere within the SvelteKit app.
+    
+*   Vercel now natively [supports the deployment of Hono apps.](https://javascriptweekly.com/link/172915/d076523b1d) [Hono](https://javascriptweekly.com/link/172916/d076523b1d) is a lightweight, cross-runtime webapp framework.
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vkm3q0uo9vhrofx8zlxb.jpg)](https://javascriptweekly.com/link/172917/d076523b1d)
+
+▶  [How JavaScript Really Evolves: Inside TC39 with Daniel Ehrenberg](https://javascriptweekly.com/link/172917/d076523b1d "www.youtube.com") — A well-recorded 47 minute in-person conversation with one of the most productive members of the TC39 committee covering not just some of the newest features coming to JavaScript, but also the way TC39 works and how _you_ can get involved and propose ideas and help the language move forward.
+
+The Weekly Dev's Brew
+
+💬 It's _very_ rough, but for accessibility, I've put [the raw YouTube transcript in this gist](https://javascriptweekly.com/link/172918/d076523b1d), if you can't watch the video. You can also [listen and subscribe in podcast form here.](https://javascriptweekly.com/link/172919/d076523b1d)
+
+[How V8's `JSON.stringify` Got Over 2x Faster](https://javascriptweekly.com/link/172920/d076523b1d "v8.dev") — The V8 team has turbo-charged `JSON.stringify`, giving apps an automatic performance boost for numerous common tasks when using V8 13.8 onwards (such as in Chrome 138). This article unpacks the low-level work behind the speedup.
+
+Patrick Thier (V8)
+
+[Level Up Your Auth for Not Only Your Users, but Also Your AI Agents](https://javascriptweekly.com/link/172921/d076523b1d "www.auth0.com") — Auth0 is a full IdP that provides robust security and control over the user experience, from sign-up flows to advanced authorization.
+
+Auth0 sponsor
+
+["JavaScript Isn’t the Problem, Replacing the Browser Was"](https://javascriptweekly.com/link/172922/d076523b1d "rwsdk.com") — The creator of [RedwoodSDK](https://javascriptweekly.com/link/172923/d076523b1d), a React framework for building server-side apps on Cloudflare, suggests SPA-style development was a compromise to work around platform limitations, and now a server-first approach makes good sense.
+
+Peter Pistorius
+
+📄 [Building Bluesky Comments for My Blog](https://javascriptweekly.com/link/172924/d076523b1d) – A neat idea, and might give you some ideas of your own. Natalie B
+
+📄 [What We Learned From Creating PostCSS](https://javascriptweekly.com/link/172925/d076523b1d) Andrey Sitnik (Evil Martians)
+
+📄 [Introducing Stan: A New State Management Library for TypeScript](https://javascriptweekly.com/link/172926/d076523b1d) Rafał Krupiński
+
+📄 [A Few Things About the Anchor Element’s `href` You Might Not Have Known](https://javascriptweekly.com/link/172927/d076523b1d) Jim Nielsen
+
+📺 [tRPC vs oRPC: A Typesafe API Battle](https://javascriptweekly.com/link/172928/d076523b1d) Jack Herrington
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/sxzl7trp0er07tjhqbwt.jpg)](https://javascriptweekly.com/link/172930/d076523b1d)
+
+[MathJax v4.0: A JS Display Engine for Math in Browsers](https://javascriptweekly.com/link/172930/d076523b1d "www.mathjax.org") — Several years in the making, [MathJax](https://javascriptweekly.com/link/172931/d076523b1d) reasserts its position as one of the best Web-based math rendering approaches. There is, of course, [a live demo.](https://javascriptweekly.com/link/172932/d076523b1d) v4.0 adds more fonts, a better default font, line-breaking support, ESM support, and much more.
+
+Cervone, Sorge, et al.
+
+[Panda CSS 1.0: Modern, Build-Time, Type-Safe CSS-in-JS](https://javascriptweekly.com/link/172933/d076523b1d "panda-css.com") — A DX-focused CSS-in-JS approach from the creator of [Chakra UI](https://javascriptweekly.com/link/172934/d076523b1d) that offers build-time generated styles and type safety out of the box. It works with Remix, Vite, Next.js, Astro, and even server components.
+
+Segun Adebayo
+
+[The Best Way for Web Developers to Track Key User Flows](https://javascriptweekly.com/link/172935/d076523b1d "embrace.io") — Check out User Journeys, a new approach to connecting technical performance to user engagement in your web apps.
+
+Embrace sponsor
+
+[zx v8.8: Write Better Shell Scripts with Node.js](https://javascriptweekly.com/link/172936/d076523b1d "github.com") — A popular way to make shell scripting a more pleasant experience in Node with useful wrappers around `child_process`, argument escaping, and sensible defaults. v8.8 improves zx’s piping story. ([Docs.](https://javascriptweekly.com/link/172937/d076523b1d))
+
+Google
+
+🔊 [React Native Audio API](https://javascriptweekly.com/link/172938/d076523b1d "docs.swmansion.com") — Get the power and flexibility of the Web Audio API in your React Native apps, whether on iOS, Android or the Web. It's explained in [much more detail in this blog post.](https://javascriptweekly.com/link/172939/d076523b1d)
+
+Software Mansion
+
+*   [eslint-plugin-angular 5.0](https://javascriptweekly.com/link/172940/d076523b1d) – ESLint plugin for AngularJS applications, now with ESLint v9 support.
+    
+*   [Ghost 6.0](https://javascriptweekly.com/link/172941/d076523b1d) – Node.js-powered indie publishing and blogging platform.
+    
+*   [Joi 18.0](https://javascriptweekly.com/link/172942/d076523b1d) – Schema description language and data validator.
+    
+*   📈 [Fuite 5.0.8](https://javascriptweekly.com/link/172943/d076523b1d) – Tool for finding memory leaks in web apps.
+    
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/172944/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+* * *
+
+Did you know we also publish [Frontend Focus](https://javascriptweekly.com/link/172945/d076523b1d)? It focuses more on the browser end of things: CSS, WebGL, HTML, etc.
+
+🎁 Some Bonus Items
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,e_colorize:5,co_rgb:808080,q_auto/npok2azmprpjxiazbs6x.jpg)](https://javascriptweekly.com/link/172946/d076523b1d)
+
+*   [AwesomeIndex](https://javascriptweekly.com/link/172946/d076523b1d) _(above)_ provides a way to search hundreds of 'awesome'-style curated link lists at once. This idea has a lot of potential, as those lists are crammed full of useful resources.
+    
+*   [r2dec-js](https://javascriptweekly.com/link/172947/d076523b1d) is a JavaScript-based decompiler that converts assembly code into 'pseudo-C' for learning purposes.
+    
+*   [Bali](https://javascriptweekly.com/link/172948/d076523b1d) is an attempt at creating a JavaScript lexer, parser, and interpreter in the Nim language.
+    
+*   👀 Do you miss ActionScript 3.0 and Flex? No? This week, I learned Apache is keeping the dream alive with [Apache Royale.](https://javascriptweekly.com/link/172949/d076523b1d)
+    
+*   🤖 You probably heard that OpenAI released GPT-5, but [their developer-oriented intro to GPT-5](https://javascriptweekly.com/link/172950/d076523b1d) was overshadowed, I think, and it goes into some interesting depth. They dropped [two open weight models](https://javascriptweekly.com/link/172951/d076523b1d) too.
+    
+*   Today I learned that [JSON has a logo.](https://javascriptweekly.com/link/172952/d076523b1d)
+    
+
+We're now off for a week, so will be back on Friday, August 22 – see you then!
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/172953/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​748 — August 8, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/748)
+
+☀️ **We're taking next week off,** so this will be the last issue until Friday, August 22. Just a little summer vacation.\
+\_\_\
+*Peter Cooper, your editor*
+
+Together with 
+
+[![Mescius](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_284/e_make_transparent/co_white,e_outline:7/mqrpcwpbl3os6si25hoe.jpg)](https://javascriptweekly.com/link/172900/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yllm5jvnk1nbingw72rh.jpg)](https://javascriptweekly.com/link/172901/d076523b1d)
+
+[Apache ECharts 6.0: The Powerful Data Visualization Library](https://javascriptweekly.com/link/172901/d076523b1d "echarts.apache.org") — 12 years on from its first release, ECharts takes another big step forward. Visualization types span from line, bar and pie charts to 3D graphs, calendars and Sankey diagrams. v6 brings an all-new design language, dynamic theme switching, dark mode support, even more chart types, and more. Be sure to enjoy the [100+ demos](https://javascriptweekly.com/link/172902/d076523b1d) and the [GitHub repo.](https://javascriptweekly.com/link/172903/d076523b1d)
+
+Apache Software Foundation
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d38061a3.png)](https://javascriptweekly.com/link/172900/d076523b1d)
+
+[Add Excel-like Spreadsheet Functionality to Your JavaScript Apps](https://javascriptweekly.com/link/172900/d076523b1d "developer.mescius.com") — SpreadJS is the industry-leading JavaScript spreadsheet for adding advanced spreadsheet features to your enterprise apps. Build finance, analysis, budget, and other apps. Excel I/O, 500+ calc functions, tables, charts, and more. [View demos now](https://javascriptweekly.com/link/172900/d076523b1d).
+
+SpreadJS from MESCIUS inc sponsor
+
+[Announcing TypeScript 5.9](https://javascriptweekly.com/link/172904/d076523b1d "devblogs.microsoft.com") — One of TypeScript's gentlest steps forward, with [support for `import defer`](https://javascriptweekly.com/link/172905/d076523b1d), [`--module node20`](https://javascriptweekly.com/link/172906/d076523b1d), and ‘expandable hovers’ *(below)* to see expanded type information in IDEs. We also learn v6.0 will act as a ‘transition point’ to get prepared for [the Go-powered ‘native port’ of TypeScript](https://javascriptweekly.com/link/172907/d076523b1d) due to arrive as TypeScript 7.0.
+
+Microsoft
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wphnwzpvmrkuoeec4ekq.jpg)](https://javascriptweekly.com/link/172908/d076523b1d)
+
+💡 The [latest version of VS Code](https://javascriptweekly.com/link/172909/d076523b1d) has also just landed with TypeScript 5.9 included and offering the 'expandable hovers' feature, [explained in more depth here.](https://javascriptweekly.com/link/172908/d076523b1d)
+
+⚖️ [Oracle's Latest Move in the JavaScript™ Trademark Case](https://javascriptweekly.com/link/172910/d076523b1d "ttabvue.uspto.gov") — Oracle’s latest response to [Deno’s petition to cancel the JavaScript trademark](https://javascriptweekly.com/link/172911/d076523b1d) includes a *denial* of the assertion that *“there is broad industry and public consensus that the term ‘JavaScript’ is generic.”* We've been told!
+
+United States Patent and Trademark Office
+
+**IN BRIEF:**
+
+* Sarah Gooding gives [an update on the latest proposal advancements at TC39](https://javascriptweekly.com/link/172912/d076523b1d), including `Math.sumPrecise`, Uint8Array/base64 conversion functions, and `Iterator.concat`.
+
+* [A mega roundup of *What's New in Viteland*](https://javascriptweekly.com/link/172913/d076523b1d) covering a variety of Vite ecosystem projects including Vite 7, Rolldown, Oxlint, and Vitest.
+
+* SvelteKit has added an experimental [remote functions feature](https://javascriptweekly.com/link/172914/d076523b1d) – server-side functions that can be called from anywhere within the SvelteKit app.
+
+* Vercel now natively [supports the deployment of Hono apps.](https://javascriptweekly.com/link/172915/d076523b1d) [Hono](https://javascriptweekly.com/link/172916/d076523b1d) is a lightweight, cross-runtime webapp framework.
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vkm3q0uo9vhrofx8zlxb.jpg)](https://javascriptweekly.com/link/172917/d076523b1d)
+
+▶  [How JavaScript Really Evolves: Inside TC39 with Daniel Ehrenberg](https://javascriptweekly.com/link/172917/d076523b1d "www.youtube.com") — A well-recorded 47 minute in-person conversation with one of the most productive members of the TC39 committee covering not just some of the newest features coming to JavaScript, but also the way TC39 works and how *you* can get involved and propose ideas and help the language move forward.
+
+The Weekly Dev's Brew
+
+💬 It's *very* rough, but for accessibility, I've put [the raw YouTube transcript in this gist](https://javascriptweekly.com/link/172918/d076523b1d), if you can't watch the video. You can also [listen and subscribe in podcast form here.](https://javascriptweekly.com/link/172919/d076523b1d)
+
+[How V8's `JSON.stringify` Got Over 2x Faster](https://javascriptweekly.com/link/172920/d076523b1d "v8.dev") — The V8 team has turbo-charged `JSON.stringify`, giving apps an automatic performance boost for numerous common tasks when using V8 13.8 onwards (such as in Chrome 138). This article unpacks the low-level work behind the speedup.
+
+Patrick Thier (V8)
+
+[Level Up Your Auth for Not Only Your Users, but Also Your AI Agents](https://javascriptweekly.com/link/172921/d076523b1d "www.auth0.com") — Auth0 is a full IdP that provides robust security and control over the user experience, from sign-up flows to advanced authorization.
+
+Auth0 sponsor
+
+["JavaScript Isn’t the Problem, Replacing the Browser Was"](https://javascriptweekly.com/link/172922/d076523b1d "rwsdk.com") — The creator of [RedwoodSDK](https://javascriptweekly.com/link/172923/d076523b1d), a React framework for building server-side apps on Cloudflare, suggests SPA-style development was a compromise to work around platform limitations, and now a server-first approach makes good sense.
+
+Peter Pistorius
+
+📄 [Building Bluesky Comments for My Blog](https://javascriptweekly.com/link/172924/d076523b1d) – A neat idea, and might give you some ideas of your own. Natalie B
+
+📄 [What We Learned From Creating PostCSS](https://javascriptweekly.com/link/172925/d076523b1d) Andrey Sitnik (Evil Martians)
+
+📄 [Introducing Stan: A New State Management Library for TypeScript](https://javascriptweekly.com/link/172926/d076523b1d) Rafał Krupiński
+
+📄 [A Few Things About the Anchor Element’s `href` You Might Not Have Known](https://javascriptweekly.com/link/172927/d076523b1d) Jim Nielsen
+
+📺 [tRPC vs oRPC: A Typesafe API Battle](https://javascriptweekly.com/link/172928/d076523b1d) Jack Herrington
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/sxzl7trp0er07tjhqbwt.jpg)](https://javascriptweekly.com/link/172930/d076523b1d)
+
+[MathJax v4.0: A JS Display Engine for Math in Browsers](https://javascriptweekly.com/link/172930/d076523b1d "www.mathjax.org") — Several years in the making, [MathJax](https://javascriptweekly.com/link/172931/d076523b1d) reasserts its position as one of the best Web-based math rendering approaches. There is, of course, [a live demo.](https://javascriptweekly.com/link/172932/d076523b1d) v4.0 adds more fonts, a better default font, line-breaking support, ESM support, and much more.
+
+Cervone, Sorge, et al.
+
+[Panda CSS 1.0: Modern, Build-Time, Type-Safe CSS-in-JS](https://javascriptweekly.com/link/172933/d076523b1d "panda-css.com") — A DX-focused CSS-in-JS approach from the creator of [Chakra UI](https://javascriptweekly.com/link/172934/d076523b1d) that offers build-time generated styles and type safety out of the box. It works with Remix, Vite, Next.js, Astro, and even server components.
+
+Segun Adebayo
+
+[The Best Way for Web Developers to Track Key User Flows](https://javascriptweekly.com/link/172935/d076523b1d "embrace.io") — Check out User Journeys, a new approach to connecting technical performance to user engagement in your web apps.
+
+Embrace sponsor
+
+[zx v8.8: Write Better Shell Scripts with Node.js](https://javascriptweekly.com/link/172936/d076523b1d "github.com") — A popular way to make shell scripting a more pleasant experience in Node with useful wrappers around `child_process`, argument escaping, and sensible defaults. v8.8 improves zx’s piping story. ([Docs.](https://javascriptweekly.com/link/172937/d076523b1d))
+
+Google
+
+🔊 [React Native Audio API](https://javascriptweekly.com/link/172938/d076523b1d "docs.swmansion.com") — Get the power and flexibility of the Web Audio API in your React Native apps, whether on iOS, Android or the Web. It's explained in [much more detail in this blog post.](https://javascriptweekly.com/link/172939/d076523b1d)
+
+Software Mansion
+
+* [eslint-plugin-angular 5.0](https://javascriptweekly.com/link/172940/d076523b1d) – ESLint plugin for AngularJS applications, now with ESLint v9 support.
+
+* [Ghost 6.0](https://javascriptweekly.com/link/172941/d076523b1d) – Node.js-powered indie publishing and blogging platform.
+
+* [Joi 18.0](https://javascriptweekly.com/link/172942/d076523b1d) – Schema description language and data validator.
+
+* 📈 [Fuite 5.0.8](https://javascriptweekly.com/link/172943/d076523b1d) – Tool for finding memory leaks in web apps.
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/172944/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+***
+
+Did you know we also publish [Frontend Focus](https://javascriptweekly.com/link/172945/d076523b1d)? It focuses more on the browser end of things: CSS, WebGL, HTML, etc.
+
+🎁 Some Bonus Items
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,e_colorize:5,co_rgb:808080,q_auto/npok2azmprpjxiazbs6x.jpg)](https://javascriptweekly.com/link/172946/d076523b1d)
+
+* [AwesomeIndex](https://javascriptweekly.com/link/172946/d076523b1d) *(above)* provides a way to search hundreds of 'awesome'-style curated link lists at once. This idea has a lot of potential, as those lists are crammed full of useful resources.
+
+* [r2dec-js](https://javascriptweekly.com/link/172947/d076523b1d) is a JavaScript-based decompiler that converts assembly code into 'pseudo-C' for learning purposes.
+
+* [Bali](https://javascriptweekly.com/link/172948/d076523b1d) is an attempt at creating a JavaScript lexer, parser, and interpreter in the Nim language.
+
+* 👀 Do you miss ActionScript 3.0 and Flex? No? This week, I learned Apache is keeping the dream alive with [Apache Royale.](https://javascriptweekly.com/link/172949/d076523b1d)
+
+* 🤖 You probably heard that OpenAI released GPT-5, but [their developer-oriented intro to GPT-5](https://javascriptweekly.com/link/172950/d076523b1d) was overshadowed, I think, and it goes into some interesting depth. They dropped [two open weight models](https://javascriptweekly.com/link/172951/d076523b1d) too.
+
+* Today I learned that [JSON has a logo.](https://javascriptweekly.com/link/172952/d076523b1d)
+
+We're now off for a week, so will be back on Friday, August 22 – see you then!
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/172953/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
