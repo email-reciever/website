@@ -1,0 +1,205 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Ideas Don't Come Out of Thin Air
+description: Ideas Don't Come Out of Thin Air
+date: 星期一 07 早上 八月 11o 2025
+author: alexkondov
+origin_url: https://mailchi.mp/81c4f3c52aee/ideas-dont-come-out-of-thin-air?e=6955ce1080
+origin_site: https://mailchi.mp/81c4f3c52aee/ideas-dont-come-out-of-thin-air?e=6955ce1080
+translated: true
+avatar: /media-source/alexkondov-ico.png
+email_recorder: alexkondov38@147790190.mailchimpapp.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Ideas Don't Come Out of Thin Air" url="https://mailchi.mp/81c4f3c52aee/ideas-dont-come-out-of-thin-air?e=6955ce1080" />
+
+<Detail client:only="react">
+	![](https://mcusercontent.com/fca75767fa83fa3473478b4ca/images/38ca00ab-a0f7-cb3d-ecc8-8766da856ac2.png)
+
+# Ideas Don't Come Out of Thin Air
+
+  
+I first got familiar with existentialism as a philosophical school during the pandemic. Long walks were the only source of entertainment, and after I caught up with all the podcasts in my playlist, I turned to topics that have long been in the periphery of my interests.
+
+I don’t know why I clicked on an episode about Albert Camus - it must’ve had a catchy title. I spent the next few hours listening about existentialism, Sartre, de Beauvoir, and the meaning of life. Throughout the whole time, I had one question on my mind.  
+ 
+
+## How did they come up with this?
+
+Do you wake up one day and start thinking about the meaning of life out of the blue? How do you get such detailed thoughts on such a niche topic?
+
+After that podcast episode, I went down the existentialism rabbit hole and noticed that philosophy books rarely dive into the main topic straight away. They start way back, a couple of schools before what the book is actually about, and build up to the idea they want to present.
+
+When you reach the part about existentialism, you have all the historical context about why these people paid so much attention to the meaning of life.
+
+It all makes sense.
+
+I’ve had many of the same questions about software development throughout the years. How did they come up with this obscure library? Why did they create this niche tool? How did they end up with this architecture?  
+ 
+
+## Ideas are responses
+
+It took me an embarrassingly long time to figure out that the ideas of today are a response to the ones of yesterday.
+
+A few years ago, I came across Adam Wathan’s article about [utility CSS classes](https://alexkondov.us2.list-manage.com/track/click?u=fca75767fa83fa3473478b4ca&id=d40b332ac0&e=6955ce1080) as I was ready to go to sleep. Weird bedtime read, I know. But as I was going through the post, everything clicked. By the end, I wanted to get out of bed and go rewrite my current project with utility classes.
+
+I would’ve had a completely different reaction if someone had just sent me a link to Tailwind.
+
+Building up the context about semantic classes and the problems with them makes you understand why he’s proposing that alternative, and why he’s building a tool of his own. It’s not just the cool weekend project of a bored programmer.
+
+But what if you’re ready to adopt every new technical concept like an axiom and you don’t care about the “why”?
+
+I think that even if you don’t consciously care about it, an idea will find a better place in your mind if it’s presented with its backstory. Without the “why,” you’ll get thrown from one idea to the other and end up using tools you don’t really need.  
+ 
+
+## We skip the “why”
+
+Existentialism and utility classes aside, this is a bigger problem in corporations.
+
+Something I’ve seen more times than I can count is a new engineer’s knee-jerk reaction when they see the architecture of the product. They don’t like it at first, they question it, propose alternatives, and put the occasional rewrite on the table. But after some time in the domain, things click.
+
+They understand the constraints, they learn the history, and they see the “why” behind the “how”.
+
+I remember my surprise when I joined a media corp and learned that they don’t use single-page applications. They still used React as a templating engine and a way to add logic to a page, but they didn’t take advantage of client-side routing.
+
+“Surely, these people don’t know what they’re doing”
+
+I struggled working with that architecture because everything in me told me it was wrong. It took me a while to figure out that users browse websites atomically, and the caching and scaling benefits far outweigh those of client-side routing.
+
+People knew what they were doing. Their ideas didn’t come out of thin air. I just didn’t have the context to understand them.  
+ 
+
+## Understand, don’t memorize
+
+I had a colleague who wasn’t that well-versed in React, and I was helping them out to implement a small feature. They were following the existing patterns in the codebase with great success, but something caught my attention during a code review.
+
+They had a custom hook for everything.
+
+Two pieces of state? A custom hook. A few lines of logic? Custom hook.
+
+I realized that they had memorized the patterns I had created in the codebase, but because they didn’t know why I was wrapping logic in custom hooks, they just did it blindly. Their intentions were good, but the end result was an overly complex feature.
+
+They had adopted the pattern without questioning it, but this had a counterproductive effect. Without the “why,” you can’t make sensible design choices. Without the “why,” you may end up with a ports and adapters architecture for every small project and send its future maintainers into an existential crisis.  
+ 
+
+## Leave breadcrumbs
+
+Documentation is the solution to this, but when people hear that, the Confluence logo pops up in their mind and they get an allergic reaction.
+
+People, you don’t need to do long, boring documents.
+
+All you need is a markdown file in a repository. You can write it in the README, that’s good too. Just find a place where you can leave breadcrumbs that people can follow. Don’t enforce a format, don’t create a dogma around it - just write things down in an obvious place.
+
+Each doc should answer three questions. Who? When? Why?
+
+That’s all you need. Imagine that you’re providing the backstory so that when a future colleague of yours stumbles on your work many years later, they can understand what you were on about. Otherwise, they’ll have many of the questions I did when I first started reading about philosophy.
+
+[![Twitter](https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png)](https://alexkondov.us2.list-manage.com/track/click?u=fca75767fa83fa3473478b4ca&id=96c59849b9&e=6955ce1080)
+
+[![LinkedIn](https://cdn-images.mailchimp.com/icons/social-block-v2/color-linkedin-48.png)](https://alexkondov.us2.list-manage.com/track/click?u=fca75767fa83fa3473478b4ca&id=cb80393a58&e=6955ce1080)
+
+[![Website](https://cdn-images.mailchimp.com/icons/social-block-v2/color-link-48.png)](https://alexkondov.us2.list-manage.com/track/click?u=fca75767fa83fa3473478b4ca&id=b225489dcf&e=6955ce1080)
+
+[![YouTube](https://cdn-images.mailchimp.com/icons/social-block-v2/color-youtube-48.png)](https://alexkondov.us2.list-manage.com/track/click?u=fca75767fa83fa3473478b4ca&id=187deff28f&e=6955ce1080)
+
+  
+  
+  
+  
+  
+  
+
+
+</Detail>
+
+![](https://mcusercontent.com/fca75767fa83fa3473478b4ca/images/38ca00ab-a0f7-cb3d-ecc8-8766da856ac2.png)
+
+# Ideas Don't Come Out of Thin Air
+
+I first got familiar with existentialism as a philosophical school during the pandemic. Long walks were the only source of entertainment, and after I caught up with all the podcasts in my playlist, I turned to topics that have long been in the periphery of my interests.
+
+I don’t know why I clicked on an episode about Albert Camus - it must’ve had a catchy title. I spent the next few hours listening about existentialism, Sartre, de Beauvoir, and the meaning of life. Throughout the whole time, I had one question on my mind.\
+ 
+
+## How did they come up with this?
+
+Do you wake up one day and start thinking about the meaning of life out of the blue? How do you get such detailed thoughts on such a niche topic?
+
+After that podcast episode, I went down the existentialism rabbit hole and noticed that philosophy books rarely dive into the main topic straight away. They start way back, a couple of schools before what the book is actually about, and build up to the idea they want to present.
+
+When you reach the part about existentialism, you have all the historical context about why these people paid so much attention to the meaning of life.
+
+It all makes sense.
+
+I’ve had many of the same questions about software development throughout the years. How did they come up with this obscure library? Why did they create this niche tool? How did they end up with this architecture?\
+ 
+
+## Ideas are responses
+
+It took me an embarrassingly long time to figure out that the ideas of today are a response to the ones of yesterday.
+
+A few years ago, I came across Adam Wathan’s article about [utility CSS classes](https://alexkondov.us2.list-manage.com/track/click?u=fca75767fa83fa3473478b4ca\&id=d40b332ac0\&e=6955ce1080) as I was ready to go to sleep. Weird bedtime read, I know. But as I was going through the post, everything clicked. By the end, I wanted to get out of bed and go rewrite my current project with utility classes.
+
+I would’ve had a completely different reaction if someone had just sent me a link to Tailwind.
+
+Building up the context about semantic classes and the problems with them makes you understand why he’s proposing that alternative, and why he’s building a tool of his own. It’s not just the cool weekend project of a bored programmer.
+
+But what if you’re ready to adopt every new technical concept like an axiom and you don’t care about the “why”?
+
+I think that even if you don’t consciously care about it, an idea will find a better place in your mind if it’s presented with its backstory. Without the “why,” you’ll get thrown from one idea to the other and end up using tools you don’t really need.\
+ 
+
+## We skip the “why”
+
+Existentialism and utility classes aside, this is a bigger problem in corporations.
+
+Something I’ve seen more times than I can count is a new engineer’s knee-jerk reaction when they see the architecture of the product. They don’t like it at first, they question it, propose alternatives, and put the occasional rewrite on the table. But after some time in the domain, things click.
+
+They understand the constraints, they learn the history, and they see the “why” behind the “how”.
+
+I remember my surprise when I joined a media corp and learned that they don’t use single-page applications. They still used React as a templating engine and a way to add logic to a page, but they didn’t take advantage of client-side routing.
+
+“Surely, these people don’t know what they’re doing”
+
+I struggled working with that architecture because everything in me told me it was wrong. It took me a while to figure out that users browse websites atomically, and the caching and scaling benefits far outweigh those of client-side routing.
+
+People knew what they were doing. Their ideas didn’t come out of thin air. I just didn’t have the context to understand them.\
+ 
+
+## Understand, don’t memorize
+
+I had a colleague who wasn’t that well-versed in React, and I was helping them out to implement a small feature. They were following the existing patterns in the codebase with great success, but something caught my attention during a code review.
+
+They had a custom hook for everything.
+
+Two pieces of state? A custom hook. A few lines of logic? Custom hook.
+
+I realized that they had memorized the patterns I had created in the codebase, but because they didn’t know why I was wrapping logic in custom hooks, they just did it blindly. Their intentions were good, but the end result was an overly complex feature.
+
+They had adopted the pattern without questioning it, but this had a counterproductive effect. Without the “why,” you can’t make sensible design choices. Without the “why,” you may end up with a ports and adapters architecture for every small project and send its future maintainers into an existential crisis.\
+ 
+
+## Leave breadcrumbs
+
+Documentation is the solution to this, but when people hear that, the Confluence logo pops up in their mind and they get an allergic reaction.
+
+People, you don’t need to do long, boring documents.
+
+All you need is a markdown file in a repository. You can write it in the README, that’s good too. Just find a place where you can leave breadcrumbs that people can follow. Don’t enforce a format, don’t create a dogma around it - just write things down in an obvious place.
+
+Each doc should answer three questions. Who? When? Why?
+
+That’s all you need. Imagine that you’re providing the backstory so that when a future colleague of yours stumbles on your work many years later, they can understand what you were on about. Otherwise, they’ll have many of the questions I did when I first started reading about philosophy.
+
+[![Twitter](https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png)](https://alexkondov.us2.list-manage.com/track/click?u=fca75767fa83fa3473478b4ca\&id=96c59849b9\&e=6955ce1080)
+
+[![LinkedIn](https://cdn-images.mailchimp.com/icons/social-block-v2/color-linkedin-48.png)](https://alexkondov.us2.list-manage.com/track/click?u=fca75767fa83fa3473478b4ca\&id=cb80393a58\&e=6955ce1080)
+
+[![Website](https://cdn-images.mailchimp.com/icons/social-block-v2/color-link-48.png)](https://alexkondov.us2.list-manage.com/track/click?u=fca75767fa83fa3473478b4ca\&id=b225489dcf\&e=6955ce1080)
+
+[![YouTube](https://cdn-images.mailchimp.com/icons/social-block-v2/color-youtube-48.png)](https://alexkondov.us2.list-manage.com/track/click?u=fca75767fa83fa3473478b4ca\&id=187deff28f\&e=6955ce1080)
+
+
