@@ -1,0 +1,345 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: We still love jQuery
+description: We still love jQuery
+date: 星期五 03 下午 八月 22o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/749
+origin_site: https://javascriptweekly.com/issues/749
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="We still love jQuery" url="https://javascriptweekly.com/issues/749" />
+
+<Detail client:only="react">
+	#​749 — August 22, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/749)
+
+☀️ **We're back after a week off**, though I'm starting to think we should have taken two weeks off as it's been quite quiet in JavaScript-land this August! Nevertheless, we still have a full issue for you today, so let's get on to it.. ;-)  
+\_\_  
+_Peter Cooper, your editor_
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/173212/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fj40vw7vja4a3nys6acf.jpg)](https://javascriptweekly.com/link/173264/d076523b1d)
+
+[Eliminating JavaScript Cold Starts on AWS Lambda](https://javascriptweekly.com/link/173264/d076523b1d "goose.icu") — [Porffor](https://javascriptweekly.com/link/173265/d076523b1d) is a rapidly developing _ahead-of-time_ JavaScript compiler with a major benefit being extremely quick process launch times (think sub-millisecond). This is certainly more a taste of the future, and something to experiment with, rather than something you want to imminently deploy into production.
+
+Oliver Medhurst
+
+[Rspack Introduces _Rslint_, a Fast Linter Written in Go](https://javascriptweekly.com/link/173267/d076523b1d "socket.dev") — A high-performance JavaScript and TypeScript linter written in Go, and the newest member of the [Rspack](https://javascriptweekly.com/link/173269/d076523b1d)/Rstack family of tools.
+
+Sarah Gooding (Socket)
+
+💡 In related news, the Rust-powered _Oxlint_ linter has [unveiled a preview of type-aware linting support.](https://javascriptweekly.com/link/173270/d076523b1d) Oxlint and Rslint (or [Biome](https://javascriptweekly.com/link/173271/d076523b1d)) are worth investigating if you're having performance issues with ESLint.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/00143e0e.jpg)](https://javascriptweekly.com/link/173212/d076523b1d)
+
+[Front-End System Design: Build Scalable UIs](https://javascriptweekly.com/link/173212/d076523b1d "frontendmasters.com") — Learn browser rendering, DOM performance, state, and UI optimization with real-world exercises.
+
+Frontend Masters sponsor
+
+[jQuery 4.0.0 Release Candidate 1](https://javascriptweekly.com/link/173273/d076523b1d "blog.jquery.com") — Version 4.0 of jQuery has reached the “_we think this is ready; now poke it with many sticks_” stage. While jQuery is still heavily used, we know it’s old-fashioned, but it was so important in the early days of _JavaScript Weekly_ that we have a major soft spot for it!
+
+Timmy Willison
+
+[Reflections on the React Community](https://javascriptweekly.com/link/173213/d076523b1d "leerob.com") — Lee, formerly of Vercel and widely recognized for his influence on Next.js and React, shares candid reflections on the React community, digging into the rise of React Server Components, the tension between commercial and non-commercial priorities, the toll of burnout, and a reminder that, above all, this is still a community of _people._
+
+Lee Robinson
+
+**IN BRIEF:**
+
+*   [Minification Benchmarks](https://javascriptweekly.com/link/173274/d076523b1d) is a frequently updated benchmark of different JavaScript minifiers, with [cminify](https://javascriptweekly.com/link/173275/d076523b1d) being the newest addition.
+    
+*   🕹️ The latest [js13kGames competition](https://javascriptweekly.com/link/173278/d076523b1d) is underway. Submissions are due by September 13.
+    
+*   🎤 Evan You, creator of Vue.js, [went on the Stack Overflow podcast](https://javascriptweekly.com/link/173214/d076523b1d) to talk about Vue and its ongoing development.
+    
+*   Dr. Axel Rauschmayer is taking a break from his deeper technical articles to produce [a series of articles for beginners](https://javascriptweekly.com/link/173215/d076523b1d) – he's already covered JavaScript [numbers, variables, and functions](https://javascriptweekly.com/link/173216/d076523b1d), [strings and methods](https://javascriptweekly.com/link/173217/d076523b1d), and [arrays.](https://javascriptweekly.com/link/173218/d076523b1d)
+    
+
+**RELEASES:**
+
+*   [React Native 0.81](https://javascriptweekly.com/link/173219/d076523b1d) – Say hi to Android 16 support and precompiled iOS builds.
+    
+*   [Next.js 15.5](https://javascriptweekly.com/link/173220/d076523b1d) – Turbopack builds in beta and stable Node.js middleware.
+    
+*   [Bun v1.2.20](https://javascriptweekly.com/link/173221/d076523b1d) – Now with reduced idle CPU usage. v1.3 due soon.
+    
+*   [Astro 5.13](https://javascriptweekly.com/link/173222/d076523b1d) , [ESLint v9.33.0](https://javascriptweekly.com/link/173223/d076523b1d), [Fastify 5.5](https://javascriptweekly.com/link/173224/d076523b1d), [pnpm 10.15](https://javascriptweekly.com/link/173225/d076523b1d), [Biome 2.2](https://javascriptweekly.com/link/173226/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mbdt1rqn7p4rxfvc4kh2.jpg)](https://javascriptweekly.com/link/173227/d076523b1d)
+
+[Using the Custom Highlight API](https://javascriptweekly.com/link/173227/d076523b1d "frontendmasters.com") — The [CSS Custom Highlight API](https://javascriptweekly.com/link/173228/d076523b1d) offers a way to style text ranges on a document using JavaScript to create the ranges, and CSS to style them. And, as of Firefox 140, all major browsers now support it. This could be great for in-page search or even dynamic syntax highlighting.
+
+Chris Coyier
+
+[The Power of the `Intl` API: A Definitive Guide to Browser-Native Internationalization](https://javascriptweekly.com/link/173229/d076523b1d "www.smashingmagazine.com") — Instead of relying on heavy third-party libraries, modern browsers provide JavaScript with the `Intl` API — a powerful, native way to handle internationalization.
+
+Fuqiao Xue
+
+[The Best Way for Web Developers to Track Key User Flows](https://javascriptweekly.com/link/173230/d076523b1d "embrace.io") — Check out User Journeys, a new approach to connecting technical performance to user engagement in your web apps.
+
+Embrace sponsor
+
+[Designing Chrome's Built-in AI Web APIs](https://javascriptweekly.com/link/173231/d076523b1d "domenic.me") — Domenic, a member of the Chrome team at Google, shares some insights into how [the APIs around Chrome’s newest AI features](https://javascriptweekly.com/link/173232/d076523b1d) were designed.
+
+Domenic Denicola
+
+▶  [React Mock Interview: Three Devs Take on a Challenge](https://javascriptweekly.com/link/173233/d076523b1d "www.youtube.com") — Three top developers take on the same React challenge to build a form complete with validation. If you’ve got the time for a 50 minute video, this is fun _and_ educational.
+
+Shruti Kapoor
+
+📄 [How Incorrect Shopify Webhook Parsing Led to Database Deletion](https://javascriptweekly.com/link/173234/d076523b1d) – A sneaky problem with an unexpected `undefined` value being fed to Prisma. One of Prisma’s validation errors did pick it up, however. Ingressr
+
+📄 [The Problems with Modals, and How to Solve Them in Vue.js](https://javascriptweekly.com/link/173235/d076523b1d) Noel De Martin
+
+📄 [How Bun Made `postMessage` 500x Faster](https://javascriptweekly.com/link/173236/d076523b1d) Jarred Sumner
+
+📄 [The Future of JavaScript: What Awaits Us](https://javascriptweekly.com/link/173237/d076523b1d) JSDev
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/s4g4wpbp7x9akaqiuzm3.jpg)](https://javascriptweekly.com/link/173238/d076523b1d)
+
+[Uppy 5.0: A Powerful, Modular JavaScript File Uploader](https://javascriptweekly.com/link/173238/d076523b1d "uppy.io") — Upload not just from local sources (whether files or a webcam) but also remote services like Dropbox or Google Drive. Integrates with frameworks like React, Vue, Svelte, and Angular, and supports resumable uploads too. [GitHub repo.](https://javascriptweekly.com/link/173239/d076523b1d)
+
+Transloadit
+
+😄 [Faceclick: A Lightweight Emoji Picker with Keyword Search](https://javascriptweekly.com/link/173240/d076523b1d "ratfactor.com") — Includes some interesting details on how it was made more efficient.
+
+Dave Gauer
+
+[Secure Your AI Agents So That You Can Protect Your Users](https://javascriptweekly.com/link/173241/d076523b1d "www.auth0.com") — Whether you have a B2B or B2C use case, Auth0 is a full IdP that provides robust security like MFA and continuous threat monitoring.
+
+Auth0 sponsor
+
+[Sidequest.js: A New Scalable Job Execution Option for Node.js](https://javascriptweekly.com/link/173242/d076523b1d "sidequestjs.com") — A scalable background job processor for Node apps that includes [a Web-based dashboard](https://javascriptweekly.com/link/173243/d076523b1d), the ability to support multiple backends, and TS-first ergonomics. [GitHub repo](https://javascriptweekly.com/link/173244/d076523b1d).
+
+Merencia and Guizzo
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mf79rxfl90cyrsflkd65.jpg)](https://javascriptweekly.com/link/173245/d076523b1d)
+
+[Minecraft MCP Server: Let an LLM Take Control of Minecraft](https://javascriptweekly.com/link/173245/d076523b1d "github.com") — A fun way to play around with MCP servers and LLMs. It uses [Mineflayer](https://javascriptweekly.com/link/173246/d076523b1d), a JavaScript API for creating Minecraft bots, behind the scenes. The video in the README is cool, showing how Claude and this server can turn a photo of the White House into an in-world creation.
+
+Yuniko Software
+
+*   [Waku 0.25](https://javascriptweekly.com/link/173247/d076523b1d) – The minimal React framework introduces the concept of 'slice components' – a new approach to fine-grained component rendering.
+    
+*   [Retire.js 5.3](https://javascriptweekly.com/link/173248/d076523b1d) – A security scanning tool to detect the use of JavaScript libraries with known vulnerabilities in your project.
+    
+*   [Ky 1.9](https://javascriptweekly.com/link/173249/d076523b1d) – Simple HTTP client based upon Fetch for browsers, Node & Deno.
+    
+*   [Repomix 1.3](https://javascriptweekly.com/link/173250/d076523b1d) – Pack an entire repository into a single, LLM-friendly file.
+    
+*   🗓️ [React Date Picker 8.6](https://javascriptweekly.com/link/173251/d076523b1d) – Simple date picker component. ([Demo](https://javascriptweekly.com/link/173252/d076523b1d).)
+    
+*   [Flatbush 4.5](https://javascriptweekly.com/link/173253/d076523b1d) – Fast static spatial index for 2D points and rectangles.
+    
+*   [plotly.js 3.1](https://javascriptweekly.com/link/173254/d076523b1d) – Standalone data visualization library.
+    
+*   [Chai 6.0](https://javascriptweekly.com/link/173255/d076523b1d) – BDD / TDD assertion framework.
+    
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/173256/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+* * *
+
+🤖 [Faster AI data = smarter agents](https://javascriptweekly.com/link/173257/d076523b1d). Redis 8.2 brings vector sets and search with sub-ms speed. [Try it for free](https://javascriptweekly.com/link/173257/d076523b1d).
+
+🎁 Some Bonus Items
+
+*   [SmallJS](https://javascriptweekly.com/link/173258/d076523b1d) is a Smalltalk-80 implementation that compiles to JavaScript. v1.7 has just been released with support for creating desktop apps using [NW.js.](https://javascriptweekly.com/link/173259/d076523b1d)
+    
+*   🏎️ Ryan Skinner [presents Rari, a demonstration of replacing Node.js with a Rust-powered backend](https://javascriptweekly.com/link/173260/d076523b1d) for rendering React server components, and shows off some serious performance improvements.
+    
+*   🚴 Harry Roberts [analyzed the performance of the sites for each team in the _Tour de France_](https://javascriptweekly.com/link/173261/d076523b1d) – it's interesting to see some of the things he noticed.
+    
+*   If you use AWS at all, [this list of 'AWS stuff you think you know that's now wrong'](https://javascriptweekly.com/link/173262/d076523b1d) from Corey Quinn is an eye-opener.
+    
+*   `/^a(1,3)/ == /^(a|aa|aaa)/?` [A regex equivalence checker.](https://javascriptweekly.com/link/173263/d076523b1d)
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/173277/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​749 — August 22, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/749)
+
+☀️ **We're back after a week off**, though I'm starting to think we should have taken two weeks off as it's been quite quiet in JavaScript-land this August! Nevertheless, we still have a full issue for you today, so let's get on to it.. ;-)\
+\_\_\
+*Peter Cooper, your editor*
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/173212/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fj40vw7vja4a3nys6acf.jpg)](https://javascriptweekly.com/link/173264/d076523b1d)
+
+[Eliminating JavaScript Cold Starts on AWS Lambda](https://javascriptweekly.com/link/173264/d076523b1d "goose.icu") — [Porffor](https://javascriptweekly.com/link/173265/d076523b1d) is a rapidly developing *ahead-of-time* JavaScript compiler with a major benefit being extremely quick process launch times (think sub-millisecond). This is certainly more a taste of the future, and something to experiment with, rather than something you want to imminently deploy into production.
+
+Oliver Medhurst
+
+[Rspack Introduces *Rslint*, a Fast Linter Written in Go](https://javascriptweekly.com/link/173267/d076523b1d "socket.dev") — A high-performance JavaScript and TypeScript linter written in Go, and the newest member of the [Rspack](https://javascriptweekly.com/link/173269/d076523b1d)/Rstack family of tools.
+
+Sarah Gooding (Socket)
+
+💡 In related news, the Rust-powered *Oxlint* linter has [unveiled a preview of type-aware linting support.](https://javascriptweekly.com/link/173270/d076523b1d) Oxlint and Rslint (or [Biome](https://javascriptweekly.com/link/173271/d076523b1d)) are worth investigating if you're having performance issues with ESLint.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/00143e0e.jpg)](https://javascriptweekly.com/link/173212/d076523b1d)
+
+[Front-End System Design: Build Scalable UIs](https://javascriptweekly.com/link/173212/d076523b1d "frontendmasters.com") — Learn browser rendering, DOM performance, state, and UI optimization with real-world exercises.
+
+Frontend Masters sponsor
+
+[jQuery 4.0.0 Release Candidate 1](https://javascriptweekly.com/link/173273/d076523b1d "blog.jquery.com") — Version 4.0 of jQuery has reached the “*we think this is ready; now poke it with many sticks*” stage. While jQuery is still heavily used, we know it’s old-fashioned, but it was so important in the early days of *JavaScript Weekly* that we have a major soft spot for it!
+
+Timmy Willison
+
+[Reflections on the React Community](https://javascriptweekly.com/link/173213/d076523b1d "leerob.com") — Lee, formerly of Vercel and widely recognized for his influence on Next.js and React, shares candid reflections on the React community, digging into the rise of React Server Components, the tension between commercial and non-commercial priorities, the toll of burnout, and a reminder that, above all, this is still a community of *people.*
+
+Lee Robinson
+
+**IN BRIEF:**
+
+* [Minification Benchmarks](https://javascriptweekly.com/link/173274/d076523b1d) is a frequently updated benchmark of different JavaScript minifiers, with [cminify](https://javascriptweekly.com/link/173275/d076523b1d) being the newest addition.
+
+* 🕹️ The latest [js13kGames competition](https://javascriptweekly.com/link/173278/d076523b1d) is underway. Submissions are due by September 13.
+
+* 🎤 Evan You, creator of Vue.js, [went on the Stack Overflow podcast](https://javascriptweekly.com/link/173214/d076523b1d) to talk about Vue and its ongoing development.
+
+* Dr. Axel Rauschmayer is taking a break from his deeper technical articles to produce [a series of articles for beginners](https://javascriptweekly.com/link/173215/d076523b1d) – he's already covered JavaScript [numbers, variables, and functions](https://javascriptweekly.com/link/173216/d076523b1d), [strings and methods](https://javascriptweekly.com/link/173217/d076523b1d), and [arrays.](https://javascriptweekly.com/link/173218/d076523b1d)
+
+**RELEASES:**
+
+* [React Native 0.81](https://javascriptweekly.com/link/173219/d076523b1d) – Say hi to Android 16 support and precompiled iOS builds.
+
+* [Next.js 15.5](https://javascriptweekly.com/link/173220/d076523b1d) – Turbopack builds in beta and stable Node.js middleware.
+
+* [Bun v1.2.20](https://javascriptweekly.com/link/173221/d076523b1d) – Now with reduced idle CPU usage. v1.3 due soon.
+
+* [Astro 5.13](https://javascriptweekly.com/link/173222/d076523b1d) , [ESLint v9.33.0](https://javascriptweekly.com/link/173223/d076523b1d), [Fastify 5.5](https://javascriptweekly.com/link/173224/d076523b1d), [pnpm 10.15](https://javascriptweekly.com/link/173225/d076523b1d), [Biome 2.2](https://javascriptweekly.com/link/173226/d076523b1d)
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mbdt1rqn7p4rxfvc4kh2.jpg)](https://javascriptweekly.com/link/173227/d076523b1d)
+
+[Using the Custom Highlight API](https://javascriptweekly.com/link/173227/d076523b1d "frontendmasters.com") — The [CSS Custom Highlight API](https://javascriptweekly.com/link/173228/d076523b1d) offers a way to style text ranges on a document using JavaScript to create the ranges, and CSS to style them. And, as of Firefox 140, all major browsers now support it. This could be great for in-page search or even dynamic syntax highlighting.
+
+Chris Coyier
+
+[The Power of the `Intl` API: A Definitive Guide to Browser-Native Internationalization](https://javascriptweekly.com/link/173229/d076523b1d "www.smashingmagazine.com") — Instead of relying on heavy third-party libraries, modern browsers provide JavaScript with the `Intl` API — a powerful, native way to handle internationalization.
+
+Fuqiao Xue
+
+[The Best Way for Web Developers to Track Key User Flows](https://javascriptweekly.com/link/173230/d076523b1d "embrace.io") — Check out User Journeys, a new approach to connecting technical performance to user engagement in your web apps.
+
+Embrace sponsor
+
+[Designing Chrome's Built-in AI Web APIs](https://javascriptweekly.com/link/173231/d076523b1d "domenic.me") — Domenic, a member of the Chrome team at Google, shares some insights into how [the APIs around Chrome’s newest AI features](https://javascriptweekly.com/link/173232/d076523b1d) were designed.
+
+Domenic Denicola
+
+▶  [React Mock Interview: Three Devs Take on a Challenge](https://javascriptweekly.com/link/173233/d076523b1d "www.youtube.com") — Three top developers take on the same React challenge to build a form complete with validation. If you’ve got the time for a 50 minute video, this is fun *and* educational.
+
+Shruti Kapoor
+
+📄 [How Incorrect Shopify Webhook Parsing Led to Database Deletion](https://javascriptweekly.com/link/173234/d076523b1d) – A sneaky problem with an unexpected `undefined` value being fed to Prisma. One of Prisma’s validation errors did pick it up, however. Ingressr
+
+📄 [The Problems with Modals, and How to Solve Them in Vue.js](https://javascriptweekly.com/link/173235/d076523b1d) Noel De Martin
+
+📄 [How Bun Made `postMessage` 500x Faster](https://javascriptweekly.com/link/173236/d076523b1d) Jarred Sumner
+
+📄 [The Future of JavaScript: What Awaits Us](https://javascriptweekly.com/link/173237/d076523b1d) JSDev
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/s4g4wpbp7x9akaqiuzm3.jpg)](https://javascriptweekly.com/link/173238/d076523b1d)
+
+[Uppy 5.0: A Powerful, Modular JavaScript File Uploader](https://javascriptweekly.com/link/173238/d076523b1d "uppy.io") — Upload not just from local sources (whether files or a webcam) but also remote services like Dropbox or Google Drive. Integrates with frameworks like React, Vue, Svelte, and Angular, and supports resumable uploads too. [GitHub repo.](https://javascriptweekly.com/link/173239/d076523b1d)
+
+Transloadit
+
+😄 [Faceclick: A Lightweight Emoji Picker with Keyword Search](https://javascriptweekly.com/link/173240/d076523b1d "ratfactor.com") — Includes some interesting details on how it was made more efficient.
+
+Dave Gauer
+
+[Secure Your AI Agents So That You Can Protect Your Users](https://javascriptweekly.com/link/173241/d076523b1d "www.auth0.com") — Whether you have a B2B or B2C use case, Auth0 is a full IdP that provides robust security like MFA and continuous threat monitoring.
+
+Auth0 sponsor
+
+[Sidequest.js: A New Scalable Job Execution Option for Node.js](https://javascriptweekly.com/link/173242/d076523b1d "sidequestjs.com") — A scalable background job processor for Node apps that includes [a Web-based dashboard](https://javascriptweekly.com/link/173243/d076523b1d), the ability to support multiple backends, and TS-first ergonomics. [GitHub repo](https://javascriptweekly.com/link/173244/d076523b1d).
+
+Merencia and Guizzo
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mf79rxfl90cyrsflkd65.jpg)](https://javascriptweekly.com/link/173245/d076523b1d)
+
+[Minecraft MCP Server: Let an LLM Take Control of Minecraft](https://javascriptweekly.com/link/173245/d076523b1d "github.com") — A fun way to play around with MCP servers and LLMs. It uses [Mineflayer](https://javascriptweekly.com/link/173246/d076523b1d), a JavaScript API for creating Minecraft bots, behind the scenes. The video in the README is cool, showing how Claude and this server can turn a photo of the White House into an in-world creation.
+
+Yuniko Software
+
+* [Waku 0.25](https://javascriptweekly.com/link/173247/d076523b1d) – The minimal React framework introduces the concept of 'slice components' – a new approach to fine-grained component rendering.
+
+* [Retire.js 5.3](https://javascriptweekly.com/link/173248/d076523b1d) – A security scanning tool to detect the use of JavaScript libraries with known vulnerabilities in your project.
+
+* [Ky 1.9](https://javascriptweekly.com/link/173249/d076523b1d) – Simple HTTP client based upon Fetch for browsers, Node & Deno.
+
+* [Repomix 1.3](https://javascriptweekly.com/link/173250/d076523b1d) – Pack an entire repository into a single, LLM-friendly file.
+
+* 🗓️ [React Date Picker 8.6](https://javascriptweekly.com/link/173251/d076523b1d) – Simple date picker component. ([Demo](https://javascriptweekly.com/link/173252/d076523b1d).)
+
+* [Flatbush 4.5](https://javascriptweekly.com/link/173253/d076523b1d) – Fast static spatial index for 2D points and rectangles.
+
+* [plotly.js 3.1](https://javascriptweekly.com/link/173254/d076523b1d) – Standalone data visualization library.
+
+* [Chai 6.0](https://javascriptweekly.com/link/173255/d076523b1d) – BDD / TDD assertion framework.
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/173256/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+***
+
+🤖 [Faster AI data = smarter agents](https://javascriptweekly.com/link/173257/d076523b1d). Redis 8.2 brings vector sets and search with sub-ms speed. [Try it for free](https://javascriptweekly.com/link/173257/d076523b1d).
+
+🎁 Some Bonus Items
+
+* [SmallJS](https://javascriptweekly.com/link/173258/d076523b1d) is a Smalltalk-80 implementation that compiles to JavaScript. v1.7 has just been released with support for creating desktop apps using [NW.js.](https://javascriptweekly.com/link/173259/d076523b1d)
+
+* 🏎️ Ryan Skinner [presents Rari, a demonstration of replacing Node.js with a Rust-powered backend](https://javascriptweekly.com/link/173260/d076523b1d) for rendering React server components, and shows off some serious performance improvements.
+
+* 🚴 Harry Roberts [analyzed the performance of the sites for each team in the *Tour de France*](https://javascriptweekly.com/link/173261/d076523b1d) – it's interesting to see some of the things he noticed.
+
+* If you use AWS at all, [this list of 'AWS stuff you think you know that's now wrong'](https://javascriptweekly.com/link/173262/d076523b1d) from Corey Quinn is an eye-opener.
+
+* `/^a(1,3)/ == /^(a|aa|aaa)/?` [A regex equivalence checker.](https://javascriptweekly.com/link/173263/d076523b1d)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/173277/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
