@@ -1,0 +1,284 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: The productivity benefits from type stripping
+description: The productivity benefits from type stripping
+date: 星期二 03 下午 八月 26o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/591
+origin_site: https://nodeweekly.com/issues/591
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="The productivity benefits from type stripping" url="https://nodeweekly.com/issues/591" />
+
+<Detail client:only="react">
+	#​591 — August 26, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/591)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/173280/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xxkigiqvxqftttmdmtce.jpg)](https://nodeweekly.com/link/173281/0a4070b383)
+
+[How We Migrated Our Rush.js Monorepo to Node Type Stripping](https://nodeweekly.com/link/173281/0a4070b383 "blog.calm.com") — Since v23.6 (and in LTS since [v22.18.0](https://nodeweekly.com/link/173282/0a4070b383)), Node has supported running (most) TypeScript code by [stripping the types out](https://nodeweekly.com/link/173326/0a4070b383) first. The Calm team was excited about the potential for improving productivity and DX, and set a migration in process. Here’s a look at the challenges encountered and what the end results were.
+
+Stuart Dotson (Calm)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/7adfde67.jpg)](https://nodeweekly.com/link/173280/0a4070b383)
+
+[Next.js Fundamentals for Modern Web Apps](https://nodeweekly.com/link/173280/0a4070b383 "frontendmasters.com") — Gain hands on experience with server actions, caching, authentication, and performance.
+
+Frontend Masters sponsor
+
+[Speeding Up the JavaScript Ecosystem: Semver](https://nodeweekly.com/link/173283/0a4070b383 "marvinh.dev") — The latest in Marvin’s multi-year series of posts on optimizing heavily used parts of the JavaScript ecosystem: _“During the installation process, package managers run a bunch of semver comparisons. The `semver` library used in npm, yarn and pnpm can be made around 33x faster.”_
+
+Marvin Hagemeister
+
+**IN BRIEF:**
+
+*   Bun 1.3 is just around the corner, but [Bun v1.2.1 has just been released](https://nodeweekly.com/link/173284/0a4070b383) with highlights including `Bun.SQL`, a first-class database client supporting MySQL, SQLite and Postgres, and a [500x faster `postMessage(string)` function.](https://nodeweekly.com/link/173285/0a4070b383)
+    
+*   In ESLint v9.34.0, ESLint has [added support for multithreaded linting](https://nodeweekly.com/link/173286/0a4070b383) which offers the potential for huge speedups on large projects.
+    
+*   Vercel Functions running on the Node.js runtime [now support `fetch` web handlers.](https://nodeweekly.com/link/173287/0a4070b383)
+    
+*   [Next.js 15.5 was released](https://nodeweekly.com/link/173288/0a4070b383) with stable support for Node.js middleware runtime.
+    
+
+[Eliminating JavaScript Cold Starts on AWS Lambda](https://nodeweekly.com/link/173289/0a4070b383 "goose.icu") — [Porffor](https://nodeweekly.com/link/173290/0a4070b383) is an _ahead-of-time_ JavaScript compiler which gives the benefit of rapid process launch times (i.e. under a millisecond). This is more a taste of the future, and something to experiment with, rather than to deploy into production ASAP.
+
+Oliver Medhurst
+
+📄 [Understanding `Promise.any()`: When One Success is Enough](https://nodeweekly.com/link/173291/0a4070b383) – Given multiple promises, resolve as soon as just one fulfills. Matt Smith
+
+📄 [Unit Formatting with Intl in JavaScript](https://nodeweekly.com/link/173292/0a4070b383) Raymond Camden
+
+📄 [Promises from the Ground Up](https://nodeweekly.com/link/173293/0a4070b383) – Aimed at beginner-to-intermediate JS developers. Josh W Comeau
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tpsqluoqv9hlapjguzu8.jpg)](https://nodeweekly.com/link/173294/0a4070b383)
+
+[Cronicle: Cron with a Web Front End](https://nodeweekly.com/link/173294/0a4070b383 "cronicle.net") — Describing itself as ‘a fancy cron replacement’, Cronicle is a distributed task scheduler and runner, built around a Node app with a web based UI. [GitHub repo.](https://nodeweekly.com/link/173295/0a4070b383)
+
+Joseph Huckaby
+
+[ImageJS 1.0: Image Processing and Manipulation Library](https://nodeweekly.com/link/173296/0a4070b383 "docs.image-js.org") — A library for resizing, cropping, filtering, color adjustments, and [numerous other image transformations](https://nodeweekly.com/link/173297/0a4070b383) which works in Node.js _and_ the browser (supporting JPEG, PNG, BMP and TIFF – thanks to pure JS dependencies like [fast-jpeg](https://nodeweekly.com/link/173298/0a4070b383) and [fast-png](https://nodeweekly.com/link/173299/0a4070b383)). v1.0 brings TypeScript support and a more intuitive API. [GitHub repo.](https://nodeweekly.com/link/173300/0a4070b383)
+
+ImageJS Team
+
+[Rocketadmin: A Flexible, Secure Admin Panel Builder](https://nodeweekly.com/link/173301/0a4070b383 "rocketadmin.com") — Seamlessly handle data — from MySQL to MongoDB. Try the next stage of no-coding back office solutions
+
+Rocketadmin sponsor
+
+[google-spreadsheet 5.0: Google Sheets API Wrapper for Node](https://nodeweekly.com/link/173302/0a4070b383 "theoephraim.github.io") — Work with Google’s online spreadsheet from Node, whether at the cell, row, worksheet, or document level. Supports numerous auth options and you can export sheets for download too. [GitHub repo.](https://nodeweekly.com/link/173303/0a4070b383)
+
+Theo Ephraim
+
+[Minecraft MCP Server: Let an LLM Take Control of Minecraft](https://nodeweekly.com/link/173304/0a4070b383 "github.com") — A fun way to play around with MCP servers and LLMs. It uses [Mineflayer](https://nodeweekly.com/link/173305/0a4070b383), a JavaScript API for creating Minecraft bots, behind the scenes. The video in the README is cool, showing how Claude and this server can turn a photo of the White House into an in-world creation.
+
+Yuniko Software
+
+*   [Repomix 1.4](https://nodeweekly.com/link/173306/0a4070b383) – Pack an entire repository into a single, LLM-friendly file. v1.4 adds the ability to integrate commit history.
+    
+*   [pg-promise 12.0](https://nodeweekly.com/link/173307/0a4070b383) – Postgres interface for Node. Support for custom promises is now gone, now it's _"ES6 Promise all the way"_.
+    
+*   🌈 [yoctocolors 2.1.2](https://nodeweekly.com/link/173308/0a4070b383) – Tiny terminal text coloring library. A smaller alternative to [Chalk](https://nodeweekly.com/link/173309/0a4070b383) from the same creator.
+    
+*   [Faker 10.0](https://nodeweekly.com/link/173310/0a4070b383) – Generate fabricated data to your heart's content. Now ESM only.
+    
+*   [Sidequest.js 1.6](https://nodeweekly.com/link/173311/0a4070b383) – Modern background job processor for Node apps.
+    
+*   🔒 [Secretlint 11.2](https://nodeweekly.com/link/173312/0a4070b383) – Tool to prevent committing credentials/secrets.
+    
+*   🤖 [OpenAI Node 5.15](https://nodeweekly.com/link/173313/0a4070b383) – The official Node library for OpenAI's API.
+    
+*   [InversifyJS 7.9](https://nodeweekly.com/link/173314/0a4070b383) – Lightweight inversion of control container.
+    
+*   [Node-SSH 1.17](https://nodeweekly.com/link/173315/0a4070b383) – Pure JS SSH2 client and server modules.
+    
+*   [pnpm 10.15](https://nodeweekly.com/link/173316/0a4070b383) – Fast, space efficient package manager.
+    
+*   [Undici 7.15](https://nodeweekly.com/link/173317/0a4070b383) – Node's powerful HTTP client library.
+    
+
+📰 Classifieds
+
+⚠️ [The Hidden Cost of Async Context in Node.js](https://nodeweekly.com/link/173318/0a4070b383) — discover the hidden toll behind rebuilding the same logic across your app.
+
+* * *
+
+😁 Sub-ms latency means happier users. Redis 8.2 is 91% faster than 7.2 and is a drop-in upgrade. [Get started for free](https://nodeweekly.com/link/173319/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/j1o4q0yewjedmfq6tazn.jpg)](https://nodeweekly.com/link/173320/0a4070b383)
+
+*   Sam Rose has put together [a fantastic illustrated introduction to Big O notation](https://nodeweekly.com/link/173320/0a4070b383), along with JavaScript examples. If you've ever wondered what O(1), O(log n), etc. mean, this is a great primer.
+    
+*   [Minification Benchmarks](https://nodeweekly.com/link/173321/0a4070b383) is a frequently updated benchmark of different JavaScript minifiers, with [cminify](https://nodeweekly.com/link/173322/0a4070b383) being the newest addition.
+    
+*   The WebKit team [introduces the CSS `random()` function](https://nodeweekly.com/link/173323/0a4070b383), now in Safari Technology Preview, and coming to CSS more generally (in some form or another) later on.
+    
+*   If you use AWS at all, [this list of 'AWS stuff you think you know that's now wrong'](https://nodeweekly.com/link/173324/0a4070b383) from Corey Quinn is an eye-opener.
+    
+*   [An illustrated guide to OAuth.](https://nodeweekly.com/link/173325/0a4070b383)
+    
+
+**P.S.** We're taking next week off, so we'll be back in two weeks on September 9.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​591 — August 26, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/591)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/173280/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xxkigiqvxqftttmdmtce.jpg)](https://nodeweekly.com/link/173281/0a4070b383)
+
+[How We Migrated Our Rush.js Monorepo to Node Type Stripping](https://nodeweekly.com/link/173281/0a4070b383 "blog.calm.com") — Since v23.6 (and in LTS since [v22.18.0](https://nodeweekly.com/link/173282/0a4070b383)), Node has supported running (most) TypeScript code by [stripping the types out](https://nodeweekly.com/link/173326/0a4070b383) first. The Calm team was excited about the potential for improving productivity and DX, and set a migration in process. Here’s a look at the challenges encountered and what the end results were.
+
+Stuart Dotson (Calm)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/7adfde67.jpg)](https://nodeweekly.com/link/173280/0a4070b383)
+
+[Next.js Fundamentals for Modern Web Apps](https://nodeweekly.com/link/173280/0a4070b383 "frontendmasters.com") — Gain hands on experience with server actions, caching, authentication, and performance.
+
+Frontend Masters sponsor
+
+[Speeding Up the JavaScript Ecosystem: Semver](https://nodeweekly.com/link/173283/0a4070b383 "marvinh.dev") — The latest in Marvin’s multi-year series of posts on optimizing heavily used parts of the JavaScript ecosystem: *“During the installation process, package managers run a bunch of semver comparisons. The `semver` library used in npm, yarn and pnpm can be made around 33x faster.”*
+
+Marvin Hagemeister
+
+**IN BRIEF:**
+
+* Bun 1.3 is just around the corner, but [Bun v1.2.1 has just been released](https://nodeweekly.com/link/173284/0a4070b383) with highlights including `Bun.SQL`, a first-class database client supporting MySQL, SQLite and Postgres, and a [500x faster `postMessage(string)` function.](https://nodeweekly.com/link/173285/0a4070b383)
+
+* In ESLint v9.34.0, ESLint has [added support for multithreaded linting](https://nodeweekly.com/link/173286/0a4070b383) which offers the potential for huge speedups on large projects.
+
+* Vercel Functions running on the Node.js runtime [now support `fetch` web handlers.](https://nodeweekly.com/link/173287/0a4070b383)
+
+* [Next.js 15.5 was released](https://nodeweekly.com/link/173288/0a4070b383) with stable support for Node.js middleware runtime.
+
+[Eliminating JavaScript Cold Starts on AWS Lambda](https://nodeweekly.com/link/173289/0a4070b383 "goose.icu") — [Porffor](https://nodeweekly.com/link/173290/0a4070b383) is an *ahead-of-time* JavaScript compiler which gives the benefit of rapid process launch times (i.e. under a millisecond). This is more a taste of the future, and something to experiment with, rather than to deploy into production ASAP.
+
+Oliver Medhurst
+
+📄 [Understanding `Promise.any()`: When One Success is Enough](https://nodeweekly.com/link/173291/0a4070b383) – Given multiple promises, resolve as soon as just one fulfills. Matt Smith
+
+📄 [Unit Formatting with Intl in JavaScript](https://nodeweekly.com/link/173292/0a4070b383) Raymond Camden
+
+📄 [Promises from the Ground Up](https://nodeweekly.com/link/173293/0a4070b383) – Aimed at beginner-to-intermediate JS developers. Josh W Comeau
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tpsqluoqv9hlapjguzu8.jpg)](https://nodeweekly.com/link/173294/0a4070b383)
+
+[Cronicle: Cron with a Web Front End](https://nodeweekly.com/link/173294/0a4070b383 "cronicle.net") — Describing itself as ‘a fancy cron replacement’, Cronicle is a distributed task scheduler and runner, built around a Node app with a web based UI. [GitHub repo.](https://nodeweekly.com/link/173295/0a4070b383)
+
+Joseph Huckaby
+
+[ImageJS 1.0: Image Processing and Manipulation Library](https://nodeweekly.com/link/173296/0a4070b383 "docs.image-js.org") — A library for resizing, cropping, filtering, color adjustments, and [numerous other image transformations](https://nodeweekly.com/link/173297/0a4070b383) which works in Node.js *and* the browser (supporting JPEG, PNG, BMP and TIFF – thanks to pure JS dependencies like [fast-jpeg](https://nodeweekly.com/link/173298/0a4070b383) and [fast-png](https://nodeweekly.com/link/173299/0a4070b383)). v1.0 brings TypeScript support and a more intuitive API. [GitHub repo.](https://nodeweekly.com/link/173300/0a4070b383)
+
+ImageJS Team
+
+[Rocketadmin: A Flexible, Secure Admin Panel Builder](https://nodeweekly.com/link/173301/0a4070b383 "rocketadmin.com") — Seamlessly handle data — from MySQL to MongoDB. Try the next stage of no-coding back office solutions
+
+Rocketadmin sponsor
+
+[google-spreadsheet 5.0: Google Sheets API Wrapper for Node](https://nodeweekly.com/link/173302/0a4070b383 "theoephraim.github.io") — Work with Google’s online spreadsheet from Node, whether at the cell, row, worksheet, or document level. Supports numerous auth options and you can export sheets for download too. [GitHub repo.](https://nodeweekly.com/link/173303/0a4070b383)
+
+Theo Ephraim
+
+[Minecraft MCP Server: Let an LLM Take Control of Minecraft](https://nodeweekly.com/link/173304/0a4070b383 "github.com") — A fun way to play around with MCP servers and LLMs. It uses [Mineflayer](https://nodeweekly.com/link/173305/0a4070b383), a JavaScript API for creating Minecraft bots, behind the scenes. The video in the README is cool, showing how Claude and this server can turn a photo of the White House into an in-world creation.
+
+Yuniko Software
+
+* [Repomix 1.4](https://nodeweekly.com/link/173306/0a4070b383) – Pack an entire repository into a single, LLM-friendly file. v1.4 adds the ability to integrate commit history.
+
+* [pg-promise 12.0](https://nodeweekly.com/link/173307/0a4070b383) – Postgres interface for Node. Support for custom promises is now gone, now it's *"ES6 Promise all the way"*.
+
+* 🌈 [yoctocolors 2.1.2](https://nodeweekly.com/link/173308/0a4070b383) – Tiny terminal text coloring library. A smaller alternative to [Chalk](https://nodeweekly.com/link/173309/0a4070b383) from the same creator.
+
+* [Faker 10.0](https://nodeweekly.com/link/173310/0a4070b383) – Generate fabricated data to your heart's content. Now ESM only.
+
+* [Sidequest.js 1.6](https://nodeweekly.com/link/173311/0a4070b383) – Modern background job processor for Node apps.
+
+* 🔒 [Secretlint 11.2](https://nodeweekly.com/link/173312/0a4070b383) – Tool to prevent committing credentials/secrets.
+
+* 🤖 [OpenAI Node 5.15](https://nodeweekly.com/link/173313/0a4070b383) – The official Node library for OpenAI's API.
+
+* [InversifyJS 7.9](https://nodeweekly.com/link/173314/0a4070b383) – Lightweight inversion of control container.
+
+* [Node-SSH 1.17](https://nodeweekly.com/link/173315/0a4070b383) – Pure JS SSH2 client and server modules.
+
+* [pnpm 10.15](https://nodeweekly.com/link/173316/0a4070b383) – Fast, space efficient package manager.
+
+* [Undici 7.15](https://nodeweekly.com/link/173317/0a4070b383) – Node's powerful HTTP client library.
+
+📰 Classifieds
+
+⚠️ [The Hidden Cost of Async Context in Node.js](https://nodeweekly.com/link/173318/0a4070b383) — discover the hidden toll behind rebuilding the same logic across your app.
+
+***
+
+😁 Sub-ms latency means happier users. Redis 8.2 is 91% faster than 7.2 and is a drop-in upgrade. [Get started for free](https://nodeweekly.com/link/173319/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/j1o4q0yewjedmfq6tazn.jpg)](https://nodeweekly.com/link/173320/0a4070b383)
+
+* Sam Rose has put together [a fantastic illustrated introduction to Big O notation](https://nodeweekly.com/link/173320/0a4070b383), along with JavaScript examples. If you've ever wondered what O(1), O(log n), etc. mean, this is a great primer.
+
+* [Minification Benchmarks](https://nodeweekly.com/link/173321/0a4070b383) is a frequently updated benchmark of different JavaScript minifiers, with [cminify](https://nodeweekly.com/link/173322/0a4070b383) being the newest addition.
+
+* The WebKit team [introduces the CSS `random()` function](https://nodeweekly.com/link/173323/0a4070b383), now in Safari Technology Preview, and coming to CSS more generally (in some form or another) later on.
+
+* If you use AWS at all, [this list of 'AWS stuff you think you know that's now wrong'](https://nodeweekly.com/link/173324/0a4070b383) from Corey Quinn is an eye-opener.
+
+* [An illustrated guide to OAuth.](https://nodeweekly.com/link/173325/0a4070b383)
+
+**P.S.** We're taking next week off, so we'll be back in two weeks on September 9.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
