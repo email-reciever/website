@@ -1,0 +1,317 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: The latest on Oracle's hold on JavaScript
+description: The latest on Oracle's hold on JavaScript
+date: 星期五 05 下午 八月 29o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/750
+origin_site: https://javascriptweekly.com/issues/750
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="The latest on Oracle's hold on JavaScript" url="https://javascriptweekly.com/issues/750" />
+
+<Detail client:only="react">
+	#​750 — August 29, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/750)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/173538/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/h7599gxmqq4qxdqo226a.jpg)](https://javascriptweekly.com/link/173601/d076523b1d)
+
+[An Illustrated Guide to Big O and Time Complexity](https://javascriptweekly.com/link/173601/d076523b1d "samwho.dev") — A fantastic JavaScript-oriented, interactive, visual essay about [Big O notation](https://javascriptweekly.com/link/173602/d076523b1d) and its role in describing algorithmic complexity. This is a beautiful bit of work, even if you’re already wise to `O(log n)` and `O(n^2)`.
+
+Sam Rose
+
+💡 Sam is making a name for himself with his interactive essays – check out the [load balancing](https://javascriptweekly.com/link/173603/d076523b1d), [memory allocation](https://javascriptweekly.com/link/173604/d076523b1d), [hashing](https://javascriptweekly.com/link/173605/d076523b1d), and [bloom filter](https://javascriptweekly.com/link/173606/d076523b1d) ones too.
+
+[JavaScript’s Trademark Problem](https://javascriptweekly.com/link/173607/d076523b1d "2ality.com") — Dr. Axel discusses Oracle's hold over the ‘JavaScript’ trademark, including the history and present-day [legal attempts to challenge Oracle.](https://javascriptweekly.com/link/173608/d076523b1d) Fireship has also just published [▶️ a video about the battle](https://javascriptweekly.com/link/173609/d076523b1d) and there’s now [a GoFundMe to raise funds](https://javascriptweekly.com/link/173610/d076523b1d) to continue the fight.
+
+Dr. Axel Rauschmayer et al.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/ab8b3c0b.png)](https://javascriptweekly.com/link/173538/d076523b1d)
+
+[Tests Are Dead. Meticulous AI Is Here](https://javascriptweekly.com/link/173538/d076523b1d "www.meticulous.ai") — Meticulous creates and maintains a continuously evolving E2E UI test suite with zero developer effort. Built on Chromium with a deterministic engine, it’s the only testing tool that eliminates flakes. Relied on by Dropbox, Notion, and Wiz.
+
+Meticulous AI sponsor
+
+[New in ESLint v9.34.0: Multithread Linting](https://javascriptweekly.com/link/173539/d076523b1d "eslint.org") — A common feature of tools like [Rslint](https://javascriptweekly.com/link/173540/d076523b1d), [Biome](https://javascriptweekly.com/link/173541/d076523b1d), and [Oxlint](https://javascriptweekly.com/link/173542/d076523b1d), is being '_N_x times faster' than ESLint, but the [latest ESLint](https://javascriptweekly.com/link/173543/d076523b1d) has a trick up its sleeve and can now process multiple files at the same time, dramatically reducing lint times for large projects.
+
+Francesco Trotta
+
+**IN BRIEF:**
+
+*   Daniel Rosenwasser proposes that TypeScript 6.0 [should have `--strict` on by default.](https://javascriptweekly.com/link/173544/d076523b1d) You can learn more about [what's planned for TypeScript 6.0 here.](https://javascriptweekly.com/link/173545/d076523b1d)
+    
+*   [Malicious versions of Nx](https://javascriptweekly.com/link/173611/d076523b1d), along with some supporting plugin packages, were published to npm – [more details on affected versions.](https://javascriptweekly.com/link/173612/d076523b1d)
+    
+*   [Remix v3 is set to drop React](https://javascriptweekly.com/link/173546/d076523b1d), instead using its own fork of [Preact.](https://javascriptweekly.com/link/173547/d076523b1d)
+    
+*   [_Codecs_ are a new Zod API](https://javascriptweekly.com/link/173548/d076523b1d) for defining bidirectional transformations between two types.
+    
+*   🇺🇸 [CascadiaJS](https://javascriptweekly.com/link/173549/d076523b1d) is a conference taking place September 18-19 in Seattle, WA.
+    
+
+**RELEASES:**
+
+*   [Rspack 1.5](https://javascriptweekly.com/link/173550/d076523b1d) – The fast web bundler improves barrel file optimization, has a faster file system watcher, improved browser support, and more. It's a big release.
+    
+*   [Node.js v24.7.0 (Current)](https://javascriptweekly.com/link/173551/d076523b1d) – A step forward for cryptography, both with Web Cryptography API support and post-quantum standards.
+    
+*   [Electron 37.4](https://javascriptweekly.com/link/173552/d076523b1d), [Prisma 6.15.0](https://javascriptweekly.com/link/173553/d076523b1d), [Ink 6.2.3](https://javascriptweekly.com/link/173554/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[Speeding Up the JavaScript Ecosystem: Semver](https://javascriptweekly.com/link/173555/d076523b1d "marvinh.dev") — The latest in Marvin’s multi-year series of posts on optimizing heavily used parts of the JavaScript ecosystem: _“During the installation process, package managers run a bunch of semver comparisons. The `semver` library used in npm, yarn and pnpm can be made around 33x faster.”_
+
+Marvin Hagemeister
+
+[Say Bye with JavaScript Beacon](https://javascriptweekly.com/link/173556/d076523b1d "hemath.dev") — The [Beacon API](https://javascriptweekly.com/link/173557/d076523b1d) has been supported in all mainstream browsers for years now and provides a way to send a guaranteed (even if a page is being unloaded) non-blocking request to a web server when no response is needed.
+
+HemathKumar R
+
+[Secure Your AI Agents So That You Can Protect Your Users](https://javascriptweekly.com/link/173558/d076523b1d "www.auth0.com") — Whether you have a B2B or B2C use case, Auth0 is a full IdP that provides robust security like MFA and continuous threat monitoring.
+
+Auth0 sponsor
+
+[How We Migrated Our Monorepo to Node Type Stripping](https://javascriptweekly.com/link/173559/d076523b1d "blog.calm.com") — Since v23.6 (and in LTS since [v22.18.0](https://javascriptweekly.com/link/173560/d076523b1d)), Node has supported running (most) TypeScript code by [stripping the types out](https://javascriptweekly.com/link/173561/d076523b1d) first. One team shares the challenges encountered and what the end benefits were.
+
+Stuart Dotson (Calm)
+
+[You No Longer Need JavaScript (For Many Frontend Things)](https://javascriptweekly.com/link/173562/d076523b1d "lyra.horse") — A neat look at some of what plain HTML and CSS can achieve in terms of effects and techniques for which you might have once relied upon JavaScript.
+
+Lyra
+
+📄 [Understanding `Promise.any()`: When One Success is Enough](https://javascriptweekly.com/link/173563/d076523b1d) – Given multiple promises, resolve as soon as just one fulfills. Matt Smith
+
+📄 [The Struggle of Wrapping a JavaScript Game for Desktop](https://javascriptweekly.com/link/173564/d076523b1d) – The author explains why they finally settled on [NW.js](https://javascriptweekly.com/link/173565/d076523b1d). JSLegendDev
+
+📄 [Speeding Up Firefox Local AI Runtime](https://javascriptweekly.com/link/173566/d076523b1d) – How Firefox accelerated inference by replacing the WASM-based ONNX runtime that powers Transformers.js with a native C++ counterpart. Ziadé, Adenot, and Guelton
+
+📄 [Unit Formatting with `Intl` in JavaScript](https://javascriptweekly.com/link/173567/d076523b1d) Raymond Camden
+
+📄 [Exporting a Cloth Simulation from Blender to an Interactive Three.js Scene](https://javascriptweekly.com/link/173568/d076523b1d) Joshua Guo
+
+📺 [Coming in Angular 21: HttpClient Built In by Default](https://javascriptweekly.com/link/173569/d076523b1d) Igor Sedov
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vknw4hyr1dnjqyibqppe.jpg)](https://javascriptweekly.com/link/173570/d076523b1d)
+
+[Cornerstone3D 4.0: Build Web-Based Medical Imaging Apps](https://javascriptweekly.com/link/173570/d076523b1d "www.cornerstonejs.org") — A set of JavaScript libraries to build things like [this 3D CT scan viewer](https://javascriptweekly.com/link/173571/d076523b1d), [PET-CT scan viewer](https://javascriptweekly.com/link/173572/d076523b1d), and [much more besides.](https://javascriptweekly.com/link/173573/d076523b1d) There’s a lot to this project, along with [numerous tutorials.](https://javascriptweekly.com/link/173574/d076523b1d)
+
+Open Health Imaging Foundation
+
+[ImageJS 1.0: Image Processing and Manipulation Library](https://javascriptweekly.com/link/173575/d076523b1d "docs.image-js.org") — A library for resizing, cropping, filtering, color adjustments, and [numerous other image transformations](https://javascriptweekly.com/link/173576/d076523b1d) which works in Node.js _and_ the browser (supporting JPEG, PNG, BMP and TIFF – thanks to pure JS dependencies like [fast-jpeg](https://javascriptweekly.com/link/173577/d076523b1d) and [fast-png](https://javascriptweekly.com/link/173578/d076523b1d)). v1.0 brings TypeScript support and a more intuitive API. [GitHub repo.](https://javascriptweekly.com/link/173579/d076523b1d)
+
+ImageJS Team
+
+[The Best Way for Web Developers To Track Key User Flows](https://javascriptweekly.com/link/173580/d076523b1d "embrace.io") — Check out User Journeys, a new approach to connecting technical performance to user engagement in your web apps.
+
+Embrace sponsor
+
+[Obs.js: Context-Aware Web Performance for Everyone](https://javascriptweekly.com/link/173613/d076523b1d "csswizardry.com") — Uses the Navigator and Battery APIs to get contextual information about your users’ connection strength and battery status so you can adapt your site/app to the environment or collect the data for analysis.
+
+Harry Roberts
+
+📊 [SveltePlot: A Visualization Framework for Svelte](https://javascriptweekly.com/link/173584/d076523b1d "svelteplot.dev") — It’s still in alpha but its API is inspired by a similar plotting library by Observable and built on top of D3. There are plenty of [examples in the docs](https://javascriptweekly.com/link/173585/d076523b1d).
+
+Gregor Aisch
+
+*   [Repomix 1.4](https://javascriptweekly.com/link/173586/d076523b1d) – Pack an entire repository into a single, LLM-friendly file. v1.4 adds the ability to integrate commit history.
+    
+*   [MikroORM 6.5](https://javascriptweekly.com/link/173587/d076523b1d) – TypeScript ORM for Node based on Data Mapper, Unit of Work and Identity Map patterns.
+    
+*   📄 [jsPDF 3.0.2](https://javascriptweekly.com/link/173588/d076523b1d) – Client-side JavaScript PDF generation for everyone.
+    
+*   [Faker 10.0](https://javascriptweekly.com/link/173589/d076523b1d) – Generate fabricated data to your heart's content.
+    
+*   [Tiptap 3.3](https://javascriptweekly.com/link/173590/d076523b1d) – Headless, framework-agnostic rich text editor.
+    
+*   [RxDB 16.18](https://javascriptweekly.com/link/173591/d076523b1d) – Offline-first, reactive database for JS apps.
+    
+*   [Denops.vim 8.0](https://javascriptweekly.com/link/173592/d076523b1d) – Write Vim/Neovim plugins with Deno.
+    
+
+🎁 Some Bonus Items
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ejadjigfrdrfh5w93wst.jpg)](https://javascriptweekly.com/link/173593/d076523b1d)
+
+*   [`Intl` Playground](https://javascriptweekly.com/link/173593/d076523b1d) is a handy site to get a quick look at how the different options on `Intl.DateTimeFormat` present in real life.
+    
+*   📺 The folks who created the epic, well-produced [▶️ Vue.js documentary](https://javascriptweekly.com/link/173594/d076523b1d), [▶️ React documentary](https://javascriptweekly.com/link/173595/d076523b1d) and [▶️ Node.js documentary](https://javascriptweekly.com/link/173596/d076523b1d) are back with [▶️ a movie-length documentary all about Python.](https://javascriptweekly.com/link/173597/d076523b1d)
+    
+*   Talking of Python, [Pyodide](https://javascriptweekly.com/link/173598/d076523b1d) is a port of CPython to WebAssembly that can be used both in the browser and from Node.js.
+    
+*   🕹️ Jeff Schomay is creating a JavaScript roguelike game called [Thunder Lizard](https://javascriptweekly.com/link/173614/d076523b1d) and decided to see what would happen if [he used AI to turn his ASCII renders into full graphics](https://javascriptweekly.com/link/173615/d076523b1d) live and on-the-fly. Fun, but sounds expensive!
+    
+*   [GitHub has added WebP image support](https://javascriptweekly.com/link/173599/d076523b1d) across its site. It was a little flaky till now.
+    
+*   🎵 Need some [music for programming?](https://javascriptweekly.com/link/173600/d076523b1d) A fantastic design for a text-only site.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/173616/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​750 — August 29, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/750)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/173538/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/h7599gxmqq4qxdqo226a.jpg)](https://javascriptweekly.com/link/173601/d076523b1d)
+
+[An Illustrated Guide to Big O and Time Complexity](https://javascriptweekly.com/link/173601/d076523b1d "samwho.dev") — A fantastic JavaScript-oriented, interactive, visual essay about [Big O notation](https://javascriptweekly.com/link/173602/d076523b1d) and its role in describing algorithmic complexity. This is a beautiful bit of work, even if you’re already wise to `O(log n)` and `O(n^2)`.
+
+Sam Rose
+
+💡 Sam is making a name for himself with his interactive essays – check out the [load balancing](https://javascriptweekly.com/link/173603/d076523b1d), [memory allocation](https://javascriptweekly.com/link/173604/d076523b1d), [hashing](https://javascriptweekly.com/link/173605/d076523b1d), and [bloom filter](https://javascriptweekly.com/link/173606/d076523b1d) ones too.
+
+[JavaScript’s Trademark Problem](https://javascriptweekly.com/link/173607/d076523b1d "2ality.com") — Dr. Axel discusses Oracle's hold over the ‘JavaScript’ trademark, including the history and present-day [legal attempts to challenge Oracle.](https://javascriptweekly.com/link/173608/d076523b1d) Fireship has also just published [▶️ a video about the battle](https://javascriptweekly.com/link/173609/d076523b1d) and there’s now [a GoFundMe to raise funds](https://javascriptweekly.com/link/173610/d076523b1d) to continue the fight.
+
+Dr. Axel Rauschmayer et al.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/ab8b3c0b.png)](https://javascriptweekly.com/link/173538/d076523b1d)
+
+[Tests Are Dead. Meticulous AI Is Here](https://javascriptweekly.com/link/173538/d076523b1d "www.meticulous.ai") — Meticulous creates and maintains a continuously evolving E2E UI test suite with zero developer effort. Built on Chromium with a deterministic engine, it’s the only testing tool that eliminates flakes. Relied on by Dropbox, Notion, and Wiz.
+
+Meticulous AI sponsor
+
+[New in ESLint v9.34.0: Multithread Linting](https://javascriptweekly.com/link/173539/d076523b1d "eslint.org") — A common feature of tools like [Rslint](https://javascriptweekly.com/link/173540/d076523b1d), [Biome](https://javascriptweekly.com/link/173541/d076523b1d), and [Oxlint](https://javascriptweekly.com/link/173542/d076523b1d), is being '\_N\_x times faster' than ESLint, but the [latest ESLint](https://javascriptweekly.com/link/173543/d076523b1d) has a trick up its sleeve and can now process multiple files at the same time, dramatically reducing lint times for large projects.
+
+Francesco Trotta
+
+**IN BRIEF:**
+
+* Daniel Rosenwasser proposes that TypeScript 6.0 [should have `--strict` on by default.](https://javascriptweekly.com/link/173544/d076523b1d) You can learn more about [what's planned for TypeScript 6.0 here.](https://javascriptweekly.com/link/173545/d076523b1d)
+
+* [Malicious versions of Nx](https://javascriptweekly.com/link/173611/d076523b1d), along with some supporting plugin packages, were published to npm – [more details on affected versions.](https://javascriptweekly.com/link/173612/d076523b1d)
+
+* [Remix v3 is set to drop React](https://javascriptweekly.com/link/173546/d076523b1d), instead using its own fork of [Preact.](https://javascriptweekly.com/link/173547/d076523b1d)
+
+* [*Codecs* are a new Zod API](https://javascriptweekly.com/link/173548/d076523b1d) for defining bidirectional transformations between two types.
+
+* 🇺🇸 [CascadiaJS](https://javascriptweekly.com/link/173549/d076523b1d) is a conference taking place September 18-19 in Seattle, WA.
+
+**RELEASES:**
+
+* [Rspack 1.5](https://javascriptweekly.com/link/173550/d076523b1d) – The fast web bundler improves barrel file optimization, has a faster file system watcher, improved browser support, and more. It's a big release.
+
+* [Node.js v24.7.0 (Current)](https://javascriptweekly.com/link/173551/d076523b1d) – A step forward for cryptography, both with Web Cryptography API support and post-quantum standards.
+
+* [Electron 37.4](https://javascriptweekly.com/link/173552/d076523b1d), [Prisma 6.15.0](https://javascriptweekly.com/link/173553/d076523b1d), [Ink 6.2.3](https://javascriptweekly.com/link/173554/d076523b1d)
+
+📖  Articles and Videos
+
+[Speeding Up the JavaScript Ecosystem: Semver](https://javascriptweekly.com/link/173555/d076523b1d "marvinh.dev") — The latest in Marvin’s multi-year series of posts on optimizing heavily used parts of the JavaScript ecosystem: *“During the installation process, package managers run a bunch of semver comparisons. The `semver` library used in npm, yarn and pnpm can be made around 33x faster.”*
+
+Marvin Hagemeister
+
+[Say Bye with JavaScript Beacon](https://javascriptweekly.com/link/173556/d076523b1d "hemath.dev") — The [Beacon API](https://javascriptweekly.com/link/173557/d076523b1d) has been supported in all mainstream browsers for years now and provides a way to send a guaranteed (even if a page is being unloaded) non-blocking request to a web server when no response is needed.
+
+HemathKumar R
+
+[Secure Your AI Agents So That You Can Protect Your Users](https://javascriptweekly.com/link/173558/d076523b1d "www.auth0.com") — Whether you have a B2B or B2C use case, Auth0 is a full IdP that provides robust security like MFA and continuous threat monitoring.
+
+Auth0 sponsor
+
+[How We Migrated Our Monorepo to Node Type Stripping](https://javascriptweekly.com/link/173559/d076523b1d "blog.calm.com") — Since v23.6 (and in LTS since [v22.18.0](https://javascriptweekly.com/link/173560/d076523b1d)), Node has supported running (most) TypeScript code by [stripping the types out](https://javascriptweekly.com/link/173561/d076523b1d) first. One team shares the challenges encountered and what the end benefits were.
+
+Stuart Dotson (Calm)
+
+[You No Longer Need JavaScript (For Many Frontend Things)](https://javascriptweekly.com/link/173562/d076523b1d "lyra.horse") — A neat look at some of what plain HTML and CSS can achieve in terms of effects and techniques for which you might have once relied upon JavaScript.
+
+Lyra
+
+📄 [Understanding `Promise.any()`: When One Success is Enough](https://javascriptweekly.com/link/173563/d076523b1d) – Given multiple promises, resolve as soon as just one fulfills. Matt Smith
+
+📄 [The Struggle of Wrapping a JavaScript Game for Desktop](https://javascriptweekly.com/link/173564/d076523b1d) – The author explains why they finally settled on [NW.js](https://javascriptweekly.com/link/173565/d076523b1d). JSLegendDev
+
+📄 [Speeding Up Firefox Local AI Runtime](https://javascriptweekly.com/link/173566/d076523b1d) – How Firefox accelerated inference by replacing the WASM-based ONNX runtime that powers Transformers.js with a native C++ counterpart. Ziadé, Adenot, and Guelton
+
+📄 [Unit Formatting with `Intl` in JavaScript](https://javascriptweekly.com/link/173567/d076523b1d) Raymond Camden
+
+📄 [Exporting a Cloth Simulation from Blender to an Interactive Three.js Scene](https://javascriptweekly.com/link/173568/d076523b1d) Joshua Guo
+
+📺 [Coming in Angular 21: HttpClient Built In by Default](https://javascriptweekly.com/link/173569/d076523b1d) Igor Sedov
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vknw4hyr1dnjqyibqppe.jpg)](https://javascriptweekly.com/link/173570/d076523b1d)
+
+[Cornerstone3D 4.0: Build Web-Based Medical Imaging Apps](https://javascriptweekly.com/link/173570/d076523b1d "www.cornerstonejs.org") — A set of JavaScript libraries to build things like [this 3D CT scan viewer](https://javascriptweekly.com/link/173571/d076523b1d), [PET-CT scan viewer](https://javascriptweekly.com/link/173572/d076523b1d), and [much more besides.](https://javascriptweekly.com/link/173573/d076523b1d) There’s a lot to this project, along with [numerous tutorials.](https://javascriptweekly.com/link/173574/d076523b1d)
+
+Open Health Imaging Foundation
+
+[ImageJS 1.0: Image Processing and Manipulation Library](https://javascriptweekly.com/link/173575/d076523b1d "docs.image-js.org") — A library for resizing, cropping, filtering, color adjustments, and [numerous other image transformations](https://javascriptweekly.com/link/173576/d076523b1d) which works in Node.js *and* the browser (supporting JPEG, PNG, BMP and TIFF – thanks to pure JS dependencies like [fast-jpeg](https://javascriptweekly.com/link/173577/d076523b1d) and [fast-png](https://javascriptweekly.com/link/173578/d076523b1d)). v1.0 brings TypeScript support and a more intuitive API. [GitHub repo.](https://javascriptweekly.com/link/173579/d076523b1d)
+
+ImageJS Team
+
+[The Best Way for Web Developers To Track Key User Flows](https://javascriptweekly.com/link/173580/d076523b1d "embrace.io") — Check out User Journeys, a new approach to connecting technical performance to user engagement in your web apps.
+
+Embrace sponsor
+
+[Obs.js: Context-Aware Web Performance for Everyone](https://javascriptweekly.com/link/173613/d076523b1d "csswizardry.com") — Uses the Navigator and Battery APIs to get contextual information about your users’ connection strength and battery status so you can adapt your site/app to the environment or collect the data for analysis.
+
+Harry Roberts
+
+📊 [SveltePlot: A Visualization Framework for Svelte](https://javascriptweekly.com/link/173584/d076523b1d "svelteplot.dev") — It’s still in alpha but its API is inspired by a similar plotting library by Observable and built on top of D3. There are plenty of [examples in the docs](https://javascriptweekly.com/link/173585/d076523b1d).
+
+Gregor Aisch
+
+* [Repomix 1.4](https://javascriptweekly.com/link/173586/d076523b1d) – Pack an entire repository into a single, LLM-friendly file. v1.4 adds the ability to integrate commit history.
+
+* [MikroORM 6.5](https://javascriptweekly.com/link/173587/d076523b1d) – TypeScript ORM for Node based on Data Mapper, Unit of Work and Identity Map patterns.
+
+* 📄 [jsPDF 3.0.2](https://javascriptweekly.com/link/173588/d076523b1d) – Client-side JavaScript PDF generation for everyone.
+
+* [Faker 10.0](https://javascriptweekly.com/link/173589/d076523b1d) – Generate fabricated data to your heart's content.
+
+* [Tiptap 3.3](https://javascriptweekly.com/link/173590/d076523b1d) – Headless, framework-agnostic rich text editor.
+
+* [RxDB 16.18](https://javascriptweekly.com/link/173591/d076523b1d) – Offline-first, reactive database for JS apps.
+
+* [Denops.vim 8.0](https://javascriptweekly.com/link/173592/d076523b1d) – Write Vim/Neovim plugins with Deno.
+
+🎁 Some Bonus Items
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ejadjigfrdrfh5w93wst.jpg)](https://javascriptweekly.com/link/173593/d076523b1d)
+
+* [`Intl` Playground](https://javascriptweekly.com/link/173593/d076523b1d) is a handy site to get a quick look at how the different options on `Intl.DateTimeFormat` present in real life.
+
+* 📺 The folks who created the epic, well-produced [▶️ Vue.js documentary](https://javascriptweekly.com/link/173594/d076523b1d), [▶️ React documentary](https://javascriptweekly.com/link/173595/d076523b1d) and [▶️ Node.js documentary](https://javascriptweekly.com/link/173596/d076523b1d) are back with [▶️ a movie-length documentary all about Python.](https://javascriptweekly.com/link/173597/d076523b1d)
+
+* Talking of Python, [Pyodide](https://javascriptweekly.com/link/173598/d076523b1d) is a port of CPython to WebAssembly that can be used both in the browser and from Node.js.
+
+* 🕹️ Jeff Schomay is creating a JavaScript roguelike game called [Thunder Lizard](https://javascriptweekly.com/link/173614/d076523b1d) and decided to see what would happen if [he used AI to turn his ASCII renders into full graphics](https://javascriptweekly.com/link/173615/d076523b1d) live and on-the-fly. Fun, but sounds expensive!
+
+* [GitHub has added WebP image support](https://javascriptweekly.com/link/173599/d076523b1d) across its site. It was a little flaky till now.
+
+* 🎵 Need some [music for programming?](https://javascriptweekly.com/link/173600/d076523b1d) A fantastic design for a text-only site.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/173616/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
