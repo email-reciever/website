@@ -1,0 +1,118 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: The useless useCallback
+description: The useless useCallback
+date: 星期三 03 早上 八月 3o 2025
+author: reactdigest
+origin_url: https://reactdigest.net/newsletters/2101-the-useless-usecallback
+origin_site: https://reactdigest.net/newsletters/2101-the-useless-usecallback
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx'
+import { Reference } from '@/components/Reference.tsx'
+
+<Reference
+  client:only="react"
+  title="The useless useCallback"
+  url="https://reactdigest.net/newsletters/2101-the-useless-usecallback"
+/>
+
+<Detail client:only="react">
+[The useless useCallback](https://tkdodo.eu/blog/the-useless-use-callback)  
+_8 minutes_ by Dominik Dorfmeister
+
+Dominik discusses the often pointless use of useCallback and useMemo in React. He argues that memoization is only useful in two scenarios: performance optimization when passing values to memoized components, and preventing effects from running too frequently.
+
+[Tests are dead. Meticulous AI is here.](https://www.meticulous.ai/?utm_source=react_digest)  
+_sponsored by Meticulous_
+
+Meticulous automatically creates and maintains an exhaustive e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Dropbox, Lattice, Bilt Rewards and hundreds of organisations rely on Meticulous for their frontend testing. It is built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[React and D3](https://2019.wattenberger.com/blog/react-and-d3)  
+_13 minutes_ by Amelia Wattenberger
+
+These two technologies are notoriously tricky to combine. The crux of the issue is that they both want to handle the DOM.
+
+[How toHandle deferred data in React Router](https://sergiodxa.com/tutorials/handle-deferred-data-in-react-router)  
+_2 minutes_ by Sergio Xalambrí
+
+If you're using React Router v7 you may not know you can return pending promises from loaders instead of awaiting them in your loader. This allows you to handle loading states directly in your components, useful for slow data fetching scenarios, or in case you want the user to navigate instantly to the page while the data is still loading.
+
+[How Parcel bundles React Server Components](https://devongovett.me/blog/parcel-rsc.html)  
+_14 minutes_ by Devon Govett
+
+Parcel v2.14.0 added support for React Server Components. The release blog post and documentation describe what RSCs are and how to use them with Parcel. Devon dives deep into the internals. He describes how RSCs integrate with a bundler, what directives like "use client" do internally, how code splitting works or how RSCs improve it.
+
+[Let's write React hooks from scratch](https://playfulprogramming.com/posts/react-write-hooks-from-scratch)  
+_3 minutes_ by Corbin Crutchley
+
+Corbin explains how React hooks persist state in function components by using a linked list data structure tied to the virtual DOM. He reveals that each component maintains its hooks in order and explains why hooks can't be called conditionally.
+
+## webdev
+
+- [Making a Masonry Layout That Works Today](https://css-tricks.com/making-a-masonry-layout-that-works-today/)
+- [The HTML Hobbyist](https://www.htmlhobbyist.com/)
+- [It's time for modern CSS to kill the SPA](https://www.jonoalderson.com/conjecture/its-time-for-modern-css-to-kill-the-spa/)
+- [Celebrating 20 years of MDN](https://developer.mozilla.org/en-US/blog/mdn-turns-20/)
+- [Minification doesnt matter much](https://gomakethings.com/minification-doesnt-matter-much/)
+
+## javascript
+
+- [Never write your own Date Parsing Library](https://www.zachleat.com/web/adventures-in-date-parsing/)
+- [The many, many, many JavaScript runtimes of the last decade](https://buttondown.com/whatever_jamie/archive/the-many-many-many-javascript-runtimes-of-the-last-decade/)
+
+And the most popular article from the last issue was:
+
+- [Introducing Zustand](https://frontendmasters.com/blog/introducing-zustand/)
+
+</Detail>
+
+[The useless useCallback](https://tkdodo.eu/blog/the-useless-use-callback)  
+_8 minutes_ by Dominik Dorfmeister
+
+Dominik discusses the often pointless use of useCallback and useMemo in React. He argues that memoization is only useful in two scenarios: performance optimization when passing values to memoized components, and preventing effects from running too frequently.
+
+[Tests are dead. Meticulous AI is here.](https://www.meticulous.ai/?utm_source=react_digest)  
+_sponsored by Meticulous_
+
+Meticulous automatically creates and maintains an exhaustive e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Dropbox, Lattice, Bilt Rewards and hundreds of organisations rely on Meticulous for their frontend testing. It is built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[React and D3](https://2019.wattenberger.com/blog/react-and-d3)  
+_13 minutes_ by Amelia Wattenberger
+
+These two technologies are notoriously tricky to combine. The crux of the issue is that they both want to handle the DOM.
+
+[How toHandle deferred data in React Router](https://sergiodxa.com/tutorials/handle-deferred-data-in-react-router)  
+_2 minutes_ by Sergio Xalambrí
+
+If you're using React Router v7 you may not know you can return pending promises from loaders instead of awaiting them in your loader. This allows you to handle loading states directly in your components, useful for slow data fetching scenarios, or in case you want the user to navigate instantly to the page while the data is still loading.
+
+[How Parcel bundles React Server Components](https://devongovett.me/blog/parcel-rsc.html)  
+_14 minutes_ by Devon Govett
+
+Parcel v2.14.0 added support for React Server Components. The release blog post and documentation describe what RSCs are and how to use them with Parcel. Devon dives deep into the internals. He describes how RSCs integrate with a bundler, what directives like "use client" do internally, how code splitting works or how RSCs improve it.
+
+[Let's write React hooks from scratch](https://playfulprogramming.com/posts/react-write-hooks-from-scratch)  
+_3 minutes_ by Corbin Crutchley
+
+Corbin explains how React hooks persist state in function components by using a linked list data structure tied to the virtual DOM. He reveals that each component maintains its hooks in order and explains why hooks can't be called conditionally.
+
+## webdev
+
+- [Making a Masonry Layout That Works Today](https://css-tricks.com/making-a-masonry-layout-that-works-today/)
+- [The HTML Hobbyist](https://www.htmlhobbyist.com/)
+- [It's time for modern CSS to kill the SPA](https://www.jonoalderson.com/conjecture/its-time-for-modern-css-to-kill-the-spa/)
+- [Celebrating 20 years of MDN](https://developer.mozilla.org/en-US/blog/mdn-turns-20/)
+- [Minification doesnt matter much](https://gomakethings.com/minification-doesnt-matter-much/)
+
+## javascript
+
+- [Never write your own Date Parsing Library](https://www.zachleat.com/web/adventures-in-date-parsing/)
+- [The many, many, many JavaScript runtimes of the last decade](https://buttondown.com/whatever_jamie/archive/the-many-many-many-javascript-runtimes-of-the-last-decade/)
+
+And the most popular article from the last issue was:
+
+- [Introducing Zustand](https://frontendmasters.com/blog/introducing-zustand/)
