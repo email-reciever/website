@@ -1,0 +1,325 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Why browsers throttle JavaScript timers (and what to do about it)
+description: Why browsers throttle JavaScript timers (and what to do about it)
+date: 星期五 05 下午 九月 5o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/751
+origin_site: https://javascriptweekly.com/issues/751
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Why browsers throttle JavaScript timers (and what to do about it)" url="https://javascriptweekly.com/issues/751" />
+
+<Detail client:only="react">
+	#​751 — September 5, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/751)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/173829/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/u3xwdwpaxw19xcumymn5.jpg)](https://javascriptweekly.com/link/173830/d076523b1d)
+
+[Mediabunny: A Complete Media Toolkit for JavaScript](https://javascriptweekly.com/link/173830/d076523b1d "mediabunny.dev") — Supporting both browsers and Node.js, this library lets you read, write and convert popular media file formats (e.g. MP4, MP3, [and more](https://javascriptweekly.com/link/173831/d076523b1d)) without needing to lean on dependencies like FFmpeg. You can [make thumbnails](https://javascriptweekly.com/link/173832/d076523b1d), [extract metadata](https://javascriptweekly.com/link/173833/d076523b1d), [write code that gets converted into a video](https://javascriptweekly.com/link/173834/d076523b1d), and more. [GitHub repo.](https://javascriptweekly.com/link/173835/d076523b1d)
+
+Vanilagy
+
+[Why Do Browsers Throttle JavaScript Timers?](https://javascriptweekly.com/link/173836/d076523b1d "nolanlawson.com") — Did you know the zero in `setTimeout(0)` doesn’t really mean _zero_? Browsers clamp timers to at least a few milliseconds or more, slowing down code that relies on them. Luckily, there are alternative options, which Nolan demonstrates and benchmarks.
+
+Nolan Lawson
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/02621154.png)](https://javascriptweekly.com/link/173829/d076523b1d)
+
+[Boost Coding Productivity with AI-Assisted Tools & Agents](https://javascriptweekly.com/link/173829/d076523b1d "frontendmasters.com") — Join Steve Kinney for this course looking at how best to harness AI for faster, higher-quality code. Learn how Cursor and Claude Code can be used to handle project plans, carry out inline edits, and perform larger background tasks — all adhering to the guidelines you set.
+
+Frontend Masters sponsor
+
+[Ripple: A New, In-Development TypeScript UI Framework](https://javascriptweekly.com/link/173837/d076523b1d "www.ripplejs.com") — A new framework aiming to take the best parts of React, Solid and Svelte, and combine them into a single package. Notably, it comes from someone who worked on React _and_ Svelte, as well as author of [Lexical](https://javascriptweekly.com/link/173838/d076523b1d) and [Inferno](https://javascriptweekly.com/link/173839/d076523b1d), so it’s worth a look. There’s more info [on the GitHub repo.](https://javascriptweekly.com/link/173840/d076523b1d)
+
+Dominic Gannaway
+
+**IN BRIEF:**
+
+*   The [What's New in Viteland: August 2025 recap](https://javascriptweekly.com/link/173842/d076523b1d) presents a handy roundup of what's going on with Oxlint, Vite, Vitest, Rolldown, and related projects.
+    
+*   [The Angular team has a big summer update](https://javascriptweekly.com/link/173844/d076523b1d) too, covering zoneless change detection, new animation features, AI integrations, better debugging, and more.
+    
+*   Thoughtbot shares its [list of upcoming JavaScript conferences for 2025.](https://javascriptweekly.com/link/173845/d076523b1d)
+    
+
+[Product for Engineers Newsletter](https://javascriptweekly.com/link/173846/d076523b1d) — Build better products, not just better code. Learn how to build features users love. [Subscribe for free](https://javascriptweekly.com/link/173846/d076523b1d)
+
+PostHog sponsor
+
+**RELEASES:**
+
+*   Deno's [Fresh](https://javascriptweekly.com/link/173848/d076523b1d) framework is [now out in _Fresh 2.0 Beta_ form.](https://javascriptweekly.com/link/173850/d076523b1d) It can now optionally run as a Vite plugin which opens up numerous new possibilities.
+    
+*   [Electron 38.0](https://javascriptweekly.com/link/173851/d076523b1d) – The cross-platform desktop app framework. Now using Chromium 140 and Node 22.18 with V8 14.0.
+    
+*   [Ember 6.6](https://javascriptweekly.com/link/173852/d076523b1d) – The framework _"for building ambitious web applications."_
+    
+*   [Node.js v20.19.5 (LTS)](https://javascriptweekly.com/link/173855/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hnzgwklouqzczgd4yw5y.jpg)](https://javascriptweekly.com/link/173856/d076523b1d)
+
+[Google Chrome Turns 17: A History](https://javascriptweekly.com/link/173856/d076523b1d "addyosmani.com") — A fantastic walkthrough of Chrome’s origins and its evolution over the years. Addy looks at key milestones (multi-process architecture for example), security, its steps into the world of AI, and more.
+
+Addy Osmani
+
+💡 On the topic of Chrome, [Top Chrome APIs Every Developer Should Try](https://javascriptweekly.com/link/173857/d076523b1d) covers a variety of Chrome-only JavaScript APIs, most of which I wasn't aware of.
+
+[_Lean_ for JavaScript Developers](https://javascriptweekly.com/link/173858/d076523b1d "overreacted.io") — A comprehensive introduction to [Lean](https://javascriptweekly.com/link/173859/d076523b1d), a theorem prover and language for creating formally verified code that Dan Abramov has really been getting into recently. _“I’ve never written code alongside proofs like this before. Have you?”_
+
+Dan Abramov
+
+[AI Writes Code. Wallaby MCP Makes Sure It Actually Works](https://javascriptweekly.com/link/173860/d076523b1d "wallabyjs.com") — Give your AI agent live execution data, coverage, and real-time insights to generate tests and code with confidence.
+
+Wallaby Team sponsor
+
+[Getting Accurate Text Lengths with `Intl.Segmenter`](https://javascriptweekly.com/link/173862/d076523b1d "blog.sangeeth.dev") — A useful tip for when `.length` just isn’t returning what you’d quite expect..
+
+Sangeeth Sudheer
+
+[Making XML Human-Readable Without XSLT](https://javascriptweekly.com/link/173863/d076523b1d "jakearchibald.com") — Jake gets niche, but sets JavaScript to good use here.
+
+Jake Archibald
+
+📄 [Stress-Testing Biome's `noFloatingPromises` Lint Rule](https://javascriptweekly.com/link/173864/d076523b1d) Dimitri Mitropoulos (Vercel)
+
+📄 [How to Optimize Third Party Scripts with Web Workers and Partytown](https://javascriptweekly.com/link/173865/d076523b1d) Jakub Andrzejewski
+
+📄 [Redux _without_ React: State Management in Vanilla JS](https://javascriptweekly.com/link/173866/d076523b1d) Moritz Kröger
+
+📄 [Functional Custom Elements the Easy Way](https://javascriptweekly.com/link/173867/d076523b1d) Ginger (Piccalilli)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/csbiyt4i3hxzhyqbrrjg.jpg)](https://javascriptweekly.com/link/173870/d076523b1d)
+
+[Peaks.js 4.0: UI Component for Interacting with Audio Waveforms](https://javascriptweekly.com/link/173870/d076523b1d "codeberg.org") — A project originally spawned from the BBC’s R&D department, Peaks renders audio waveforms to a canvas element and allows scrolling, zooming, and the sort of things you might otherwise see in an audio editor. _LGPL licensed._
+
+Chris Needham et al.
+
+💡 There are other options in this space too, including the newly released [Waveform Renderer 1.0](https://javascriptweekly.com/link/173871/d076523b1d) (complete with [interactive demo](https://javascriptweekly.com/link/173872/d076523b1d)) which is entirely focused on waveform rendering, as well as [Wavesurfer.js.](https://javascriptweekly.com/link/173873/d076523b1d)
+
+[Redux Toolkit 2.9: The 'Batteries-Included' Toolset for Redux](https://javascriptweekly.com/link/173874/d076523b1d "github.com") — The long-standing toolset for working with Redux for state management gets a performance update with a rewrite of RTK Query’s subscription and polling systems, automatic aborting of in-flight requests when a cache entry is removed, and more.
+
+Mark Erikson
+
+[react-window 2.0: Render Large Lists of Data Quickly](https://javascriptweekly.com/link/173875/d076523b1d "react-window.vercel.app") — A component library for rendering large lists of data quickly and without the performance problems that often go along with that. There are several examples to check out, and React 18 is now required. ([Tanstack Virtual](https://javascriptweekly.com/link/173877/d076523b1d) is another option to consider in this space.)
+
+Brian Vaughn
+
+*   [serverless-http 4.0](https://javascriptweekly.com/link/173879/d076523b1d) – Use your existing middleware framework (e.g. Express, Koa) on AWS Lambda.
+    
+*   🖋️ [Signature Pad 5.1](https://javascriptweekly.com/link/173880/d076523b1d) – Canvas-based smooth signature drawing control.
+    
+*   [Tinypool 2.0](https://javascriptweekly.com/link/173882/d076523b1d) – Minimal Node.js worker thread pool implementation.
+    
+*   [gRPC Web 2.0](https://javascriptweekly.com/link/173884/d076523b1d) – JS implementation of gRPC for browser clients.
+    
+*   [Jasmine 5.10](https://javascriptweekly.com/link/173885/d076523b1d) – Testing framework for browsers & Node.
+    
+*   [NodeBB 4.5](https://javascriptweekly.com/link/173887/d076523b1d) – Node.js-powered forum system.
+    
+*   [Watt 3](https://javascriptweekly.com/link/173888/d076523b1d) – Node.js application server.
+    
+
+📰 Classifieds
+
+🎟️ [JetBrains JavaScript Day](https://javascriptweekly.com/link/173889/d076523b1d) is back for its fifth edition! We’ve lined up a full day of great speakers and insights. All that’s missing is you.
+
+* * *
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/173891/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+✉️  From the Inbox
+
+For a variety of reasons – not least taking a vacation in August (oops!) – I have a backlog of fantastic submissions from people that I want to share separately:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xpv93uhclrfmn7fsvf22.jpg)](https://javascriptweekly.com/link/173892/d076523b1d)
+
+*   🎨 [Eyecons](https://javascriptweekly.com/link/173892/d076523b1d) is a VS Code icon theme that automatically adapts the color of icons to fit your editor's main theme – well, [from this list](https://javascriptweekly.com/link/173893/d076523b1d) anyway.
+    
+*   [TypeScript Result](https://javascriptweekly.com/link/173894/d076523b1d) brings a `Result` type into play to help you handle errors in a more type-safe way.
+    
+*   [Vue Log Arsenal](https://javascriptweekly.com/link/173895/d076523b1d) is a plugin that adds a variety of logging directives for Vue 3 apps to use directly in elements, [like this, for example.](https://javascriptweekly.com/link/173896/d076523b1d)
+    
+*   Michael Sweeney [shows off 'the JavaScript equivalent of a magic trick'](https://javascriptweekly.com/link/173897/d076523b1d) using functions acting as primitives and nested proxies that remember their ancestry.
+    
+*   [StateLayer](https://javascriptweekly.com/link/173898/d076523b1d) is a forthcoming declarative 3D component framework whose homepage is a live demo. There's also a [getting started tutorial](https://javascriptweekly.com/link/173899/d076523b1d) showing how to build your own 3D scene from scratch.
+    
+*   [fp-filters](https://javascriptweekly.com/link/173900/d076523b1d) is a curated suite of over a hundred common-use filter functions that can be used in a functional programming style.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/173901/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​751 — September 5, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/751)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/173829/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/u3xwdwpaxw19xcumymn5.jpg)](https://javascriptweekly.com/link/173830/d076523b1d)
+
+[Mediabunny: A Complete Media Toolkit for JavaScript](https://javascriptweekly.com/link/173830/d076523b1d "mediabunny.dev") — Supporting both browsers and Node.js, this library lets you read, write and convert popular media file formats (e.g. MP4, MP3, [and more](https://javascriptweekly.com/link/173831/d076523b1d)) without needing to lean on dependencies like FFmpeg. You can [make thumbnails](https://javascriptweekly.com/link/173832/d076523b1d), [extract metadata](https://javascriptweekly.com/link/173833/d076523b1d), [write code that gets converted into a video](https://javascriptweekly.com/link/173834/d076523b1d), and more. [GitHub repo.](https://javascriptweekly.com/link/173835/d076523b1d)
+
+Vanilagy
+
+[Why Do Browsers Throttle JavaScript Timers?](https://javascriptweekly.com/link/173836/d076523b1d "nolanlawson.com") — Did you know the zero in `setTimeout(0)` doesn’t really mean *zero*? Browsers clamp timers to at least a few milliseconds or more, slowing down code that relies on them. Luckily, there are alternative options, which Nolan demonstrates and benchmarks.
+
+Nolan Lawson
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/02621154.png)](https://javascriptweekly.com/link/173829/d076523b1d)
+
+[Boost Coding Productivity with AI-Assisted Tools & Agents](https://javascriptweekly.com/link/173829/d076523b1d "frontendmasters.com") — Join Steve Kinney for this course looking at how best to harness AI for faster, higher-quality code. Learn how Cursor and Claude Code can be used to handle project plans, carry out inline edits, and perform larger background tasks — all adhering to the guidelines you set.
+
+Frontend Masters sponsor
+
+[Ripple: A New, In-Development TypeScript UI Framework](https://javascriptweekly.com/link/173837/d076523b1d "www.ripplejs.com") — A new framework aiming to take the best parts of React, Solid and Svelte, and combine them into a single package. Notably, it comes from someone who worked on React *and* Svelte, as well as author of [Lexical](https://javascriptweekly.com/link/173838/d076523b1d) and [Inferno](https://javascriptweekly.com/link/173839/d076523b1d), so it’s worth a look. There’s more info [on the GitHub repo.](https://javascriptweekly.com/link/173840/d076523b1d)
+
+Dominic Gannaway
+
+**IN BRIEF:**
+
+* The [What's New in Viteland: August 2025 recap](https://javascriptweekly.com/link/173842/d076523b1d) presents a handy roundup of what's going on with Oxlint, Vite, Vitest, Rolldown, and related projects.
+
+* [The Angular team has a big summer update](https://javascriptweekly.com/link/173844/d076523b1d) too, covering zoneless change detection, new animation features, AI integrations, better debugging, and more.
+
+* Thoughtbot shares its [list of upcoming JavaScript conferences for 2025.](https://javascriptweekly.com/link/173845/d076523b1d)
+
+[Product for Engineers Newsletter](https://javascriptweekly.com/link/173846/d076523b1d) — Build better products, not just better code. Learn how to build features users love. [Subscribe for free](https://javascriptweekly.com/link/173846/d076523b1d)
+
+PostHog sponsor
+
+**RELEASES:**
+
+* Deno's [Fresh](https://javascriptweekly.com/link/173848/d076523b1d) framework is [now out in *Fresh 2.0 Beta* form.](https://javascriptweekly.com/link/173850/d076523b1d) It can now optionally run as a Vite plugin which opens up numerous new possibilities.
+
+* [Electron 38.0](https://javascriptweekly.com/link/173851/d076523b1d) – The cross-platform desktop app framework. Now using Chromium 140 and Node 22.18 with V8 14.0.
+
+* [Ember 6.6](https://javascriptweekly.com/link/173852/d076523b1d) – The framework *"for building ambitious web applications."*
+
+* [Node.js v20.19.5 (LTS)](https://javascriptweekly.com/link/173855/d076523b1d)
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hnzgwklouqzczgd4yw5y.jpg)](https://javascriptweekly.com/link/173856/d076523b1d)
+
+[Google Chrome Turns 17: A History](https://javascriptweekly.com/link/173856/d076523b1d "addyosmani.com") — A fantastic walkthrough of Chrome’s origins and its evolution over the years. Addy looks at key milestones (multi-process architecture for example), security, its steps into the world of AI, and more.
+
+Addy Osmani
+
+💡 On the topic of Chrome, [Top Chrome APIs Every Developer Should Try](https://javascriptweekly.com/link/173857/d076523b1d) covers a variety of Chrome-only JavaScript APIs, most of which I wasn't aware of.
+
+[*Lean* for JavaScript Developers](https://javascriptweekly.com/link/173858/d076523b1d "overreacted.io") — A comprehensive introduction to [Lean](https://javascriptweekly.com/link/173859/d076523b1d), a theorem prover and language for creating formally verified code that Dan Abramov has really been getting into recently. *“I’ve never written code alongside proofs like this before. Have you?”*
+
+Dan Abramov
+
+[AI Writes Code. Wallaby MCP Makes Sure It Actually Works](https://javascriptweekly.com/link/173860/d076523b1d "wallabyjs.com") — Give your AI agent live execution data, coverage, and real-time insights to generate tests and code with confidence.
+
+Wallaby Team sponsor
+
+[Getting Accurate Text Lengths with `Intl.Segmenter`](https://javascriptweekly.com/link/173862/d076523b1d "blog.sangeeth.dev") — A useful tip for when `.length` just isn’t returning what you’d quite expect..
+
+Sangeeth Sudheer
+
+[Making XML Human-Readable Without XSLT](https://javascriptweekly.com/link/173863/d076523b1d "jakearchibald.com") — Jake gets niche, but sets JavaScript to good use here.
+
+Jake Archibald
+
+📄 [Stress-Testing Biome's `noFloatingPromises` Lint Rule](https://javascriptweekly.com/link/173864/d076523b1d) Dimitri Mitropoulos (Vercel)
+
+📄 [How to Optimize Third Party Scripts with Web Workers and Partytown](https://javascriptweekly.com/link/173865/d076523b1d) Jakub Andrzejewski
+
+📄 [Redux *without* React: State Management in Vanilla JS](https://javascriptweekly.com/link/173866/d076523b1d) Moritz Kröger
+
+📄 [Functional Custom Elements the Easy Way](https://javascriptweekly.com/link/173867/d076523b1d) Ginger (Piccalilli)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/csbiyt4i3hxzhyqbrrjg.jpg)](https://javascriptweekly.com/link/173870/d076523b1d)
+
+[Peaks.js 4.0: UI Component for Interacting with Audio Waveforms](https://javascriptweekly.com/link/173870/d076523b1d "codeberg.org") — A project originally spawned from the BBC’s R\&D department, Peaks renders audio waveforms to a canvas element and allows scrolling, zooming, and the sort of things you might otherwise see in an audio editor. *LGPL licensed.*
+
+Chris Needham et al.
+
+💡 There are other options in this space too, including the newly released [Waveform Renderer 1.0](https://javascriptweekly.com/link/173871/d076523b1d) (complete with [interactive demo](https://javascriptweekly.com/link/173872/d076523b1d)) which is entirely focused on waveform rendering, as well as [Wavesurfer.js.](https://javascriptweekly.com/link/173873/d076523b1d)
+
+[Redux Toolkit 2.9: The 'Batteries-Included' Toolset for Redux](https://javascriptweekly.com/link/173874/d076523b1d "github.com") — The long-standing toolset for working with Redux for state management gets a performance update with a rewrite of RTK Query’s subscription and polling systems, automatic aborting of in-flight requests when a cache entry is removed, and more.
+
+Mark Erikson
+
+[react-window 2.0: Render Large Lists of Data Quickly](https://javascriptweekly.com/link/173875/d076523b1d "react-window.vercel.app") — A component library for rendering large lists of data quickly and without the performance problems that often go along with that. There are several examples to check out, and React 18 is now required. ([Tanstack Virtual](https://javascriptweekly.com/link/173877/d076523b1d) is another option to consider in this space.)
+
+Brian Vaughn
+
+* [serverless-http 4.0](https://javascriptweekly.com/link/173879/d076523b1d) – Use your existing middleware framework (e.g. Express, Koa) on AWS Lambda.
+
+* 🖋️ [Signature Pad 5.1](https://javascriptweekly.com/link/173880/d076523b1d) – Canvas-based smooth signature drawing control.
+
+* [Tinypool 2.0](https://javascriptweekly.com/link/173882/d076523b1d) – Minimal Node.js worker thread pool implementation.
+
+* [gRPC Web 2.0](https://javascriptweekly.com/link/173884/d076523b1d) – JS implementation of gRPC for browser clients.
+
+* [Jasmine 5.10](https://javascriptweekly.com/link/173885/d076523b1d) – Testing framework for browsers & Node.
+
+* [NodeBB 4.5](https://javascriptweekly.com/link/173887/d076523b1d) – Node.js-powered forum system.
+
+* [Watt 3](https://javascriptweekly.com/link/173888/d076523b1d) – Node.js application server.
+
+📰 Classifieds
+
+🎟️ [JetBrains JavaScript Day](https://javascriptweekly.com/link/173889/d076523b1d) is back for its fifth edition! We’ve lined up a full day of great speakers and insights. All that’s missing is you.
+
+***
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/173891/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+✉️  From the Inbox
+
+For a variety of reasons – not least taking a vacation in August (oops!) – I have a backlog of fantastic submissions from people that I want to share separately:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xpv93uhclrfmn7fsvf22.jpg)](https://javascriptweekly.com/link/173892/d076523b1d)
+
+* 🎨 [Eyecons](https://javascriptweekly.com/link/173892/d076523b1d) is a VS Code icon theme that automatically adapts the color of icons to fit your editor's main theme – well, [from this list](https://javascriptweekly.com/link/173893/d076523b1d) anyway.
+
+* [TypeScript Result](https://javascriptweekly.com/link/173894/d076523b1d) brings a `Result` type into play to help you handle errors in a more type-safe way.
+
+* [Vue Log Arsenal](https://javascriptweekly.com/link/173895/d076523b1d) is a plugin that adds a variety of logging directives for Vue 3 apps to use directly in elements, [like this, for example.](https://javascriptweekly.com/link/173896/d076523b1d)
+
+* Michael Sweeney [shows off 'the JavaScript equivalent of a magic trick'](https://javascriptweekly.com/link/173897/d076523b1d) using functions acting as primitives and nested proxies that remember their ancestry.
+
+* [StateLayer](https://javascriptweekly.com/link/173898/d076523b1d) is a forthcoming declarative 3D component framework whose homepage is a live demo. There's also a [getting started tutorial](https://javascriptweekly.com/link/173899/d076523b1d) showing how to build your own 3D scene from scratch.
+
+* [fp-filters](https://javascriptweekly.com/link/173900/d076523b1d) is a curated suite of over a hundred common-use filter functions that can be used in a functional programming style.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/173901/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
