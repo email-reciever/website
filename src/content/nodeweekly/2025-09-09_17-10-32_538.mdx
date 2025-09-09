@@ -1,0 +1,276 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: A big supply chain attack on the npm ecosystem
+description: A big supply chain attack on the npm ecosystem
+date: 星期二 05 下午 九月 9o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/592
+origin_site: https://nodeweekly.com/issues/592
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="A big supply chain attack on the npm ecosystem" url="https://nodeweekly.com/issues/592" />
+
+<Detail client:only="react">
+	#​592 — September 9, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/592)
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1238,h_192/e_make_transparent/co_white,e_outline:37/fcshbu9d17nd8smej96j.png)](https://nodeweekly.com/link/173904/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kzdihezwybmfv4v41ktk.jpg)](https://nodeweekly.com/link/173905/0a4070b383)
+
+[A Major Supply Chain Attack Hits the npm Ecosystem](https://nodeweekly.com/link/173905/0a4070b383 "socket.dev") — In July, Socket warned us about [a phishing campaign](https://nodeweekly.com/link/173906/0a4070b383) targeting npm package publishers. Sadly, a prolific package author (among [others](https://nodeweekly.com/link/173907/0a4070b383), like [DuckDB, who explain how the attack worked on them](https://nodeweekly.com/link/173963/0a4070b383)) [fell victim](https://nodeweekly.com/link/173908/0a4070b383) to the scam, resulting in some popular packages becoming compromised ([like Chalk](https://nodeweekly.com/link/173909/0a4070b383), [debug](https://nodeweekly.com/link/173910/0a4070b383), and [others](https://nodeweekly.com/link/173911/0a4070b383)).
+
+Gooding, Brown, et al. (Socket)
+
+💡 Inspired by the above story, [Zbyszek Tenerowicz shows off an interesting tool](https://nodeweekly.com/link/173912/0a4070b383) / Webpack plugin (that he works on) called [LavaMoat](https://nodeweekly.com/link/173913/0a4070b383) that can be used to sandbox / contain dependencies that are only made available [by way of defined policies.](https://nodeweekly.com/link/173914/0a4070b383)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/6e3b2159.png)](https://nodeweekly.com/link/173904/0a4070b383)
+
+[CodeRabbit’s Free AI Code Reviews in IDE - VS Code, Cursor, Windsurf](https://nodeweekly.com/link/173904/0a4070b383 "coderabbit.link") — Code Rabbit brings AI code reviews to VS Code, Cursor & Windsurf. Get line-by-line reviews, one-click fixes & codebase-aware feedback - all free in your IDE. Seamlessly integrates with git workflows. [Install the extension & start reviewing!](https://nodeweekly.com/link/173904/0a4070b383)
+
+CodeRabbit sponsor
+
+[Bringing Node HTTP Servers to _Cloudflare Workers_](https://nodeweekly.com/link/173915/0a4070b383 "blog.cloudflare.com") — A few weeks ago [we linked to an item](https://nodeweekly.com/link/173916/0a4070b383) that noticed Cloudflare Workers' local dev tools had begun to support Express.js apps – now support has come to _Workers_ proper, with support for `node:http`’s client and server APIs if you enable [Node.js compatibility.](https://nodeweekly.com/link/173917/0a4070b383)
+
+Nizipli and Snell (Cloudflare)
+
+**IN BRIEF:**
+
+*   [Vercel now supports](https://nodeweekly.com/link/173918/0a4070b383) Express-based backends with zero configuration, and Vercel Functions running on Node now also [support graceful shutdowns](https://nodeweekly.com/link/173919/0a4070b383), giving you 500ms to run cleanup tasks before termination.
+    
+*   📗 [NodeBook](https://nodeweekly.com/link/173920/0a4070b383) is a new, in-progress book promising a 'deep dive' into Node's internals, and it already delivers [a look inside the V8 JavaScript engine](https://nodeweekly.com/link/173921/0a4070b383) and [how Node's event loop works.](https://nodeweekly.com/link/173922/0a4070b383)
+    
+*   On X, [Marco Ippolito laments that Node.js lives in a paradox](https://nodeweekly.com/link/173923/0a4070b383) of progressing both "too fast" and "too slow" for many developers.
+    
+
+[Node.js v20.19.5 (LTS) Released](https://nodeweekly.com/link/173924/0a4070b383 "nodejs.org") — A quiet release dominated by bugfixes and a large number of dependency updates. It arrived quickly after [v22.19.0 (LTS)](https://nodeweekly.com/link/173925/0a4070b383), which unflagged `--experimental-wasm-modules`, added `server.keepAliveTimeoutBuffer` to `http`, and added the ability for Node to use the system’s certificate authority (CA) via the `NODE_USE_SYSTEM_CA` environment variable.
+
+Marco Ippolito
+
+📄 [Getting Accurate Text Lengths with `Intl.Segmenter`](https://nodeweekly.com/link/173926/0a4070b383) – A useful tip for when `str.length` isn’t returning what you’d quite expect.. Sangeeth Sudheer
+
+📺 [Handling 500 Million Clicks with a $4 VPS](https://nodeweekly.com/link/173927/0a4070b383) – A developer goes behind the scenes of his Node.js-backed site that went viral. Andrew Schmelyun
+
+📄 [Why I Ditched Docker for Podman (And You Should Too)](https://nodeweekly.com/link/173928/0a4070b383) Dominik Szymański
+
+📄 [UDP in Node.js: A Technical Guide](https://nodeweekly.com/link/173929/0a4070b383) Pavel Romanov
+
+🛠 Code & Tools
+
+[Mediabunny: A Complete Media Toolkit for JavaScript](https://nodeweekly.com/link/173930/0a4070b383 "mediabunny.dev") — A library to read, write and convert popular media file formats (e.g. MP4, MP3, [and more](https://nodeweekly.com/link/173931/0a4070b383)) without leaning on dependencies like FFmpeg. You can [make thumbnails](https://nodeweekly.com/link/173932/0a4070b383), [extract metadata](https://nodeweekly.com/link/173933/0a4070b383), [write code that gets converted into a video](https://nodeweekly.com/link/173934/0a4070b383), and more. [GitHub repo.](https://nodeweekly.com/link/173935/0a4070b383)
+
+Vanilagy
+
+[Rocketadmin: An Efficient and Secure No-Code Back Office Solution](https://nodeweekly.com/link/173936/0a4070b383 "rocketadmin.com") — Save time and make things easier for your users with a powerful, feature-rich admin panel. We support all main databases.
+
+Rocketadmin sponsor
+
+[sqs-consumer 13.0: Build Amazon SQS-Based Apps Without Boilerplate](https://nodeweekly.com/link/173937/0a4070b383 "github.com") — Build SQS-based (Simple Queue Service) apps without the boilerplate. Just define an async function to handle the SQS message processing. If it’s good enough for the BBC..
+
+BBC
+
+[github-script 8.0: Script the GitHub API in _Actions_ Workflows](https://nodeweekly.com/link/173938/0a4070b383 "github.com") — If you want to write GitHub Actions that perform operations via the GitHub API using JavaScript, this is for you. Now supports Node.js 24.
+
+GitHub Actions
+
+*   [serverless-http 4.0](https://nodeweekly.com/link/173939/0a4070b383) – Use your existing middleware framework (e.g. Express, Koa) on AWS Lambda.
+    
+*   [express-openapi-validator 5.6](https://nodeweekly.com/link/173940/0a4070b383) – Auto-validate API requests and responses in Express against an OpenAPI 3.x spec.
+    
+*   [Prisma 6.15](https://nodeweekly.com/link/173941/0a4070b383) – The popular ORM for Node.js and TypeScript gains some 'AI safety guardrails.'
+    
+*   [Tinypool 2.0](https://nodeweekly.com/link/173942/0a4070b383) – Minimal Node.js worker thread pool implementation.
+    
+*   [Sidequest 1.7](https://nodeweekly.com/link/173943/0a4070b383) – Scalable background job processor for Node apps.
+    
+*   [MongoDB Node.js Driver 6.19](https://nodeweekly.com/link/173944/0a4070b383) – The latest official MongoDB driver.
+    
+*   [Electron 38.0](https://nodeweekly.com/link/173945/0a4070b383) – The cross-platform desktop app framework.
+    
+*   [express-rate-limit 8.1](https://nodeweekly.com/link/173946/0a4070b383) – Basic rate limiting for Express apps.
+    
+*   [Fastify 5.6](https://nodeweekly.com/link/173947/0a4070b383) – The fast, low overhead Node web framework.
+    
+*   [JSPyBridge 1.2.5](https://nodeweekly.com/link/173948/0a4070b383) – Run Python from Node or vice versa.
+    
+*   [NodeBB 4.5](https://nodeweekly.com/link/173949/0a4070b383) – The Node.js-powered forum system.
+    
+*   [ESLint v9.35.0](https://nodeweekly.com/link/173950/0a4070b383)
+    
+
+📰 Classifieds
+
+Master Node API design with ▶️ [this video course](https://nodeweekly.com/link/173951/0a4070b383). Learn API anatomy, auth, testing, deployment, and more. New members [get $100 off](https://nodeweekly.com/link/173965/0a4070b383) a yearly membership.
+
+* * *
+
+Go beyond caching. [Redis 8.2](https://nodeweekly.com/link/173952/0a4070b383) handles 5x more data with 150 new commands and 8 new data structures vs 7.2. [Try Redis Pro—first $200 free](https://nodeweekly.com/link/173953/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+*   [Learn about why browsers throttle JavaScript timers](https://nodeweekly.com/link/173954/0a4070b383) with Nolan Lawson, and learn about some techniques to schedule functions to run _ASAP_.
+    
+*   [Andromeda](https://nodeweekly.com/link/173955/0a4070b383) is the newest JavaScript runtime on the block, powered by the [Nova](https://nodeweekly.com/link/173956/0a4070b383) engine. It's built in Rust and boasts direct GPU accelerated graphics support, single file compilation, and memory safety.
+    
+*   🗓️ Thoughtbot shares [a list of upcoming JavaScript conferences](https://nodeweekly.com/link/173957/0a4070b383) taking place over the remainder of 2025.
+    
+*   [`Intl` Playground](https://nodeweekly.com/link/173958/0a4070b383) is a handy site to get a quick look at how the different options on `Intl.DateTimeFormat` present in real life.
+    
+*   Deno's [Fresh](https://nodeweekly.com/link/173959/0a4070b383) framework is [now out in _Fresh 2.0 Beta_ form.](https://nodeweekly.com/link/173960/0a4070b383) It can now optionally run as a Vite plugin which opens up numerous new possibilities.
+    
+*   TIL the MacBook Pro has a 'lid angle sensor' [that can be programatically queried.](https://nodeweekly.com/link/173961/0a4070b383) A [video on X](https://nodeweekly.com/link/173962/0a4070b383) shows off the feature with a comedic effect.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​592 — September 9, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/592)
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1238,h_192/e_make_transparent/co_white,e_outline:37/fcshbu9d17nd8smej96j.png)](https://nodeweekly.com/link/173904/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kzdihezwybmfv4v41ktk.jpg)](https://nodeweekly.com/link/173905/0a4070b383)
+
+[A Major Supply Chain Attack Hits the npm Ecosystem](https://nodeweekly.com/link/173905/0a4070b383 "socket.dev") — In July, Socket warned us about [a phishing campaign](https://nodeweekly.com/link/173906/0a4070b383) targeting npm package publishers. Sadly, a prolific package author (among [others](https://nodeweekly.com/link/173907/0a4070b383), like [DuckDB, who explain how the attack worked on them](https://nodeweekly.com/link/173963/0a4070b383)) [fell victim](https://nodeweekly.com/link/173908/0a4070b383) to the scam, resulting in some popular packages becoming compromised ([like Chalk](https://nodeweekly.com/link/173909/0a4070b383), [debug](https://nodeweekly.com/link/173910/0a4070b383), and [others](https://nodeweekly.com/link/173911/0a4070b383)).
+
+Gooding, Brown, et al. (Socket)
+
+💡 Inspired by the above story, [Zbyszek Tenerowicz shows off an interesting tool](https://nodeweekly.com/link/173912/0a4070b383) / Webpack plugin (that he works on) called [LavaMoat](https://nodeweekly.com/link/173913/0a4070b383) that can be used to sandbox / contain dependencies that are only made available [by way of defined policies.](https://nodeweekly.com/link/173914/0a4070b383)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/6e3b2159.png)](https://nodeweekly.com/link/173904/0a4070b383)
+
+[CodeRabbit’s Free AI Code Reviews in IDE - VS Code, Cursor, Windsurf](https://nodeweekly.com/link/173904/0a4070b383 "coderabbit.link") — Code Rabbit brings AI code reviews to VS Code, Cursor & Windsurf. Get line-by-line reviews, one-click fixes & codebase-aware feedback - all free in your IDE. Seamlessly integrates with git workflows. [Install the extension & start reviewing!](https://nodeweekly.com/link/173904/0a4070b383)
+
+CodeRabbit sponsor
+
+[Bringing Node HTTP Servers to *Cloudflare Workers*](https://nodeweekly.com/link/173915/0a4070b383 "blog.cloudflare.com") — A few weeks ago [we linked to an item](https://nodeweekly.com/link/173916/0a4070b383) that noticed Cloudflare Workers' local dev tools had begun to support Express.js apps – now support has come to *Workers* proper, with support for `node:http`’s client and server APIs if you enable [Node.js compatibility.](https://nodeweekly.com/link/173917/0a4070b383)
+
+Nizipli and Snell (Cloudflare)
+
+**IN BRIEF:**
+
+* [Vercel now supports](https://nodeweekly.com/link/173918/0a4070b383) Express-based backends with zero configuration, and Vercel Functions running on Node now also [support graceful shutdowns](https://nodeweekly.com/link/173919/0a4070b383), giving you 500ms to run cleanup tasks before termination.
+
+* 📗 [NodeBook](https://nodeweekly.com/link/173920/0a4070b383) is a new, in-progress book promising a 'deep dive' into Node's internals, and it already delivers [a look inside the V8 JavaScript engine](https://nodeweekly.com/link/173921/0a4070b383) and [how Node's event loop works.](https://nodeweekly.com/link/173922/0a4070b383)
+
+* On X, [Marco Ippolito laments that Node.js lives in a paradox](https://nodeweekly.com/link/173923/0a4070b383) of progressing both "too fast" and "too slow" for many developers.
+
+[Node.js v20.19.5 (LTS) Released](https://nodeweekly.com/link/173924/0a4070b383 "nodejs.org") — A quiet release dominated by bugfixes and a large number of dependency updates. It arrived quickly after [v22.19.0 (LTS)](https://nodeweekly.com/link/173925/0a4070b383), which unflagged `--experimental-wasm-modules`, added `server.keepAliveTimeoutBuffer` to `http`, and added the ability for Node to use the system’s certificate authority (CA) via the `NODE_USE_SYSTEM_CA` environment variable.
+
+Marco Ippolito
+
+📄 [Getting Accurate Text Lengths with `Intl.Segmenter`](https://nodeweekly.com/link/173926/0a4070b383) – A useful tip for when `str.length` isn’t returning what you’d quite expect.. Sangeeth Sudheer
+
+📺 [Handling 500 Million Clicks with a $4 VPS](https://nodeweekly.com/link/173927/0a4070b383) – A developer goes behind the scenes of his Node.js-backed site that went viral. Andrew Schmelyun
+
+📄 [Why I Ditched Docker for Podman (And You Should Too)](https://nodeweekly.com/link/173928/0a4070b383) Dominik Szymański
+
+📄 [UDP in Node.js: A Technical Guide](https://nodeweekly.com/link/173929/0a4070b383) Pavel Romanov
+
+🛠 Code & Tools
+
+[Mediabunny: A Complete Media Toolkit for JavaScript](https://nodeweekly.com/link/173930/0a4070b383 "mediabunny.dev") — A library to read, write and convert popular media file formats (e.g. MP4, MP3, [and more](https://nodeweekly.com/link/173931/0a4070b383)) without leaning on dependencies like FFmpeg. You can [make thumbnails](https://nodeweekly.com/link/173932/0a4070b383), [extract metadata](https://nodeweekly.com/link/173933/0a4070b383), [write code that gets converted into a video](https://nodeweekly.com/link/173934/0a4070b383), and more. [GitHub repo.](https://nodeweekly.com/link/173935/0a4070b383)
+
+Vanilagy
+
+[Rocketadmin: An Efficient and Secure No-Code Back Office Solution](https://nodeweekly.com/link/173936/0a4070b383 "rocketadmin.com") — Save time and make things easier for your users with a powerful, feature-rich admin panel. We support all main databases.
+
+Rocketadmin sponsor
+
+[sqs-consumer 13.0: Build Amazon SQS-Based Apps Without Boilerplate](https://nodeweekly.com/link/173937/0a4070b383 "github.com") — Build SQS-based (Simple Queue Service) apps without the boilerplate. Just define an async function to handle the SQS message processing. If it’s good enough for the BBC..
+
+BBC
+
+[github-script 8.0: Script the GitHub API in *Actions* Workflows](https://nodeweekly.com/link/173938/0a4070b383 "github.com") — If you want to write GitHub Actions that perform operations via the GitHub API using JavaScript, this is for you. Now supports Node.js 24.
+
+GitHub Actions
+
+* [serverless-http 4.0](https://nodeweekly.com/link/173939/0a4070b383) – Use your existing middleware framework (e.g. Express, Koa) on AWS Lambda.
+
+* [express-openapi-validator 5.6](https://nodeweekly.com/link/173940/0a4070b383) – Auto-validate API requests and responses in Express against an OpenAPI 3.x spec.
+
+* [Prisma 6.15](https://nodeweekly.com/link/173941/0a4070b383) – The popular ORM for Node.js and TypeScript gains some 'AI safety guardrails.'
+
+* [Tinypool 2.0](https://nodeweekly.com/link/173942/0a4070b383) – Minimal Node.js worker thread pool implementation.
+
+* [Sidequest 1.7](https://nodeweekly.com/link/173943/0a4070b383) – Scalable background job processor for Node apps.
+
+* [MongoDB Node.js Driver 6.19](https://nodeweekly.com/link/173944/0a4070b383) – The latest official MongoDB driver.
+
+* [Electron 38.0](https://nodeweekly.com/link/173945/0a4070b383) – The cross-platform desktop app framework.
+
+* [express-rate-limit 8.1](https://nodeweekly.com/link/173946/0a4070b383) – Basic rate limiting for Express apps.
+
+* [Fastify 5.6](https://nodeweekly.com/link/173947/0a4070b383) – The fast, low overhead Node web framework.
+
+* [JSPyBridge 1.2.5](https://nodeweekly.com/link/173948/0a4070b383) – Run Python from Node or vice versa.
+
+* [NodeBB 4.5](https://nodeweekly.com/link/173949/0a4070b383) – The Node.js-powered forum system.
+
+* [ESLint v9.35.0](https://nodeweekly.com/link/173950/0a4070b383)
+
+📰 Classifieds
+
+Master Node API design with ▶️ [this video course](https://nodeweekly.com/link/173951/0a4070b383). Learn API anatomy, auth, testing, deployment, and more. New members [get $100 off](https://nodeweekly.com/link/173965/0a4070b383) a yearly membership.
+
+***
+
+Go beyond caching. [Redis 8.2](https://nodeweekly.com/link/173952/0a4070b383) handles 5x more data with 150 new commands and 8 new data structures vs 7.2. [Try Redis Pro—first $200 free](https://nodeweekly.com/link/173953/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+* [Learn about why browsers throttle JavaScript timers](https://nodeweekly.com/link/173954/0a4070b383) with Nolan Lawson, and learn about some techniques to schedule functions to run *ASAP*.
+
+* [Andromeda](https://nodeweekly.com/link/173955/0a4070b383) is the newest JavaScript runtime on the block, powered by the [Nova](https://nodeweekly.com/link/173956/0a4070b383) engine. It's built in Rust and boasts direct GPU accelerated graphics support, single file compilation, and memory safety.
+
+* 🗓️ Thoughtbot shares [a list of upcoming JavaScript conferences](https://nodeweekly.com/link/173957/0a4070b383) taking place over the remainder of 2025.
+
+* [`Intl` Playground](https://nodeweekly.com/link/173958/0a4070b383) is a handy site to get a quick look at how the different options on `Intl.DateTimeFormat` present in real life.
+
+* Deno's [Fresh](https://nodeweekly.com/link/173959/0a4070b383) framework is [now out in *Fresh 2.0 Beta* form.](https://nodeweekly.com/link/173960/0a4070b383) It can now optionally run as a Vite plugin which opens up numerous new possibilities.
+
+* TIL the MacBook Pro has a 'lid angle sensor' [that can be programatically queried.](https://nodeweekly.com/link/173961/0a4070b383) A [video on X](https://nodeweekly.com/link/173962/0a4070b383) shows off the feature with a comedic effect.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
