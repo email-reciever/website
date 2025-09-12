@@ -1,0 +1,344 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Package efficiency and dependency hygiene
+description: Package efficiency and dependency hygiene
+date: 星期五 05 下午 九月 12o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/752
+origin_site: https://javascriptweekly.com/issues/752
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Package efficiency and dependency hygiene" url="https://javascriptweekly.com/issues/752" />
+
+<Detail client:only="react">
+	#​752 — September 12, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/752)
+
+If you have any interest in music and being able to render music or generate music with JavaScript, be sure to check out the very end of this issue where we've dedicated an entire section to the topic :-)  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![SurveyJS](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1000,h_410/e_make_transparent/co_white,e_outline:20/yrja59qflovcjwojxypq.png)](https://javascriptweekly.com/link/174186/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qhjrvyfvoxxp652shjou.jpg)](https://javascriptweekly.com/link/174187/d076523b1d)
+
+[How to Keep `package.json` Under Control](https://javascriptweekly.com/link/174187/d076523b1d "blog.val.town") — Staring at a 863 megabyte `node_modules` folder for [Val Town](https://javascriptweekly.com/link/174189/d076523b1d)’s React app, Tom got to thinking about ‘dependency hygiene’ and some good ways to keep things under control. Good tips and tool recommendations here.
+
+Tom MacWright
+
+[Behind the Scenes of `bun install`](https://javascriptweekly.com/link/174190/d076523b1d "bun.com") — Talk about an epic post. This is no mere explanation of how [Bun](https://javascriptweekly.com/link/174193/d076523b1d) quickly and efficiently installs packages — but a tour of package installation more generally, the underlying technicalities that make package installation tricky universally, and how Bun has tackled the problem.
+
+Lydia Hallie (Bun)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/92f08903.png)](https://javascriptweekly.com/link/174186/d076523b1d)
+
+[Stop Reinventing Forms. Use SurveyJS Instead](https://javascriptweekly.com/link/174186/d076523b1d "surveyjs.io") — SurveyJS UI components let you build JSON-driven forms, render them in React, Angular, Vue 3, or plain JS, and store results in your own DB. Open-source, extensible, no vendor lock-in — save months of development and stay in control of your data.
+
+SurveyJS sponsor
+
+[A Major Supply Chain Attack Hit the npm Ecosystem](https://javascriptweekly.com/link/174194/d076523b1d "socket.dev") — Socket warned us about [a phishing campaign](https://javascriptweekly.com/link/174195/d076523b1d) targeting npm package publishers which, sadly, bore fruit earlier this week when a variety of popular packages became compromised ([like Chalk](https://javascriptweekly.com/link/174197/d076523b1d), [DuckDB's distribution for Node.js](https://javascriptweekly.com/link/174199/d076523b1d), [debug](https://javascriptweekly.com/link/174202/d076523b1d), and [many others](https://javascriptweekly.com/link/174205/d076523b1d)).
+
+Gooding, Brown, et al. (Socket)
+
+**RELEASES:**
+
+*   [Deno 2.5](https://javascriptweekly.com/link/174208/d076523b1d) – You can now create sets of permissions in `deno.json`, `Deno.test` gets some DX improvements, and `deno bundle` gets a programmatic API so you can script the bundling of your app, along with much more.
+    
+*   [ESLint v9.35.0](https://javascriptweekly.com/link/174210/d076523b1d) – Has [a new rule](https://javascriptweekly.com/link/174212/d076523b1d) (`preserve-caught-error`) for disallowing the loss of an originally caught error when re-throwing custom errors.
+    
+*   [Node.js v24.8.0 (Current)](https://javascriptweekly.com/link/174213/d076523b1d) – Now supporting inspection of HTTP/2 network calls in Chrome DevTools.
+    
+*   [Electron 38](https://javascriptweekly.com/link/174214/d076523b1d) – Mentioned last week, but now has an official blog post.
+    
+*   [Storybook 10 is now in beta](https://javascriptweekly.com/link/174215/d076523b1d). The big change is it's going ESM only.
+    
+*   [Ember 6.7](https://javascriptweekly.com/link/174217/d076523b1d), [Rspack 1.5.3](https://javascriptweekly.com/link/174219/d076523b1d), [Expo Router v6](https://javascriptweekly.com/link/174221/d076523b1d), [Fastify 5.6](https://javascriptweekly.com/link/174222/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[The Missing Link in JavaScript Tools?](https://javascriptweekly.com/link/174224/d076523b1d "marvinh.dev") — Marvin ponders whether today’s fractured toolchain for templates, CSS imports, JSX, and numerous other non-standard enhancements to JavaScript could be unified into a single pipeline.
+
+Marvin Hagemeister
+
+[Finally, Safe Array Methods in JavaScript](https://javascriptweekly.com/link/174225/d076523b1d "allthingssmitty.com") — `arr.sort()` will sort your array _in place_, whereas ES2023’s `arr.toSorted()` will return a new, sorted _copy_ of `arr`. There are several such methods you might prefer to use.
+
+Matt Smith
+
+[Secure Your Agentic Apps with Auth for GenAI](https://javascriptweekly.com/link/174226/d076523b1d "auth0.com") — Secure your agentic apps with features like User Authentication for AI agents, Token Vault, and more with Auth0’s Auth for GenAI (exclusively in Developer Preview).
+
+Auth0 sponsor
+
+[An Interactive Guide to TanStack DB](https://javascriptweekly.com/link/174228/d076523b1d "frontendatscale.com") — [TanStack DB](https://javascriptweekly.com/link/174229/d076523b1d) offers an embedded client‑side database that uses differential dataflow to power live, relational queries, sub‑ms incremental updates, and optimistic writes. This tutorial leans on using it with React, but TanStack DB works alongside Vue, Solid, and Svelte [as well.](https://javascriptweekly.com/link/174230/d076523b1d)
+
+Maxi Ferreira
+
+📺 [Handling 500 Million Clicks with a $4 VPS](https://javascriptweekly.com/link/174232/d076523b1d) – Behind the scenes of a Node-backed site that went viral. Andrew Schmelyun
+
+📄 [How To Set Up Express.js 5 For Production in 2025](https://javascriptweekly.com/link/174234/d076523b1d) Jan Hesters
+
+📄 [Building Microfrontends with Module Federation and Vue](https://javascriptweekly.com/link/174236/d076523b1d) Alex Opalic
+
+📄 [How Shopify Migrated to React Native's _New Architecture_](https://javascriptweekly.com/link/174237/d076523b1d) Thiago Magalhaes (Shopify)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mwthqetzakzeazjrarol.jpg)](https://javascriptweekly.com/link/174239/d076523b1d)
+
+[Andromeda: The Newest JavaScript Runtime on the Block](https://javascriptweekly.com/link/174239/d076523b1d "tryandromeda.dev") — A new JavaScript and TypeScript runtime built around the Rust-powered [Nova engine](https://javascriptweekly.com/link/174240/d076523b1d). It’s still early days but they’re promising a lot: native single file compilation, a GPU-accelerated 2D Canvas API, low runtime overhead, interop with Rust, memory safety, WinterTC compatibility, and cross-platform support.
+
+Andromeda Team
+
+[BlazeDiff: 'Blazing-Fast' Pixel-by-Pixel Image Comparisons](https://javascriptweekly.com/link/174241/d076523b1d "github.com") — The creator was happy with the established [pixelmatch library](https://javascriptweekly.com/link/174242/d076523b1d) for doing image comparisons, until it got too slow for the scale he wanted. [Here’s the story](https://javascriptweekly.com/link/174243/d076523b1d) of how he came up with a faster alternative.
+
+Teimur Gasanov
+
+[Unlock the Power of MCP Servers](https://javascriptweekly.com/link/174244/d076523b1d "go.clerk.com") — Clerk shows how MCP servers let AI apps access data securely with OAuth — complete with a Next.js demo.
+
+Clerk sponsor
+
+[Feedsmith 2.0: Feed Parser and Generation Library](https://javascriptweekly.com/link/174245/d076523b1d "feedsmith.dev") — As well as parsing feeds, you can also create RSS, Atom, JSON Feed, and OPML files with many common namespaces (iTunes, Podcast, Media RSS, Dublin Core, etc.) There’s [a quick start tutorial](https://javascriptweekly.com/link/174246/d076523b1d) for using it both in browsers or Node.js. [GitHub repo.](https://javascriptweekly.com/link/174247/d076523b1d)
+
+Maciej Lamberski
+
+[React Bits: 100+ Creative, Animated React Components](https://javascriptweekly.com/link/174249/d076523b1d "www.reactbits.dev") — If you want a bit of visual _pizzazz_ in your project, this is for you. [The components](https://javascriptweekly.com/link/174252/d076523b1d) span from a variety of text effects to general animations, [a ‘chroma grid’](https://javascriptweekly.com/link/174255/d076523b1d), bouncing cards, distortions, and more. [GitHub repo.](https://javascriptweekly.com/link/174256/d076523b1d)
+
+David Has
+
+*   [Ink 6.3](https://javascriptweekly.com/link/174257/d076523b1d) – Use React to build CLI apps, as used by Claude Code, Gemini CLI, and [many other apps.](https://javascriptweekly.com/link/174258/d076523b1d)
+    
+*   [Tricolore 0.1](https://javascriptweekly.com/link/174259/d076523b1d) – Visualize ternary compositions with choropleth maps. [Live demo.](https://javascriptweekly.com/link/174260/d076523b1d)
+    
+*   [ts-to-zod 4.0](https://javascriptweekly.com/link/174261/d076523b1d) – Generate Zod schemas (v4) from TypeScript types/interfaces.
+    
+*   [Confirmal 1.3](https://javascriptweekly.com/link/174262/d076523b1d) – Turn `FormData` into real objects with TypeScript inference.
+    
+*   📊 [Chartbrew 4.3](https://javascriptweekly.com/link/174264/d076523b1d) – Create live reporting dashboards.
+    
+*   [ow 3.0](https://javascriptweekly.com/link/174265/d076523b1d) – Function argument validation for humans.
+    
+*   [uuid 13.0](https://javascriptweekly.com/link/174267/d076523b1d) – Generate RFC9562 compliant UUIDs.
+    
+*   [Fresh 2.0](https://javascriptweekly.com/link/174269/d076523b1d) – Deno-powered Web framework.
+    
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/174271/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+* * *
+
+🔈 [JetBrains JavaScript Day 2025 registration is now open!](https://javascriptweekly.com/link/174273/d076523b1d) Get up to speed with modern JavaScript development in just one day – for free.
+
+* * *
+
+[$100 off yearly Frontend Masters membership!](https://javascriptweekly.com/link/174275/d076523b1d) 250+ courses, personalized learning path, workshops with devs from GitHub & Netflix. [Sale ends soon →](https://javascriptweekly.com/link/174275/d076523b1d)
+
+* * *
+
+🗓️ [Free virtual DevSecCon on Oct 22, 2025](https://javascriptweekly.com/link/174276/d076523b1d). Learn to secure AI-native apps with keynotes, demos, and a developer challenge. [Register now!](https://javascriptweekly.com/link/174276/d076523b1d)
+
+🎵 Let's Get Musical
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ugbwvfrjtbd4yzmc8mbj.jpg)](https://javascriptweekly.com/link/174277/d076523b1d)
+
+[SpessaSynth: SoundFont2-Based MIDI Player and Synthesizer](https://javascriptweekly.com/link/174277/d076523b1d "github.com") — If you think typical browser-played MIDI files sound terrible, you’re right – but try this! It uses a SoundFont sample driven approach to play MIDI files in a predictable fashion, and also includes an editor/visualizer if you need it. [The live demo](https://javascriptweekly.com/link/174278/d076523b1d) is quite striking.
+
+Spessasus
+
+While we're on the topic, here are some other neat music related JavaScript projects we've enjoyed over the years:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/e074yzw1bgpvb4fvef1z.jpg)](https://javascriptweekly.com/link/174279/d076523b1d)
+
+*   [alphaTab](https://javascriptweekly.com/link/174279/d076523b1d) – A full on music notation and guitar tab rendering library for building complete musical apps _(above)_.
+    
+*   [chiptune3.js](https://javascriptweekly.com/link/174280/d076523b1d) – A bit like SpressaSynth _(also above)_ but for playing _module file_ music. [Live demo.](https://javascriptweekly.com/link/174281/d076523b1d)
+    
+*   [Tone.js](https://javascriptweekly.com/link/174282/d076523b1d) – An easy way to use the Web Audio API to create music in the browser. Someone used it to [recreate the famous THX 'deep note' sound.](https://javascriptweekly.com/link/174283/d076523b1d)
+    
+*   🎸 [SVGuitar](https://javascriptweekly.com/link/174284/d076523b1d) – A library to render SVG guitar chord charts.
+    
+*   [JZZ.js](https://javascriptweekly.com/link/174285/d076523b1d) – A JavaScript MIDI library that hides a lot of complexity behind its chained syntax when you need to work directly with MIDI. (The keyboard logo at the top left of its homepage is a neat easter egg.)
+    
+*   [Strudel](https://javascriptweekly.com/link/174286/d076523b1d) – A live-coding environment in the browser for generating pieces of music with simple, chained JavaScript expressions.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/174287/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​752 — September 12, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/752)
+
+If you have any interest in music and being able to render music or generate music with JavaScript, be sure to check out the very end of this issue where we've dedicated an entire section to the topic :-)\
+\_\_\
+*Your editor, Peter Cooper*
+
+Together with 
+
+[![SurveyJS](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1000,h_410/e_make_transparent/co_white,e_outline:20/yrja59qflovcjwojxypq.png)](https://javascriptweekly.com/link/174186/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qhjrvyfvoxxp652shjou.jpg)](https://javascriptweekly.com/link/174187/d076523b1d)
+
+[How to Keep `package.json` Under Control](https://javascriptweekly.com/link/174187/d076523b1d "blog.val.town") — Staring at a 863 megabyte `node_modules` folder for [Val Town](https://javascriptweekly.com/link/174189/d076523b1d)’s React app, Tom got to thinking about ‘dependency hygiene’ and some good ways to keep things under control. Good tips and tool recommendations here.
+
+Tom MacWright
+
+[Behind the Scenes of `bun install`](https://javascriptweekly.com/link/174190/d076523b1d "bun.com") — Talk about an epic post. This is no mere explanation of how [Bun](https://javascriptweekly.com/link/174193/d076523b1d) quickly and efficiently installs packages — but a tour of package installation more generally, the underlying technicalities that make package installation tricky universally, and how Bun has tackled the problem.
+
+Lydia Hallie (Bun)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/92f08903.png)](https://javascriptweekly.com/link/174186/d076523b1d)
+
+[Stop Reinventing Forms. Use SurveyJS Instead](https://javascriptweekly.com/link/174186/d076523b1d "surveyjs.io") — SurveyJS UI components let you build JSON-driven forms, render them in React, Angular, Vue 3, or plain JS, and store results in your own DB. Open-source, extensible, no vendor lock-in — save months of development and stay in control of your data.
+
+SurveyJS sponsor
+
+[A Major Supply Chain Attack Hit the npm Ecosystem](https://javascriptweekly.com/link/174194/d076523b1d "socket.dev") — Socket warned us about [a phishing campaign](https://javascriptweekly.com/link/174195/d076523b1d) targeting npm package publishers which, sadly, bore fruit earlier this week when a variety of popular packages became compromised ([like Chalk](https://javascriptweekly.com/link/174197/d076523b1d), [DuckDB's distribution for Node.js](https://javascriptweekly.com/link/174199/d076523b1d), [debug](https://javascriptweekly.com/link/174202/d076523b1d), and [many others](https://javascriptweekly.com/link/174205/d076523b1d)).
+
+Gooding, Brown, et al. (Socket)
+
+**RELEASES:**
+
+* [Deno 2.5](https://javascriptweekly.com/link/174208/d076523b1d) – You can now create sets of permissions in `deno.json`, `Deno.test` gets some DX improvements, and `deno bundle` gets a programmatic API so you can script the bundling of your app, along with much more.
+
+* [ESLint v9.35.0](https://javascriptweekly.com/link/174210/d076523b1d) – Has [a new rule](https://javascriptweekly.com/link/174212/d076523b1d) (`preserve-caught-error`) for disallowing the loss of an originally caught error when re-throwing custom errors.
+
+* [Node.js v24.8.0 (Current)](https://javascriptweekly.com/link/174213/d076523b1d) – Now supporting inspection of HTTP/2 network calls in Chrome DevTools.
+
+* [Electron 38](https://javascriptweekly.com/link/174214/d076523b1d) – Mentioned last week, but now has an official blog post.
+
+* [Storybook 10 is now in beta](https://javascriptweekly.com/link/174215/d076523b1d). The big change is it's going ESM only.
+
+* [Ember 6.7](https://javascriptweekly.com/link/174217/d076523b1d), [Rspack 1.5.3](https://javascriptweekly.com/link/174219/d076523b1d), [Expo Router v6](https://javascriptweekly.com/link/174221/d076523b1d), [Fastify 5.6](https://javascriptweekly.com/link/174222/d076523b1d)
+
+📖  Articles and Videos
+
+[The Missing Link in JavaScript Tools?](https://javascriptweekly.com/link/174224/d076523b1d "marvinh.dev") — Marvin ponders whether today’s fractured toolchain for templates, CSS imports, JSX, and numerous other non-standard enhancements to JavaScript could be unified into a single pipeline.
+
+Marvin Hagemeister
+
+[Finally, Safe Array Methods in JavaScript](https://javascriptweekly.com/link/174225/d076523b1d "allthingssmitty.com") — `arr.sort()` will sort your array *in place*, whereas ES2023’s `arr.toSorted()` will return a new, sorted *copy* of `arr`. There are several such methods you might prefer to use.
+
+Matt Smith
+
+[Secure Your Agentic Apps with Auth for GenAI](https://javascriptweekly.com/link/174226/d076523b1d "auth0.com") — Secure your agentic apps with features like User Authentication for AI agents, Token Vault, and more with Auth0’s Auth for GenAI (exclusively in Developer Preview).
+
+Auth0 sponsor
+
+[An Interactive Guide to TanStack DB](https://javascriptweekly.com/link/174228/d076523b1d "frontendatscale.com") — [TanStack DB](https://javascriptweekly.com/link/174229/d076523b1d) offers an embedded client‑side database that uses differential dataflow to power live, relational queries, sub‑ms incremental updates, and optimistic writes. This tutorial leans on using it with React, but TanStack DB works alongside Vue, Solid, and Svelte [as well.](https://javascriptweekly.com/link/174230/d076523b1d)
+
+Maxi Ferreira
+
+📺 [Handling 500 Million Clicks with a $4 VPS](https://javascriptweekly.com/link/174232/d076523b1d) – Behind the scenes of a Node-backed site that went viral. Andrew Schmelyun
+
+📄 [How To Set Up Express.js 5 For Production in 2025](https://javascriptweekly.com/link/174234/d076523b1d) Jan Hesters
+
+📄 [Building Microfrontends with Module Federation and Vue](https://javascriptweekly.com/link/174236/d076523b1d) Alex Opalic
+
+📄 [How Shopify Migrated to React Native's *New Architecture*](https://javascriptweekly.com/link/174237/d076523b1d) Thiago Magalhaes (Shopify)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mwthqetzakzeazjrarol.jpg)](https://javascriptweekly.com/link/174239/d076523b1d)
+
+[Andromeda: The Newest JavaScript Runtime on the Block](https://javascriptweekly.com/link/174239/d076523b1d "tryandromeda.dev") — A new JavaScript and TypeScript runtime built around the Rust-powered [Nova engine](https://javascriptweekly.com/link/174240/d076523b1d). It’s still early days but they’re promising a lot: native single file compilation, a GPU-accelerated 2D Canvas API, low runtime overhead, interop with Rust, memory safety, WinterTC compatibility, and cross-platform support.
+
+Andromeda Team
+
+[BlazeDiff: 'Blazing-Fast' Pixel-by-Pixel Image Comparisons](https://javascriptweekly.com/link/174241/d076523b1d "github.com") — The creator was happy with the established [pixelmatch library](https://javascriptweekly.com/link/174242/d076523b1d) for doing image comparisons, until it got too slow for the scale he wanted. [Here’s the story](https://javascriptweekly.com/link/174243/d076523b1d) of how he came up with a faster alternative.
+
+Teimur Gasanov
+
+[Unlock the Power of MCP Servers](https://javascriptweekly.com/link/174244/d076523b1d "go.clerk.com") — Clerk shows how MCP servers let AI apps access data securely with OAuth — complete with a Next.js demo.
+
+Clerk sponsor
+
+[Feedsmith 2.0: Feed Parser and Generation Library](https://javascriptweekly.com/link/174245/d076523b1d "feedsmith.dev") — As well as parsing feeds, you can also create RSS, Atom, JSON Feed, and OPML files with many common namespaces (iTunes, Podcast, Media RSS, Dublin Core, etc.) There’s [a quick start tutorial](https://javascriptweekly.com/link/174246/d076523b1d) for using it both in browsers or Node.js. [GitHub repo.](https://javascriptweekly.com/link/174247/d076523b1d)
+
+Maciej Lamberski
+
+[React Bits: 100+ Creative, Animated React Components](https://javascriptweekly.com/link/174249/d076523b1d "www.reactbits.dev") — If you want a bit of visual *pizzazz* in your project, this is for you. [The components](https://javascriptweekly.com/link/174252/d076523b1d) span from a variety of text effects to general animations, [a ‘chroma grid’](https://javascriptweekly.com/link/174255/d076523b1d), bouncing cards, distortions, and more. [GitHub repo.](https://javascriptweekly.com/link/174256/d076523b1d)
+
+David Has
+
+* [Ink 6.3](https://javascriptweekly.com/link/174257/d076523b1d) – Use React to build CLI apps, as used by Claude Code, Gemini CLI, and [many other apps.](https://javascriptweekly.com/link/174258/d076523b1d)
+
+* [Tricolore 0.1](https://javascriptweekly.com/link/174259/d076523b1d) – Visualize ternary compositions with choropleth maps. [Live demo.](https://javascriptweekly.com/link/174260/d076523b1d)
+
+* [ts-to-zod 4.0](https://javascriptweekly.com/link/174261/d076523b1d) – Generate Zod schemas (v4) from TypeScript types/interfaces.
+
+* [Confirmal 1.3](https://javascriptweekly.com/link/174262/d076523b1d) – Turn `FormData` into real objects with TypeScript inference.
+
+* 📊 [Chartbrew 4.3](https://javascriptweekly.com/link/174264/d076523b1d) – Create live reporting dashboards.
+
+* [ow 3.0](https://javascriptweekly.com/link/174265/d076523b1d) – Function argument validation for humans.
+
+* [uuid 13.0](https://javascriptweekly.com/link/174267/d076523b1d) – Generate RFC9562 compliant UUIDs.
+
+* [Fresh 2.0](https://javascriptweekly.com/link/174269/d076523b1d) – Deno-powered Web framework.
+
+📰 Classifieds
+
+[Meticulous automatically creates and maintains an E2E UI test suite with zero developer effort](https://javascriptweekly.com/link/174271/d076523b1d). Relied on by Dropbox, Wiz, Lattice, Bilt Rewards, etc.
+
+***
+
+🔈 [JetBrains JavaScript Day 2025 registration is now open!](https://javascriptweekly.com/link/174273/d076523b1d) Get up to speed with modern JavaScript development in just one day – for free.
+
+***
+
+[$100 off yearly Frontend Masters membership!](https://javascriptweekly.com/link/174275/d076523b1d) 250+ courses, personalized learning path, workshops with devs from GitHub & Netflix. [Sale ends soon →](https://javascriptweekly.com/link/174275/d076523b1d)
+
+***
+
+🗓️ [Free virtual DevSecCon on Oct 22, 2025](https://javascriptweekly.com/link/174276/d076523b1d). Learn to secure AI-native apps with keynotes, demos, and a developer challenge. [Register now!](https://javascriptweekly.com/link/174276/d076523b1d)
+
+🎵 Let's Get Musical
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ugbwvfrjtbd4yzmc8mbj.jpg)](https://javascriptweekly.com/link/174277/d076523b1d)
+
+[SpessaSynth: SoundFont2-Based MIDI Player and Synthesizer](https://javascriptweekly.com/link/174277/d076523b1d "github.com") — If you think typical browser-played MIDI files sound terrible, you’re right – but try this! It uses a SoundFont sample driven approach to play MIDI files in a predictable fashion, and also includes an editor/visualizer if you need it. [The live demo](https://javascriptweekly.com/link/174278/d076523b1d) is quite striking.
+
+Spessasus
+
+While we're on the topic, here are some other neat music related JavaScript projects we've enjoyed over the years:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/e074yzw1bgpvb4fvef1z.jpg)](https://javascriptweekly.com/link/174279/d076523b1d)
+
+* [alphaTab](https://javascriptweekly.com/link/174279/d076523b1d) – A full on music notation and guitar tab rendering library for building complete musical apps *(above)*.
+
+* [chiptune3.js](https://javascriptweekly.com/link/174280/d076523b1d) – A bit like SpressaSynth *(also above)* but for playing *module file* music. [Live demo.](https://javascriptweekly.com/link/174281/d076523b1d)
+
+* [Tone.js](https://javascriptweekly.com/link/174282/d076523b1d) – An easy way to use the Web Audio API to create music in the browser. Someone used it to [recreate the famous THX 'deep note' sound.](https://javascriptweekly.com/link/174283/d076523b1d)
+
+* 🎸 [SVGuitar](https://javascriptweekly.com/link/174284/d076523b1d) – A library to render SVG guitar chord charts.
+
+* [JZZ.js](https://javascriptweekly.com/link/174285/d076523b1d) – A JavaScript MIDI library that hides a lot of complexity behind its chained syntax when you need to work directly with MIDI. (The keyboard logo at the top left of its homepage is a neat easter egg.)
+
+* [Strudel](https://javascriptweekly.com/link/174286/d076523b1d) – A live-coding environment in the browser for generating pieces of music with simple, chained JavaScript expressions.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/174287/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
