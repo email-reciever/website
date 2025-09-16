@@ -1,0 +1,280 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: pnpm adds support for delayed dependency updates
+description: pnpm adds support for delayed dependency updates
+date: 星期二 04 下午 九月 16o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/593
+origin_site: https://nodeweekly.com/issues/593
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="pnpm adds support for delayed dependency updates" url="https://nodeweekly.com/issues/593" />
+
+<Detail client:only="react">
+	#​593 — September 16, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/593)
+
+🗓️ **We're taking next week off,** so we will be back in your inbox again on Tuesday, September 30.  
+\_\_  
+_Peter Cooper, your editor_
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/174290/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/c2nk0ko7zg8m1jw7ayta.jpg)](https://nodeweekly.com/link/174291/0a4070b383)
+
+[Node.js v24.8.0 (Current) Released](https://nodeweekly.com/link/174291/0a4070b383 "nodejs.org") — The big new feature is added support for inspecting HTTP/2 network calls made from Node in Chrome DevTools. There have also been some [cryptography related enhancements](https://nodeweekly.com/link/174292/0a4070b383) and `npm` gets upgraded to v11.6.
+
+Michaël Zasso
+
+[pnpm 10.16 Adds Support for Delayed Dependency Updates](https://nodeweekly.com/link/174293/0a4070b383 "pnpm.io") — The alternative efficient npm package manager has added a way to specify a ‘minimum release age’ for package dependencies, so a setting of ‘1440’ (minutes) will mean only packages released more than one day ago will be installed. This can help avoid malicious versions of packages which are quickly withdrawn.
+
+Zoltan Kochan
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/bffd4902.png)](https://nodeweekly.com/link/174290/0a4070b383)
+
+[Advanced Redis & Valkey Hosting for Node Apps](https://nodeweekly.com/link/174290/0a4070b383 "dashboard.memetria.com") — Memetria K/V helps Node.js developers host Redis OSS and Valkey with key-level visibility, memory tracking, and performance analytics—at any scale.
+
+Memetria sponsor
+
+**IN BRIEF:**
+
+*   ⚠️ Last week we featured news of [a significant npm supply chain attack](https://nodeweekly.com/link/174294/0a4070b383) relating to a variety of popular packages, but yet more are continuing to occur, [this time affecting @ctrl/tinycolor](https://nodeweekly.com/link/174295/0a4070b383) among others. The payload in this case is particularly dangerous as it installed a secrets scanner and exfiltrated the tokens found. [More technical details here.](https://nodeweekly.com/link/174296/0a4070b383)
+    
+*   [Electron 38 has been released](https://nodeweekly.com/link/174297/0a4070b383) and upgrades to [Node 22.18](https://nodeweekly.com/link/174298/0a4070b383) meaning it gets type stripping enabled by default. It also upgrades from Chromium 138 to 140 (admittedly a rather minor update for devs).
+    
+*   📗 Flavio Copes has [updated his popular Node.js Handbook](https://nodeweekly.com/link/174299/0a4070b383), originally released in 2018, in a new 2025 edition. It remains free, though behind an email wall.
+    
+
+[Oh No, Not Again: A Meditation on npm Supply Chain Attacks](https://nodeweekly.com/link/174300/0a4070b383 "tane.dev") — Noting that “_npm has become the largest and easiest way to ship malware_”, Tane points a finger at Microsoft, the custodians of the npm registry.
+
+Tane Piper
+
+[How To Set-Up Express.js 5 for Production in 2025](https://nodeweekly.com/link/174301/0a4070b383 "www.reactsquad.io") — A walkthrough of the basic dev process for the latest version of Express, complete with TypeScript, ESLint, Prettier, file structure, and logging.
+
+Jan Hesters
+
+[Automating the Release Process for a Desktop App with GitHub Actions](https://nodeweekly.com/link/174302/0a4070b383 "www.dolthub.com") — _Dolt Workbench_ is an SQL workbench packaged as an Electron app and distributed for several platforms. Eric explains how the Dolt team has automated the process and shares the code for [their GitHub workflows.](https://nodeweekly.com/link/174303/0a4070b383)
+
+Eric Richardson (DoltHub)
+
+[Secure Your Agentic Apps with Auth for GenAI](https://nodeweekly.com/link/174304/0a4070b383 "auth0.com") — Secure your agentic apps with features like User Authentication for AI agents, Token Vault, and more with Auth0’s Auth for GenAI (exclusively in Developer Preview).
+
+Auth0 sponsor
+
+📄 [How to Keep `package.json` Under Control](https://nodeweekly.com/link/174305/0a4070b383) – Good tips and tool recommendations here. Tom MacWright
+
+📄 [The State of QUIC Support in Node.js](https://nodeweekly.com/link/174306/0a4070b383) – A look at the many year story of bringing native QUIC support to Node and how Node 25 should get the first implementation in place. Pavel Romanov
+
+📄 [Using Node's Native Test Runner with TypeScript and React](https://nodeweekly.com/link/174307/0a4070b383) Matthew Brown
+
+📄 [Compiling Multiple CSS Files into One](https://nodeweekly.com/link/174308/0a4070b383) – Using either PostCSS or a custom Node.js script with no dependencies. Geoff Graham
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/o2ob8hwexnwceevgwjn4.jpg)](https://nodeweekly.com/link/174309/0a4070b383)
+
+[Feedsmith 2.0: Web Feed Parsing and Generation Library](https://nodeweekly.com/link/174309/0a4070b383 "feedsmith.dev") — As well as parsing feeds of various types, you can also create RSS, Atom, JSON Feed, and OPML files with many common namespaces (iTunes, Podcast, Media RSS, Dublin Core, etc.) – here’s [a quick start tutorial](https://nodeweekly.com/link/174310/0a4070b383) for using it both in browsers or Node. [GitHub repo.](https://nodeweekly.com/link/174311/0a4070b383)
+
+Maciej Lamberski
+
+[Trash 10.0: Move Files and Directories to the 'Trash'](https://nodeweekly.com/link/174312/0a4070b383 "github.com") — Rather than deleting files outright (e.g. `unlink`), this moves them to the ‘trashcan’ equivalent on Windows, Linux, and macOS.
+
+Sindre Sorhus
+
+[openapi-typescript-server: Codegen TypeScript Servers from OpenAPI](https://nodeweekly.com/link/174313/0a4070b383 "github.com") — CLI and runtime library to help you implement type-safe APIs documented in OpenAPI specs.
+
+Jason Blanchard
+
+*   [Ow 3.0](https://nodeweekly.com/link/174314/0a4070b383) – Function argument validation for humans (essentially chainable easy-to-read data validations).
+    
+*   🖼️ [terminal-image 4.0](https://nodeweekly.com/link/174315/0a4070b383) – Display images in the terminal. v4 adds support for [Kitty](https://nodeweekly.com/link/174316/0a4070b383)'s graphics protocol.
+    
+*   [npm-publish 4.0](https://nodeweekly.com/link/174317/0a4070b383) – GitHub Action to publish packages to the npm registry. Now runs on Node 24 with `npm` 11.
+    
+*   [jsdom 27.0](https://nodeweekly.com/link/174318/0a4070b383) – Pure JS implementation of WHATWG DOM and HTML standards.
+    
+*   [LogTape 1.1](https://nodeweekly.com/link/174319/0a4070b383) – Simple logging library for all major JS runtimes. [Changelog.](https://nodeweekly.com/link/174320/0a4070b383)
+    
+*   [Undici 7.16](https://nodeweekly.com/link/174321/0a4070b383) – Node's powerful HTTP client library.
+    
+*   [Hexo 8.0](https://nodeweekly.com/link/174322/0a4070b383) – Popular blog framework/ generator.
+    
+*   [node-soap 1.4](https://nodeweekly.com/link/174323/0a4070b383) – SOAP client _and_ server library.
+    
+
+📰 Classifieds
+
+[$100 off yearly Frontend Masters membership!](https://nodeweekly.com/link/174324/0a4070b383) 250+ courses, personalized learning path, workshops with devs from GitHub & Netflix. [Sale ends soon →](https://nodeweekly.com/link/174324/0a4070b383)
+
+* * *
+
+Go beyond caching. [Redis 8.2](https://nodeweekly.com/link/174325/0a4070b383) handles 5x more data with 150 new commands and 8 new data structures vs 7.2. [Try Redis Pro.](https://nodeweekly.com/link/174326/0a4070b383)
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hc7dyd1nbhs9dkduro00.jpg)](https://nodeweekly.com/link/174327/0a4070b383)
+
+*   ["Behind the Scenes of `bun install`"](https://nodeweekly.com/link/174327/0a4070b383) is an epic post by Lydia Hallie of [the Bun project](https://nodeweekly.com/link/174328/0a4070b383) covering not only what Bun has done to make its package installation mechanism fast, but also the process and pain points of package installation more generally.
+    
+*   [Deno 2.5 has been released](https://nodeweekly.com/link/174329/0a4070b383). You can now create sets of permissions in `deno.json`, `Deno.test` gets some DX improvements, and `deno bundle` gets a programmatic API so you can script the bundling of your app, along with much more.
+    
+*   A developer satisfies his curiosity by answering [which npm package has the largest version number?](https://nodeweekly.com/link/174330/0a4070b383) Some poking around the npm registry's data yields a variety of winners, depending on how you define 'version' and 'largest'.
+    
+*   Someone figured out how to [host a web site on a disposable vape.](https://nodeweekly.com/link/174331/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​593 — September 16, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/593)
+
+🗓️ **We're taking next week off,** so we will be back in your inbox again on Tuesday, September 30.\
+\_\_\
+*Peter Cooper, your editor*
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/174290/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/c2nk0ko7zg8m1jw7ayta.jpg)](https://nodeweekly.com/link/174291/0a4070b383)
+
+[Node.js v24.8.0 (Current) Released](https://nodeweekly.com/link/174291/0a4070b383 "nodejs.org") — The big new feature is added support for inspecting HTTP/2 network calls made from Node in Chrome DevTools. There have also been some [cryptography related enhancements](https://nodeweekly.com/link/174292/0a4070b383) and `npm` gets upgraded to v11.6.
+
+Michaël Zasso
+
+[pnpm 10.16 Adds Support for Delayed Dependency Updates](https://nodeweekly.com/link/174293/0a4070b383 "pnpm.io") — The alternative efficient npm package manager has added a way to specify a ‘minimum release age’ for package dependencies, so a setting of ‘1440’ (minutes) will mean only packages released more than one day ago will be installed. This can help avoid malicious versions of packages which are quickly withdrawn.
+
+Zoltan Kochan
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/bffd4902.png)](https://nodeweekly.com/link/174290/0a4070b383)
+
+[Advanced Redis & Valkey Hosting for Node Apps](https://nodeweekly.com/link/174290/0a4070b383 "dashboard.memetria.com") — Memetria K/V helps Node.js developers host Redis OSS and Valkey with key-level visibility, memory tracking, and performance analytics—at any scale.
+
+Memetria sponsor
+
+**IN BRIEF:**
+
+* ⚠️ Last week we featured news of [a significant npm supply chain attack](https://nodeweekly.com/link/174294/0a4070b383) relating to a variety of popular packages, but yet more are continuing to occur, [this time affecting @ctrl/tinycolor](https://nodeweekly.com/link/174295/0a4070b383) among others. The payload in this case is particularly dangerous as it installed a secrets scanner and exfiltrated the tokens found. [More technical details here.](https://nodeweekly.com/link/174296/0a4070b383)
+
+* [Electron 38 has been released](https://nodeweekly.com/link/174297/0a4070b383) and upgrades to [Node 22.18](https://nodeweekly.com/link/174298/0a4070b383) meaning it gets type stripping enabled by default. It also upgrades from Chromium 138 to 140 (admittedly a rather minor update for devs).
+
+* 📗 Flavio Copes has [updated his popular Node.js Handbook](https://nodeweekly.com/link/174299/0a4070b383), originally released in 2018, in a new 2025 edition. It remains free, though behind an email wall.
+
+[Oh No, Not Again: A Meditation on npm Supply Chain Attacks](https://nodeweekly.com/link/174300/0a4070b383 "tane.dev") — Noting that “*npm has become the largest and easiest way to ship malware*”, Tane points a finger at Microsoft, the custodians of the npm registry.
+
+Tane Piper
+
+[How To Set-Up Express.js 5 for Production in 2025](https://nodeweekly.com/link/174301/0a4070b383 "www.reactsquad.io") — A walkthrough of the basic dev process for the latest version of Express, complete with TypeScript, ESLint, Prettier, file structure, and logging.
+
+Jan Hesters
+
+[Automating the Release Process for a Desktop App with GitHub Actions](https://nodeweekly.com/link/174302/0a4070b383 "www.dolthub.com") — *Dolt Workbench* is an SQL workbench packaged as an Electron app and distributed for several platforms. Eric explains how the Dolt team has automated the process and shares the code for [their GitHub workflows.](https://nodeweekly.com/link/174303/0a4070b383)
+
+Eric Richardson (DoltHub)
+
+[Secure Your Agentic Apps with Auth for GenAI](https://nodeweekly.com/link/174304/0a4070b383 "auth0.com") — Secure your agentic apps with features like User Authentication for AI agents, Token Vault, and more with Auth0’s Auth for GenAI (exclusively in Developer Preview).
+
+Auth0 sponsor
+
+📄 [How to Keep `package.json` Under Control](https://nodeweekly.com/link/174305/0a4070b383) – Good tips and tool recommendations here. Tom MacWright
+
+📄 [The State of QUIC Support in Node.js](https://nodeweekly.com/link/174306/0a4070b383) – A look at the many year story of bringing native QUIC support to Node and how Node 25 should get the first implementation in place. Pavel Romanov
+
+📄 [Using Node's Native Test Runner with TypeScript and React](https://nodeweekly.com/link/174307/0a4070b383) Matthew Brown
+
+📄 [Compiling Multiple CSS Files into One](https://nodeweekly.com/link/174308/0a4070b383) – Using either PostCSS or a custom Node.js script with no dependencies. Geoff Graham
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/o2ob8hwexnwceevgwjn4.jpg)](https://nodeweekly.com/link/174309/0a4070b383)
+
+[Feedsmith 2.0: Web Feed Parsing and Generation Library](https://nodeweekly.com/link/174309/0a4070b383 "feedsmith.dev") — As well as parsing feeds of various types, you can also create RSS, Atom, JSON Feed, and OPML files with many common namespaces (iTunes, Podcast, Media RSS, Dublin Core, etc.) – here’s [a quick start tutorial](https://nodeweekly.com/link/174310/0a4070b383) for using it both in browsers or Node. [GitHub repo.](https://nodeweekly.com/link/174311/0a4070b383)
+
+Maciej Lamberski
+
+[Trash 10.0: Move Files and Directories to the 'Trash'](https://nodeweekly.com/link/174312/0a4070b383 "github.com") — Rather than deleting files outright (e.g. `unlink`), this moves them to the ‘trashcan’ equivalent on Windows, Linux, and macOS.
+
+Sindre Sorhus
+
+[openapi-typescript-server: Codegen TypeScript Servers from OpenAPI](https://nodeweekly.com/link/174313/0a4070b383 "github.com") — CLI and runtime library to help you implement type-safe APIs documented in OpenAPI specs.
+
+Jason Blanchard
+
+* [Ow 3.0](https://nodeweekly.com/link/174314/0a4070b383) – Function argument validation for humans (essentially chainable easy-to-read data validations).
+
+* 🖼️ [terminal-image 4.0](https://nodeweekly.com/link/174315/0a4070b383) – Display images in the terminal. v4 adds support for [Kitty](https://nodeweekly.com/link/174316/0a4070b383)'s graphics protocol.
+
+* [npm-publish 4.0](https://nodeweekly.com/link/174317/0a4070b383) – GitHub Action to publish packages to the npm registry. Now runs on Node 24 with `npm` 11.
+
+* [jsdom 27.0](https://nodeweekly.com/link/174318/0a4070b383) – Pure JS implementation of WHATWG DOM and HTML standards.
+
+* [LogTape 1.1](https://nodeweekly.com/link/174319/0a4070b383) – Simple logging library for all major JS runtimes. [Changelog.](https://nodeweekly.com/link/174320/0a4070b383)
+
+* [Undici 7.16](https://nodeweekly.com/link/174321/0a4070b383) – Node's powerful HTTP client library.
+
+* [Hexo 8.0](https://nodeweekly.com/link/174322/0a4070b383) – Popular blog framework/ generator.
+
+* [node-soap 1.4](https://nodeweekly.com/link/174323/0a4070b383) – SOAP client *and* server library.
+
+📰 Classifieds
+
+[$100 off yearly Frontend Masters membership!](https://nodeweekly.com/link/174324/0a4070b383) 250+ courses, personalized learning path, workshops with devs from GitHub & Netflix. [Sale ends soon →](https://nodeweekly.com/link/174324/0a4070b383)
+
+***
+
+Go beyond caching. [Redis 8.2](https://nodeweekly.com/link/174325/0a4070b383) handles 5x more data with 150 new commands and 8 new data structures vs 7.2. [Try Redis Pro.](https://nodeweekly.com/link/174326/0a4070b383)
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hc7dyd1nbhs9dkduro00.jpg)](https://nodeweekly.com/link/174327/0a4070b383)
+
+* ["Behind the Scenes of `bun install`"](https://nodeweekly.com/link/174327/0a4070b383) is an epic post by Lydia Hallie of [the Bun project](https://nodeweekly.com/link/174328/0a4070b383) covering not only what Bun has done to make its package installation mechanism fast, but also the process and pain points of package installation more generally.
+
+* [Deno 2.5 has been released](https://nodeweekly.com/link/174329/0a4070b383). You can now create sets of permissions in `deno.json`, `Deno.test` gets some DX improvements, and `deno bundle` gets a programmatic API so you can script the bundling of your app, along with much more.
+
+* A developer satisfies his curiosity by answering [which npm package has the largest version number?](https://nodeweekly.com/link/174330/0a4070b383) Some poking around the npm registry's data yields a variety of winners, depending on how you define 'version' and 'largest'.
+
+* Someone figured out how to [host a web site on a disposable vape.](https://nodeweekly.com/link/174331/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
