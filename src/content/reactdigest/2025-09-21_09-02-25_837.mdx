@@ -1,0 +1,122 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: React won by default
+description: React won by default
+date: 星期一 09 上午 九月 21o 2025
+author: reactdigest
+origin_url: https://reactdigest.net/newsletters/2129-react-won-by-default
+origin_site: https://reactdigest.net/newsletters/2129-react-won-by-default
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx'
+import { Reference } from '@/components/Reference.tsx'
+
+<Reference
+  client:only="react"
+  title="React won by default"
+  url="https://reactdigest.net/newsletters/2129-react-won-by-default"
+/>
+
+<Detail client:only="react">
+
+
+[React won by default – and it's killing frontend innovation](https://www.lorenstew.art/blog/react-won-by-default/)  
+_8 minutes_ by Loren Stewart
+
+React has become the default choice for frontend development, but this reflex is stifling innovation. Teams pick React because everyone knows it, not because it fits their needs best. Meanwhile, better alternatives like Svelte, Solid, and Qwik struggle to gain adoption despite offering real technical advantages like faster performance and simpler code. This creates a cycle where network effects matter more than technical merit, slowing progress across the entire web ecosystem.
+
+[How React engineers at Nubank and Ramp focus on UX (vs migrating class components and writing tests)](https://devin.ai/customers?utm_medium=newsletter&utm_source=bonobos-react-digest&utm_campaign=20250919)  
+_sponsored by Devin AI_
+
+What do elite React teams at Ramp and Nubank have in common? They all save 10k+ hours monthly by delegating tedious work (think class migrations, test writing, prop drilling fixes) to Devin so they can focus on user experience and new features. Devin is a SWE agent built for real-world work. It analyzes your codebase to craft context-grounded plans before implementing and testing. Starting at $20.
+
+[Middleware in React router](https://remix.run/blog/middleware)  
+_6 minutes_ by Matt Brophy
+
+React Router 7.9.0 now includes stable middleware support through a feature flag. This allows developers to run code before loaders execute, solving common issues like accessing parent data in child routes and stopping child loaders when parent routes redirect. The feature required major changes to how data loading works, including a new "Single Fetch" system that combines multiple requests into one.
+
+[Cut styled-components into pieces: This is our last resort](https://www.sanity.io/blog/cut-styled-components-into-pieces-this-is-our-last-resort)  
+_8 minutes_ by Cody Olsen, Knut Melvær
+
+React apps using styled-components can be 40% slower than needed because the library never adopted React 18's useInsertionEffect hook. This creates performance problems when styles inject during render instead of between render and layout. Styled-components entered maintenance mode in March 2025, with its maintainer recommending against new adoption. Sanity created optimized forks to help teams migrate gradually while maintaining performance.
+
+[Can I use React Server Components today?](https://rsc.krasimirtsonev.com/)  
+_8 minutes_ by Krasimir Tsonev
+
+Krasimir showcases 12 test cases for React Server Components and client components across 7 frameworks. The tests cover key patterns like rendering async server components, mixing server and client code, passing server functions to clients, and handling form submissions with server actions. Examples demonstrate how to pass data between components, use promises, and create interactive features while maintaining proper separation between server and client logic.
+
+[Migrating to TanStack Start](https://catalins.tech/migrating-to-tanstack-start/)  
+_9 minutes_ by Catalin Pit
+
+Catalin migrated from a client-server setup using TanStack Router to TanStack Start to add server-side rendering for better SEO. The course platform needed certain pages indexed by search engines. The migration involved updating the router configuration, modifying the root route to handle authentication and meta tags, and adjusting the Vite setup.
+
+## webdev
+
+- [What Can We Actually Do With corner-shape?](https://css-tricks.com/what-can-we-actually-do-with-corner-shape/)
+- [Apple has a private CSS property to add Liquid Glass effects to web content](https://alastair.is/apple-has-a-private-css-property-to-add-liquid-glass-effects-to-web-content/)
+- [Don't Inherit the Box Model](https://www.oddbird.net/2025/09/04/box-model/)
+- [100+ CSS features](https://nerdy.dev/cascading-secret-sauce)
+
+## javascript
+
+- [Wasm 3.0 Completed](https://webassembly.org/news/2025-09-17-wasm-3.0/)
+- [Fetch streams are great, but not for measuring upload progress](https://jakearchibald.com/2025/fetch-streams-not-for-progress/)
+- [Behind The Scenes of Bun Install](https://bun.com/blog/behind-the-scenes-of-bun-install)
+- [How to keep package.json under control](https://blog.val.town/gardening-dependencies)
+
+And the most popular article from the last issue was:
+
+- [An interactive guide to TanStack DB](https://frontendatscale.com/blog/tanstack-db/)
+
+</Detail>
+
+[React won by default – and it's killing frontend innovation](https://www.lorenstew.art/blog/react-won-by-default/)  
+_8 minutes_ by Loren Stewart
+
+React has become the default choice for frontend development, but this reflex is stifling innovation. Teams pick React because everyone knows it, not because it fits their needs best. Meanwhile, better alternatives like Svelte, Solid, and Qwik struggle to gain adoption despite offering real technical advantages like faster performance and simpler code. This creates a cycle where network effects matter more than technical merit, slowing progress across the entire web ecosystem.
+
+[How React engineers at Nubank and Ramp focus on UX (vs migrating class components and writing tests)](https://devin.ai/customers?utm_medium=newsletter&utm_source=bonobos-react-digest&utm_campaign=20250919)  
+_sponsored by Devin AI_
+
+What do elite React teams at Ramp and Nubank have in common? They all save 10k+ hours monthly by delegating tedious work (think class migrations, test writing, prop drilling fixes) to Devin so they can focus on user experience and new features. Devin is a SWE agent built for real-world work. It analyzes your codebase to craft context-grounded plans before implementing and testing. Starting at $20.
+
+[Middleware in React router](https://remix.run/blog/middleware)  
+_6 minutes_ by Matt Brophy
+
+React Router 7.9.0 now includes stable middleware support through a feature flag. This allows developers to run code before loaders execute, solving common issues like accessing parent data in child routes and stopping child loaders when parent routes redirect. The feature required major changes to how data loading works, including a new "Single Fetch" system that combines multiple requests into one.
+
+[Cut styled-components into pieces: This is our last resort](https://www.sanity.io/blog/cut-styled-components-into-pieces-this-is-our-last-resort)  
+_8 minutes_ by Cody Olsen, Knut Melvær
+
+React apps using styled-components can be 40% slower than needed because the library never adopted React 18's useInsertionEffect hook. This creates performance problems when styles inject during render instead of between render and layout. Styled-components entered maintenance mode in March 2025, with its maintainer recommending against new adoption. Sanity created optimized forks to help teams migrate gradually while maintaining performance.
+
+[Can I use React Server Components today?](https://rsc.krasimirtsonev.com/)  
+_8 minutes_ by Krasimir Tsonev
+
+Krasimir showcases 12 test cases for React Server Components and client components across 7 frameworks. The tests cover key patterns like rendering async server components, mixing server and client code, passing server functions to clients, and handling form submissions with server actions. Examples demonstrate how to pass data between components, use promises, and create interactive features while maintaining proper separation between server and client logic.
+
+[Migrating to TanStack Start](https://catalins.tech/migrating-to-tanstack-start/)  
+_9 minutes_ by Catalin Pit
+
+Catalin migrated from a client-server setup using TanStack Router to TanStack Start to add server-side rendering for better SEO. The course platform needed certain pages indexed by search engines. The migration involved updating the router configuration, modifying the root route to handle authentication and meta tags, and adjusting the Vite setup.
+
+## webdev
+
+- [What Can We Actually Do With corner-shape?](https://css-tricks.com/what-can-we-actually-do-with-corner-shape/)
+- [Apple has a private CSS property to add Liquid Glass effects to web content](https://alastair.is/apple-has-a-private-css-property-to-add-liquid-glass-effects-to-web-content/)
+- [Don't Inherit the Box Model](https://www.oddbird.net/2025/09/04/box-model/)
+- [100+ CSS features](https://nerdy.dev/cascading-secret-sauce)
+
+## javascript
+
+- [Wasm 3.0 Completed](https://webassembly.org/news/2025-09-17-wasm-3.0/)
+- [Fetch streams are great, but not for measuring upload progress](https://jakearchibald.com/2025/fetch-streams-not-for-progress/)
+- [Behind The Scenes of Bun Install](https://bun.com/blog/behind-the-scenes-of-bun-install)
+- [How to keep package.json under control](https://blog.val.town/gardening-dependencies)
+
+And the most popular article from the last issue was:
+
+- [An interactive guide to TanStack DB](https://frontendatscale.com/blog/tanstack-db/)

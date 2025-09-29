@@ -1,0 +1,117 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: React state management in 2025
+description: React state management in 2025
+date: 星期一 09 上午 九月 28o 2025
+author: reactdigest
+origin_url: https://reactdigest.net/newsletters/2133-react-state-management-in-2025
+origin_site: https://reactdigest.net/newsletters/2133-react-state-management-in-2025
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx'
+import { Reference } from '@/components/Reference.tsx'
+
+<Reference
+  client:only="react"
+  title="React state management in 2025"
+  url="https://reactdigest.net/newsletters/2133-react-state-management-in-2025"
+/>
+
+<Detail client:only="react">
+
+[React state management in 2025: What you actually need](https://www.developerway.com/posts/react-state-management-2025)  
+_24 minutes_ by Nadia Makarevich
+
+Nadia shares her opinion on how to manage state in modern React apps, what is remote, URL, local, and shared state, and when you actually need a state management library.
+
+[Tests are dead. Meticulous AI is here.](https://www.meticulous.ai/?utm_source=react_digest)  
+_sponsored by Meticulous_
+
+Meticulous automatically creates and maintains an exhaustive e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Dropbox, Lattice, Bilt Rewards and hundreds of organisations rely on Meticulous for their frontend testing. It is built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[What Elm taught me about React's useReducer](https://cekrem.github.io/posts/the-discipline-of-constraints-elm-usereducer-lessons/)  
+_7 minutes_ by Christian Ekrem
+
+Learning Elm's strict compiler rules can make you a better React developer. Elm forces you to handle every possible state change and prevents common mistakes that React allows. After using Elm, Christian argues he wrote cleaner React code by avoiding default cases in reducers, using proper TypeScript types, and isolating side effects in custom hooks.
+
+[How to leverage React router's built-in data deduplication](https://sergiodxa.com/tutorials/leverage-react-router-s-built-in-data-deduplication)  
+_5 minutes_ by Sergio Xalambrí
+
+React Router has a hidden feature that prevents duplicate data when combining promises. When you use Promise.all() to merge independent promises, the framework sends shared data using references instead of copying the actual values. This means if two promises return the same data, React Router transmits it once and uses pointers for subsequent references. The optimization works automatically without requiring code changes, making data loading more efficient for complex web applications. Sergio explores this with a practical example.
+
+[Parallel and recursive route rendering](https://twofoldframework.com/blog/parallel-and-recursive-route-rendering-with-rsc)  
+_11 minutes_ by Ryan Toronto
+
+RSC routers use a clever technique to avoid slow waterfalls where each route waits for its parent to finish loading. Instead of rendering routes in a nested tree, they render all routes in parallel on the server as a flat list. The server creates a stack of rendered components with placeholder children. On the client, a recursive component pops items from the stack and replaces placeholders with actual content, rebuilding the nested structure without the delays.
+
+[Creating an immersive 3D weather visualization with React three fiber](https://tympanus.net/codrops/2025/09/18/creating-an-immersive-3d-weather-visualization-with-react-three-fiber/)  
+_19 minutes_ by Carter Rink
+
+Carter shows how to build a 3D weather app using React Three Fiber and real weather data. The system creates interactive scenes with sun, rain, snow, and storms based on current conditions. It uses instanced rendering for thousands of particles and conditional components that only load needed effects. The app includes forecast portals where users can click to explore future weather in 3D environments.
+
+## webdev
+
+- [What You Need to Know about Modern CSS (2025 Edition)](https://frontendmasters.com/blog/what-you-need-to-know-about-modern-css-2025-edition/)
+- [Let’s Be Specific: CSS Specificity Explained](https://playfulprogramming.com/posts/css-specificity-explained)
+- [The Big Gotcha With @starting-style](https://www.joshwcomeau.com/css/starting-style/)
+- [Developing an alt text button for images on my website](https://jamesg.blog/2025/08/17/alt-text-button)
+
+## javascript
+
+- [The Risks of NPM](https://blog.jim-nielsen.com/2025/npm-risks/)
+- [Help Us Raise $200k to Free JavaScript from Oracle](https://deno.com/blog/javascript-tm-gofundme)
+
+And the most popular article from the last issue was:
+
+- [React won by default – and it's killing frontend innovation](https://www.lorenstew.art/blog/react-won-by-default/)
+
+</Detail>
+
+[[React state management in 2025: What you actually need](https://www.developerway.com/posts/react-state-management-2025)  
+_24 minutes_ by Nadia Makarevich
+
+Nadia shares her opinion on how to manage state in modern React apps, what is remote, URL, local, and shared state, and when you actually need a state management library.
+
+[Tests are dead. Meticulous AI is here.](https://www.meticulous.ai/?utm_source=react_digest)  
+_sponsored by Meticulous_
+
+Meticulous automatically creates and maintains an exhaustive e2e UI test suite that covers every corner of your application – with no developer intervention required whatsoever. Dropbox, Lattice, Bilt Rewards and hundreds of organisations rely on Meticulous for their frontend testing. It is built from the Chromium level up with a deterministic scheduling engine – making it the only testing tool that eliminates flakes.
+
+[What Elm taught me about React's useReducer](https://cekrem.github.io/posts/the-discipline-of-constraints-elm-usereducer-lessons/)  
+_7 minutes_ by Christian Ekrem
+
+Learning Elm's strict compiler rules can make you a better React developer. Elm forces you to handle every possible state change and prevents common mistakes that React allows. After using Elm, Christian argues he wrote cleaner React code by avoiding default cases in reducers, using proper TypeScript types, and isolating side effects in custom hooks.
+
+[How to leverage React router's built-in data deduplication](https://sergiodxa.com/tutorials/leverage-react-router-s-built-in-data-deduplication)  
+_5 minutes_ by Sergio Xalambrí
+
+React Router has a hidden feature that prevents duplicate data when combining promises. When you use Promise.all() to merge independent promises, the framework sends shared data using references instead of copying the actual values. This means if two promises return the same data, React Router transmits it once and uses pointers for subsequent references. The optimization works automatically without requiring code changes, making data loading more efficient for complex web applications. Sergio explores this with a practical example.
+
+[Parallel and recursive route rendering](https://twofoldframework.com/blog/parallel-and-recursive-route-rendering-with-rsc)  
+_11 minutes_ by Ryan Toronto
+
+RSC routers use a clever technique to avoid slow waterfalls where each route waits for its parent to finish loading. Instead of rendering routes in a nested tree, they render all routes in parallel on the server as a flat list. The server creates a stack of rendered components with placeholder children. On the client, a recursive component pops items from the stack and replaces placeholders with actual content, rebuilding the nested structure without the delays.
+
+[Creating an immersive 3D weather visualization with React three fiber](https://tympanus.net/codrops/2025/09/18/creating-an-immersive-3d-weather-visualization-with-react-three-fiber/)  
+_19 minutes_ by Carter Rink
+
+Carter shows how to build a 3D weather app using React Three Fiber and real weather data. The system creates interactive scenes with sun, rain, snow, and storms based on current conditions. It uses instanced rendering for thousands of particles and conditional components that only load needed effects. The app includes forecast portals where users can click to explore future weather in 3D environments.
+
+## webdev
+
+- [What You Need to Know about Modern CSS (2025 Edition)](https://frontendmasters.com/blog/what-you-need-to-know-about-modern-css-2025-edition/)
+- [Let’s Be Specific: CSS Specificity Explained](https://playfulprogramming.com/posts/css-specificity-explained)
+- [The Big Gotcha With @starting-style](https://www.joshwcomeau.com/css/starting-style/)
+- [Developing an alt text button for images on my website](https://jamesg.blog/2025/08/17/alt-text-button)
+
+## javascript
+
+- [The Risks of NPM](https://blog.jim-nielsen.com/2025/npm-risks/)
+- [Help Us Raise $200k to Free JavaScript from Oracle](https://deno.com/blog/javascript-tm-gofundme)
+
+And the most popular article from the last issue was:
+
+- [React won by default – and it's killing frontend innovation](https://www.lorenstew.art/blog/react-won-by-default/)
