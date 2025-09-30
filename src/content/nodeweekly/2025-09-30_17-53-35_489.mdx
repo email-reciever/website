@@ -1,0 +1,288 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Using Node with Cloudflare Workers
+description: Using Node with Cloudflare Workers
+date: 星期二 05 下午 九月 30o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/594
+origin_site: https://nodeweekly.com/issues/594
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Using Node with Cloudflare Workers" url="https://nodeweekly.com/issues/594" />
+
+<Detail client:only="react">
+	#​594 — September 30, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/594)
+
+🗓️ We're back after taking a week off for my birthday. I've never bothered to do that before, but I figured I'd give it a go, and.. it was good 😅 We're now back every week until Christmas!  
+\_\_  
+_Peter Cooper, your editor_
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/174912/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/re6pyks033vel0nnxouy.jpg)](https://nodeweekly.com/link/174913/0a4070b383)
+
+[A Year of Improving Node.js Compatibility in _Cloudflare Workers_](https://nodeweekly.com/link/174913/0a4070b383 "blog.cloudflare.com") — _“We’ve been busy,”_ says Cloudflare [which recently announced](https://nodeweekly.com/link/174914/0a4070b383) it’s bringing Node.js HTTP server support to its _Workers_ function platform. This post goes _deep_ into the technicalities, covering what areas of the standard library is supported, how the file system works (_Workers_ doesn’t have a typical file system), how input/output streams work, and more. And you can use all of this now.
+
+James M Snell (Cloudflare)
+
+[Electron-Based Apps Causing System-Wide Lag on macOS 26 Tahoe?](https://nodeweekly.com/link/174915/0a4070b383 "github.com") — There were a variety of reports and discussions on social media about system-wide sluggishness caused by changes in a _private_ API in macOS that Electron uses. The good news? The [recently released](https://nodeweekly.com/link/174916/0a4070b383) Electron 38.2, 37.6 and 36.9.2 fix the bug, if you maintain an Electron powered app you need to repackage.
+
+Various Contributors
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/9d7fc769.png)](https://nodeweekly.com/link/174912/0a4070b383)
+
+[Go from Monolith to Monorepo](https://nodeweekly.com/link/174912/0a4070b383 "frontendmasters.com") — Join Mike North for this course on architecting maintainable, fast and light codebases. You'll learn how to refactor a codebase into a TypeScript monorepo using tools like Nx and Lerna — covering dependencies, formatting, linting, performance and more.
+
+Frontend Masters sponsor
+
+**IN BRIEF:**
+
+*   [Node v24.9.0 (Current) has been released](https://nodeweekly.com/link/174917/0a4070b383) – it's a small release with minor enhancements to `http`, `sqlite`, and `worker`. [Node v22.20 (LTS) was also released](https://nodeweekly.com/link/174918/0a4070b383) focused on updating OpenSSL to v3.5.2.
+    
+*   🎂 [AdonisJS](https://nodeweekly.com/link/174919/0a4070b383), a popular full-featured web framework for Node, is [celebrating its tenth birthday.](https://nodeweekly.com/link/174920/0a4070b383)
+    
+*   The latest [State of JS survey is now open](https://nodeweekly.com/link/174921/0a4070b383) to take.
+    
+
+[GitHub's Plan for a More Secure npm Supply Chain](https://nodeweekly.com/link/174922/0a4070b383 "github.blog") — In direct response to the recent npm ecosystem [supply chain attacks](https://nodeweekly.com/link/174923/0a4070b383) of recent weeks, GitHub’s senior director of security research has outlined steps GitHub is taking, including blocking the upload of packages featuring the patterns of the recent malware, hardening package publication, and promoting the use of [trusted publishing.](https://nodeweekly.com/link/174924/0a4070b383)
+
+Xavier René-Corail (GitHub)
+
+💡 GitHub has posted [a more technical update](https://nodeweekly.com/link/174925/0a4070b383) with a timeline of npm package publishing changes taking place in the coming weeks.
+
+[Mastering `npx`: A Cheatsheet for npm and Node Power Users](https://nodeweekly.com/link/174926/0a4070b383 "www.nodejs-security.com") — You’ve almost certainly used the `npx` command to easily run a command from an npm package (either local or remote) – it’s easy to use, but `npx` has a couple of other features and options to keep in mind.
+
+Liran Tal
+
+📄 [Stop Using `.reverse().find()`: Meet `findLast()`](https://nodeweekly.com/link/174927/0a4070b383) Matt Smith
+
+📄 [Storing Unwise Amounts of Data in JavaScript `BigInt`s](https://nodeweekly.com/link/174928/0a4070b383) Jonathan Frere
+
+📄 [Instrumenting the Node.js Event Loop with eBPF](https://nodeweekly.com/link/174929/0a4070b383) Nikolay Sivko
+
+🛠 Code & Tools
+
+[Skia Canvas 3.0: A Canvas Environment for Node](https://nodeweekly.com/link/174930/0a4070b383 "skia-canvas.org") — Based on Google’s Skia graphics engine and offers end results similar to Chrome’s own canvas. GPU accelerated and can render images, paths, fonts, shapes, etc. [GitHub repo.](https://nodeweekly.com/link/174931/0a4070b383)
+
+Christian Swinehart
+
+[Pompelmi: Scan File Uploads for Malware](https://nodeweekly.com/link/174932/0a4070b383 "pompelmi.github.io") — Provides adapters for Express, Koa, and Next.js to perform fast file-upload malware scanning in Node, including digging into ZIP files and with optional integration with the [YARA malware detection tool.](https://nodeweekly.com/link/174933/0a4070b383) [GitHub repo.](https://nodeweekly.com/link/174934/0a4070b383)
+
+Tommaso Bertocchi
+
+[Catch Bugs in PRs Before They Hit Production](https://nodeweekly.com/link/174935/0a4070b383 "sentry.io") — Use Sentry’s AI code review to spot errors, performance issues & test gaps in your pull requests.
+
+Sentry sponsor
+
+[npm-check-updates 19.0: Update `package.json` Dependencies to Latest Versions](https://nodeweekly.com/link/174936/0a4070b383 "github.com") — That is, as opposed to the _specified_ versions. Has a `-i` interactive mode so you can look at upgrades and opt in to them one by one. The recent v18.2 release added a ‘cooldown’ feature to help protect against supply chain attacks by requiring package versions be of a certain age first.
+
+Raine Revere
+
+🤖 [GitHub Copilot CLI Now in Public Preview](https://nodeweekly.com/link/174937/0a4070b383 "github.blog") — Not content to let Claude Code and OpenAI Codex dominate the CLI-based dev agent scene, GitHub has released a CLI-based version of Copilot, built using Node.
+
+GitHub
+
+[modern-tar: Zero-Dependency Streaming `tar` Parser and Writer](https://nodeweekly.com/link/174938/0a4070b383 "github.com") — As in the classic [tar archive format.](https://nodeweekly.com/link/174939/0a4070b383)
+
+Ayuhito
+
+[ffetch: TypeScript-First `fetch` Wrapper with Extras](https://nodeweekly.com/link/174940/0a4070b383 "github.com") — What extras? Think retries, circuit breaking, hooks, and monitoring of active requests.
+
+Gabor Koos
+
+*   [pnpm 10.17](https://nodeweekly.com/link/174941/0a4070b383) – The new `minimumReleaseAgeExclude` now supports patterns to exclude groups of packages from minimum release age checks.
+    
+*   [TypeBox 1.0](https://nodeweekly.com/link/174942/0a4070b383) – A runtime type system that creates in-memory JSON Schema objects that infer as TypeScript types.
+    
+*   🤖 [OpenAI Node 5.23.1](https://nodeweekly.com/link/174943/0a4070b383) – The official Node library for OpenAI's API now supports `gpt5-codex`.
+    
+*   [pretty-bytes 7.1](https://nodeweekly.com/link/174944/0a4070b383) – Convert a size in bytes into a human readable equivalent (e.g. 1337 becomes '1.34 kB').
+    
+*   [Wasp 0.18](https://nodeweekly.com/link/174945/0a4070b383) – [Wasp](https://nodeweekly.com/link/174946/0a4070b383) is a Rails-like framework using Node, React & Prisma.
+    
+*   [MongoDB Node.js Driver 6.20](https://nodeweekly.com/link/174947/0a4070b383) – The latest official MongoDB driver.
+    
+*   [pg-boss 11.0](https://nodeweekly.com/link/174948/0a4070b383) – Postgres-based job queuing system for Node.js.
+    
+*   [Verdaccio 6.2](https://nodeweekly.com/link/174949/0a4070b383) – Lightweight local private npm registry.
+    
+
+📰 Classifieds
+
+🕳️ 🥊 At [Holepunch](https://nodeweekly.com/link/174950/0a4070b383) we maintain 2000+ OSS npm packages, make the JS runtime Bare to build the P2P Internet. Real tech, Real impact. [Join us!](https://nodeweekly.com/link/174950/0a4070b383)
+
+* * *
+
+Go beyond caching. [Redis 8.2](https://nodeweekly.com/link/174951/0a4070b383) handles 5x more data with 150 new commands and 8 new data structures vs 7.2. [Try Redis Pro.](https://nodeweekly.com/link/174952/0a4070b383)
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+*   [The agenda of this week's TC39 meeting](https://nodeweekly.com/link/174953/0a4070b383) where several proposals were advanced, including [Import Bytes](https://nodeweekly.com/link/174954/0a4070b383), [Iterator Chunking](https://nodeweekly.com/link/174955/0a4070b383), and [`Array.prototype.pushAll`](https://nodeweekly.com/link/174956/0a4070b383).
+    
+*   [Bun v1.2.23 has been released](https://nodeweekly.com/link/174957/0a4070b383) with a myriad of smaller features and Node.js compatibility improvements. The big release of Bun v1.3 is expected later this week, however.
+    
+*   [IINA](https://nodeweekly.com/link/174958/0a4070b383) is a popular, open-source media player for macOS and it has just [added a JavaScript-based plugin system](https://nodeweekly.com/link/174959/0a4070b383) to let users extend its functionality.
+    
+*   We recently mentioned [Andromeda](https://nodeweekly.com/link/174960/0a4070b383) as being the newest JavaScript runtime to appear, but [now there's Ion](https://nodeweekly.com/link/174961/0a4070b383), a runtime aimed at bringing a JavaScript engine into Rust programs.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​594 — September 30, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/594)
+
+🗓️ We're back after taking a week off for my birthday. I've never bothered to do that before, but I figured I'd give it a go, and.. it was good 😅 We're now back every week until Christmas!\
+\_\_\
+*Peter Cooper, your editor*
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/174912/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/re6pyks033vel0nnxouy.jpg)](https://nodeweekly.com/link/174913/0a4070b383)
+
+[A Year of Improving Node.js Compatibility in *Cloudflare Workers*](https://nodeweekly.com/link/174913/0a4070b383 "blog.cloudflare.com") — *“We’ve been busy,”* says Cloudflare [which recently announced](https://nodeweekly.com/link/174914/0a4070b383) it’s bringing Node.js HTTP server support to its *Workers* function platform. This post goes *deep* into the technicalities, covering what areas of the standard library is supported, how the file system works (*Workers* doesn’t have a typical file system), how input/output streams work, and more. And you can use all of this now.
+
+James M Snell (Cloudflare)
+
+[Electron-Based Apps Causing System-Wide Lag on macOS 26 Tahoe?](https://nodeweekly.com/link/174915/0a4070b383 "github.com") — There were a variety of reports and discussions on social media about system-wide sluggishness caused by changes in a *private* API in macOS that Electron uses. The good news? The [recently released](https://nodeweekly.com/link/174916/0a4070b383) Electron 38.2, 37.6 and 36.9.2 fix the bug, if you maintain an Electron powered app you need to repackage.
+
+Various Contributors
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/9d7fc769.png)](https://nodeweekly.com/link/174912/0a4070b383)
+
+[Go from Monolith to Monorepo](https://nodeweekly.com/link/174912/0a4070b383 "frontendmasters.com") — Join Mike North for this course on architecting maintainable, fast and light codebases. You'll learn how to refactor a codebase into a TypeScript monorepo using tools like Nx and Lerna — covering dependencies, formatting, linting, performance and more.
+
+Frontend Masters sponsor
+
+**IN BRIEF:**
+
+* [Node v24.9.0 (Current) has been released](https://nodeweekly.com/link/174917/0a4070b383) – it's a small release with minor enhancements to `http`, `sqlite`, and `worker`. [Node v22.20 (LTS) was also released](https://nodeweekly.com/link/174918/0a4070b383) focused on updating OpenSSL to v3.5.2.
+
+* 🎂 [AdonisJS](https://nodeweekly.com/link/174919/0a4070b383), a popular full-featured web framework for Node, is [celebrating its tenth birthday.](https://nodeweekly.com/link/174920/0a4070b383)
+
+* The latest [State of JS survey is now open](https://nodeweekly.com/link/174921/0a4070b383) to take.
+
+[GitHub's Plan for a More Secure npm Supply Chain](https://nodeweekly.com/link/174922/0a4070b383 "github.blog") — In direct response to the recent npm ecosystem [supply chain attacks](https://nodeweekly.com/link/174923/0a4070b383) of recent weeks, GitHub’s senior director of security research has outlined steps GitHub is taking, including blocking the upload of packages featuring the patterns of the recent malware, hardening package publication, and promoting the use of [trusted publishing.](https://nodeweekly.com/link/174924/0a4070b383)
+
+Xavier René-Corail (GitHub)
+
+💡 GitHub has posted [a more technical update](https://nodeweekly.com/link/174925/0a4070b383) with a timeline of npm package publishing changes taking place in the coming weeks.
+
+[Mastering `npx`: A Cheatsheet for npm and Node Power Users](https://nodeweekly.com/link/174926/0a4070b383 "www.nodejs-security.com") — You’ve almost certainly used the `npx` command to easily run a command from an npm package (either local or remote) – it’s easy to use, but `npx` has a couple of other features and options to keep in mind.
+
+Liran Tal
+
+📄 [Stop Using `.reverse().find()`: Meet `findLast()`](https://nodeweekly.com/link/174927/0a4070b383) Matt Smith
+
+📄 [Storing Unwise Amounts of Data in JavaScript `BigInt`s](https://nodeweekly.com/link/174928/0a4070b383) Jonathan Frere
+
+📄 [Instrumenting the Node.js Event Loop with eBPF](https://nodeweekly.com/link/174929/0a4070b383) Nikolay Sivko
+
+🛠 Code & Tools
+
+[Skia Canvas 3.0: A Canvas Environment for Node](https://nodeweekly.com/link/174930/0a4070b383 "skia-canvas.org") — Based on Google’s Skia graphics engine and offers end results similar to Chrome’s own canvas. GPU accelerated and can render images, paths, fonts, shapes, etc. [GitHub repo.](https://nodeweekly.com/link/174931/0a4070b383)
+
+Christian Swinehart
+
+[Pompelmi: Scan File Uploads for Malware](https://nodeweekly.com/link/174932/0a4070b383 "pompelmi.github.io") — Provides adapters for Express, Koa, and Next.js to perform fast file-upload malware scanning in Node, including digging into ZIP files and with optional integration with the [YARA malware detection tool.](https://nodeweekly.com/link/174933/0a4070b383) [GitHub repo.](https://nodeweekly.com/link/174934/0a4070b383)
+
+Tommaso Bertocchi
+
+[Catch Bugs in PRs Before They Hit Production](https://nodeweekly.com/link/174935/0a4070b383 "sentry.io") — Use Sentry’s AI code review to spot errors, performance issues & test gaps in your pull requests.
+
+Sentry sponsor
+
+[npm-check-updates 19.0: Update `package.json` Dependencies to Latest Versions](https://nodeweekly.com/link/174936/0a4070b383 "github.com") — That is, as opposed to the *specified* versions. Has a `-i` interactive mode so you can look at upgrades and opt in to them one by one. The recent v18.2 release added a ‘cooldown’ feature to help protect against supply chain attacks by requiring package versions be of a certain age first.
+
+Raine Revere
+
+🤖 [GitHub Copilot CLI Now in Public Preview](https://nodeweekly.com/link/174937/0a4070b383 "github.blog") — Not content to let Claude Code and OpenAI Codex dominate the CLI-based dev agent scene, GitHub has released a CLI-based version of Copilot, built using Node.
+
+GitHub
+
+[modern-tar: Zero-Dependency Streaming `tar` Parser and Writer](https://nodeweekly.com/link/174938/0a4070b383 "github.com") — As in the classic [tar archive format.](https://nodeweekly.com/link/174939/0a4070b383)
+
+Ayuhito
+
+[ffetch: TypeScript-First `fetch` Wrapper with Extras](https://nodeweekly.com/link/174940/0a4070b383 "github.com") — What extras? Think retries, circuit breaking, hooks, and monitoring of active requests.
+
+Gabor Koos
+
+* [pnpm 10.17](https://nodeweekly.com/link/174941/0a4070b383) – The new `minimumReleaseAgeExclude` now supports patterns to exclude groups of packages from minimum release age checks.
+
+* [TypeBox 1.0](https://nodeweekly.com/link/174942/0a4070b383) – A runtime type system that creates in-memory JSON Schema objects that infer as TypeScript types.
+
+* 🤖 [OpenAI Node 5.23.1](https://nodeweekly.com/link/174943/0a4070b383) – The official Node library for OpenAI's API now supports `gpt5-codex`.
+
+* [pretty-bytes 7.1](https://nodeweekly.com/link/174944/0a4070b383) – Convert a size in bytes into a human readable equivalent (e.g. 1337 becomes '1.34 kB').
+
+* [Wasp 0.18](https://nodeweekly.com/link/174945/0a4070b383) – [Wasp](https://nodeweekly.com/link/174946/0a4070b383) is a Rails-like framework using Node, React & Prisma.
+
+* [MongoDB Node.js Driver 6.20](https://nodeweekly.com/link/174947/0a4070b383) – The latest official MongoDB driver.
+
+* [pg-boss 11.0](https://nodeweekly.com/link/174948/0a4070b383) – Postgres-based job queuing system for Node.js.
+
+* [Verdaccio 6.2](https://nodeweekly.com/link/174949/0a4070b383) – Lightweight local private npm registry.
+
+📰 Classifieds
+
+🕳️ 🥊 At [Holepunch](https://nodeweekly.com/link/174950/0a4070b383) we maintain 2000+ OSS npm packages, make the JS runtime Bare to build the P2P Internet. Real tech, Real impact. [Join us!](https://nodeweekly.com/link/174950/0a4070b383)
+
+***
+
+Go beyond caching. [Redis 8.2](https://nodeweekly.com/link/174951/0a4070b383) handles 5x more data with 150 new commands and 8 new data structures vs 7.2. [Try Redis Pro.](https://nodeweekly.com/link/174952/0a4070b383)
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+* [The agenda of this week's TC39 meeting](https://nodeweekly.com/link/174953/0a4070b383) where several proposals were advanced, including [Import Bytes](https://nodeweekly.com/link/174954/0a4070b383), [Iterator Chunking](https://nodeweekly.com/link/174955/0a4070b383), and [`Array.prototype.pushAll`](https://nodeweekly.com/link/174956/0a4070b383).
+
+* [Bun v1.2.23 has been released](https://nodeweekly.com/link/174957/0a4070b383) with a myriad of smaller features and Node.js compatibility improvements. The big release of Bun v1.3 is expected later this week, however.
+
+* [IINA](https://nodeweekly.com/link/174958/0a4070b383) is a popular, open-source media player for macOS and it has just [added a JavaScript-based plugin system](https://nodeweekly.com/link/174959/0a4070b383) to let users extend its functionality.
+
+* We recently mentioned [Andromeda](https://nodeweekly.com/link/174960/0a4070b383) as being the newest JavaScript runtime to appear, but [now there's Ion](https://nodeweekly.com/link/174961/0a4070b383), a runtime aimed at bringing a JavaScript engine into Rust programs.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
