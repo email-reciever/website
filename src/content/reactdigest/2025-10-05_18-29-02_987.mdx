@@ -1,0 +1,169 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: RD#526 The nuance of React rendering behaviour
+description: RD#526 The nuance of React rendering behaviour
+date: 星期日 06 晚上 十月 5o 2025
+author: reactdigest
+origin_url: javascript:;
+origin_site: javascript:;
+translated: true
+avatar: /media-source/reactdigest-ico.png
+email_recorder: jakub@reactdigest.net
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="RD#526 The nuance of React rendering behaviour" url="javascript:;" />
+
+<Detail client:only="react">
+	[Read Online](https://reactdigest.net/newsletters/2137?sid=d0444622-e98b-430a-9e1d-e3d73625b90d)
+
+[The nuance of React rendering behaviour as it relates to children](https://reactdigest.net/links/20406/d0444622-e98b-430a-9e1d-e3d73625b90d/email)  
+_5 minutes_ by David Johnston
+
+David explores React's rendering behavior differences between two component patterns. When components render children directly versus receiving them through props, they create identical tree structures. However, the key difference lies in object reference equality. Direct rendering creates new objects on each render, while props.children maintains the same reference. React uses this reference equality to determine whether to skip re-rendering child components.
+
+[Why Agentic AI Will Change Identity Governance Forever](https://reactdigest.net/links/20407/d0444622-e98b-430a-9e1d-e3d73625b90d/email)  
+_sponsored by Lumos_
+
+See how Lumos is reinventing IGA with agentic AI. Experience an autonomous identity platform that speaks natural language, runs access policies, approvals, and reviews, and produces audit-ready evidence on demand. Discover why bolt-on AI wrappers fall short—and how a trusted agent can deliver least-privilege, compliance, and speed all at once. Sign up now to join the live webinar.
+
+[Quick look into the useEffectEvent](https://reactdigest.net/links/20408/d0444622-e98b-430a-9e1d-e3d73625b90d/email)  
+_4 minutes_ by Nico Prananta
+
+React 19.2.0 introduces the useEffectEvent hook, which creates functions that always see the latest state and props without causing effects to re-run. Unlike regular functions in effects that capture values at creation time, useEffectEvent functions remain "unstable" but access current values. This solves bugs where functions inside effects use stale data when state changes.
+
+[How to build a master-detail UI with React router](https://reactdigest.net/links/20409/d0444622-e98b-430a-9e1d-e3d73625b90d/email)  
+_4 minutes_ by Sergio Xalambrí
+
+React Router enables smooth master-detail interfaces that adapt based on how users access them. The key is creating two routes to the same content: one for browsing and one for direct access. When users browse within the app, they see the full layout with sidebar and details. But when they access URLs directly or refresh the page, they get a focused view of just the content. This uses redirect logic based on request headers to detect navigation type and preserve the right user experience.
+
+[Activity, the new React component](https://reactdigest.net/links/20410/d0444622-e98b-430a-9e1d-e3d73625b90d/email)  
+_4 minutes_ by Hugo Foyart
+
+Freshly announced on the React canary channel, the new Activity component aims to make conditional rendering of components much easier, while allowing their state to be preserved even while visually hidden. Hugo explores how it works.
+
+[React hooks demystified: The mechanics of “useState”](https://reactdigest.net/links/20411/d0444622-e98b-430a-9e1d-e3d73625b90d/email)  
+_12 minutes_ by Edaqa Mortoray
+
+React’s functional components introduce a powerful yet unconventional programming model — one that can create subtle bugs even for experienced developers. To truly master React, it’s essential to understand how it renders components and manages state. In this article, Edaqa takes a detailed look at the useState hook. He explains what a component instance is, how state values persist across renders, and why these details matter for building reliable components and unlocking advanced React techniques.
+
+## webdev
+
+*   [How much do you really know about media queries?](https://reactdigest.net/links/20412/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+*   [Styling siblings with CSS has never been easier](https://reactdigest.net/links/20413/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+*   [The Coyier CSS starter](https://reactdigest.net/links/20414/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+*   [Your Images Are (Probably) Oversized](https://reactdigest.net/links/20415/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+*   [The Best CSS Unit Might Be a Combination](https://reactdigest.net/links/20416/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+
+## javascript
+
+*   [From If-Else Hell to Clean Architecture with Function Registry Pattern](https://reactdigest.net/links/20417/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+*   [JSON is not JSON Across Languages](https://reactdigest.net/links/20418/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+*   [Stop using .reverse().find(): meet findLast()](https://reactdigest.net/links/20419/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+*   [How to stay safe from NPM supply chain attacks](https://reactdigest.net/links/20420/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+
+And the most popular article from the last issue was:
+
+*   [React state management in 2025: What you actually need](https://reactdigest.net/links/20421/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+
+## newsletters
+
+*   [Programming Digest](https://programmingdigest.net/?utm_medium=campaign&utm_source=react)
+*   [Leadership in Tech](https://leadershipintech.com/?utm_medium=campaign&utm_source=react)
+*   [C# Digest](https://csharpdigest.net/?utm_medium=campaign&utm_source=react)
+
+* * *
+
+Would you like to [advertise](https://bonobopress.com/) in the newsletter? Check out our [media kit](https://bonobopress.com/media-kit/) and get in touch.
+
+* * *
+
+© 2025 [Bonobo Press](https://bonobopress.com/)
+
+Jakub Chodounsky (dba. Bonobo Press)  
+1/25 Mana Street  
+Wellington, New Zealand  
+[Privacy Policy](https://reactdigest.net/privacy)
+
+If you no longer wish to receive these emails, click to [unsubscribe](https://reactdigest.net/subscribers/d0444622-e98b-430a-9e1d-e3d73625b90d/unsubscribe).
+
+![](https://reactdigest.net/newsletters/2137/open/d0444622-e98b-430a-9e1d-e3d73625b90d.gif
+</Detail>
+
+[Read Online](https://reactdigest.net/newsletters/2137?sid=d0444622-e98b-430a-9e1d-e3d73625b90d)
+
+[The nuance of React rendering behaviour as it relates to children](https://reactdigest.net/links/20406/d0444622-e98b-430a-9e1d-e3d73625b90d/email)\
+*5 minutes* by David Johnston
+
+David explores React's rendering behavior differences between two component patterns. When components render children directly versus receiving them through props, they create identical tree structures. However, the key difference lies in object reference equality. Direct rendering creates new objects on each render, while props.children maintains the same reference. React uses this reference equality to determine whether to skip re-rendering child components.
+
+[Why Agentic AI Will Change Identity Governance Forever](https://reactdigest.net/links/20407/d0444622-e98b-430a-9e1d-e3d73625b90d/email)\
+*sponsored by Lumos*
+
+See how Lumos is reinventing IGA with agentic AI. Experience an autonomous identity platform that speaks natural language, runs access policies, approvals, and reviews, and produces audit-ready evidence on demand. Discover why bolt-on AI wrappers fall short—and how a trusted agent can deliver least-privilege, compliance, and speed all at once. Sign up now to join the live webinar.
+
+[Quick look into the useEffectEvent](https://reactdigest.net/links/20408/d0444622-e98b-430a-9e1d-e3d73625b90d/email)\
+*4 minutes* by Nico Prananta
+
+React 19.2.0 introduces the useEffectEvent hook, which creates functions that always see the latest state and props without causing effects to re-run. Unlike regular functions in effects that capture values at creation time, useEffectEvent functions remain "unstable" but access current values. This solves bugs where functions inside effects use stale data when state changes.
+
+[How to build a master-detail UI with React router](https://reactdigest.net/links/20409/d0444622-e98b-430a-9e1d-e3d73625b90d/email)\
+*4 minutes* by Sergio Xalambrí
+
+React Router enables smooth master-detail interfaces that adapt based on how users access them. The key is creating two routes to the same content: one for browsing and one for direct access. When users browse within the app, they see the full layout with sidebar and details. But when they access URLs directly or refresh the page, they get a focused view of just the content. This uses redirect logic based on request headers to detect navigation type and preserve the right user experience.
+
+[Activity, the new React component](https://reactdigest.net/links/20410/d0444622-e98b-430a-9e1d-e3d73625b90d/email)\
+*4 minutes* by Hugo Foyart
+
+Freshly announced on the React canary channel, the new Activity component aims to make conditional rendering of components much easier, while allowing their state to be preserved even while visually hidden. Hugo explores how it works.
+
+[React hooks demystified: The mechanics of “useState”](https://reactdigest.net/links/20411/d0444622-e98b-430a-9e1d-e3d73625b90d/email)\
+*12 minutes* by Edaqa Mortoray
+
+React’s functional components introduce a powerful yet unconventional programming model — one that can create subtle bugs even for experienced developers. To truly master React, it’s essential to understand how it renders components and manages state. In this article, Edaqa takes a detailed look at the useState hook. He explains what a component instance is, how state values persist across renders, and why these details matter for building reliable components and unlocking advanced React techniques.
+
+## webdev
+
+* [How much do you really know about media queries?](https://reactdigest.net/links/20412/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+* [Styling siblings with CSS has never been easier](https://reactdigest.net/links/20413/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+* [The Coyier CSS starter](https://reactdigest.net/links/20414/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+* [Your Images Are (Probably) Oversized](https://reactdigest.net/links/20415/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+* [The Best CSS Unit Might Be a Combination](https://reactdigest.net/links/20416/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+
+## javascript
+
+* [From If-Else Hell to Clean Architecture with Function Registry Pattern](https://reactdigest.net/links/20417/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+* [JSON is not JSON Across Languages](https://reactdigest.net/links/20418/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+* [Stop using .reverse().find(): meet findLast()](https://reactdigest.net/links/20419/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+* [How to stay safe from NPM supply chain attacks](https://reactdigest.net/links/20420/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+
+And the most popular article from the last issue was:
+
+* [React state management in 2025: What you actually need](https://reactdigest.net/links/20421/d0444622-e98b-430a-9e1d-e3d73625b90d/email)
+
+## newsletters
+
+* [Programming Digest](https://programmingdigest.net/?utm_medium=campaign\&utm_source=react)
+* [Leadership in Tech](https://leadershipintech.com/?utm_medium=campaign\&utm_source=react)
+* [C# Digest](https://csharpdigest.net/?utm_medium=campaign\&utm_source=react)
+
+***
+
+Would you like to [advertise](https://bonobopress.com/) in the newsletter? Check out our [media kit](https://bonobopress.com/media-kit/) and get in touch.
+
+***
+
+© 2025 [Bonobo Press](https://bonobopress.com/)
+
+Jakub Chodounsky (dba. Bonobo Press)\
+1/25 Mana Street\
+Wellington, New Zealand\
+[Privacy Policy](https://reactdigest.net/privacy)
+
+If you no longer wish to receive these emails, click to [unsubscribe](https://reactdigest.net/subscribers/d0444622-e98b-430a-9e1d-e3d73625b90d/unsubscribe).
+
+!\[]\(https://reactdigest.net/newsletters/2137/open/d0444622-e98b-430a-9e1d-e3d73625b90d.gif
+
+
