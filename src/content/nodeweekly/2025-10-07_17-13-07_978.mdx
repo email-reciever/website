@@ -1,0 +1,284 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: npm security best practices to consider
+description: npm security best practices to consider
+date: 星期二 05 下午 十月 7o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/595
+origin_site: https://nodeweekly.com/issues/595
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="npm security best practices to consider" url="https://nodeweekly.com/issues/595" />
+
+<Detail client:only="react">
+	#​595 — October 7, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/595)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/175242/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bwkzjvf9xodyyyouimji.jpg)](https://nodeweekly.com/link/175243/0a4070b383)
+
+[15 Recent Node Features That Can Replace Popular npm Packages](https://nodeweekly.com/link/175243/0a4070b383 "nodesource.com") — Many features that once required third-party packages are now built into the runtime itself. Here’s a look at some of the most notable that you may want to experiment with, prior to reducing unnecessary dependencies.
+
+Lizz Parody
+
+[Awesome npm Security Best Practices](https://nodeweekly.com/link/175244/0a4070b383 "github.com") — Web security expert Liran Tal has put together a handy set of best practices to consider when working with the npm ecosystem, whether or not you’re using the canonical `npm` tool. Plenty of good advice here.
+
+Liran Tal
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d3bf5153.jpg)](https://nodeweekly.com/link/175242/0a4070b383)
+
+[API Design in Node](https://nodeweekly.com/link/175242/0a4070b383 "frontendmasters.com") — Ready to build scalable APIs with Node and Express? Join Scott Moss for this video course and learn RESTful API design, testing techniques, authentication and authorization, error handling, and more. Create a production deployment and ship your next API today!
+
+Frontend Masters sponsor
+
+**IN BRIEF:**
+
+*   Nicholas C. Zakas presents [a look at what's coming in ESLint v10.0](https://nodeweekly.com/link/175245/0a4070b383), including changes to Node.js compatibility, a variety of removals and deprecations, and the enabling of JSX reference tracking.
+    
+*   [pnpm 10.18](https://nodeweekly.com/link/175246/0a4070b383) has been released with a new network performance monitoring feature enabling you to be warned when requests are suffering delays.
+    
+*   [Bun](https://nodeweekly.com/link/175247/0a4070b383) 1.3 is due to be released later today but hadn't appeared by the time we went to press.
+    
+
+📉 [Processing 14GB Files 78% Faster with Buffer Optimization](https://nodeweekly.com/link/175248/0a4070b383 "pmbanugo.me") — The author took on an interesting challenge for fun: how quickly could he get Node to process almost 15 gigabytes of weather data? _“By the end of the weekend, what started as idle curiosity turned into a 78% speedup—but the story of how I got there is far more interesting than the numbers alone.”_
+
+Peter Mbanugo
+
+[How Deno Protects Against npm Exploits](https://nodeweekly.com/link/175249/0a4070b383 "deno.com") — The maintainers of the [Deno](https://nodeweekly.com/link/175250/0a4070b383) runtime reflect on the [recent npm ecosystem security issues](https://nodeweekly.com/link/175251/0a4070b383), and show off how Deno’s non-permissive explicit ‘secure by default’ model can help.
+
+Andy Jiang (Deno)
+
+🧹 [Cleaning House in Nx Monorepo: How I Removed 120 Unused Dependencies Safely](https://nodeweekly.com/link/175252/0a4070b383 "johnjames.blog") — Another win (mostly) for [Knip](https://nodeweekly.com/link/175253/0a4070b383), a tool that helps you declutter projects by finding unused dependencies.
+
+John James
+
+[Free Virtual DevSecCon on Oct 22, 2025](https://nodeweekly.com/link/175254/0a4070b383 "snyk.io") — Join the AI Security Developers Challenge at DevSecCon 2025 on October 22nd and learn best practices to secure AI-native apps. [Register now!](https://nodeweekly.com/link/175254/0a4070b383)
+
+Snyk sponsor
+
+📄 [Shipping Node.js Packages in 2025](https://nodeweekly.com/link/175255/0a4070b383) – A dense and helpful slidedeck from a talk given at last week's NordicJS event. We look forward to sharing the video when it's available. Joyee Cheung
+
+📄 [How to Group Arrays Without `reduce()`](https://nodeweekly.com/link/175256/0a4070b383) – A look at `Object.groupBy()` and `Map.groupBy()` Matt Smith
+
+📄 [Eleventy/11ty Hacks for Fun and Performance](https://nodeweekly.com/link/175257/0a4070b383) – [Eleventy](https://nodeweekly.com/link/175258/0a4070b383) is a popular Node-based static site generator. Alex Russell
+
+🛠 Code & Tools
+
+[Javet 5.0: A Way to Embed Node.js and V8 in Java](https://nodeweekly.com/link/175259/0a4070b383 "www.caoccao.com") — The idea is you can use Node and V8 directly within the JVM. [Platform support](https://nodeweekly.com/link/175260/0a4070b383) is mixed, but it's an interesting idea and the docs are good. [GitHub repo.](https://nodeweekly.com/link/175261/0a4070b383)
+
+Sam Cao
+
+[Cap'n Web: A New RPC System for Browsers and Web Servers](https://nodeweekly.com/link/175262/0a4070b383 "blog.cloudflare.com") — A ‘spiritual sibling’ to [Cap’n Proto](https://nodeweekly.com/link/175263/0a4070b383), an RPC protocol created by one of the same authors. However, _Cap’n Web_’s underlying serialization is human-readable, focused on integrating well with JS runtimes, and works over HTTP, WebSocket, and `postMessage()` out-of-the-box.
+
+Varda and Faulkner (Cloudflare)
+
+\*.\* [Globby 15.0: User-Friendly Glob Matching](https://nodeweekly.com/link/175264/0a4070b383 "github.com") — Give it an array of globs and it returns an array of matching paths. It even supports negations and `.gitignore` files.
+
+Sindre Sorhus
+
+[Icebird: Read Apache Iceberg Tables in JavaScript](https://nodeweekly.com/link/175265/0a4070b383 "github.com") — _Iceberg_ is a high performance open-source format for large analytic tables.
+
+Hyperparam
+
+🖼️ [Odiff 4.0: A Fast Pixel-by-Pixel Image Diffing Tool and Library](https://nodeweekly.com/link/175266/0a4070b383 "github.com") — Claims to provide results in milliseconds. You can use it as a CLI tool or from Node (though it’s written in OCaml, primarily). It supports PNG, JPG, and BMP, including cross-file comparisons.
+
+Dmitriy Kovalenko
+
+*   [isomorphic-git 1.34](https://nodeweekly.com/link/175267/0a4070b383) – Pure JS implementation of `git` for Node & browsers.
+    
+*   [node-llama-cpp 3.14](https://nodeweekly.com/link/175268/0a4070b383) – Run LLMs locally with bindings to `llama.cpp`.
+    
+*   [pg-promise 12.2](https://nodeweekly.com/link/175269/0a4070b383) – Postgres interface for Node. Now with official Postgres 18 support.
+    
+*   [BullMQ 5.61](https://nodeweekly.com/link/175270/0a4070b383) – Reliable, Redis-based distributed queue.
+    
+*   [node-mssql 12.0](https://nodeweekly.com/link/175271/0a4070b383) – Microsoft SQL Server client.
+    
+*   [node-soap 1.5](https://nodeweekly.com/link/175272/0a4070b383) – SOAP client _and_ server library.
+    
+*   [Pino 10.0](https://nodeweekly.com/link/175273/0a4070b383) – High-speed HTTP logger for Node.
+    
+*   [NodeBB 4.6](https://nodeweekly.com/link/175274/0a4070b383) – Node.js-powered forum system.
+    
+*   [ESLint v9.37.0](https://nodeweekly.com/link/175275/0a4070b383)
+    
+
+📰 Classifieds
+
+HIRING NOW🕳️ 🥊: At [Holepunch](https://nodeweekly.com/link/175276/0a4070b383) we maintain 2000+ OSS npm packages, make the JS runtime Bare to build the P2P Internet. Real tech, Real impact. [Join us!](https://nodeweekly.com/link/175276/0a4070b383)
+
+* * *
+
+🐘 Postgres user? [Postgres Weekly](https://nodeweekly.com/link/175277/0a4070b383) is our sister newsletter covering all things Postgres related each week.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+*   [React 19.2 was released](https://nodeweekly.com/link/175278/0a4070b383) last week.
+    
+*   Monthly roundups were published by [the Svelte project](https://nodeweekly.com/link/175279/0a4070b383), [team Astro](https://nodeweekly.com/link/175280/0a4070b383), and [void(0) covering Vite-adjacent projects.](https://nodeweekly.com/link/175281/0a4070b383)
+    
+*   🤖 Google AI Studio has [added the ability to generate Angular apps.](https://nodeweekly.com/link/175282/0a4070b383)
+    
+*   [The relaunched _JSConf_](https://nodeweekly.com/link/175283/0a4070b383) returns to Maryland _next week_. Tickets are still available and they sent us a `JSCONF25NEWSLETTER` code which gives a discount. _(Note: We have no financial relationship with the event.)_
+    
+*   [PostgreSQL 18](https://nodeweekly.com/link/175284/0a4070b383) was released two weeks ago and Tudor Golubenco [takes us down the 'rabbit hole' of Postgres 18's features.](https://nodeweekly.com/link/175285/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​595 — October 7, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/595)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/175242/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bwkzjvf9xodyyyouimji.jpg)](https://nodeweekly.com/link/175243/0a4070b383)
+
+[15 Recent Node Features That Can Replace Popular npm Packages](https://nodeweekly.com/link/175243/0a4070b383 "nodesource.com") — Many features that once required third-party packages are now built into the runtime itself. Here’s a look at some of the most notable that you may want to experiment with, prior to reducing unnecessary dependencies.
+
+Lizz Parody
+
+[Awesome npm Security Best Practices](https://nodeweekly.com/link/175244/0a4070b383 "github.com") — Web security expert Liran Tal has put together a handy set of best practices to consider when working with the npm ecosystem, whether or not you’re using the canonical `npm` tool. Plenty of good advice here.
+
+Liran Tal
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d3bf5153.jpg)](https://nodeweekly.com/link/175242/0a4070b383)
+
+[API Design in Node](https://nodeweekly.com/link/175242/0a4070b383 "frontendmasters.com") — Ready to build scalable APIs with Node and Express? Join Scott Moss for this video course and learn RESTful API design, testing techniques, authentication and authorization, error handling, and more. Create a production deployment and ship your next API today!
+
+Frontend Masters sponsor
+
+**IN BRIEF:**
+
+* Nicholas C. Zakas presents [a look at what's coming in ESLint v10.0](https://nodeweekly.com/link/175245/0a4070b383), including changes to Node.js compatibility, a variety of removals and deprecations, and the enabling of JSX reference tracking.
+
+* [pnpm 10.18](https://nodeweekly.com/link/175246/0a4070b383) has been released with a new network performance monitoring feature enabling you to be warned when requests are suffering delays.
+
+* [Bun](https://nodeweekly.com/link/175247/0a4070b383) 1.3 is due to be released later today but hadn't appeared by the time we went to press.
+
+📉 [Processing 14GB Files 78% Faster with Buffer Optimization](https://nodeweekly.com/link/175248/0a4070b383 "pmbanugo.me") — The author took on an interesting challenge for fun: how quickly could he get Node to process almost 15 gigabytes of weather data? *“By the end of the weekend, what started as idle curiosity turned into a 78% speedup—but the story of how I got there is far more interesting than the numbers alone.”*
+
+Peter Mbanugo
+
+[How Deno Protects Against npm Exploits](https://nodeweekly.com/link/175249/0a4070b383 "deno.com") — The maintainers of the [Deno](https://nodeweekly.com/link/175250/0a4070b383) runtime reflect on the [recent npm ecosystem security issues](https://nodeweekly.com/link/175251/0a4070b383), and show off how Deno’s non-permissive explicit ‘secure by default’ model can help.
+
+Andy Jiang (Deno)
+
+🧹 [Cleaning House in Nx Monorepo: How I Removed 120 Unused Dependencies Safely](https://nodeweekly.com/link/175252/0a4070b383 "johnjames.blog") — Another win (mostly) for [Knip](https://nodeweekly.com/link/175253/0a4070b383), a tool that helps you declutter projects by finding unused dependencies.
+
+John James
+
+[Free Virtual DevSecCon on Oct 22, 2025](https://nodeweekly.com/link/175254/0a4070b383 "snyk.io") — Join the AI Security Developers Challenge at DevSecCon 2025 on October 22nd and learn best practices to secure AI-native apps. [Register now!](https://nodeweekly.com/link/175254/0a4070b383)
+
+Snyk sponsor
+
+📄 [Shipping Node.js Packages in 2025](https://nodeweekly.com/link/175255/0a4070b383) – A dense and helpful slidedeck from a talk given at last week's NordicJS event. We look forward to sharing the video when it's available. Joyee Cheung
+
+📄 [How to Group Arrays Without `reduce()`](https://nodeweekly.com/link/175256/0a4070b383) – A look at `Object.groupBy()` and `Map.groupBy()` Matt Smith
+
+📄 [Eleventy/11ty Hacks for Fun and Performance](https://nodeweekly.com/link/175257/0a4070b383) – [Eleventy](https://nodeweekly.com/link/175258/0a4070b383) is a popular Node-based static site generator. Alex Russell
+
+🛠 Code & Tools
+
+[Javet 5.0: A Way to Embed Node.js and V8 in Java](https://nodeweekly.com/link/175259/0a4070b383 "www.caoccao.com") — The idea is you can use Node and V8 directly within the JVM. [Platform support](https://nodeweekly.com/link/175260/0a4070b383) is mixed, but it's an interesting idea and the docs are good. [GitHub repo.](https://nodeweekly.com/link/175261/0a4070b383)
+
+Sam Cao
+
+[Cap'n Web: A New RPC System for Browsers and Web Servers](https://nodeweekly.com/link/175262/0a4070b383 "blog.cloudflare.com") — A ‘spiritual sibling’ to [Cap’n Proto](https://nodeweekly.com/link/175263/0a4070b383), an RPC protocol created by one of the same authors. However, *Cap’n Web*’s underlying serialization is human-readable, focused on integrating well with JS runtimes, and works over HTTP, WebSocket, and `postMessage()` out-of-the-box.
+
+Varda and Faulkner (Cloudflare)
+
+\*.\* [Globby 15.0: User-Friendly Glob Matching](https://nodeweekly.com/link/175264/0a4070b383 "github.com") — Give it an array of globs and it returns an array of matching paths. It even supports negations and `.gitignore` files.
+
+Sindre Sorhus
+
+[Icebird: Read Apache Iceberg Tables in JavaScript](https://nodeweekly.com/link/175265/0a4070b383 "github.com") — *Iceberg* is a high performance open-source format for large analytic tables.
+
+Hyperparam
+
+🖼️ [Odiff 4.0: A Fast Pixel-by-Pixel Image Diffing Tool and Library](https://nodeweekly.com/link/175266/0a4070b383 "github.com") — Claims to provide results in milliseconds. You can use it as a CLI tool or from Node (though it’s written in OCaml, primarily). It supports PNG, JPG, and BMP, including cross-file comparisons.
+
+Dmitriy Kovalenko
+
+* [isomorphic-git 1.34](https://nodeweekly.com/link/175267/0a4070b383) – Pure JS implementation of `git` for Node & browsers.
+
+* [node-llama-cpp 3.14](https://nodeweekly.com/link/175268/0a4070b383) – Run LLMs locally with bindings to `llama.cpp`.
+
+* [pg-promise 12.2](https://nodeweekly.com/link/175269/0a4070b383) – Postgres interface for Node. Now with official Postgres 18 support.
+
+* [BullMQ 5.61](https://nodeweekly.com/link/175270/0a4070b383) – Reliable, Redis-based distributed queue.
+
+* [node-mssql 12.0](https://nodeweekly.com/link/175271/0a4070b383) – Microsoft SQL Server client.
+
+* [node-soap 1.5](https://nodeweekly.com/link/175272/0a4070b383) – SOAP client *and* server library.
+
+* [Pino 10.0](https://nodeweekly.com/link/175273/0a4070b383) – High-speed HTTP logger for Node.
+
+* [NodeBB 4.6](https://nodeweekly.com/link/175274/0a4070b383) – Node.js-powered forum system.
+
+* [ESLint v9.37.0](https://nodeweekly.com/link/175275/0a4070b383)
+
+📰 Classifieds
+
+HIRING NOW🕳️ 🥊: At [Holepunch](https://nodeweekly.com/link/175276/0a4070b383) we maintain 2000+ OSS npm packages, make the JS runtime Bare to build the P2P Internet. Real tech, Real impact. [Join us!](https://nodeweekly.com/link/175276/0a4070b383)
+
+***
+
+🐘 Postgres user? [Postgres Weekly](https://nodeweekly.com/link/175277/0a4070b383) is our sister newsletter covering all things Postgres related each week.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+* [React 19.2 was released](https://nodeweekly.com/link/175278/0a4070b383) last week.
+
+* Monthly roundups were published by [the Svelte project](https://nodeweekly.com/link/175279/0a4070b383), [team Astro](https://nodeweekly.com/link/175280/0a4070b383), and [void(0) covering Vite-adjacent projects.](https://nodeweekly.com/link/175281/0a4070b383)
+
+* 🤖 Google AI Studio has [added the ability to generate Angular apps.](https://nodeweekly.com/link/175282/0a4070b383)
+
+* [The relaunched *JSConf*](https://nodeweekly.com/link/175283/0a4070b383) returns to Maryland *next week*. Tickets are still available and they sent us a `JSCONF25NEWSLETTER` code which gives a discount. *(Note: We have no financial relationship with the event.)*
+
+* [PostgreSQL 18](https://nodeweekly.com/link/175284/0a4070b383) was released two weeks ago and Tudor Golubenco [takes us down the 'rabbit hole' of Postgres 18's features.](https://nodeweekly.com/link/175285/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
