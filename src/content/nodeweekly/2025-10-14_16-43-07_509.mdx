@@ -1,0 +1,270 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Bringing Python apps into Node
+description: Bringing Python apps into Node
+date: 星期二 04 下午 十月 14o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/596
+origin_site: https://nodeweekly.com/issues/596
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Bringing Python apps into Node" url="https://nodeweekly.com/issues/596" />
+
+<Detail client:only="react">
+	#​596 — October 14, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/596)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/175543/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wmokcbhldm6vbxbdsr5o.jpg)](https://nodeweekly.com/link/175544/0a4070b383)
+
+📂 [A Modern Guide to Reading and Writing Files in Node](https://nodeweekly.com/link/175544/0a4070b383 "nodejsdesignpatterns.com") — A comprehensive guide to various methods for working with files, from promise-based methods through to working with streams, processing files concurrently, using file handles, and memory-efficient techniques.
+
+Luciano Mammino
+
+[A Way to Integrate Python ASGI with Node.js Apps](https://nodeweekly.com/link/175545/0a4070b383 "blog.platformatic.dev") — You might remember several months ago when Platformatic [unveiled `php-node`](https://nodeweekly.com/link/175546/0a4070b383), a way to embed PHP directly within Node apps. Now they’re tackling Python! [@platformatic/python-node](https://nodeweekly.com/link/175547/0a4070b383) is a Node.js-native bridge that embeds a Python interpreter and speaks ASGI.
+
+Stephen Belanger and Matteo Collina
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d064be04.png)](https://nodeweekly.com/link/175543/0a4070b383)
+
+[Level Up Redis Debugging in Node.js](https://nodeweekly.com/link/175543/0a4070b383 "dashboard.memetria.com") — See inside Valkey and OSS Redis. Memetria K/V adds key-level visibility, memory analytics, and performance insights built for Node.js developers — so you can detect large keys and optimize latency before users notice.
+
+Memetria sponsor
+
+[Bun 1.3: The Alternative Full-Stack JavaScript Runtime](https://nodeweekly.com/link/175548/0a4070b383 "bun.sh") — Bun is a JavaScriptCore-powered runtime built with performance and elegance in mind. It can now largely act as a drop-in replacement for Node in many situations, and v1.3 makes it more of a ‘full-stack runtime’ with a built-in dev server (with hot reloading), MySQL/Postgres/SQLite/Redis clients, strong WebSocket support, [isolated package installs](https://nodeweekly.com/link/175549/0a4070b383) by default, and [huge enhancements to its Node.js compatibility](https://nodeweekly.com/link/175550/0a4070b383), particularly around `worker_threads`.
+
+The Bun Team
+
+**IN BRIEF:**
+
+*   [Node.js v24.10.0 (Current)](https://nodeweekly.com/link/175551/0a4070b383) has been released – though it's quite a minor release, focused on dependency updates and bug fixes.
+    
+*   🔒 A reminder that [GitHub is making changes to strengthen npm security](https://nodeweekly.com/link/175552/0a4070b383) that could affect you if you publish packages (_especially_ if you're using classic tokens for npm).
+    
+*   Pavel Romanov has put together [a helpful guide to using TypeScript with Node.](https://nodeweekly.com/link/175583/0a4070b383) Not just in the modern 'type stripping' way, but working with Node's type definitions and the broader ecosystem of tools, along with some limitations you might encounter.
+    
+
+[Node.js 20+ Memory Management in Containers](https://nodeweekly.com/link/175553/0a4070b383 "developers.redhat.com") — _“This article answers the question: Do you need to set the heap size in Node.js, or is it already container-aware?”_
+
+De Melo Jnr. and Ayala (Red Hat)
+
+[Generate PDFs from JSON with Python](https://nodeweekly.com/link/175554/0a4070b383 "developer-api.foxit.com") — Build PDFs dynamically using Word templates and JSON data. Fast setup, free Foxit API account included.
+
+Foxit Software sponsor
+
+📄 [Node.js 22 Features You Should Be Using](https://nodeweekly.com/link/175555/0a4070b383) – Now Node 22 is the LTS release, you can safely use all of its latest features. Lizz Parody
+
+📄 [How to Get Started with _GitHub Copilot CLI_](https://nodeweekly.com/link/175556/0a4070b383) Andrea Griffiths (GitHub)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v08svzbsvdqf0tgbzii4.jpg)](https://nodeweekly.com/link/175557/0a4070b383)
+
+[jsonriver: A Simple, Fast Streaming JSON Parser](https://nodeweekly.com/link/175557/0a4070b383 "github.com") — A library to parse JSON incrementally as it streams in, such as from a network request or an LLM, returning a sequence of ‘increasingly complete’ values.
+
+Peter Burns (Google)
+
+[xmlbuilder2 4.0: An XML Builder Library](https://nodeweekly.com/link/175558/0a4070b383 "github.com") — Convert JS objects into XML, parse and serialize XML documents, or create XML documents using chained function calls.
+
+Ozgur Ozcitak
+
+[Kaluma 1.3: A Tiny JS Runtime for the Raspberry Pi Pico 2](https://nodeweekly.com/link/175560/0a4070b383 "kalumajs.org") — Can a JavaScript runtime squeeze onto an RP2350-based Raspberry Pi Pico 2? Kaluma can, all while offering some Node.js-like niceties. v1.3 is powered by the latest version of [JerryScript](https://nodeweekly.com/link/175561/0a4070b383), a lightweight JS engine for constrained environments.
+
+Kaluma Project
+
+[Crosspost 1.0: Post Across Multiple Social Networks At Once](https://nodeweekly.com/link/175584/0a4070b383 "github.com") — A Node.js library _and_ CLI tool for making posts to different social networks, including Mastodon, Bluesky, X, Discord, Telegram, and more.
+
+Nicholas C. Zakas
+
+[Serialize JavaScript 7.0: Serialize Objects to a Superset of JSON](https://nodeweekly.com/link/175559/0a4070b383 "github.com") — Why? So you can serialize regular expressions, dates, functions, and (as of this week) `Infinity`, as well as the usual things JSON can handle.
+
+Yahoo
+
+[MaxIntervalCover.js: Computes the Optimal Subset of Non-Overlapping Intervals](https://nodeweekly.com/link/175562/0a4070b383)  
+Robert Eisele
+
+📰 Classifieds
+
+🕳️ 🥊 [Hiring Now:](https://nodeweekly.com/link/175563/0a4070b383) Build P2P apps for mobile & desktop. Ditch servers, empower users, protect privacy. Open source. Remote EU.
+
+* * *
+
+🐱 **ConfigCat Feature Flag Service** lets you release and roll back features safely without code changes. Set it up in minutes! **[Save 25% now!](https://nodeweekly.com/link/175564/0a4070b383)**
+
+*   [Playwright 1.56](https://nodeweekly.com/link/175565/0a4070b383) – Microsoft's browser/Web automation library – now with [▶️ Playwright Agents](https://nodeweekly.com/link/175566/0a4070b383) – these are definitions to guide LLMs through the process of building a Playwright test.
+    
+*   [Happy DOM 20.0](https://nodeweekly.com/link/175567/0a4070b383) – Cross-runtime JS implementation of a web browser _sans_ UI. Note that JavaScript evaluation is now _disabled_ by default.
+    
+*   [Sidequest 1.10](https://nodeweekly.com/link/175568/0a4070b383) – Scalable background job processor for Node apps. v1.10 enables WAL mode for the SQLite backend for added performance.
+    
+*   🤖 [OpenAI Node 6.3](https://nodeweekly.com/link/175569/0a4070b383) – The official Node library for OpenAI's API.
+    
+*   [Ow 3.1](https://nodeweekly.com/link/175570/0a4070b383) – Function argument validation for humans (essentially chainable easy-to-read data validations).
+    
+*   [Got 14.5](https://nodeweekly.com/link/175571/0a4070b383) – Human-friendly HTTP request library.
+    
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lunqoujoz99muk1kwdgg.jpg)](https://nodeweekly.com/link/175572/0a4070b383)
+
+*   Ready for a bit of fun? [An implementation of pipeline-style composition](https://nodeweekly.com/link/175572/0a4070b383) (using `|`) in pure JavaScript thanks to `Symbol.toPrimitive` and some [clever code.](https://nodeweekly.com/link/175573/0a4070b383)
+    
+*   From the same creators of the fantastic [▶️ Node.js](https://nodeweekly.com/link/175574/0a4070b383), [▶️ Angular](https://nodeweekly.com/link/175575/0a4070b383) and [▶️ React](https://nodeweekly.com/link/175576/0a4070b383) documentaries comes [▶️ an all new documentary about _Vite_](https://nodeweekly.com/link/175577/0a4070b383), the build tool that has taken the JavaScript ecosystem by storm. Many luminaries appear to tell their stories.
+    
+*   Staying on the topic of Vite, VoidZero has [announced Vite+ (a.k.a. Viteplus)](https://nodeweekly.com/link/175578/0a4070b383), an extended version of Vite that introduces [extra features](https://nodeweekly.com/link/175579/0a4070b383) like a linter, test runner, monorepo task runner, and more, though take note [of the licensing.](https://nodeweekly.com/link/175580/0a4070b383)
+    
+*   [Next.js 16 Beta](https://nodeweekly.com/link/175581/0a4070b383) was released with stable Turbopack support, React 19.2 support and React Compiler support too. ([React Compiler v1.0](https://nodeweekly.com/link/175582/0a4070b383) has also been released.)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​596 — October 14, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/596)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/175543/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wmokcbhldm6vbxbdsr5o.jpg)](https://nodeweekly.com/link/175544/0a4070b383)
+
+📂 [A Modern Guide to Reading and Writing Files in Node](https://nodeweekly.com/link/175544/0a4070b383 "nodejsdesignpatterns.com") — A comprehensive guide to various methods for working with files, from promise-based methods through to working with streams, processing files concurrently, using file handles, and memory-efficient techniques.
+
+Luciano Mammino
+
+[A Way to Integrate Python ASGI with Node.js Apps](https://nodeweekly.com/link/175545/0a4070b383 "blog.platformatic.dev") — You might remember several months ago when Platformatic [unveiled `php-node`](https://nodeweekly.com/link/175546/0a4070b383), a way to embed PHP directly within Node apps. Now they’re tackling Python! [@platformatic/python-node](https://nodeweekly.com/link/175547/0a4070b383) is a Node.js-native bridge that embeds a Python interpreter and speaks ASGI.
+
+Stephen Belanger and Matteo Collina
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d064be04.png)](https://nodeweekly.com/link/175543/0a4070b383)
+
+[Level Up Redis Debugging in Node.js](https://nodeweekly.com/link/175543/0a4070b383 "dashboard.memetria.com") — See inside Valkey and OSS Redis. Memetria K/V adds key-level visibility, memory analytics, and performance insights built for Node.js developers — so you can detect large keys and optimize latency before users notice.
+
+Memetria sponsor
+
+[Bun 1.3: The Alternative Full-Stack JavaScript Runtime](https://nodeweekly.com/link/175548/0a4070b383 "bun.sh") — Bun is a JavaScriptCore-powered runtime built with performance and elegance in mind. It can now largely act as a drop-in replacement for Node in many situations, and v1.3 makes it more of a ‘full-stack runtime’ with a built-in dev server (with hot reloading), MySQL/Postgres/SQLite/Redis clients, strong WebSocket support, [isolated package installs](https://nodeweekly.com/link/175549/0a4070b383) by default, and [huge enhancements to its Node.js compatibility](https://nodeweekly.com/link/175550/0a4070b383), particularly around `worker_threads`.
+
+The Bun Team
+
+**IN BRIEF:**
+
+* [Node.js v24.10.0 (Current)](https://nodeweekly.com/link/175551/0a4070b383) has been released – though it's quite a minor release, focused on dependency updates and bug fixes.
+
+* 🔒 A reminder that [GitHub is making changes to strengthen npm security](https://nodeweekly.com/link/175552/0a4070b383) that could affect you if you publish packages (*especially* if you're using classic tokens for npm).
+
+* Pavel Romanov has put together [a helpful guide to using TypeScript with Node.](https://nodeweekly.com/link/175583/0a4070b383) Not just in the modern 'type stripping' way, but working with Node's type definitions and the broader ecosystem of tools, along with some limitations you might encounter.
+
+[Node.js 20+ Memory Management in Containers](https://nodeweekly.com/link/175553/0a4070b383 "developers.redhat.com") — *“This article answers the question: Do you need to set the heap size in Node.js, or is it already container-aware?”*
+
+De Melo Jnr. and Ayala (Red Hat)
+
+[Generate PDFs from JSON with Python](https://nodeweekly.com/link/175554/0a4070b383 "developer-api.foxit.com") — Build PDFs dynamically using Word templates and JSON data. Fast setup, free Foxit API account included.
+
+Foxit Software sponsor
+
+📄 [Node.js 22 Features You Should Be Using](https://nodeweekly.com/link/175555/0a4070b383) – Now Node 22 is the LTS release, you can safely use all of its latest features. Lizz Parody
+
+📄 [How to Get Started with *GitHub Copilot CLI*](https://nodeweekly.com/link/175556/0a4070b383) Andrea Griffiths (GitHub)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v08svzbsvdqf0tgbzii4.jpg)](https://nodeweekly.com/link/175557/0a4070b383)
+
+[jsonriver: A Simple, Fast Streaming JSON Parser](https://nodeweekly.com/link/175557/0a4070b383 "github.com") — A library to parse JSON incrementally as it streams in, such as from a network request or an LLM, returning a sequence of ‘increasingly complete’ values.
+
+Peter Burns (Google)
+
+[xmlbuilder2 4.0: An XML Builder Library](https://nodeweekly.com/link/175558/0a4070b383 "github.com") — Convert JS objects into XML, parse and serialize XML documents, or create XML documents using chained function calls.
+
+Ozgur Ozcitak
+
+[Kaluma 1.3: A Tiny JS Runtime for the Raspberry Pi Pico 2](https://nodeweekly.com/link/175560/0a4070b383 "kalumajs.org") — Can a JavaScript runtime squeeze onto an RP2350-based Raspberry Pi Pico 2? Kaluma can, all while offering some Node.js-like niceties. v1.3 is powered by the latest version of [JerryScript](https://nodeweekly.com/link/175561/0a4070b383), a lightweight JS engine for constrained environments.
+
+Kaluma Project
+
+[Crosspost 1.0: Post Across Multiple Social Networks At Once](https://nodeweekly.com/link/175584/0a4070b383 "github.com") — A Node.js library *and* CLI tool for making posts to different social networks, including Mastodon, Bluesky, X, Discord, Telegram, and more.
+
+Nicholas C. Zakas
+
+[Serialize JavaScript 7.0: Serialize Objects to a Superset of JSON](https://nodeweekly.com/link/175559/0a4070b383 "github.com") — Why? So you can serialize regular expressions, dates, functions, and (as of this week) `Infinity`, as well as the usual things JSON can handle.
+
+Yahoo
+
+[MaxIntervalCover.js: Computes the Optimal Subset of Non-Overlapping Intervals](https://nodeweekly.com/link/175562/0a4070b383)\
+Robert Eisele
+
+📰 Classifieds
+
+🕳️ 🥊 [Hiring Now:](https://nodeweekly.com/link/175563/0a4070b383) Build P2P apps for mobile & desktop. Ditch servers, empower users, protect privacy. Open source. Remote EU.
+
+***
+
+🐱 **ConfigCat Feature Flag Service** lets you release and roll back features safely without code changes. Set it up in minutes! **[Save 25% now!](https://nodeweekly.com/link/175564/0a4070b383)**
+
+* [Playwright 1.56](https://nodeweekly.com/link/175565/0a4070b383) – Microsoft's browser/Web automation library – now with [▶️ Playwright Agents](https://nodeweekly.com/link/175566/0a4070b383) – these are definitions to guide LLMs through the process of building a Playwright test.
+
+* [Happy DOM 20.0](https://nodeweekly.com/link/175567/0a4070b383) – Cross-runtime JS implementation of a web browser *sans* UI. Note that JavaScript evaluation is now *disabled* by default.
+
+* [Sidequest 1.10](https://nodeweekly.com/link/175568/0a4070b383) – Scalable background job processor for Node apps. v1.10 enables WAL mode for the SQLite backend for added performance.
+
+* 🤖 [OpenAI Node 6.3](https://nodeweekly.com/link/175569/0a4070b383) – The official Node library for OpenAI's API.
+
+* [Ow 3.1](https://nodeweekly.com/link/175570/0a4070b383) – Function argument validation for humans (essentially chainable easy-to-read data validations).
+
+* [Got 14.5](https://nodeweekly.com/link/175571/0a4070b383) – Human-friendly HTTP request library.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lunqoujoz99muk1kwdgg.jpg)](https://nodeweekly.com/link/175572/0a4070b383)
+
+* Ready for a bit of fun? [An implementation of pipeline-style composition](https://nodeweekly.com/link/175572/0a4070b383) (using `|`) in pure JavaScript thanks to `Symbol.toPrimitive` and some [clever code.](https://nodeweekly.com/link/175573/0a4070b383)
+
+* From the same creators of the fantastic [▶️ Node.js](https://nodeweekly.com/link/175574/0a4070b383), [▶️ Angular](https://nodeweekly.com/link/175575/0a4070b383) and [▶️ React](https://nodeweekly.com/link/175576/0a4070b383) documentaries comes [▶️ an all new documentary about *Vite*](https://nodeweekly.com/link/175577/0a4070b383), the build tool that has taken the JavaScript ecosystem by storm. Many luminaries appear to tell their stories.
+
+* Staying on the topic of Vite, VoidZero has [announced Vite+ (a.k.a. Viteplus)](https://nodeweekly.com/link/175578/0a4070b383), an extended version of Vite that introduces [extra features](https://nodeweekly.com/link/175579/0a4070b383) like a linter, test runner, monorepo task runner, and more, though take note [of the licensing.](https://nodeweekly.com/link/175580/0a4070b383)
+
+* [Next.js 16 Beta](https://nodeweekly.com/link/175581/0a4070b383) was released with stable Turbopack support, React 19.2 support and React Compiler support too. ([React Compiler v1.0](https://nodeweekly.com/link/175582/0a4070b383) has also been released.)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
