@@ -1,0 +1,217 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: React Compiler 1.0, Bun 1.3, and Next.js 16 Beta
+description: React Compiler 1.0, Bun 1.3, and Next.js 16 Beta
+date: 星期三 04 下午 十月 15o 2025
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/<!--%20\id%20-->
+origin_site: https://react.statuscode.com/issues/<!--%20\id%20-->
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="React Compiler 1.0, Bun 1.3, and Next.js 16 Beta" url="https://react.statuscode.com/issues/<!--%20\id%20-->" />
+
+<Detail client:only="react">
+	#​448 — October 15, 2025
+
+[Read on the Web](https://react.statuscode.com/issues/&lt;!--%20\id%20-->)
+
+Together with 
+
+[![TigerData logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_296/e_make_transparent/co_white,e_outline:30/ri3mjutb8cydvqo9zn6r.png)](https://react.statuscode.com/link/175660/5d0bbb4a61)
+
+⚛️ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dagqqwnducpge9ncoiir.jpg)](https://react.statuscode.com/link/175661/5d0bbb4a61)
+
+[Triplex: A Newly Open Sourced Workspace for Building React and React Three Fiber Components](https://react.statuscode.com/link/175661/5d0bbb4a61 "triplex.dev") — Originally a commercial tool for visually laying out components in 3D scenes rendered with [React Three Fiber](https://react.statuscode.com/link/175662/5d0bbb4a61), Triplex has gone open source and joined the [Poimandres Collective](https://react.statuscode.com/link/175663/5d0bbb4a61) (responsible for [projects](https://react.statuscode.com/link/175664/5d0bbb4a61) like Three Fiber, Jotai, and Zustand). Its scope has also increased with a [VS Code extension](https://react.statuscode.com/link/175665/5d0bbb4a61) and support for regular React DOM elements and components.
+
+Mike Douges and Pmndrs
+
+[React Compiler v1.0](https://react.statuscode.com/link/175666/5d0bbb4a61 "react.dev") — The [React Compiler](https://react.statuscode.com/link/175667/5d0bbb4a61) is now finally considered _stable_ and ready to take on some of your app’s optimization tasks by way of auto-memoization applied based on the compiler’s analysis of your code. You can still use `useMemo` and `useCallback` as appropriate for precise control, however.
+
+Tan, Savona, and Zhang
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/46973187.png)](https://react.statuscode.com/link/175660/5d0bbb4a61)
+
+[Tiger Lake: Real-Time Data Without the Complexity](https://react.statuscode.com/link/175660/5d0bbb4a61 "www.tigerdata.com") — Meet Tiger Lake: now in public beta. It unifies Postgres and your lakehouse in a continuous real-time loop, eliminating pipelines and orchestration. Build dashboards, agents, and analytics on live, full-context data—all in one system.
+
+TigerData sponsor
+
+[Bun 1.3: The Alternative Full-Stack JS Runtime](https://react.statuscode.com/link/175668/5d0bbb4a61 "bun.com") — The performance-focused JavaScriptCore-powered runtime gets a big upgrade making it more of a ‘full-stack runtime’ including a dev server with hot reloading (including React Fast Refresh), the ability to [scaffold React projects](https://react.statuscode.com/link/175669/5d0bbb4a61) out of the box, and isolated package installs by default. There’s a lot to like in here for React use cases.
+
+The Bun Team
+
+[React Native 0.82: A New Era](https://react.statuscode.com/link/175670/5d0bbb4a61 "reactnative.dev") — A ‘new era’ because it’s the first React Native release that runs _entirely_ on the [New Architecture.](https://react.statuscode.com/link/175671/5d0bbb4a61) It also ships with an experimental opt-in to a newer (faster!) version of the [Hermes](https://react.statuscode.com/link/175672/5d0bbb4a61) JS engine called [Hermes V1.](https://react.statuscode.com/link/175673/5d0bbb4a61)
+
+The React Native Team
+
+📄 [React Folder Structure in Five Steps, 2025 Edition](https://react.statuscode.com/link/175674/5d0bbb4a61) Robin Wieruch
+
+📄 [No Rewrite Required: How to Bring Expo Into Mature Native Apps](https://react.statuscode.com/link/175675/5d0bbb4a61) – Skip a costly rewrite and use Expo and React Native to modernize incrementally. Gabriel Donadel (Expo)
+
+📄 [How to Get Started with _GitHub Copilot CLI_](https://react.statuscode.com/link/175676/5d0bbb4a61) Andrea Griffiths
+
+📄 [Context Inheritance in TanStack Router](https://react.statuscode.com/link/175677/5d0bbb4a61) Dominik Dorfmeister (TkDodo)
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ounliu1mlu8mtpfwdjv3.jpg)](https://react.statuscode.com/link/175678/5d0bbb4a61)
+
+[React Chrono 3.0: Dynamic, Interactive Timeline Component](https://react.statuscode.com/link/175678/5d0bbb4a61 "react-chrono.prabhumurthy.com") — Supports [horizontal](https://react.statuscode.com/link/175679/5d0bbb4a61), [vertical](https://react.statuscode.com/link/175680/5d0bbb4a61), and vertical alternating timelines, complete with keyboard accessibility, support for nested timelines, auto-playing timelines slideshow-style, and more. [Good docs](https://react.statuscode.com/link/175681/5d0bbb4a61) too. [v3.0](https://react.statuscode.com/link/175682/5d0bbb4a61) is a large scale refactoring, adds React 19 compatibility, offers Google Fonts integration, and more.
+
+Prabhu Murthy et al.
+
+[Next.js 16 Beta Released](https://react.statuscode.com/link/175683/5d0bbb4a61 "nextjs.org") — The popular framework takes a step into the future with Turbopack support now stable and the default bundler for new apps. React 19.2 and React Compiler support makes an appearance, along with extra caching features. Testing is recommended as the routing and navigation system has been overhauled, though no code changes _should_ be needed.
+
+Clark, Lai, Choi, Kasper, and Koppers
+
+[Bots Abuse Free Trials. WorkOS Radar Stops Them](https://react.statuscode.com/link/175684/5d0bbb4a61 "workos.com") — Leading AI companies like Cursor use WorkOS Radar to block fake accounts, fraud, and abuse before it reaches your app.
+
+WorkOS sponsor
+
+🖨️ [React-to-Print: Control the Printing of React Components](https://react.statuscode.com/link/175685/5d0bbb4a61 "github.com") — If your app renders components that users are likely to print (as in on actual paper, like tickets or invoices, say) this can give you more control over the process. [Here’s a tutorial showing off how to use it.](https://react.statuscode.com/link/175686/5d0bbb4a61)
+
+Herbst and Nowakowski
+
+🎛️ [React Knob Headless: A Primitive Component for Knobs](https://react.statuscode.com/link/175687/5d0bbb4a61 "react-knob-headless.pages.dev") — An unstyled, accessible dial / rotary control primitive for React for when you prefer your range of values to be circular rather than in a more traditional linear slider (like in audio contexts, maybe). [GitHub repo.](https://react.statuscode.com/link/175688/5d0bbb4a61)
+
+Satelllte
+
+*   [React Three Fiber 9.4](https://react.statuscode.com/link/175689/5d0bbb4a61) – React renderer for Three.js.
+    
+*   📄 [react-native-pdf 7.0](https://react.statuscode.com/link/175690/5d0bbb4a61) – A PDF component for React Native apps.
+    
+*   📄 [React PDF 10.2](https://react.statuscode.com/link/175691/5d0bbb4a61) – Or for regular React apps, if you prefer!
+    
+*   [llama.ui 2.38](https://react.statuscode.com/link/175692/5d0bbb4a61) – A minimal interface for AI Companion that runs entirely in your browser.
+    
+
+📰 Classifieds
+
+🍐 [Tuple](https://react.statuscode.com/link/175693/5d0bbb4a61) - how developers at Tailwind, Shopify, and Stripe unblock PRs, make technical decisions, and pair program.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v08svzbsvdqf0tgbzii4.jpg)](https://react.statuscode.com/link/175694/5d0bbb4a61)
+
+*   [jsonriver](https://react.statuscode.com/link/175694/5d0bbb4a61) _(above)_ is a JSON parser designed for _streaming_ use cases where you might not have an entire document ready to process. It can parse JSON incrementally as it streams in (from a network request or LLM, say) and return a sequence of 'increasingly complete' values.
+    
+*   🔒 A reminder that [GitHub is making changes to strengthen npm security](https://react.statuscode.com/link/175695/5d0bbb4a61) that could affect you if you publish packages (_especially_ if you're using classic tokens for npm).
+    
+*   VoidZero has [announced Vite+ (a.k.a. Viteplus)](https://react.statuscode.com/link/175696/5d0bbb4a61), an extended version of Vite that introduces [extra features](https://react.statuscode.com/link/175697/5d0bbb4a61) like a linter, test runner, monorepo task runner, and more, though take note [of the licensing.](https://react.statuscode.com/link/175698/5d0bbb4a61)
+    
+*   In [The Birth of Prettier](https://react.statuscode.com/link/175699/5d0bbb4a61), Christopher Chedeau (a.k.a. Vjeux) takes us back ten years to the genesis of [Prettier](https://react.statuscode.com/link/175700/5d0bbb4a61), a popular code formatter he co-created, with James Long, that popularized the practice of fully-automated AST-based code formatting in the JS ecosystem.
+    
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​448 — October 15, 2025
+
+[Read on the Web](https://react.statuscode.com/issues/&lt;!--%20\id%20-->)
+
+Together with 
+
+[![TigerData logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_296/e_make_transparent/co_white,e_outline:30/ri3mjutb8cydvqo9zn6r.png)](https://react.statuscode.com/link/175660/5d0bbb4a61)
+
+⚛️ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dagqqwnducpge9ncoiir.jpg)](https://react.statuscode.com/link/175661/5d0bbb4a61)
+
+[Triplex: A Newly Open Sourced Workspace for Building React and React Three Fiber Components](https://react.statuscode.com/link/175661/5d0bbb4a61 "triplex.dev") — Originally a commercial tool for visually laying out components in 3D scenes rendered with [React Three Fiber](https://react.statuscode.com/link/175662/5d0bbb4a61), Triplex has gone open source and joined the [Poimandres Collective](https://react.statuscode.com/link/175663/5d0bbb4a61) (responsible for [projects](https://react.statuscode.com/link/175664/5d0bbb4a61) like Three Fiber, Jotai, and Zustand). Its scope has also increased with a [VS Code extension](https://react.statuscode.com/link/175665/5d0bbb4a61) and support for regular React DOM elements and components.
+
+Mike Douges and Pmndrs
+
+[React Compiler v1.0](https://react.statuscode.com/link/175666/5d0bbb4a61 "react.dev") — The [React Compiler](https://react.statuscode.com/link/175667/5d0bbb4a61) is now finally considered *stable* and ready to take on some of your app’s optimization tasks by way of auto-memoization applied based on the compiler’s analysis of your code. You can still use `useMemo` and `useCallback` as appropriate for precise control, however.
+
+Tan, Savona, and Zhang
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/46973187.png)](https://react.statuscode.com/link/175660/5d0bbb4a61)
+
+[Tiger Lake: Real-Time Data Without the Complexity](https://react.statuscode.com/link/175660/5d0bbb4a61 "www.tigerdata.com") — Meet Tiger Lake: now in public beta. It unifies Postgres and your lakehouse in a continuous real-time loop, eliminating pipelines and orchestration. Build dashboards, agents, and analytics on live, full-context data—all in one system.
+
+TigerData sponsor
+
+[Bun 1.3: The Alternative Full-Stack JS Runtime](https://react.statuscode.com/link/175668/5d0bbb4a61 "bun.com") — The performance-focused JavaScriptCore-powered runtime gets a big upgrade making it more of a ‘full-stack runtime’ including a dev server with hot reloading (including React Fast Refresh), the ability to [scaffold React projects](https://react.statuscode.com/link/175669/5d0bbb4a61) out of the box, and isolated package installs by default. There’s a lot to like in here for React use cases.
+
+The Bun Team
+
+[React Native 0.82: A New Era](https://react.statuscode.com/link/175670/5d0bbb4a61 "reactnative.dev") — A ‘new era’ because it’s the first React Native release that runs *entirely* on the [New Architecture.](https://react.statuscode.com/link/175671/5d0bbb4a61) It also ships with an experimental opt-in to a newer (faster!) version of the [Hermes](https://react.statuscode.com/link/175672/5d0bbb4a61) JS engine called [Hermes V1.](https://react.statuscode.com/link/175673/5d0bbb4a61)
+
+The React Native Team
+
+📄 [React Folder Structure in Five Steps, 2025 Edition](https://react.statuscode.com/link/175674/5d0bbb4a61) Robin Wieruch
+
+📄 [No Rewrite Required: How to Bring Expo Into Mature Native Apps](https://react.statuscode.com/link/175675/5d0bbb4a61) – Skip a costly rewrite and use Expo and React Native to modernize incrementally. Gabriel Donadel (Expo)
+
+📄 [How to Get Started with *GitHub Copilot CLI*](https://react.statuscode.com/link/175676/5d0bbb4a61) Andrea Griffiths
+
+📄 [Context Inheritance in TanStack Router](https://react.statuscode.com/link/175677/5d0bbb4a61) Dominik Dorfmeister (TkDodo)
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ounliu1mlu8mtpfwdjv3.jpg)](https://react.statuscode.com/link/175678/5d0bbb4a61)
+
+[React Chrono 3.0: Dynamic, Interactive Timeline Component](https://react.statuscode.com/link/175678/5d0bbb4a61 "react-chrono.prabhumurthy.com") — Supports [horizontal](https://react.statuscode.com/link/175679/5d0bbb4a61), [vertical](https://react.statuscode.com/link/175680/5d0bbb4a61), and vertical alternating timelines, complete with keyboard accessibility, support for nested timelines, auto-playing timelines slideshow-style, and more. [Good docs](https://react.statuscode.com/link/175681/5d0bbb4a61) too. [v3.0](https://react.statuscode.com/link/175682/5d0bbb4a61) is a large scale refactoring, adds React 19 compatibility, offers Google Fonts integration, and more.
+
+Prabhu Murthy et al.
+
+[Next.js 16 Beta Released](https://react.statuscode.com/link/175683/5d0bbb4a61 "nextjs.org") — The popular framework takes a step into the future with Turbopack support now stable and the default bundler for new apps. React 19.2 and React Compiler support makes an appearance, along with extra caching features. Testing is recommended as the routing and navigation system has been overhauled, though no code changes *should* be needed.
+
+Clark, Lai, Choi, Kasper, and Koppers
+
+[Bots Abuse Free Trials. WorkOS Radar Stops Them](https://react.statuscode.com/link/175684/5d0bbb4a61 "workos.com") — Leading AI companies like Cursor use WorkOS Radar to block fake accounts, fraud, and abuse before it reaches your app.
+
+WorkOS sponsor
+
+🖨️ [React-to-Print: Control the Printing of React Components](https://react.statuscode.com/link/175685/5d0bbb4a61 "github.com") — If your app renders components that users are likely to print (as in on actual paper, like tickets or invoices, say) this can give you more control over the process. [Here’s a tutorial showing off how to use it.](https://react.statuscode.com/link/175686/5d0bbb4a61)
+
+Herbst and Nowakowski
+
+🎛️ [React Knob Headless: A Primitive Component for Knobs](https://react.statuscode.com/link/175687/5d0bbb4a61 "react-knob-headless.pages.dev") — An unstyled, accessible dial / rotary control primitive for React for when you prefer your range of values to be circular rather than in a more traditional linear slider (like in audio contexts, maybe). [GitHub repo.](https://react.statuscode.com/link/175688/5d0bbb4a61)
+
+Satelllte
+
+* [React Three Fiber 9.4](https://react.statuscode.com/link/175689/5d0bbb4a61) – React renderer for Three.js.
+
+* 📄 [react-native-pdf 7.0](https://react.statuscode.com/link/175690/5d0bbb4a61) – A PDF component for React Native apps.
+
+* 📄 [React PDF 10.2](https://react.statuscode.com/link/175691/5d0bbb4a61) – Or for regular React apps, if you prefer!
+
+* [llama.ui 2.38](https://react.statuscode.com/link/175692/5d0bbb4a61) – A minimal interface for AI Companion that runs entirely in your browser.
+
+📰 Classifieds
+
+🍐 [Tuple](https://react.statuscode.com/link/175693/5d0bbb4a61) - how developers at Tailwind, Shopify, and Stripe unblock PRs, make technical decisions, and pair program.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v08svzbsvdqf0tgbzii4.jpg)](https://react.statuscode.com/link/175694/5d0bbb4a61)
+
+* [jsonriver](https://react.statuscode.com/link/175694/5d0bbb4a61) *(above)* is a JSON parser designed for *streaming* use cases where you might not have an entire document ready to process. It can parse JSON incrementally as it streams in (from a network request or LLM, say) and return a sequence of 'increasingly complete' values.
+
+* 🔒 A reminder that [GitHub is making changes to strengthen npm security](https://react.statuscode.com/link/175695/5d0bbb4a61) that could affect you if you publish packages (*especially* if you're using classic tokens for npm).
+
+* VoidZero has [announced Vite+ (a.k.a. Viteplus)](https://react.statuscode.com/link/175696/5d0bbb4a61), an extended version of Vite that introduces [extra features](https://react.statuscode.com/link/175697/5d0bbb4a61) like a linter, test runner, monorepo task runner, and more, though take note [of the licensing.](https://react.statuscode.com/link/175698/5d0bbb4a61)
+
+* In [The Birth of Prettier](https://react.statuscode.com/link/175699/5d0bbb4a61), Christopher Chedeau (a.k.a. Vjeux) takes us back ten years to the genesis of [Prettier](https://react.statuscode.com/link/175700/5d0bbb4a61), a popular code formatter he co-created, with James Long, that popularized the practice of fully-automated AST-based code formatting in the JS ecosystem.
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
