@@ -1,0 +1,343 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: A Bun-believable release that isn't half-baked
+description: A Bun-believable release that isn't half-baked
+date: 星期五 07 晚上 十月 17o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/757
+origin_site: https://javascriptweekly.com/issues/757
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="A Bun-believable release that isn't half-baked" url="https://javascriptweekly.com/issues/757" />
+
+<Detail client:only="react">
+	#​757 — October 17, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/757)
+
+Together with 
+
+[![Auth0](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_390/e_make_transparent/co_white,e_outline:20/lsepvwbdk5k9keuelsk1.png)](https://javascriptweekly.com/link/175801/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/do9aq9hnb6aseugkrior.jpg)](https://javascriptweekly.com/link/175802/d076523b1d)
+
+[Bun 1.3: The Full-Stack JavaScript Runtime](https://javascriptweekly.com/link/175802/d076523b1d "bun.sh") — Arriving a few hours after last week’s issue (natch!) Bun 1.3 remains the big news of the past week. [Bun](https://javascriptweekly.com/link/175803/d076523b1d) is a performance and DX-focused JavaScriptCore-powered runtime which, with v1.3, balances being a drop-in Node.js replacement with becoming a _‘full-stack runtime’_ among other exciting developments:
+
+*   Full‑stack dev server with [hot reloading](https://javascriptweekly.com/link/175804/d076523b1d) built into `Bun.serve`
+*   Improved GC with lower idle CPU and memory usage.
+*   Built-in MySQL and Redis clients (alongside Postgres and SQLite).
+*   The ability to [bundle both frontend and backend apps](https://javascriptweekly.com/link/175805/d076523b1d) into a single build.
+*   [Code signing](https://javascriptweekly.com/link/175806/d076523b1d) for Windows and macOS executables you build.
+*   [Isolated pnpm-esque package installs](https://javascriptweekly.com/link/175807/d076523b1d) are now the default.
+
+It also wouldn't be a big Bun release without [▶️ the obligatory release video.](https://javascriptweekly.com/link/175808/d076523b1d)
+
+The Bun Team
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f1abe6db.png)](https://javascriptweekly.com/link/175801/d076523b1d)
+
+[AI Agents? Meet External Tools](https://javascriptweekly.com/link/175801/d076523b1d "auth0.com") — Launching an AI-powered app? Make sure your agent is securely connecting with all of your external tools and APIs. Learn more about how Auth0’s Token Vault can secure your logins and agents so your users aren’t left vulnerable and exposed.
+
+Auth0 sponsor
+
+[Announcing Vite+ / VitePlus](https://javascriptweekly.com/link/175809/d076523b1d "voidzero.dev") — Originally announced at last week's _ViteConf_, Evan shares more details about what this extended, unified Vite-based toolchain ([now in ‘early access’](https://javascriptweekly.com/link/175810/d076523b1d)) is, and the motivation behind it. Unlike regular Vite, it has a commercial angle but _“will be free for individuals, open source projects, and small businesses”_ as well as _“source available.”_
+
+Evan You
+
+[Node.js v25.0.0 (Current) Released](https://javascriptweekly.com/link/175811/d076523b1d "nodejs.org") — The latest cutting edge version of Node has arrived with Web Storage enabled by default, `JSON.stringify` perf improvements, a new `--allow-net` option in the [permission model](https://javascriptweekly.com/link/175812/d076523b1d), built-in `Uint8Array` base64/hex conversion, and WebAssembly and JIT optimizations.
+
+Rafael Gonzaga
+
+**IN BRIEF:**
+
+*   [Cloudflare Sandboxes](https://javascriptweekly.com/link/175813/d076523b1d) is a new service for running untrusted JavaScript (and Python) code in a safe container-based 'sandbox' environment.
+    
+*   The Remix project's _Remix Jam_ event took place last week, and you can now [▶️ watch the full livestream](https://javascriptweekly.com/link/175814/d076523b1d). If you want to see the reveal and demo of **Remix 3**, [jump to `03:24:30`](https://javascriptweekly.com/link/175815/d076523b1d) in the video.
+    
+*   [Why is `typeof null === 'object'`?](https://javascriptweekly.com/link/175816/d076523b1d) Piotr Zarycki goes much deeper into the history than you might expect.
+    
+*   [The _Lit_ project is joining the OpenJS Foundation.](https://javascriptweekly.com/link/175817/d076523b1d)
+    
+
+**RELEASES:**
+
+*   [React Native 0.82](https://javascriptweekly.com/link/175818/d076523b1d) – It's a 'new era' as React Native now runs entirely on the [New Architecture.](https://javascriptweekly.com/link/175819/d076523b1d)
+    
+*   [Graffle 7.3](https://javascriptweekly.com/link/175820/d076523b1d) – GraphQL client library formerly known as `graphql-request`. v7.3 _adds_ CommonJS support for compatibility with Jest and non-ESM systems.
+    
+*   [Skeleton v4.0](https://javascriptweekly.com/link/175821/d076523b1d) – Adaptive design system powered by Tailwind CSS. [See the homepage](https://javascriptweekly.com/link/175822/d076523b1d) for a preview and more.
+    
+
+📖  Articles and Videos
+
+[Improving the Trustworthiness of JavaScript on the Web](https://javascriptweekly.com/link/175823/d076523b1d "blog.cloudflare.com") — A look at [WAICT](https://javascriptweekly.com/link/175824/d076523b1d) (Web Application Integrity, Consistency, and Transparency), an early-stage W3C-backed effort to bring stronger ‘app store-like’ security guarantees to the Web by ensuring the code a browser runs hasn’t been modified by attackers.
+
+Michael Rosenberg (Cloudflare)
+
+▶  [Beyond Signals](https://javascriptweekly.com/link/175825/d076523b1d "www.youtube.com") — A half-hour talk from the creator of [SolidJS](https://javascriptweekly.com/link/175826/d076523b1d), exploring how signals (once pioneering, now mainstream) are shaping web development, their architectural implications, but why we’re only _“at the beginning of the journey”_ and what comes next.
+
+Ryan Carniato
+
+[Build Smarter Web Apps with AI-Powered JavaScript UI Controls](https://javascriptweekly.com/link/175827/d076523b1d "www.syncfusion.com") — Build enterprise apps faster with 145+ AI-ready, high-performance JS components. Start your free trial today.
+
+Syncfusion sponsor
+
+[Lazy Fields for 30x Speedup Without Decorators or Transforms](https://javascriptweekly.com/link/175828/d076523b1d "joist-orm.io") — Some clever work from the creators of the [Joist ORM.](https://javascriptweekly.com/link/175829/d076523b1d)
+
+Stephen Haberman (Joist)
+
+🌿 [A Quick Tutorial on the Barnsley Fern Fractal](https://javascriptweekly.com/link/175830/d076523b1d "slicker.me") — The [Barnsley fern](https://javascriptweekly.com/link/175831/d076523b1d) is a fractal that represents a plant-like fern structure.
+
+Slicker
+
+💡 Slicker has other examples of implementing effects in (somewhat old school) JavaScript, including the [Julia set fractal](https://javascriptweekly.com/link/175832/d076523b1d), [plasma](https://javascriptweekly.com/link/175833/d076523b1d), and [a fire effect.](https://javascriptweekly.com/link/175834/d076523b1d)
+
+📄 [Find Where a Specific Object Was Allocated in JavaScript with DevTools](https://javascriptweekly.com/link/175835/d076523b1d) – A slightly convoluted Chrome DevTools trick for tracking down where a specific object was allocated. Joona Heikkilä
+
+📄 [A Modern Guide to Reading and Writing Files in Node.js](https://javascriptweekly.com/link/175836/d076523b1d) – A comprehensive guide to a variety of approaches. Luciano Mammino
+
+📄 [Refactoring a Form to a Signal Form in Angular](https://javascriptweekly.com/link/175837/d076523b1d) Tim Deschryver
+
+📄 [How to Get Started with _GitHub Copilot CLI_](https://javascriptweekly.com/link/175838/d076523b1d) Andrea Griffiths (GitHub)
+
+🛠 Code & Tools
+
+[DOMPurify 3.3: A Fast, Tolerant XSS Sanitizer for HTML](https://javascriptweekly.com/link/175839/d076523b1d "github.com") — Supports all modern browsers (as well as Node.js) and is heavily tested. There’s [a live demo here.](https://javascriptweekly.com/link/175840/d076523b1d)
+
+Cure53
+
+[python-node: Integrate Python ASGI Apps with Node.js](https://javascriptweekly.com/link/175841/d076523b1d "blog.platformatic.dev") — Several months ago Platformatic [unveiled `php-node`](https://javascriptweekly.com/link/175842/d076523b1d), a way to embed PHP directly within Node apps. Now they’re tackling Python with [@platformatic/python-node](https://javascriptweekly.com/link/175843/d076523b1d), a Node-native bridge that embeds a Python interpreter and speaks ASGI.
+
+Stephen Belanger and Matteo Collina
+
+[Tiger Lake: Real-Time Data for Dashboards, Agents & Analytics](https://javascriptweekly.com/link/175844/d076523b1d "www.tigerdata.com") — Unify Postgres and your lakehouse for live, full-context data—no pipelines, no lag.
+
+TigerData sponsor
+
+[jsonriver: A Simple, Fast Streaming JSON Parser](https://javascriptweekly.com/link/175846/d076523b1d "github.com") — A library to parse JSON incrementally as it streams in, such as from a network request or an LLM, returning a sequence of ‘increasingly complete’ values.
+
+Peter Burns (Google)
+
+[Kaluma 1.3: A Tiny JS Runtime for the Raspberry Pi Pico 2](https://javascriptweekly.com/link/175848/d076523b1d "kalumajs.org") — Can a JavaScript runtime squeeze onto an RP2350-based Raspberry Pi Pico 2? Kaluma can, all while offering some Node.js-like niceties. v1.3 is powered by the latest version of [JerryScript](https://javascriptweekly.com/link/175850/d076523b1d), a lightweight JS engine for constrained environments.
+
+Kaluma Project
+
+[Triplex: A Visual Workspace for Building React Components](https://javascriptweekly.com/link/175852/d076523b1d "triplex.dev") — Originally a commercial tool for laying out components in 3D scenes rendered with [React Three Fiber](https://javascriptweekly.com/link/175853/d076523b1d), Triplex is now open source. Its scope has increased with a [VS Code extension](https://javascriptweekly.com/link/175854/d076523b1d) and support for regular React DOM elements and components too.
+
+Mike Douges and Pmndrs
+
+*   🗓️ [Schedule-X 3.3](https://javascriptweekly.com/link/175857/d076523b1d) – Event calendar control. MIT licensed, but with a premium version with added features.
+    
+*   [json-joy v17.55.0](https://javascriptweekly.com/link/175858/d076523b1d) – Real-time, collaborative editing algorithms and utilities for JSON data models.
+    
+*   [Ky 1.12](https://javascriptweekly.com/link/175860/d076523b1d) – Simple HTTP client based upon Fetch for browsers, Node & Deno.
+    
+*   🗓️ [React Date Picker 8.8](https://javascriptweekly.com/link/175861/d076523b1d) – Simple date picker component. ([Demo](https://javascriptweekly.com/link/175862/d076523b1d).)
+    
+*   [Faker 10.1](https://javascriptweekly.com/link/175863/d076523b1d) – Generate fabricated data to your heart's content.
+    
+
+📰 Classifieds
+
+[Meticulous writes and maintains your E2E UI tests](https://javascriptweekly.com/link/175864/d076523b1d). Built on Chromium with a deterministic engine, it’s the only testing tool that eliminates flakes.
+
+* * *
+
+🚀 Unlock 2× Team Efficiency in Just 30 Days. JS Weekly readers: Claim your [free Audit by Fractional CTO](https://javascriptweekly.com/link/175865/d076523b1d) and resolve your toughest SaaS issues—fast.
+
+* * *
+
+🕳️ 🥊 [Hiring Now:](https://javascriptweekly.com/link/175866/d076523b1d) Build P2P apps for mobile & desktop. Ditch servers, empower users, protect privacy. Open source. Remote EU.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+*   The React team has [shipped v1.0 of React Compiler](https://javascriptweekly.com/link/175867/d076523b1d), a tool for automating the optimization of React apps by way of auto-memoization applied based upon analysis of their code.
+    
+*   Sebastian Lague's [▶️ Simulating Smoke](https://javascriptweekly.com/link/175868/d076523b1d) video presents a fascinating look at how you might model and code a fluid simulation to emulate the behavior of smoke. It's not in JavaScript but is mostly math anyway.
+    
+*   With this week's release of [Firefox 144](https://javascriptweekly.com/link/175869/d076523b1d), all major browsers now support [_view transitions,_](https://javascriptweekly.com/link/175870/d076523b1d) a neat front-end feature.
+    
+*   [PostgreSQL 18](https://javascriptweekly.com/link/175871/d076523b1d) was released recently and [its new asynchronous I/O subsystem](https://javascriptweekly.com/link/175872/d076523b1d) yields immediate performance benefits for certain workloads, as seen in [these benchmarks of Postgres 17 vs Postgres 18](https://javascriptweekly.com/link/175873/d076523b1d) performed by PlanetScale.
+    
+*   Ever heard of [HTML's &lt;output> tag?](https://javascriptweekly.com/link/175874/d076523b1d)
+    
+*   🐈 Cat cams! Nothing to do with programming, but [meow.camera](https://javascriptweekly.com/link/175875/d076523b1d) charmed me. You might need to switch cameras to actually find a cat. Not a fan of cats? [Check out the Namib Desert](https://javascriptweekly.com/link/175876/d076523b1d) for some bigger critters..
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/175877/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​757 — October 17, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/757)
+
+Together with 
+
+[![Auth0](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_390/e_make_transparent/co_white,e_outline:20/lsepvwbdk5k9keuelsk1.png)](https://javascriptweekly.com/link/175801/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/do9aq9hnb6aseugkrior.jpg)](https://javascriptweekly.com/link/175802/d076523b1d)
+
+[Bun 1.3: The Full-Stack JavaScript Runtime](https://javascriptweekly.com/link/175802/d076523b1d "bun.sh") — Arriving a few hours after last week’s issue (natch!) Bun 1.3 remains the big news of the past week. [Bun](https://javascriptweekly.com/link/175803/d076523b1d) is a performance and DX-focused JavaScriptCore-powered runtime which, with v1.3, balances being a drop-in Node.js replacement with becoming a *‘full-stack runtime’* among other exciting developments:
+
+* Full‑stack dev server with [hot reloading](https://javascriptweekly.com/link/175804/d076523b1d) built into `Bun.serve`
+* Improved GC with lower idle CPU and memory usage.
+* Built-in MySQL and Redis clients (alongside Postgres and SQLite).
+* The ability to [bundle both frontend and backend apps](https://javascriptweekly.com/link/175805/d076523b1d) into a single build.
+* [Code signing](https://javascriptweekly.com/link/175806/d076523b1d) for Windows and macOS executables you build.
+* [Isolated pnpm-esque package installs](https://javascriptweekly.com/link/175807/d076523b1d) are now the default.
+
+It also wouldn't be a big Bun release without [▶️ the obligatory release video.](https://javascriptweekly.com/link/175808/d076523b1d)
+
+The Bun Team
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f1abe6db.png)](https://javascriptweekly.com/link/175801/d076523b1d)
+
+[AI Agents? Meet External Tools](https://javascriptweekly.com/link/175801/d076523b1d "auth0.com") — Launching an AI-powered app? Make sure your agent is securely connecting with all of your external tools and APIs. Learn more about how Auth0’s Token Vault can secure your logins and agents so your users aren’t left vulnerable and exposed.
+
+Auth0 sponsor
+
+[Announcing Vite+ / VitePlus](https://javascriptweekly.com/link/175809/d076523b1d "voidzero.dev") — Originally announced at last week's *ViteConf*, Evan shares more details about what this extended, unified Vite-based toolchain ([now in ‘early access’](https://javascriptweekly.com/link/175810/d076523b1d)) is, and the motivation behind it. Unlike regular Vite, it has a commercial angle but *“will be free for individuals, open source projects, and small businesses”* as well as *“source available.”*
+
+Evan You
+
+[Node.js v25.0.0 (Current) Released](https://javascriptweekly.com/link/175811/d076523b1d "nodejs.org") — The latest cutting edge version of Node has arrived with Web Storage enabled by default, `JSON.stringify` perf improvements, a new `--allow-net` option in the [permission model](https://javascriptweekly.com/link/175812/d076523b1d), built-in `Uint8Array` base64/hex conversion, and WebAssembly and JIT optimizations.
+
+Rafael Gonzaga
+
+**IN BRIEF:**
+
+* [Cloudflare Sandboxes](https://javascriptweekly.com/link/175813/d076523b1d) is a new service for running untrusted JavaScript (and Python) code in a safe container-based 'sandbox' environment.
+
+* The Remix project's *Remix Jam* event took place last week, and you can now [▶️ watch the full livestream](https://javascriptweekly.com/link/175814/d076523b1d). If you want to see the reveal and demo of **Remix 3**, [jump to `03:24:30`](https://javascriptweekly.com/link/175815/d076523b1d) in the video.
+
+* [Why is `typeof null === 'object'`?](https://javascriptweekly.com/link/175816/d076523b1d) Piotr Zarycki goes much deeper into the history than you might expect.
+
+* [The *Lit* project is joining the OpenJS Foundation.](https://javascriptweekly.com/link/175817/d076523b1d)
+
+**RELEASES:**
+
+* [React Native 0.82](https://javascriptweekly.com/link/175818/d076523b1d) – It's a 'new era' as React Native now runs entirely on the [New Architecture.](https://javascriptweekly.com/link/175819/d076523b1d)
+
+* [Graffle 7.3](https://javascriptweekly.com/link/175820/d076523b1d) – GraphQL client library formerly known as `graphql-request`. v7.3 *adds* CommonJS support for compatibility with Jest and non-ESM systems.
+
+* [Skeleton v4.0](https://javascriptweekly.com/link/175821/d076523b1d) – Adaptive design system powered by Tailwind CSS. [See the homepage](https://javascriptweekly.com/link/175822/d076523b1d) for a preview and more.
+
+📖  Articles and Videos
+
+[Improving the Trustworthiness of JavaScript on the Web](https://javascriptweekly.com/link/175823/d076523b1d "blog.cloudflare.com") — A look at [WAICT](https://javascriptweekly.com/link/175824/d076523b1d) (Web Application Integrity, Consistency, and Transparency), an early-stage W3C-backed effort to bring stronger ‘app store-like’ security guarantees to the Web by ensuring the code a browser runs hasn’t been modified by attackers.
+
+Michael Rosenberg (Cloudflare)
+
+▶  [Beyond Signals](https://javascriptweekly.com/link/175825/d076523b1d "www.youtube.com") — A half-hour talk from the creator of [SolidJS](https://javascriptweekly.com/link/175826/d076523b1d), exploring how signals (once pioneering, now mainstream) are shaping web development, their architectural implications, but why we’re only *“at the beginning of the journey”* and what comes next.
+
+Ryan Carniato
+
+[Build Smarter Web Apps with AI-Powered JavaScript UI Controls](https://javascriptweekly.com/link/175827/d076523b1d "www.syncfusion.com") — Build enterprise apps faster with 145+ AI-ready, high-performance JS components. Start your free trial today.
+
+Syncfusion sponsor
+
+[Lazy Fields for 30x Speedup Without Decorators or Transforms](https://javascriptweekly.com/link/175828/d076523b1d "joist-orm.io") — Some clever work from the creators of the [Joist ORM.](https://javascriptweekly.com/link/175829/d076523b1d)
+
+Stephen Haberman (Joist)
+
+🌿 [A Quick Tutorial on the Barnsley Fern Fractal](https://javascriptweekly.com/link/175830/d076523b1d "slicker.me") — The [Barnsley fern](https://javascriptweekly.com/link/175831/d076523b1d) is a fractal that represents a plant-like fern structure.
+
+Slicker
+
+💡 Slicker has other examples of implementing effects in (somewhat old school) JavaScript, including the [Julia set fractal](https://javascriptweekly.com/link/175832/d076523b1d), [plasma](https://javascriptweekly.com/link/175833/d076523b1d), and [a fire effect.](https://javascriptweekly.com/link/175834/d076523b1d)
+
+📄 [Find Where a Specific Object Was Allocated in JavaScript with DevTools](https://javascriptweekly.com/link/175835/d076523b1d) – A slightly convoluted Chrome DevTools trick for tracking down where a specific object was allocated. Joona Heikkilä
+
+📄 [A Modern Guide to Reading and Writing Files in Node.js](https://javascriptweekly.com/link/175836/d076523b1d) – A comprehensive guide to a variety of approaches. Luciano Mammino
+
+📄 [Refactoring a Form to a Signal Form in Angular](https://javascriptweekly.com/link/175837/d076523b1d) Tim Deschryver
+
+📄 [How to Get Started with *GitHub Copilot CLI*](https://javascriptweekly.com/link/175838/d076523b1d) Andrea Griffiths (GitHub)
+
+🛠 Code & Tools
+
+[DOMPurify 3.3: A Fast, Tolerant XSS Sanitizer for HTML](https://javascriptweekly.com/link/175839/d076523b1d "github.com") — Supports all modern browsers (as well as Node.js) and is heavily tested. There’s [a live demo here.](https://javascriptweekly.com/link/175840/d076523b1d)
+
+Cure53
+
+[python-node: Integrate Python ASGI Apps with Node.js](https://javascriptweekly.com/link/175841/d076523b1d "blog.platformatic.dev") — Several months ago Platformatic [unveiled `php-node`](https://javascriptweekly.com/link/175842/d076523b1d), a way to embed PHP directly within Node apps. Now they’re tackling Python with [@platformatic/python-node](https://javascriptweekly.com/link/175843/d076523b1d), a Node-native bridge that embeds a Python interpreter and speaks ASGI.
+
+Stephen Belanger and Matteo Collina
+
+[Tiger Lake: Real-Time Data for Dashboards, Agents & Analytics](https://javascriptweekly.com/link/175844/d076523b1d "www.tigerdata.com") — Unify Postgres and your lakehouse for live, full-context data—no pipelines, no lag.
+
+TigerData sponsor
+
+[jsonriver: A Simple, Fast Streaming JSON Parser](https://javascriptweekly.com/link/175846/d076523b1d "github.com") — A library to parse JSON incrementally as it streams in, such as from a network request or an LLM, returning a sequence of ‘increasingly complete’ values.
+
+Peter Burns (Google)
+
+[Kaluma 1.3: A Tiny JS Runtime for the Raspberry Pi Pico 2](https://javascriptweekly.com/link/175848/d076523b1d "kalumajs.org") — Can a JavaScript runtime squeeze onto an RP2350-based Raspberry Pi Pico 2? Kaluma can, all while offering some Node.js-like niceties. v1.3 is powered by the latest version of [JerryScript](https://javascriptweekly.com/link/175850/d076523b1d), a lightweight JS engine for constrained environments.
+
+Kaluma Project
+
+[Triplex: A Visual Workspace for Building React Components](https://javascriptweekly.com/link/175852/d076523b1d "triplex.dev") — Originally a commercial tool for laying out components in 3D scenes rendered with [React Three Fiber](https://javascriptweekly.com/link/175853/d076523b1d), Triplex is now open source. Its scope has increased with a [VS Code extension](https://javascriptweekly.com/link/175854/d076523b1d) and support for regular React DOM elements and components too.
+
+Mike Douges and Pmndrs
+
+* 🗓️ [Schedule-X 3.3](https://javascriptweekly.com/link/175857/d076523b1d) – Event calendar control. MIT licensed, but with a premium version with added features.
+
+* [json-joy v17.55.0](https://javascriptweekly.com/link/175858/d076523b1d) – Real-time, collaborative editing algorithms and utilities for JSON data models.
+
+* [Ky 1.12](https://javascriptweekly.com/link/175860/d076523b1d) – Simple HTTP client based upon Fetch for browsers, Node & Deno.
+
+* 🗓️ [React Date Picker 8.8](https://javascriptweekly.com/link/175861/d076523b1d) – Simple date picker component. ([Demo](https://javascriptweekly.com/link/175862/d076523b1d).)
+
+* [Faker 10.1](https://javascriptweekly.com/link/175863/d076523b1d) – Generate fabricated data to your heart's content.
+
+📰 Classifieds
+
+[Meticulous writes and maintains your E2E UI tests](https://javascriptweekly.com/link/175864/d076523b1d). Built on Chromium with a deterministic engine, it’s the only testing tool that eliminates flakes.
+
+***
+
+🚀 Unlock 2× Team Efficiency in Just 30 Days. JS Weekly readers: Claim your [free Audit by Fractional CTO](https://javascriptweekly.com/link/175865/d076523b1d) and resolve your toughest SaaS issues—fast.
+
+***
+
+🕳️ 🥊 [Hiring Now:](https://javascriptweekly.com/link/175866/d076523b1d) Build P2P apps for mobile & desktop. Ditch servers, empower users, protect privacy. Open source. Remote EU.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+* The React team has [shipped v1.0 of React Compiler](https://javascriptweekly.com/link/175867/d076523b1d), a tool for automating the optimization of React apps by way of auto-memoization applied based upon analysis of their code.
+
+* Sebastian Lague's [▶️ Simulating Smoke](https://javascriptweekly.com/link/175868/d076523b1d) video presents a fascinating look at how you might model and code a fluid simulation to emulate the behavior of smoke. It's not in JavaScript but is mostly math anyway.
+
+* With this week's release of [Firefox 144](https://javascriptweekly.com/link/175869/d076523b1d), all major browsers now support [*view transitions,*](https://javascriptweekly.com/link/175870/d076523b1d) a neat front-end feature.
+
+* [PostgreSQL 18](https://javascriptweekly.com/link/175871/d076523b1d) was released recently and [its new asynchronous I/O subsystem](https://javascriptweekly.com/link/175872/d076523b1d) yields immediate performance benefits for certain workloads, as seen in [these benchmarks of Postgres 17 vs Postgres 18](https://javascriptweekly.com/link/175873/d076523b1d) performed by PlanetScale.
+
+* Ever heard of [HTML's &lt;output> tag?](https://javascriptweekly.com/link/175874/d076523b1d)
+
+* 🐈 Cat cams! Nothing to do with programming, but [meow.camera](https://javascriptweekly.com/link/175875/d076523b1d) charmed me. You might need to switch cameras to actually find a cat. Not a fan of cats? [Check out the Namib Desert](https://javascriptweekly.com/link/175876/d076523b1d) for some bigger critters..
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/175877/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
