@@ -1,0 +1,268 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node.js 25.0 arrives
+description: Node.js 25.0 arrives
+date: 星期二 06 晚上 十月 21o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/597
+origin_site: https://nodeweekly.com/issues/597
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node.js 25.0 arrives" url="https://nodeweekly.com/issues/597" />
+
+<Detail client:only="react">
+	#​597 — October 21, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/597)
+
+Together with 
+
+[![TigerData logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_296/e_make_transparent/co_white,e_outline:30/ri3mjutb8cydvqo9zn6r.png)](https://nodeweekly.com/link/175880/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/n90coxkrapjrjlvlughp.jpg)](https://nodeweekly.com/link/175881/0a4070b383)
+
+[Node.js v25.0.0 (Current) Released](https://nodeweekly.com/link/175881/0a4070b383 "nodejs.org") — The latest cutting edge version of Node has arrived with Web Storage enabled by default, `JSON.stringify` perf improvements, a new `--allow-net` option in the [permission model](https://nodeweekly.com/link/175882/0a4070b383), built-in `Uint8Array` base64/hex conversion, and WebAssembly and JIT optimizations. As shown in the diagram above, this means Node 24 will soon be promoted to being the 'active' LTS release and Node 22 will enter its 'maintenance' LTS phase.
+
+Rafael Gonzaga
+
+💡 [Node v22.21.0 (LTS)](https://nodeweekly.com/link/175883/0a4070b383) has also been released with `--use-env-proxy` and `NODE_USE_ENV_PROXY` HTTP proxy support backported.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/5f609210.png)](https://nodeweekly.com/link/175880/0a4070b383)
+
+[⚡ Supercharge Postgres: 2PB Scale & 1.5T Metrics/Day](https://nodeweekly.com/link/175880/0a4070b383 "www.tigerdata.com") — TigerData, creators of TimescaleDB, are pushing Postgres to new limits: scale to 2PB and 1.5 trillion metrics/day—without proprietary black boxes or hidden tools. With Tiger Postgres, you get massive scale while keeping the SQL you know and love.
+
+TigerData sponsor
+
+**IN BRIEF:**
+
+*   [▶️ The talks from Nordic.js 2025](https://nodeweekly.com/link/175921/0a4070b383) are now up on YouTube, including Joyee Cheung's talk on [▶️ shipping Node.js packages in 2025](https://nodeweekly.com/link/175922/0a4070b383) and Marco Ippolito's about [▶️ Node 23's `node.config.json` file.](https://nodeweekly.com/link/175923/0a4070b383)
+    
+*   No video yet, but Node.js TSC member Ruy Adorno gave a talk at [JSConf](https://nodeweekly.com/link/175919/0a4070b383) last week about [What's New and What's Next in Node.js](https://nodeweekly.com/link/175920/0a4070b383) and has shared his slidedeck which stands well on its own.
+    
+*   Vercel now has [zero-configuration support for NestJS apps.](https://nodeweekly.com/link/175884/0a4070b383)
+    
+
+[Building CLIs with Ace: A Bookmarks App in Node (and Bun)](https://nodeweekly.com/link/175885/0a4070b383 "blog.galaxycloud.app") — [Ace](https://nodeweekly.com/link/175886/0a4070b383) ([GitHub repo](https://nodeweekly.com/link/175887/0a4070b383)) is a CLI app framework built by the [AdonisJS](https://nodeweekly.com/link/175888/0a4070b383) folks that you might not have encountered before.
+
+Harminder Virk
+
+[How a Node.js Backpressure Example Led Me to Explore DTrace](https://nodeweekly.com/link/175889/0a4070b383 "tylerhillery.com") — Backpressure (which you can [learn more about here](https://nodeweekly.com/link/175890/0a4070b383)) is a mechanism by which a stream can prevent producers from sending more data until the consumer(s) catch up. Tyler used DTrace to measure how disabling backpressure causes garbage collection to spike dramatically in Node.js.
+
+Tyler Hillery
+
+[Build a Real-Time Interactive RCS Experience with Node.js and Vonage](https://nodeweekly.com/link/175891/0a4070b383 "developer.vonage.com") — From sports to music, create rich, interactive RCS journeys with Vonage Messages API to boost engagement!
+
+Vonage sponsor
+
+📄 [The Node Test Runner's Built-In Support for Code Coverage](https://nodeweekly.com/link/175892/0a4070b383) – The docs for a feature you might not have known about. Aviv Keller
+
+📄 [Why `typeof null === object`](https://nodeweekly.com/link/175893/0a4070b383) – Digs much deeper into the history than you might expect. Piotr Zarycki
+
+🛠 Code & Tools
+
+[Wretch 3.0: A Wrapper Around `fetch` with an Intuitive Syntax](https://nodeweekly.com/link/175894/0a4070b383 "github.com") — A long standing, mature library that makes `fetch` more friendly and extensible with a fluent-style API. Check [the examples](https://nodeweekly.com/link/175895/0a4070b383) to get a feel for it. [Version 3.0](https://nodeweekly.com/link/175896/0a4070b383) removes the need for polyfills, adds better error handling, smarter retry defaults, upload progress monitoring, and more.
+
+Julien Elbaz
+
+[Graffle 7.3: A Simple GraphQL Client that 'Runs Everywhere'](https://nodeweekly.com/link/175897/0a4070b383 "graffle.js.org") — A GraphQL client library formerly known as `graphql-request`. v7.3 _adds_ CommonJS support for compatibility with Jest and non-ESM systems.
+
+Jason Kuhrt
+
+[DOMPurify 3.3: A Fast, Tolerant XSS Sanitizer for HTML](https://nodeweekly.com/link/175898/0a4070b383 "github.com") — Supports Node plus all modern browsers and is heavily tested. There’s [a live demo here.](https://nodeweekly.com/link/175899/0a4070b383)
+
+Cure53
+
+[ImapFlow: Modern, Easy-to-Use IMAP Client Library](https://nodeweekly.com/link/175900/0a4070b383 "imapflow.com") — IMAP (Internet Message Access Protocol) is a popular protocol used by email clients to work with messages hosted on a remote mail server.
+
+Postal Systems OÜ
+
+[ATSippy: A Reconnecting Compression-Supporting Client for Bluesky's Jetstream Service](https://nodeweekly.com/link/175924/0a4070b383 "github.com") — [Jetstream](https://nodeweekly.com/link/175925/0a4070b383) provides access to a firehose of Bluesky events.
+
+Luke Cashion-Lozell
+
+*   [Faker 10.1](https://nodeweekly.com/link/175901/0a4070b383) – Generate fabricated data to your heart's content.
+    
+*   🤖 [Repomix 1.8](https://nodeweekly.com/link/175902/0a4070b383) – Pack an entire repository into a single, LLM-friendly file. Now with official plugins for _Claude Code._
+    
+*   [node-oracledb 6.10](https://nodeweekly.com/link/175903/0a4070b383) – _Oracle Database_ driver for Node. Now with Advanced Queuing (AQ) support in Thin Mode.
+    
+*   [node-rdkafka 3.6](https://nodeweekly.com/link/175904/0a4070b383) – Node.js bindings for librdkafka (Kafka's C/C++ library).
+    
+*   🤖 [OpenAI Node 6.6](https://nodeweekly.com/link/175905/0a4070b383) – The official Node library for OpenAI's API.
+    
+*   [zx 8.8.5](https://nodeweekly.com/link/175906/0a4070b383) – Google's tool for better Node shell scripting.
+    
+*   [terminal-image 4.1](https://nodeweekly.com/link/175907/0a4070b383) – Display images in the terminal.
+    
+*   [Got 14.6](https://nodeweekly.com/link/175908/0a4070b383) – Human-friendly HTTP request library.
+    
+*   [Pino 10.1](https://nodeweekly.com/link/175909/0a4070b383) – High-speed JSON logger for Node.
+    
+*   [ESLint v9.38.0](https://nodeweekly.com/link/175910/0a4070b383)
+    
+
+📰 Classifieds
+
+🕳️ 🥊 **[Hiring Now:](https://nodeweekly.com/link/175911/0a4070b383)** Join Holepunch to build the peer-to-peer internet. No servers. Open source, privacy-first. Shape the future of apps. Remote worldwide.
+
+* * *
+
+🐱 **[ConfigCat Feature Flag Service](https://nodeweekly.com/link/175912/0a4070b383)** lets you release and roll back features safely without code changes. Set it up in minutes! **[Save 25% now!](https://nodeweekly.com/link/175912/0a4070b383)**
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+*   Dan Abramov shares [some handy insights on how to fix/identify any bug in your code.](https://nodeweekly.com/link/175913/0a4070b383) This is a bread and butter task for most software engineers, but Dan explains the technique of endlessly simplifying an example well.
+    
+*   [Cloudflare Sandboxes](https://nodeweekly.com/link/175914/0a4070b383) is a new service for running untrusted JavaScript (and Python) code in a safe container-based 'sandbox' environment.
+    
+*   [PostgreSQL 18](https://nodeweekly.com/link/175915/0a4070b383) was released recently and [its new asynchronous I/O subsystem](https://nodeweekly.com/link/175916/0a4070b383) yields immediate performance benefits for certain workloads, as seen in [these benchmarks of Postgres 17 vs Postgres 18](https://nodeweekly.com/link/175917/0a4070b383) performed by PlanetScale.
+    
+*   NY Times puzzle fan? Andrew Healey demonstrates [how to solve the NYT's _Pips_ puzzle using TypeScript.](https://nodeweekly.com/link/175918/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​597 — October 21, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/597)
+
+Together with 
+
+[![TigerData logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_296/e_make_transparent/co_white,e_outline:30/ri3mjutb8cydvqo9zn6r.png)](https://nodeweekly.com/link/175880/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/n90coxkrapjrjlvlughp.jpg)](https://nodeweekly.com/link/175881/0a4070b383)
+
+[Node.js v25.0.0 (Current) Released](https://nodeweekly.com/link/175881/0a4070b383 "nodejs.org") — The latest cutting edge version of Node has arrived with Web Storage enabled by default, `JSON.stringify` perf improvements, a new `--allow-net` option in the [permission model](https://nodeweekly.com/link/175882/0a4070b383), built-in `Uint8Array` base64/hex conversion, and WebAssembly and JIT optimizations. As shown in the diagram above, this means Node 24 will soon be promoted to being the 'active' LTS release and Node 22 will enter its 'maintenance' LTS phase.
+
+Rafael Gonzaga
+
+💡 [Node v22.21.0 (LTS)](https://nodeweekly.com/link/175883/0a4070b383) has also been released with `--use-env-proxy` and `NODE_USE_ENV_PROXY` HTTP proxy support backported.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/5f609210.png)](https://nodeweekly.com/link/175880/0a4070b383)
+
+[⚡ Supercharge Postgres: 2PB Scale & 1.5T Metrics/Day](https://nodeweekly.com/link/175880/0a4070b383 "www.tigerdata.com") — TigerData, creators of TimescaleDB, are pushing Postgres to new limits: scale to 2PB and 1.5 trillion metrics/day—without proprietary black boxes or hidden tools. With Tiger Postgres, you get massive scale while keeping the SQL you know and love.
+
+TigerData sponsor
+
+**IN BRIEF:**
+
+* [▶️ The talks from Nordic.js 2025](https://nodeweekly.com/link/175921/0a4070b383) are now up on YouTube, including Joyee Cheung's talk on [▶️ shipping Node.js packages in 2025](https://nodeweekly.com/link/175922/0a4070b383) and Marco Ippolito's about [▶️ Node 23's `node.config.json` file.](https://nodeweekly.com/link/175923/0a4070b383)
+
+* No video yet, but Node.js TSC member Ruy Adorno gave a talk at [JSConf](https://nodeweekly.com/link/175919/0a4070b383) last week about [What's New and What's Next in Node.js](https://nodeweekly.com/link/175920/0a4070b383) and has shared his slidedeck which stands well on its own.
+
+* Vercel now has [zero-configuration support for NestJS apps.](https://nodeweekly.com/link/175884/0a4070b383)
+
+[Building CLIs with Ace: A Bookmarks App in Node (and Bun)](https://nodeweekly.com/link/175885/0a4070b383 "blog.galaxycloud.app") — [Ace](https://nodeweekly.com/link/175886/0a4070b383) ([GitHub repo](https://nodeweekly.com/link/175887/0a4070b383)) is a CLI app framework built by the [AdonisJS](https://nodeweekly.com/link/175888/0a4070b383) folks that you might not have encountered before.
+
+Harminder Virk
+
+[How a Node.js Backpressure Example Led Me to Explore DTrace](https://nodeweekly.com/link/175889/0a4070b383 "tylerhillery.com") — Backpressure (which you can [learn more about here](https://nodeweekly.com/link/175890/0a4070b383)) is a mechanism by which a stream can prevent producers from sending more data until the consumer(s) catch up. Tyler used DTrace to measure how disabling backpressure causes garbage collection to spike dramatically in Node.js.
+
+Tyler Hillery
+
+[Build a Real-Time Interactive RCS Experience with Node.js and Vonage](https://nodeweekly.com/link/175891/0a4070b383 "developer.vonage.com") — From sports to music, create rich, interactive RCS journeys with Vonage Messages API to boost engagement!
+
+Vonage sponsor
+
+📄 [The Node Test Runner's Built-In Support for Code Coverage](https://nodeweekly.com/link/175892/0a4070b383) – The docs for a feature you might not have known about. Aviv Keller
+
+📄 [Why `typeof null === object`](https://nodeweekly.com/link/175893/0a4070b383) – Digs much deeper into the history than you might expect. Piotr Zarycki
+
+🛠 Code & Tools
+
+[Wretch 3.0: A Wrapper Around `fetch` with an Intuitive Syntax](https://nodeweekly.com/link/175894/0a4070b383 "github.com") — A long standing, mature library that makes `fetch` more friendly and extensible with a fluent-style API. Check [the examples](https://nodeweekly.com/link/175895/0a4070b383) to get a feel for it. [Version 3.0](https://nodeweekly.com/link/175896/0a4070b383) removes the need for polyfills, adds better error handling, smarter retry defaults, upload progress monitoring, and more.
+
+Julien Elbaz
+
+[Graffle 7.3: A Simple GraphQL Client that 'Runs Everywhere'](https://nodeweekly.com/link/175897/0a4070b383 "graffle.js.org") — A GraphQL client library formerly known as `graphql-request`. v7.3 *adds* CommonJS support for compatibility with Jest and non-ESM systems.
+
+Jason Kuhrt
+
+[DOMPurify 3.3: A Fast, Tolerant XSS Sanitizer for HTML](https://nodeweekly.com/link/175898/0a4070b383 "github.com") — Supports Node plus all modern browsers and is heavily tested. There’s [a live demo here.](https://nodeweekly.com/link/175899/0a4070b383)
+
+Cure53
+
+[ImapFlow: Modern, Easy-to-Use IMAP Client Library](https://nodeweekly.com/link/175900/0a4070b383 "imapflow.com") — IMAP (Internet Message Access Protocol) is a popular protocol used by email clients to work with messages hosted on a remote mail server.
+
+Postal Systems OÜ
+
+[ATSippy: A Reconnecting Compression-Supporting Client for Bluesky's Jetstream Service](https://nodeweekly.com/link/175924/0a4070b383 "github.com") — [Jetstream](https://nodeweekly.com/link/175925/0a4070b383) provides access to a firehose of Bluesky events.
+
+Luke Cashion-Lozell
+
+* [Faker 10.1](https://nodeweekly.com/link/175901/0a4070b383) – Generate fabricated data to your heart's content.
+
+* 🤖 [Repomix 1.8](https://nodeweekly.com/link/175902/0a4070b383) – Pack an entire repository into a single, LLM-friendly file. Now with official plugins for *Claude Code.*
+
+* [node-oracledb 6.10](https://nodeweekly.com/link/175903/0a4070b383) – *Oracle Database* driver for Node. Now with Advanced Queuing (AQ) support in Thin Mode.
+
+* [node-rdkafka 3.6](https://nodeweekly.com/link/175904/0a4070b383) – Node.js bindings for librdkafka (Kafka's C/C++ library).
+
+* 🤖 [OpenAI Node 6.6](https://nodeweekly.com/link/175905/0a4070b383) – The official Node library for OpenAI's API.
+
+* [zx 8.8.5](https://nodeweekly.com/link/175906/0a4070b383) – Google's tool for better Node shell scripting.
+
+* [terminal-image 4.1](https://nodeweekly.com/link/175907/0a4070b383) – Display images in the terminal.
+
+* [Got 14.6](https://nodeweekly.com/link/175908/0a4070b383) – Human-friendly HTTP request library.
+
+* [Pino 10.1](https://nodeweekly.com/link/175909/0a4070b383) – High-speed JSON logger for Node.
+
+* [ESLint v9.38.0](https://nodeweekly.com/link/175910/0a4070b383)
+
+📰 Classifieds
+
+🕳️ 🥊 **[Hiring Now:](https://nodeweekly.com/link/175911/0a4070b383)** Join Holepunch to build the peer-to-peer internet. No servers. Open source, privacy-first. Shape the future of apps. Remote worldwide.
+
+***
+
+🐱 **[ConfigCat Feature Flag Service](https://nodeweekly.com/link/175912/0a4070b383)** lets you release and roll back features safely without code changes. Set it up in minutes! **[Save 25% now!](https://nodeweekly.com/link/175912/0a4070b383)**
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+* Dan Abramov shares [some handy insights on how to fix/identify any bug in your code.](https://nodeweekly.com/link/175913/0a4070b383) This is a bread and butter task for most software engineers, but Dan explains the technique of endlessly simplifying an example well.
+
+* [Cloudflare Sandboxes](https://nodeweekly.com/link/175914/0a4070b383) is a new service for running untrusted JavaScript (and Python) code in a safe container-based 'sandbox' environment.
+
+* [PostgreSQL 18](https://nodeweekly.com/link/175915/0a4070b383) was released recently and [its new asynchronous I/O subsystem](https://nodeweekly.com/link/175916/0a4070b383) yields immediate performance benefits for certain workloads, as seen in [these benchmarks of Postgres 17 vs Postgres 18](https://nodeweekly.com/link/175917/0a4070b383) performed by PlanetScale.
+
+* NY Times puzzle fan? Andrew Healey demonstrates [how to solve the NYT's *Pips* puzzle using TypeScript.](https://nodeweekly.com/link/175918/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
