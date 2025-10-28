@@ -1,0 +1,276 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: The reality of adapting Deno code to run on Node
+description: The reality of adapting Deno code to run on Node
+date: 星期二 06 晚上 十月 28o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/598
+origin_site: https://nodeweekly.com/issues/598
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="The reality of adapting Deno code to run on Node" url="https://nodeweekly.com/issues/598" />
+
+<Detail client:only="react">
+	#​598 — October 28, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/598)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://nodeweekly.com/link/176150/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ftnd6w7pjsuswm4jraj0.jpg)](https://nodeweekly.com/link/176151/0a4070b383)
+
+[Awesome Node: Over 500 Curated Packages, Resources and Links](https://nodeweekly.com/link/176151/0a4070b383 "github.com") — It’s been more than four years since we linked to Sindre's handy resource, but it continues to get updates and tweaks (and, if you want, [you can contribute a submission too](https://nodeweekly.com/link/176152/0a4070b383) – though the bar is quite high).
+
+Sindre Sorhus
+
+💡 There are several similar lists you might find useful too, including [Awesome Node.js Security resources](https://nodeweekly.com/link/176153/0a4070b383), [Awesome SaaS Templates](https://nodeweekly.com/link/176154/0a4070b383), [Awesome npm Security Best Practices](https://nodeweekly.com/link/176155/0a4070b383), and [Awesome Regex](https://nodeweekly.com/link/176156/0a4070b383).
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/e0f60105.jpg)](https://nodeweekly.com/link/176150/0a4070b383)
+
+[Ship Code That Breaks Less: Sentry AI Code Review](https://nodeweekly.com/link/176150/0a4070b383 "sentry.io") — Sentry’s AI Code Review inspects PRs using real error and performance signals from your codebase. It surfaces high-impact bugs, explains root causes, and generates targeted unit tests in separate branches. Free while in open beta.
+
+Sentry sponsor
+
+**IN BRIEF:**
+
+*   **To LTS or not to LTS?** There's a quirk right now where no LTS release of Node.js is designated 'active' while we await the imminent release of a new version of v24. This quirk [caused Node's downloads page to break last week](https://nodeweekly.com/link/176157/0a4070b383). As a fix, [Node v24.10.0](https://nodeweekly.com/link/176158/0a4070b383) is now offered as the active LTS release, though that version was released as 'current' (the role now taken by [v25](https://nodeweekly.com/link/176159/0a4070b383)).
+    
+*   Lizz Parody shares [a quick update on the state of the Express.js project](https://nodeweekly.com/link/176160/0a4070b383) and its recent steps forward.
+    
+*   [Node-RED](https://nodeweekly.com/link/176161/0a4070b383) is a popular 'low code' programming environment built on top of Node. [Node-RED Con 2025](https://nodeweekly.com/link/176162/0a4070b383) is a free, online event taking place next week (November 4) highlighting how Node-RED is being used in industrial engineering, smart homes, and even to play [Factorio!](https://nodeweekly.com/link/176163/0a4070b383)
+    
+
+[What I Learned Porting Mastro from Deno to Node](https://nodeweekly.com/link/176164/0a4070b383 "mastrojs.github.io") — [Mastro](https://nodeweekly.com/link/176165/0a4070b383) is a web framework and site generator originally for [Deno](https://nodeweekly.com/link/176166/0a4070b383) only. But if Deno is compatible with Node, is it easy to make Deno-facing code run on Node too? Not exactly, but it’s do-able!
+
+Mauro Bieg
+
+[Building from the Base Up: Rethinking Starter Kits in AdonisJS](https://nodeweekly.com/link/176167/0a4070b383 "adonisjs.com") — [Adonis](https://nodeweekly.com/link/176168/0a4070b383) is a modern web framework for Node that offers a lot out of the box and its newest ‘starter kit’ includes a set of base components (e.g. buttons, form fields, and layouts) along with a signup and login system to help you get started building an app quickly.
+
+Harminder Virk
+
+📄 [Rethinking Async Loops in JavaScript](https://nodeweekly.com/link/176169/0a4070b383) – A look at some quirks with using `await` in loops or `map()` and some alternatives that actually achieve what you were probably trying to do. Matt Smith
+
+📺 [How I Built an Auth System to Handle 1.9B Logins Per Month with Node](https://nodeweekly.com/link/176170/0a4070b383) Sergio Salcedo
+
+📄 [Will New npm Security Measures Stop the Next Shai-Hulud?](https://nodeweekly.com/link/176171/0a4070b383) ReversingLabs
+
+🛠 Code & Tools
+
+[Vitest 4.0 Released: The Vite-Native Testing Framework](https://nodeweekly.com/link/176172/0a4070b383 "vitest.dev") — The Vite-powered, Jest-compatible testing framework adds [visual regression testing](https://nodeweekly.com/link/176173/0a4070b383), makes [‘Browser Mode’](https://nodeweekly.com/link/176174/0a4070b383) stable (runs tests in a browser directly), adds Playwright Traces support, and more. You can [compare it with other test runners here.](https://nodeweekly.com/link/176175/0a4070b383)
+
+VoidZero and Contributors
+
+💡 VoidZero's Alexander Lichter has [put together a ViteConf 2025 recap](https://nodeweekly.com/link/176176/0a4070b383) covering recent news in the Vite ecosystem, like Vite+, Oxlint's JS plugin support, Nitro v3, and more.
+
+👍 [emoji-regex: A Regular Expression to Match All Emoji-Only Symbols](https://nodeweekly.com/link/176177/0a4070b383 "github.com") — A regex-based approach to match emoji symbols and sequences (including textual representations of emoji) as per the Unicode Standard.
+
+Mathias Bynens
+
+[Automate Invoice Creation with a Simple Python Script](https://nodeweekly.com/link/176178/0a4070b383 "developer-api.foxit.com") — Learn to use Word templates + JSON data to generate custom invoices via the Foxit Document Generation API.
+
+Foxit Software sponsor
+
+💬 [GramIO: A Framework for Creating Telegram Bots](https://nodeweekly.com/link/176179/0a4070b383 "gramio.dev") — A multi-runtime (Node, Bun and Deno) framework for creating bots for the [Telegram](https://nodeweekly.com/link/176180/0a4070b383) messaging app using Telegram’s [official Bot API.](https://nodeweekly.com/link/176181/0a4070b383) – [GitHub repo.](https://nodeweekly.com/link/176182/0a4070b383)
+
+Kravets
+
+💡 [telegraf.js](https://nodeweekly.com/link/176183/0a4070b383) is another Node-specific option in this space.
+
+[Gasket: CLI Tool to Discover 'Bridges' Between JavaScript and Native Code](https://nodeweekly.com/link/176184/0a4070b383 "github.com") — Dynamic analysis tool that inspects the in-memory layout of JavaScript function objects to identify those that cross the language boundary. This is quite niche, but built by the authors of [a paper](https://nodeweekly.com/link/176185/0a4070b383) about identifying such bridges for security purposes.
+
+Alexopoulos and Sotiropoulos
+
+[workerpool 10.0: Offload Tasks to a Pool of Workers](https://nodeweekly.com/link/176186/0a4070b383 "github.com") — A long established thread pool library that works not only on Node but also in the browser.
+
+Jos de Jong
+
+*   [OpenAI Node 6.7](https://nodeweekly.com/link/176187/0a4070b383) – The official Node library for OpenAI's family of APIs. Adds support for [Zod 4](https://nodeweekly.com/link/176188/0a4070b383) schemas.
+    
+*   [Electron 39.0](https://nodeweekly.com/link/176189/0a4070b383) – The cross-platform desktop app framework. Upgrades to Chromium 142.
+    
+*   [vm2 3.10](https://nodeweekly.com/link/176190/0a4070b383) – Sandbox for Node that can run untrusted code with whitelisted modules.
+    
+*   [ESLint Markdown Language Plugin 7.5](https://nodeweekly.com/link/176191/0a4070b383) – Lint JS/TSX code blocks in Markdown documents.
+    
+*   [pnpm 10.19](https://nodeweekly.com/link/176207/0a4070b383) – Fast, space efficient package manager.
+    
+*   [Prisma 6.18](https://nodeweekly.com/link/176193/0a4070b383) – Next-gen Node.js + TypeScript ORM.
+    
+*   [node-soap 1.6](https://nodeweekly.com/link/176194/0a4070b383) – A SOAP client and server library.
+    
+*   [Hexo 8.1](https://nodeweekly.com/link/176195/0a4070b383) – Popular blog framework/ generator.
+    
+*   [node-redis 5.9](https://nodeweekly.com/link/176196/0a4070b383) – Redis/Valkey client library.
+    
+*   [ini 6.0](https://nodeweekly.com/link/176197/0a4070b383) – npm's INI file parser/serializer.
+    
+
+📰 Classifieds
+
+🐱 **[ConfigCat Feature Flag Service](https://nodeweekly.com/link/176198/0a4070b383)** lets you release and roll back features safely without code changes. Set it up in minutes! **[Save 25% now!](https://nodeweekly.com/link/176198/0a4070b383)**
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+*   [vite-plugin-use-golang](https://nodeweekly.com/link/176199/0a4070b383) is a curious new Vite plugin that lets you add a `"use golang"` directive to the top of a 'JavaScript' file but then actually write [Go](https://nodeweekly.com/link/176200/0a4070b383) code instead (which is then compiled to WebAssembly).
+    
+*   It's less of a question on the backend, but Jake Archibald considers [the benefits of `import`ing vs `fetch`ing JSON](https://nodeweekly.com/link/176201/0a4070b383), now that the former is possible in most browsers.
+    
+*   Over on _X_, Tzvetan Milkov [shows off an interesting proof of concept](https://nodeweekly.com/link/176202/0a4070b383) of React driving the [Dear ImGui](https://nodeweekly.com/link/176203/0a4070b383) GUI library with the [Hermes](https://nodeweekly.com/link/176204/0a4070b383) JS engine to create fully native apps.
+    
+*   [You Already Have a Git Server](https://nodeweekly.com/link/176205/0a4070b383) is a fantastic reminder of the decentralized power of Git and `ssh`.
+    
+*   At last month's CascadiaJS, Annie Sexton gave [▶️ a talk sharing the origin story of JavaScript](https://nodeweekly.com/link/176206/0a4070b383).
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​598 — October 28, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/598)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://nodeweekly.com/link/176150/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ftnd6w7pjsuswm4jraj0.jpg)](https://nodeweekly.com/link/176151/0a4070b383)
+
+[Awesome Node: Over 500 Curated Packages, Resources and Links](https://nodeweekly.com/link/176151/0a4070b383 "github.com") — It’s been more than four years since we linked to Sindre's handy resource, but it continues to get updates and tweaks (and, if you want, [you can contribute a submission too](https://nodeweekly.com/link/176152/0a4070b383) – though the bar is quite high).
+
+Sindre Sorhus
+
+💡 There are several similar lists you might find useful too, including [Awesome Node.js Security resources](https://nodeweekly.com/link/176153/0a4070b383), [Awesome SaaS Templates](https://nodeweekly.com/link/176154/0a4070b383), [Awesome npm Security Best Practices](https://nodeweekly.com/link/176155/0a4070b383), and [Awesome Regex](https://nodeweekly.com/link/176156/0a4070b383).
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/e0f60105.jpg)](https://nodeweekly.com/link/176150/0a4070b383)
+
+[Ship Code That Breaks Less: Sentry AI Code Review](https://nodeweekly.com/link/176150/0a4070b383 "sentry.io") — Sentry’s AI Code Review inspects PRs using real error and performance signals from your codebase. It surfaces high-impact bugs, explains root causes, and generates targeted unit tests in separate branches. Free while in open beta.
+
+Sentry sponsor
+
+**IN BRIEF:**
+
+* **To LTS or not to LTS?** There's a quirk right now where no LTS release of Node.js is designated 'active' while we await the imminent release of a new version of v24. This quirk [caused Node's downloads page to break last week](https://nodeweekly.com/link/176157/0a4070b383). As a fix, [Node v24.10.0](https://nodeweekly.com/link/176158/0a4070b383) is now offered as the active LTS release, though that version was released as 'current' (the role now taken by [v25](https://nodeweekly.com/link/176159/0a4070b383)).
+
+* Lizz Parody shares [a quick update on the state of the Express.js project](https://nodeweekly.com/link/176160/0a4070b383) and its recent steps forward.
+
+* [Node-RED](https://nodeweekly.com/link/176161/0a4070b383) is a popular 'low code' programming environment built on top of Node. [Node-RED Con 2025](https://nodeweekly.com/link/176162/0a4070b383) is a free, online event taking place next week (November 4) highlighting how Node-RED is being used in industrial engineering, smart homes, and even to play [Factorio!](https://nodeweekly.com/link/176163/0a4070b383)
+
+[What I Learned Porting Mastro from Deno to Node](https://nodeweekly.com/link/176164/0a4070b383 "mastrojs.github.io") — [Mastro](https://nodeweekly.com/link/176165/0a4070b383) is a web framework and site generator originally for [Deno](https://nodeweekly.com/link/176166/0a4070b383) only. But if Deno is compatible with Node, is it easy to make Deno-facing code run on Node too? Not exactly, but it’s do-able!
+
+Mauro Bieg
+
+[Building from the Base Up: Rethinking Starter Kits in AdonisJS](https://nodeweekly.com/link/176167/0a4070b383 "adonisjs.com") — [Adonis](https://nodeweekly.com/link/176168/0a4070b383) is a modern web framework for Node that offers a lot out of the box and its newest ‘starter kit’ includes a set of base components (e.g. buttons, form fields, and layouts) along with a signup and login system to help you get started building an app quickly.
+
+Harminder Virk
+
+📄 [Rethinking Async Loops in JavaScript](https://nodeweekly.com/link/176169/0a4070b383) – A look at some quirks with using `await` in loops or `map()` and some alternatives that actually achieve what you were probably trying to do. Matt Smith
+
+📺 [How I Built an Auth System to Handle 1.9B Logins Per Month with Node](https://nodeweekly.com/link/176170/0a4070b383) Sergio Salcedo
+
+📄 [Will New npm Security Measures Stop the Next Shai-Hulud?](https://nodeweekly.com/link/176171/0a4070b383) ReversingLabs
+
+🛠 Code & Tools
+
+[Vitest 4.0 Released: The Vite-Native Testing Framework](https://nodeweekly.com/link/176172/0a4070b383 "vitest.dev") — The Vite-powered, Jest-compatible testing framework adds [visual regression testing](https://nodeweekly.com/link/176173/0a4070b383), makes [‘Browser Mode’](https://nodeweekly.com/link/176174/0a4070b383) stable (runs tests in a browser directly), adds Playwright Traces support, and more. You can [compare it with other test runners here.](https://nodeweekly.com/link/176175/0a4070b383)
+
+VoidZero and Contributors
+
+💡 VoidZero's Alexander Lichter has [put together a ViteConf 2025 recap](https://nodeweekly.com/link/176176/0a4070b383) covering recent news in the Vite ecosystem, like Vite+, Oxlint's JS plugin support, Nitro v3, and more.
+
+👍 [emoji-regex: A Regular Expression to Match All Emoji-Only Symbols](https://nodeweekly.com/link/176177/0a4070b383 "github.com") — A regex-based approach to match emoji symbols and sequences (including textual representations of emoji) as per the Unicode Standard.
+
+Mathias Bynens
+
+[Automate Invoice Creation with a Simple Python Script](https://nodeweekly.com/link/176178/0a4070b383 "developer-api.foxit.com") — Learn to use Word templates + JSON data to generate custom invoices via the Foxit Document Generation API.
+
+Foxit Software sponsor
+
+💬 [GramIO: A Framework for Creating Telegram Bots](https://nodeweekly.com/link/176179/0a4070b383 "gramio.dev") — A multi-runtime (Node, Bun and Deno) framework for creating bots for the [Telegram](https://nodeweekly.com/link/176180/0a4070b383) messaging app using Telegram’s [official Bot API.](https://nodeweekly.com/link/176181/0a4070b383) – [GitHub repo.](https://nodeweekly.com/link/176182/0a4070b383)
+
+Kravets
+
+💡 [telegraf.js](https://nodeweekly.com/link/176183/0a4070b383) is another Node-specific option in this space.
+
+[Gasket: CLI Tool to Discover 'Bridges' Between JavaScript and Native Code](https://nodeweekly.com/link/176184/0a4070b383 "github.com") — Dynamic analysis tool that inspects the in-memory layout of JavaScript function objects to identify those that cross the language boundary. This is quite niche, but built by the authors of [a paper](https://nodeweekly.com/link/176185/0a4070b383) about identifying such bridges for security purposes.
+
+Alexopoulos and Sotiropoulos
+
+[workerpool 10.0: Offload Tasks to a Pool of Workers](https://nodeweekly.com/link/176186/0a4070b383 "github.com") — A long established thread pool library that works not only on Node but also in the browser.
+
+Jos de Jong
+
+* [OpenAI Node 6.7](https://nodeweekly.com/link/176187/0a4070b383) – The official Node library for OpenAI's family of APIs. Adds support for [Zod 4](https://nodeweekly.com/link/176188/0a4070b383) schemas.
+
+* [Electron 39.0](https://nodeweekly.com/link/176189/0a4070b383) – The cross-platform desktop app framework. Upgrades to Chromium 142.
+
+* [vm2 3.10](https://nodeweekly.com/link/176190/0a4070b383) – Sandbox for Node that can run untrusted code with whitelisted modules.
+
+* [ESLint Markdown Language Plugin 7.5](https://nodeweekly.com/link/176191/0a4070b383) – Lint JS/TSX code blocks in Markdown documents.
+
+* [pnpm 10.19](https://nodeweekly.com/link/176207/0a4070b383) – Fast, space efficient package manager.
+
+* [Prisma 6.18](https://nodeweekly.com/link/176193/0a4070b383) – Next-gen Node.js + TypeScript ORM.
+
+* [node-soap 1.6](https://nodeweekly.com/link/176194/0a4070b383) – A SOAP client and server library.
+
+* [Hexo 8.1](https://nodeweekly.com/link/176195/0a4070b383) – Popular blog framework/ generator.
+
+* [node-redis 5.9](https://nodeweekly.com/link/176196/0a4070b383) – Redis/Valkey client library.
+
+* [ini 6.0](https://nodeweekly.com/link/176197/0a4070b383) – npm's INI file parser/serializer.
+
+📰 Classifieds
+
+🐱 **[ConfigCat Feature Flag Service](https://nodeweekly.com/link/176198/0a4070b383)** lets you release and roll back features safely without code changes. Set it up in minutes! **[Save 25% now!](https://nodeweekly.com/link/176198/0a4070b383)**
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+* [vite-plugin-use-golang](https://nodeweekly.com/link/176199/0a4070b383) is a curious new Vite plugin that lets you add a `"use golang"` directive to the top of a 'JavaScript' file but then actually write [Go](https://nodeweekly.com/link/176200/0a4070b383) code instead (which is then compiled to WebAssembly).
+
+* It's less of a question on the backend, but Jake Archibald considers [the benefits of `import`ing vs `fetch`ing JSON](https://nodeweekly.com/link/176201/0a4070b383), now that the former is possible in most browsers.
+
+* Over on *X*, Tzvetan Milkov [shows off an interesting proof of concept](https://nodeweekly.com/link/176202/0a4070b383) of React driving the [Dear ImGui](https://nodeweekly.com/link/176203/0a4070b383) GUI library with the [Hermes](https://nodeweekly.com/link/176204/0a4070b383) JS engine to create fully native apps.
+
+* [You Already Have a Git Server](https://nodeweekly.com/link/176205/0a4070b383) is a fantastic reminder of the decentralized power of Git and `ssh`.
+
+* At last month's CascadiaJS, Annie Sexton gave [▶️ a talk sharing the origin story of JavaScript](https://nodeweekly.com/link/176206/0a4070b383).
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
