@@ -1,0 +1,250 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Are we getting locked in by directives?
+description: Are we getting locked in by directives?
+date: 星期三 05 下午 十月 29o 2025
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/449
+origin_site: https://react.statuscode.com/issues/449
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Are we getting locked in by directives?" url="https://react.statuscode.com/issues/449" />
+
+<Detail client:only="react">
+	#​449 — October 29, 2025
+
+[Read on the Web](https://react.statuscode.com/issues/449)
+
+🫢 Unfortunately I forgot to mention it in the [last issue](https://react.statuscode.com/issues/448), but last week was a scheduled break, so you didn't miss anything – we're now back each week until the Christmas break in December! :-)  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![Crowdin](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_180,h_37/e_make_transparent/co_white,e_outline:4/mxvvmw4iegftrv72yi4c.png)](https://react.statuscode.com/link/176241/5d0bbb4a61)
+
+⚛️ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/riqagnil9pbsc5si5rxs.jpg)](https://react.statuscode.com/link/176242/5d0bbb4a61)
+
+[A Recap of _React Conf 2025_](https://react.statuscode.com/link/176242/5d0bbb4a61 "react.dev") — An official roundup of the year's largest official React event that took place earlier this month, covering areas like new React 19.2 features, React Compiler 1.0, big changes to React Native, and links to the most essential talks at the event.
+
+Matt Carroll and Ricky Hanlon
+
+💡 The Remix folks [have a similar roundup of _Remix Jam_](https://react.statuscode.com/link/176243/5d0bbb4a61) which took place the week after React Conf and where [Remix 3 was first unveiled.](https://react.statuscode.com/link/176244/5d0bbb4a61)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a7c9050e.jpg)](https://react.statuscode.com/link/176241/5d0bbb4a61)
+
+[🌐 Build International Next.js Apps with Confidence](https://react.statuscode.com/link/176241/5d0bbb4a61 "learn.next-intl.dev") — Master the art of holistic internationalization, from the fundamentals to advanced patterns, all through a real-world project. Now 25% off for subscribers of React Status!
+
+next-intl & Crowdin sponsor
+
+[Directives and the Platform Boundary](https://react.statuscode.com/link/176245/5d0bbb4a61 "tanstack.com") — First there was the `"use strict"` directive to opt in to strict mode in JavaScript, but now you’ll encounter `use client`, `use server`, `use no memo`, and more, despite not being standard JS features at all. Tanner thinks this proliferation of directives comes at a cost and a risk of framework and tooling lock-in.
+
+Tanner Linsley (TanStack)
+
+**IN BRIEF:**
+
+*   🤔 [`use no memo`](https://react.statuscode.com/link/176246/5d0bbb4a61) is a new React directive to prevent a function from being optimized by [React Compiler.](https://react.statuscode.com/link/176247/5d0bbb4a61)
+    
+*   📱 Loren Stewart [built the same app ten different times](https://react.statuscode.com/link/176248/5d0bbb4a61) to compare the performance differences between approaches (including two React-based ones) on mobile devices in particular.
+    
+*   On _X_, Tzvetan Milkov [showed off an interesting proof of concept](https://react.statuscode.com/link/176249/5d0bbb4a61) of React driving the [Dear ImGui](https://react.statuscode.com/link/176250/5d0bbb4a61) GUI library with the [Hermes](https://react.statuscode.com/link/176251/5d0bbb4a61) JS engine as an alternative way to create native apps.
+    
+
+[How to Fix Any Bug](https://react.statuscode.com/link/176252/5d0bbb4a61 "overreacted.io") — Dan Abramov ran into a bug when working with React Router and AI failed to solve it. Why? It didn’t have a good ‘repro’ to work with – that is, a set of instructions and the simplest code needed to _reproduce_ the bug. Dan explains the importance of such repros when finding bugs and what his bug ultimately turned out to be.
+
+Dan Abramov
+
+📄 [The Same App in React and Elm: A Side-by-Side Comparison](https://react.statuscode.com/link/176253/5d0bbb4a61) Christian Ekrem
+
+📄 [One Year with Next.js App Router — Why We're Moving On](https://react.statuscode.com/link/176288/5d0bbb4a61) – A critique of React Server Components and Next.js 15. Paper Clover
+
+📄 [I Tried React 19’s 'Activity' Component: Here’s What I Learned](https://react.statuscode.com/link/176254/5d0bbb4a61) Partha Roy
+
+📄 [React and Remix Choose Different Futures](https://react.statuscode.com/link/176255/5d0bbb4a61) Brendan McLoughlin
+
+🛠  Code, Tools & Libraries
+
+[Next.js 16 Released](https://react.statuscode.com/link/176256/5d0bbb4a61 "nextjs.org") — Launched alongside last week’s Next.js Conf (you can [▶️ watch the livestream again here](https://react.statuscode.com/link/176257/5d0bbb4a61)), the popular React framework gains explicit caching components, an MCP server for AI-assisted debugging, both Turbopack and React Compiler support go stable, and more.
+
+Lai, Story, Markbåge, and Neutkens
+
+💡 A point release, [Next.js 16.0.1](https://react.statuscode.com/link/176258/5d0bbb4a61) was released yesterday.
+
+[Solito 5.0: A Way to Use React Native with Next.js](https://react.statuscode.com/link/176259/5d0bbb4a61 "solito.dev") — [Solito](https://react.statuscode.com/link/176260/5d0bbb4a61) is a wrapper around React Navigation and Next.js that lets you share navigation code when building cross-platform apps. v5.0 supports Next.js 16 and Expo 54, and also drops React Native Web as a dependency.
+
+Fernando Rojo
+
+[Tuple - The Fastest Way to Review AI Slop](https://react.statuscode.com/link/176261/5d0bbb4a61) — Wasting hours debugging AI code? Tuple brings your team together to figure it out, clean it up, and ship.
+
+Tuple sponsor
+
+[uikit 1.0: Build 3D UIs in _React Three Fiber_ Apps](https://react.statuscode.com/link/176262/5d0bbb4a61 "pmndrs.github.io") — Ideal for games, XR (VR/AR), and web-based spatial-style apps. [v1.0](https://react.statuscode.com/link/176263/5d0bbb4a61) takes some steps to align more closely with commonly accepted HTML/CSS behavior and techniques. [GitHub repo.](https://react.statuscode.com/link/176264/5d0bbb4a61)
+
+Poimandres
+
+[Obra Icons: A Simple, Consistent Set of Icons for User Interfaces](https://react.statuscode.com/link/176265/5d0bbb4a61 "icons.obra.studio") — More than 1000 icons that you can download as SVG, PNG, or [use this React component](https://react.statuscode.com/link/176266/5d0bbb4a61) to quickly bring them into your app.
+
+Obra Studio
+
+*   📊 [Recharts 3.3](https://react.statuscode.com/link/176267/5d0bbb4a61) – A chart library built on top of D3. The [homepage](https://react.statuscode.com/link/176268/5d0bbb4a61) has examples and demos. v3.3 gives charts the direct ability to handle responsive sizing.
+    
+*   📅 [React Date Picker 8.8](https://react.statuscode.com/link/176269/5d0bbb4a61) – Date picker component. Now with [enhanced docs.](https://react.statuscode.com/link/176270/5d0bbb4a61)
+    
+*   [react-intersection-observer 10.0](https://react.statuscode.com/link/176271/5d0bbb4a61) – Uses the Intersection Observer API to take action when an element enters or leaves the viewport.
+    
+*   [ReactPivot 6.1](https://react.statuscode.com/link/176272/5d0bbb4a61) – Data grid component with pivot-table-like functionality. ([Demo.](https://react.statuscode.com/link/176273/5d0bbb4a61))
+    
+*   [React Stripe.js 5.3](https://react.statuscode.com/link/176274/5d0bbb4a61) – Components for Stripe.js and Stripe Elements.
+    
+*   [Vitest 4.0](https://react.statuscode.com/link/176275/5d0bbb4a61) – The Vite-native testing framework.
+    
+*   [Ink 6.4](https://react.statuscode.com/link/176276/5d0bbb4a61) – Use React to build CLI apps.
+    
+*   [Vite 7.2.0 Beta 1](https://react.statuscode.com/link/176277/5d0bbb4a61) – [Changelogs.](https://react.statuscode.com/link/176278/5d0bbb4a61)
+    
+*   [Astro 5.15](https://react.statuscode.com/link/176279/5d0bbb4a61)
+    
+
+📢  Elsewhere in the ecosystem
+
+Some other interesting stories in the broader landscape:
+
+*   It's been many years since [Backbone.js](https://react.statuscode.com/link/176280/5d0bbb4a61) was frequently mentioned in conversation, but it was a big deal in the pre-React era and Panphora looks at [React vs Backbone in 2025](https://react.statuscode.com/link/176281/5d0bbb4a61) while pondering how much progress we've made in 15 years.
+    
+*   [Node.js v25.1.0 (Current)](https://react.statuscode.com/link/176282/5d0bbb4a61), [v24.11.0 'Krypton' (Active LTS)](https://react.statuscode.com/link/176283/5d0bbb4a61), and [v22.21.1 (LTS)](https://react.statuscode.com/link/176284/5d0bbb4a61) were released last night. v24.11.0 is notable as marking the transition of Node v24 into being the active LTS version.
+    
+*   [A look at solving the New York Times _Pips_ puzzle](https://react.statuscode.com/link/176285/5d0bbb4a61) with TypeScript and React.
+    
+*   🐘 There's a new free tier of Postgres hosting in town, if you need it, with [Tiger Data's newest plan.](https://react.statuscode.com/link/176286/5d0bbb4a61)
+    
+*   There are only a few days left to [take the latest _State of JS_ survey.](https://react.statuscode.com/link/176287/5d0bbb4a61)
+    
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​449 — October 29, 2025
+
+[Read on the Web](https://react.statuscode.com/issues/449)
+
+🫢 Unfortunately I forgot to mention it in the [last issue](https://react.statuscode.com/issues/448), but last week was a scheduled break, so you didn't miss anything – we're now back each week until the Christmas break in December! :-)\
+\_\_\
+*Your editor, Peter Cooper*
+
+Together with 
+
+[![Crowdin](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_180,h_37/e_make_transparent/co_white,e_outline:4/mxvvmw4iegftrv72yi4c.png)](https://react.statuscode.com/link/176241/5d0bbb4a61)
+
+⚛️ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/riqagnil9pbsc5si5rxs.jpg)](https://react.statuscode.com/link/176242/5d0bbb4a61)
+
+[A Recap of *React Conf 2025*](https://react.statuscode.com/link/176242/5d0bbb4a61 "react.dev") — An official roundup of the year's largest official React event that took place earlier this month, covering areas like new React 19.2 features, React Compiler 1.0, big changes to React Native, and links to the most essential talks at the event.
+
+Matt Carroll and Ricky Hanlon
+
+💡 The Remix folks [have a similar roundup of *Remix Jam*](https://react.statuscode.com/link/176243/5d0bbb4a61) which took place the week after React Conf and where [Remix 3 was first unveiled.](https://react.statuscode.com/link/176244/5d0bbb4a61)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a7c9050e.jpg)](https://react.statuscode.com/link/176241/5d0bbb4a61)
+
+[🌐 Build International Next.js Apps with Confidence](https://react.statuscode.com/link/176241/5d0bbb4a61 "learn.next-intl.dev") — Master the art of holistic internationalization, from the fundamentals to advanced patterns, all through a real-world project. Now 25% off for subscribers of React Status!
+
+next-intl & Crowdin sponsor
+
+[Directives and the Platform Boundary](https://react.statuscode.com/link/176245/5d0bbb4a61 "tanstack.com") — First there was the `"use strict"` directive to opt in to strict mode in JavaScript, but now you’ll encounter `use client`, `use server`, `use no memo`, and more, despite not being standard JS features at all. Tanner thinks this proliferation of directives comes at a cost and a risk of framework and tooling lock-in.
+
+Tanner Linsley (TanStack)
+
+**IN BRIEF:**
+
+* 🤔 [`use no memo`](https://react.statuscode.com/link/176246/5d0bbb4a61) is a new React directive to prevent a function from being optimized by [React Compiler.](https://react.statuscode.com/link/176247/5d0bbb4a61)
+
+* 📱 Loren Stewart [built the same app ten different times](https://react.statuscode.com/link/176248/5d0bbb4a61) to compare the performance differences between approaches (including two React-based ones) on mobile devices in particular.
+
+* On *X*, Tzvetan Milkov [showed off an interesting proof of concept](https://react.statuscode.com/link/176249/5d0bbb4a61) of React driving the [Dear ImGui](https://react.statuscode.com/link/176250/5d0bbb4a61) GUI library with the [Hermes](https://react.statuscode.com/link/176251/5d0bbb4a61) JS engine as an alternative way to create native apps.
+
+[How to Fix Any Bug](https://react.statuscode.com/link/176252/5d0bbb4a61 "overreacted.io") — Dan Abramov ran into a bug when working with React Router and AI failed to solve it. Why? It didn’t have a good ‘repro’ to work with – that is, a set of instructions and the simplest code needed to *reproduce* the bug. Dan explains the importance of such repros when finding bugs and what his bug ultimately turned out to be.
+
+Dan Abramov
+
+📄 [The Same App in React and Elm: A Side-by-Side Comparison](https://react.statuscode.com/link/176253/5d0bbb4a61) Christian Ekrem
+
+📄 [One Year with Next.js App Router — Why We're Moving On](https://react.statuscode.com/link/176288/5d0bbb4a61) – A critique of React Server Components and Next.js 15. Paper Clover
+
+📄 [I Tried React 19’s 'Activity' Component: Here’s What I Learned](https://react.statuscode.com/link/176254/5d0bbb4a61) Partha Roy
+
+📄 [React and Remix Choose Different Futures](https://react.statuscode.com/link/176255/5d0bbb4a61) Brendan McLoughlin
+
+🛠  Code, Tools & Libraries
+
+[Next.js 16 Released](https://react.statuscode.com/link/176256/5d0bbb4a61 "nextjs.org") — Launched alongside last week’s Next.js Conf (you can [▶️ watch the livestream again here](https://react.statuscode.com/link/176257/5d0bbb4a61)), the popular React framework gains explicit caching components, an MCP server for AI-assisted debugging, both Turbopack and React Compiler support go stable, and more.
+
+Lai, Story, Markbåge, and Neutkens
+
+💡 A point release, [Next.js 16.0.1](https://react.statuscode.com/link/176258/5d0bbb4a61) was released yesterday.
+
+[Solito 5.0: A Way to Use React Native with Next.js](https://react.statuscode.com/link/176259/5d0bbb4a61 "solito.dev") — [Solito](https://react.statuscode.com/link/176260/5d0bbb4a61) is a wrapper around React Navigation and Next.js that lets you share navigation code when building cross-platform apps. v5.0 supports Next.js 16 and Expo 54, and also drops React Native Web as a dependency.
+
+Fernando Rojo
+
+[Tuple - The Fastest Way to Review AI Slop](https://react.statuscode.com/link/176261/5d0bbb4a61) — Wasting hours debugging AI code? Tuple brings your team together to figure it out, clean it up, and ship.
+
+Tuple sponsor
+
+[uikit 1.0: Build 3D UIs in *React Three Fiber* Apps](https://react.statuscode.com/link/176262/5d0bbb4a61 "pmndrs.github.io") — Ideal for games, XR (VR/AR), and web-based spatial-style apps. [v1.0](https://react.statuscode.com/link/176263/5d0bbb4a61) takes some steps to align more closely with commonly accepted HTML/CSS behavior and techniques. [GitHub repo.](https://react.statuscode.com/link/176264/5d0bbb4a61)
+
+Poimandres
+
+[Obra Icons: A Simple, Consistent Set of Icons for User Interfaces](https://react.statuscode.com/link/176265/5d0bbb4a61 "icons.obra.studio") — More than 1000 icons that you can download as SVG, PNG, or [use this React component](https://react.statuscode.com/link/176266/5d0bbb4a61) to quickly bring them into your app.
+
+Obra Studio
+
+* 📊 [Recharts 3.3](https://react.statuscode.com/link/176267/5d0bbb4a61) – A chart library built on top of D3. The [homepage](https://react.statuscode.com/link/176268/5d0bbb4a61) has examples and demos. v3.3 gives charts the direct ability to handle responsive sizing.
+
+* 📅 [React Date Picker 8.8](https://react.statuscode.com/link/176269/5d0bbb4a61) – Date picker component. Now with [enhanced docs.](https://react.statuscode.com/link/176270/5d0bbb4a61)
+
+* [react-intersection-observer 10.0](https://react.statuscode.com/link/176271/5d0bbb4a61) – Uses the Intersection Observer API to take action when an element enters or leaves the viewport.
+
+* [ReactPivot 6.1](https://react.statuscode.com/link/176272/5d0bbb4a61) – Data grid component with pivot-table-like functionality. ([Demo.](https://react.statuscode.com/link/176273/5d0bbb4a61))
+
+* [React Stripe.js 5.3](https://react.statuscode.com/link/176274/5d0bbb4a61) – Components for Stripe.js and Stripe Elements.
+
+* [Vitest 4.0](https://react.statuscode.com/link/176275/5d0bbb4a61) – The Vite-native testing framework.
+
+* [Ink 6.4](https://react.statuscode.com/link/176276/5d0bbb4a61) – Use React to build CLI apps.
+
+* [Vite 7.2.0 Beta 1](https://react.statuscode.com/link/176277/5d0bbb4a61) – [Changelogs.](https://react.statuscode.com/link/176278/5d0bbb4a61)
+
+* [Astro 5.15](https://react.statuscode.com/link/176279/5d0bbb4a61)
+
+📢  Elsewhere in the ecosystem
+
+Some other interesting stories in the broader landscape:
+
+* It's been many years since [Backbone.js](https://react.statuscode.com/link/176280/5d0bbb4a61) was frequently mentioned in conversation, but it was a big deal in the pre-React era and Panphora looks at [React vs Backbone in 2025](https://react.statuscode.com/link/176281/5d0bbb4a61) while pondering how much progress we've made in 15 years.
+
+* [Node.js v25.1.0 (Current)](https://react.statuscode.com/link/176282/5d0bbb4a61), [v24.11.0 'Krypton' (Active LTS)](https://react.statuscode.com/link/176283/5d0bbb4a61), and [v22.21.1 (LTS)](https://react.statuscode.com/link/176284/5d0bbb4a61) were released last night. v24.11.0 is notable as marking the transition of Node v24 into being the active LTS version.
+
+* [A look at solving the New York Times *Pips* puzzle](https://react.statuscode.com/link/176285/5d0bbb4a61) with TypeScript and React.
+
+* 🐘 There's a new free tier of Postgres hosting in town, if you need it, with [Tiger Data's newest plan.](https://react.statuscode.com/link/176286/5d0bbb4a61)
+
+* There are only a few days left to [take the latest *State of JS* survey.](https://react.statuscode.com/link/176287/5d0bbb4a61)
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
