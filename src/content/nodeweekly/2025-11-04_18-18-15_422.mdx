@@ -1,0 +1,255 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Importing Node modules from BitTorrent?
+description: Importing Node modules from BitTorrent?
+date: 星期二 06 晚上 十一月 4o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/599
+origin_site: https://nodeweekly.com/issues/599
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Importing Node modules from BitTorrent?" url="https://nodeweekly.com/issues/599" />
+
+<Detail client:only="react">
+	#​599 — November 4, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/599)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/176499/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hefurnlvgkqgwjjqffhu.jpg)](https://nodeweekly.com/link/176500/0a4070b383)
+
+[Node v22 to v24 Migration Guide](https://nodeweekly.com/link/176500/0a4070b383 "nodejs.org") — Now that v24 is the new active LTS release, you might have code running on v22 you need to upgrade. The Node team has put together this helpful guide to the changes you’ll need to negotiate. There are similar guides for [v20 to v22](https://nodeweekly.com/link/176501/0a4070b383), [v14 to 16](https://nodeweekly.com/link/176502/0a4070b383), and [v12 to v14](https://nodeweekly.com/link/176503/0a4070b383).
+
+Node.js Core Team
+
+💡 There are also [official userland migration codemods](https://nodeweekly.com/link/176504/0a4070b383) to assist with upgrades. For example, there's one to change `import .. assert` to `import .. with` in a [v20 to v22 migration](https://nodeweekly.com/link/176501/0a4070b383), say.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/cd1908c9.png)](https://nodeweekly.com/link/176499/0a4070b383)
+
+[TypeScript: From First Steps to Professional](https://nodeweekly.com/link/176499/0a4070b383 "frontendmasters.com") — Learn TypeScript step-by-step with Anjana Vakil, and gain confidence writing code you can trust! Add strong types, reuse interfaces, and apply type safety throughout your app with hands-on projects converting JavaScript to TypeScript.
+
+Frontend Masters sponsor
+
+[Importing Node Modules from BitTorrent](https://nodeweekly.com/link/176505/0a4070b383 "evanhahn.com") — There's little practical motivation for this in production, but it's a fascinating experiment that shows off what Node’s [customization hooks](https://nodeweekly.com/link/176506/0a4070b383) can do for overriding imports. Worth a read as inspiration fuel.
+
+Evan Hahn
+
+[Node.js 24 Becomes LTS: What You Need to Know](https://nodeweekly.com/link/176507/0a4070b383 "nodesource.com") — [Node v24.11.0 (LTS)](https://nodeweekly.com/link/176508/0a4070b383) has arrived and marks Node 24’s transition to becoming the active LTS release. There are no changes from the prior v24 release, but Lizz looks at how Node 24 differs from 22 if you’re upgrading.
+
+Lizz Parody
+
+**IN BRIEF:**
+
+*   [Node.js v25.1.0 (Current)](https://nodeweekly.com/link/176509/0a4070b383) has been released.
+    
+*   A brief reminder that in the next week or two, [npm will revoke all classic npm tokens](https://nodeweekly.com/link/176510/0a4070b383) and fail to generate new ones.
+    
+*   If Vercel support was preventing you from giving [Bun](https://nodeweekly.com/link/176511/0a4070b383) a try, [Vercel now supports the Bun runtime.](https://nodeweekly.com/link/176512/0a4070b383) Or, more on the Node side of things, [they now support Fastify apps with zero-configuration.](https://nodeweekly.com/link/176513/0a4070b383)
+    
+
+[Running Node.js in a Hugging Face Space](https://nodeweekly.com/link/176514/0a4070b383 "blog.tomayac.com") — If you, like Thomas, were saddened by the [closure of Glitch](https://nodeweekly.com/link/176515/0a4070b383) — here’s a brief look at using [Hugging Face Spaces](https://nodeweekly.com/link/176516/0a4070b383) (most commonly associated with ML projects) as an alternative for hosting small server-based Node apps.
+
+Thomas Steiner
+
+[Turn Office Files into PDFs Automatically](https://nodeweekly.com/link/176517/0a4070b383 "developer-api.foxit.com") — Step-by-step Node/Python workflow: trigger on Dropbox uploads and convert docs to PDF with Foxit PDF Services API.
+
+Foxit Software sponsor
+
+📄 [Why We Migrated from Python to Node.js](https://nodeweekly.com/link/176518/0a4070b383) – They didn’t like Python’s async story, but do now love [MikroORM.](https://nodeweekly.com/link/176519/0a4070b383) Yakko Majuri
+
+📄 [Why `NaN !== NaN` (and the IEEE 754 Story Behind It)](https://nodeweekly.com/link/176520/0a4070b383) – The number that's also not a number. Piotr Zarycki
+
+📄 [Using `URLPattern` as a Framework-Free Router in Node 24](https://nodeweekly.com/link/176521/0a4070b383) JSDev
+
+🛠 Code & Tools
+
+🖼️ [image-dimensions: Get the Dimensions of an Image](https://nodeweekly.com/link/176522/0a4070b383 "github.com") — A quick way to get the pixel width and height of JPEG, PNG/APNG, GIF, WebP, AVIF and HEIF images in _any_ modern JavaScript environment.
+
+Sindre Sorhus
+
+💡 If you need to support for even more formats, [image-size](https://nodeweekly.com/link/176539/0a4070b383) is another Node-only option.
+
+[type-flag: A Typed Command-Line Arguments Parser](https://nodeweekly.com/link/176523/0a4070b383 "github.com") — A way to define the types for your command line arguments and enforce them.
+
+Hiroki Osame
+
+[Electron 39.0: The Cross-Platform Desktop App Framework](https://nodeweekly.com/link/176524/0a4070b383 "www.electronjs.org") — We briefly mentioned this last week but it now has a proper blog post. Electron bumps up to Chromium 142, V8 14.2, and [Node 22.20.](https://nodeweekly.com/link/176525/0a4070b383)
+
+Charles Kerr
+
+[on-change 6.0: Watch an Object or Array for Changes](https://nodeweekly.com/link/176526/0a4070b383 "github.com") — Uses proxies and works recursively.
+
+Sindre Sorhus
+
+📰 Classifieds
+
+🐱 **[ConfigCat Feature Flag Service](https://nodeweekly.com/link/176527/0a4070b383)** lets you release and roll back features safely without code changes. Set it up in minutes! **[Save 25% now!](https://nodeweekly.com/link/176527/0a4070b383)**
+
+[sitemap.js 9.0: Sitemap Generation Library and CLI Tool](https://nodeweekly.com/link/176528/0a4070b383 "github.com") — XML ‘sitemap’ files help search spiders (e.g. Googlebot) crawl your site and you can offload the boring task of generating them to this library/CLI. Now an ESM-first library.
+
+Eugene Kalinin
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/aymjfmcwiameir81gr66.jpg)](https://nodeweekly.com/link/176529/0a4070b383)
+
+*   [Dependency Cruiser 17.2](https://nodeweekly.com/link/176529/0a4070b383) – Tool to visualize dependencies _(shown above)_.
+    
+*   [pnpm 10.20](https://nodeweekly.com/link/176530/0a4070b383) – Fast, space efficient package manager. You can now run `pnpm help --all` to see help for all of its commands.
+    
+*   [express-useragent 2.0](https://nodeweekly.com/link/176531/0a4070b383) – Fast user-agent parser as Express middleware.
+    
+*   [jsdom 27.1](https://nodeweekly.com/link/176532/0a4070b383) – Pure JS implementation of WHATWG DOM and HTML standards.
+    
+*   [Immer 10.2](https://nodeweekly.com/link/176533/0a4070b383) – Popular library for working with immutable state.
+    
+*   [express-rate-limit 8.2](https://nodeweekly.com/link/176534/0a4070b383) – Basic rate limiting for Express apps.
+    
+*   [npq 3.14](https://nodeweekly.com/link/176535/0a4070b383) – Audit npm packages _before_ you install them.
+    
+*   [rimraf 6.1](https://nodeweekly.com/link/176536/0a4070b383) – Like `rm -rf` but from Node.
+    
+*   [Ink 6.4](https://nodeweekly.com/link/176537/0a4070b383) – Use React to build CLI apps.
+    
+*   [ESLint v9.39.1](https://nodeweekly.com/link/176538/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​599 — November 4, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/599)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/176499/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hefurnlvgkqgwjjqffhu.jpg)](https://nodeweekly.com/link/176500/0a4070b383)
+
+[Node v22 to v24 Migration Guide](https://nodeweekly.com/link/176500/0a4070b383 "nodejs.org") — Now that v24 is the new active LTS release, you might have code running on v22 you need to upgrade. The Node team has put together this helpful guide to the changes you’ll need to negotiate. There are similar guides for [v20 to v22](https://nodeweekly.com/link/176501/0a4070b383), [v14 to 16](https://nodeweekly.com/link/176502/0a4070b383), and [v12 to v14](https://nodeweekly.com/link/176503/0a4070b383).
+
+Node.js Core Team
+
+💡 There are also [official userland migration codemods](https://nodeweekly.com/link/176504/0a4070b383) to assist with upgrades. For example, there's one to change `import .. assert` to `import .. with` in a [v20 to v22 migration](https://nodeweekly.com/link/176501/0a4070b383), say.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/cd1908c9.png)](https://nodeweekly.com/link/176499/0a4070b383)
+
+[TypeScript: From First Steps to Professional](https://nodeweekly.com/link/176499/0a4070b383 "frontendmasters.com") — Learn TypeScript step-by-step with Anjana Vakil, and gain confidence writing code you can trust! Add strong types, reuse interfaces, and apply type safety throughout your app with hands-on projects converting JavaScript to TypeScript.
+
+Frontend Masters sponsor
+
+[Importing Node Modules from BitTorrent](https://nodeweekly.com/link/176505/0a4070b383 "evanhahn.com") — There's little practical motivation for this in production, but it's a fascinating experiment that shows off what Node’s [customization hooks](https://nodeweekly.com/link/176506/0a4070b383) can do for overriding imports. Worth a read as inspiration fuel.
+
+Evan Hahn
+
+[Node.js 24 Becomes LTS: What You Need to Know](https://nodeweekly.com/link/176507/0a4070b383 "nodesource.com") — [Node v24.11.0 (LTS)](https://nodeweekly.com/link/176508/0a4070b383) has arrived and marks Node 24’s transition to becoming the active LTS release. There are no changes from the prior v24 release, but Lizz looks at how Node 24 differs from 22 if you’re upgrading.
+
+Lizz Parody
+
+**IN BRIEF:**
+
+* [Node.js v25.1.0 (Current)](https://nodeweekly.com/link/176509/0a4070b383) has been released.
+
+* A brief reminder that in the next week or two, [npm will revoke all classic npm tokens](https://nodeweekly.com/link/176510/0a4070b383) and fail to generate new ones.
+
+* If Vercel support was preventing you from giving [Bun](https://nodeweekly.com/link/176511/0a4070b383) a try, [Vercel now supports the Bun runtime.](https://nodeweekly.com/link/176512/0a4070b383) Or, more on the Node side of things, [they now support Fastify apps with zero-configuration.](https://nodeweekly.com/link/176513/0a4070b383)
+
+[Running Node.js in a Hugging Face Space](https://nodeweekly.com/link/176514/0a4070b383 "blog.tomayac.com") — If you, like Thomas, were saddened by the [closure of Glitch](https://nodeweekly.com/link/176515/0a4070b383) — here’s a brief look at using [Hugging Face Spaces](https://nodeweekly.com/link/176516/0a4070b383) (most commonly associated with ML projects) as an alternative for hosting small server-based Node apps.
+
+Thomas Steiner
+
+[Turn Office Files into PDFs Automatically](https://nodeweekly.com/link/176517/0a4070b383 "developer-api.foxit.com") — Step-by-step Node/Python workflow: trigger on Dropbox uploads and convert docs to PDF with Foxit PDF Services API.
+
+Foxit Software sponsor
+
+📄 [Why We Migrated from Python to Node.js](https://nodeweekly.com/link/176518/0a4070b383) – They didn’t like Python’s async story, but do now love [MikroORM.](https://nodeweekly.com/link/176519/0a4070b383) Yakko Majuri
+
+📄 [Why `NaN !== NaN` (and the IEEE 754 Story Behind It)](https://nodeweekly.com/link/176520/0a4070b383) – The number that's also not a number. Piotr Zarycki
+
+📄 [Using `URLPattern` as a Framework-Free Router in Node 24](https://nodeweekly.com/link/176521/0a4070b383) JSDev
+
+🛠 Code & Tools
+
+🖼️ [image-dimensions: Get the Dimensions of an Image](https://nodeweekly.com/link/176522/0a4070b383 "github.com") — A quick way to get the pixel width and height of JPEG, PNG/APNG, GIF, WebP, AVIF and HEIF images in *any* modern JavaScript environment.
+
+Sindre Sorhus
+
+💡 If you need to support for even more formats, [image-size](https://nodeweekly.com/link/176539/0a4070b383) is another Node-only option.
+
+[type-flag: A Typed Command-Line Arguments Parser](https://nodeweekly.com/link/176523/0a4070b383 "github.com") — A way to define the types for your command line arguments and enforce them.
+
+Hiroki Osame
+
+[Electron 39.0: The Cross-Platform Desktop App Framework](https://nodeweekly.com/link/176524/0a4070b383 "www.electronjs.org") — We briefly mentioned this last week but it now has a proper blog post. Electron bumps up to Chromium 142, V8 14.2, and [Node 22.20.](https://nodeweekly.com/link/176525/0a4070b383)
+
+Charles Kerr
+
+[on-change 6.0: Watch an Object or Array for Changes](https://nodeweekly.com/link/176526/0a4070b383 "github.com") — Uses proxies and works recursively.
+
+Sindre Sorhus
+
+📰 Classifieds
+
+🐱 **[ConfigCat Feature Flag Service](https://nodeweekly.com/link/176527/0a4070b383)** lets you release and roll back features safely without code changes. Set it up in minutes! **[Save 25% now!](https://nodeweekly.com/link/176527/0a4070b383)**
+
+[sitemap.js 9.0: Sitemap Generation Library and CLI Tool](https://nodeweekly.com/link/176528/0a4070b383 "github.com") — XML ‘sitemap’ files help search spiders (e.g. Googlebot) crawl your site and you can offload the boring task of generating them to this library/CLI. Now an ESM-first library.
+
+Eugene Kalinin
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/aymjfmcwiameir81gr66.jpg)](https://nodeweekly.com/link/176529/0a4070b383)
+
+* [Dependency Cruiser 17.2](https://nodeweekly.com/link/176529/0a4070b383) – Tool to visualize dependencies *(shown above)*.
+
+* [pnpm 10.20](https://nodeweekly.com/link/176530/0a4070b383) – Fast, space efficient package manager. You can now run `pnpm help --all` to see help for all of its commands.
+
+* [express-useragent 2.0](https://nodeweekly.com/link/176531/0a4070b383) – Fast user-agent parser as Express middleware.
+
+* [jsdom 27.1](https://nodeweekly.com/link/176532/0a4070b383) – Pure JS implementation of WHATWG DOM and HTML standards.
+
+* [Immer 10.2](https://nodeweekly.com/link/176533/0a4070b383) – Popular library for working with immutable state.
+
+* [express-rate-limit 8.2](https://nodeweekly.com/link/176534/0a4070b383) – Basic rate limiting for Express apps.
+
+* [npq 3.14](https://nodeweekly.com/link/176535/0a4070b383) – Audit npm packages *before* you install them.
+
+* [rimraf 6.1](https://nodeweekly.com/link/176536/0a4070b383) – Like `rm -rf` but from Node.
+
+* [Ink 6.4](https://nodeweekly.com/link/176537/0a4070b383) – Use React to build CLI apps.
+
+* [ESLint v9.39.1](https://nodeweekly.com/link/176538/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
