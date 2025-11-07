@@ -1,0 +1,329 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: How JavaScript source maps actually work
+description: How JavaScript source maps actually work
+date: 星期五 07 晚上 十一月 7o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/760
+origin_site: https://javascriptweekly.com/issues/760
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="How JavaScript source maps actually work" url="https://javascriptweekly.com/issues/760" />
+
+<Detail client:only="react">
+	#​760 — November 7, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/760)
+
+Together with 
+
+[![WorkOS](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_514,h_98/e_make_transparent/co_white,e_outline:9/tdfxwgk852ui9leli4wm.png)](https://javascriptweekly.com/link/176756/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mettuhpw65jeltbt2jio.jpg)](https://javascriptweekly.com/link/176757/d076523b1d)
+
+[The Inner Workings of JavaScript Source Maps](https://javascriptweekly.com/link/176757/d076523b1d "www.polarsignals.com") — Ever wondered how devtools can magically turn mangled, minified JavaScript back into readable source while debugging? Zero magic; that’s a [source map](https://javascriptweekly.com/link/176758/d076523b1d) doing its job. But how do source maps actually work under the hood?
+
+Manoj Vivek
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/0dccc2d2.png)](https://javascriptweekly.com/link/176756/d076523b1d)
+
+[Ship Secure MCP Auth Without Relying on API Keys](https://javascriptweekly.com/link/176756/d076523b1d "workos.com") — API keys are hard to scope and break user flows. WorkOS Connect delivers a fully compliant OAuth 2.1 flow. It handles PKCE, scopes, user consent, and secure token issuance out of the box.
+
+WorkOS sponsor
+
+[Anders Hejlsberg's Take on the Rise of TypeScript](https://javascriptweekly.com/link/176759/d076523b1d "github.blog") — The co-creator of TypeScript says he’s ‘floored’ by the language’s success (now [the number one language](https://javascriptweekly.com/link/176760/d076523b1d) on GitHub in 2025), shares a little info on the on-going compiler rewrite in Go, and the increasing role of AI.
+
+The GitHub Blog
+
+[Embedding TypeScript with Hako](https://javascriptweekly.com/link/176761/d076523b1d "andrews.substack.com") — A technical look at the [Hako](https://javascriptweekly.com/link/176762/d076523b1d) JavaScript engine. It runs in WebAssembly so can be more easily embedded in more environments, including mobile apps.
+
+Andrew Sampson
+
+**IN BRIEF:**
+
+*   GitHub has updated [its post about ongoing npm security changes](https://javascriptweekly.com/link/176763/d076523b1d). npm classic tokens can no longer be created, but existing ones will continue to work till February 3, 2026 at the latest.
+    
+*   I enjoyed Lea Verou's [cute proxy-based trick for creating symbols](https://javascriptweekly.com/link/176764/d076523b1d) on demand.
+    
+*   The Svelte team has [a November 2025 update on what's new in Svelte.](https://javascriptweekly.com/link/176765/d076523b1d)
+    
+*   🇷🇴 The popular [JSHeroes](https://javascriptweekly.com/link/176766/d076523b1d) conference is taking place in Romania next May 14-15. If you'd like to speak, [its CFP is open](https://javascriptweekly.com/link/176767/d076523b1d) until December 31.
+    
+
+**RELEASES:**
+
+*   [Storybook 10](https://javascriptweekly.com/link/176768/d076523b1d) – The popular frontend component workshop is now ESM-only, lighter, has a new module automocking system, Vitest 4 support, and more.
+    
+*   [htmx 4.0 Alpha 1](https://javascriptweekly.com/link/176769/d076523b1d) – There was never going to be a v3 of htmx, so how about v4? Carson Gross tells the full story here.
+    
+*   [React Email 5.0](https://javascriptweekly.com/link/176812/d076523b1d) – Suite of components for creating emails in React. Now with a dark mode switcher and Tailwind 4 support.
+    
+*   [Turborepo 2.6](https://javascriptweekly.com/link/176770/d076523b1d), [Video.js v10](https://javascriptweekly.com/link/176771/d076523b1d), [ESLint Config Inspector v1.4](https://javascriptweekly.com/link/176772/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nx2vvbisbpcuoxm7piby.jpg)](https://javascriptweekly.com/link/176773/d076523b1d)
+
+▶  [The Talk Videos from CascadiaJS 2025](https://javascriptweekly.com/link/176773/d076523b1d "www.youtube.com") — [CascadiaJS](https://javascriptweekly.com/link/176774/d076523b1d) took place a month ago and the talk videos have been gradually rolling out onto YouTube. You can [learn more about TanStack](https://javascriptweekly.com/link/176775/d076523b1d) with Jack Herrington, [the origin story of JavaScript](https://javascriptweekly.com/link/176776/d076523b1d) with Annie Sexton, [the Web Monetization API](https://javascriptweekly.com/link/176777/d076523b1d) with Ioana Chiorean, and more.
+
+CascadiaJS
+
+[High-Performance Syntax Highlighting with the CSS Custom Highlight API](https://javascriptweekly.com/link/176778/d076523b1d "pavi2410.com") — Now supported in all major browsers, the CSS Custom Highlight API provides a mechanism for styling arbitrary text ranges in a document by using JavaScript to create the ranges, and CSS to style them.
+
+Pavitra Golchha
+
+[How to Create a Virtual Green Screen Using the Vonage Video API](https://javascriptweekly.com/link/176779/d076523b1d "developer.vonage.com") — Transform video calls with virtual green screens using the Vonage Video API and HTML5 canvas.
+
+Vonage sponsor
+
+[How to Throttle Specific Requests in Chrome DevTools](https://javascriptweekly.com/link/176780/d076523b1d "www.debugbear.com") — Chrome DevTools has supported network throttling for a long time but you can now throttle requests to specific URLs or domains too, which could be ideal if you want to see how your site handles the failure of third party scripts.
+
+Matt Zeunert
+
+?! [Importing Node Modules from BitTorrent](https://javascriptweekly.com/link/176781/d076523b1d "evanhahn.com") — A fascinating demo of the power of Node.js’s [customization hooks](https://javascriptweekly.com/link/176782/d076523b1d) for overriding import behavior.
+
+Evan Hahn
+
+[Advanced Beginner’s Guide to ClojureScript](https://javascriptweekly.com/link/176783/d076523b1d "romanliutikov.com") — An introduction to [a compiler](https://javascriptweekly.com/link/176784/d076523b1d) for the functional Clojure Lisp dialect that produces JavaScript.
+
+Roman Liutikov
+
+📄 [Handling Time and Mock Clocks in Tests](https://javascriptweekly.com/link/176785/d076523b1d) Andrew Scott (Angular)
+
+📄 [Zod + TypeScript: Schema Validation Made Easy](https://javascriptweekly.com/link/176786/d076523b1d) Hassan Djirdeh
+
+📄 [Next.js 16: What’s New and What It Means for Frontend Devs](https://javascriptweekly.com/link/176787/d076523b1d) Abiola Farounbi (LogRocket)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pizfvud2u2vunfdrntbu.jpg)](https://javascriptweekly.com/link/176788/d076523b1d)
+
+[Perspective 4.0: High Performance Analytics and Data Visualization Component](https://javascriptweekly.com/link/176788/d076523b1d "perspective-dev.github.io") — Originally built by JP Morgan, this data visualization component, built in C++ and compiled to WebAssembly, is well-suited for large and real-time streaming datasets. The demo on the homepage lets you try visualization types at up to 1000 changes per second. v4.0 [sees the project move to the OpenJS Foundation.](https://javascriptweekly.com/link/176789/d076523b1d)
+
+OpenJS Foundation
+
+💡 Perspective comes with a rich set of [examples](https://javascriptweekly.com/link/176790/d076523b1d) with full code demonstrating how to use it, [like this streaming example.](https://javascriptweekly.com/link/176791/d076523b1d)
+
+[Agentic Postgres: Let Your Agents Cook](https://javascriptweekly.com/link/176792/d076523b1d "www.tigerdata.com") — Build AI apps faster: Postgres with built-in memory, search, and free forkable DBs. Try it free on Tiger.
+
+Tiger Data sponsor
+
+[Vue Data UI 3.6: Vue Components Library for Data Storytelling](https://javascriptweekly.com/link/176793/d076523b1d "vue-data-ui.graphieros.com") — There’s a lot packed into this suite of components, including basic chart types through to donuts, sparklines, world views, stacks, heatmaps, word clouds, and more. Definitely worth a look if you’re using Vue. [Live examples.](https://javascriptweekly.com/link/176794/d076523b1d)
+
+Alec Lloyd Probert
+
+🖼️ [image-dimensions: Get the Dimensions of Images](https://javascriptweekly.com/link/176795/d076523b1d "github.com") — A zero-dependency way to get the pixel width and height of JPEG, PNG/APNG, GIF, WebP, AVIF and HEIF images in _any_ modern JavaScript environment.
+
+Sindre Sorhus
+
+[React Syntax Highlighter: A Code Syntax Highlighting Component](https://javascriptweekly.com/link/176796/d076523b1d "react-syntax-highlighter.github.io") — If you need to show off source code in your React app somewhere, this is a component that does the job. [GitHub repo.](https://javascriptweekly.com/link/176797/d076523b1d)
+
+Conor Hastings
+
+[CSSOM: A CSS Parser Written in Pure JavaScript](https://javascriptweekly.com/link/176798/d076523b1d "github.com") — Also a partial implementation of CSS Object Model.
+
+Nikita Vasilyev
+
+*   [debounce 3.0](https://javascriptweekly.com/link/176799/d076523b1d) – Delay function calls until a set time elapses after the last invocation. Now a pure ES module.
+    
+*   [bcrypt.js 3.0.3](https://javascriptweekly.com/link/176800/d076523b1d) – Optimized bcrypt in pure JavaScript, even in the browser.
+    
+*   [Marked 17.0](https://javascriptweekly.com/link/176801/d076523b1d) – Markdown parser and compiler. ([Docs.](https://javascriptweekly.com/link/176802/d076523b1d))
+    
+*   [AlaSQL.js 4.8](https://javascriptweekly.com/link/176803/d076523b1d) – Isomorphic JavaScript SQL database.
+    
+*   [fast-copy 4.0](https://javascriptweekly.com/link/176804/d076523b1d) – A fast deep object copier.
+    
+
+📰 Classifieds
+
+[Still writing tests manually?](https://javascriptweekly.com/link/176805/d076523b1d) See why modern engineering teams like Dropbox, Notion and Wiz rely on [Meticulous](https://javascriptweekly.com/link/176805/d076523b1d) to run E2E UI tests.
+
+* * *
+
+🔎 Search your GitHub Actions logs instantly. No more endless scrolling through CI failures. [Try Depot's new log search and find errors in seconds](https://javascriptweekly.com/link/176806/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/va7cbt2uouajwonnie5m.jpg)](https://javascriptweekly.com/link/176807/d076523b1d)
+
+*   In [Your URL is Your State](https://javascriptweekly.com/link/176807/d076523b1d), Ahmad Alfy looks at the 'overlooked power' and elegance of using the URL's various components for representing state.
+    
+*   Matt Perry shares everything he knows about animation performance on the Web in [The Web Animation Performance Tier List.](https://javascriptweekly.com/link/176808/d076523b1d)
+    
+*   Ben Visness writes about [how Mozilla has overhauled its internal tools for visualizing JavaScript and WebAssembly compilation](https://javascriptweekly.com/link/176809/d076523b1d), complete with some interactive graphs.
+    
+*   If you were saddened by the [recent closure of Glitch](https://javascriptweekly.com/link/176810/d076523b1d), Thomas Steiner demonstrates [how to use _Hugging Face Spaces_](https://javascriptweekly.com/link/176811/d076523b1d) as an alternative for hosting small server-based Node apps.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/176814/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​760 — November 7, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/760)
+
+Together with 
+
+[![WorkOS](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_514,h_98/e_make_transparent/co_white,e_outline:9/tdfxwgk852ui9leli4wm.png)](https://javascriptweekly.com/link/176756/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mettuhpw65jeltbt2jio.jpg)](https://javascriptweekly.com/link/176757/d076523b1d)
+
+[The Inner Workings of JavaScript Source Maps](https://javascriptweekly.com/link/176757/d076523b1d "www.polarsignals.com") — Ever wondered how devtools can magically turn mangled, minified JavaScript back into readable source while debugging? Zero magic; that’s a [source map](https://javascriptweekly.com/link/176758/d076523b1d) doing its job. But how do source maps actually work under the hood?
+
+Manoj Vivek
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/0dccc2d2.png)](https://javascriptweekly.com/link/176756/d076523b1d)
+
+[Ship Secure MCP Auth Without Relying on API Keys](https://javascriptweekly.com/link/176756/d076523b1d "workos.com") — API keys are hard to scope and break user flows. WorkOS Connect delivers a fully compliant OAuth 2.1 flow. It handles PKCE, scopes, user consent, and secure token issuance out of the box.
+
+WorkOS sponsor
+
+[Anders Hejlsberg's Take on the Rise of TypeScript](https://javascriptweekly.com/link/176759/d076523b1d "github.blog") — The co-creator of TypeScript says he’s ‘floored’ by the language’s success (now [the number one language](https://javascriptweekly.com/link/176760/d076523b1d) on GitHub in 2025), shares a little info on the on-going compiler rewrite in Go, and the increasing role of AI.
+
+The GitHub Blog
+
+[Embedding TypeScript with Hako](https://javascriptweekly.com/link/176761/d076523b1d "andrews.substack.com") — A technical look at the [Hako](https://javascriptweekly.com/link/176762/d076523b1d) JavaScript engine. It runs in WebAssembly so can be more easily embedded in more environments, including mobile apps.
+
+Andrew Sampson
+
+**IN BRIEF:**
+
+* GitHub has updated [its post about ongoing npm security changes](https://javascriptweekly.com/link/176763/d076523b1d). npm classic tokens can no longer be created, but existing ones will continue to work till February 3, 2026 at the latest.
+
+* I enjoyed Lea Verou's [cute proxy-based trick for creating symbols](https://javascriptweekly.com/link/176764/d076523b1d) on demand.
+
+* The Svelte team has [a November 2025 update on what's new in Svelte.](https://javascriptweekly.com/link/176765/d076523b1d)
+
+* 🇷🇴 The popular [JSHeroes](https://javascriptweekly.com/link/176766/d076523b1d) conference is taking place in Romania next May 14-15. If you'd like to speak, [its CFP is open](https://javascriptweekly.com/link/176767/d076523b1d) until December 31.
+
+**RELEASES:**
+
+* [Storybook 10](https://javascriptweekly.com/link/176768/d076523b1d) – The popular frontend component workshop is now ESM-only, lighter, has a new module automocking system, Vitest 4 support, and more.
+
+* [htmx 4.0 Alpha 1](https://javascriptweekly.com/link/176769/d076523b1d) – There was never going to be a v3 of htmx, so how about v4? Carson Gross tells the full story here.
+
+* [React Email 5.0](https://javascriptweekly.com/link/176812/d076523b1d) – Suite of components for creating emails in React. Now with a dark mode switcher and Tailwind 4 support.
+
+* [Turborepo 2.6](https://javascriptweekly.com/link/176770/d076523b1d), [Video.js v10](https://javascriptweekly.com/link/176771/d076523b1d), [ESLint Config Inspector v1.4](https://javascriptweekly.com/link/176772/d076523b1d)
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nx2vvbisbpcuoxm7piby.jpg)](https://javascriptweekly.com/link/176773/d076523b1d)
+
+▶  [The Talk Videos from CascadiaJS 2025](https://javascriptweekly.com/link/176773/d076523b1d "www.youtube.com") — [CascadiaJS](https://javascriptweekly.com/link/176774/d076523b1d) took place a month ago and the talk videos have been gradually rolling out onto YouTube. You can [learn more about TanStack](https://javascriptweekly.com/link/176775/d076523b1d) with Jack Herrington, [the origin story of JavaScript](https://javascriptweekly.com/link/176776/d076523b1d) with Annie Sexton, [the Web Monetization API](https://javascriptweekly.com/link/176777/d076523b1d) with Ioana Chiorean, and more.
+
+CascadiaJS
+
+[High-Performance Syntax Highlighting with the CSS Custom Highlight API](https://javascriptweekly.com/link/176778/d076523b1d "pavi2410.com") — Now supported in all major browsers, the CSS Custom Highlight API provides a mechanism for styling arbitrary text ranges in a document by using JavaScript to create the ranges, and CSS to style them.
+
+Pavitra Golchha
+
+[How to Create a Virtual Green Screen Using the Vonage Video API](https://javascriptweekly.com/link/176779/d076523b1d "developer.vonage.com") — Transform video calls with virtual green screens using the Vonage Video API and HTML5 canvas.
+
+Vonage sponsor
+
+[How to Throttle Specific Requests in Chrome DevTools](https://javascriptweekly.com/link/176780/d076523b1d "www.debugbear.com") — Chrome DevTools has supported network throttling for a long time but you can now throttle requests to specific URLs or domains too, which could be ideal if you want to see how your site handles the failure of third party scripts.
+
+Matt Zeunert
+
+?! [Importing Node Modules from BitTorrent](https://javascriptweekly.com/link/176781/d076523b1d "evanhahn.com") — A fascinating demo of the power of Node.js’s [customization hooks](https://javascriptweekly.com/link/176782/d076523b1d) for overriding import behavior.
+
+Evan Hahn
+
+[Advanced Beginner’s Guide to ClojureScript](https://javascriptweekly.com/link/176783/d076523b1d "romanliutikov.com") — An introduction to [a compiler](https://javascriptweekly.com/link/176784/d076523b1d) for the functional Clojure Lisp dialect that produces JavaScript.
+
+Roman Liutikov
+
+📄 [Handling Time and Mock Clocks in Tests](https://javascriptweekly.com/link/176785/d076523b1d) Andrew Scott (Angular)
+
+📄 [Zod + TypeScript: Schema Validation Made Easy](https://javascriptweekly.com/link/176786/d076523b1d) Hassan Djirdeh
+
+📄 [Next.js 16: What’s New and What It Means for Frontend Devs](https://javascriptweekly.com/link/176787/d076523b1d) Abiola Farounbi (LogRocket)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pizfvud2u2vunfdrntbu.jpg)](https://javascriptweekly.com/link/176788/d076523b1d)
+
+[Perspective 4.0: High Performance Analytics and Data Visualization Component](https://javascriptweekly.com/link/176788/d076523b1d "perspective-dev.github.io") — Originally built by JP Morgan, this data visualization component, built in C++ and compiled to WebAssembly, is well-suited for large and real-time streaming datasets. The demo on the homepage lets you try visualization types at up to 1000 changes per second. v4.0 [sees the project move to the OpenJS Foundation.](https://javascriptweekly.com/link/176789/d076523b1d)
+
+OpenJS Foundation
+
+💡 Perspective comes with a rich set of [examples](https://javascriptweekly.com/link/176790/d076523b1d) with full code demonstrating how to use it, [like this streaming example.](https://javascriptweekly.com/link/176791/d076523b1d)
+
+[Agentic Postgres: Let Your Agents Cook](https://javascriptweekly.com/link/176792/d076523b1d "www.tigerdata.com") — Build AI apps faster: Postgres with built-in memory, search, and free forkable DBs. Try it free on Tiger.
+
+Tiger Data sponsor
+
+[Vue Data UI 3.6: Vue Components Library for Data Storytelling](https://javascriptweekly.com/link/176793/d076523b1d "vue-data-ui.graphieros.com") — There’s a lot packed into this suite of components, including basic chart types through to donuts, sparklines, world views, stacks, heatmaps, word clouds, and more. Definitely worth a look if you’re using Vue. [Live examples.](https://javascriptweekly.com/link/176794/d076523b1d)
+
+Alec Lloyd Probert
+
+🖼️ [image-dimensions: Get the Dimensions of Images](https://javascriptweekly.com/link/176795/d076523b1d "github.com") — A zero-dependency way to get the pixel width and height of JPEG, PNG/APNG, GIF, WebP, AVIF and HEIF images in *any* modern JavaScript environment.
+
+Sindre Sorhus
+
+[React Syntax Highlighter: A Code Syntax Highlighting Component](https://javascriptweekly.com/link/176796/d076523b1d "react-syntax-highlighter.github.io") — If you need to show off source code in your React app somewhere, this is a component that does the job. [GitHub repo.](https://javascriptweekly.com/link/176797/d076523b1d)
+
+Conor Hastings
+
+[CSSOM: A CSS Parser Written in Pure JavaScript](https://javascriptweekly.com/link/176798/d076523b1d "github.com") — Also a partial implementation of CSS Object Model.
+
+Nikita Vasilyev
+
+* [debounce 3.0](https://javascriptweekly.com/link/176799/d076523b1d) – Delay function calls until a set time elapses after the last invocation. Now a pure ES module.
+
+* [bcrypt.js 3.0.3](https://javascriptweekly.com/link/176800/d076523b1d) – Optimized bcrypt in pure JavaScript, even in the browser.
+
+* [Marked 17.0](https://javascriptweekly.com/link/176801/d076523b1d) – Markdown parser and compiler. ([Docs.](https://javascriptweekly.com/link/176802/d076523b1d))
+
+* [AlaSQL.js 4.8](https://javascriptweekly.com/link/176803/d076523b1d) – Isomorphic JavaScript SQL database.
+
+* [fast-copy 4.0](https://javascriptweekly.com/link/176804/d076523b1d) – A fast deep object copier.
+
+📰 Classifieds
+
+[Still writing tests manually?](https://javascriptweekly.com/link/176805/d076523b1d) See why modern engineering teams like Dropbox, Notion and Wiz rely on [Meticulous](https://javascriptweekly.com/link/176805/d076523b1d) to run E2E UI tests.
+
+***
+
+🔎 Search your GitHub Actions logs instantly. No more endless scrolling through CI failures. [Try Depot's new log search and find errors in seconds](https://javascriptweekly.com/link/176806/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/va7cbt2uouajwonnie5m.jpg)](https://javascriptweekly.com/link/176807/d076523b1d)
+
+* In [Your URL is Your State](https://javascriptweekly.com/link/176807/d076523b1d), Ahmad Alfy looks at the 'overlooked power' and elegance of using the URL's various components for representing state.
+
+* Matt Perry shares everything he knows about animation performance on the Web in [The Web Animation Performance Tier List.](https://javascriptweekly.com/link/176808/d076523b1d)
+
+* Ben Visness writes about [how Mozilla has overhauled its internal tools for visualizing JavaScript and WebAssembly compilation](https://javascriptweekly.com/link/176809/d076523b1d), complete with some interactive graphs.
+
+* If you were saddened by the [recent closure of Glitch](https://javascriptweekly.com/link/176810/d076523b1d), Thomas Steiner demonstrates [how to use *Hugging Face Spaces*](https://javascriptweekly.com/link/176811/d076523b1d) as an alternative for hosting small server-based Node apps.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/176814/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
