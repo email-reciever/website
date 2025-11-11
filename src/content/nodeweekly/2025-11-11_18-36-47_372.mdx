@@ -1,0 +1,288 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Ten top web application security threats
+description: Ten top web application security threats
+date: 星期二 06 晚上 十一月 11o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/600
+origin_site: https://nodeweekly.com/issues/600
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Ten top web application security threats" url="https://nodeweekly.com/issues/600" />
+
+<Detail client:only="react">
+	#​600 — November 11, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/600)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/176816/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vrxbuyfqhkgxcvqtoeu8.jpg)](https://nodeweekly.com/link/176817/0a4070b383)
+
+[Node.js Security Best Practices](https://nodeweekly.com/link/176817/0a4070b383 "nodejs.org") — Did you know the Node.js project maintains a page about security best practices organized around how to mitigate ten of the most significant vectors? Topics include networking weaknesses, timing attacks, supply chain attacks, and the monkey patching of intrinsics.
+
+Node Documentation
+
+💡 On security, Liran Tal's [Awesome Node.js Security](https://nodeweekly.com/link/176818/0a4070b383) is always worth a revisit and includes numerous resources and a timeline of notable security incidents. OWASP has also just released an RC of [its list of the top ten webapp security threats in 2025.](https://nodeweekly.com/link/176819/0a4070b383)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d923f0a0.png)](https://nodeweekly.com/link/176816/0a4070b383)
+
+[Agentic Postgres: AI-Ready Postgres for Go Developers](https://nodeweekly.com/link/176816/0a4070b383 "www.tigerdata.com") — Tiger Data’s Agentic Postgres turns vanilla Postgres into an AI-native database. Fork DBs, give agents memory, and query via REST or CLI. Perfect for Go backends building with Claude, Cursor, or custom agents. Try it free—no card needed.
+
+Tiger Data sponsor
+
+[pnpm 10.21: Safer Installs and Smarter Runtime Management](https://nodeweekly.com/link/176820/0a4070b383 "pnpm.io") — pnpm can now automatically install the Node version required by a dependency, declared in its `engines.runtime` field, meaning CLI apps and `postinstall` scripts will run with the specified version. A new `trustPolicy` setting also adds protection against supply-chain attacks by failing to install packages whose trust level drops (e.g. if a package’s build pipeline loses attestation).
+
+Zoltan Kochan
+
+**IN BRIEF:**
+
+*   GitHub has updated [its post about ongoing npm security changes](https://nodeweekly.com/link/176821/0a4070b383). npm classic tokens can no longer be created, but existing ones will continue to work until February 2026 at the latest.
+    
+*   On Reddit's `/r/node`, Jeet Shekhaliya shares [his efforts to create a system to automatically test thousands of popular npm packages](https://nodeweekly.com/link/176822/0a4070b383) against the latest daily build of Node. You can see [the latest report here.](https://nodeweekly.com/link/176823/0a4070b383)
+    
+*   Dr. Axel Rauschmayer [noticed](https://nodeweekly.com/link/176824/0a4070b383) a `pnpm` feature we weren't aware of before: [the ability to install and manage different versions of Node.](https://nodeweekly.com/link/176825/0a4070b383)
+    
+*   [Node.js 24 is now available on Azure App Service for Linux.](https://nodeweekly.com/link/176826/0a4070b383)
+    
+
+▶  [The State of Node.js 2025 Explained by Matteo Collina](https://nodeweekly.com/link/176827/0a4070b383 "www.youtube.com") — A thirty minute talk from _JSNation_ earlier this year where TSC member Matteo presented an update on Node’s still-growing popularity, release schedule, security, recent performance enhancements, the permissions system, and more.
+
+GitNation
+
+📄 [Error Chaining in JS: Cleaner Debugging with `Error` and `cause`](https://nodeweekly.com/link/176828/0a4070b383) Matt Smith
+
+📄 [Building NestJS Applications Following the CQRS Model](https://nodeweekly.com/link/176829/0a4070b383) Christian Nwamba
+
+📄 [Zod + TypeScript: Schema Validation Made Easy](https://nodeweekly.com/link/176830/0a4070b383) Hassan Djirdeh
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/p2b7csuw8eqebbk7r6yz.jpg)](https://nodeweekly.com/link/176831/0a4070b383)
+
+[Umami 3.0: A Self-Hosted, Privacy-Focused Google Analytics Alternative](https://nodeweekly.com/link/176831/0a4070b383 "github.com") — Think something like [Plausible](https://nodeweekly.com/link/176832/0a4070b383) or Google Analytics, but built in Node and ready for you to host yourself. Here’s [the full feature list.](https://nodeweekly.com/link/176833/0a4070b383) MIT licensed but also available as [a paid hosted service.](https://nodeweekly.com/link/176834/0a4070b383)
+
+Umami Software, Inc.
+
+[Unify Logs, Errors, and Traces in One Place](https://nodeweekly.com/link/176835/0a4070b383 "sentry.io") — See logs, errors, and traces together in one place for full context. Debug faster with Sentry Logs.
+
+Sentry sponsor
+
+[Tasuku (タスク): A Minimal Task Runner for Node](https://nodeweekly.com/link/176836/0a4070b383 "github.com") — Tasuku, Japanese for ‘task’, provides a clean way to break up processes into small tasks, which can then be run in the right order with progress displayed elegantly in the terminal. Think `make` but Node-flavored. [Live demo.](https://nodeweekly.com/link/176837/0a4070b383)
+
+hiroki osame
+
+🛑 [fkill 10.0: A Cross-Platform Way to Kill Processes](https://nodeweekly.com/link/176838/0a4070b383 "github.com") — Working on macOS, Linux, and Windows, this gives you a nice API for kill processes. For example: `await fkill('chrome', &lcub;waitForExit: 2000});`
+
+Sindre Sorhus
+
+[CSSOM: A CSS Parser Written in Pure JavaScript](https://nodeweekly.com/link/176839/0a4070b383 "github.com") — Also a partial implementation of CSS Object Model.
+
+Nikita Vasilyev
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/spj3hsrlthowmnt1i4se.jpg)](https://nodeweekly.com/link/176840/0a4070b383)
+
+[Render.js: A Raytracing Renderer with RenderMan Format Support](https://nodeweekly.com/link/176840/0a4070b383 "github.com") — Created at Pixar in the 80s, the [_RenderMan Interface Specification_](https://nodeweekly.com/link/176841/0a4070b383) was an early API for building 3D scenes. Anders has been building a Node-based, 90s-style renderer for the format _“as a stroll down amnesia lane”_ in pure JavaScript.
+
+Anders Brownworth
+
+*   [MongoDB Node.js Driver 7.0](https://nodeweekly.com/link/176842/0a4070b383) – The latest official MongoDB driver. I love how thorough MongoDB's release notes always are for these!
+    
+*   [pg-promise v12.3](https://nodeweekly.com/link/176843/0a4070b383) – Extended Postgres driver for Node with automatic connections and transactions, query generation, and more.
+    
+*   [file-type 21.1](https://nodeweekly.com/link/176844/0a4070b383) – Detect the file type of a file, stream, or data. Now also supporting `.tar.gz` files and Windows registry files.
+    
+*   [pg-boss 12.0](https://nodeweekly.com/link/176845/0a4070b383) – Postgres-based job queuing system for Node. Has migrated to ESM, so existing users have some changes to make.
+    
+*   🤖 [Repomix 1.9](https://nodeweekly.com/link/176846/0a4070b383) – Pack an entire repository into a single, LLM-friendly file.
+    
+*   [Fastify 5.6.2](https://nodeweekly.com/link/176847/0a4070b383) – The fast, low overhead Node web framework.
+    
+*   [Prisma 6.19](https://nodeweekly.com/link/176848/0a4070b383) – Popular ORM for Node.js and TypeScript.
+    
+*   [node-mssql 12.1](https://nodeweekly.com/link/176849/0a4070b383) – Microsoft SQL Server client library.
+    
+
+📰 Classifieds
+
+🐱 **[ConfigCat Feature Flag Service](https://nodeweekly.com/link/176850/0a4070b383)** lets you release and roll back features safely without code changes. Set it up in minutes! **[Save 25% now!](https://nodeweekly.com/link/176850/0a4070b383)**
+
+* * *
+
+Add e-signatures to your Node.js app in minutes with the BoldSign Node.js SDK—powered by **[our e-signature API. Get your free API key today](https://nodeweekly.com/link/176851/0a4070b383).**
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v0djw45wiicxyxptccxq.jpg)](https://nodeweekly.com/link/176852/0a4070b383)
+
+*   🇯🇵 Fancy writing JavaScript in Japanese _(above)_? [Say こんにちは to KokoScript.](https://nodeweekly.com/link/176852/0a4070b383)
+    
+*   On the topic of Japan, if you know a company in Japan that would benefit from having one of JavaScript's best-known names as an employee, [Dan Abramov is looking for a job in Japan right now.](https://nodeweekly.com/link/176853/0a4070b383)
+    
+*   I enjoyed Lea Verou's [cute proxy-based trick for creating JavaScript symbols](https://nodeweekly.com/link/176854/0a4070b383) on demand.
+    
+*   [GitHub did a quick interview with TypeScript co-creator Anders Hejsberg](https://nodeweekly.com/link/176855/0a4070b383) about the rise of TypeScript (now the #1 language on GitHub) and its role in a more AI-oriented world.
+    
+*   Ben Visness writes about [how Mozilla has overhauled its internal tools for visualizing JavaScript and WebAssembly compilation](https://nodeweekly.com/link/176856/0a4070b383), complete with interactive graphs.
+    
+*   If you need to embed JavaScript into places Node doesn't yet go, [Hako is an interesting WebAssembly-oriented option](https://nodeweekly.com/link/176857/0a4070b383).
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​600 — November 11, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/600)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/176816/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vrxbuyfqhkgxcvqtoeu8.jpg)](https://nodeweekly.com/link/176817/0a4070b383)
+
+[Node.js Security Best Practices](https://nodeweekly.com/link/176817/0a4070b383 "nodejs.org") — Did you know the Node.js project maintains a page about security best practices organized around how to mitigate ten of the most significant vectors? Topics include networking weaknesses, timing attacks, supply chain attacks, and the monkey patching of intrinsics.
+
+Node Documentation
+
+💡 On security, Liran Tal's [Awesome Node.js Security](https://nodeweekly.com/link/176818/0a4070b383) is always worth a revisit and includes numerous resources and a timeline of notable security incidents. OWASP has also just released an RC of [its list of the top ten webapp security threats in 2025.](https://nodeweekly.com/link/176819/0a4070b383)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d923f0a0.png)](https://nodeweekly.com/link/176816/0a4070b383)
+
+[Agentic Postgres: AI-Ready Postgres for Go Developers](https://nodeweekly.com/link/176816/0a4070b383 "www.tigerdata.com") — Tiger Data’s Agentic Postgres turns vanilla Postgres into an AI-native database. Fork DBs, give agents memory, and query via REST or CLI. Perfect for Go backends building with Claude, Cursor, or custom agents. Try it free—no card needed.
+
+Tiger Data sponsor
+
+[pnpm 10.21: Safer Installs and Smarter Runtime Management](https://nodeweekly.com/link/176820/0a4070b383 "pnpm.io") — pnpm can now automatically install the Node version required by a dependency, declared in its `engines.runtime` field, meaning CLI apps and `postinstall` scripts will run with the specified version. A new `trustPolicy` setting also adds protection against supply-chain attacks by failing to install packages whose trust level drops (e.g. if a package’s build pipeline loses attestation).
+
+Zoltan Kochan
+
+**IN BRIEF:**
+
+* GitHub has updated [its post about ongoing npm security changes](https://nodeweekly.com/link/176821/0a4070b383). npm classic tokens can no longer be created, but existing ones will continue to work until February 2026 at the latest.
+
+* On Reddit's `/r/node`, Jeet Shekhaliya shares [his efforts to create a system to automatically test thousands of popular npm packages](https://nodeweekly.com/link/176822/0a4070b383) against the latest daily build of Node. You can see [the latest report here.](https://nodeweekly.com/link/176823/0a4070b383)
+
+* Dr. Axel Rauschmayer [noticed](https://nodeweekly.com/link/176824/0a4070b383) a `pnpm` feature we weren't aware of before: [the ability to install and manage different versions of Node.](https://nodeweekly.com/link/176825/0a4070b383)
+
+* [Node.js 24 is now available on Azure App Service for Linux.](https://nodeweekly.com/link/176826/0a4070b383)
+
+▶  [The State of Node.js 2025 Explained by Matteo Collina](https://nodeweekly.com/link/176827/0a4070b383 "www.youtube.com") — A thirty minute talk from *JSNation* earlier this year where TSC member Matteo presented an update on Node’s still-growing popularity, release schedule, security, recent performance enhancements, the permissions system, and more.
+
+GitNation
+
+📄 [Error Chaining in JS: Cleaner Debugging with `Error` and `cause`](https://nodeweekly.com/link/176828/0a4070b383) Matt Smith
+
+📄 [Building NestJS Applications Following the CQRS Model](https://nodeweekly.com/link/176829/0a4070b383) Christian Nwamba
+
+📄 [Zod + TypeScript: Schema Validation Made Easy](https://nodeweekly.com/link/176830/0a4070b383) Hassan Djirdeh
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/p2b7csuw8eqebbk7r6yz.jpg)](https://nodeweekly.com/link/176831/0a4070b383)
+
+[Umami 3.0: A Self-Hosted, Privacy-Focused Google Analytics Alternative](https://nodeweekly.com/link/176831/0a4070b383 "github.com") — Think something like [Plausible](https://nodeweekly.com/link/176832/0a4070b383) or Google Analytics, but built in Node and ready for you to host yourself. Here’s [the full feature list.](https://nodeweekly.com/link/176833/0a4070b383) MIT licensed but also available as [a paid hosted service.](https://nodeweekly.com/link/176834/0a4070b383)
+
+Umami Software, Inc.
+
+[Unify Logs, Errors, and Traces in One Place](https://nodeweekly.com/link/176835/0a4070b383 "sentry.io") — See logs, errors, and traces together in one place for full context. Debug faster with Sentry Logs.
+
+Sentry sponsor
+
+[Tasuku (タスク): A Minimal Task Runner for Node](https://nodeweekly.com/link/176836/0a4070b383 "github.com") — Tasuku, Japanese for ‘task’, provides a clean way to break up processes into small tasks, which can then be run in the right order with progress displayed elegantly in the terminal. Think `make` but Node-flavored. [Live demo.](https://nodeweekly.com/link/176837/0a4070b383)
+
+hiroki osame
+
+🛑 [fkill 10.0: A Cross-Platform Way to Kill Processes](https://nodeweekly.com/link/176838/0a4070b383 "github.com") — Working on macOS, Linux, and Windows, this gives you a nice API for kill processes. For example: `await fkill('chrome', &lcub;waitForExit: 2000});`
+
+Sindre Sorhus
+
+[CSSOM: A CSS Parser Written in Pure JavaScript](https://nodeweekly.com/link/176839/0a4070b383 "github.com") — Also a partial implementation of CSS Object Model.
+
+Nikita Vasilyev
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/spj3hsrlthowmnt1i4se.jpg)](https://nodeweekly.com/link/176840/0a4070b383)
+
+[Render.js: A Raytracing Renderer with RenderMan Format Support](https://nodeweekly.com/link/176840/0a4070b383 "github.com") — Created at Pixar in the 80s, the [*RenderMan Interface Specification*](https://nodeweekly.com/link/176841/0a4070b383) was an early API for building 3D scenes. Anders has been building a Node-based, 90s-style renderer for the format *“as a stroll down amnesia lane”* in pure JavaScript.
+
+Anders Brownworth
+
+* [MongoDB Node.js Driver 7.0](https://nodeweekly.com/link/176842/0a4070b383) – The latest official MongoDB driver. I love how thorough MongoDB's release notes always are for these!
+
+* [pg-promise v12.3](https://nodeweekly.com/link/176843/0a4070b383) – Extended Postgres driver for Node with automatic connections and transactions, query generation, and more.
+
+* [file-type 21.1](https://nodeweekly.com/link/176844/0a4070b383) – Detect the file type of a file, stream, or data. Now also supporting `.tar.gz` files and Windows registry files.
+
+* [pg-boss 12.0](https://nodeweekly.com/link/176845/0a4070b383) – Postgres-based job queuing system for Node. Has migrated to ESM, so existing users have some changes to make.
+
+* 🤖 [Repomix 1.9](https://nodeweekly.com/link/176846/0a4070b383) – Pack an entire repository into a single, LLM-friendly file.
+
+* [Fastify 5.6.2](https://nodeweekly.com/link/176847/0a4070b383) – The fast, low overhead Node web framework.
+
+* [Prisma 6.19](https://nodeweekly.com/link/176848/0a4070b383) – Popular ORM for Node.js and TypeScript.
+
+* [node-mssql 12.1](https://nodeweekly.com/link/176849/0a4070b383) – Microsoft SQL Server client library.
+
+📰 Classifieds
+
+🐱 **[ConfigCat Feature Flag Service](https://nodeweekly.com/link/176850/0a4070b383)** lets you release and roll back features safely without code changes. Set it up in minutes! **[Save 25% now!](https://nodeweekly.com/link/176850/0a4070b383)**
+
+***
+
+Add e-signatures to your Node.js app in minutes with the BoldSign Node.js SDK—powered by **[our e-signature API. Get your free API key today](https://nodeweekly.com/link/176851/0a4070b383).**
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v0djw45wiicxyxptccxq.jpg)](https://nodeweekly.com/link/176852/0a4070b383)
+
+* 🇯🇵 Fancy writing JavaScript in Japanese *(above)*? [Say こんにちは to KokoScript.](https://nodeweekly.com/link/176852/0a4070b383)
+
+* On the topic of Japan, if you know a company in Japan that would benefit from having one of JavaScript's best-known names as an employee, [Dan Abramov is looking for a job in Japan right now.](https://nodeweekly.com/link/176853/0a4070b383)
+
+* I enjoyed Lea Verou's [cute proxy-based trick for creating JavaScript symbols](https://nodeweekly.com/link/176854/0a4070b383) on demand.
+
+* [GitHub did a quick interview with TypeScript co-creator Anders Hejsberg](https://nodeweekly.com/link/176855/0a4070b383) about the rise of TypeScript (now the #1 language on GitHub) and its role in a more AI-oriented world.
+
+* Ben Visness writes about [how Mozilla has overhauled its internal tools for visualizing JavaScript and WebAssembly compilation](https://nodeweekly.com/link/176856/0a4070b383), complete with interactive graphs.
+
+* If you need to embed JavaScript into places Node doesn't yet go, [Hako is an interesting WebAssembly-oriented option](https://nodeweekly.com/link/176857/0a4070b383).
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
