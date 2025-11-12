@@ -1,0 +1,222 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Beware the overuse of useTransition
+description: Beware the overuse of useTransition
+date: 星期三 07 晚上 十一月 12o 2025
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/451
+origin_site: https://react.statuscode.com/issues/451
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Beware the overuse of useTransition" url="https://react.statuscode.com/issues/451" />
+
+<Detail client:only="react">
+	#​451 — November 12, 2025
+
+[Read on the Web](https://react.statuscode.com/issues/451)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://react.statuscode.com/link/176932/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jjw8rfhd8wyn4akpqaei.jpg)](https://react.statuscode.com/link/176933/5d0bbb4a61)
+
+[Don't Blindly Use `useTransition` Everywhere](https://react.statuscode.com/link/176933/5d0bbb4a61 "www.charpeni.com") — The [`useTransition`](https://react.statuscode.com/link/176934/5d0bbb4a61) hook makes UI updates interruptible, but overuse creates messy experiences. Nicolas challenges its overuse, shares some live examples, and suggests alternative approaches.
+
+Nicolas Charpentier
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/5b735973.png)](https://react.statuscode.com/link/176932/5d0bbb4a61)
+
+[TypeScript: From First Steps to Professional](https://react.statuscode.com/link/176932/5d0bbb4a61 "frontendmasters.com") — Learn TypeScript step-by-step with Anjana Vakil, and gain confidence writing code you can trust! Add strong types, reuse interfaces, and apply type safety throughout your app with hands-on projects converting JavaScript to TypeScript.
+
+Frontend Masters sponsor
+
+**IN BRIEF:**
+
+*   The team behind Snapchat [has open sourced _Valdi_](https://react.statuscode.com/link/176935/5d0bbb4a61), a cross-platform UI framework used in its apps for many years. It's _not_ React Native, but covers similar ground. [More info here.](https://react.statuscode.com/link/176936/5d0bbb4a61)
+    
+*   🔎 [React Source Lens](https://react.statuscode.com/link/176937/5d0bbb4a61) offers a new way to select a component in your app in the browser and open its code in your editor.
+    
+*   🇯🇵 If you know a company in Japan that would benefit from having one of React's best-known names as an employee, [Dan Abramov is looking for a job in Japan right now.](https://react.statuscode.com/link/176938/5d0bbb4a61)
+    
+
+[Expo for React Native in 2025: A Perspective](https://react.statuscode.com/link/176939/5d0bbb4a61 "hashrocket.com") — [Expo](https://react.statuscode.com/link/176940/5d0bbb4a61) is essentially becoming to React Native what Next.js became to React. But is it well suited for _you_? Jack weighs the pros and cons.
+
+Jack Rosa
+
+[Your URL is Your State](https://react.statuscode.com/link/176941/5d0bbb4a61 "alfy.blog") — If a site supports it, a URL can, in many cases, elegantly reflect state through its various components. Ahmad looks into this ‘overlooked power.’ Includes examples in plain JavaScript and using React Router.
+
+Ahmad Alfy
+
+💡 [nuqs](https://react.statuscode.com/link/176942/5d0bbb4a61) is a popular type-safe params state manager for React worth checking out that handles this task too.
+
+📄 [Rendering a Chart with Secondary Y Axis in React Native with Victory Native](https://react.statuscode.com/link/176943/5d0bbb4a61) – [Victory Native](https://react.statuscode.com/link/176944/5d0bbb4a61) is an open source charting library for React Native. Valerie Nielson
+
+📄 [Concurrent Hydration with `useSyncExternalStore`](https://react.statuscode.com/link/176945/5d0bbb4a61) Jacob 'Kurt' Groß
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fgcxuruucxufk1lwu259.jpg)](https://react.statuscode.com/link/176946/5d0bbb4a61)
+
+[ElevenLabs UI: `shadcn/ui`\-Based Components for Multimodal Agent Use Cases](https://react.statuscode.com/link/176946/5d0bbb4a61 "ui.elevenlabs.io") — A unique library that includes React components aimed specifically at agent and audio apps, with orbs, waveforms, voice agents, audio players, etc. View the components [on the docs site](https://react.statuscode.com/link/176946/5d0bbb4a61), which includes some working, interactive examples.
+
+ElevenLabs
+
+[Mantine DataTable: A Table Component for Data-Rich Apps](https://react.statuscode.com/link/176947/5d0bbb4a61 "icflorescu.github.io") — A fully featured data table / data grid component for building data-rich applications that are using [Mantine 8.](https://react.statuscode.com/link/176948/5d0bbb4a61)
+
+Ionut-Cristian Florescu
+
+[Make Remote Pair Programming Fun Again](https://react.statuscode.com/link/176949/5d0bbb4a61 "tuple.app") — 92% of surveyed Tuple users say that using Tuple makes them happier at work. [Find out why](https://react.statuscode.com/link/176949/5d0bbb4a61).
+
+Tuple sponsor
+
+[Ink 6.5: Build Interactive CLI Apps using React](https://react.statuscode.com/link/176950/5d0bbb4a61 "github.com") — A [very widely used](https://react.statuscode.com/link/176951/5d0bbb4a61) terminal-based React renderer for building reactive terminal apps using components. v6.5 is notable for adding [an incremental rendering option.](https://react.statuscode.com/link/176952/5d0bbb4a61)
+
+Vadim Demedes
+
+[Valtio 2.2: Proxy State Made Simple](https://react.statuscode.com/link/176953/5d0bbb4a61 "valtio.dev") — Turns objects into self-aware proxies so you can access state and subscribe to changes outside of components, add [computed properties](https://react.statuscode.com/link/176954/5d0bbb4a61) and more. [GitHub repo.](https://react.statuscode.com/link/176955/5d0bbb4a61)
+
+Daishi Kato
+
+*    [React Native Apple Authentication 2.5](https://react.statuscode.com/link/176956/5d0bbb4a61) – Support for _Sign In with Apple_ on iOS and Android.
+    
+*   [react-jsonschema-form 6.1](https://react.statuscode.com/link/176957/5d0bbb4a61) – Use JSON Schema to declaratively build forms. ([Live demo.](https://react.statuscode.com/link/176958/5d0bbb4a61))
+    
+*   📅 [React Date Picker 8.9](https://react.statuscode.com/link/176959/5d0bbb4a61) – Date picker component. ([Demo.](https://react.statuscode.com/link/176960/5d0bbb4a61))
+    
+*   [Fortune Sheet 1.0.4](https://react.statuscode.com/link/176961/5d0bbb4a61) – Google Sheets/Excel-style spreadsheet control. ([Demo.](https://react.statuscode.com/link/176962/5d0bbb4a61))
+    
+*   [next-intl v4.5.0](https://react.statuscode.com/link/176963/5d0bbb4a61) – Internationalization approach for Next.js apps.
+    
+*   [React Chrono 3.2.1](https://react.statuscode.com/link/176964/5d0bbb4a61) – Modern timeline component.
+    
+
+📢  Elsewhere in the ecosystem
+
+Some other interesting stories in the broader landscape:
+
+*   [Node.js v25.2.0 (Current)](https://react.statuscode.com/link/176965/5d0bbb4a61) has been released with [type stripping](https://react.statuscode.com/link/176966/5d0bbb4a61) now marked as stable (though it otherwise works as in v24).
+    
+*   Matt Perry shares everything he knows about animation performance on the Web in [The Web Animation Performance Tier List.](https://react.statuscode.com/link/176967/5d0bbb4a61)
+    
+*   🇷🇴 The popular [JSHeroes](https://react.statuscode.com/link/176968/5d0bbb4a61) conference is taking place in Romania next May 14-15. If you'd like to speak, [its CFP is open](https://react.statuscode.com/link/176969/5d0bbb4a61) until December 31.
+    
+*   🇯🇵 Fancy writing JavaScript in Japanese? [Say こんにちは to KokoScript.](https://react.statuscode.com/link/176970/5d0bbb4a61)
+    
+*   [Bun v1.3.2](https://react.statuscode.com/link/176971/5d0bbb4a61) has been released.
+    
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​451 — November 12, 2025
+
+[Read on the Web](https://react.statuscode.com/issues/451)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://react.statuscode.com/link/176932/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jjw8rfhd8wyn4akpqaei.jpg)](https://react.statuscode.com/link/176933/5d0bbb4a61)
+
+[Don't Blindly Use `useTransition` Everywhere](https://react.statuscode.com/link/176933/5d0bbb4a61 "www.charpeni.com") — The [`useTransition`](https://react.statuscode.com/link/176934/5d0bbb4a61) hook makes UI updates interruptible, but overuse creates messy experiences. Nicolas challenges its overuse, shares some live examples, and suggests alternative approaches.
+
+Nicolas Charpentier
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/5b735973.png)](https://react.statuscode.com/link/176932/5d0bbb4a61)
+
+[TypeScript: From First Steps to Professional](https://react.statuscode.com/link/176932/5d0bbb4a61 "frontendmasters.com") — Learn TypeScript step-by-step with Anjana Vakil, and gain confidence writing code you can trust! Add strong types, reuse interfaces, and apply type safety throughout your app with hands-on projects converting JavaScript to TypeScript.
+
+Frontend Masters sponsor
+
+**IN BRIEF:**
+
+* The team behind Snapchat [has open sourced *Valdi*](https://react.statuscode.com/link/176935/5d0bbb4a61), a cross-platform UI framework used in its apps for many years. It's *not* React Native, but covers similar ground. [More info here.](https://react.statuscode.com/link/176936/5d0bbb4a61)
+
+* 🔎 [React Source Lens](https://react.statuscode.com/link/176937/5d0bbb4a61) offers a new way to select a component in your app in the browser and open its code in your editor.
+
+* 🇯🇵 If you know a company in Japan that would benefit from having one of React's best-known names as an employee, [Dan Abramov is looking for a job in Japan right now.](https://react.statuscode.com/link/176938/5d0bbb4a61)
+
+[Expo for React Native in 2025: A Perspective](https://react.statuscode.com/link/176939/5d0bbb4a61 "hashrocket.com") — [Expo](https://react.statuscode.com/link/176940/5d0bbb4a61) is essentially becoming to React Native what Next.js became to React. But is it well suited for *you*? Jack weighs the pros and cons.
+
+Jack Rosa
+
+[Your URL is Your State](https://react.statuscode.com/link/176941/5d0bbb4a61 "alfy.blog") — If a site supports it, a URL can, in many cases, elegantly reflect state through its various components. Ahmad looks into this ‘overlooked power.’ Includes examples in plain JavaScript and using React Router.
+
+Ahmad Alfy
+
+💡 [nuqs](https://react.statuscode.com/link/176942/5d0bbb4a61) is a popular type-safe params state manager for React worth checking out that handles this task too.
+
+📄 [Rendering a Chart with Secondary Y Axis in React Native with Victory Native](https://react.statuscode.com/link/176943/5d0bbb4a61) – [Victory Native](https://react.statuscode.com/link/176944/5d0bbb4a61) is an open source charting library for React Native. Valerie Nielson
+
+📄 [Concurrent Hydration with `useSyncExternalStore`](https://react.statuscode.com/link/176945/5d0bbb4a61) Jacob 'Kurt' Groß
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fgcxuruucxufk1lwu259.jpg)](https://react.statuscode.com/link/176946/5d0bbb4a61)
+
+[ElevenLabs UI: `shadcn/ui`-Based Components for Multimodal Agent Use Cases](https://react.statuscode.com/link/176946/5d0bbb4a61 "ui.elevenlabs.io") — A unique library that includes React components aimed specifically at agent and audio apps, with orbs, waveforms, voice agents, audio players, etc. View the components [on the docs site](https://react.statuscode.com/link/176946/5d0bbb4a61), which includes some working, interactive examples.
+
+ElevenLabs
+
+[Mantine DataTable: A Table Component for Data-Rich Apps](https://react.statuscode.com/link/176947/5d0bbb4a61 "icflorescu.github.io") — A fully featured data table / data grid component for building data-rich applications that are using [Mantine 8.](https://react.statuscode.com/link/176948/5d0bbb4a61)
+
+Ionut-Cristian Florescu
+
+[Make Remote Pair Programming Fun Again](https://react.statuscode.com/link/176949/5d0bbb4a61 "tuple.app") — 92% of surveyed Tuple users say that using Tuple makes them happier at work. [Find out why](https://react.statuscode.com/link/176949/5d0bbb4a61).
+
+Tuple sponsor
+
+[Ink 6.5: Build Interactive CLI Apps using React](https://react.statuscode.com/link/176950/5d0bbb4a61 "github.com") — A [very widely used](https://react.statuscode.com/link/176951/5d0bbb4a61) terminal-based React renderer for building reactive terminal apps using components. v6.5 is notable for adding [an incremental rendering option.](https://react.statuscode.com/link/176952/5d0bbb4a61)
+
+Vadim Demedes
+
+[Valtio 2.2: Proxy State Made Simple](https://react.statuscode.com/link/176953/5d0bbb4a61 "valtio.dev") — Turns objects into self-aware proxies so you can access state and subscribe to changes outside of components, add [computed properties](https://react.statuscode.com/link/176954/5d0bbb4a61) and more. [GitHub repo.](https://react.statuscode.com/link/176955/5d0bbb4a61)
+
+Daishi Kato
+
+*  [React Native Apple Authentication 2.5](https://react.statuscode.com/link/176956/5d0bbb4a61) – Support for *Sign In with Apple* on iOS and Android.
+
+* [react-jsonschema-form 6.1](https://react.statuscode.com/link/176957/5d0bbb4a61) – Use JSON Schema to declaratively build forms. ([Live demo.](https://react.statuscode.com/link/176958/5d0bbb4a61))
+
+* 📅 [React Date Picker 8.9](https://react.statuscode.com/link/176959/5d0bbb4a61) – Date picker component. ([Demo.](https://react.statuscode.com/link/176960/5d0bbb4a61))
+
+* [Fortune Sheet 1.0.4](https://react.statuscode.com/link/176961/5d0bbb4a61) – Google Sheets/Excel-style spreadsheet control. ([Demo.](https://react.statuscode.com/link/176962/5d0bbb4a61))
+
+* [next-intl v4.5.0](https://react.statuscode.com/link/176963/5d0bbb4a61) – Internationalization approach for Next.js apps.
+
+* [React Chrono 3.2.1](https://react.statuscode.com/link/176964/5d0bbb4a61) – Modern timeline component.
+
+📢  Elsewhere in the ecosystem
+
+Some other interesting stories in the broader landscape:
+
+* [Node.js v25.2.0 (Current)](https://react.statuscode.com/link/176965/5d0bbb4a61) has been released with [type stripping](https://react.statuscode.com/link/176966/5d0bbb4a61) now marked as stable (though it otherwise works as in v24).
+
+* Matt Perry shares everything he knows about animation performance on the Web in [The Web Animation Performance Tier List.](https://react.statuscode.com/link/176967/5d0bbb4a61)
+
+* 🇷🇴 The popular [JSHeroes](https://react.statuscode.com/link/176968/5d0bbb4a61) conference is taking place in Romania next May 14-15. If you'd like to speak, [its CFP is open](https://react.statuscode.com/link/176969/5d0bbb4a61) until December 31.
+
+* 🇯🇵 Fancy writing JavaScript in Japanese? [Say こんにちは to KokoScript.](https://react.statuscode.com/link/176970/5d0bbb4a61)
+
+* [Bun v1.3.2](https://react.statuscode.com/link/176971/5d0bbb4a61) has been released.
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
