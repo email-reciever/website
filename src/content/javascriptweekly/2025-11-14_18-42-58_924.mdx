@@ -1,0 +1,341 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Every JavaScript engine all at once
+description: Every JavaScript engine all at once
+date: 星期五 06 晚上 十一月 14o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/761
+origin_site: https://javascriptweekly.com/issues/761
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Every JavaScript engine all at once" url="https://javascriptweekly.com/issues/761" />
+
+<Detail client:only="react">
+	#​761 — November 14, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/761)
+
+Together with 
+
+[![Mescius](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_284/e_make_transparent/co_white,e_outline:7/mqrpcwpbl3os6si25hoe.jpg)](https://javascriptweekly.com/link/177055/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/sest28jyubncgvbyhloa.jpg)](https://javascriptweekly.com/link/177056/d076523b1d)
+
+[JavaScript Engines Zoo: Learn About Over 100 JS Engines](https://javascriptweekly.com/link/177056/d076523b1d "ivankra.github.io") — I’m a sucker for a big table of data and this is about as big as it gets when it comes to JavaScript engines. See how various engines compare, sort them by performance, or click on an engine’s name to learn more about its development, history, and end users. The [project’s repo](https://javascriptweekly.com/link/177057/d076523b1d) also has [Dockerfiles](https://javascriptweekly.com/link/177059/d076523b1d) for trying each of them out.
+
+Ivan Krasilnikov
+
+💡 Sticking with a theme, I've always enjoyed [this ECMAScript compatibility table](https://javascriptweekly.com/link/177060/d076523b1d) where you can see cross-browser and runtime support for different JavaScript features.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/1b9e24da.png)](https://javascriptweekly.com/link/177055/d076523b1d)
+
+[FlexGrid by Wijmo: The Industry-Leading JavaScript Datagrid](https://javascriptweekly.com/link/177055/d076523b1d "developer.mescius.com") — A fast and flexible datagrid for building modern web apps. Key features and virtualized rendering are included in the core grid module. Pick & choose special features to keep your app small. Built for JavaScript, extended to Angular, React, and Vue.
+
+Wijmo From MESCIUS sponsor
+
+[Valdi: Snap's Newly-Open Cross-Platform UI Framework](https://javascriptweekly.com/link/177061/d076523b1d "github.com") — The team behind Snapchat has open sourced this cross-platform UI framework that it’s used in its production apps for eight years: _“Write your UI once in declarative TypeScript, and it compiles directly to native views on iOS, Android, and macOS—no web views, no JavaScript bridges.”_
+
+Snap
+
+💡 [Valdi's FAQ](https://javascriptweekly.com/link/177063/d076523b1d) answers several questions you might have, including how it works and why you might pick Valdi over React Native.
+
+**IN BRIEF:**
+
+*   The TC39 committee behind ECMAScript is meeting for the 111th time next week and [has a packed agenda to discuss.](https://javascriptweekly.com/link/177064/d076523b1d) _(Thanks to [Rob Palmer](https://javascriptweekly.com/link/177065/d076523b1d) for the heads up.)_
+    
+*   For Stack Overflow, Tanya Janca shares [several tips for writing more secure JavaScript.](https://javascriptweekly.com/link/177066/d076523b1d)
+    
+*   The co-founder of the fantastic [Val Town](https://javascriptweekly.com/link/177067/d076523b1d) online JavaScript platform shares [a retrospective of its past three years](https://javascriptweekly.com/link/177068/d076523b1d), as well as two roles they're hiring for.
+    
+*   [Visual Types](https://javascriptweekly.com/link/177069/d076523b1d) is a handy visually-oriented guide/tour of what types are and how they work, with a focus on TypeScript.
+    
+
+**RELEASES:**
+
+*   [Bun v1.3.2](https://javascriptweekly.com/link/177070/d076523b1d) – Isolated package installs, introduced as the default in v1.3, were causing issues with some existing projects, so now hoisted installs are back as the default for those. `bun install` also gets even faster and you can do CPU profiling by running with `--cpu-prof`.
+    
+*   [Node.js v25.2.0 (Current)](https://javascriptweekly.com/link/177071/d076523b1d) – Now with **[type stripping](https://javascriptweekly.com/link/177072/d076523b1d) marked as stable.**
+    
+*   [esbuild 0.27](https://javascriptweekly.com/link/177073/d076523b1d) – Popular bundler. A notable release for having breaking changes (so you're reminded to pin `esbuild` appropriately).
+    
+*   [TanStack DB 0.5](https://javascriptweekly.com/link/177074/d076523b1d), [Node.js v24.11.1 (LTS)](https://javascriptweekly.com/link/177075/d076523b1d), [MikroORM 6.6](https://javascriptweekly.com/link/177076/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pwene62ff0apc6bwcbg0.jpg)](https://javascriptweekly.com/link/177077/d076523b1d)
+
+▶  [The State of Node.js in 2025, Explained](https://javascriptweekly.com/link/177077/d076523b1d "www.youtube.com") — A thirty-minute talk from _JSNation_ earlier this year where TSC member Matteo Collina presented an update on Node’s still-growing popularity, release schedule, security, recent performance enhancements, the permissions system, and more.
+
+GitNation
+
+[V8's Garbage Collector Developments in Recent Years](https://javascriptweekly.com/link/177078/d076523b1d "wingolog.org") — Andy, who’s worked on both V8 and JavaScriptCore in the past, reviews the major developments in the V8 engine’s garbage collector over the past couple of years. Very technical, but a valuable piece of history.
+
+Andy Wingo
+
+[Build Type-Safe APIs for Your JS Apps: Protobuf Workshop with Buf Team](https://javascriptweekly.com/link/177079/d076523b1d "fandf.co") — Learn how Protobuf brings type safety across your stack from Node.js APIs to frontend clients. Live Q&A with Buf engineers.
+
+Buf sponsor
+
+[Comparing Electron vs. Tauri for Building and Distributing a Desktop App](https://javascriptweekly.com/link/177080/d076523b1d "www.dolthub.com") — A team working on an open-source desktop app built using JavaScript and Electron took a look into the Rust-based [Tauri](https://javascriptweekly.com/link/177081/d076523b1d) instead, with mixed, but mostly positive, results.
+
+Eric Richardson
+
+[Using Expo for React Native Development in 2025: A Perspective](https://javascriptweekly.com/link/177082/d076523b1d "hashrocket.com") — [Expo](https://javascriptweekly.com/link/177083/d076523b1d) has essentially become to React Native what Next.js became to React. But is it well suited for _you_? Jack weighs the pros and cons.
+
+Jack Rosa
+
+📄 [How We Catch UI Bugs Early with Visual Regression Testing](https://javascriptweekly.com/link/177084/d076523b1d) – Using Playwright and its [visual comparisons](https://javascriptweekly.com/link/177085/d076523b1d) feature. Tommaso Ruscica
+
+📺 [Learn JavaScript by Building 'Mario'](https://javascriptweekly.com/link/177086/d076523b1d) – One of Ania’s typically easy to follow, comprehensive tutorials. Ania Kubow
+
+📄 [Building a 3D Infinite Carousel with Reactive Background Gradients](https://javascriptweekly.com/link/177087/d076523b1d) Clément Grellier
+
+📄 [Error Chaining in JS: Cleaner Debugging with `Error`'s `cause`](https://javascriptweekly.com/link/177088/d076523b1d) Matt Smith
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/thylucbd0cbx3euryyp4.jpg)](https://javascriptweekly.com/link/177089/d076523b1d)
+
+[imgui-react-runtime: React + Dear ImGui + Static Hermes](https://javascriptweekly.com/link/177089/d076523b1d "github.com") — When the author [teased a demo](https://javascriptweekly.com/link/177090/d076523b1d) of this on X a few weeks ago, I wasn’t sure if it would get released, but here it is. A new way to put together native apps using React and the popular lightweight GUI library [Dear ImGui.](https://javascriptweekly.com/link/177091/d076523b1d)
+
+Tzvetan Mikov
+
+[ESLint Plugin for Baseline JavaScript](https://javascriptweekly.com/link/177092/d076523b1d "baselinejs.vercel.app") — The winner of last month's [Baseline Tooling Hackathon](https://javascriptweekly.com/link/177093/d076523b1d) is an ESLint plugin that flags code that’s using features newer than your configured [Baseline](https://javascriptweekly.com/link/177094/d076523b1d) target (features broadly supported by modern browsers).
+
+Ryuya Hasegawa
+
+[Customizable JavaScript Libraries for Forms & Surveys](https://javascriptweekly.com/link/177095/d076523b1d "surveyjs.io") — Create branded, dynamic forms with full control over design, logic, and data storage.
+
+SurveyJS sponsor
+
+[pnpm 10.21: Safer Installs and Smarter Runtime Management](https://javascriptweekly.com/link/177096/d076523b1d "pnpm.io") — Now installs the Node version required by a dependency, declared in its `engines.runtime` field, meaning CLI apps and `postinstall` scripts will run with the specified version. The `trustPolicy` setting also adds protection against supply-chain attacks by failing to install a package if its trust level drops.
+
+Zoltan Kochan
+
+[Ink 6.5: Build Interactive CLI Apps using React](https://javascriptweekly.com/link/177097/d076523b1d "github.com") — A [very widely used](https://javascriptweekly.com/link/177098/d076523b1d) terminal-based React renderer for building reactive terminal apps using components. v6.5 is notable for adding [an incremental rendering option.](https://javascriptweekly.com/link/177099/d076523b1d)
+
+Vadim Demedes
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bmi63s4ori1en5q0gdh5.jpg)](https://javascriptweekly.com/link/177100/d076523b1d)
+
+*   [vis-timeline 8.4](https://javascriptweekly.com/link/177100/d076523b1d) – Interactive control to visualize data across time, as shown above. [Numerous examples here.](https://javascriptweekly.com/link/177102/d076523b1d)
+    
+*   [rasterizeHTML.js 1.4](https://javascriptweekly.com/link/177103/d076523b1d) – Renders HTML into a canvas element. Now supporting [OffscreenCanvas](https://javascriptweekly.com/link/177104/d076523b1d) too.
+    
+*   [file-type 21.1](https://javascriptweekly.com/link/177105/d076523b1d) – Detect the file type of a file, stream, or data in both Node and the browser.
+    
+*   [Svelte SEO 2.0](https://javascriptweekly.com/link/177106/d076523b1d) – Optimize your Svelte app for search engines and social media.
+    
+*   [isomorphic-git 1.35](https://javascriptweekly.com/link/177107/d076523b1d) – Pure JS implementation of `git` for Node & browsers.
+    
+
+📰 Classifieds
+
+Add lightning-fast, on-device 1D/2D code scanning to your web app with [STRICH](https://javascriptweekly.com/link/177108/d076523b1d). Easy integration, simple pricing, [free trial and demo!](https://javascriptweekly.com/link/177108/d076523b1d)
+
+* * *
+
+[Still writing tests manually?](https://javascriptweekly.com/link/177109/d076523b1d) See why modern engineering teams like Dropbox, Notion and Lattice rely on [Meticulous](https://javascriptweekly.com/link/177109/d076523b1d) to run E2E UI tests.
+
+* * *
+
+[Launch Your Shopify Storefront in Minutes with Next.js](https://javascriptweekly.com/link/177110/d076523b1d) - Open-source starter with Dynamic OG Images, AI Vector Search & Vercel Toolbar.
+
+* * *
+
+🎨 [Try Pintura image editor for free today](https://javascriptweekly.com/link/177111/d076523b1d), add a polished cropping, rotating, and annotation experience to your web app in minutes.
+
+📢  Elsewhere in the ecosystem
+
+Some other interesting tidbits in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/eflmy8nrynzm9m7mywlm.jpg)](https://javascriptweekly.com/link/177112/d076523b1d)
+
+*   🔒 OWASP (Open Worldwide Application Security Project) has released [its list of the top ten web application security threats in 2025.](https://javascriptweekly.com/link/177112/d076523b1d)
+    
+*   🤖 An ardent critic of LLMs [spent a month doing 'chat oriented programming'](https://javascriptweekly.com/link/177116/d076523b1d) and while he found the experience "infuriating", he concedes it has merit and is a viable option _"if your tolerance for pain is high enough."_.
+    
+*   🧊 Ever fancied [implementing a voxel-based engine](https://javascriptweekly.com/link/177115/d076523b1d) for that Minecraft-esque experience? Uses (very Rust-y) pseudocode in order to remain timeless and let you enjoy doing the implementation yourself.
+    
+*   An explanation of [the differences between monorepos, multi-repo, submodule and subtree setups](https://javascriptweekly.com/link/177113/d076523b1d) in Git.
+    
+*   💻 If you like collecting stickers from conferences, you might enjoy [this gallery of hundreds of people's stickered-up laptops](https://javascriptweekly.com/link/177118/d076523b1d) or even want to submit your own. It took me a while to find any JavaScript stickers, but they're there..
+    
+
+🎂 P.S. _JavaScript Weekly_ turned fifteen years old this week! Thanks to all of you for reading, and particularly anyone still subscribed from the first issue. We haven't looked at the stats in a while, but we know there are some of you! :-)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/177120/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​761 — November 14, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/761)
+
+Together with 
+
+[![Mescius](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_284/e_make_transparent/co_white,e_outline:7/mqrpcwpbl3os6si25hoe.jpg)](https://javascriptweekly.com/link/177055/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/sest28jyubncgvbyhloa.jpg)](https://javascriptweekly.com/link/177056/d076523b1d)
+
+[JavaScript Engines Zoo: Learn About Over 100 JS Engines](https://javascriptweekly.com/link/177056/d076523b1d "ivankra.github.io") — I’m a sucker for a big table of data and this is about as big as it gets when it comes to JavaScript engines. See how various engines compare, sort them by performance, or click on an engine’s name to learn more about its development, history, and end users. The [project’s repo](https://javascriptweekly.com/link/177057/d076523b1d) also has [Dockerfiles](https://javascriptweekly.com/link/177059/d076523b1d) for trying each of them out.
+
+Ivan Krasilnikov
+
+💡 Sticking with a theme, I've always enjoyed [this ECMAScript compatibility table](https://javascriptweekly.com/link/177060/d076523b1d) where you can see cross-browser and runtime support for different JavaScript features.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/1b9e24da.png)](https://javascriptweekly.com/link/177055/d076523b1d)
+
+[FlexGrid by Wijmo: The Industry-Leading JavaScript Datagrid](https://javascriptweekly.com/link/177055/d076523b1d "developer.mescius.com") — A fast and flexible datagrid for building modern web apps. Key features and virtualized rendering are included in the core grid module. Pick & choose special features to keep your app small. Built for JavaScript, extended to Angular, React, and Vue.
+
+Wijmo From MESCIUS sponsor
+
+[Valdi: Snap's Newly-Open Cross-Platform UI Framework](https://javascriptweekly.com/link/177061/d076523b1d "github.com") — The team behind Snapchat has open sourced this cross-platform UI framework that it’s used in its production apps for eight years: *“Write your UI once in declarative TypeScript, and it compiles directly to native views on iOS, Android, and macOS—no web views, no JavaScript bridges.”*
+
+Snap
+
+💡 [Valdi's FAQ](https://javascriptweekly.com/link/177063/d076523b1d) answers several questions you might have, including how it works and why you might pick Valdi over React Native.
+
+**IN BRIEF:**
+
+* The TC39 committee behind ECMAScript is meeting for the 111th time next week and [has a packed agenda to discuss.](https://javascriptweekly.com/link/177064/d076523b1d) *(Thanks to [Rob Palmer](https://javascriptweekly.com/link/177065/d076523b1d) for the heads up.)*
+
+* For Stack Overflow, Tanya Janca shares [several tips for writing more secure JavaScript.](https://javascriptweekly.com/link/177066/d076523b1d)
+
+* The co-founder of the fantastic [Val Town](https://javascriptweekly.com/link/177067/d076523b1d) online JavaScript platform shares [a retrospective of its past three years](https://javascriptweekly.com/link/177068/d076523b1d), as well as two roles they're hiring for.
+
+* [Visual Types](https://javascriptweekly.com/link/177069/d076523b1d) is a handy visually-oriented guide/tour of what types are and how they work, with a focus on TypeScript.
+
+**RELEASES:**
+
+* [Bun v1.3.2](https://javascriptweekly.com/link/177070/d076523b1d) – Isolated package installs, introduced as the default in v1.3, were causing issues with some existing projects, so now hoisted installs are back as the default for those. `bun install` also gets even faster and you can do CPU profiling by running with `--cpu-prof`.
+
+* [Node.js v25.2.0 (Current)](https://javascriptweekly.com/link/177071/d076523b1d) – Now with **[type stripping](https://javascriptweekly.com/link/177072/d076523b1d) marked as stable.**
+
+* [esbuild 0.27](https://javascriptweekly.com/link/177073/d076523b1d) – Popular bundler. A notable release for having breaking changes (so you're reminded to pin `esbuild` appropriately).
+
+* [TanStack DB 0.5](https://javascriptweekly.com/link/177074/d076523b1d), [Node.js v24.11.1 (LTS)](https://javascriptweekly.com/link/177075/d076523b1d), [MikroORM 6.6](https://javascriptweekly.com/link/177076/d076523b1d)
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pwene62ff0apc6bwcbg0.jpg)](https://javascriptweekly.com/link/177077/d076523b1d)
+
+▶  [The State of Node.js in 2025, Explained](https://javascriptweekly.com/link/177077/d076523b1d "www.youtube.com") — A thirty-minute talk from *JSNation* earlier this year where TSC member Matteo Collina presented an update on Node’s still-growing popularity, release schedule, security, recent performance enhancements, the permissions system, and more.
+
+GitNation
+
+[V8's Garbage Collector Developments in Recent Years](https://javascriptweekly.com/link/177078/d076523b1d "wingolog.org") — Andy, who’s worked on both V8 and JavaScriptCore in the past, reviews the major developments in the V8 engine’s garbage collector over the past couple of years. Very technical, but a valuable piece of history.
+
+Andy Wingo
+
+[Build Type-Safe APIs for Your JS Apps: Protobuf Workshop with Buf Team](https://javascriptweekly.com/link/177079/d076523b1d "fandf.co") — Learn how Protobuf brings type safety across your stack from Node.js APIs to frontend clients. Live Q\&A with Buf engineers.
+
+Buf sponsor
+
+[Comparing Electron vs. Tauri for Building and Distributing a Desktop App](https://javascriptweekly.com/link/177080/d076523b1d "www.dolthub.com") — A team working on an open-source desktop app built using JavaScript and Electron took a look into the Rust-based [Tauri](https://javascriptweekly.com/link/177081/d076523b1d) instead, with mixed, but mostly positive, results.
+
+Eric Richardson
+
+[Using Expo for React Native Development in 2025: A Perspective](https://javascriptweekly.com/link/177082/d076523b1d "hashrocket.com") — [Expo](https://javascriptweekly.com/link/177083/d076523b1d) has essentially become to React Native what Next.js became to React. But is it well suited for *you*? Jack weighs the pros and cons.
+
+Jack Rosa
+
+📄 [How We Catch UI Bugs Early with Visual Regression Testing](https://javascriptweekly.com/link/177084/d076523b1d) – Using Playwright and its [visual comparisons](https://javascriptweekly.com/link/177085/d076523b1d) feature. Tommaso Ruscica
+
+📺 [Learn JavaScript by Building 'Mario'](https://javascriptweekly.com/link/177086/d076523b1d) – One of Ania’s typically easy to follow, comprehensive tutorials. Ania Kubow
+
+📄 [Building a 3D Infinite Carousel with Reactive Background Gradients](https://javascriptweekly.com/link/177087/d076523b1d) Clément Grellier
+
+📄 [Error Chaining in JS: Cleaner Debugging with `Error`'s `cause`](https://javascriptweekly.com/link/177088/d076523b1d) Matt Smith
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/thylucbd0cbx3euryyp4.jpg)](https://javascriptweekly.com/link/177089/d076523b1d)
+
+[imgui-react-runtime: React + Dear ImGui + Static Hermes](https://javascriptweekly.com/link/177089/d076523b1d "github.com") — When the author [teased a demo](https://javascriptweekly.com/link/177090/d076523b1d) of this on X a few weeks ago, I wasn’t sure if it would get released, but here it is. A new way to put together native apps using React and the popular lightweight GUI library [Dear ImGui.](https://javascriptweekly.com/link/177091/d076523b1d)
+
+Tzvetan Mikov
+
+[ESLint Plugin for Baseline JavaScript](https://javascriptweekly.com/link/177092/d076523b1d "baselinejs.vercel.app") — The winner of last month's [Baseline Tooling Hackathon](https://javascriptweekly.com/link/177093/d076523b1d) is an ESLint plugin that flags code that’s using features newer than your configured [Baseline](https://javascriptweekly.com/link/177094/d076523b1d) target (features broadly supported by modern browsers).
+
+Ryuya Hasegawa
+
+[Customizable JavaScript Libraries for Forms & Surveys](https://javascriptweekly.com/link/177095/d076523b1d "surveyjs.io") — Create branded, dynamic forms with full control over design, logic, and data storage.
+
+SurveyJS sponsor
+
+[pnpm 10.21: Safer Installs and Smarter Runtime Management](https://javascriptweekly.com/link/177096/d076523b1d "pnpm.io") — Now installs the Node version required by a dependency, declared in its `engines.runtime` field, meaning CLI apps and `postinstall` scripts will run with the specified version. The `trustPolicy` setting also adds protection against supply-chain attacks by failing to install a package if its trust level drops.
+
+Zoltan Kochan
+
+[Ink 6.5: Build Interactive CLI Apps using React](https://javascriptweekly.com/link/177097/d076523b1d "github.com") — A [very widely used](https://javascriptweekly.com/link/177098/d076523b1d) terminal-based React renderer for building reactive terminal apps using components. v6.5 is notable for adding [an incremental rendering option.](https://javascriptweekly.com/link/177099/d076523b1d)
+
+Vadim Demedes
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bmi63s4ori1en5q0gdh5.jpg)](https://javascriptweekly.com/link/177100/d076523b1d)
+
+* [vis-timeline 8.4](https://javascriptweekly.com/link/177100/d076523b1d) – Interactive control to visualize data across time, as shown above. [Numerous examples here.](https://javascriptweekly.com/link/177102/d076523b1d)
+
+* [rasterizeHTML.js 1.4](https://javascriptweekly.com/link/177103/d076523b1d) – Renders HTML into a canvas element. Now supporting [OffscreenCanvas](https://javascriptweekly.com/link/177104/d076523b1d) too.
+
+* [file-type 21.1](https://javascriptweekly.com/link/177105/d076523b1d) – Detect the file type of a file, stream, or data in both Node and the browser.
+
+* [Svelte SEO 2.0](https://javascriptweekly.com/link/177106/d076523b1d) – Optimize your Svelte app for search engines and social media.
+
+* [isomorphic-git 1.35](https://javascriptweekly.com/link/177107/d076523b1d) – Pure JS implementation of `git` for Node & browsers.
+
+📰 Classifieds
+
+Add lightning-fast, on-device 1D/2D code scanning to your web app with [STRICH](https://javascriptweekly.com/link/177108/d076523b1d). Easy integration, simple pricing, [free trial and demo!](https://javascriptweekly.com/link/177108/d076523b1d)
+
+***
+
+[Still writing tests manually?](https://javascriptweekly.com/link/177109/d076523b1d) See why modern engineering teams like Dropbox, Notion and Lattice rely on [Meticulous](https://javascriptweekly.com/link/177109/d076523b1d) to run E2E UI tests.
+
+***
+
+[Launch Your Shopify Storefront in Minutes with Next.js](https://javascriptweekly.com/link/177110/d076523b1d) - Open-source starter with Dynamic OG Images, AI Vector Search & Vercel Toolbar.
+
+***
+
+🎨 [Try Pintura image editor for free today](https://javascriptweekly.com/link/177111/d076523b1d), add a polished cropping, rotating, and annotation experience to your web app in minutes.
+
+📢  Elsewhere in the ecosystem
+
+Some other interesting tidbits in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/eflmy8nrynzm9m7mywlm.jpg)](https://javascriptweekly.com/link/177112/d076523b1d)
+
+* 🔒 OWASP (Open Worldwide Application Security Project) has released [its list of the top ten web application security threats in 2025.](https://javascriptweekly.com/link/177112/d076523b1d)
+
+* 🤖 An ardent critic of LLMs [spent a month doing 'chat oriented programming'](https://javascriptweekly.com/link/177116/d076523b1d) and while he found the experience "infuriating", he concedes it has merit and is a viable option *"if your tolerance for pain is high enough."*.
+
+* 🧊 Ever fancied [implementing a voxel-based engine](https://javascriptweekly.com/link/177115/d076523b1d) for that Minecraft-esque experience? Uses (very Rust-y) pseudocode in order to remain timeless and let you enjoy doing the implementation yourself.
+
+* An explanation of [the differences between monorepos, multi-repo, submodule and subtree setups](https://javascriptweekly.com/link/177113/d076523b1d) in Git.
+
+* 💻 If you like collecting stickers from conferences, you might enjoy [this gallery of hundreds of people's stickered-up laptops](https://javascriptweekly.com/link/177118/d076523b1d) or even want to submit your own. It took me a while to find any JavaScript stickers, but they're there..
+
+🎂 P.S. *JavaScript Weekly* turned fifteen years old this week! Thanks to all of you for reading, and particularly anyone still subscribed from the first issue. We haven't looked at the stats in a while, but we know there are some of you! :-)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/177120/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
