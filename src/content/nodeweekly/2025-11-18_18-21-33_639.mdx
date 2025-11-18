@@ -1,0 +1,300 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Did you know Node has a 'deprecate' method?
+description: Did you know Node has a 'deprecate' method?
+date: 星期二 06 晚上 十一月 18o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/601
+origin_site: https://nodeweekly.com/issues/601
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Did you know Node has a 'deprecate' method?" url="https://nodeweekly.com/issues/601" />
+
+<Detail client:only="react">
+	#​601 — November 18, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/601)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/177124/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wt3zf9ub6prvhvnu9mkr.jpg)](https://nodeweekly.com/link/177125/0a4070b383)
+
+[Node.js v25.2.1 (Current) Released (and 25.2.0 with Type Stripping Marked 'Stable')](https://nodeweekly.com/link/177125/0a4070b383 "nodejs.org") — [v25.2.0 was released](https://nodeweekly.com/link/177126/0a4070b383) hours after we hit send last week (often the way!) and **marked type stripping as stable**, meaning all major server-side runtimes [now support TypeScript officially](https://nodeweekly.com/link/177127/0a4070b383) (at least in type-stripping form). [v25.2.1](https://nodeweekly.com/link/177125/0a4070b383), on the other hand, reverts a spec-compliance issue where `localStorage` access can throw an exception (which will be pushed back to v26).
+
+Antoine du Hamel
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f1c42b94.png)](https://nodeweekly.com/link/177124/0a4070b383)
+
+[Real-Time Redis Visibility for Node Apps](https://nodeweekly.com/link/177124/0a4070b383 "dashboard.memetria.com") — Memetria K/V turns Redis metrics into insight. Track memory growth, large keys, and latency in real time — all from a dashboard designed for Node.js developers running Redis OSS or Valkey at scale.
+
+Memetria sponsor
+
+[Comparing Electron vs. Tauri for Building and Distributing a Desktop App](https://nodeweekly.com/link/177128/0a4070b383 "www.dolthub.com") — A team working on an open-source desktop app built using JavaScript and Electron took a look into the Rust-based [Tauri](https://nodeweekly.com/link/177129/0a4070b383) instead, with mixed, but mostly positive, results (while still being able to write their app mostly in JavaScript).
+
+Eric Richardson
+
+**IN BRIEF:**
+
+*   The OpenJS Foundation shares [an October 2025 update on security](https://nodeweekly.com/link/177130/0a4070b383), largely oriented around Node.js.
+    
+*   🗣️ Reddit's `/r/node` had [a heated discussion about the pros and cons](https://nodeweekly.com/link/177131/0a4070b383) of [NestJS.](https://nodeweekly.com/link/177132/0a4070b383)
+    
+*   Talking of Reddit, Josef Strzibny has [looked at Reddit's newly unveiled 'engagement' numbers](https://nodeweekly.com/link/177133/0a4070b383) for various programming subreddits. `/r/node` holds up well, surpassing even `/r/javascript` itself.
+    
+*   Node.js has had [`Error.captureStackTrace`](https://nodeweekly.com/link/177134/0a4070b383) since Node 4.0 but [its associated proposal/spec](https://nodeweekly.com/link/177135/0a4070b383) has progressed to stage 2 at this week's TC39 meeting and should see broader adoption.
+    
+*   [Node.js v24.11.1 (LTS)](https://nodeweekly.com/link/177136/0a4070b383) was released to fix a bug in `Buffer.allocUnsafe`.
+    
+
+[V8's Garbage Collector Developments in Recent Years](https://nodeweekly.com/link/177137/0a4070b383 "wingolog.org") — Andy, who’s worked on both V8 and JavaScriptCore in the past, reviews the major developments in the V8 engine’s garbage collector over the past couple of years. Very technical, but a valuable slice of history.
+
+Andy Wingo
+
+[Automated NPM Secret Rotation in GitHub Actions](https://nodeweekly.com/link/177138/0a4070b383 "michaelheap.com") — If you’ve built a system to automatically publish to npm, you may have had to change things due to [this month’s npm security changes.](https://nodeweekly.com/link/177139/0a4070b383) Here’s a way to keep things ticking if you’re not ready to switch to trusted publishing.
+
+Michael Heap
+
+📄 [How to 'Officially' Deprecate Methods with Node.js Utilities](https://nodeweekly.com/link/177140/0a4070b383) – Did you know Node has a [`deprecate` method?](https://nodeweekly.com/link/177141/0a4070b383) Stefan Judis
+
+📄 [Tinyglobby: A Success Story in Modernization and Performance](https://nodeweekly.com/link/177142/0a4070b383) Madeline Gurriarán
+
+📄 [The IndonesianFoods TEA Theft: Analyzing an NPM Spam Campaign](https://nodeweekly.com/link/177143/0a4070b383) Staicu and Raj (Endor Labs)
+
+📄 [Several Tips for Secure Coding in JavaScript](https://nodeweekly.com/link/177144/0a4070b383) Tanya Janca
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vwuges7bypeuf3xw7ny1.jpg)](https://nodeweekly.com/link/177145/0a4070b383)
+
+[Inquirer.js 13.0: A Collection of Common Interactive CLI Controls](https://nodeweekly.com/link/177145/0a4070b383 "github.com") — Want to ask your users questions? Select from predefined options? Enter a password? Check boxes? Inquirer is a good way to do that. v13 is a ‘modernization’ of the codebase which is now ESM only (no CommonJS) and removes a variety of deprecations. [Yoctocolors](https://nodeweekly.com/link/177146/0a4070b383) also gets dropped for Node’s own `styleText`.
+
+Simon Boudrias
+
+[Build a JSON-to-PDF Workflow for Your App](https://nodeweekly.com/link/177147/0a4070b383 "developer-api.foxit.com") — Learn how to generate PDFs programmatically — ideal for quotes, receipts, or contracts. No setup headaches.
+
+Foxit Software sponsor
+
+[Globby 16.0: User-Friendly Glob Matching](https://nodeweekly.com/link/177148/0a4070b383 "github.com") — Give it an array of globs and it returns an array of matching paths. It supports negations (including negation-only patterns in v16) and can also respect `.gitignore` files (and, [new in v16](https://nodeweekly.com/link/177149/0a4070b383), `.gitignore` files in parent directories too).
+
+Sindre Sorhus
+
+[node-libcurl 5.0: `libcurl` Bindings for Node](https://nodeweekly.com/link/177150/0a4070b383 "github.com") — [libcurl](https://nodeweekly.com/link/177151/0a4070b383) is a _very_ powerful and established way to fetch data from URLs across numerous protocols (HTTP, IMAP, SCP, SFTP, LDAP etc.) [v5.0](https://nodeweekly.com/link/177152/0a4070b383) upgrades to libcurl 8.17.0 and pre-built binaries now have HTTP/3 support enabled across all platforms.
+
+Jonathan Cardoso Machado
+
+📊 [Ackee 3.5: A Self-Hosted, Node-Based Web Analytics System](https://nodeweekly.com/link/177153/0a4070b383 "ackee.electerious.com") — Last week we mentioned [Umami](https://nodeweekly.com/link/177154/0a4070b383) but Ackee is another long standing option powered by Node for self-hosted Web analytics. [GitHub repo.](https://nodeweekly.com/link/177155/0a4070b383)
+
+Tobias Reich
+
+[Marked.js 17.0: A Fast Markdown Parser and Compiler](https://nodeweekly.com/link/177156/0a4070b383 "marked.js.org") — A low level Markdown compiler built for speed and available as a client-side library, server-side library, and even a CLI.
+
+Christopher Jeffrey
+
+*   [pnpm 10.22](https://nodeweekly.com/link/177157/0a4070b383) – Fast, space efficient package manager. Adds a `trustPolicyExclude` option to specify packages that should be installed in spite of any other trust policy requirements.
+    
+*   [MikroORM 6.6](https://nodeweekly.com/link/177158/0a4070b383) – TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Now offering more control over filters on relations, as well as private property accessors.
+    
+*   🤖 [OpenAI Node 6.9](https://nodeweekly.com/link/177159/0a4070b383) – The official Node library for OpenAI's adds support for the newly released [GPT-5.1.](https://nodeweekly.com/link/177160/0a4070b383)
+    
+*   [ESLint v10.0.0 Alpha 0](https://nodeweekly.com/link/177161/0a4070b383) – Get an early look at the breaking changes in the next major release.
+    
+*   [LogTape 1.2](https://nodeweekly.com/link/177162/0a4070b383) – Simple logging library for all major JS runtimes. [Changelog.](https://nodeweekly.com/link/177163/0a4070b383)
+    
+*   [pg-boss 12.2](https://nodeweekly.com/link/177164/0a4070b383) – Postgres-based job queuing system for Node.js.
+    
+*   [Mercurius 16.6](https://nodeweekly.com/link/177165/0a4070b383) – Implement GraphQL servers on top of Fastify.
+    
+*   [FoalTS 5.1](https://nodeweekly.com/link/177166/0a4070b383) – Full-featured Node.js app framework.
+    
+
+📰 Classifieds
+
+✍️ Add e-signatures to your Node.js app in minutes with the BoldSign Node.js SDK—powered by our e-signature API. [Get your free API key today](https://nodeweekly.com/link/177167/0a4070b383).
+
+* * *
+
+_[The Road to Next](https://nodeweekly.com/link/177168/0a4070b383)_ is a course by Robin Wieruch for learning full-stack web development with Next.js 15 and React 19. The perfect match for JavaScript developers ready to go beyond the frontend.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/absuo9ofip416huckbgi.jpg)](https://nodeweekly.com/link/177169/0a4070b383)
+
+*   [The latest version of Visual Code, v1.106, is out.](https://nodeweekly.com/link/177169/0a4070b383) You can now select deleted code in diffs, 'snooze' inline suggestions directly from the gutter icon, the 'Go to Line' command gets some improvements if you want to go to a certain byte or column offset _(above)_, and [Terminal IntelliSense](https://nodeweekly.com/link/177170/0a4070b383) is now considered stable.
+    
+*   [Git 2.52 has been released](https://nodeweekly.com/link/177171/0a4070b383) with a variety of minor features, including a new `git last-modified` command for determining which commit most recently modified each file in a given directory.
+    
+*   Did you know you can script LibreOffice with JavaScript? Even better, [you can use it to create a Wordle clone.](https://nodeweekly.com/link/177172/0a4070b383)
+    
+*   [JavaScript Engines Zoo](https://nodeweekly.com/link/177173/0a4070b383) is a nifty data grid share info about over 100 JavaScript engines.
+    
+*   [Visual Types](https://nodeweekly.com/link/177174/0a4070b383) is a handy visually-oriented guide/tour of what types are and how they work, with a focus on TypeScript.
+    
+*   🔥 In the UK, they've found an interesting alternative to high home heating bills: [getting people to host datacenters in their house](https://nodeweekly.com/link/177175/0a4070b383) in order to benefit from the generated heat for free.
+    
+*   [A quick recipe for rate-limiting requests with Nginx.](https://nodeweekly.com/link/177176/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​601 — November 18, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/601)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/177124/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wt3zf9ub6prvhvnu9mkr.jpg)](https://nodeweekly.com/link/177125/0a4070b383)
+
+[Node.js v25.2.1 (Current) Released (and 25.2.0 with Type Stripping Marked 'Stable')](https://nodeweekly.com/link/177125/0a4070b383 "nodejs.org") — [v25.2.0 was released](https://nodeweekly.com/link/177126/0a4070b383) hours after we hit send last week (often the way!) and **marked type stripping as stable**, meaning all major server-side runtimes [now support TypeScript officially](https://nodeweekly.com/link/177127/0a4070b383) (at least in type-stripping form). [v25.2.1](https://nodeweekly.com/link/177125/0a4070b383), on the other hand, reverts a spec-compliance issue where `localStorage` access can throw an exception (which will be pushed back to v26).
+
+Antoine du Hamel
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f1c42b94.png)](https://nodeweekly.com/link/177124/0a4070b383)
+
+[Real-Time Redis Visibility for Node Apps](https://nodeweekly.com/link/177124/0a4070b383 "dashboard.memetria.com") — Memetria K/V turns Redis metrics into insight. Track memory growth, large keys, and latency in real time — all from a dashboard designed for Node.js developers running Redis OSS or Valkey at scale.
+
+Memetria sponsor
+
+[Comparing Electron vs. Tauri for Building and Distributing a Desktop App](https://nodeweekly.com/link/177128/0a4070b383 "www.dolthub.com") — A team working on an open-source desktop app built using JavaScript and Electron took a look into the Rust-based [Tauri](https://nodeweekly.com/link/177129/0a4070b383) instead, with mixed, but mostly positive, results (while still being able to write their app mostly in JavaScript).
+
+Eric Richardson
+
+**IN BRIEF:**
+
+* The OpenJS Foundation shares [an October 2025 update on security](https://nodeweekly.com/link/177130/0a4070b383), largely oriented around Node.js.
+
+* 🗣️ Reddit's `/r/node` had [a heated discussion about the pros and cons](https://nodeweekly.com/link/177131/0a4070b383) of [NestJS.](https://nodeweekly.com/link/177132/0a4070b383)
+
+* Talking of Reddit, Josef Strzibny has [looked at Reddit's newly unveiled 'engagement' numbers](https://nodeweekly.com/link/177133/0a4070b383) for various programming subreddits. `/r/node` holds up well, surpassing even `/r/javascript` itself.
+
+* Node.js has had [`Error.captureStackTrace`](https://nodeweekly.com/link/177134/0a4070b383) since Node 4.0 but [its associated proposal/spec](https://nodeweekly.com/link/177135/0a4070b383) has progressed to stage 2 at this week's TC39 meeting and should see broader adoption.
+
+* [Node.js v24.11.1 (LTS)](https://nodeweekly.com/link/177136/0a4070b383) was released to fix a bug in `Buffer.allocUnsafe`.
+
+[V8's Garbage Collector Developments in Recent Years](https://nodeweekly.com/link/177137/0a4070b383 "wingolog.org") — Andy, who’s worked on both V8 and JavaScriptCore in the past, reviews the major developments in the V8 engine’s garbage collector over the past couple of years. Very technical, but a valuable slice of history.
+
+Andy Wingo
+
+[Automated NPM Secret Rotation in GitHub Actions](https://nodeweekly.com/link/177138/0a4070b383 "michaelheap.com") — If you’ve built a system to automatically publish to npm, you may have had to change things due to [this month’s npm security changes.](https://nodeweekly.com/link/177139/0a4070b383) Here’s a way to keep things ticking if you’re not ready to switch to trusted publishing.
+
+Michael Heap
+
+📄 [How to 'Officially' Deprecate Methods with Node.js Utilities](https://nodeweekly.com/link/177140/0a4070b383) – Did you know Node has a [`deprecate` method?](https://nodeweekly.com/link/177141/0a4070b383) Stefan Judis
+
+📄 [Tinyglobby: A Success Story in Modernization and Performance](https://nodeweekly.com/link/177142/0a4070b383) Madeline Gurriarán
+
+📄 [The IndonesianFoods TEA Theft: Analyzing an NPM Spam Campaign](https://nodeweekly.com/link/177143/0a4070b383) Staicu and Raj (Endor Labs)
+
+📄 [Several Tips for Secure Coding in JavaScript](https://nodeweekly.com/link/177144/0a4070b383) Tanya Janca
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vwuges7bypeuf3xw7ny1.jpg)](https://nodeweekly.com/link/177145/0a4070b383)
+
+[Inquirer.js 13.0: A Collection of Common Interactive CLI Controls](https://nodeweekly.com/link/177145/0a4070b383 "github.com") — Want to ask your users questions? Select from predefined options? Enter a password? Check boxes? Inquirer is a good way to do that. v13 is a ‘modernization’ of the codebase which is now ESM only (no CommonJS) and removes a variety of deprecations. [Yoctocolors](https://nodeweekly.com/link/177146/0a4070b383) also gets dropped for Node’s own `styleText`.
+
+Simon Boudrias
+
+[Build a JSON-to-PDF Workflow for Your App](https://nodeweekly.com/link/177147/0a4070b383 "developer-api.foxit.com") — Learn how to generate PDFs programmatically — ideal for quotes, receipts, or contracts. No setup headaches.
+
+Foxit Software sponsor
+
+[Globby 16.0: User-Friendly Glob Matching](https://nodeweekly.com/link/177148/0a4070b383 "github.com") — Give it an array of globs and it returns an array of matching paths. It supports negations (including negation-only patterns in v16) and can also respect `.gitignore` files (and, [new in v16](https://nodeweekly.com/link/177149/0a4070b383), `.gitignore` files in parent directories too).
+
+Sindre Sorhus
+
+[node-libcurl 5.0: `libcurl` Bindings for Node](https://nodeweekly.com/link/177150/0a4070b383 "github.com") — [libcurl](https://nodeweekly.com/link/177151/0a4070b383) is a *very* powerful and established way to fetch data from URLs across numerous protocols (HTTP, IMAP, SCP, SFTP, LDAP etc.) [v5.0](https://nodeweekly.com/link/177152/0a4070b383) upgrades to libcurl 8.17.0 and pre-built binaries now have HTTP/3 support enabled across all platforms.
+
+Jonathan Cardoso Machado
+
+📊 [Ackee 3.5: A Self-Hosted, Node-Based Web Analytics System](https://nodeweekly.com/link/177153/0a4070b383 "ackee.electerious.com") — Last week we mentioned [Umami](https://nodeweekly.com/link/177154/0a4070b383) but Ackee is another long standing option powered by Node for self-hosted Web analytics. [GitHub repo.](https://nodeweekly.com/link/177155/0a4070b383)
+
+Tobias Reich
+
+[Marked.js 17.0: A Fast Markdown Parser and Compiler](https://nodeweekly.com/link/177156/0a4070b383 "marked.js.org") — A low level Markdown compiler built for speed and available as a client-side library, server-side library, and even a CLI.
+
+Christopher Jeffrey
+
+* [pnpm 10.22](https://nodeweekly.com/link/177157/0a4070b383) – Fast, space efficient package manager. Adds a `trustPolicyExclude` option to specify packages that should be installed in spite of any other trust policy requirements.
+
+* [MikroORM 6.6](https://nodeweekly.com/link/177158/0a4070b383) – TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Now offering more control over filters on relations, as well as private property accessors.
+
+* 🤖 [OpenAI Node 6.9](https://nodeweekly.com/link/177159/0a4070b383) – The official Node library for OpenAI's adds support for the newly released [GPT-5.1.](https://nodeweekly.com/link/177160/0a4070b383)
+
+* [ESLint v10.0.0 Alpha 0](https://nodeweekly.com/link/177161/0a4070b383) – Get an early look at the breaking changes in the next major release.
+
+* [LogTape 1.2](https://nodeweekly.com/link/177162/0a4070b383) – Simple logging library for all major JS runtimes. [Changelog.](https://nodeweekly.com/link/177163/0a4070b383)
+
+* [pg-boss 12.2](https://nodeweekly.com/link/177164/0a4070b383) – Postgres-based job queuing system for Node.js.
+
+* [Mercurius 16.6](https://nodeweekly.com/link/177165/0a4070b383) – Implement GraphQL servers on top of Fastify.
+
+* [FoalTS 5.1](https://nodeweekly.com/link/177166/0a4070b383) – Full-featured Node.js app framework.
+
+📰 Classifieds
+
+✍️ Add e-signatures to your Node.js app in minutes with the BoldSign Node.js SDK—powered by our e-signature API. [Get your free API key today](https://nodeweekly.com/link/177167/0a4070b383).
+
+***
+
+*[The Road to Next](https://nodeweekly.com/link/177168/0a4070b383)* is a course by Robin Wieruch for learning full-stack web development with Next.js 15 and React 19. The perfect match for JavaScript developers ready to go beyond the frontend.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/absuo9ofip416huckbgi.jpg)](https://nodeweekly.com/link/177169/0a4070b383)
+
+* [The latest version of Visual Code, v1.106, is out.](https://nodeweekly.com/link/177169/0a4070b383) You can now select deleted code in diffs, 'snooze' inline suggestions directly from the gutter icon, the 'Go to Line' command gets some improvements if you want to go to a certain byte or column offset *(above)*, and [Terminal IntelliSense](https://nodeweekly.com/link/177170/0a4070b383) is now considered stable.
+
+* [Git 2.52 has been released](https://nodeweekly.com/link/177171/0a4070b383) with a variety of minor features, including a new `git last-modified` command for determining which commit most recently modified each file in a given directory.
+
+* Did you know you can script LibreOffice with JavaScript? Even better, [you can use it to create a Wordle clone.](https://nodeweekly.com/link/177172/0a4070b383)
+
+* [JavaScript Engines Zoo](https://nodeweekly.com/link/177173/0a4070b383) is a nifty data grid share info about over 100 JavaScript engines.
+
+* [Visual Types](https://nodeweekly.com/link/177174/0a4070b383) is a handy visually-oriented guide/tour of what types are and how they work, with a focus on TypeScript.
+
+* 🔥 In the UK, they've found an interesting alternative to high home heating bills: [getting people to host datacenters in their house](https://nodeweekly.com/link/177175/0a4070b383) in order to benefit from the generated heat for free.
+
+* [A quick recipe for rate-limiting requests with Nginx.](https://nodeweekly.com/link/177176/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
