@@ -1,0 +1,363 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: A significant Angular release
+description: A significant Angular release
+date: 星期五 06 晚上 十一月 21o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/762
+origin_site: https://javascriptweekly.com/issues/762
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="A significant Angular release" url="https://javascriptweekly.com/issues/762" />
+
+<Detail client:only="react">
+	#​762 — November 21, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/762)
+
+Together with 
+
+[![Fusion Auth](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_316/e_make_transparent/co_white,e_outline:15/wm1gvx8cub0d4gmmabev.png)](https://javascriptweekly.com/link/177387/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nrddlxtqseqwhpcjyyfc.jpg)](https://javascriptweekly.com/link/177388/d076523b1d)
+
+[Google Announces Angular v21](https://javascriptweekly.com/link/177388/d076523b1d "blog.angular.dev") — The Google team has gone all out with this significant release of its popular JavaScript framework. They’ve put together [a retro game-themed adventure-based tour](https://javascriptweekly.com/link/177389/d076523b1d) of what’s new, along with top notch videos showing off features like its new signal-based approach to forms, MCP server for AI-powered workflows, library of headless components focused on accessibility, and even a new ‘Angular AI Tutor’ to get up to speed.
+
+Google
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/1d9e84d0.png)](https://javascriptweekly.com/link/177387/d076523b1d)
+
+[Authentication. Complete, Not Complex](https://javascriptweekly.com/link/177387/d076523b1d "fusionauth.link") —
+
+`const fusionAuth = &lcub;      builtFor: "developers",     documentedFor: "humans",     supportedBy: "experts"   };`
+
+FusionAuth sponsor
+
+**IN BRIEF:**
+
+*   Devographics' annual [_State of React_ survey](https://javascriptweekly.com/link/177391/d076523b1d) is now open to take again. Here's [last year's results.](https://javascriptweekly.com/link/177392/d076523b1d)
+    
+*   🎤 TypeScript's Daniel Rosenwasser and Jake Bailey [went on the TypeScript.fm podcast](https://javascriptweekly.com/link/177393/d076523b1d) to talk about what's coming up in TypeScript 6 and 7.
+    
+*   📗 TC-39 member James M. Snell is [working on a book called _JavaScript in Depth_](https://javascriptweekly.com/link/177394/d076523b1d) for Manning. Final publication is expected in mid 2026 but four chapters are already available in early access.
+    
+*   [CSS Grid support should be coming to React Native](https://javascriptweekly.com/link/177395/d076523b1d) soon.
+    
+
+**RELEASES:**
+
+*   [Prisma 7.0](https://javascriptweekly.com/link/177396/d076523b1d) – Popular ORM for Node.js and TypeScript. The Rust-free Prisma Client is now the default.
+    
+*   [pnpm 10.23](https://javascriptweekly.com/link/177397/d076523b1d) – Fast, space efficient package manager.
+    
+*   [Node.js v25.2.1 (Current)](https://javascriptweekly.com/link/177398/d076523b1d), [Astro 5.16](https://javascriptweekly.com/link/177474/d076523b1d)
+    
+
+📖  Articles and Videos
+
+![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vwh5lw3rkjrodwxb8frg.jpg)
+
+Photo used with the kind permission of [Rob Palmer](https://javascriptweekly.com/link/177399/d076523b1d)
+
+**This week's TC39 meeting:** The Ecma TC39 committee (the group behind the design of ECMAScript / JavaScript) [met up for the 111th time this week](https://javascriptweekly.com/link/177400/d076523b1d) _(seen above)_ to discuss language proposals. The meeting notes won't be published for a few weeks, but several proposals did see some progress:
+
+*   [Iterator Sequencing](https://javascriptweekly.com/link/177401/d076523b1d) progressed to stage 4.
+    
+*   [Joint Iteration](https://javascriptweekly.com/link/177402/d076523b1d), [Iterator Join](https://javascriptweekly.com/link/177403/d076523b1d), and [Await dictionary of Promises](https://javascriptweekly.com/link/177404/d076523b1d) go stage 2.7.
+    
+*   [`Error.captureStackTrace`](https://javascriptweekly.com/link/177406/d076523b1d), [`import .. with &lcub;type: "text"}`](https://javascriptweekly.com/link/177407/d076523b1d), and [`Object.keysLength`](https://javascriptweekly.com/link/177408/d076523b1d) all progressed to stage 2.
+    
+*   The [Intl Unit Protocol](https://javascriptweekly.com/link/177409/d076523b1d) also reached stage 1 to provide a way to annotate quantities with the units being measured.
+    
+*   [Typed Array Find Within](https://javascriptweekly.com/link/177410/d076523b1d) progressed to stage 1. Think a native `indexOf`\-type method for TypedArrays.
+    
+
+_Note: Learn more about [what the TC39 stages mean here.](https://javascriptweekly.com/link/177412/d076523b1d)_
+
+[Tooltip Components Should Not Exist](https://javascriptweekly.com/link/177413/d076523b1d "tkdodo.eu") — Dominik challenges some common wisdom in his typically erudite fashion. Stand-alone tooltip components are the wrong abstraction when separated from the underlying UI features that use them. This thinking can apply to many other UI affordances too, so the broad idea is well worth considering.
+
+Dominik Dorfmeister (AKA TkDodo)
+
+[Agentic Postgres: Let Your Agents Cook](https://javascriptweekly.com/link/177414/d076523b1d "www.tigerdata.com") — Build AI apps faster: Postgres with built-in memory, search, and free forkable DBs. Try it free on Tiger.
+
+Tiger Data sponsor
+
+[Implementing Wordle in LibreOffice with JavaScript Macros](https://javascriptweekly.com/link/177415/d076523b1d "bojidar-bg.dev") — One of those fun things where the real value is in learning that you can script LibreOffice with JavaScript.
+
+Bojidar Marinov
+
+[Automated NPM Secret Rotation in GitHub Actions](https://javascriptweekly.com/link/177416/d076523b1d "michaelheap.com") — If you’ve built a system to automatically publish to npm, you may have had to change things due to [this month’s npm security changes.](https://javascriptweekly.com/link/177417/d076523b1d) Here’s a way to keep things ticking if you’re not ready to switch to trusted publishing.
+
+Michael Heap
+
+[Six Things I Bet You Didn't Know You Could Do With Chrome's DevTools](https://javascriptweekly.com/link/177418/d076523b1d "www.readwriterachel.com") — Part one here covers the first three, with [part two covering the last three](https://javascriptweekly.com/link/177419/d076523b1d). Covers time functions, DOM observation, user action replays, and more.
+
+Rachel Kaufman
+
+📄 [An Experiment in Making TypeScript Immutable-by-Default](https://javascriptweekly.com/link/177420/d076523b1d) – _“I wondered: is it possible to make TypeScript values immutable by default?”_ Evan Hahn
+
+📄 [How to Build Cinematic 3D Scroll Experiences with GSAP](https://javascriptweekly.com/link/177422/d076523b1d) Joseph Santamaria
+
+📄 [How We Migrated 76,000 Tests from Enzyme to React Testing Library](https://javascriptweekly.com/link/177424/d076523b1d) – HubSpot’s tale of a big React testing migration. Charley Pugmire (HubSpot)
+
+📄 [How to 'Officially' Deprecate Methods in Node.js Code](https://javascriptweekly.com/link/177426/d076523b1d) – Did you know of Node's [`deprecate` method?](https://javascriptweekly.com/link/177428/d076523b1d) Stefan Judis
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/owmwl53xr3x2niy4htem.jpg)](https://javascriptweekly.com/link/177431/d076523b1d)
+
+[Webpack Bundle Analyzer 5.0: A Visual Look at Webpack's Output](https://javascriptweekly.com/link/177431/d076523b1d "github.com") — An official Webpack plugin and CLI tool that shows bundle content in the form of an interactive zoomable treemap so you can dig in and see what’s taking up space in your bundle (and then optimize it, ideally).
+
+Webpack Project
+
+[TanStack DB 0.5, Now with Query-Driven Sync](https://javascriptweekly.com/link/177433/d076523b1d "tanstack.com") — TanStack DB is a client‑first reactive data store that uses differential dataflow to power live, relational queries, sub‑ms incremental updates, and seamless optimistic writes. In v0.5, a component’s query becomes the API call too. _“Just write your query and TanStack DB figures out exactly what to fetch.”_
+
+Willis, De Parre, and Matthews
+
+[Still Writing Tests Manually?](https://javascriptweekly.com/link/177435/d076523b1d) — See why modern engineering teams like Dropbox, Notion and Lattice rely on Meticulous to run E2E UI tests.
+
+Meticulous AI sponsor
+
+[Brimstone: A New JavaScript Engine Written in Rust](https://javascriptweekly.com/link/177436/d076523b1d "github.com") — Joining the [hundreds of JS engines available](https://javascriptweekly.com/link/177437/d076523b1d), Brimstone has strong language support (97% of the spec), is _very_ small, but remains a work in progress.
+
+Hans Halverson
+
+[VueFinder: File Management Component for Vue 3](https://javascriptweekly.com/link/177438/d076523b1d "vuefinder.ozdemir.be") — Provides a reactive, native-like file explorer interface for users to organize, preview, and manage files.
+
+Yusuf Özdemir
+
+[is-online 12.0: Check if the Internet Connection Is Up](https://javascriptweekly.com/link/177439/d076523b1d "github.com") — Works in both Node and the browser and uses various approaches to check if the Internet is really available.
+
+Sindre Sorhus
+
+*   [PlayCanvas glTF Viewer 5.7](https://javascriptweekly.com/link/177440/d076523b1d) – 3D model viewer supporting glTF 2.0 and PLY.
+    
+*   [Wasp 0.19](https://javascriptweekly.com/link/177442/d076523b1d) – [Wasp](https://javascriptweekly.com/link/177444/d076523b1d) is a Rails-like framework built on Node, React & Prisma.
+    
+*   [Neo.mjs 11.7](https://javascriptweekly.com/link/177445/d076523b1d) – Multi-threaded framework for fast, desktop-like webapps.
+    
+*   [Inquirer.js 13.0](https://javascriptweekly.com/link/177447/d076523b1d) – Popular interactive CLI controls library for Node.js.
+    
+*   [Plotly.js 3.3](https://javascriptweekly.com/link/177449/d076523b1d) – Standalone data visualization library.
+    
+*   [Rockpack 7.0](https://javascriptweekly.com/link/177451/d076523b1d) – React app starter/generator.
+    
+*   [Fresh 2.2](https://javascriptweekly.com/link/177452/d076523b1d) – Deno-powered Web framework.
+    
+
+📰 Classifieds
+
+[Build Docker images faster with BuildKit and Depot](https://javascriptweekly.com/link/177454/d076523b1d). Parallel execution, deduplication, and auto-scaling cut CI wait times.
+
+* * *
+
+🎨 [Try Pintura image editor for free today](https://javascriptweekly.com/link/177455/d076523b1d), add a polished cropping, rotating, and annotation experience to your web app in minutes.
+
+* * *
+
+_[The Road to Next](https://javascriptweekly.com/link/177473/d076523b1d)_ is a course by Robin Wieruch for learning full-stack web development with Next.js 15 and React 19. The perfect match for JavaScript developers ready to go beyond the frontend.
+
+📢  Elsewhere in the ecosystem
+
+Some other interesting tidbits in the broader landscape:
+
+*   Were you affected by Cloudflare's extended outage on Tuesday? If so, you might be keen to [learn all the details of what happened](https://javascriptweekly.com/link/177458/d076523b1d) (it was code-related). This is a fantastic example of an incident report, despite the inconvenience.
+    
+*   📗 [WebAssembly from the Ground Up](https://javascriptweekly.com/link/177461/d076523b1d) is a new (paid) book that walks you through building a compiler in JavaScript. There's [a sample PDF](https://javascriptweekly.com/link/177462/d076523b1d) showing off thirty pages of the content – it looks very promising.
+    
+*   A well-presented [account of how a well-known typeface company pursued another company](https://javascriptweekly.com/link/177464/d076523b1d) for nonexistent license violations.
+    
+*   Josef Strzibny has [looked at Reddit's newly unveiled 'engagement' numbers](https://javascriptweekly.com/link/177465/d076523b1d) for various programming subreddits. Redditors clearly like to be niche, as `/r/node`, `/r/react` and `/r/nextjs` all easily beat `/r/javascript`'s engagement numbers.
+    
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lxocfitim49xeu8chlbi.jpg)](https://javascriptweekly.com/link/177467/d076523b1d)
+
+*   The above autocorrect-fuelled headline on Hacker News gave me a chuckle. If you like Bach or organ music in general, [▶️ listen to the 'new' pieces here.](https://javascriptweekly.com/link/177468/d076523b1d)
+    
+*   [Amazon RDS for PostgreSQL now supports Postgres 18](https://javascriptweekly.com/link/177469/d076523b1d).
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/177471/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​762 — November 21, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/762)
+
+Together with 
+
+[![Fusion Auth](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_316/e_make_transparent/co_white,e_outline:15/wm1gvx8cub0d4gmmabev.png)](https://javascriptweekly.com/link/177387/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nrddlxtqseqwhpcjyyfc.jpg)](https://javascriptweekly.com/link/177388/d076523b1d)
+
+[Google Announces Angular v21](https://javascriptweekly.com/link/177388/d076523b1d "blog.angular.dev") — The Google team has gone all out with this significant release of its popular JavaScript framework. They’ve put together [a retro game-themed adventure-based tour](https://javascriptweekly.com/link/177389/d076523b1d) of what’s new, along with top notch videos showing off features like its new signal-based approach to forms, MCP server for AI-powered workflows, library of headless components focused on accessibility, and even a new ‘Angular AI Tutor’ to get up to speed.
+
+Google
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/1d9e84d0.png)](https://javascriptweekly.com/link/177387/d076523b1d)
+
+[Authentication. Complete, Not Complex](https://javascriptweekly.com/link/177387/d076523b1d "fusionauth.link") —
+
+`const fusionAuth = &lcub;      builtFor: "developers",     documentedFor: "humans",     supportedBy: "experts"   };`
+
+FusionAuth sponsor
+
+**IN BRIEF:**
+
+* Devographics' annual [*State of React* survey](https://javascriptweekly.com/link/177391/d076523b1d) is now open to take again. Here's [last year's results.](https://javascriptweekly.com/link/177392/d076523b1d)
+
+* 🎤 TypeScript's Daniel Rosenwasser and Jake Bailey [went on the TypeScript.fm podcast](https://javascriptweekly.com/link/177393/d076523b1d) to talk about what's coming up in TypeScript 6 and 7.
+
+* 📗 TC-39 member James M. Snell is [working on a book called *JavaScript in Depth*](https://javascriptweekly.com/link/177394/d076523b1d) for Manning. Final publication is expected in mid 2026 but four chapters are already available in early access.
+
+* [CSS Grid support should be coming to React Native](https://javascriptweekly.com/link/177395/d076523b1d) soon.
+
+**RELEASES:**
+
+* [Prisma 7.0](https://javascriptweekly.com/link/177396/d076523b1d) – Popular ORM for Node.js and TypeScript. The Rust-free Prisma Client is now the default.
+
+* [pnpm 10.23](https://javascriptweekly.com/link/177397/d076523b1d) – Fast, space efficient package manager.
+
+* [Node.js v25.2.1 (Current)](https://javascriptweekly.com/link/177398/d076523b1d), [Astro 5.16](https://javascriptweekly.com/link/177474/d076523b1d)
+
+📖  Articles and Videos
+
+![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vwh5lw3rkjrodwxb8frg.jpg)
+
+Photo used with the kind permission of [Rob Palmer](https://javascriptweekly.com/link/177399/d076523b1d)
+
+**This week's TC39 meeting:** The Ecma TC39 committee (the group behind the design of ECMAScript / JavaScript) [met up for the 111th time this week](https://javascriptweekly.com/link/177400/d076523b1d) *(seen above)* to discuss language proposals. The meeting notes won't be published for a few weeks, but several proposals did see some progress:
+
+* [Iterator Sequencing](https://javascriptweekly.com/link/177401/d076523b1d) progressed to stage 4.
+
+* [Joint Iteration](https://javascriptweekly.com/link/177402/d076523b1d), [Iterator Join](https://javascriptweekly.com/link/177403/d076523b1d), and [Await dictionary of Promises](https://javascriptweekly.com/link/177404/d076523b1d) go stage 2.7.
+
+* [`Error.captureStackTrace`](https://javascriptweekly.com/link/177406/d076523b1d), [`import .. with &lcub;type: "text"}`](https://javascriptweekly.com/link/177407/d076523b1d), and [`Object.keysLength`](https://javascriptweekly.com/link/177408/d076523b1d) all progressed to stage 2.
+
+* The [Intl Unit Protocol](https://javascriptweekly.com/link/177409/d076523b1d) also reached stage 1 to provide a way to annotate quantities with the units being measured.
+
+* [Typed Array Find Within](https://javascriptweekly.com/link/177410/d076523b1d) progressed to stage 1. Think a native `indexOf`-type method for TypedArrays.
+
+*Note: Learn more about [what the TC39 stages mean here.](https://javascriptweekly.com/link/177412/d076523b1d)*
+
+[Tooltip Components Should Not Exist](https://javascriptweekly.com/link/177413/d076523b1d "tkdodo.eu") — Dominik challenges some common wisdom in his typically erudite fashion. Stand-alone tooltip components are the wrong abstraction when separated from the underlying UI features that use them. This thinking can apply to many other UI affordances too, so the broad idea is well worth considering.
+
+Dominik Dorfmeister (AKA TkDodo)
+
+[Agentic Postgres: Let Your Agents Cook](https://javascriptweekly.com/link/177414/d076523b1d "www.tigerdata.com") — Build AI apps faster: Postgres with built-in memory, search, and free forkable DBs. Try it free on Tiger.
+
+Tiger Data sponsor
+
+[Implementing Wordle in LibreOffice with JavaScript Macros](https://javascriptweekly.com/link/177415/d076523b1d "bojidar-bg.dev") — One of those fun things where the real value is in learning that you can script LibreOffice with JavaScript.
+
+Bojidar Marinov
+
+[Automated NPM Secret Rotation in GitHub Actions](https://javascriptweekly.com/link/177416/d076523b1d "michaelheap.com") — If you’ve built a system to automatically publish to npm, you may have had to change things due to [this month’s npm security changes.](https://javascriptweekly.com/link/177417/d076523b1d) Here’s a way to keep things ticking if you’re not ready to switch to trusted publishing.
+
+Michael Heap
+
+[Six Things I Bet You Didn't Know You Could Do With Chrome's DevTools](https://javascriptweekly.com/link/177418/d076523b1d "www.readwriterachel.com") — Part one here covers the first three, with [part two covering the last three](https://javascriptweekly.com/link/177419/d076523b1d). Covers time functions, DOM observation, user action replays, and more.
+
+Rachel Kaufman
+
+📄 [An Experiment in Making TypeScript Immutable-by-Default](https://javascriptweekly.com/link/177420/d076523b1d) – *“I wondered: is it possible to make TypeScript values immutable by default?”* Evan Hahn
+
+📄 [How to Build Cinematic 3D Scroll Experiences with GSAP](https://javascriptweekly.com/link/177422/d076523b1d) Joseph Santamaria
+
+📄 [How We Migrated 76,000 Tests from Enzyme to React Testing Library](https://javascriptweekly.com/link/177424/d076523b1d) – HubSpot’s tale of a big React testing migration. Charley Pugmire (HubSpot)
+
+📄 [How to 'Officially' Deprecate Methods in Node.js Code](https://javascriptweekly.com/link/177426/d076523b1d) – Did you know of Node's [`deprecate` method?](https://javascriptweekly.com/link/177428/d076523b1d) Stefan Judis
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/owmwl53xr3x2niy4htem.jpg)](https://javascriptweekly.com/link/177431/d076523b1d)
+
+[Webpack Bundle Analyzer 5.0: A Visual Look at Webpack's Output](https://javascriptweekly.com/link/177431/d076523b1d "github.com") — An official Webpack plugin and CLI tool that shows bundle content in the form of an interactive zoomable treemap so you can dig in and see what’s taking up space in your bundle (and then optimize it, ideally).
+
+Webpack Project
+
+[TanStack DB 0.5, Now with Query-Driven Sync](https://javascriptweekly.com/link/177433/d076523b1d "tanstack.com") — TanStack DB is a client‑first reactive data store that uses differential dataflow to power live, relational queries, sub‑ms incremental updates, and seamless optimistic writes. In v0.5, a component’s query becomes the API call too. *“Just write your query and TanStack DB figures out exactly what to fetch.”*
+
+Willis, De Parre, and Matthews
+
+[Still Writing Tests Manually?](https://javascriptweekly.com/link/177435/d076523b1d) — See why modern engineering teams like Dropbox, Notion and Lattice rely on Meticulous to run E2E UI tests.
+
+Meticulous AI sponsor
+
+[Brimstone: A New JavaScript Engine Written in Rust](https://javascriptweekly.com/link/177436/d076523b1d "github.com") — Joining the [hundreds of JS engines available](https://javascriptweekly.com/link/177437/d076523b1d), Brimstone has strong language support (97% of the spec), is *very* small, but remains a work in progress.
+
+Hans Halverson
+
+[VueFinder: File Management Component for Vue 3](https://javascriptweekly.com/link/177438/d076523b1d "vuefinder.ozdemir.be") — Provides a reactive, native-like file explorer interface for users to organize, preview, and manage files.
+
+Yusuf Özdemir
+
+[is-online 12.0: Check if the Internet Connection Is Up](https://javascriptweekly.com/link/177439/d076523b1d "github.com") — Works in both Node and the browser and uses various approaches to check if the Internet is really available.
+
+Sindre Sorhus
+
+* [PlayCanvas glTF Viewer 5.7](https://javascriptweekly.com/link/177440/d076523b1d) – 3D model viewer supporting glTF 2.0 and PLY.
+
+* [Wasp 0.19](https://javascriptweekly.com/link/177442/d076523b1d) – [Wasp](https://javascriptweekly.com/link/177444/d076523b1d) is a Rails-like framework built on Node, React & Prisma.
+
+* [Neo.mjs 11.7](https://javascriptweekly.com/link/177445/d076523b1d) – Multi-threaded framework for fast, desktop-like webapps.
+
+* [Inquirer.js 13.0](https://javascriptweekly.com/link/177447/d076523b1d) – Popular interactive CLI controls library for Node.js.
+
+* [Plotly.js 3.3](https://javascriptweekly.com/link/177449/d076523b1d) – Standalone data visualization library.
+
+* [Rockpack 7.0](https://javascriptweekly.com/link/177451/d076523b1d) – React app starter/generator.
+
+* [Fresh 2.2](https://javascriptweekly.com/link/177452/d076523b1d) – Deno-powered Web framework.
+
+📰 Classifieds
+
+[Build Docker images faster with BuildKit and Depot](https://javascriptweekly.com/link/177454/d076523b1d). Parallel execution, deduplication, and auto-scaling cut CI wait times.
+
+***
+
+🎨 [Try Pintura image editor for free today](https://javascriptweekly.com/link/177455/d076523b1d), add a polished cropping, rotating, and annotation experience to your web app in minutes.
+
+***
+
+*[The Road to Next](https://javascriptweekly.com/link/177473/d076523b1d)* is a course by Robin Wieruch for learning full-stack web development with Next.js 15 and React 19. The perfect match for JavaScript developers ready to go beyond the frontend.
+
+📢  Elsewhere in the ecosystem
+
+Some other interesting tidbits in the broader landscape:
+
+* Were you affected by Cloudflare's extended outage on Tuesday? If so, you might be keen to [learn all the details of what happened](https://javascriptweekly.com/link/177458/d076523b1d) (it was code-related). This is a fantastic example of an incident report, despite the inconvenience.
+
+* 📗 [WebAssembly from the Ground Up](https://javascriptweekly.com/link/177461/d076523b1d) is a new (paid) book that walks you through building a compiler in JavaScript. There's [a sample PDF](https://javascriptweekly.com/link/177462/d076523b1d) showing off thirty pages of the content – it looks very promising.
+
+* A well-presented [account of how a well-known typeface company pursued another company](https://javascriptweekly.com/link/177464/d076523b1d) for nonexistent license violations.
+
+* Josef Strzibny has [looked at Reddit's newly unveiled 'engagement' numbers](https://javascriptweekly.com/link/177465/d076523b1d) for various programming subreddits. Redditors clearly like to be niche, as `/r/node`, `/r/react` and `/r/nextjs` all easily beat `/r/javascript`'s engagement numbers.
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lxocfitim49xeu8chlbi.jpg)](https://javascriptweekly.com/link/177467/d076523b1d)
+
+* The above autocorrect-fuelled headline on Hacker News gave me a chuckle. If you like Bach or organ music in general, [▶️ listen to the 'new' pieces here.](https://javascriptweekly.com/link/177468/d076523b1d)
+
+* [Amazon RDS for PostgreSQL now supports Postgres 18](https://javascriptweekly.com/link/177469/d076523b1d).
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/177471/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
