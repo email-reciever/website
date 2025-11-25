@@ -1,0 +1,268 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Guess who's back, back again? Shai-Hulud.
+description: Guess who's back, back again? Shai-Hulud.
+date: 星期二 05 下午 十一月 25o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/602
+origin_site: https://nodeweekly.com/issues/602
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Guess who's back, back again? Shai-Hulud." url="https://nodeweekly.com/issues/602" />
+
+<Detail client:only="react">
+	#​602 — November 25, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/602)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/177476/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bkkm0fm8u5ml6qa0l0cu.jpg)](https://nodeweekly.com/link/177477/0a4070b383)
+
+[How a Summer in Abruzzo Helped Bring Type Stripping to Node.js](https://nodeweekly.com/link/177477/0a4070b383 "satanacchio.hashnode.dev") — Node.js TSC member and committer Marco tells the _personal_ tale of what it took to bring [type stripping](https://nodeweekly.com/link/177524/0a4070b383) (now considered stable) to Node. It’s neat to get the back story. He’s now working on a new experimental feature: [`--experimental-config-file`](https://nodeweekly.com/link/177478/0a4070b383)
+
+Marco Ippolito
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/ccc690df.png)](https://nodeweekly.com/link/177476/0a4070b383)
+
+[Tiger Data Taught AI to Write Real Postgres Code. Try it Today.](https://nodeweekly.com/link/177476/0a4070b383 "www.tigerdata.com") — Tiger Data taught AI how to write idiomatic Postgres and open-sourced it. pg-aiguide brings real DB expertise to Claude Code, or any other MCP-enabled tool.
+
+Tiger Data sponsor
+
+⚠️ [Shai Hulud 2.0: The Widespread npm Supply Chain Attack is Back](https://nodeweekly.com/link/177479/0a4070b383 "about.gitlab.com") — The big story this week is an evolution of a [previous story](https://nodeweekly.com/link/177480/0a4070b383) we’ve covered about a 'worm' that spreads through npm packages. GitLab does a good job of explaining what’s going on: an infected package gets installed then executes a malicious payload which exfiltrates GitHub, npm, and other credentials, then infects and publishes yet more packages.
+
+Abeles and Henriksen (GitLab)
+
+💡 Numerous sources have written about this latest wave of attacks including [Wiz](https://nodeweekly.com/link/177481/0a4070b383), [Snyk](https://nodeweekly.com/link/177482/0a4070b383), [Socket](https://nodeweekly.com/link/177483/0a4070b383), [Aikido](https://nodeweekly.com/link/177484/0a4070b383) and [HelixGuard.](https://nodeweekly.com/link/177485/0a4070b383) Corridor's [Shai Hulud 2.0 Detector](https://nodeweekly.com/link/177486/0a4070b383) can also be used to scan a `package.json` file for known affected packages.
+
+**IN BRIEF:**
+
+*   [Node.js v20.19.6 (LTS) has been released.](https://nodeweekly.com/link/177487/0a4070b383) It's a minor LTS release with updates to root certificates and OpenSSL, plus the deprecation of HTTP/2 priority signalling (as is the case in [RFC 9113](https://nodeweekly.com/link/177488/0a4070b383) also).
+    
+*   Node.js 24 is now a supported runtime on _AWS Lambda_ (as `nodejs24.x`) and won't be deprecated until April 30, 2028.
+    
+*   🎤 TypeScript's Daniel Rosenwasser and Jake Bailey [went on the TypeScript.fm podcast](https://nodeweekly.com/link/177489/0a4070b383) to talk about what's coming up in TypeScript 6 and 7.
+    
+*   ▶️ A brief look [behind the scenes of Node.js's automated release process.](https://nodeweekly.com/link/177490/0a4070b383)
+    
+
+📄 [An Experiment in Making TypeScript Immutable-by-Default](https://nodeweekly.com/link/177491/0a4070b383) – _“I wondered: is it possible to make TypeScript values immutable by default?”_ Evan Hahn
+
+📄 [A Comprehensive Guide to Error Handling in Node](https://nodeweekly.com/link/177492/0a4070b383) Ayooluwa Isaiah (Honeybadger)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/okkvyfpa9owci6jyyuoa.jpg)](https://nodeweekly.com/link/177493/0a4070b383)
+
+[Gluegun: A Toolkit for Building Node-Powered CLIs](https://nodeweekly.com/link/177493/0a4070b383 "github.com") — For building CLI apps with many features available 'out of the box', including templating, sub-command support, colorful output, argument parsing, etc.
+
+Infinite Red, Inc.
+
+[tshy 3.1: TypeScript HYbridizer](https://nodeweekly.com/link/177494/0a4070b383 "github.com") — A tool by Isaac Z. Schlueter for building _hybrid_ modules that Just Work™ in both ESM and CommonJS contexts, if you’re not quite ready to [go ESM only.](https://nodeweekly.com/link/177495/0a4070b383)
+
+Isaac Z. Schlueter
+
+[BoldSign eSignature API & SDK — Built for Developers, Easy to Integrate](https://nodeweekly.com/link/177496/0a4070b383 "boldsign.com") — ✍️ Ship secure e-signatures in your app in minutes with the BoldSign SDK & API. [Get your free API key](https://nodeweekly.com/link/177496/0a4070b383) and start testing today.
+
+BoldSign sponsor
+
+(\*.js) [Glob 13: Match Files Using Shell-Style Patterns](https://nodeweekly.com/link/177497/0a4070b383 "github.com") — _“The most correct and second fastest glob implementation in JavaScript.”_
+
+Isaac Z. Schlueter
+
+[is-online 12.0: Check if the Internet Connection Is Up](https://nodeweekly.com/link/177498/0a4070b383 "github.com") — Works in both Node and the browser and uses several approaches to check if the Internet is _really_ available.
+
+Sindre Sorhus
+
+[open v11.0: Open URLs, Files, Executables, etc. Cross-Platform](https://nodeweekly.com/link/177499/0a4070b383 "github.com") — Designed for use in command line tools and scripts, `open` acts similarly to macOS’s terminal namesake: `open`
+
+Sindre Sorhus
+
+[jsonld.js v9.0: A JSON-LD Processor and API Implementation](https://nodeweekly.com/link/177500/0a4070b383 "github.com") — [JSON-LD](https://nodeweekly.com/link/177501/0a4070b383) (JSON for Linking Data) is a JSON-based format used to represent objects on the Web in a way that’s easy for code to read.
+
+Digital Bazaar, Inc.
+
+*   [Prisma 7.0](https://nodeweekly.com/link/177502/0a4070b383) – Popular ORM for Node.js and TypeScript. The Rust-free Prisma Client is now the default.
+    
+*   [Mongoose 9.0](https://nodeweekly.com/link/177503/0a4070b383) – Popular MongoDB object modeling library.
+    
+*   🖼️ [exiftool-vendored.js v33.4](https://nodeweekly.com/link/177504/0a4070b383) – Fast, cross-platform Node.js access to ExifTool for extracting metadata from photos.
+    
+*   🔎 [Node File Trace (NFT) 1.1](https://nodeweekly.com/link/177505/0a4070b383) – A tool from Vercel for determining exactly which files are necessary for an app to run.
+    
+*   [Link Preview JS 4.0](https://nodeweekly.com/link/177506/0a4070b383) – Extract Web link information from a URL using OpenGraph tags.
+    
+*   [node-redis 5.10](https://nodeweekly.com/link/177507/0a4070b383) – The Redis/Valkey client library adds support for some new commands.
+    
+*   [cron-schedule 6.0](https://nodeweekly.com/link/177508/0a4070b383) – Zero-dependency cron parser and scheduler.
+    
+*   [Wasp 0.19](https://nodeweekly.com/link/177509/0a4070b383) – [Wasp](https://nodeweekly.com/link/177510/0a4070b383) is a Rails-like framework built on Node, React & Prisma.
+    
+*   [pnpm 10.23](https://nodeweekly.com/link/177511/0a4070b383) – Fast, space efficient package manager.
+    
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vwh5lw3rkjrodwxb8frg.jpg)
+
+Photo used with the kind permission of [Rob Palmer](https://nodeweekly.com/link/177512/0a4070b383)
+
+*   Ecma's TC39 committee met up last week _(above)_ and progressed numerous proposals including [Iterator Sequencing](https://nodeweekly.com/link/177513/0a4070b383), [Await dictionary of Promises](https://nodeweekly.com/link/177514/0a4070b383), [Joint Iteration](https://nodeweekly.com/link/177515/0a4070b383), [Iterator Join](https://nodeweekly.com/link/177516/0a4070b383), and [Typed Array Find Within](https://nodeweekly.com/link/177517/0a4070b383).
+    
+*   [Google unveiled Angular v21](https://nodeweekly.com/link/177518/0a4070b383) last week, the latest version of its popular JavaScript framework. I enjoyed the [nifty retro gaming themed tour](https://nodeweekly.com/link/177519/0a4070b383) of its new features.
+    
+*   Devographics' annual [_State of React_ survey](https://nodeweekly.com/link/177520/0a4070b383) is now open to take again if you're a React developer.
+    
+*   📗 [WebAssembly from the Ground Up](https://nodeweekly.com/link/177521/0a4070b383) is a new (paid) book that walks you through building a compiler in JavaScript. There's [a sample PDF](https://nodeweekly.com/link/177522/0a4070b383) showing off thirty pages of the content – it looks very promising.
+    
+*   🧟 This news would have been funnier on October 31, but [AWS has resurrected CodeCommit from the dead.](https://nodeweekly.com/link/177523/0a4070b383) CodeCommit was _is_ AWS's private Git repo hosting platform and it's generally available again.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​602 — November 25, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/602)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/177476/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bkkm0fm8u5ml6qa0l0cu.jpg)](https://nodeweekly.com/link/177477/0a4070b383)
+
+[How a Summer in Abruzzo Helped Bring Type Stripping to Node.js](https://nodeweekly.com/link/177477/0a4070b383 "satanacchio.hashnode.dev") — Node.js TSC member and committer Marco tells the *personal* tale of what it took to bring [type stripping](https://nodeweekly.com/link/177524/0a4070b383) (now considered stable) to Node. It’s neat to get the back story. He’s now working on a new experimental feature: [`--experimental-config-file`](https://nodeweekly.com/link/177478/0a4070b383)
+
+Marco Ippolito
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/ccc690df.png)](https://nodeweekly.com/link/177476/0a4070b383)
+
+[Tiger Data Taught AI to Write Real Postgres Code. Try it Today.](https://nodeweekly.com/link/177476/0a4070b383 "www.tigerdata.com") — Tiger Data taught AI how to write idiomatic Postgres and open-sourced it. pg-aiguide brings real DB expertise to Claude Code, or any other MCP-enabled tool.
+
+Tiger Data sponsor
+
+⚠️ [Shai Hulud 2.0: The Widespread npm Supply Chain Attack is Back](https://nodeweekly.com/link/177479/0a4070b383 "about.gitlab.com") — The big story this week is an evolution of a [previous story](https://nodeweekly.com/link/177480/0a4070b383) we’ve covered about a 'worm' that spreads through npm packages. GitLab does a good job of explaining what’s going on: an infected package gets installed then executes a malicious payload which exfiltrates GitHub, npm, and other credentials, then infects and publishes yet more packages.
+
+Abeles and Henriksen (GitLab)
+
+💡 Numerous sources have written about this latest wave of attacks including [Wiz](https://nodeweekly.com/link/177481/0a4070b383), [Snyk](https://nodeweekly.com/link/177482/0a4070b383), [Socket](https://nodeweekly.com/link/177483/0a4070b383), [Aikido](https://nodeweekly.com/link/177484/0a4070b383) and [HelixGuard.](https://nodeweekly.com/link/177485/0a4070b383) Corridor's [Shai Hulud 2.0 Detector](https://nodeweekly.com/link/177486/0a4070b383) can also be used to scan a `package.json` file for known affected packages.
+
+**IN BRIEF:**
+
+* [Node.js v20.19.6 (LTS) has been released.](https://nodeweekly.com/link/177487/0a4070b383) It's a minor LTS release with updates to root certificates and OpenSSL, plus the deprecation of HTTP/2 priority signalling (as is the case in [RFC 9113](https://nodeweekly.com/link/177488/0a4070b383) also).
+
+* Node.js 24 is now a supported runtime on *AWS Lambda* (as `nodejs24.x`) and won't be deprecated until April 30, 2028.
+
+* 🎤 TypeScript's Daniel Rosenwasser and Jake Bailey [went on the TypeScript.fm podcast](https://nodeweekly.com/link/177489/0a4070b383) to talk about what's coming up in TypeScript 6 and 7.
+
+* ▶️ A brief look [behind the scenes of Node.js's automated release process.](https://nodeweekly.com/link/177490/0a4070b383)
+
+📄 [An Experiment in Making TypeScript Immutable-by-Default](https://nodeweekly.com/link/177491/0a4070b383) – *“I wondered: is it possible to make TypeScript values immutable by default?”* Evan Hahn
+
+📄 [A Comprehensive Guide to Error Handling in Node](https://nodeweekly.com/link/177492/0a4070b383) Ayooluwa Isaiah (Honeybadger)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/okkvyfpa9owci6jyyuoa.jpg)](https://nodeweekly.com/link/177493/0a4070b383)
+
+[Gluegun: A Toolkit for Building Node-Powered CLIs](https://nodeweekly.com/link/177493/0a4070b383 "github.com") — For building CLI apps with many features available 'out of the box', including templating, sub-command support, colorful output, argument parsing, etc.
+
+Infinite Red, Inc.
+
+[tshy 3.1: TypeScript HYbridizer](https://nodeweekly.com/link/177494/0a4070b383 "github.com") — A tool by Isaac Z. Schlueter for building *hybrid* modules that Just Work™ in both ESM and CommonJS contexts, if you’re not quite ready to [go ESM only.](https://nodeweekly.com/link/177495/0a4070b383)
+
+Isaac Z. Schlueter
+
+[BoldSign eSignature API & SDK — Built for Developers, Easy to Integrate](https://nodeweekly.com/link/177496/0a4070b383 "boldsign.com") — ✍️ Ship secure e-signatures in your app in minutes with the BoldSign SDK & API. [Get your free API key](https://nodeweekly.com/link/177496/0a4070b383) and start testing today.
+
+BoldSign sponsor
+
+(\*.js) [Glob 13: Match Files Using Shell-Style Patterns](https://nodeweekly.com/link/177497/0a4070b383 "github.com") — *“The most correct and second fastest glob implementation in JavaScript.”*
+
+Isaac Z. Schlueter
+
+[is-online 12.0: Check if the Internet Connection Is Up](https://nodeweekly.com/link/177498/0a4070b383 "github.com") — Works in both Node and the browser and uses several approaches to check if the Internet is *really* available.
+
+Sindre Sorhus
+
+[open v11.0: Open URLs, Files, Executables, etc. Cross-Platform](https://nodeweekly.com/link/177499/0a4070b383 "github.com") — Designed for use in command line tools and scripts, `open` acts similarly to macOS’s terminal namesake: `open`
+
+Sindre Sorhus
+
+[jsonld.js v9.0: A JSON-LD Processor and API Implementation](https://nodeweekly.com/link/177500/0a4070b383 "github.com") — [JSON-LD](https://nodeweekly.com/link/177501/0a4070b383) (JSON for Linking Data) is a JSON-based format used to represent objects on the Web in a way that’s easy for code to read.
+
+Digital Bazaar, Inc.
+
+* [Prisma 7.0](https://nodeweekly.com/link/177502/0a4070b383) – Popular ORM for Node.js and TypeScript. The Rust-free Prisma Client is now the default.
+
+* [Mongoose 9.0](https://nodeweekly.com/link/177503/0a4070b383) – Popular MongoDB object modeling library.
+
+* 🖼️ [exiftool-vendored.js v33.4](https://nodeweekly.com/link/177504/0a4070b383) – Fast, cross-platform Node.js access to ExifTool for extracting metadata from photos.
+
+* 🔎 [Node File Trace (NFT) 1.1](https://nodeweekly.com/link/177505/0a4070b383) – A tool from Vercel for determining exactly which files are necessary for an app to run.
+
+* [Link Preview JS 4.0](https://nodeweekly.com/link/177506/0a4070b383) – Extract Web link information from a URL using OpenGraph tags.
+
+* [node-redis 5.10](https://nodeweekly.com/link/177507/0a4070b383) – The Redis/Valkey client library adds support for some new commands.
+
+* [cron-schedule 6.0](https://nodeweekly.com/link/177508/0a4070b383) – Zero-dependency cron parser and scheduler.
+
+* [Wasp 0.19](https://nodeweekly.com/link/177509/0a4070b383) – [Wasp](https://nodeweekly.com/link/177510/0a4070b383) is a Rails-like framework built on Node, React & Prisma.
+
+* [pnpm 10.23](https://nodeweekly.com/link/177511/0a4070b383) – Fast, space efficient package manager.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vwh5lw3rkjrodwxb8frg.jpg)
+
+Photo used with the kind permission of [Rob Palmer](https://nodeweekly.com/link/177512/0a4070b383)
+
+* Ecma's TC39 committee met up last week *(above)* and progressed numerous proposals including [Iterator Sequencing](https://nodeweekly.com/link/177513/0a4070b383), [Await dictionary of Promises](https://nodeweekly.com/link/177514/0a4070b383), [Joint Iteration](https://nodeweekly.com/link/177515/0a4070b383), [Iterator Join](https://nodeweekly.com/link/177516/0a4070b383), and [Typed Array Find Within](https://nodeweekly.com/link/177517/0a4070b383).
+
+* [Google unveiled Angular v21](https://nodeweekly.com/link/177518/0a4070b383) last week, the latest version of its popular JavaScript framework. I enjoyed the [nifty retro gaming themed tour](https://nodeweekly.com/link/177519/0a4070b383) of its new features.
+
+* Devographics' annual [*State of React* survey](https://nodeweekly.com/link/177520/0a4070b383) is now open to take again if you're a React developer.
+
+* 📗 [WebAssembly from the Ground Up](https://nodeweekly.com/link/177521/0a4070b383) is a new (paid) book that walks you through building a compiler in JavaScript. There's [a sample PDF](https://nodeweekly.com/link/177522/0a4070b383) showing off thirty pages of the content – it looks very promising.
+
+* 🧟 This news would have been funnier on October 31, but [AWS has resurrected CodeCommit from the dead.](https://nodeweekly.com/link/177523/0a4070b383) CodeCommit was *is* AWS's private Git repo hosting platform and it's generally available again.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
