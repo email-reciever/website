@@ -1,0 +1,312 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Comparing performance across Node versions and ARM vs x86
+description: Comparing performance across Node versions and ARM vs x86
+date: 星期二 06 晚上 十二月 2o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/603
+origin_site: https://nodeweekly.com/issues/603
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Comparing performance across Node versions and ARM vs x86" url="https://nodeweekly.com/issues/603" />
+
+<Detail client:only="react">
+	#​603 — December 2, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/603)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/177810/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/epjc5vb4lfgwkqueocex.jpg)](https://nodeweekly.com/link/177811/0a4070b383)
+
+[Tinybench 6.0: A Tiny, Simple Benchmarking Library](https://nodeweekly.com/link/177811/0a4070b383 "github.com") — Uses whatever precise timing capabilities are available (e.g. `process.hrtime` or `performance.now`). You can then benchmark whatever functions you want, specify how long or how many times to benchmark for, and get a variety of stats in return – it runs across multiple runtimes, too. [GitHub repo.](https://nodeweekly.com/link/177811/0a4070b383)
+
+Tinylibs
+
+[93% Faster Next.js in (Your) Kubernetes](https://nodeweekly.com/link/177859/0a4070b383 "blog.platformatic.dev") — Matteo Collina examines the performance improvements Platformatic’s [Watt application server](https://nodeweekly.com/link/177860/0a4070b383) can offer Node apps with CPU-bound workloads that are struggling to scale.
+
+Matteo Collina (Platformatic)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d3bf5153.jpg)](https://nodeweekly.com/link/177810/0a4070b383)
+
+[API Design in Node](https://nodeweekly.com/link/177810/0a4070b383 "frontendmasters.com") — Ready to build scalable APIs with Node and Express? Join Scott Moss for this video course and learn RESTful API design, testing techniques, authentication and authorization, error handling, and more. Create a production deployment and ship your next API today!
+
+Frontend Masters sponsor
+
+📈 [Comparing _AWS Lambda_ ARM64 vs x86 Performance Across Runtimes and Node Versions](https://nodeweekly.com/link/177812/0a4070b383 "chrisebert.net") — A developer puts Node.js, Python, and Rust through their paces on Amazon’s serverless platform. On the Node side, Node 22 beats Node 20 by 8-11% across the board, but Node functions on ARM run even faster than on x86. Chris concludes: _“Switching to arm64 is the easiest performance win you can get.”_ As always with benchmarks, your own results may vary.
+
+Chris Ebert
+
+**IN BRIEF:**
+
+*   [Express v5.2 was released yesterday](https://nodeweekly.com/link/177813/0a4070b383) but note that v5.2.1 followed today, [reverting a security fix in 5.2.0](https://nodeweekly.com/link/177814/0a4070b383) that would have broken apps in certain situations. [v4.22.0](https://nodeweekly.com/link/177815/0a4070b383) and [v4.22.1](https://nodeweekly.com/link/177816/0a4070b383) were also released and follow the same pattern.
+    
+*   Node 24 LTS is now available [for builds and functions on Vercel.](https://nodeweekly.com/link/177817/0a4070b383)
+    
+*   We featured news about the 'Shai-Hulud 2.0' npm worm issue last week, but [DataDog has published a good summary of what's going on.](https://nodeweekly.com/link/177818/0a4070b383)
+    
+*   The Electron project has [entered a 'quiet month'](https://nodeweekly.com/link/177819/0a4070b383) to give the maintainers a rest before getting back to full steam in January. They also use the post to review what happened with Electron in 2025.
+    
+*   We picked up on the release of Prisma 7 last week, but missed [the official release post](https://nodeweekly.com/link/177820/0a4070b383) which does a great job of explaining its full value proposition.
+    
+
+[Node.js 24 Runtime Now Available in AWS Lambda](https://nodeweekly.com/link/177821/0a4070b383 "aws.amazon.com") — We noticed this briefly last week, but now there’s a full blog post showing off what’s new with Node.js on Amazon’s serverless platform. It also acts as a good quick primer on what changed in Node.js 24 overall, even if you don’t use Lambda.
+
+Amorosi and Tuliani (Amazon)
+
+💡 AWS Lambda has also [introduced 'Managed Instances'](https://nodeweekly.com/link/177822/0a4070b383) if you want to keep Lambda's serverless workflow but running on EC2 instances of your own.
+
+[Wrangling My Email with Claude Code](https://nodeweekly.com/link/177823/0a4070b383 "jlongster.com") — James shows how you can use Claude’s [‘agent skills’](https://nodeweekly.com/link/177824/0a4070b383) to run a Node app that fetches your email from Gmail for Claude Code to analyze. This is a good explanation of a powerful Claude feature I've been playing with a lot myself recently.
+
+James Long
+
+[Add eSignatures to Your App in Minutes](https://nodeweekly.com/link/177825/0a4070b383 "developer-api.foxit.com") — Use the Foxit eSign API to send, sign, and track agreements with just a few lines of Python.
+
+Foxit Software sponsor
+
+📄 [Improving TTFB and UX with HTTP Streaming](https://nodeweekly.com/link/177826/0a4070b383) Mauro Bieg
+
+📄 [How Does cgroups v2 Impact Node.js in OpenShift 4?](https://nodeweekly.com/link/177827/0a4070b383) Francisco De Melo Junior (Red Hat)
+
+📄 [Category Theory for JavaScript Developers](https://nodeweekly.com/link/177828/0a4070b383) Ibrahim Cesar
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xreswf8rfft8hrdgnael.jpg)](https://nodeweekly.com/link/177829/0a4070b383)
+
+[Voici.js 3.0: Pretty Table Printing for the Terminal](https://nodeweekly.com/link/177829/0a4070b383 "voici.larswaechter.dev") — If you’ve got a collection of large objects to print out, this could be ideal as it can format them into a table, dynamically size the columns as appropriate, [sort the output](https://nodeweekly.com/link/177830/0a4070b383), and let you add styling into the mix ([including colors.](https://nodeweekly.com/link/177831/0a4070b383)) – [GitHub repo.](https://nodeweekly.com/link/177832/0a4070b383)
+
+Lars Waechter
+
+[Chokidar 5.0: Efficient Cross-Platform File Watching Library](https://nodeweekly.com/link/177833/0a4070b383 "github.com") — Wraps around `fs.watch` / `fs.watchFile` and normalizes the events received, applies some best practices, OS-specific fixes (like macOS events reporting filenames), and presents an API that works the same across different platforms. v5.0 sees the package go ESM-only.
+
+Paul Miller
+
+[readdirp 5.0: Recursive Version of `fs.readdir` with a Streaming API](https://nodeweekly.com/link/177834/0a4070b383 "github.com") — An efficient way to read the contents of a directory and, recursively, any child directories.
+
+Paul Miller
+
+[binary-parser 2.3: Declarative Parser Builder for Binary Data](https://nodeweekly.com/link/177835/0a4070b383 "github.com") — Chain together methods to define binary structures which can then be used in parsing real data. For example, a IP packet header parser might begin `.endianness("big")​.bit4("version")​.bit4("headerLength")` and so on.
+
+Keichi Takahashi
+
+[Better Auth: A Comprehensive Authentication Framework for TypeScript](https://nodeweekly.com/link/177836/0a4070b383 "www.better-auth.com") — A framework-agnostic authentication and authorization framework that provides email and password-based auth, OAuth and social sign-in, account and session management, 2FA, and more. [v1.4](https://nodeweekly.com/link/177837/0a4070b383) was just released with stateless/database-free session management support.
+
+Better Auth
+
+*   [Playwright 1.57](https://nodeweekly.com/link/177838/0a4070b383) – Microsoft's browser/Web automation library now has a 'speedboard' tab in its HTML reports to show you your tests sorted by slowness. It also switches from Chromium to [Chrome for Testing](https://nodeweekly.com/link/177839/0a4070b383).
+    
+*   [pnpm 10.24](https://nodeweekly.com/link/177840/0a4070b383) – The fast, efficiency-focused package manager gains adaptive network concurrency to download packages even faster.
+    
+*   [Sidequest 1.13](https://nodeweekly.com/link/177841/0a4070b383) – Scalable background job processor for Node apps. Note the LGPL license.
+    
+*   [better-sqlite3 v12.5.0](https://nodeweekly.com/link/177842/0a4070b383) – Popular small SQLite3 library. Now using SQLite 3.51.1.
+    
+*   [node-rate-limiter-flexible v9.0](https://nodeweekly.com/link/177843/0a4070b383) – Now with Mongoose 9 support.
+    
+*   [Neutralinojs 6.4](https://nodeweekly.com/link/177844/0a4070b383) – Lighter alternative to Electron.
+    
+*   [NodeBB 4.7](https://nodeweekly.com/link/177845/0a4070b383) – Node.js-powered forum system.
+    
+*   [ESLint v10.0.0 Alpha 1](https://nodeweekly.com/link/177846/0a4070b383)
+    
+
+📰 Classifieds
+
+🐱 [ConfigCat Feature Flag Service](https://nodeweekly.com/link/177847/0a4070b383) lets you release and roll back features safely without code changes. Set it up in minutes! [Save 25% now!](https://nodeweekly.com/link/177847/0a4070b383)
+
+* * *
+
+**Drop-in e-signatures for your app** — [BoldSign](https://nodeweekly.com/link/177848/0a4070b383) SDK with sample code, webhooks, and a free sandbox. [Get your free API key](https://nodeweekly.com/link/177849/0a4070b383).
+
+* * *
+
+[The Road to Next](https://nodeweekly.com/link/177850/0a4070b383) is a course by Robin Wieruch for learning full-stack web development with Next.js 15 and React 19. The perfect match for JavaScript developers ready to go beyond the frontend.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mijjxsilvxl0zd6wryhv.jpg)](https://nodeweekly.com/link/177851/0a4070b383)
+
+*   [DepX's badge generator](https://nodeweekly.com/link/177851/0a4070b383) gives you a graphical badge _(above)_ you can include in your README or on your project site to show how many (or how few!) dependencies your npm package has.
+    
+*   🎄 Puzzlers rejoice! [_Advent of Code_ is back](https://nodeweekly.com/link/177852/0a4070b383) for another year. This time we get 12 days of puzzles instead of the usual 25, making it easier to complete.. we hope!
+    
+*   🔒 _Let's Encrypt_ has announced that it's gradually reducing the validity period of certificates it issues [from 90 days to 45 days over the next two years.](https://nodeweekly.com/link/177853/0a4070b383) If you have a process for obtaining certificates from them, you'll want to ensure it's robust enough to handle the change.
+    
+*   [Over 150 algorithms and data structures demonstrated in JavaScript.](https://nodeweekly.com/link/177854/0a4070b383) Examples of many common algorithms and data structures with explanations. Available in eighteen written languages.
+    
+*   The Piccalilli team has made the [Introduction to Asynchronous JavaScript](https://nodeweekly.com/link/177855/0a4070b383) chapter of their [JavaScript for Everyone](https://nodeweekly.com/link/177856/0a4070b383) course free to read online.
+    
+*   [Brimstone](https://nodeweekly.com/link/177857/0a4070b383) is another new JavaScript engine on the block (joining [the hundreds of others](https://nodeweekly.com/link/177858/0a4070b383)) but has strong language support (97% of the spec), is written in Rust, and is _very_ small.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​603 — December 2, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/603)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/177810/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/epjc5vb4lfgwkqueocex.jpg)](https://nodeweekly.com/link/177811/0a4070b383)
+
+[Tinybench 6.0: A Tiny, Simple Benchmarking Library](https://nodeweekly.com/link/177811/0a4070b383 "github.com") — Uses whatever precise timing capabilities are available (e.g. `process.hrtime` or `performance.now`). You can then benchmark whatever functions you want, specify how long or how many times to benchmark for, and get a variety of stats in return – it runs across multiple runtimes, too. [GitHub repo.](https://nodeweekly.com/link/177811/0a4070b383)
+
+Tinylibs
+
+[93% Faster Next.js in (Your) Kubernetes](https://nodeweekly.com/link/177859/0a4070b383 "blog.platformatic.dev") — Matteo Collina examines the performance improvements Platformatic’s [Watt application server](https://nodeweekly.com/link/177860/0a4070b383) can offer Node apps with CPU-bound workloads that are struggling to scale.
+
+Matteo Collina (Platformatic)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d3bf5153.jpg)](https://nodeweekly.com/link/177810/0a4070b383)
+
+[API Design in Node](https://nodeweekly.com/link/177810/0a4070b383 "frontendmasters.com") — Ready to build scalable APIs with Node and Express? Join Scott Moss for this video course and learn RESTful API design, testing techniques, authentication and authorization, error handling, and more. Create a production deployment and ship your next API today!
+
+Frontend Masters sponsor
+
+📈 [Comparing *AWS Lambda* ARM64 vs x86 Performance Across Runtimes and Node Versions](https://nodeweekly.com/link/177812/0a4070b383 "chrisebert.net") — A developer puts Node.js, Python, and Rust through their paces on Amazon’s serverless platform. On the Node side, Node 22 beats Node 20 by 8-11% across the board, but Node functions on ARM run even faster than on x86. Chris concludes: *“Switching to arm64 is the easiest performance win you can get.”* As always with benchmarks, your own results may vary.
+
+Chris Ebert
+
+**IN BRIEF:**
+
+* [Express v5.2 was released yesterday](https://nodeweekly.com/link/177813/0a4070b383) but note that v5.2.1 followed today, [reverting a security fix in 5.2.0](https://nodeweekly.com/link/177814/0a4070b383) that would have broken apps in certain situations. [v4.22.0](https://nodeweekly.com/link/177815/0a4070b383) and [v4.22.1](https://nodeweekly.com/link/177816/0a4070b383) were also released and follow the same pattern.
+
+* Node 24 LTS is now available [for builds and functions on Vercel.](https://nodeweekly.com/link/177817/0a4070b383)
+
+* We featured news about the 'Shai-Hulud 2.0' npm worm issue last week, but [DataDog has published a good summary of what's going on.](https://nodeweekly.com/link/177818/0a4070b383)
+
+* The Electron project has [entered a 'quiet month'](https://nodeweekly.com/link/177819/0a4070b383) to give the maintainers a rest before getting back to full steam in January. They also use the post to review what happened with Electron in 2025.
+
+* We picked up on the release of Prisma 7 last week, but missed [the official release post](https://nodeweekly.com/link/177820/0a4070b383) which does a great job of explaining its full value proposition.
+
+[Node.js 24 Runtime Now Available in AWS Lambda](https://nodeweekly.com/link/177821/0a4070b383 "aws.amazon.com") — We noticed this briefly last week, but now there’s a full blog post showing off what’s new with Node.js on Amazon’s serverless platform. It also acts as a good quick primer on what changed in Node.js 24 overall, even if you don’t use Lambda.
+
+Amorosi and Tuliani (Amazon)
+
+💡 AWS Lambda has also [introduced 'Managed Instances'](https://nodeweekly.com/link/177822/0a4070b383) if you want to keep Lambda's serverless workflow but running on EC2 instances of your own.
+
+[Wrangling My Email with Claude Code](https://nodeweekly.com/link/177823/0a4070b383 "jlongster.com") — James shows how you can use Claude’s [‘agent skills’](https://nodeweekly.com/link/177824/0a4070b383) to run a Node app that fetches your email from Gmail for Claude Code to analyze. This is a good explanation of a powerful Claude feature I've been playing with a lot myself recently.
+
+James Long
+
+[Add eSignatures to Your App in Minutes](https://nodeweekly.com/link/177825/0a4070b383 "developer-api.foxit.com") — Use the Foxit eSign API to send, sign, and track agreements with just a few lines of Python.
+
+Foxit Software sponsor
+
+📄 [Improving TTFB and UX with HTTP Streaming](https://nodeweekly.com/link/177826/0a4070b383) Mauro Bieg
+
+📄 [How Does cgroups v2 Impact Node.js in OpenShift 4?](https://nodeweekly.com/link/177827/0a4070b383) Francisco De Melo Junior (Red Hat)
+
+📄 [Category Theory for JavaScript Developers](https://nodeweekly.com/link/177828/0a4070b383) Ibrahim Cesar
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xreswf8rfft8hrdgnael.jpg)](https://nodeweekly.com/link/177829/0a4070b383)
+
+[Voici.js 3.0: Pretty Table Printing for the Terminal](https://nodeweekly.com/link/177829/0a4070b383 "voici.larswaechter.dev") — If you’ve got a collection of large objects to print out, this could be ideal as it can format them into a table, dynamically size the columns as appropriate, [sort the output](https://nodeweekly.com/link/177830/0a4070b383), and let you add styling into the mix ([including colors.](https://nodeweekly.com/link/177831/0a4070b383)) – [GitHub repo.](https://nodeweekly.com/link/177832/0a4070b383)
+
+Lars Waechter
+
+[Chokidar 5.0: Efficient Cross-Platform File Watching Library](https://nodeweekly.com/link/177833/0a4070b383 "github.com") — Wraps around `fs.watch` / `fs.watchFile` and normalizes the events received, applies some best practices, OS-specific fixes (like macOS events reporting filenames), and presents an API that works the same across different platforms. v5.0 sees the package go ESM-only.
+
+Paul Miller
+
+[readdirp 5.0: Recursive Version of `fs.readdir` with a Streaming API](https://nodeweekly.com/link/177834/0a4070b383 "github.com") — An efficient way to read the contents of a directory and, recursively, any child directories.
+
+Paul Miller
+
+[binary-parser 2.3: Declarative Parser Builder for Binary Data](https://nodeweekly.com/link/177835/0a4070b383 "github.com") — Chain together methods to define binary structures which can then be used in parsing real data. For example, a IP packet header parser might begin `.endianness("big")​.bit4("version")​.bit4("headerLength")` and so on.
+
+Keichi Takahashi
+
+[Better Auth: A Comprehensive Authentication Framework for TypeScript](https://nodeweekly.com/link/177836/0a4070b383 "www.better-auth.com") — A framework-agnostic authentication and authorization framework that provides email and password-based auth, OAuth and social sign-in, account and session management, 2FA, and more. [v1.4](https://nodeweekly.com/link/177837/0a4070b383) was just released with stateless/database-free session management support.
+
+Better Auth
+
+* [Playwright 1.57](https://nodeweekly.com/link/177838/0a4070b383) – Microsoft's browser/Web automation library now has a 'speedboard' tab in its HTML reports to show you your tests sorted by slowness. It also switches from Chromium to [Chrome for Testing](https://nodeweekly.com/link/177839/0a4070b383).
+
+* [pnpm 10.24](https://nodeweekly.com/link/177840/0a4070b383) – The fast, efficiency-focused package manager gains adaptive network concurrency to download packages even faster.
+
+* [Sidequest 1.13](https://nodeweekly.com/link/177841/0a4070b383) – Scalable background job processor for Node apps. Note the LGPL license.
+
+* [better-sqlite3 v12.5.0](https://nodeweekly.com/link/177842/0a4070b383) – Popular small SQLite3 library. Now using SQLite 3.51.1.
+
+* [node-rate-limiter-flexible v9.0](https://nodeweekly.com/link/177843/0a4070b383) – Now with Mongoose 9 support.
+
+* [Neutralinojs 6.4](https://nodeweekly.com/link/177844/0a4070b383) – Lighter alternative to Electron.
+
+* [NodeBB 4.7](https://nodeweekly.com/link/177845/0a4070b383) – Node.js-powered forum system.
+
+* [ESLint v10.0.0 Alpha 1](https://nodeweekly.com/link/177846/0a4070b383)
+
+📰 Classifieds
+
+🐱 [ConfigCat Feature Flag Service](https://nodeweekly.com/link/177847/0a4070b383) lets you release and roll back features safely without code changes. Set it up in minutes! [Save 25% now!](https://nodeweekly.com/link/177847/0a4070b383)
+
+***
+
+**Drop-in e-signatures for your app** — [BoldSign](https://nodeweekly.com/link/177848/0a4070b383) SDK with sample code, webhooks, and a free sandbox. [Get your free API key](https://nodeweekly.com/link/177849/0a4070b383).
+
+***
+
+[The Road to Next](https://nodeweekly.com/link/177850/0a4070b383) is a course by Robin Wieruch for learning full-stack web development with Next.js 15 and React 19. The perfect match for JavaScript developers ready to go beyond the frontend.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mijjxsilvxl0zd6wryhv.jpg)](https://nodeweekly.com/link/177851/0a4070b383)
+
+* [DepX's badge generator](https://nodeweekly.com/link/177851/0a4070b383) gives you a graphical badge *(above)* you can include in your README or on your project site to show how many (or how few!) dependencies your npm package has.
+
+* 🎄 Puzzlers rejoice! [*Advent of Code* is back](https://nodeweekly.com/link/177852/0a4070b383) for another year. This time we get 12 days of puzzles instead of the usual 25, making it easier to complete.. we hope!
+
+* 🔒 *Let's Encrypt* has announced that it's gradually reducing the validity period of certificates it issues [from 90 days to 45 days over the next two years.](https://nodeweekly.com/link/177853/0a4070b383) If you have a process for obtaining certificates from them, you'll want to ensure it's robust enough to handle the change.
+
+* [Over 150 algorithms and data structures demonstrated in JavaScript.](https://nodeweekly.com/link/177854/0a4070b383) Examples of many common algorithms and data structures with explanations. Available in eighteen written languages.
+
+* The Piccalilli team has made the [Introduction to Asynchronous JavaScript](https://nodeweekly.com/link/177855/0a4070b383) chapter of their [JavaScript for Everyone](https://nodeweekly.com/link/177856/0a4070b383) course free to read online.
+
+* [Brimstone](https://nodeweekly.com/link/177857/0a4070b383) is another new JavaScript engine on the block (joining [the hundreds of others](https://nodeweekly.com/link/177858/0a4070b383)) but has strong language support (97% of the spec), is written in Rust, and is *very* small.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
