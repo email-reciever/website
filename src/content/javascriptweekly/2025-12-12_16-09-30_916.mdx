@@ -1,0 +1,321 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Building JavaScript tools in a single HTML file
+description: Building JavaScript tools in a single HTML file
+date: 星期五 04 下午 十二月 12o 2025
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/765
+origin_site: https://javascriptweekly.com/issues/765
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Building JavaScript tools in a single HTML file" url="https://javascriptweekly.com/issues/765" />
+
+<Detail client:only="react">
+	#​765 — December 12, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/765)
+
+Together with 
+
+[![Mescius](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_284/e_make_transparent/co_white,e_outline:7/mqrpcwpbl3os6si25hoe.jpg)](https://javascriptweekly.com/link/178406/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/cv1rfqhs5r8zqfcbxora.jpg)](https://javascriptweekly.com/link/178407/d076523b1d)
+
+[Useful Patterns for Building HTML Tools](https://javascriptweekly.com/link/178407/d076523b1d "simonwillison.net") — In many situations, you don’t need a full-on framework to build useful tools; just HTML, JavaScript and CSS in a single file will do the job fine. Simon’s become a bit of an expert by rolling out [many such tools](https://javascriptweekly.com/link/178408/d076523b1d) using LLMs, and shares his process and practices here. More please!
+
+Simon Willison
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/b949c560.png)](https://javascriptweekly.com/link/178406/d076523b1d)
+
+[Why Are the Top AI Companies Choosing SpreadJS?](https://javascriptweekly.com/link/178406/d076523b1d "developer.mescius.com") — Because SpreadJS brings a familiar Excel-like UI to JavaScript web apps. Trusted by leading AI innovators and organizations, it empowers devs to build finance, analytics, and more apps with Excel I/O, 500+ calc functions, charts, & more. [View demos!](https://javascriptweekly.com/link/178406/d076523b1d)
+
+SpreadJS From MESCIUS sponsor
+
+[Deno 2.6 Released](https://javascriptweekly.com/link/178409/d076523b1d "deno.com") — The popular alternative runtime introduces a new `npx`\-like tool called `dx` to run binaries from npm and JSR packages, adds a `deno audit` tool for identifying vulnerabilities in dependencies, adds more granular control over runtime permissions, implements [source phase imports](https://javascriptweekly.com/link/178410/d076523b1d), and more.
+
+Iwańczuk and Jiang (Deno)
+
+**IN BRIEF:**
+
+*   ⚠️ [Two more vulnerabilities relating to React Server Components](https://javascriptweekly.com/link/178411/d076523b1d) surfaced yesterday, separate to last week's [React2Shell](https://javascriptweekly.com/link/178412/d076523b1d) incident.
+    
+*   🔒 [GitHub shares an update on its npm token policies.](https://javascriptweekly.com/link/178413/d076523b1d) All npm classic tokens have been revoked this week, and there's now a new process for getting a two hour session token or a granular access token instead.
+    
+*   🕒 [Chrome 144 Beta](https://javascriptweekly.com/link/178414/d076523b1d) has been released with support for the [Temporal API](https://javascriptweekly.com/link/178415/d076523b1d) for working with dates and times.
+    
+*   Microsoft has unveiled [a preview of its _JavaScript/TypeScript Modernizer_ for VS Code](https://javascriptweekly.com/link/178416/d076523b1d) – it's a tool that analyzes a project and suggests an upgrade plan for both syntax and dependencies.
+    
+*   [Oxlint introduces type-aware linting](https://javascriptweekly.com/link/178417/d076523b1d) in alpha form.
+    
+
+**RELEASES:**
+
+*   [Node.js v24.12.0 (LTS)](https://javascriptweekly.com/link/178418/d076523b1d) – The first LTS release of Node.js with type stripping marked as stable.
+    
+*   [@platformatic/python-node v2.0](https://javascriptweekly.com/link/178419/d076523b1d) – Run Python ASGI apps in Node.js processes. Now supporting HTTP response streaming and bidirectional WebSockets.
+    
+*   [Bun v1.3.4](https://javascriptweekly.com/link/178420/d076523b1d) – Now with support for `URLPattern`, fake/controllable timers in its test runner, and `console.log` now supports the `%j` specifier like Node.
+    
+*   [React v19.2.3](https://javascriptweekly.com/link/178421/d076523b1d), [v19.1.4](https://javascriptweekly.com/link/178422/d076523b1d), and [v19.0.3](https://javascriptweekly.com/link/178423/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[How the _Seattle Times_ is Protecting Itself from npm Supply Chain Attacks](https://javascriptweekly.com/link/178424/d076523b1d "pnpm.io") — Technical details on how the _Seattle Times_ has been adopting [pnpm](https://javascriptweekly.com/link/178425/d076523b1d) as an alternative to `npm` for its enhanced client-side security controls.
+
+Ryan Sobol
+
+[A Proposal for Making Complex Web Apps Faster](https://javascriptweekly.com/link/178426/d076523b1d "blogs.windows.com") — From Microsoft comes an early-stage look at a [proposal](https://javascriptweekly.com/link/178427/d076523b1d) for a new _Delayed Message Timing API_ to help deal with the slowdowns that multiple parallel contexts (_iframes, threads, multiple windows, etc_) can introduce. Feedback is being sought.
+
+Joone Hur & Patrick Brosset (Microsoft)
+
+[Behind CERN’s Data Engine: Faster Writes, Instant Insights](https://javascriptweekly.com/link/178428/d076523b1d "www.tigerdata.com") — CERN’s massive time-series workloads run faster with TimescaleDB, improving ingestion, compression, and real-time analytics.
+
+Tiger Data sponsor
+
+[Building a Tiny 2D Physics Engine in JavaScript](https://javascriptweekly.com/link/178429/d076523b1d "xem.github.io") — A lovely, and rather old-school style post about building a simple physics engine from scratch in JavaScript then golfing it down to just 2KB of source as seen [on its homepage](https://javascriptweekly.com/link/178430/d076523b1d) (where there's a demo too).
+
+Maxime Euzière
+
+📄 [Non-Blocking Cross-Browser Image Rendering on the Canvas](https://javascriptweekly.com/link/178431/d076523b1d) – A good way to improve UX responsiveness with more complex use cases. Alexander Myshov
+
+📄 [_Prelude of the Chambered_ Reborn: Rewriting a Classic in TypeScript](https://javascriptweekly.com/link/178432/d076523b1d) – Porting a Java game that Minecraft’s creator worked on during a _Ludum Dare_ contest. Angelo Lima
+
+📄 [Angular Tips](https://javascriptweekly.com/link/178433/d076523b1d) – A documentation site covering numerous best practices for building large Angular apps. Martin Boué
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/c4d4ysezfg0zfblgbkst.jpg)](https://javascriptweekly.com/link/178434/d076523b1d)
+
+[Open Sourcing the _Remix_ Store](https://javascriptweekly.com/link/178434/d076523b1d "remix.run") — [The Remix Store](https://javascriptweekly.com/link/178435/d076523b1d) is a swag store for the [Remix](https://javascriptweekly.com/link/178436/d076523b1d) project and its codebase provides a powerful example of how Remix’s own core team builds apps with Remix and [Hydrogen](https://javascriptweekly.com/link/178437/d076523b1d).
+
+Brooks Lybrand and the Remix Team
+
+💡 You don't need to be a Remix user to benefit from this code, either. For example, [here's the code](https://javascriptweekly.com/link/178465/d076523b1d) to the store's neat ['glitchy' 404 page](https://javascriptweekly.com/link/178438/d076523b1d) which you could adapt to use elsewhere.
+
+🕒 [`&lt;relative-time>` 5.0: Format Timestamps as a Natural Language Relative Time](https://javascriptweekly.com/link/178439/d076523b1d "github.com") — Supply this web component with a standard formatted date and time and it’ll render _“2 days ago”_, say. GitHub uses this itself on all repo and code views.
+
+GitHub
+
+[Still Writing Tests Manually?](https://javascriptweekly.com/link/178440/d076523b1d) — See why modern engineering teams like Dropbox, Notion and Lattice rely on Meticulous to run E2E UI tests.
+
+Meticulous AI sponsor
+
+[ts-exec: Execute TypeScript on Node using SWC](https://javascriptweekly.com/link/178441/d076523b1d "github.com") — From the creator of [Adonis](https://javascriptweekly.com/link/178442/d076523b1d) comes another way to run TypeScript on Node. While Node 22.18+ supports [type stripping](https://javascriptweekly.com/link/178443/d076523b1d), `ts-exec` supports JSX and decorators and [has some benefits over `ts-node` and `tsx`.](https://javascriptweekly.com/link/178444/d076523b1d)
+
+Harminder Virk
+
+[Toastflow: A Toast Notifications Library for Vue 3](https://javascriptweekly.com/link/178445/d076523b1d "toastflow.adrianjanocko.sk") — A really nifty web-based playground for playing around with toast notifications. I wish more projects had things like this. Toastflow is technically framework agnostic, but the only renderer so far is for Vue 3. [GitHub repo.](https://javascriptweekly.com/link/178446/d076523b1d)
+
+Adrián Janočko
+
+[Devalue: Get the Job Done When `JSON.stringify` Can't](https://javascriptweekly.com/link/178447/d076523b1d "github.com") — A library from the Svelte project that’s like `JSON.stringify` but that can tackle more things like cyclical and repeated references, regexes, `Map` and `Set`, and even custom types. You can [try it out here.](https://javascriptweekly.com/link/178448/d076523b1d)
+
+Svelte
+
+[iceberg-js: A JavaScript Client for Apache Iceberg](https://javascriptweekly.com/link/178449/d076523b1d "supabase.com") — A minimal, vendor-agnostic JavaScript client for the Apache Iceberg REST Catalog API that works in most runtimes and environments.
+
+Katerina Skroumpelou (Supabase)
+
+*   [Inertia 2.3](https://javascriptweekly.com/link/178450/d076523b1d) – Build single-page React, Vue and Svelte apps using classic server-side routing and controllers (ideally for integrating with server-side frameworks like Django, Rails, Laravel, etc.)
+    
+*   [OpenPGP.js 6.3](https://javascriptweekly.com/link/178451/d076523b1d) – OpenPGP implementation for JavaScript.
+    
+*   🗓️ [React Datepicker 9.0](https://javascriptweekly.com/link/178452/d076523b1d) – Long–standing React date picker component.
+    
+*   🎸 [SVGuitar 2.5](https://javascriptweekly.com/link/178453/d076523b1d) – Render guitar chord charts in SVG form.
+    
+*   [pnpm 10.25](https://javascriptweekly.com/link/178454/d076523b1d) – Fast, space efficient package manager.
+    
+*   [js-tokens 10.0](https://javascriptweekly.com/link/178455/d076523b1d) – Tiny JavaScript source tokenizer.
+    
+
+📰 Classifieds
+
+[Trigger.dev](https://javascriptweekly.com/link/178456/d076523b1d) handles queues, retries, and long-running tasks so you can build production-ready agents and TypeScript workflows reliably at scale.
+
+* * *
+
+$5 PostgreSQL now available. Stop overpaying for idle instances with the [new developer tier from Aiven.](https://javascriptweekly.com/link/178464/d076523b1d)
+
+📢  Elsewhere in the ecosystem
+
+Some other interesting tidbits in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/sakpnmcmeylkxcoeqkkw.jpg)](https://javascriptweekly.com/link/178458/d076523b1d)
+
+*   📺 Earlier this year, Dimitri Mitropoulos wowed us by [running Doom inside TypeScript's type system](https://javascriptweekly.com/link/178459/d076523b1d) – now he's back [▶️ showing off TypeSlayer](https://javascriptweekly.com/link/178458/d076523b1d), a tool for diagnosing and fixing TypeScript performance problems with some fantastic 3D visualizations. It looks great, but isn't public _yet_.
+    
+*   Get up to speed with the latest developments in the world of CSS this year with the Chrome team's [CSS Wrapped 2025.](https://javascriptweekly.com/link/178460/d076523b1d)
+    
+*   GitHub shares some updates on [work it's done on its GitHub Actions platform](https://javascriptweekly.com/link/178461/d076523b1d) and some new features coming in 2026.
+    
+*   🗳️ Rick Viscomi of the Google Chrome team has put out a call for you to [vote for the web features you want to see](https://javascriptweekly.com/link/178462/d076523b1d) in the future. This is a separate effort from the recent Interop 2025 voting process and votes will accumulate over the long term.
+    
+*   🤖 [OpenAI released its GPT 5.2 model](https://javascriptweekly.com/link/178463/d076523b1d) yesterday.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/178466/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​765 — December 12, 2025
+
+[Read on the Web](https://javascriptweekly.com/issues/765)
+
+Together with 
+
+[![Mescius](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_284/e_make_transparent/co_white,e_outline:7/mqrpcwpbl3os6si25hoe.jpg)](https://javascriptweekly.com/link/178406/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/cv1rfqhs5r8zqfcbxora.jpg)](https://javascriptweekly.com/link/178407/d076523b1d)
+
+[Useful Patterns for Building HTML Tools](https://javascriptweekly.com/link/178407/d076523b1d "simonwillison.net") — In many situations, you don’t need a full-on framework to build useful tools; just HTML, JavaScript and CSS in a single file will do the job fine. Simon’s become a bit of an expert by rolling out [many such tools](https://javascriptweekly.com/link/178408/d076523b1d) using LLMs, and shares his process and practices here. More please!
+
+Simon Willison
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/b949c560.png)](https://javascriptweekly.com/link/178406/d076523b1d)
+
+[Why Are the Top AI Companies Choosing SpreadJS?](https://javascriptweekly.com/link/178406/d076523b1d "developer.mescius.com") — Because SpreadJS brings a familiar Excel-like UI to JavaScript web apps. Trusted by leading AI innovators and organizations, it empowers devs to build finance, analytics, and more apps with Excel I/O, 500+ calc functions, charts, & more. [View demos!](https://javascriptweekly.com/link/178406/d076523b1d)
+
+SpreadJS From MESCIUS sponsor
+
+[Deno 2.6 Released](https://javascriptweekly.com/link/178409/d076523b1d "deno.com") — The popular alternative runtime introduces a new `npx`-like tool called `dx` to run binaries from npm and JSR packages, adds a `deno audit` tool for identifying vulnerabilities in dependencies, adds more granular control over runtime permissions, implements [source phase imports](https://javascriptweekly.com/link/178410/d076523b1d), and more.
+
+Iwańczuk and Jiang (Deno)
+
+**IN BRIEF:**
+
+* ⚠️ [Two more vulnerabilities relating to React Server Components](https://javascriptweekly.com/link/178411/d076523b1d) surfaced yesterday, separate to last week's [React2Shell](https://javascriptweekly.com/link/178412/d076523b1d) incident.
+
+* 🔒 [GitHub shares an update on its npm token policies.](https://javascriptweekly.com/link/178413/d076523b1d) All npm classic tokens have been revoked this week, and there's now a new process for getting a two hour session token or a granular access token instead.
+
+* 🕒 [Chrome 144 Beta](https://javascriptweekly.com/link/178414/d076523b1d) has been released with support for the [Temporal API](https://javascriptweekly.com/link/178415/d076523b1d) for working with dates and times.
+
+* Microsoft has unveiled [a preview of its *JavaScript/TypeScript Modernizer* for VS Code](https://javascriptweekly.com/link/178416/d076523b1d) – it's a tool that analyzes a project and suggests an upgrade plan for both syntax and dependencies.
+
+* [Oxlint introduces type-aware linting](https://javascriptweekly.com/link/178417/d076523b1d) in alpha form.
+
+**RELEASES:**
+
+* [Node.js v24.12.0 (LTS)](https://javascriptweekly.com/link/178418/d076523b1d) – The first LTS release of Node.js with type stripping marked as stable.
+
+* [@platformatic/python-node v2.0](https://javascriptweekly.com/link/178419/d076523b1d) – Run Python ASGI apps in Node.js processes. Now supporting HTTP response streaming and bidirectional WebSockets.
+
+* [Bun v1.3.4](https://javascriptweekly.com/link/178420/d076523b1d) – Now with support for `URLPattern`, fake/controllable timers in its test runner, and `console.log` now supports the `%j` specifier like Node.
+
+* [React v19.2.3](https://javascriptweekly.com/link/178421/d076523b1d), [v19.1.4](https://javascriptweekly.com/link/178422/d076523b1d), and [v19.0.3](https://javascriptweekly.com/link/178423/d076523b1d)
+
+📖  Articles and Videos
+
+[How the *Seattle Times* is Protecting Itself from npm Supply Chain Attacks](https://javascriptweekly.com/link/178424/d076523b1d "pnpm.io") — Technical details on how the *Seattle Times* has been adopting [pnpm](https://javascriptweekly.com/link/178425/d076523b1d) as an alternative to `npm` for its enhanced client-side security controls.
+
+Ryan Sobol
+
+[A Proposal for Making Complex Web Apps Faster](https://javascriptweekly.com/link/178426/d076523b1d "blogs.windows.com") — From Microsoft comes an early-stage look at a [proposal](https://javascriptweekly.com/link/178427/d076523b1d) for a new *Delayed Message Timing API* to help deal with the slowdowns that multiple parallel contexts (*iframes, threads, multiple windows, etc*) can introduce. Feedback is being sought.
+
+Joone Hur & Patrick Brosset (Microsoft)
+
+[Behind CERN’s Data Engine: Faster Writes, Instant Insights](https://javascriptweekly.com/link/178428/d076523b1d "www.tigerdata.com") — CERN’s massive time-series workloads run faster with TimescaleDB, improving ingestion, compression, and real-time analytics.
+
+Tiger Data sponsor
+
+[Building a Tiny 2D Physics Engine in JavaScript](https://javascriptweekly.com/link/178429/d076523b1d "xem.github.io") — A lovely, and rather old-school style post about building a simple physics engine from scratch in JavaScript then golfing it down to just 2KB of source as seen [on its homepage](https://javascriptweekly.com/link/178430/d076523b1d) (where there's a demo too).
+
+Maxime Euzière
+
+📄 [Non-Blocking Cross-Browser Image Rendering on the Canvas](https://javascriptweekly.com/link/178431/d076523b1d) – A good way to improve UX responsiveness with more complex use cases. Alexander Myshov
+
+📄 [*Prelude of the Chambered* Reborn: Rewriting a Classic in TypeScript](https://javascriptweekly.com/link/178432/d076523b1d) – Porting a Java game that Minecraft’s creator worked on during a *Ludum Dare* contest. Angelo Lima
+
+📄 [Angular Tips](https://javascriptweekly.com/link/178433/d076523b1d) – A documentation site covering numerous best practices for building large Angular apps. Martin Boué
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/c4d4ysezfg0zfblgbkst.jpg)](https://javascriptweekly.com/link/178434/d076523b1d)
+
+[Open Sourcing the *Remix* Store](https://javascriptweekly.com/link/178434/d076523b1d "remix.run") — [The Remix Store](https://javascriptweekly.com/link/178435/d076523b1d) is a swag store for the [Remix](https://javascriptweekly.com/link/178436/d076523b1d) project and its codebase provides a powerful example of how Remix’s own core team builds apps with Remix and [Hydrogen](https://javascriptweekly.com/link/178437/d076523b1d).
+
+Brooks Lybrand and the Remix Team
+
+💡 You don't need to be a Remix user to benefit from this code, either. For example, [here's the code](https://javascriptweekly.com/link/178465/d076523b1d) to the store's neat ['glitchy' 404 page](https://javascriptweekly.com/link/178438/d076523b1d) which you could adapt to use elsewhere.
+
+🕒 [`&lt;relative-time>` 5.0: Format Timestamps as a Natural Language Relative Time](https://javascriptweekly.com/link/178439/d076523b1d "github.com") — Supply this web component with a standard formatted date and time and it’ll render *“2 days ago”*, say. GitHub uses this itself on all repo and code views.
+
+GitHub
+
+[Still Writing Tests Manually?](https://javascriptweekly.com/link/178440/d076523b1d) — See why modern engineering teams like Dropbox, Notion and Lattice rely on Meticulous to run E2E UI tests.
+
+Meticulous AI sponsor
+
+[ts-exec: Execute TypeScript on Node using SWC](https://javascriptweekly.com/link/178441/d076523b1d "github.com") — From the creator of [Adonis](https://javascriptweekly.com/link/178442/d076523b1d) comes another way to run TypeScript on Node. While Node 22.18+ supports [type stripping](https://javascriptweekly.com/link/178443/d076523b1d), `ts-exec` supports JSX and decorators and [has some benefits over `ts-node` and `tsx`.](https://javascriptweekly.com/link/178444/d076523b1d)
+
+Harminder Virk
+
+[Toastflow: A Toast Notifications Library for Vue 3](https://javascriptweekly.com/link/178445/d076523b1d "toastflow.adrianjanocko.sk") — A really nifty web-based playground for playing around with toast notifications. I wish more projects had things like this. Toastflow is technically framework agnostic, but the only renderer so far is for Vue 3. [GitHub repo.](https://javascriptweekly.com/link/178446/d076523b1d)
+
+Adrián Janočko
+
+[Devalue: Get the Job Done When `JSON.stringify` Can't](https://javascriptweekly.com/link/178447/d076523b1d "github.com") — A library from the Svelte project that’s like `JSON.stringify` but that can tackle more things like cyclical and repeated references, regexes, `Map` and `Set`, and even custom types. You can [try it out here.](https://javascriptweekly.com/link/178448/d076523b1d)
+
+Svelte
+
+[iceberg-js: A JavaScript Client for Apache Iceberg](https://javascriptweekly.com/link/178449/d076523b1d "supabase.com") — A minimal, vendor-agnostic JavaScript client for the Apache Iceberg REST Catalog API that works in most runtimes and environments.
+
+Katerina Skroumpelou (Supabase)
+
+* [Inertia 2.3](https://javascriptweekly.com/link/178450/d076523b1d) – Build single-page React, Vue and Svelte apps using classic server-side routing and controllers (ideally for integrating with server-side frameworks like Django, Rails, Laravel, etc.)
+
+* [OpenPGP.js 6.3](https://javascriptweekly.com/link/178451/d076523b1d) – OpenPGP implementation for JavaScript.
+
+* 🗓️ [React Datepicker 9.0](https://javascriptweekly.com/link/178452/d076523b1d) – Long–standing React date picker component.
+
+* 🎸 [SVGuitar 2.5](https://javascriptweekly.com/link/178453/d076523b1d) – Render guitar chord charts in SVG form.
+
+* [pnpm 10.25](https://javascriptweekly.com/link/178454/d076523b1d) – Fast, space efficient package manager.
+
+* [js-tokens 10.0](https://javascriptweekly.com/link/178455/d076523b1d) – Tiny JavaScript source tokenizer.
+
+📰 Classifieds
+
+[Trigger.dev](https://javascriptweekly.com/link/178456/d076523b1d) handles queues, retries, and long-running tasks so you can build production-ready agents and TypeScript workflows reliably at scale.
+
+***
+
+$5 PostgreSQL now available. Stop overpaying for idle instances with the [new developer tier from Aiven.](https://javascriptweekly.com/link/178464/d076523b1d)
+
+📢  Elsewhere in the ecosystem
+
+Some other interesting tidbits in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/sakpnmcmeylkxcoeqkkw.jpg)](https://javascriptweekly.com/link/178458/d076523b1d)
+
+* 📺 Earlier this year, Dimitri Mitropoulos wowed us by [running Doom inside TypeScript's type system](https://javascriptweekly.com/link/178459/d076523b1d) – now he's back [▶️ showing off TypeSlayer](https://javascriptweekly.com/link/178458/d076523b1d), a tool for diagnosing and fixing TypeScript performance problems with some fantastic 3D visualizations. It looks great, but isn't public *yet*.
+
+* Get up to speed with the latest developments in the world of CSS this year with the Chrome team's [CSS Wrapped 2025.](https://javascriptweekly.com/link/178460/d076523b1d)
+
+* GitHub shares some updates on [work it's done on its GitHub Actions platform](https://javascriptweekly.com/link/178461/d076523b1d) and some new features coming in 2026.
+
+* 🗳️ Rick Viscomi of the Google Chrome team has put out a call for you to [vote for the web features you want to see](https://javascriptweekly.com/link/178462/d076523b1d) in the future. This is a separate effort from the recent Interop 2025 voting process and votes will accumulate over the long term.
+
+* 🤖 [OpenAI released its GPT 5.2 model](https://javascriptweekly.com/link/178463/d076523b1d) yesterday.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/178466/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
