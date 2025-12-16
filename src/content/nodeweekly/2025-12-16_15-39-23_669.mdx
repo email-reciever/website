@@ -1,0 +1,269 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 'Twas the Node before Christmas...
+description: 'Twas the Node before Christmas...
+date: 星期二 03 下午 十二月 16o 2025
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/605
+origin_site: https://nodeweekly.com/issues/605
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="'Twas the Node before Christmas..." url="https://nodeweekly.com/issues/605" />
+
+<Detail client:only="react">
+	#​605 — December 16, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/605)
+
+🗓️ Today we're taking a look back over some of the big stories and links that got you clicking this year. Also, **Node Weekly will be moving to Thursdays in January 2026,** as part of a reshuffle for many of [our newsletters](https://cooperpress.com/publications/).  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/178469/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gizbizsmonmhtoqyvt4i.jpg)
+
+This is our final issue of the year, with a focus on looking back at what happened with Node in 2025, as well as the most popular items readers enjoyed. First, though, we do have a few items of news:
+
+[Node.js v24.12.0 (LTS) Released](https://nodeweekly.com/link/178470/0a4070b383 "nodejs.org") — Node’s implementation of type-stripping in order to be able to [run TypeScript natively](https://nodeweekly.com/link/178471/0a4070b383) reaches a conclusion of sorts with the support being marked as stable for the first time in the active LTS release.
+
+Michaël Zasso
+
+💡 [Deno 2.6](https://nodeweekly.com/link/178512/0a4070b383) was also released with a new `npx`\-like tool called `dx` to run binaries from npm and JSR packages, a `deno audit` tool for identifying vulnerabilities in dependencies, and yet more Node.js compatibility enhancements.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/23d7ea88.png)](https://nodeweekly.com/link/178469/0a4070b383)
+
+[CERN Upgrades Its Data Stack: Here’s the Database Behind It](https://nodeweekly.com/link/178469/0a4070b383 "www.tigerdata.com") — The NextGen Archiver at CERN depends on high-performance ingestion and fast analytics. Discover why TimescaleDB beat pure PostgreSQL and legacy systems with superior throughput, 7–10x compression, and dramatically faster queries.
+
+Tiger Data sponsor
+
+**SECURITY RELEASES:** The expected December 15 Node.js releases [have been bumped back to this Thursday, December 18.](https://nodeweekly.com/link/178472/0a4070b383) New versions of the 25.x, 24.x, 22.x, and 20.x release lines are expected to fix a handful of security vulnerabilities.
+
+**MONGOOSE:** Valeri Karpov gives us an update [on what's new in Mongoose 9.0](https://nodeweekly.com/link/178473/0a4070b383), the MongoDB object modeling library for Node.
+
+⚙️ [pnpm 10.26](https://nodeweekly.com/link/178474/0a4070b383) has landed with stricter security defaults for git-hosted dependencies, `allowBuilds` for granular script permissions, and a new setting to block exotic transitive dependencies.
+
+🏆 The Top Items of 2025
+
+The top items of the year based upon the aggregated number of clicks by readers, whether in email, on the Web, or through our RSS feed:
+
+1. [15 Recent Node Features that Replace Popular npm Packages](https://nodeweekly.com/link/178475/0a4070b383 "nodesource.com") — Clearly trimming dependencies is on many people's minds as the most popular item of 2025 was about ditching unnecessary packages for built-in Node alternatives.
+
+Lizz Parody
+
+2. [A Modern Guide to Reading and Writing Files in Node](https://nodeweekly.com/link/178476/0a4070b383 "nodejsdesignpatterns.com") — A valuable, comprehensive guide to various methods for working with files, something that doesn't often get blogged about.
+
+Luciano Mammino
+
+[Extract Text from PDFs Using REST APIs](https://nodeweekly.com/link/178477/0a4070b383 "developer-api.foxit.com") — Pull text from PDFs for search, AI, or automation workflows — full Python example included.
+
+Foxit Software sponsor
+
+3. [Modern Node.js Patterns for 2025](https://nodeweekly.com/link/178478/0a4070b383 "kashw1n.com") — Halfway through the year, Ashwin reminded us of various features the modern Node environment provides us, including ES modules, built-in Web APIs, the test runner, watch mode, the permission model, import maps, and more.
+
+Ashwin
+
+4. [Node.js Testing Best Practices](https://nodeweekly.com/link/178479/0a4070b383 "github.com") — A detailed guide to modern testing in Node from a group of developers who know all about it.
+
+Goldberg, Salomon, and Gluskin
+
+5. [How V8 Made `JSON.stringify` More Than Twice as Fast](https://nodeweekly.com/link/178480/0a4070b383 "v8.dev") — The V8 team shows off how they made `JSON.stringify` over twice as fast, at least in V8 13.8 or higher (currently only true of Node v25 which ships with V8 14.1).
+
+Patrick Thier (V8)
+
+6\. ⚙️ [Node Modules Inspector](https://nodeweekly.com/link/178481/0a4070b383 "node-modules.dev") — A tool that runs pnpm _inside your browser_, “installs” a package, then analyzes its dependencies.
+
+Anthony Fu
+
+7. [Subverting Control with Weak References](https://nodeweekly.com/link/178482/0a4070b383 "jlongster.com") — Node supports `WeakMap` and [`WeakRef`](https://nodeweekly.com/link/178483/0a4070b383) for working with weak references and James is a big fan of the extra abstractions they unlock.
+
+James Long
+
+8. [The Many, Many, Many JavaScript Runtimes of the Last Decade](https://nodeweekly.com/link/178484/0a4070b383 "buttondown.com") — A fantastic, well-researched look at the myriad of JavaScript runtimes and engines both past and present, from mainstream picks like Node and Bun, to cloud platforms and more obscure ‘honorable mentions’. A perfect way to round out your knowledge of JavaScript’s runtime story.
+
+Whatever, Jamie
+
+🗓️  Node.js in 2025: Month by Month
+
+**JANUARY –** We start and end the year in the same place, with the ability of [Node being able to run TypeScript](https://nodeweekly.com/link/178485/0a4070b383) being new early in the year, and now ending the year with [Node.js v24.12.0 (LTS)](https://nodeweekly.com/link/178470/0a4070b383) making it stable in an LTS release. We also got a [major update on progress with Express.js.](https://nodeweekly.com/link/178486/0a4070b383) [NodeBB v4.0](https://nodeweekly.com/link/178487/0a4070b383) was released too.
+
+**FEBRUARY –** [TypeScript 5.8](https://nodeweekly.com/link/178488/0a4070b383) was a big release for Node developers in particular, with support for `require()` of ES modules with `--module nodenext` and an `--erasableSyntaxOnly` option for generating code that Node 22.6+'s type-stripping features could deal with.
+
+**MARCH –** The Node.js project got [its own official community space on Discord.](https://nodeweekly.com/link/178489/0a4070b383) It now has almost 22,000 members. The Node.js TSC also [voted to stop distributing Corepack](https://nodeweekly.com/link/178490/0a4070b383) by default. [Express 5.1](https://nodeweekly.com/link/178491/0a4070b383) was released.
+
+**APRIL –** [Koa 3.0](https://nodeweekly.com/link/178492/0a4070b383) was released, and Microsoft [warned us about Node's increasing role](https://nodeweekly.com/link/178493/0a4070b383) in malware. [A major Node.js collaboration summit](https://nodeweekly.com/link/178494/0a4070b383) also took place in Paris.
+
+**MAY –** [Node.js v24.0](https://nodeweekly.com/link/178495/0a4070b383) was released. The [Glitch platform announced](https://nodeweekly.com/link/178496/0a4070b383) it was shutting down. Platformatic began [bringing PHP and Node together.](https://nodeweekly.com/link/178497/0a4070b383)
+
+**JUNE –** I think everyone took an early summer break as it was very quiet!
+
+**JULY –** [A discussion, still ongoing,](https://nodeweekly.com/link/178498/0a4070b383) began about shifting Node to annual major releases and shortening the LTS timeframe.
+
+**AUGUST –** [TypeScript 5.9](https://nodeweekly.com/link/178499/0a4070b383) was released.
+
+**SEPTEMBER –** A messy autumn for npm package security began with [a variety of packages being compromised in a phishing attack.](https://nodeweekly.com/link/178500/0a4070b383) In response, [pnpm added support](https://nodeweekly.com/link/178501/0a4070b383) for delayed dependency updates. Cloudflare Workers [introduced support for Node.js HTTP servers](https://nodeweekly.com/link/178502/0a4070b383) and [improved Node compatibility](https://nodeweekly.com/link/178503/0a4070b383) generally. macOS Tahoe users found [Electron apps were very laggy](https://nodeweekly.com/link/178504/0a4070b383) due to a change in a private API.
+
+**OCTOBER –** [Node.js v25.0](https://nodeweekly.com/link/178505/0a4070b383) was released and [Node.js 24 became the active LTS release.](https://nodeweekly.com/link/178506/0a4070b383)
+
+**NOVEMBER –** [Type stripping went 'stable'](https://nodeweekly.com/link/178507/0a4070b383) in Node v25.2 and Marco Ippolito shared [his personal story of how type stripping was shipped.](https://nodeweekly.com/link/178508/0a4070b383) The now-named Shai Halud supply chain attack [reared its ugly head in a 'version 2' form.](https://nodeweekly.com/link/178509/0a4070b383)
+
+**DECEMBER –** Where we are now: it's been a relatively quiet month so far!
+
+📰 Classifieds
+
+✍️ Add e-signatures to your Node.js app in minutes with the BoldSign Node.js SDK—powered by our [e-signature API. Get your free API key today](https://nodeweekly.com/link/178510/0a4070b383).
+
+* * *
+
+[The Road to Next](https://nodeweekly.com/link/178511/0a4070b383) is a course by Robin Wieruch for learning full-stack web development with Next.js 15 and React 19. The perfect match for JavaScript developers ready to go beyond the frontend.
+
+🎁 _P.S._ We hope you have a great holiday season and **we'll be back on Thursday, January 8.**
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​605 — December 16, 2025
+
+[Read on the Web](https://nodeweekly.com/issues/605)
+
+🗓️ Today we're taking a look back over some of the big stories and links that got you clicking this year. Also, **Node Weekly will be moving to Thursdays in January 2026,** as part of a reshuffle for many of [our newsletters](https://cooperpress.com/publications/).\
+\_\_\
+*Your editor, Peter Cooper*
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/178469/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gizbizsmonmhtoqyvt4i.jpg)
+
+This is our final issue of the year, with a focus on looking back at what happened with Node in 2025, as well as the most popular items readers enjoyed. First, though, we do have a few items of news:
+
+[Node.js v24.12.0 (LTS) Released](https://nodeweekly.com/link/178470/0a4070b383 "nodejs.org") — Node’s implementation of type-stripping in order to be able to [run TypeScript natively](https://nodeweekly.com/link/178471/0a4070b383) reaches a conclusion of sorts with the support being marked as stable for the first time in the active LTS release.
+
+Michaël Zasso
+
+💡 [Deno 2.6](https://nodeweekly.com/link/178512/0a4070b383) was also released with a new `npx`-like tool called `dx` to run binaries from npm and JSR packages, a `deno audit` tool for identifying vulnerabilities in dependencies, and yet more Node.js compatibility enhancements.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/23d7ea88.png)](https://nodeweekly.com/link/178469/0a4070b383)
+
+[CERN Upgrades Its Data Stack: Here’s the Database Behind It](https://nodeweekly.com/link/178469/0a4070b383 "www.tigerdata.com") — The NextGen Archiver at CERN depends on high-performance ingestion and fast analytics. Discover why TimescaleDB beat pure PostgreSQL and legacy systems with superior throughput, 7–10x compression, and dramatically faster queries.
+
+Tiger Data sponsor
+
+**SECURITY RELEASES:** The expected December 15 Node.js releases [have been bumped back to this Thursday, December 18.](https://nodeweekly.com/link/178472/0a4070b383) New versions of the 25.x, 24.x, 22.x, and 20.x release lines are expected to fix a handful of security vulnerabilities.
+
+**MONGOOSE:** Valeri Karpov gives us an update [on what's new in Mongoose 9.0](https://nodeweekly.com/link/178473/0a4070b383), the MongoDB object modeling library for Node.
+
+⚙️ [pnpm 10.26](https://nodeweekly.com/link/178474/0a4070b383) has landed with stricter security defaults for git-hosted dependencies, `allowBuilds` for granular script permissions, and a new setting to block exotic transitive dependencies.
+
+🏆 The Top Items of 2025
+
+The top items of the year based upon the aggregated number of clicks by readers, whether in email, on the Web, or through our RSS feed:
+
+1. [15 Recent Node Features that Replace Popular npm Packages](https://nodeweekly.com/link/178475/0a4070b383 "nodesource.com") — Clearly trimming dependencies is on many people's minds as the most popular item of 2025 was about ditching unnecessary packages for built-in Node alternatives.
+
+Lizz Parody
+
+2. [A Modern Guide to Reading and Writing Files in Node](https://nodeweekly.com/link/178476/0a4070b383 "nodejsdesignpatterns.com") — A valuable, comprehensive guide to various methods for working with files, something that doesn't often get blogged about.
+
+Luciano Mammino
+
+[Extract Text from PDFs Using REST APIs](https://nodeweekly.com/link/178477/0a4070b383 "developer-api.foxit.com") — Pull text from PDFs for search, AI, or automation workflows — full Python example included.
+
+Foxit Software sponsor
+
+3. [Modern Node.js Patterns for 2025](https://nodeweekly.com/link/178478/0a4070b383 "kashw1n.com") — Halfway through the year, Ashwin reminded us of various features the modern Node environment provides us, including ES modules, built-in Web APIs, the test runner, watch mode, the permission model, import maps, and more.
+
+Ashwin
+
+4. [Node.js Testing Best Practices](https://nodeweekly.com/link/178479/0a4070b383 "github.com") — A detailed guide to modern testing in Node from a group of developers who know all about it.
+
+Goldberg, Salomon, and Gluskin
+
+5. [How V8 Made `JSON.stringify` More Than Twice as Fast](https://nodeweekly.com/link/178480/0a4070b383 "v8.dev") — The V8 team shows off how they made `JSON.stringify` over twice as fast, at least in V8 13.8 or higher (currently only true of Node v25 which ships with V8 14.1).
+
+Patrick Thier (V8)
+
+6\. ⚙️ [Node Modules Inspector](https://nodeweekly.com/link/178481/0a4070b383 "node-modules.dev") — A tool that runs pnpm *inside your browser*, “installs” a package, then analyzes its dependencies.
+
+Anthony Fu
+
+7. [Subverting Control with Weak References](https://nodeweekly.com/link/178482/0a4070b383 "jlongster.com") — Node supports `WeakMap` and [`WeakRef`](https://nodeweekly.com/link/178483/0a4070b383) for working with weak references and James is a big fan of the extra abstractions they unlock.
+
+James Long
+
+8. [The Many, Many, Many JavaScript Runtimes of the Last Decade](https://nodeweekly.com/link/178484/0a4070b383 "buttondown.com") — A fantastic, well-researched look at the myriad of JavaScript runtimes and engines both past and present, from mainstream picks like Node and Bun, to cloud platforms and more obscure ‘honorable mentions’. A perfect way to round out your knowledge of JavaScript’s runtime story.
+
+Whatever, Jamie
+
+🗓️  Node.js in 2025: Month by Month
+
+**JANUARY –** We start and end the year in the same place, with the ability of [Node being able to run TypeScript](https://nodeweekly.com/link/178485/0a4070b383) being new early in the year, and now ending the year with [Node.js v24.12.0 (LTS)](https://nodeweekly.com/link/178470/0a4070b383) making it stable in an LTS release. We also got a [major update on progress with Express.js.](https://nodeweekly.com/link/178486/0a4070b383) [NodeBB v4.0](https://nodeweekly.com/link/178487/0a4070b383) was released too.
+
+**FEBRUARY –** [TypeScript 5.8](https://nodeweekly.com/link/178488/0a4070b383) was a big release for Node developers in particular, with support for `require()` of ES modules with `--module nodenext` and an `--erasableSyntaxOnly` option for generating code that Node 22.6+'s type-stripping features could deal with.
+
+**MARCH –** The Node.js project got [its own official community space on Discord.](https://nodeweekly.com/link/178489/0a4070b383) It now has almost 22,000 members. The Node.js TSC also [voted to stop distributing Corepack](https://nodeweekly.com/link/178490/0a4070b383) by default. [Express 5.1](https://nodeweekly.com/link/178491/0a4070b383) was released.
+
+**APRIL –** [Koa 3.0](https://nodeweekly.com/link/178492/0a4070b383) was released, and Microsoft [warned us about Node's increasing role](https://nodeweekly.com/link/178493/0a4070b383) in malware. [A major Node.js collaboration summit](https://nodeweekly.com/link/178494/0a4070b383) also took place in Paris.
+
+**MAY –** [Node.js v24.0](https://nodeweekly.com/link/178495/0a4070b383) was released. The [Glitch platform announced](https://nodeweekly.com/link/178496/0a4070b383) it was shutting down. Platformatic began [bringing PHP and Node together.](https://nodeweekly.com/link/178497/0a4070b383)
+
+**JUNE –** I think everyone took an early summer break as it was very quiet!
+
+**JULY –** [A discussion, still ongoing,](https://nodeweekly.com/link/178498/0a4070b383) began about shifting Node to annual major releases and shortening the LTS timeframe.
+
+**AUGUST –** [TypeScript 5.9](https://nodeweekly.com/link/178499/0a4070b383) was released.
+
+**SEPTEMBER –** A messy autumn for npm package security began with [a variety of packages being compromised in a phishing attack.](https://nodeweekly.com/link/178500/0a4070b383) In response, [pnpm added support](https://nodeweekly.com/link/178501/0a4070b383) for delayed dependency updates. Cloudflare Workers [introduced support for Node.js HTTP servers](https://nodeweekly.com/link/178502/0a4070b383) and [improved Node compatibility](https://nodeweekly.com/link/178503/0a4070b383) generally. macOS Tahoe users found [Electron apps were very laggy](https://nodeweekly.com/link/178504/0a4070b383) due to a change in a private API.
+
+**OCTOBER –** [Node.js v25.0](https://nodeweekly.com/link/178505/0a4070b383) was released and [Node.js 24 became the active LTS release.](https://nodeweekly.com/link/178506/0a4070b383)
+
+**NOVEMBER –** [Type stripping went 'stable'](https://nodeweekly.com/link/178507/0a4070b383) in Node v25.2 and Marco Ippolito shared [his personal story of how type stripping was shipped.](https://nodeweekly.com/link/178508/0a4070b383) The now-named Shai Halud supply chain attack [reared its ugly head in a 'version 2' form.](https://nodeweekly.com/link/178509/0a4070b383)
+
+**DECEMBER –** Where we are now: it's been a relatively quiet month so far!
+
+📰 Classifieds
+
+✍️ Add e-signatures to your Node.js app in minutes with the BoldSign Node.js SDK—powered by our [e-signature API. Get your free API key today](https://nodeweekly.com/link/178510/0a4070b383).
+
+***
+
+[The Road to Next](https://nodeweekly.com/link/178511/0a4070b383) is a course by Robin Wieruch for learning full-stack web development with Next.js 15 and React 19. The perfect match for JavaScript developers ready to go beyond the frontend.
+
+🎁 *P.S.* We hope you have a great holiday season and **we'll be back on Thursday, January 8.**
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
