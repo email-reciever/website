@@ -1,0 +1,254 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: The joys of React 19.2's useEffectEvent
+description: The joys of React 19.2's useEffectEvent
+date: 星期五 04 下午 一月 9o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/457
+origin_site: https://react.statuscode.com/issues/457
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="The joys of React 19.2's useEffectEvent" url="https://react.statuscode.com/issues/457" />
+
+<Detail client:only="react">
+	#​457 — January 9, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/457)
+
+👋 Happy new year! React Status is now sent every Friday (starting today!)  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://react.statuscode.com/link/179025/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/epssq4ziaqeq4ooix3gq.jpg)](https://react.statuscode.com/link/179026/5d0bbb4a61)
+
+[The React Conf 2025 Videos are Now Online](https://react.statuscode.com/link/179026/5d0bbb4a61 "conf.react.dev") — React Conf 2025 took place last October and while you could previously scrub your way through the livestreams, the talks have now been separated and shared in an easier-to-watch format. There are [25 talk videos](https://react.statuscode.com/link/179027/5d0bbb4a61) and [23 _interview_ videos](https://react.statuscode.com/link/179028/5d0bbb4a61) which are new and feature folks like [Tanner Linsley](https://react.statuscode.com/link/179029/5d0bbb4a61), [Delba de Oliveira](https://react.statuscode.com/link/179030/5d0bbb4a61), and [Kent C. Dodds.](https://react.statuscode.com/link/179031/5d0bbb4a61)
+
+Meta
+
+📺 There's also [an interview with four members of the React core team](https://react.statuscode.com/link/179032/5d0bbb4a61) (Mofei Zhang, Lauren Tan, Jack Pope, and Joe Savona) covering their favorite React 19.2 features, React Compiler, and more.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/80952090.png)](https://react.statuscode.com/link/179025/5d0bbb4a61)
+
+[Build a Fullstack Next.js App](https://react.statuscode.com/link/179025/5d0bbb4a61 "frontendmasters.com") — Join Brian Holt for this comprehensive video course and learn how to ship enterprise-ready Next.js apps! You’ll cover setup, scaling, auth, deployment, logging and much, much more.
+
+Frontend Masters sponsor
+
+[React Has Finally Solved Its Biggest Problem: The Joys of `useEffectEvent`](https://react.statuscode.com/link/179033/5d0bbb4a61 "blog.logrocket.com") — You might be more used to seeing Jack on YouTube, but he writes too! Here, he looks at how React 19.2’s `useEffectEvent` hook can help solve the stale closure problem that has plagued `useEffect` for years.
+
+Jack Herrington
+
+**IN BRIEF:**
+
+*   If you attended React Conf 2025, either in person or virtually, [the team is seeking your feedback](https://react.statuscode.com/link/179034/5d0bbb4a61) for making future events even better.
+    
+*   ⚠️ [The React Router team has just published six CVEs](https://react.statuscode.com/link/179035/5d0bbb4a61) identifying security vulnerabilities in React Router and Remix v2. Upgrading is advised.
+    
+*   Dan Abramov released [RSC Explorer](https://react.statuscode.com/link/179036/5d0bbb4a61) as an aid for understanding how React Server Components operate behind the scenes.
+    
+*   A developer shows off [▶️ a demo of his React Native decompiler and disassembly tool.](https://react.statuscode.com/link/179037/5d0bbb4a61)
+    
+
+[React Has Changed, Your Hooks Should Too](https://react.statuscode.com/link/179038/5d0bbb4a61 "allthingssmitty.com") — _“If you’re still writing Hooks the same way you did in 2020, that’s fine. Most of us are. But React 18+ gives us a much better toolbox, and getting comfortable with these patterns pays off quickly.”_
+
+Matt Smith
+
+📺 [I Moved Off of Next.js](https://react.statuscode.com/link/179039/5d0bbb4a61) – The prolific dev YouTuber explains how he moved his chat app from Next.js to TanStack Start. This _isn't_ a rant about Next.js at all, but more about improving his app's structure and his team's development experience. Theo Browne
+
+📄 [How AI Coding Agents Hid an Infinite Recursion Bug in Our React App](https://react.statuscode.com/link/179040/5d0bbb4a61) Andrew Patton
+
+📄 [Driving 3D Scenes in Blender with React](https://react.statuscode.com/link/179041/5d0bbb4a61) – A delightfully creative use for React, though the code is a little hard to read in the post. Roman Liutikov
+
+📄 [How I Rebuilt My Blog with React Server Components](https://react.statuscode.com/link/179042/5d0bbb4a61) Micah Cantor
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xshcz68dksc5n2786cj2.jpg)](https://react.statuscode.com/link/179044/5d0bbb4a61)
+
+[React Aria: Adobe's World-Class React Components](https://react.statuscode.com/link/179044/5d0bbb4a61 "react-aria.adobe.com") — They’ve been around for a long while, but React Aria has a fantastic new site and all-new documentation that really sells the entire experience complete with interactive CSS and Tailwind examples to get you started quickly.
+
+Adobe
+
+[Let Users Create API Keys with Clerk's New React Components](https://react.statuscode.com/link/179045/5d0bbb4a61 "go.clerk.com") — Drop-in `&lt;APIKeys />` component for UserProfile & OrganizationProfile. Scopes, expiration & revocation built-in.
+
+Clerk sponsor
+
+[Schedule-X 3.6: A Material Design Calendar and Date Picker](https://react.statuscode.com/link/179046/5d0bbb4a61 "schedule-x.dev") — Available in the form of React/Preact, Vue, Svelte, Angular, or plain JS components. Open source but with a premium version with extra features. [GitHub repo.](https://react.statuscode.com/link/179047/5d0bbb4a61)
+
+Tom Österlund
+
+[Base UI 1.0: Unstyled UI Components for React](https://react.statuscode.com/link/179048/5d0bbb4a61 "base-ui.com") — Intended as a successor to Radix (and from the same creators as Radix, Floating UI and Material UI), this is a new, comprehensive UI component library worth checking out if you like things clean and simple. Here’s a [guide to all of the components](https://react.statuscode.com/link/179049/5d0bbb4a61), complete with examples and code samples.
+
+Base UI Team
+
+*   [Ink 6.6](https://react.statuscode.com/link/179050/5d0bbb4a61) – Use React to build CLI apps, as used by Claude Code, Gemini CLI, [and many others.](https://react.statuscode.com/link/179051/5d0bbb4a61)
+    
+*   [React Three Fiber 9.5](https://react.statuscode.com/link/179052/5d0bbb4a61) – React renderer for Three.js. Now compatible with React 19.2, including `Activity`.
+    
+*   [React-Grid-Layout 2.2](https://react.statuscode.com/link/179053/5d0bbb4a61) – Draggable and resizable grid layout system with responsive breakpoints.
+    
+*   📊 [Recharts 3.6](https://react.statuscode.com/link/179054/5d0bbb4a61) – Popular D3-powered React charting library.
+    
+*   [xstyled 4.1](https://react.statuscode.com/link/179055/5d0bbb4a61) – Utility-first CSS-in-JS framework for React.
+    
+*   [React-PDF 10.3](https://react.statuscode.com/link/179056/5d0bbb4a61) – Easily display PDFs in your React app.
+    
+*   [react-qr-scanner 2.5](https://react.statuscode.com/link/179057/5d0bbb4a61) – A library to scan QR codes.
+    
+*   [React Router Devtools 6.1](https://react.statuscode.com/link/179058/5d0bbb4a61)
+    
+*   [TanStack AI Alpha 2](https://react.statuscode.com/link/179059/5d0bbb4a61)
+    
+*   [Next.js 16.1](https://react.statuscode.com/link/179060/5d0bbb4a61)
+    
+
+📢  Elsewhere in the ecosystem
+
+Some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xft2tcainxsqlvfskkvi.jpg)](https://react.statuscode.com/link/179061/5d0bbb4a61)
+
+*   [The 2025 JavaScript Rising Stars](https://react.statuscode.com/link/179062/5d0bbb4a61) roundup of the most starred JavaScript projects in 2025 is now live and there's [a React-specific section](https://react.statuscode.com/link/179061/5d0bbb4a61) _(above)_ where [React Bits](https://react.statuscode.com/link/179063/5d0bbb4a61) took the #1 spot.
+    
+*   As the next stage of making the npm ecosystem more secure, [GitHub plans to implement 'staged publishing' for npm packages.](https://react.statuscode.com/link/179064/5d0bbb4a61)
+    
+*   [pnpm](https://react.statuscode.com/link/179065/5d0bbb4a61)'s lead maintainer, Zoltan Kochan, presents [a look back at how 2025 was a transformative year for the project.](https://react.statuscode.com/link/179066/5d0bbb4a61)
+    
+*   [WebF](https://react.statuscode.com/link/179067/5d0bbb4a61) is a new WHATWG-compliant web runtime for Flutter so you can build parts of Flutter apps using a more typical JS stack (React, Vue, etc.)
+    
+*   [The results of the _State of HTML 2025_ survey](https://react.statuscode.com/link/179068/5d0bbb4a61) are now available.
+    
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​457 — January 9, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/457)
+
+👋 Happy new year! React Status is now sent every Friday (starting today!)\
+\_\_\
+*Your editor, Peter Cooper*
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://react.statuscode.com/link/179025/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/epssq4ziaqeq4ooix3gq.jpg)](https://react.statuscode.com/link/179026/5d0bbb4a61)
+
+[The React Conf 2025 Videos are Now Online](https://react.statuscode.com/link/179026/5d0bbb4a61 "conf.react.dev") — React Conf 2025 took place last October and while you could previously scrub your way through the livestreams, the talks have now been separated and shared in an easier-to-watch format. There are [25 talk videos](https://react.statuscode.com/link/179027/5d0bbb4a61) and [23 *interview* videos](https://react.statuscode.com/link/179028/5d0bbb4a61) which are new and feature folks like [Tanner Linsley](https://react.statuscode.com/link/179029/5d0bbb4a61), [Delba de Oliveira](https://react.statuscode.com/link/179030/5d0bbb4a61), and [Kent C. Dodds.](https://react.statuscode.com/link/179031/5d0bbb4a61)
+
+Meta
+
+📺 There's also [an interview with four members of the React core team](https://react.statuscode.com/link/179032/5d0bbb4a61) (Mofei Zhang, Lauren Tan, Jack Pope, and Joe Savona) covering their favorite React 19.2 features, React Compiler, and more.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/80952090.png)](https://react.statuscode.com/link/179025/5d0bbb4a61)
+
+[Build a Fullstack Next.js App](https://react.statuscode.com/link/179025/5d0bbb4a61 "frontendmasters.com") — Join Brian Holt for this comprehensive video course and learn how to ship enterprise-ready Next.js apps! You’ll cover setup, scaling, auth, deployment, logging and much, much more.
+
+Frontend Masters sponsor
+
+[React Has Finally Solved Its Biggest Problem: The Joys of `useEffectEvent`](https://react.statuscode.com/link/179033/5d0bbb4a61 "blog.logrocket.com") — You might be more used to seeing Jack on YouTube, but he writes too! Here, he looks at how React 19.2’s `useEffectEvent` hook can help solve the stale closure problem that has plagued `useEffect` for years.
+
+Jack Herrington
+
+**IN BRIEF:**
+
+* If you attended React Conf 2025, either in person or virtually, [the team is seeking your feedback](https://react.statuscode.com/link/179034/5d0bbb4a61) for making future events even better.
+
+* ⚠️ [The React Router team has just published six CVEs](https://react.statuscode.com/link/179035/5d0bbb4a61) identifying security vulnerabilities in React Router and Remix v2. Upgrading is advised.
+
+* Dan Abramov released [RSC Explorer](https://react.statuscode.com/link/179036/5d0bbb4a61) as an aid for understanding how React Server Components operate behind the scenes.
+
+* A developer shows off [▶️ a demo of his React Native decompiler and disassembly tool.](https://react.statuscode.com/link/179037/5d0bbb4a61)
+
+[React Has Changed, Your Hooks Should Too](https://react.statuscode.com/link/179038/5d0bbb4a61 "allthingssmitty.com") — *“If you’re still writing Hooks the same way you did in 2020, that’s fine. Most of us are. But React 18+ gives us a much better toolbox, and getting comfortable with these patterns pays off quickly.”*
+
+Matt Smith
+
+📺 [I Moved Off of Next.js](https://react.statuscode.com/link/179039/5d0bbb4a61) – The prolific dev YouTuber explains how he moved his chat app from Next.js to TanStack Start. This *isn't* a rant about Next.js at all, but more about improving his app's structure and his team's development experience. Theo Browne
+
+📄 [How AI Coding Agents Hid an Infinite Recursion Bug in Our React App](https://react.statuscode.com/link/179040/5d0bbb4a61) Andrew Patton
+
+📄 [Driving 3D Scenes in Blender with React](https://react.statuscode.com/link/179041/5d0bbb4a61) – A delightfully creative use for React, though the code is a little hard to read in the post. Roman Liutikov
+
+📄 [How I Rebuilt My Blog with React Server Components](https://react.statuscode.com/link/179042/5d0bbb4a61) Micah Cantor
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xshcz68dksc5n2786cj2.jpg)](https://react.statuscode.com/link/179044/5d0bbb4a61)
+
+[React Aria: Adobe's World-Class React Components](https://react.statuscode.com/link/179044/5d0bbb4a61 "react-aria.adobe.com") — They’ve been around for a long while, but React Aria has a fantastic new site and all-new documentation that really sells the entire experience complete with interactive CSS and Tailwind examples to get you started quickly.
+
+Adobe
+
+[Let Users Create API Keys with Clerk's New React Components](https://react.statuscode.com/link/179045/5d0bbb4a61 "go.clerk.com") — Drop-in `&lt;APIKeys />` component for UserProfile & OrganizationProfile. Scopes, expiration & revocation built-in.
+
+Clerk sponsor
+
+[Schedule-X 3.6: A Material Design Calendar and Date Picker](https://react.statuscode.com/link/179046/5d0bbb4a61 "schedule-x.dev") — Available in the form of React/Preact, Vue, Svelte, Angular, or plain JS components. Open source but with a premium version with extra features. [GitHub repo.](https://react.statuscode.com/link/179047/5d0bbb4a61)
+
+Tom Österlund
+
+[Base UI 1.0: Unstyled UI Components for React](https://react.statuscode.com/link/179048/5d0bbb4a61 "base-ui.com") — Intended as a successor to Radix (and from the same creators as Radix, Floating UI and Material UI), this is a new, comprehensive UI component library worth checking out if you like things clean and simple. Here’s a [guide to all of the components](https://react.statuscode.com/link/179049/5d0bbb4a61), complete with examples and code samples.
+
+Base UI Team
+
+* [Ink 6.6](https://react.statuscode.com/link/179050/5d0bbb4a61) – Use React to build CLI apps, as used by Claude Code, Gemini CLI, [and many others.](https://react.statuscode.com/link/179051/5d0bbb4a61)
+
+* [React Three Fiber 9.5](https://react.statuscode.com/link/179052/5d0bbb4a61) – React renderer for Three.js. Now compatible with React 19.2, including `Activity`.
+
+* [React-Grid-Layout 2.2](https://react.statuscode.com/link/179053/5d0bbb4a61) – Draggable and resizable grid layout system with responsive breakpoints.
+
+* 📊 [Recharts 3.6](https://react.statuscode.com/link/179054/5d0bbb4a61) – Popular D3-powered React charting library.
+
+* [xstyled 4.1](https://react.statuscode.com/link/179055/5d0bbb4a61) – Utility-first CSS-in-JS framework for React.
+
+* [React-PDF 10.3](https://react.statuscode.com/link/179056/5d0bbb4a61) – Easily display PDFs in your React app.
+
+* [react-qr-scanner 2.5](https://react.statuscode.com/link/179057/5d0bbb4a61) – A library to scan QR codes.
+
+* [React Router Devtools 6.1](https://react.statuscode.com/link/179058/5d0bbb4a61)
+
+* [TanStack AI Alpha 2](https://react.statuscode.com/link/179059/5d0bbb4a61)
+
+* [Next.js 16.1](https://react.statuscode.com/link/179060/5d0bbb4a61)
+
+📢  Elsewhere in the ecosystem
+
+Some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xft2tcainxsqlvfskkvi.jpg)](https://react.statuscode.com/link/179061/5d0bbb4a61)
+
+* [The 2025 JavaScript Rising Stars](https://react.statuscode.com/link/179062/5d0bbb4a61) roundup of the most starred JavaScript projects in 2025 is now live and there's [a React-specific section](https://react.statuscode.com/link/179061/5d0bbb4a61) *(above)* where [React Bits](https://react.statuscode.com/link/179063/5d0bbb4a61) took the #1 spot.
+
+* As the next stage of making the npm ecosystem more secure, [GitHub plans to implement 'staged publishing' for npm packages.](https://react.statuscode.com/link/179064/5d0bbb4a61)
+
+* [pnpm](https://react.statuscode.com/link/179065/5d0bbb4a61)'s lead maintainer, Zoltan Kochan, presents [a look back at how 2025 was a transformative year for the project.](https://react.statuscode.com/link/179066/5d0bbb4a61)
+
+* [WebF](https://react.statuscode.com/link/179067/5d0bbb4a61) is a new WHATWG-compliant web runtime for Flutter so you can build parts of Flutter apps using a more typical JS stack (React, Vue, etc.)
+
+* [The results of the *State of HTML 2025* survey](https://react.statuscode.com/link/179068/5d0bbb4a61) are now available.
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
