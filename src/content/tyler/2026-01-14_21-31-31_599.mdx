@@ -1,0 +1,107 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Bytes： Practice safe npx with Deno
+description: Bytes： Practice safe npx with Deno
+date: 星期三 09 晚上 一月 14o 2026
+author: tyler
+origin_url: https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/e0hph0u7mp49xrt8/aHR0cHM6Ly9ieXRlcy5kZXYvYXJjaGl2ZXMvNDU0
+origin_site: https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/e0hph0u7mp49xrt8/aHR0cHM6Ly9ieXRlcy5kZXYvYXJjaGl2ZXMvNDU0
+translated: true
+avatar: /media-source/tyler-ico.png
+email_recorder: tyler@ui.dev
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Bytes： Practice safe npx with Deno" url="https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/e0hph0u7mp49xrt8/aHR0cHM6Ly9ieXRlcy5kZXYvYXJjaGl2ZXMvNDU0" />
+
+<Detail client:only="react">
+	![Cool Bits logo](https://bytes.dev/images/content/cool-bits.png)
+
+## Cool Bits
+
+1.  Cam Pederson took a ceramics class and wrote a cool article about how [code is clay](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/25h2h9u3lvdvrec3/aHR0cHM6Ly9jYW1wZWRlcnNlbi5jb20vY29kZS1pcy1jbGF5). We love to see a man with hobbies.
+    
+2.  [Astro 6.0 beta](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/qvh8h8ude7n7g6ul/aHR0cHM6Ly9hc3Ryby5idWlsZC9ibG9nL2FzdHJvLTYtYmV0YS8=) just dropped yesterday with a redesigned dev server and more reasons to regret using RSC for your company’s landing page.
+    
+3.  [AppSignal gives you full observability without complexity](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/g3hnhwumgdpd7eur/aHR0cHM6Ly9zcnYuYnV5c2VsbGFkcy5jb20vYWRzL2xvbmcveC9UQ1JUUEVaUVRUVFRUVEhYSlI2Q0xUVFRUVFRHREM0UDI2VFRUVFRUS0RaNjRCVlRUVFRUVEVCRFZSV0lLV0RVVjdRRktPTEhLNzRNUDVERUNSSzZOSjRJUEo3VA==). Your team gets logs, metrics, and traces in one simple UI that’s easy to use. Try it for free. \[sponsored\]
+    
+4.  antirez warned against [falling into the anti-AI hype](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/9qhzhdud4q9qkpf9/aHR0cHM6Ly9hbnRpcmV6LmNvbS9uZXdzLzE1OA==), even if it’s fun to be a hater sometimes.
+    
+5.  Speaking of which, David Loker shared a report on how [AI code creates 1.7x more problems](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/n2hohquv28r8w6f6/aHR0cHM6Ly93d3cuY29kZXJhYmJpdC5haS9ibG9nL3N0YXRlLW9mLWFpLXZzLWh1bWFuLWNvZGUtZ2VuZXJhdGlvbi1yZXBvcnQ=). But there’s good news too.
+    
+6.  Aapo Alasuutari wrote a completely non-contrarian article about how [garbage collection is contrarian](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/48hvh7umw5g5zgcx/aHR0cHM6Ly90cnlub3ZhLmRldi9ibG9nL2dhcmJhZ2UtY29sbGVjdGlvbi1pcy1jb250cmFyaWFu).
+    
+7.  Only idiots write manual tests – modern engineering teams like Notion, Dropbox and LaunchDarkly use Meticulous to maintain e2e UI tests that [cover every edge case](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/wnh2h6uqm5g598i7/aHR0cHM6Ly93d3cubWV0aWN1bG91cy5haS8_dXRtX2NhbXBhaWduPTI2cTEmdXRtX2NvbnRlbnQ9c2Vjb25kYXJ5JnV0bV9tZWRpdW09bmV3c2xldHRlciZ1dG1fc291cmNlPWJ5dGVz) of your web app. \[sponsored\]
+    
+8.  Dave Rupert concluded his four-part blog series on `contrast-colour()` with [this playful focus rings explainer](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/reh8h9umk2x29ka2/aHR0cHM6Ly9kYXZlcnVwZXJ0LmNvbS8yMDI2LzAxL25lc3RlZC1jb250cmFzdC1jb2xvci1mb2N1cy1yaW5ncy8=).
+    
+9.  Harrison Chase wrote a good post on why good observability is crucial to [understanding code written by AI agents](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/08hwhgu2nozo0vfl/aHR0cHM6Ly94LmNvbS9od2NoYXNlMTcvc3RhdHVzLzIwMTAwNDQ3NzkyMjUzMjk2ODg=).
+    
+10.  Mike Cann made this video on how he [spent 10 months making the best Christmas lights display & simulator](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/8ghqh3uow090edfk/aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj1seld6WTc0Sk91SQ==) using Convex. Now _this_ is the kind of unhinged sponsored content I can respect, especially if Mike was able to expense all those lights. \[sponsored\]
+    
+11.  Addy Osmani gave his advice on [navigating the next two years of software engineering](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/vqh3hmuomxgx2rtg/aHR0cHM6Ly9hZGR5b3NtYW5pLmNvbS9ibG9nL25leHQtdHdvLXllYXJzLw==) as a developer. Tip #1: Work at Google from 2010-2025.
+    
+12.  Karl Sguin explained [why the Lightpanda team migrated their DOM to Zig](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/l2heh6ulq0r059b6/aHR0cHM6Ly9saWdodHBhbmRhLmlvL2Jsb2cvcG9zdHMvbWlncmF0aW5nLW91ci1kb20tdG8temln). But we all know the real reason is because they’re trying to become friends with Jarred and get acquired by Anthropic.
+    
+
+![Bytes](https://bytes.dev/images/bytes-icon.png)
+
+##### Want us to say nice things  
+about your company?
+
+[Sponsor Bytes](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/dphehmued454zlcm/aHR0cHM6Ly9ieXRlcy5kZXYvYWR2ZXJ0aXNl)
+
+[or share it](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/e0hph0u7mp4p9ru8/aHR0cHM6Ly9ieXRlcy5kZXYvc2hhcmU=)
+
+Built with ❤️ by [ui.dev](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/7qh7h2u9dkzkvxsz/aHR0cHM6Ly91aS5kZXY=)
+
+50 W Broadway Ste 333 PMB 51647 Salt Lake City, Utah 84101
+
+
+</Detail>
+
+![Cool Bits logo](https://bytes.dev/images/content/cool-bits.png)
+
+## Cool Bits
+
+1. Cam Pederson took a ceramics class and wrote a cool article about how [code is clay](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/25h2h9u3lvdvrec3/aHR0cHM6Ly9jYW1wZWRlcnNlbi5jb20vY29kZS1pcy1jbGF5). We love to see a man with hobbies.
+
+2. [Astro 6.0 beta](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/qvh8h8ude7n7g6ul/aHR0cHM6Ly9hc3Ryby5idWlsZC9ibG9nL2FzdHJvLTYtYmV0YS8=) just dropped yesterday with a redesigned dev server and more reasons to regret using RSC for your company’s landing page.
+
+3. [AppSignal gives you full observability without complexity](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/g3hnhwumgdpd7eur/aHR0cHM6Ly9zcnYuYnV5c2VsbGFkcy5jb20vYWRzL2xvbmcveC9UQ1JUUEVaUVRUVFRUVEhYSlI2Q0xUVFRUVFRHREM0UDI2VFRUVFRUS0RaNjRCVlRUVFRUVEVCRFZSV0lLV0RVVjdRRktPTEhLNzRNUDVERUNSSzZOSjRJUEo3VA==). Your team gets logs, metrics, and traces in one simple UI that’s easy to use. Try it for free. \[sponsored]
+
+4. antirez warned against [falling into the anti-AI hype](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/9qhzhdud4q9qkpf9/aHR0cHM6Ly9hbnRpcmV6LmNvbS9uZXdzLzE1OA==), even if it’s fun to be a hater sometimes.
+
+5. Speaking of which, David Loker shared a report on how [AI code creates 1.7x more problems](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/n2hohquv28r8w6f6/aHR0cHM6Ly93d3cuY29kZXJhYmJpdC5haS9ibG9nL3N0YXRlLW9mLWFpLXZzLWh1bWFuLWNvZGUtZ2VuZXJhdGlvbi1yZXBvcnQ=). But there’s good news too.
+
+6. Aapo Alasuutari wrote a completely non-contrarian article about how [garbage collection is contrarian](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/48hvh7umw5g5zgcx/aHR0cHM6Ly90cnlub3ZhLmRldi9ibG9nL2dhcmJhZ2UtY29sbGVjdGlvbi1pcy1jb250cmFyaWFu).
+
+7. Only idiots write manual tests – modern engineering teams like Notion, Dropbox and LaunchDarkly use Meticulous to maintain e2e UI tests that [cover every edge case](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/wnh2h6uqm5g598i7/aHR0cHM6Ly93d3cubWV0aWN1bG91cy5haS8_dXRtX2NhbXBhaWduPTI2cTEmdXRtX2NvbnRlbnQ9c2Vjb25kYXJ5JnV0bV9tZWRpdW09bmV3c2xldHRlciZ1dG1fc291cmNlPWJ5dGVz) of your web app. \[sponsored]
+
+8. Dave Rupert concluded his four-part blog series on `contrast-colour()` with [this playful focus rings explainer](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/reh8h9umk2x29ka2/aHR0cHM6Ly9kYXZlcnVwZXJ0LmNvbS8yMDI2LzAxL25lc3RlZC1jb250cmFzdC1jb2xvci1mb2N1cy1yaW5ncy8=).
+
+9. Harrison Chase wrote a good post on why good observability is crucial to [understanding code written by AI agents](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/08hwhgu2nozo0vfl/aHR0cHM6Ly94LmNvbS9od2NoYXNlMTcvc3RhdHVzLzIwMTAwNDQ3NzkyMjUzMjk2ODg=).
+
+10. Mike Cann made this video on how he [spent 10 months making the best Christmas lights display & simulator](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/8ghqh3uow090edfk/aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj1seld6WTc0Sk91SQ==) using Convex. Now *this* is the kind of unhinged sponsored content I can respect, especially if Mike was able to expense all those lights. \[sponsored]
+
+11. Addy Osmani gave his advice on [navigating the next two years of software engineering](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/vqh3hmuomxgx2rtg/aHR0cHM6Ly9hZGR5b3NtYW5pLmNvbS9ibG9nL25leHQtdHdvLXllYXJzLw==) as a developer. Tip #1: Work at Google from 2010-2025.
+
+12. Karl Sguin explained [why the Lightpanda team migrated their DOM to Zig](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/l2heh6ulq0r059b6/aHR0cHM6Ly9saWdodHBhbmRhLmlvL2Jsb2cvcG9zdHMvbWlncmF0aW5nLW91ci1kb20tdG8temln). But we all know the real reason is because they’re trying to become friends with Jarred and get acquired by Anthropic.
+
+![Bytes](https://bytes.dev/images/bytes-icon.png)
+
+##### Want us to say nice things
+
+about your company?
+
+[Sponsor Bytes](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/dphehmued454zlcm/aHR0cHM6Ly9ieXRlcy5kZXYvYWR2ZXJ0aXNl)
+
+[or share it](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/e0hph0u7mp4p9ru8/aHR0cHM6Ly9ieXRlcy5kZXYvc2hhcmU=)
+
+Built with ❤️ by [ui.dev](https://click.kit-mail6.com/5quoleoxr2s7hn3gxrwt6h92qw344bnhxdov/7qh7h2u9dkzkvxsz/aHR0cHM6Ly91aS5kZXY=)
+
+50 W Broadway Ste 333 PMB 51647 Salt Lake City, Utah 84101
+
+
