@@ -1,0 +1,268 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: require(esm) now stable in Node 25
+description: require(esm) now stable in Node 25
+date: 星期四 04 下午 一月 22o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/608
+origin_site: https://nodeweekly.com/issues/608
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="require(esm) now stable in Node 25" url="https://nodeweekly.com/issues/608" />
+
+<Detail client:only="react">
+	#​608 — January 22, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/608)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/179589/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hlmhdebv2gl4qzuzs95s.jpg)](https://nodeweekly.com/link/179590/0a4070b383)
+
+[Node.js 25.4.0 (Current) Released](https://nodeweekly.com/link/179590/0a4070b383 "nodejs.org") — Another gradual step forward for Node with **`require(esm)` now marked as stable**, as well as the [module compile cache](https://nodeweekly.com/link/179591/0a4070b383), along with a variety of other minor tweaks. Joyee Cheung of the Node team has [written a thread on Bluesky](https://nodeweekly.com/link/179592/0a4070b383) going deeper into this release.
+
+Rafael Gonzaga
+
+💡 Socket also published [a good round-up of the Node 25.4 release.](https://nodeweekly.com/link/179593/0a4070b383)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/29d5edc3.png)](https://nodeweekly.com/link/179589/0a4070b383)
+
+[New Course: Backend System Design](https://nodeweekly.com/link/179589/0a4070b383 "frontendmasters.com") — Join Jem Young for this detailed video course and develop the system-thinking skills to solve complex backend design challenges related to scaling, data storage, reliability, performance, and more.
+
+Frontend Masters sponsor
+
+🤖 [Mastra 1.0: An AI Framework from the Former Gatsby Team](https://nodeweekly.com/link/179594/0a4070b383 "mastra.ai") — An all-in-one framework ([homepage](https://nodeweekly.com/link/179595/0a4070b383)) for building AI powered apps and agents. With v1.0, you can now bundle agents and workflows into existing Node apps using several new adapter packages to run Mastra inside existing Express, Hono, Fastify or Koa apps. Support for [Vercel’s AI SDK](https://nodeweekly.com/link/179596/0a4070b383) v6 has also been added.
+
+Sam Bhagwat
+
+**IN BRIEF:**
+
+*   Overwhelmed by an increasing number of low-quality reports, the Node.js project has [increased its required 'Signal score'](https://nodeweekly.com/link/179597/0a4070b383) for looking into vulnerability reports made via HackerOne.
+    
+*   Over on X, [Evan You noticed](https://nodeweekly.com/link/179598/0a4070b383) a neat new 'export CPU profile as Markdown' feature coming to [Bun](https://nodeweekly.com/link/179599/0a4070b383) and suggested Node should get something similar. Shortly thereafter, Matteo Collina dropped [pprof-to-md](https://nodeweekly.com/link/179600/0a4070b383).
+    
+*   The AdonisJS team has announced [AdonisJS v7 is feature complete](https://nodeweekly.com/link/179601/0a4070b383) and in final testing before a public release in a few weeks.
+    
+*   [The Boring JavaScript Stack](https://nodeweekly.com/link/179602/0a4070b383) has hit version 1.0 – it's an _'opinionated full-stack JavaScript project starter'_ built around Sails, Inertia, Tailwind CSS, and your choice of Vue, React or Svelte.
+    
+
+[Scale Time-Series Data Without Leaving Postgres](https://nodeweekly.com/link/179603/0a4070b383 "www.tigerdata.com") — TimescaleDB: hypertables, 95% compression, 200+ SQL functions. Query billions of rows in milliseconds. [Start for free](https://nodeweekly.com/link/179604/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+📄 [Dynamic Configuration in Node.js: Beyond Environment Variables](https://nodeweekly.com/link/179605/0a4070b383) – Must admit I’d never thought about this before. Dmitry Tilyupo (Replane)
+
+📄 [What Changed in the Node.js January 2026 Security Releases and Why It Matters](https://nodeweekly.com/link/179606/0a4070b383) Estefany Aguilar (NodeSource)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fzlvik1mmi4h8pmvdz8e.jpg)](https://nodeweekly.com/link/179607/0a4070b383)
+
+[Superdiff 4.0: Compares Arrays or Objects and Returns a Diff](https://nodeweekly.com/link/179607/0a4070b383 "github.com") — Got two similar objects or arrays and want to see the underlying differences? Superdiff has been around a while, but recent updates boost performance, add support for streamed input and using a worker for more efficient diffing in a background thread. The project now has a [handy documentation site](https://nodeweekly.com/link/179608/0a4070b383) too.
+
+antoine
+
+[Electron 40.0.0 Released](https://nodeweekly.com/link/179609/0a4070b383 "www.electronjs.org") — Despite the round number, it’s a gentle update for the ubiquitous cross-platform desktop app framework. It bumps up to Node 24.11.1 (from 22.20.0), V8 14.4, and Chromium 144 (from 142) and adds a variety of minor features.
+
+Michaela Laurencin
+
+💡 Of greater intellectual curiosity is [this post about the Electron team's improvements to window resizing](https://nodeweekly.com/link/179610/0a4070b383) on Windows.
+
+[np 11.0: A Better `npm publish`](https://nodeweekly.com/link/179611/0a4070b383 "github.com") — Makes the process of publishing a package smoother with an interactive UI, checks that you’re publishing from the right branch, checks dependencies, runs tests, pushes commits and tags, etc. Designed for local developer use rather than CI, however.
+
+Sindre Sorhus
+
+🌀 [cli-spinners 3.4: Spinners for Use in the Terminal](https://nodeweekly.com/link/179612/0a4070b383 "github.com") — 70+ simple spinners to signal some sort of progress is occurring.
+
+Sindre Sorhus
+
+[fast-json-stringify 6.2: Faster Alternative to `JSON.stringify()`](https://nodeweekly.com/link/179613/0a4070b383 "github.com") — Boasts being significantly faster than `JSON.stringify()` particularly for _small_ payloads, with its performance advantage shrinking as your payload grows.
+
+Fastify
+
+*   🍊 [Orange ORM v4.9](https://nodeweekly.com/link/179614/0a4070b383) – Object Relational Mapper for Node and TypeScript. SQLite support switches to using `better-sqlite3` on Node &lt;22.5.
+    
+*   [Turbowatch 2.30.0](https://nodeweekly.com/link/179615/0a4070b383) – Fast file change detector and task orchestrator for Node.
+    
+*   [Typegoose v13.1.0](https://nodeweekly.com/link/179616/0a4070b383) – Define Mongoose models using TypeScript classes.
+    
+*   [ArangoDB.js v10.2.0](https://nodeweekly.com/link/179617/0a4070b383) – Official client for the [ArangoDB](https://nodeweekly.com/link/179618/0a4070b383) graph database.
+    
+*   [npm 11.8.0](https://nodeweekly.com/link/179619/0a4070b383) – The grandaddy of all JavaScript package managers?
+    
+*   [BSON Parser 7.1](https://nodeweekly.com/link/179620/0a4070b383) – BSON (Binary JSON) parser for JavaScript.
+    
+
+📰 Classifieds
+
+🛠️ Auth0 for AI Agents provides a foundation for developers to build AI agents without compromising security or innovation. [Start building](https://nodeweekly.com/link/179621/0a4070b383).
+
+* * *
+
+[Speed up queries 3x with PostgreSQL 18](https://nodeweekly.com/link/179622/0a4070b383). Learn AIO, Skip Scan & replication enhancements. [Register!](https://nodeweekly.com/link/179622/0a4070b383)
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/icnn9q36s2kkjvszkfuq.jpg)](https://nodeweekly.com/link/179623/0a4070b383)
+
+*   Whether you agree or not, Ryan Dahl, the original creator of both Node.js and Deno, drew a lot of attention for [a post on X](https://nodeweekly.com/link/179623/0a4070b383) _(above)_ where he shared a thought on the shifting roles of modern software engineers in an agentic world.
+    
+*   Sticking with the topic of AI and agents, Matteo Collina shares a more extensive view in [_The Human in the Loop_](https://nodeweekly.com/link/179624/0a4070b383) noting that _"my bottleneck is now review, not coding."_
+    
+*   jQuery turned 20 years old last week, and then [released jQuery 4.0](https://nodeweekly.com/link/179625/0a4070b383) alongside the celebrations. The long-standing frontend utility library has now migrated entirely to ES modules making it easier to use in modern builds.
+    
+*   🕒 [Temporal Playground](https://nodeweekly.com/link/179626/0a4070b383) is an online sandbox for playing around with the [Temporal API.](https://nodeweekly.com/link/179627/0a4070b383)
+    
+*   🐘 If you're a Postgres user, I really enjoyed [this article about alternatives to 'soft delete'](https://nodeweekly.com/link/179628/0a4070b383) where rather than use a boolean or datetime flag, you could use a trigger to move a row to an archive table or capture deleted rows from the WAL for archival.
+    
+*   [Deno 2.6.5](https://nodeweekly.com/link/179629/0a4070b383) was released.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​608 — January 22, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/608)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/179589/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hlmhdebv2gl4qzuzs95s.jpg)](https://nodeweekly.com/link/179590/0a4070b383)
+
+[Node.js 25.4.0 (Current) Released](https://nodeweekly.com/link/179590/0a4070b383 "nodejs.org") — Another gradual step forward for Node with **`require(esm)` now marked as stable**, as well as the [module compile cache](https://nodeweekly.com/link/179591/0a4070b383), along with a variety of other minor tweaks. Joyee Cheung of the Node team has [written a thread on Bluesky](https://nodeweekly.com/link/179592/0a4070b383) going deeper into this release.
+
+Rafael Gonzaga
+
+💡 Socket also published [a good round-up of the Node 25.4 release.](https://nodeweekly.com/link/179593/0a4070b383)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/29d5edc3.png)](https://nodeweekly.com/link/179589/0a4070b383)
+
+[New Course: Backend System Design](https://nodeweekly.com/link/179589/0a4070b383 "frontendmasters.com") — Join Jem Young for this detailed video course and develop the system-thinking skills to solve complex backend design challenges related to scaling, data storage, reliability, performance, and more.
+
+Frontend Masters sponsor
+
+🤖 [Mastra 1.0: An AI Framework from the Former Gatsby Team](https://nodeweekly.com/link/179594/0a4070b383 "mastra.ai") — An all-in-one framework ([homepage](https://nodeweekly.com/link/179595/0a4070b383)) for building AI powered apps and agents. With v1.0, you can now bundle agents and workflows into existing Node apps using several new adapter packages to run Mastra inside existing Express, Hono, Fastify or Koa apps. Support for [Vercel’s AI SDK](https://nodeweekly.com/link/179596/0a4070b383) v6 has also been added.
+
+Sam Bhagwat
+
+**IN BRIEF:**
+
+* Overwhelmed by an increasing number of low-quality reports, the Node.js project has [increased its required 'Signal score'](https://nodeweekly.com/link/179597/0a4070b383) for looking into vulnerability reports made via HackerOne.
+
+* Over on X, [Evan You noticed](https://nodeweekly.com/link/179598/0a4070b383) a neat new 'export CPU profile as Markdown' feature coming to [Bun](https://nodeweekly.com/link/179599/0a4070b383) and suggested Node should get something similar. Shortly thereafter, Matteo Collina dropped [pprof-to-md](https://nodeweekly.com/link/179600/0a4070b383).
+
+* The AdonisJS team has announced [AdonisJS v7 is feature complete](https://nodeweekly.com/link/179601/0a4070b383) and in final testing before a public release in a few weeks.
+
+* [The Boring JavaScript Stack](https://nodeweekly.com/link/179602/0a4070b383) has hit version 1.0 – it's an *'opinionated full-stack JavaScript project starter'* built around Sails, Inertia, Tailwind CSS, and your choice of Vue, React or Svelte.
+
+[Scale Time-Series Data Without Leaving Postgres](https://nodeweekly.com/link/179603/0a4070b383 "www.tigerdata.com") — TimescaleDB: hypertables, 95% compression, 200+ SQL functions. Query billions of rows in milliseconds. [Start for free](https://nodeweekly.com/link/179604/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+📄 [Dynamic Configuration in Node.js: Beyond Environment Variables](https://nodeweekly.com/link/179605/0a4070b383) – Must admit I’d never thought about this before. Dmitry Tilyupo (Replane)
+
+📄 [What Changed in the Node.js January 2026 Security Releases and Why It Matters](https://nodeweekly.com/link/179606/0a4070b383) Estefany Aguilar (NodeSource)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fzlvik1mmi4h8pmvdz8e.jpg)](https://nodeweekly.com/link/179607/0a4070b383)
+
+[Superdiff 4.0: Compares Arrays or Objects and Returns a Diff](https://nodeweekly.com/link/179607/0a4070b383 "github.com") — Got two similar objects or arrays and want to see the underlying differences? Superdiff has been around a while, but recent updates boost performance, add support for streamed input and using a worker for more efficient diffing in a background thread. The project now has a [handy documentation site](https://nodeweekly.com/link/179608/0a4070b383) too.
+
+antoine
+
+[Electron 40.0.0 Released](https://nodeweekly.com/link/179609/0a4070b383 "www.electronjs.org") — Despite the round number, it’s a gentle update for the ubiquitous cross-platform desktop app framework. It bumps up to Node 24.11.1 (from 22.20.0), V8 14.4, and Chromium 144 (from 142) and adds a variety of minor features.
+
+Michaela Laurencin
+
+💡 Of greater intellectual curiosity is [this post about the Electron team's improvements to window resizing](https://nodeweekly.com/link/179610/0a4070b383) on Windows.
+
+[np 11.0: A Better `npm publish`](https://nodeweekly.com/link/179611/0a4070b383 "github.com") — Makes the process of publishing a package smoother with an interactive UI, checks that you’re publishing from the right branch, checks dependencies, runs tests, pushes commits and tags, etc. Designed for local developer use rather than CI, however.
+
+Sindre Sorhus
+
+🌀 [cli-spinners 3.4: Spinners for Use in the Terminal](https://nodeweekly.com/link/179612/0a4070b383 "github.com") — 70+ simple spinners to signal some sort of progress is occurring.
+
+Sindre Sorhus
+
+[fast-json-stringify 6.2: Faster Alternative to `JSON.stringify()`](https://nodeweekly.com/link/179613/0a4070b383 "github.com") — Boasts being significantly faster than `JSON.stringify()` particularly for *small* payloads, with its performance advantage shrinking as your payload grows.
+
+Fastify
+
+* 🍊 [Orange ORM v4.9](https://nodeweekly.com/link/179614/0a4070b383) – Object Relational Mapper for Node and TypeScript. SQLite support switches to using `better-sqlite3` on Node &lt;22.5.
+
+* [Turbowatch 2.30.0](https://nodeweekly.com/link/179615/0a4070b383) – Fast file change detector and task orchestrator for Node.
+
+* [Typegoose v13.1.0](https://nodeweekly.com/link/179616/0a4070b383) – Define Mongoose models using TypeScript classes.
+
+* [ArangoDB.js v10.2.0](https://nodeweekly.com/link/179617/0a4070b383) – Official client for the [ArangoDB](https://nodeweekly.com/link/179618/0a4070b383) graph database.
+
+* [npm 11.8.0](https://nodeweekly.com/link/179619/0a4070b383) – The grandaddy of all JavaScript package managers?
+
+* [BSON Parser 7.1](https://nodeweekly.com/link/179620/0a4070b383) – BSON (Binary JSON) parser for JavaScript.
+
+📰 Classifieds
+
+🛠️ Auth0 for AI Agents provides a foundation for developers to build AI agents without compromising security or innovation. [Start building](https://nodeweekly.com/link/179621/0a4070b383).
+
+***
+
+[Speed up queries 3x with PostgreSQL 18](https://nodeweekly.com/link/179622/0a4070b383). Learn AIO, Skip Scan & replication enhancements. [Register!](https://nodeweekly.com/link/179622/0a4070b383)
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/icnn9q36s2kkjvszkfuq.jpg)](https://nodeweekly.com/link/179623/0a4070b383)
+
+* Whether you agree or not, Ryan Dahl, the original creator of both Node.js and Deno, drew a lot of attention for [a post on X](https://nodeweekly.com/link/179623/0a4070b383) *(above)* where he shared a thought on the shifting roles of modern software engineers in an agentic world.
+
+* Sticking with the topic of AI and agents, Matteo Collina shares a more extensive view in [*The Human in the Loop*](https://nodeweekly.com/link/179624/0a4070b383) noting that *"my bottleneck is now review, not coding."*
+
+* jQuery turned 20 years old last week, and then [released jQuery 4.0](https://nodeweekly.com/link/179625/0a4070b383) alongside the celebrations. The long-standing frontend utility library has now migrated entirely to ES modules making it easier to use in modern builds.
+
+* 🕒 [Temporal Playground](https://nodeweekly.com/link/179626/0a4070b383) is an online sandbox for playing around with the [Temporal API.](https://nodeweekly.com/link/179627/0a4070b383)
+
+* 🐘 If you're a Postgres user, I really enjoyed [this article about alternatives to 'soft delete'](https://nodeweekly.com/link/179628/0a4070b383) where rather than use a boolean or datetime flag, you could use a trigger to move a row to an archive table or capture deleted rows from the WAL for archival.
+
+* [Deno 2.6.5](https://nodeweekly.com/link/179629/0a4070b383) was released.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
