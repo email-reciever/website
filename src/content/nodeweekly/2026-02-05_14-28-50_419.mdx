@@ -1,0 +1,284 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Hono tops developer satisfaction, but Express still leads
+description: Hono tops developer satisfaction, but Express still leads
+date: 星期四 02 下午 二月 5o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/610
+origin_site: https://nodeweekly.com/issues/610
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Hono tops developer satisfaction, but Express still leads" url="https://nodeweekly.com/issues/610" />
+
+<Detail client:only="react">
+	#​610 — February 5, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/610)
+
+Together with 
+
+[![Clerk](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_220,h_64/e_make_transparent/co_white,e_outline:5/j3vhv1hnwqeffgkzzlvu.png)](https://nodeweekly.com/link/180251/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gpc3uyxo5a0hriq5lc7g.jpg)](https://nodeweekly.com/link/180252/0a4070b383)
+
+[The State of JavaScript 2025: Backend Frameworks](https://nodeweekly.com/link/180252/0a4070b383 "2025.stateofjs.com") — The results of the popular annual JavaScript survey are out, and we’re focusing on the most relevant bit to Node.js: _backend frameworks_. [Express](https://nodeweekly.com/link/180300/0a4070b383) still leads the way, but [NestJS](https://nodeweekly.com/link/180253/0a4070b383) continues to grow rapidly. Meanwhile, [Hono](https://nodeweekly.com/link/180254/0a4070b383) comes top in developer satisfaction.
+
+Devographics
+
+[Node.js 25.6.0 (Current) Released](https://nodeweekly.com/link/180255/0a4070b383 "nodejs.org") — `async_hooks` can now [opt out of `Promise` tracking](https://nodeweekly.com/link/180256/0a4070b383) to cut instrumentation overhead in production. The built-in test runner supports per-run env injection (see the [`env` option here](https://nodeweekly.com/link/180257/0a4070b383)), [TextEncoder](https://nodeweekly.com/link/180258/0a4070b383) gets [some SIMD-backed speedups](https://nodeweekly.com/link/180259/0a4070b383), and the URL parser updates to Unicode 17.
+
+Antoine du Hamel
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/760fc888.png)](https://nodeweekly.com/link/180251/0a4070b383)
+
+[Stop AI Agents from Generating Outdated Clerk Code](https://nodeweekly.com/link/180251/0a4070b383 "go.clerk.com") — Cursor, Copilot, and Claude Code are trained on old Clerk patterns. Clerk Skills is a one-command way to give your agent up-to-date knowledge to build auth flows, sync users to databases, set up organizations, and more. One command, and it knows how to build auth the right way.
+
+Clerk sponsor
+
+**IN BRIEF:**
+
+*   Check out [a sneak preview of the new design for Node's official docs.](https://nodeweekly.com/link/180260/0a4070b383) You're encouraged to [file issues](https://nodeweekly.com/link/180261/0a4070b383) if you encounter any problems.
+    
+*   😂 npm's current 64-character limit on package names didn't stop someone from grandfathering in a 214-character monster back in 2012. It's too long to share here without breaking the email, so [here you go.](https://nodeweekly.com/link/180262/0a4070b383)
+    
+*   🔒 [vm2](https://nodeweekly.com/link/180263/0a4070b383) is a sandbox for running untrusted code within the same process as your app. [A critical vulnerability was announced](https://nodeweekly.com/link/180264/0a4070b383) which warrants an immediate upgrade to [v3.10.4](https://nodeweekly.com/link/180265/0a4070b383).
+    
+*   Vercel has added [zero-config deployment support for Koa apps.](https://nodeweekly.com/link/180266/0a4070b383)
+    
+
+[How to Migrate from Chalk to Node's `styleText`](https://nodeweekly.com/link/180267/0a4070b383 "nodejs.org") — [Chalk](https://nodeweekly.com/link/180268/0a4070b383) is great for terminal styling, but Node's built-in `styleText` handles most of the same tasks with no dependency required. There's even a codemod to migrate automatically.
+
+Richie McColl
+
+[Explicit Resource Management in JavaScript](https://nodeweekly.com/link/180269/0a4070b383 "allthingssmitty.com") — You can use `using` for deterministic cleanup, calling `Symbol.dispose`/`asyncDispose` at scope exit without `try`/`finally`. A small fix for leaks and forgotten teardowns in streams, observers, locks, and similar APIs.
+
+Matt Smith
+
+[Why JSBin Went Down for 3 Days (and How It Was Fixed)](https://nodeweekly.com/link/180270/0a4070b383 "remysharp.com") — [JSBin](https://nodeweekly.com/link/180271/0a4070b383), the long-running collaborative JavaScript pastebin, went offline for roughly three days in January after a huge traffic spike overwhelmed its tiny single-CPU server. Node.js wasn’t the root cause, but running an ancient Node 7(!) runtime amplified the failure. Remy tells the full story.
+
+Remy Sharp
+
+[How to Tinker with Node.js Core on ARM64 Windows](https://nodeweekly.com/link/180272/0a4070b383 "joyeecheung.github.io") — Building Node on ARM64 Windows? The toolchain setup has some gotchas. Luckily, Joyee walks us past them.
+
+Joyee Cheung
+
+[Skip the Second Database for Analytics](https://nodeweekly.com/link/180273/0a4070b383 "www.tigerdata.com") — Analytics on live data, no second database. TimescaleDB extends Postgres so you scale without splitting. [Try free](https://nodeweekly.com/link/180273/0a4070b383).
+
+Tiger Data sponsor
+
+📄 [Changes to Environment Variable Access in Cypress v15.10.0+](https://nodeweekly.com/link/180274/0a4070b383) Jenna Beckett (Cypress)
+
+📄 [Measuring SVG Rendering Time with Node.js](https://nodeweekly.com/link/180275/0a4070b383) Stoyan Stefanov
+
+🛠 Code & Tools
+
+🕒 [Croner 10.0: Cron-Style Triggers and Evaluation](https://nodeweekly.com/link/180276/0a4070b383 "croner.56k.guru") — Trigger functions on any cron schedule using [cron syntax.](https://nodeweekly.com/link/180277/0a4070b383) It can also evaluate cron expressions to give you a list of upcoming times. [v10.0](https://nodeweekly.com/link/180278/0a4070b383) brings full OCPS (Open Cron Pattern Specification) 1.4 compliance and even more scheduling options.
+
+Hexagon
+
+🔐 [OTPAuth: One-Time Password (HOTP/TOTP) Library](https://nodeweekly.com/link/180279/0a4070b383 "github.com") — When you log in to a site with 2FA and you’re asked for six digits from your authentication app, that’s a Time-based One-Time Password (or TOTP). This library for Node, Deno, Bun _and_ the browser lets you work with both TOTPs and HOTPs (HMAC-based OTPs).
+
+Héctor Molinero Fernández
+
+[log-update 7.1: Log by Overwriting Previous Output in the Terminal](https://nodeweekly.com/link/180280/0a4070b383 "github.com") — Imagine a `console.log` that overwrites its output on the same line. Think progress updates, animations, etc. v7.1 gains synchronized output rendering.
+
+Sindre Sorhus
+
+💡 Sindre has also just updated his ['ora' terminal spinner library.](https://nodeweekly.com/link/180281/0a4070b383)
+
+💡 [Nanoclaw: A Personal Claude Assistant That Runs in macOS Containers](https://nodeweekly.com/link/180282/0a4070b383 "github.com") — [OpenClaw](https://nodeweekly.com/link/180283/0a4070b383) (_née_ Clawdbot) is incredible, yet slightly scary. If you want something lighter and safer to hack on, Nanoclaw is simpler and uses macOS Tahoe's native container support to stay sandboxed.
+
+Gavriel C
+
+🎥 [simple-ffmpegjs: A Helper for Complex FFmpeg Operations](https://nodeweekly.com/link/180284/0a4070b383 "github.com") — A helper library to simplify programmatic video composition, transitions, and audio mixing without complex raw FFmpeg commands. Think crossfade transitions, text overlays with animations, and audio track mixing, etc.
+
+Brayden Blackwell
+
+💡 Prefer something lower level? [node-av](https://nodeweekly.com/link/180285/0a4070b383) offers Node bindings to FFmpeg's C APIs.
+
+*   🎮 [node-hid v3.3.0](https://nodeweekly.com/link/180286/0a4070b383) – Access USB HID devices (except keyboard/mouse).
+    
+*   [MongoDB Node.js Driver v7.1.0](https://nodeweekly.com/link/180287/0a4070b383) – Official driver for MongoDB in Node.
+    
+*   [pg-boss 12.9.0](https://nodeweekly.com/link/180288/0a4070b383) – Postgres-powered background job processing.
+    
+*   [jsdom 28.0](https://nodeweekly.com/link/180289/0a4070b383) – Pure JS implementation of various web standards.
+    
+*   [WebDAV v5.9.0](https://nodeweekly.com/link/180290/0a4070b383) – WebDAV client library.
+    
+
+📰 Classifieds
+
+🔮 Debug smarter: See how [Sentry’s AI-agent Seer](https://nodeweekly.com/link/180291/0a4070b383) analyzes Node errors & logs to pinpoint root causes and propose fixes.
+
+* * *
+
+🎉 [Hear from the minds shaping the web!](https://nodeweekly.com/link/180292/0a4070b383) Thousands of devs, food trucks & Amsterdam vibes. Don’t miss [JSNation](https://nodeweekly.com/link/180292/0a4070b383) — 10% off with `JSWEEKLY`.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+*   The Deno team has [made _Deno Deploy_ generally available.](https://nodeweekly.com/link/180293/0a4070b383) Despite the name, you can use it to smoothly run Node projects in the cloud, as well as Deno ones. They've also introduced [Deno Sandbox](https://nodeweekly.com/link/180294/0a4070b383) as a way to programmatically manage microVMs for executing code securely.
+    
+*   📱 Someone claims to have compiled Node 18 to run on the iPhone to run Claude Code natively on device. There's nothing but a [Hacker News post](https://nodeweekly.com/link/180295/0a4070b383) and a [▶️ YouTube Short](https://nodeweekly.com/link/180296/0a4070b383) so far.
+    
+*   If your `node_modules` folder is just too much for your existing servers to handle, [Amazon EC2 has new C8id, M8id, and R8id instances](https://nodeweekly.com/link/180297/0a4070b383) with up to 22.8 TB local NVMe storage attached.. 😅
+    
+*   A _Daily WTF_ post showing off [a way you _shouldn't_ parse numbers in JS.](https://nodeweekly.com/link/180298/0a4070b383)
+    
+*   🤖 An exploration of how some [recent Node and React security vulnerabilities were found using AI.](https://nodeweekly.com/link/180299/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​610 — February 5, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/610)
+
+Together with 
+
+[![Clerk](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_220,h_64/e_make_transparent/co_white,e_outline:5/j3vhv1hnwqeffgkzzlvu.png)](https://nodeweekly.com/link/180251/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gpc3uyxo5a0hriq5lc7g.jpg)](https://nodeweekly.com/link/180252/0a4070b383)
+
+[The State of JavaScript 2025: Backend Frameworks](https://nodeweekly.com/link/180252/0a4070b383 "2025.stateofjs.com") — The results of the popular annual JavaScript survey are out, and we’re focusing on the most relevant bit to Node.js: *backend frameworks*. [Express](https://nodeweekly.com/link/180300/0a4070b383) still leads the way, but [NestJS](https://nodeweekly.com/link/180253/0a4070b383) continues to grow rapidly. Meanwhile, [Hono](https://nodeweekly.com/link/180254/0a4070b383) comes top in developer satisfaction.
+
+Devographics
+
+[Node.js 25.6.0 (Current) Released](https://nodeweekly.com/link/180255/0a4070b383 "nodejs.org") — `async_hooks` can now [opt out of `Promise` tracking](https://nodeweekly.com/link/180256/0a4070b383) to cut instrumentation overhead in production. The built-in test runner supports per-run env injection (see the [`env` option here](https://nodeweekly.com/link/180257/0a4070b383)), [TextEncoder](https://nodeweekly.com/link/180258/0a4070b383) gets [some SIMD-backed speedups](https://nodeweekly.com/link/180259/0a4070b383), and the URL parser updates to Unicode 17.
+
+Antoine du Hamel
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/760fc888.png)](https://nodeweekly.com/link/180251/0a4070b383)
+
+[Stop AI Agents from Generating Outdated Clerk Code](https://nodeweekly.com/link/180251/0a4070b383 "go.clerk.com") — Cursor, Copilot, and Claude Code are trained on old Clerk patterns. Clerk Skills is a one-command way to give your agent up-to-date knowledge to build auth flows, sync users to databases, set up organizations, and more. One command, and it knows how to build auth the right way.
+
+Clerk sponsor
+
+**IN BRIEF:**
+
+* Check out [a sneak preview of the new design for Node's official docs.](https://nodeweekly.com/link/180260/0a4070b383) You're encouraged to [file issues](https://nodeweekly.com/link/180261/0a4070b383) if you encounter any problems.
+
+* 😂 npm's current 64-character limit on package names didn't stop someone from grandfathering in a 214-character monster back in 2012. It's too long to share here without breaking the email, so [here you go.](https://nodeweekly.com/link/180262/0a4070b383)
+
+* 🔒 [vm2](https://nodeweekly.com/link/180263/0a4070b383) is a sandbox for running untrusted code within the same process as your app. [A critical vulnerability was announced](https://nodeweekly.com/link/180264/0a4070b383) which warrants an immediate upgrade to [v3.10.4](https://nodeweekly.com/link/180265/0a4070b383).
+
+* Vercel has added [zero-config deployment support for Koa apps.](https://nodeweekly.com/link/180266/0a4070b383)
+
+[How to Migrate from Chalk to Node's `styleText`](https://nodeweekly.com/link/180267/0a4070b383 "nodejs.org") — [Chalk](https://nodeweekly.com/link/180268/0a4070b383) is great for terminal styling, but Node's built-in `styleText` handles most of the same tasks with no dependency required. There's even a codemod to migrate automatically.
+
+Richie McColl
+
+[Explicit Resource Management in JavaScript](https://nodeweekly.com/link/180269/0a4070b383 "allthingssmitty.com") — You can use `using` for deterministic cleanup, calling `Symbol.dispose`/`asyncDispose` at scope exit without `try`/`finally`. A small fix for leaks and forgotten teardowns in streams, observers, locks, and similar APIs.
+
+Matt Smith
+
+[Why JSBin Went Down for 3 Days (and How It Was Fixed)](https://nodeweekly.com/link/180270/0a4070b383 "remysharp.com") — [JSBin](https://nodeweekly.com/link/180271/0a4070b383), the long-running collaborative JavaScript pastebin, went offline for roughly three days in January after a huge traffic spike overwhelmed its tiny single-CPU server. Node.js wasn’t the root cause, but running an ancient Node 7(!) runtime amplified the failure. Remy tells the full story.
+
+Remy Sharp
+
+[How to Tinker with Node.js Core on ARM64 Windows](https://nodeweekly.com/link/180272/0a4070b383 "joyeecheung.github.io") — Building Node on ARM64 Windows? The toolchain setup has some gotchas. Luckily, Joyee walks us past them.
+
+Joyee Cheung
+
+[Skip the Second Database for Analytics](https://nodeweekly.com/link/180273/0a4070b383 "www.tigerdata.com") — Analytics on live data, no second database. TimescaleDB extends Postgres so you scale without splitting. [Try free](https://nodeweekly.com/link/180273/0a4070b383).
+
+Tiger Data sponsor
+
+📄 [Changes to Environment Variable Access in Cypress v15.10.0+](https://nodeweekly.com/link/180274/0a4070b383) Jenna Beckett (Cypress)
+
+📄 [Measuring SVG Rendering Time with Node.js](https://nodeweekly.com/link/180275/0a4070b383) Stoyan Stefanov
+
+🛠 Code & Tools
+
+🕒 [Croner 10.0: Cron-Style Triggers and Evaluation](https://nodeweekly.com/link/180276/0a4070b383 "croner.56k.guru") — Trigger functions on any cron schedule using [cron syntax.](https://nodeweekly.com/link/180277/0a4070b383) It can also evaluate cron expressions to give you a list of upcoming times. [v10.0](https://nodeweekly.com/link/180278/0a4070b383) brings full OCPS (Open Cron Pattern Specification) 1.4 compliance and even more scheduling options.
+
+Hexagon
+
+🔐 [OTPAuth: One-Time Password (HOTP/TOTP) Library](https://nodeweekly.com/link/180279/0a4070b383 "github.com") — When you log in to a site with 2FA and you’re asked for six digits from your authentication app, that’s a Time-based One-Time Password (or TOTP). This library for Node, Deno, Bun *and* the browser lets you work with both TOTPs and HOTPs (HMAC-based OTPs).
+
+Héctor Molinero Fernández
+
+[log-update 7.1: Log by Overwriting Previous Output in the Terminal](https://nodeweekly.com/link/180280/0a4070b383 "github.com") — Imagine a `console.log` that overwrites its output on the same line. Think progress updates, animations, etc. v7.1 gains synchronized output rendering.
+
+Sindre Sorhus
+
+💡 Sindre has also just updated his ['ora' terminal spinner library.](https://nodeweekly.com/link/180281/0a4070b383)
+
+💡 [Nanoclaw: A Personal Claude Assistant That Runs in macOS Containers](https://nodeweekly.com/link/180282/0a4070b383 "github.com") — [OpenClaw](https://nodeweekly.com/link/180283/0a4070b383) (*née* Clawdbot) is incredible, yet slightly scary. If you want something lighter and safer to hack on, Nanoclaw is simpler and uses macOS Tahoe's native container support to stay sandboxed.
+
+Gavriel C
+
+🎥 [simple-ffmpegjs: A Helper for Complex FFmpeg Operations](https://nodeweekly.com/link/180284/0a4070b383 "github.com") — A helper library to simplify programmatic video composition, transitions, and audio mixing without complex raw FFmpeg commands. Think crossfade transitions, text overlays with animations, and audio track mixing, etc.
+
+Brayden Blackwell
+
+💡 Prefer something lower level? [node-av](https://nodeweekly.com/link/180285/0a4070b383) offers Node bindings to FFmpeg's C APIs.
+
+* 🎮 [node-hid v3.3.0](https://nodeweekly.com/link/180286/0a4070b383) – Access USB HID devices (except keyboard/mouse).
+
+* [MongoDB Node.js Driver v7.1.0](https://nodeweekly.com/link/180287/0a4070b383) – Official driver for MongoDB in Node.
+
+* [pg-boss 12.9.0](https://nodeweekly.com/link/180288/0a4070b383) – Postgres-powered background job processing.
+
+* [jsdom 28.0](https://nodeweekly.com/link/180289/0a4070b383) – Pure JS implementation of various web standards.
+
+* [WebDAV v5.9.0](https://nodeweekly.com/link/180290/0a4070b383) – WebDAV client library.
+
+📰 Classifieds
+
+🔮 Debug smarter: See how [Sentry’s AI-agent Seer](https://nodeweekly.com/link/180291/0a4070b383) analyzes Node errors & logs to pinpoint root causes and propose fixes.
+
+***
+
+🎉 [Hear from the minds shaping the web!](https://nodeweekly.com/link/180292/0a4070b383) Thousands of devs, food trucks & Amsterdam vibes. Don’t miss [JSNation](https://nodeweekly.com/link/180292/0a4070b383) — 10% off with `JSWEEKLY`.
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+* The Deno team has [made *Deno Deploy* generally available.](https://nodeweekly.com/link/180293/0a4070b383) Despite the name, you can use it to smoothly run Node projects in the cloud, as well as Deno ones. They've also introduced [Deno Sandbox](https://nodeweekly.com/link/180294/0a4070b383) as a way to programmatically manage microVMs for executing code securely.
+
+* 📱 Someone claims to have compiled Node 18 to run on the iPhone to run Claude Code natively on device. There's nothing but a [Hacker News post](https://nodeweekly.com/link/180295/0a4070b383) and a [▶️ YouTube Short](https://nodeweekly.com/link/180296/0a4070b383) so far.
+
+* If your `node_modules` folder is just too much for your existing servers to handle, [Amazon EC2 has new C8id, M8id, and R8id instances](https://nodeweekly.com/link/180297/0a4070b383) with up to 22.8 TB local NVMe storage attached.. 😅
+
+* A *Daily WTF* post showing off [a way you *shouldn't* parse numbers in JS.](https://nodeweekly.com/link/180298/0a4070b383)
+
+* 🤖 An exploration of how some [recent Node and React security vulnerabilities were found using AI.](https://nodeweekly.com/link/180299/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
