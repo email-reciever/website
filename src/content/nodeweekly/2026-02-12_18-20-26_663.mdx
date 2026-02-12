@@ -1,0 +1,281 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: An experimental Node environment in the browser
+description: An experimental Node environment in the browser
+date: 星期四 06 晚上 二月 12o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/611
+origin_site: https://nodeweekly.com/issues/611
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="An experimental Node environment in the browser" url="https://nodeweekly.com/issues/611" />
+
+<Detail client:only="react">
+	#​611 — February 12, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/611)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/180631/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wycxkg5io9z9fakcztpd.jpg)](https://nodeweekly.com/link/180632/0a4070b383)
+
+TypeScript 6.0 enters beta, but what does it mean for Node developers?
+
+[TypeScript 6.0 is now in beta.](https://nodeweekly.com/link/180632/0a4070b383) It's a _"clean up your tsconfig"_ release, not meant to wow but to make sense as a _bridge_ to the eventual [Go-powered 'native' TypeScript 7 compiler.](https://nodeweekly.com/link/180633/0a4070b383)
+
+There are, however, several notable updates for Node developers:
+
+*   [`--strict` is now true by default.](https://nodeweekly.com/link/180674/0a4070b383) Projects that relied on the previous default of `false` will need to set it explicitly.
+    
+*   [`types` now defaults to `[]`](https://nodeweekly.com/link/180669/0a4070b383) which will affect many projects. `rootDir` now defaults to `.` too, which can silently change your output directory structure.
+    
+*   [Subpath import starting with `#/`](https://nodeweekly.com/link/180670/0a4070b383), so packages can use a simple prefix for subpath imports without needing an extra segment.
+    
+*   [The inclusion of types for Temporal.](https://nodeweekly.com/link/180671/0a4070b383)
+    
+*   `--esModuleInterop` and `allowSyntheticDefaultImports` can [no longer be set to `false`.](https://nodeweekly.com/link/180672/0a4070b383) If you have imports that rely on the old behavior, you may need to adjust them.
+    
+*   And, unsurprisingly, a lot more, though here are the [breaking changes and deprecations](https://nodeweekly.com/link/180673/0a4070b383) to be aware of.
+    
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/bd087dc2.png)](https://nodeweekly.com/link/180631/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/180631/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics.
+
+Memetria sponsor
+
+[npmx: A Better npm Registry Package Browser](https://nodeweekly.com/link/180634/0a4070b383 "npmx.dev") — A new, fast way to browse the [official npm registry](https://nodeweekly.com/link/180635/0a4070b383). The search works well, and you see more data on package pages (e.g. [`axios`](https://nodeweekly.com/link/180636/0a4070b383)). It's not a replacement for the registry, but makes browsing `npmjs․com` feel outdated. The [package comparison tool](https://nodeweekly.com/link/180637/0a4070b383) is neat too.
+
+npmx
+
+[How to Make an HTTP Request in Node.js](https://nodeweekly.com/link/180638/0a4070b383 "nodejsdesignpatterns.com") — Easy. Just use `fetch`, right? Okay, how do we use it, how do we set timeouts, how do we stream requests and responses? Retries. Concurrent requests. Mocking. There’s a lot involved and Luciano does a fantastic job of boiling down the techniques, as well as when to consider using Undici or `http`/`https` directly.
+
+Luciano Mammino
+
+**IN BRIEF:**
+
+*   👀 Matteo Collina is [working on a first-class virtual file system module](https://nodeweekly.com/link/180639/0a4070b383) for Node that integrates with `fs`.
+    
+*   [Node.js 25.6.1 (Current)](https://nodeweekly.com/link/180640/0a4070b383) has been released. It brings the new [`merve`](https://nodeweekly.com/link/180641/0a4070b383) lexer for extracting named exports from CommonJS modules into play (it's [25% faster](https://nodeweekly.com/link/180642/0a4070b383) than [`cjs-module-lexer`](https://nodeweekly.com/link/180643/0a4070b383)).
+    
+*   [Node.js 24.13.1 (LTS)](https://nodeweekly.com/link/180644/0a4070b383) has been released with Unicode 17 URL parsing support, `crypto.hash` and `--build-snapshot` marked as stable, plus dependency updates and bug fixes.
+    
+*   [ESLint 10.0 has been released](https://nodeweekly.com/link/180645/0a4070b383) completing the removal of the `eslintrc` config system and introducing a new config lookup algorithm starting from the linted file (nice for monorepos).
+    
+*   [Bun 1.3.9](https://nodeweekly.com/link/180646/0a4070b383) adds the ability to run multiple `package.json` scripts concurrently/sequentially, `Bun.markdown.react()` gets faster, and regexes get a SIMD boost.
+    
+
+[almostnode: Run a Node Environment in the Browser](https://nodeweekly.com/link/180647/0a4070b383 "almostnode.dev") — A _very_ experimental attempt to bring a Node.js (v20) runtime environment into the browser, complete with npm package support. Not ready for prime time, but an interesting idea with a neat live demo on the homepage.
+
+Macaly
+
+[It’s About to Get a Lot Easier For Your JavaScript to Clean Up After Itself](https://nodeweekly.com/link/180648/0a4070b383 "piccalil.li") — A fun exploration of `Symbol.dispose` and `using`, two features available in Node 22.4+ that can ease many headaches around cleaning things up: closing connections, freeing resources, etc.
+
+Mat Marquis
+
+[The Second Database Tax Is Real. Skip It](https://nodeweekly.com/link/180649/0a4070b383 "www.tigerdata.com") — Pipelines, lag, and drift - that's the tax of split infrastructure. Use Postgres for analytics on live data. [Try free](https://nodeweekly.com/link/180649/0a4070b383).
+
+Tiger Data sponsor
+
+📄 [Is Node.js Single-Threaded… Or Not?](https://nodeweekly.com/link/180650/0a4070b383) – A basic, diagrammed introduction to how some of Node’s internals work. Estefany Aguilar
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fgw0cob1tnngofvo55o5.jpg)](https://nodeweekly.com/link/180651/0a4070b383)
+
+[Transformers.js v4 Preview Released](https://nodeweekly.com/link/180651/0a4070b383 "huggingface.co") — Transformers.js brings Hugging Face’s transformer models directly to the JavaScript world, meaning you can run numerous NLP, vision, and audio models right from Node.js. v4 is WebGPU powered and is now installable with `npm`.
+
+Hugging Face
+
+[Ink 6.7: Build Rich Terminal Apps with React](https://nodeweekly.com/link/180652/0a4070b383 "github.com") — Used by Claude Code, Gemini CLI, Gatsby, Prisma, and others, Ink lets you use React’s component-based model for building terminal apps. v6.7 is notable for adding support for concurrent rendering and synchronized updates (less flicker!)
+
+Vadim Demedes et al.
+
+[VineJS 4.3: Form Data Validation Library for Node Apps](https://nodeweekly.com/link/180653/0a4070b383 "vinejs.dev") — A fast validation library for data received by your backend app, providing both runtime and static type safety, and handling form data and JSON payloads. [v4.3](https://nodeweekly.com/link/180654/0a4070b383) supports converting validation schemas to JSON Schema.
+
+VineJS Contributors
+
+[Shovel.js: What If Your Server Were Just a Service Worker?](https://nodeweekly.com/link/180655/0a4070b383 "shovel.js.org") — A full-stack framework and meta-framework built around the [Service Worker](https://nodeweekly.com/link/180656/0a4070b383) model, where you use Web APIs for the server abstractions for a consistent experience across runtimes, whether Node, Bun, or edge platforms.
+
+Brian Kim
+
+📰 Classifieds
+
+[Clerk's MCP Server](https://nodeweekly.com/link/180663/0a4070b383) gives your AI coding assistant accurate auth snippets and patterns. [Now in public beta](https://nodeweekly.com/link/180663/0a4070b383).
+
+*   📄 [DOCX 9.5.2](https://nodeweekly.com/link/180657/0a4070b383) – The popular `.docx` creation and manipulation library gets its first update in some time.
+    
+*   [Prisma 7.4.0](https://nodeweekly.com/link/180658/0a4070b383) – Gains a new caching layer and support for partial indexes.
+    
+*   [Aedes 1.0](https://nodeweekly.com/link/180659/0a4070b383) – Barebone MQTT server that can run on any stream server.
+    
+*   [Awilix 12.1](https://nodeweekly.com/link/180660/0a4070b383) – Inversion of Control (IoC) container for Node.
+    
+*   [pnpm v10.29.3](https://nodeweekly.com/link/180661/0a4070b383) – Fast, efficient package manager.
+    
+*   [Orange ORM 5.0](https://nodeweekly.com/link/180662/0a4070b383)
+    
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mhuzekcddkcjzq0ogrmq.jpg)](https://nodeweekly.com/link/180664/0a4070b383)
+
+*   [broz](https://nodeweekly.com/link/180664/0a4070b383) _(above)_ is a simple Node/Electron tool you can use via `npx` if you're tired of fidgeting around to get a screenshot of a site with a clean look. From the maintainer of [Shiki.](https://nodeweekly.com/link/180665/0a4070b383)
+    
+*   🤯 _Promethee_ provides [UEFI bindings for JavaScript](https://nodeweekly.com/link/180666/0a4070b383) so, yes, you can write a UEFI bootloader in JavaScript and play with it in QEMU! [Duktape](https://nodeweekly.com/link/180667/0a4070b383) is the JavaScript engine behind the scenes.
+    
+*   [webpack has shared its 2026 roadmap.](https://nodeweekly.com/link/180668/0a4070b383) It includes support for a `universal` target to compile code to run on numerous runtimes, building TypeScript without loaders, CSS modules without plugins, and more.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​611 — February 12, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/611)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/180631/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wycxkg5io9z9fakcztpd.jpg)](https://nodeweekly.com/link/180632/0a4070b383)
+
+TypeScript 6.0 enters beta, but what does it mean for Node developers?
+
+[TypeScript 6.0 is now in beta.](https://nodeweekly.com/link/180632/0a4070b383) It's a *"clean up your tsconfig"* release, not meant to wow but to make sense as a *bridge* to the eventual [Go-powered 'native' TypeScript 7 compiler.](https://nodeweekly.com/link/180633/0a4070b383)
+
+There are, however, several notable updates for Node developers:
+
+* [`--strict` is now true by default.](https://nodeweekly.com/link/180674/0a4070b383) Projects that relied on the previous default of `false` will need to set it explicitly.
+
+* [`types` now defaults to `[]`](https://nodeweekly.com/link/180669/0a4070b383) which will affect many projects. `rootDir` now defaults to `.` too, which can silently change your output directory structure.
+
+* [Subpath import starting with `#/`](https://nodeweekly.com/link/180670/0a4070b383), so packages can use a simple prefix for subpath imports without needing an extra segment.
+
+* [The inclusion of types for Temporal.](https://nodeweekly.com/link/180671/0a4070b383)
+
+* `--esModuleInterop` and `allowSyntheticDefaultImports` can [no longer be set to `false`.](https://nodeweekly.com/link/180672/0a4070b383) If you have imports that rely on the old behavior, you may need to adjust them.
+
+* And, unsurprisingly, a lot more, though here are the [breaking changes and deprecations](https://nodeweekly.com/link/180673/0a4070b383) to be aware of.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/bd087dc2.png)](https://nodeweekly.com/link/180631/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/180631/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics.
+
+Memetria sponsor
+
+[npmx: A Better npm Registry Package Browser](https://nodeweekly.com/link/180634/0a4070b383 "npmx.dev") — A new, fast way to browse the [official npm registry](https://nodeweekly.com/link/180635/0a4070b383). The search works well, and you see more data on package pages (e.g. [`axios`](https://nodeweekly.com/link/180636/0a4070b383)). It's not a replacement for the registry, but makes browsing `npmjs․com` feel outdated. The [package comparison tool](https://nodeweekly.com/link/180637/0a4070b383) is neat too.
+
+npmx
+
+[How to Make an HTTP Request in Node.js](https://nodeweekly.com/link/180638/0a4070b383 "nodejsdesignpatterns.com") — Easy. Just use `fetch`, right? Okay, how do we use it, how do we set timeouts, how do we stream requests and responses? Retries. Concurrent requests. Mocking. There’s a lot involved and Luciano does a fantastic job of boiling down the techniques, as well as when to consider using Undici or `http`/`https` directly.
+
+Luciano Mammino
+
+**IN BRIEF:**
+
+* 👀 Matteo Collina is [working on a first-class virtual file system module](https://nodeweekly.com/link/180639/0a4070b383) for Node that integrates with `fs`.
+
+* [Node.js 25.6.1 (Current)](https://nodeweekly.com/link/180640/0a4070b383) has been released. It brings the new [`merve`](https://nodeweekly.com/link/180641/0a4070b383) lexer for extracting named exports from CommonJS modules into play (it's [25% faster](https://nodeweekly.com/link/180642/0a4070b383) than [`cjs-module-lexer`](https://nodeweekly.com/link/180643/0a4070b383)).
+
+* [Node.js 24.13.1 (LTS)](https://nodeweekly.com/link/180644/0a4070b383) has been released with Unicode 17 URL parsing support, `crypto.hash` and `--build-snapshot` marked as stable, plus dependency updates and bug fixes.
+
+* [ESLint 10.0 has been released](https://nodeweekly.com/link/180645/0a4070b383) completing the removal of the `eslintrc` config system and introducing a new config lookup algorithm starting from the linted file (nice for monorepos).
+
+* [Bun 1.3.9](https://nodeweekly.com/link/180646/0a4070b383) adds the ability to run multiple `package.json` scripts concurrently/sequentially, `Bun.markdown.react()` gets faster, and regexes get a SIMD boost.
+
+[almostnode: Run a Node Environment in the Browser](https://nodeweekly.com/link/180647/0a4070b383 "almostnode.dev") — A *very* experimental attempt to bring a Node.js (v20) runtime environment into the browser, complete with npm package support. Not ready for prime time, but an interesting idea with a neat live demo on the homepage.
+
+Macaly
+
+[It’s About to Get a Lot Easier For Your JavaScript to Clean Up After Itself](https://nodeweekly.com/link/180648/0a4070b383 "piccalil.li") — A fun exploration of `Symbol.dispose` and `using`, two features available in Node 22.4+ that can ease many headaches around cleaning things up: closing connections, freeing resources, etc.
+
+Mat Marquis
+
+[The Second Database Tax Is Real. Skip It](https://nodeweekly.com/link/180649/0a4070b383 "www.tigerdata.com") — Pipelines, lag, and drift - that's the tax of split infrastructure. Use Postgres for analytics on live data. [Try free](https://nodeweekly.com/link/180649/0a4070b383).
+
+Tiger Data sponsor
+
+📄 [Is Node.js Single-Threaded… Or Not?](https://nodeweekly.com/link/180650/0a4070b383) – A basic, diagrammed introduction to how some of Node’s internals work. Estefany Aguilar
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fgw0cob1tnngofvo55o5.jpg)](https://nodeweekly.com/link/180651/0a4070b383)
+
+[Transformers.js v4 Preview Released](https://nodeweekly.com/link/180651/0a4070b383 "huggingface.co") — Transformers.js brings Hugging Face’s transformer models directly to the JavaScript world, meaning you can run numerous NLP, vision, and audio models right from Node.js. v4 is WebGPU powered and is now installable with `npm`.
+
+Hugging Face
+
+[Ink 6.7: Build Rich Terminal Apps with React](https://nodeweekly.com/link/180652/0a4070b383 "github.com") — Used by Claude Code, Gemini CLI, Gatsby, Prisma, and others, Ink lets you use React’s component-based model for building terminal apps. v6.7 is notable for adding support for concurrent rendering and synchronized updates (less flicker!)
+
+Vadim Demedes et al.
+
+[VineJS 4.3: Form Data Validation Library for Node Apps](https://nodeweekly.com/link/180653/0a4070b383 "vinejs.dev") — A fast validation library for data received by your backend app, providing both runtime and static type safety, and handling form data and JSON payloads. [v4.3](https://nodeweekly.com/link/180654/0a4070b383) supports converting validation schemas to JSON Schema.
+
+VineJS Contributors
+
+[Shovel.js: What If Your Server Were Just a Service Worker?](https://nodeweekly.com/link/180655/0a4070b383 "shovel.js.org") — A full-stack framework and meta-framework built around the [Service Worker](https://nodeweekly.com/link/180656/0a4070b383) model, where you use Web APIs for the server abstractions for a consistent experience across runtimes, whether Node, Bun, or edge platforms.
+
+Brian Kim
+
+📰 Classifieds
+
+[Clerk's MCP Server](https://nodeweekly.com/link/180663/0a4070b383) gives your AI coding assistant accurate auth snippets and patterns. [Now in public beta](https://nodeweekly.com/link/180663/0a4070b383).
+
+* 📄 [DOCX 9.5.2](https://nodeweekly.com/link/180657/0a4070b383) – The popular `.docx` creation and manipulation library gets its first update in some time.
+
+* [Prisma 7.4.0](https://nodeweekly.com/link/180658/0a4070b383) – Gains a new caching layer and support for partial indexes.
+
+* [Aedes 1.0](https://nodeweekly.com/link/180659/0a4070b383) – Barebone MQTT server that can run on any stream server.
+
+* [Awilix 12.1](https://nodeweekly.com/link/180660/0a4070b383) – Inversion of Control (IoC) container for Node.
+
+* [pnpm v10.29.3](https://nodeweekly.com/link/180661/0a4070b383) – Fast, efficient package manager.
+
+* [Orange ORM 5.0](https://nodeweekly.com/link/180662/0a4070b383)
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mhuzekcddkcjzq0ogrmq.jpg)](https://nodeweekly.com/link/180664/0a4070b383)
+
+* [broz](https://nodeweekly.com/link/180664/0a4070b383) *(above)* is a simple Node/Electron tool you can use via `npx` if you're tired of fidgeting around to get a screenshot of a site with a clean look. From the maintainer of [Shiki.](https://nodeweekly.com/link/180665/0a4070b383)
+
+* 🤯 *Promethee* provides [UEFI bindings for JavaScript](https://nodeweekly.com/link/180666/0a4070b383) so, yes, you can write a UEFI bootloader in JavaScript and play with it in QEMU! [Duktape](https://nodeweekly.com/link/180667/0a4070b383) is the JavaScript engine behind the scenes.
+
+* [webpack has shared its 2026 roadmap.](https://nodeweekly.com/link/180668/0a4070b383) It includes support for a `universal` target to compile code to run on numerous runtimes, building TypeScript without loaders, CSS modules without plugins, and more.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
