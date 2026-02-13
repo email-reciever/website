@@ -1,0 +1,266 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Building bulletproof React components and handling billion-row tables
+description: Building bulletproof React components and handling billion-row tables
+date: 星期五 06 晚上 二月 13o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/462
+origin_site: https://react.statuscode.com/issues/462
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Building bulletproof React components and handling billion-row tables" url="https://react.statuscode.com/issues/462" />
+
+<Detail client:only="react">
+	#​462 — February 13, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/462)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://react.statuscode.com/link/180732/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xwgdmp5juj69nmnjhfgj.jpg)](https://react.statuscode.com/link/180733/5d0bbb4a61)
+
+[The Latest _State of React_ Survey Results](https://react.statuscode.com/link/180733/5d0bbb4a61 "2025.stateofreact.com") — The latest annual community survey collected the opinions and preferences of almost 4,000 developers giving us insights into [UI library preferences](https://react.statuscode.com/link/180734/5d0bbb4a61), [data visualization libraries](https://react.statuscode.com/link/180735/5d0bbb4a61), [authentication](https://react.statuscode.com/link/180736/5d0bbb4a61), the use of [alternative renderers](https://react.statuscode.com/link/180737/5d0bbb4a61), and the biggest [pain points in React’s core APIs.](https://react.statuscode.com/link/180738/5d0bbb4a61) Aurora Scharff wrote [a conclusion piece](https://react.statuscode.com/link/180739/5d0bbb4a61) rounding up React’s strong year.
+
+Devographics
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2a531980.png)](https://react.statuscode.com/link/180732/5d0bbb4a61)
+
+[The Most Loved JavaScript Course Year After Year](https://react.statuscode.com/link/180732/5d0bbb4a61 "frontendmasters.com") — JavaScript: The Hard Parts is rated 4.92 on average by thousands of developers. Build real mental models for how JavaScript works, from execution context and closures to async behavior and modern language features.
+
+Frontend Masters sponsor
+
+[Building Bulletproof React Components](https://react.statuscode.com/link/180740/5d0bbb4a61 "shud.in") — Ten production-tested patterns to ensure your components survive the gauntlet of portals, transitions, hydration, being used server-side, and other modern React features. An elegant, no-nonsense guide from the co-creator of [SWR](https://react.statuscode.com/link/180741/5d0bbb4a61) and creator of Vercel’s [React Best Practices](https://react.statuscode.com/link/180742/5d0bbb4a61) skill.
+
+Shu Ding
+
+**IN BRIEF:**
+
+*   [TypeScript 6.0 is now in beta.](https://react.statuscode.com/link/180743/5d0bbb4a61) It acts as a bridge to the eventual Go-based TypeScript 7, but packs in a few changes that could trip you up.
+    
+*   [ESLint v10.0 is out](https://react.statuscode.com/link/180744/5d0bbb4a61) and now tracks JSX references, enabling correct scope analysis of JSX elements.
+    
+*   [Bun v1.3.9](https://react.statuscode.com/link/180745/5d0bbb4a61) has been released with a faster, [more efficient `Bun.markdown.react()`](https://react.statuscode.com/link/180746/5d0bbb4a61).
+    
+*   ✏️ Rick Hanlon is [working on an extensive rewrite](https://react.statuscode.com/link/180747/5d0bbb4a61) of the `useActionState` docs. You can [see an early draft here.](https://react.statuscode.com/link/180748/5d0bbb4a61)
+    
+
+[React Native 0.84: Now Hermes V1 by Default](https://react.statuscode.com/link/180749/5d0bbb4a61 "reactnative.dev") — Hermes V1 is now the default JS engine on iOS and Android, improving performance and reducing memory usage. iOS ships with precompiled binaries, cutting build times. Under the hood, everything now runs on React 19.2.3.
+
+Hunt, Lee, et al.
+
+[Implementing Virtual Scrolling at Billion-Row Scale](https://react.statuscode.com/link/180750/5d0bbb4a61 "rednegra.net") — A technical walkthrough of building a table component ([HighTable](https://react.statuscode.com/link/180751/5d0bbb4a61)) that handles billions of rows while deftly handling browser DOM limits, scrollbar precision problems, and accessibility constraints, coupled with plenty of diagrams and demos.
+
+Sylvain Lesage
+
+🎨 [Shades of Halftone](https://react.statuscode.com/link/180752/5d0bbb4a61 "blog.maximeheckel.com") — A striking tour of creating pixelation, dithering, and halftone effects using shaders and [React Three Fiber.](https://react.statuscode.com/link/180753/5d0bbb4a61)
+
+Maxime Heckel
+
+[Skip the 'Create Organization' Step. Clerk Does It Automatically](https://react.statuscode.com/link/180754/5d0bbb4a61 "go.clerk.com") — Clerk auto-creates a user's first org with smart naming from their email domain. Less onboarding friction, zero code.
+
+Clerk sponsor
+
+📄 [How I Added a Bluesky Comment Section to My Blog](https://react.statuscode.com/link/180755/5d0bbb4a61) Micah Cantor
+
+📄 [Building a Rich Text Editor in React](https://react.statuscode.com/link/180756/5d0bbb4a61) Amitesh Anand (Puck)
+
+📄 [A React Trick to Improve Exit Animations](https://react.statuscode.com/link/180757/5d0bbb4a61) Max Barvian
+
+📄 [The Journey to a Safer Frontend: Why We Removed React.FC](https://react.statuscode.com/link/180758/5d0bbb4a61) Arda Örkin (Gusto)
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bar4sonl5hvlbqxk5mn9.jpg)](https://react.statuscode.com/link/180759/5d0bbb4a61)
+
+[FrankenTUI: Embed Terminal UIs in Any React Page](https://react.statuscode.com/link/180759/5d0bbb4a61 "frankentui.com") — [FrankenTUI](https://react.statuscode.com/link/180760/5d0bbb4a61) is a bold TUI framework and runtime built in Rust, and you can now bring FrankenTUI apps into React: _“Anywhere you’d embed a code editor, you can now embed a full terminal UI.”_ The [demo](https://react.statuscode.com/link/180761/5d0bbb4a61) is rather mind-boggling; one of those projects where it’s hard to determine if it’s visionary or completely out-there (in a good way)!
+
+Jeffrey Emanuel
+
+[Tambo 1.0: A Generative UI Toolkit for React](https://react.statuscode.com/link/180762/5d0bbb4a61 "tambo.co") — Give an agent your existing components and it picks and customizes the right ones for tasks users want to perform. It’s open source, but the project is backed by a commercial offering for the server-side part (you can self-host it for free). [GitHub repo.](https://react.statuscode.com/link/180763/5d0bbb4a61)
+
+Michael Milstead
+
+💡 Vercel's [json-render](https://react.statuscode.com/link/180764/5d0bbb4a61) covers similar ground but at a lower level.
+
+🏎️ [Rari: Runtime-Accelerated Rendering Infrastructure](https://react.statuscode.com/link/180765/5d0bbb4a61 "rari.build") — A React Server Components framework but with a Rust-powered server runtime, aiming for higher throughput and lower latency. The [getting started guide](https://react.statuscode.com/link/180766/5d0bbb4a61) will help you get the idea.
+
+Ryan Skinner
+
+[Ink 6.7: Build Rich Terminal Apps with React](https://react.statuscode.com/link/180767/5d0bbb4a61 "github.com") — Ink, used by Claude Code, Gemini CLI, Gatsby, Prisma, et al., lets you use a component-based model for building terminal apps. v6.7 notably adds support for concurrent rendering and synchronized updates (less flicker!)
+
+Vadim Demedes et al.
+
+[react-native-turbo-base64: Fast Base64 Support for React Native](https://react.statuscode.com/link/180768/5d0bbb4a61 "github.com") — Boasts being _‘the fastest base64 encoding/decoding library’_ for React Native. Powered by C++ with JSI bindings.
+
+Alex Shumihin
+
+📰 Classifieds
+
+✨ [React Summit 2026](https://react.statuscode.com/link/180769/5d0bbb4a61) - Curious how top minds like Kitze, Aurora Scharff, Alex Russell build modern React? [See it in Amsterdam this summer](https://react.statuscode.com/link/180769/5d0bbb4a61).
+
+* * *
+
+🎆 Reach an audience of 250M+ Fire TV users. With [Amazon Developers’](https://react.statuscode.com/link/180770/5d0bbb4a61) tools, porting React Native mobile and web apps has never been simpler.
+
+*   [Wasp 0.21.0](https://react.statuscode.com/link/180771/5d0bbb4a61) – Rails-like framework for React, Node.js, and Prisma. Now installable through `npm` and now using Tailwind CSS 4, Vitest 4, and React Router 7.
+    
+*   [Downshift 9.3](https://react.statuscode.com/link/180772/5d0bbb4a61) – Primitives to build WAI-ARIA compliant React autocomplete, combo box & select dropdown components.
+    
+*   [ReUI 2.0](https://react.statuscode.com/link/180773/5d0bbb4a61) – A suite of hundreds of React and Tailwind CSS UI components, patterns, and effects for `shadcn/ui` projects.
+    
+*   [Sentry React Native 8.0](https://react.statuscode.com/link/180774/5d0bbb4a61) – Official Sentry SDK for React Native.
+    
+*   [Ant Design 6.3](https://react.statuscode.com/link/180775/5d0bbb4a61)
+    
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hu0nhnzbxnpcr645v1de.jpg)](https://react.statuscode.com/link/180776/5d0bbb4a61)
+
+*   We're loving [npmx.dev](https://react.statuscode.com/link/180777/5d0bbb4a61) as a new, alternative way to browse packages in the official npm registry. It also provides a cool way to [quickly compare packages.](https://react.statuscode.com/link/180778/5d0bbb4a61)
+    
+*   [How to Make an HTTP Request in Node.js](https://react.statuscode.com/link/180779/5d0bbb4a61) covers a _lot_ of ground on using `fetch` productively, not just the basics.
+    
+*   📊 Data from over 100,000 sites was boiled down into [a report on modern CSS usage.](https://react.statuscode.com/link/180780/5d0bbb4a61) The median number of CSS rules per site was 2,802, with one page somehow using a whopping 210,695 rules.
+    
+*   [The _Windows XP_ experience, recreated with React!](https://react.statuscode.com/link/180781/5d0bbb4a61)
+    
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​462 — February 13, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/462)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://react.statuscode.com/link/180732/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xwgdmp5juj69nmnjhfgj.jpg)](https://react.statuscode.com/link/180733/5d0bbb4a61)
+
+[The Latest *State of React* Survey Results](https://react.statuscode.com/link/180733/5d0bbb4a61 "2025.stateofreact.com") — The latest annual community survey collected the opinions and preferences of almost 4,000 developers giving us insights into [UI library preferences](https://react.statuscode.com/link/180734/5d0bbb4a61), [data visualization libraries](https://react.statuscode.com/link/180735/5d0bbb4a61), [authentication](https://react.statuscode.com/link/180736/5d0bbb4a61), the use of [alternative renderers](https://react.statuscode.com/link/180737/5d0bbb4a61), and the biggest [pain points in React’s core APIs.](https://react.statuscode.com/link/180738/5d0bbb4a61) Aurora Scharff wrote [a conclusion piece](https://react.statuscode.com/link/180739/5d0bbb4a61) rounding up React’s strong year.
+
+Devographics
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2a531980.png)](https://react.statuscode.com/link/180732/5d0bbb4a61)
+
+[The Most Loved JavaScript Course Year After Year](https://react.statuscode.com/link/180732/5d0bbb4a61 "frontendmasters.com") — JavaScript: The Hard Parts is rated 4.92 on average by thousands of developers. Build real mental models for how JavaScript works, from execution context and closures to async behavior and modern language features.
+
+Frontend Masters sponsor
+
+[Building Bulletproof React Components](https://react.statuscode.com/link/180740/5d0bbb4a61 "shud.in") — Ten production-tested patterns to ensure your components survive the gauntlet of portals, transitions, hydration, being used server-side, and other modern React features. An elegant, no-nonsense guide from the co-creator of [SWR](https://react.statuscode.com/link/180741/5d0bbb4a61) and creator of Vercel’s [React Best Practices](https://react.statuscode.com/link/180742/5d0bbb4a61) skill.
+
+Shu Ding
+
+**IN BRIEF:**
+
+* [TypeScript 6.0 is now in beta.](https://react.statuscode.com/link/180743/5d0bbb4a61) It acts as a bridge to the eventual Go-based TypeScript 7, but packs in a few changes that could trip you up.
+
+* [ESLint v10.0 is out](https://react.statuscode.com/link/180744/5d0bbb4a61) and now tracks JSX references, enabling correct scope analysis of JSX elements.
+
+* [Bun v1.3.9](https://react.statuscode.com/link/180745/5d0bbb4a61) has been released with a faster, [more efficient `Bun.markdown.react()`](https://react.statuscode.com/link/180746/5d0bbb4a61).
+
+* ✏️ Rick Hanlon is [working on an extensive rewrite](https://react.statuscode.com/link/180747/5d0bbb4a61) of the `useActionState` docs. You can [see an early draft here.](https://react.statuscode.com/link/180748/5d0bbb4a61)
+
+[React Native 0.84: Now Hermes V1 by Default](https://react.statuscode.com/link/180749/5d0bbb4a61 "reactnative.dev") — Hermes V1 is now the default JS engine on iOS and Android, improving performance and reducing memory usage. iOS ships with precompiled binaries, cutting build times. Under the hood, everything now runs on React 19.2.3.
+
+Hunt, Lee, et al.
+
+[Implementing Virtual Scrolling at Billion-Row Scale](https://react.statuscode.com/link/180750/5d0bbb4a61 "rednegra.net") — A technical walkthrough of building a table component ([HighTable](https://react.statuscode.com/link/180751/5d0bbb4a61)) that handles billions of rows while deftly handling browser DOM limits, scrollbar precision problems, and accessibility constraints, coupled with plenty of diagrams and demos.
+
+Sylvain Lesage
+
+🎨 [Shades of Halftone](https://react.statuscode.com/link/180752/5d0bbb4a61 "blog.maximeheckel.com") — A striking tour of creating pixelation, dithering, and halftone effects using shaders and [React Three Fiber.](https://react.statuscode.com/link/180753/5d0bbb4a61)
+
+Maxime Heckel
+
+[Skip the 'Create Organization' Step. Clerk Does It Automatically](https://react.statuscode.com/link/180754/5d0bbb4a61 "go.clerk.com") — Clerk auto-creates a user's first org with smart naming from their email domain. Less onboarding friction, zero code.
+
+Clerk sponsor
+
+📄 [How I Added a Bluesky Comment Section to My Blog](https://react.statuscode.com/link/180755/5d0bbb4a61) Micah Cantor
+
+📄 [Building a Rich Text Editor in React](https://react.statuscode.com/link/180756/5d0bbb4a61) Amitesh Anand (Puck)
+
+📄 [A React Trick to Improve Exit Animations](https://react.statuscode.com/link/180757/5d0bbb4a61) Max Barvian
+
+📄 [The Journey to a Safer Frontend: Why We Removed React.FC](https://react.statuscode.com/link/180758/5d0bbb4a61) Arda Örkin (Gusto)
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bar4sonl5hvlbqxk5mn9.jpg)](https://react.statuscode.com/link/180759/5d0bbb4a61)
+
+[FrankenTUI: Embed Terminal UIs in Any React Page](https://react.statuscode.com/link/180759/5d0bbb4a61 "frankentui.com") — [FrankenTUI](https://react.statuscode.com/link/180760/5d0bbb4a61) is a bold TUI framework and runtime built in Rust, and you can now bring FrankenTUI apps into React: *“Anywhere you’d embed a code editor, you can now embed a full terminal UI.”* The [demo](https://react.statuscode.com/link/180761/5d0bbb4a61) is rather mind-boggling; one of those projects where it’s hard to determine if it’s visionary or completely out-there (in a good way)!
+
+Jeffrey Emanuel
+
+[Tambo 1.0: A Generative UI Toolkit for React](https://react.statuscode.com/link/180762/5d0bbb4a61 "tambo.co") — Give an agent your existing components and it picks and customizes the right ones for tasks users want to perform. It’s open source, but the project is backed by a commercial offering for the server-side part (you can self-host it for free). [GitHub repo.](https://react.statuscode.com/link/180763/5d0bbb4a61)
+
+Michael Milstead
+
+💡 Vercel's [json-render](https://react.statuscode.com/link/180764/5d0bbb4a61) covers similar ground but at a lower level.
+
+🏎️ [Rari: Runtime-Accelerated Rendering Infrastructure](https://react.statuscode.com/link/180765/5d0bbb4a61 "rari.build") — A React Server Components framework but with a Rust-powered server runtime, aiming for higher throughput and lower latency. The [getting started guide](https://react.statuscode.com/link/180766/5d0bbb4a61) will help you get the idea.
+
+Ryan Skinner
+
+[Ink 6.7: Build Rich Terminal Apps with React](https://react.statuscode.com/link/180767/5d0bbb4a61 "github.com") — Ink, used by Claude Code, Gemini CLI, Gatsby, Prisma, et al., lets you use a component-based model for building terminal apps. v6.7 notably adds support for concurrent rendering and synchronized updates (less flicker!)
+
+Vadim Demedes et al.
+
+[react-native-turbo-base64: Fast Base64 Support for React Native](https://react.statuscode.com/link/180768/5d0bbb4a61 "github.com") — Boasts being *‘the fastest base64 encoding/decoding library’* for React Native. Powered by C++ with JSI bindings.
+
+Alex Shumihin
+
+📰 Classifieds
+
+✨ [React Summit 2026](https://react.statuscode.com/link/180769/5d0bbb4a61) - Curious how top minds like Kitze, Aurora Scharff, Alex Russell build modern React? [See it in Amsterdam this summer](https://react.statuscode.com/link/180769/5d0bbb4a61).
+
+***
+
+🎆 Reach an audience of 250M+ Fire TV users. With [Amazon Developers’](https://react.statuscode.com/link/180770/5d0bbb4a61) tools, porting React Native mobile and web apps has never been simpler.
+
+* [Wasp 0.21.0](https://react.statuscode.com/link/180771/5d0bbb4a61) – Rails-like framework for React, Node.js, and Prisma. Now installable through `npm` and now using Tailwind CSS 4, Vitest 4, and React Router 7.
+
+* [Downshift 9.3](https://react.statuscode.com/link/180772/5d0bbb4a61) – Primitives to build WAI-ARIA compliant React autocomplete, combo box & select dropdown components.
+
+* [ReUI 2.0](https://react.statuscode.com/link/180773/5d0bbb4a61) – A suite of hundreds of React and Tailwind CSS UI components, patterns, and effects for `shadcn/ui` projects.
+
+* [Sentry React Native 8.0](https://react.statuscode.com/link/180774/5d0bbb4a61) – Official Sentry SDK for React Native.
+
+* [Ant Design 6.3](https://react.statuscode.com/link/180775/5d0bbb4a61)
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hu0nhnzbxnpcr645v1de.jpg)](https://react.statuscode.com/link/180776/5d0bbb4a61)
+
+* We're loving [npmx.dev](https://react.statuscode.com/link/180777/5d0bbb4a61) as a new, alternative way to browse packages in the official npm registry. It also provides a cool way to [quickly compare packages.](https://react.statuscode.com/link/180778/5d0bbb4a61)
+
+* [How to Make an HTTP Request in Node.js](https://react.statuscode.com/link/180779/5d0bbb4a61) covers a *lot* of ground on using `fetch` productively, not just the basics.
+
+* 📊 Data from over 100,000 sites was boiled down into [a report on modern CSS usage.](https://react.statuscode.com/link/180780/5d0bbb4a61) The median number of CSS rules per site was 2,802, with one page somehow using a whopping 210,695 rules.
+
+* [The *Windows XP* experience, recreated with React!](https://react.statuscode.com/link/180781/5d0bbb4a61)
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
