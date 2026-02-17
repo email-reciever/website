@@ -1,0 +1,309 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Electrobun v1： Bun-powered desktop apps in 12MB bundles
+description: Electrobun v1： Bun-powered desktop apps in 12MB bundles
+date: 星期二 08 晚上 二月 17o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/773
+origin_site: https://javascriptweekly.com/issues/773
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Electrobun v1： Bun-powered desktop apps in 12MB bundles" url="https://javascriptweekly.com/issues/773" />
+
+<Detail client:only="react">
+	#​773 — February 17, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/773)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/180784/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/r2fpf9tqoyfd43aqs1pc.jpg)](https://javascriptweekly.com/link/180785/d076523b1d)
+
+[TanStack Hotkeys: A Type-Safe, Cross-Platform Hotkey Library](https://javascriptweekly.com/link/180785/d076523b1d "tanstack.com") — The [TanStack family](https://javascriptweekly.com/link/180786/d076523b1d) gains a new member: _Hotkeys_, an alpha-stage universal keyboard interaction toolkit. It handles cross-environment quirks, supports multi-step sequences (like Vim commands or cheat codes), and can record user shortcuts. [Here's the full pitch.](https://javascriptweekly.com/link/180787/d076523b1d)
+
+TanStack LLC
+
+💡 Being in alpha, the focus in the docs is on React for now, but it's not React only, and they're looking for help with Solid, Angular, Svelte, and Vue adapters.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/8572b4a4.png)](https://javascriptweekly.com/link/180784/d076523b1d)
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://javascriptweekly.com/link/180784/d076523b1d) — Notion, Dropbox, Wiz, and LaunchDarkly have found a new testing paradigm - and they can't imagine working without it. Built by ex-Palantir engineers, Meticulous autonomously creates a continuously evolving suite of E2E UI tests that delivers near-exhaustive coverage with zero developer effort.
+
+Meticulous sponsor
+
+[Announcing TypeScript 6.0 Beta](https://javascriptweekly.com/link/180788/d076523b1d "devblogs.microsoft.com") — v6.0 is largely a _“time to clean up your tsconfig”_ release, designed to bridge the transition to the [Go-powered native TypeScript 7](https://javascriptweekly.com/link/180789/d076523b1d) later this year. Be aware of some tweaks, like `types` defaulting to `[]` and `--strict` now being true by default, among [many more breaking changes and deprecations.](https://javascriptweekly.com/link/180790/d076523b1d)
+
+Microsoft
+
+**IN BRIEF:**
+
+*   📊 Hot on the heels of the recent State of JS survey results come the [_State of React_ results.](https://javascriptweekly.com/link/180791/d076523b1d)
+    
+*   🤖 [Google shows off a preview of WebMCP](https://javascriptweekly.com/link/180792/d076523b1d), an attempt to create a standard way for web sites to offer up abilities for AI agents to use.
+    
+
+**RELEASES:**
+
+*   [Biome 2.4](https://javascriptweekly.com/link/180793/d076523b1d) – The formatting/linting tool can now handle embedded CSS & GraphQL in JS files, improves Vue and Svelte support, and adds HTML accessibility linting rules.
+    
+*   [React Native 0.84](https://javascriptweekly.com/link/180794/d076523b1d) – Hermes V1 is now the default JS engine on iOS and Android, iOS ships with precompiled binaries, and React 19.2.3.
+    
+*   [Node.js 25.6.1 (Current)](https://javascriptweekly.com/link/180795/d076523b1d) and [Node.js 24.13.1 (LTS)](https://javascriptweekly.com/link/180796/d076523b1d)
+    
+*   [sql.js v1.14.0](https://javascriptweekly.com/link/180797/d076523b1d) – SQLite compiled to JavaScript.
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/b4fz0lk01ql1hz0cjaj5.jpg)](https://javascriptweekly.com/link/180798/d076523b1d)
+
+[Experiments with CodeMirror](https://javascriptweekly.com/link/180798/d076523b1d "aziis98.com") — [CodeMirror](https://javascriptweekly.com/link/180799/d076523b1d) is one of the most robust code editor components out there _(we’ve just used it while rebuilding our newsletter editor!)_ and it’s very _extensible_ too, as seen in this walkthrough of building a VSCode-like ‘change review’ feature for it.
+
+Antonio De Lucreziis
+
+[How to Make an HTTP Request in Node.js](https://javascriptweekly.com/link/180800/d076523b1d "nodejsdesignpatterns.com") — A comprehensive guide to using `fetch` in production, tackling timeouts, streaming requests and responses, retries, concurrency, mocking, and more. Most of this is useful in the broader JavaScript context.
+
+Luciano Mammino
+
+[One Database for Transactions and Analytics. No Pipelines](https://javascriptweekly.com/link/180801/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres so analytics runs on live data—no sync lag, no drift, no second system. [Try free](https://javascriptweekly.com/link/180801/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Implementing Virtual Scrolling at Billion-Row Scale](https://javascriptweekly.com/link/180802/d076523b1d "rednegra.net") — A walkthrough of tackling the numerous challenges involved in building a table component ([HighTable](https://javascriptweekly.com/link/180803/d076523b1d)) that handles billions of rows.
+
+Sylvain Lesage
+
+[JS-Heavy Approaches Aren't Compatible with Long-Term Performance Goals](https://javascriptweekly.com/link/180804/d076523b1d "sgom.es") — A web performance engineer at Automattic makes the case against JS-heavy architectures and in support of a more server-centric approach.
+
+Sérgio Gomes
+
+📄 [Fun with TypeScript Generics](https://javascriptweekly.com/link/180805/d076523b1d) – Not your typical entry-level tutorial but a dive into a niche use case. Adam Rackis
+
+📄 [Building Bulletproof React Components](https://javascriptweekly.com/link/180806/d076523b1d) – Elegant, no-nonsense tips from the co-creator of [SWR](https://javascriptweekly.com/link/180807/d076523b1d). Shu Ding
+
+📄 [How Rolldown Works: High-Performance Code Splitting with Bitset Logic](https://javascriptweekly.com/link/180808/d076523b1d) Atriiy
+
+📄 [Angular Bindings: What Are They and How Do I Use Them?](https://javascriptweekly.com/link/180809/d076523b1d) Bo French
+
+🛠 Code & Tools
+
+[Electrobun v1: A Bun-Based Desktop App Approach](https://javascriptweekly.com/link/180810/d076523b1d "blackboard.sh") — An introduction to a cross-platform runtime for JS/TS desktop apps. It uses the OS’s default web renderer (like [Neutralinojs](https://javascriptweekly.com/link/180811/d076523b1d)) with [Bun](https://javascriptweekly.com/link/180812/d076523b1d) as the engine and bundler behind the scenes. The resulting bundles are as small as 12MB. ([Homepage](https://javascriptweekly.com/link/180837/d076523b1d) and [GitHub repo.](https://javascriptweekly.com/link/180838/d076523b1d))
+
+Blackboard
+
+💡 Electrobun's creator [▶️ shows it off in this 4 minute video.](https://javascriptweekly.com/link/180813/d076523b1d)
+
+[Console Ninja: Inline Logs & Smarter Debugging](https://javascriptweekly.com/link/180814/d076523b1d "console-ninja.com") — See console output, runtime data, and errors next to your code, shared with your AI. Rethought, redesigned, and rebuilt in v2 for faster JavaScript debugging workflows.
+
+Wallaby Team sponsor
+
+[fetch-network-simulator: Intercept `fetch` to Simulate Poor Network Conditions](https://javascriptweekly.com/link/180815/d076523b1d "github.com") — The heart of this is a library that intercepts `fetch` and applies rules to do things like drop random requests, delay them, or slow them down, so you can see how resilient your app is.
+
+Karn Pratap Singh
+
+[Peek: A Lightweight Library for Smart Page Header Behavior](https://javascriptweekly.com/link/180818/d076523b1d "adesignl.github.io") — You can see it in action on the page. It’s “smart” in that it will differentiate between small insignificant scrolls and intentional ones. You can customize the thresholds and delays and it works with any framework. [Repo here](https://javascriptweekly.com/link/180819/d076523b1d).
+
+Chad Pierce
+
+🏎️ [Rari: Runtime-Accelerated Rendering Infrastructure](https://javascriptweekly.com/link/180816/d076523b1d "rari.build") — A React Server Components framework but with a Rust-powered server runtime, aiming for higher throughput and lower latency. The [getting started guide](https://javascriptweekly.com/link/180817/d076523b1d) will help you get the idea.
+
+Ryan Skinner
+
+[Broad Infinite List: A Bidirectional Infinite List for React and Vue](https://javascriptweekly.com/link/180820/d076523b1d "suhaotian.github.io") — Smoothly stream logs, feed updates, or chat history in both directions without layout shifts.
+
+suhaotian
+
+*   📊 [Perspective 4.2](https://javascriptweekly.com/link/180821/d076523b1d) – Interactive analytics and data viz component for large/streaming datasets.
+    
+*   [Dockview 5.0](https://javascriptweekly.com/link/180822/d076523b1d) – Zero dependency layout manager supporting tabs, groups, grids, and split views.
+    
+*   ♟️ [Stockfish.js 18](https://javascriptweekly.com/link/180823/d076523b1d) – A WASM port of the Stockfish chess engine you can use from JavaScript.
+    
+*   [Ohm 17.5](https://javascriptweekly.com/link/180824/d076523b1d) – Parsing toolkit for building parsers, interpreters, etc.
+    
+
+📰 Classifieds
+
+🔥[JSNation 2026 lineup:](https://javascriptweekly.com/link/180825/d076523b1d) Matt Pocock, Luca Mezzalira & more speakers revealed! [Let’s talk modern web dev in beautiful Amsterdam this June](https://javascriptweekly.com/link/180825/d076523b1d).
+
+* * *
+
+📸 Add robust 1D/2D barcode scanning to your web app with [STRICH](https://javascriptweekly.com/link/180826/d076523b1d). Easy integration, simple pricing. [Free trial and demo app available](https://javascriptweekly.com/link/180826/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ukdmw6smabliypinu2bq.jpg)](https://javascriptweekly.com/link/180827/d076523b1d)
+
+*   🎨 Three years ago we linked to [DPaint.JS](https://javascriptweekly.com/link/180827/d076523b1d), a web based image editor modeled after the legendary 1980s Amiga and PC graphics editor _Deluxe Paint_. Many side projects like this fizzle out, but not DPaint! [v0.2.0 has been released](https://javascriptweekly.com/link/180828/d076523b1d) after two years with support for animations, pen support, texture brushes, and more.
+    
+*   [almostnode](https://javascriptweekly.com/link/180829/d076523b1d) is an experimental project that brings a Node.js runtime environment into the browser. The demo on the homepage is neat.
+    
+*   📊 Data from over 100,000 sites was boiled down into [this useful report on modern CSS usage.](https://javascriptweekly.com/link/180830/d076523b1d) The median number of CSS rules per site was 2,802, with one page somehow using 210,695 rules!
+    
+*   🕹️ Not content to just [port Quake to run in the browser](https://javascriptweekly.com/link/180831/d076523b1d), the creator of Three.js has now [attempted a _Descent_ port too](https://javascriptweekly.com/link/180832/d076523b1d) ([source](https://javascriptweekly.com/link/180833/d076523b1d)).
+    
+*   🤖 Can you [recreate something like SQLite with a swarm of agents?](https://javascriptweekly.com/link/180834/d076523b1d) Kian Kyars had a try, as part of an agent coordination experiment.
+    
+*   Cloudflare is rolling out [a feature to allow agents to fetch Markdown directly](https://javascriptweekly.com/link/180835/d076523b1d) from Cloudflare-powered sites.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/180836/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​773 — February 17, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/773)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/180784/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/r2fpf9tqoyfd43aqs1pc.jpg)](https://javascriptweekly.com/link/180785/d076523b1d)
+
+[TanStack Hotkeys: A Type-Safe, Cross-Platform Hotkey Library](https://javascriptweekly.com/link/180785/d076523b1d "tanstack.com") — The [TanStack family](https://javascriptweekly.com/link/180786/d076523b1d) gains a new member: *Hotkeys*, an alpha-stage universal keyboard interaction toolkit. It handles cross-environment quirks, supports multi-step sequences (like Vim commands or cheat codes), and can record user shortcuts. [Here's the full pitch.](https://javascriptweekly.com/link/180787/d076523b1d)
+
+TanStack LLC
+
+💡 Being in alpha, the focus in the docs is on React for now, but it's not React only, and they're looking for help with Solid, Angular, Svelte, and Vue adapters.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/8572b4a4.png)](https://javascriptweekly.com/link/180784/d076523b1d)
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://javascriptweekly.com/link/180784/d076523b1d) — Notion, Dropbox, Wiz, and LaunchDarkly have found a new testing paradigm - and they can't imagine working without it. Built by ex-Palantir engineers, Meticulous autonomously creates a continuously evolving suite of E2E UI tests that delivers near-exhaustive coverage with zero developer effort.
+
+Meticulous sponsor
+
+[Announcing TypeScript 6.0 Beta](https://javascriptweekly.com/link/180788/d076523b1d "devblogs.microsoft.com") — v6.0 is largely a *“time to clean up your tsconfig”* release, designed to bridge the transition to the [Go-powered native TypeScript 7](https://javascriptweekly.com/link/180789/d076523b1d) later this year. Be aware of some tweaks, like `types` defaulting to `[]` and `--strict` now being true by default, among [many more breaking changes and deprecations.](https://javascriptweekly.com/link/180790/d076523b1d)
+
+Microsoft
+
+**IN BRIEF:**
+
+* 📊 Hot on the heels of the recent State of JS survey results come the [*State of React* results.](https://javascriptweekly.com/link/180791/d076523b1d)
+
+* 🤖 [Google shows off a preview of WebMCP](https://javascriptweekly.com/link/180792/d076523b1d), an attempt to create a standard way for web sites to offer up abilities for AI agents to use.
+
+**RELEASES:**
+
+* [Biome 2.4](https://javascriptweekly.com/link/180793/d076523b1d) – The formatting/linting tool can now handle embedded CSS & GraphQL in JS files, improves Vue and Svelte support, and adds HTML accessibility linting rules.
+
+* [React Native 0.84](https://javascriptweekly.com/link/180794/d076523b1d) – Hermes V1 is now the default JS engine on iOS and Android, iOS ships with precompiled binaries, and React 19.2.3.
+
+* [Node.js 25.6.1 (Current)](https://javascriptweekly.com/link/180795/d076523b1d) and [Node.js 24.13.1 (LTS)](https://javascriptweekly.com/link/180796/d076523b1d)
+
+* [sql.js v1.14.0](https://javascriptweekly.com/link/180797/d076523b1d) – SQLite compiled to JavaScript.
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/b4fz0lk01ql1hz0cjaj5.jpg)](https://javascriptweekly.com/link/180798/d076523b1d)
+
+[Experiments with CodeMirror](https://javascriptweekly.com/link/180798/d076523b1d "aziis98.com") — [CodeMirror](https://javascriptweekly.com/link/180799/d076523b1d) is one of the most robust code editor components out there *(we’ve just used it while rebuilding our newsletter editor!)* and it’s very *extensible* too, as seen in this walkthrough of building a VSCode-like ‘change review’ feature for it.
+
+Antonio De Lucreziis
+
+[How to Make an HTTP Request in Node.js](https://javascriptweekly.com/link/180800/d076523b1d "nodejsdesignpatterns.com") — A comprehensive guide to using `fetch` in production, tackling timeouts, streaming requests and responses, retries, concurrency, mocking, and more. Most of this is useful in the broader JavaScript context.
+
+Luciano Mammino
+
+[One Database for Transactions and Analytics. No Pipelines](https://javascriptweekly.com/link/180801/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres so analytics runs on live data—no sync lag, no drift, no second system. [Try free](https://javascriptweekly.com/link/180801/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Implementing Virtual Scrolling at Billion-Row Scale](https://javascriptweekly.com/link/180802/d076523b1d "rednegra.net") — A walkthrough of tackling the numerous challenges involved in building a table component ([HighTable](https://javascriptweekly.com/link/180803/d076523b1d)) that handles billions of rows.
+
+Sylvain Lesage
+
+[JS-Heavy Approaches Aren't Compatible with Long-Term Performance Goals](https://javascriptweekly.com/link/180804/d076523b1d "sgom.es") — A web performance engineer at Automattic makes the case against JS-heavy architectures and in support of a more server-centric approach.
+
+Sérgio Gomes
+
+📄 [Fun with TypeScript Generics](https://javascriptweekly.com/link/180805/d076523b1d) – Not your typical entry-level tutorial but a dive into a niche use case. Adam Rackis
+
+📄 [Building Bulletproof React Components](https://javascriptweekly.com/link/180806/d076523b1d) – Elegant, no-nonsense tips from the co-creator of [SWR](https://javascriptweekly.com/link/180807/d076523b1d). Shu Ding
+
+📄 [How Rolldown Works: High-Performance Code Splitting with Bitset Logic](https://javascriptweekly.com/link/180808/d076523b1d) Atriiy
+
+📄 [Angular Bindings: What Are They and How Do I Use Them?](https://javascriptweekly.com/link/180809/d076523b1d) Bo French
+
+🛠 Code & Tools
+
+[Electrobun v1: A Bun-Based Desktop App Approach](https://javascriptweekly.com/link/180810/d076523b1d "blackboard.sh") — An introduction to a cross-platform runtime for JS/TS desktop apps. It uses the OS’s default web renderer (like [Neutralinojs](https://javascriptweekly.com/link/180811/d076523b1d)) with [Bun](https://javascriptweekly.com/link/180812/d076523b1d) as the engine and bundler behind the scenes. The resulting bundles are as small as 12MB. ([Homepage](https://javascriptweekly.com/link/180837/d076523b1d) and [GitHub repo.](https://javascriptweekly.com/link/180838/d076523b1d))
+
+Blackboard
+
+💡 Electrobun's creator [▶️ shows it off in this 4 minute video.](https://javascriptweekly.com/link/180813/d076523b1d)
+
+[Console Ninja: Inline Logs & Smarter Debugging](https://javascriptweekly.com/link/180814/d076523b1d "console-ninja.com") — See console output, runtime data, and errors next to your code, shared with your AI. Rethought, redesigned, and rebuilt in v2 for faster JavaScript debugging workflows.
+
+Wallaby Team sponsor
+
+[fetch-network-simulator: Intercept `fetch` to Simulate Poor Network Conditions](https://javascriptweekly.com/link/180815/d076523b1d "github.com") — The heart of this is a library that intercepts `fetch` and applies rules to do things like drop random requests, delay them, or slow them down, so you can see how resilient your app is.
+
+Karn Pratap Singh
+
+[Peek: A Lightweight Library for Smart Page Header Behavior](https://javascriptweekly.com/link/180818/d076523b1d "adesignl.github.io") — You can see it in action on the page. It’s “smart” in that it will differentiate between small insignificant scrolls and intentional ones. You can customize the thresholds and delays and it works with any framework. [Repo here](https://javascriptweekly.com/link/180819/d076523b1d).
+
+Chad Pierce
+
+🏎️ [Rari: Runtime-Accelerated Rendering Infrastructure](https://javascriptweekly.com/link/180816/d076523b1d "rari.build") — A React Server Components framework but with a Rust-powered server runtime, aiming for higher throughput and lower latency. The [getting started guide](https://javascriptweekly.com/link/180817/d076523b1d) will help you get the idea.
+
+Ryan Skinner
+
+[Broad Infinite List: A Bidirectional Infinite List for React and Vue](https://javascriptweekly.com/link/180820/d076523b1d "suhaotian.github.io") — Smoothly stream logs, feed updates, or chat history in both directions without layout shifts.
+
+suhaotian
+
+* 📊 [Perspective 4.2](https://javascriptweekly.com/link/180821/d076523b1d) – Interactive analytics and data viz component for large/streaming datasets.
+
+* [Dockview 5.0](https://javascriptweekly.com/link/180822/d076523b1d) – Zero dependency layout manager supporting tabs, groups, grids, and split views.
+
+* ♟️ [Stockfish.js 18](https://javascriptweekly.com/link/180823/d076523b1d) – A WASM port of the Stockfish chess engine you can use from JavaScript.
+
+* [Ohm 17.5](https://javascriptweekly.com/link/180824/d076523b1d) – Parsing toolkit for building parsers, interpreters, etc.
+
+📰 Classifieds
+
+🔥[JSNation 2026 lineup:](https://javascriptweekly.com/link/180825/d076523b1d) Matt Pocock, Luca Mezzalira & more speakers revealed! [Let’s talk modern web dev in beautiful Amsterdam this June](https://javascriptweekly.com/link/180825/d076523b1d).
+
+***
+
+📸 Add robust 1D/2D barcode scanning to your web app with [STRICH](https://javascriptweekly.com/link/180826/d076523b1d). Easy integration, simple pricing. [Free trial and demo app available](https://javascriptweekly.com/link/180826/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ukdmw6smabliypinu2bq.jpg)](https://javascriptweekly.com/link/180827/d076523b1d)
+
+* 🎨 Three years ago we linked to [DPaint.JS](https://javascriptweekly.com/link/180827/d076523b1d), a web based image editor modeled after the legendary 1980s Amiga and PC graphics editor *Deluxe Paint*. Many side projects like this fizzle out, but not DPaint! [v0.2.0 has been released](https://javascriptweekly.com/link/180828/d076523b1d) after two years with support for animations, pen support, texture brushes, and more.
+
+* [almostnode](https://javascriptweekly.com/link/180829/d076523b1d) is an experimental project that brings a Node.js runtime environment into the browser. The demo on the homepage is neat.
+
+* 📊 Data from over 100,000 sites was boiled down into [this useful report on modern CSS usage.](https://javascriptweekly.com/link/180830/d076523b1d) The median number of CSS rules per site was 2,802, with one page somehow using 210,695 rules!
+
+* 🕹️ Not content to just [port Quake to run in the browser](https://javascriptweekly.com/link/180831/d076523b1d), the creator of Three.js has now [attempted a *Descent* port too](https://javascriptweekly.com/link/180832/d076523b1d) ([source](https://javascriptweekly.com/link/180833/d076523b1d)).
+
+* 🤖 Can you [recreate something like SQLite with a swarm of agents?](https://javascriptweekly.com/link/180834/d076523b1d) Kian Kyars had a try, as part of an agent coordination experiment.
+
+* Cloudflare is rolling out [a feature to allow agents to fetch Markdown directly](https://javascriptweekly.com/link/180835/d076523b1d) from Cloudflare-powered sites.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/180836/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
