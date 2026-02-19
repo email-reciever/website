@@ -1,0 +1,252 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Halving Node.js memory usage with pointer compression
+description: Halving Node.js memory usage with pointer compression
+date: 星期四 05 下午 二月 19o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/612
+origin_site: https://nodeweekly.com/issues/612
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Halving Node.js memory usage with pointer compression" url="https://nodeweekly.com/issues/612" />
+
+<Detail client:only="react">
+	#​612 — February 19, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/612)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/180907/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/agfx1juvr9qrcrim1gn3.jpg)](https://nodeweekly.com/link/180908/0a4070b383)
+
+[Halving Node.js Memory Usage with Pointer Compression](https://nodeweekly.com/link/180908/0a4070b383 "blog.platformatic.dev") — Does 50% memory savings in production sound good? Cloudflare, Igalia, and the Node project have collaborated on `node-caged`, a Docker image containing Node 25 with V8 pointer compression enabled. Matteo digs into all the details here – this is neat work, though there are tradeoffs to consider.
+
+Matteo Collina
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/8dc43b16.jpg)](https://nodeweekly.com/link/180909/0a4070b383)
+
+[Foundations of Agent Development](https://nodeweekly.com/link/180909/0a4070b383 "frontendmasters.com") — Create an AI agent from scratch in this detailed video course, hosted by Scott Moss. You'll learn tool calling, agent loops, evals, token usage monitoring, and more — including which agent framework might be right for you.
+
+Frontend Masters sponsor
+
+[npm v11.10.0 Released](https://nodeweekly.com/link/180910/0a4070b383 "github.blog") — `npm install` gains a `--allow-git` flag that defaults to `all` for now, but is expected to become `none` in npm 12+. Maintainers can also now add/update trusted publishing configs across multiple packages in a single operation. Also, and curiously not covered in the release post, is [`--min-release-age`](https://nodeweekly.com/link/180911/0a4070b383).
+
+GitHub
+
+**IN BRIEF:**
+
+*   [Node.js 25.6.1 (Current)](https://nodeweekly.com/link/180912/0a4070b383) has been released replacing `cjs-module-lexer` with `merv`. [v24.13.1 (LTS)](https://nodeweekly.com/link/180913/0a4070b383) has also been released.
+    
+*   ⭐ [The Temporal API is close to being enabled by default](https://nodeweekly.com/link/180914/0a4070b383) in a future Node.js release.
+    
+*   Joyee Cheung has added the ability for Node [single executable applications (SEA)](https://nodeweekly.com/link/180915/0a4070b383) to [support ESM entrypoints](https://nodeweekly.com/link/180916/0a4070b383) (non-builtin access is not supported, but Matteo Collina's [work on a virtual file system module](https://nodeweekly.com/link/180917/0a4070b383) may enable that).
+    
+*   🔒 npm package pages [now link directly to Socket's security analysis](https://nodeweekly.com/link/180918/0a4070b383) for each package. Here's [the one for `express`](https://nodeweekly.com/link/180919/0a4070b383), for example.
+    
+*   Node's `zlib` is also about to get [support for custom Brotli compression dictionaries.](https://nodeweekly.com/link/180920/0a4070b383)
+    
+
+📊 [Node.js vs Deno vs Bun Performance Benchmarks](https://nodeweekly.com/link/180921/0a4070b383 "www.repoflow.io") — A few weeks ago, RepoFlow did a handy [version-by-version Node benchmark](https://nodeweekly.com/link/180922/0a4070b383) and now they’re back with some micro-benchmarks comparing Node, Deno and Bun. As always with benchmarks, apply a critical eye!
+
+RepoFlow Team
+
+🛠 Code & Tools
+
+[Introducing `@stoolap/node`: Fast Bindings to an Embedded SQL Database](https://nodeweekly.com/link/180923/0a4070b383 "stoolap.io") — [Stoolap](https://nodeweekly.com/link/180924/0a4070b383) is a high-performance, pure-Rust embedded SQL database that compiles to WebAssembly ([play with it here](https://nodeweekly.com/link/180925/0a4070b383)). It now includes NAPI-RS powered Node.js bindings. In this post, Semih tackles the inevitable _“Why not just use SQLite?”_ question: chiefly, lock-free MVCC means readers never block writers.
+
+Semih Alev
+
+[fetch-network-simulator: Intercept `fetch` to Simulate Poor Network Conditions](https://nodeweekly.com/link/180926/0a4070b383 "github.com") — Intercepts `fetch` and applies rules to drop random requests, delay them, slow them down, etc. Or you could just switch to my mobile provider.
+
+Karn Pratap Singh
+
+[Clerk Just Made Auth More Affordable — 50,000 MRUs Now Free](https://nodeweekly.com/link/180927/0a4070b383 "go.clerk.com") — MFA, device tracking, and satellite domains included in Pro. Unlimited apps on every plan. Automatic volume discounts.
+
+Clerk sponsor
+
+[BrowserPod 1.0: Universal WASM-Powered In-Browser Sandboxes](https://nodeweekly.com/link/180928/0a4070b383 "labs.leaningtech.com") — From the team behind [CheerpX](https://nodeweekly.com/link/180929/0a4070b383) comes a new browser-based code sandbox, launching with Node.js and with Python, Ruby, Go, and Rust planned next. Target use cases include in-browser agentic coding, web IDEs, and interactive docs, with the option to expose virtual services via public URLs.
+
+Alessandro Pignotti
+
+[npm-check-updates 19.5: Find Newer Versions of Your Dependencies](https://nodeweekly.com/link/180930/0a4070b383 "github.com") — Specifically, newer versions than your `package.json` allows. Includes a `-i` interactive mode so you can look at potential upgrades and then opt in to them one by one. You can also specify ‘cooldown’ strings like “7d” or “12h” to limit suggestions to libraries that have been published for a certain amount of time.
+
+Raine Revere
+
+[Tangerine: DNS over HTTPS for Node Apps](https://nodeweekly.com/link/180931/0a4070b383 "github.com") — A drop-in replacement for `dns.promises.Resolver` that performs DNS lookups over HTTPS (so-called [“DoH”](https://nodeweekly.com/link/180932/0a4070b383)) with built-in retries, timeouts, smart server rotation, and more.
+
+Forward Email
+
+*   [pnpm v10.30.0](https://nodeweekly.com/link/180933/0a4070b383) – The [`pnpm why`](https://nodeweekly.com/link/180934/0a4070b383) command now shows a reverse dependency tree.
+    
+*   [jsdom 28.1](https://nodeweekly.com/link/180935/0a4070b383) – Pure JS implementation of various web standards for testing and scraping web apps.
+    
+*   [google-spreadsheet 5.2](https://nodeweekly.com/link/180936/0a4070b383) – Wrapper for the Google Sheets API.
+    
+*   [Mineflayer 4.35](https://nodeweekly.com/link/180937/0a4070b383) – Create Minecraft bots with JavaScript.
+    
+*   [qs 6.15.0](https://nodeweekly.com/link/180938/0a4070b383) – Query string parsing and stringifying library.
+    
+*   [typescript-eslint 8.56.0](https://nodeweekly.com/link/180939/0a4070b383) – Now with ESLint 10 support.
+    
+
+📰 Classifieds
+
+🚀 [HTML to PDF made easy.](https://nodeweekly.com/link/180940/0a4070b383) One simple API that scales. PrinceXML under the hood for full CSS & JS support. EU-hosted, free to start.
+
+* * *
+
+🔥[JSNation 2026 lineup:](https://nodeweekly.com/link/180941/0a4070b383) Matt Pocock, Luca Mezzalira & more speakers revealed! [Let’s talk modern web dev in beautiful Amsterdam this June](https://nodeweekly.com/link/180941/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+A few stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kucoghjizxjnd12jhmys.jpg)](https://nodeweekly.com/link/180942/0a4070b383)
+
+*   We're digging the newest member to Vercel's _Geist_ font family: [Geist Pixel](https://nodeweekly.com/link/180942/0a4070b383) is an aliased/bitmap-style font that slots in nicely alongside [their existing sans and monospaced variants.](https://nodeweekly.com/link/180943/0a4070b383)
+    
+*   [Electrobun v1](https://nodeweekly.com/link/180944/0a4070b383) is an interesting development in the Bun ecosystem - think Electron/NeutralinoJS, but for building cross-platform desktop apps on top of the system webview, Bun, and Zig. The big win is app bundle sizes as low as 12 megabytes. [More info here.](https://nodeweekly.com/link/180945/0a4070b383)
+    
+*   🕹️ Not content to just [port Quake to run in the browser](https://nodeweekly.com/link/180946/0a4070b383), the creator of Three.js has now [attempted a _Descent_ port too](https://nodeweekly.com/link/180947/0a4070b383) ([source](https://nodeweekly.com/link/180948/0a4070b383)).
+    
+*   [Deno 2.6.10](https://nodeweekly.com/link/180949/0a4070b383) has been released introducing [`deno install --compile`](https://nodeweekly.com/link/180950/0a4070b383) for installing scripts as compiled executables.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​612 — February 19, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/612)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/180907/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/agfx1juvr9qrcrim1gn3.jpg)](https://nodeweekly.com/link/180908/0a4070b383)
+
+[Halving Node.js Memory Usage with Pointer Compression](https://nodeweekly.com/link/180908/0a4070b383 "blog.platformatic.dev") — Does 50% memory savings in production sound good? Cloudflare, Igalia, and the Node project have collaborated on `node-caged`, a Docker image containing Node 25 with V8 pointer compression enabled. Matteo digs into all the details here – this is neat work, though there are tradeoffs to consider.
+
+Matteo Collina
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/8dc43b16.jpg)](https://nodeweekly.com/link/180909/0a4070b383)
+
+[Foundations of Agent Development](https://nodeweekly.com/link/180909/0a4070b383 "frontendmasters.com") — Create an AI agent from scratch in this detailed video course, hosted by Scott Moss. You'll learn tool calling, agent loops, evals, token usage monitoring, and more — including which agent framework might be right for you.
+
+Frontend Masters sponsor
+
+[npm v11.10.0 Released](https://nodeweekly.com/link/180910/0a4070b383 "github.blog") — `npm install` gains a `--allow-git` flag that defaults to `all` for now, but is expected to become `none` in npm 12+. Maintainers can also now add/update trusted publishing configs across multiple packages in a single operation. Also, and curiously not covered in the release post, is [`--min-release-age`](https://nodeweekly.com/link/180911/0a4070b383).
+
+GitHub
+
+**IN BRIEF:**
+
+* [Node.js 25.6.1 (Current)](https://nodeweekly.com/link/180912/0a4070b383) has been released replacing `cjs-module-lexer` with `merv`. [v24.13.1 (LTS)](https://nodeweekly.com/link/180913/0a4070b383) has also been released.
+
+* ⭐ [The Temporal API is close to being enabled by default](https://nodeweekly.com/link/180914/0a4070b383) in a future Node.js release.
+
+* Joyee Cheung has added the ability for Node [single executable applications (SEA)](https://nodeweekly.com/link/180915/0a4070b383) to [support ESM entrypoints](https://nodeweekly.com/link/180916/0a4070b383) (non-builtin access is not supported, but Matteo Collina's [work on a virtual file system module](https://nodeweekly.com/link/180917/0a4070b383) may enable that).
+
+* 🔒 npm package pages [now link directly to Socket's security analysis](https://nodeweekly.com/link/180918/0a4070b383) for each package. Here's [the one for `express`](https://nodeweekly.com/link/180919/0a4070b383), for example.
+
+* Node's `zlib` is also about to get [support for custom Brotli compression dictionaries.](https://nodeweekly.com/link/180920/0a4070b383)
+
+📊 [Node.js vs Deno vs Bun Performance Benchmarks](https://nodeweekly.com/link/180921/0a4070b383 "www.repoflow.io") — A few weeks ago, RepoFlow did a handy [version-by-version Node benchmark](https://nodeweekly.com/link/180922/0a4070b383) and now they’re back with some micro-benchmarks comparing Node, Deno and Bun. As always with benchmarks, apply a critical eye!
+
+RepoFlow Team
+
+🛠 Code & Tools
+
+[Introducing `@stoolap/node`: Fast Bindings to an Embedded SQL Database](https://nodeweekly.com/link/180923/0a4070b383 "stoolap.io") — [Stoolap](https://nodeweekly.com/link/180924/0a4070b383) is a high-performance, pure-Rust embedded SQL database that compiles to WebAssembly ([play with it here](https://nodeweekly.com/link/180925/0a4070b383)). It now includes NAPI-RS powered Node.js bindings. In this post, Semih tackles the inevitable *“Why not just use SQLite?”* question: chiefly, lock-free MVCC means readers never block writers.
+
+Semih Alev
+
+[fetch-network-simulator: Intercept `fetch` to Simulate Poor Network Conditions](https://nodeweekly.com/link/180926/0a4070b383 "github.com") — Intercepts `fetch` and applies rules to drop random requests, delay them, slow them down, etc. Or you could just switch to my mobile provider.
+
+Karn Pratap Singh
+
+[Clerk Just Made Auth More Affordable — 50,000 MRUs Now Free](https://nodeweekly.com/link/180927/0a4070b383 "go.clerk.com") — MFA, device tracking, and satellite domains included in Pro. Unlimited apps on every plan. Automatic volume discounts.
+
+Clerk sponsor
+
+[BrowserPod 1.0: Universal WASM-Powered In-Browser Sandboxes](https://nodeweekly.com/link/180928/0a4070b383 "labs.leaningtech.com") — From the team behind [CheerpX](https://nodeweekly.com/link/180929/0a4070b383) comes a new browser-based code sandbox, launching with Node.js and with Python, Ruby, Go, and Rust planned next. Target use cases include in-browser agentic coding, web IDEs, and interactive docs, with the option to expose virtual services via public URLs.
+
+Alessandro Pignotti
+
+[npm-check-updates 19.5: Find Newer Versions of Your Dependencies](https://nodeweekly.com/link/180930/0a4070b383 "github.com") — Specifically, newer versions than your `package.json` allows. Includes a `-i` interactive mode so you can look at potential upgrades and then opt in to them one by one. You can also specify ‘cooldown’ strings like “7d” or “12h” to limit suggestions to libraries that have been published for a certain amount of time.
+
+Raine Revere
+
+[Tangerine: DNS over HTTPS for Node Apps](https://nodeweekly.com/link/180931/0a4070b383 "github.com") — A drop-in replacement for `dns.promises.Resolver` that performs DNS lookups over HTTPS (so-called [“DoH”](https://nodeweekly.com/link/180932/0a4070b383)) with built-in retries, timeouts, smart server rotation, and more.
+
+Forward Email
+
+* [pnpm v10.30.0](https://nodeweekly.com/link/180933/0a4070b383) – The [`pnpm why`](https://nodeweekly.com/link/180934/0a4070b383) command now shows a reverse dependency tree.
+
+* [jsdom 28.1](https://nodeweekly.com/link/180935/0a4070b383) – Pure JS implementation of various web standards for testing and scraping web apps.
+
+* [google-spreadsheet 5.2](https://nodeweekly.com/link/180936/0a4070b383) – Wrapper for the Google Sheets API.
+
+* [Mineflayer 4.35](https://nodeweekly.com/link/180937/0a4070b383) – Create Minecraft bots with JavaScript.
+
+* [qs 6.15.0](https://nodeweekly.com/link/180938/0a4070b383) – Query string parsing and stringifying library.
+
+* [typescript-eslint 8.56.0](https://nodeweekly.com/link/180939/0a4070b383) – Now with ESLint 10 support.
+
+📰 Classifieds
+
+🚀 [HTML to PDF made easy.](https://nodeweekly.com/link/180940/0a4070b383) One simple API that scales. PrinceXML under the hood for full CSS & JS support. EU-hosted, free to start.
+
+***
+
+🔥[JSNation 2026 lineup:](https://nodeweekly.com/link/180941/0a4070b383) Matt Pocock, Luca Mezzalira & more speakers revealed! [Let’s talk modern web dev in beautiful Amsterdam this June](https://nodeweekly.com/link/180941/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+A few stories in the broader landscape:
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kucoghjizxjnd12jhmys.jpg)](https://nodeweekly.com/link/180942/0a4070b383)
+
+* We're digging the newest member to Vercel's *Geist* font family: [Geist Pixel](https://nodeweekly.com/link/180942/0a4070b383) is an aliased/bitmap-style font that slots in nicely alongside [their existing sans and monospaced variants.](https://nodeweekly.com/link/180943/0a4070b383)
+
+* [Electrobun v1](https://nodeweekly.com/link/180944/0a4070b383) is an interesting development in the Bun ecosystem - think Electron/NeutralinoJS, but for building cross-platform desktop apps on top of the system webview, Bun, and Zig. The big win is app bundle sizes as low as 12 megabytes. [More info here.](https://nodeweekly.com/link/180945/0a4070b383)
+
+* 🕹️ Not content to just [port Quake to run in the browser](https://nodeweekly.com/link/180946/0a4070b383), the creator of Three.js has now [attempted a *Descent* port too](https://nodeweekly.com/link/180947/0a4070b383) ([source](https://nodeweekly.com/link/180948/0a4070b383)).
+
+* [Deno 2.6.10](https://nodeweekly.com/link/180949/0a4070b383) has been released introducing [`deno install --compile`](https://nodeweekly.com/link/180950/0a4070b383) for installing scripts as compiled executables.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
