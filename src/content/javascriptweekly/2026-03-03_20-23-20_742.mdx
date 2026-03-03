@@ -1,0 +1,325 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: External import maps, a big Bun release, and Node.js schedule changes
+description: External import maps, a big Bun release, and Node.js schedule changes
+date: 星期二 08 晚上 三月 3o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/775
+origin_site: https://javascriptweekly.com/issues/775
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="External import maps, a big Bun release, and Node.js schedule changes" url="https://javascriptweekly.com/issues/775" />
+
+<Detail client:only="react">
+	#​775 — March 3, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/775)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/181403/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yd2s7wyaubxm1olt8hnu.jpg)](https://javascriptweekly.com/link/181455/d076523b1d)
+
+[Bun v1.3.10 Released: A Surprisingly Big Update](https://javascriptweekly.com/link/181455/d076523b1d "bun.com") — Bun’s REPL has been completely rewritten with many improvements (both practical and cosmetic), there's a `--compile --target=browser` option for building self-contained HTML files with all JS, CSS, and assets included (ideal for simple JS-powered single page apps), full support for TC39 stage 3 [ES decorators](https://javascriptweekly.com/link/181456/d076523b1d), a faster event loop, barrel import optimization, and more.
+
+Jarred Sumner
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/bd4a72e4.png)](https://javascriptweekly.com/link/181403/d076523b1d)
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://javascriptweekly.com/link/181403/d076523b1d) — Notion, Dropbox, Wiz and LaunchDarkly now use a testing paradigm they can’t work without. Built by former Palantir engineers, Meticulous automatically creates an evolving suite of E2E UI tests, delivering exhaustive coverage with no developer effort.
+
+Meticulous sponsor
+
+[External Import Maps, Today!](https://javascriptweekly.com/link/181457/d076523b1d "lea.verou.me") — Several weeks ago Lea posted about [web dependencies being broken](https://javascriptweekly.com/link/181458/d076523b1d), but now she has a solution. The core technique employed to emulate support for external import maps isn't obvious, despite being simple, but is already [offered by JSPM 4.0.](https://javascriptweekly.com/link/181459/d076523b1d)
+
+Lea Verou
+
+**IN BRIEF:**
+
+*   [_The React Foundation_ has officially launched](https://javascriptweekly.com/link/181404/d076523b1d) taking over ownership of React, React Native and JSX. It has a board of eight founding members (including Meta) with Seth Webster, former head of React at Meta, as exec director.
+    
+*   It's not formal yet, but [this preview post reveals how Node.js's release schedule is changing](https://javascriptweekly.com/link/181405/d076523b1d) later this year (one major release per year, every release to be LTS, with no more odd/even distinction).
+    
+*   📢 Monthly roundups have landed from [Svelte](https://javascriptweekly.com/link/181406/d076523b1d), [ViteLand / VoidZero](https://javascriptweekly.com/link/181407/d076523b1d), and [Astro.](https://javascriptweekly.com/link/181408/d076523b1d)
+    
+*   🔒 The Angular team [explains two recently patched vulnerabilities in Angular.](https://javascriptweekly.com/link/181409/d076523b1d)
+    
+*   [The Navigation API is now Baseline Newly Available](https://javascriptweekly.com/link/181410/d076523b1d) across all major browsers.
+    
+
+**RELEASES:**
+
+*   [Deno 2.7](https://javascriptweekly.com/link/181460/d076523b1d) – The alternative runtime stabilizes Temporal API support, supports Windows on ARM, adds `package.json` `overrides` support, and more.
+    
+*   [Expo SDK 55](https://javascriptweekly.com/link/181411/d076523b1d) – The popular React Native framework/toolchain.
+    
+*   [Shiki 4.0](https://javascriptweekly.com/link/181412/d076523b1d) – TextMate grammar powered, VS Code-like syntax highlighter.
+    
+*   [Angular 21.2](https://javascriptweekly.com/link/181413/d076523b1d), [Mediabunny 1.35](https://javascriptweekly.com/link/181414/d076523b1d), [Neo.mjs 12.0](https://javascriptweekly.com/link/181415/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[Making WebAssembly a First-Class Citizen on the Web](https://javascriptweekly.com/link/181416/d076523b1d "hacks.mozilla.org") — WASM has come a long way but remains tricky to work with on the Web, with even performing a `console.log` requiring a lot of glue code. Ryan makes the case that the [WebAssembly Component Model](https://javascriptweekly.com/link/181480/d076523b1d) could change this by letting modules bind directly to browser APIs, load directly from `script` tags, and more.
+
+Ryan Hunt
+
+[We Deserve a Better Streams API for JavaScript](https://javascriptweekly.com/link/181479/d076523b1d "blog.cloudflare.com") — _“I’m publishing this to start a conversation,”_ says James who shows off an alternative approach to Web streams that works around the current standard’s _“fundamental usability and performance issues.”_ The end results and James' extensive experience in this area make for a compelling argument.
+
+James M Snell
+
+[`npx workos:` An AI Agent That Writes Auth Directly Into Your Codebase](https://javascriptweekly.com/link/181419/d076523b1d "workos.com") — Reads your project, detects your framework, writes the integration, then typechecks and fixes its own build errors.
+
+WorkOS sponsor
+
+[The Illusion of JavaScript-Powered 'DRM'](https://javascriptweekly.com/link/181423/d076523b1d "www.therantydev.com") — An explanation of why building a DRM/copy protection system purely in JavaScript (rather than [EME](https://javascriptweekly.com/link/181424/d076523b1d)\-based approaches) is ultimately just _“sophisticated friction”_, at best, and uses a tale of breaking a (NSFW) platform’s protection to make the point.
+
+Ahmed Arat
+
+[How Cloudflare Rebuilt Next.js with AI in a Week](https://javascriptweekly.com/link/181420/d076523b1d "blog.cloudflare.com") — [vinext](https://javascriptweekly.com/link/181421/d076523b1d) is an experimental, Vite-based reimplementation of Next.js’s API surface, letting existing apps run in more environments, though with [some tradeoffs.](https://javascriptweekly.com/link/181422/d076523b1d)
+
+Steve Faulkner (Cloudflare)
+
+[Using Val Town to Get Me to the Movies](https://javascriptweekly.com/link/181417/d076523b1d "www.raymondcamden.com") — [Val Town](https://javascriptweekly.com/link/181418/d076523b1d) is a fantastic platform for quickly writing and deploying JavaScript-powered services. Like this one!
+
+Raymond Camden
+
+📄 [Sticky Grid Scroll: Building a Scroll-Driven Animated Grid](https://javascriptweekly.com/link/181428/d076523b1d) – I’m not a huge fan of scroll-driven effects, but this one [does look neat.](https://javascriptweekly.com/link/181429/d076523b1d) Theo Plawinski
+
+📄 [From `instanceof` to `Error.isError` for Safer Error Checking](https://javascriptweekly.com/link/181461/d076523b1d) Matt Smith
+
+📄 [Proxying Fetch Requests in Server-Side JavaScript](https://javascriptweekly.com/link/181462/d076523b1d) Nicholas C. Zakas
+
+▶️ [Why I Chose Electron Over Native (And I’d Do It Again)](https://javascriptweekly.com/link/181430/d076523b1d) Syntax Podcast
+
+📄 [Using React Native to Create Meta Quest VR Apps](https://javascriptweekly.com/link/181425/d076523b1d) Chludziński, Jaworski, and Leyendecker
+
+🛠 Code & Tools
+
+[txiki.js: A Small, Powerful JavaScript Runtime](https://javascriptweekly.com/link/181441/d076523b1d "txikijs.org") — Stands on the shoulders of QuickJS-ng and libuv and aims to support the latest ECMAScript features while being [WinterTC](https://javascriptweekly.com/link/181478/d076523b1d) compliant. [GitHub repo.](https://javascriptweekly.com/link/181442/d076523b1d)
+
+Saúl Ibarra Corretgé
+
+[numpy-ts: A NumPy Implementation for TypeScript](https://javascriptweekly.com/link/181431/d076523b1d "numpyts.dev") — A recreation of [NumPy](https://javascriptweekly.com/link/181432/d076523b1d), a fundamental piece of the Python scientific computing ecosystem, that works in the browser, Node, Bun, and Deno. 94% of NumPy’s API is covered so far and there’s [an online playground](https://javascriptweekly.com/link/181433/d076523b1d) to give it a try.
+
+Nicolas Dupont
+
+[Ship Real-Time Features Without Real-Time Complexity](https://javascriptweekly.com/link/181434/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres: hypertables, 95% compression, continuous aggregates. Run analytics on live data. [Try free](https://javascriptweekly.com/link/181434/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Yoopta Editor 6.0: A Headless Rich Text Editor for React](https://javascriptweekly.com/link/181435/d076523b1d "yoopta.dev") — MIT-licensed library for creating block-based, Notion-style rich text editing experiences. It’s headless at heart, but comes with a variety of UI components to get started fast. [The playground](https://javascriptweekly.com/link/181436/d076523b1d) offers a live example.
+
+Akhmed Ibragimov
+
+[AdonisJS v7 Released: 'Batteries-Included' Node.js Framework](https://javascriptweekly.com/link/181437/d076523b1d "adonisjs.com") — A popular framework that includes auth, ORM, queues, testing, etc. With v7 comes [an all new web site](https://javascriptweekly.com/link/181438/d076523b1d), OpenTelemetry integration, new starter kits to rapidly build new apps, and more.
+
+Harminder Virk
+
+🎨 [Color Thief 3.0: Grab Color Palettes from Images](https://javascriptweekly.com/link/181439/d076523b1d "lokeshdhakar.com") — Given an image, this uses `canvas` to return a list of the dominant colors. Works in browsers or Node. Now with OKLCH support, Web Worker offloading, ‘live extraction’ for video, canvas and image elements, and more. [GitHub repo.](https://javascriptweekly.com/link/181440/d076523b1d)
+
+Lokesh Dhakar
+
+📊 [ng2-charts: Chart.js-Based Charting Library for Angular](https://javascriptweekly.com/link/181443/d076523b1d "valor-software.com") — Now with Angular 20 support.
+
+Valor Labs
+
+[vue-superselect: A Headless Select/Combobox for Vue 3](https://javascriptweekly.com/link/181444/d076523b1d "github.com")
+
+Nemanja Malesija
+
+*   📄 [React PDF 10.4](https://javascriptweekly.com/link/181445/d076523b1d) – Display PDFs in React apps. [v10.4](https://javascriptweekly.com/link/181446/d076523b1d) adds the ability to override colors used in rendering.
+    
+*   🕹️ [JSNES 2.0](https://javascriptweekly.com/link/181447/d076523b1d) – JavaScript NES emulator for browsers and Node. ([Demo.](https://javascriptweekly.com/link/181448/d076523b1d))
+    
+*   [Milkdown 7.19](https://javascriptweekly.com/link/181449/d076523b1d) – Plugin-driven WYSIWYG markdown editor framework.
+    
+*   [Peggy 5.1](https://javascriptweekly.com/link/181450/d076523b1d) – Simple parser generator.
+    
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gdwsmsikbuphb1tyqcm8.jpg)](https://javascriptweekly.com/link/181463/d076523b1d)
+
+*   🎉 Three weeks ago we featured [npmx.dev](https://javascriptweekly.com/link/181464/d076523b1d), a new, fast way to browse and search the official npm registry. Things have got more serious this week with [a full announcement post about the site's alpha release](https://javascriptweekly.com/link/181463/d076523b1d), coupled with a [flurry](https://javascriptweekly.com/link/181465/d076523b1d) of [enthusiastic](https://javascriptweekly.com/link/181466/d076523b1d) [blog](https://javascriptweekly.com/link/181467/d076523b1d) [posts](https://javascriptweekly.com/link/181468/d076523b1d) from around [the community](https://javascriptweekly.com/link/181469/d076523b1d) celebrating the project. I can't remember the last time a JavaScript project attracted so many blog posts at the same time.
+    
+*   [Locutus](https://javascriptweekly.com/link/181451/d076523b1d) is a curious project that offers TypeScript ports of standard libraries from fifteen other programming languages (e.g. PHP, Go, Python, Ruby).
+    
+*   [The results of the _State of React Native 2025_ survey](https://javascriptweekly.com/link/181452/d076523b1d) have been released by Software Mansion and Devographics.
+    
+*   [Detailed notes for performing a TypeScript 5.x to 6.0 migration.](https://javascriptweekly.com/link/181453/d076523b1d) The author suggests it might be handy to feed to an AI agent of your choice.
+    
+*   [An interactive version](https://javascriptweekly.com/link/181470/d076523b1d) of the [famous xkcd comic](https://javascriptweekly.com/link/181471/d076523b1d) about single-person dependencies, courtesy of [p5.js.](https://javascriptweekly.com/link/181472/d076523b1d)
+    
+*   The [Drizzle ORM](https://javascriptweekly.com/link/181473/d076523b1d) team has [joined PlanetScale.](https://javascriptweekly.com/link/181474/d076523b1d)
+    
+*   [A list of little, fun programming languages.](https://javascriptweekly.com/link/181454/d076523b1d)
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/181477/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​775 — March 3, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/775)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/181403/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yd2s7wyaubxm1olt8hnu.jpg)](https://javascriptweekly.com/link/181455/d076523b1d)
+
+[Bun v1.3.10 Released: A Surprisingly Big Update](https://javascriptweekly.com/link/181455/d076523b1d "bun.com") — Bun’s REPL has been completely rewritten with many improvements (both practical and cosmetic), there's a `--compile --target=browser` option for building self-contained HTML files with all JS, CSS, and assets included (ideal for simple JS-powered single page apps), full support for TC39 stage 3 [ES decorators](https://javascriptweekly.com/link/181456/d076523b1d), a faster event loop, barrel import optimization, and more.
+
+Jarred Sumner
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/bd4a72e4.png)](https://javascriptweekly.com/link/181403/d076523b1d)
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://javascriptweekly.com/link/181403/d076523b1d) — Notion, Dropbox, Wiz and LaunchDarkly now use a testing paradigm they can’t work without. Built by former Palantir engineers, Meticulous automatically creates an evolving suite of E2E UI tests, delivering exhaustive coverage with no developer effort.
+
+Meticulous sponsor
+
+[External Import Maps, Today!](https://javascriptweekly.com/link/181457/d076523b1d "lea.verou.me") — Several weeks ago Lea posted about [web dependencies being broken](https://javascriptweekly.com/link/181458/d076523b1d), but now she has a solution. The core technique employed to emulate support for external import maps isn't obvious, despite being simple, but is already [offered by JSPM 4.0.](https://javascriptweekly.com/link/181459/d076523b1d)
+
+Lea Verou
+
+**IN BRIEF:**
+
+* [*The React Foundation* has officially launched](https://javascriptweekly.com/link/181404/d076523b1d) taking over ownership of React, React Native and JSX. It has a board of eight founding members (including Meta) with Seth Webster, former head of React at Meta, as exec director.
+
+* It's not formal yet, but [this preview post reveals how Node.js's release schedule is changing](https://javascriptweekly.com/link/181405/d076523b1d) later this year (one major release per year, every release to be LTS, with no more odd/even distinction).
+
+* 📢 Monthly roundups have landed from [Svelte](https://javascriptweekly.com/link/181406/d076523b1d), [ViteLand / VoidZero](https://javascriptweekly.com/link/181407/d076523b1d), and [Astro.](https://javascriptweekly.com/link/181408/d076523b1d)
+
+* 🔒 The Angular team [explains two recently patched vulnerabilities in Angular.](https://javascriptweekly.com/link/181409/d076523b1d)
+
+* [The Navigation API is now Baseline Newly Available](https://javascriptweekly.com/link/181410/d076523b1d) across all major browsers.
+
+**RELEASES:**
+
+* [Deno 2.7](https://javascriptweekly.com/link/181460/d076523b1d) – The alternative runtime stabilizes Temporal API support, supports Windows on ARM, adds `package.json` `overrides` support, and more.
+
+* [Expo SDK 55](https://javascriptweekly.com/link/181411/d076523b1d) – The popular React Native framework/toolchain.
+
+* [Shiki 4.0](https://javascriptweekly.com/link/181412/d076523b1d) – TextMate grammar powered, VS Code-like syntax highlighter.
+
+* [Angular 21.2](https://javascriptweekly.com/link/181413/d076523b1d), [Mediabunny 1.35](https://javascriptweekly.com/link/181414/d076523b1d), [Neo.mjs 12.0](https://javascriptweekly.com/link/181415/d076523b1d)
+
+📖  Articles and Videos
+
+[Making WebAssembly a First-Class Citizen on the Web](https://javascriptweekly.com/link/181416/d076523b1d "hacks.mozilla.org") — WASM has come a long way but remains tricky to work with on the Web, with even performing a `console.log` requiring a lot of glue code. Ryan makes the case that the [WebAssembly Component Model](https://javascriptweekly.com/link/181480/d076523b1d) could change this by letting modules bind directly to browser APIs, load directly from `script` tags, and more.
+
+Ryan Hunt
+
+[We Deserve a Better Streams API for JavaScript](https://javascriptweekly.com/link/181479/d076523b1d "blog.cloudflare.com") — *“I’m publishing this to start a conversation,”* says James who shows off an alternative approach to Web streams that works around the current standard’s *“fundamental usability and performance issues.”* The end results and James' extensive experience in this area make for a compelling argument.
+
+James M Snell
+
+[`npx workos:` An AI Agent That Writes Auth Directly Into Your Codebase](https://javascriptweekly.com/link/181419/d076523b1d "workos.com") — Reads your project, detects your framework, writes the integration, then typechecks and fixes its own build errors.
+
+WorkOS sponsor
+
+[The Illusion of JavaScript-Powered 'DRM'](https://javascriptweekly.com/link/181423/d076523b1d "www.therantydev.com") — An explanation of why building a DRM/copy protection system purely in JavaScript (rather than [EME](https://javascriptweekly.com/link/181424/d076523b1d)-based approaches) is ultimately just *“sophisticated friction”*, at best, and uses a tale of breaking a (NSFW) platform’s protection to make the point.
+
+Ahmed Arat
+
+[How Cloudflare Rebuilt Next.js with AI in a Week](https://javascriptweekly.com/link/181420/d076523b1d "blog.cloudflare.com") — [vinext](https://javascriptweekly.com/link/181421/d076523b1d) is an experimental, Vite-based reimplementation of Next.js’s API surface, letting existing apps run in more environments, though with [some tradeoffs.](https://javascriptweekly.com/link/181422/d076523b1d)
+
+Steve Faulkner (Cloudflare)
+
+[Using Val Town to Get Me to the Movies](https://javascriptweekly.com/link/181417/d076523b1d "www.raymondcamden.com") — [Val Town](https://javascriptweekly.com/link/181418/d076523b1d) is a fantastic platform for quickly writing and deploying JavaScript-powered services. Like this one!
+
+Raymond Camden
+
+📄 [Sticky Grid Scroll: Building a Scroll-Driven Animated Grid](https://javascriptweekly.com/link/181428/d076523b1d) – I’m not a huge fan of scroll-driven effects, but this one [does look neat.](https://javascriptweekly.com/link/181429/d076523b1d) Theo Plawinski
+
+📄 [From `instanceof` to `Error.isError` for Safer Error Checking](https://javascriptweekly.com/link/181461/d076523b1d) Matt Smith
+
+📄 [Proxying Fetch Requests in Server-Side JavaScript](https://javascriptweekly.com/link/181462/d076523b1d) Nicholas C. Zakas
+
+▶️ [Why I Chose Electron Over Native (And I’d Do It Again)](https://javascriptweekly.com/link/181430/d076523b1d) Syntax Podcast
+
+📄 [Using React Native to Create Meta Quest VR Apps](https://javascriptweekly.com/link/181425/d076523b1d) Chludziński, Jaworski, and Leyendecker
+
+🛠 Code & Tools
+
+[txiki.js: A Small, Powerful JavaScript Runtime](https://javascriptweekly.com/link/181441/d076523b1d "txikijs.org") — Stands on the shoulders of QuickJS-ng and libuv and aims to support the latest ECMAScript features while being [WinterTC](https://javascriptweekly.com/link/181478/d076523b1d) compliant. [GitHub repo.](https://javascriptweekly.com/link/181442/d076523b1d)
+
+Saúl Ibarra Corretgé
+
+[numpy-ts: A NumPy Implementation for TypeScript](https://javascriptweekly.com/link/181431/d076523b1d "numpyts.dev") — A recreation of [NumPy](https://javascriptweekly.com/link/181432/d076523b1d), a fundamental piece of the Python scientific computing ecosystem, that works in the browser, Node, Bun, and Deno. 94% of NumPy’s API is covered so far and there’s [an online playground](https://javascriptweekly.com/link/181433/d076523b1d) to give it a try.
+
+Nicolas Dupont
+
+[Ship Real-Time Features Without Real-Time Complexity](https://javascriptweekly.com/link/181434/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres: hypertables, 95% compression, continuous aggregates. Run analytics on live data. [Try free](https://javascriptweekly.com/link/181434/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Yoopta Editor 6.0: A Headless Rich Text Editor for React](https://javascriptweekly.com/link/181435/d076523b1d "yoopta.dev") — MIT-licensed library for creating block-based, Notion-style rich text editing experiences. It’s headless at heart, but comes with a variety of UI components to get started fast. [The playground](https://javascriptweekly.com/link/181436/d076523b1d) offers a live example.
+
+Akhmed Ibragimov
+
+[AdonisJS v7 Released: 'Batteries-Included' Node.js Framework](https://javascriptweekly.com/link/181437/d076523b1d "adonisjs.com") — A popular framework that includes auth, ORM, queues, testing, etc. With v7 comes [an all new web site](https://javascriptweekly.com/link/181438/d076523b1d), OpenTelemetry integration, new starter kits to rapidly build new apps, and more.
+
+Harminder Virk
+
+🎨 [Color Thief 3.0: Grab Color Palettes from Images](https://javascriptweekly.com/link/181439/d076523b1d "lokeshdhakar.com") — Given an image, this uses `canvas` to return a list of the dominant colors. Works in browsers or Node. Now with OKLCH support, Web Worker offloading, ‘live extraction’ for video, canvas and image elements, and more. [GitHub repo.](https://javascriptweekly.com/link/181440/d076523b1d)
+
+Lokesh Dhakar
+
+📊 [ng2-charts: Chart.js-Based Charting Library for Angular](https://javascriptweekly.com/link/181443/d076523b1d "valor-software.com") — Now with Angular 20 support.
+
+Valor Labs
+
+[vue-superselect: A Headless Select/Combobox for Vue 3](https://javascriptweekly.com/link/181444/d076523b1d "github.com")
+
+Nemanja Malesija
+
+* 📄 [React PDF 10.4](https://javascriptweekly.com/link/181445/d076523b1d) – Display PDFs in React apps. [v10.4](https://javascriptweekly.com/link/181446/d076523b1d) adds the ability to override colors used in rendering.
+
+* 🕹️ [JSNES 2.0](https://javascriptweekly.com/link/181447/d076523b1d) – JavaScript NES emulator for browsers and Node. ([Demo.](https://javascriptweekly.com/link/181448/d076523b1d))
+
+* [Milkdown 7.19](https://javascriptweekly.com/link/181449/d076523b1d) – Plugin-driven WYSIWYG markdown editor framework.
+
+* [Peggy 5.1](https://javascriptweekly.com/link/181450/d076523b1d) – Simple parser generator.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gdwsmsikbuphb1tyqcm8.jpg)](https://javascriptweekly.com/link/181463/d076523b1d)
+
+* 🎉 Three weeks ago we featured [npmx.dev](https://javascriptweekly.com/link/181464/d076523b1d), a new, fast way to browse and search the official npm registry. Things have got more serious this week with [a full announcement post about the site's alpha release](https://javascriptweekly.com/link/181463/d076523b1d), coupled with a [flurry](https://javascriptweekly.com/link/181465/d076523b1d) of [enthusiastic](https://javascriptweekly.com/link/181466/d076523b1d) [blog](https://javascriptweekly.com/link/181467/d076523b1d) [posts](https://javascriptweekly.com/link/181468/d076523b1d) from around [the community](https://javascriptweekly.com/link/181469/d076523b1d) celebrating the project. I can't remember the last time a JavaScript project attracted so many blog posts at the same time.
+
+* [Locutus](https://javascriptweekly.com/link/181451/d076523b1d) is a curious project that offers TypeScript ports of standard libraries from fifteen other programming languages (e.g. PHP, Go, Python, Ruby).
+
+* [The results of the *State of React Native 2025* survey](https://javascriptweekly.com/link/181452/d076523b1d) have been released by Software Mansion and Devographics.
+
+* [Detailed notes for performing a TypeScript 5.x to 6.0 migration.](https://javascriptweekly.com/link/181453/d076523b1d) The author suggests it might be handy to feed to an AI agent of your choice.
+
+* [An interactive version](https://javascriptweekly.com/link/181470/d076523b1d) of the [famous xkcd comic](https://javascriptweekly.com/link/181471/d076523b1d) about single-person dependencies, courtesy of [p5.js.](https://javascriptweekly.com/link/181472/d076523b1d)
+
+* The [Drizzle ORM](https://javascriptweekly.com/link/181473/d076523b1d) team has [joined PlanetScale.](https://javascriptweekly.com/link/181474/d076523b1d)
+
+* [A list of little, fun programming languages.](https://javascriptweekly.com/link/181454/d076523b1d)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/181477/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
