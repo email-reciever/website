@@ -1,0 +1,260 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node 25.8 adds permission model audit mode
+description: Node 25.8 adds permission model audit mode
+date: 星期四 06 晚上 三月 5o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/614
+origin_site: https://nodeweekly.com/issues/614
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node 25.8 adds permission model audit mode" url="https://nodeweekly.com/issues/614" />
+
+<Detail client:only="react">
+	#​614 — March 5, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/614)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/181549/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/i2t89wjk2i4g46i1tkx6.jpg)](https://nodeweekly.com/link/181550/0a4070b383)
+
+[Evolving the Node.js Release Schedule: A Work in Progress](https://nodeweekly.com/link/181550/0a4070b383 "nodejs-org-git-fork-ulisesgascon-release-announcement-openjs.vercel.app") — The Node.js team [has long been discussing](https://nodeweekly.com/link/181551/0a4070b383) shifting Node to a new schedule of one major release per year (instead of two), removing the odd/even distinction, and making every release LTS (with a prior 11 months of alpha/current status). This is a preview post not intended for final publication till April, so things are subject to change ([backup version](https://nodeweekly.com/link/181593/0a4070b383)).
+
+The Node.js Team
+
+💡 A cute side effect of the change will be the latest LTS Node version will match the year. Node 28 will go LTS in 2028, and so on.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/02b2389d.png)](https://nodeweekly.com/link/181549/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/181549/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics.
+
+Memetria sponsor
+
+[Node.js 25.8.0 (Current) Released](https://nodeweekly.com/link/181552/0a4070b383 "nodejs.org") — A typical incremental maintenance release, with the interesting [addition of `--permission-audit`](https://nodeweekly.com/link/181553/0a4070b383) if you want to adopt [the permission model](https://nodeweekly.com/link/181554/0a4070b383), or are debugging failures with it. It enables the permission model in _warning-only_ mode, so it could be a good way to audit your app in advance of enabling the full feature.
+
+Richard Lau
+
+**IN BRIEF:**
+
+*   The OpenJS Foundation has [launched a Node.js upgrade and modernization program](https://nodeweekly.com/link/181555/0a4070b383) aimed at helping _'enterprises move safely off legacy and end-of-life Node.js versions.'_
+    
+*   🌐 The popular [Inquirer.js](https://nodeweekly.com/link/181556/0a4070b383) family of CLI UI components has added [an i18n package](https://nodeweekly.com/link/181557/0a4070b383) for creating prompts in non-English languages.
+    
+*   The [Drizzle ORM](https://nodeweekly.com/link/181558/0a4070b383) team has [joined cloud database provider _PlanetScale_.](https://nodeweekly.com/link/181559/0a4070b383)
+    
+
+[We Deserve a Better Streams API for JavaScript](https://nodeweekly.com/link/181560/0a4070b383 "blog.cloudflare.com") — _“I’m publishing this to start a conversation,”_ says James who shows off an alternative approach to streams working around the current standard’s _“fundamental usability and performance issues.”_ Following the success of this post, James has since [created a PR for Node.js](https://nodeweekly.com/link/181561/0a4070b383) to foster discussion and to demonstrate how his new approach can sit safely alongside the existing implementation.
+
+James M Snell
+
+[Upgrading OpenClaw on NVIDIA's Jetson Nano with Node 22](https://nodeweekly.com/link/181562/0a4070b383 "brtkwr.com") — Mostly interesting to see Node running on NVIDIA’s [tiny AI-focused computer.](https://nodeweekly.com/link/181563/0a4070b383) It took Node _27 hours_ to compile and required a patch to do so.
+
+Bharat Kunwar
+
+[Reliability Infrastructure Hits $5B Valuation](https://nodeweekly.com/link/181564/0a4070b383 "temporal.io") — Temporal’s Series D signals durable execution is becoming core to modern Node and backend systems.
+
+Temporal Technologies sponsor
+
+📄 [Proxying Fetch Requests in Server-Side JavaScript](https://nodeweekly.com/link/181565/0a4070b383) Nicholas C. Zakas
+
+▶️ [Why I Chose Electron Over Native (And I’d Do It Again)](https://nodeweekly.com/link/181566/0a4070b383) Syntax Podcast
+
+🛠 Code & Tools
+
+📄 [VMPrint: Pure JS Typesetting Engine for Perfect PDF Output](https://nodeweekly.com/link/181567/0a4070b383 "github.com") — It’s common to defer to headless Chrome instances for print-to-PDF type work, but VMPrint _“guarantees identical layout given identical input, down to the sub-point position of every glyph.”_ [Here’s a sample PDF.](https://nodeweekly.com/link/181568/0a4070b383) I gave it a test for myself and it seemed to work pretty well.
+
+Cosmic Iron
+
+💰  [Dinero.js 2.0: Create, Calculate, and Format Money Safely](https://nodeweekly.com/link/181569/0a4070b383 "www.dinerojs.com") — An immutable library for expressing monetary values and performing calculations with them. [v2.0](https://nodeweekly.com/link/181570/0a4070b383) is a complete rewrite with a new, fully tree-shakeable functional architecture.
+
+Sarah Dayan
+
+[Bun v1.3.10 Released](https://nodeweekly.com/link/181571/0a4070b383 "bun.com") — A hefty release. Bun’s REPL has been rewritten with many practical and cosmetic improvements, there's a `--compile --target=browser` option for building self-contained HTML files with all assets included, full support for TC39 [ES decorators](https://nodeweekly.com/link/181572/0a4070b383), and more.
+
+Jarred Sumner
+
+[Unbarrelify: Barrel File Removal Tool for JavaScript](https://nodeweekly.com/link/181573/0a4070b383 "github.com") — From the creators of [Knip](https://nodeweekly.com/link/181574/0a4070b383), a barrel file removal tool for JS/TS projects (ESM-only).
+
+WebPro
+
+*   [Fastify 5.8](https://nodeweekly.com/link/181575/0a4070b383) – The fast, low-overhead web framework adds [handler-level timeouts](https://nodeweekly.com/link/181576/0a4070b383) and [Pino](https://nodeweekly.com/link/181577/0a4070b383) v9/v10 compatibility.
+    
+*   🤖 [GramIO 0.7](https://nodeweekly.com/link/181578/0a4070b383) – Telegram Bot API framework. Now supporting the just-updated [Telegram Bot API 9.5](https://nodeweekly.com/link/181579/0a4070b383).
+    
+*   🎵 [mp3tag.js 3.16](https://nodeweekly.com/link/181580/0a4070b383) – Read, write, and remove ID3 metadata on MP3, MP4/M4A, AIFF, and AAC files.
+    
+*   [sax-js 1.5](https://nodeweekly.com/link/181581/0a4070b383) – Isaac Z Schlueter's SAX-style XML and HTML parser.
+    
+*   [jose 6.2](https://nodeweekly.com/link/181582/0a4070b383) – JSON Object Signing and Encryption library.
+    
+*   [NodeBB 4.9](https://nodeweekly.com/link/181583/0a4070b383) – Node.js based forum software.
+    
+*   [AVA 7.0](https://nodeweekly.com/link/181584/0a4070b383) – A popular Node.js test runner.
+    
+
+📰 Classifieds
+
+Next.js on Node.js? Here's How to Get Readable Stack Traces with [Sentry](https://nodeweekly.com/link/181585/0a4070b383).
+
+* * *
+
+📖 Master **Visual Studio Code**, and learn [over 150 essential tips in this screenshot-packed guide](https://nodeweekly.com/link/181586/0a4070b383) from Louis Lazaris.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/snk0uemn0p9c50mlzi9d.jpg)](https://nodeweekly.com/link/181587/0a4070b383)
+
+*   Patreon has shared [the tale of its seven year migration from JavaScript to TypeScript.](https://nodeweekly.com/link/181587/0a4070b383) There's a focus on tooling choices that might be useful if you're making a similar shift.
+    
+*   [npmx.dev](https://nodeweekly.com/link/181588/0a4070b383) is a new, fast way to browse and search the official npm registry that's gone into _alpha_ this week with [a post running through all the details.](https://nodeweekly.com/link/181589/0a4070b383)
+    
+*   [Packaging a Gleam App Into a Single Executable](https://nodeweekly.com/link/181590/0a4070b383) shows how non-JavaScript languages can still benefit from the executable building capabilities of Deno, Bun, and Node.
+    
+*   Marianne Feng [hacked her old Kindle to display bus arrival times](https://nodeweekly.com/link/181591/0a4070b383) with Node playing a role.
+    
+*   📉 [Uptime Kuma](https://nodeweekly.com/link/181592/0a4070b383) is an impressive Node.js-powered self-hosted uptime monitoring tool we've begun using ourselves. It's easily deployed via Docker, if you prefer.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​614 — March 5, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/614)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/181549/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/i2t89wjk2i4g46i1tkx6.jpg)](https://nodeweekly.com/link/181550/0a4070b383)
+
+[Evolving the Node.js Release Schedule: A Work in Progress](https://nodeweekly.com/link/181550/0a4070b383 "nodejs-org-git-fork-ulisesgascon-release-announcement-openjs.vercel.app") — The Node.js team [has long been discussing](https://nodeweekly.com/link/181551/0a4070b383) shifting Node to a new schedule of one major release per year (instead of two), removing the odd/even distinction, and making every release LTS (with a prior 11 months of alpha/current status). This is a preview post not intended for final publication till April, so things are subject to change ([backup version](https://nodeweekly.com/link/181593/0a4070b383)).
+
+The Node.js Team
+
+💡 A cute side effect of the change will be the latest LTS Node version will match the year. Node 28 will go LTS in 2028, and so on.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/02b2389d.png)](https://nodeweekly.com/link/181549/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/181549/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics.
+
+Memetria sponsor
+
+[Node.js 25.8.0 (Current) Released](https://nodeweekly.com/link/181552/0a4070b383 "nodejs.org") — A typical incremental maintenance release, with the interesting [addition of `--permission-audit`](https://nodeweekly.com/link/181553/0a4070b383) if you want to adopt [the permission model](https://nodeweekly.com/link/181554/0a4070b383), or are debugging failures with it. It enables the permission model in *warning-only* mode, so it could be a good way to audit your app in advance of enabling the full feature.
+
+Richard Lau
+
+**IN BRIEF:**
+
+* The OpenJS Foundation has [launched a Node.js upgrade and modernization program](https://nodeweekly.com/link/181555/0a4070b383) aimed at helping *'enterprises move safely off legacy and end-of-life Node.js versions.'*
+
+* 🌐 The popular [Inquirer.js](https://nodeweekly.com/link/181556/0a4070b383) family of CLI UI components has added [an i18n package](https://nodeweekly.com/link/181557/0a4070b383) for creating prompts in non-English languages.
+
+* The [Drizzle ORM](https://nodeweekly.com/link/181558/0a4070b383) team has [joined cloud database provider *PlanetScale*.](https://nodeweekly.com/link/181559/0a4070b383)
+
+[We Deserve a Better Streams API for JavaScript](https://nodeweekly.com/link/181560/0a4070b383 "blog.cloudflare.com") — *“I’m publishing this to start a conversation,”* says James who shows off an alternative approach to streams working around the current standard’s *“fundamental usability and performance issues.”* Following the success of this post, James has since [created a PR for Node.js](https://nodeweekly.com/link/181561/0a4070b383) to foster discussion and to demonstrate how his new approach can sit safely alongside the existing implementation.
+
+James M Snell
+
+[Upgrading OpenClaw on NVIDIA's Jetson Nano with Node 22](https://nodeweekly.com/link/181562/0a4070b383 "brtkwr.com") — Mostly interesting to see Node running on NVIDIA’s [tiny AI-focused computer.](https://nodeweekly.com/link/181563/0a4070b383) It took Node *27 hours* to compile and required a patch to do so.
+
+Bharat Kunwar
+
+[Reliability Infrastructure Hits $5B Valuation](https://nodeweekly.com/link/181564/0a4070b383 "temporal.io") — Temporal’s Series D signals durable execution is becoming core to modern Node and backend systems.
+
+Temporal Technologies sponsor
+
+📄 [Proxying Fetch Requests in Server-Side JavaScript](https://nodeweekly.com/link/181565/0a4070b383) Nicholas C. Zakas
+
+▶️ [Why I Chose Electron Over Native (And I’d Do It Again)](https://nodeweekly.com/link/181566/0a4070b383) Syntax Podcast
+
+🛠 Code & Tools
+
+📄 [VMPrint: Pure JS Typesetting Engine for Perfect PDF Output](https://nodeweekly.com/link/181567/0a4070b383 "github.com") — It’s common to defer to headless Chrome instances for print-to-PDF type work, but VMPrint *“guarantees identical layout given identical input, down to the sub-point position of every glyph.”* [Here’s a sample PDF.](https://nodeweekly.com/link/181568/0a4070b383) I gave it a test for myself and it seemed to work pretty well.
+
+Cosmic Iron
+
+💰  [Dinero.js 2.0: Create, Calculate, and Format Money Safely](https://nodeweekly.com/link/181569/0a4070b383 "www.dinerojs.com") — An immutable library for expressing monetary values and performing calculations with them. [v2.0](https://nodeweekly.com/link/181570/0a4070b383) is a complete rewrite with a new, fully tree-shakeable functional architecture.
+
+Sarah Dayan
+
+[Bun v1.3.10 Released](https://nodeweekly.com/link/181571/0a4070b383 "bun.com") — A hefty release. Bun’s REPL has been rewritten with many practical and cosmetic improvements, there's a `--compile --target=browser` option for building self-contained HTML files with all assets included, full support for TC39 [ES decorators](https://nodeweekly.com/link/181572/0a4070b383), and more.
+
+Jarred Sumner
+
+[Unbarrelify: Barrel File Removal Tool for JavaScript](https://nodeweekly.com/link/181573/0a4070b383 "github.com") — From the creators of [Knip](https://nodeweekly.com/link/181574/0a4070b383), a barrel file removal tool for JS/TS projects (ESM-only).
+
+WebPro
+
+* [Fastify 5.8](https://nodeweekly.com/link/181575/0a4070b383) – The fast, low-overhead web framework adds [handler-level timeouts](https://nodeweekly.com/link/181576/0a4070b383) and [Pino](https://nodeweekly.com/link/181577/0a4070b383) v9/v10 compatibility.
+
+* 🤖 [GramIO 0.7](https://nodeweekly.com/link/181578/0a4070b383) – Telegram Bot API framework. Now supporting the just-updated [Telegram Bot API 9.5](https://nodeweekly.com/link/181579/0a4070b383).
+
+* 🎵 [mp3tag.js 3.16](https://nodeweekly.com/link/181580/0a4070b383) – Read, write, and remove ID3 metadata on MP3, MP4/M4A, AIFF, and AAC files.
+
+* [sax-js 1.5](https://nodeweekly.com/link/181581/0a4070b383) – Isaac Z Schlueter's SAX-style XML and HTML parser.
+
+* [jose 6.2](https://nodeweekly.com/link/181582/0a4070b383) – JSON Object Signing and Encryption library.
+
+* [NodeBB 4.9](https://nodeweekly.com/link/181583/0a4070b383) – Node.js based forum software.
+
+* [AVA 7.0](https://nodeweekly.com/link/181584/0a4070b383) – A popular Node.js test runner.
+
+📰 Classifieds
+
+Next.js on Node.js? Here's How to Get Readable Stack Traces with [Sentry](https://nodeweekly.com/link/181585/0a4070b383).
+
+***
+
+📖 Master **Visual Studio Code**, and learn [over 150 essential tips in this screenshot-packed guide](https://nodeweekly.com/link/181586/0a4070b383) from Louis Lazaris.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/snk0uemn0p9c50mlzi9d.jpg)](https://nodeweekly.com/link/181587/0a4070b383)
+
+* Patreon has shared [the tale of its seven year migration from JavaScript to TypeScript.](https://nodeweekly.com/link/181587/0a4070b383) There's a focus on tooling choices that might be useful if you're making a similar shift.
+
+* [npmx.dev](https://nodeweekly.com/link/181588/0a4070b383) is a new, fast way to browse and search the official npm registry that's gone into *alpha* this week with [a post running through all the details.](https://nodeweekly.com/link/181589/0a4070b383)
+
+* [Packaging a Gleam App Into a Single Executable](https://nodeweekly.com/link/181590/0a4070b383) shows how non-JavaScript languages can still benefit from the executable building capabilities of Deno, Bun, and Node.
+
+* Marianne Feng [hacked her old Kindle to display bus arrival times](https://nodeweekly.com/link/181591/0a4070b383) with Node playing a role.
+
+* 📉 [Uptime Kuma](https://nodeweekly.com/link/181592/0a4070b383) is an impressive Node.js-powered self-hosted uptime monitoring tool we've begun using ourselves. It's easily deployed via Docker, if you prefer.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
