@@ -1,0 +1,325 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: TypeScript 6.0 RC and Solid 2.0 beta arrive
+description: TypeScript 6.0 RC and Solid 2.0 beta arrive
+date: 星期二 08 晚上 三月 10o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/776
+origin_site: https://javascriptweekly.com/issues/776
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="TypeScript 6.0 RC and Solid 2.0 beta arrive" url="https://javascriptweekly.com/issues/776" />
+
+<Detail client:only="react">
+	#​776 — March 10, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/776)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/181802/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/r5xkaj47ci4qmdvsdvww.jpg)](https://javascriptweekly.com/link/181868/d076523b1d)
+
+[Solid v2.0.0 Beta: The `&lt;Suspense>` is Over](https://javascriptweekly.com/link/181868/d076523b1d "github.com") — After a long experimental phase, Solid 2.0’s first beta lands with first-class async support where computations can return Promises or async iterables, and the reactive graph suspends and resumes around them natively. `&lt;Suspense>` is retired in favor of `&lt;Loading>` for initial renders, and mutations get a first-class `action()` primitive with optimistic support. For existing users the breaking changes are substantial, but there’s [a migration guide](https://javascriptweekly.com/link/181871/d076523b1d).
+
+Ryan Carniato
+
+💡 Ryan also had an AI write up [the architectural case for Solid 2.0](https://javascriptweekly.com/link/181872/d076523b1d), framing fine-grained reactivity as the only sustainable model for an AI-agent world. He also did [▶️ a livestream](https://javascriptweekly.com/link/181873/d076523b1d) where he tried to _break_ Solid 2.0 by pushing against its limits.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/3e9972d1.png)](https://javascriptweekly.com/link/181802/d076523b1d)
+
+[The Most Loved JavaScript Course Year After Year](https://javascriptweekly.com/link/181802/d076523b1d "frontendmasters.com") — JavaScript: The Hard Parts is rated 4.92 on average by thousands of developers. Build real mental models for how JavaScript works, from execution context and closures to async behavior and modern language features.
+
+Frontend Masters sponsor
+
+[TypeScript 6.0 Release Candidate](https://javascriptweekly.com/link/181803/d076523b1d "devblogs.microsoft.com") — v6.0 is primarily a stepping stone to the eventual Go-powered native TypeScript 7.0 due later this year and all the necessary `tsconfig.json` changes will put you in a good position for the future. There are only [a few small changes](https://javascriptweekly.com/link/181804/d076523b1d) in the RC vs the recent beta.
+
+Daniel Rosenwasser (Microsoft)
+
+**IN BRIEF:**
+
+*   [TC39's 113th meeting has just started](https://javascriptweekly.com/link/181805/d076523b1d) with the topic of [taking the Temporal API to stage 4](https://javascriptweekly.com/link/181806/d076523b1d) high on the agenda.
+    
+*   📊 [Minification Benchmarks](https://javascriptweekly.com/link/181807/d076523b1d) is a frequently updated comparison of different JavaScript minifiers. [SWC](https://javascriptweekly.com/link/181808/d076523b1d) is in the lead overall, but [Minify](https://javascriptweekly.com/link/181809/d076523b1d) and [Oxc's](https://javascriptweekly.com/link/181810/d076523b1d) minifier aren't far behind and are much faster.
+    
+*   [11ty (Eleventy)](https://javascriptweekly.com/link/181811/d076523b1d) started life as a Node.js-powered static site generator, but now it's [becoming _Build Awesome_](https://javascriptweekly.com/link/181812/d076523b1d), a project under the [Font Awesome](https://javascriptweekly.com/link/181813/d076523b1d) umbrella.
+    
+*   🇫🇷 [The dotJS conference](https://javascriptweekly.com/link/181814/d076523b1d) is back in Paris this September 1. [Its CFP](https://javascriptweekly.com/link/181815/d076523b1d) is open until April 28.
+    
+
+**RELEASES:**
+
+*   [Node.js 25.8.0 (Current)](https://javascriptweekly.com/link/181816/d076523b1d) – Adds a [`--permission-audit` option](https://javascriptweekly.com/link/181817/d076523b1d) to run Node's [permission model](https://javascriptweekly.com/link/181818/d076523b1d) in a warning-only mode.
+    
+*   [Astro 6.0](https://javascriptweekly.com/link/181874/d076523b1d) – `astro dev` is now using Vite’s new Environment API so you can now run your exact prod runtime during dev. Also, a new Fonts API takes care of custom fonts.
+    
+*   [Knockout 3.5.2](https://javascriptweekly.com/link/181820/d076523b1d) – The classic MVVM library gets its first update in six years!
+    
+*   [ESLint v10.0.3](https://javascriptweekly.com/link/181821/d076523b1d) and [ESLint v9.39.4](https://javascriptweekly.com/link/181822/d076523b1d)
+    
+*   [Ember 6.11](https://javascriptweekly.com/link/181823/d076523b1d), [Ionic Framework 8.8](https://javascriptweekly.com/link/181824/d076523b1d), [React Native 0.85 RC.0](https://javascriptweekly.com/link/181825/d076523b1d), [pnpm v10.32.0](https://javascriptweekly.com/link/181826/d076523b1d), [Recharts 3.8](https://javascriptweekly.com/link/181827/d076523b1d), [Jest 30.3](https://javascriptweekly.com/link/181828/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[Seven Years to TypeScript: Migrating 11,000 Files at Patreon](https://javascriptweekly.com/link/181829/d076523b1d "www.patreon.com") — The popular creator platform had a million lines of JavaScript on its hands, and while adopting TypeScript on new code was going well, converting _all_ their code was a daunting task. This retrospective covers the tools and techniques involved.
+
+Gavy Aggarwal (Patreon)
+
+[Building a Real-Time Todo App with Jazz and Vue 3](https://javascriptweekly.com/link/181830/d076523b1d "alexop.dev") — [Jazz](https://javascriptweekly.com/link/181831/d076523b1d) is a distributed database with real-time syncing and local reactive JSON state.
+
+Alexander Opalic
+
+[Next.js Source Maps: From Minified Chunks to Readable Stack Traces](https://javascriptweekly.com/link/181832/d076523b1d "blog.sentry.io") — Your stack traces shouldn't point to random chunk files. Learn how to wire up source maps so Sentry shows the code you actually wrote.
+
+Sentry sponsor
+
+[A Tale of Stealing `npm` Publish Tokens by Opening a GitHub Issue](https://javascriptweekly.com/link/181833/d076523b1d "neciudan.dev") — A repo had an AI-powered issue triage system that ran when any issue was opened, and the issue’s title was fed directly into the prompt… and that was just step one of the three-stage attack explained here.
+
+Neciu Dan
+
+[Wikipedia Hit by Self-Propagating JavaScript Worm](https://javascriptweekly.com/link/181834/d076523b1d "www.bleepingcomputer.com") — A writeup of how a dormant script, accidentally triggered by a Wikimedia employee, exploited a shared global script and vandalized nearly 4,000 pages on Wikipedia’s _Meta-Wiki_.
+
+Lawrence Abrams (Bleeping Computer)
+
+📄 [How to Decode a VIN in JavaScript](https://javascriptweekly.com/link/181835/d076523b1d) – VINs ([Vehicle Identification Numbers](https://javascriptweekly.com/link/181836/d076523b1d)) are standardized codes assigned to various types of motor vehicle. Cardog
+
+📄 [Building Async Page Transitions in Vanilla JavaScript](https://javascriptweekly.com/link/181837/d076523b1d) Valentin Mor
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/zwpikapn5kjjerntvqwg.jpg)](https://javascriptweekly.com/link/181838/d076523b1d)
+
+[RevoGrid: High-Performance Data Grid Component](https://javascriptweekly.com/link/181838/d076523b1d "rv-grid.com") — A high-performance data grid control built for massive datasets. Integrates with Vue, Angular, React, Svelte, or can be used from vanilla JS. [Live demo](https://javascriptweekly.com/link/181839/d076523b1d) and [GitHub repo.](https://javascriptweekly.com/link/181840/d076523b1d)
+
+Revolist OU
+
+[Clerk Core 3: Redesigned Hooks, Smaller Bundles, Agent-Ready APIs](https://javascriptweekly.com/link/181842/d076523b1d "go.clerk.com") — Redesigned useSignIn, useSignUp, and useCheckout hooks, ~50KB bundle savings, and keyless mode extended to TanStack Start, Astro, and React Router.
+
+Clerk sponsor
+
+[ArkType 2.2: Use Your TypeScript Types as Runtime Validators](https://javascriptweekly.com/link/181841/d076523b1d "arktype.io") — A TypeScript-first validation library where types and validators are the same thing. Write a type once and it becomes both the static type and the runtime validator. In v2.2, `type.fn` brings runtime-validated _functions_, checking inputs and return values automatically.
+
+ArkType
+
+[TinyBase 8.0: A Reactive Data Store for Local-First Apps](https://javascriptweekly.com/link/181843/d076523b1d "tinybase.org") — A reactive data store and sync engine that can be used as the entire backend for many types of app. It can stand alone or [integrate with all sorts of things](https://javascriptweekly.com/link/181844/d076523b1d) like cloud storage, client-side stores, SQL databases, etc. [v8.0](https://javascriptweekly.com/link/181845/d076523b1d) adds a middleware feature and the ability to store objects and arrays in its ‘cells’.
+
+James Pearce
+
+📄 [VMPrint: Pure JS Typesetting Engine for Perfect PDF Output](https://javascriptweekly.com/link/181846/d076523b1d "github.com") — It’s common to defer to headless Chrome instances for print-to-PDF type work, but VMPrint _“guarantees identical layout given identical input, down to the sub-point position of every glyph.”_ [Here’s a sample PDF.](https://javascriptweekly.com/link/181847/d076523b1d)
+
+Cosmic Iron
+
+*   [SQLite JS 1.3](https://javascriptweekly.com/link/181848/d076523b1d) – Write custom SQLite functions in JavaScript.
+    
+*   [Heapify 1.0](https://javascriptweekly.com/link/181849/d076523b1d) – Fast JavaScript priority queue, implemented using a binary heap.
+    
+*   📺 [OpenPlayer.js 3.0](https://javascriptweekly.com/link/181850/d076523b1d) – Modular, tree-shakeable HTML5 media player.
+    
+*   [Emittery 2.0](https://javascriptweekly.com/link/181851/d076523b1d) – Sindre Sorhus's simple, modern async event emitter.
+    
+*   [Svelte Sonner 1.1](https://javascriptweekly.com/link/181852/d076523b1d) – Toast notification component for Svelte apps.
+    
+*   📄 [EmbedPDF 2.8](https://javascriptweekly.com/link/181853/d076523b1d) – Framework-agnostic JavaScript PDF viewer.
+    
+*   [Tabulator 6.4](https://javascriptweekly.com/link/181854/d076523b1d) – Interactive data tables for JavaScript apps.
+    
+*   🕹️ [melonJS 18.0](https://javascriptweekly.com/link/181855/d076523b1d) – Lightweight HTML5 2D game engine.
+    
+*   [flatted 3.4](https://javascriptweekly.com/link/181856/d076523b1d) – Fast, minimal circular JSON parser.
+    
+*   [Poku 4.0](https://javascriptweekly.com/link/181857/d076523b1d) – Cross-platform test runner.
+    
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/181858/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+* * *
+
+[Trigger.dev](https://javascriptweekly.com/link/181859/d076523b1d) handles queues, retries, and long-running tasks so you can build production-ready agents and TypeScript workflows reliably at scale.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/sumcsjstjbwnmu1c6nuq.jpg)](https://javascriptweekly.com/link/181860/d076523b1d)
+
+*   It's been eight years since we last mentioned [JSLinux](https://javascriptweekly.com/link/181860/d076523b1d), [Fabrice Bellard](https://javascriptweekly.com/link/181861/d076523b1d)'s JavaScript-powered Linux VM that runs in the browser. He's still working on it, and as of this week it supports x86\_64, AVX-512 and APX.
+    
+    Head into [a full x86\_64 Alpine Linux environment](https://javascriptweekly.com/link/181862/d076523b1d), and start using Git, Node, Ruby, Perl, Python, and more, right away. Hacker News users [discussed some use cases](https://javascriptweekly.com/link/181863/d076523b1d) for it.
+    
+    [The tech behind JSLinux is explained here](https://javascriptweekly.com/link/181864/d076523b1d) with the biggest limitation being how its Internet connection works, going through a 40KB/s capped proxy.
+    
+*   Did you know you can [use newline and tab characters in URLs](https://javascriptweekly.com/link/181865/d076523b1d) in HTML and they'll be ignored?
+    
+*   How long does it take to [compile Node.js on NVIDIA's tiny Jetson Nano device?](https://javascriptweekly.com/link/181866/d076523b1d) About 27 hours.
+    
+*   [How to recreate the Flappy Bird game](https://javascriptweekly.com/link/181867/d076523b1d) with CSS and no JavaScript at all.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/181870/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​776 — March 10, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/776)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/181802/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/r5xkaj47ci4qmdvsdvww.jpg)](https://javascriptweekly.com/link/181868/d076523b1d)
+
+[Solid v2.0.0 Beta: The `&lt;Suspense>` is Over](https://javascriptweekly.com/link/181868/d076523b1d "github.com") — After a long experimental phase, Solid 2.0’s first beta lands with first-class async support where computations can return Promises or async iterables, and the reactive graph suspends and resumes around them natively. `&lt;Suspense>` is retired in favor of `&lt;Loading>` for initial renders, and mutations get a first-class `action()` primitive with optimistic support. For existing users the breaking changes are substantial, but there’s [a migration guide](https://javascriptweekly.com/link/181871/d076523b1d).
+
+Ryan Carniato
+
+💡 Ryan also had an AI write up [the architectural case for Solid 2.0](https://javascriptweekly.com/link/181872/d076523b1d), framing fine-grained reactivity as the only sustainable model for an AI-agent world. He also did [▶️ a livestream](https://javascriptweekly.com/link/181873/d076523b1d) where he tried to *break* Solid 2.0 by pushing against its limits.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/3e9972d1.png)](https://javascriptweekly.com/link/181802/d076523b1d)
+
+[The Most Loved JavaScript Course Year After Year](https://javascriptweekly.com/link/181802/d076523b1d "frontendmasters.com") — JavaScript: The Hard Parts is rated 4.92 on average by thousands of developers. Build real mental models for how JavaScript works, from execution context and closures to async behavior and modern language features.
+
+Frontend Masters sponsor
+
+[TypeScript 6.0 Release Candidate](https://javascriptweekly.com/link/181803/d076523b1d "devblogs.microsoft.com") — v6.0 is primarily a stepping stone to the eventual Go-powered native TypeScript 7.0 due later this year and all the necessary `tsconfig.json` changes will put you in a good position for the future. There are only [a few small changes](https://javascriptweekly.com/link/181804/d076523b1d) in the RC vs the recent beta.
+
+Daniel Rosenwasser (Microsoft)
+
+**IN BRIEF:**
+
+* [TC39's 113th meeting has just started](https://javascriptweekly.com/link/181805/d076523b1d) with the topic of [taking the Temporal API to stage 4](https://javascriptweekly.com/link/181806/d076523b1d) high on the agenda.
+
+* 📊 [Minification Benchmarks](https://javascriptweekly.com/link/181807/d076523b1d) is a frequently updated comparison of different JavaScript minifiers. [SWC](https://javascriptweekly.com/link/181808/d076523b1d) is in the lead overall, but [Minify](https://javascriptweekly.com/link/181809/d076523b1d) and [Oxc's](https://javascriptweekly.com/link/181810/d076523b1d) minifier aren't far behind and are much faster.
+
+* [11ty (Eleventy)](https://javascriptweekly.com/link/181811/d076523b1d) started life as a Node.js-powered static site generator, but now it's [becoming *Build Awesome*](https://javascriptweekly.com/link/181812/d076523b1d), a project under the [Font Awesome](https://javascriptweekly.com/link/181813/d076523b1d) umbrella.
+
+* 🇫🇷 [The dotJS conference](https://javascriptweekly.com/link/181814/d076523b1d) is back in Paris this September 1. [Its CFP](https://javascriptweekly.com/link/181815/d076523b1d) is open until April 28.
+
+**RELEASES:**
+
+* [Node.js 25.8.0 (Current)](https://javascriptweekly.com/link/181816/d076523b1d) – Adds a [`--permission-audit` option](https://javascriptweekly.com/link/181817/d076523b1d) to run Node's [permission model](https://javascriptweekly.com/link/181818/d076523b1d) in a warning-only mode.
+
+* [Astro 6.0](https://javascriptweekly.com/link/181874/d076523b1d) – `astro dev` is now using Vite’s new Environment API so you can now run your exact prod runtime during dev. Also, a new Fonts API takes care of custom fonts.
+
+* [Knockout 3.5.2](https://javascriptweekly.com/link/181820/d076523b1d) – The classic MVVM library gets its first update in six years!
+
+* [ESLint v10.0.3](https://javascriptweekly.com/link/181821/d076523b1d) and [ESLint v9.39.4](https://javascriptweekly.com/link/181822/d076523b1d)
+
+* [Ember 6.11](https://javascriptweekly.com/link/181823/d076523b1d), [Ionic Framework 8.8](https://javascriptweekly.com/link/181824/d076523b1d), [React Native 0.85 RC.0](https://javascriptweekly.com/link/181825/d076523b1d), [pnpm v10.32.0](https://javascriptweekly.com/link/181826/d076523b1d), [Recharts 3.8](https://javascriptweekly.com/link/181827/d076523b1d), [Jest 30.3](https://javascriptweekly.com/link/181828/d076523b1d)
+
+📖  Articles and Videos
+
+[Seven Years to TypeScript: Migrating 11,000 Files at Patreon](https://javascriptweekly.com/link/181829/d076523b1d "www.patreon.com") — The popular creator platform had a million lines of JavaScript on its hands, and while adopting TypeScript on new code was going well, converting *all* their code was a daunting task. This retrospective covers the tools and techniques involved.
+
+Gavy Aggarwal (Patreon)
+
+[Building a Real-Time Todo App with Jazz and Vue 3](https://javascriptweekly.com/link/181830/d076523b1d "alexop.dev") — [Jazz](https://javascriptweekly.com/link/181831/d076523b1d) is a distributed database with real-time syncing and local reactive JSON state.
+
+Alexander Opalic
+
+[Next.js Source Maps: From Minified Chunks to Readable Stack Traces](https://javascriptweekly.com/link/181832/d076523b1d "blog.sentry.io") — Your stack traces shouldn't point to random chunk files. Learn how to wire up source maps so Sentry shows the code you actually wrote.
+
+Sentry sponsor
+
+[A Tale of Stealing `npm` Publish Tokens by Opening a GitHub Issue](https://javascriptweekly.com/link/181833/d076523b1d "neciudan.dev") — A repo had an AI-powered issue triage system that ran when any issue was opened, and the issue’s title was fed directly into the prompt… and that was just step one of the three-stage attack explained here.
+
+Neciu Dan
+
+[Wikipedia Hit by Self-Propagating JavaScript Worm](https://javascriptweekly.com/link/181834/d076523b1d "www.bleepingcomputer.com") — A writeup of how a dormant script, accidentally triggered by a Wikimedia employee, exploited a shared global script and vandalized nearly 4,000 pages on Wikipedia’s *Meta-Wiki*.
+
+Lawrence Abrams (Bleeping Computer)
+
+📄 [How to Decode a VIN in JavaScript](https://javascriptweekly.com/link/181835/d076523b1d) – VINs ([Vehicle Identification Numbers](https://javascriptweekly.com/link/181836/d076523b1d)) are standardized codes assigned to various types of motor vehicle. Cardog
+
+📄 [Building Async Page Transitions in Vanilla JavaScript](https://javascriptweekly.com/link/181837/d076523b1d) Valentin Mor
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/zwpikapn5kjjerntvqwg.jpg)](https://javascriptweekly.com/link/181838/d076523b1d)
+
+[RevoGrid: High-Performance Data Grid Component](https://javascriptweekly.com/link/181838/d076523b1d "rv-grid.com") — A high-performance data grid control built for massive datasets. Integrates with Vue, Angular, React, Svelte, or can be used from vanilla JS. [Live demo](https://javascriptweekly.com/link/181839/d076523b1d) and [GitHub repo.](https://javascriptweekly.com/link/181840/d076523b1d)
+
+Revolist OU
+
+[Clerk Core 3: Redesigned Hooks, Smaller Bundles, Agent-Ready APIs](https://javascriptweekly.com/link/181842/d076523b1d "go.clerk.com") — Redesigned useSignIn, useSignUp, and useCheckout hooks, ~50KB bundle savings, and keyless mode extended to TanStack Start, Astro, and React Router.
+
+Clerk sponsor
+
+[ArkType 2.2: Use Your TypeScript Types as Runtime Validators](https://javascriptweekly.com/link/181841/d076523b1d "arktype.io") — A TypeScript-first validation library where types and validators are the same thing. Write a type once and it becomes both the static type and the runtime validator. In v2.2, `type.fn` brings runtime-validated *functions*, checking inputs and return values automatically.
+
+ArkType
+
+[TinyBase 8.0: A Reactive Data Store for Local-First Apps](https://javascriptweekly.com/link/181843/d076523b1d "tinybase.org") — A reactive data store and sync engine that can be used as the entire backend for many types of app. It can stand alone or [integrate with all sorts of things](https://javascriptweekly.com/link/181844/d076523b1d) like cloud storage, client-side stores, SQL databases, etc. [v8.0](https://javascriptweekly.com/link/181845/d076523b1d) adds a middleware feature and the ability to store objects and arrays in its ‘cells’.
+
+James Pearce
+
+📄 [VMPrint: Pure JS Typesetting Engine for Perfect PDF Output](https://javascriptweekly.com/link/181846/d076523b1d "github.com") — It’s common to defer to headless Chrome instances for print-to-PDF type work, but VMPrint *“guarantees identical layout given identical input, down to the sub-point position of every glyph.”* [Here’s a sample PDF.](https://javascriptweekly.com/link/181847/d076523b1d)
+
+Cosmic Iron
+
+* [SQLite JS 1.3](https://javascriptweekly.com/link/181848/d076523b1d) – Write custom SQLite functions in JavaScript.
+
+* [Heapify 1.0](https://javascriptweekly.com/link/181849/d076523b1d) – Fast JavaScript priority queue, implemented using a binary heap.
+
+* 📺 [OpenPlayer.js 3.0](https://javascriptweekly.com/link/181850/d076523b1d) – Modular, tree-shakeable HTML5 media player.
+
+* [Emittery 2.0](https://javascriptweekly.com/link/181851/d076523b1d) – Sindre Sorhus's simple, modern async event emitter.
+
+* [Svelte Sonner 1.1](https://javascriptweekly.com/link/181852/d076523b1d) – Toast notification component for Svelte apps.
+
+* 📄 [EmbedPDF 2.8](https://javascriptweekly.com/link/181853/d076523b1d) – Framework-agnostic JavaScript PDF viewer.
+
+* [Tabulator 6.4](https://javascriptweekly.com/link/181854/d076523b1d) – Interactive data tables for JavaScript apps.
+
+* 🕹️ [melonJS 18.0](https://javascriptweekly.com/link/181855/d076523b1d) – Lightweight HTML5 2D game engine.
+
+* [flatted 3.4](https://javascriptweekly.com/link/181856/d076523b1d) – Fast, minimal circular JSON parser.
+
+* [Poku 4.0](https://javascriptweekly.com/link/181857/d076523b1d) – Cross-platform test runner.
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/181858/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+***
+
+[Trigger.dev](https://javascriptweekly.com/link/181859/d076523b1d) handles queues, retries, and long-running tasks so you can build production-ready agents and TypeScript workflows reliably at scale.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/sumcsjstjbwnmu1c6nuq.jpg)](https://javascriptweekly.com/link/181860/d076523b1d)
+
+* It's been eight years since we last mentioned [JSLinux](https://javascriptweekly.com/link/181860/d076523b1d), [Fabrice Bellard](https://javascriptweekly.com/link/181861/d076523b1d)'s JavaScript-powered Linux VM that runs in the browser. He's still working on it, and as of this week it supports x86\_64, AVX-512 and APX.
+
+  Head into [a full x86\_64 Alpine Linux environment](https://javascriptweekly.com/link/181862/d076523b1d), and start using Git, Node, Ruby, Perl, Python, and more, right away. Hacker News users [discussed some use cases](https://javascriptweekly.com/link/181863/d076523b1d) for it.
+
+  [The tech behind JSLinux is explained here](https://javascriptweekly.com/link/181864/d076523b1d) with the biggest limitation being how its Internet connection works, going through a 40KB/s capped proxy.
+
+* Did you know you can [use newline and tab characters in URLs](https://javascriptweekly.com/link/181865/d076523b1d) in HTML and they'll be ignored?
+
+* How long does it take to [compile Node.js on NVIDIA's tiny Jetson Nano device?](https://javascriptweekly.com/link/181866/d076523b1d) About 27 hours.
+
+* [How to recreate the Flappy Bird game](https://javascriptweekly.com/link/181867/d076523b1d) with CSS and no JavaScript at all.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/181870/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
