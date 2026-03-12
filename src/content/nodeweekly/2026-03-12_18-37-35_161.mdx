@@ -1,0 +1,256 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Can we all code Node like Matteo Collina?
+description: Can we all code Node like Matteo Collina?
+date: 星期四 06 晚上 三月 12o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/615
+origin_site: https://nodeweekly.com/issues/615
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Can we all code Node like Matteo Collina?" url="https://nodeweekly.com/issues/615" />
+
+<Detail client:only="react">
+	#​615 — March 12, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/615)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/181957/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vza0iehtfttazhj0ustr.jpg)](https://nodeweekly.com/link/181958/0a4070b383)
+
+[Matteo Collina's Personal Skills for AI-Assisted Node Development](https://nodeweekly.com/link/181958/0a4070b383 "adventures.nodeland.dev") — The prolific Node contributor (not to mention creator of [Fastify](https://nodeweekly.com/link/181959/0a4070b383)) is using AI in his workflows, but he wanted it to write code _like he does._ This boiled-down suite of hard-earned knowledge and best practices could be useful for your own agents, or you could read it directly as documentation such as in his [Node](https://nodeweekly.com/link/181960/0a4070b383), [Fastify](https://nodeweekly.com/link/181961/0a4070b383), and [documentation](https://nodeweekly.com/link/181962/0a4070b383) skills.
+
+Matteo Collina
+
+💡 If you're wondering if skills like these really shift the needle, [Simon Maple put them to the test](https://nodeweekly.com/link/181963/0a4070b383), seeing how they fare across Anthropic's models.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a962e599.png)](https://nodeweekly.com/link/181957/0a4070b383)
+
+[Fast APIs Deserve Fast Analytics](https://nodeweekly.com/link/181957/0a4070b383 "www.tigerdata.com") — When your Node app needs analytics, the answer shouldn't be a second database. TimescaleDB extends Postgres: hypertables, 95% compression, continuous aggregates. Analytics on live data, no pipelines. [Start for free](https://nodeweekly.com/link/181957/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+**IN BRIEF:**
+
+*   🗓️ Last week we featured a preview post about Node's future approach to releases, but [now the evolution of Node's release schedule is official.](https://nodeweekly.com/link/181964/0a4070b383) **Node will move to a cadence of one major release per year starting from Node 27.** LTS users will remain largely unaffected.
+    
+*   [TypeScript 6.0 Release Candidate](https://nodeweekly.com/link/181965/0a4070b383) has been released with only [a few minor tweaks](https://nodeweekly.com/link/181966/0a4070b383) since the beta.
+    
+*   🕒 At [this week's TC39 meeting](https://nodeweekly.com/link/181967/0a4070b383), the Temporal proposal progressed to Stage 4. In [Temporal: The 9-Year Journey to Fix Time in JavaScript](https://nodeweekly.com/link/181968/0a4070b383), Jason Williams explains how JavaScript's time/date handling has long been problematic and what Temporal brings to the table. Now we need [Node to enable Temporal by default](https://nodeweekly.com/link/181969/0a4070b383) (most likely in Node 26).
+    
+*   [Node.js v25.8.1 (Current)](https://nodeweekly.com/link/181970/0a4070b383), [v22.22.1 (LTS)](https://nodeweekly.com/link/181971/0a4070b383), and [v20.20.1 (LTS)](https://nodeweekly.com/link/181972/0a4070b383) have been released.
+    
+
+[In a Scan of 250 Node Repos for Blocking I/O, 76% Had It (And Why That Matters)](https://nodeweekly.com/link/181973/0a4070b383 "stackinsight.dev") — An empirical study scanning real repos for blocking I/O calls, plus benchmarks quantifying the true cost of using things like `execSync`, `existsSync` and `readFileSync`.
+
+Ko-Hsin Liang
+
+📄 [Dictionary Compression is Finally Here, And It's Ridiculously Good](https://nodeweekly.com/link/181974/0a4070b383) – Node v24.6+ and v22.19+ now have built-in Zstd dictionary compression in `zlib`. Tim Perry
+
+📄 [Source Maps: Shipping Features Through Standards](https://nodeweekly.com/link/181975/0a4070b383) Jon Kuperman
+
+📄 [AdonisJS 7 Transformers: A Deep Dive](https://nodeweekly.com/link/181976/0a4070b383) Chimezie Enyinnaya
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pzqasnrqsiledblpn7yy.jpg)](https://nodeweekly.com/link/181977/0a4070b383)
+
+[ArkType 2.2: Use Your TypeScript Types as Runtime Validators](https://nodeweekly.com/link/181977/0a4070b383 "arktype.io") — A TypeScript-first validation library where you write a type once and it becomes both the static type and the runtime validator. In v2.2, `type.fn` brings runtime-validated _functions_, checking inputs and return values automatically.
+
+ArkType
+
+[MikroORM 7: A TypeScript ORM Built on Proven Patterns](https://nodeweekly.com/link/181978/0a4070b383 "mikro-orm.io") — v7 dubs itself ‘unchained’ as it’s dropped Knex for Kysely, dropped all core dependencies, and removed its hard coupling to Node. In new features, it now has a type-safe query builder, supports Common Table Expressions (CTEs), and is now a native ESM package. For existing users, there’s a [v6 to v7 upgrade guide.](https://nodeweekly.com/link/181979/0a4070b383)
+
+Martin Adámek
+
+[Build Reliable Backends with Temporal (Course)](https://nodeweekly.com/link/181980/0a4070b383 "learn.temporal.io") — Learn Workflows, Activities & the TS SDK to build apps that recover from failures and manage state safely.
+
+Temporal Technologies sponsor
+
+[node-sqlite3 Goes 6.0, and Becomes Unmaintained](https://nodeweekly.com/link/181981/0a4070b383 "github.com") — The popular SQLite binding bows out with a final release before going unmaintained. Now's the time to look at alternatives like [better-sqlite3](https://nodeweekly.com/link/181982/0a4070b383) or Node's [`node:sqlite`](https://nodeweekly.com/link/181983/0a4070b383).
+
+Ghost
+
+💡 Talking of which, [better-sqlite3 12.7](https://nodeweekly.com/link/181984/0a4070b383) has just been released.
+
+⚙️ [Systeminformation: Get Info about the System and OS](https://nodeweekly.com/link/181986/0a4070b383 "github.com") — If you want to query what environment your Node program is running in, this is for you. Get info about audio devices, Bluetooth devices, printers, USB, CPU, architecture, wifi, and more. It’s frequently updated and already [supports the latest Macs](https://nodeweekly.com/link/181987/0a4070b383), including the MacBook Neo.
+
+Sebastian Hildebrandt
+
+[Emittery 2.0: A Simple, Modern Async Event Emitter](https://nodeweekly.com/link/182006/0a4070b383 "github.com") — A small, async event emitter for Node and the browser.
+
+Sindre Sorhus
+
+*   [Verdaccio 6.3](https://nodeweekly.com/link/181988/0a4070b383) – Run your own local private npm registry and proxy/cache. v7.0 is currently in beta too.
+    
+*   [get-windows 9.3](https://nodeweekly.com/link/181989/0a4070b383) – Get metadata about the active and open windows on macOS, Windows, and Linux.
+    
+*   [Poku 4.0](https://nodeweekly.com/link/181990/0a4070b383) – Cross-platform test runner. Run the exact same test suite with Node, Bun, and Deno.
+    
+*   [Mercurius 16.8](https://nodeweekly.com/link/181991/0a4070b383) – Implement GraphQL servers and gateways atop Fastify.
+    
+*   [SQLite JS 1.3](https://nodeweekly.com/link/181992/0a4070b383) – Write custom SQLite functions using JavaScript.
+    
+*   [wallpaper 7.3](https://nodeweekly.com/link/181993/0a4070b383) – Cross-platform library to set a desktop wallpaper.
+    
+*   [fnm 1.39.0](https://nodeweekly.com/link/181994/0a4070b383) – Fast, simple Node version manager, built in Rust.
+    
+*   [ESLint v10.0.3](https://nodeweekly.com/link/181995/0a4070b383) and [ESLint v9.39.4](https://nodeweekly.com/link/181996/0a4070b383)
+    
+*   [pnpm v10.32.0](https://nodeweekly.com/link/182007/0a4070b383)
+    
+*   [Prisma 7.5](https://nodeweekly.com/link/181998/0a4070b383)
+    
+
+📢  Elsewhere in the ecosystem
+
+*   Imagine what you could do if a popular GitHub repo had an issue triage bot that injected the title of an issue into the prompt sent to an LLM. In [this tale of stealing `npm` publish tokens using GitHub issues](https://nodeweekly.com/link/181999/0a4070b383), that vulnerability was just step one of an interesting attack that compromised the Cline CLI.
+    
+*   📊 [Minification Benchmarks](https://nodeweekly.com/link/182000/0a4070b383) offers a comparison of different JavaScript minifiers. [SWC](https://nodeweekly.com/link/182001/0a4070b383) is in the lead overall, but [Minify](https://nodeweekly.com/link/182002/0a4070b383) and [Oxc's](https://nodeweekly.com/link/182003/0a4070b383) minifier are close behind and faster.
+    
+*   [JSLinux](https://nodeweekly.com/link/182004/0a4070b383), Fabrice Bellard's JS-powered Linux VM, now supports x86\_64, AVX-512, and APX. You can drop [into this Alpine Linux powered VM](https://nodeweekly.com/link/182005/0a4070b383) in your browser and run Node right away (if slowly).
+    
+*   [GitHub addresses its recent availability issues…](https://nodeweekly.com/link/182008/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​615 — March 12, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/615)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/181957/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vza0iehtfttazhj0ustr.jpg)](https://nodeweekly.com/link/181958/0a4070b383)
+
+[Matteo Collina's Personal Skills for AI-Assisted Node Development](https://nodeweekly.com/link/181958/0a4070b383 "adventures.nodeland.dev") — The prolific Node contributor (not to mention creator of [Fastify](https://nodeweekly.com/link/181959/0a4070b383)) is using AI in his workflows, but he wanted it to write code *like he does.* This boiled-down suite of hard-earned knowledge and best practices could be useful for your own agents, or you could read it directly as documentation such as in his [Node](https://nodeweekly.com/link/181960/0a4070b383), [Fastify](https://nodeweekly.com/link/181961/0a4070b383), and [documentation](https://nodeweekly.com/link/181962/0a4070b383) skills.
+
+Matteo Collina
+
+💡 If you're wondering if skills like these really shift the needle, [Simon Maple put them to the test](https://nodeweekly.com/link/181963/0a4070b383), seeing how they fare across Anthropic's models.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a962e599.png)](https://nodeweekly.com/link/181957/0a4070b383)
+
+[Fast APIs Deserve Fast Analytics](https://nodeweekly.com/link/181957/0a4070b383 "www.tigerdata.com") — When your Node app needs analytics, the answer shouldn't be a second database. TimescaleDB extends Postgres: hypertables, 95% compression, continuous aggregates. Analytics on live data, no pipelines. [Start for free](https://nodeweekly.com/link/181957/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+**IN BRIEF:**
+
+* 🗓️ Last week we featured a preview post about Node's future approach to releases, but [now the evolution of Node's release schedule is official.](https://nodeweekly.com/link/181964/0a4070b383) **Node will move to a cadence of one major release per year starting from Node 27.** LTS users will remain largely unaffected.
+
+* [TypeScript 6.0 Release Candidate](https://nodeweekly.com/link/181965/0a4070b383) has been released with only [a few minor tweaks](https://nodeweekly.com/link/181966/0a4070b383) since the beta.
+
+* 🕒 At [this week's TC39 meeting](https://nodeweekly.com/link/181967/0a4070b383), the Temporal proposal progressed to Stage 4. In [Temporal: The 9-Year Journey to Fix Time in JavaScript](https://nodeweekly.com/link/181968/0a4070b383), Jason Williams explains how JavaScript's time/date handling has long been problematic and what Temporal brings to the table. Now we need [Node to enable Temporal by default](https://nodeweekly.com/link/181969/0a4070b383) (most likely in Node 26).
+
+* [Node.js v25.8.1 (Current)](https://nodeweekly.com/link/181970/0a4070b383), [v22.22.1 (LTS)](https://nodeweekly.com/link/181971/0a4070b383), and [v20.20.1 (LTS)](https://nodeweekly.com/link/181972/0a4070b383) have been released.
+
+[In a Scan of 250 Node Repos for Blocking I/O, 76% Had It (And Why That Matters)](https://nodeweekly.com/link/181973/0a4070b383 "stackinsight.dev") — An empirical study scanning real repos for blocking I/O calls, plus benchmarks quantifying the true cost of using things like `execSync`, `existsSync` and `readFileSync`.
+
+Ko-Hsin Liang
+
+📄 [Dictionary Compression is Finally Here, And It's Ridiculously Good](https://nodeweekly.com/link/181974/0a4070b383) – Node v24.6+ and v22.19+ now have built-in Zstd dictionary compression in `zlib`. Tim Perry
+
+📄 [Source Maps: Shipping Features Through Standards](https://nodeweekly.com/link/181975/0a4070b383) Jon Kuperman
+
+📄 [AdonisJS 7 Transformers: A Deep Dive](https://nodeweekly.com/link/181976/0a4070b383) Chimezie Enyinnaya
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pzqasnrqsiledblpn7yy.jpg)](https://nodeweekly.com/link/181977/0a4070b383)
+
+[ArkType 2.2: Use Your TypeScript Types as Runtime Validators](https://nodeweekly.com/link/181977/0a4070b383 "arktype.io") — A TypeScript-first validation library where you write a type once and it becomes both the static type and the runtime validator. In v2.2, `type.fn` brings runtime-validated *functions*, checking inputs and return values automatically.
+
+ArkType
+
+[MikroORM 7: A TypeScript ORM Built on Proven Patterns](https://nodeweekly.com/link/181978/0a4070b383 "mikro-orm.io") — v7 dubs itself ‘unchained’ as it’s dropped Knex for Kysely, dropped all core dependencies, and removed its hard coupling to Node. In new features, it now has a type-safe query builder, supports Common Table Expressions (CTEs), and is now a native ESM package. For existing users, there’s a [v6 to v7 upgrade guide.](https://nodeweekly.com/link/181979/0a4070b383)
+
+Martin Adámek
+
+[Build Reliable Backends with Temporal (Course)](https://nodeweekly.com/link/181980/0a4070b383 "learn.temporal.io") — Learn Workflows, Activities & the TS SDK to build apps that recover from failures and manage state safely.
+
+Temporal Technologies sponsor
+
+[node-sqlite3 Goes 6.0, and Becomes Unmaintained](https://nodeweekly.com/link/181981/0a4070b383 "github.com") — The popular SQLite binding bows out with a final release before going unmaintained. Now's the time to look at alternatives like [better-sqlite3](https://nodeweekly.com/link/181982/0a4070b383) or Node's [`node:sqlite`](https://nodeweekly.com/link/181983/0a4070b383).
+
+Ghost
+
+💡 Talking of which, [better-sqlite3 12.7](https://nodeweekly.com/link/181984/0a4070b383) has just been released.
+
+⚙️ [Systeminformation: Get Info about the System and OS](https://nodeweekly.com/link/181986/0a4070b383 "github.com") — If you want to query what environment your Node program is running in, this is for you. Get info about audio devices, Bluetooth devices, printers, USB, CPU, architecture, wifi, and more. It’s frequently updated and already [supports the latest Macs](https://nodeweekly.com/link/181987/0a4070b383), including the MacBook Neo.
+
+Sebastian Hildebrandt
+
+[Emittery 2.0: A Simple, Modern Async Event Emitter](https://nodeweekly.com/link/182006/0a4070b383 "github.com") — A small, async event emitter for Node and the browser.
+
+Sindre Sorhus
+
+* [Verdaccio 6.3](https://nodeweekly.com/link/181988/0a4070b383) – Run your own local private npm registry and proxy/cache. v7.0 is currently in beta too.
+
+* [get-windows 9.3](https://nodeweekly.com/link/181989/0a4070b383) – Get metadata about the active and open windows on macOS, Windows, and Linux.
+
+* [Poku 4.0](https://nodeweekly.com/link/181990/0a4070b383) – Cross-platform test runner. Run the exact same test suite with Node, Bun, and Deno.
+
+* [Mercurius 16.8](https://nodeweekly.com/link/181991/0a4070b383) – Implement GraphQL servers and gateways atop Fastify.
+
+* [SQLite JS 1.3](https://nodeweekly.com/link/181992/0a4070b383) – Write custom SQLite functions using JavaScript.
+
+* [wallpaper 7.3](https://nodeweekly.com/link/181993/0a4070b383) – Cross-platform library to set a desktop wallpaper.
+
+* [fnm 1.39.0](https://nodeweekly.com/link/181994/0a4070b383) – Fast, simple Node version manager, built in Rust.
+
+* [ESLint v10.0.3](https://nodeweekly.com/link/181995/0a4070b383) and [ESLint v9.39.4](https://nodeweekly.com/link/181996/0a4070b383)
+
+* [pnpm v10.32.0](https://nodeweekly.com/link/182007/0a4070b383)
+
+* [Prisma 7.5](https://nodeweekly.com/link/181998/0a4070b383)
+
+📢  Elsewhere in the ecosystem
+
+* Imagine what you could do if a popular GitHub repo had an issue triage bot that injected the title of an issue into the prompt sent to an LLM. In [this tale of stealing `npm` publish tokens using GitHub issues](https://nodeweekly.com/link/181999/0a4070b383), that vulnerability was just step one of an interesting attack that compromised the Cline CLI.
+
+* 📊 [Minification Benchmarks](https://nodeweekly.com/link/182000/0a4070b383) offers a comparison of different JavaScript minifiers. [SWC](https://nodeweekly.com/link/182001/0a4070b383) is in the lead overall, but [Minify](https://nodeweekly.com/link/182002/0a4070b383) and [Oxc's](https://nodeweekly.com/link/182003/0a4070b383) minifier are close behind and faster.
+
+* [JSLinux](https://nodeweekly.com/link/182004/0a4070b383), Fabrice Bellard's JS-powered Linux VM, now supports x86\_64, AVX-512, and APX. You can drop [into this Alpine Linux powered VM](https://nodeweekly.com/link/182005/0a4070b383) in your browser and run Node right away (if slowly).
+
+* [GitHub addresses its recent availability issues…](https://nodeweekly.com/link/182008/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
