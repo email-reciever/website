@@ -1,0 +1,313 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: It’s about time： Temporal advances, Vite accelerates
+description: It’s about time： Temporal advances, Vite accelerates
+date: 星期二 08 晚上 三月 17o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/777
+origin_site: https://javascriptweekly.com/issues/777
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="It’s about time： Temporal advances, Vite accelerates" url="https://javascriptweekly.com/issues/777" />
+
+<Detail client:only="react">
+	#​777 — March 17, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/777)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/182280/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vpspjotfzjret41fw9u7.jpg)](https://javascriptweekly.com/link/182337/d076523b1d)
+
+[Temporal: The 9-Year Journey to Fix Time in JavaScript](https://javascriptweekly.com/link/182337/d076523b1d "bloomberg.github.io") — JavaScript’s date/time handling is notoriously [messy](https://javascriptweekly.com/link/182338/d076523b1d) and libraries like [Moment.js](https://javascriptweekly.com/link/182339/d076523b1d) became popular as a way to work around it. In 2017, Maggie Johnson-Pint, a maintainer of Moment.js, proposed the [Temporal API](https://javascriptweekly.com/link/182340/d076523b1d) to fix date/time handling for good, and we’re _mostly there_ ([support is growing](https://javascriptweekly.com/link/182341/d076523b1d), with Safari and Node to catch up).
+
+Jason Williams (Bloomberg)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/88249823.png)](https://javascriptweekly.com/link/182280/d076523b1d)
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://javascriptweekly.com/link/182280/d076523b1d) — Notion, Dropbox, Wiz and LaunchDarkly now use a testing paradigm they can’t work without. Built by former Palantir engineers, Meticulous automatically creates an evolving suite of E2E UI tests, delivering exhaustive coverage with no developer effort.
+
+Meticulous sponsor
+
+[Vite 8.0 Released](https://javascriptweekly.com/link/182281/d076523b1d "vite.dev") — A mega release for the popular build tool. Designed to be a smooth upgrade, there’s a _lot_ behind the scenes: `@vitejs/plugin-react` v6 no longer needs Babel, [Rolldown](https://javascriptweekly.com/link/182282/d076523b1d) replaces Rollup and esbuild, Wasm SSR support, browser console forwarding to the terminal, and big performance gains.
+
+Vite
+
+💡 VoidZero has also [open sourced its _Vite+_ toolkit.](https://javascriptweekly.com/link/182283/d076523b1d) Originally intended to be a commercial project, Vite+ combines Vite, Vitest, Oxlint, Oxfmt, Rolldown, and tsdown into a single, unified toolchain, and it's now in alpha.
+
+**IN BRIEF:**
+
+*   [Sarah Gooding rounds up last week's TC39 meeting](https://javascriptweekly.com/link/182284/d076523b1d) and the proposals that advanced there, including Temporal, [Import Text](https://javascriptweekly.com/link/182285/d076523b1d), [Error Stack Accessor](https://javascriptweekly.com/link/182286/d076523b1d), and [Iterator Includes](https://javascriptweekly.com/link/182287/d076523b1d).
+    
+*   😆 `BigInt.PI = 3`? Enjoy _qntm_'s tongue-in-cheek [proposal to add mathematical constants to `BigInt`.](https://javascriptweekly.com/link/182288/d076523b1d)
+    
+*   Laurent Cazanove [rounds up what was announced](https://javascriptweekly.com/link/182342/d076523b1d) at last week's [Vue.js Amsterdam](https://javascriptweekly.com/link/182343/d076523b1d) conference, including Vue Router 5, Vite 8, and [Void Cloud.](https://javascriptweekly.com/link/182344/d076523b1d)
+    
+
+**RELEASES:**
+
+*   [Electron 41.0](https://javascriptweekly.com/link/182289/d076523b1d) – The cross-platform desktop app framework adds ASAR Integrity digest and MSIX auto-updating support, improves Wayland support, and updates to Chromium 146, Node v24.14.0, and V8 14.6.
+    
+*   [Nitro v3 Beta](https://javascriptweekly.com/link/182290/d076523b1d) – Extend your Vite app with a production-ready server, compatible with any runtime. Handy if you want to try building your own framework!
+    
+*   [Vitest 4.1](https://javascriptweekly.com/link/182291/d076523b1d) – Next-gen testing framework, now supporting Vite 8.
+    
+*   [Preact 10.29.0](https://javascriptweekly.com/link/182292/d076523b1d), [Prisma 7.5.0](https://javascriptweekly.com/link/182293/d076523b1d), [Babel 8.0 RC3](https://javascriptweekly.com/link/182294/d076523b1d), [Vue 3.6.0 Beta 8](https://javascriptweekly.com/link/182295/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[Source Maps: Shipping Features Through Standards](https://javascriptweekly.com/link/182297/d076523b1d "bloomberg.github.io") — [Source maps](https://javascriptweekly.com/link/182298/d076523b1d) are JSON files that provide debuggers and similar tools with a mapping between minified/transformed code and the original codebase. Jon gives us a tour and takes us behind the scenes of how the feature has progressed towards becoming a standard ([ECMA-426](https://javascriptweekly.com/link/182299/d076523b1d)).
+
+Jon Kuperman (Bloomberg)
+
+[How we Rewrote 130K Lines from React to Svelte in Two Weeks](https://javascriptweekly.com/link/182296/d076523b1d "strawberrybrowser.com") — A common adage in recent months has been that the use of LLMs and coding agents could lock us into using only the most popular frameworks, but in reality they also make _switching between frameworks_ easier than ever before.
+
+Strawberry
+
+[Your Slowest Endpoint Is Probably an Analytics Query](https://javascriptweekly.com/link/182300/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres so analytics queries stay fast at scale. Hypertables, 95% compression, live data. [Start for free](https://javascriptweekly.com/link/182300/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Best Practices for Svelte Developers](https://javascriptweekly.com/link/182301/d076523b1d "svelte.dev") — A brand new page in the Svelte docs that outlines some best practices for writing more robust Svelte apps.
+
+Svelte Docs
+
+[An Empirical Study of Frontend Memory Leaks](https://javascriptweekly.com/link/182302/d076523b1d "stackinsight.dev") — Analysis of five hundred React, Vue and Angular apps for patterns that lead to memory leaks. Missing timer cleanups and event listener removals cause the majority of problems.
+
+Ko-Hsin Liang
+
+[Rewriting a 12-Year-Old JavaScript Library in TypeScript](https://javascriptweekly.com/link/182303/d076523b1d "ifandelse.com") — Specifically, the [Machina](https://javascriptweekly.com/link/182304/d076523b1d) finite state machine library.
+
+Jim Cowart
+
+📄 [Lies I Was Told About Collaborative Editing: Why We Don't Use Yjs](https://javascriptweekly.com/link/182305/d076523b1d) Alex Clemmer
+
+▶️ [Breaking and Securing OAuth 2.0 in Frontends](https://javascriptweekly.com/link/182306/d076523b1d) Philippe De Ryck
+
+📄 [How I Added Bluesky Likes to My Astro Blog](https://javascriptweekly.com/link/182307/d076523b1d) Luciano Mammino
+
+📄 [Why Node.js Needs a Virtual File System](https://javascriptweekly.com/link/182308/d076523b1d) Matteo Collina
+
+📄 [Native JSON Modules Are Finally Real](https://javascriptweekly.com/link/182309/d076523b1d) Matt Smith
+
+🛠 Code & Tools
+
+[Nuxt 4.4: The Full-Stack Vue Framework](https://javascriptweekly.com/link/182310/d076523b1d "nuxt.com") — The full-stack Vue framework that includes routing (now powered by Vue Router v5), server-side rendering, and data fetching out of the box now adds custom `useFetch`/`useAsyncData` factories, typed layout props, build profiling, and more.
+
+Daniel Roe and the Nuxt Team
+
+[Reveal.js 6.0: The HTML Presentation Framework](https://javascriptweekly.com/link/182311/d076523b1d "revealjs.com") — A long-standing way to bring elegant presentations to anyone with a browser. [v6.0](https://javascriptweekly.com/link/182312/d076523b1d) has some breaking changes, switches to Vite, and introduces an official React wrapper.
+
+Hakim El Hattab
+
+[40-60% of Your Mobile Builds Don't Need to Happen](https://javascriptweekly.com/link/182313/d076523b1d "try.expo.dev") — Expo Workflows is mobile CICD that detects whether your changes touch native code and skips the builds you don't need.
+
+Expo Workflows sponsor
+
+[RedwoodSDK 1.0 Released: The Cloudflare-Native React Framework](https://javascriptweekly.com/link/182314/d076523b1d "rwsdk.com") — A server-first React framework, built as a Vite plugin, that integrates deeply with the Cloudflare platform ([why?](https://javascriptweekly.com/link/182315/d076523b1d)) and its provision of workers, databases (D1), durable objects, storage (R2), AI APIs, etc.
+
+Peter Pistorius
+
+*   [Defuddle 0.14.0](https://javascriptweekly.com/link/182316/d076523b1d) – Get the main content of a page as Markdown. A modern implementation of the ideas behind Mozilla’s [Readability](https://javascriptweekly.com/link/182317/d076523b1d).
+    
+*   [Extension.js 3.9](https://javascriptweekly.com/link/182318/d076523b1d) – Framework for developing fast, unified cross-browser extensions with zero configuration.
+    
+*   [React Native Sandbox 0.5](https://javascriptweekly.com/link/182319/d076523b1d) – Run multiple, isolated RN instances within an app.
+    
+*   [XO 2.0](https://javascriptweekly.com/link/182320/d076523b1d) – Opinionated, configurable ESLint 10 wrapper with _'lots of goodies'._
+    
+*   [Poku 4.1](https://javascriptweekly.com/link/182321/d076523b1d) – Cross-platform test runner that supports Node, Bun, and Deno.
+    
+*   [sax js 1.6](https://javascriptweekly.com/link/182322/d076523b1d) – SAX-style streaming XML parser for Node and browsers.
+    
+*   📺 [YouTube.js 17.0](https://javascriptweekly.com/link/182323/d076523b1d) – JavaScript client for YouTube's private API.
+    
+*   [Svelte SPA Router 5.0](https://javascriptweekly.com/link/182324/d076523b1d) – A router for Svelte 5 single-page apps.
+    
+*   📃 [PDFKit 0.18](https://javascriptweekly.com/link/182325/d076523b1d) – PDF generation library for Node and browsers.
+    
+*   [Cypress ESLint Plugin v6.2.0](https://javascriptweekly.com/link/182326/d076523b1d) – ESLint plugin for [Cypress](https://javascriptweekly.com/link/182327/d076523b1d) tests.
+    
+
+📰 Classifieds
+
+🌷 [JSNation - Amsterdam & Online](https://javascriptweekly.com/link/182328/d076523b1d) - This June, catch the latest trends in modern Web development from the people shaping its present & future.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/k9xy1phwtccll1e7qy4n.jpg)](https://javascriptweekly.com/link/182329/d076523b1d)
+
+*   📈 In [The 49MB Web Page](https://javascriptweekly.com/link/182329/d076523b1d), Shubham Bose expresses surprise at finding that loading a single _NY Times_ page results in 422 network requests and 49 megabytes of data transferred. He reflects on the problems that have led to this being a common experience on news sites.
+    
+*   [Difftastic](https://javascriptweekly.com/link/182331/d076523b1d) is a handy tool to diff code files based on _syntax_. It [supports most popular languages](https://javascriptweekly.com/link/182332/d076523b1d) including JavaScript and TypeScript.
+    
+*   [VS Code 1.111 has been released](https://javascriptweekly.com/link/182333/d076523b1d). It's notable as being the first release in VS Code's new weekly stable release cadence.
+    
+*   Amazon S3 has introduced [account regional namespaces for S3 buckets](https://javascriptweekly.com/link/182334/d076523b1d), a feature that will help prevent so-called '[bucketsquatting](https://javascriptweekly.com/link/182335/d076523b1d)'.
+    
+*   🎂 **Feeling old yet?** Sticking with S3, Amazon's Sébastien Stormacq reflects on the ubiquitous [AWS S3 cloud storage system turning 20 years old.](https://javascriptweekly.com/link/182336/d076523b1d)
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/182346/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​777 — March 17, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/777)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/182280/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vpspjotfzjret41fw9u7.jpg)](https://javascriptweekly.com/link/182337/d076523b1d)
+
+[Temporal: The 9-Year Journey to Fix Time in JavaScript](https://javascriptweekly.com/link/182337/d076523b1d "bloomberg.github.io") — JavaScript’s date/time handling is notoriously [messy](https://javascriptweekly.com/link/182338/d076523b1d) and libraries like [Moment.js](https://javascriptweekly.com/link/182339/d076523b1d) became popular as a way to work around it. In 2017, Maggie Johnson-Pint, a maintainer of Moment.js, proposed the [Temporal API](https://javascriptweekly.com/link/182340/d076523b1d) to fix date/time handling for good, and we’re *mostly there* ([support is growing](https://javascriptweekly.com/link/182341/d076523b1d), with Safari and Node to catch up).
+
+Jason Williams (Bloomberg)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/88249823.png)](https://javascriptweekly.com/link/182280/d076523b1d)
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://javascriptweekly.com/link/182280/d076523b1d) — Notion, Dropbox, Wiz and LaunchDarkly now use a testing paradigm they can’t work without. Built by former Palantir engineers, Meticulous automatically creates an evolving suite of E2E UI tests, delivering exhaustive coverage with no developer effort.
+
+Meticulous sponsor
+
+[Vite 8.0 Released](https://javascriptweekly.com/link/182281/d076523b1d "vite.dev") — A mega release for the popular build tool. Designed to be a smooth upgrade, there’s a *lot* behind the scenes: `@vitejs/plugin-react` v6 no longer needs Babel, [Rolldown](https://javascriptweekly.com/link/182282/d076523b1d) replaces Rollup and esbuild, Wasm SSR support, browser console forwarding to the terminal, and big performance gains.
+
+Vite
+
+💡 VoidZero has also [open sourced its *Vite+* toolkit.](https://javascriptweekly.com/link/182283/d076523b1d) Originally intended to be a commercial project, Vite+ combines Vite, Vitest, Oxlint, Oxfmt, Rolldown, and tsdown into a single, unified toolchain, and it's now in alpha.
+
+**IN BRIEF:**
+
+* [Sarah Gooding rounds up last week's TC39 meeting](https://javascriptweekly.com/link/182284/d076523b1d) and the proposals that advanced there, including Temporal, [Import Text](https://javascriptweekly.com/link/182285/d076523b1d), [Error Stack Accessor](https://javascriptweekly.com/link/182286/d076523b1d), and [Iterator Includes](https://javascriptweekly.com/link/182287/d076523b1d).
+
+* 😆 `BigInt.PI = 3`? Enjoy *qntm*'s tongue-in-cheek [proposal to add mathematical constants to `BigInt`.](https://javascriptweekly.com/link/182288/d076523b1d)
+
+* Laurent Cazanove [rounds up what was announced](https://javascriptweekly.com/link/182342/d076523b1d) at last week's [Vue.js Amsterdam](https://javascriptweekly.com/link/182343/d076523b1d) conference, including Vue Router 5, Vite 8, and [Void Cloud.](https://javascriptweekly.com/link/182344/d076523b1d)
+
+**RELEASES:**
+
+* [Electron 41.0](https://javascriptweekly.com/link/182289/d076523b1d) – The cross-platform desktop app framework adds ASAR Integrity digest and MSIX auto-updating support, improves Wayland support, and updates to Chromium 146, Node v24.14.0, and V8 14.6.
+
+* [Nitro v3 Beta](https://javascriptweekly.com/link/182290/d076523b1d) – Extend your Vite app with a production-ready server, compatible with any runtime. Handy if you want to try building your own framework!
+
+* [Vitest 4.1](https://javascriptweekly.com/link/182291/d076523b1d) – Next-gen testing framework, now supporting Vite 8.
+
+* [Preact 10.29.0](https://javascriptweekly.com/link/182292/d076523b1d), [Prisma 7.5.0](https://javascriptweekly.com/link/182293/d076523b1d), [Babel 8.0 RC3](https://javascriptweekly.com/link/182294/d076523b1d), [Vue 3.6.0 Beta 8](https://javascriptweekly.com/link/182295/d076523b1d)
+
+📖  Articles and Videos
+
+[Source Maps: Shipping Features Through Standards](https://javascriptweekly.com/link/182297/d076523b1d "bloomberg.github.io") — [Source maps](https://javascriptweekly.com/link/182298/d076523b1d) are JSON files that provide debuggers and similar tools with a mapping between minified/transformed code and the original codebase. Jon gives us a tour and takes us behind the scenes of how the feature has progressed towards becoming a standard ([ECMA-426](https://javascriptweekly.com/link/182299/d076523b1d)).
+
+Jon Kuperman (Bloomberg)
+
+[How we Rewrote 130K Lines from React to Svelte in Two Weeks](https://javascriptweekly.com/link/182296/d076523b1d "strawberrybrowser.com") — A common adage in recent months has been that the use of LLMs and coding agents could lock us into using only the most popular frameworks, but in reality they also make *switching between frameworks* easier than ever before.
+
+Strawberry
+
+[Your Slowest Endpoint Is Probably an Analytics Query](https://javascriptweekly.com/link/182300/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres so analytics queries stay fast at scale. Hypertables, 95% compression, live data. [Start for free](https://javascriptweekly.com/link/182300/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Best Practices for Svelte Developers](https://javascriptweekly.com/link/182301/d076523b1d "svelte.dev") — A brand new page in the Svelte docs that outlines some best practices for writing more robust Svelte apps.
+
+Svelte Docs
+
+[An Empirical Study of Frontend Memory Leaks](https://javascriptweekly.com/link/182302/d076523b1d "stackinsight.dev") — Analysis of five hundred React, Vue and Angular apps for patterns that lead to memory leaks. Missing timer cleanups and event listener removals cause the majority of problems.
+
+Ko-Hsin Liang
+
+[Rewriting a 12-Year-Old JavaScript Library in TypeScript](https://javascriptweekly.com/link/182303/d076523b1d "ifandelse.com") — Specifically, the [Machina](https://javascriptweekly.com/link/182304/d076523b1d) finite state machine library.
+
+Jim Cowart
+
+📄 [Lies I Was Told About Collaborative Editing: Why We Don't Use Yjs](https://javascriptweekly.com/link/182305/d076523b1d) Alex Clemmer
+
+▶️ [Breaking and Securing OAuth 2.0 in Frontends](https://javascriptweekly.com/link/182306/d076523b1d) Philippe De Ryck
+
+📄 [How I Added Bluesky Likes to My Astro Blog](https://javascriptweekly.com/link/182307/d076523b1d) Luciano Mammino
+
+📄 [Why Node.js Needs a Virtual File System](https://javascriptweekly.com/link/182308/d076523b1d) Matteo Collina
+
+📄 [Native JSON Modules Are Finally Real](https://javascriptweekly.com/link/182309/d076523b1d) Matt Smith
+
+🛠 Code & Tools
+
+[Nuxt 4.4: The Full-Stack Vue Framework](https://javascriptweekly.com/link/182310/d076523b1d "nuxt.com") — The full-stack Vue framework that includes routing (now powered by Vue Router v5), server-side rendering, and data fetching out of the box now adds custom `useFetch`/`useAsyncData` factories, typed layout props, build profiling, and more.
+
+Daniel Roe and the Nuxt Team
+
+[Reveal.js 6.0: The HTML Presentation Framework](https://javascriptweekly.com/link/182311/d076523b1d "revealjs.com") — A long-standing way to bring elegant presentations to anyone with a browser. [v6.0](https://javascriptweekly.com/link/182312/d076523b1d) has some breaking changes, switches to Vite, and introduces an official React wrapper.
+
+Hakim El Hattab
+
+[40-60% of Your Mobile Builds Don't Need to Happen](https://javascriptweekly.com/link/182313/d076523b1d "try.expo.dev") — Expo Workflows is mobile CICD that detects whether your changes touch native code and skips the builds you don't need.
+
+Expo Workflows sponsor
+
+[RedwoodSDK 1.0 Released: The Cloudflare-Native React Framework](https://javascriptweekly.com/link/182314/d076523b1d "rwsdk.com") — A server-first React framework, built as a Vite plugin, that integrates deeply with the Cloudflare platform ([why?](https://javascriptweekly.com/link/182315/d076523b1d)) and its provision of workers, databases (D1), durable objects, storage (R2), AI APIs, etc.
+
+Peter Pistorius
+
+* [Defuddle 0.14.0](https://javascriptweekly.com/link/182316/d076523b1d) – Get the main content of a page as Markdown. A modern implementation of the ideas behind Mozilla’s [Readability](https://javascriptweekly.com/link/182317/d076523b1d).
+
+* [Extension.js 3.9](https://javascriptweekly.com/link/182318/d076523b1d) – Framework for developing fast, unified cross-browser extensions with zero configuration.
+
+* [React Native Sandbox 0.5](https://javascriptweekly.com/link/182319/d076523b1d) – Run multiple, isolated RN instances within an app.
+
+* [XO 2.0](https://javascriptweekly.com/link/182320/d076523b1d) – Opinionated, configurable ESLint 10 wrapper with *'lots of goodies'.*
+
+* [Poku 4.1](https://javascriptweekly.com/link/182321/d076523b1d) – Cross-platform test runner that supports Node, Bun, and Deno.
+
+* [sax js 1.6](https://javascriptweekly.com/link/182322/d076523b1d) – SAX-style streaming XML parser for Node and browsers.
+
+* 📺 [YouTube.js 17.0](https://javascriptweekly.com/link/182323/d076523b1d) – JavaScript client for YouTube's private API.
+
+* [Svelte SPA Router 5.0](https://javascriptweekly.com/link/182324/d076523b1d) – A router for Svelte 5 single-page apps.
+
+* 📃 [PDFKit 0.18](https://javascriptweekly.com/link/182325/d076523b1d) – PDF generation library for Node and browsers.
+
+* [Cypress ESLint Plugin v6.2.0](https://javascriptweekly.com/link/182326/d076523b1d) – ESLint plugin for [Cypress](https://javascriptweekly.com/link/182327/d076523b1d) tests.
+
+📰 Classifieds
+
+🌷 [JSNation - Amsterdam & Online](https://javascriptweekly.com/link/182328/d076523b1d) - This June, catch the latest trends in modern Web development from the people shaping its present & future.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/k9xy1phwtccll1e7qy4n.jpg)](https://javascriptweekly.com/link/182329/d076523b1d)
+
+* 📈 In [The 49MB Web Page](https://javascriptweekly.com/link/182329/d076523b1d), Shubham Bose expresses surprise at finding that loading a single *NY Times* page results in 422 network requests and 49 megabytes of data transferred. He reflects on the problems that have led to this being a common experience on news sites.
+
+* [Difftastic](https://javascriptweekly.com/link/182331/d076523b1d) is a handy tool to diff code files based on *syntax*. It [supports most popular languages](https://javascriptweekly.com/link/182332/d076523b1d) including JavaScript and TypeScript.
+
+* [VS Code 1.111 has been released](https://javascriptweekly.com/link/182333/d076523b1d). It's notable as being the first release in VS Code's new weekly stable release cadence.
+
+* Amazon S3 has introduced [account regional namespaces for S3 buckets](https://javascriptweekly.com/link/182334/d076523b1d), a feature that will help prevent so-called '[bucketsquatting](https://javascriptweekly.com/link/182335/d076523b1d)'.
+
+* 🎂 **Feeling old yet?** Sticking with S3, Amazon's Sébastien Stormacq reflects on the ubiquitous [AWS S3 cloud storage system turning 20 years old.](https://javascriptweekly.com/link/182336/d076523b1d)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/182346/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
