@@ -1,0 +1,236 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Petition calls for ban on AI-generated code in Node.js core
+description: Petition calls for ban on AI-generated code in Node.js core
+date: 星期四 05 下午 三月 19o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/616
+origin_site: https://nodeweekly.com/issues/616
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Petition calls for ban on AI-generated code in Node.js core" url="https://nodeweekly.com/issues/616" />
+
+<Detail client:only="react">
+	#​616 — March 19, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/616)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/182460/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vleephvykt5ci7kalfvc.jpg)](https://nodeweekly.com/link/182415/0a4070b383)
+
+🤖 [No AI Code in Node.js Core? A Petition to the Node.js TSC](https://nodeweekly.com/link/182415/0a4070b383 "github.com") — A long-running [discussion about the use of AI-assisted development](https://nodeweekly.com/link/182416/0a4070b383) in OpenJS Foundation projects (Node is one), coupled with a new 19K LOC PR _(more on that later)_, has inspired a long-standing Node contributor to start a petition to restrict code created by AI systems from going into Node’s core.
+
+Fedor Indutny et al.
+
+🗣️ There were [many comments on Reddit's `/r/node`](https://nodeweekly.com/link/182417/0a4070b383) about this topic. The consensus was largely in _support_ of AI, but against huge 10,000+ line PRs generally.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/68db6eea.jpg)](https://nodeweekly.com/link/182460/0a4070b383)
+
+[Build AI Agents from Scratch in Node.js](https://nodeweekly.com/link/182460/0a4070b383 "frontendmasters.com") — Tool calling, agent loops, evals, web search, and human approval flows -- taught by Scott Moss (Senior Dev at Netflix). Rated 4.86/5 by 90 developers.
+
+Frontend Masters sponsor
+
+[Why Node.js Needs a Virtual File System](https://nodeweekly.com/link/182418/0a4070b383 "blog.platformatic.dev") — The idea is simple: hook into `node:fs` and the module resolver so you can `import` modules that exist only in memory for things like sandboxing, single executable apps, and test isolation. Matteo Collina has built a `node:vfs` module for Node core _and_ released [a userland package](https://nodeweekly.com/link/182419/0a4070b383) that works today ([with some compromises](https://nodeweekly.com/link/182420/0a4070b383)).
+
+Matteo Collina (Platformatic)
+
+😬 [The PR for `node:vfs`](https://nodeweekly.com/link/182461/0a4070b383) was one of the inspirations for the AI petition _(above)_.
+
+**IN BRIEF:**
+
+*   ⚠️ All maintained Node.js versions (25.x, 24.x, 22.x and 20.x) [will get security releases next week](https://nodeweekly.com/link/182421/0a4070b383) (on or after March 24) to address nine vulnerabilities.
+    
+*   At last week's TC39 meeting, [several language proposals were advanced](https://nodeweekly.com/link/182422/0a4070b383) including [Temporal](https://nodeweekly.com/link/182423/0a4070b383), [Import Text](https://nodeweekly.com/link/182424/0a4070b383), [Error Stack Accessor](https://nodeweekly.com/link/182425/0a4070b383), and [Iterator Includes](https://nodeweekly.com/link/182426/0a4070b383).
+    
+*   [A Node.js PR proposes opt-in support for TLS certificate compression](https://nodeweekly.com/link/182427/0a4070b383), which could shrink handshake sizes and reduce fingerprintability.
+    
+*   [Bun v1.3.11](https://nodeweekly.com/link/182428/0a4070b383) has been released with `Bun.cron` for OS-level cron jobs and expression parsing, ANSI and grapheme-aware string slicing, and yet more [Node.js compatibility improvements.](https://nodeweekly.com/link/182429/0a4070b383)
+    
+
+[Node Worker Threads are Problematic, But Work Great for Us](https://nodeweekly.com/link/182430/0a4070b383 "www.inngest.com") — A practical case study of solving event loop starvation in a WebSocket-based SDK by moving connection internals into a worker thread, while recognizing the constraints of `worker_threads` compared to threading approaches in other languages.
+
+Aaron Harper (Inngest)
+
+[Clerk Core 3: Keyless Mode, Satellite Fixes, Upgrade CLI](https://nodeweekly.com/link/182431/0a4070b383 "go.clerk.com") — Keyless mode for TanStack Start, Astro, and React Router. Satellite domains skip redirects for anonymous visitors.
+
+Clerk sponsor
+
+📄 [Rewriting a 12-Year-Old JavaScript Library in TypeScript](https://nodeweekly.com/link/182432/0a4070b383) – Specifically, the [Machina](https://nodeweekly.com/link/182433/0a4070b383) finite state machine library. Jim Cowart
+
+📄 [Monitoring Your Node.js App's Health on Fly.io](https://nodeweekly.com/link/182434/0a4070b383) Tarun Singh (AppSignal)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tx9gxccojk8jj8fltnzm.jpg)](https://nodeweekly.com/link/182435/0a4070b383)
+
+[Edge.js: Running Node Apps Inside a WebAssembly Sandbox](https://nodeweekly.com/link/182435/0a4070b383 "wasmer.io") — A new runtime (in alpha, for now) that maintains full Node.js compatibility while isolating unsafe execution via WebAssembly. Existing apps and native modules run unmodified with system calls sandboxed through WASIX. There’s [more info on Edge.js's homepage.](https://nodeweekly.com/link/182436/0a4070b383)
+
+Syrus Akbary (Wasmer)
+
+*   [jsdom 29.0.0](https://nodeweekly.com/link/182437/0a4070b383) – Pure JS implementation of WHATWG DOM and HTML Standards for use with Node for testing, scraping, and similar use cases.
+    
+*   [node-rate-limiter-flexible 10.0](https://nodeweekly.com/link/182438/0a4070b383) – Atomic and non-atomic counters for limiting access to resources.
+    
+*   [better-sqlite3 12.8](https://nodeweekly.com/link/182439/0a4070b383) – The popular SQLite library updates to [SQLite 3.51.3](https://nodeweekly.com/link/182440/0a4070b383) and now requires Node 20+.
+    
+*   [`pnpm/action-setup` 5.0](https://nodeweekly.com/link/182441/0a4070b383) – GitHub Action to install and configure [pnpm](https://nodeweekly.com/link/182442/0a4070b383). Now uses Node.js v24.
+    
+*   🤖 [OpenAI v6.32.0](https://nodeweekly.com/link/182443/0a4070b383) – OpenAI's REST API client. Now with [GPT 5.4 mini and nano](https://nodeweekly.com/link/182444/0a4070b383) support.
+    
+*   [Node File Trace 1.4](https://nodeweekly.com/link/182445/0a4070b383) – A tool that determines exactly which files are necessary for an app to run.
+    
+*   [XO 2.0](https://nodeweekly.com/link/182446/0a4070b383) – Opinionated, configurable ESLint 10 wrapper with _'lots of goodies'._
+    
+*   [node-oom-heapdump 3.8](https://nodeweekly.com/link/182447/0a4070b383) – Create a V8 heap snapshot right before OOM.
+    
+*   [node-osc 11.3](https://nodeweekly.com/link/182448/0a4070b383) – No-frills [Open Sound Control](https://nodeweekly.com/link/182449/0a4070b383) client and server.
+    
+*   [Hookable 6.1](https://nodeweekly.com/link/182450/0a4070b383) – Awaitable hooks system.
+    
+
+📢  Elsewhere in the ecosystem
+
+*   [Next.js 16.2 has been released.](https://nodeweekly.com/link/182451/0a4070b383) The popular React framework gets much faster `next dev` startup times, faster rendering, significant [Turbopack-related](https://nodeweekly.com/link/182452/0a4070b383) improvements, and [some goodies for AI-assisted development.](https://nodeweekly.com/link/182453/0a4070b383)
+    
+*   Should `BigInt.PI === 3`? Enjoy _qntm_'s tongue-in-cheek [proposal to add mathematical constants to `BigInt`.](https://nodeweekly.com/link/182454/0a4070b383)
+    
+*   🤖 [Addy Osmani introduces us to _comprehension debt_](https://nodeweekly.com/link/182455/0a4070b383). In a world of agent-produced code, the question is now not _“how do we generate more code?”_ but _“how do we actually understand more of what we’re shipping?”_
+    
+*   One from the Postgres world: [how a single query blew up and consumed 2 terabytes of memory](https://nodeweekly.com/link/182456/0a4070b383) before being taken down by Linux's OOM killer.
+    
+*    [Awesome Mac](https://nodeweekly.com/link/182457/0a4070b383) is a fantastic, well-updated curated directory of macOS software, with a large [developer tools section.](https://nodeweekly.com/link/182458/0a4070b383)
+    
+*   And much, much more (including Vite 8!) in [this week's issue of _JavaScript Weekly._](https://nodeweekly.com/link/182459/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​616 — March 19, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/616)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/182460/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vleephvykt5ci7kalfvc.jpg)](https://nodeweekly.com/link/182415/0a4070b383)
+
+🤖 [No AI Code in Node.js Core? A Petition to the Node.js TSC](https://nodeweekly.com/link/182415/0a4070b383 "github.com") — A long-running [discussion about the use of AI-assisted development](https://nodeweekly.com/link/182416/0a4070b383) in OpenJS Foundation projects (Node is one), coupled with a new 19K LOC PR *(more on that later)*, has inspired a long-standing Node contributor to start a petition to restrict code created by AI systems from going into Node’s core.
+
+Fedor Indutny et al.
+
+🗣️ There were [many comments on Reddit's `/r/node`](https://nodeweekly.com/link/182417/0a4070b383) about this topic. The consensus was largely in *support* of AI, but against huge 10,000+ line PRs generally.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/68db6eea.jpg)](https://nodeweekly.com/link/182460/0a4070b383)
+
+[Build AI Agents from Scratch in Node.js](https://nodeweekly.com/link/182460/0a4070b383 "frontendmasters.com") — Tool calling, agent loops, evals, web search, and human approval flows -- taught by Scott Moss (Senior Dev at Netflix). Rated 4.86/5 by 90 developers.
+
+Frontend Masters sponsor
+
+[Why Node.js Needs a Virtual File System](https://nodeweekly.com/link/182418/0a4070b383 "blog.platformatic.dev") — The idea is simple: hook into `node:fs` and the module resolver so you can `import` modules that exist only in memory for things like sandboxing, single executable apps, and test isolation. Matteo Collina has built a `node:vfs` module for Node core *and* released [a userland package](https://nodeweekly.com/link/182419/0a4070b383) that works today ([with some compromises](https://nodeweekly.com/link/182420/0a4070b383)).
+
+Matteo Collina (Platformatic)
+
+😬 [The PR for `node:vfs`](https://nodeweekly.com/link/182461/0a4070b383) was one of the inspirations for the AI petition *(above)*.
+
+**IN BRIEF:**
+
+* ⚠️ All maintained Node.js versions (25.x, 24.x, 22.x and 20.x) [will get security releases next week](https://nodeweekly.com/link/182421/0a4070b383) (on or after March 24) to address nine vulnerabilities.
+
+* At last week's TC39 meeting, [several language proposals were advanced](https://nodeweekly.com/link/182422/0a4070b383) including [Temporal](https://nodeweekly.com/link/182423/0a4070b383), [Import Text](https://nodeweekly.com/link/182424/0a4070b383), [Error Stack Accessor](https://nodeweekly.com/link/182425/0a4070b383), and [Iterator Includes](https://nodeweekly.com/link/182426/0a4070b383).
+
+* [A Node.js PR proposes opt-in support for TLS certificate compression](https://nodeweekly.com/link/182427/0a4070b383), which could shrink handshake sizes and reduce fingerprintability.
+
+* [Bun v1.3.11](https://nodeweekly.com/link/182428/0a4070b383) has been released with `Bun.cron` for OS-level cron jobs and expression parsing, ANSI and grapheme-aware string slicing, and yet more [Node.js compatibility improvements.](https://nodeweekly.com/link/182429/0a4070b383)
+
+[Node Worker Threads are Problematic, But Work Great for Us](https://nodeweekly.com/link/182430/0a4070b383 "www.inngest.com") — A practical case study of solving event loop starvation in a WebSocket-based SDK by moving connection internals into a worker thread, while recognizing the constraints of `worker_threads` compared to threading approaches in other languages.
+
+Aaron Harper (Inngest)
+
+[Clerk Core 3: Keyless Mode, Satellite Fixes, Upgrade CLI](https://nodeweekly.com/link/182431/0a4070b383 "go.clerk.com") — Keyless mode for TanStack Start, Astro, and React Router. Satellite domains skip redirects for anonymous visitors.
+
+Clerk sponsor
+
+📄 [Rewriting a 12-Year-Old JavaScript Library in TypeScript](https://nodeweekly.com/link/182432/0a4070b383) – Specifically, the [Machina](https://nodeweekly.com/link/182433/0a4070b383) finite state machine library. Jim Cowart
+
+📄 [Monitoring Your Node.js App's Health on Fly.io](https://nodeweekly.com/link/182434/0a4070b383) Tarun Singh (AppSignal)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tx9gxccojk8jj8fltnzm.jpg)](https://nodeweekly.com/link/182435/0a4070b383)
+
+[Edge.js: Running Node Apps Inside a WebAssembly Sandbox](https://nodeweekly.com/link/182435/0a4070b383 "wasmer.io") — A new runtime (in alpha, for now) that maintains full Node.js compatibility while isolating unsafe execution via WebAssembly. Existing apps and native modules run unmodified with system calls sandboxed through WASIX. There’s [more info on Edge.js's homepage.](https://nodeweekly.com/link/182436/0a4070b383)
+
+Syrus Akbary (Wasmer)
+
+* [jsdom 29.0.0](https://nodeweekly.com/link/182437/0a4070b383) – Pure JS implementation of WHATWG DOM and HTML Standards for use with Node for testing, scraping, and similar use cases.
+
+* [node-rate-limiter-flexible 10.0](https://nodeweekly.com/link/182438/0a4070b383) – Atomic and non-atomic counters for limiting access to resources.
+
+* [better-sqlite3 12.8](https://nodeweekly.com/link/182439/0a4070b383) – The popular SQLite library updates to [SQLite 3.51.3](https://nodeweekly.com/link/182440/0a4070b383) and now requires Node 20+.
+
+* [`pnpm/action-setup` 5.0](https://nodeweekly.com/link/182441/0a4070b383) – GitHub Action to install and configure [pnpm](https://nodeweekly.com/link/182442/0a4070b383). Now uses Node.js v24.
+
+* 🤖 [OpenAI v6.32.0](https://nodeweekly.com/link/182443/0a4070b383) – OpenAI's REST API client. Now with [GPT 5.4 mini and nano](https://nodeweekly.com/link/182444/0a4070b383) support.
+
+* [Node File Trace 1.4](https://nodeweekly.com/link/182445/0a4070b383) – A tool that determines exactly which files are necessary for an app to run.
+
+* [XO 2.0](https://nodeweekly.com/link/182446/0a4070b383) – Opinionated, configurable ESLint 10 wrapper with *'lots of goodies'.*
+
+* [node-oom-heapdump 3.8](https://nodeweekly.com/link/182447/0a4070b383) – Create a V8 heap snapshot right before OOM.
+
+* [node-osc 11.3](https://nodeweekly.com/link/182448/0a4070b383) – No-frills [Open Sound Control](https://nodeweekly.com/link/182449/0a4070b383) client and server.
+
+* [Hookable 6.1](https://nodeweekly.com/link/182450/0a4070b383) – Awaitable hooks system.
+
+📢  Elsewhere in the ecosystem
+
+* [Next.js 16.2 has been released.](https://nodeweekly.com/link/182451/0a4070b383) The popular React framework gets much faster `next dev` startup times, faster rendering, significant [Turbopack-related](https://nodeweekly.com/link/182452/0a4070b383) improvements, and [some goodies for AI-assisted development.](https://nodeweekly.com/link/182453/0a4070b383)
+
+* Should `BigInt.PI === 3`? Enjoy *qntm*'s tongue-in-cheek [proposal to add mathematical constants to `BigInt`.](https://nodeweekly.com/link/182454/0a4070b383)
+
+* 🤖 [Addy Osmani introduces us to *comprehension debt*](https://nodeweekly.com/link/182455/0a4070b383). In a world of agent-produced code, the question is now not *“how do we generate more code?”* but *“how do we actually understand more of what we’re shipping?”*
+
+* One from the Postgres world: [how a single query blew up and consumed 2 terabytes of memory](https://nodeweekly.com/link/182456/0a4070b383) before being taken down by Linux's OOM killer.
+
+*  [Awesome Mac](https://nodeweekly.com/link/182457/0a4070b383) is a fantastic, well-updated curated directory of macOS software, with a large [developer tools section.](https://nodeweekly.com/link/182458/0a4070b383)
+
+* And much, much more (including Vite 8!) in [this week's issue of *JavaScript Weekly.*](https://nodeweekly.com/link/182459/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
