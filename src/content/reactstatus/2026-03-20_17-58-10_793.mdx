@@ -1,0 +1,250 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: How to roll your own server-side React framework
+description: How to roll your own server-side React framework
+date: 星期五 05 下午 三月 20o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/467
+origin_site: https://react.statuscode.com/issues/467
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="How to roll your own server-side React framework" url="https://react.statuscode.com/issues/467" />
+
+<Detail client:only="react">
+	#​467 — March 20, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/467)
+
+Together with 
+
+[![Clerk](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_220,h_64/e_make_transparent/co_white,e_outline:5/j3vhv1hnwqeffgkzzlvu.png)](https://react.statuscode.com/link/182598/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mugxsoqu3wdoesaay38f.jpg)](https://react.statuscode.com/link/182599/5d0bbb4a61)
+
+📊 [A React SSR Framework Performance Showdown](https://react.statuscode.com/link/182599/5d0bbb4a61 "blog.platformatic.dev") — A significant benchmarking effort where TanStack Start, React Router, and Next.js were put under heavy load. The benchmark results helped make TanStack Start and Next.js better, too, as their maintainers fixed issues raised during testing, including [this speedup for React itself.](https://react.statuscode.com/link/182600/5d0bbb4a61)
+
+Matteo Collina (Platformatic)
+
+💡 As always with benchmarks, they present a single snapshot in time, are hard to get right, and real life situations vary a lot.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/6733df67.png)](https://react.statuscode.com/link/182598/5d0bbb4a61)
+
+[Auth That Plays Nice with Suspense and Transitions](https://react.statuscode.com/link/182598/5d0bbb4a61 "go.clerk.com") — Clerk Core 3 adds full support for React concurrent rendering — Suspense, transitions, and streaming SSR now work correctly with auth state. Also ships new hooks for custom sign-in and sign-up flows, a visual theme editor, and ~50KB smaller bundles.
+
+Clerk sponsor
+
+[Why We Rolled Our Own React Server Components Framework](https://react.statuscode.com/link/182601/5d0bbb4a61 "www.aha.io") — _Another_ one? The team at _Aha!_ had specific needs existing frameworks couldn’t meet, and modern React and Vite have made ‘rolling your own’ a realistic option. Josh shares a _lot_ of details on how to approach such a task yourself.
+
+Josh Wilson (Aha!)
+
+💡 If you go down the 'roll your own' rabbit hole, [Nitro v3](https://react.statuscode.com/link/182602/5d0bbb4a61) is worth a look as it now makes it possible to [tie Vite and React](https://react.statuscode.com/link/182649/5d0bbb4a61) together to build server-side apps.
+
+**IN BRIEF:**
+
+*   [Expo UI in SDK 55](https://react.statuscode.com/link/182603/5d0bbb4a61) brings Jetpack Compose (now in beta) and reworked SwiftUI APIs into React Native apps.
+    
+*   The moderator of the `/r/reactjs` subreddit (Mark Erikson of Redux fame) is [seeking feedback on how to make the sub better.](https://react.statuscode.com/link/182604/5d0bbb4a61)
+    
+*   [Solid](https://react.statuscode.com/link/182605/5d0bbb4a61)'s Ryan Carniato argues [two unpopular React design choices were unavoidable](https://react.statuscode.com/link/182606/5d0bbb4a61) (deferred state commits and dependency arrays on effects) and signal-based alternatives (like Solid) only avoid them by staying synchronous.
+    
+*   🤖 In [a post on _X_](https://react.statuscode.com/link/182607/5d0bbb4a61), Anthropic's Felix Rieseberg reveals the [main Claude site](https://react.statuscode.com/link/182651/5d0bbb4a61) and desktop apps have shifted to Vite and TanStack Router.
+    
+
+[5x SSR Throughput: Profiling SSR Hot Paths in TanStack Start](https://react.statuscode.com/link/182609/5d0bbb4a61 "tanstack.com") — An in-depth explanation, coupled with analysis, of TanStack’s efforts to significantly improve the server-side rendering performance of [TanStack Start.](https://react.statuscode.com/link/182610/5d0bbb4a61) 5x higher throughput and a 90% drop in average latency is [_not to be sniffed at._](https://react.statuscode.com/link/182611/5d0bbb4a61)
+
+Schiller and Pellet (TanStack)
+
+[`npx workos`: An AI Agent That Writes Auth Directly Into Your Codebase](https://react.statuscode.com/link/182612/5d0bbb4a61 "workos.com") — Reads your project, detects your framework, writes the integration, then typechecks and fixes its own build errors.
+
+WorkOS sponsor
+
+📄 [Start Naming Your `useEffect` Functions (You'll Thank Me Later)](https://react.statuscode.com/link/182613/5d0bbb4a61) Neciu Dan
+
+📺 [Generating Images with TanStack AI](https://react.statuscode.com/link/182614/5d0bbb4a61) Jack Herrington
+
+🛠  Code, Tools & Libraries
+
+[Next.js 16.2 Released](https://react.statuscode.com/link/182615/5d0bbb4a61 "nextjs.org") — A release focused on developer experience with much faster `next dev` startup, ~50% faster rendering, Server Function logging in dev, plus [significant Turbopack-related improvements](https://react.statuscode.com/link/182616/5d0bbb4a61), and [improvements for AI-assisted development.](https://react.statuscode.com/link/182617/5d0bbb4a61)
+
+Jimmy Lai, Tim Neutkens
+
+[React Native Reanimated DnD 2.0: The Drag and Drop Library](https://react.statuscode.com/link/182618/5d0bbb4a61 "reanimated-dnd-docs.vercel.app") — Built with Reanimated 4 and Worklets for 60 fps animations. You can scan a QR code on the homepage to try it for yourself. [v2.0](https://react.statuscode.com/link/182619/5d0bbb4a61) migrates the library to Reanimated 4 and adds sortable grids and dynamic heights.
+
+Vishesh Raheja
+
+[RevoGrid: High-Performance Data Grid Component](https://react.statuscode.com/link/182620/5d0bbb4a61 "rv-grid.com") — A high-performance data grid control built for massive datasets. [Integrates with React](https://react.statuscode.com/link/182622/5d0bbb4a61), Vue, Angular, and Svelte. [Live demo](https://react.statuscode.com/link/182624/5d0bbb4a61) and [GitHub repo.](https://react.statuscode.com/link/182626/5d0bbb4a61)
+
+Revolist OU
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ujagdenzznvptt9h5kr9.jpg)](https://react.statuscode.com/link/182627/5d0bbb4a61)
+
+*   [Shimmer From Structure 2.4](https://react.statuscode.com/link/182627/5d0bbb4a61) – Auto-generates pixel-perfect 'shimmer skeletons' for components that are loading _(above)_. [The homepage](https://react.statuscode.com/link/182629/5d0bbb4a61) is a great live demo.
+    
+*   [Streamdown 2.5](https://react.statuscode.com/link/182630/5d0bbb4a61) – Vercel's component for rendering streaming Markdown.
+    
+*   ⌨️ [React Hotkeys 3.0](https://react.statuscode.com/link/182631/5d0bbb4a61) – Component to listen to keydown/keyup and defining and dispatching keyboard shortcuts.
+    
+*   [react-fontawesome 3.3](https://react.statuscode.com/link/182632/5d0bbb4a61) – Official React component for _Font Awesome_ icons.
+    
+*   [next-forge 6.0](https://react.statuscode.com/link/182633/5d0bbb4a61) – Vercel's monorepo Turborepo template for Next.js apps.
+    
+*   [Modern.js 3.1](https://react.statuscode.com/link/182634/5d0bbb4a61) – ByteDance's progressive React & Rsbuild framework.
+    
+*   [React Notion X 7.10](https://react.statuscode.com/link/182635/5d0bbb4a61) – Fast and accurate React renderer for Notion.
+    
+*   📅 [React Native DateTimePicker 9.1](https://react.statuscode.com/link/182636/5d0bbb4a61)
+    
+*   [React Native for Windows 0.82](https://react.statuscode.com/link/182637/5d0bbb4a61)
+    
+
+📰 Classifieds
+
+📸 Add robust 1D/2D barcode scanning to your web app with [STRICH](https://react.statuscode.com/link/182638/5d0bbb4a61). Easy integration, simple pricing. [Free trial and demo app available](https://react.statuscode.com/link/182638/5d0bbb4a61).
+
+* * *
+
+🏃 Your existing React Native apps can now run on Fire TV with minimal changes. [Learn more about Vega OS](https://react.statuscode.com/link/182639/5d0bbb4a61) and see how simple it is to get started.
+
+📢  Elsewhere in the ecosystem
+
+*   🤖 [Addy Osmani introduces us to _comprehension debt_](https://react.statuscode.com/link/182640/5d0bbb4a61). In a world of agent-produced code, the question is now not _“how do we generate more code?”_ but _“how do we actually understand more of what we’re shipping?”_
+    
+*   🤖 Vercel has [updated its terms of service](https://react.statuscode.com/link/182641/5d0bbb4a61) to allow for using code for AI model training and _"with AI model providers"_. It's off by default for _paid_ users, but Hobby users need to opt out manually.
+    
+*   ⚠️ All maintained Node.js versions (25.x, 24.x, 22.x and 20.x) [will get security releases next week](https://react.statuscode.com/link/182642/5d0bbb4a61) (on or after March 24) to address nine vulnerabilities.
+    
+*   [Bun v1.3.11](https://react.statuscode.com/link/182644/5d0bbb4a61) has been released with `Bun.cron` for OS-level cron jobs and expression parsing, ANSI and grapheme-aware string slicing, and yet more [Node.js compatibility improvements.](https://react.statuscode.com/link/182645/5d0bbb4a61)
+    
+*   If upgrading to macOS 26 (Tahoe) has broken support for custom local TLDs (e.g. `.internal` or `.test`), [this Gist might be useful.](https://react.statuscode.com/link/182647/5d0bbb4a61)
+    
+*   And much, much more in [this week's _JavaScript Weekly._](https://react.statuscode.com/link/182648/5d0bbb4a61)
+    
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​467 — March 20, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/467)
+
+Together with 
+
+[![Clerk](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_220,h_64/e_make_transparent/co_white,e_outline:5/j3vhv1hnwqeffgkzzlvu.png)](https://react.statuscode.com/link/182598/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mugxsoqu3wdoesaay38f.jpg)](https://react.statuscode.com/link/182599/5d0bbb4a61)
+
+📊 [A React SSR Framework Performance Showdown](https://react.statuscode.com/link/182599/5d0bbb4a61 "blog.platformatic.dev") — A significant benchmarking effort where TanStack Start, React Router, and Next.js were put under heavy load. The benchmark results helped make TanStack Start and Next.js better, too, as their maintainers fixed issues raised during testing, including [this speedup for React itself.](https://react.statuscode.com/link/182600/5d0bbb4a61)
+
+Matteo Collina (Platformatic)
+
+💡 As always with benchmarks, they present a single snapshot in time, are hard to get right, and real life situations vary a lot.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/6733df67.png)](https://react.statuscode.com/link/182598/5d0bbb4a61)
+
+[Auth That Plays Nice with Suspense and Transitions](https://react.statuscode.com/link/182598/5d0bbb4a61 "go.clerk.com") — Clerk Core 3 adds full support for React concurrent rendering — Suspense, transitions, and streaming SSR now work correctly with auth state. Also ships new hooks for custom sign-in and sign-up flows, a visual theme editor, and ~50KB smaller bundles.
+
+Clerk sponsor
+
+[Why We Rolled Our Own React Server Components Framework](https://react.statuscode.com/link/182601/5d0bbb4a61 "www.aha.io") — *Another* one? The team at *Aha!* had specific needs existing frameworks couldn’t meet, and modern React and Vite have made ‘rolling your own’ a realistic option. Josh shares a *lot* of details on how to approach such a task yourself.
+
+Josh Wilson (Aha!)
+
+💡 If you go down the 'roll your own' rabbit hole, [Nitro v3](https://react.statuscode.com/link/182602/5d0bbb4a61) is worth a look as it now makes it possible to [tie Vite and React](https://react.statuscode.com/link/182649/5d0bbb4a61) together to build server-side apps.
+
+**IN BRIEF:**
+
+* [Expo UI in SDK 55](https://react.statuscode.com/link/182603/5d0bbb4a61) brings Jetpack Compose (now in beta) and reworked SwiftUI APIs into React Native apps.
+
+* The moderator of the `/r/reactjs` subreddit (Mark Erikson of Redux fame) is [seeking feedback on how to make the sub better.](https://react.statuscode.com/link/182604/5d0bbb4a61)
+
+* [Solid](https://react.statuscode.com/link/182605/5d0bbb4a61)'s Ryan Carniato argues [two unpopular React design choices were unavoidable](https://react.statuscode.com/link/182606/5d0bbb4a61) (deferred state commits and dependency arrays on effects) and signal-based alternatives (like Solid) only avoid them by staying synchronous.
+
+* 🤖 In [a post on *X*](https://react.statuscode.com/link/182607/5d0bbb4a61), Anthropic's Felix Rieseberg reveals the [main Claude site](https://react.statuscode.com/link/182651/5d0bbb4a61) and desktop apps have shifted to Vite and TanStack Router.
+
+[5x SSR Throughput: Profiling SSR Hot Paths in TanStack Start](https://react.statuscode.com/link/182609/5d0bbb4a61 "tanstack.com") — An in-depth explanation, coupled with analysis, of TanStack’s efforts to significantly improve the server-side rendering performance of [TanStack Start.](https://react.statuscode.com/link/182610/5d0bbb4a61) 5x higher throughput and a 90% drop in average latency is [*not to be sniffed at.*](https://react.statuscode.com/link/182611/5d0bbb4a61)
+
+Schiller and Pellet (TanStack)
+
+[`npx workos`: An AI Agent That Writes Auth Directly Into Your Codebase](https://react.statuscode.com/link/182612/5d0bbb4a61 "workos.com") — Reads your project, detects your framework, writes the integration, then typechecks and fixes its own build errors.
+
+WorkOS sponsor
+
+📄 [Start Naming Your `useEffect` Functions (You'll Thank Me Later)](https://react.statuscode.com/link/182613/5d0bbb4a61) Neciu Dan
+
+📺 [Generating Images with TanStack AI](https://react.statuscode.com/link/182614/5d0bbb4a61) Jack Herrington
+
+🛠  Code, Tools & Libraries
+
+[Next.js 16.2 Released](https://react.statuscode.com/link/182615/5d0bbb4a61 "nextjs.org") — A release focused on developer experience with much faster `next dev` startup, ~50% faster rendering, Server Function logging in dev, plus [significant Turbopack-related improvements](https://react.statuscode.com/link/182616/5d0bbb4a61), and [improvements for AI-assisted development.](https://react.statuscode.com/link/182617/5d0bbb4a61)
+
+Jimmy Lai, Tim Neutkens
+
+[React Native Reanimated DnD 2.0: The Drag and Drop Library](https://react.statuscode.com/link/182618/5d0bbb4a61 "reanimated-dnd-docs.vercel.app") — Built with Reanimated 4 and Worklets for 60 fps animations. You can scan a QR code on the homepage to try it for yourself. [v2.0](https://react.statuscode.com/link/182619/5d0bbb4a61) migrates the library to Reanimated 4 and adds sortable grids and dynamic heights.
+
+Vishesh Raheja
+
+[RevoGrid: High-Performance Data Grid Component](https://react.statuscode.com/link/182620/5d0bbb4a61 "rv-grid.com") — A high-performance data grid control built for massive datasets. [Integrates with React](https://react.statuscode.com/link/182622/5d0bbb4a61), Vue, Angular, and Svelte. [Live demo](https://react.statuscode.com/link/182624/5d0bbb4a61) and [GitHub repo.](https://react.statuscode.com/link/182626/5d0bbb4a61)
+
+Revolist OU
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ujagdenzznvptt9h5kr9.jpg)](https://react.statuscode.com/link/182627/5d0bbb4a61)
+
+* [Shimmer From Structure 2.4](https://react.statuscode.com/link/182627/5d0bbb4a61) – Auto-generates pixel-perfect 'shimmer skeletons' for components that are loading *(above)*. [The homepage](https://react.statuscode.com/link/182629/5d0bbb4a61) is a great live demo.
+
+* [Streamdown 2.5](https://react.statuscode.com/link/182630/5d0bbb4a61) – Vercel's component for rendering streaming Markdown.
+
+* ⌨️ [React Hotkeys 3.0](https://react.statuscode.com/link/182631/5d0bbb4a61) – Component to listen to keydown/keyup and defining and dispatching keyboard shortcuts.
+
+* [react-fontawesome 3.3](https://react.statuscode.com/link/182632/5d0bbb4a61) – Official React component for *Font Awesome* icons.
+
+* [next-forge 6.0](https://react.statuscode.com/link/182633/5d0bbb4a61) – Vercel's monorepo Turborepo template for Next.js apps.
+
+* [Modern.js 3.1](https://react.statuscode.com/link/182634/5d0bbb4a61) – ByteDance's progressive React & Rsbuild framework.
+
+* [React Notion X 7.10](https://react.statuscode.com/link/182635/5d0bbb4a61) – Fast and accurate React renderer for Notion.
+
+* 📅 [React Native DateTimePicker 9.1](https://react.statuscode.com/link/182636/5d0bbb4a61)
+
+* [React Native for Windows 0.82](https://react.statuscode.com/link/182637/5d0bbb4a61)
+
+📰 Classifieds
+
+📸 Add robust 1D/2D barcode scanning to your web app with [STRICH](https://react.statuscode.com/link/182638/5d0bbb4a61). Easy integration, simple pricing. [Free trial and demo app available](https://react.statuscode.com/link/182638/5d0bbb4a61).
+
+***
+
+🏃 Your existing React Native apps can now run on Fire TV with minimal changes. [Learn more about Vega OS](https://react.statuscode.com/link/182639/5d0bbb4a61) and see how simple it is to get started.
+
+📢  Elsewhere in the ecosystem
+
+* 🤖 [Addy Osmani introduces us to *comprehension debt*](https://react.statuscode.com/link/182640/5d0bbb4a61). In a world of agent-produced code, the question is now not *“how do we generate more code?”* but *“how do we actually understand more of what we’re shipping?”*
+
+* 🤖 Vercel has [updated its terms of service](https://react.statuscode.com/link/182641/5d0bbb4a61) to allow for using code for AI model training and *"with AI model providers"*. It's off by default for *paid* users, but Hobby users need to opt out manually.
+
+* ⚠️ All maintained Node.js versions (25.x, 24.x, 22.x and 20.x) [will get security releases next week](https://react.statuscode.com/link/182642/5d0bbb4a61) (on or after March 24) to address nine vulnerabilities.
+
+* [Bun v1.3.11](https://react.statuscode.com/link/182644/5d0bbb4a61) has been released with `Bun.cron` for OS-level cron jobs and expression parsing, ANSI and grapheme-aware string slicing, and yet more [Node.js compatibility improvements.](https://react.statuscode.com/link/182645/5d0bbb4a61)
+
+* If upgrading to macOS 26 (Tahoe) has broken support for custom local TLDs (e.g. `.internal` or `.test`), [this Gist might be useful.](https://react.statuscode.com/link/182647/5d0bbb4a61)
+
+* And much, much more in [this week's *JavaScript Weekly.*](https://react.statuscode.com/link/182648/5d0bbb4a61)
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
