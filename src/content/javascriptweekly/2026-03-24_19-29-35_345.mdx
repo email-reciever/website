@@ -1,0 +1,311 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: TypeScript 6.0, Next.js 16.2, and a new Node.js runtime
+description: TypeScript 6.0, Next.js 16.2, and a new Node.js runtime
+date: 星期二 07 晚上 三月 24o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/778
+origin_site: https://javascriptweekly.com/issues/778
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="TypeScript 6.0, Next.js 16.2, and a new Node.js runtime" url="https://javascriptweekly.com/issues/778" />
+
+<Detail client:only="react">
+	#​778 — March 24, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/778)
+
+Together with 
+
+[![Mescius](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_284/e_make_transparent/co_white,e_outline:7/mqrpcwpbl3os6si25hoe.jpg)](https://javascriptweekly.com/link/182653/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dx6duhxflearlefqrpxf.jpg)](https://javascriptweekly.com/link/182654/d076523b1d)
+
+[Announcing TypeScript 6.0](https://javascriptweekly.com/link/182654/d076523b1d "devblogs.microsoft.com") — Over six months in the making, TypeScript 6.0 is designed to bridge the gap between its self-hosted [compiler](https://javascriptweekly.com/link/182655/d076523b1d) and the (almost ready) [Go-powered native compiler of TypeScript 7.0](https://javascriptweekly.com/link/182656/d076523b1d) . There _are_ new features (Temporal improvements, `RegExp.escape`, and more), but most important are the changes to help you prepare for 7.0:
+
+*   [Numerous default changes](https://javascriptweekly.com/link/182657/d076523b1d): `strict` is now `true`, `module` is `esnext`, `rootDir` defaults to `.`, and more.
+*   A change that will affect many apps is `types` defaulting to `[]` rather than pulling in everything from `node_modules/@types`.
+*   Numerous _deprecations_: the `es5` target, [emitting AMD, UMD, and SystemJS](https://javascriptweekly.com/link/182658/d076523b1d) modules, [`--baseUrl`](https://javascriptweekly.com/link/182659/d076523b1d), and others.
+*   `--stableTypeOrdering` makes 6.0's type ordering behavior match 7.0's to help diagnose inference differences as you update.
+
+Daniel Rosenwasser (Microsoft)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/aff2eb90.png)](https://javascriptweekly.com/link/182653/d076523b1d)
+
+[Add Excel-like Spreadsheet Functionality to Your JavaScript Apps](https://javascriptweekly.com/link/182653/d076523b1d "developer.mescius.com") — SpreadJS is the industry-leading JavaScript spreadsheet for adding advanced spreadsheet features to your enterprise apps. Build finance, analysis, budget, and other apps. Excel I/O, 500+ calc functions, tables, charts, and more. [View demos now](https://javascriptweekly.com/link/182653/d076523b1d).
+
+SpreadJS from MESCIUS inc sponsor
+
+**IN BRIEF:**
+
+*   🤖 The Node.js community is wrestling with the role that LLM-produced code should play in its implementation, with the once creator of the _io.js_ fork [starting a petition to say 'no' to contributions built with AI assistance.](https://javascriptweekly.com/link/182660/d076523b1d)
+    
+*   A large number of [Deno](https://javascriptweekly.com/link/182661/d076523b1d) employees announced ([e.g.](https://javascriptweekly.com/link/182662/d076523b1d)) they were departing the company last week. Deno employee Josh Collinsworth, _not_ speaking for the company, [noted](https://javascriptweekly.com/link/182663/d076523b1d) _"Deno is not going away. These are just hard times."_
+    
+*   📗 [Chibivue](https://javascriptweekly.com/link/182664/d076523b1d) is a code project and associated online book that provides, and explains how to build for yourself, a minimal Vue.js implementation.
+    
+
+**RELEASES:**
+
+*   [Next.js 16.2](https://javascriptweekly.com/link/182665/d076523b1d) – The React framework gets much faster `next dev` startup and ~50% faster rendering.
+    
+*   [Storybook 10.3.0](https://javascriptweekly.com/link/182667/d076523b1d) – The component workshop adds Vite 8, Next.js 16.2, and ESLint 10 support, plus a preview of an MCP server for React dev.
+    
+*   ⚠️ All maintained Node.js versions [are due security releases](https://javascriptweekly.com/link/182668/d076523b1d) later _today_ to address nine vulnerabilities.
+    
+*   [Deno 2.7.6](https://javascriptweekly.com/link/182669/d076523b1d) – `deno eval` auto-detects CJS vs ESM, and `--cpu-prof-flamegraph` generates interactive SVG flamegraphs.
+    
+*   [Bun 1.3.11](https://javascriptweekly.com/link/182670/d076523b1d), [Valibot 1.3](https://javascriptweekly.com/link/182671/d076523b1d), [ESLint 10.1](https://javascriptweekly.com/link/182672/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kajshdtprmih95p8dxgb.jpg)](https://javascriptweekly.com/link/182673/d076523b1d)
+
+[The Three Pillars of JavaScript Bloat](https://javascriptweekly.com/link/182673/d076523b1d "43081j.com") — Three reasons your `node_modules` is huge: needless ES3-era compat packages, micro-libraries with a single consumer, and [ponyfills](https://javascriptweekly.com/link/182674/d076523b1d) for APIs that shipped years ago! James, known for the [e18e](https://javascriptweekly.com/link/182675/d076523b1d) ecosystem performance project, offers some ways to calm the chaos.
+
+James Garbutt
+
+[How Rewriting a Rust and WASM-Powered Parser in TypeScript Made it _Faster_](https://javascriptweekly.com/link/182676/d076523b1d "www.openui.com") — A counterintuitive result on the surface, but the WASM-JS boundary can introduce a serious performance penalty for many use cases, such that it can be 2-4x quicker to stay in the JS world.
+
+Thesys Engineering Team
+
+[Clerk Auth for Chrome Extensions — Now in Vanilla JS](https://javascriptweekly.com/link/182677/d076523b1d "go.clerk.com") — The Chrome Extension SDK now supports vanilla JS via createClerkClient(). Build popups and side panels without React. New quickstart included.
+
+Clerk sponsor
+
+📊 [A React SSR Framework Performance Showdown](https://javascriptweekly.com/link/182678/d076523b1d "blog.platformatic.dev") — A large benchmark of TanStack Start, React Router, and Next.js under heavy load. The results led to patches benefitting both TanStack and React generally.
+
+Matteo Collina (Platformatic)
+
+[Two React Design Choices Developers Don’t Like, But Can’t Avoid](https://javascriptweekly.com/link/182679/d076523b1d "dev.to") — Deferred state commits and dependency arrays on effects cause a lot of issues, but Ryan points out that signal-based alternatives (like Solid) only avoid them by staying synchronous.
+
+Ryan Carniato
+
+📄 [JavaScript Thinks Everything's a Date](https://javascriptweekly.com/link/182680/d076523b1d) – This is why we celebrate the progress of the Temporal API! Robert Gambee
+
+📄 [An Introductory Guide to Bookmarklets](https://javascriptweekly.com/link/182681/d076523b1d) – Tiny bits of JavaScript saved in, and triggered by, bookmarks. Declan Chidlow
+
+📺 [How to Burn $30M on a JavaScript Framework](https://javascriptweekly.com/link/182682/d076523b1d) – A five-minute retrospective of 2012’s `famo.us` project. Fireship
+
+📄 [Node.js Worker Threads are Problematic, But They Work Great for Us](https://javascriptweekly.com/link/182683/d076523b1d) Aaron Harper (Inngest)
+
+🛠 Code & Tools
+
+[pnpm 11 Beta 0: A Sneak Peek](https://javascriptweekly.com/link/182684/d076523b1d "github.com") — The [efficiency-focused npm alternative](https://javascriptweekly.com/link/182685/d076523b1d) continues its outsized impact on JS package management. It's moving to a SQLite-powered store, gets a configuration overhaul, and has stricter build security by default. Four new commands, too, including `pnpm sbom` for generating Software Bill of Materials JSON documents.
+
+pnpm contributors
+
+[Edge.js: Running Node Apps Inside a WebAssembly Sandbox](https://javascriptweekly.com/link/182686/d076523b1d "wasmer.io") — A new, in-alpha runtime that maintains full Node compatibility while offering isolation via WebAssembly. Existing apps/modules run unmodified with system calls sandboxed, and the JS engine used is pluggable (between V8, JavaScriptCore and QuickJS). [More info on the homepage](https://javascriptweekly.com/link/182687/d076523b1d).
+
+Syrus Akbary (Wasmer)
+
+[Breakpoints and `console.log` Is the Past, Time Travel Is the Future](https://javascriptweekly.com/link/182688/d076523b1d "wallabyjs.com") — 15x faster JavaScript debugging than with breakpoints and console.log, supports Vitest, Jest, Karma, Jasmine, and more.
+
+Wallaby Team sponsor
+
+[ArrowJS 1.0: Fast, Reactive UI Runtime Built on Platform Primitives](https://javascriptweekly.com/link/182689/d076523b1d "www.arrow-js.com") — Built around ES modules, template literals and the DOM, it can also isolate component logic inside WASM sandboxes while rendering full inline DOM directly. First unveiled in 2022 by the creator of [FormKit](https://javascriptweekly.com/link/182690/d076523b1d), it's now clearly finding its feet.
+
+Justin Schroeder
+
+[Sugar High 1.0: A Lightweight JSX Syntax Highlighter](https://javascriptweekly.com/link/182691/d076523b1d "sugar-high.vercel.app") — Doesn’t need React present, so you can use it for syntax highlighting JSX snippets anywhere. You can also theme it with CSS. [GitHub repo](https://javascriptweekly.com/link/182692/d076523b1d).
+
+Jiachi Liu
+
+*   [htmlparser2 12.0](https://javascriptweekly.com/link/182695/d076523b1d) – Fast, forgiving HTML and XML parser focused on performance. Works both server-side and in the browser.
+    
+*   🔊 [vue-audio-visual 3.1](https://javascriptweekly.com/link/182693/d076523b1d) – Vue 3 HTML5 audio visualization components using the Web Audio API. Check out [the demos.](https://javascriptweekly.com/link/182694/d076523b1d)
+    
+*   [Svelte SEO 2.1](https://javascriptweekly.com/link/182696/d076523b1d) – Optimize Svelte apps for search engines/social media with meta tags, Open Graph, and JSON-LD.
+    
+*   [`pnpm/action-setup` 5.0](https://javascriptweekly.com/link/182697/d076523b1d) – GitHub Action to install and configure [pnpm](https://javascriptweekly.com/link/182685/d076523b1d). Now uses Node.js v24.
+    
+*   ☎︎ [vue-tel-input v9.8.0](https://javascriptweekly.com/link/182698/d076523b1d) – Vue component for global phone number input. ([Demo.](https://javascriptweekly.com/link/182699/d076523b1d))
+    
+*   [Mediabunny 1.40.0](https://javascriptweekly.com/link/182700/d076523b1d) – Powerful toolkit for reading/writing/converting media files.
+    
+*   🗓️ [EventCalendar 5.5](https://javascriptweekly.com/link/182701/d076523b1d) – Full-sized drag and drop event calendar.
+    
+*   [Maz UI 4.9](https://javascriptweekly.com/link/182703/d076523b1d) – Lightweight UI components for Vue 3 and Nuxt 3.
+    
+*   [React Joyride 3.0](https://javascriptweekly.com/link/182704/d076523b1d) – Create guided tours in React apps.
+    
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/182705/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/iygpyy7l0o5z8lvfh6b2.jpg)](https://javascriptweekly.com/link/182706/d076523b1d)
+
+*   The Microsoft Visual Studio Code team [shares how they use AI to work on VS Code](https://javascriptweekly.com/link/182706/d076523b1d), from organizing their work and handling issues, to pushing out new releases. If you've noticed VS Code is getting a release every week now, this is why!
+    
+*   🔒 Perhaps more than ever, it's essential to ensure no secrets have sneaked into your repos. [Secretlint](https://javascriptweekly.com/link/182707/d076523b1d) is a linter dedicated to that task.
+    
+*   Back in 1989, Rob Pike, famous for his work on both the Go programming language and co-creating UTF-8, wrote [Rob Pike's 5 Rules of Programming](https://javascriptweekly.com/link/182708/d076523b1d) which has gone viral this week and still apply in 2026!
+    
+*   🤖 [Addy Osmani introduces us to _comprehension debt_](https://javascriptweekly.com/link/182709/d076523b1d). In a world of agent-produced code, the question is now not _“how do we generate more code?”_ but _“how do we actually understand more of what we’re shipping?”_
+    
+*    Dislike all the menu icons that macOS 26 (Tahoe) has introduced? [There's a solution](https://javascriptweekly.com/link/182710/d076523b1d): `defaults write -g NSMenuEnableActionImages -bool NO`
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/182711/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​778 — March 24, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/778)
+
+Together with 
+
+[![Mescius](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_284/e_make_transparent/co_white,e_outline:7/mqrpcwpbl3os6si25hoe.jpg)](https://javascriptweekly.com/link/182653/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dx6duhxflearlefqrpxf.jpg)](https://javascriptweekly.com/link/182654/d076523b1d)
+
+[Announcing TypeScript 6.0](https://javascriptweekly.com/link/182654/d076523b1d "devblogs.microsoft.com") — Over six months in the making, TypeScript 6.0 is designed to bridge the gap between its self-hosted [compiler](https://javascriptweekly.com/link/182655/d076523b1d) and the (almost ready) [Go-powered native compiler of TypeScript 7.0](https://javascriptweekly.com/link/182656/d076523b1d) . There *are* new features (Temporal improvements, `RegExp.escape`, and more), but most important are the changes to help you prepare for 7.0:
+
+* [Numerous default changes](https://javascriptweekly.com/link/182657/d076523b1d): `strict` is now `true`, `module` is `esnext`, `rootDir` defaults to `.`, and more.
+* A change that will affect many apps is `types` defaulting to `[]` rather than pulling in everything from `node_modules/@types`.
+* Numerous *deprecations*: the `es5` target, [emitting AMD, UMD, and SystemJS](https://javascriptweekly.com/link/182658/d076523b1d) modules, [`--baseUrl`](https://javascriptweekly.com/link/182659/d076523b1d), and others.
+* `--stableTypeOrdering` makes 6.0's type ordering behavior match 7.0's to help diagnose inference differences as you update.
+
+Daniel Rosenwasser (Microsoft)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/aff2eb90.png)](https://javascriptweekly.com/link/182653/d076523b1d)
+
+[Add Excel-like Spreadsheet Functionality to Your JavaScript Apps](https://javascriptweekly.com/link/182653/d076523b1d "developer.mescius.com") — SpreadJS is the industry-leading JavaScript spreadsheet for adding advanced spreadsheet features to your enterprise apps. Build finance, analysis, budget, and other apps. Excel I/O, 500+ calc functions, tables, charts, and more. [View demos now](https://javascriptweekly.com/link/182653/d076523b1d).
+
+SpreadJS from MESCIUS inc sponsor
+
+**IN BRIEF:**
+
+* 🤖 The Node.js community is wrestling with the role that LLM-produced code should play in its implementation, with the once creator of the *io.js* fork [starting a petition to say 'no' to contributions built with AI assistance.](https://javascriptweekly.com/link/182660/d076523b1d)
+
+* A large number of [Deno](https://javascriptweekly.com/link/182661/d076523b1d) employees announced ([e.g.](https://javascriptweekly.com/link/182662/d076523b1d)) they were departing the company last week. Deno employee Josh Collinsworth, *not* speaking for the company, [noted](https://javascriptweekly.com/link/182663/d076523b1d) *"Deno is not going away. These are just hard times."*
+
+* 📗 [Chibivue](https://javascriptweekly.com/link/182664/d076523b1d) is a code project and associated online book that provides, and explains how to build for yourself, a minimal Vue.js implementation.
+
+**RELEASES:**
+
+* [Next.js 16.2](https://javascriptweekly.com/link/182665/d076523b1d) – The React framework gets much faster `next dev` startup and ~50% faster rendering.
+
+* [Storybook 10.3.0](https://javascriptweekly.com/link/182667/d076523b1d) – The component workshop adds Vite 8, Next.js 16.2, and ESLint 10 support, plus a preview of an MCP server for React dev.
+
+* ⚠️ All maintained Node.js versions [are due security releases](https://javascriptweekly.com/link/182668/d076523b1d) later *today* to address nine vulnerabilities.
+
+* [Deno 2.7.6](https://javascriptweekly.com/link/182669/d076523b1d) – `deno eval` auto-detects CJS vs ESM, and `--cpu-prof-flamegraph` generates interactive SVG flamegraphs.
+
+* [Bun 1.3.11](https://javascriptweekly.com/link/182670/d076523b1d), [Valibot 1.3](https://javascriptweekly.com/link/182671/d076523b1d), [ESLint 10.1](https://javascriptweekly.com/link/182672/d076523b1d)
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kajshdtprmih95p8dxgb.jpg)](https://javascriptweekly.com/link/182673/d076523b1d)
+
+[The Three Pillars of JavaScript Bloat](https://javascriptweekly.com/link/182673/d076523b1d "43081j.com") — Three reasons your `node_modules` is huge: needless ES3-era compat packages, micro-libraries with a single consumer, and [ponyfills](https://javascriptweekly.com/link/182674/d076523b1d) for APIs that shipped years ago! James, known for the [e18e](https://javascriptweekly.com/link/182675/d076523b1d) ecosystem performance project, offers some ways to calm the chaos.
+
+James Garbutt
+
+[How Rewriting a Rust and WASM-Powered Parser in TypeScript Made it *Faster*](https://javascriptweekly.com/link/182676/d076523b1d "www.openui.com") — A counterintuitive result on the surface, but the WASM-JS boundary can introduce a serious performance penalty for many use cases, such that it can be 2-4x quicker to stay in the JS world.
+
+Thesys Engineering Team
+
+[Clerk Auth for Chrome Extensions — Now in Vanilla JS](https://javascriptweekly.com/link/182677/d076523b1d "go.clerk.com") — The Chrome Extension SDK now supports vanilla JS via createClerkClient(). Build popups and side panels without React. New quickstart included.
+
+Clerk sponsor
+
+📊 [A React SSR Framework Performance Showdown](https://javascriptweekly.com/link/182678/d076523b1d "blog.platformatic.dev") — A large benchmark of TanStack Start, React Router, and Next.js under heavy load. The results led to patches benefitting both TanStack and React generally.
+
+Matteo Collina (Platformatic)
+
+[Two React Design Choices Developers Don’t Like, But Can’t Avoid](https://javascriptweekly.com/link/182679/d076523b1d "dev.to") — Deferred state commits and dependency arrays on effects cause a lot of issues, but Ryan points out that signal-based alternatives (like Solid) only avoid them by staying synchronous.
+
+Ryan Carniato
+
+📄 [JavaScript Thinks Everything's a Date](https://javascriptweekly.com/link/182680/d076523b1d) – This is why we celebrate the progress of the Temporal API! Robert Gambee
+
+📄 [An Introductory Guide to Bookmarklets](https://javascriptweekly.com/link/182681/d076523b1d) – Tiny bits of JavaScript saved in, and triggered by, bookmarks. Declan Chidlow
+
+📺 [How to Burn $30M on a JavaScript Framework](https://javascriptweekly.com/link/182682/d076523b1d) – A five-minute retrospective of 2012’s `famo.us` project. Fireship
+
+📄 [Node.js Worker Threads are Problematic, But They Work Great for Us](https://javascriptweekly.com/link/182683/d076523b1d) Aaron Harper (Inngest)
+
+🛠 Code & Tools
+
+[pnpm 11 Beta 0: A Sneak Peek](https://javascriptweekly.com/link/182684/d076523b1d "github.com") — The [efficiency-focused npm alternative](https://javascriptweekly.com/link/182685/d076523b1d) continues its outsized impact on JS package management. It's moving to a SQLite-powered store, gets a configuration overhaul, and has stricter build security by default. Four new commands, too, including `pnpm sbom` for generating Software Bill of Materials JSON documents.
+
+pnpm contributors
+
+[Edge.js: Running Node Apps Inside a WebAssembly Sandbox](https://javascriptweekly.com/link/182686/d076523b1d "wasmer.io") — A new, in-alpha runtime that maintains full Node compatibility while offering isolation via WebAssembly. Existing apps/modules run unmodified with system calls sandboxed, and the JS engine used is pluggable (between V8, JavaScriptCore and QuickJS). [More info on the homepage](https://javascriptweekly.com/link/182687/d076523b1d).
+
+Syrus Akbary (Wasmer)
+
+[Breakpoints and `console.log` Is the Past, Time Travel Is the Future](https://javascriptweekly.com/link/182688/d076523b1d "wallabyjs.com") — 15x faster JavaScript debugging than with breakpoints and console.log, supports Vitest, Jest, Karma, Jasmine, and more.
+
+Wallaby Team sponsor
+
+[ArrowJS 1.0: Fast, Reactive UI Runtime Built on Platform Primitives](https://javascriptweekly.com/link/182689/d076523b1d "www.arrow-js.com") — Built around ES modules, template literals and the DOM, it can also isolate component logic inside WASM sandboxes while rendering full inline DOM directly. First unveiled in 2022 by the creator of [FormKit](https://javascriptweekly.com/link/182690/d076523b1d), it's now clearly finding its feet.
+
+Justin Schroeder
+
+[Sugar High 1.0: A Lightweight JSX Syntax Highlighter](https://javascriptweekly.com/link/182691/d076523b1d "sugar-high.vercel.app") — Doesn’t need React present, so you can use it for syntax highlighting JSX snippets anywhere. You can also theme it with CSS. [GitHub repo](https://javascriptweekly.com/link/182692/d076523b1d).
+
+Jiachi Liu
+
+* [htmlparser2 12.0](https://javascriptweekly.com/link/182695/d076523b1d) – Fast, forgiving HTML and XML parser focused on performance. Works both server-side and in the browser.
+
+* 🔊 [vue-audio-visual 3.1](https://javascriptweekly.com/link/182693/d076523b1d) – Vue 3 HTML5 audio visualization components using the Web Audio API. Check out [the demos.](https://javascriptweekly.com/link/182694/d076523b1d)
+
+* [Svelte SEO 2.1](https://javascriptweekly.com/link/182696/d076523b1d) – Optimize Svelte apps for search engines/social media with meta tags, Open Graph, and JSON-LD.
+
+* [`pnpm/action-setup` 5.0](https://javascriptweekly.com/link/182697/d076523b1d) – GitHub Action to install and configure [pnpm](https://javascriptweekly.com/link/182685/d076523b1d). Now uses Node.js v24.
+
+* ☎︎ [vue-tel-input v9.8.0](https://javascriptweekly.com/link/182698/d076523b1d) – Vue component for global phone number input. ([Demo.](https://javascriptweekly.com/link/182699/d076523b1d))
+
+* [Mediabunny 1.40.0](https://javascriptweekly.com/link/182700/d076523b1d) – Powerful toolkit for reading/writing/converting media files.
+
+* 🗓️ [EventCalendar 5.5](https://javascriptweekly.com/link/182701/d076523b1d) – Full-sized drag and drop event calendar.
+
+* [Maz UI 4.9](https://javascriptweekly.com/link/182703/d076523b1d) – Lightweight UI components for Vue 3 and Nuxt 3.
+
+* [React Joyride 3.0](https://javascriptweekly.com/link/182704/d076523b1d) – Create guided tours in React apps.
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/182705/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/iygpyy7l0o5z8lvfh6b2.jpg)](https://javascriptweekly.com/link/182706/d076523b1d)
+
+* The Microsoft Visual Studio Code team [shares how they use AI to work on VS Code](https://javascriptweekly.com/link/182706/d076523b1d), from organizing their work and handling issues, to pushing out new releases. If you've noticed VS Code is getting a release every week now, this is why!
+
+* 🔒 Perhaps more than ever, it's essential to ensure no secrets have sneaked into your repos. [Secretlint](https://javascriptweekly.com/link/182707/d076523b1d) is a linter dedicated to that task.
+
+* Back in 1989, Rob Pike, famous for his work on both the Go programming language and co-creating UTF-8, wrote [Rob Pike's 5 Rules of Programming](https://javascriptweekly.com/link/182708/d076523b1d) which has gone viral this week and still apply in 2026!
+
+* 🤖 [Addy Osmani introduces us to *comprehension debt*](https://javascriptweekly.com/link/182709/d076523b1d). In a world of agent-produced code, the question is now not *“how do we generate more code?”* but *“how do we actually understand more of what we’re shipping?”*
+
+*  Dislike all the menu icons that macOS 26 (Tahoe) has introduced? [There's a solution](https://javascriptweekly.com/link/182710/d076523b1d): `defaults write -g NSMenuEnableActionImages -bool NO`
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/182711/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
