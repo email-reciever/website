@@ -1,0 +1,260 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: How TypeScript 6.0 affects Node developers
+description: How TypeScript 6.0 affects Node developers
+date: 星期四 04 下午 三月 26o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/617
+origin_site: https://nodeweekly.com/issues/617
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="How TypeScript 6.0 affects Node developers" url="https://nodeweekly.com/issues/617" />
+
+<Detail client:only="react">
+	#​617 — March 26, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/617)
+
+🟦 [TypeScript 6.0 landed this week](https://nodeweekly.com/link/182809/0a4070b383). We've put together a quick bulletpoint list of the Node-relevant changes and considerations at the end of the issue for you to check out before upgrading.  
+\_\_\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![Clerk](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_220,h_64/e_make_transparent/co_white,e_outline:5/j3vhv1hnwqeffgkzzlvu.png)](https://nodeweekly.com/link/182810/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/osbtlcss4015epc6ff5z.jpg)](https://nodeweekly.com/link/182811/0a4070b383)
+
+[The Node.js March 24, 2026 Security Releases](https://nodeweekly.com/link/182811/0a4070b383 "nodejs.org") — [Node.js v25.8.2 (Current)](https://nodeweekly.com/link/182812/0a4070b383), [v24.14.1 (LTS)](https://nodeweekly.com/link/182813/0a4070b383), [v22.22.2 (LTS)](https://nodeweekly.com/link/182814/0a4070b383), and [v20.20.2 (LTS)](https://nodeweekly.com/link/182815/0a4070b383) have just been released to address nine vulnerabilities (two of ‘high’ severity) covering a broad variety of areas like TLS, HTTP/HTTP2, the permission model, HMAC verification, URL processing, and V8 hashing _(more on that next!)_
+
+The Node.js Team
+
+[Developing a Minimally HashDoS Resistant, Yet Quickly Reversible Integer Hash for V8](https://nodeweekly.com/link/182816/0a4070b383 "nodejs.org") — Can a hash be both resistant to [hash flooding](https://nodeweekly.com/link/182817/0a4070b383) (a.k.a. HashDoS) _and_ quickly reversible? That’s the puzzle the Node team had to tackle in V8 for this week’s security release. This post on the official Node blog is _extremely_ technical, but one of the most educational in years.
+
+Joyee Cheung
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f0e67078.png)](https://nodeweekly.com/link/182810/0a4070b383)
+
+[Clerk M2M Tokens Now Support JWT Format for Faster Auth](https://nodeweekly.com/link/182810/0a4070b383 "go.clerk.com") — Verify machine-to-machine tokens locally with no network request. Self-contained JWTs carry machine ID, claims, and expiration.
+
+Clerk sponsor
+
+**IN BRIEF:**
+
+*   [pnpm 11 Beta](https://nodeweekly.com/link/182818/0a4070b383) offers a sneak peek of the future for the popular, alternative efficiency-focused package manager, including a new SQLite-powered store, config overhaul, and stricter build security by default.
+    
+*   Last week, several [Deno](https://nodeweekly.com/link/182819/0a4070b383) employees departed the company. Though _not_ officially speaking for the company, [Josh Collinsworth noted](https://nodeweekly.com/link/182820/0a4070b383) _"Deno is not going away. These are just hard times."_
+    
+*   ⚠️ [Fastify](https://nodeweekly.com/link/182821/0a4070b383) users should upgrade to [v5.8.3 / 5.8.4](https://nodeweekly.com/link/182822/0a4070b383) to avoid a now-fixed [protocol/host spoofing vulnerability.](https://nodeweekly.com/link/182823/0a4070b383)
+    
+
+[Where Did 400 Megabytes of Memory Go?](https://nodeweekly.com/link/182824/0a4070b383 "frn.sh") — A meticulous deep dive into working out why a Node-powered WebSocket k8s pod was using way more memory than its peers, despite `process.memoryUsage()` painting a rosy picture. Powerful techniques worth referring to when you need to investigate similar issues.
+
+Fernando S.
+
+[The Three Pillars of JavaScript Bloat](https://nodeweekly.com/link/182825/0a4070b383 "43081j.com") — Three reasons your `node_modules` is bigger than it should be: needless ES3-era compat packages, micro-libraries with a single consumer, and [ponyfills](https://nodeweekly.com/link/182826/0a4070b383) for APIs that shipped years ago. Luckily, this article offers some solutions for trimming the fat.
+
+James Garbutt
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wfzkdllh4jlwjqicw1em.jpg)](https://nodeweekly.com/link/182827/0a4070b383)
+
+[Announcing Knip v6: The Fast Way to Declutter Your Projects](https://nodeweekly.com/link/182827/0a4070b383 "knip.dev") — [Knip](https://nodeweekly.com/link/182828/0a4070b383) has established itself as a go-to tool for finding and removing unused files, exports, and dependencies. v6 leans on [oxc-parser](https://nodeweekly.com/link/182829/0a4070b383) for 2-4x performance gains (tearing through a huge repo like _Astro_ in two seconds) and is a drop-in upgrade.
+
+Lars Kappert
+
+[Your API Shouldn't Wait on a Pipeline for Fresh Data](https://nodeweekly.com/link/182830/0a4070b383 "www.tigerdata.com") — TimescaleDB extends Postgres so analytics hits live data. No second database, no sync lag, no stale responses. [Get started for free](https://nodeweekly.com/link/182830/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Knex.js 3.2: The SQL Query Builder is _Back_](https://nodeweekly.com/link/182852/0a4070b383 "knexjs.org") — Knex is a popular ‘batteries included’ SQL query builder that supports Postgres, MySQL, SQL Server, SQLite3, and other SQL oriented database systems.
+
+knex
+
+💡 The Knex.js team has [written a blog post announcing a revival of active development](https://nodeweekly.com/link/182832/0a4070b383) after an intensive period of catching up on a backlog of issues. _"Knex deserves to thrive, and we’re committed to getting it there."_
+
+[Vavite 6: Develop Server-Side Applications with Vite](https://nodeweekly.com/link/182833/0a4070b383 "github.com") — Use Vite for your backend Node.js code too, so you get one unified toolchain for everything, including hot reloading for both front and back-end. v6 brings Vite 7/8 support, server-side HMR, and separate server mode (e.g. for `Bun.serve`).
+
+Fatih Aygün
+
+[htmlparser2 12.0: A Fast and Forgiving HTML and XML Parser](https://nodeweekly.com/link/182834/0a4070b383 "github.com") — Consumes documents and calls callbacks, but it can generate a DOM as well. There’s [a live demo here.](https://nodeweekly.com/link/182835/0a4070b383) Works in both Node and browser.
+
+Felix Böhm
+
+*   [Deno 2.7.6-2.7.8](https://nodeweekly.com/link/182853/0a4070b383) – Now with `NodeRuntime` CDP (Chrome DevTools Protocol) support, `deno eval` auto-detects CJS vs ESM, and `--cpu-prof-flamegraph` generates interactive SVG flamegraphs.
+    
+*   [`pnpm/action-setup` 5.0](https://nodeweekly.com/link/182837/0a4070b383) – GitHub Action to install and configure [pnpm](https://nodeweekly.com/link/182838/0a4070b383). Now uses Node.js v24.
+    
+*   [pnpm 10.33](https://nodeweekly.com/link/182839/0a4070b383) – Adds a new `dedupePeers` setting that reduces peer dependency duplication.
+    
+*   [Faker 10.4](https://nodeweekly.com/link/182840/0a4070b383) – Generate realistic data for testing and development.
+    
+*   [ws 8.20.0](https://nodeweekly.com/link/182841/0a4070b383) – Long-standing WebSocket client and server library.
+    
+*   🤖 [OpenAI Node v6.33.0](https://nodeweekly.com/link/182842/0a4070b383)
+    
+
+🟦 TypeScript 6.0 for Node developers
+
+[Announcing TypeScript 6.0](https://nodeweekly.com/link/182809/0a4070b383 "devblogs.microsoft.com") — TypeScript 6.0 is designed to bridge the way from its [self-hosted compiler](https://nodeweekly.com/link/182843/0a4070b383) to [the Go-powered native compiler future](https://nodeweekly.com/link/182844/0a4070b383) of TypeScript 7.0 (which, we're told, is almost ready to go, too).
+
+As always, the release post is _huge_ but here are the things that jumped out to me as affecting Node developers the most:
+
+*   [**`types` now defaults to `[]`**](https://nodeweekly.com/link/182845/0a4070b383). TypeScript will no longer pull in potentially thousands of type declarations at build time. Great for performance, but... if you were relying on it, your project will break! `"types": ["node"]` or `"types": ["*"]` may be your friend at first.
+    
+*   [**`strict` is now `true` by default.**](https://nodeweekly.com/link/182846/0a4070b383) Many of you will already be working in strict mode, but if not, get ready for a flood of new type errors unless you explicitly set it to `false`.
+    
+*   [**`--moduleResolution node` is deprecated.**](https://nodeweekly.com/link/182847/0a4070b383) If you're targeting Node, you'll now use `--moduleResolution nodenext` which reflects how modern versions of Node resolve modules.
+    
+*   **`module` now defaults to `esnext`.** CommonJS projects must now set `"module": "commonjs"` explicitly.
+    
+*   [**`#/` subpath imports now work.**](https://nodeweekly.com/link/182848/0a4070b383) Available in Node [since v25.4](https://nodeweekly.com/link/182849/0a4070b383) (and backported into LTS releases), but now in TypeScript too.
+    
+*   [**`rootDir` now defaults to `.`**](https://nodeweekly.com/link/182850/0a4070b383) If you have source files deeper than your `tsconfig.json` and were relying on TypeScript to infer a common root directory, you now need to explicitly set `rootDir`.
+    
+*   [**`--esModuleInterop false` and `--allowSyntheticDefaultImports false` no longer work.**](https://nodeweekly.com/link/182851/0a4070b383) So if you're still using syntax like `import * as express from "express"` it won't work, you'd need to use `import express from "express"`.
+    
+
+In short, TypeScript 6.0 tightens defaults across the board and throws enough changes into the works that many projects will need at least a tsconfig tweak.. good luck with your upgrades! 🤞
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​617 — March 26, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/617)
+
+🟦 [TypeScript 6.0 landed this week](https://nodeweekly.com/link/182809/0a4070b383). We've put together a quick bulletpoint list of the Node-relevant changes and considerations at the end of the issue for you to check out before upgrading.\
+\_\_\_\_\
+*Your editor, Peter Cooper*
+
+Together with 
+
+[![Clerk](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_220,h_64/e_make_transparent/co_white,e_outline:5/j3vhv1hnwqeffgkzzlvu.png)](https://nodeweekly.com/link/182810/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/osbtlcss4015epc6ff5z.jpg)](https://nodeweekly.com/link/182811/0a4070b383)
+
+[The Node.js March 24, 2026 Security Releases](https://nodeweekly.com/link/182811/0a4070b383 "nodejs.org") — [Node.js v25.8.2 (Current)](https://nodeweekly.com/link/182812/0a4070b383), [v24.14.1 (LTS)](https://nodeweekly.com/link/182813/0a4070b383), [v22.22.2 (LTS)](https://nodeweekly.com/link/182814/0a4070b383), and [v20.20.2 (LTS)](https://nodeweekly.com/link/182815/0a4070b383) have just been released to address nine vulnerabilities (two of ‘high’ severity) covering a broad variety of areas like TLS, HTTP/HTTP2, the permission model, HMAC verification, URL processing, and V8 hashing *(more on that next!)*
+
+The Node.js Team
+
+[Developing a Minimally HashDoS Resistant, Yet Quickly Reversible Integer Hash for V8](https://nodeweekly.com/link/182816/0a4070b383 "nodejs.org") — Can a hash be both resistant to [hash flooding](https://nodeweekly.com/link/182817/0a4070b383) (a.k.a. HashDoS) *and* quickly reversible? That’s the puzzle the Node team had to tackle in V8 for this week’s security release. This post on the official Node blog is *extremely* technical, but one of the most educational in years.
+
+Joyee Cheung
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f0e67078.png)](https://nodeweekly.com/link/182810/0a4070b383)
+
+[Clerk M2M Tokens Now Support JWT Format for Faster Auth](https://nodeweekly.com/link/182810/0a4070b383 "go.clerk.com") — Verify machine-to-machine tokens locally with no network request. Self-contained JWTs carry machine ID, claims, and expiration.
+
+Clerk sponsor
+
+**IN BRIEF:**
+
+* [pnpm 11 Beta](https://nodeweekly.com/link/182818/0a4070b383) offers a sneak peek of the future for the popular, alternative efficiency-focused package manager, including a new SQLite-powered store, config overhaul, and stricter build security by default.
+
+* Last week, several [Deno](https://nodeweekly.com/link/182819/0a4070b383) employees departed the company. Though *not* officially speaking for the company, [Josh Collinsworth noted](https://nodeweekly.com/link/182820/0a4070b383) *"Deno is not going away. These are just hard times."*
+
+* ⚠️ [Fastify](https://nodeweekly.com/link/182821/0a4070b383) users should upgrade to [v5.8.3 / 5.8.4](https://nodeweekly.com/link/182822/0a4070b383) to avoid a now-fixed [protocol/host spoofing vulnerability.](https://nodeweekly.com/link/182823/0a4070b383)
+
+[Where Did 400 Megabytes of Memory Go?](https://nodeweekly.com/link/182824/0a4070b383 "frn.sh") — A meticulous deep dive into working out why a Node-powered WebSocket k8s pod was using way more memory than its peers, despite `process.memoryUsage()` painting a rosy picture. Powerful techniques worth referring to when you need to investigate similar issues.
+
+Fernando S.
+
+[The Three Pillars of JavaScript Bloat](https://nodeweekly.com/link/182825/0a4070b383 "43081j.com") — Three reasons your `node_modules` is bigger than it should be: needless ES3-era compat packages, micro-libraries with a single consumer, and [ponyfills](https://nodeweekly.com/link/182826/0a4070b383) for APIs that shipped years ago. Luckily, this article offers some solutions for trimming the fat.
+
+James Garbutt
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wfzkdllh4jlwjqicw1em.jpg)](https://nodeweekly.com/link/182827/0a4070b383)
+
+[Announcing Knip v6: The Fast Way to Declutter Your Projects](https://nodeweekly.com/link/182827/0a4070b383 "knip.dev") — [Knip](https://nodeweekly.com/link/182828/0a4070b383) has established itself as a go-to tool for finding and removing unused files, exports, and dependencies. v6 leans on [oxc-parser](https://nodeweekly.com/link/182829/0a4070b383) for 2-4x performance gains (tearing through a huge repo like *Astro* in two seconds) and is a drop-in upgrade.
+
+Lars Kappert
+
+[Your API Shouldn't Wait on a Pipeline for Fresh Data](https://nodeweekly.com/link/182830/0a4070b383 "www.tigerdata.com") — TimescaleDB extends Postgres so analytics hits live data. No second database, no sync lag, no stale responses. [Get started for free](https://nodeweekly.com/link/182830/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Knex.js 3.2: The SQL Query Builder is *Back*](https://nodeweekly.com/link/182852/0a4070b383 "knexjs.org") — Knex is a popular ‘batteries included’ SQL query builder that supports Postgres, MySQL, SQL Server, SQLite3, and other SQL oriented database systems.
+
+knex
+
+💡 The Knex.js team has [written a blog post announcing a revival of active development](https://nodeweekly.com/link/182832/0a4070b383) after an intensive period of catching up on a backlog of issues. *"Knex deserves to thrive, and we’re committed to getting it there."*
+
+[Vavite 6: Develop Server-Side Applications with Vite](https://nodeweekly.com/link/182833/0a4070b383 "github.com") — Use Vite for your backend Node.js code too, so you get one unified toolchain for everything, including hot reloading for both front and back-end. v6 brings Vite 7/8 support, server-side HMR, and separate server mode (e.g. for `Bun.serve`).
+
+Fatih Aygün
+
+[htmlparser2 12.0: A Fast and Forgiving HTML and XML Parser](https://nodeweekly.com/link/182834/0a4070b383 "github.com") — Consumes documents and calls callbacks, but it can generate a DOM as well. There’s [a live demo here.](https://nodeweekly.com/link/182835/0a4070b383) Works in both Node and browser.
+
+Felix Böhm
+
+* [Deno 2.7.6-2.7.8](https://nodeweekly.com/link/182853/0a4070b383) – Now with `NodeRuntime` CDP (Chrome DevTools Protocol) support, `deno eval` auto-detects CJS vs ESM, and `--cpu-prof-flamegraph` generates interactive SVG flamegraphs.
+
+* [`pnpm/action-setup` 5.0](https://nodeweekly.com/link/182837/0a4070b383) – GitHub Action to install and configure [pnpm](https://nodeweekly.com/link/182838/0a4070b383). Now uses Node.js v24.
+
+* [pnpm 10.33](https://nodeweekly.com/link/182839/0a4070b383) – Adds a new `dedupePeers` setting that reduces peer dependency duplication.
+
+* [Faker 10.4](https://nodeweekly.com/link/182840/0a4070b383) – Generate realistic data for testing and development.
+
+* [ws 8.20.0](https://nodeweekly.com/link/182841/0a4070b383) – Long-standing WebSocket client and server library.
+
+* 🤖 [OpenAI Node v6.33.0](https://nodeweekly.com/link/182842/0a4070b383)
+
+🟦 TypeScript 6.0 for Node developers
+
+[Announcing TypeScript 6.0](https://nodeweekly.com/link/182809/0a4070b383 "devblogs.microsoft.com") — TypeScript 6.0 is designed to bridge the way from its [self-hosted compiler](https://nodeweekly.com/link/182843/0a4070b383) to [the Go-powered native compiler future](https://nodeweekly.com/link/182844/0a4070b383) of TypeScript 7.0 (which, we're told, is almost ready to go, too).
+
+As always, the release post is *huge* but here are the things that jumped out to me as affecting Node developers the most:
+
+* [**`types` now defaults to `[]`**](https://nodeweekly.com/link/182845/0a4070b383). TypeScript will no longer pull in potentially thousands of type declarations at build time. Great for performance, but... if you were relying on it, your project will break! `"types": ["node"]` or `"types": ["*"]` may be your friend at first.
+
+* [**`strict` is now `true` by default.**](https://nodeweekly.com/link/182846/0a4070b383) Many of you will already be working in strict mode, but if not, get ready for a flood of new type errors unless you explicitly set it to `false`.
+
+* [**`--moduleResolution node` is deprecated.**](https://nodeweekly.com/link/182847/0a4070b383) If you're targeting Node, you'll now use `--moduleResolution nodenext` which reflects how modern versions of Node resolve modules.
+
+* **`module` now defaults to `esnext`.** CommonJS projects must now set `"module": "commonjs"` explicitly.
+
+* [**`#/` subpath imports now work.**](https://nodeweekly.com/link/182848/0a4070b383) Available in Node [since v25.4](https://nodeweekly.com/link/182849/0a4070b383) (and backported into LTS releases), but now in TypeScript too.
+
+* [**`rootDir` now defaults to `.`**](https://nodeweekly.com/link/182850/0a4070b383) If you have source files deeper than your `tsconfig.json` and were relying on TypeScript to infer a common root directory, you now need to explicitly set `rootDir`.
+
+* [**`--esModuleInterop false` and `--allowSyntheticDefaultImports false` no longer work.**](https://nodeweekly.com/link/182851/0a4070b383) So if you're still using syntax like `import * as express from "express"` it won't work, you'd need to use `import express from "express"`.
+
+In short, TypeScript 6.0 tightens defaults across the board and throws enough changes into the works that many projects will need at least a tsconfig tweak.. good luck with your upgrades! 🤞
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
