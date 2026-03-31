@@ -1,0 +1,292 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: A new, major npm supply chain attack via Axios
+description: A new, major npm supply chain attack via Axios
+date: 星期二 06 晚上 三月 31o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/779
+origin_site: https://javascriptweekly.com/issues/779
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="A new, major npm supply chain attack via Axios" url="https://javascriptweekly.com/issues/779" />
+
+<Detail client:only="react">
+	#​779 — March 31, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/779)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/183033/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hscgioobwckiiyh4eyof.jpg)](https://javascriptweekly.com/link/183093/d076523b1d)
+
+[`axios` Package Compromised; Malicious Versions Added a Trojan Dependency](https://javascriptweekly.com/link/183093/d076523b1d "www.stepsecurity.io") — [Axios](https://javascriptweekly.com/link/183094/d076523b1d) is an HTTP library that gets 100M+ downloads a week, largely due to its legacy popularity. An attacker took advantage of that to roll out a version with a malicious dependency including a remote access trojan (though Axios' codebase _itself_ was fine). This is big, as even if _you_ don’t use Axios, your dependencies might. Here's [how to see if you're affected.](https://javascriptweekly.com/link/183095/d076523b1d)
+
+Ashish Kurmi
+
+💡 **More:** Socket offers [a more accessible breakdown](https://javascriptweekly.com/link/183096/d076523b1d). There's also [a GitHub issue](https://javascriptweekly.com/link/183097/d076523b1d) discussing the matter. It's worth considering [pinning your dependencies](https://javascriptweekly.com/link/183098/d076523b1d), preventing post-install scripts from running (can be configured with `npm` but is the default in pnpm and Bun) and/or using cooldowns for dependency updates (using [`minimumReleaseAge`](https://javascriptweekly.com/link/183099/d076523b1d) in npm or [pnpm's approach](https://javascriptweekly.com/link/183100/d076523b1d)).
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/1f750717.png)](https://javascriptweekly.com/link/183033/d076523b1d)
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://javascriptweekly.com/link/183033/d076523b1d) — Notion, Dropbox, Wiz and LaunchDarkly now use a testing paradigm they can’t work without. Built by former Palantir engineers, Meticulous automatically creates an evolving suite of E2E UI tests, delivering exhaustive coverage with no developer effort.
+
+Meticulous sponsor
+
+[Transformers.js v4: Run AI Models in the Browser](https://javascriptweekly.com/link/183034/d076523b1d "github.com") — Brings [Hugging Face](https://javascriptweekly.com/link/183035/d076523b1d)\-hosted transformer models into JavaScript, so you can run NLP, vision, and audio models in-browser. v4 switches to a WebGPU runtime and is installable with npm. There are [many live demos](https://javascriptweekly.com/link/183036/d076523b1d) covering [real-time speech transcription](https://javascriptweekly.com/link/183037/d076523b1d), [using Qwen 3.5](https://javascriptweekly.com/link/183038/d076523b1d), and [real-time video captioning.](https://javascriptweekly.com/link/183039/d076523b1d)
+
+Hugging Face
+
+**RELEASES:**
+
+*   [Inertia.js 3.0](https://javascriptweekly.com/link/183040/d076523b1d) – Glue between React, Vue and Svelte SPAs and non-JS server-side frameworks like Laravel, Rails and Django. [More on v3 here.](https://javascriptweekly.com/link/183041/d076523b1d)
+    
+*   [Node.js March 24, 2026 Security Releases](https://javascriptweekly.com/link/183042/d076523b1d) - Including [Node.js v25.8.2 (Current)](https://javascriptweekly.com/link/183043/d076523b1d), [v24.14.1 (LTS)](https://javascriptweekly.com/link/183044/d076523b1d), [v22.22.2 (LTS)](https://javascriptweekly.com/link/183045/d076523b1d), and [v20.20.2 (LTS)](https://javascriptweekly.com/link/183046/d076523b1d).
+    
+*   [TanStack DB 0.6](https://javascriptweekly.com/link/183047/d076523b1d) – Now with persistence, offline support, and hierarchical data.
+    
+*   [Astro 6.1](https://javascriptweekly.com/link/183048/d076523b1d), [Mantine 9.0](https://javascriptweekly.com/link/183049/d076523b1d), [Ky 2.0 Prerelease](https://javascriptweekly.com/link/183050/d076523b1d), [CKEditor 48.0](https://javascriptweekly.com/link/183051/d076523b1d), [pnpm 10.33](https://javascriptweekly.com/link/183052/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xiqo1c9nlcnj9gh3bhiz.jpg)](https://javascriptweekly.com/link/183053/d076523b1d)
+
+[Signals: The Push-Pull Based Algorithm](https://javascriptweekly.com/link/183053/d076523b1d "willybrauner.com") — A well-diagrammed ground-up explanation of how [signals](https://javascriptweekly.com/link/183054/d076523b1d) work internally, focusing on the push-pull algorithm at the core of reactivity in frameworks like Solid, Vue, and Angular.
+
+Willy Brauner
+
+🖼️ [Your Options for Preloading Images with JavaScript](https://javascriptweekly.com/link/183055/d076523b1d "macarthur.me") — _“There are a number of ways to preload an image on demand with JavaScript, each with their own strengths and drawbacks. Let's explore them.”_
+
+Alex MacArthur
+
+▶  [Stop Guessing Where Your Next.js App Broke](https://javascriptweekly.com/link/183056/d076523b1d "youtube.com") — 7 videos on error monitoring, replays, tracing, and alerts to debug across your Next.js stack. [Watch now](https://javascriptweekly.com/link/183056/d076523b1d).
+
+Sentry sponsor
+
+[A Gentle Intro to npm Workspaces (With Visuals)](https://javascriptweekly.com/link/183057/d076523b1d "wasp.sh") — [Workspaces](https://javascriptweekly.com/link/183058/d076523b1d) let you manage multiple packages in one repo and link local packages so they can import each other by name. npm may then hoist and deduplicate compatible dependencies during install.
+
+Carlos Precioso
+
+📄 ['I Decompiled the White House's New App'](https://javascriptweekly.com/link/183059/d076523b1d) – Among the surprises in the React Native app are a cookie/paywall bypass injector and dynamic loading of JavaScript from a random user’s GitHub Pages... Thereallo
+
+📄 [Building a Scroll-Reactive 3D Gallery with Three.js, Velocity, and Mood-Based Backgrounds](https://javascriptweekly.com/link/183060/d076523b1d) Houmahani Kane
+
+📄 [Why We Replaced Node.js with Bun for 5x Throughput](https://javascriptweekly.com/link/183061/d076523b1d) Nick at Trigger
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wr8dtkzww9icxfo8kpoi.jpg)](https://javascriptweekly.com/link/183087/d076523b1d)
+
+[Pretext: A Multiline Text Measurement and Layout Library](https://javascriptweekly.com/link/183087/d076523b1d "simonwillison.net") — Cheng Lou, formerly a React core team member, caused a stir with [this X post](https://javascriptweekly.com/link/183088/d076523b1d) three days ago, racking up 22M impressions and getting 25k stars on [this repo](https://javascriptweekly.com/link/183089/d076523b1d) since. Why? People are _very_ excited about the potential for real time web layouts! There are [demos here](https://javascriptweekly.com/link/183090/d076523b1d) if you want to see what the excitement is about, although the library itself is reasonably straightforward.
+
+Cheng Lou
+
+[GitHub Actions 🤝Expo CI/CD Workflows](https://javascriptweekly.com/link/183062/d076523b1d "try.expo.dev") — Keep GitHub Actions. Add Expo Workflows for mobile: M4 Pro builds, E2E tests, OTA. Let each tool handle what it’s best at.
+
+Expo sponsor
+
+[Knip v6: The Tool to Declutter Your JS/TS Projects](https://javascriptweekly.com/link/183063/d076523b1d "knip.dev") — [Knip](https://javascriptweekly.com/link/183064/d076523b1d) is a _go-to_ tool for finding and removing unused files, exports, and dependencies in projects. v6 integrates _oxc_ for 2-4x performance gains (it tears through _Astro_ in two seconds) and is largely a drop-in upgrade.
+
+Lars Kappert
+
+📺 [ArtPlayer: A Modern, Full-Featured HTML5 Video Player](https://javascriptweekly.com/link/183065/d076523b1d "github.com") — A straightforward way to get your own heavily-customizable YouTube-style player experience. There’s [a full, live demo/playground](https://javascriptweekly.com/link/183066/d076523b1d) showing it off.
+
+Harvey Zhao
+
+[Semiotic 3.0: React + D3 Data Visualization Framework](https://javascriptweekly.com/link/183067/d076523b1d "semiotic.nteract.io") — Does the basics well, but has some more unique offerings like [choropleth maps](https://javascriptweekly.com/link/183068/d076523b1d), [Sankey diagrams](https://javascriptweekly.com/link/183069/d076523b1d), [flow maps](https://javascriptweekly.com/link/183070/d076523b1d), and [violin plots](https://javascriptweekly.com/link/183071/d076523b1d), plus streaming data support.
+
+nteract
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wvpr78nmzpjjo73nyorf.jpg)](https://javascriptweekly.com/link/183072/d076523b1d)
+
+*   [Heat.js 5.1](https://javascriptweekly.com/link/183072/d076523b1d) _(above)_ – Generate heat maps, charts, and statistics to visualize date-based activity. Now with point/line chart support.
+    
+*   [numpy-ts 1.2](https://javascriptweekly.com/link/183091/d076523b1d) – NumPy implementation for TypeScript and JavaScript. Now at ~50% native performance and with Float16 support. ([Homepage](https://javascriptweekly.com/link/183092/d076523b1d))
+    
+*   [ts-blank-space 0.8](https://javascriptweekly.com/link/183073/d076523b1d) – Pure JavaScript type-stripper using the TypeScript 6 parser.
+    
+*   [RxDB 17.0](https://javascriptweekly.com/link/183074/d076523b1d) – Reactive NoSQL database for JS apps with local-first capabilities.
+    
+*   [filesize.js 11.0.15](https://javascriptweekly.com/link/183075/d076523b1d) – Converts byte counts into human-readable file size strings.
+    
+*   💳 [React Stripe.js 6.0](https://javascriptweekly.com/link/183076/d076523b1d) – Components for Stripe.js and Stripe Elements.
+    
+*   [css-select 7.0](https://javascriptweekly.com/link/183077/d076523b1d) – CSS selector compiler and engine. Now ESM.
+    
+*   [ESLint Markdown Plugin 8.0](https://javascriptweekly.com/link/183078/d076523b1d) – Lint Markdown with ESLint.
+    
+
+📰 Classifieds
+
+⚡[Nimbalyst](https://javascriptweekly.com/link/183079/d076523b1d): Visual workspace for building with Claude Code & Codex. Manage sessions & tasks. Visually edit markdown, mockups, diagrams, code.
+
+* * *
+
+[Gauntlet AI Live Night School](https://javascriptweekly.com/link/183101/d076523b1d) - Stop Shipping Slop: How to Verify AI Generated Code for Production Deployments (Virtual - 4/1)
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xcilxcd2tfzp8xwakvba.jpg)](https://javascriptweekly.com/link/183081/d076523b1d)
+
+*   JetBrains' Java/Kotlin IDE _IntelliJ IDEA_ now [includes core JavaScript and TypeScript features for free](https://javascriptweekly.com/link/183081/d076523b1d) (no _Ultimate_ subscription needed).
+    
+*   Vercel explains [the work going on to make Next.js work better across cloud platforms.](https://javascriptweekly.com/link/183082/d076523b1d) The _Adapter API_ provides a way for platforms to adjust apps to suit their environment. OpenNext, Netlify, Cloudflare, AWS Amplify, and Google Cloud are all on board.
+    
+*   🤖 GitHub has announced, starting late April, data (including inputs and snippets) from Free/Pro/Pro+ Copilot users [will be used, by default, to help train future AI models](https://javascriptweekly.com/link/183083/d076523b1d). You can opt out.
+    
+*   🤖 A developer noticed [Copilot edited an 'ad' into one of his PRs!](https://javascriptweekly.com/link/183084/d076523b1d) GitHub's Martin Woodward [explained (on _X_) why it happened](https://javascriptweekly.com/link/183085/d076523b1d) and said the 'feature' has been disabled.
+    
+*   🔠 Looking for a new IDE font option? [CodingFont](https://javascriptweekly.com/link/183086/d076523b1d) lets you find your ideal choice _visually_ using a bracket-style faceoff. _Noto Sans Mono_ won for me – not one I'd considered before!
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/183102/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​779 — March 31, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/779)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/183033/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hscgioobwckiiyh4eyof.jpg)](https://javascriptweekly.com/link/183093/d076523b1d)
+
+[`axios` Package Compromised; Malicious Versions Added a Trojan Dependency](https://javascriptweekly.com/link/183093/d076523b1d "www.stepsecurity.io") — [Axios](https://javascriptweekly.com/link/183094/d076523b1d) is an HTTP library that gets 100M+ downloads a week, largely due to its legacy popularity. An attacker took advantage of that to roll out a version with a malicious dependency including a remote access trojan (though Axios' codebase *itself* was fine). This is big, as even if *you* don’t use Axios, your dependencies might. Here's [how to see if you're affected.](https://javascriptweekly.com/link/183095/d076523b1d)
+
+Ashish Kurmi
+
+💡 **More:** Socket offers [a more accessible breakdown](https://javascriptweekly.com/link/183096/d076523b1d). There's also [a GitHub issue](https://javascriptweekly.com/link/183097/d076523b1d) discussing the matter. It's worth considering [pinning your dependencies](https://javascriptweekly.com/link/183098/d076523b1d), preventing post-install scripts from running (can be configured with `npm` but is the default in pnpm and Bun) and/or using cooldowns for dependency updates (using [`minimumReleaseAge`](https://javascriptweekly.com/link/183099/d076523b1d) in npm or [pnpm's approach](https://javascriptweekly.com/link/183100/d076523b1d)).
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/1f750717.png)](https://javascriptweekly.com/link/183033/d076523b1d)
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://javascriptweekly.com/link/183033/d076523b1d) — Notion, Dropbox, Wiz and LaunchDarkly now use a testing paradigm they can’t work without. Built by former Palantir engineers, Meticulous automatically creates an evolving suite of E2E UI tests, delivering exhaustive coverage with no developer effort.
+
+Meticulous sponsor
+
+[Transformers.js v4: Run AI Models in the Browser](https://javascriptweekly.com/link/183034/d076523b1d "github.com") — Brings [Hugging Face](https://javascriptweekly.com/link/183035/d076523b1d)-hosted transformer models into JavaScript, so you can run NLP, vision, and audio models in-browser. v4 switches to a WebGPU runtime and is installable with npm. There are [many live demos](https://javascriptweekly.com/link/183036/d076523b1d) covering [real-time speech transcription](https://javascriptweekly.com/link/183037/d076523b1d), [using Qwen 3.5](https://javascriptweekly.com/link/183038/d076523b1d), and [real-time video captioning.](https://javascriptweekly.com/link/183039/d076523b1d)
+
+Hugging Face
+
+**RELEASES:**
+
+* [Inertia.js 3.0](https://javascriptweekly.com/link/183040/d076523b1d) – Glue between React, Vue and Svelte SPAs and non-JS server-side frameworks like Laravel, Rails and Django. [More on v3 here.](https://javascriptweekly.com/link/183041/d076523b1d)
+
+* [Node.js March 24, 2026 Security Releases](https://javascriptweekly.com/link/183042/d076523b1d) - Including [Node.js v25.8.2 (Current)](https://javascriptweekly.com/link/183043/d076523b1d), [v24.14.1 (LTS)](https://javascriptweekly.com/link/183044/d076523b1d), [v22.22.2 (LTS)](https://javascriptweekly.com/link/183045/d076523b1d), and [v20.20.2 (LTS)](https://javascriptweekly.com/link/183046/d076523b1d).
+
+* [TanStack DB 0.6](https://javascriptweekly.com/link/183047/d076523b1d) – Now with persistence, offline support, and hierarchical data.
+
+* [Astro 6.1](https://javascriptweekly.com/link/183048/d076523b1d), [Mantine 9.0](https://javascriptweekly.com/link/183049/d076523b1d), [Ky 2.0 Prerelease](https://javascriptweekly.com/link/183050/d076523b1d), [CKEditor 48.0](https://javascriptweekly.com/link/183051/d076523b1d), [pnpm 10.33](https://javascriptweekly.com/link/183052/d076523b1d)
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xiqo1c9nlcnj9gh3bhiz.jpg)](https://javascriptweekly.com/link/183053/d076523b1d)
+
+[Signals: The Push-Pull Based Algorithm](https://javascriptweekly.com/link/183053/d076523b1d "willybrauner.com") — A well-diagrammed ground-up explanation of how [signals](https://javascriptweekly.com/link/183054/d076523b1d) work internally, focusing on the push-pull algorithm at the core of reactivity in frameworks like Solid, Vue, and Angular.
+
+Willy Brauner
+
+🖼️ [Your Options for Preloading Images with JavaScript](https://javascriptweekly.com/link/183055/d076523b1d "macarthur.me") — *“There are a number of ways to preload an image on demand with JavaScript, each with their own strengths and drawbacks. Let's explore them.”*
+
+Alex MacArthur
+
+▶  [Stop Guessing Where Your Next.js App Broke](https://javascriptweekly.com/link/183056/d076523b1d "youtube.com") — 7 videos on error monitoring, replays, tracing, and alerts to debug across your Next.js stack. [Watch now](https://javascriptweekly.com/link/183056/d076523b1d).
+
+Sentry sponsor
+
+[A Gentle Intro to npm Workspaces (With Visuals)](https://javascriptweekly.com/link/183057/d076523b1d "wasp.sh") — [Workspaces](https://javascriptweekly.com/link/183058/d076523b1d) let you manage multiple packages in one repo and link local packages so they can import each other by name. npm may then hoist and deduplicate compatible dependencies during install.
+
+Carlos Precioso
+
+📄 ['I Decompiled the White House's New App'](https://javascriptweekly.com/link/183059/d076523b1d) – Among the surprises in the React Native app are a cookie/paywall bypass injector and dynamic loading of JavaScript from a random user’s GitHub Pages... Thereallo
+
+📄 [Building a Scroll-Reactive 3D Gallery with Three.js, Velocity, and Mood-Based Backgrounds](https://javascriptweekly.com/link/183060/d076523b1d) Houmahani Kane
+
+📄 [Why We Replaced Node.js with Bun for 5x Throughput](https://javascriptweekly.com/link/183061/d076523b1d) Nick at Trigger
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wr8dtkzww9icxfo8kpoi.jpg)](https://javascriptweekly.com/link/183087/d076523b1d)
+
+[Pretext: A Multiline Text Measurement and Layout Library](https://javascriptweekly.com/link/183087/d076523b1d "simonwillison.net") — Cheng Lou, formerly a React core team member, caused a stir with [this X post](https://javascriptweekly.com/link/183088/d076523b1d) three days ago, racking up 22M impressions and getting 25k stars on [this repo](https://javascriptweekly.com/link/183089/d076523b1d) since. Why? People are *very* excited about the potential for real time web layouts! There are [demos here](https://javascriptweekly.com/link/183090/d076523b1d) if you want to see what the excitement is about, although the library itself is reasonably straightforward.
+
+Cheng Lou
+
+[GitHub Actions 🤝Expo CI/CD Workflows](https://javascriptweekly.com/link/183062/d076523b1d "try.expo.dev") — Keep GitHub Actions. Add Expo Workflows for mobile: M4 Pro builds, E2E tests, OTA. Let each tool handle what it’s best at.
+
+Expo sponsor
+
+[Knip v6: The Tool to Declutter Your JS/TS Projects](https://javascriptweekly.com/link/183063/d076523b1d "knip.dev") — [Knip](https://javascriptweekly.com/link/183064/d076523b1d) is a *go-to* tool for finding and removing unused files, exports, and dependencies in projects. v6 integrates *oxc* for 2-4x performance gains (it tears through *Astro* in two seconds) and is largely a drop-in upgrade.
+
+Lars Kappert
+
+📺 [ArtPlayer: A Modern, Full-Featured HTML5 Video Player](https://javascriptweekly.com/link/183065/d076523b1d "github.com") — A straightforward way to get your own heavily-customizable YouTube-style player experience. There’s [a full, live demo/playground](https://javascriptweekly.com/link/183066/d076523b1d) showing it off.
+
+Harvey Zhao
+
+[Semiotic 3.0: React + D3 Data Visualization Framework](https://javascriptweekly.com/link/183067/d076523b1d "semiotic.nteract.io") — Does the basics well, but has some more unique offerings like [choropleth maps](https://javascriptweekly.com/link/183068/d076523b1d), [Sankey diagrams](https://javascriptweekly.com/link/183069/d076523b1d), [flow maps](https://javascriptweekly.com/link/183070/d076523b1d), and [violin plots](https://javascriptweekly.com/link/183071/d076523b1d), plus streaming data support.
+
+nteract
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wvpr78nmzpjjo73nyorf.jpg)](https://javascriptweekly.com/link/183072/d076523b1d)
+
+* [Heat.js 5.1](https://javascriptweekly.com/link/183072/d076523b1d) *(above)* – Generate heat maps, charts, and statistics to visualize date-based activity. Now with point/line chart support.
+
+* [numpy-ts 1.2](https://javascriptweekly.com/link/183091/d076523b1d) – NumPy implementation for TypeScript and JavaScript. Now at ~50% native performance and with Float16 support. ([Homepage](https://javascriptweekly.com/link/183092/d076523b1d))
+
+* [ts-blank-space 0.8](https://javascriptweekly.com/link/183073/d076523b1d) – Pure JavaScript type-stripper using the TypeScript 6 parser.
+
+* [RxDB 17.0](https://javascriptweekly.com/link/183074/d076523b1d) – Reactive NoSQL database for JS apps with local-first capabilities.
+
+* [filesize.js 11.0.15](https://javascriptweekly.com/link/183075/d076523b1d) – Converts byte counts into human-readable file size strings.
+
+* 💳 [React Stripe.js 6.0](https://javascriptweekly.com/link/183076/d076523b1d) – Components for Stripe.js and Stripe Elements.
+
+* [css-select 7.0](https://javascriptweekly.com/link/183077/d076523b1d) – CSS selector compiler and engine. Now ESM.
+
+* [ESLint Markdown Plugin 8.0](https://javascriptweekly.com/link/183078/d076523b1d) – Lint Markdown with ESLint.
+
+📰 Classifieds
+
+⚡[Nimbalyst](https://javascriptweekly.com/link/183079/d076523b1d): Visual workspace for building with Claude Code & Codex. Manage sessions & tasks. Visually edit markdown, mockups, diagrams, code.
+
+***
+
+[Gauntlet AI Live Night School](https://javascriptweekly.com/link/183101/d076523b1d) - Stop Shipping Slop: How to Verify AI Generated Code for Production Deployments (Virtual - 4/1)
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xcilxcd2tfzp8xwakvba.jpg)](https://javascriptweekly.com/link/183081/d076523b1d)
+
+* JetBrains' Java/Kotlin IDE *IntelliJ IDEA* now [includes core JavaScript and TypeScript features for free](https://javascriptweekly.com/link/183081/d076523b1d) (no *Ultimate* subscription needed).
+
+* Vercel explains [the work going on to make Next.js work better across cloud platforms.](https://javascriptweekly.com/link/183082/d076523b1d) The *Adapter API* provides a way for platforms to adjust apps to suit their environment. OpenNext, Netlify, Cloudflare, AWS Amplify, and Google Cloud are all on board.
+
+* 🤖 GitHub has announced, starting late April, data (including inputs and snippets) from Free/Pro/Pro+ Copilot users [will be used, by default, to help train future AI models](https://javascriptweekly.com/link/183083/d076523b1d). You can opt out.
+
+* 🤖 A developer noticed [Copilot edited an 'ad' into one of his PRs!](https://javascriptweekly.com/link/183084/d076523b1d) GitHub's Martin Woodward [explained (on *X*) why it happened](https://javascriptweekly.com/link/183085/d076523b1d) and said the 'feature' has been disabled.
+
+* 🔠 Looking for a new IDE font option? [CodingFont](https://javascriptweekly.com/link/183086/d076523b1d) lets you find your ideal choice *visually* using a bracket-style faceoff. *Noto Sans Mono* won for me – not one I'd considered before!
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/183102/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
