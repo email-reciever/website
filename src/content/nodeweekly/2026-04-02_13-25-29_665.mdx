@@ -1,0 +1,272 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node.js 25.9 brings --max-heap-size and better, iterable streams
+description: Node.js 25.9 brings --max-heap-size and better, iterable streams
+date: 星期四 01 下午 四月 2o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/618
+origin_site: https://nodeweekly.com/issues/618
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node.js 25.9 brings --max-heap-size and better, iterable streams" url="https://nodeweekly.com/issues/618" />
+
+<Detail client:only="react">
+	#​618 — April 2, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/618)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/183180/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/z8z8ak6sfky2qi5mg7y0.jpg)](https://nodeweekly.com/link/183181/0a4070b383)
+
+[Node.js 25.9.0 (Current) Released](https://nodeweekly.com/link/183181/0a4070b383 "nodejs.org") — Including a `--max-heap-size` option to set the maximum heap size for a process, James Snell’s experimental [‘better streams API’](https://nodeweekly.com/link/183182/0a4070b383) implementation lands as `stream/iter` ([docs here](https://nodeweekly.com/link/183183/0a4070b383)), plus test runner module mocking improvements.
+
+Antoine du Hamel
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/8052a322.png)](https://nodeweekly.com/link/183180/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/183180/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics.
+
+Memetria sponsor
+
+[The Hidden Blast Radius of the Axios Compromise](https://nodeweekly.com/link/183184/0a4070b383 "socket.dev") — You’ve probably heard about [the supply chain attack via Axios](https://nodeweekly.com/link/183185/0a4070b383) this week (if not, be sure to [check if you’re affected](https://nodeweekly.com/link/183186/0a4070b383)). Ahmad reflects on the mechanics of such attacks and why their effects spread further than you might think.
+
+Ahmad Nassri (Socket)
+
+💡 If you want to mitigate such attacks, Dani Akash has [a guide to using 'minimum release age' cooldowns](https://nodeweekly.com/link/183187/0a4070b383) with npm, pnpm, Bun, and Yarn.
+
+**IN BRIEF:**
+
+*   MSW's Artem Zakharchenko shares [a step-by-step guide to publishing to npm _securely_ in 2026.](https://nodeweekly.com/link/183188/0a4070b383)
+    
+*   [The source code for Claude Code leaked](https://nodeweekly.com/link/183189/0a4070b383) a few days ago due to the accidental shipping of source maps in its npm package. A Bun-related [issue](https://nodeweekly.com/link/183190/0a4070b383), but a reminder of [how powerful source maps can be.](https://nodeweekly.com/link/183191/0a4070b383)
+    
+*   Cloudflare has [released EmDash](https://nodeweekly.com/link/183192/0a4070b383), a _'spiritual successor to WordPress'_ that runs both on Cloudflare or _'any Node.js server'._
+    
+
+[A Gentle Intro to npm Workspaces](https://nodeweekly.com/link/183193/0a4070b383 "wasp.sh") — With [workspaces](https://nodeweekly.com/link/183194/0a4070b383), you can manage multiple packages in one repo and link local packages so they can import each other by name. npm may then hoist and deduplicate compatible dependencies during install.
+
+Carlos Precioso (Wasp)
+
+[Run Agents on Production-Fidelity Sandboxes](https://nodeweekly.com/link/183195/0a4070b383) — Ox spins up a sandbox for every agent task. Isolated code, compute, and data. Test against prod with zero blast radius.
+
+Ox sponsor
+
+▶️ [Most Developers Misunderstand Node.js in Production](https://nodeweekly.com/link/183196/0a4070b383) – A quick 6-minute interview with core contributor Ulises Gascón. Beyond.js (NodeSource)
+
+🤖 [Getting Started Building Agents with the Vercel AI SDK in Node](https://nodeweekly.com/link/183197/0a4070b383) Valeri Karpov
+
+📄 [Escaping Node.js's Permission Model via Brotli](https://nodeweekly.com/link/183198/0a4070b383) maitai
+
+📄 [Why We Replaced Node.js with Bun for 5x Throughput](https://nodeweekly.com/link/183199/0a4070b383) Nick at Trigger
+
+🛠 Code & Tools
+
+🤖 [Transformers.js v4: Run AI Models from JavaScript](https://nodeweekly.com/link/183200/0a4070b383 "github.com") — Run [Hugging Face](https://nodeweekly.com/link/183201/0a4070b383)\-hosted models to do things like LLMs, vision, and audio models from Node, in the browser, etc. v4 switches to WebGPU and is installable with npm. There are [many demos](https://nodeweekly.com/link/183202/0a4070b383) covering [speech transcription](https://nodeweekly.com/link/183203/0a4070b383), [using Qwen 3.5](https://nodeweekly.com/link/183204/0a4070b383), and [video captioning.](https://nodeweekly.com/link/183205/0a4070b383)
+
+Hugging Face
+
+💡 The browser demos use large model downloads, so server-side use with Node may be the best use case, even if not the _coolest_.
+
+[node-re2: Bindings for Google's RE2 Regex Library](https://nodeweekly.com/link/183206/0a4070b383 "github.com") — [RE2](https://nodeweekly.com/link/183207/0a4070b383) is a regular expression library with linear-time matching, making it immune to [ReDoS](https://nodeweekly.com/link/183237/0a4070b383) attacks caused by backtracking. node-re2 offers it as a near drop-in replacement for `RegExp`.
+
+Eugene Lazutkin
+
+[Defuddle: Extract the Main Content from Pages](https://nodeweekly.com/link/183209/0a4070b383 "github.com") — Strips clutter from HTML leaving only the primary content for you to use. There’s [a demo](https://nodeweekly.com/link/183210/0a4070b383) where you can try it out.
+
+Steph Ango
+
+*   [dotenv 17.4](https://nodeweekly.com/link/183213/0a4070b383) – Loads environment variables from `.env` files into `process.env`. While now [a built-in Node feature](https://nodeweekly.com/link/183214/0a4070b383), dotenv is a popular dependency with 100M+ downloads a week and offers finer-grained control over the process.
+    
+*   [numpy-ts 1.2](https://nodeweekly.com/link/183215/0a4070b383) – NumPy implementation for TS/JS. Now at ~50% native perf and with Float16 support. ([Homepage](https://nodeweekly.com/link/183216/0a4070b383))
+    
+*   [Path-to-RegExp 8.4](https://nodeweekly.com/link/183217/0a4070b383) – Library to convert path strings with parameters into regexes.
+    
+*   [globby 16.2](https://nodeweekly.com/link/183218/0a4070b383) – Promise-based glob matching, now with [global gitignore file support.](https://nodeweekly.com/link/183219/0a4070b383)
+    
+*   [ts-blank-space 0.8](https://nodeweekly.com/link/183220/0a4070b383) – Pure JS type-stripper using the TypeScript 6 parser.
+    
+*   [Aedes 1.0.2](https://nodeweekly.com/link/183221/0a4070b383) – Node.js MQTT broker that runs on any stream server.
+    
+*   [Ky 2.0 Prerelease](https://nodeweekly.com/link/183222/0a4070b383) – Popular HTTP client based on the Fetch API.
+    
+*   [Got 15.0](https://nodeweekly.com/link/183223/0a4070b383) – Human-friendly, powerful HTTP request library.
+    
+*   [ESLint Markdown Plugin 8.0](https://nodeweekly.com/link/183224/0a4070b383) – Lint Markdown with ESLint.
+    
+*   [file-type 22.0](https://nodeweekly.com/link/183225/0a4070b383) – Detect the file type of binary files.
+    
+
+📰 Classifieds
+
+🧐 A cheaper Heroku? Our [cost comparison calculator](https://nodeweekly.com/link/183226/0a4070b383) puts the PaaS alternatives head-to-head.
+
+* * *
+
+Become an AI-first engineer. Gauntlet is a full-time fellowship, no cost. $200K+ roles. Next cohort starts 4/27. [Apply Today](https://nodeweekly.com/link/183238/0a4070b383)
+
+* * *
+
+SerpApi is a [Web Search API](https://nodeweekly.com/link/183228/0a4070b383) for accessing Google and other search engine results in structured JSON. Try SerpApi for free.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ke7osegtjy2uvzmaphus.jpg)](https://nodeweekly.com/link/183229/0a4070b383)
+
+*   [WWWBasic](https://nodeweekly.com/link/183229/0a4070b383) is a curious Google-hosted project to use the [BASIC](https://nodeweekly.com/link/183230/0a4070b383) language in `script` tags or within Node apps. It's had its first update in years (1.0.2) to add ESM support and improve a few things. This seems to be a true labor of love for Googler Brad Nelson.
+    
+*   [QuickBEAM](https://nodeweekly.com/link/183231/0a4070b383) is a JavaScript runtime for Erlang's BEAM VM, as also used by [Elixir.](https://nodeweekly.com/link/183232/0a4070b383) It offers compatibility with core Node.js APIs.
+    
+*   [Deno v2.7.11 has been released](https://nodeweekly.com/link/183233/0a4070b383) with _"tons of Node.js compatibility improvements"_ covering `crypto`, `child_process`, `workers`, and [TTY handling on Windows](https://nodeweekly.com/link/183235/0a4070b383) to match `libuv`'s behavior.
+    
+*   [wasm-git](https://nodeweekly.com/link/183236/0a4070b383) is a WASM-compiled version of Git you can use directly from Node. We first linked to this six years ago when it was a mere experiment, but it's come a long way since then.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​618 — April 2, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/618)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/183180/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/z8z8ak6sfky2qi5mg7y0.jpg)](https://nodeweekly.com/link/183181/0a4070b383)
+
+[Node.js 25.9.0 (Current) Released](https://nodeweekly.com/link/183181/0a4070b383 "nodejs.org") — Including a `--max-heap-size` option to set the maximum heap size for a process, James Snell’s experimental [‘better streams API’](https://nodeweekly.com/link/183182/0a4070b383) implementation lands as `stream/iter` ([docs here](https://nodeweekly.com/link/183183/0a4070b383)), plus test runner module mocking improvements.
+
+Antoine du Hamel
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/8052a322.png)](https://nodeweekly.com/link/183180/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/183180/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics.
+
+Memetria sponsor
+
+[The Hidden Blast Radius of the Axios Compromise](https://nodeweekly.com/link/183184/0a4070b383 "socket.dev") — You’ve probably heard about [the supply chain attack via Axios](https://nodeweekly.com/link/183185/0a4070b383) this week (if not, be sure to [check if you’re affected](https://nodeweekly.com/link/183186/0a4070b383)). Ahmad reflects on the mechanics of such attacks and why their effects spread further than you might think.
+
+Ahmad Nassri (Socket)
+
+💡 If you want to mitigate such attacks, Dani Akash has [a guide to using 'minimum release age' cooldowns](https://nodeweekly.com/link/183187/0a4070b383) with npm, pnpm, Bun, and Yarn.
+
+**IN BRIEF:**
+
+* MSW's Artem Zakharchenko shares [a step-by-step guide to publishing to npm *securely* in 2026.](https://nodeweekly.com/link/183188/0a4070b383)
+
+* [The source code for Claude Code leaked](https://nodeweekly.com/link/183189/0a4070b383) a few days ago due to the accidental shipping of source maps in its npm package. A Bun-related [issue](https://nodeweekly.com/link/183190/0a4070b383), but a reminder of [how powerful source maps can be.](https://nodeweekly.com/link/183191/0a4070b383)
+
+* Cloudflare has [released EmDash](https://nodeweekly.com/link/183192/0a4070b383), a *'spiritual successor to WordPress'* that runs both on Cloudflare or *'any Node.js server'.*
+
+[A Gentle Intro to npm Workspaces](https://nodeweekly.com/link/183193/0a4070b383 "wasp.sh") — With [workspaces](https://nodeweekly.com/link/183194/0a4070b383), you can manage multiple packages in one repo and link local packages so they can import each other by name. npm may then hoist and deduplicate compatible dependencies during install.
+
+Carlos Precioso (Wasp)
+
+[Run Agents on Production-Fidelity Sandboxes](https://nodeweekly.com/link/183195/0a4070b383) — Ox spins up a sandbox for every agent task. Isolated code, compute, and data. Test against prod with zero blast radius.
+
+Ox sponsor
+
+▶️ [Most Developers Misunderstand Node.js in Production](https://nodeweekly.com/link/183196/0a4070b383) – A quick 6-minute interview with core contributor Ulises Gascón. Beyond.js (NodeSource)
+
+🤖 [Getting Started Building Agents with the Vercel AI SDK in Node](https://nodeweekly.com/link/183197/0a4070b383) Valeri Karpov
+
+📄 [Escaping Node.js's Permission Model via Brotli](https://nodeweekly.com/link/183198/0a4070b383) maitai
+
+📄 [Why We Replaced Node.js with Bun for 5x Throughput](https://nodeweekly.com/link/183199/0a4070b383) Nick at Trigger
+
+🛠 Code & Tools
+
+🤖 [Transformers.js v4: Run AI Models from JavaScript](https://nodeweekly.com/link/183200/0a4070b383 "github.com") — Run [Hugging Face](https://nodeweekly.com/link/183201/0a4070b383)-hosted models to do things like LLMs, vision, and audio models from Node, in the browser, etc. v4 switches to WebGPU and is installable with npm. There are [many demos](https://nodeweekly.com/link/183202/0a4070b383) covering [speech transcription](https://nodeweekly.com/link/183203/0a4070b383), [using Qwen 3.5](https://nodeweekly.com/link/183204/0a4070b383), and [video captioning.](https://nodeweekly.com/link/183205/0a4070b383)
+
+Hugging Face
+
+💡 The browser demos use large model downloads, so server-side use with Node may be the best use case, even if not the *coolest*.
+
+[node-re2: Bindings for Google's RE2 Regex Library](https://nodeweekly.com/link/183206/0a4070b383 "github.com") — [RE2](https://nodeweekly.com/link/183207/0a4070b383) is a regular expression library with linear-time matching, making it immune to [ReDoS](https://nodeweekly.com/link/183237/0a4070b383) attacks caused by backtracking. node-re2 offers it as a near drop-in replacement for `RegExp`.
+
+Eugene Lazutkin
+
+[Defuddle: Extract the Main Content from Pages](https://nodeweekly.com/link/183209/0a4070b383 "github.com") — Strips clutter from HTML leaving only the primary content for you to use. There’s [a demo](https://nodeweekly.com/link/183210/0a4070b383) where you can try it out.
+
+Steph Ango
+
+* [dotenv 17.4](https://nodeweekly.com/link/183213/0a4070b383) – Loads environment variables from `.env` files into `process.env`. While now [a built-in Node feature](https://nodeweekly.com/link/183214/0a4070b383), dotenv is a popular dependency with 100M+ downloads a week and offers finer-grained control over the process.
+
+* [numpy-ts 1.2](https://nodeweekly.com/link/183215/0a4070b383) – NumPy implementation for TS/JS. Now at ~50% native perf and with Float16 support. ([Homepage](https://nodeweekly.com/link/183216/0a4070b383))
+
+* [Path-to-RegExp 8.4](https://nodeweekly.com/link/183217/0a4070b383) – Library to convert path strings with parameters into regexes.
+
+* [globby 16.2](https://nodeweekly.com/link/183218/0a4070b383) – Promise-based glob matching, now with [global gitignore file support.](https://nodeweekly.com/link/183219/0a4070b383)
+
+* [ts-blank-space 0.8](https://nodeweekly.com/link/183220/0a4070b383) – Pure JS type-stripper using the TypeScript 6 parser.
+
+* [Aedes 1.0.2](https://nodeweekly.com/link/183221/0a4070b383) – Node.js MQTT broker that runs on any stream server.
+
+* [Ky 2.0 Prerelease](https://nodeweekly.com/link/183222/0a4070b383) – Popular HTTP client based on the Fetch API.
+
+* [Got 15.0](https://nodeweekly.com/link/183223/0a4070b383) – Human-friendly, powerful HTTP request library.
+
+* [ESLint Markdown Plugin 8.0](https://nodeweekly.com/link/183224/0a4070b383) – Lint Markdown with ESLint.
+
+* [file-type 22.0](https://nodeweekly.com/link/183225/0a4070b383) – Detect the file type of binary files.
+
+📰 Classifieds
+
+🧐 A cheaper Heroku? Our [cost comparison calculator](https://nodeweekly.com/link/183226/0a4070b383) puts the PaaS alternatives head-to-head.
+
+***
+
+Become an AI-first engineer. Gauntlet is a full-time fellowship, no cost. $200K+ roles. Next cohort starts 4/27. [Apply Today](https://nodeweekly.com/link/183238/0a4070b383)
+
+***
+
+SerpApi is a [Web Search API](https://nodeweekly.com/link/183228/0a4070b383) for accessing Google and other search engine results in structured JSON. Try SerpApi for free.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ke7osegtjy2uvzmaphus.jpg)](https://nodeweekly.com/link/183229/0a4070b383)
+
+* [WWWBasic](https://nodeweekly.com/link/183229/0a4070b383) is a curious Google-hosted project to use the [BASIC](https://nodeweekly.com/link/183230/0a4070b383) language in `script` tags or within Node apps. It's had its first update in years (1.0.2) to add ESM support and improve a few things. This seems to be a true labor of love for Googler Brad Nelson.
+
+* [QuickBEAM](https://nodeweekly.com/link/183231/0a4070b383) is a JavaScript runtime for Erlang's BEAM VM, as also used by [Elixir.](https://nodeweekly.com/link/183232/0a4070b383) It offers compatibility with core Node.js APIs.
+
+* [Deno v2.7.11 has been released](https://nodeweekly.com/link/183233/0a4070b383) with *"tons of Node.js compatibility improvements"* covering `crypto`, `child_process`, `workers`, and [TTY handling on Windows](https://nodeweekly.com/link/183235/0a4070b383) to match `libuv`'s behavior.
+
+* [wasm-git](https://nodeweekly.com/link/183236/0a4070b383) is a WASM-compiled version of Git you can use directly from Node. We first linked to this six years ago when it was a mere experiment, but it's come a long way since then.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
