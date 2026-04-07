@@ -1,0 +1,829 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: useEffectEvent： Why So Strict? | Michael Landis
+description: useEffectEvent： Why So Strict? | Michael Landis
+date: 星期二 11 晚上 四月 7o 2026
+author: mediumcom
+origin_url: https://medium.com/
+origin_site: https://medium.com/
+translated: true
+avatar: /media-source/mediumcom-ico.png
+email_recorder: noreply@medium.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="useEffectEvent： Why So Strict? | Michael Landis" url="https://medium.com/" />
+
+<Detail client:only="react">
+	Today's highlights
+
+[![Michael Landis](https://miro.medium.com/fit/c/40/40/1*3oXJTieuJ8R3XIKb_qBhfA.jpeg)](https://medium.com/@michaellandis?source=email-2b8b8ee19057-1775585092731-digest.reader--8984de3bcaf7----0-102------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Michael Landis](https://medium.com/@michaellandis?source=email-2b8b8ee19057-1775585092731-digest.reader--8984de3bcaf7----0-102------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[
+
+## useEffectEvent: Why So Strict?
+
+### There’s a new hook introduced in React 19.2…
+
+
+
+](https://medium.com/@michaellandis/useeffectevent-why-so-strict-8984de3bcaf7?source=email-2b8b8ee19057-1775585092731-digest.reader--8984de3bcaf7----0-102------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+205
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+8
+
+[![Matt Bentley](https://miro.medium.com/fit/c/40/40/1*nUZ_xcK6heGCMT4SHpSsuA.jpeg)](https://medium.com/@mattbentley_67939?source=email-2b8b8ee19057-1775585092731-digest.reader-5517fd7b58a6-bee5a4e4d9aa----1-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Matt Bentley](https://medium.com/@mattbentley_67939?source=email-2b8b8ee19057-1775585092731-digest.reader-5517fd7b58a6-bee5a4e4d9aa----1-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1775585092731-digest.reader-5517fd7b58a6-bee5a4e4d9aa----1-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![Designing a Production-Grade RAG Architecture](https://miro.medium.com/fit/c/320/214/1*T_4LvgEpEHWGLqE86pgyDg.jpeg)](https://medium.com/@mattbentley_67939/designing-a-production-grade-rag-architecture-bee5a4e4d9aa?source=email-2b8b8ee19057-1775585092731-digest.reader-5517fd7b58a6-bee5a4e4d9aa----1-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[
+
+## Designing a Production-Grade RAG Architecture
+
+### Techniques and best practices for grounding LLMs in…
+
+
+
+](https://medium.com/@mattbentley_67939/designing-a-production-grade-rag-architecture-bee5a4e4d9aa?source=email-2b8b8ee19057-1775585092731-digest.reader-5517fd7b58a6-bee5a4e4d9aa----1-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+15 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+464
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+11
+
+[![Will Lockett](https://miro.medium.com/fit/c/40/40/1*V0qWMQ8V5_NaF9yUoHAdyg.jpeg)](https://medium.com/@wlockett?source=email-2b8b8ee19057-1775585092731-digest.reader--fb6dfa5e4128----2-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Will Lockett](https://medium.com/@wlockett?source=email-2b8b8ee19057-1775585092731-digest.reader--fb6dfa5e4128----2-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![AI Pullback Has Officially Started](https://miro.medium.com/fit/c/320/214/0*b_ruGyVzhDhj6X04)](https://medium.com/@wlockett/ai-pullback-has-officially-started-fb6dfa5e4128?source=email-2b8b8ee19057-1775585092731-digest.reader--fb6dfa5e4128----2-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[
+
+## AI Pullback Has Officially Started
+
+### People are beginning to confront the reality of AI…
+
+
+
+](https://medium.com/@wlockett/ai-pullback-has-officially-started-fb6dfa5e4128?source=email-2b8b8ee19057-1775585092731-digest.reader--fb6dfa5e4128----2-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+291
+
+[![Nick Babich](https://miro.medium.com/fit/c/40/40/1*DvFE_85Tc3fObRgRww9ZTQ.jpeg)](https://medium.com/@101?source=email-2b8b8ee19057-1775585092731-digest.reader-819cc2aaeee0-a453a7a8faa7----3-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Nick Babich](https://medium.com/@101?source=email-2b8b8ee19057-1775585092731-digest.reader-819cc2aaeee0-a453a7a8faa7----3-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[UX Planet](https://medium.com/ux-planet?source=email-2b8b8ee19057-1775585092731-digest.reader-819cc2aaeee0-a453a7a8faa7----3-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![Claude Skills for Product Designers](https://miro.medium.com/fit/c/320/214/1*gXGL1GPeYM875Sbw53XuRw.png)](https://medium.com/@101/claude-skills-for-product-designers-a453a7a8faa7?source=email-2b8b8ee19057-1775585092731-digest.reader-819cc2aaeee0-a453a7a8faa7----3-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[
+
+## Claude Skills for Product Designers
+
+### How to create your first Claude Skill
+
+
+
+](https://medium.com/@101/claude-skills-for-product-designers-a453a7a8faa7?source=email-2b8b8ee19057-1775585092731-digest.reader-819cc2aaeee0-a453a7a8faa7----3-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+26
+
+[![George J. Ziogas](https://miro.medium.com/fit/c/40/40/1*7XRbajLVaZH4CPtE-Xxckw.jpeg)](https://medium.com/@georgejziogas?source=email-2b8b8ee19057-1775585092731-digest.reader-5d5c7d350039-ca0c8b2405fd----4-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[George J. Ziogas](https://medium.com/@georgejziogas?source=email-2b8b8ee19057-1775585092731-digest.reader-5d5c7d350039-ca0c8b2405fd----4-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[Infinite Impulse](https://medium.com/infinite-impulse?source=email-2b8b8ee19057-1775585092731-digest.reader-5d5c7d350039-ca0c8b2405fd----4-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![The Psychology of People Who Go Silent When They’re Hurt](https://miro.medium.com/fit/c/320/214/1*ufsqWnnL1JzhrJ5CqeUZdA.jpeg)](https://medium.com/@georgejziogas/the-psychology-of-people-who-go-silent-when-theyre-hurt-ca0c8b2405fd?source=email-2b8b8ee19057-1775585092731-digest.reader-5d5c7d350039-ca0c8b2405fd----4-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[
+
+## The Psychology of People Who Go Silent When They’re Hurt
+
+### Why hurt people stop talking
+
+
+
+](https://medium.com/@georgejziogas/the-psychology-of-people-who-go-silent-when-theyre-hurt-ca0c8b2405fd?source=email-2b8b8ee19057-1775585092731-digest.reader-5d5c7d350039-ca0c8b2405fd----4-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+12.8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+449
+
+[![Vadym Grin](https://miro.medium.com/fit/c/40/40/1*xPCTWfJG7ch1Gs4VoM8qkA.jpeg)](https://medium.com/@vadimgrin?source=email-2b8b8ee19057-1775585092731-digest.reader-138adf9c44c-5d027a50bdaf----5-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Vadym Grin](https://medium.com/@vadimgrin?source=email-2b8b8ee19057-1775585092731-digest.reader-138adf9c44c-5d027a50bdaf----5-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[UX Collective](https://medium.com/user-experience-design-1?source=email-2b8b8ee19057-1775585092731-digest.reader-138adf9c44c-5d027a50bdaf----5-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![Feelings are the new features](https://miro.medium.com/fit/c/320/214/1*Py1ss4V0lWBVOkVBZSnEfA.png)](https://medium.com/@vadimgrin/feelings-are-the-new-features-5d027a50bdaf?source=email-2b8b8ee19057-1775585092731-digest.reader-138adf9c44c-5d027a50bdaf----5-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[
+
+## Feelings are the new features
+
+### A strategic framework for emotional design when…
+
+
+
+](https://medium.com/@vadimgrin/feelings-are-the-new-features-5d027a50bdaf?source=email-2b8b8ee19057-1775585092731-digest.reader-138adf9c44c-5d027a50bdaf----5-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+332
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+9
+
+[![Raja Sekar](https://miro.medium.com/fit/c/40/40/1*1QBHmpPV3uGCWu1n_c8VqQ.jpeg)](https://medium.com/@raja96?source=email-2b8b8ee19057-1775585092731-digest.reader-2b6792fe7b4f-2f2c613e707c----6-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Raja Sekar](https://medium.com/@raja96?source=email-2b8b8ee19057-1775585092731-digest.reader-2b6792fe7b4f-2f2c613e707c----6-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[The Useful Life](https://medium.com/the-useful-life?source=email-2b8b8ee19057-1775585092731-digest.reader-2b6792fe7b4f-2f2c613e707c----6-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![Why I Stopped Reading Self-Help Books, And What I Read Instead](https://miro.medium.com/fit/c/320/214/1*xXocLTWLrOrRDSeaATTcSw.jpeg)](https://medium.com/@raja96/why-i-stopped-reading-self-help-books-and-what-i-read-instead-2f2c613e707c?source=email-2b8b8ee19057-1775585092731-digest.reader-2b6792fe7b4f-2f2c613e707c----6-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[
+
+## Why I Stopped Reading Self-Help Books, And What I Read Instead
+
+### What replaced motivation junk food
+
+
+
+](https://medium.com/@raja96/why-i-stopped-reading-self-help-books-and-what-i-read-instead-2f2c613e707c?source=email-2b8b8ee19057-1775585092731-digest.reader-2b6792fe7b4f-2f2c613e707c----6-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+10 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+8.2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+309
+
+[![Gargi Kumari](https://miro.medium.com/fit/c/40/40/1*WXME8lCqCMSBmLedFsWkcw.jpeg)](https://medium.com/@gargi.kumari?source=email-2b8b8ee19057-1775585092731-digest.reader-9e1dad5ee390-abe6818d56ea----7-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Gargi Kumari](https://medium.com/@gargi.kumari?source=email-2b8b8ee19057-1775585092731-digest.reader-9e1dad5ee390-abe6818d56ea----7-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[Sharing Food](https://medium.com/sharing-food?source=email-2b8b8ee19057-1775585092731-digest.reader-9e1dad5ee390-abe6818d56ea----7-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![Barcelona’s Catalan Food Scene Ruined Us (In the Best Way)](https://miro.medium.com/fit/c/320/214/1*Taz6NnQxA740wPjTlxSYeA.jpeg)](https://medium.com/@gargi.kumari/barcelonas-catalan-food-scene-ruined-us-in-the-best-way-abe6818d56ea?source=email-2b8b8ee19057-1775585092731-digest.reader-9e1dad5ee390-abe6818d56ea----7-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[
+
+## Barcelona’s Catalan Food Scene Ruined Us (In the Best Way)
+
+### A pre-wedding city break, a matcha latte, and the…
+
+
+
+](https://medium.com/@gargi.kumari/barcelonas-catalan-food-scene-ruined-us-in-the-best-way-abe6818d56ea?source=email-2b8b8ee19057-1775585092731-digest.reader-9e1dad5ee390-abe6818d56ea----7-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+11 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+160
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+3
+
+[![Michael Alford](https://miro.medium.com/fit/c/40/40/1*dIXXi9Ldo0NinJKTd-qStg.jpeg)](https://medium.com/@alford.michaelr?source=email-2b8b8ee19057-1775585092731-digest.reader-785489229d74-8ca84bdecdb2----8-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Michael Alford](https://medium.com/@alford.michaelr?source=email-2b8b8ee19057-1775585092731-digest.reader-785489229d74-8ca84bdecdb2----8-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[Live View](https://medium.com/live-view?source=email-2b8b8ee19057-1775585092731-digest.reader-785489229d74-8ca84bdecdb2----8-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![Stock Photography: The Past Pays Dollars; the Present Just Pennies](https://miro.medium.com/fit/c/320/214/1*XDOTJ8b-cYIrOfLI_0C8SA.png)](https://medium.com/@alford.michaelr/stock-photography-the-past-pays-dollars-the-present-just-pennies-8ca84bdecdb2?source=email-2b8b8ee19057-1775585092731-digest.reader-785489229d74-8ca84bdecdb2----8-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[
+
+## Stock Photography: The Past Pays Dollars; the Present Just Pennies
+
+### History as photography’s last monopoly
+
+
+
+](https://medium.com/@alford.michaelr/stock-photography-the-past-pays-dollars-the-present-just-pennies-8ca84bdecdb2?source=email-2b8b8ee19057-1775585092731-digest.reader-785489229d74-8ca84bdecdb2----8-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+9 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+203
+
+[![Vagelis Plevris](https://miro.medium.com/fit/c/40/40/1*9Uh2XP9RGqY7CShmIxSouA.jpeg)](https://medium.com/@vplevris?source=email-2b8b8ee19057-1775585092731-digest.reader--40a8495023a5----9-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Vagelis Plevris](https://medium.com/@vplevris?source=email-2b8b8ee19057-1775585092731-digest.reader--40a8495023a5----9-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![The Magical Number 6174](https://miro.medium.com/focal/320/214/55/53/1*PuOqzKC9duBh4ADkRweT6g.jpeg)](https://medium.com/@vplevris/the-magical-number-6174-40a8495023a5?source=email-2b8b8ee19057-1775585092731-digest.reader--40a8495023a5----9-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[
+
+## The Magical Number 6174
+
+### Why Every Four-Digit Number Finds Its Way to…
+
+
+
+](https://medium.com/@vplevris/the-magical-number-6174-40a8495023a5?source=email-2b8b8ee19057-1775585092731-digest.reader--40a8495023a5----9-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+177
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+4
+
+[![Thomas Smith](https://miro.medium.com/fit/c/40/40/2*3vJU4sgGd_CmFQFl4wH6-Q.jpeg)](https://medium.com/@tomsmith585?source=email-2b8b8ee19057-1775585092731-digest.reader-16ade7bc003e-c911346faa7c----10-102------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Thomas Smith](https://medium.com/@tomsmith585?source=email-2b8b8ee19057-1775585092731-digest.reader-16ade7bc003e-c911346faa7c----10-102------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[The Generator](https://medium.com/the-generator?source=email-2b8b8ee19057-1775585092731-digest.reader-16ade7bc003e-c911346faa7c----10-102------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![I Built An OpenClaw AI Agent To Do My Job For Me](https://miro.medium.com/fit/c/320/214/1*1MMC7B4-3Sg-Ui_1vscFKg.jpeg)](https://medium.com/@tomsmith585/i-built-an-openclaw-ai-agent-to-do-my-job-for-me-c911346faa7c?source=email-2b8b8ee19057-1775585092731-digest.reader-16ade7bc003e-c911346faa7c----10-102------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[
+
+## I Built An OpenClaw AI Agent To Do My Job For Me
+
+### The results were surprising, and a bit scary
+
+
+
+](https://medium.com/@tomsmith585/i-built-an-openclaw-ai-agent-to-do-my-job-for-me-c911346faa7c?source=email-2b8b8ee19057-1775585092731-digest.reader-16ade7bc003e-c911346faa7c----10-102------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+38
+
+[![Tanmay Bansal](https://miro.medium.com/fit/c/40/40/0*SroILly4wl60FexY)](https://medium.com/@tanmay.bansal20?source=email-2b8b8ee19057-1775585092731-digest.reader-78d064101951-fb7fbb9a2e08----11-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Tanmay Bansal](https://medium.com/@tanmay.bansal20?source=email-2b8b8ee19057-1775585092731-digest.reader-78d064101951-fb7fbb9a2e08----11-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[Artificial Intelligence in Plain English](https://medium.com/ai-in-plain-english?source=email-2b8b8ee19057-1775585092731-digest.reader-78d064101951-fb7fbb9a2e08----11-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![Everyone Is “Learning AI”, But Nobody Really Understands This One Thing.](https://miro.medium.com/fit/c/320/214/1*yyWRG8L6l3kbDM32fvhBZA.png)](https://medium.com/@tanmay.bansal20/everyone-is-learning-ai-but-nobody-really-understands-this-one-thing-fb7fbb9a2e08?source=email-2b8b8ee19057-1775585092731-digest.reader-78d064101951-fb7fbb9a2e08----11-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[
+
+## Everyone Is “Learning AI”, But Nobody Really Understands This One Thing.
+
+### Prompting teaches you the interface. AI literacy means…
+
+
+
+](https://medium.com/@tanmay.bansal20/everyone-is-learning-ai-but-nobody-really-understands-this-one-thing-fb7fbb9a2e08?source=email-2b8b8ee19057-1775585092731-digest.reader-78d064101951-fb7fbb9a2e08----11-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+54
+
+[![Usman Writes](https://miro.medium.com/fit/c/40/40/1*bMbe1ORqVNQs2qCyBZSJEQ.png)](https://medium.com/@pixicstudio?source=email-2b8b8ee19057-1775585092731-digest.reader-d1baaa8417a4-417511411fad----12-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Usman Writes](https://medium.com/@pixicstudio?source=email-2b8b8ee19057-1775585092731-digest.reader-d1baaa8417a4-417511411fad----12-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[Stackademic](https://medium.com/stackademic?source=email-2b8b8ee19057-1775585092731-digest.reader-d1baaa8417a4-417511411fad----12-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![You Can Now Learn Anything 100x Faster With Claude.](https://miro.medium.com/fit/c/320/214/1*zytpvQUV-Z8151LiJ5yPFA.png)](https://medium.com/@pixicstudio/you-can-now-learn-anything-100x-faster-with-claude-417511411fad?source=email-2b8b8ee19057-1775585092731-digest.reader-d1baaa8417a4-417511411fad----12-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[
+
+## You Can Now Learn Anything 100x Faster With Claude.
+
+### Most people use AI to draft emails or summarize…
+
+
+
+](https://medium.com/@pixicstudio/you-can-now-learn-anything-100x-faster-with-claude-417511411fad?source=email-2b8b8ee19057-1775585092731-digest.reader-d1baaa8417a4-417511411fad----12-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+979
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+6
+
+[![Andy Murphy](https://miro.medium.com/fit/c/40/40/1*0xrDaW1PAbC6JkPyC2DuyQ.jpeg)](https://medium.com/@andycmurphy1?source=email-2b8b8ee19057-1775585092731-digest.reader--e9c740d8ee1a----13-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Andy Murphy](https://medium.com/@andycmurphy1?source=email-2b8b8ee19057-1775585092731-digest.reader--e9c740d8ee1a----13-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![There Are Only Five Rules In Life (According to Carl Jung)](https://miro.medium.com/fit/c/320/214/0*nu_29RinWQTdWoPR)](https://medium.com/@andycmurphy1/there-are-only-five-rules-in-life-according-to-carl-jung-e9c740d8ee1a?source=email-2b8b8ee19057-1775585092731-digest.reader--e9c740d8ee1a----13-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[
+
+## There Are Only Five Rules In Life (According to Carl Jung)
+
+### The first is scary. The second is pleasurable. The…
+
+
+
+](https://medium.com/@andycmurphy1/there-are-only-five-rules-in-life-according-to-carl-jung-e9c740d8ee1a?source=email-2b8b8ee19057-1775585092731-digest.reader--e9c740d8ee1a----13-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+12.8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+317
+
+[![Farhad Malik](https://miro.medium.com/fit/c/40/40/1*7MhP4LsHsl3G_oE3LBVlsg.jpeg)](https://medium.com/@farhadmalik?source=email-2b8b8ee19057-1775585092731-digest.reader-8993e01dcfd3-a27272af0c48----14-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Farhad Malik](https://medium.com/@farhadmalik?source=email-2b8b8ee19057-1775585092731-digest.reader-8993e01dcfd3-a27272af0c48----14-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[Data Science Collective](https://medium.com/data-science-collective?source=email-2b8b8ee19057-1775585092731-digest.reader-8993e01dcfd3-a27272af0c48----14-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![What I Learnt Using Claude Code to Build Production-Ready Apps](https://miro.medium.com/fit/c/320/214/1*L-Hp494D-GhKT40A-YuCpw.png)](https://medium.com/@farhadmalik/what-i-learnt-using-claude-code-to-build-production-ready-apps-a27272af0c48?source=email-2b8b8ee19057-1775585092731-digest.reader-8993e01dcfd3-a27272af0c48----14-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[
+
+## What I Learnt Using Claude Code to Build Production-Ready Apps
+
+### A practical guide covering the building blocks, hidden…
+
+
+
+](https://medium.com/@farhadmalik/what-i-learnt-using-claude-code-to-build-production-ready-apps-a27272af0c48?source=email-2b8b8ee19057-1775585092731-digest.reader-8993e01dcfd3-a27272af0c48----14-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+18 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+524
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+4
+
+[![Become a Medium member](https://miro.medium.com/max/1360/6b37395e36e2d6768583b0d27172b3075c079241270c50b770a18b83476ecffc)](https://medium.com/plans?source=email-2b8b8ee19057-1775585092731-digest.reader-------------------------16cd2014_8148_46e7_82ee_3ec96f0423d3)
+
+
+</Detail>
+
+Today's highlights
+
+[![Michael Landis](https://miro.medium.com/fit/c/40/40/1*3oXJTieuJ8R3XIKb_qBhfA.jpeg)](https://medium.com/@michaellandis?source=email-2b8b8ee19057-1775585092731-digest.reader--8984de3bcaf7----0-102------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Michael Landis](https://medium.com/@michaellandis?source=email-2b8b8ee19057-1775585092731-digest.reader--8984de3bcaf7----0-102------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+\[
+
+## useEffectEvent: Why So Strict?
+
+### There’s a new hook introduced in React 19.2…
+
+]\(https://medium.com/@michaellandis/useeffectevent-why-so-strict-8984de3bcaf7?source=email-2b8b8ee19057-1775585092731-digest.reader--8984de3bcaf7----0-102------------------16cd2014\_8148\_46e7\_82ee\_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+205
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+8
+
+[![Matt Bentley](https://miro.medium.com/fit/c/40/40/1*nUZ_xcK6heGCMT4SHpSsuA.jpeg)](https://medium.com/@mattbentley_67939?source=email-2b8b8ee19057-1775585092731-digest.reader-5517fd7b58a6-bee5a4e4d9aa----1-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Matt Bentley](https://medium.com/@mattbentley_67939?source=email-2b8b8ee19057-1775585092731-digest.reader-5517fd7b58a6-bee5a4e4d9aa----1-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1775585092731-digest.reader-5517fd7b58a6-bee5a4e4d9aa----1-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![Designing a Production-Grade RAG Architecture](https://miro.medium.com/fit/c/320/214/1*T_4LvgEpEHWGLqE86pgyDg.jpeg)](https://medium.com/@mattbentley_67939/designing-a-production-grade-rag-architecture-bee5a4e4d9aa?source=email-2b8b8ee19057-1775585092731-digest.reader-5517fd7b58a6-bee5a4e4d9aa----1-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+\[
+
+## Designing a Production-Grade RAG Architecture
+
+### Techniques and best practices for grounding LLMs in…
+
+]\(https://medium.com/@mattbentley\_67939/designing-a-production-grade-rag-architecture-bee5a4e4d9aa?source=email-2b8b8ee19057-1775585092731-digest.reader-5517fd7b58a6-bee5a4e4d9aa----1-109------------------16cd2014\_8148\_46e7\_82ee\_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+15 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+464
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+11
+
+[![Will Lockett](https://miro.medium.com/fit/c/40/40/1*V0qWMQ8V5_NaF9yUoHAdyg.jpeg)](https://medium.com/@wlockett?source=email-2b8b8ee19057-1775585092731-digest.reader--fb6dfa5e4128----2-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Will Lockett](https://medium.com/@wlockett?source=email-2b8b8ee19057-1775585092731-digest.reader--fb6dfa5e4128----2-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![AI Pullback Has Officially Started](https://miro.medium.com/fit/c/320/214/0*b_ruGyVzhDhj6X04)](https://medium.com/@wlockett/ai-pullback-has-officially-started-fb6dfa5e4128?source=email-2b8b8ee19057-1775585092731-digest.reader--fb6dfa5e4128----2-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+\[
+
+## AI Pullback Has Officially Started
+
+### People are beginning to confront the reality of AI…
+
+]\(https://medium.com/@wlockett/ai-pullback-has-officially-started-fb6dfa5e4128?source=email-2b8b8ee19057-1775585092731-digest.reader--fb6dfa5e4128----2-109------------------16cd2014\_8148\_46e7\_82ee\_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+291
+
+[![Nick Babich](https://miro.medium.com/fit/c/40/40/1*DvFE_85Tc3fObRgRww9ZTQ.jpeg)](https://medium.com/@101?source=email-2b8b8ee19057-1775585092731-digest.reader-819cc2aaeee0-a453a7a8faa7----3-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Nick Babich](https://medium.com/@101?source=email-2b8b8ee19057-1775585092731-digest.reader-819cc2aaeee0-a453a7a8faa7----3-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[UX Planet](https://medium.com/ux-planet?source=email-2b8b8ee19057-1775585092731-digest.reader-819cc2aaeee0-a453a7a8faa7----3-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![Claude Skills for Product Designers](https://miro.medium.com/fit/c/320/214/1*gXGL1GPeYM875Sbw53XuRw.png)](https://medium.com/@101/claude-skills-for-product-designers-a453a7a8faa7?source=email-2b8b8ee19057-1775585092731-digest.reader-819cc2aaeee0-a453a7a8faa7----3-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+\[
+
+## Claude Skills for Product Designers
+
+### How to create your first Claude Skill
+
+]\(https://medium.com/@101/claude-skills-for-product-designers-a453a7a8faa7?source=email-2b8b8ee19057-1775585092731-digest.reader-819cc2aaeee0-a453a7a8faa7----3-99------------------16cd2014\_8148\_46e7\_82ee\_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+26
+
+[![George J. Ziogas](https://miro.medium.com/fit/c/40/40/1*7XRbajLVaZH4CPtE-Xxckw.jpeg)](https://medium.com/@georgejziogas?source=email-2b8b8ee19057-1775585092731-digest.reader-5d5c7d350039-ca0c8b2405fd----4-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[George J. Ziogas](https://medium.com/@georgejziogas?source=email-2b8b8ee19057-1775585092731-digest.reader-5d5c7d350039-ca0c8b2405fd----4-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[Infinite Impulse](https://medium.com/infinite-impulse?source=email-2b8b8ee19057-1775585092731-digest.reader-5d5c7d350039-ca0c8b2405fd----4-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![The Psychology of People Who Go Silent When They’re Hurt](https://miro.medium.com/fit/c/320/214/1*ufsqWnnL1JzhrJ5CqeUZdA.jpeg)](https://medium.com/@georgejziogas/the-psychology-of-people-who-go-silent-when-theyre-hurt-ca0c8b2405fd?source=email-2b8b8ee19057-1775585092731-digest.reader-5d5c7d350039-ca0c8b2405fd----4-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+\[
+
+## The Psychology of People Who Go Silent When They’re Hurt
+
+### Why hurt people stop talking
+
+]\(https://medium.com/@georgejziogas/the-psychology-of-people-who-go-silent-when-theyre-hurt-ca0c8b2405fd?source=email-2b8b8ee19057-1775585092731-digest.reader-5d5c7d350039-ca0c8b2405fd----4-73------------------16cd2014\_8148\_46e7\_82ee\_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+12.8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+449
+
+[![Vadym Grin](https://miro.medium.com/fit/c/40/40/1*xPCTWfJG7ch1Gs4VoM8qkA.jpeg)](https://medium.com/@vadimgrin?source=email-2b8b8ee19057-1775585092731-digest.reader-138adf9c44c-5d027a50bdaf----5-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Vadym Grin](https://medium.com/@vadimgrin?source=email-2b8b8ee19057-1775585092731-digest.reader-138adf9c44c-5d027a50bdaf----5-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[UX Collective](https://medium.com/user-experience-design-1?source=email-2b8b8ee19057-1775585092731-digest.reader-138adf9c44c-5d027a50bdaf----5-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![Feelings are the new features](https://miro.medium.com/fit/c/320/214/1*Py1ss4V0lWBVOkVBZSnEfA.png)](https://medium.com/@vadimgrin/feelings-are-the-new-features-5d027a50bdaf?source=email-2b8b8ee19057-1775585092731-digest.reader-138adf9c44c-5d027a50bdaf----5-109------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+\[
+
+## Feelings are the new features
+
+### A strategic framework for emotional design when…
+
+]\(https://medium.com/@vadimgrin/feelings-are-the-new-features-5d027a50bdaf?source=email-2b8b8ee19057-1775585092731-digest.reader-138adf9c44c-5d027a50bdaf----5-109------------------16cd2014\_8148\_46e7\_82ee\_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+332
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+9
+
+[![Raja Sekar](https://miro.medium.com/fit/c/40/40/1*1QBHmpPV3uGCWu1n_c8VqQ.jpeg)](https://medium.com/@raja96?source=email-2b8b8ee19057-1775585092731-digest.reader-2b6792fe7b4f-2f2c613e707c----6-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Raja Sekar](https://medium.com/@raja96?source=email-2b8b8ee19057-1775585092731-digest.reader-2b6792fe7b4f-2f2c613e707c----6-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[The Useful Life](https://medium.com/the-useful-life?source=email-2b8b8ee19057-1775585092731-digest.reader-2b6792fe7b4f-2f2c613e707c----6-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![Why I Stopped Reading Self-Help Books, And What I Read Instead](https://miro.medium.com/fit/c/320/214/1*xXocLTWLrOrRDSeaATTcSw.jpeg)](https://medium.com/@raja96/why-i-stopped-reading-self-help-books-and-what-i-read-instead-2f2c613e707c?source=email-2b8b8ee19057-1775585092731-digest.reader-2b6792fe7b4f-2f2c613e707c----6-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+\[
+
+## Why I Stopped Reading Self-Help Books, And What I Read Instead
+
+### What replaced motivation junk food
+
+]\(https://medium.com/@raja96/why-i-stopped-reading-self-help-books-and-what-i-read-instead-2f2c613e707c?source=email-2b8b8ee19057-1775585092731-digest.reader-2b6792fe7b4f-2f2c613e707c----6-99------------------16cd2014\_8148\_46e7\_82ee\_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+10 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+8.2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+309
+
+[![Gargi Kumari](https://miro.medium.com/fit/c/40/40/1*WXME8lCqCMSBmLedFsWkcw.jpeg)](https://medium.com/@gargi.kumari?source=email-2b8b8ee19057-1775585092731-digest.reader-9e1dad5ee390-abe6818d56ea----7-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Gargi Kumari](https://medium.com/@gargi.kumari?source=email-2b8b8ee19057-1775585092731-digest.reader-9e1dad5ee390-abe6818d56ea----7-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[Sharing Food](https://medium.com/sharing-food?source=email-2b8b8ee19057-1775585092731-digest.reader-9e1dad5ee390-abe6818d56ea----7-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![Barcelona’s Catalan Food Scene Ruined Us (In the Best Way)](https://miro.medium.com/fit/c/320/214/1*Taz6NnQxA740wPjTlxSYeA.jpeg)](https://medium.com/@gargi.kumari/barcelonas-catalan-food-scene-ruined-us-in-the-best-way-abe6818d56ea?source=email-2b8b8ee19057-1775585092731-digest.reader-9e1dad5ee390-abe6818d56ea----7-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+\[
+
+## Barcelona’s Catalan Food Scene Ruined Us (In the Best Way)
+
+### A pre-wedding city break, a matcha latte, and the…
+
+]\(https://medium.com/@gargi.kumari/barcelonas-catalan-food-scene-ruined-us-in-the-best-way-abe6818d56ea?source=email-2b8b8ee19057-1775585092731-digest.reader-9e1dad5ee390-abe6818d56ea----7-108------------------16cd2014\_8148\_46e7\_82ee\_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+11 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+160
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+3
+
+[![Michael Alford](https://miro.medium.com/fit/c/40/40/1*dIXXi9Ldo0NinJKTd-qStg.jpeg)](https://medium.com/@alford.michaelr?source=email-2b8b8ee19057-1775585092731-digest.reader-785489229d74-8ca84bdecdb2----8-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Michael Alford](https://medium.com/@alford.michaelr?source=email-2b8b8ee19057-1775585092731-digest.reader-785489229d74-8ca84bdecdb2----8-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[Live View](https://medium.com/live-view?source=email-2b8b8ee19057-1775585092731-digest.reader-785489229d74-8ca84bdecdb2----8-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![Stock Photography: The Past Pays Dollars; the Present Just Pennies](https://miro.medium.com/fit/c/320/214/1*XDOTJ8b-cYIrOfLI_0C8SA.png)](https://medium.com/@alford.michaelr/stock-photography-the-past-pays-dollars-the-present-just-pennies-8ca84bdecdb2?source=email-2b8b8ee19057-1775585092731-digest.reader-785489229d74-8ca84bdecdb2----8-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+\[
+
+## Stock Photography: The Past Pays Dollars; the Present Just Pennies
+
+### History as photography’s last monopoly
+
+]\(https://medium.com/@alford.michaelr/stock-photography-the-past-pays-dollars-the-present-just-pennies-8ca84bdecdb2?source=email-2b8b8ee19057-1775585092731-digest.reader-785489229d74-8ca84bdecdb2----8-108------------------16cd2014\_8148\_46e7\_82ee\_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+9 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+203
+
+[![Vagelis Plevris](https://miro.medium.com/fit/c/40/40/1*9Uh2XP9RGqY7CShmIxSouA.jpeg)](https://medium.com/@vplevris?source=email-2b8b8ee19057-1775585092731-digest.reader--40a8495023a5----9-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Vagelis Plevris](https://medium.com/@vplevris?source=email-2b8b8ee19057-1775585092731-digest.reader--40a8495023a5----9-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![The Magical Number 6174](https://miro.medium.com/focal/320/214/55/53/1*PuOqzKC9duBh4ADkRweT6g.jpeg)](https://medium.com/@vplevris/the-magical-number-6174-40a8495023a5?source=email-2b8b8ee19057-1775585092731-digest.reader--40a8495023a5----9-108------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+\[
+
+## The Magical Number 6174
+
+### Why Every Four-Digit Number Finds Its Way to…
+
+]\(https://medium.com/@vplevris/the-magical-number-6174-40a8495023a5?source=email-2b8b8ee19057-1775585092731-digest.reader--40a8495023a5----9-108------------------16cd2014\_8148\_46e7\_82ee\_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+177
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+4
+
+[![Thomas Smith](https://miro.medium.com/fit/c/40/40/2*3vJU4sgGd_CmFQFl4wH6-Q.jpeg)](https://medium.com/@tomsmith585?source=email-2b8b8ee19057-1775585092731-digest.reader-16ade7bc003e-c911346faa7c----10-102------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Thomas Smith](https://medium.com/@tomsmith585?source=email-2b8b8ee19057-1775585092731-digest.reader-16ade7bc003e-c911346faa7c----10-102------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[The Generator](https://medium.com/the-generator?source=email-2b8b8ee19057-1775585092731-digest.reader-16ade7bc003e-c911346faa7c----10-102------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![I Built An OpenClaw AI Agent To Do My Job For Me](https://miro.medium.com/fit/c/320/214/1*1MMC7B4-3Sg-Ui_1vscFKg.jpeg)](https://medium.com/@tomsmith585/i-built-an-openclaw-ai-agent-to-do-my-job-for-me-c911346faa7c?source=email-2b8b8ee19057-1775585092731-digest.reader-16ade7bc003e-c911346faa7c----10-102------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+\[
+
+## I Built An OpenClaw AI Agent To Do My Job For Me
+
+### The results were surprising, and a bit scary
+
+]\(https://medium.com/@tomsmith585/i-built-an-openclaw-ai-agent-to-do-my-job-for-me-c911346faa7c?source=email-2b8b8ee19057-1775585092731-digest.reader-16ade7bc003e-c911346faa7c----10-102------------------16cd2014\_8148\_46e7\_82ee\_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+38
+
+[![Tanmay Bansal](https://miro.medium.com/fit/c/40/40/0*SroILly4wl60FexY)](https://medium.com/@tanmay.bansal20?source=email-2b8b8ee19057-1775585092731-digest.reader-78d064101951-fb7fbb9a2e08----11-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Tanmay Bansal](https://medium.com/@tanmay.bansal20?source=email-2b8b8ee19057-1775585092731-digest.reader-78d064101951-fb7fbb9a2e08----11-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[Artificial Intelligence in Plain English](https://medium.com/ai-in-plain-english?source=email-2b8b8ee19057-1775585092731-digest.reader-78d064101951-fb7fbb9a2e08----11-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![Everyone Is “Learning AI”, But Nobody Really Understands This One Thing.](https://miro.medium.com/fit/c/320/214/1*yyWRG8L6l3kbDM32fvhBZA.png)](https://medium.com/@tanmay.bansal20/everyone-is-learning-ai-but-nobody-really-understands-this-one-thing-fb7fbb9a2e08?source=email-2b8b8ee19057-1775585092731-digest.reader-78d064101951-fb7fbb9a2e08----11-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+\[
+
+## Everyone Is “Learning AI”, But Nobody Really Understands This One Thing.
+
+### Prompting teaches you the interface. AI literacy means…
+
+]\(https://medium.com/@tanmay.bansal20/everyone-is-learning-ai-but-nobody-really-understands-this-one-thing-fb7fbb9a2e08?source=email-2b8b8ee19057-1775585092731-digest.reader-78d064101951-fb7fbb9a2e08----11-73------------------16cd2014\_8148\_46e7\_82ee\_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+54
+
+[![Usman Writes](https://miro.medium.com/fit/c/40/40/1*bMbe1ORqVNQs2qCyBZSJEQ.png)](https://medium.com/@pixicstudio?source=email-2b8b8ee19057-1775585092731-digest.reader-d1baaa8417a4-417511411fad----12-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Usman Writes](https://medium.com/@pixicstudio?source=email-2b8b8ee19057-1775585092731-digest.reader-d1baaa8417a4-417511411fad----12-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[Stackademic](https://medium.com/stackademic?source=email-2b8b8ee19057-1775585092731-digest.reader-d1baaa8417a4-417511411fad----12-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![You Can Now Learn Anything 100x Faster With Claude.](https://miro.medium.com/fit/c/320/214/1*zytpvQUV-Z8151LiJ5yPFA.png)](https://medium.com/@pixicstudio/you-can-now-learn-anything-100x-faster-with-claude-417511411fad?source=email-2b8b8ee19057-1775585092731-digest.reader-d1baaa8417a4-417511411fad----12-99------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+\[
+
+## You Can Now Learn Anything 100x Faster With Claude.
+
+### Most people use AI to draft emails or summarize…
+
+]\(https://medium.com/@pixicstudio/you-can-now-learn-anything-100x-faster-with-claude-417511411fad?source=email-2b8b8ee19057-1775585092731-digest.reader-d1baaa8417a4-417511411fad----12-99------------------16cd2014\_8148\_46e7\_82ee\_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+979
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+6
+
+[![Andy Murphy](https://miro.medium.com/fit/c/40/40/1*0xrDaW1PAbC6JkPyC2DuyQ.jpeg)](https://medium.com/@andycmurphy1?source=email-2b8b8ee19057-1775585092731-digest.reader--e9c740d8ee1a----13-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Andy Murphy](https://medium.com/@andycmurphy1?source=email-2b8b8ee19057-1775585092731-digest.reader--e9c740d8ee1a----13-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![There Are Only Five Rules In Life (According to Carl Jung)](https://miro.medium.com/fit/c/320/214/0*nu_29RinWQTdWoPR)](https://medium.com/@andycmurphy1/there-are-only-five-rules-in-life-according-to-carl-jung-e9c740d8ee1a?source=email-2b8b8ee19057-1775585092731-digest.reader--e9c740d8ee1a----13-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+\[
+
+## There Are Only Five Rules In Life (According to Carl Jung)
+
+### The first is scary. The second is pleasurable. The…
+
+]\(https://medium.com/@andycmurphy1/there-are-only-five-rules-in-life-according-to-carl-jung-e9c740d8ee1a?source=email-2b8b8ee19057-1775585092731-digest.reader--e9c740d8ee1a----13-73------------------16cd2014\_8148\_46e7\_82ee\_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+12.8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+317
+
+[![Farhad Malik](https://miro.medium.com/fit/c/40/40/1*7MhP4LsHsl3G_oE3LBVlsg.jpeg)](https://medium.com/@farhadmalik?source=email-2b8b8ee19057-1775585092731-digest.reader-8993e01dcfd3-a27272af0c48----14-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[Farhad Malik](https://medium.com/@farhadmalik?source=email-2b8b8ee19057-1775585092731-digest.reader-8993e01dcfd3-a27272af0c48----14-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)in[Data Science Collective](https://medium.com/data-science-collective?source=email-2b8b8ee19057-1775585092731-digest.reader-8993e01dcfd3-a27272af0c48----14-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+[![What I Learnt Using Claude Code to Build Production-Ready Apps](https://miro.medium.com/fit/c/320/214/1*L-Hp494D-GhKT40A-YuCpw.png)](https://medium.com/@farhadmalik/what-i-learnt-using-claude-code-to-build-production-ready-apps-a27272af0c48?source=email-2b8b8ee19057-1775585092731-digest.reader-8993e01dcfd3-a27272af0c48----14-73------------------16cd2014_8148_46e7_82ee_3ec96f0423d3-1)
+
+\[
+
+## What I Learnt Using Claude Code to Build Production-Ready Apps
+
+### A practical guide covering the building blocks, hidden…
+
+]\(https://medium.com/@farhadmalik/what-i-learnt-using-claude-code-to-build-production-ready-apps-a27272af0c48?source=email-2b8b8ee19057-1775585092731-digest.reader-8993e01dcfd3-a27272af0c48----14-73------------------16cd2014\_8148\_46e7\_82ee\_3ec96f0423d3-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+18 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+524
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+4
+
+[![Become a Medium member](https://miro.medium.com/max/1360/6b37395e36e2d6768583b0d27172b3075c079241270c50b770a18b83476ecffc)](https://medium.com/plans?source=email-2b8b8ee19057-1775585092731-digest.reader-------------------------16cd2014_8148_46e7_82ee_3ec96f0423d3)
+
+
