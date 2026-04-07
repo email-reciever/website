@@ -1,0 +1,333 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: What to know about JavaScript in 2026
+description: What to know about JavaScript in 2026
+date: 星期二 06 晚上 四月 7o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/780
+origin_site: https://javascriptweekly.com/issues/780
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="What to know about JavaScript in 2026" url="https://javascriptweekly.com/issues/780" />
+
+<Detail client:only="react">
+	#​780 — April 7, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/780)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/183302/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/clia2za7y4fbmgwelaod.jpg)](https://javascriptweekly.com/link/183303/d076523b1d)
+
+[JSIR: A High-Level IR for JavaScript from Google](https://javascriptweekly.com/link/183303/d076523b1d "discourse.llvm.org") — Google has open sourced a new tool ([JSIR](https://javascriptweekly.com/link/183304/d076523b1d)) and proposed an industry-standard IR ([Intermediate Representation](https://javascriptweekly.com/link/183305/d076523b1d) – if an AST tells you what the code _looks like_, an IR tells you what it _does_) for JavaScript. Already used at Google for analysis and code transformation, the underlying idea could form a foundation for a new generation of tooling.
+
+Zhixun Tan (Google)
+
+💡 Most devs won't feel the impact for a while, but this is the kind of groundwork that can lead to better linters, smarter bundlers, better refactoring tools, and so forth.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/8534bab8.jpg)](https://javascriptweekly.com/link/183302/d076523b1d)
+
+[Free Workshop: Claude Code Deep Dive — April 21](https://javascriptweekly.com/link/183302/d076523b1d "www.addevent.com") — Lydia Hallie from Anthropic teaches a full-day Claude Code workshop at Frontend Masters on April 21. Free to attend. No subscription required.
+
+Frontend Masters sponsor
+
+[What to Know in JavaScript (2026 Edition)](https://javascriptweekly.com/link/183306/d076523b1d "frontendmasters.com") — An up-to-date overview of the JS landscape, including the latest ECMAScript additions, frameworks to keep tabs on, runtimes, build tools, and more. A good way to catch up.
+
+Chris Coyier
+
+**IN BRIEF:**
+
+*   🔓 The Axios team has published [a postmortem of last week's npm supply chain compromise](https://javascriptweekly.com/link/183363/d076523b1d). There's also a look into [how the social engineering part worked.](https://javascriptweekly.com/link/183364/d076523b1d)
+    
+*   📊 WebKit, Google and Mozilla have [unveiled _JetStream 3_](https://javascriptweekly.com/link/183361/d076523b1d), the latest version of a suite of popular browser-oriented JS and WASM performance benchmarks.
+    
+*   [Cloudflare has released _EmDash_](https://javascriptweekly.com/link/183309/d076523b1d), a JavaScript-flavored _'spiritual successor to WordPress'_.
+    
+*   [The Svelte team has published its latest monthly roundup.](https://javascriptweekly.com/link/183310/d076523b1d)
+    
+
+**RELEASES:**
+
+*   [ESLint v10.2.0](https://javascriptweekly.com/link/183311/d076523b1d) – Adds support for language-aware rules through a new `meta.languages` property. `Temporal` is now also supported.
+    
+*   [Node.js 25.9.0 (Current)](https://javascriptweekly.com/link/183312/d076523b1d) – Adds `--max-heap-size` to set a max heap size for a process, and includes [`stream/iter`](https://javascriptweekly.com/link/183313/d076523b1d), a new experimental iterable streams API.
+    
+
+📖  Articles and Videos
+
+[Minimum Release Age is an Underrated Supply Chain Defense](https://javascriptweekly.com/link/183315/d076523b1d "daniakash.com") — An increasingly common package manager feature is being able to specify a minimum ‘package age’. The idea is that if you wait, then maintainers, security tools, etc. will tackle the most nefarious supply chain attacks. It’s no silver bullet, but may suit your use case, and here’s how to set it up.
+
+Dani Akash
+
+▶  [TanStack Start: A Client-First Web Framework](https://javascriptweekly.com/link/183316/d076523b1d "www.youtube.com") — A 30-minute talk from TanStack’s founder showcasing [TanStack Start](https://javascriptweekly.com/link/183317/d076523b1d)’s value proposition for both React and Solid developers looking for a complete SSR framework.
+
+Tanner Linsley
+
+[One Extension Replaces Your Entire Analytics Pipeline](https://javascriptweekly.com/link/183318/d076523b1d "www.tigerdata.com") — TimescaleDB adds hypertables, 95% compression, and continuous aggregates to Postgres. Analytics on live data. Try for free.
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Burnout is Real for Open Source Maintainers](https://javascriptweekly.com/link/183319/d076523b1d "openjsf.org") — A 40-minute audio interview (along with a nice write up) with John-David Dalton, the creator of [Lodash](https://javascriptweekly.com/link/183320/d076523b1d), one of JavaScript's most popular projects.
+
+The OpenJS Foundation
+
+[The Great CSS Expansion](https://javascriptweekly.com/link/183321/d076523b1d "blog.gitbutler.com") — A thorough review of Web-based tasks that were once JavaScript’s natural domain (e.g. tooltips, dialogs, scroll animations) but for which modern CSS now excels.
+
+Pavel Laptev
+
+📄 [Building a Dual-Scene Fluid 'X-Ray Reveal' Effect in Three.js](https://javascriptweekly.com/link/183322/d076523b1d) Cullen Webber
+
+📄 [Quick Tip: `Intl` Can Localize Units, Too](https://javascriptweekly.com/link/183323/d076523b1d) Stefan Judis
+
+📄 [Things Learned Migrating to Solid 2.0](https://javascriptweekly.com/link/183324/d076523b1d) Brenley Dueck
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qbelblco3qxogy63pwvv.jpg)](https://javascriptweekly.com/link/183325/d076523b1d)
+
+[Fuse.js 7.3: Lightweight Fuzzy-Search](https://javascriptweekly.com/link/183325/d076523b1d "fusejs.io") — Want a search feature tolerant to ambiguous input _without_ a dedicated backend? [v7.3](https://javascriptweekly.com/link/183326/d076523b1d) adds per-term fuzzy matching and a static method for single string matching, while [v7.4 beta](https://javascriptweekly.com/link/183327/d076523b1d) adds [worker-based distributed search](https://javascriptweekly.com/link/183328/d076523b1d) for tackling huge datasets. [A demo](https://javascriptweekly.com/link/183329/d076523b1d) shows off the basics.
+
+Kiro Risk
+
+[Your CI doesn't have to be this slow](https://javascriptweekly.com/link/183330/d076523b1d "fandf.co") — Depot CI: 2-3s job starts, parallel steps, SSH debugging. Run `depot ci migrate` to move your GitHub Actions in minutes.
+
+Depot sponsor
+
+[Announcing Babylon.js 9.0](https://javascriptweekly.com/link/183331/d076523b1d "blogs.windows.com") — [Microsoft's popular rendering engine](https://javascriptweekly.com/link/183332/d076523b1d) for building interactive, 3D web experiences now has a node-based particle editor, [volumetric lighting](https://javascriptweekly.com/link/183333/d076523b1d), [advanced Gaussian splatting](https://javascriptweekly.com/link/183334/d076523b1d), and more.
+
+Carter & Lucchini (Microsoft)
+
+[Marked.js 18.0: A Fast Markdown Parser and Compiler](https://javascriptweekly.com/link/183335/d076523b1d "marked.js.org") — A low-level Markdown compiler built for speed. [The demo](https://javascriptweekly.com/link/183336/d076523b1d) shows off the basics. v18 is largely a bug fix release that also bumps it up to TypeScript 6. [GitHub repo.](https://javascriptweekly.com/link/183337/d076523b1d)
+
+Christopher Jeffrey
+
+[TinyBase v8.1: A Reactive Data Store for Local-First Apps](https://javascriptweekly.com/link/183338/d076523b1d "tinybase.org") — A reactive data store and sync engine that can be used as the entire backend for many types of app, **now with native Svelte 5 support.**
+
+James Pearce
+
+[xdk-typescript: The Official 'XDK' for the X API](https://javascriptweekly.com/link/183339/d076523b1d "github.com") — The social media platform’s new official SDK for its API (good luck).
+
+X Dev Platform
+
+*   [npm-check-updates v20.0.0](https://javascriptweekly.com/link/183314/d076523b1d) – Upgrade `package.json` dependencies to latest versions while preserving semantic versioning policies. Now supporting cooldowns.
+    
+*   [Neutralinojs 6.7](https://javascriptweekly.com/link/183340/d076523b1d) – The cross-platform desktop app framework adds an API for input device simulation and handling.
+    
+*   🖼️ [SVGInject 2.0](https://javascriptweekly.com/link/183341/d076523b1d) – Inlines SVG files into the DOM at runtime (no build step) so you can style them with CSS.
+    
+*   [vue-clamp 1.0](https://javascriptweekly.com/link/183342/d076523b1d) – Primitives for clamping multiline text, inline strings, and wrapped items in Vue 3. ([Demo.](https://javascriptweekly.com/link/183343/d076523b1d))
+    
+*   [vue-virtual-scroller 2.0](https://javascriptweekly.com/link/183344/d076523b1d) – Fast virtual-scrolling for lists in Vue 3.
+    
+*   [Verdaccio 6.4](https://javascriptweekly.com/link/183345/d076523b1d) – Run your own local private npm registry.
+    
+*   [React Native Skia 2.6](https://javascriptweekly.com/link/183346/d076523b1d) – Fast 2D graphics library for RN.
+    
+*   [SunEditor 3.0](https://javascriptweekly.com/link/183347/d076523b1d) – Extensible, vanilla JS WYSIWYG editor.
+    
+*   [hucre 0.3](https://javascriptweekly.com/link/183348/d076523b1d) – Zero-dependency spreadsheet engine.
+    
+*   [bwip-js 4.9](https://javascriptweekly.com/link/183349/d076523b1d) – Pure JavaScript barcode writer.
+    
+
+📰 Classifieds
+
+Most engineers can't prove they're AI-first in an interview. [Gauntlet's](https://javascriptweekly.com/link/183350/d076523b1d) CTO breaks down exactly what separates those who can.
+
+* * *
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/183351/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+* * *
+
+Every app needs a bit of spreadsheet in it. [Handsontable](https://javascriptweekly.com/link/183352/d076523b1d) delivers Excel-like experiences fast, without the risk and complexity.
+
+* * *
+
+Access Google Search, Maps, Shopping, and more real-time data with a simple API by [SerpApi.](https://javascriptweekly.com/link/183353/d076523b1d)
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/l6ibojqnoesy4fogc1ju.jpg)](https://javascriptweekly.com/link/183354/d076523b1d)
+
+*   In [CSS is DOOMed](https://javascriptweekly.com/link/183354/d076523b1d), Niels Leenheer shows off how he implemented a version of 1993's _Doom_ using purely CSS rendering (with the game logic in JavaScript). [Play it for yourself](https://javascriptweekly.com/link/183355/d076523b1d) or [check out the code.](https://javascriptweekly.com/link/183356/d076523b1d)
+    
+*   [QuickBEAM](https://javascriptweekly.com/link/183357/d076523b1d) is a JavaScript runtime for Erlang's BEAM VM, as also used by [Elixir.](https://javascriptweekly.com/link/183358/d076523b1d) It offers compatibility with core Node.js APIs.
+    
+*   In [CSS or BS?](https://javascriptweekly.com/link/183359/d076523b1d) find out how good you are at telling real-life CSS properties from made up ones.
+    
+*   ✉️ Spencer Mortensen [put twenty-five email address obfuscation techniques to the test](https://javascriptweekly.com/link/183360/d076523b1d) to see which _actually_ work in 2026.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/183362/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​780 — April 7, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/780)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/183302/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/clia2za7y4fbmgwelaod.jpg)](https://javascriptweekly.com/link/183303/d076523b1d)
+
+[JSIR: A High-Level IR for JavaScript from Google](https://javascriptweekly.com/link/183303/d076523b1d "discourse.llvm.org") — Google has open sourced a new tool ([JSIR](https://javascriptweekly.com/link/183304/d076523b1d)) and proposed an industry-standard IR ([Intermediate Representation](https://javascriptweekly.com/link/183305/d076523b1d) – if an AST tells you what the code *looks like*, an IR tells you what it *does*) for JavaScript. Already used at Google for analysis and code transformation, the underlying idea could form a foundation for a new generation of tooling.
+
+Zhixun Tan (Google)
+
+💡 Most devs won't feel the impact for a while, but this is the kind of groundwork that can lead to better linters, smarter bundlers, better refactoring tools, and so forth.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/8534bab8.jpg)](https://javascriptweekly.com/link/183302/d076523b1d)
+
+[Free Workshop: Claude Code Deep Dive — April 21](https://javascriptweekly.com/link/183302/d076523b1d "www.addevent.com") — Lydia Hallie from Anthropic teaches a full-day Claude Code workshop at Frontend Masters on April 21. Free to attend. No subscription required.
+
+Frontend Masters sponsor
+
+[What to Know in JavaScript (2026 Edition)](https://javascriptweekly.com/link/183306/d076523b1d "frontendmasters.com") — An up-to-date overview of the JS landscape, including the latest ECMAScript additions, frameworks to keep tabs on, runtimes, build tools, and more. A good way to catch up.
+
+Chris Coyier
+
+**IN BRIEF:**
+
+* 🔓 The Axios team has published [a postmortem of last week's npm supply chain compromise](https://javascriptweekly.com/link/183363/d076523b1d). There's also a look into [how the social engineering part worked.](https://javascriptweekly.com/link/183364/d076523b1d)
+
+* 📊 WebKit, Google and Mozilla have [unveiled *JetStream 3*](https://javascriptweekly.com/link/183361/d076523b1d), the latest version of a suite of popular browser-oriented JS and WASM performance benchmarks.
+
+* [Cloudflare has released *EmDash*](https://javascriptweekly.com/link/183309/d076523b1d), a JavaScript-flavored *'spiritual successor to WordPress'*.
+
+* [The Svelte team has published its latest monthly roundup.](https://javascriptweekly.com/link/183310/d076523b1d)
+
+**RELEASES:**
+
+* [ESLint v10.2.0](https://javascriptweekly.com/link/183311/d076523b1d) – Adds support for language-aware rules through a new `meta.languages` property. `Temporal` is now also supported.
+
+* [Node.js 25.9.0 (Current)](https://javascriptweekly.com/link/183312/d076523b1d) – Adds `--max-heap-size` to set a max heap size for a process, and includes [`stream/iter`](https://javascriptweekly.com/link/183313/d076523b1d), a new experimental iterable streams API.
+
+📖  Articles and Videos
+
+[Minimum Release Age is an Underrated Supply Chain Defense](https://javascriptweekly.com/link/183315/d076523b1d "daniakash.com") — An increasingly common package manager feature is being able to specify a minimum ‘package age’. The idea is that if you wait, then maintainers, security tools, etc. will tackle the most nefarious supply chain attacks. It’s no silver bullet, but may suit your use case, and here’s how to set it up.
+
+Dani Akash
+
+▶  [TanStack Start: A Client-First Web Framework](https://javascriptweekly.com/link/183316/d076523b1d "www.youtube.com") — A 30-minute talk from TanStack’s founder showcasing [TanStack Start](https://javascriptweekly.com/link/183317/d076523b1d)’s value proposition for both React and Solid developers looking for a complete SSR framework.
+
+Tanner Linsley
+
+[One Extension Replaces Your Entire Analytics Pipeline](https://javascriptweekly.com/link/183318/d076523b1d "www.tigerdata.com") — TimescaleDB adds hypertables, 95% compression, and continuous aggregates to Postgres. Analytics on live data. Try for free.
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Burnout is Real for Open Source Maintainers](https://javascriptweekly.com/link/183319/d076523b1d "openjsf.org") — A 40-minute audio interview (along with a nice write up) with John-David Dalton, the creator of [Lodash](https://javascriptweekly.com/link/183320/d076523b1d), one of JavaScript's most popular projects.
+
+The OpenJS Foundation
+
+[The Great CSS Expansion](https://javascriptweekly.com/link/183321/d076523b1d "blog.gitbutler.com") — A thorough review of Web-based tasks that were once JavaScript’s natural domain (e.g. tooltips, dialogs, scroll animations) but for which modern CSS now excels.
+
+Pavel Laptev
+
+📄 [Building a Dual-Scene Fluid 'X-Ray Reveal' Effect in Three.js](https://javascriptweekly.com/link/183322/d076523b1d) Cullen Webber
+
+📄 [Quick Tip: `Intl` Can Localize Units, Too](https://javascriptweekly.com/link/183323/d076523b1d) Stefan Judis
+
+📄 [Things Learned Migrating to Solid 2.0](https://javascriptweekly.com/link/183324/d076523b1d) Brenley Dueck
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qbelblco3qxogy63pwvv.jpg)](https://javascriptweekly.com/link/183325/d076523b1d)
+
+[Fuse.js 7.3: Lightweight Fuzzy-Search](https://javascriptweekly.com/link/183325/d076523b1d "fusejs.io") — Want a search feature tolerant to ambiguous input *without* a dedicated backend? [v7.3](https://javascriptweekly.com/link/183326/d076523b1d) adds per-term fuzzy matching and a static method for single string matching, while [v7.4 beta](https://javascriptweekly.com/link/183327/d076523b1d) adds [worker-based distributed search](https://javascriptweekly.com/link/183328/d076523b1d) for tackling huge datasets. [A demo](https://javascriptweekly.com/link/183329/d076523b1d) shows off the basics.
+
+Kiro Risk
+
+[Your CI doesn't have to be this slow](https://javascriptweekly.com/link/183330/d076523b1d "fandf.co") — Depot CI: 2-3s job starts, parallel steps, SSH debugging. Run `depot ci migrate` to move your GitHub Actions in minutes.
+
+Depot sponsor
+
+[Announcing Babylon.js 9.0](https://javascriptweekly.com/link/183331/d076523b1d "blogs.windows.com") — [Microsoft's popular rendering engine](https://javascriptweekly.com/link/183332/d076523b1d) for building interactive, 3D web experiences now has a node-based particle editor, [volumetric lighting](https://javascriptweekly.com/link/183333/d076523b1d), [advanced Gaussian splatting](https://javascriptweekly.com/link/183334/d076523b1d), and more.
+
+Carter & Lucchini (Microsoft)
+
+[Marked.js 18.0: A Fast Markdown Parser and Compiler](https://javascriptweekly.com/link/183335/d076523b1d "marked.js.org") — A low-level Markdown compiler built for speed. [The demo](https://javascriptweekly.com/link/183336/d076523b1d) shows off the basics. v18 is largely a bug fix release that also bumps it up to TypeScript 6. [GitHub repo.](https://javascriptweekly.com/link/183337/d076523b1d)
+
+Christopher Jeffrey
+
+[TinyBase v8.1: A Reactive Data Store for Local-First Apps](https://javascriptweekly.com/link/183338/d076523b1d "tinybase.org") — A reactive data store and sync engine that can be used as the entire backend for many types of app, **now with native Svelte 5 support.**
+
+James Pearce
+
+[xdk-typescript: The Official 'XDK' for the X API](https://javascriptweekly.com/link/183339/d076523b1d "github.com") — The social media platform’s new official SDK for its API (good luck).
+
+X Dev Platform
+
+* [npm-check-updates v20.0.0](https://javascriptweekly.com/link/183314/d076523b1d) – Upgrade `package.json` dependencies to latest versions while preserving semantic versioning policies. Now supporting cooldowns.
+
+* [Neutralinojs 6.7](https://javascriptweekly.com/link/183340/d076523b1d) – The cross-platform desktop app framework adds an API for input device simulation and handling.
+
+* 🖼️ [SVGInject 2.0](https://javascriptweekly.com/link/183341/d076523b1d) – Inlines SVG files into the DOM at runtime (no build step) so you can style them with CSS.
+
+* [vue-clamp 1.0](https://javascriptweekly.com/link/183342/d076523b1d) – Primitives for clamping multiline text, inline strings, and wrapped items in Vue 3. ([Demo.](https://javascriptweekly.com/link/183343/d076523b1d))
+
+* [vue-virtual-scroller 2.0](https://javascriptweekly.com/link/183344/d076523b1d) – Fast virtual-scrolling for lists in Vue 3.
+
+* [Verdaccio 6.4](https://javascriptweekly.com/link/183345/d076523b1d) – Run your own local private npm registry.
+
+* [React Native Skia 2.6](https://javascriptweekly.com/link/183346/d076523b1d) – Fast 2D graphics library for RN.
+
+* [SunEditor 3.0](https://javascriptweekly.com/link/183347/d076523b1d) – Extensible, vanilla JS WYSIWYG editor.
+
+* [hucre 0.3](https://javascriptweekly.com/link/183348/d076523b1d) – Zero-dependency spreadsheet engine.
+
+* [bwip-js 4.9](https://javascriptweekly.com/link/183349/d076523b1d) – Pure JavaScript barcode writer.
+
+📰 Classifieds
+
+Most engineers can't prove they're AI-first in an interview. [Gauntlet's](https://javascriptweekly.com/link/183350/d076523b1d) CTO breaks down exactly what separates those who can.
+
+***
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/183351/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+***
+
+Every app needs a bit of spreadsheet in it. [Handsontable](https://javascriptweekly.com/link/183352/d076523b1d) delivers Excel-like experiences fast, without the risk and complexity.
+
+***
+
+Access Google Search, Maps, Shopping, and more real-time data with a simple API by [SerpApi.](https://javascriptweekly.com/link/183353/d076523b1d)
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/l6ibojqnoesy4fogc1ju.jpg)](https://javascriptweekly.com/link/183354/d076523b1d)
+
+* In [CSS is DOOMed](https://javascriptweekly.com/link/183354/d076523b1d), Niels Leenheer shows off how he implemented a version of 1993's *Doom* using purely CSS rendering (with the game logic in JavaScript). [Play it for yourself](https://javascriptweekly.com/link/183355/d076523b1d) or [check out the code.](https://javascriptweekly.com/link/183356/d076523b1d)
+
+* [QuickBEAM](https://javascriptweekly.com/link/183357/d076523b1d) is a JavaScript runtime for Erlang's BEAM VM, as also used by [Elixir.](https://javascriptweekly.com/link/183358/d076523b1d) It offers compatibility with core Node.js APIs.
+
+* In [CSS or BS?](https://javascriptweekly.com/link/183359/d076523b1d) find out how good you are at telling real-life CSS properties from made up ones.
+
+* ✉️ Spencer Mortensen [put twenty-five email address obfuscation techniques to the test](https://javascriptweekly.com/link/183360/d076523b1d) to see which *actually* work in 2026.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/183362/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
