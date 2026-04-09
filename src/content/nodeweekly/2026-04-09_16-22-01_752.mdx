@@ -1,0 +1,284 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Social engineering attacks target high-impact Node.js maintainers
+description: Social engineering attacks target high-impact Node.js maintainers
+date: 星期四 04 下午 四月 9o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/619
+origin_site: https://nodeweekly.com/issues/619
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Social engineering attacks target high-impact Node.js maintainers" url="https://nodeweekly.com/issues/619" />
+
+<Detail client:only="react">
+	#​619 — April 9, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/619)
+
+Together with 
+
+[![Microsoft logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_280,h_60/e_make_transparent/co_white,e_outline:7/om9hjsmudy5lsvba59eb.png)](https://nodeweekly.com/link/183450/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dxux2uvcy9unbbysurgu.jpg)](https://nodeweekly.com/link/183451/0a4070b383)
+
+[A Post-Mortem of the Axios Compromise](https://nodeweekly.com/link/183451/0a4070b383 "github.com") — The Axios team has shared a detailed post-mortem of [the recent supply chain compromise](https://nodeweekly.com/link/183452/0a4070b383) where a trojan was pulled in as a malicious dependency. The attack was well planned and involved [a sophisticated bit of social engineering.](https://nodeweekly.com/link/183453/0a4070b383)
+
+Jason Saayman / axios
+
+⚠️ Axios isn't the only target. Sarah Gooding reports on [ongoing attempts to socially engineer 'high-impact Node.js maintainers.'](https://nodeweekly.com/link/183454/0a4070b383) **It's worth being aware of these techniques if you maintain any public npm packages.**
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/3b00cadd.png)](https://nodeweekly.com/link/183450/0a4070b383)
+
+[You Don’t Have To Attend All 44 Postgres Talks](https://nodeweekly.com/link/183450/0a4070b383 "posetteconf.com") — POSETTE: An Event for Postgres 2026 is a free & virtual developer event on 16-18 Jun. All 44 talks stream live & will be available later. Join live to take part in discussions with speakers & attendees. [Check out the schedule and mark your calendar.](https://nodeweekly.com/link/183450/0a4070b383)
+
+Microsoft | AMD sponsor
+
+[You Can't Cancel a Promise (Except Sometimes You Can)](https://nodeweekly.com/link/183455/0a4070b383 "www.inngest.com") — You can’t cancel a promise, but you can halt an async function by making it `await` a promise that never resolves. The function silently stops, and GC cleans up after it. It’s not just a trick; Inngest uses it in production to interrupt long-running workflow functions.
+
+Aaron Harper (Inngest)
+
+**IN BRIEF:**
+
+*   Google's compilers team has [proposed a high-level IR for JavaScript](https://nodeweekly.com/link/183456/0a4070b383) and shared a tool ([JSIR](https://nodeweekly.com/link/183457/0a4070b383)) it's already using internally to take advantage of it for analysis and source-to-source transformation.
+    
+*   Microsoft has announced the [end of support for Node 20.x](https://nodeweekly.com/link/183458/0a4070b383) in the _Azure SDK for JavaScript._
+    
+*   [npm trusted publishing now supports CircleCI](https://nodeweekly.com/link/183459/0a4070b383) as an OIDC provider.
+    
+*   🎤 [A 50-minute chat](https://nodeweekly.com/link/183460/0a4070b383) (with transcript) from two of the developers behind the [npmx project](https://nodeweekly.com/link/183461/0a4070b383) — an increasingly popular way to browse the npm registry.
+    
+
+[Node's Security Bug Bounty Program Paused Due to Loss of Funding](https://nodeweekly.com/link/183462/0a4070b383 "nodejs.org") — Since 2016, the Node.js project has offered bounties for qualifying security vulnerability reports. This was funded by the _Internet Bug Bounty_ program which is [on hiatus](https://nodeweekly.com/link/183463/0a4070b383) as it figures out its role in an AI-assisted landscape. Reports can still be made, but with no monetary reward.
+
+The Node.js Project
+
+[tsdown Can Now Generate Executable Files for Node Apps](https://nodeweekly.com/link/183464/0a4070b383 "tsdown.dev") — [tsdown](https://nodeweekly.com/link/183465/0a4070b383), the library bundler from VoidZero (Evan You's company), now supports building standalone executables using Node's [Single Executable Applications (SEA)](https://nodeweekly.com/link/183466/0a4070b383) feature.
+
+VoidZero
+
+📄 [Building a Runtime with QuickJS](https://nodeweekly.com/link/183467/0a4070b383) Andrew Healey
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/k2ny3ugmivzjsodk8pjo.jpg)](https://nodeweekly.com/link/183468/0a4070b383)
+
+[web-audio-api: Use the Web Audio API from Node](https://nodeweekly.com/link/183468/0a4070b383 "github.com") — Get full [Web Audio API](https://nodeweekly.com/link/183469/0a4070b383) support in Node and play audio on your machine or render it to file (and, yes, [Tone.js](https://nodeweekly.com/link/183470/0a4070b383) works too). There are [lots of examples](https://nodeweekly.com/link/183471/0a4070b383) to enjoy. v1.0/1.3 supports all 26 audio node types and has a 100% pass rate against the WPT test suite.
+
+Sébastien Piquemal
+
+🗣️ [TinyTTS: English Text-to-Speech with a 3.4MB Model](https://nodeweekly.com/link/183472/0a4070b383 "github.com") — Fast text-to-speech on the CPU with a tiny 3MB model for both Node.js and Python. Has an AI-generated vibe, but it worked well when [I used it like this](https://nodeweekly.com/link/183473/0a4070b383). There’s a [demo on the Web](https://nodeweekly.com/link/183474/0a4070b383) to hear what it sounds like.
+
+tronghieuit
+
+[Analytics Doesn't Need Its Own Infrastructure](https://nodeweekly.com/link/183475/0a4070b383 "www.tigerdata.com") — TimescaleDB extends Postgres so analytics runs on live data. Same connection, no pipeline, no second database. Start for free.
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Marked.js 18.0: Fast Markdown Parser Library](https://nodeweekly.com/link/183476/0a4070b383 "marked.js.org") — A low level Markdown compiler built for speed, available as both a client and server-side library. [The demo](https://nodeweekly.com/link/183477/0a4070b383) shows off the basics. v18 is a bug fix release that also bumps it up to TypeScript 6. [GitHub repo.](https://nodeweekly.com/link/183478/0a4070b383)
+
+Christopher Jeffrey
+
+🤖 [grammY: An Up-to-Date Telegram Bot Framework](https://nodeweekly.com/link/183479/0a4070b383 "grammy.dev") — _“Make creating Telegram bots so simple you already know how to do it.”_ This week’s release supports the latest [Telegram Bot API 9.6.](https://nodeweekly.com/link/183480/0a4070b383) [GitHub repo.](https://nodeweekly.com/link/183481/0a4070b383)
+
+KnorpelSenf
+
+[tokenu: `du`\-Like CLI Tool to Count Token Usage in Files and Directories](https://nodeweekly.com/link/183482/0a4070b383 "github.com") — Could be useful to see if your codebase can fit entirely into a sensible context window, say.
+
+Liran Tal
+
+*   [ky 2.0](https://nodeweekly.com/link/183502/0a4070b383) – Sindre Sorhus's popular, elegant HTTP client library that wraps `fetch` gets a big upgrade including setting a `totalTimeout` across all retries, and `baseURL` for standard URL resolution to make your calls even simpler.
+    
+*   [npm-check-updates 20.0](https://nodeweekly.com/link/183483/0a4070b383) – Upgrade `package.json` dependencies while preserving semantic versioning policies. Now supports cooldowns.
+    
+*   [ESLint 10.2](https://nodeweekly.com/link/183484/0a4070b383) – Adds support for language-aware rules through a new `meta.languages` property. `Temporal` is now supported too.
+    
+*   [Ink 7.0](https://nodeweekly.com/link/183485/0a4070b383) – Build CLI/TUI apps using React. Now uses React 19, requires Node 22+, and adds a lot of useful hooks.
+    
+*   [content-disposition 1.1](https://nodeweekly.com/link/183486/0a4070b383) – Work with HTTP `Content-Disposition` headers.
+    
+*   [Orange ORM 5.3](https://nodeweekly.com/link/183487/0a4070b383) – The Node and TypeScript ORM adds MariaDB support.
+    
+*   [Axios 1.15.0](https://nodeweekly.com/link/183488/0a4070b383) – The popular HTTP client adds Bun and Deno support.
+    
+*   [RedisSMQ 10.0](https://nodeweekly.com/link/183489/0a4070b383) – Simple Redis-backed message queue for Node.
+    
+*   [node-ical 0.26.0](https://nodeweekly.com/link/183490/0a4070b383) – iCalendar/ICS (RFC 5545) parsing library.
+    
+*   [Undici 8.0](https://nodeweekly.com/link/183491/0a4070b383) – HTTP/1.1 client written from scratch for Node.
+    
+*   [pnpm v11.0 Beta 8](https://nodeweekly.com/link/183492/0a4070b383)
+    
+
+📰 Classifieds
+
+⚡[Route product events to HubSpot, Salesforce, Slack & more in one API call.](https://nodeweekly.com/link/183493/0a4070b383) Retries, fan-out, and delivery guarantees built in.
+
+* * *
+
+Ship production AI. Land $200K–$950K. [Gauntlet's 10-week no-cost fellowship](https://nodeweekly.com/link/183494/0a4070b383) builds the AI-first engineers hiring managers actually want.
+
+📢  Elsewhere in the ecosystem
+
+*   Keen to brush up your knowledge of modern JavaScript? Chris Coyier's [What To Know in JavaScript (2026 Edition)](https://nodeweekly.com/link/183495/0a4070b383) tours the latest language features, plus the state of the most popular runtimes and build tools.
+    
+*   🤖 A developer discovered an npm package where the postinstall script [copied Markdown files into Claude Code's config.](https://nodeweekly.com/link/183496/0a4070b383) While likely not malicious in this case, it's a vector ripe for abuse and worth knowing about. [Ignoring postinstall scripts](https://nodeweekly.com/link/183497/0a4070b383) is a wise option, and something [pnpm v10+ does by default.](https://nodeweekly.com/link/183498/0a4070b383)
+    
+*   🇷🇴 The popular [_JSHeroes_ conference](https://nodeweekly.com/link/183499/0a4070b383) is back this May 14-15 in Romania.
+    
+*   Engineers at the _Railway_ cloud hosting platform shared their story of [moving their frontend off Next.js to Vite and TanStack Router.](https://nodeweekly.com/link/183500/0a4070b383)
+    
+*   [Puru](https://nodeweekly.com/link/183501/0a4070b383) is a new project offering a channels-inspired 'Go-style concurrency' option in Node and Bun.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​619 — April 9, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/619)
+
+Together with 
+
+[![Microsoft logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_280,h_60/e_make_transparent/co_white,e_outline:7/om9hjsmudy5lsvba59eb.png)](https://nodeweekly.com/link/183450/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dxux2uvcy9unbbysurgu.jpg)](https://nodeweekly.com/link/183451/0a4070b383)
+
+[A Post-Mortem of the Axios Compromise](https://nodeweekly.com/link/183451/0a4070b383 "github.com") — The Axios team has shared a detailed post-mortem of [the recent supply chain compromise](https://nodeweekly.com/link/183452/0a4070b383) where a trojan was pulled in as a malicious dependency. The attack was well planned and involved [a sophisticated bit of social engineering.](https://nodeweekly.com/link/183453/0a4070b383)
+
+Jason Saayman / axios
+
+⚠️ Axios isn't the only target. Sarah Gooding reports on [ongoing attempts to socially engineer 'high-impact Node.js maintainers.'](https://nodeweekly.com/link/183454/0a4070b383) **It's worth being aware of these techniques if you maintain any public npm packages.**
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/3b00cadd.png)](https://nodeweekly.com/link/183450/0a4070b383)
+
+[You Don’t Have To Attend All 44 Postgres Talks](https://nodeweekly.com/link/183450/0a4070b383 "posetteconf.com") — POSETTE: An Event for Postgres 2026 is a free & virtual developer event on 16-18 Jun. All 44 talks stream live & will be available later. Join live to take part in discussions with speakers & attendees. [Check out the schedule and mark your calendar.](https://nodeweekly.com/link/183450/0a4070b383)
+
+Microsoft | AMD sponsor
+
+[You Can't Cancel a Promise (Except Sometimes You Can)](https://nodeweekly.com/link/183455/0a4070b383 "www.inngest.com") — You can’t cancel a promise, but you can halt an async function by making it `await` a promise that never resolves. The function silently stops, and GC cleans up after it. It’s not just a trick; Inngest uses it in production to interrupt long-running workflow functions.
+
+Aaron Harper (Inngest)
+
+**IN BRIEF:**
+
+* Google's compilers team has [proposed a high-level IR for JavaScript](https://nodeweekly.com/link/183456/0a4070b383) and shared a tool ([JSIR](https://nodeweekly.com/link/183457/0a4070b383)) it's already using internally to take advantage of it for analysis and source-to-source transformation.
+
+* Microsoft has announced the [end of support for Node 20.x](https://nodeweekly.com/link/183458/0a4070b383) in the *Azure SDK for JavaScript.*
+
+* [npm trusted publishing now supports CircleCI](https://nodeweekly.com/link/183459/0a4070b383) as an OIDC provider.
+
+* 🎤 [A 50-minute chat](https://nodeweekly.com/link/183460/0a4070b383) (with transcript) from two of the developers behind the [npmx project](https://nodeweekly.com/link/183461/0a4070b383) — an increasingly popular way to browse the npm registry.
+
+[Node's Security Bug Bounty Program Paused Due to Loss of Funding](https://nodeweekly.com/link/183462/0a4070b383 "nodejs.org") — Since 2016, the Node.js project has offered bounties for qualifying security vulnerability reports. This was funded by the *Internet Bug Bounty* program which is [on hiatus](https://nodeweekly.com/link/183463/0a4070b383) as it figures out its role in an AI-assisted landscape. Reports can still be made, but with no monetary reward.
+
+The Node.js Project
+
+[tsdown Can Now Generate Executable Files for Node Apps](https://nodeweekly.com/link/183464/0a4070b383 "tsdown.dev") — [tsdown](https://nodeweekly.com/link/183465/0a4070b383), the library bundler from VoidZero (Evan You's company), now supports building standalone executables using Node's [Single Executable Applications (SEA)](https://nodeweekly.com/link/183466/0a4070b383) feature.
+
+VoidZero
+
+📄 [Building a Runtime with QuickJS](https://nodeweekly.com/link/183467/0a4070b383) Andrew Healey
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/k2ny3ugmivzjsodk8pjo.jpg)](https://nodeweekly.com/link/183468/0a4070b383)
+
+[web-audio-api: Use the Web Audio API from Node](https://nodeweekly.com/link/183468/0a4070b383 "github.com") — Get full [Web Audio API](https://nodeweekly.com/link/183469/0a4070b383) support in Node and play audio on your machine or render it to file (and, yes, [Tone.js](https://nodeweekly.com/link/183470/0a4070b383) works too). There are [lots of examples](https://nodeweekly.com/link/183471/0a4070b383) to enjoy. v1.0/1.3 supports all 26 audio node types and has a 100% pass rate against the WPT test suite.
+
+Sébastien Piquemal
+
+🗣️ [TinyTTS: English Text-to-Speech with a 3.4MB Model](https://nodeweekly.com/link/183472/0a4070b383 "github.com") — Fast text-to-speech on the CPU with a tiny 3MB model for both Node.js and Python. Has an AI-generated vibe, but it worked well when [I used it like this](https://nodeweekly.com/link/183473/0a4070b383). There’s a [demo on the Web](https://nodeweekly.com/link/183474/0a4070b383) to hear what it sounds like.
+
+tronghieuit
+
+[Analytics Doesn't Need Its Own Infrastructure](https://nodeweekly.com/link/183475/0a4070b383 "www.tigerdata.com") — TimescaleDB extends Postgres so analytics runs on live data. Same connection, no pipeline, no second database. Start for free.
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Marked.js 18.0: Fast Markdown Parser Library](https://nodeweekly.com/link/183476/0a4070b383 "marked.js.org") — A low level Markdown compiler built for speed, available as both a client and server-side library. [The demo](https://nodeweekly.com/link/183477/0a4070b383) shows off the basics. v18 is a bug fix release that also bumps it up to TypeScript 6. [GitHub repo.](https://nodeweekly.com/link/183478/0a4070b383)
+
+Christopher Jeffrey
+
+🤖 [grammY: An Up-to-Date Telegram Bot Framework](https://nodeweekly.com/link/183479/0a4070b383 "grammy.dev") — *“Make creating Telegram bots so simple you already know how to do it.”* This week’s release supports the latest [Telegram Bot API 9.6.](https://nodeweekly.com/link/183480/0a4070b383) [GitHub repo.](https://nodeweekly.com/link/183481/0a4070b383)
+
+KnorpelSenf
+
+[tokenu: `du`-Like CLI Tool to Count Token Usage in Files and Directories](https://nodeweekly.com/link/183482/0a4070b383 "github.com") — Could be useful to see if your codebase can fit entirely into a sensible context window, say.
+
+Liran Tal
+
+* [ky 2.0](https://nodeweekly.com/link/183502/0a4070b383) – Sindre Sorhus's popular, elegant HTTP client library that wraps `fetch` gets a big upgrade including setting a `totalTimeout` across all retries, and `baseURL` for standard URL resolution to make your calls even simpler.
+
+* [npm-check-updates 20.0](https://nodeweekly.com/link/183483/0a4070b383) – Upgrade `package.json` dependencies while preserving semantic versioning policies. Now supports cooldowns.
+
+* [ESLint 10.2](https://nodeweekly.com/link/183484/0a4070b383) – Adds support for language-aware rules through a new `meta.languages` property. `Temporal` is now supported too.
+
+* [Ink 7.0](https://nodeweekly.com/link/183485/0a4070b383) – Build CLI/TUI apps using React. Now uses React 19, requires Node 22+, and adds a lot of useful hooks.
+
+* [content-disposition 1.1](https://nodeweekly.com/link/183486/0a4070b383) – Work with HTTP `Content-Disposition` headers.
+
+* [Orange ORM 5.3](https://nodeweekly.com/link/183487/0a4070b383) – The Node and TypeScript ORM adds MariaDB support.
+
+* [Axios 1.15.0](https://nodeweekly.com/link/183488/0a4070b383) – The popular HTTP client adds Bun and Deno support.
+
+* [RedisSMQ 10.0](https://nodeweekly.com/link/183489/0a4070b383) – Simple Redis-backed message queue for Node.
+
+* [node-ical 0.26.0](https://nodeweekly.com/link/183490/0a4070b383) – iCalendar/ICS (RFC 5545) parsing library.
+
+* [Undici 8.0](https://nodeweekly.com/link/183491/0a4070b383) – HTTP/1.1 client written from scratch for Node.
+
+* [pnpm v11.0 Beta 8](https://nodeweekly.com/link/183492/0a4070b383)
+
+📰 Classifieds
+
+⚡[Route product events to HubSpot, Salesforce, Slack & more in one API call.](https://nodeweekly.com/link/183493/0a4070b383) Retries, fan-out, and delivery guarantees built in.
+
+***
+
+Ship production AI. Land $200K–$950K. [Gauntlet's 10-week no-cost fellowship](https://nodeweekly.com/link/183494/0a4070b383) builds the AI-first engineers hiring managers actually want.
+
+📢  Elsewhere in the ecosystem
+
+* Keen to brush up your knowledge of modern JavaScript? Chris Coyier's [What To Know in JavaScript (2026 Edition)](https://nodeweekly.com/link/183495/0a4070b383) tours the latest language features, plus the state of the most popular runtimes and build tools.
+
+* 🤖 A developer discovered an npm package where the postinstall script [copied Markdown files into Claude Code's config.](https://nodeweekly.com/link/183496/0a4070b383) While likely not malicious in this case, it's a vector ripe for abuse and worth knowing about. [Ignoring postinstall scripts](https://nodeweekly.com/link/183497/0a4070b383) is a wise option, and something [pnpm v10+ does by default.](https://nodeweekly.com/link/183498/0a4070b383)
+
+* 🇷🇴 The popular [*JSHeroes* conference](https://nodeweekly.com/link/183499/0a4070b383) is back this May 14-15 in Romania.
+
+* Engineers at the *Railway* cloud hosting platform shared their story of [moving their frontend off Next.js to Vite and TanStack Router.](https://nodeweekly.com/link/183500/0a4070b383)
+
+* [Puru](https://nodeweekly.com/link/183501/0a4070b383) is a new project offering a channels-inspired 'Go-style concurrency' option in Node and Bun.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
