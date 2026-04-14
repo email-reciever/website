@@ -1,0 +1,349 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: MDN ditches React for web components in frontend rebuild
+description: MDN ditches React for web components in frontend rebuild
+date: 星期二 06 晚上 四月 14o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/781
+origin_site: https://javascriptweekly.com/issues/781
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="MDN ditches React for web components in frontend rebuild" url="https://javascriptweekly.com/issues/781" />
+
+<Detail client:only="react">
+	#​781 — April 14, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/781)
+
+Together with 
+
+[![Expo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1024,h_289/e_make_transparent/co_white,e_outline:15/damvoyij8zrqr3lp2edx.png)](https://javascriptweekly.com/link/183679/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gm0i5twsmyfutkc1xygg.jpg)](https://javascriptweekly.com/link/183680/d076523b1d)
+
+[Under the Hood of MDN's New Frontend](https://javascriptweekly.com/link/183680/d076523b1d "developer.mozilla.org") — The hugely useful [MDN](https://javascriptweekly.com/link/183681/d076523b1d) has rebuilt its frontend stack from the ground up, ditching React for web components and a homegrown server component system. A great read on building a modern, content-heavy site without shipping unnecessary JavaScript on every page.
+
+Leo McArdle (MDN)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/865de20e.png)](https://javascriptweekly.com/link/183679/d076523b1d)
+
+[Ship Mobile Apps The Way You Ship Websites](https://javascriptweekly.com/link/183679/d076523b1d "try.expo.dev") — Expo gives JavaScript developers a web-like workflow for native mobile. Hot reload on device. OTA updates that skip app store review. Cloud builds that work like Vercel. Start with npx create-expo-app.
+
+Expo sponsor
+
+🕹️ [Phaser 4.0: The 2D WebGL and Canvas-Based Game Framework](https://javascriptweekly.com/link/183682/d076523b1d "phaser.io") — The widely used game framework celebrates its 13th birthday with [a major release](https://javascriptweekly.com/link/183683/d076523b1d) focused on perf/efficiency improvements, and includes [skills files](https://javascriptweekly.com/link/183684/d076523b1d) so AI agents can build Phaser 4.0 apps well. There are [lots of demos](https://javascriptweekly.com/link/183685/d076523b1d), including [these games](https://javascriptweekly.com/link/183686/d076523b1d), and existing users get a [v3 to v4 migration guide.](https://javascriptweekly.com/link/183687/d076523b1d)
+
+Phaser Studio Inc.
+
+**IN BRIEF:**
+
+*   Google will [penalize sites that 'hijack' the back button](https://javascriptweekly.com/link/183688/d076523b1d) in its search results from June. _"Ensure you are not doing anything to interfere with a user's ability to navigate their browser history,"_ says Chris Nelson.
+    
+*   [TanStack Start](https://javascriptweekly.com/link/183689/d076523b1d) now has [(experimental) React Server Components support.](https://javascriptweekly.com/link/183690/d076523b1d)
+    
+*   🇫🇷 [dotJS](https://javascriptweekly.com/link/183691/d076523b1d) returns to Paris, France this September 18 – [its CFP](https://javascriptweekly.com/link/183692/d076523b1d) is open for two more weeks if you'd like to speak.
+    
+*   🇷🇴 The [_JSHeroes_ conference](https://javascriptweekly.com/link/183693/d076523b1d) is back this May 14-15 in Romania.
+    
+
+**RELEASES:**
+
+*   [Bun v1.3.12](https://javascriptweekly.com/link/183694/d076523b1d) – The JS runtime now ships with native, headless browser automation built in, and [`Bun.cron`](https://javascriptweekly.com/link/183695/d076523b1d) provides an in-process task scheduler.
+    
+*   ⚠️ [React 19.2.5](https://javascriptweekly.com/link/183696/d076523b1d), [19.1.6](https://javascriptweekly.com/link/183697/d076523b1d) and [19.0.5](https://javascriptweekly.com/link/183698/d076523b1d) have been released to deploy a fix for a React Server Components vulnerability.
+    
+*   [React Native 0.85](https://javascriptweekly.com/link/183699/d076523b1d) – New animation backend and devtools improvements.
+    
+*   [pnpm v11.0 RC 0](https://javascriptweekly.com/link/183701/d076523b1d), [React Three Fiber 9.6](https://javascriptweekly.com/link/183702/d076523b1d), [Electron 41.2](https://javascriptweekly.com/link/183703/d076523b1d), [DOMPurify 3.4](https://javascriptweekly.com/link/183704/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ekaqzknctznkltb0sfzw.jpg)](https://javascriptweekly.com/link/183705/d076523b1d)
+
+[Installing Every Firefox Extension](https://javascriptweekly.com/link/183705/d076523b1d "jack.cab") — One person’s entertaining and heroic tale of wielding JavaScript to explore the Firefox extension ecosystem. And what oddities there are within! I enjoyed this a lot, it’s like _Alice in Wonderland_ for developers. More spelunking like this please.
+
+Jack Cab
+
+[Uses for Nested Promises](https://javascriptweekly.com/link/183706/d076523b1d "blog.jcoglan.com") — James revisits 2013's [Promises/A+](https://javascriptweekly.com/link/183707/d076523b1d) monads [debate](https://javascriptweekly.com/link/183708/d076523b1d) and has changed his mind, thanks to a real concurrency problem he ran into. Demanding but rewarding.
+
+James Coglan
+
+[44 Postgres Talks To Choose From All in One Free, Virtual Event](https://javascriptweekly.com/link/183709/d076523b1d "posetteconf.com") — Join POSETTE: An Event for Postgres 2026, a free & virtual Postgres developer event, 16–18 Jun. [Check out the schedule](https://javascriptweekly.com/link/183709/d076523b1d).
+
+Microsoft | AMD sponsor
+
+[You Can't Cancel a Promise (Except Sometimes You Can)](https://javascriptweekly.com/link/183710/d076523b1d "www.inngest.com") — You can’t cancel a promise, but you can halt an async function by making it `await` a promise that never resolves. The function silently stops, and GC cleans up after it.
+
+Aaron Harper (Inngest)
+
+[Parse, Don't Validate (In a Language That Doesn't Want You To)](https://javascriptweekly.com/link/183711/d076523b1d "cekrem.github.io") — Tired of writing the same defensive `if` check in multiple files because you can’t trust that validation already happened? Branded types and discriminated unions can let TypeScript carry that proof for you.
+
+Christian Ekrem
+
+🌐 [The `Intl` API: The Best Browser API You’re Not Using](https://javascriptweekly.com/link/183712/d076523b1d "polypane.app") — A neat code-heavy primer to what you can do with `Intl`.
+
+Kilian Valkhof
+
+📄 [Making Our Frontend Unit Tests Much Faster with @swc/jest](https://javascriptweekly.com/link/183713/d076523b1d) – From 15 seconds with Jest to 4 seconds with the compatible [@swc/jest](https://javascriptweekly.com/link/183714/d076523b1d). Sebastian Herrmann
+
+📄 [Creating Custom Page Transitions in Astro with Barba.js and GSAP](https://javascriptweekly.com/link/183715/d076523b1d) Iqbal Muthahhary (Codrops)
+
+📄 [The Uphill Climb of Making Diff Lines Performant on GitHub](https://javascriptweekly.com/link/183716/d076523b1d) Ghenco and Shwert (GitHub)
+
+📄 [Building a JavaScript Runtime with QuickJS](https://javascriptweekly.com/link/183717/d076523b1d) Andrew Healey
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/afxlfwdqfincfdil92bq.jpg)](https://javascriptweekly.com/link/183718/d076523b1d)
+
+[Boneyard: Auto-Generated Skeleton Screens for Your UI](https://javascriptweekly.com/link/183718/d076523b1d "boneyard.vercel.app") — Snapshots your real UI and captures a flat list of skeleton ‘bones’ which are positioned, sized rectangles that mirror the page exactly. Supports React, Preact, React Native, Vue, Svelte, and Angular.
+
+0xGF
+
+📈 [Micro-ML: A Toolkit of Forecasting and Clustering Algorithms](https://javascriptweekly.com/link/183719/d076523b1d "github.com") — A ~56KB WASM-powered library with algorithms for regression and smoothing. Cluster points, classify data, or predict the next value in a series without dragging in TensorFlow.js.
+
+Adam Perliński
+
+[AI Writes Code. Wallaby MCP Makes Sure It Actually Works](https://javascriptweekly.com/link/183720/d076523b1d "wallabyjs.com") — Give your AI agent live execution data, coverage, and real-time insights to generate tests and code with confidence.
+
+Wallaby Team sponsor
+
+[Ink 7.0: Use React to Build TUIs and Command Line Apps](https://javascriptweekly.com/link/183722/d076523b1d "github.com") — Powering [many popular terminal apps](https://javascriptweekly.com/link/183723/d076523b1d), v7.0 now leans on React 19.2, uses `useEffectEvent` internally for added efficiency, and brings new hooks and settings.
+
+Vadim Demedes
+
+🔊 [web-audio-api: Use the Web Audio API from Node and Bun](https://javascriptweekly.com/link/183725/d076523b1d "github.com") — Full [Web Audio API](https://javascriptweekly.com/link/183726/d076523b1d) support to either play audio on your machine/server or render it to file (and, yes, [Tone.js](https://javascriptweekly.com/link/183727/d076523b1d) works too). There are [many examples](https://javascriptweekly.com/link/183728/d076523b1d) to enjoy.
+
+Sébastien Piquemal
+
+[Syncpack: Consistent Dependency Versions in Large JS Monorepos](https://javascriptweekly.com/link/183729/d076523b1d "syncpack.dev") — A CLI tool (used by Electron, Cloudflare, Vercel and others) that finds version mismatches across your entire monorepo, fixes them, and can enforce version policies in CI to avoid future drift.
+
+Jamie Mason
+
+*   [Mantine 9.0](https://javascriptweekly.com/link/183730/d076523b1d) – The wildly popular React component suite now includes a complete set of calendar scheduling components.
+    
+*   [wa-sqlite 1.1](https://javascriptweekly.com/link/183731/d076523b1d) – WebAssembly build of SQLite enabling JavaScript-based virtual filesystems and browser storage extensions. ([Demo.](https://javascriptweekly.com/link/183732/d076523b1d))
+    
+*   [gridstack.js 12.6](https://javascriptweekly.com/link/183733/d076523b1d) – Build responsive drag-and-drop multi-column dashboards.
+    
+*   [Formula.js 4.6](https://javascriptweekly.com/link/183734/d076523b1d) – Excel's formula functions, but for JavaScript.
+    
+*   [Lexical 0.43](https://javascriptweekly.com/link/183735/d076523b1d) – Facebook's extensible text editor framework.
+    
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/183736/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+* * *
+
+[Manage SAML and OIDC enterprise connections via Clerk's Backend API](https://javascriptweekly.com/link/183737/d076523b1d). One unified endpoint for both protocols.
+
+* * *
+
+⚡[Nimbalyst](https://javascriptweekly.com/link/183738/d076523b1d): Visual workspace for building with Claude Code & Codex. Integrate and manage sessions, tasks & files. Visually edit markdown, mockups, diagrams, code.
+
+* * *
+
+[Gauntlet AI Night School](https://javascriptweekly.com/link/183739/d076523b1d) | Cursor, Claude Code, or agents — how AI-first engineers choose the right tool for production. (Virtual - 4/15)
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lr3xjgxnr21effijce2j.jpg)](https://javascriptweekly.com/link/183740/d076523b1d)
+
+[Windows 95 as an Electron App](https://javascriptweekly.com/link/183740/d076523b1d "github.com") — A full Windows 95 experience as an app on macOS, Linux, and Windows, built upon the [v86](https://javascriptweekly.com/link/183741/d076523b1d) JavaScript + WASM emulator. [v5.0](https://javascriptweekly.com/link/183742/d076523b1d) is a big release as you can mount a folder from your machine into it as a Z: drive, mount ISOs as CD-ROMs, there’s a shared clipboard, and Internet access has been improved. I’m _so_ trying to get _Microsoft Encarta_’s [Mindmaze](https://javascriptweekly.com/link/183743/d076523b1d) running on this…
+
+Felix Rieseberg
+
+*   🎨 Sticking to the retro theme, a new release of [JSPaint](https://javascriptweekly.com/link/183744/d076523b1d) has landed too, so you can relive the joy of using _MS Paint_. [Try it here.](https://javascriptweekly.com/link/183745/d076523b1d)
+    
+*   It's ten years since Domenic Denicola [posted about adding JavaScript modules to the web platform](https://javascriptweekly.com/link/183746/d076523b1d) – how far we've come since!
+    
+*   GitHub has [a private preview of 'stacked PRs'](https://javascriptweekly.com/link/183747/d076523b1d), a feature to break large changes into smaller, dependent parts.
+    
+*   TanStack Router, Start, and Query have gained [beta support for Solid 2.0.](https://javascriptweekly.com/link/183748/d076523b1d)
+    
+*   🎤 [A 50-minute chat](https://javascriptweekly.com/link/183749/d076523b1d) (with transcript) from two of the developers behind the [npmx project](https://javascriptweekly.com/link/183750/d076523b1d) — an increasingly popular way to browse the npm registry.
+    
+*   [JSON Alexander](https://javascriptweekly.com/link/183751/d076523b1d) is a new JSON viewer extension for Chrome and Firefox from Wes Bos, complete with a snazzy George Costanza logo.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/183752/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​781 — April 14, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/781)
+
+Together with 
+
+[![Expo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1024,h_289/e_make_transparent/co_white,e_outline:15/damvoyij8zrqr3lp2edx.png)](https://javascriptweekly.com/link/183679/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gm0i5twsmyfutkc1xygg.jpg)](https://javascriptweekly.com/link/183680/d076523b1d)
+
+[Under the Hood of MDN's New Frontend](https://javascriptweekly.com/link/183680/d076523b1d "developer.mozilla.org") — The hugely useful [MDN](https://javascriptweekly.com/link/183681/d076523b1d) has rebuilt its frontend stack from the ground up, ditching React for web components and a homegrown server component system. A great read on building a modern, content-heavy site without shipping unnecessary JavaScript on every page.
+
+Leo McArdle (MDN)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/865de20e.png)](https://javascriptweekly.com/link/183679/d076523b1d)
+
+[Ship Mobile Apps The Way You Ship Websites](https://javascriptweekly.com/link/183679/d076523b1d "try.expo.dev") — Expo gives JavaScript developers a web-like workflow for native mobile. Hot reload on device. OTA updates that skip app store review. Cloud builds that work like Vercel. Start with npx create-expo-app.
+
+Expo sponsor
+
+🕹️ [Phaser 4.0: The 2D WebGL and Canvas-Based Game Framework](https://javascriptweekly.com/link/183682/d076523b1d "phaser.io") — The widely used game framework celebrates its 13th birthday with [a major release](https://javascriptweekly.com/link/183683/d076523b1d) focused on perf/efficiency improvements, and includes [skills files](https://javascriptweekly.com/link/183684/d076523b1d) so AI agents can build Phaser 4.0 apps well. There are [lots of demos](https://javascriptweekly.com/link/183685/d076523b1d), including [these games](https://javascriptweekly.com/link/183686/d076523b1d), and existing users get a [v3 to v4 migration guide.](https://javascriptweekly.com/link/183687/d076523b1d)
+
+Phaser Studio Inc.
+
+**IN BRIEF:**
+
+* Google will [penalize sites that 'hijack' the back button](https://javascriptweekly.com/link/183688/d076523b1d) in its search results from June. *"Ensure you are not doing anything to interfere with a user's ability to navigate their browser history,"* says Chris Nelson.
+
+* [TanStack Start](https://javascriptweekly.com/link/183689/d076523b1d) now has [(experimental) React Server Components support.](https://javascriptweekly.com/link/183690/d076523b1d)
+
+* 🇫🇷 [dotJS](https://javascriptweekly.com/link/183691/d076523b1d) returns to Paris, France this September 18 – [its CFP](https://javascriptweekly.com/link/183692/d076523b1d) is open for two more weeks if you'd like to speak.
+
+* 🇷🇴 The [*JSHeroes* conference](https://javascriptweekly.com/link/183693/d076523b1d) is back this May 14-15 in Romania.
+
+**RELEASES:**
+
+* [Bun v1.3.12](https://javascriptweekly.com/link/183694/d076523b1d) – The JS runtime now ships with native, headless browser automation built in, and [`Bun.cron`](https://javascriptweekly.com/link/183695/d076523b1d) provides an in-process task scheduler.
+
+* ⚠️ [React 19.2.5](https://javascriptweekly.com/link/183696/d076523b1d), [19.1.6](https://javascriptweekly.com/link/183697/d076523b1d) and [19.0.5](https://javascriptweekly.com/link/183698/d076523b1d) have been released to deploy a fix for a React Server Components vulnerability.
+
+* [React Native 0.85](https://javascriptweekly.com/link/183699/d076523b1d) – New animation backend and devtools improvements.
+
+* [pnpm v11.0 RC 0](https://javascriptweekly.com/link/183701/d076523b1d), [React Three Fiber 9.6](https://javascriptweekly.com/link/183702/d076523b1d), [Electron 41.2](https://javascriptweekly.com/link/183703/d076523b1d), [DOMPurify 3.4](https://javascriptweekly.com/link/183704/d076523b1d)
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ekaqzknctznkltb0sfzw.jpg)](https://javascriptweekly.com/link/183705/d076523b1d)
+
+[Installing Every Firefox Extension](https://javascriptweekly.com/link/183705/d076523b1d "jack.cab") — One person’s entertaining and heroic tale of wielding JavaScript to explore the Firefox extension ecosystem. And what oddities there are within! I enjoyed this a lot, it’s like *Alice in Wonderland* for developers. More spelunking like this please.
+
+Jack Cab
+
+[Uses for Nested Promises](https://javascriptweekly.com/link/183706/d076523b1d "blog.jcoglan.com") — James revisits 2013's [Promises/A+](https://javascriptweekly.com/link/183707/d076523b1d) monads [debate](https://javascriptweekly.com/link/183708/d076523b1d) and has changed his mind, thanks to a real concurrency problem he ran into. Demanding but rewarding.
+
+James Coglan
+
+[44 Postgres Talks To Choose From All in One Free, Virtual Event](https://javascriptweekly.com/link/183709/d076523b1d "posetteconf.com") — Join POSETTE: An Event for Postgres 2026, a free & virtual Postgres developer event, 16–18 Jun. [Check out the schedule](https://javascriptweekly.com/link/183709/d076523b1d).
+
+Microsoft | AMD sponsor
+
+[You Can't Cancel a Promise (Except Sometimes You Can)](https://javascriptweekly.com/link/183710/d076523b1d "www.inngest.com") — You can’t cancel a promise, but you can halt an async function by making it `await` a promise that never resolves. The function silently stops, and GC cleans up after it.
+
+Aaron Harper (Inngest)
+
+[Parse, Don't Validate (In a Language That Doesn't Want You To)](https://javascriptweekly.com/link/183711/d076523b1d "cekrem.github.io") — Tired of writing the same defensive `if` check in multiple files because you can’t trust that validation already happened? Branded types and discriminated unions can let TypeScript carry that proof for you.
+
+Christian Ekrem
+
+🌐 [The `Intl` API: The Best Browser API You’re Not Using](https://javascriptweekly.com/link/183712/d076523b1d "polypane.app") — A neat code-heavy primer to what you can do with `Intl`.
+
+Kilian Valkhof
+
+📄 [Making Our Frontend Unit Tests Much Faster with @swc/jest](https://javascriptweekly.com/link/183713/d076523b1d) – From 15 seconds with Jest to 4 seconds with the compatible [@swc/jest](https://javascriptweekly.com/link/183714/d076523b1d). Sebastian Herrmann
+
+📄 [Creating Custom Page Transitions in Astro with Barba.js and GSAP](https://javascriptweekly.com/link/183715/d076523b1d) Iqbal Muthahhary (Codrops)
+
+📄 [The Uphill Climb of Making Diff Lines Performant on GitHub](https://javascriptweekly.com/link/183716/d076523b1d) Ghenco and Shwert (GitHub)
+
+📄 [Building a JavaScript Runtime with QuickJS](https://javascriptweekly.com/link/183717/d076523b1d) Andrew Healey
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/afxlfwdqfincfdil92bq.jpg)](https://javascriptweekly.com/link/183718/d076523b1d)
+
+[Boneyard: Auto-Generated Skeleton Screens for Your UI](https://javascriptweekly.com/link/183718/d076523b1d "boneyard.vercel.app") — Snapshots your real UI and captures a flat list of skeleton ‘bones’ which are positioned, sized rectangles that mirror the page exactly. Supports React, Preact, React Native, Vue, Svelte, and Angular.
+
+0xGF
+
+📈 [Micro-ML: A Toolkit of Forecasting and Clustering Algorithms](https://javascriptweekly.com/link/183719/d076523b1d "github.com") — A ~56KB WASM-powered library with algorithms for regression and smoothing. Cluster points, classify data, or predict the next value in a series without dragging in TensorFlow.js.
+
+Adam Perliński
+
+[AI Writes Code. Wallaby MCP Makes Sure It Actually Works](https://javascriptweekly.com/link/183720/d076523b1d "wallabyjs.com") — Give your AI agent live execution data, coverage, and real-time insights to generate tests and code with confidence.
+
+Wallaby Team sponsor
+
+[Ink 7.0: Use React to Build TUIs and Command Line Apps](https://javascriptweekly.com/link/183722/d076523b1d "github.com") — Powering [many popular terminal apps](https://javascriptweekly.com/link/183723/d076523b1d), v7.0 now leans on React 19.2, uses `useEffectEvent` internally for added efficiency, and brings new hooks and settings.
+
+Vadim Demedes
+
+🔊 [web-audio-api: Use the Web Audio API from Node and Bun](https://javascriptweekly.com/link/183725/d076523b1d "github.com") — Full [Web Audio API](https://javascriptweekly.com/link/183726/d076523b1d) support to either play audio on your machine/server or render it to file (and, yes, [Tone.js](https://javascriptweekly.com/link/183727/d076523b1d) works too). There are [many examples](https://javascriptweekly.com/link/183728/d076523b1d) to enjoy.
+
+Sébastien Piquemal
+
+[Syncpack: Consistent Dependency Versions in Large JS Monorepos](https://javascriptweekly.com/link/183729/d076523b1d "syncpack.dev") — A CLI tool (used by Electron, Cloudflare, Vercel and others) that finds version mismatches across your entire monorepo, fixes them, and can enforce version policies in CI to avoid future drift.
+
+Jamie Mason
+
+* [Mantine 9.0](https://javascriptweekly.com/link/183730/d076523b1d) – The wildly popular React component suite now includes a complete set of calendar scheduling components.
+
+* [wa-sqlite 1.1](https://javascriptweekly.com/link/183731/d076523b1d) – WebAssembly build of SQLite enabling JavaScript-based virtual filesystems and browser storage extensions. ([Demo.](https://javascriptweekly.com/link/183732/d076523b1d))
+
+* [gridstack.js 12.6](https://javascriptweekly.com/link/183733/d076523b1d) – Build responsive drag-and-drop multi-column dashboards.
+
+* [Formula.js 4.6](https://javascriptweekly.com/link/183734/d076523b1d) – Excel's formula functions, but for JavaScript.
+
+* [Lexical 0.43](https://javascriptweekly.com/link/183735/d076523b1d) – Facebook's extensible text editor framework.
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/183736/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+***
+
+[Manage SAML and OIDC enterprise connections via Clerk's Backend API](https://javascriptweekly.com/link/183737/d076523b1d). One unified endpoint for both protocols.
+
+***
+
+⚡[Nimbalyst](https://javascriptweekly.com/link/183738/d076523b1d): Visual workspace for building with Claude Code & Codex. Integrate and manage sessions, tasks & files. Visually edit markdown, mockups, diagrams, code.
+
+***
+
+[Gauntlet AI Night School](https://javascriptweekly.com/link/183739/d076523b1d) | Cursor, Claude Code, or agents — how AI-first engineers choose the right tool for production. (Virtual - 4/15)
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lr3xjgxnr21effijce2j.jpg)](https://javascriptweekly.com/link/183740/d076523b1d)
+
+[Windows 95 as an Electron App](https://javascriptweekly.com/link/183740/d076523b1d "github.com") — A full Windows 95 experience as an app on macOS, Linux, and Windows, built upon the [v86](https://javascriptweekly.com/link/183741/d076523b1d) JavaScript + WASM emulator. [v5.0](https://javascriptweekly.com/link/183742/d076523b1d) is a big release as you can mount a folder from your machine into it as a Z: drive, mount ISOs as CD-ROMs, there’s a shared clipboard, and Internet access has been improved. I’m *so* trying to get *Microsoft Encarta*’s [Mindmaze](https://javascriptweekly.com/link/183743/d076523b1d) running on this…
+
+Felix Rieseberg
+
+* 🎨 Sticking to the retro theme, a new release of [JSPaint](https://javascriptweekly.com/link/183744/d076523b1d) has landed too, so you can relive the joy of using *MS Paint*. [Try it here.](https://javascriptweekly.com/link/183745/d076523b1d)
+
+* It's ten years since Domenic Denicola [posted about adding JavaScript modules to the web platform](https://javascriptweekly.com/link/183746/d076523b1d) – how far we've come since!
+
+* GitHub has [a private preview of 'stacked PRs'](https://javascriptweekly.com/link/183747/d076523b1d), a feature to break large changes into smaller, dependent parts.
+
+* TanStack Router, Start, and Query have gained [beta support for Solid 2.0.](https://javascriptweekly.com/link/183748/d076523b1d)
+
+* 🎤 [A 50-minute chat](https://javascriptweekly.com/link/183749/d076523b1d) (with transcript) from two of the developers behind the [npmx project](https://javascriptweekly.com/link/183750/d076523b1d) — an increasingly popular way to browse the npm registry.
+
+* [JSON Alexander](https://javascriptweekly.com/link/183751/d076523b1d) is a new JSON viewer extension for Chrome and Firefox from Wes Bos, complete with a snazzy George Costanza logo.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/183752/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
