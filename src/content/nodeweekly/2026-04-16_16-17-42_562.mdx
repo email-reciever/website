@@ -1,0 +1,255 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node moves toward Temporal by default
+description: Node moves toward Temporal by default
+date: 星期四 04 下午 四月 16o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/620
+origin_site: https://nodeweekly.com/issues/620
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node moves toward Temporal by default" url="https://nodeweekly.com/issues/620" />
+
+<Detail client:only="react">
+	#​620 — April 16, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/620)
+
+Together with 
+
+[![AppSignal logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_700,h_120/e_make_transparent/co_white,e_outline:7/lme8p344dw1aodshz9px.png)](https://nodeweekly.com/link/183883/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/o2rklqqsv15ze9w9abj5.jpg)](https://nodeweekly.com/link/183842/0a4070b383)
+
+[Node Moves to Enable Temporal By Default](https://nodeweekly.com/link/183842/0a4070b383 "github.com") — The [Temporal API](https://nodeweekly.com/link/183843/0a4070b383), designed to modernize JavaScript’s date/time handling, [reached stage 4](https://nodeweekly.com/link/183844/0a4070b383) last month. Node was waiting on V8 to make it enabled by default, which happened in V8 14.4, and the wheels are now in motion for an eventual release in Node 26.
+
+Richard Lau
+
+[Node.js 24.15.0 (LTS) Released](https://nodeweekly.com/link/183845/0a4070b383 "nodejs.org") — The LTS release of Node gets a few goodies from v25 including `require(esm)` and the module compile cache being marked as stable, as well as `--max-heap-size` and OpenSSL 4.0 build support.
+
+Antoine du Hamel
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/7ca95ac2.png)](https://nodeweekly.com/link/183883/0a4070b383)
+
+[Stop Juggling 5 Tools to Monitor One Node App](https://nodeweekly.com/link/183883/0a4070b383 "www.appsignal.com") — Errors, performance, logs, uptime, host metrics — AppSignal handles all of it for your Node.js stack. Auto-instruments Express, Koa, Prisma, and BullMQ out of the box. Request-based pricing, unlimited seats. [Free 30-day trial, no credit card](https://nodeweekly.com/link/183883/0a4070b383).
+
+AppSignal sponsor
+
+[The OWASP NPM Security Best Practices Cheat Sheet](https://nodeweekly.com/link/183846/0a4070b383 "cheatsheetseries.owasp.org") — A long-standing resource that continues to be updated and remains a useful checklist. Recent updates tackle disabling lifecycle scripts, typosquatting, trusted publishing, and dependency confusion.
+
+OWASP Cheat Sheet Series
+
+[Uses for Nested Promises](https://nodeweekly.com/link/183847/0a4070b383 "blog.jcoglan.com") — James revisits 2013's [Promises/A+](https://nodeweekly.com/link/183848/0a4070b383) monads [debate](https://nodeweekly.com/link/183849/0a4070b383) and has changed his mind, thanks to a real concurrency problem he ran into. Demanding but rewarding.
+
+James Coglan
+
+📄 [The Simplest C-to-WebAssembly-to-Node Pipeline](https://nodeweekly.com/link/183850/0a4070b383) – The simplest steps to take a function written in C and compile it to run from Node with WASM. A 2018 experiment of mine updated for the modern day. Peter Cooper
+
+📄 [What We Learned Building a Rust Runtime for TypeScript](https://nodeweekly.com/link/183851/0a4070b383) Ivan Cernja (Encore)
+
+📄 [Build a Movie Watchlist with Node.js, TypeScript, and MongoDB](https://nodeweekly.com/link/183852/0a4070b383) Nic Raboy
+
+🛠 Code & Tools
+
+🦠 [Pompelmi 1.0: Antivirus File Scanning from Node](https://nodeweekly.com/link/183853/0a4070b383 "pompelmi.app") — A wrapper for [ClamAV](https://nodeweekly.com/link/183854/0a4070b383), originally designed for scanning for malicious uploads in Node apps. It’s standalone and no daemons are required as it spawns ClamAV as-needed. [v1.0](https://nodeweekly.com/link/183855/0a4070b383) landed a few days ago as its first stable release. [GitHub repo.](https://nodeweekly.com/link/183856/0a4070b383)
+
+pompelmi contributors
+
+📄 [officeParser: A Library to Parse Common Office-Related Formats](https://nodeweekly.com/link/183857/0a4070b383 "officeparser.harshankur.com") — Covers formats like `docx`, `pptx`, `xlsx`, `odt` and others used by tools like Microsoft Office and LibreOffice. [GitHub repo.](https://nodeweekly.com/link/183858/0a4070b383)
+
+Harsh Ankur
+
+[You Already Have Postgres. Why Not Make It Handle Analytics?](https://nodeweekly.com/link/183859/0a4070b383 "www.tigerdata.com") — TimescaleDB adds hypertables, 95% compression, and continuous aggregates. No second database, no pipeline. [Try for free](https://nodeweekly.com/link/183859/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+📈 [Micro-ML: A Toolkit of Forecasting and Clustering Algorithms](https://nodeweekly.com/link/183860/0a4070b383 "github.com") — A ~56KB WASM-powered library with algorithms for regression and smoothing. Cluster points, classify data, or predict the next value in a series without dragging in TensorFlow.js.
+
+Adam Perliński
+
+🔊 [Audio: High-Level Audio Manipulation in Node](https://nodeweekly.com/link/183861/0a4070b383 "github.com") — Take audio, trim it, normalize loudness, add fading, detect notes/chords, perform filtering, and more. No ffmpeg needed. From the same creators as the [web-audio-api](https://nodeweekly.com/link/183862/0a4070b383) project featured last week.
+
+audiojs project
+
+[x-win: Inspect Open and Active Windows from Node](https://nodeweekly.com/link/183863/0a4070b383 "github.com") — Obtain the position, size, app icon, and title of windows open on macOS, Linux, and Windows, as well as the process info and memory usage of their underlying processes.
+
+Hocine Benkhadra
+
+*   🖼️ [terminal-image 4.3](https://nodeweekly.com/link/183864/0a4070b383) – Display images in the terminal, whether by colorized ANSI blocks or full resolution (in terminals that support it).
+    
+*   [Jazzer.js 4.0](https://nodeweekly.com/link/183865/0a4070b383) – Coverage-guided, in-process fuzzer for Node based on LLVM's [libFuzzer](https://nodeweekly.com/link/183866/0a4070b383). Now supports pure ESM code.
+    
+*   📊 [Chartbrew 5.0](https://nodeweekly.com/link/183867/0a4070b383) – Powerful Node and React-powered live data dashboard app.
+    
+*   [Happy DOM 20.9](https://nodeweekly.com/link/183868/0a4070b383) – JS implementation of a web browser without the GUI.
+    
+*   🎨 [Color Thief 3.0](https://nodeweekly.com/link/183869/0a4070b383) – Extract color palettes from images.
+    
+*   [node-mssql 12.3](https://nodeweekly.com/link/183870/0a4070b383) – Microsoft SQL Server client.
+    
+*   🤖 [GramIO 0.9](https://nodeweekly.com/link/183871/0a4070b383) – Telegram Bot API framework.
+    
+
+📰 Classifieds
+
+💌 What is happening at Heroku?? Judoscale wrote a [letter from the dev community,](https://nodeweekly.com/link/183872/0a4070b383) expressing our concerns.
+
+* * *
+
+[Gauntlet](https://nodeweekly.com/link/183873/0a4070b383). A 10-week no-cost fellowship building the AI-first engineers hiring managers need. Ship production AI. Land a $200K–$950K job.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ulgnvyrw2bt4ykhbefbx.jpg)](https://nodeweekly.com/link/183874/0a4070b383)
+
+*   [FluidCAD](https://nodeweekly.com/link/183874/0a4070b383) _(above)_ is a new project bringing parametric CAD to the JavaScript world where you can write code to create/manipulate objects and see a live update of what you're making. It's built on top of [OpenCascade.js](https://nodeweekly.com/link/183875/0a4070b383), a JS/WASM port of the open source [OpenCascade](https://nodeweekly.com/link/183876/0a4070b383) 3D geometry library.
+    
+*   [A full Windows 95 experience in an Electron app.](https://nodeweekly.com/link/183877/0a4070b383) v5.0 lets you share a local folder as a `Z:` drive, mount ISOs, and share the clipboard.
+    
+*   A quick ten year flashback to when the V8 project [blogged about Orinoco](https://nodeweekly.com/link/183878/0a4070b383), its then-under-development parallel and concurrent garbage collector which is now a fundamental part of Node's performance story.
+    
+*   Ally Piechowski shares [the `git` commands she runs before reading any code](https://nodeweekly.com/link/183879/0a4070b383). They provide a handy way to get a quick grasp on what's happening in larger, multi-contributor repos.
+    
+*   A cautionary read for anyone running Node on AWS Lambda with MySQL or MariaDB: [The AWS Lambda 'Kiss of Death'](https://nodeweekly.com/link/183880/0a4070b383) walks through how connection reuse can leave transactions dangling, causing InnoDB's history list to grow unchecked until the database freezes.
+    
+*   GitHub has [opened a private preview of _Stacked PRs_](https://nodeweekly.com/link/183881/0a4070b383), giving native support for a workflow where one big change is split into a chain of dependent PRs.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​620 — April 16, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/620)
+
+Together with 
+
+[![AppSignal logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_700,h_120/e_make_transparent/co_white,e_outline:7/lme8p344dw1aodshz9px.png)](https://nodeweekly.com/link/183883/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/o2rklqqsv15ze9w9abj5.jpg)](https://nodeweekly.com/link/183842/0a4070b383)
+
+[Node Moves to Enable Temporal By Default](https://nodeweekly.com/link/183842/0a4070b383 "github.com") — The [Temporal API](https://nodeweekly.com/link/183843/0a4070b383), designed to modernize JavaScript’s date/time handling, [reached stage 4](https://nodeweekly.com/link/183844/0a4070b383) last month. Node was waiting on V8 to make it enabled by default, which happened in V8 14.4, and the wheels are now in motion for an eventual release in Node 26.
+
+Richard Lau
+
+[Node.js 24.15.0 (LTS) Released](https://nodeweekly.com/link/183845/0a4070b383 "nodejs.org") — The LTS release of Node gets a few goodies from v25 including `require(esm)` and the module compile cache being marked as stable, as well as `--max-heap-size` and OpenSSL 4.0 build support.
+
+Antoine du Hamel
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/7ca95ac2.png)](https://nodeweekly.com/link/183883/0a4070b383)
+
+[Stop Juggling 5 Tools to Monitor One Node App](https://nodeweekly.com/link/183883/0a4070b383 "www.appsignal.com") — Errors, performance, logs, uptime, host metrics — AppSignal handles all of it for your Node.js stack. Auto-instruments Express, Koa, Prisma, and BullMQ out of the box. Request-based pricing, unlimited seats. [Free 30-day trial, no credit card](https://nodeweekly.com/link/183883/0a4070b383).
+
+AppSignal sponsor
+
+[The OWASP NPM Security Best Practices Cheat Sheet](https://nodeweekly.com/link/183846/0a4070b383 "cheatsheetseries.owasp.org") — A long-standing resource that continues to be updated and remains a useful checklist. Recent updates tackle disabling lifecycle scripts, typosquatting, trusted publishing, and dependency confusion.
+
+OWASP Cheat Sheet Series
+
+[Uses for Nested Promises](https://nodeweekly.com/link/183847/0a4070b383 "blog.jcoglan.com") — James revisits 2013's [Promises/A+](https://nodeweekly.com/link/183848/0a4070b383) monads [debate](https://nodeweekly.com/link/183849/0a4070b383) and has changed his mind, thanks to a real concurrency problem he ran into. Demanding but rewarding.
+
+James Coglan
+
+📄 [The Simplest C-to-WebAssembly-to-Node Pipeline](https://nodeweekly.com/link/183850/0a4070b383) – The simplest steps to take a function written in C and compile it to run from Node with WASM. A 2018 experiment of mine updated for the modern day. Peter Cooper
+
+📄 [What We Learned Building a Rust Runtime for TypeScript](https://nodeweekly.com/link/183851/0a4070b383) Ivan Cernja (Encore)
+
+📄 [Build a Movie Watchlist with Node.js, TypeScript, and MongoDB](https://nodeweekly.com/link/183852/0a4070b383) Nic Raboy
+
+🛠 Code & Tools
+
+🦠 [Pompelmi 1.0: Antivirus File Scanning from Node](https://nodeweekly.com/link/183853/0a4070b383 "pompelmi.app") — A wrapper for [ClamAV](https://nodeweekly.com/link/183854/0a4070b383), originally designed for scanning for malicious uploads in Node apps. It’s standalone and no daemons are required as it spawns ClamAV as-needed. [v1.0](https://nodeweekly.com/link/183855/0a4070b383) landed a few days ago as its first stable release. [GitHub repo.](https://nodeweekly.com/link/183856/0a4070b383)
+
+pompelmi contributors
+
+📄 [officeParser: A Library to Parse Common Office-Related Formats](https://nodeweekly.com/link/183857/0a4070b383 "officeparser.harshankur.com") — Covers formats like `docx`, `pptx`, `xlsx`, `odt` and others used by tools like Microsoft Office and LibreOffice. [GitHub repo.](https://nodeweekly.com/link/183858/0a4070b383)
+
+Harsh Ankur
+
+[You Already Have Postgres. Why Not Make It Handle Analytics?](https://nodeweekly.com/link/183859/0a4070b383 "www.tigerdata.com") — TimescaleDB adds hypertables, 95% compression, and continuous aggregates. No second database, no pipeline. [Try for free](https://nodeweekly.com/link/183859/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+📈 [Micro-ML: A Toolkit of Forecasting and Clustering Algorithms](https://nodeweekly.com/link/183860/0a4070b383 "github.com") — A ~56KB WASM-powered library with algorithms for regression and smoothing. Cluster points, classify data, or predict the next value in a series without dragging in TensorFlow.js.
+
+Adam Perliński
+
+🔊 [Audio: High-Level Audio Manipulation in Node](https://nodeweekly.com/link/183861/0a4070b383 "github.com") — Take audio, trim it, normalize loudness, add fading, detect notes/chords, perform filtering, and more. No ffmpeg needed. From the same creators as the [web-audio-api](https://nodeweekly.com/link/183862/0a4070b383) project featured last week.
+
+audiojs project
+
+[x-win: Inspect Open and Active Windows from Node](https://nodeweekly.com/link/183863/0a4070b383 "github.com") — Obtain the position, size, app icon, and title of windows open on macOS, Linux, and Windows, as well as the process info and memory usage of their underlying processes.
+
+Hocine Benkhadra
+
+* 🖼️ [terminal-image 4.3](https://nodeweekly.com/link/183864/0a4070b383) – Display images in the terminal, whether by colorized ANSI blocks or full resolution (in terminals that support it).
+
+* [Jazzer.js 4.0](https://nodeweekly.com/link/183865/0a4070b383) – Coverage-guided, in-process fuzzer for Node based on LLVM's [libFuzzer](https://nodeweekly.com/link/183866/0a4070b383). Now supports pure ESM code.
+
+* 📊 [Chartbrew 5.0](https://nodeweekly.com/link/183867/0a4070b383) – Powerful Node and React-powered live data dashboard app.
+
+* [Happy DOM 20.9](https://nodeweekly.com/link/183868/0a4070b383) – JS implementation of a web browser without the GUI.
+
+* 🎨 [Color Thief 3.0](https://nodeweekly.com/link/183869/0a4070b383) – Extract color palettes from images.
+
+* [node-mssql 12.3](https://nodeweekly.com/link/183870/0a4070b383) – Microsoft SQL Server client.
+
+* 🤖 [GramIO 0.9](https://nodeweekly.com/link/183871/0a4070b383) – Telegram Bot API framework.
+
+📰 Classifieds
+
+💌 What is happening at Heroku?? Judoscale wrote a [letter from the dev community,](https://nodeweekly.com/link/183872/0a4070b383) expressing our concerns.
+
+***
+
+[Gauntlet](https://nodeweekly.com/link/183873/0a4070b383). A 10-week no-cost fellowship building the AI-first engineers hiring managers need. Ship production AI. Land a $200K–$950K job.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ulgnvyrw2bt4ykhbefbx.jpg)](https://nodeweekly.com/link/183874/0a4070b383)
+
+* [FluidCAD](https://nodeweekly.com/link/183874/0a4070b383) *(above)* is a new project bringing parametric CAD to the JavaScript world where you can write code to create/manipulate objects and see a live update of what you're making. It's built on top of [OpenCascade.js](https://nodeweekly.com/link/183875/0a4070b383), a JS/WASM port of the open source [OpenCascade](https://nodeweekly.com/link/183876/0a4070b383) 3D geometry library.
+
+* [A full Windows 95 experience in an Electron app.](https://nodeweekly.com/link/183877/0a4070b383) v5.0 lets you share a local folder as a `Z:` drive, mount ISOs, and share the clipboard.
+
+* A quick ten year flashback to when the V8 project [blogged about Orinoco](https://nodeweekly.com/link/183878/0a4070b383), its then-under-development parallel and concurrent garbage collector which is now a fundamental part of Node's performance story.
+
+* Ally Piechowski shares [the `git` commands she runs before reading any code](https://nodeweekly.com/link/183879/0a4070b383). They provide a handy way to get a quick grasp on what's happening in larger, multi-contributor repos.
+
+* A cautionary read for anyone running Node on AWS Lambda with MySQL or MariaDB: [The AWS Lambda 'Kiss of Death'](https://nodeweekly.com/link/183880/0a4070b383) walks through how connection reuse can leave transactions dangling, causing InnoDB's history list to grow unchecked until the database freezes.
+
+* GitHub has [opened a private preview of *Stacked PRs*](https://nodeweekly.com/link/183881/0a4070b383), giving native support for a workflow where one big change is split into a chain of dependent PRs.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
