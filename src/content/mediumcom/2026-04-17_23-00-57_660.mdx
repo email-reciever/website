@@ -1,0 +1,841 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Designing a Production-Grade RAG Architecture | Matt Bentley in Level Up Coding
+description: Designing a Production-Grade RAG Architecture | Matt Bentley in Level Up Coding
+date: 星期五 11 晚上 四月 17o 2026
+author: mediumcom
+origin_url: https://medium.com/
+origin_site: https://medium.com/
+translated: true
+avatar: /media-source/mediumcom-ico.png
+email_recorder: noreply@medium.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Designing a Production-Grade RAG Architecture | Matt Bentley in Level Up Coding" url="https://medium.com/" />
+
+<Detail client:only="react">
+	Today's highlights
+
+[![Matt Bentley](https://miro.medium.com/fit/c/40/40/1*nUZ_xcK6heGCMT4SHpSsuA.jpeg)](https://medium.com/@mattbentley_67939?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-bee5a4e4d9aa----0-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Matt Bentley](https://medium.com/@mattbentley_67939?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-bee5a4e4d9aa----0-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-bee5a4e4d9aa----0-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Designing a Production-Grade RAG Architecture](https://miro.medium.com/fit/c/320/214/1*T_4LvgEpEHWGLqE86pgyDg.jpeg)](https://medium.com/@mattbentley_67939/designing-a-production-grade-rag-architecture-bee5a4e4d9aa?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-bee5a4e4d9aa----0-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[
+
+## Designing a Production-Grade RAG Architecture
+
+### Techniques and best practices for grounding LLMs in…
+
+
+
+](https://medium.com/@mattbentley_67939/designing-a-production-grade-rag-architecture-bee5a4e4d9aa?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-bee5a4e4d9aa----0-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+15 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+539
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+12
+
+[![The Useful Tech](https://miro.medium.com/fit/c/40/40/1*huaATcaUP76fICcfufubLw.png)](https://medium.com/@theusefultech?source=email-2b8b8ee19057-1776449500115-digest.reader-953b148ade73-297f86e6345d----1-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[The Useful Tech](https://medium.com/@theusefultech?source=email-2b8b8ee19057-1776449500115-digest.reader-953b148ade73-297f86e6345d----1-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[The Useful Tech](https://medium.com/the-useful-tech?source=email-2b8b8ee19057-1776449500115-digest.reader-953b148ade73-297f86e6345d----1-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![9 Ridiculously Useful macOS Tahoe Settings You’re 100% Not Using](https://miro.medium.com/fit/c/320/214/1*vCZRETrCPH68kjKBRPAXwQ.png)](https://medium.com/@theusefultech/9-ridiculously-useful-macos-tahoe-settings-youre-100-not-using-297f86e6345d?source=email-2b8b8ee19057-1776449500115-digest.reader-953b148ade73-297f86e6345d----1-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[
+
+## 9 Ridiculously Useful macOS Tahoe Settings You’re 100% Not Using
+
+### Settings so hidden that even Apple’s own feature pages…
+
+
+
+](https://medium.com/@theusefultech/9-ridiculously-useful-macos-tahoe-settings-youre-100-not-using-297f86e6345d?source=email-2b8b8ee19057-1776449500115-digest.reader-953b148ade73-297f86e6345d----1-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+13 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+18
+
+[![Zeeshan Saghir](https://miro.medium.com/fit/c/40/40/1*deF5v6S2mOr_j2mBKW9OAQ.jpeg)](https://medium.com/@simpleandkind788?source=email-2b8b8ee19057-1776449500115-digest.reader--781d8a83f76e----2-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Zeeshan Saghir](https://medium.com/@simpleandkind788?source=email-2b8b8ee19057-1776449500115-digest.reader--781d8a83f76e----2-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Apple Notes Has a Secret Mode — And Almost No One Uses It](https://miro.medium.com/fit/c/320/214/1*U_lrSeMRHldzE5iS_Bk1fw.jpeg)](https://medium.com/@simpleandkind788/apple-notes-has-a-secret-mode-and-almost-no-one-uses-it-781d8a83f76e?source=email-2b8b8ee19057-1776449500115-digest.reader--781d8a83f76e----2-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[
+
+## Apple Notes Has a Secret Mode — And Almost No One Uses It
+
+### From messy notes to a clean system, one hidden feature…
+
+
+
+](https://medium.com/@simpleandkind788/apple-notes-has-a-secret-mode-and-almost-no-one-uses-it-781d8a83f76e?source=email-2b8b8ee19057-1776449500115-digest.reader--781d8a83f76e----2-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+37
+
+[![Jayant Kumar](https://miro.medium.com/fit/c/40/40/1*kL2KKnoNf2lIqCFWOhz9ag.jpeg)](https://medium.com/@nameisjayant1?source=email-2b8b8ee19057-1776449500115-digest.reader-93b94b621c3d-16a956cc01b3----3-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Jayant Kumar](https://medium.com/@nameisjayant1?source=email-2b8b8ee19057-1776449500115-digest.reader-93b94b621c3d-16a956cc01b3----3-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[React Native Lab](https://medium.com/react-native-lab?source=email-2b8b8ee19057-1776449500115-digest.reader-93b94b621c3d-16a956cc01b3----3-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![React Native UI Props That Quietly Improve UX (No One Talks About Them)](https://miro.medium.com/fit/c/320/214/0*F2MfRZGlset4iV2O)](https://medium.com/@nameisjayant1/react-native-ui-props-that-quietly-improve-ux-no-one-talks-about-them-16a956cc01b3?source=email-2b8b8ee19057-1776449500115-digest.reader-93b94b621c3d-16a956cc01b3----3-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[
+
+## React Native UI Props That Quietly Improve UX (No One Talks About Them)
+
+### In this article, we will discuss the UI Props in React…
+
+
+
+](https://medium.com/@nameisjayant1/react-native-ui-props-that-quietly-improve-ux-no-one-talks-about-them-16a956cc01b3?source=email-2b8b8ee19057-1776449500115-digest.reader-93b94b621c3d-16a956cc01b3----3-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+290
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Tushar Kanjariya](https://miro.medium.com/fit/c/40/40/2*lSBGQKdOUsG8qNMLANgd1w.jpeg)](https://medium.com/@TusharKanjariya?source=email-2b8b8ee19057-1776449500115-digest.reader--449bfeb396a2----4-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Tushar Kanjariya](https://medium.com/@TusharKanjariya?source=email-2b8b8ee19057-1776449500115-digest.reader--449bfeb396a2----4-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Four Lines in &lt;head> Changed My Site Speed](https://miro.medium.com/fit/c/320/214/1*bUb2G3XPdr473xfLeCutXg.png)](https://medium.com/@TusharKanjariya/four-lines-in-head-changed-my-site-speed-449bfeb396a2?source=email-2b8b8ee19057-1776449500115-digest.reader--449bfeb396a2----4-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[
+
+## Four Lines in &lt;head> Changed My Site Speed
+
+### The browser just needed a hint.
+
+
+
+](https://medium.com/@TusharKanjariya/four-lines-in-head-changed-my-site-speed-449bfeb396a2?source=email-2b8b8ee19057-1776449500115-digest.reader--449bfeb396a2----4-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+8
+
+[![Ashley Ha](https://miro.medium.com/fit/c/40/40/1*YwX4Drn-4CwBYDtQvU4YOw.jpeg)](https://medium.com/@ashleyha?source=email-2b8b8ee19057-1776449500115-digest.reader--145d25e502cf----5-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Ashley Ha](https://medium.com/@ashleyha?source=email-2b8b8ee19057-1776449500115-digest.reader--145d25e502cf----5-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![I mastered the Claude Code workflow](https://miro.medium.com/fit/c/320/214/0*49ShJORgTY6awlcr.jpeg)](https://medium.com/@ashleyha/i-mastered-the-claude-code-workflow-145d25e502cf?source=email-2b8b8ee19057-1776449500115-digest.reader--145d25e502cf----5-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[
+
+## I mastered the Claude Code workflow
+
+### You 🤝 Claude Code
+
+
+
+](https://medium.com/@ashleyha/i-mastered-the-claude-code-workflow-145d25e502cf?source=email-2b8b8ee19057-1776449500115-digest.reader--145d25e502cf----5-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+11 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.99K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+31
+
+[![Dr. Ashish Bamania](https://miro.medium.com/fit/c/40/40/1*5R3sTJ1KZkaD9s6XmBNsQA@2x.jpeg)](https://medium.com/@bamania-ashish?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-010fc998b6d7----6-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Dr. Ashish Bamania](https://medium.com/@bamania-ashish?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-010fc998b6d7----6-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-010fc998b6d7----6-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Learn About The Entire Computer Science Stack In 51 Images](https://miro.medium.com/fit/c/320/214/0*GUr0SWng8M8sYYFv)](https://medium.com/@bamania-ashish/learn-about-the-entire-computer-science-stack-in-51-images-010fc998b6d7?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-010fc998b6d7----6-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[
+
+## Learn About The Entire Computer Science Stack In 51 Images
+
+### A visual tour through the entire Computer Science…
+
+
+
+](https://medium.com/@bamania-ashish/learn-about-the-entire-computer-science-stack-in-51-images-010fc998b6d7?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-010fc998b6d7----6-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+17 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+13
+
+[![Thomas Smith](https://miro.medium.com/fit/c/40/40/2*3vJU4sgGd_CmFQFl4wH6-Q.jpeg)](https://medium.com/@tomsmith585?source=email-2b8b8ee19057-1776449500115-digest.reader-16ade7bc003e-c911346faa7c----7-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Thomas Smith](https://medium.com/@tomsmith585?source=email-2b8b8ee19057-1776449500115-digest.reader-16ade7bc003e-c911346faa7c----7-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[The Generator](https://medium.com/the-generator?source=email-2b8b8ee19057-1776449500115-digest.reader-16ade7bc003e-c911346faa7c----7-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![I Built An OpenClaw AI Agent To Do My Job For Me](https://miro.medium.com/fit/c/320/214/1*1MMC7B4-3Sg-Ui_1vscFKg.jpeg)](https://medium.com/@tomsmith585/i-built-an-openclaw-ai-agent-to-do-my-job-for-me-c911346faa7c?source=email-2b8b8ee19057-1776449500115-digest.reader-16ade7bc003e-c911346faa7c----7-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[
+
+## I Built An OpenClaw AI Agent To Do My Job For Me
+
+### The results were surprising, and a bit scary
+
+
+
+](https://medium.com/@tomsmith585/i-built-an-openclaw-ai-agent-to-do-my-job-for-me-c911346faa7c?source=email-2b8b8ee19057-1776449500115-digest.reader-16ade7bc003e-c911346faa7c----7-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+42
+
+[![Burk](https://miro.medium.com/fit/c/40/40/1*iQ2uBOw6BWWzmfhzHtJveA.jpeg)](https://medium.com/@burkrosemann?source=email-2b8b8ee19057-1776449500115-digest.reader--6b9416d56d24----8-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Burk](https://medium.com/@burkrosemann?source=email-2b8b8ee19057-1776449500115-digest.reader--6b9416d56d24----8-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Do NOT Buy the MacBook Neo](https://miro.medium.com/fit/c/320/214/1*hFDmX3mTLAa7ThSif1ReSQ.png)](https://medium.com/@burkrosemann/do-not-buy-the-macbook-neo-6b9416d56d24?source=email-2b8b8ee19057-1776449500115-digest.reader--6b9416d56d24----8-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[
+
+## Do NOT Buy the MacBook Neo
+
+### One significant reason NOT to
+
+
+
+](https://medium.com/@burkrosemann/do-not-buy-the-macbook-neo-6b9416d56d24?source=email-2b8b8ee19057-1776449500115-digest.reader--6b9416d56d24----8-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+811
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+44
+
+[![Ben Shih](https://miro.medium.com/fit/c/40/40/1*z1lu1SAQK_wsN_foCl04yA.jpeg)](https://medium.com/@hbshih?source=email-2b8b8ee19057-1776449500115-digest.reader-48e972f5c24e-1c34f601cc43----9-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Ben Shih](https://medium.com/@hbshih?source=email-2b8b8ee19057-1776449500115-digest.reader-48e972f5c24e-1c34f601cc43----9-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[Bootcamp](https://medium.com/design-bootcamp?source=email-2b8b8ee19057-1776449500115-digest.reader-48e972f5c24e-1c34f601cc43----9-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![How LennyRPG was built in 8 hours](https://miro.medium.com/freeze/fit/c/320/214/1*JckyVdkxehceC3bTuzaPkw.gif)](https://medium.com/@hbshih/how-lennyrpg-was-built-in-8-hours-1c34f601cc43?source=email-2b8b8ee19057-1776449500115-digest.reader-48e972f5c24e-1c34f601cc43----9-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[
+
+## How LennyRPG was built in 8 hours
+
+### How I turned 300+ podcast transcripts into a playable…
+
+
+
+](https://medium.com/@hbshih/how-lennyrpg-was-built-in-8-hours-1c34f601cc43?source=email-2b8b8ee19057-1776449500115-digest.reader-48e972f5c24e-1c34f601cc43----9-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+15 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+328
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+4
+
+[![Yuri Novicow](https://miro.medium.com/fit/c/40/40/1*ouNM9DqkSZ4KHcwKwHMDqg.png)](https://medium.com/@yurinovicow?source=email-2b8b8ee19057-1776449500115-digest.reader--422b7edabd1d----10-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Yuri Novicow](https://medium.com/@yurinovicow?source=email-2b8b8ee19057-1776449500115-digest.reader--422b7edabd1d----10-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Flutter. The GetX package was deleted from GitHub](https://miro.medium.com/fit/c/320/214/1*TtndHgR1aOXUL5xYCXKqGw.png)](https://medium.com/@yurinovicow/flutter-the-getx-package-was-deleted-from-github-422b7edabd1d?source=email-2b8b8ee19057-1776449500115-digest.reader--422b7edabd1d----10-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[
+
+## Flutter. The GetX package was deleted from GitHub
+
+### The whole author account is also gone. I hope the…
+
+
+
+](https://medium.com/@yurinovicow/flutter-the-getx-package-was-deleted-from-github-422b7edabd1d?source=email-2b8b8ee19057-1776449500115-digest.reader--422b7edabd1d----10-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+2 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+138
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+9
+
+[![Anthony Gliddon](https://miro.medium.com/fit/c/40/40/1*cNbYAsmNwvyOqPt6o31HdA.png)](https://medium.com/@agliddon-79347?source=email-2b8b8ee19057-1776449500115-digest.reader--fd6c0753c29f----11-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Anthony Gliddon](https://medium.com/@agliddon-79347?source=email-2b8b8ee19057-1776449500115-digest.reader--fd6c0753c29f----11-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Pixels of the Past: Games I Loved in the 2000s](https://miro.medium.com/fit/c/320/214/1*XOT675rN22E7SvShh7PPig.jpeg)](https://medium.com/@agliddon-79347/pixels-of-the-past-games-i-loved-in-the-2000s-fd6c0753c29f?source=email-2b8b8ee19057-1776449500115-digest.reader--fd6c0753c29f----11-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[
+
+## Pixels of the Past: Games I Loved in the 2000s
+
+### Windows XP/Vista/7 gaming milestones for 32-bit and…
+
+
+
+](https://medium.com/@agliddon-79347/pixels-of-the-past-games-i-loved-in-the-2000s-fd6c0753c29f?source=email-2b8b8ee19057-1776449500115-digest.reader--fd6c0753c29f----11-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+95 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+90
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![The Flutter Way](https://miro.medium.com/fit/c/40/40/1*PV-lmlvtgYZISrOViKMIUw.png)](https://medium.com/@theflutterway?source=email-2b8b8ee19057-1776449500115-digest.reader-d1baaa8417a4-0e9ff6a9c3e2----12-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[The Flutter Way](https://medium.com/@theflutterway?source=email-2b8b8ee19057-1776449500115-digest.reader-d1baaa8417a4-0e9ff6a9c3e2----12-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[Stackademic](https://medium.com/stackademic?source=email-2b8b8ee19057-1776449500115-digest.reader-d1baaa8417a4-0e9ff6a9c3e2----12-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Flutter App Logging — The Production Way](https://miro.medium.com/fit/c/320/214/1*os0NRdo4JY1MihIxZU93Aw.png)](https://medium.com/@theflutterway/flutter-app-logging-the-production-way-0e9ff6a9c3e2?source=email-2b8b8ee19057-1776449500115-digest.reader-d1baaa8417a4-0e9ff6a9c3e2----12-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[
+
+## Flutter App Logging — The Production Way
+
+### Your app will crash. The question is: will you know…
+
+
+
+](https://medium.com/@theflutterway/flutter-app-logging-the-production-way-0e9ff6a9c3e2?source=email-2b8b8ee19057-1776449500115-digest.reader-d1baaa8417a4-0e9ff6a9c3e2----12-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+242
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Dan Hansen](https://miro.medium.com/fit/c/40/40/1*Mg_1J12YWRxWaF71uq28Wg.jpeg)](https://medium.com/@dan-hansen?source=email-2b8b8ee19057-1776449500115-digest.reader-d1f54550947b-88b26e87e39c----13-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Dan Hansen](https://medium.com/@dan-hansen?source=email-2b8b8ee19057-1776449500115-digest.reader-d1f54550947b-88b26e87e39c----13-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[Mac O’Clock](https://medium.com/macoclock?source=email-2b8b8ee19057-1776449500115-digest.reader-d1f54550947b-88b26e87e39c----13-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![It’s Only Two Months Until Apple Launches The Greatest Mac Ever.](https://miro.medium.com/fit/c/320/214/1*4lImQcOYLeEAJu5gN4xFNg.png)](https://medium.com/@dan-hansen/its-only-two-months-until-apple-launches-the-greatest-mac-ever-88b26e87e39c?source=email-2b8b8ee19057-1776449500115-digest.reader-d1f54550947b-88b26e87e39c----13-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[
+
+## It’s Only Two Months Until Apple Launches The Greatest Mac Ever.
+
+### Apple Silicon is the gift that keeps on giving.
+
+
+
+](https://medium.com/@dan-hansen/its-only-two-months-until-apple-launches-the-greatest-mac-ever-88b26e87e39c?source=email-2b8b8ee19057-1776449500115-digest.reader-d1f54550947b-88b26e87e39c----13-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+390
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+8
+
+[![Alvis Ng](https://miro.medium.com/fit/c/40/40/1*kKJHnRlneR5oCtJw0ahXiQ.jpeg)](https://medium.com/@iamalvisng?source=email-2b8b8ee19057-1776449500115-digest.reader--a7c984d6d0da----14-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Alvis Ng](https://medium.com/@iamalvisng?source=email-2b8b8ee19057-1776449500115-digest.reader--a7c984d6d0da----14-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Nobody Wants to Learn AI](https://miro.medium.com/fit/c/320/214/1*5rwzuVqlue5rkfM8k10viw.jpeg)](https://medium.com/@iamalvisng/nobody-wants-to-learn-ai-a7c984d6d0da?source=email-2b8b8ee19057-1776449500115-digest.reader--a7c984d6d0da----14-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[
+
+## Nobody Wants to Learn AI
+
+### The “lifelong learner” identity isn’t aspiration. It’s…
+
+
+
+](https://medium.com/@iamalvisng/nobody-wants-to-learn-ai-a7c984d6d0da?source=email-2b8b8ee19057-1776449500115-digest.reader--a7c984d6d0da----14-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+74
+
+[![Become a Medium member](https://miro.medium.com/max/1360/6b37395e36e2d6768583b0d27172b3075c079241270c50b770a18b83476ecffc)](https://medium.com/plans?source=email-2b8b8ee19057-1776449500115-digest.reader-------------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516)
+
+
+</Detail>
+
+Today's highlights
+
+[![Matt Bentley](https://miro.medium.com/fit/c/40/40/1*nUZ_xcK6heGCMT4SHpSsuA.jpeg)](https://medium.com/@mattbentley_67939?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-bee5a4e4d9aa----0-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Matt Bentley](https://medium.com/@mattbentley_67939?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-bee5a4e4d9aa----0-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-bee5a4e4d9aa----0-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Designing a Production-Grade RAG Architecture](https://miro.medium.com/fit/c/320/214/1*T_4LvgEpEHWGLqE86pgyDg.jpeg)](https://medium.com/@mattbentley_67939/designing-a-production-grade-rag-architecture-bee5a4e4d9aa?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-bee5a4e4d9aa----0-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+\[
+
+## Designing a Production-Grade RAG Architecture
+
+### Techniques and best practices for grounding LLMs in…
+
+]\(https://medium.com/@mattbentley\_67939/designing-a-production-grade-rag-architecture-bee5a4e4d9aa?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-bee5a4e4d9aa----0-109------------------b726f3f2\_0bb7\_44d3\_ab2f\_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+15 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+539
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+12
+
+[![The Useful Tech](https://miro.medium.com/fit/c/40/40/1*huaATcaUP76fICcfufubLw.png)](https://medium.com/@theusefultech?source=email-2b8b8ee19057-1776449500115-digest.reader-953b148ade73-297f86e6345d----1-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[The Useful Tech](https://medium.com/@theusefultech?source=email-2b8b8ee19057-1776449500115-digest.reader-953b148ade73-297f86e6345d----1-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[The Useful Tech](https://medium.com/the-useful-tech?source=email-2b8b8ee19057-1776449500115-digest.reader-953b148ade73-297f86e6345d----1-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![9 Ridiculously Useful macOS Tahoe Settings You’re 100% Not Using](https://miro.medium.com/fit/c/320/214/1*vCZRETrCPH68kjKBRPAXwQ.png)](https://medium.com/@theusefultech/9-ridiculously-useful-macos-tahoe-settings-youre-100-not-using-297f86e6345d?source=email-2b8b8ee19057-1776449500115-digest.reader-953b148ade73-297f86e6345d----1-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+\[
+
+## 9 Ridiculously Useful macOS Tahoe Settings You’re 100% Not Using
+
+### Settings so hidden that even Apple’s own feature pages…
+
+]\(https://medium.com/@theusefultech/9-ridiculously-useful-macos-tahoe-settings-youre-100-not-using-297f86e6345d?source=email-2b8b8ee19057-1776449500115-digest.reader-953b148ade73-297f86e6345d----1-102------------------b726f3f2\_0bb7\_44d3\_ab2f\_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+13 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+18
+
+[![Zeeshan Saghir](https://miro.medium.com/fit/c/40/40/1*deF5v6S2mOr_j2mBKW9OAQ.jpeg)](https://medium.com/@simpleandkind788?source=email-2b8b8ee19057-1776449500115-digest.reader--781d8a83f76e----2-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Zeeshan Saghir](https://medium.com/@simpleandkind788?source=email-2b8b8ee19057-1776449500115-digest.reader--781d8a83f76e----2-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Apple Notes Has a Secret Mode — And Almost No One Uses It](https://miro.medium.com/fit/c/320/214/1*U_lrSeMRHldzE5iS_Bk1fw.jpeg)](https://medium.com/@simpleandkind788/apple-notes-has-a-secret-mode-and-almost-no-one-uses-it-781d8a83f76e?source=email-2b8b8ee19057-1776449500115-digest.reader--781d8a83f76e----2-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+\[
+
+## Apple Notes Has a Secret Mode — And Almost No One Uses It
+
+### From messy notes to a clean system, one hidden feature…
+
+]\(https://medium.com/@simpleandkind788/apple-notes-has-a-secret-mode-and-almost-no-one-uses-it-781d8a83f76e?source=email-2b8b8ee19057-1776449500115-digest.reader--781d8a83f76e----2-73------------------b726f3f2\_0bb7\_44d3\_ab2f\_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+37
+
+[![Jayant Kumar](https://miro.medium.com/fit/c/40/40/1*kL2KKnoNf2lIqCFWOhz9ag.jpeg)](https://medium.com/@nameisjayant1?source=email-2b8b8ee19057-1776449500115-digest.reader-93b94b621c3d-16a956cc01b3----3-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Jayant Kumar](https://medium.com/@nameisjayant1?source=email-2b8b8ee19057-1776449500115-digest.reader-93b94b621c3d-16a956cc01b3----3-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[React Native Lab](https://medium.com/react-native-lab?source=email-2b8b8ee19057-1776449500115-digest.reader-93b94b621c3d-16a956cc01b3----3-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![React Native UI Props That Quietly Improve UX (No One Talks About Them)](https://miro.medium.com/fit/c/320/214/0*F2MfRZGlset4iV2O)](https://medium.com/@nameisjayant1/react-native-ui-props-that-quietly-improve-ux-no-one-talks-about-them-16a956cc01b3?source=email-2b8b8ee19057-1776449500115-digest.reader-93b94b621c3d-16a956cc01b3----3-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+\[
+
+## React Native UI Props That Quietly Improve UX (No One Talks About Them)
+
+### In this article, we will discuss the UI Props in React…
+
+]\(https://medium.com/@nameisjayant1/react-native-ui-props-that-quietly-improve-ux-no-one-talks-about-them-16a956cc01b3?source=email-2b8b8ee19057-1776449500115-digest.reader-93b94b621c3d-16a956cc01b3----3-99------------------b726f3f2\_0bb7\_44d3\_ab2f\_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+290
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Tushar Kanjariya](https://miro.medium.com/fit/c/40/40/2*lSBGQKdOUsG8qNMLANgd1w.jpeg)](https://medium.com/@TusharKanjariya?source=email-2b8b8ee19057-1776449500115-digest.reader--449bfeb396a2----4-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Tushar Kanjariya](https://medium.com/@TusharKanjariya?source=email-2b8b8ee19057-1776449500115-digest.reader--449bfeb396a2----4-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Four Lines in \&lt;head> Changed My Site Speed](https://miro.medium.com/fit/c/320/214/1*bUb2G3XPdr473xfLeCutXg.png)](https://medium.com/@TusharKanjariya/four-lines-in-head-changed-my-site-speed-449bfeb396a2?source=email-2b8b8ee19057-1776449500115-digest.reader--449bfeb396a2----4-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+\[
+
+## Four Lines in &lt;head> Changed My Site Speed
+
+### The browser just needed a hint.
+
+]\(https://medium.com/@TusharKanjariya/four-lines-in-head-changed-my-site-speed-449bfeb396a2?source=email-2b8b8ee19057-1776449500115-digest.reader--449bfeb396a2----4-99------------------b726f3f2\_0bb7\_44d3\_ab2f\_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+8
+
+[![Ashley Ha](https://miro.medium.com/fit/c/40/40/1*YwX4Drn-4CwBYDtQvU4YOw.jpeg)](https://medium.com/@ashleyha?source=email-2b8b8ee19057-1776449500115-digest.reader--145d25e502cf----5-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Ashley Ha](https://medium.com/@ashleyha?source=email-2b8b8ee19057-1776449500115-digest.reader--145d25e502cf----5-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![I mastered the Claude Code workflow](https://miro.medium.com/fit/c/320/214/0*49ShJORgTY6awlcr.jpeg)](https://medium.com/@ashleyha/i-mastered-the-claude-code-workflow-145d25e502cf?source=email-2b8b8ee19057-1776449500115-digest.reader--145d25e502cf----5-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+\[
+
+## I mastered the Claude Code workflow
+
+### You 🤝 Claude Code
+
+]\(https://medium.com/@ashleyha/i-mastered-the-claude-code-workflow-145d25e502cf?source=email-2b8b8ee19057-1776449500115-digest.reader--145d25e502cf----5-73------------------b726f3f2\_0bb7\_44d3\_ab2f\_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+11 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.99K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+31
+
+[![Dr. Ashish Bamania](https://miro.medium.com/fit/c/40/40/1*5R3sTJ1KZkaD9s6XmBNsQA@2x.jpeg)](https://medium.com/@bamania-ashish?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-010fc998b6d7----6-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Dr. Ashish Bamania](https://medium.com/@bamania-ashish?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-010fc998b6d7----6-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-010fc998b6d7----6-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Learn About The Entire Computer Science Stack In 51 Images](https://miro.medium.com/fit/c/320/214/0*GUr0SWng8M8sYYFv)](https://medium.com/@bamania-ashish/learn-about-the-entire-computer-science-stack-in-51-images-010fc998b6d7?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-010fc998b6d7----6-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+\[
+
+## Learn About The Entire Computer Science Stack In 51 Images
+
+### A visual tour through the entire Computer Science…
+
+]\(https://medium.com/@bamania-ashish/learn-about-the-entire-computer-science-stack-in-51-images-010fc998b6d7?source=email-2b8b8ee19057-1776449500115-digest.reader-5517fd7b58a6-010fc998b6d7----6-102------------------b726f3f2\_0bb7\_44d3\_ab2f\_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+17 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+13
+
+[![Thomas Smith](https://miro.medium.com/fit/c/40/40/2*3vJU4sgGd_CmFQFl4wH6-Q.jpeg)](https://medium.com/@tomsmith585?source=email-2b8b8ee19057-1776449500115-digest.reader-16ade7bc003e-c911346faa7c----7-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Thomas Smith](https://medium.com/@tomsmith585?source=email-2b8b8ee19057-1776449500115-digest.reader-16ade7bc003e-c911346faa7c----7-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[The Generator](https://medium.com/the-generator?source=email-2b8b8ee19057-1776449500115-digest.reader-16ade7bc003e-c911346faa7c----7-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![I Built An OpenClaw AI Agent To Do My Job For Me](https://miro.medium.com/fit/c/320/214/1*1MMC7B4-3Sg-Ui_1vscFKg.jpeg)](https://medium.com/@tomsmith585/i-built-an-openclaw-ai-agent-to-do-my-job-for-me-c911346faa7c?source=email-2b8b8ee19057-1776449500115-digest.reader-16ade7bc003e-c911346faa7c----7-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+\[
+
+## I Built An OpenClaw AI Agent To Do My Job For Me
+
+### The results were surprising, and a bit scary
+
+]\(https://medium.com/@tomsmith585/i-built-an-openclaw-ai-agent-to-do-my-job-for-me-c911346faa7c?source=email-2b8b8ee19057-1776449500115-digest.reader-16ade7bc003e-c911346faa7c----7-102------------------b726f3f2\_0bb7\_44d3\_ab2f\_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+42
+
+[![Burk](https://miro.medium.com/fit/c/40/40/1*iQ2uBOw6BWWzmfhzHtJveA.jpeg)](https://medium.com/@burkrosemann?source=email-2b8b8ee19057-1776449500115-digest.reader--6b9416d56d24----8-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Burk](https://medium.com/@burkrosemann?source=email-2b8b8ee19057-1776449500115-digest.reader--6b9416d56d24----8-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Do NOT Buy the MacBook Neo](https://miro.medium.com/fit/c/320/214/1*hFDmX3mTLAa7ThSif1ReSQ.png)](https://medium.com/@burkrosemann/do-not-buy-the-macbook-neo-6b9416d56d24?source=email-2b8b8ee19057-1776449500115-digest.reader--6b9416d56d24----8-73------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+\[
+
+## Do NOT Buy the MacBook Neo
+
+### One significant reason NOT to
+
+]\(https://medium.com/@burkrosemann/do-not-buy-the-macbook-neo-6b9416d56d24?source=email-2b8b8ee19057-1776449500115-digest.reader--6b9416d56d24----8-73------------------b726f3f2\_0bb7\_44d3\_ab2f\_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+811
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+44
+
+[![Ben Shih](https://miro.medium.com/fit/c/40/40/1*z1lu1SAQK_wsN_foCl04yA.jpeg)](https://medium.com/@hbshih?source=email-2b8b8ee19057-1776449500115-digest.reader-48e972f5c24e-1c34f601cc43----9-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Ben Shih](https://medium.com/@hbshih?source=email-2b8b8ee19057-1776449500115-digest.reader-48e972f5c24e-1c34f601cc43----9-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[Bootcamp](https://medium.com/design-bootcamp?source=email-2b8b8ee19057-1776449500115-digest.reader-48e972f5c24e-1c34f601cc43----9-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![How LennyRPG was built in 8 hours](https://miro.medium.com/freeze/fit/c/320/214/1*JckyVdkxehceC3bTuzaPkw.gif)](https://medium.com/@hbshih/how-lennyrpg-was-built-in-8-hours-1c34f601cc43?source=email-2b8b8ee19057-1776449500115-digest.reader-48e972f5c24e-1c34f601cc43----9-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+\[
+
+## How LennyRPG was built in 8 hours
+
+### How I turned 300+ podcast transcripts into a playable…
+
+]\(https://medium.com/@hbshih/how-lennyrpg-was-built-in-8-hours-1c34f601cc43?source=email-2b8b8ee19057-1776449500115-digest.reader-48e972f5c24e-1c34f601cc43----9-109------------------b726f3f2\_0bb7\_44d3\_ab2f\_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+15 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+328
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+4
+
+[![Yuri Novicow](https://miro.medium.com/fit/c/40/40/1*ouNM9DqkSZ4KHcwKwHMDqg.png)](https://medium.com/@yurinovicow?source=email-2b8b8ee19057-1776449500115-digest.reader--422b7edabd1d----10-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Yuri Novicow](https://medium.com/@yurinovicow?source=email-2b8b8ee19057-1776449500115-digest.reader--422b7edabd1d----10-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Flutter. The GetX package was deleted from GitHub](https://miro.medium.com/fit/c/320/214/1*TtndHgR1aOXUL5xYCXKqGw.png)](https://medium.com/@yurinovicow/flutter-the-getx-package-was-deleted-from-github-422b7edabd1d?source=email-2b8b8ee19057-1776449500115-digest.reader--422b7edabd1d----10-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+\[
+
+## Flutter. The GetX package was deleted from GitHub
+
+### The whole author account is also gone. I hope the…
+
+]\(https://medium.com/@yurinovicow/flutter-the-getx-package-was-deleted-from-github-422b7edabd1d?source=email-2b8b8ee19057-1776449500115-digest.reader--422b7edabd1d----10-99------------------b726f3f2\_0bb7\_44d3\_ab2f\_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+2 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+138
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+9
+
+[![Anthony Gliddon](https://miro.medium.com/fit/c/40/40/1*cNbYAsmNwvyOqPt6o31HdA.png)](https://medium.com/@agliddon-79347?source=email-2b8b8ee19057-1776449500115-digest.reader--fd6c0753c29f----11-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Anthony Gliddon](https://medium.com/@agliddon-79347?source=email-2b8b8ee19057-1776449500115-digest.reader--fd6c0753c29f----11-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Pixels of the Past: Games I Loved in the 2000s](https://miro.medium.com/fit/c/320/214/1*XOT675rN22E7SvShh7PPig.jpeg)](https://medium.com/@agliddon-79347/pixels-of-the-past-games-i-loved-in-the-2000s-fd6c0753c29f?source=email-2b8b8ee19057-1776449500115-digest.reader--fd6c0753c29f----11-102------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+\[
+
+## Pixels of the Past: Games I Loved in the 2000s
+
+### Windows XP/Vista/7 gaming milestones for 32-bit and…
+
+]\(https://medium.com/@agliddon-79347/pixels-of-the-past-games-i-loved-in-the-2000s-fd6c0753c29f?source=email-2b8b8ee19057-1776449500115-digest.reader--fd6c0753c29f----11-102------------------b726f3f2\_0bb7\_44d3\_ab2f\_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+95 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+90
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![The Flutter Way](https://miro.medium.com/fit/c/40/40/1*PV-lmlvtgYZISrOViKMIUw.png)](https://medium.com/@theflutterway?source=email-2b8b8ee19057-1776449500115-digest.reader-d1baaa8417a4-0e9ff6a9c3e2----12-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[The Flutter Way](https://medium.com/@theflutterway?source=email-2b8b8ee19057-1776449500115-digest.reader-d1baaa8417a4-0e9ff6a9c3e2----12-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[Stackademic](https://medium.com/stackademic?source=email-2b8b8ee19057-1776449500115-digest.reader-d1baaa8417a4-0e9ff6a9c3e2----12-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Flutter App Logging — The Production Way](https://miro.medium.com/fit/c/320/214/1*os0NRdo4JY1MihIxZU93Aw.png)](https://medium.com/@theflutterway/flutter-app-logging-the-production-way-0e9ff6a9c3e2?source=email-2b8b8ee19057-1776449500115-digest.reader-d1baaa8417a4-0e9ff6a9c3e2----12-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+\[
+
+## Flutter App Logging — The Production Way
+
+### Your app will crash. The question is: will you know…
+
+]\(https://medium.com/@theflutterway/flutter-app-logging-the-production-way-0e9ff6a9c3e2?source=email-2b8b8ee19057-1776449500115-digest.reader-d1baaa8417a4-0e9ff6a9c3e2----12-99------------------b726f3f2\_0bb7\_44d3\_ab2f\_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+242
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Dan Hansen](https://miro.medium.com/fit/c/40/40/1*Mg_1J12YWRxWaF71uq28Wg.jpeg)](https://medium.com/@dan-hansen?source=email-2b8b8ee19057-1776449500115-digest.reader-d1f54550947b-88b26e87e39c----13-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Dan Hansen](https://medium.com/@dan-hansen?source=email-2b8b8ee19057-1776449500115-digest.reader-d1f54550947b-88b26e87e39c----13-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)in[Mac O’Clock](https://medium.com/macoclock?source=email-2b8b8ee19057-1776449500115-digest.reader-d1f54550947b-88b26e87e39c----13-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![It’s Only Two Months Until Apple Launches The Greatest Mac Ever.](https://miro.medium.com/fit/c/320/214/1*4lImQcOYLeEAJu5gN4xFNg.png)](https://medium.com/@dan-hansen/its-only-two-months-until-apple-launches-the-greatest-mac-ever-88b26e87e39c?source=email-2b8b8ee19057-1776449500115-digest.reader-d1f54550947b-88b26e87e39c----13-99------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+\[
+
+## It’s Only Two Months Until Apple Launches The Greatest Mac Ever.
+
+### Apple Silicon is the gift that keeps on giving.
+
+]\(https://medium.com/@dan-hansen/its-only-two-months-until-apple-launches-the-greatest-mac-ever-88b26e87e39c?source=email-2b8b8ee19057-1776449500115-digest.reader-d1f54550947b-88b26e87e39c----13-99------------------b726f3f2\_0bb7\_44d3\_ab2f\_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+390
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+8
+
+[![Alvis Ng](https://miro.medium.com/fit/c/40/40/1*kKJHnRlneR5oCtJw0ahXiQ.jpeg)](https://medium.com/@iamalvisng?source=email-2b8b8ee19057-1776449500115-digest.reader--a7c984d6d0da----14-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[Alvis Ng](https://medium.com/@iamalvisng?source=email-2b8b8ee19057-1776449500115-digest.reader--a7c984d6d0da----14-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+[![Nobody Wants to Learn AI](https://miro.medium.com/fit/c/320/214/1*5rwzuVqlue5rkfM8k10viw.jpeg)](https://medium.com/@iamalvisng/nobody-wants-to-learn-ai-a7c984d6d0da?source=email-2b8b8ee19057-1776449500115-digest.reader--a7c984d6d0da----14-109------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516-1)
+
+\[
+
+## Nobody Wants to Learn AI
+
+### The “lifelong learner” identity isn’t aspiration. It’s…
+
+]\(https://medium.com/@iamalvisng/nobody-wants-to-learn-ai-a7c984d6d0da?source=email-2b8b8ee19057-1776449500115-digest.reader--a7c984d6d0da----14-109------------------b726f3f2\_0bb7\_44d3\_ab2f\_3286ae8c9516-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+74
+
+[![Become a Medium member](https://miro.medium.com/max/1360/6b37395e36e2d6768583b0d27172b3075c079241270c50b770a18b83476ecffc)](https://medium.com/plans?source=email-2b8b8ee19057-1776449500115-digest.reader-------------------------b726f3f2_0bb7_44d3_ab2f_3286ae8c9516)
+
+
