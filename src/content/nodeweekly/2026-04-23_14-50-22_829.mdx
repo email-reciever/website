@@ -1,0 +1,301 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Playwright's exciting new page.screencast API
+description: Playwright's exciting new page.screencast API
+date: 星期四 02 下午 四月 23o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/621
+origin_site: https://nodeweekly.com/issues/621
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Playwright's exciting new page.screencast API" url="https://nodeweekly.com/issues/621" />
+
+<Detail client:only="react">
+	#​621 — April 23, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/621)
+
+🎥 Playwright has added a new feature I thought was neat, so I've written a bit about it at the end of this issue – check it out!  
+\_\_  
+_Peter Cooper, your editor_
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/184188/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ebnru5mx0iiqlp0qmorn.jpg)](https://nodeweekly.com/link/184189/0a4070b383)
+
+[aube: A New Node.js Package Manager](https://nodeweekly.com/link/184189/0a4070b383 "aube.en.dev") — Yes, another one! What’s noteworthy is it comes from the developer of [mise](https://nodeweekly.com/link/184190/0a4070b383), a tool that makes managing numerous languages so much easier. aube’s selling points are [raw performance](https://nodeweekly.com/link/184191/0a4070b383) and being a drop-in replacement. [Its defaults](https://nodeweekly.com/link/184192/0a4070b383) are also security-focused.
+
+Jeff Dickey
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/62f4e709.webp)](https://nodeweekly.com/link/184188/0a4070b383)
+
+[Write Better Prompts](https://nodeweekly.com/link/184188/0a4070b383 "frontendmasters.com") — Join GitHub's Sabrina Goldfarb for this detailed video course on generating higher quality code with AI. Learn practical prompting techniques that work consistently across tools and transform your project ideas into reality.
+
+Frontend Masters sponsor
+
+[Writing Node.js Addons with .NET Native AOT](https://nodeweekly.com/link/184193/0a4070b383 "devblogs.microsoft.com") — You can now write native Node addons in .NET languages like C#. _Native AOT_ compiles programs to shared libraries (or executables) which can expose N-API entry points for Node to call into, much like a C/C++ extension.
+
+Drew Noakes (Microsoft)
+
+**IN BRIEF:**
+
+*   🇪🇺 [NodeConf EU](https://nodeweekly.com/link/184194/0a4070b383) is back. It's in Bologna, Italy this September 29-30. Tickets are on sale, and [here's the CFP](https://nodeweekly.com/link/184195/0a4070b383) if you want to speak.
+    
+*   Maël Nison, the maintainer of Yarn, is working on [a new Node feature to support _package maps_](https://nodeweekly.com/link/184196/0a4070b383) where Node can resolve packages using a static JSON file instead of walking `node_modules`.
+    
+
+[TypeScript 7.0 Beta: A 10x Faster TypeScript Compiler](https://nodeweekly.com/link/184197/0a4070b383 "devblogs.microsoft.com") — The first beta of the Go-powered native port of TypeScript boasting _“about 10 times faster”_ performance. [TypeScript 6.0](https://nodeweekly.com/link/184198/0a4070b383) remains important as a transitional release in your upgrade process, as TS 7.0 shares [6.0’s default config changes](https://nodeweekly.com/link/184199/0a4070b383) and 6.0’s deprecations are now hard errors. There are also [changes to how to write your code](https://nodeweekly.com/link/184200/0a4070b383) to take into account.
+
+Microsoft
+
+[Build Durable AI Agents That Won’t Break in Production (Webinar)](https://nodeweekly.com/link/184201/0a4070b383 "orkes.io") — Learn the open-source 4-layer stack and run durable AI agents with Agentspan across LangGraph, OpenAI, and Google SDKs.
+
+Orkes sponsor
+
+📄 [Delivering a Dynamic Hexagonal World Map in 10KB](https://nodeweekly.com/link/184202/0a4070b383) – How a developer built a hexagon-based SVG world map using a Node-based pipeline with [Turf.js](https://nodeweekly.com/link/184203/0a4070b383) to simplify GeoJSON. Ben Schwarz
+
+📄 [Features Everyone Should Steal From `npmx`](https://nodeweekly.com/link/184204/0a4070b383) – [npmx](https://nodeweekly.com/link/184205/0a4070b383) is a fantastic way to browse the npm package registry. Andrew Nesbitt
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/efwmqi5yf7qstwu2evdl.jpg)](https://nodeweekly.com/link/184206/0a4070b383)
+
+[Optique 1.0: Type-Safe Combinatorial CLI Parser](https://nodeweekly.com/link/184206/0a4070b383 "optique.dev") — Build composable parsers for CLIs with type safety, type inference, and built-in shell completion support, plus config file integration and `man` page generation from the same definitions. [v1.0](https://nodeweekly.com/link/184207/0a4070b383) is the first stable release and Hong [compares it to Commander.js and explains why you'd use Optique.](https://nodeweekly.com/link/184208/0a4070b383)
+
+Hong Minhee
+
+[DocMD: Build Production-Ready Docs from Markdown](https://nodeweekly.com/link/184209/0a4070b383 "docmd.io") — A Node-powered zero-config documentation site generator with a focus on producing lean, fast output ([its own docs](https://nodeweekly.com/link/184210/0a4070b383) are a good example). It has i18n and versioning built-in and, as of this week, [a `deploy` command](https://nodeweekly.com/link/184211/0a4070b383) to produce ready-to-deploy files for Docker, Nginx, and Caddy.
+
+docmd
+
+[rocksdb-js: New RocksDB Bindings for Node](https://nodeweekly.com/link/184212/0a4070b383 "www.harper.fast") — It’s been messy using Facebook’s [RocksDB](https://nodeweekly.com/link/184213/0a4070b383) key-value store from Node in recent years, but finally there’s a new, modern native addon for the task. [GitHub repo.](https://nodeweekly.com/link/184214/0a4070b383)
+
+Chris Barber (Harper)
+
+[Bun v1.3.13: Smarter Testing and Less Memory Usage](https://nodeweekly.com/link/184215/0a4070b383 "bun.com") — The alternative runtime enhances `bun test` with options for test environment isolation, parallelization, and to run only those tests affected by recent changes. The runtime [uses 5% less memory](https://nodeweekly.com/link/184216/0a4070b383) and `bun install` gets faster, among other things.
+
+Jarred Sumner
+
+*   [`pnpm/action-setup@v6`](https://nodeweekly.com/link/184217/0a4070b383) – The GitHub Action to install/configure pnpm adds [pnpm v11](https://nodeweekly.com/link/184218/0a4070b383) support.
+    
+*   [node-mssql 12.5](https://nodeweekly.com/link/184219/0a4070b383) – Microsoft SQL Server client library. You can now set per-request timeouts.
+    
+*   [type-flag 4.2](https://nodeweekly.com/link/184220/0a4070b383) – Strongly typed command-line arguments parser.
+    
+*   [MongoDB Node.js Driver v7.2.0](https://nodeweekly.com/link/184221/0a4070b383) – The official MongoDB driver.
+    
+*   [Mongoose 9.5](https://nodeweekly.com/link/184222/0a4070b383) – MongoDB object modeling library for Node.
+    
+*   [pg-boss 12.16](https://nodeweekly.com/link/184223/0a4070b383) – Postgres-backed job queue for Node apps.
+    
+*   [xero-node 15.0](https://nodeweekly.com/link/184224/0a4070b383) – Node SDK for [Xero](https://nodeweekly.com/link/184225/0a4070b383) accounting software.
+    
+*   [np 11.2](https://nodeweekly.com/link/184226/0a4070b383) – Feature-packed alternative to `npm publish`.
+    
+
+📰 Classifieds
+
+Skip the README archaeology. Flox delivers reproducible dev environments with no system pollution. One command, zero friction. [Try it free](https://nodeweekly.com/link/184227/0a4070b383).
+
+* * *
+
+[Gauntlet](https://nodeweekly.com/link/184228/0a4070b383). A 10-week no-cost fellowship building the AI skills companies need. Learn to ship faster with AI. Land a $200K+ job. [Apply now](https://nodeweekly.com/link/184228/0a4070b383).
+
+* * *
+
+⚙️ [Build AI agents like you build APIs. Orchestrate not just LLMs — but Claude Code, Codex & full coding harnesses](https://nodeweekly.com/link/184229/0a4070b383). Open-source TypeScript SDK. [agentfield.ai](https://nodeweekly.com/link/184232/0a4070b383).
+
+🎥  Playwright's `page.screencast` API
+
+[The newest version](https://nodeweekly.com/link/184231/0a4070b383) of the popular Playwright Web testing and automation library ([v1.59.0](https://nodeweekly.com/link/184231/0a4070b383)) boasts a new `page.screencast` API to make recording videos more flexible. I took it for a spin and liked what I saw.
+
+You can now start and stop video recording in a more granular way than `recordVideo` allowed:
+
+await page.screencast.start(&lcub; path: 'video.webm' });
+// do stuff here
+await page.screencast.stop();
+
+But the real fun begins when you use its new visual annotation and custom HTML overlay features.
+
+I created a basic HTML form and a Playwright script to test out the new features and you can basically create full screencast style videos with it:
+
+![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nzdmofwqfrltr3qxvri8.jpg)
+
+![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fzxobegz35z6hfni1dfp.jpg)
+
+Here's the code for the section above:
+
+await page.screencast.showChapter('Step 4 — Interests', &lcub;
+  description: 'Multiple checkboxes',
+  duration: 1400,
+});
+await page.locator('#interests input\[value="testing"\]').check();
+await page.locator('#interests input\[value="tooling"\]').check();
+
+Read [the full release notes](https://nodeweekly.com/link/184231/0a4070b383) for what you can do, but this strikes me as a fantastic way to automatically generate good-looking videos you can slot into your documentation.
+
+There's also a new `playwright-cli show` command that brings up a dashboard where you can see all the currently running browsers, interact with them, and open DevTools to inspect what's going on.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​621 — April 23, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/621)
+
+🎥 Playwright has added a new feature I thought was neat, so I've written a bit about it at the end of this issue – check it out!\
+\_\_\
+*Peter Cooper, your editor*
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/184188/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ebnru5mx0iiqlp0qmorn.jpg)](https://nodeweekly.com/link/184189/0a4070b383)
+
+[aube: A New Node.js Package Manager](https://nodeweekly.com/link/184189/0a4070b383 "aube.en.dev") — Yes, another one! What’s noteworthy is it comes from the developer of [mise](https://nodeweekly.com/link/184190/0a4070b383), a tool that makes managing numerous languages so much easier. aube’s selling points are [raw performance](https://nodeweekly.com/link/184191/0a4070b383) and being a drop-in replacement. [Its defaults](https://nodeweekly.com/link/184192/0a4070b383) are also security-focused.
+
+Jeff Dickey
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/62f4e709.webp)](https://nodeweekly.com/link/184188/0a4070b383)
+
+[Write Better Prompts](https://nodeweekly.com/link/184188/0a4070b383 "frontendmasters.com") — Join GitHub's Sabrina Goldfarb for this detailed video course on generating higher quality code with AI. Learn practical prompting techniques that work consistently across tools and transform your project ideas into reality.
+
+Frontend Masters sponsor
+
+[Writing Node.js Addons with .NET Native AOT](https://nodeweekly.com/link/184193/0a4070b383 "devblogs.microsoft.com") — You can now write native Node addons in .NET languages like C#. *Native AOT* compiles programs to shared libraries (or executables) which can expose N-API entry points for Node to call into, much like a C/C++ extension.
+
+Drew Noakes (Microsoft)
+
+**IN BRIEF:**
+
+* 🇪🇺 [NodeConf EU](https://nodeweekly.com/link/184194/0a4070b383) is back. It's in Bologna, Italy this September 29-30. Tickets are on sale, and [here's the CFP](https://nodeweekly.com/link/184195/0a4070b383) if you want to speak.
+
+* Maël Nison, the maintainer of Yarn, is working on [a new Node feature to support *package maps*](https://nodeweekly.com/link/184196/0a4070b383) where Node can resolve packages using a static JSON file instead of walking `node_modules`.
+
+[TypeScript 7.0 Beta: A 10x Faster TypeScript Compiler](https://nodeweekly.com/link/184197/0a4070b383 "devblogs.microsoft.com") — The first beta of the Go-powered native port of TypeScript boasting *“about 10 times faster”* performance. [TypeScript 6.0](https://nodeweekly.com/link/184198/0a4070b383) remains important as a transitional release in your upgrade process, as TS 7.0 shares [6.0’s default config changes](https://nodeweekly.com/link/184199/0a4070b383) and 6.0’s deprecations are now hard errors. There are also [changes to how to write your code](https://nodeweekly.com/link/184200/0a4070b383) to take into account.
+
+Microsoft
+
+[Build Durable AI Agents That Won’t Break in Production (Webinar)](https://nodeweekly.com/link/184201/0a4070b383 "orkes.io") — Learn the open-source 4-layer stack and run durable AI agents with Agentspan across LangGraph, OpenAI, and Google SDKs.
+
+Orkes sponsor
+
+📄 [Delivering a Dynamic Hexagonal World Map in 10KB](https://nodeweekly.com/link/184202/0a4070b383) – How a developer built a hexagon-based SVG world map using a Node-based pipeline with [Turf.js](https://nodeweekly.com/link/184203/0a4070b383) to simplify GeoJSON. Ben Schwarz
+
+📄 [Features Everyone Should Steal From `npmx`](https://nodeweekly.com/link/184204/0a4070b383) – [npmx](https://nodeweekly.com/link/184205/0a4070b383) is a fantastic way to browse the npm package registry. Andrew Nesbitt
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/efwmqi5yf7qstwu2evdl.jpg)](https://nodeweekly.com/link/184206/0a4070b383)
+
+[Optique 1.0: Type-Safe Combinatorial CLI Parser](https://nodeweekly.com/link/184206/0a4070b383 "optique.dev") — Build composable parsers for CLIs with type safety, type inference, and built-in shell completion support, plus config file integration and `man` page generation from the same definitions. [v1.0](https://nodeweekly.com/link/184207/0a4070b383) is the first stable release and Hong [compares it to Commander.js and explains why you'd use Optique.](https://nodeweekly.com/link/184208/0a4070b383)
+
+Hong Minhee
+
+[DocMD: Build Production-Ready Docs from Markdown](https://nodeweekly.com/link/184209/0a4070b383 "docmd.io") — A Node-powered zero-config documentation site generator with a focus on producing lean, fast output ([its own docs](https://nodeweekly.com/link/184210/0a4070b383) are a good example). It has i18n and versioning built-in and, as of this week, [a `deploy` command](https://nodeweekly.com/link/184211/0a4070b383) to produce ready-to-deploy files for Docker, Nginx, and Caddy.
+
+docmd
+
+[rocksdb-js: New RocksDB Bindings for Node](https://nodeweekly.com/link/184212/0a4070b383 "www.harper.fast") — It’s been messy using Facebook’s [RocksDB](https://nodeweekly.com/link/184213/0a4070b383) key-value store from Node in recent years, but finally there’s a new, modern native addon for the task. [GitHub repo.](https://nodeweekly.com/link/184214/0a4070b383)
+
+Chris Barber (Harper)
+
+[Bun v1.3.13: Smarter Testing and Less Memory Usage](https://nodeweekly.com/link/184215/0a4070b383 "bun.com") — The alternative runtime enhances `bun test` with options for test environment isolation, parallelization, and to run only those tests affected by recent changes. The runtime [uses 5% less memory](https://nodeweekly.com/link/184216/0a4070b383) and `bun install` gets faster, among other things.
+
+Jarred Sumner
+
+* [`pnpm/action-setup@v6`](https://nodeweekly.com/link/184217/0a4070b383) – The GitHub Action to install/configure pnpm adds [pnpm v11](https://nodeweekly.com/link/184218/0a4070b383) support.
+
+* [node-mssql 12.5](https://nodeweekly.com/link/184219/0a4070b383) – Microsoft SQL Server client library. You can now set per-request timeouts.
+
+* [type-flag 4.2](https://nodeweekly.com/link/184220/0a4070b383) – Strongly typed command-line arguments parser.
+
+* [MongoDB Node.js Driver v7.2.0](https://nodeweekly.com/link/184221/0a4070b383) – The official MongoDB driver.
+
+* [Mongoose 9.5](https://nodeweekly.com/link/184222/0a4070b383) – MongoDB object modeling library for Node.
+
+* [pg-boss 12.16](https://nodeweekly.com/link/184223/0a4070b383) – Postgres-backed job queue for Node apps.
+
+* [xero-node 15.0](https://nodeweekly.com/link/184224/0a4070b383) – Node SDK for [Xero](https://nodeweekly.com/link/184225/0a4070b383) accounting software.
+
+* [np 11.2](https://nodeweekly.com/link/184226/0a4070b383) – Feature-packed alternative to `npm publish`.
+
+📰 Classifieds
+
+Skip the README archaeology. Flox delivers reproducible dev environments with no system pollution. One command, zero friction. [Try it free](https://nodeweekly.com/link/184227/0a4070b383).
+
+***
+
+[Gauntlet](https://nodeweekly.com/link/184228/0a4070b383). A 10-week no-cost fellowship building the AI skills companies need. Learn to ship faster with AI. Land a $200K+ job. [Apply now](https://nodeweekly.com/link/184228/0a4070b383).
+
+***
+
+⚙️ [Build AI agents like you build APIs. Orchestrate not just LLMs — but Claude Code, Codex & full coding harnesses](https://nodeweekly.com/link/184229/0a4070b383). Open-source TypeScript SDK. [agentfield.ai](https://nodeweekly.com/link/184232/0a4070b383).
+
+🎥  Playwright's `page.screencast` API
+
+[The newest version](https://nodeweekly.com/link/184231/0a4070b383) of the popular Playwright Web testing and automation library ([v1.59.0](https://nodeweekly.com/link/184231/0a4070b383)) boasts a new `page.screencast` API to make recording videos more flexible. I took it for a spin and liked what I saw.
+
+You can now start and stop video recording in a more granular way than `recordVideo` allowed:
+
+await page.screencast.start(&lcub; path: 'video.webm' });
+// do stuff here
+await page.screencast.stop();
+
+But the real fun begins when you use its new visual annotation and custom HTML overlay features.
+
+I created a basic HTML form and a Playwright script to test out the new features and you can basically create full screencast style videos with it:
+
+![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nzdmofwqfrltr3qxvri8.jpg)
+
+![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fzxobegz35z6hfni1dfp.jpg)
+
+Here's the code for the section above:
+
+await page.screencast.showChapter('Step 4 — Interests', &lcub;
+description: 'Multiple checkboxes',
+duration: 1400,
+});
+await page.locator('#interests input\[value="testing"]').check();
+await page.locator('#interests input\[value="tooling"]').check();
+
+Read [the full release notes](https://nodeweekly.com/link/184231/0a4070b383) for what you can do, but this strikes me as a fantastic way to automatically generate good-looking videos you can slot into your documentation.
+
+There's also a new `playwright-cli show` command that brings up a dashboard where you can see all the currently running browsers, interact with them, and open DevTools to inspect what's going on.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
