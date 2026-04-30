@@ -1,0 +1,224 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: pnpm 11.0, AVA 8.0, and a Node 26 delay
+description: pnpm 11.0, AVA 8.0, and a Node 26 delay
+date: 星期四 02 下午 四月 30o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/622
+origin_site: https://nodeweekly.com/issues/622
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="pnpm 11.0, AVA 8.0, and a Node 26 delay" url="https://nodeweekly.com/issues/622" />
+
+<Detail client:only="react">
+	#​622 — April 30, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/622)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/184529/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pfbdgnfzrmsntuiya6mi.jpg)](https://nodeweekly.com/link/184530/0a4070b383)
+
+[What’s Actually New in JavaScript (And What’s Coming Next)](https://nodeweekly.com/link/184530/0a4070b383 "neciudan.dev") — If you don’t read the specs or endless posts about new language features, this is a great way to catch up. _Most_ of the features are supported in Node, like `Promise.try`, `Set` union/intersection/difference, `Array.fromAsync`, and `using`, with others soon to land, like [`Math.sumPrecise`](https://nodeweekly.com/link/184531/0a4070b383) and [`Map.getOrInsert`](https://nodeweekly.com/link/184532/0a4070b383) (in Node 26).
+
+Neciu Dan
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2257c431.png)](https://nodeweekly.com/link/184529/0a4070b383)
+
+[p99 Is 40ms. Until the Analytics Query Hits](https://nodeweekly.com/link/184529/0a4070b383 "www.tigerdata.com") — Analytics queries shouldn't blow your latency budget. A second database adds pipelines, sync lag, and drift. TimescaleDB extends Postgres for fast analytics on live data. Hypertables, 95% compression, continuous aggregates. [Start building for free](https://nodeweekly.com/link/184529/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Node 26.0 Slips to May 5: Temporal Trips Over Rosetta 2](https://nodeweekly.com/link/184533/0a4070b383 "github.com") — Node 26.0 (Current), complete with the [Temporal API](https://nodeweekly.com/link/184534/0a4070b383) enabled by default, was expected this Tuesday, but a [macOS-related problem broke the build.](https://nodeweekly.com/link/184535/0a4070b383) A [fix is in the pipeline](https://nodeweekly.com/link/184536/0a4070b383), and [26.0 RC 2](https://nodeweekly.com/link/184537/0a4070b383) was created, so you can still try 26.0 out.
+
+The Node.js Project
+
+**IN BRIEF:**
+
+*   [pnpm 11.0](https://nodeweekly.com/link/184538/0a4070b383) _(more below)_ has added [a `pack-app` command](https://nodeweekly.com/link/184539/0a4070b383) which packs an app with a CommonJS entry file into a standalone executable using Node's SEA ([Single Executable Applications](https://nodeweekly.com/link/184540/0a4070b383)) feature under the hood.
+    
+*   [Perry](https://nodeweekly.com/link/184541/0a4070b383) is an interesting cross-platform TypeScript compiler that compiles directly to native executables.
+    
+*   Earlier this year, the Node-based [Eleventy (11ty)](https://nodeweekly.com/link/184542/0a4070b383) static site generator [became _Build Awesome_](https://nodeweekly.com/link/184543/0a4070b383). They now [have a Kickstarter](https://nodeweekly.com/link/184544/0a4070b383) to build a _Pro_ edition with collaborative editing and simpler publishing.
+    
+
+🛠 Code & Tools
+
+[portless: Replace Port Numbers with Stable, Named Local URLs](https://nodeweekly.com/link/184545/0a4070b383 "github.com") — If you’d rather see something like `https://myapp.localhost` than `http://localhost:3000` this is for you. It’s built on Node, and now includes [new features for Tailscale users.](https://nodeweekly.com/link/184546/0a4070b383)
+
+Vercel Labs
+
+[Stop Guessing Where Your Next.js App Broke \[Workshop\]](https://nodeweekly.com/link/184547/0a4070b383 "sentry.io") — Trace Next.js errors back to their source across client and Node runtimes. [Free workshop, register today](https://nodeweekly.com/link/184548/0a4070b383).
+
+Sentry sponsor
+
+[pnpm 11.0 Released](https://nodeweekly.com/link/184538/0a4070b383 "pnpm.io") — A big release. The most promising feature is a new SQLite-backed package index, but it also adds native package publishing tooling, global installs are isolated, and supply-chain protection is on by default.
+
+Zoltan Kochan
+
+🍋 [Fresh 2.3: The Deno-Native Full-Stack Framework](https://nodeweekly.com/link/184549/0a4070b383 "deno.com") — Deno's full-stack web framework ([explained here](https://nodeweekly.com/link/184550/0a4070b383)) gains first-class WebSocket support, no longer ships _any_ JavaScript for pages that don’t need it, and makes using the View Transitions API a snap with a single attribute in your views.
+
+Bartek Iwańczuk (Deno)
+
+[Honker: Get Postgres `NOTIFY`/`LISTEN` Semantics in SQLite](https://nodeweekly.com/link/184551/0a4070b383 "github.com") — Brings `NOTIFY`/`LISTEN` event delivery to SQLite without a daemon. The [honker-node package](https://nodeweekly.com/link/184552/0a4070b383) brings it to Node.js and [here's how to use it.](https://nodeweekly.com/link/184553/0a4070b383)
+
+Russell Romney
+
+*   [AVA 8.0](https://nodeweekly.com/link/184554/0a4070b383) – The popular Node.js test runner is now fully ESM and includes two new test modifiers: `test.skipIf()` and `test.runIf()`.
+    
+*   [Hono Node.js Adapter 2.0](https://nodeweekly.com/link/184555/0a4070b383) – If you're a [Hono](https://nodeweekly.com/link/184556/0a4070b383) user building apps for Node, the performance wins here are a huge step forward.
+    
+*   [BWIP-JS 4.10](https://nodeweekly.com/link/184557/0a4070b383) – Pure JavaScript barcode generator for Node and browsers, supporting [over 100 barcode standards.](https://nodeweekly.com/link/184558/0a4070b383)
+    
+*   [basic-ftp 6.0](https://nodeweekly.com/link/184559/0a4070b383) – FTP client for Node.js, because you know someone's still using FTP _somewhere._
+    
+*   🎨 [icc 4.0](https://nodeweekly.com/link/184560/0a4070b383) – Parse International Color Consortium (ICC) profiles.
+    
+*   [Ora 9.4](https://nodeweekly.com/link/184561/0a4070b383) – Sindre Sorhus's _"elegant terminal spinner"_ library.
+    
+*   [Mongoose 9.6](https://nodeweekly.com/link/184562/0a4070b383) – The MongoDB object modeling library.
+    
+*   [Vine 4.4](https://nodeweekly.com/link/184563/0a4070b383) – Fast form data validation library for Node.
+    
+
+📰 Classifieds
+
+The new Clerk CLI scaffolds auth, manages config in code, and queries the Clerk API, all from your terminal: [clerk.com/cli](https://nodeweekly.com/link/184564/0a4070b383)
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ptgnu09nc5nbmyyyqtzn.jpg)](https://nodeweekly.com/link/184565/0a4070b383)
+
+*   Discontent has been brewing around GitHub's reliability in recent months. Vlad Fedorov has [posted a new update on GitHub's availability](https://nodeweekly.com/link/184565/0a4070b383) in the wake of two further incidents, including one where incorrect merge commits were created. Meanwhile, Mitchell Hashimoto has announced [the Ghostty project is leaving GitHub entirely.](https://nodeweekly.com/link/184566/0a4070b383)
+    
+*   [Ubuntu 26.04 LTS](https://nodeweekly.com/link/184567/0a4070b383) (codenamed _"Resolute Raccoon"_) has been released. As an LTS release, it will get maintenance updates through to 2031.
+    
+*   📊 If you need to render small bar, (spark)line, or pie charts in your app, [Datatype](https://nodeweekly.com/link/184568/0a4070b383) is a variable OpenType font that lets you render charts solely with plain text – no JS or images required. It's [available on Google Fonts](https://nodeweekly.com/link/184569/0a4070b383) too.
+    
+*   🤖 Cloudflare has released [a set of agent skills](https://nodeweekly.com/link/184570/0a4070b383) to help agentic development tools build on the Cloudflare platform. This has become even more relevant as [agents can now open their own Cloudflare accounts!](https://nodeweekly.com/link/184571/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​622 — April 30, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/622)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/184529/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pfbdgnfzrmsntuiya6mi.jpg)](https://nodeweekly.com/link/184530/0a4070b383)
+
+[What’s Actually New in JavaScript (And What’s Coming Next)](https://nodeweekly.com/link/184530/0a4070b383 "neciudan.dev") — If you don’t read the specs or endless posts about new language features, this is a great way to catch up. *Most* of the features are supported in Node, like `Promise.try`, `Set` union/intersection/difference, `Array.fromAsync`, and `using`, with others soon to land, like [`Math.sumPrecise`](https://nodeweekly.com/link/184531/0a4070b383) and [`Map.getOrInsert`](https://nodeweekly.com/link/184532/0a4070b383) (in Node 26).
+
+Neciu Dan
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2257c431.png)](https://nodeweekly.com/link/184529/0a4070b383)
+
+[p99 Is 40ms. Until the Analytics Query Hits](https://nodeweekly.com/link/184529/0a4070b383 "www.tigerdata.com") — Analytics queries shouldn't blow your latency budget. A second database adds pipelines, sync lag, and drift. TimescaleDB extends Postgres for fast analytics on live data. Hypertables, 95% compression, continuous aggregates. [Start building for free](https://nodeweekly.com/link/184529/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Node 26.0 Slips to May 5: Temporal Trips Over Rosetta 2](https://nodeweekly.com/link/184533/0a4070b383 "github.com") — Node 26.0 (Current), complete with the [Temporal API](https://nodeweekly.com/link/184534/0a4070b383) enabled by default, was expected this Tuesday, but a [macOS-related problem broke the build.](https://nodeweekly.com/link/184535/0a4070b383) A [fix is in the pipeline](https://nodeweekly.com/link/184536/0a4070b383), and [26.0 RC 2](https://nodeweekly.com/link/184537/0a4070b383) was created, so you can still try 26.0 out.
+
+The Node.js Project
+
+**IN BRIEF:**
+
+* [pnpm 11.0](https://nodeweekly.com/link/184538/0a4070b383) *(more below)* has added [a `pack-app` command](https://nodeweekly.com/link/184539/0a4070b383) which packs an app with a CommonJS entry file into a standalone executable using Node's SEA ([Single Executable Applications](https://nodeweekly.com/link/184540/0a4070b383)) feature under the hood.
+
+* [Perry](https://nodeweekly.com/link/184541/0a4070b383) is an interesting cross-platform TypeScript compiler that compiles directly to native executables.
+
+* Earlier this year, the Node-based [Eleventy (11ty)](https://nodeweekly.com/link/184542/0a4070b383) static site generator [became *Build Awesome*](https://nodeweekly.com/link/184543/0a4070b383). They now [have a Kickstarter](https://nodeweekly.com/link/184544/0a4070b383) to build a *Pro* edition with collaborative editing and simpler publishing.
+
+🛠 Code & Tools
+
+[portless: Replace Port Numbers with Stable, Named Local URLs](https://nodeweekly.com/link/184545/0a4070b383 "github.com") — If you’d rather see something like `https://myapp.localhost` than `http://localhost:3000` this is for you. It’s built on Node, and now includes [new features for Tailscale users.](https://nodeweekly.com/link/184546/0a4070b383)
+
+Vercel Labs
+
+[Stop Guessing Where Your Next.js App Broke \[Workshop\]](https://nodeweekly.com/link/184547/0a4070b383 "sentry.io") — Trace Next.js errors back to their source across client and Node runtimes. [Free workshop, register today](https://nodeweekly.com/link/184548/0a4070b383).
+
+Sentry sponsor
+
+[pnpm 11.0 Released](https://nodeweekly.com/link/184538/0a4070b383 "pnpm.io") — A big release. The most promising feature is a new SQLite-backed package index, but it also adds native package publishing tooling, global installs are isolated, and supply-chain protection is on by default.
+
+Zoltan Kochan
+
+🍋 [Fresh 2.3: The Deno-Native Full-Stack Framework](https://nodeweekly.com/link/184549/0a4070b383 "deno.com") — Deno's full-stack web framework ([explained here](https://nodeweekly.com/link/184550/0a4070b383)) gains first-class WebSocket support, no longer ships *any* JavaScript for pages that don’t need it, and makes using the View Transitions API a snap with a single attribute in your views.
+
+Bartek Iwańczuk (Deno)
+
+[Honker: Get Postgres `NOTIFY`/`LISTEN` Semantics in SQLite](https://nodeweekly.com/link/184551/0a4070b383 "github.com") — Brings `NOTIFY`/`LISTEN` event delivery to SQLite without a daemon. The [honker-node package](https://nodeweekly.com/link/184552/0a4070b383) brings it to Node.js and [here's how to use it.](https://nodeweekly.com/link/184553/0a4070b383)
+
+Russell Romney
+
+* [AVA 8.0](https://nodeweekly.com/link/184554/0a4070b383) – The popular Node.js test runner is now fully ESM and includes two new test modifiers: `test.skipIf()` and `test.runIf()`.
+
+* [Hono Node.js Adapter 2.0](https://nodeweekly.com/link/184555/0a4070b383) – If you're a [Hono](https://nodeweekly.com/link/184556/0a4070b383) user building apps for Node, the performance wins here are a huge step forward.
+
+* [BWIP-JS 4.10](https://nodeweekly.com/link/184557/0a4070b383) – Pure JavaScript barcode generator for Node and browsers, supporting [over 100 barcode standards.](https://nodeweekly.com/link/184558/0a4070b383)
+
+* [basic-ftp 6.0](https://nodeweekly.com/link/184559/0a4070b383) – FTP client for Node.js, because you know someone's still using FTP *somewhere.*
+
+* 🎨 [icc 4.0](https://nodeweekly.com/link/184560/0a4070b383) – Parse International Color Consortium (ICC) profiles.
+
+* [Ora 9.4](https://nodeweekly.com/link/184561/0a4070b383) – Sindre Sorhus's *"elegant terminal spinner"* library.
+
+* [Mongoose 9.6](https://nodeweekly.com/link/184562/0a4070b383) – The MongoDB object modeling library.
+
+* [Vine 4.4](https://nodeweekly.com/link/184563/0a4070b383) – Fast form data validation library for Node.
+
+📰 Classifieds
+
+The new Clerk CLI scaffolds auth, manages config in code, and queries the Clerk API, all from your terminal: [clerk.com/cli](https://nodeweekly.com/link/184564/0a4070b383)
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ptgnu09nc5nbmyyyqtzn.jpg)](https://nodeweekly.com/link/184565/0a4070b383)
+
+* Discontent has been brewing around GitHub's reliability in recent months. Vlad Fedorov has [posted a new update on GitHub's availability](https://nodeweekly.com/link/184565/0a4070b383) in the wake of two further incidents, including one where incorrect merge commits were created. Meanwhile, Mitchell Hashimoto has announced [the Ghostty project is leaving GitHub entirely.](https://nodeweekly.com/link/184566/0a4070b383)
+
+* [Ubuntu 26.04 LTS](https://nodeweekly.com/link/184567/0a4070b383) (codenamed *"Resolute Raccoon"*) has been released. As an LTS release, it will get maintenance updates through to 2031.
+
+* 📊 If you need to render small bar, (spark)line, or pie charts in your app, [Datatype](https://nodeweekly.com/link/184568/0a4070b383) is a variable OpenType font that lets you render charts solely with plain text – no JS or images required. It's [available on Google Fonts](https://nodeweekly.com/link/184569/0a4070b383) too.
+
+* 🤖 Cloudflare has released [a set of agent skills](https://nodeweekly.com/link/184570/0a4070b383) to help agentic development tools build on the Cloudflare platform. This has become even more relevant as [agents can now open their own Cloudflare accounts!](https://nodeweekly.com/link/184571/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
