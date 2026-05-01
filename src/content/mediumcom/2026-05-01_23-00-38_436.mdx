@@ -1,0 +1,825 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: We Rewrote Our API in Rust for 20% Better Performance. It Cost Us $180K. | Aditya Suryawanshi in Level Up Coding
+description: We Rewrote Our API in Rust for 20% Better Performance. It Cost Us $180K. | Aditya Suryawanshi in Level Up Coding
+date: 星期五 11 晚上 五月 1o 2026
+author: mediumcom
+origin_url: https://medium.com/
+origin_site: https://medium.com/
+translated: true
+avatar: /media-source/mediumcom-ico.png
+email_recorder: noreply@medium.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="We Rewrote Our API in Rust for 20% Better Performance. It Cost Us $180K. | Aditya Suryawanshi in Level Up Coding" url="https://medium.com/" />
+
+<Detail client:only="react">
+	Today's highlights
+
+[![Aditya Suryawanshi](https://miro.medium.com/fit/c/40/40/0*M6ILk_9-qQeng88C)](https://medium.com/@suryawanshiaditya159?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-52d37711ffb3----0-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Aditya Suryawanshi](https://medium.com/@suryawanshiaditya159?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-52d37711ffb3----0-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-52d37711ffb3----0-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![We Rewrote Our API in Rust for 20% Better Performance. It Cost Us $180K.](https://miro.medium.com/fit/c/320/214/0*Y9dAP1-pOLoYZflE)](https://medium.com/@suryawanshiaditya159/we-rewrote-our-api-in-rust-for-20-better-performance-it-cost-us-180k-52d37711ffb3?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-52d37711ffb3----0-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[
+
+## We Rewrote Our API in Rust for 20% Better Performance. It Cost Us $180K.
+
+### A real production experiment comparing Rust, Go, and…
+
+
+
+](https://medium.com/@suryawanshiaditya159/we-rewrote-our-api-in-rust-for-20-better-performance-it-cost-us-180k-52d37711ffb3?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-52d37711ffb3----0-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+228
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+18
+
+[![Theresa-Marie Rhyne](https://miro.medium.com/fit/c/40/40/0*7LiJPfxd3gmgiIAE.jpg)](https://medium.com/@theresamarierhyne?source=email-2b8b8ee19057-1777658613442-digest.reader-138adf9c44c-5416cbd3ef10----1-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Theresa-Marie Rhyne](https://medium.com/@theresamarierhyne?source=email-2b8b8ee19057-1777658613442-digest.reader-138adf9c44c-5416cbd3ef10----1-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[UX Collective](https://medium.com/user-experience-design-1?source=email-2b8b8ee19057-1777658613442-digest.reader-138adf9c44c-5416cbd3ef10----1-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![A GenAI perplexed by color theory](https://miro.medium.com/fit/c/320/214/1*AtXaI85VlaJttF6KBveZnw.png)](https://medium.com/@theresamarierhyne/a-genai-perplexed-by-color-theory-5416cbd3ef10?source=email-2b8b8ee19057-1777658613442-digest.reader-138adf9c44c-5416cbd3ef10----1-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[
+
+## A GenAI perplexed by color theory
+
+### Using Perplexity to build an accessible perceptual…
+
+
+
+](https://medium.com/@theresamarierhyne/a-genai-perplexed-by-color-theory-5416cbd3ef10?source=email-2b8b8ee19057-1777658613442-digest.reader-138adf9c44c-5416cbd3ef10----1-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+16 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+58
+
+[![Daniel Parris](https://miro.medium.com/fit/c/40/40/1*fyWPNUeXe09dyA3c8iO30Q.jpeg)](https://medium.com/@stat_significant?source=email-2b8b8ee19057-1777658613442-digest.reader-c7435de990ae-2c73918c769f----2-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Daniel Parris](https://medium.com/@stat_significant?source=email-2b8b8ee19057-1777658613442-digest.reader-c7435de990ae-2c73918c769f----2-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Fanfare](https://medium.com/fan-fare?source=email-2b8b8ee19057-1777658613442-digest.reader-c7435de990ae-2c73918c769f----2-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![Streaming’s Biggest TV Show is for 5-Year-Olds](https://miro.medium.com/fit/c/320/214/0*oflcYfsFXAkLvDtc.jpeg)](https://medium.com/@stat_significant/streamings-biggest-tv-show-is-for-5-year-olds-2c73918c769f?source=email-2b8b8ee19057-1777658613442-digest.reader-c7435de990ae-2c73918c769f----2-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[
+
+## Streaming’s Biggest TV Show is for 5-Year-Olds
+
+### How a kid’s cartoon came to dominate streaming, and…
+
+
+
+](https://medium.com/@stat_significant/streamings-biggest-tv-show-is-for-5-year-olds-2c73918c769f?source=email-2b8b8ee19057-1777658613442-digest.reader-c7435de990ae-2c73918c769f----2-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+40
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Divy Yadav](https://miro.medium.com/fit/c/40/40/1*Sh8e9jzCC5a04Faiur6Fzg.png)](https://medium.com/@yadavdivy296?source=email-2b8b8ee19057-1777658613442-digest.reader-98111c9905da-f3524ee68b9c----3-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Divy Yadav](https://medium.com/@yadavdivy296?source=email-2b8b8ee19057-1777658613442-digest.reader-98111c9905da-f3524ee68b9c----3-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Towards AI](https://medium.com/towards-artificial-intelligence?source=email-2b8b8ee19057-1777658613442-digest.reader-98111c9905da-f3524ee68b9c----3-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![9 RAG Architectures Every AI Developer Must Know: A Complete Guide with Examples](https://miro.medium.com/fit/c/320/214/1*QvmjR4YHw0NjVTDO0QfNoA.png)](https://medium.com/@yadavdivy296/rag-architectures-every-ai-developer-must-know-a-complete-guide-f3524ee68b9c?source=email-2b8b8ee19057-1777658613442-digest.reader-98111c9905da-f3524ee68b9c----3-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[
+
+## 9 RAG Architectures Every AI Developer Must Know: A Complete Guide with…
+
+### Architectures beyond Naive Rag to build reliable…
+
+
+
+](https://medium.com/@yadavdivy296/rag-architectures-every-ai-developer-must-know-a-complete-guide-f3524ee68b9c?source=email-2b8b8ee19057-1777658613442-digest.reader-98111c9905da-f3524ee68b9c----3-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+2.7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+59
+
+[![Pragnesh Palsana (APP DEVELOPER)](https://miro.medium.com/fit/c/40/40/1*2_V4WQiLSVWIgpF07LrGKQ.webp)](https://medium.com/@notesapp555?source=email-2b8b8ee19057-1777658613442-digest.reader-ea4a4972c116-b6fee30b0c5d----4-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Pragnesh Palsana (APP DEVELOPER)](https://medium.com/@notesapp555?source=email-2b8b8ee19057-1777658613442-digest.reader-ea4a4972c116-b6fee30b0c5d----4-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Easy Flutter](https://medium.com/easy-flutter?source=email-2b8b8ee19057-1777658613442-digest.reader-ea4a4972c116-b6fee30b0c5d----4-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![I gave Claude AI my codebase for 30 days — honest review from a solo dev](https://miro.medium.com/fit/c/320/214/1*sMznQL1ND_7IwbG3ULBBvA.png)](https://medium.com/@notesapp555/i-gave-claude-ai-my-codebase-for-30-days-honest-review-from-a-solo-dev-b6fee30b0c5d?source=email-2b8b8ee19057-1777658613442-digest.reader-ea4a4972c116-b6fee30b0c5d----4-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[
+
+## I gave Claude AI my codebase for 30 days — honest review from a solo dev
+
+### No sponsor. No hype. Just one developer, one AI, and…
+
+
+
+](https://medium.com/@notesapp555/i-gave-claude-ai-my-codebase-for-30-days-honest-review-from-a-solo-dev-b6fee30b0c5d?source=email-2b8b8ee19057-1777658613442-digest.reader-ea4a4972c116-b6fee30b0c5d----4-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+485
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+24
+
+[![Aditya Darekar](https://miro.medium.com/fit/c/40/40/1*M0oB4MMTnaAwOVJMAscUmg.png)](https://medium.com/@adityadarekar?source=email-2b8b8ee19057-1777658613442-digest.reader-d1f54550947b-2bd3cdd42269----5-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Aditya Darekar](https://medium.com/@adityadarekar?source=email-2b8b8ee19057-1777658613442-digest.reader-d1f54550947b-2bd3cdd42269----5-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Mac O’Clock](https://medium.com/macoclock?source=email-2b8b8ee19057-1777658613442-digest.reader-d1f54550947b-2bd3cdd42269----5-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![Is the MacBook Neo Good for Students? My Two Week University Experience](https://miro.medium.com/fit/c/320/214/1*2CWRdSIr2vAdKELTlqRDSw.png)](https://medium.com/@adityadarekar/is-the-macbook-neo-good-for-students-my-two-week-university-experience-2bd3cdd42269?source=email-2b8b8ee19057-1777658613442-digest.reader-d1f54550947b-2bd3cdd42269----5-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[
+
+## Is the MacBook Neo Good for Students? My Two Week University Experience
+
+### Can a $599 Mac handle postgrad life? I tested the…
+
+
+
+](https://medium.com/@adityadarekar/is-the-macbook-neo-good-for-students-my-two-week-university-experience-2bd3cdd42269?source=email-2b8b8ee19057-1777658613442-digest.reader-d1f54550947b-2bd3cdd42269----5-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+15 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+524
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+13
+
+[![Cyan](https://miro.medium.com/fit/c/40/40/0*9cbZbkfTH3ZJBLhf)](https://medium.com/@cyangineer?source=email-2b8b8ee19057-1777658613442-digest.reader--847aa5e811f2----6-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Cyan](https://medium.com/@cyangineer?source=email-2b8b8ee19057-1777658613442-digest.reader--847aa5e811f2----6-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![The Blank Screen Blues: Why Coming Up With Game Ideas Feels Impossible](https://miro.medium.com/fit/c/320/214/0*CJ-lUE2JItQ2theS)](https://medium.com/@cyangineer/the-blank-screen-blues-why-coming-up-with-game-ideas-feels-impossible-847aa5e811f2?source=email-2b8b8ee19057-1777658613442-digest.reader--847aa5e811f2----6-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[
+
+## The Blank Screen Blues: Why Coming Up With Game Ideas Feels Impossible
+
+### (And How Retro Games Can Save You)
+
+
+
+](https://medium.com/@cyangineer/the-blank-screen-blues-why-coming-up-with-game-ideas-feels-impossible-847aa5e811f2?source=email-2b8b8ee19057-1777658613442-digest.reader--847aa5e811f2----6-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+229
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+5
+
+[![Francesco Pace](https://miro.medium.com/fit/c/40/40/1*5RnXmzy0hU9N2iuqMU_6Lg.png)](https://medium.com/@francesco.pace?source=email-2b8b8ee19057-1777658613442-digest.reader--61a631a9b4ec----7-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Francesco Pace](https://medium.com/@francesco.pace?source=email-2b8b8ee19057-1777658613442-digest.reader--61a631a9b4ec----7-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![How I Turned My Wi-Fi Into a Motion Sensor…](https://miro.medium.com/fit/c/320/214/1*_BWnNV7hToAzcftuRIIZpA.jpeg)](https://medium.com/@francesco.pace/how-i-turned-my-wi-fi-into-a-motion-sensor-61a631a9b4ec?source=email-2b8b8ee19057-1777658613442-digest.reader--61a631a9b4ec----7-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[
+
+## How I Turned My Wi-Fi Into a Motion Sensor…
+
+### … using only the waves emitted by my router and a bit…
+
+
+
+](https://medium.com/@francesco.pace/how-i-turned-my-wi-fi-into-a-motion-sensor-61a631a9b4ec?source=email-2b8b8ee19057-1777658613442-digest.reader--61a631a9b4ec----7-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+9 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+6
+
+[![Dr. Ashish Bamania](https://miro.medium.com/fit/c/40/40/1*5R3sTJ1KZkaD9s6XmBNsQA@2x.jpeg)](https://medium.com/@bamania-ashish?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-79087514dba1----8-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Dr. Ashish Bamania](https://medium.com/@bamania-ashish?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-79087514dba1----8-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-79087514dba1----8-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![21 Reinforcement Learning (RL) Concepts Explained In Plain English](https://miro.medium.com/fit/c/320/214/0*7z1Bx02JVehrEIqp)](https://medium.com/@bamania-ashish/21-reinforcement-learning-rl-concepts-explained-in-plain-english-79087514dba1?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-79087514dba1----8-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[
+
+## 21 Reinforcement Learning (RL) Concepts Explained In Plain English
+
+### Skip the complex mathematics and finally understand RL…
+
+
+
+](https://medium.com/@bamania-ashish/21-reinforcement-learning-rl-concepts-explained-in-plain-english-79087514dba1?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-79087514dba1----8-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+19 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+757
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+4
+
+[![Shaw Talebi](https://miro.medium.com/fit/c/40/40/1*2i-FyltZx2WNoNUv9g7kDw@2x.jpeg)](https://medium.com/@shawhin?source=email-2b8b8ee19057-1777658613442-digest.reader-a47c2ab4d9da-9b2514625762----9-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Shaw Talebi](https://medium.com/@shawhin?source=email-2b8b8ee19057-1777658613442-digest.reader-a47c2ab4d9da-9b2514625762----9-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[The Data Entrepreneurs](https://medium.com/the-data-entrepreneurs?source=email-2b8b8ee19057-1777658613442-digest.reader-a47c2ab4d9da-9b2514625762----9-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![How to Monetize Your AI Skills (outside of your 9–5 job)](https://miro.medium.com/fit/c/320/214/0*QC0ZV15RZFDYiGbG)](https://medium.com/@shawhin/how-to-monetize-your-ai-skills-outside-of-your-9-5-job-9b2514625762?source=email-2b8b8ee19057-1777658613442-digest.reader-a47c2ab4d9da-9b2514625762----9-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[
+
+## How to Monetize Your AI Skills (outside of your 9–5 job)
+
+### 5 technical side-hustles you can start this weekend
+
+
+
+](https://medium.com/@shawhin/how-to-monetize-your-ai-skills-outside-of-your-9-5-job-9b2514625762?source=email-2b8b8ee19057-1777658613442-digest.reader-a47c2ab4d9da-9b2514625762----9-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+82
+
+[![Pawan Kumawat](https://miro.medium.com/fit/c/40/40/1*3woDpE0sYiFp2eKyX8s1ew.jpeg)](https://medium.com/@pawan-kumawat?source=email-2b8b8ee19057-1777658613442-digest.reader--79fe1437e210----10-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Pawan Kumawat](https://medium.com/@pawan-kumawat?source=email-2b8b8ee19057-1777658613442-digest.reader--79fe1437e210----10-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![Angular 22: The 3‑Minute Prerelease Briefing](https://miro.medium.com/fit/c/320/214/1*vGlEODhMU9vk-4FpUOoZJQ.png)](https://medium.com/@pawan-kumawat/angular-22-the-3-minute-prerelease-briefing-79fe1437e210?source=email-2b8b8ee19057-1777658613442-digest.reader--79fe1437e210----10-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[
+
+## Angular 22: The 3‑Minute Prerelease Briefing
+
+### Angular 22 is still v22.0.0-next.\* — verify against…
+
+
+
+](https://medium.com/@pawan-kumawat/angular-22-the-3-minute-prerelease-briefing-79fe1437e210?source=email-2b8b8ee19057-1777658613442-digest.reader--79fe1437e210----10-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+2 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+225
+
+[![Rhett Allain](https://miro.medium.com/fit/c/40/40/1*-A5PgdQ7cAuT-L04J4e3YQ.jpeg)](https://medium.com/@rjallain?source=email-2b8b8ee19057-1777658613442-digest.reader--8af3d44a2850----11-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Rhett Allain](https://medium.com/@rjallain?source=email-2b8b8ee19057-1777658613442-digest.reader--8af3d44a2850----11-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![Modeling Artemis II with Physics and Python](https://miro.medium.com/fit/c/320/214/1*tEBBV96BTTdiiG3X3MrJqA.png)](https://medium.com/@rjallain/modeling-artemis-ii-with-physics-and-python-8af3d44a2850?source=email-2b8b8ee19057-1777658613442-digest.reader--8af3d44a2850----11-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[
+
+## Modeling Artemis II with Physics and Python
+
+### I think it’s kind of a big deal. Humans going back to…
+
+
+
+](https://medium.com/@rjallain/modeling-artemis-ii-with-physics-and-python-8af3d44a2850?source=email-2b8b8ee19057-1777658613442-digest.reader--8af3d44a2850----11-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+237
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+8
+
+[![Emilina Lomas](https://miro.medium.com/fit/c/40/40/1*VR-KZSkafM2Akwa4P5xtWA@2x.jpeg)](https://medium.com/@emilinalomas?source=email-2b8b8ee19057-1777658613442-digest.reader-b5717b16a765-7c22bbde9903----12-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Emilina Lomas](https://medium.com/@emilinalomas?source=email-2b8b8ee19057-1777658613442-digest.reader-b5717b16a765-7c22bbde9903----12-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Mind Cafe](https://medium.com/mind-cafe?source=email-2b8b8ee19057-1777658613442-digest.reader-b5717b16a765-7c22bbde9903----12-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![10 Daily Habits That Help You Age in Reverse — Backed by Science](https://miro.medium.com/fit/c/320/214/0*Kx0HKXdSGN3PqXei.jpeg)](https://medium.com/@emilinalomas/10-daily-habits-that-help-you-age-in-reverse-backed-by-science-7c22bbde9903?source=email-2b8b8ee19057-1777658613442-digest.reader-b5717b16a765-7c22bbde9903----12-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[
+
+## 10 Daily Habits That Help You Age in Reverse — Backed by Science
+
+### A longevity-obsessed writer’s guide to eating…
+
+
+
+](https://medium.com/@emilinalomas/10-daily-habits-that-help-you-age-in-reverse-backed-by-science-7c22bbde9903?source=email-2b8b8ee19057-1777658613442-digest.reader-b5717b16a765-7c22bbde9903----12-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+3.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+87
+
+[![Han HELOIR YAN, Ph.D. ☕️](https://miro.medium.com/fit/c/40/40/1*QKpZJpnggjxenDvymZOQ_g@2x.jpeg)](https://medium.com/@han.heloir?source=email-2b8b8ee19057-1777658613442-digest.reader-8993e01dcfd3-1173470ab622----13-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Han HELOIR YAN, Ph.D. ☕️](https://medium.com/@han.heloir?source=email-2b8b8ee19057-1777658613442-digest.reader-8993e01dcfd3-1173470ab622----13-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Data Science Collective](https://medium.com/data-science-collective?source=email-2b8b8ee19057-1777658613442-digest.reader-8993e01dcfd3-1173470ab622----13-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![Everyone Analyzed Claude Code’s Features. Nobody Analyzed Its Architecture.](https://miro.medium.com/fit/c/320/214/0*fJwyKc8hc5l9vm0D)](https://medium.com/@han.heloir/everyone-analyzed-claude-codes-features-nobody-analyzed-its-architecture-1173470ab622?source=email-2b8b8ee19057-1777658613442-digest.reader-8993e01dcfd3-1173470ab622----13-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[
+
+## Everyone Analyzed Claude Code’s Features. Nobody Analyzed Its Architecture.
+
+### Five hundred thousand lines of leaked source code…
+
+
+
+](https://medium.com/@han.heloir/everyone-analyzed-claude-codes-features-nobody-analyzed-its-architecture-1173470ab622?source=email-2b8b8ee19057-1777658613442-digest.reader-8993e01dcfd3-1173470ab622----13-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+5.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+18
+
+[![Tanmay Bansal](https://miro.medium.com/fit/c/40/40/0*SroILly4wl60FexY)](https://medium.com/@tanmay.bansal20?source=email-2b8b8ee19057-1777658613442-digest.reader-78d064101951-fb7fbb9a2e08----14-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Tanmay Bansal](https://medium.com/@tanmay.bansal20?source=email-2b8b8ee19057-1777658613442-digest.reader-78d064101951-fb7fbb9a2e08----14-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Artificial Intelligence in Plain English](https://medium.com/ai-in-plain-english?source=email-2b8b8ee19057-1777658613442-digest.reader-78d064101951-fb7fbb9a2e08----14-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![Everyone Is “Learning AI”, But Nobody Really Understands This One Thing.](https://miro.medium.com/fit/c/320/214/1*yyWRG8L6l3kbDM32fvhBZA.png)](https://medium.com/@tanmay.bansal20/everyone-is-learning-ai-but-nobody-really-understands-this-one-thing-fb7fbb9a2e08?source=email-2b8b8ee19057-1777658613442-digest.reader-78d064101951-fb7fbb9a2e08----14-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[
+
+## Everyone Is “Learning AI”, But Nobody Really Understands This One Thing.
+
+### Prompting teaches you the interface. AI literacy means…
+
+
+
+](https://medium.com/@tanmay.bansal20/everyone-is-learning-ai-but-nobody-really-understands-this-one-thing-fb7fbb9a2e08?source=email-2b8b8ee19057-1777658613442-digest.reader-78d064101951-fb7fbb9a2e08----14-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.6K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+63
+
+[![Download the Medium app](https://miro.medium.com/max/1360/58dbc9043bb7d1ca1cc3a9bda27b9b94f96c34a37d6e1cb5b47ba882e5cde883)](https://medium.com/download-app?source=email-2b8b8ee19057-1777658613442-digest.reader-------------------------071522af_0e3d_4fe0_8945_cec403b85cbe)
+
+
+</Detail>
+
+Today's highlights
+
+[![Aditya Suryawanshi](https://miro.medium.com/fit/c/40/40/0*M6ILk_9-qQeng88C)](https://medium.com/@suryawanshiaditya159?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-52d37711ffb3----0-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Aditya Suryawanshi](https://medium.com/@suryawanshiaditya159?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-52d37711ffb3----0-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-52d37711ffb3----0-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![We Rewrote Our API in Rust for 20% Better Performance. It Cost Us $180K.](https://miro.medium.com/fit/c/320/214/0*Y9dAP1-pOLoYZflE)](https://medium.com/@suryawanshiaditya159/we-rewrote-our-api-in-rust-for-20-better-performance-it-cost-us-180k-52d37711ffb3?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-52d37711ffb3----0-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+\[
+
+## We Rewrote Our API in Rust for 20% Better Performance. It Cost Us $180K.
+
+### A real production experiment comparing Rust, Go, and…
+
+]\(https://medium.com/@suryawanshiaditya159/we-rewrote-our-api-in-rust-for-20-better-performance-it-cost-us-180k-52d37711ffb3?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-52d37711ffb3----0-109------------------071522af\_0e3d\_4fe0\_8945\_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+228
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+18
+
+[![Theresa-Marie Rhyne](https://miro.medium.com/fit/c/40/40/0*7LiJPfxd3gmgiIAE.jpg)](https://medium.com/@theresamarierhyne?source=email-2b8b8ee19057-1777658613442-digest.reader-138adf9c44c-5416cbd3ef10----1-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Theresa-Marie Rhyne](https://medium.com/@theresamarierhyne?source=email-2b8b8ee19057-1777658613442-digest.reader-138adf9c44c-5416cbd3ef10----1-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[UX Collective](https://medium.com/user-experience-design-1?source=email-2b8b8ee19057-1777658613442-digest.reader-138adf9c44c-5416cbd3ef10----1-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![A GenAI perplexed by color theory](https://miro.medium.com/fit/c/320/214/1*AtXaI85VlaJttF6KBveZnw.png)](https://medium.com/@theresamarierhyne/a-genai-perplexed-by-color-theory-5416cbd3ef10?source=email-2b8b8ee19057-1777658613442-digest.reader-138adf9c44c-5416cbd3ef10----1-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+\[
+
+## A GenAI perplexed by color theory
+
+### Using Perplexity to build an accessible perceptual…
+
+]\(https://medium.com/@theresamarierhyne/a-genai-perplexed-by-color-theory-5416cbd3ef10?source=email-2b8b8ee19057-1777658613442-digest.reader-138adf9c44c-5416cbd3ef10----1-108------------------071522af\_0e3d\_4fe0\_8945\_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+16 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+58
+
+[![Daniel Parris](https://miro.medium.com/fit/c/40/40/1*fyWPNUeXe09dyA3c8iO30Q.jpeg)](https://medium.com/@stat_significant?source=email-2b8b8ee19057-1777658613442-digest.reader-c7435de990ae-2c73918c769f----2-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Daniel Parris](https://medium.com/@stat_significant?source=email-2b8b8ee19057-1777658613442-digest.reader-c7435de990ae-2c73918c769f----2-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Fanfare](https://medium.com/fan-fare?source=email-2b8b8ee19057-1777658613442-digest.reader-c7435de990ae-2c73918c769f----2-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![Streaming’s Biggest TV Show is for 5-Year-Olds](https://miro.medium.com/fit/c/320/214/0*oflcYfsFXAkLvDtc.jpeg)](https://medium.com/@stat_significant/streamings-biggest-tv-show-is-for-5-year-olds-2c73918c769f?source=email-2b8b8ee19057-1777658613442-digest.reader-c7435de990ae-2c73918c769f----2-108------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+\[
+
+## Streaming’s Biggest TV Show is for 5-Year-Olds
+
+### How a kid’s cartoon came to dominate streaming, and…
+
+]\(https://medium.com/@stat\_significant/streamings-biggest-tv-show-is-for-5-year-olds-2c73918c769f?source=email-2b8b8ee19057-1777658613442-digest.reader-c7435de990ae-2c73918c769f----2-108------------------071522af\_0e3d\_4fe0\_8945\_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+40
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Divy Yadav](https://miro.medium.com/fit/c/40/40/1*Sh8e9jzCC5a04Faiur6Fzg.png)](https://medium.com/@yadavdivy296?source=email-2b8b8ee19057-1777658613442-digest.reader-98111c9905da-f3524ee68b9c----3-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Divy Yadav](https://medium.com/@yadavdivy296?source=email-2b8b8ee19057-1777658613442-digest.reader-98111c9905da-f3524ee68b9c----3-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Towards AI](https://medium.com/towards-artificial-intelligence?source=email-2b8b8ee19057-1777658613442-digest.reader-98111c9905da-f3524ee68b9c----3-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![9 RAG Architectures Every AI Developer Must Know: A Complete Guide with Examples](https://miro.medium.com/fit/c/320/214/1*QvmjR4YHw0NjVTDO0QfNoA.png)](https://medium.com/@yadavdivy296/rag-architectures-every-ai-developer-must-know-a-complete-guide-f3524ee68b9c?source=email-2b8b8ee19057-1777658613442-digest.reader-98111c9905da-f3524ee68b9c----3-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+\[
+
+## 9 RAG Architectures Every AI Developer Must Know: A Complete Guide with…
+
+### Architectures beyond Naive Rag to build reliable…
+
+]\(https://medium.com/@yadavdivy296/rag-architectures-every-ai-developer-must-know-a-complete-guide-f3524ee68b9c?source=email-2b8b8ee19057-1777658613442-digest.reader-98111c9905da-f3524ee68b9c----3-73------------------071522af\_0e3d\_4fe0\_8945\_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+2.7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+59
+
+[![Pragnesh Palsana (APP DEVELOPER)](https://miro.medium.com/fit/c/40/40/1*2_V4WQiLSVWIgpF07LrGKQ.webp)](https://medium.com/@notesapp555?source=email-2b8b8ee19057-1777658613442-digest.reader-ea4a4972c116-b6fee30b0c5d----4-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Pragnesh Palsana (APP DEVELOPER)](https://medium.com/@notesapp555?source=email-2b8b8ee19057-1777658613442-digest.reader-ea4a4972c116-b6fee30b0c5d----4-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Easy Flutter](https://medium.com/easy-flutter?source=email-2b8b8ee19057-1777658613442-digest.reader-ea4a4972c116-b6fee30b0c5d----4-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![I gave Claude AI my codebase for 30 days — honest review from a solo dev](https://miro.medium.com/fit/c/320/214/1*sMznQL1ND_7IwbG3ULBBvA.png)](https://medium.com/@notesapp555/i-gave-claude-ai-my-codebase-for-30-days-honest-review-from-a-solo-dev-b6fee30b0c5d?source=email-2b8b8ee19057-1777658613442-digest.reader-ea4a4972c116-b6fee30b0c5d----4-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+\[
+
+## I gave Claude AI my codebase for 30 days — honest review from a solo dev
+
+### No sponsor. No hype. Just one developer, one AI, and…
+
+]\(https://medium.com/@notesapp555/i-gave-claude-ai-my-codebase-for-30-days-honest-review-from-a-solo-dev-b6fee30b0c5d?source=email-2b8b8ee19057-1777658613442-digest.reader-ea4a4972c116-b6fee30b0c5d----4-99------------------071522af\_0e3d\_4fe0\_8945\_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+485
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+24
+
+[![Aditya Darekar](https://miro.medium.com/fit/c/40/40/1*M0oB4MMTnaAwOVJMAscUmg.png)](https://medium.com/@adityadarekar?source=email-2b8b8ee19057-1777658613442-digest.reader-d1f54550947b-2bd3cdd42269----5-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Aditya Darekar](https://medium.com/@adityadarekar?source=email-2b8b8ee19057-1777658613442-digest.reader-d1f54550947b-2bd3cdd42269----5-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Mac O’Clock](https://medium.com/macoclock?source=email-2b8b8ee19057-1777658613442-digest.reader-d1f54550947b-2bd3cdd42269----5-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![Is the MacBook Neo Good for Students? My Two Week University Experience](https://miro.medium.com/fit/c/320/214/1*2CWRdSIr2vAdKELTlqRDSw.png)](https://medium.com/@adityadarekar/is-the-macbook-neo-good-for-students-my-two-week-university-experience-2bd3cdd42269?source=email-2b8b8ee19057-1777658613442-digest.reader-d1f54550947b-2bd3cdd42269----5-109------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+\[
+
+## Is the MacBook Neo Good for Students? My Two Week University Experience
+
+### Can a $599 Mac handle postgrad life? I tested the…
+
+]\(https://medium.com/@adityadarekar/is-the-macbook-neo-good-for-students-my-two-week-university-experience-2bd3cdd42269?source=email-2b8b8ee19057-1777658613442-digest.reader-d1f54550947b-2bd3cdd42269----5-109------------------071522af\_0e3d\_4fe0\_8945\_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+15 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+524
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+13
+
+[![Cyan](https://miro.medium.com/fit/c/40/40/0*9cbZbkfTH3ZJBLhf)](https://medium.com/@cyangineer?source=email-2b8b8ee19057-1777658613442-digest.reader--847aa5e811f2----6-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Cyan](https://medium.com/@cyangineer?source=email-2b8b8ee19057-1777658613442-digest.reader--847aa5e811f2----6-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![The Blank Screen Blues: Why Coming Up With Game Ideas Feels Impossible](https://miro.medium.com/fit/c/320/214/0*CJ-lUE2JItQ2theS)](https://medium.com/@cyangineer/the-blank-screen-blues-why-coming-up-with-game-ideas-feels-impossible-847aa5e811f2?source=email-2b8b8ee19057-1777658613442-digest.reader--847aa5e811f2----6-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+\[
+
+## The Blank Screen Blues: Why Coming Up With Game Ideas Feels Impossible
+
+### (And How Retro Games Can Save You)
+
+]\(https://medium.com/@cyangineer/the-blank-screen-blues-why-coming-up-with-game-ideas-feels-impossible-847aa5e811f2?source=email-2b8b8ee19057-1777658613442-digest.reader--847aa5e811f2----6-102------------------071522af\_0e3d\_4fe0\_8945\_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+229
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+5
+
+[![Francesco Pace](https://miro.medium.com/fit/c/40/40/1*5RnXmzy0hU9N2iuqMU_6Lg.png)](https://medium.com/@francesco.pace?source=email-2b8b8ee19057-1777658613442-digest.reader--61a631a9b4ec----7-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Francesco Pace](https://medium.com/@francesco.pace?source=email-2b8b8ee19057-1777658613442-digest.reader--61a631a9b4ec----7-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![How I Turned My Wi-Fi Into a Motion Sensor…](https://miro.medium.com/fit/c/320/214/1*_BWnNV7hToAzcftuRIIZpA.jpeg)](https://medium.com/@francesco.pace/how-i-turned-my-wi-fi-into-a-motion-sensor-61a631a9b4ec?source=email-2b8b8ee19057-1777658613442-digest.reader--61a631a9b4ec----7-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+\[
+
+## How I Turned My Wi-Fi Into a Motion Sensor…
+
+### … using only the waves emitted by my router and a bit…
+
+]\(https://medium.com/@francesco.pace/how-i-turned-my-wi-fi-into-a-motion-sensor-61a631a9b4ec?source=email-2b8b8ee19057-1777658613442-digest.reader--61a631a9b4ec----7-102------------------071522af\_0e3d\_4fe0\_8945\_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+9 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+6
+
+[![Dr. Ashish Bamania](https://miro.medium.com/fit/c/40/40/1*5R3sTJ1KZkaD9s6XmBNsQA@2x.jpeg)](https://medium.com/@bamania-ashish?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-79087514dba1----8-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Dr. Ashish Bamania](https://medium.com/@bamania-ashish?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-79087514dba1----8-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-79087514dba1----8-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![21 Reinforcement Learning (RL) Concepts Explained In Plain English](https://miro.medium.com/fit/c/320/214/0*7z1Bx02JVehrEIqp)](https://medium.com/@bamania-ashish/21-reinforcement-learning-rl-concepts-explained-in-plain-english-79087514dba1?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-79087514dba1----8-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+\[
+
+## 21 Reinforcement Learning (RL) Concepts Explained In Plain English
+
+### Skip the complex mathematics and finally understand RL…
+
+]\(https://medium.com/@bamania-ashish/21-reinforcement-learning-rl-concepts-explained-in-plain-english-79087514dba1?source=email-2b8b8ee19057-1777658613442-digest.reader-5517fd7b58a6-79087514dba1----8-102------------------071522af\_0e3d\_4fe0\_8945\_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+19 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+757
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+4
+
+[![Shaw Talebi](https://miro.medium.com/fit/c/40/40/1*2i-FyltZx2WNoNUv9g7kDw@2x.jpeg)](https://medium.com/@shawhin?source=email-2b8b8ee19057-1777658613442-digest.reader-a47c2ab4d9da-9b2514625762----9-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Shaw Talebi](https://medium.com/@shawhin?source=email-2b8b8ee19057-1777658613442-digest.reader-a47c2ab4d9da-9b2514625762----9-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[The Data Entrepreneurs](https://medium.com/the-data-entrepreneurs?source=email-2b8b8ee19057-1777658613442-digest.reader-a47c2ab4d9da-9b2514625762----9-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![How to Monetize Your AI Skills (outside of your 9–5 job)](https://miro.medium.com/fit/c/320/214/0*QC0ZV15RZFDYiGbG)](https://medium.com/@shawhin/how-to-monetize-your-ai-skills-outside-of-your-9-5-job-9b2514625762?source=email-2b8b8ee19057-1777658613442-digest.reader-a47c2ab4d9da-9b2514625762----9-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+\[
+
+## How to Monetize Your AI Skills (outside of your 9–5 job)
+
+### 5 technical side-hustles you can start this weekend
+
+]\(https://medium.com/@shawhin/how-to-monetize-your-ai-skills-outside-of-your-9-5-job-9b2514625762?source=email-2b8b8ee19057-1777658613442-digest.reader-a47c2ab4d9da-9b2514625762----9-73------------------071522af\_0e3d\_4fe0\_8945\_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+82
+
+[![Pawan Kumawat](https://miro.medium.com/fit/c/40/40/1*3woDpE0sYiFp2eKyX8s1ew.jpeg)](https://medium.com/@pawan-kumawat?source=email-2b8b8ee19057-1777658613442-digest.reader--79fe1437e210----10-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Pawan Kumawat](https://medium.com/@pawan-kumawat?source=email-2b8b8ee19057-1777658613442-digest.reader--79fe1437e210----10-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![Angular 22: The 3‑Minute Prerelease Briefing](https://miro.medium.com/fit/c/320/214/1*vGlEODhMU9vk-4FpUOoZJQ.png)](https://medium.com/@pawan-kumawat/angular-22-the-3-minute-prerelease-briefing-79fe1437e210?source=email-2b8b8ee19057-1777658613442-digest.reader--79fe1437e210----10-99------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+\[
+
+## Angular 22: The 3‑Minute Prerelease Briefing
+
+### Angular 22 is still v22.0.0-next.\* — verify against…
+
+]\(https://medium.com/@pawan-kumawat/angular-22-the-3-minute-prerelease-briefing-79fe1437e210?source=email-2b8b8ee19057-1777658613442-digest.reader--79fe1437e210----10-99------------------071522af\_0e3d\_4fe0\_8945\_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+2 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+225
+
+[![Rhett Allain](https://miro.medium.com/fit/c/40/40/1*-A5PgdQ7cAuT-L04J4e3YQ.jpeg)](https://medium.com/@rjallain?source=email-2b8b8ee19057-1777658613442-digest.reader--8af3d44a2850----11-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Rhett Allain](https://medium.com/@rjallain?source=email-2b8b8ee19057-1777658613442-digest.reader--8af3d44a2850----11-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![Modeling Artemis II with Physics and Python](https://miro.medium.com/fit/c/320/214/1*tEBBV96BTTdiiG3X3MrJqA.png)](https://medium.com/@rjallain/modeling-artemis-ii-with-physics-and-python-8af3d44a2850?source=email-2b8b8ee19057-1777658613442-digest.reader--8af3d44a2850----11-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+\[
+
+## Modeling Artemis II with Physics and Python
+
+### I think it’s kind of a big deal. Humans going back to…
+
+]\(https://medium.com/@rjallain/modeling-artemis-ii-with-physics-and-python-8af3d44a2850?source=email-2b8b8ee19057-1777658613442-digest.reader--8af3d44a2850----11-102------------------071522af\_0e3d\_4fe0\_8945\_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+237
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+8
+
+[![Emilina Lomas](https://miro.medium.com/fit/c/40/40/1*VR-KZSkafM2Akwa4P5xtWA@2x.jpeg)](https://medium.com/@emilinalomas?source=email-2b8b8ee19057-1777658613442-digest.reader-b5717b16a765-7c22bbde9903----12-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Emilina Lomas](https://medium.com/@emilinalomas?source=email-2b8b8ee19057-1777658613442-digest.reader-b5717b16a765-7c22bbde9903----12-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Mind Cafe](https://medium.com/mind-cafe?source=email-2b8b8ee19057-1777658613442-digest.reader-b5717b16a765-7c22bbde9903----12-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![10 Daily Habits That Help You Age in Reverse — Backed by Science](https://miro.medium.com/fit/c/320/214/0*Kx0HKXdSGN3PqXei.jpeg)](https://medium.com/@emilinalomas/10-daily-habits-that-help-you-age-in-reverse-backed-by-science-7c22bbde9903?source=email-2b8b8ee19057-1777658613442-digest.reader-b5717b16a765-7c22bbde9903----12-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+\[
+
+## 10 Daily Habits That Help You Age in Reverse — Backed by Science
+
+### A longevity-obsessed writer’s guide to eating…
+
+]\(https://medium.com/@emilinalomas/10-daily-habits-that-help-you-age-in-reverse-backed-by-science-7c22bbde9903?source=email-2b8b8ee19057-1777658613442-digest.reader-b5717b16a765-7c22bbde9903----12-73------------------071522af\_0e3d\_4fe0\_8945\_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+3.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+87
+
+[![Han HELOIR YAN, Ph.D. ☕️](https://miro.medium.com/fit/c/40/40/1*QKpZJpnggjxenDvymZOQ_g@2x.jpeg)](https://medium.com/@han.heloir?source=email-2b8b8ee19057-1777658613442-digest.reader-8993e01dcfd3-1173470ab622----13-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Han HELOIR YAN, Ph.D. ☕️](https://medium.com/@han.heloir?source=email-2b8b8ee19057-1777658613442-digest.reader-8993e01dcfd3-1173470ab622----13-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Data Science Collective](https://medium.com/data-science-collective?source=email-2b8b8ee19057-1777658613442-digest.reader-8993e01dcfd3-1173470ab622----13-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![Everyone Analyzed Claude Code’s Features. Nobody Analyzed Its Architecture.](https://miro.medium.com/fit/c/320/214/0*fJwyKc8hc5l9vm0D)](https://medium.com/@han.heloir/everyone-analyzed-claude-codes-features-nobody-analyzed-its-architecture-1173470ab622?source=email-2b8b8ee19057-1777658613442-digest.reader-8993e01dcfd3-1173470ab622----13-102------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+\[
+
+## Everyone Analyzed Claude Code’s Features. Nobody Analyzed Its Architecture.
+
+### Five hundred thousand lines of leaked source code…
+
+]\(https://medium.com/@han.heloir/everyone-analyzed-claude-codes-features-nobody-analyzed-its-architecture-1173470ab622?source=email-2b8b8ee19057-1777658613442-digest.reader-8993e01dcfd3-1173470ab622----13-102------------------071522af\_0e3d\_4fe0\_8945\_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+5.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+18
+
+[![Tanmay Bansal](https://miro.medium.com/fit/c/40/40/0*SroILly4wl60FexY)](https://medium.com/@tanmay.bansal20?source=email-2b8b8ee19057-1777658613442-digest.reader-78d064101951-fb7fbb9a2e08----14-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[Tanmay Bansal](https://medium.com/@tanmay.bansal20?source=email-2b8b8ee19057-1777658613442-digest.reader-78d064101951-fb7fbb9a2e08----14-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)in[Artificial Intelligence in Plain English](https://medium.com/ai-in-plain-english?source=email-2b8b8ee19057-1777658613442-digest.reader-78d064101951-fb7fbb9a2e08----14-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+[![Everyone Is “Learning AI”, But Nobody Really Understands This One Thing.](https://miro.medium.com/fit/c/320/214/1*yyWRG8L6l3kbDM32fvhBZA.png)](https://medium.com/@tanmay.bansal20/everyone-is-learning-ai-but-nobody-really-understands-this-one-thing-fb7fbb9a2e08?source=email-2b8b8ee19057-1777658613442-digest.reader-78d064101951-fb7fbb9a2e08----14-73------------------071522af_0e3d_4fe0_8945_cec403b85cbe-1)
+
+\[
+
+## Everyone Is “Learning AI”, But Nobody Really Understands This One Thing.
+
+### Prompting teaches you the interface. AI literacy means…
+
+]\(https://medium.com/@tanmay.bansal20/everyone-is-learning-ai-but-nobody-really-understands-this-one-thing-fb7fbb9a2e08?source=email-2b8b8ee19057-1777658613442-digest.reader-78d064101951-fb7fbb9a2e08----14-73------------------071522af\_0e3d\_4fe0\_8945\_cec403b85cbe-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.6K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+63
+
+[![Download the Medium app](https://miro.medium.com/max/1360/58dbc9043bb7d1ca1cc3a9bda27b9b94f96c34a37d6e1cb5b47ba882e5cde883)](https://medium.com/download-app?source=email-2b8b8ee19057-1777658613442-digest.reader-------------------------071522af_0e3d_4fe0_8945_cec403b85cbe)
+
+
