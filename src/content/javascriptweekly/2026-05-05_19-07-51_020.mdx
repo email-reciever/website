@@ -1,0 +1,301 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Remix 3 drops React
+description: Remix 3 drops React
+date: 星期二 07 晚上 五月 5o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/784
+origin_site: https://javascriptweekly.com/issues/784
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Remix 3 drops React" url="https://javascriptweekly.com/issues/784" />
+
+<Detail client:only="react">
+	#​784 — May 5, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/784)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/184702/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vwduhmrqbq1j2ypwelyc.jpg)](https://javascriptweekly.com/link/184764/d076523b1d)
+
+[Remix 3 Enters Beta — It's No Longer a React Framework](https://javascriptweekly.com/link/184764/d076523b1d "remix.run") — Remix has quite the back story. Created by the duo behind React Router in 2020 and seen as an [alternative to Next.js](https://javascriptweekly.com/link/184765/d076523b1d), Remix was [acquired by Shopify](https://javascriptweekly.com/link/184766/d076523b1d) in 2022 and its core ideas folded into [React Router v7](https://javascriptweekly.com/link/184767/d076523b1d) in 2024. Now, a new direction: a full-stack, web standards-first framework with its own UI component model and… no React.
+
+Michael Jackson (Remix)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/691a6339.png)](https://javascriptweekly.com/link/184702/d076523b1d)
+
+[Build AI Features That Get Better Over Time](https://javascriptweekly.com/link/184702/d076523b1d "frontendmasters.com") — Join Scott Moss for this detailed video course covering agentic systems, eval harnesses, RAG, and context engineering — everything you need to ship reliable, production-ready AI features.
+
+Frontend Masters sponsor
+
+[Node.js 26.0.0 (Current) Released](https://javascriptweekly.com/link/184754/d076523b1d "nodejs.org") — A macOS build snafu pushed the release date out to today, but the latest version of Node is here, complete with [Temporal API](https://javascriptweekly.com/link/184755/d076523b1d) enabled by default, V8 14.6, and Undici 8. v26 is the ‘current’ cutting-edge release until October when it’ll be promoted to LTS.
+
+Rafael Gonzaga
+
+**IN BRIEF:**
+
+*   [Vitest](https://javascriptweekly.com/link/184705/d076523b1d) is tightly coupled to Vite, but a maintainer has [proposed making it "framework-agnostic"](https://javascriptweekly.com/link/184706/d076523b1d) to support other build tools and runtimes.
+    
+*   People on Hacker News [got very excited](https://javascriptweekly.com/link/184756/d076523b1d) to discuss an effort by Bun's Jarred Sumner [to port Bun from Zig to Rust.](https://javascriptweekly.com/link/184757/d076523b1d) Jarred [turned up on the thread](https://javascriptweekly.com/link/184758/d076523b1d) to cool things down. A Rust port _is_ being attempted, but with no long-term intent to _switch_ for now.
+    
+*   The Svelte team has [shared its latest monthly roundup](https://javascriptweekly.com/link/184707/d076523b1d), including the news that Svelte [appears in ThoughtWorks' latest _Technology Radar_.](https://javascriptweekly.com/link/184708/d076523b1d)
+    
+*   Deno is getting [experimental support for `import defer`](https://javascriptweekly.com/link/184759/d076523b1d) ([TC39 proposal](https://javascriptweekly.com/link/184760/d076523b1d)) and may be the first runtime to support it.
+    
+
+**RELEASES:**
+
+*   [PM2 7.0](https://javascriptweekly.com/link/184709/d076523b1d) – The Node.js process manager gets a refactor that slashes its dependency footprint, and extends cluster mode and the monitoring agent to Bun apps.
+    
+*   [Astro v7 Alpha](https://javascriptweekly.com/link/184710/d076523b1d) – The web framework for content-driven websites teases its Vite 8-based, Rust compiler-driven version, alongside its [v6.2 release](https://javascriptweekly.com/link/184711/d076523b1d).
+    
+*   [Electron 41.5](https://javascriptweekly.com/link/184712/d076523b1d) – The cross-platform desktop app framework adds support for Touch ID for WebAuthn on macOS.
+    
+*   [Ember 6.12](https://javascriptweekly.com/link/184713/d076523b1d) – The final 6.x release in preparation for Ember 7.0.
+    
+*   [ESLint 10.3](https://javascriptweekly.com/link/184714/d076523b1d), [Zod 4.4](https://javascriptweekly.com/link/184715/d076523b1d), [Babylon.js 9.5](https://javascriptweekly.com/link/184716/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[Testing Vue Components in the Browser](https://javascriptweekly.com/link/184717/d076523b1d "jvns.ca") — Julia sets up integration tests for her components that run entirely in the browser, sidestepping extraneous tooling, and shares issues she ran into around mounting components, waiting on the DOM, filling forms, and measuring coverage.
+
+Julia Evans
+
+[Trustworthy JavaScript for the Open Web](https://javascriptweekly.com/link/184771/d076523b1d "hacks.mozilla.org") — Web Application Integrity, Consistency and Transparency (WAICT) is an emerging spec for cryptographically verifying that the JavaScript running in a user’s browser matches what the site published (there’s [a full explainer here](https://javascriptweekly.com/link/184772/d076523b1d)). A prototype is now live in Firefox Nightly.
+
+The Firefox Security Team (Mozilla)
+
+[Breakpoints and `console.log` Is the Past, Time Travel Is the Future](https://javascriptweekly.com/link/184719/d076523b1d "wallabyjs.com") — 15x faster JavaScript debugging than with breakpoints and console.log, supports Vitest, Jest, Karma, Jasmine, and more.
+
+Wallaby Team sponsor
+
+📄 ['I Got a $134 Cloudflare D1 Bill: Here's How I Cut It 95%'](https://javascriptweekly.com/link/184720/d076523b1d) – Adventures in using SvelteKit on Cloudflare Workers with D1 (SQLite) and Drizzle ORM. Justin Ahinon
+
+📄 ['I Am Worried About Bun'](https://javascriptweekly.com/link/184768/d076523b1d) – By a developer who’s worried about the long term implications of [Anthropic acquiring Bun.](https://javascriptweekly.com/link/184769/d076523b1d) William Johnston
+
+📄 [Making Bluetooth Low Energy Work with JavaScript](https://javascriptweekly.com/link/184722/d076523b1d) Ifedayo Agboola
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jtuzetnfsmbiv0owbcam.jpg)](https://javascriptweekly.com/link/184723/d076523b1d)
+
+[Anime.js 4.4: The Flexible JavaScript Animation Engine](https://javascriptweekly.com/link/184723/d076523b1d "animejs.com") — At ten years old, the ‘animate anything from JavaScript’ library continues to get even better with a [new `scrambleText` effect](https://javascriptweekly.com/link/184724/d076523b1d) and [auto-grid layout mode](https://javascriptweekly.com/link/184725/d076523b1d) for stagger grids. The [docs](https://javascriptweekly.com/link/184727/d076523b1d) for Anime are truly top-tier and packed with examples.
+
+Julian Garnier
+
+[Video Archiving with the Vonage Video API and React](https://javascriptweekly.com/link/184728/d076523b1d "developer.vonage.com") — Master four ways to record: capture audio-only, separate streams, or use Experience Composer for custom branded layouts.
+
+Vonage sponsor
+
+[Formisch: A Modular, Type-Safe Form Library](https://javascriptweekly.com/link/184729/d076523b1d "github.com") — A schema-based, headless form library for Preact, Qwik, React, SolidJS, Svelte and Vue that manages form state and validation (using Valibot). Try out [some demos in the playground](https://javascriptweekly.com/link/184730/d076523b1d).
+
+Open Circle
+
+[opentype.js: Read and Write OpenType Fonts](https://javascriptweekly.com/link/184731/d076523b1d "opentype.js.org") — Get direct access to letterforms in the browser and Node.js. Has broad WOFF, OTF, and TTF support, and supports ligatures, kerning, and emojis. You can also create your own fonts from scratch. The new [v1.3.5](https://javascriptweekly.com/link/184732/d076523b1d) release is a preview of the soon-to-land 2.0. [GitHub repo.](https://javascriptweekly.com/link/184733/d076523b1d)
+
+Frederik De Bleser
+
+[View Transitions Mock: Non-Visual Polyfill for Same-Document View Transitions](https://javascriptweekly.com/link/184734/d076523b1d "github.com") — A JS implementation of Same-Document View Transitions, without the visuals. Write one clean code path: supporting browsers get the transitions, non-supporting ones get an instant DOM swap, but the promises behave the same.
+
+Google Chrome Labs
+
+*   🎬 [Mediabunny v1.42.0](https://javascriptweekly.com/link/184735/d076523b1d) – Read, write, and convert audio and video files in the browser. v1.42.0 notably adds HTTP Live Streaming (HLS) read/write support.
+    
+*   [pnpm v11.0.5](https://javascriptweekly.com/link/184736/d076523b1d) – The fast and efficient `npm` alternative has deployed many bugfixes since last week's [big 11.0 release.](https://javascriptweekly.com/link/184737/d076523b1d)
+    
+*   [Electrobun 1.18](https://javascriptweekly.com/link/184738/d076523b1d) – Build tiny cross-platform desktop apps atop Bun. ([Changelog](https://javascriptweekly.com/link/184739/d076523b1d))
+    
+*   [useHotkeys 5.3](https://javascriptweekly.com/link/184740/d076523b1d) – React hook for using keyboard shortcuts in components.
+    
+*   [RxDB 17.2.0](https://javascriptweekly.com/link/184741/d076523b1d) – Fast, local-first, reactive database for JS apps.
+    
+
+📰 Classifieds
+
+⌘ [**Command Code**](https://javascriptweekly.com/link/184770/d076523b1d) is a frontier coding agent that ships features, fixes bugs, writes tests, & continuously learns your taste. **Start now for $1**.
+
+* * *
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/184743/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+* * *
+
+⚙️ [The new Clerk CLI](https://javascriptweekly.com/link/184744/d076523b1d): Run clerk init to scaffold auth, clerk config to manage it in code, Clerk API to query it. Open source: [clerk.com/cli](https://javascriptweekly.com/link/184744/d076523b1d)
+
+* * *
+
+[Handsontable Theme Builder](https://javascriptweekly.com/link/184745/d076523b1d) has AI. Describe your theme, get a token set that fits your data grid — no CSS overrides, no trial and error.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wv3jtbpvschb5vcdrhw3.jpg)](https://javascriptweekly.com/link/184746/d076523b1d)
+
+*   How can you _not_ love a project homepage where you're a cat in a convertible driving through an endless barrage of obstacles? [Crashcat](https://javascriptweekly.com/link/184746/d076523b1d) is a JavaScript 3D rigid body physics library built for games, simulations, and web experiences, complete with [numerous fun examples.](https://javascriptweekly.com/link/184747/d076523b1d)
+    
+*   ✉️ Cloudflare has [open sourced _Agentic Inbox_](https://javascriptweekly.com/link/184748/d076523b1d), a self-hosted React 19 and React Router 7-based web email app that ties together and heavily leans on numerous Cloudflare APIs.
+    
+*   [Ladybird](https://javascriptweekly.com/link/184749/d076523b1d) is a _"truly independent web browser"_ with its renderer and JS engine built entirely from _scratch_, with an alpha release due later this year. In [the project's latest update](https://javascriptweekly.com/link/184750/d076523b1d) they cover recent significant JS and CSS improvements.
+    
+*   Tired of `localhost:3000` on your projects? Vercel's [Portless](https://javascriptweekly.com/link/184751/d076523b1d) lets you run local dev servers using a more user-friendly `.localhost` hostname over HTTPS.
+    
+*   [Thales](https://javascriptweekly.com/link/184761/d076523b1d) is a TypeScript to [Lean](https://javascriptweekly.com/link/184762/d076523b1d) compiler that type-checks a subset of TypeScript and emits a Lean sidecar, turning your code into a Lean module you can reason about.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/184752/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​784 — May 5, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/784)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://javascriptweekly.com/link/184702/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vwduhmrqbq1j2ypwelyc.jpg)](https://javascriptweekly.com/link/184764/d076523b1d)
+
+[Remix 3 Enters Beta — It's No Longer a React Framework](https://javascriptweekly.com/link/184764/d076523b1d "remix.run") — Remix has quite the back story. Created by the duo behind React Router in 2020 and seen as an [alternative to Next.js](https://javascriptweekly.com/link/184765/d076523b1d), Remix was [acquired by Shopify](https://javascriptweekly.com/link/184766/d076523b1d) in 2022 and its core ideas folded into [React Router v7](https://javascriptweekly.com/link/184767/d076523b1d) in 2024. Now, a new direction: a full-stack, web standards-first framework with its own UI component model and… no React.
+
+Michael Jackson (Remix)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/691a6339.png)](https://javascriptweekly.com/link/184702/d076523b1d)
+
+[Build AI Features That Get Better Over Time](https://javascriptweekly.com/link/184702/d076523b1d "frontendmasters.com") — Join Scott Moss for this detailed video course covering agentic systems, eval harnesses, RAG, and context engineering — everything you need to ship reliable, production-ready AI features.
+
+Frontend Masters sponsor
+
+[Node.js 26.0.0 (Current) Released](https://javascriptweekly.com/link/184754/d076523b1d "nodejs.org") — A macOS build snafu pushed the release date out to today, but the latest version of Node is here, complete with [Temporal API](https://javascriptweekly.com/link/184755/d076523b1d) enabled by default, V8 14.6, and Undici 8. v26 is the ‘current’ cutting-edge release until October when it’ll be promoted to LTS.
+
+Rafael Gonzaga
+
+**IN BRIEF:**
+
+* [Vitest](https://javascriptweekly.com/link/184705/d076523b1d) is tightly coupled to Vite, but a maintainer has [proposed making it "framework-agnostic"](https://javascriptweekly.com/link/184706/d076523b1d) to support other build tools and runtimes.
+
+* People on Hacker News [got very excited](https://javascriptweekly.com/link/184756/d076523b1d) to discuss an effort by Bun's Jarred Sumner [to port Bun from Zig to Rust.](https://javascriptweekly.com/link/184757/d076523b1d) Jarred [turned up on the thread](https://javascriptweekly.com/link/184758/d076523b1d) to cool things down. A Rust port *is* being attempted, but with no long-term intent to *switch* for now.
+
+* The Svelte team has [shared its latest monthly roundup](https://javascriptweekly.com/link/184707/d076523b1d), including the news that Svelte [appears in ThoughtWorks' latest *Technology Radar*.](https://javascriptweekly.com/link/184708/d076523b1d)
+
+* Deno is getting [experimental support for `import defer`](https://javascriptweekly.com/link/184759/d076523b1d) ([TC39 proposal](https://javascriptweekly.com/link/184760/d076523b1d)) and may be the first runtime to support it.
+
+**RELEASES:**
+
+* [PM2 7.0](https://javascriptweekly.com/link/184709/d076523b1d) – The Node.js process manager gets a refactor that slashes its dependency footprint, and extends cluster mode and the monitoring agent to Bun apps.
+
+* [Astro v7 Alpha](https://javascriptweekly.com/link/184710/d076523b1d) – The web framework for content-driven websites teases its Vite 8-based, Rust compiler-driven version, alongside its [v6.2 release](https://javascriptweekly.com/link/184711/d076523b1d).
+
+* [Electron 41.5](https://javascriptweekly.com/link/184712/d076523b1d) – The cross-platform desktop app framework adds support for Touch ID for WebAuthn on macOS.
+
+* [Ember 6.12](https://javascriptweekly.com/link/184713/d076523b1d) – The final 6.x release in preparation for Ember 7.0.
+
+* [ESLint 10.3](https://javascriptweekly.com/link/184714/d076523b1d), [Zod 4.4](https://javascriptweekly.com/link/184715/d076523b1d), [Babylon.js 9.5](https://javascriptweekly.com/link/184716/d076523b1d)
+
+📖  Articles and Videos
+
+[Testing Vue Components in the Browser](https://javascriptweekly.com/link/184717/d076523b1d "jvns.ca") — Julia sets up integration tests for her components that run entirely in the browser, sidestepping extraneous tooling, and shares issues she ran into around mounting components, waiting on the DOM, filling forms, and measuring coverage.
+
+Julia Evans
+
+[Trustworthy JavaScript for the Open Web](https://javascriptweekly.com/link/184771/d076523b1d "hacks.mozilla.org") — Web Application Integrity, Consistency and Transparency (WAICT) is an emerging spec for cryptographically verifying that the JavaScript running in a user’s browser matches what the site published (there’s [a full explainer here](https://javascriptweekly.com/link/184772/d076523b1d)). A prototype is now live in Firefox Nightly.
+
+The Firefox Security Team (Mozilla)
+
+[Breakpoints and `console.log` Is the Past, Time Travel Is the Future](https://javascriptweekly.com/link/184719/d076523b1d "wallabyjs.com") — 15x faster JavaScript debugging than with breakpoints and console.log, supports Vitest, Jest, Karma, Jasmine, and more.
+
+Wallaby Team sponsor
+
+📄 ['I Got a $134 Cloudflare D1 Bill: Here's How I Cut It 95%'](https://javascriptweekly.com/link/184720/d076523b1d) – Adventures in using SvelteKit on Cloudflare Workers with D1 (SQLite) and Drizzle ORM. Justin Ahinon
+
+📄 ['I Am Worried About Bun'](https://javascriptweekly.com/link/184768/d076523b1d) – By a developer who’s worried about the long term implications of [Anthropic acquiring Bun.](https://javascriptweekly.com/link/184769/d076523b1d) William Johnston
+
+📄 [Making Bluetooth Low Energy Work with JavaScript](https://javascriptweekly.com/link/184722/d076523b1d) Ifedayo Agboola
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jtuzetnfsmbiv0owbcam.jpg)](https://javascriptweekly.com/link/184723/d076523b1d)
+
+[Anime.js 4.4: The Flexible JavaScript Animation Engine](https://javascriptweekly.com/link/184723/d076523b1d "animejs.com") — At ten years old, the ‘animate anything from JavaScript’ library continues to get even better with a [new `scrambleText` effect](https://javascriptweekly.com/link/184724/d076523b1d) and [auto-grid layout mode](https://javascriptweekly.com/link/184725/d076523b1d) for stagger grids. The [docs](https://javascriptweekly.com/link/184727/d076523b1d) for Anime are truly top-tier and packed with examples.
+
+Julian Garnier
+
+[Video Archiving with the Vonage Video API and React](https://javascriptweekly.com/link/184728/d076523b1d "developer.vonage.com") — Master four ways to record: capture audio-only, separate streams, or use Experience Composer for custom branded layouts.
+
+Vonage sponsor
+
+[Formisch: A Modular, Type-Safe Form Library](https://javascriptweekly.com/link/184729/d076523b1d "github.com") — A schema-based, headless form library for Preact, Qwik, React, SolidJS, Svelte and Vue that manages form state and validation (using Valibot). Try out [some demos in the playground](https://javascriptweekly.com/link/184730/d076523b1d).
+
+Open Circle
+
+[opentype.js: Read and Write OpenType Fonts](https://javascriptweekly.com/link/184731/d076523b1d "opentype.js.org") — Get direct access to letterforms in the browser and Node.js. Has broad WOFF, OTF, and TTF support, and supports ligatures, kerning, and emojis. You can also create your own fonts from scratch. The new [v1.3.5](https://javascriptweekly.com/link/184732/d076523b1d) release is a preview of the soon-to-land 2.0. [GitHub repo.](https://javascriptweekly.com/link/184733/d076523b1d)
+
+Frederik De Bleser
+
+[View Transitions Mock: Non-Visual Polyfill for Same-Document View Transitions](https://javascriptweekly.com/link/184734/d076523b1d "github.com") — A JS implementation of Same-Document View Transitions, without the visuals. Write one clean code path: supporting browsers get the transitions, non-supporting ones get an instant DOM swap, but the promises behave the same.
+
+Google Chrome Labs
+
+* 🎬 [Mediabunny v1.42.0](https://javascriptweekly.com/link/184735/d076523b1d) – Read, write, and convert audio and video files in the browser. v1.42.0 notably adds HTTP Live Streaming (HLS) read/write support.
+
+* [pnpm v11.0.5](https://javascriptweekly.com/link/184736/d076523b1d) – The fast and efficient `npm` alternative has deployed many bugfixes since last week's [big 11.0 release.](https://javascriptweekly.com/link/184737/d076523b1d)
+
+* [Electrobun 1.18](https://javascriptweekly.com/link/184738/d076523b1d) – Build tiny cross-platform desktop apps atop Bun. ([Changelog](https://javascriptweekly.com/link/184739/d076523b1d))
+
+* [useHotkeys 5.3](https://javascriptweekly.com/link/184740/d076523b1d) – React hook for using keyboard shortcuts in components.
+
+* [RxDB 17.2.0](https://javascriptweekly.com/link/184741/d076523b1d) – Fast, local-first, reactive database for JS apps.
+
+📰 Classifieds
+
+⌘ [**Command Code**](https://javascriptweekly.com/link/184770/d076523b1d) is a frontier coding agent that ships features, fixes bugs, writes tests, & continuously learns your taste. **Start now for $1**.
+
+***
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/184743/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+***
+
+⚙️ [The new Clerk CLI](https://javascriptweekly.com/link/184744/d076523b1d): Run clerk init to scaffold auth, clerk config to manage it in code, Clerk API to query it. Open source: [clerk.com/cli](https://javascriptweekly.com/link/184744/d076523b1d)
+
+***
+
+[Handsontable Theme Builder](https://javascriptweekly.com/link/184745/d076523b1d) has AI. Describe your theme, get a token set that fits your data grid — no CSS overrides, no trial and error.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wv3jtbpvschb5vcdrhw3.jpg)](https://javascriptweekly.com/link/184746/d076523b1d)
+
+* How can you *not* love a project homepage where you're a cat in a convertible driving through an endless barrage of obstacles? [Crashcat](https://javascriptweekly.com/link/184746/d076523b1d) is a JavaScript 3D rigid body physics library built for games, simulations, and web experiences, complete with [numerous fun examples.](https://javascriptweekly.com/link/184747/d076523b1d)
+
+* ✉️ Cloudflare has [open sourced *Agentic Inbox*](https://javascriptweekly.com/link/184748/d076523b1d), a self-hosted React 19 and React Router 7-based web email app that ties together and heavily leans on numerous Cloudflare APIs.
+
+* [Ladybird](https://javascriptweekly.com/link/184749/d076523b1d) is a *"truly independent web browser"* with its renderer and JS engine built entirely from *scratch*, with an alpha release due later this year. In [the project's latest update](https://javascriptweekly.com/link/184750/d076523b1d) they cover recent significant JS and CSS improvements.
+
+* Tired of `localhost:3000` on your projects? Vercel's [Portless](https://javascriptweekly.com/link/184751/d076523b1d) lets you run local dev servers using a more user-friendly `.localhost` hostname over HTTPS.
+
+* [Thales](https://javascriptweekly.com/link/184761/d076523b1d) is a TypeScript to [Lean](https://javascriptweekly.com/link/184762/d076523b1d) compiler that type-checks a subset of TypeScript and emits a Lean sidecar, turning your code into a Lean module you can reason about.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/184752/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
