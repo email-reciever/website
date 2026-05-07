@@ -1,0 +1,289 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node 26.0 ships Temporal; Node 26.1 brings FFI
+description: Node 26.0 ships Temporal; Node 26.1 brings FFI
+date: 星期四 05 下午 五月 7o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/623
+origin_site: https://nodeweekly.com/issues/623
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node 26.0 ships Temporal; Node 26.1 brings FFI" url="https://nodeweekly.com/issues/623" />
+
+<Detail client:only="react">
+	#​623 — May 7, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/623)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/184884/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ck46oncyiofoth467qvt.jpg)](https://nodeweekly.com/link/184885/0a4070b383)
+
+[Node.js 26.0 (Current) Released](https://nodeweekly.com/link/184885/0a4070b383 "nodejs.org") — It's here! Complete with the [Temporal API](https://nodeweekly.com/link/184886/0a4070b383) enabled by default, V8 14.6 (say hello to [map ‘upsert’ methods](https://nodeweekly.com/link/184887/0a4070b383) like `Map.prototype.getOrInsert()` and [iterator sequencing](https://nodeweekly.com/link/184888/0a4070b383) with `Iterator.concat()`), plus Undici 8. v26 is the ‘Current’ cutting-edge release until October when it gets promoted to LTS.
+
+Rafael Gonzaga
+
+💡 [Node 26.1 (Current)](https://nodeweekly.com/link/184889/0a4070b383) also landed _today_ with a feature that has so much promise I've written **a mini article at the end of this issue** about it!
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/e5cd1ae5.png)](https://nodeweekly.com/link/184884/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/184884/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics.
+
+Memetria sponsor
+
+[A Report from the London Node.js Collaboration Summit](https://nodeweekly.com/link/184890/0a4070b383 "nodejs.org") — What was discussed at the Node team’s latest in-person summit in London last month, including Node’s new release schedule (starting with Node 27), James Snell’s iterable streams API (a.k.a. [node:stream/iter](https://nodeweekly.com/link/184891/0a4070b383)), OpenTelemetry support, how to deal with AI contributions to Node, libuv v2, and more.
+
+Wu and Cheung (Node.js Project)
+
+**IN BRIEF:**
+
+*   Node 20 _(Iron)_ has just entered [End-of-Life (EOL).](https://nodeweekly.com/link/184892/0a4070b383) With this, _all_ LTS Node releases can run TypeScript without flags via type stripping.
+    
+*   [Electron 42](https://nodeweekly.com/link/184893/0a4070b383) has been released and no longer downloads the Electron binary in a `postinstall` script due to recent supply chain attacks using that vector. It now downloads itself dynamically the first time it's _run_.
+    
+*   Due to Temporal API support being provided by a Rust library ([temporal\_rs](https://nodeweekly.com/link/184894/0a4070b383)), [building Node 26+ from _source_ requires a Rust toolchain.](https://nodeweekly.com/link/184895/0a4070b383)
+    
+
+[Rolldown 1.0: The High Performance JS Bundler](https://nodeweekly.com/link/184896/0a4070b383 "voidzero.dev") — It’s stable, fast, production-ready, and you get esbuild-like speed with Rollup plugin compatibility. Recent Node versions already handle `.ts` files, ESM, and JSON imports natively, so Rolldown’s real win is in _shipping_, when you want the smallest tree-shaken runtime artifact possible.
+
+The VoidZero Team
+
+💡 [tsdown 0.22](https://nodeweekly.com/link/184897/0a4070b383), a library bundler built on Rolldown 1.0, has also been released.
+
+[Why Migrate to Valibot?](https://nodeweekly.com/link/184898/0a4070b383 "valibot.dev") — [Valibot](https://nodeweekly.com/link/184899/0a4070b383) is a light, modular TypeScript schema validation library and an alternative to the likes of Zod. [v1.4.0](https://nodeweekly.com/link/184900/0a4070b383) just dropped, too.
+
+Fabian Hiller
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jpjdpg5ptldt7heqprbh.jpg)](https://nodeweekly.com/link/184901/0a4070b383)
+
+[html-to-text 10.0: Advanced HTML to Text Converter](https://nodeweekly.com/link/184901/0a4070b383 "github.com") — Uses a variety of techniques to convert even complex HTML into plain text (but with some formatting, such as for tables). v10 brings the project up to modern standards.
+
+KillyMXI
+
+[Stale API Responses Start with a Stale Data Source](https://nodeweekly.com/link/184902/0a4070b383 "www.tigerdata.com") — TimescaleDB extends Postgres for analytics on live data. No pipeline, no second database. [$1000 credit to start](https://nodeweekly.com/link/184902/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[PM2 7.0: The Production Process Manager for Node.js](https://nodeweekly.com/link/184903/0a4070b383 "github.com") — The long standing Node-based production process manager ([homepage](https://nodeweekly.com/link/184904/0a4070b383)) has been refactored, dropping a large number of external dependencies. It's also extended its Bun runtime support in cluster mode and with the monitoring agent.
+
+Alexandre Strzelewicz (Unitech)
+
+[Find My Way 9.6: A Fast HTTP Router That Uses Radix Trees](https://nodeweekly.com/link/184905/0a4070b383 "github.com") — A ‘crazy fast’ HTTP router that’s framework independent and supports the things you’d expect for path matching. _(If you’re a Fastify user, you’re already using it!)_
+
+Tomas Della Vedova
+
+[opentype.js: Read and Write OpenType Fonts](https://nodeweekly.com/link/184906/0a4070b383 "opentype.js.org") — Get direct access to letterforms. Has broad WOFF, OTF, and TTF support, and supports ligatures, kerning, and emojis. As well as creating paths for text, you can create and save your own custom fonts from scratch too. [GitHub repo.](https://nodeweekly.com/link/184907/0a4070b383)
+
+Frederik De Bleser
+
+*   [sqs-consumer 15.0](https://nodeweekly.com/link/184908/0a4070b383) – The BBC's approach to building Amazon Simple Queue Service (SQS) based apps without boilerplate.
+    
+*   [pnpm v11.0.8](https://nodeweekly.com/link/184909/0a4070b383) – The fast and efficient `npm` alternative has had a [stream of small releases](https://nodeweekly.com/link/184910/0a4070b383) since last week's [big v11 release.](https://nodeweekly.com/link/184911/0a4070b383)
+    
+*   [article-extractor 8.1](https://nodeweekly.com/link/184912/0a4070b383) – Extract an article's content and metadata given a URL.
+    
+*   🖼️ [probe-image-size 7.3](https://nodeweekly.com/link/184913/0a4070b383) – Get the size of images (JPG, GIF, PNG, and more) without fully downloading them.
+    
+*   [fast-json-stringify 6.4](https://nodeweekly.com/link/184914/0a4070b383) – It's 2x faster than `JSON.stringify()`
+    
+
+📰 Classifieds
+
+💫 [Lessons-learned](https://nodeweekly.com/link/184915/0a4070b383): Jon from Judoscale shares what they’ve learned from a decade (!) autoscaling thousands of apps.
+
+* * *
+
+🔎 [Elastic-quality search for Postgres as an extension](https://nodeweekly.com/link/184916/0a4070b383). BM25, analytics & vectors — no Elasticsearch required.
+
+📢  Node 26.1 Lands FFI Support
+
+[Node.js 26.1.0 (Current)](https://nodeweekly.com/link/184889/0a4070b383) quickly followed Node.js 26 with a single notable feature: **an experimental `node:ffi` module.**
+
+FFI ([Foreign Function Interface](https://nodeweekly.com/link/184917/0a4070b383)) is a mechanism to directly interface with libraries written in other languages (most commonly those exposing a C ABI).
+
+FFI support has been _complicated_ in Node over the years. [node-ffi](https://nodeweekly.com/link/184918/0a4070b383) was an early option, but quite fragile. [Koffi](https://nodeweekly.com/link/184919/0a4070b383) offers a more robust take on the idea and continues to work well today, but wasn't adopted as an official, core solution.
+
+Node settled on the [Node-API / NAPI approach](https://nodeweekly.com/link/184920/0a4070b383) of writing glue code to bridge the Node / C++ gap, an approach that's now universal in Node libraries with native dependencies.
+
+With [this work](https://nodeweekly.com/link/184921/0a4070b383) now in Node 26.1 behind a `--experimental-ffi` flag, it seems we're finally getting a core, officially supported FFI solution. It integrates with Node's [permissions model](https://nodeweekly.com/link/184922/0a4070b383) too (and [it's fast](https://nodeweekly.com/link/184924/0a4070b383)).
+
+Here's a basic (macOS only) example I just made to show off the basic shape of the support and how easy it is, though with only a single, simple call:
+
+* * *
+
+```js
+import &lcub; dlopen } from 'node:ffi';
+const path = '/usr/lib/libSystem.B.dylib';
+
+const &lcub; functions } = dlopen(path, &lcub;
+  sqrt: &lcub; parameters: ['f64'], result: 'f64' },
+});
+
+console.log(functions.sqrt(2));  // 1.414213...
+```
+
+* * *
+
+I also tried SQLite 3 with some success, and am looking forward to giving [Raylib 6.0](https://nodeweekly.com/link/184923/0a4070b383) a go as an example of a far more complex C library.
+
+My fingers are crossed that Node finds a way to make this stable, so we can all benefit from more direct use of native dependencies in Node in future 😄
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​623 — May 7, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/623)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/184884/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ck46oncyiofoth467qvt.jpg)](https://nodeweekly.com/link/184885/0a4070b383)
+
+[Node.js 26.0 (Current) Released](https://nodeweekly.com/link/184885/0a4070b383 "nodejs.org") — It's here! Complete with the [Temporal API](https://nodeweekly.com/link/184886/0a4070b383) enabled by default, V8 14.6 (say hello to [map ‘upsert’ methods](https://nodeweekly.com/link/184887/0a4070b383) like `Map.prototype.getOrInsert()` and [iterator sequencing](https://nodeweekly.com/link/184888/0a4070b383) with `Iterator.concat()`), plus Undici 8. v26 is the ‘Current’ cutting-edge release until October when it gets promoted to LTS.
+
+Rafael Gonzaga
+
+💡 [Node 26.1 (Current)](https://nodeweekly.com/link/184889/0a4070b383) also landed *today* with a feature that has so much promise I've written **a mini article at the end of this issue** about it!
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/e5cd1ae5.png)](https://nodeweekly.com/link/184884/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/184884/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics.
+
+Memetria sponsor
+
+[A Report from the London Node.js Collaboration Summit](https://nodeweekly.com/link/184890/0a4070b383 "nodejs.org") — What was discussed at the Node team’s latest in-person summit in London last month, including Node’s new release schedule (starting with Node 27), James Snell’s iterable streams API (a.k.a. [node:stream/iter](https://nodeweekly.com/link/184891/0a4070b383)), OpenTelemetry support, how to deal with AI contributions to Node, libuv v2, and more.
+
+Wu and Cheung (Node.js Project)
+
+**IN BRIEF:**
+
+* Node 20 *(Iron)* has just entered [End-of-Life (EOL).](https://nodeweekly.com/link/184892/0a4070b383) With this, *all* LTS Node releases can run TypeScript without flags via type stripping.
+
+* [Electron 42](https://nodeweekly.com/link/184893/0a4070b383) has been released and no longer downloads the Electron binary in a `postinstall` script due to recent supply chain attacks using that vector. It now downloads itself dynamically the first time it's *run*.
+
+* Due to Temporal API support being provided by a Rust library ([temporal\_rs](https://nodeweekly.com/link/184894/0a4070b383)), [building Node 26+ from *source* requires a Rust toolchain.](https://nodeweekly.com/link/184895/0a4070b383)
+
+[Rolldown 1.0: The High Performance JS Bundler](https://nodeweekly.com/link/184896/0a4070b383 "voidzero.dev") — It’s stable, fast, production-ready, and you get esbuild-like speed with Rollup plugin compatibility. Recent Node versions already handle `.ts` files, ESM, and JSON imports natively, so Rolldown’s real win is in *shipping*, when you want the smallest tree-shaken runtime artifact possible.
+
+The VoidZero Team
+
+💡 [tsdown 0.22](https://nodeweekly.com/link/184897/0a4070b383), a library bundler built on Rolldown 1.0, has also been released.
+
+[Why Migrate to Valibot?](https://nodeweekly.com/link/184898/0a4070b383 "valibot.dev") — [Valibot](https://nodeweekly.com/link/184899/0a4070b383) is a light, modular TypeScript schema validation library and an alternative to the likes of Zod. [v1.4.0](https://nodeweekly.com/link/184900/0a4070b383) just dropped, too.
+
+Fabian Hiller
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jpjdpg5ptldt7heqprbh.jpg)](https://nodeweekly.com/link/184901/0a4070b383)
+
+[html-to-text 10.0: Advanced HTML to Text Converter](https://nodeweekly.com/link/184901/0a4070b383 "github.com") — Uses a variety of techniques to convert even complex HTML into plain text (but with some formatting, such as for tables). v10 brings the project up to modern standards.
+
+KillyMXI
+
+[Stale API Responses Start with a Stale Data Source](https://nodeweekly.com/link/184902/0a4070b383 "www.tigerdata.com") — TimescaleDB extends Postgres for analytics on live data. No pipeline, no second database. [$1000 credit to start](https://nodeweekly.com/link/184902/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[PM2 7.0: The Production Process Manager for Node.js](https://nodeweekly.com/link/184903/0a4070b383 "github.com") — The long standing Node-based production process manager ([homepage](https://nodeweekly.com/link/184904/0a4070b383)) has been refactored, dropping a large number of external dependencies. It's also extended its Bun runtime support in cluster mode and with the monitoring agent.
+
+Alexandre Strzelewicz (Unitech)
+
+[Find My Way 9.6: A Fast HTTP Router That Uses Radix Trees](https://nodeweekly.com/link/184905/0a4070b383 "github.com") — A ‘crazy fast’ HTTP router that’s framework independent and supports the things you’d expect for path matching. *(If you’re a Fastify user, you’re already using it!)*
+
+Tomas Della Vedova
+
+[opentype.js: Read and Write OpenType Fonts](https://nodeweekly.com/link/184906/0a4070b383 "opentype.js.org") — Get direct access to letterforms. Has broad WOFF, OTF, and TTF support, and supports ligatures, kerning, and emojis. As well as creating paths for text, you can create and save your own custom fonts from scratch too. [GitHub repo.](https://nodeweekly.com/link/184907/0a4070b383)
+
+Frederik De Bleser
+
+* [sqs-consumer 15.0](https://nodeweekly.com/link/184908/0a4070b383) – The BBC's approach to building Amazon Simple Queue Service (SQS) based apps without boilerplate.
+
+* [pnpm v11.0.8](https://nodeweekly.com/link/184909/0a4070b383) – The fast and efficient `npm` alternative has had a [stream of small releases](https://nodeweekly.com/link/184910/0a4070b383) since last week's [big v11 release.](https://nodeweekly.com/link/184911/0a4070b383)
+
+* [article-extractor 8.1](https://nodeweekly.com/link/184912/0a4070b383) – Extract an article's content and metadata given a URL.
+
+* 🖼️ [probe-image-size 7.3](https://nodeweekly.com/link/184913/0a4070b383) – Get the size of images (JPG, GIF, PNG, and more) without fully downloading them.
+
+* [fast-json-stringify 6.4](https://nodeweekly.com/link/184914/0a4070b383) – It's 2x faster than `JSON.stringify()`
+
+📰 Classifieds
+
+💫 [Lessons-learned](https://nodeweekly.com/link/184915/0a4070b383): Jon from Judoscale shares what they’ve learned from a decade (!) autoscaling thousands of apps.
+
+***
+
+🔎 [Elastic-quality search for Postgres as an extension](https://nodeweekly.com/link/184916/0a4070b383). BM25, analytics & vectors — no Elasticsearch required.
+
+📢  Node 26.1 Lands FFI Support
+
+[Node.js 26.1.0 (Current)](https://nodeweekly.com/link/184889/0a4070b383) quickly followed Node.js 26 with a single notable feature: **an experimental `node:ffi` module.**
+
+FFI ([Foreign Function Interface](https://nodeweekly.com/link/184917/0a4070b383)) is a mechanism to directly interface with libraries written in other languages (most commonly those exposing a C ABI).
+
+FFI support has been *complicated* in Node over the years. [node-ffi](https://nodeweekly.com/link/184918/0a4070b383) was an early option, but quite fragile. [Koffi](https://nodeweekly.com/link/184919/0a4070b383) offers a more robust take on the idea and continues to work well today, but wasn't adopted as an official, core solution.
+
+Node settled on the [Node-API / NAPI approach](https://nodeweekly.com/link/184920/0a4070b383) of writing glue code to bridge the Node / C++ gap, an approach that's now universal in Node libraries with native dependencies.
+
+With [this work](https://nodeweekly.com/link/184921/0a4070b383) now in Node 26.1 behind a `--experimental-ffi` flag, it seems we're finally getting a core, officially supported FFI solution. It integrates with Node's [permissions model](https://nodeweekly.com/link/184922/0a4070b383) too (and [it's fast](https://nodeweekly.com/link/184924/0a4070b383)).
+
+Here's a basic (macOS only) example I just made to show off the basic shape of the support and how easy it is, though with only a single, simple call:
+
+***
+
+```js
+import &lcub; dlopen } from 'node:ffi';
+const path = '/usr/lib/libSystem.B.dylib';
+
+const &lcub; functions } = dlopen(path, &lcub;
+  sqrt: &lcub; parameters: ['f64'], result: 'f64' },
+});
+
+console.log(functions.sqrt(2));  // 1.414213...
+```
+
+***
+
+I also tried SQLite 3 with some success, and am looking forward to giving [Raylib 6.0](https://nodeweekly.com/link/184923/0a4070b383) a go as an example of a far more complex C library.
+
+My fingers are crossed that Node finds a way to make this stable, so we can all benefit from more direct use of native dependencies in Node in future 😄
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
