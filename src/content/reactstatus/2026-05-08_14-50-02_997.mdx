@@ -1,0 +1,230 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: TanStack's experimental React clone
+description: TanStack's experimental React clone
+date: 星期五 02 下午 五月 8o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/473
+origin_site: https://react.statuscode.com/issues/473
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="TanStack's experimental React clone" url="https://react.statuscode.com/issues/473" />
+
+<Detail client:only="react">
+	#​473 — May 8, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/473)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://react.statuscode.com/link/184925/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tepcqb9rqsjymbgvkat4.jpg)](https://react.statuscode.com/link/184926/5d0bbb4a61)
+
+[Projecting React](https://react.statuscode.com/link/184926/5d0bbb4a61 "tannerlinsley.com") — Tanner Linsley (he of [TanStack](https://react.statuscode.com/link/184927/5d0bbb4a61)) spent a day prompting an AI agent to regenerate React’s public API as a ~9KB runtime scoped to TanStack Start, and quietly shipped it on his blog and [tanstack.com](https://react.statuscode.com/link/184927/5d0bbb4a61), where it runs at 2–3× the speed of stock React. But the most interesting part is why he _isn’t_ properly releasing it (though [it _is_ on npm](https://react.statuscode.com/link/184965/5d0bbb4a61) if you're curious).
+
+Tanner Linsley
+
+💡 It's also noteworthy that Tanner didn't find [Preact](https://react.statuscode.com/link/184928/5d0bbb4a61) to be a good, lighter 'drop-in' replacement for React due to its slow drift away over the years.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a3a92880.png)](https://react.statuscode.com/link/184925/5d0bbb4a61)
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://react.statuscode.com/link/184925/5d0bbb4a61 "www.meticulous.ai") — Notion, Dropbox, Wiz and LaunchDarkly now use a testing paradigm they can’t work without. Built by former Palantir engineers, Meticulous automatically creates an evolving suite of E2E UI tests, delivering exhaustive coverage with no developer effort.
+
+Meticulous sponsor
+
+[Next.js May 2026 Security Releases](https://react.statuscode.com/link/184929/5d0bbb4a61 "vercel.com") — More security woes, but ones quickly addressed by upgrading to Next.js 15.5.18 and 16.2.6. All RSC users should also upgrade React (see box below). Users who applied [Cloudflare’s WAF rules in response to prior RSC CVEs](https://react.statuscode.com/link/184930/5d0bbb4a61) remain protected by them.
+
+Jimmy Lai (Vercel)
+
+💡 React [19.2.6](https://react.statuscode.com/link/184931/5d0bbb4a61), [19.1.7](https://react.statuscode.com/link/184932/5d0bbb4a61), and [19.0.6](https://react.statuscode.com/link/184933/5d0bbb4a61) have also been released to address [this React Server Components-related DoS vulnerability.](https://react.statuscode.com/link/184934/5d0bbb4a61)
+
+**IN BRIEF:**
+
+*   📱 [Expo SDK 56 Beta is now available](https://react.statuscode.com/link/184935/5d0bbb4a61). Speed and stability are the highlights, with much faster iOS builds, faster Android app startup times, and the Jetpack Compose (Android) and SwiftUI (iOS) APIs in Expo UI are stable.
+    
+*   🤖 Vercel has [open sourced `deepsec`](https://react.statuscode.com/link/184936/5d0bbb4a61), a security harness for LLMs to perform security vulnerability scans on large repos.
+    
+*   [React Router v7.15.0](https://react.statuscode.com/link/184937/5d0bbb4a61) has been released with a variety of API tweaks to prepare for a React Router v8 release _'in the next month or two.'_
+    
+
+[Introducing TanStack Form](https://react.statuscode.com/link/184938/5d0bbb4a61 "frontendmasters.com") — A clean introduction to TanStack Form, walking through the headless-architecture mental model: state and validation in TanStack's hands, rendering entirely in yours.
+
+Adam Rackis
+
+[From React to Web Components: A Migration That Saved 100KB](https://react.statuscode.com/link/184939/5d0bbb4a61 "evilmartians.com") — _“How I migrated a site from React to native Web Components, why that worked better than I expected, and how the patterns I used along the way grew into a small library called [nanotags](https://react.statuscode.com/link/184940/5d0bbb4a61).”_
+
+Pavel Grinchenko (Evil Martians)
+
+[Faster Dashboards Start with Faster Queries](https://react.statuscode.com/link/184941/5d0bbb4a61 "www.tigerdata.com") — TimescaleDB extends Postgres so dashboards query live data at scale. No pipeline, no stale state. [$1000 credit to start](https://react.statuscode.com/link/184941/5d0bbb4a61).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+🏖️ [What I Saw at React Miami 2026](https://react.statuscode.com/link/184942/5d0bbb4a61) – React Router, Remix, and the use of AI all popped up as common topics. Brooks Lybrand
+
+📄 [Who Owns the Tree? RSC as a Protocol, Not an Architecture](https://react.statuscode.com/link/184943/5d0bbb4a61) Tanner Linsley
+
+📄 [Untangling Dialogs in React Router](https://react.statuscode.com/link/184944/5d0bbb4a61) David Adams
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yqozacdvsrttjzp6ihvy.jpg)](https://react.statuscode.com/link/184945/5d0bbb4a61)
+
+[MapLibre React Native: Render Interactive Vector Tile Maps](https://react.statuscode.com/link/184945/5d0bbb4a61 "maplibre.org") — A library for creating maps with MapLibre Native for Android and iOS. It started as a fork of `rnmapbox`, but now focuses on MapLibre as the MapLibre and Mapbox SDKs continue to diverge.
+
+MapLibre Project
+
+[shadcn CLI 4.7: Package Imports and Registry Target Aliases](https://react.statuscode.com/link/184946/5d0bbb4a61 "ui.shadcn.com") — Now supports `package.json#imports` for installing components, rewriting imports, and resolving third-party registries. Registry items also gain `files[].target` aliases for when you want a registry to drop components into specific folders.
+
+shadcn / Vercel
+
+🗓️ [React DayPicker 10.0: A Component to Create Date Picker Controls](https://react.statuscode.com/link/184947/5d0bbb4a61 "daypicker.dev") — There are countless date selection components, but few match DayPicker’s maturity, accessibility, and ability to be sculpted into whatever you need. [GitHub repo.](https://react.statuscode.com/link/184948/5d0bbb4a61)
+
+Giampaolo Bellavite
+
+*   [html-react-parser 6.1](https://react.statuscode.com/link/184949/5d0bbb4a61) – HTML to React parser that converts HTML strings into React elements. v6.1 adds Content Security Policy (CSP) support.
+    
+*   [Jotai 2.20.0](https://react.statuscode.com/link/184950/5d0bbb4a61) – The primitive, flexible state management solution for React _"improves performance in high-throughput scenarios"_.
+    
+*   [Classicy 0.9](https://react.statuscode.com/link/184951/5d0bbb4a61) – React component collection with a classic Mac OS-inspired retro style.
+    
+
+📰 Classifieds
+
+⚡[Nimbalyst](https://react.statuscode.com/link/184952/5d0bbb4a61): Visual workspace for building with Claude Code & Codex. Integrate and manage sessions, tasks & files. Visually edit markdown, mockups, diagrams, code.
+
+* * *
+
+📸 Scan barcodes, QR codes and others directly in the browser using [STRICH](https://react.statuscode.com/link/184953/5d0bbb4a61), a lean JS library. [Free 30-day trial, try the demo app today!](https://react.statuscode.com/link/184953/5d0bbb4a61)
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ck46oncyiofoth467qvt.jpg)](https://react.statuscode.com/link/184954/5d0bbb4a61)
+
+*   It's been a big week for Node.js with [Node.js 26.0 (Current)](https://react.statuscode.com/link/184954/5d0bbb4a61) landing with the [Temporal API](https://react.statuscode.com/link/184955/5d0bbb4a61) enabled by default and a variety of V8 14.6 enhancements, but also [Node 26.1 (Current)](https://react.statuscode.com/link/184956/5d0bbb4a61) with an experimental core FFI mechanism.
+    
+*   _Rolldown_, the high-performance bundler, [reached a stable v1.0 release.](https://react.statuscode.com/link/184957/5d0bbb4a61) It focuses on speed and Rollup plugin compatibility.
+    
+*   [Vitest](https://react.statuscode.com/link/184958/5d0bbb4a61) is tightly coupled to Vite, but a maintainer has [proposed making it "framework-agnostic"](https://react.statuscode.com/link/184959/5d0bbb4a61) to support other build tools and runtimes.
+    
+*   As part of the [Astro 6.2](https://react.statuscode.com/link/184960/5d0bbb4a61) release, the popular web framework for content sites teased [Astro v7 Alpha](https://react.statuscode.com/link/184961/5d0bbb4a61), its next Vite 8-based, Rust compiler-driven version. [Astro 6.3](https://react.statuscode.com/link/184962/5d0bbb4a61) also landed shortly after with a new, experimental 'advanced routing' feature for better integration with alternative runtimes and frameworks like [Hono](https://react.statuscode.com/link/184963/5d0bbb4a61).
+    
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​473 — May 8, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/473)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://react.statuscode.com/link/184925/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tepcqb9rqsjymbgvkat4.jpg)](https://react.statuscode.com/link/184926/5d0bbb4a61)
+
+[Projecting React](https://react.statuscode.com/link/184926/5d0bbb4a61 "tannerlinsley.com") — Tanner Linsley (he of [TanStack](https://react.statuscode.com/link/184927/5d0bbb4a61)) spent a day prompting an AI agent to regenerate React’s public API as a ~9KB runtime scoped to TanStack Start, and quietly shipped it on his blog and [tanstack.com](https://react.statuscode.com/link/184927/5d0bbb4a61), where it runs at 2–3× the speed of stock React. But the most interesting part is why he *isn’t* properly releasing it (though [it *is* on npm](https://react.statuscode.com/link/184965/5d0bbb4a61) if you're curious).
+
+Tanner Linsley
+
+💡 It's also noteworthy that Tanner didn't find [Preact](https://react.statuscode.com/link/184928/5d0bbb4a61) to be a good, lighter 'drop-in' replacement for React due to its slow drift away over the years.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a3a92880.png)](https://react.statuscode.com/link/184925/5d0bbb4a61)
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://react.statuscode.com/link/184925/5d0bbb4a61 "www.meticulous.ai") — Notion, Dropbox, Wiz and LaunchDarkly now use a testing paradigm they can’t work without. Built by former Palantir engineers, Meticulous automatically creates an evolving suite of E2E UI tests, delivering exhaustive coverage with no developer effort.
+
+Meticulous sponsor
+
+[Next.js May 2026 Security Releases](https://react.statuscode.com/link/184929/5d0bbb4a61 "vercel.com") — More security woes, but ones quickly addressed by upgrading to Next.js 15.5.18 and 16.2.6. All RSC users should also upgrade React (see box below). Users who applied [Cloudflare’s WAF rules in response to prior RSC CVEs](https://react.statuscode.com/link/184930/5d0bbb4a61) remain protected by them.
+
+Jimmy Lai (Vercel)
+
+💡 React [19.2.6](https://react.statuscode.com/link/184931/5d0bbb4a61), [19.1.7](https://react.statuscode.com/link/184932/5d0bbb4a61), and [19.0.6](https://react.statuscode.com/link/184933/5d0bbb4a61) have also been released to address [this React Server Components-related DoS vulnerability.](https://react.statuscode.com/link/184934/5d0bbb4a61)
+
+**IN BRIEF:**
+
+* 📱 [Expo SDK 56 Beta is now available](https://react.statuscode.com/link/184935/5d0bbb4a61). Speed and stability are the highlights, with much faster iOS builds, faster Android app startup times, and the Jetpack Compose (Android) and SwiftUI (iOS) APIs in Expo UI are stable.
+
+* 🤖 Vercel has [open sourced `deepsec`](https://react.statuscode.com/link/184936/5d0bbb4a61), a security harness for LLMs to perform security vulnerability scans on large repos.
+
+* [React Router v7.15.0](https://react.statuscode.com/link/184937/5d0bbb4a61) has been released with a variety of API tweaks to prepare for a React Router v8 release *'in the next month or two.'*
+
+[Introducing TanStack Form](https://react.statuscode.com/link/184938/5d0bbb4a61 "frontendmasters.com") — A clean introduction to TanStack Form, walking through the headless-architecture mental model: state and validation in TanStack's hands, rendering entirely in yours.
+
+Adam Rackis
+
+[From React to Web Components: A Migration That Saved 100KB](https://react.statuscode.com/link/184939/5d0bbb4a61 "evilmartians.com") — *“How I migrated a site from React to native Web Components, why that worked better than I expected, and how the patterns I used along the way grew into a small library called [nanotags](https://react.statuscode.com/link/184940/5d0bbb4a61).”*
+
+Pavel Grinchenko (Evil Martians)
+
+[Faster Dashboards Start with Faster Queries](https://react.statuscode.com/link/184941/5d0bbb4a61 "www.tigerdata.com") — TimescaleDB extends Postgres so dashboards query live data at scale. No pipeline, no stale state. [$1000 credit to start](https://react.statuscode.com/link/184941/5d0bbb4a61).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+🏖️ [What I Saw at React Miami 2026](https://react.statuscode.com/link/184942/5d0bbb4a61) – React Router, Remix, and the use of AI all popped up as common topics. Brooks Lybrand
+
+📄 [Who Owns the Tree? RSC as a Protocol, Not an Architecture](https://react.statuscode.com/link/184943/5d0bbb4a61) Tanner Linsley
+
+📄 [Untangling Dialogs in React Router](https://react.statuscode.com/link/184944/5d0bbb4a61) David Adams
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yqozacdvsrttjzp6ihvy.jpg)](https://react.statuscode.com/link/184945/5d0bbb4a61)
+
+[MapLibre React Native: Render Interactive Vector Tile Maps](https://react.statuscode.com/link/184945/5d0bbb4a61 "maplibre.org") — A library for creating maps with MapLibre Native for Android and iOS. It started as a fork of `rnmapbox`, but now focuses on MapLibre as the MapLibre and Mapbox SDKs continue to diverge.
+
+MapLibre Project
+
+[shadcn CLI 4.7: Package Imports and Registry Target Aliases](https://react.statuscode.com/link/184946/5d0bbb4a61 "ui.shadcn.com") — Now supports `package.json#imports` for installing components, rewriting imports, and resolving third-party registries. Registry items also gain `files[].target` aliases for when you want a registry to drop components into specific folders.
+
+shadcn / Vercel
+
+🗓️ [React DayPicker 10.0: A Component to Create Date Picker Controls](https://react.statuscode.com/link/184947/5d0bbb4a61 "daypicker.dev") — There are countless date selection components, but few match DayPicker’s maturity, accessibility, and ability to be sculpted into whatever you need. [GitHub repo.](https://react.statuscode.com/link/184948/5d0bbb4a61)
+
+Giampaolo Bellavite
+
+* [html-react-parser 6.1](https://react.statuscode.com/link/184949/5d0bbb4a61) – HTML to React parser that converts HTML strings into React elements. v6.1 adds Content Security Policy (CSP) support.
+
+* [Jotai 2.20.0](https://react.statuscode.com/link/184950/5d0bbb4a61) – The primitive, flexible state management solution for React *"improves performance in high-throughput scenarios"*.
+
+* [Classicy 0.9](https://react.statuscode.com/link/184951/5d0bbb4a61) – React component collection with a classic Mac OS-inspired retro style.
+
+📰 Classifieds
+
+⚡[Nimbalyst](https://react.statuscode.com/link/184952/5d0bbb4a61): Visual workspace for building with Claude Code & Codex. Integrate and manage sessions, tasks & files. Visually edit markdown, mockups, diagrams, code.
+
+***
+
+📸 Scan barcodes, QR codes and others directly in the browser using [STRICH](https://react.statuscode.com/link/184953/5d0bbb4a61), a lean JS library. [Free 30-day trial, try the demo app today!](https://react.statuscode.com/link/184953/5d0bbb4a61)
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ck46oncyiofoth467qvt.jpg)](https://react.statuscode.com/link/184954/5d0bbb4a61)
+
+* It's been a big week for Node.js with [Node.js 26.0 (Current)](https://react.statuscode.com/link/184954/5d0bbb4a61) landing with the [Temporal API](https://react.statuscode.com/link/184955/5d0bbb4a61) enabled by default and a variety of V8 14.6 enhancements, but also [Node 26.1 (Current)](https://react.statuscode.com/link/184956/5d0bbb4a61) with an experimental core FFI mechanism.
+
+* *Rolldown*, the high-performance bundler, [reached a stable v1.0 release.](https://react.statuscode.com/link/184957/5d0bbb4a61) It focuses on speed and Rollup plugin compatibility.
+
+* [Vitest](https://react.statuscode.com/link/184958/5d0bbb4a61) is tightly coupled to Vite, but a maintainer has [proposed making it "framework-agnostic"](https://react.statuscode.com/link/184959/5d0bbb4a61) to support other build tools and runtimes.
+
+* As part of the [Astro 6.2](https://react.statuscode.com/link/184960/5d0bbb4a61) release, the popular web framework for content sites teased [Astro v7 Alpha](https://react.statuscode.com/link/184961/5d0bbb4a61), its next Vite 8-based, Rust compiler-driven version. [Astro 6.3](https://react.statuscode.com/link/184962/5d0bbb4a61) also landed shortly after with a new, experimental 'advanced routing' feature for better integration with alternative runtimes and frameworks like [Hono](https://react.statuscode.com/link/184963/5d0bbb4a61).
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
