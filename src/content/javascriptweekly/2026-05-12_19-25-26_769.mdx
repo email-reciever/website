@@ -1,0 +1,276 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Cryptographically valid malware hits npm
+description: Cryptographically valid malware hits npm
+date: 星期二 07 晚上 五月 12o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/785
+origin_site: https://javascriptweekly.com/issues/785
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Cryptographically valid malware hits npm" url="https://javascriptweekly.com/issues/785" />
+
+<Detail client:only="react">
+	#​785 — May 12, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/785)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://javascriptweekly.com/link/185000/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ckou53i84jyf1ujrgken.jpg)](https://javascriptweekly.com/link/185001/d076523b1d)
+
+[Anatomy of the TanStack npm Compromise](https://javascriptweekly.com/link/185001/d076523b1d "tanstack.com") — A new strain of the [Shai-Hulud worm](https://javascriptweekly.com/link/185002/d076523b1d) pushed malicious versions of TanStack packages to npm yesterday (containing a tripwire that would delete files if it detected token revocation), though [it hit ~170 other packages too](https://javascriptweekly.com/link/185003/d076523b1d). **Maintainer credentials weren’t stolen**, with the attack instead chaining `pull_request_target` abuse, cache poisoning, and OIDC token theft from CI _memory_.
+
+Tanner Linsley
+
+❓ **What should you do?** Consider an install-time cooldown (e.g. with `npm config set min-release-age=7` or [pnpm](https://javascriptweekly.com/link/185004/d076523b1d)'s `minimumReleaseAge`), as the packages were only compromised for 26 minutes. Plus, audit your GitHub Actions workflows for security issues with a tool like [zizmor](https://javascriptweekly.com/link/185005/d076523b1d).
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/8c7fe4d2.jpeg)](https://javascriptweekly.com/link/185000/d076523b1d)
+
+[Next.js Debugging Workshop: Logs, Tracing, Full Context](https://javascriptweekly.com/link/185000/d076523b1d "sentry.io") — Stop jumping between tools to piece together a Next.js bug. Sentry's hands-on workshop shows you how to write logs that explain where, what, and why, then connect them to traces across client and Node runtimes. [Register today](https://javascriptweekly.com/link/185000/d076523b1d).
+
+Sentry sponsor
+
+[Announcing Rolldown 1.0: The High Performance JS Bundler](https://javascriptweekly.com/link/185006/d076523b1d "voidzero.dev") — The Rust-based bundler built as the backbone for Vite 8 reaches a stable v1.0. You get huge performance gains, but with Rollup plugin API compatibility: it's 10–30x faster than Rollup, with early adopters reporting big drops in build time.
+
+The VoidZero Team
+
+**IN BRIEF:**
+
+*   The [notes from Node.js's recent collaboration summit](https://javascriptweekly.com/link/185007/d076523b1d) make for good reading if you want to see what the Node team is working on right now.
+    
+*   Regarding Bun's experimental port to Rust (from Zig), Jarred Sumner says the now-960k LOC rewrite [passes 99.8% of Bun's pre-existing test suite.](https://javascriptweekly.com/link/185008/d076523b1d)
+    
+*   🤖 A developer has [launched a challenge to port NetHack to JavaScript.](https://javascriptweekly.com/link/185047/d076523b1d) Can LLMs port the complex roguelike game _perfectly?_ So far, no, with [the leaderboard](https://javascriptweekly.com/link/185047/d076523b1d) showing a _transpiled_ version coming closest.
+    
+*   Did you know [Firefox has a `$$$` helper](https://javascriptweekly.com/link/185017/d076523b1d) for querying through the Shadow DOM?
+    
+
+**RELEASES:**
+
+*   [Jest 30.4.0](https://javascriptweekly.com/link/185009/d076523b1d) – A strong release for the popular JavaScript testing framework as it improves ESM, Temporal and React 19 support.
+    
+*   [Node 26.1 (Current)](https://javascriptweekly.com/link/185010/d076523b1d) – Last week's [big Node 26 release](https://javascriptweekly.com/link/185011/d076523b1d) may have had the Temporal API, but 26.1 adds (experimental) official FFI support. I did a writeup of what this means at the end of [last week's Node Weekly.](https://javascriptweekly.com/link/185012/d076523b1d)
+    
+*   [Electron 42](https://javascriptweekly.com/link/185013/d076523b1d) – Updates to Chromium 148/Node 24.15/V8 14.8 and no longer downloads the Electron binary in a `postinstall` script for added security.
+    
+*   [Capacitor 9.0 Alpha 1](https://javascriptweekly.com/link/185014/d076523b1d), [Playwright 1.60.0](https://javascriptweekly.com/link/185015/d076523b1d), [Mantine 9.2](https://javascriptweekly.com/link/185016/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[33 JavaScript Concepts](https://javascriptweekly.com/link/185051/d076523b1d "33jsconcepts.com") — What began life as a [Medium article](https://javascriptweekly.com/link/185052/d076523b1d) and turned into [a popular GitHub repo](https://javascriptweekly.com/link/185053/d076523b1d) is now a full site covering a wide array of JavaScript concepts, [even going beyond the 33](https://javascriptweekly.com/link/185054/d076523b1d).
+
+Leonardo Maldonado
+
+[9 Times the Web Platform Was Influenced by JavaScript Libraries](https://javascriptweekly.com/link/185018/d076523b1d "jadjoubran.io") — How various libraries like Lodash, Dojo and jQuery often did the “_R&D work in production_” for various features that eventually ended up in browser APIs.
+
+Jad Joubran
+
+[Easy and Rapid Azure Migrations. Azure Copilot Migration Agent](https://javascriptweekly.com/link/185019/d076523b1d "fandf.co") — Check out Microsoft’s [Introduction to Azure Copilot Agents free learning module](https://javascriptweekly.com/link/185019/d076523b1d) to learn more and [try it yourself](https://javascriptweekly.com/link/185019/d076523b1d).
+
+Microsoft Azure Copilot Migration Agent sponsor
+
+[From React to Web Components: A Migration That Saved 100 KB](https://javascriptweekly.com/link/185020/d076523b1d "evilmartians.com") — _“How I migrated a site from React to native Web Components, why that worked better than I expected, and how the patterns I used along the way grew into a small library called [nanotags](https://javascriptweekly.com/link/185021/d076523b1d).”_
+
+Pavel Grinchenko (Evil Martians)
+
+[Why Migrate to Valibot?](https://javascriptweekly.com/link/185048/d076523b1d "valibot.dev") — [Valibot](https://javascriptweekly.com/link/185049/d076523b1d) is a light, modular TypeScript schema validation library and an alternative to the likes of Zod. [v1.4.0](https://javascriptweekly.com/link/185050/d076523b1d) just dropped, too.
+
+Fabian Hiller
+
+📄 [A Vanilla Routing Experiment](https://javascriptweekly.com/link/185022/d076523b1d) – A look at the tripping points when building client-side routing for a small site _without_ using a framework. Daniela Baron
+
+📄 [Preserving DOM Changes Across Live Reloads](https://javascriptweekly.com/link/185023/d076523b1d) Kitty Giraudel
+
+📄 [I Keep Tripping Over `true, false, true`](https://javascriptweekly.com/link/185024/d076523b1d) Matt Smith
+
+📄 [Stop Using Yarn Classic](https://javascriptweekly.com/link/185025/d076523b1d) Nicolas Charpentier
+
+📄 [Introducing TanStack Form](https://javascriptweekly.com/link/185026/d076523b1d) Adam Rackis
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/aspuyiohodby5rhpai86.jpg)](https://javascriptweekly.com/link/185027/d076523b1d)
+
+[zero-native: Build Desktop Apps with Zig + WebView](https://javascriptweekly.com/link/185027/d076523b1d "zero-native.dev") — Vercel Labs’ entry into the [Neutralinojs](https://javascriptweekly.com/link/185028/d076523b1d)/Electron/Tauri space for building native HTML+JS desktop apps atop a Zig core and the system WebView _or_ Chromium. There are [examples](https://javascriptweekly.com/link/185029/d076523b1d) covering how to build vanilla, React, Svelte, and Vue apps on it. [GitHub repo.](https://javascriptweekly.com/link/185030/d076523b1d)
+
+Vercel
+
+[That API Call Takes 3 Seconds. It's Not the Network](https://javascriptweekly.com/link/185031/d076523b1d "www.tigerdata.com") — It's the analytics query behind it. TimescaleDB extends Postgres so queries stay fast at scale. [$1000 credit to start](https://javascriptweekly.com/link/185031/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Wakaru: Pull Apart Minified JavaScript Bundles](https://javascriptweekly.com/link/185032/d076523b1d "github.com") — A tool you can feed minified bundled code and get readable modules back, whether for recovering code, reverse-engineering, or security auditing. You can [try it online here.](https://javascriptweekly.com/link/185033/d076523b1d)
+
+Pionxzh
+
+[BlueJS: Compile JavaScript to Tiny Binaries](https://javascriptweekly.com/link/185034/d076523b1d) — An ahead-of-time compiler for JavaScript with QuickJS optionally embedded for dynamic features and package support. While _closed source_, the raw numbers are compelling (~5ms startup; 3.8MB peak memory use, and a GUI app in a 1.2MB binary).
+
+BlueJS
+
+💡 [PerryTS](https://javascriptweekly.com/link/185035/d076523b1d) is another (open source) option in this space worth a look.
+
+*   [pnpm 11.1](https://javascriptweekly.com/link/185036/d076523b1d) – Supports a new `gh:` prefix for GitHub Packages, `pnpm bugs` opens a package's bug tracker in the browser, and `pnpm audit signatures` verifies ECDSA registry signatures against keys.
+    
+*   [Astro 6.3](https://javascriptweekly.com/link/185037/d076523b1d) – Adds experimental support for advanced routing: control how requests flow through your app, with full support for frameworks like [Hono](https://javascriptweekly.com/link/185038/d076523b1d).
+    
+*   [Syncpack 15.0](https://javascriptweekly.com/link/185039/d076523b1d) – Large JavaScript monorepo dependency version manager. Now with full support for pnpm and Bun catalogs.
+    
+*   📱 [Expo SDK 56 Beta](https://javascriptweekly.com/link/185040/d076523b1d) – The popular React Native framework gets a speed boost and the Jetpack Compose and SwiftUI APIs go stable.
+    
+*   [MDXEditor 4.0](https://javascriptweekly.com/link/185041/d076523b1d) – Powerful Markdown editor React component.
+    
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/185043/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+* * *
+
+🔎 Detect, Highlight, Fix Accessibility - Test for WCAG & ARIA in the browser! Get [A11yInspect Pro](https://javascriptweekly.com/link/185044/d076523b1d) Free for 1 year - A developer friendly tool. [Join the waitlist](https://javascriptweekly.com/link/185044/d076523b1d).
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/185045/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​785 — May 12, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/785)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://javascriptweekly.com/link/185000/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ckou53i84jyf1ujrgken.jpg)](https://javascriptweekly.com/link/185001/d076523b1d)
+
+[Anatomy of the TanStack npm Compromise](https://javascriptweekly.com/link/185001/d076523b1d "tanstack.com") — A new strain of the [Shai-Hulud worm](https://javascriptweekly.com/link/185002/d076523b1d) pushed malicious versions of TanStack packages to npm yesterday (containing a tripwire that would delete files if it detected token revocation), though [it hit ~170 other packages too](https://javascriptweekly.com/link/185003/d076523b1d). **Maintainer credentials weren’t stolen**, with the attack instead chaining `pull_request_target` abuse, cache poisoning, and OIDC token theft from CI *memory*.
+
+Tanner Linsley
+
+❓ **What should you do?** Consider an install-time cooldown (e.g. with `npm config set min-release-age=7` or [pnpm](https://javascriptweekly.com/link/185004/d076523b1d)'s `minimumReleaseAge`), as the packages were only compromised for 26 minutes. Plus, audit your GitHub Actions workflows for security issues with a tool like [zizmor](https://javascriptweekly.com/link/185005/d076523b1d).
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/8c7fe4d2.jpeg)](https://javascriptweekly.com/link/185000/d076523b1d)
+
+[Next.js Debugging Workshop: Logs, Tracing, Full Context](https://javascriptweekly.com/link/185000/d076523b1d "sentry.io") — Stop jumping between tools to piece together a Next.js bug. Sentry's hands-on workshop shows you how to write logs that explain where, what, and why, then connect them to traces across client and Node runtimes. [Register today](https://javascriptweekly.com/link/185000/d076523b1d).
+
+Sentry sponsor
+
+[Announcing Rolldown 1.0: The High Performance JS Bundler](https://javascriptweekly.com/link/185006/d076523b1d "voidzero.dev") — The Rust-based bundler built as the backbone for Vite 8 reaches a stable v1.0. You get huge performance gains, but with Rollup plugin API compatibility: it's 10–30x faster than Rollup, with early adopters reporting big drops in build time.
+
+The VoidZero Team
+
+**IN BRIEF:**
+
+* The [notes from Node.js's recent collaboration summit](https://javascriptweekly.com/link/185007/d076523b1d) make for good reading if you want to see what the Node team is working on right now.
+
+* Regarding Bun's experimental port to Rust (from Zig), Jarred Sumner says the now-960k LOC rewrite [passes 99.8% of Bun's pre-existing test suite.](https://javascriptweekly.com/link/185008/d076523b1d)
+
+* 🤖 A developer has [launched a challenge to port NetHack to JavaScript.](https://javascriptweekly.com/link/185047/d076523b1d) Can LLMs port the complex roguelike game *perfectly?* So far, no, with [the leaderboard](https://javascriptweekly.com/link/185047/d076523b1d) showing a *transpiled* version coming closest.
+
+* Did you know [Firefox has a `$$$` helper](https://javascriptweekly.com/link/185017/d076523b1d) for querying through the Shadow DOM?
+
+**RELEASES:**
+
+* [Jest 30.4.0](https://javascriptweekly.com/link/185009/d076523b1d) – A strong release for the popular JavaScript testing framework as it improves ESM, Temporal and React 19 support.
+
+* [Node 26.1 (Current)](https://javascriptweekly.com/link/185010/d076523b1d) – Last week's [big Node 26 release](https://javascriptweekly.com/link/185011/d076523b1d) may have had the Temporal API, but 26.1 adds (experimental) official FFI support. I did a writeup of what this means at the end of [last week's Node Weekly.](https://javascriptweekly.com/link/185012/d076523b1d)
+
+* [Electron 42](https://javascriptweekly.com/link/185013/d076523b1d) – Updates to Chromium 148/Node 24.15/V8 14.8 and no longer downloads the Electron binary in a `postinstall` script for added security.
+
+* [Capacitor 9.0 Alpha 1](https://javascriptweekly.com/link/185014/d076523b1d), [Playwright 1.60.0](https://javascriptweekly.com/link/185015/d076523b1d), [Mantine 9.2](https://javascriptweekly.com/link/185016/d076523b1d)
+
+📖  Articles and Videos
+
+[33 JavaScript Concepts](https://javascriptweekly.com/link/185051/d076523b1d "33jsconcepts.com") — What began life as a [Medium article](https://javascriptweekly.com/link/185052/d076523b1d) and turned into [a popular GitHub repo](https://javascriptweekly.com/link/185053/d076523b1d) is now a full site covering a wide array of JavaScript concepts, [even going beyond the 33](https://javascriptweekly.com/link/185054/d076523b1d).
+
+Leonardo Maldonado
+
+[9 Times the Web Platform Was Influenced by JavaScript Libraries](https://javascriptweekly.com/link/185018/d076523b1d "jadjoubran.io") — How various libraries like Lodash, Dojo and jQuery often did the “*R\&D work in production*” for various features that eventually ended up in browser APIs.
+
+Jad Joubran
+
+[Easy and Rapid Azure Migrations. Azure Copilot Migration Agent](https://javascriptweekly.com/link/185019/d076523b1d "fandf.co") — Check out Microsoft’s [Introduction to Azure Copilot Agents free learning module](https://javascriptweekly.com/link/185019/d076523b1d) to learn more and [try it yourself](https://javascriptweekly.com/link/185019/d076523b1d).
+
+Microsoft Azure Copilot Migration Agent sponsor
+
+[From React to Web Components: A Migration That Saved 100 KB](https://javascriptweekly.com/link/185020/d076523b1d "evilmartians.com") — *“How I migrated a site from React to native Web Components, why that worked better than I expected, and how the patterns I used along the way grew into a small library called [nanotags](https://javascriptweekly.com/link/185021/d076523b1d).”*
+
+Pavel Grinchenko (Evil Martians)
+
+[Why Migrate to Valibot?](https://javascriptweekly.com/link/185048/d076523b1d "valibot.dev") — [Valibot](https://javascriptweekly.com/link/185049/d076523b1d) is a light, modular TypeScript schema validation library and an alternative to the likes of Zod. [v1.4.0](https://javascriptweekly.com/link/185050/d076523b1d) just dropped, too.
+
+Fabian Hiller
+
+📄 [A Vanilla Routing Experiment](https://javascriptweekly.com/link/185022/d076523b1d) – A look at the tripping points when building client-side routing for a small site *without* using a framework. Daniela Baron
+
+📄 [Preserving DOM Changes Across Live Reloads](https://javascriptweekly.com/link/185023/d076523b1d) Kitty Giraudel
+
+📄 [I Keep Tripping Over `true, false, true`](https://javascriptweekly.com/link/185024/d076523b1d) Matt Smith
+
+📄 [Stop Using Yarn Classic](https://javascriptweekly.com/link/185025/d076523b1d) Nicolas Charpentier
+
+📄 [Introducing TanStack Form](https://javascriptweekly.com/link/185026/d076523b1d) Adam Rackis
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/aspuyiohodby5rhpai86.jpg)](https://javascriptweekly.com/link/185027/d076523b1d)
+
+[zero-native: Build Desktop Apps with Zig + WebView](https://javascriptweekly.com/link/185027/d076523b1d "zero-native.dev") — Vercel Labs’ entry into the [Neutralinojs](https://javascriptweekly.com/link/185028/d076523b1d)/Electron/Tauri space for building native HTML+JS desktop apps atop a Zig core and the system WebView *or* Chromium. There are [examples](https://javascriptweekly.com/link/185029/d076523b1d) covering how to build vanilla, React, Svelte, and Vue apps on it. [GitHub repo.](https://javascriptweekly.com/link/185030/d076523b1d)
+
+Vercel
+
+[That API Call Takes 3 Seconds. It's Not the Network](https://javascriptweekly.com/link/185031/d076523b1d "www.tigerdata.com") — It's the analytics query behind it. TimescaleDB extends Postgres so queries stay fast at scale. [$1000 credit to start](https://javascriptweekly.com/link/185031/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Wakaru: Pull Apart Minified JavaScript Bundles](https://javascriptweekly.com/link/185032/d076523b1d "github.com") — A tool you can feed minified bundled code and get readable modules back, whether for recovering code, reverse-engineering, or security auditing. You can [try it online here.](https://javascriptweekly.com/link/185033/d076523b1d)
+
+Pionxzh
+
+[BlueJS: Compile JavaScript to Tiny Binaries](https://javascriptweekly.com/link/185034/d076523b1d) — An ahead-of-time compiler for JavaScript with QuickJS optionally embedded for dynamic features and package support. While *closed source*, the raw numbers are compelling (~5ms startup; 3.8MB peak memory use, and a GUI app in a 1.2MB binary).
+
+BlueJS
+
+💡 [PerryTS](https://javascriptweekly.com/link/185035/d076523b1d) is another (open source) option in this space worth a look.
+
+* [pnpm 11.1](https://javascriptweekly.com/link/185036/d076523b1d) – Supports a new `gh:` prefix for GitHub Packages, `pnpm bugs` opens a package's bug tracker in the browser, and `pnpm audit signatures` verifies ECDSA registry signatures against keys.
+
+* [Astro 6.3](https://javascriptweekly.com/link/185037/d076523b1d) – Adds experimental support for advanced routing: control how requests flow through your app, with full support for frameworks like [Hono](https://javascriptweekly.com/link/185038/d076523b1d).
+
+* [Syncpack 15.0](https://javascriptweekly.com/link/185039/d076523b1d) – Large JavaScript monorepo dependency version manager. Now with full support for pnpm and Bun catalogs.
+
+* 📱 [Expo SDK 56 Beta](https://javascriptweekly.com/link/185040/d076523b1d) – The popular React Native framework gets a speed boost and the Jetpack Compose and SwiftUI APIs go stable.
+
+* [MDXEditor 4.0](https://javascriptweekly.com/link/185041/d076523b1d) – Powerful Markdown editor React component.
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/185043/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+***
+
+🔎 Detect, Highlight, Fix Accessibility - Test for WCAG & ARIA in the browser! Get [A11yInspect Pro](https://javascriptweekly.com/link/185044/d076523b1d) Free for 1 year - A developer friendly tool. [Join the waitlist](https://javascriptweekly.com/link/185044/d076523b1d).
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/185045/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
