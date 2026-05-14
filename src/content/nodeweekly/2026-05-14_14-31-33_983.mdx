@@ -1,0 +1,231 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Let's go deep into Node's internals
+description: Let's go deep into Node's internals
+date: 星期四 02 下午 五月 14o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/624
+origin_site: https://nodeweekly.com/issues/624
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Let's go deep into Node's internals" url="https://nodeweekly.com/issues/624" />
+
+<Detail client:only="react">
+	#​624 — May 14, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/624)
+
+Together with 
+
+[![AppSignal logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_700,h_120/e_make_transparent/co_white,e_outline:7/lme8p344dw1aodshz9px.png)](https://nodeweekly.com/link/185135/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lpxoo7odk9dmyhontiqg.jpg)](https://nodeweekly.com/link/185136/0a4070b383)
+
+📗 [NodeBook: An Advanced Guide to Node.js Internals](https://nodeweekly.com/link/185136/0a4070b383 "www.thenodebook.com") — Volume I of this in-depth guide is now complete with eight chapters of advanced material covering topics like [event loop internals](https://nodeweekly.com/link/185137/0a4070b383), [what V8 does](https://nodeweekly.com/link/185138/0a4070b383), [buffer allocation](https://nodeweekly.com/link/185139/0a4070b383), [streams](https://nodeweekly.com/link/185140/0a4070b383), [module resolution](https://nodeweekly.com/link/185141/0a4070b383), [async/await](https://nodeweekly.com/link/185142/0a4070b383), and [the process lifecycle](https://nodeweekly.com/link/185143/0a4070b383).
+
+Ishtmeet Singh
+
+💡 Ishtmeet is now working on Volume II focusing on network I/O and APIs.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/e487e54d.png)](https://nodeweekly.com/link/185135/0a4070b383)
+
+[Plug Claude or Cursor into Your Node App's Production Errors](https://nodeweekly.com/link/185135/0a4070b383 "www.appsignal.com") — AppSignal's MCP server feeds your AI editor the error, stack trace, and deploy context. AI drafts the fix. You review and ship. [Free 30-day trial](https://nodeweekly.com/link/185135/0a4070b383).
+
+AppSignal sponsor
+
+[What's New in Node.js 26](https://nodeweekly.com/link/185144/0a4070b383 "nodejsdesignpatterns.com") — We featured Node 26’s release last week, but this is a practical tour of the goodies you could easily overlook in a release that _“doesn’t look like it’s adding a ton”_. v26 goes LTS this October, so everything here is something you could be using in production by the end of the year.
+
+Luciano Mammino
+
+**IN BRIEF:**
+
+*   [Node v22.22.3 (LTS)](https://nodeweekly.com/link/185145/0a4070b383) lands a _lot_ of dependency updates, `npm` v10.9.8, and backports numerous V8 fixes.
+    
+*   [Jest 30.4.0](https://nodeweekly.com/link/185146/0a4070b383) is a noteworthy release for the popular testing framework as it improves ESM, Temporal and React 19 support (`require(esm)` is supported on Node 24.9+ behind a flag).
+    
+*   Socket has [released certified patches for `vm2`](https://nodeweekly.com/link/185147/0a4070b383), a JavaScript sandboxing library for Node that has fallen prey to a sandbox escaping vulnerability.
+    
+*   _Vercel Sandbox_ now [supports Node.js 26.x.](https://nodeweekly.com/link/185148/0a4070b383)
+    
+
+[Fixing JavaScript Observability, One Library at a Time](https://nodeweekly.com/link/185149/0a4070b383 "blog.sentry.io") — The team at Sentry have been working on an approach to replace the monkey-patching that powers JavaScript APM tools with a runtime-oriented [diagnostics channel](https://nodeweekly.com/link/185150/0a4070b383)\-based approach. The hard part? Getting popular packages to join in, but [it’s happening.](https://nodeweekly.com/link/185151/0a4070b383)
+
+Abdelrahman Awad (Sentry)
+
+[Your Recursion is Lying to You](https://nodeweekly.com/link/185152/0a4070b383 "blog.gaborkoos.com") — ES2015 (a.k.a. ES6) specified [tail call optimization](https://nodeweekly.com/link/185153/0a4070b383), though V8 never shipped it. _“Tail-recursive shape does not automatically make JavaScript stack-safe.”_ Koos walks through the gap between recursive form and runtime behavior, showing off a ‘trampoline’ pattern for keeping the recursive style without the stack overflow.
+
+Gabor Koos
+
+📄 [Using HTTP/3 Over QUIC in Node.js](https://nodeweekly.com/link/185154/0a4070b383) – `node:quic` is experimental, but if you want to build an HTTP/3 client or server in Node, this is a useful introduction. James M Snell
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wbyrkh7emle4pakaf988.jpg)](https://nodeweekly.com/link/185155/0a4070b383)
+
+[Bun v1.3.14 Adds Image Processing, HTTP/3, HTTP/2 Fetch and More](https://nodeweekly.com/link/185155/0a4070b383 "bun.com") — Another mammoth Bun release. `Bun.Image` is a new built-in image processing API which can replace [Sharp](https://nodeweekly.com/link/185156/0a4070b383) in many cases. Bun’s package manager has added a global virtual store (akin to [pnpm’s](https://nodeweekly.com/link/185157/0a4070b383)), `Bun.serve` has experimental HTTP/3 over QUIC support, and `fetch` gets HTTP/2 and HTTP/3 support. Plus the usual raft of [Node.js compatibility improvements.](https://nodeweekly.com/link/185158/0a4070b383)
+
+Jarred Sumner
+
+[How to Send and Receive SMS Messages with Node.js and Google Cloud Run](https://nodeweekly.com/link/185159/0a4070b383 "developer.vonage.com") — Deploy a containerized Node.js app to Google Cloud Run to send SMS and process inbound webhooks via Vonage Messages API.
+
+Vonage sponsor
+
+[Syncpack 15.0: Consistent Dependency Versions in JS Monorepos](https://nodeweekly.com/link/185160/0a4070b383 "syncpack.dev") — A CLI tool (used by Electron, Cloudflare, Vercel, and others) that finds and fixes version mismatches across your entire monorepo, and enforces version policies to avoid drift. [v15.0](https://nodeweekly.com/link/185161/0a4070b383) adds support for pnpm and Bun catalogs and introduces a default 1 day minimum release age cooldown.
+
+Jamie Mason
+
+[Counterfact: An OpenAPI-Driven API Simulator](https://nodeweekly.com/link/185162/0a4070b383 "counterfact.dev") — Point it at an OpenAPI spec and get a live, stateful Node server with typed handlers, hot reload, and a REPL to control behavior at runtime. You can try it out in seconds with `npx`. [GitHub repo.](https://nodeweekly.com/link/185163/0a4070b383)
+
+Patrick McElhaney
+
+[pnpm 11.1 Adds More New Commands](https://nodeweekly.com/link/185164/0a4070b383 "pnpm.io") — `pnpm bugs` opens a package’s bug tracker in the browser, `pnpm audit signatures` verifies ECDSA registry signatures against keys, and there’s a new `gh:` prefix for installing packages from the GitHub Packages registry.
+
+Zoltan Kochan
+
+[wf: A CLI for Looking Up Web Platform Features](https://nodeweekly.com/link/185165/0a4070b383 "www.npmjs.com") — A CLI tool for looking up web platform feature support, bugs, and docs, from Microsoft's [Patrick Brosset](https://nodeweekly.com/link/185166/0a4070b383). You can install and run it as `wf` _or_ use `npx` for ad hoc use, e.g.: `npx web-features-cli "fetch api" -a`
+
+Patrick Brosset (Microsoft)
+
+📰 Classifieds
+
+⚡[Clerk API Keys are now GA](https://nodeweekly.com/link/185167/0a4070b383). Let your users create credentials that delegate access to your app's API — verify server-side, revoke instantly. 1K creations and 100K verifications free per month.
+
+* * *
+
+⚙️ [Middleware, but for AI agents](https://nodeweekly.com/link/185168/0a4070b383). Compose Claude Code, Codex & Gemini as one TypeScript harness — 100+ agent recipes: [agentfield.ai/github](https://nodeweekly.com/link/185169/0a4070b383)
+
+📢  Elsewhere in the ecosystem
+
+*   [zero-native](https://nodeweekly.com/link/185170/0a4070b383) is Vercel's entry into the ecosystem of frameworks for building native JS desktop apps. It sits atop a Zig core and lets you pick between the system WebView or Chromium. It works well, but it's still early days.
+    
+*   [Wakaru](https://nodeweekly.com/link/185171/0a4070b383) is a Rust-powered tool for pulling apart minified JavaScript bundles – give it minified bundled code and get readable modules back.
+    
+*   A developer of an HTTPS debugging tool [reflects on switching from Electron to the Rust-based Tauri.](https://nodeweekly.com/link/185172/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​624 — May 14, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/624)
+
+Together with 
+
+[![AppSignal logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_700,h_120/e_make_transparent/co_white,e_outline:7/lme8p344dw1aodshz9px.png)](https://nodeweekly.com/link/185135/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lpxoo7odk9dmyhontiqg.jpg)](https://nodeweekly.com/link/185136/0a4070b383)
+
+📗 [NodeBook: An Advanced Guide to Node.js Internals](https://nodeweekly.com/link/185136/0a4070b383 "www.thenodebook.com") — Volume I of this in-depth guide is now complete with eight chapters of advanced material covering topics like [event loop internals](https://nodeweekly.com/link/185137/0a4070b383), [what V8 does](https://nodeweekly.com/link/185138/0a4070b383), [buffer allocation](https://nodeweekly.com/link/185139/0a4070b383), [streams](https://nodeweekly.com/link/185140/0a4070b383), [module resolution](https://nodeweekly.com/link/185141/0a4070b383), [async/await](https://nodeweekly.com/link/185142/0a4070b383), and [the process lifecycle](https://nodeweekly.com/link/185143/0a4070b383).
+
+Ishtmeet Singh
+
+💡 Ishtmeet is now working on Volume II focusing on network I/O and APIs.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/e487e54d.png)](https://nodeweekly.com/link/185135/0a4070b383)
+
+[Plug Claude or Cursor into Your Node App's Production Errors](https://nodeweekly.com/link/185135/0a4070b383 "www.appsignal.com") — AppSignal's MCP server feeds your AI editor the error, stack trace, and deploy context. AI drafts the fix. You review and ship. [Free 30-day trial](https://nodeweekly.com/link/185135/0a4070b383).
+
+AppSignal sponsor
+
+[What's New in Node.js 26](https://nodeweekly.com/link/185144/0a4070b383 "nodejsdesignpatterns.com") — We featured Node 26’s release last week, but this is a practical tour of the goodies you could easily overlook in a release that *“doesn’t look like it’s adding a ton”*. v26 goes LTS this October, so everything here is something you could be using in production by the end of the year.
+
+Luciano Mammino
+
+**IN BRIEF:**
+
+* [Node v22.22.3 (LTS)](https://nodeweekly.com/link/185145/0a4070b383) lands a *lot* of dependency updates, `npm` v10.9.8, and backports numerous V8 fixes.
+
+* [Jest 30.4.0](https://nodeweekly.com/link/185146/0a4070b383) is a noteworthy release for the popular testing framework as it improves ESM, Temporal and React 19 support (`require(esm)` is supported on Node 24.9+ behind a flag).
+
+* Socket has [released certified patches for `vm2`](https://nodeweekly.com/link/185147/0a4070b383), a JavaScript sandboxing library for Node that has fallen prey to a sandbox escaping vulnerability.
+
+* *Vercel Sandbox* now [supports Node.js 26.x.](https://nodeweekly.com/link/185148/0a4070b383)
+
+[Fixing JavaScript Observability, One Library at a Time](https://nodeweekly.com/link/185149/0a4070b383 "blog.sentry.io") — The team at Sentry have been working on an approach to replace the monkey-patching that powers JavaScript APM tools with a runtime-oriented [diagnostics channel](https://nodeweekly.com/link/185150/0a4070b383)-based approach. The hard part? Getting popular packages to join in, but [it’s happening.](https://nodeweekly.com/link/185151/0a4070b383)
+
+Abdelrahman Awad (Sentry)
+
+[Your Recursion is Lying to You](https://nodeweekly.com/link/185152/0a4070b383 "blog.gaborkoos.com") — ES2015 (a.k.a. ES6) specified [tail call optimization](https://nodeweekly.com/link/185153/0a4070b383), though V8 never shipped it. *“Tail-recursive shape does not automatically make JavaScript stack-safe.”* Koos walks through the gap between recursive form and runtime behavior, showing off a ‘trampoline’ pattern for keeping the recursive style without the stack overflow.
+
+Gabor Koos
+
+📄 [Using HTTP/3 Over QUIC in Node.js](https://nodeweekly.com/link/185154/0a4070b383) – `node:quic` is experimental, but if you want to build an HTTP/3 client or server in Node, this is a useful introduction. James M Snell
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wbyrkh7emle4pakaf988.jpg)](https://nodeweekly.com/link/185155/0a4070b383)
+
+[Bun v1.3.14 Adds Image Processing, HTTP/3, HTTP/2 Fetch and More](https://nodeweekly.com/link/185155/0a4070b383 "bun.com") — Another mammoth Bun release. `Bun.Image` is a new built-in image processing API which can replace [Sharp](https://nodeweekly.com/link/185156/0a4070b383) in many cases. Bun’s package manager has added a global virtual store (akin to [pnpm’s](https://nodeweekly.com/link/185157/0a4070b383)), `Bun.serve` has experimental HTTP/3 over QUIC support, and `fetch` gets HTTP/2 and HTTP/3 support. Plus the usual raft of [Node.js compatibility improvements.](https://nodeweekly.com/link/185158/0a4070b383)
+
+Jarred Sumner
+
+[How to Send and Receive SMS Messages with Node.js and Google Cloud Run](https://nodeweekly.com/link/185159/0a4070b383 "developer.vonage.com") — Deploy a containerized Node.js app to Google Cloud Run to send SMS and process inbound webhooks via Vonage Messages API.
+
+Vonage sponsor
+
+[Syncpack 15.0: Consistent Dependency Versions in JS Monorepos](https://nodeweekly.com/link/185160/0a4070b383 "syncpack.dev") — A CLI tool (used by Electron, Cloudflare, Vercel, and others) that finds and fixes version mismatches across your entire monorepo, and enforces version policies to avoid drift. [v15.0](https://nodeweekly.com/link/185161/0a4070b383) adds support for pnpm and Bun catalogs and introduces a default 1 day minimum release age cooldown.
+
+Jamie Mason
+
+[Counterfact: An OpenAPI-Driven API Simulator](https://nodeweekly.com/link/185162/0a4070b383 "counterfact.dev") — Point it at an OpenAPI spec and get a live, stateful Node server with typed handlers, hot reload, and a REPL to control behavior at runtime. You can try it out in seconds with `npx`. [GitHub repo.](https://nodeweekly.com/link/185163/0a4070b383)
+
+Patrick McElhaney
+
+[pnpm 11.1 Adds More New Commands](https://nodeweekly.com/link/185164/0a4070b383 "pnpm.io") — `pnpm bugs` opens a package’s bug tracker in the browser, `pnpm audit signatures` verifies ECDSA registry signatures against keys, and there’s a new `gh:` prefix for installing packages from the GitHub Packages registry.
+
+Zoltan Kochan
+
+[wf: A CLI for Looking Up Web Platform Features](https://nodeweekly.com/link/185165/0a4070b383 "www.npmjs.com") — A CLI tool for looking up web platform feature support, bugs, and docs, from Microsoft's [Patrick Brosset](https://nodeweekly.com/link/185166/0a4070b383). You can install and run it as `wf` *or* use `npx` for ad hoc use, e.g.: `npx web-features-cli "fetch api" -a`
+
+Patrick Brosset (Microsoft)
+
+📰 Classifieds
+
+⚡[Clerk API Keys are now GA](https://nodeweekly.com/link/185167/0a4070b383). Let your users create credentials that delegate access to your app's API — verify server-side, revoke instantly. 1K creations and 100K verifications free per month.
+
+***
+
+⚙️ [Middleware, but for AI agents](https://nodeweekly.com/link/185168/0a4070b383). Compose Claude Code, Codex & Gemini as one TypeScript harness — 100+ agent recipes: [agentfield.ai/github](https://nodeweekly.com/link/185169/0a4070b383)
+
+📢  Elsewhere in the ecosystem
+
+* [zero-native](https://nodeweekly.com/link/185170/0a4070b383) is Vercel's entry into the ecosystem of frameworks for building native JS desktop apps. It sits atop a Zig core and lets you pick between the system WebView or Chromium. It works well, but it's still early days.
+
+* [Wakaru](https://nodeweekly.com/link/185171/0a4070b383) is a Rust-powered tool for pulling apart minified JavaScript bundles – give it minified bundled code and get readable modules back.
+
+* A developer of an HTTPS debugging tool [reflects on switching from Electron to the Rust-based Tauri.](https://nodeweekly.com/link/185172/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
