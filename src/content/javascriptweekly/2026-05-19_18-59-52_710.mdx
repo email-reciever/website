@@ -1,0 +1,325 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Dr. Axel's blog is gone (for now)
+description: Dr. Axel's blog is gone (for now)
+date: 星期二 06 晚上 五月 19o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/786
+origin_site: https://javascriptweekly.com/issues/786
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Dr. Axel's blog is gone (for now)" url="https://javascriptweekly.com/issues/786" />
+
+<Detail client:only="react">
+	#​786 — May 19, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/786)
+
+Together with 
+
+[![Depot](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_320/e_make_transparent/co_white,e_outline:20/lqhtj3olkxbq58buyzzc.png)](https://javascriptweekly.com/link/185306/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ql3ejie7zibdm4rd25zh.jpg)](https://javascriptweekly.com/link/185307/d076523b1d)
+
+RFC: [It’s Time for `npm` to Make Install Scripts Opt-In](https://javascriptweekly.com/link/185307/d076523b1d "github.com") — npm is the only major package manager that runs dependency install scripts (e.g. `postinstall`) by default, and they’ve become too much of a security weakness, says Jamie, who works for GitHub (maintainers of npm). This RFC features further discussion of the idea and the tradeoffs involved.
+
+Jamie Magee
+
+💡 [npq](https://javascriptweekly.com/link/185308/d076523b1d) is a tool that makes `npm install`s safer. It stands in front of `npm` and audits packages before installing them, including the presence of pre/post install scripts.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f5067c40.png)](https://javascriptweekly.com/link/185306/d076523b1d)
+
+[How Depot Built a CI Orchestrator on AWS Lambda](https://javascriptweekly.com/link/185306/d076523b1d "fandf.co") — Long-running CI orchestration without long-lived servers. Depot rebuilt their CI engine using AWS Lambda durable functions — stateful, callback-driven, and crash-recoverable. A deep dive into the run-workflow-job hierarchy powering Depot CI.
+
+Depot sponsor
+
+[_Mini Shai-Hulud_ Hits: 300+ Malicious npm Packages Published](https://javascriptweekly.com/link/185309/d076523b1d "safedep.io") — The _"[Shai-Hulud](https://javascriptweekly.com/link/185310/d076523b1d)"_ class of npm ecosystem attacks continues to rumble on. Today, [hundreds more packages](https://javascriptweekly.com/link/185311/d076523b1d) – including popular ones from the `antv` family and `timeago.js` – were hit.
+
+SafeDep Team
+
+**IN BRIEF:**
+
+*   😱 Dr. Axel Rauschmayer (JavaScript legend and former JS Weekly editor) has [taken his blog and JavaScript books off the Web](https://javascriptweekly.com/link/185312/d076523b1d) due to being overwhelmed by AI crawlers. You can, however, still [purchase his fantastic books here.](https://javascriptweekly.com/link/185313/d076523b1d)
+    
+*   The Bun saga continues. Despite once [playing down its significance](https://javascriptweekly.com/link/185314/d076523b1d), the [Rust-based rewrite of Bun has been merged](https://javascriptweekly.com/link/185315/d076523b1d), though there are [questions over the quality](https://javascriptweekly.com/link/185316/d076523b1d) of the AI-ported code. Much [discussion ensued on Hacker News.](https://javascriptweekly.com/link/185317/d076523b1d)
+    
+*   [The Deno team is teasing Deno 2.8](https://javascriptweekly.com/link/185318/d076523b1d), due to be released this week. Significant Node.js compatibility improvements, `import defer`, and TypeScript 6.0.3 support await.
+    
+*   The Chrome and Edge teams are working on [a new `&lt;install>` HTML element](https://javascriptweekly.com/link/185319/d076523b1d) for browsers to render a 'trusted install button' for PWAs.
+    
+*   The _Express.js_ project has [an all new look](https://javascriptweekly.com/link/185320/d076523b1d), including a new site, logo, and [improved docs.](https://javascriptweekly.com/link/185321/d076523b1d)
+    
+
+**RELEASES:**
+
+*   [Angular 22 Release Candidate](https://javascriptweekly.com/link/185322/d076523b1d) – Final is due in early June. Expect [signal-based forms](https://javascriptweekly.com/link/185323/d076523b1d) and the [OnPush](https://javascriptweekly.com/link/185324/d076523b1d) change detection strategy becoming default.
+    
+*   [Bun 1.3.14](https://javascriptweekly.com/link/185325/d076523b1d) – The alternative JS runtime gets `Bun.Image`, more HTTP/2 and HTTP/3 support, and more Node compatibility improvements.
+    
+*   [ESLint Config Inspector 3.0](https://javascriptweekly.com/link/185326/d076523b1d) – A visual tool for inspecting and understanding your ESLint flat configs.
+    
+*   [TypeORM 1.0](https://javascriptweekly.com/link/185327/d076523b1d), [ESLint 10.4.0](https://javascriptweekly.com/link/185328/d076523b1d), [Relay 21.0](https://javascriptweekly.com/link/185329/d076523b1d), [Rolldown 1.0.1](https://javascriptweekly.com/link/185330/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/echd5tqlridpzz6jd2bx.jpg)](https://javascriptweekly.com/link/185331/d076523b1d)
+
+🤖 [Mark Erikson's Agent Setup, Workflow, and Tools](https://javascriptweekly.com/link/185331/d076523b1d "blog.isquaredsoftware.com") — Mark, well known for maintaining Redux and creating Redux Toolkit, goes deep into his daily development workflow, including his use of [OpenCode](https://javascriptweekly.com/link/185332/d076523b1d) (an open source JavaScript-powered coding agent), how he manages his knowledge base, tasks, and more.
+
+Mark Erikson
+
+[Clerk API Keys Are Now Generally Available](https://javascriptweekly.com/link/185333/d076523b1d "go.clerk.com") — Let your users create credentials that delegate access to your API. Verify server-side, revoke instantly — all via the Backend SDK.
+
+Clerk sponsor
+
+📗 [NodeBook: An Advanced Guide to Node.js Internals](https://javascriptweekly.com/link/185334/d076523b1d "www.thenodebook.com") — Eight in-depth chapters for understanding Node.js internals, covering topics like [event loop internals](https://javascriptweekly.com/link/185335/d076523b1d), [what V8 does](https://javascriptweekly.com/link/185336/d076523b1d), [streams](https://javascriptweekly.com/link/185337/d076523b1d), [module resolution](https://javascriptweekly.com/link/185338/d076523b1d), and [async/await](https://javascriptweekly.com/link/185339/d076523b1d).
+
+Ishtmeet Singh
+
+[Soon We Can Finally Banish JavaScript to the _ShadowRealm_](https://javascriptweekly.com/link/185340/d076523b1d "css-tricks.com") — A tour of the _in-progress_ [TC39 proposal](https://javascriptweekly.com/link/185341/d076523b1d) for running JavaScript in an isolated ‘pseudo-realm’ with its own globals and intrinsics. Handy for third-party code or anything you want to keep away from global scope.
+
+Mat Marquis
+
+📄 [Hardening TanStack After the npm Compromise](https://javascriptweekly.com/link/185342/d076523b1d) – What TanStack is doing to improve supply chain security after [an attacker published](https://javascriptweekly.com/link/185343/d076523b1d) malicious versions of TanStack packages last week. The TanStack Team
+
+📺 [The _TanStack Start_ Story: Tanner Linsley on Competing with Next.js](https://javascriptweekly.com/link/185344/d076523b1d) – A candid 40-minute interview with TanStack’s founder. Nuno Maduro
+
+📄 [Cross-Document View Transitions: The Gotchas Nobody Mentions](https://javascriptweekly.com/link/185345/d076523b1d) Durgesh Rajubhai Pawar (CSS Tricks)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wbo5vpin96clokiyeke5.jpg)](https://javascriptweekly.com/link/185346/d076523b1d)
+
+[Orval: Generate Type-Safe Clients from OpenAPI/Swagger Specs](https://javascriptweekly.com/link/185346/d076523b1d "orval.dev") — Given a valid OpenAPI v3 or Swagger v2 spec, generate models, requests, hooks, and mocks for React, Vue, Svelte, Solid, and Hono apps, or even plain `fetch`.
+
+Victor Bury
+
+[Brownies: Browser Storage as a Plain Object, With Change Events](https://javascriptweekly.com/link/185347/d076523b1d "github.com") — One tiny API over cookies, localStorage, sessionStorage and IndexedDB. Typed values survive automatically, and you get `subscribe()` for change events.
+
+Francisco Presencia
+
+[Querying a Billion Rows Shouldn't Freeze Your API](https://javascriptweekly.com/link/185348/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres so analytics queries stay fast at scale. No pipeline, no drift. [$1000 credit to start](https://javascriptweekly.com/link/185348/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+🖼️ [Pica 10.0: High Quality Image Resizing in the Browser](https://javascriptweekly.com/link/185349/d076523b1d "nodeca.github.io") — High quality in-browser image resizing that leans on WASM and Web Workers or falls back to pure JS as necessary. [v10](https://javascriptweekly.com/link/185350/d076523b1d) is a modernization build (the first since 2021) that adds ESM and split builds and migrates to TypeScript. [GitHub repo.](https://javascriptweekly.com/link/185351/d076523b1d)
+
+Vitaly Puzrin
+
+🗓️ [SVAR Calendar: A Calendar Component for React, Svelte and Vue](https://javascriptweekly.com/link/185352/d076523b1d "svar.dev") — A flexible calendar component with a MIT-licensed core and extended commercial version. [Here’s a live demo](https://javascriptweekly.com/link/185353/d076523b1d) of the open source version.
+
+XB Software Sp.
+
+💡 [Schedule-X](https://javascriptweekly.com/link/185354/d076523b1d) is another great option in this space and [v4.6](https://javascriptweekly.com/link/185355/d076523b1d) just landed.
+
+[Fate 1.0: A Modern Data Framework for React](https://javascriptweekly.com/link/185356/d076523b1d "fate.technology") — A new data framework from former Jest lead and ex-Meta engineer Christoph Nakazawa.
+
+Christoph Nakazawa
+
+[Alien Signals: 'The Lightest Signal Library'](https://javascriptweekly.com/link/185357/d076523b1d "github.com") — Boils the best of Vue, Preact and Svelte’s approaches down into the lightest signal library going. A push-pull reactivity core so well-tuned it got merged back into Vue.
+
+Johnson Chu
+
+*   [Critical 8.0](https://javascriptweekly.com/link/185358/d076523b1d) – Addy Osmani's library for extracting and inlining above-the-fold CSS into HTML.
+    
+*   [SQL Formatter 15.8](https://javascriptweekly.com/link/185359/d076523b1d) – Pretty-printer for SQL queries. ([Demo](https://javascriptweekly.com/link/185360/d076523b1d))
+    
+*   [Shiki 4.1](https://javascriptweekly.com/link/185361/d076523b1d) – Popular, powerful syntax highlighter.
+    
+*   [Redux Toolkit 2.12.0](https://javascriptweekly.com/link/185362/d076523b1d) and [React Redux 9.3](https://javascriptweekly.com/link/185363/d076523b1d)
+    
+*   [Vue.js Language Tools 3.3](https://javascriptweekly.com/link/185364/d076523b1d)
+    
+
+📰 Classifieds
+
+[HyperFormula](https://javascriptweekly.com/link/185365/d076523b1d): The headless spreadsheet engine with 400+ Excel-compatible formulas. Run complex calculations at high speed.
+
+* * *
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/185366/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+* * *
+
+⚙️ [Middleware, but for AI agents](https://javascriptweekly.com/link/185367/d076523b1d). Compose Claude Code, Codex & Gemini as one TypeScript harness — 100+ agent recipes. [agentfield.ai/github](https://javascriptweekly.com/link/185367/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/azx9afpomjipp3vdrpxi.jpg)](https://javascriptweekly.com/link/185368/d076523b1d)
+
+*   Andrea Giammarchi [proposes `JSONRegistry`](https://javascriptweekly.com/link/185368/d076523b1d) _(above)_, an alternative to `JSON` that lets you define a registry for serializing and reviving custom/branded types.
+    
+*   🐝 [Wasp](https://javascriptweekly.com/link/185369/d076523b1d) is a Rails-like framework for Node, React and Prisma. It started life as a new programming language of its own before moving to JavaScript. Founder Matija Sosic tells the story in [5 Years and $5M Later: Inventing a New Programming Language for Web Development Was a Mistake](https://javascriptweekly.com/link/185370/d076523b1d).
+    
+*   Did you know that [some browsers render certain sites 'differently'](https://javascriptweekly.com/link/185371/d076523b1d) on an ad hoc basis? Firefox and Safari ship with [built-in 'tweaks' for popular sites](https://javascriptweekly.com/link/185372/d076523b1d) to fix elements that don't render correctly by default.
+    
+*   🤖 Simon Willison shares [a quick look at the last six months in LLMs.](https://javascriptweekly.com/link/185373/d076523b1d)
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/185374/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​786 — May 19, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/786)
+
+Together with 
+
+[![Depot](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_320/e_make_transparent/co_white,e_outline:20/lqhtj3olkxbq58buyzzc.png)](https://javascriptweekly.com/link/185306/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ql3ejie7zibdm4rd25zh.jpg)](https://javascriptweekly.com/link/185307/d076523b1d)
+
+RFC: [It’s Time for `npm` to Make Install Scripts Opt-In](https://javascriptweekly.com/link/185307/d076523b1d "github.com") — npm is the only major package manager that runs dependency install scripts (e.g. `postinstall`) by default, and they’ve become too much of a security weakness, says Jamie, who works for GitHub (maintainers of npm). This RFC features further discussion of the idea and the tradeoffs involved.
+
+Jamie Magee
+
+💡 [npq](https://javascriptweekly.com/link/185308/d076523b1d) is a tool that makes `npm install`s safer. It stands in front of `npm` and audits packages before installing them, including the presence of pre/post install scripts.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f5067c40.png)](https://javascriptweekly.com/link/185306/d076523b1d)
+
+[How Depot Built a CI Orchestrator on AWS Lambda](https://javascriptweekly.com/link/185306/d076523b1d "fandf.co") — Long-running CI orchestration without long-lived servers. Depot rebuilt their CI engine using AWS Lambda durable functions — stateful, callback-driven, and crash-recoverable. A deep dive into the run-workflow-job hierarchy powering Depot CI.
+
+Depot sponsor
+
+[*Mini Shai-Hulud* Hits: 300+ Malicious npm Packages Published](https://javascriptweekly.com/link/185309/d076523b1d "safedep.io") — The *"[Shai-Hulud](https://javascriptweekly.com/link/185310/d076523b1d)"* class of npm ecosystem attacks continues to rumble on. Today, [hundreds more packages](https://javascriptweekly.com/link/185311/d076523b1d) – including popular ones from the `antv` family and `timeago.js` – were hit.
+
+SafeDep Team
+
+**IN BRIEF:**
+
+* 😱 Dr. Axel Rauschmayer (JavaScript legend and former JS Weekly editor) has [taken his blog and JavaScript books off the Web](https://javascriptweekly.com/link/185312/d076523b1d) due to being overwhelmed by AI crawlers. You can, however, still [purchase his fantastic books here.](https://javascriptweekly.com/link/185313/d076523b1d)
+
+* The Bun saga continues. Despite once [playing down its significance](https://javascriptweekly.com/link/185314/d076523b1d), the [Rust-based rewrite of Bun has been merged](https://javascriptweekly.com/link/185315/d076523b1d), though there are [questions over the quality](https://javascriptweekly.com/link/185316/d076523b1d) of the AI-ported code. Much [discussion ensued on Hacker News.](https://javascriptweekly.com/link/185317/d076523b1d)
+
+* [The Deno team is teasing Deno 2.8](https://javascriptweekly.com/link/185318/d076523b1d), due to be released this week. Significant Node.js compatibility improvements, `import defer`, and TypeScript 6.0.3 support await.
+
+* The Chrome and Edge teams are working on [a new `&lt;install>` HTML element](https://javascriptweekly.com/link/185319/d076523b1d) for browsers to render a 'trusted install button' for PWAs.
+
+* The *Express.js* project has [an all new look](https://javascriptweekly.com/link/185320/d076523b1d), including a new site, logo, and [improved docs.](https://javascriptweekly.com/link/185321/d076523b1d)
+
+**RELEASES:**
+
+* [Angular 22 Release Candidate](https://javascriptweekly.com/link/185322/d076523b1d) – Final is due in early June. Expect [signal-based forms](https://javascriptweekly.com/link/185323/d076523b1d) and the [OnPush](https://javascriptweekly.com/link/185324/d076523b1d) change detection strategy becoming default.
+
+* [Bun 1.3.14](https://javascriptweekly.com/link/185325/d076523b1d) – The alternative JS runtime gets `Bun.Image`, more HTTP/2 and HTTP/3 support, and more Node compatibility improvements.
+
+* [ESLint Config Inspector 3.0](https://javascriptweekly.com/link/185326/d076523b1d) – A visual tool for inspecting and understanding your ESLint flat configs.
+
+* [TypeORM 1.0](https://javascriptweekly.com/link/185327/d076523b1d), [ESLint 10.4.0](https://javascriptweekly.com/link/185328/d076523b1d), [Relay 21.0](https://javascriptweekly.com/link/185329/d076523b1d), [Rolldown 1.0.1](https://javascriptweekly.com/link/185330/d076523b1d)
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/echd5tqlridpzz6jd2bx.jpg)](https://javascriptweekly.com/link/185331/d076523b1d)
+
+🤖 [Mark Erikson's Agent Setup, Workflow, and Tools](https://javascriptweekly.com/link/185331/d076523b1d "blog.isquaredsoftware.com") — Mark, well known for maintaining Redux and creating Redux Toolkit, goes deep into his daily development workflow, including his use of [OpenCode](https://javascriptweekly.com/link/185332/d076523b1d) (an open source JavaScript-powered coding agent), how he manages his knowledge base, tasks, and more.
+
+Mark Erikson
+
+[Clerk API Keys Are Now Generally Available](https://javascriptweekly.com/link/185333/d076523b1d "go.clerk.com") — Let your users create credentials that delegate access to your API. Verify server-side, revoke instantly — all via the Backend SDK.
+
+Clerk sponsor
+
+📗 [NodeBook: An Advanced Guide to Node.js Internals](https://javascriptweekly.com/link/185334/d076523b1d "www.thenodebook.com") — Eight in-depth chapters for understanding Node.js internals, covering topics like [event loop internals](https://javascriptweekly.com/link/185335/d076523b1d), [what V8 does](https://javascriptweekly.com/link/185336/d076523b1d), [streams](https://javascriptweekly.com/link/185337/d076523b1d), [module resolution](https://javascriptweekly.com/link/185338/d076523b1d), and [async/await](https://javascriptweekly.com/link/185339/d076523b1d).
+
+Ishtmeet Singh
+
+[Soon We Can Finally Banish JavaScript to the *ShadowRealm*](https://javascriptweekly.com/link/185340/d076523b1d "css-tricks.com") — A tour of the *in-progress* [TC39 proposal](https://javascriptweekly.com/link/185341/d076523b1d) for running JavaScript in an isolated ‘pseudo-realm’ with its own globals and intrinsics. Handy for third-party code or anything you want to keep away from global scope.
+
+Mat Marquis
+
+📄 [Hardening TanStack After the npm Compromise](https://javascriptweekly.com/link/185342/d076523b1d) – What TanStack is doing to improve supply chain security after [an attacker published](https://javascriptweekly.com/link/185343/d076523b1d) malicious versions of TanStack packages last week. The TanStack Team
+
+📺 [The *TanStack Start* Story: Tanner Linsley on Competing with Next.js](https://javascriptweekly.com/link/185344/d076523b1d) – A candid 40-minute interview with TanStack’s founder. Nuno Maduro
+
+📄 [Cross-Document View Transitions: The Gotchas Nobody Mentions](https://javascriptweekly.com/link/185345/d076523b1d) Durgesh Rajubhai Pawar (CSS Tricks)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wbo5vpin96clokiyeke5.jpg)](https://javascriptweekly.com/link/185346/d076523b1d)
+
+[Orval: Generate Type-Safe Clients from OpenAPI/Swagger Specs](https://javascriptweekly.com/link/185346/d076523b1d "orval.dev") — Given a valid OpenAPI v3 or Swagger v2 spec, generate models, requests, hooks, and mocks for React, Vue, Svelte, Solid, and Hono apps, or even plain `fetch`.
+
+Victor Bury
+
+[Brownies: Browser Storage as a Plain Object, With Change Events](https://javascriptweekly.com/link/185347/d076523b1d "github.com") — One tiny API over cookies, localStorage, sessionStorage and IndexedDB. Typed values survive automatically, and you get `subscribe()` for change events.
+
+Francisco Presencia
+
+[Querying a Billion Rows Shouldn't Freeze Your API](https://javascriptweekly.com/link/185348/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres so analytics queries stay fast at scale. No pipeline, no drift. [$1000 credit to start](https://javascriptweekly.com/link/185348/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+🖼️ [Pica 10.0: High Quality Image Resizing in the Browser](https://javascriptweekly.com/link/185349/d076523b1d "nodeca.github.io") — High quality in-browser image resizing that leans on WASM and Web Workers or falls back to pure JS as necessary. [v10](https://javascriptweekly.com/link/185350/d076523b1d) is a modernization build (the first since 2021) that adds ESM and split builds and migrates to TypeScript. [GitHub repo.](https://javascriptweekly.com/link/185351/d076523b1d)
+
+Vitaly Puzrin
+
+🗓️ [SVAR Calendar: A Calendar Component for React, Svelte and Vue](https://javascriptweekly.com/link/185352/d076523b1d "svar.dev") — A flexible calendar component with a MIT-licensed core and extended commercial version. [Here’s a live demo](https://javascriptweekly.com/link/185353/d076523b1d) of the open source version.
+
+XB Software Sp.
+
+💡 [Schedule-X](https://javascriptweekly.com/link/185354/d076523b1d) is another great option in this space and [v4.6](https://javascriptweekly.com/link/185355/d076523b1d) just landed.
+
+[Fate 1.0: A Modern Data Framework for React](https://javascriptweekly.com/link/185356/d076523b1d "fate.technology") — A new data framework from former Jest lead and ex-Meta engineer Christoph Nakazawa.
+
+Christoph Nakazawa
+
+[Alien Signals: 'The Lightest Signal Library'](https://javascriptweekly.com/link/185357/d076523b1d "github.com") — Boils the best of Vue, Preact and Svelte’s approaches down into the lightest signal library going. A push-pull reactivity core so well-tuned it got merged back into Vue.
+
+Johnson Chu
+
+* [Critical 8.0](https://javascriptweekly.com/link/185358/d076523b1d) – Addy Osmani's library for extracting and inlining above-the-fold CSS into HTML.
+
+* [SQL Formatter 15.8](https://javascriptweekly.com/link/185359/d076523b1d) – Pretty-printer for SQL queries. ([Demo](https://javascriptweekly.com/link/185360/d076523b1d))
+
+* [Shiki 4.1](https://javascriptweekly.com/link/185361/d076523b1d) – Popular, powerful syntax highlighter.
+
+* [Redux Toolkit 2.12.0](https://javascriptweekly.com/link/185362/d076523b1d) and [React Redux 9.3](https://javascriptweekly.com/link/185363/d076523b1d)
+
+* [Vue.js Language Tools 3.3](https://javascriptweekly.com/link/185364/d076523b1d)
+
+📰 Classifieds
+
+[HyperFormula](https://javascriptweekly.com/link/185365/d076523b1d): The headless spreadsheet engine with 400+ Excel-compatible formulas. Run complex calculations at high speed.
+
+***
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/185366/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+***
+
+⚙️ [Middleware, but for AI agents](https://javascriptweekly.com/link/185367/d076523b1d). Compose Claude Code, Codex & Gemini as one TypeScript harness — 100+ agent recipes. [agentfield.ai/github](https://javascriptweekly.com/link/185367/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/azx9afpomjipp3vdrpxi.jpg)](https://javascriptweekly.com/link/185368/d076523b1d)
+
+* Andrea Giammarchi [proposes `JSONRegistry`](https://javascriptweekly.com/link/185368/d076523b1d) *(above)*, an alternative to `JSON` that lets you define a registry for serializing and reviving custom/branded types.
+
+* 🐝 [Wasp](https://javascriptweekly.com/link/185369/d076523b1d) is a Rails-like framework for Node, React and Prisma. It started life as a new programming language of its own before moving to JavaScript. Founder Matija Sosic tells the story in [5 Years and $5M Later: Inventing a New Programming Language for Web Development Was a Mistake](https://javascriptweekly.com/link/185370/d076523b1d).
+
+* Did you know that [some browsers render certain sites 'differently'](https://javascriptweekly.com/link/185371/d076523b1d) on an ad hoc basis? Firefox and Safari ship with [built-in 'tweaks' for popular sites](https://javascriptweekly.com/link/185372/d076523b1d) to fix elements that don't render correctly by default.
+
+* 🤖 Simon Willison shares [a quick look at the last six months in LLMs.](https://javascriptweekly.com/link/185373/d076523b1d)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/185374/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
