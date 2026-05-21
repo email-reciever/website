@@ -1,0 +1,248 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Should we rewrite Node.js in Rust?
+description: Should we rewrite Node.js in Rust?
+date: 星期四 05 下午 五月 21o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/625
+origin_site: https://nodeweekly.com/issues/625
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Should we rewrite Node.js in Rust?" url="https://nodeweekly.com/issues/625" />
+
+<Detail client:only="react">
+	#​625 — May 21, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/625)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/185442/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fsvwj9zvfpmdmnocruui.jpg)](https://nodeweekly.com/link/185443/0a4070b383)
+
+[A Fresh Chapter and New Look for Express](https://nodeweekly.com/link/185443/0a4070b383 "expressjs.com") — For a while, Node’s long-standing web framework, _Express.js_, was looking a bit stale and projects like [Fastify](https://nodeweekly.com/link/185444/0a4070b383) were beginning to carry the torch, but [a major reboot that began in 2024](https://nodeweekly.com/link/185445/0a4070b383) brought Express back to the fore. Now Express’s brand, website, and [docs](https://nodeweekly.com/link/185446/0a4070b383) have time-travelled to 2026 too.
+
+Sebastian Beltran
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/b7435692.png)](https://nodeweekly.com/link/185442/0a4070b383)
+
+[AI Engineering Fundamentals with Scott Moss of Netflix](https://nodeweekly.com/link/185442/0a4070b383 "frontendmasters.com") — Learn to build reliable AI features. Build an AI-assisted Excalidraw app, set up eval harnesses, master context engineering, and ship agents that actually work.
+
+Frontend Masters sponsor
+
+[Introducing Staged Publishing for npm Packages](https://nodeweekly.com/link/185448/0a4070b383 "docs.npmjs.com") — Several months after first being teased, npm has released its new ‘staged publishing’ model that provides a review period before packages go live (as part of yesterday’s [npm 11.15.0 release](https://nodeweekly.com/link/185449/0a4070b383)).
+
+The npm Project
+
+💡 A [prerelease of npm 12.0](https://nodeweekly.com/link/185450/0a4070b383) has also just been released.
+
+**IN BRIEF:**
+
+*   🔒 GitHub's Jamie Magee has [proposed that `npm` make install scripts opt-in only by default](https://nodeweekly.com/link/185451/0a4070b383) to help mitigate problems increasingly caused by malevolent `postinstall` and similar scripts.
+    
+*   🔒 [Shai Hulud struck again earlier this week](https://nodeweekly.com/link/185452/0a4070b383), affecting hundreds of packages. Meanwhile, [`node-ipc` was also infected](https://nodeweekly.com/link/185453/0a4070b383) with a credentials stealer.
+    
+*   [Deno 2.8 is being teased](https://nodeweekly.com/link/185454/0a4070b383) to be released this week with huge Node.js compatibility improvements, `import defer`, and TypeScript 6.0.3 support.
+    
+
+[Node.js 26.2.0 (Current) Released](https://nodeweekly.com/link/185455/0a4070b383 "nodejs.org") — A modest release compared to [v26](https://nodeweekly.com/link/185456/0a4070b383) (Temporal) and [v26.1](https://nodeweekly.com/link/185457/0a4070b383) (`node:ffi`), but `stream.compose` is now marked as stable and `fs.Stats`/`BigIntStats` now support `Temporal.Instant`.
+
+Antoine du Hamel
+
+[How Node.js and V8 Keep Each Other Working](https://nodeweekly.com/link/185458/0a4070b383 "joyeecheung.github.io") — A behind-the-scenes look at how Node stays in sync with the V8 engine.
+
+Joyee Cheung
+
+[Build Durable AI Agents That Won’t Break in Production (Webinar)](https://nodeweekly.com/link/185459/0a4070b383 "orkes.io") — Learn the open-source 4-layer stack and run durable AI agents with Agentspan across LangGraph, OpenAI, and Google SDKs.
+
+Orkes sponsor
+
+📄 [Hardening TanStack After the npm Compromise](https://nodeweekly.com/link/185460/0a4070b383) – What TanStack is doing to improve supply chain security after [last week’s attack.](https://nodeweekly.com/link/185461/0a4070b383) The TanStack Team
+
+📄 [Optimizing Build Times by Migrating from Webpack to Rspack](https://nodeweekly.com/link/185462/0a4070b383) Benson Pan (Yelp)
+
+📄 [Building Automatic, Contextual Clinical Trial Audit Logging in Postgres Without Triggers](https://nodeweekly.com/link/185463/0a4070b383) – Using Drizzle, specifically. Nathan Leung (Harbor)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wmetd6i6esxnhgrtv4s7.jpg)](https://nodeweekly.com/link/185464/0a4070b383)
+
+[An Official Codemod to Migrate from Axios to `fetch`](https://nodeweekly.com/link/185464/0a4070b383 "nodejs.org") — A [codemod](https://nodeweekly.com/link/185465/0a4070b383) (used via `npx codemod`) that transforms code using Axios to leverage the WHATWG Fetch API, which is now natively available in Node.js. For some reason they don’t link to it in the post, but [it’s here](https://nodeweekly.com/link/185466/0a4070b383) if you want to try it out (and [here’s the underlying code](https://nodeweekly.com/link/185467/0a4070b383)).
+
+Augustin Mauroy
+
+[TypeORM 1.0: The DataMapper and ActiveRecord ORM](https://nodeweekly.com/link/185468/0a4070b383 "typeorm.io") — The popular TypeScript-first ORM that supports all major relational databases has reached 1.0 after years on 0.3.x, bringing cleanup and modernization work, `INSERT INTO ... SELECT` support, cross-driver transaction isolation levels, and smoother PostgreSQL enum migrations.
+
+TypeORM Team
+
+[Kanel 4.0: Generate TypeScript Types from Postgres](https://nodeweekly.com/link/185469/0a4070b383 "kristiandupont.github.io") — It inspects your database and outputs code you can add to a TypeScript project for use with something like Knex, Zod or Kysely (it has official extensions for each). [GitHub repo.](https://nodeweekly.com/link/185470/0a4070b383)
+
+Kristian Dupont
+
+*   [ESLint 10.4](https://nodeweekly.com/link/185471/0a4070b383) – Adds a `includeIgnoreFile()` helper for including patterns from `.gitignore` files and other files with gitignore-style patterns.
+    
+*   [pnpm 11.2](https://nodeweekly.com/link/185472/0a4070b383) – The efficient package manager adds an opt-in experiment for using a Rust powered install engine.
+    
+*   [Vavite 7.0](https://nodeweekly.com/link/185473/0a4070b383) – Bring the power of Vite to building server-side apps, complete with Hot Module Replacement.
+    
+*   🤖 [Adonis MCP 1.0](https://nodeweekly.com/link/185474/0a4070b383) – Enable AI-powered interactions on [AdonisJS](https://nodeweekly.com/link/185475/0a4070b383) apps. ([GitHub repo.](https://nodeweekly.com/link/185476/0a4070b383))
+    
+*   [Joist 2.2](https://nodeweekly.com/link/185477/0a4070b383) – Opinionated ORM for TypeScript, Node, and Postgres with schema-driven code generation.
+    
+*   [MikroORM 7.1](https://nodeweekly.com/link/185478/0a4070b383) – Another big release for the popular TypeScript ORM.
+    
+
+📰 Classifieds
+
+Autoscaling that doesn’t suck. [Try Judoscale](https://nodeweekly.com/link/185479/0a4070b383) and see what all the fuss is about.
+
+* * *
+
+⚡[Clerk API Keys are now GA](https://nodeweekly.com/link/185537/0a4070b383). Let your users create credentials that delegate access to your app's API — verify server-side, revoke instantly. 1K creations and 100K verifications free per month.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pjnzwjwur1bhozwghxb3.jpg)](https://nodeweekly.com/link/185480/0a4070b383)
+
+*   **😱 Bun's Zig-to-Rust porting saga continues, but what about Node...?** The [Rust-based rewrite of Bun has been merged](https://nodeweekly.com/link/185481/0a4070b383), though there are [questions over the quality](https://nodeweekly.com/link/185482/0a4070b383) of the AI-ported code. Matteo Collina and Luca Maraschi got together to [▶️ discuss the story and speculate whether Node could follow...](https://nodeweekly.com/link/185480/0a4070b383)
+    
+*   **🐝 Buzzin' through $5M.** [Wasp](https://nodeweekly.com/link/185483/0a4070b383) is a Rails-like framework for Node, React and Prisma, but it started life as a custom programming language of its own. Founder Matija Sosic tells the story [of why inventing a new language was an (expensive) mistake](https://nodeweekly.com/link/185484/0a4070b383) and how they landed on Node.
+    
+*   **🕹️ Doom in Node.js via FFI.** I knew something cool would come of [Node v26.1](https://nodeweekly.com/link/185457/0a4070b383)'s initial `node:ffi` support, and here it is: [Destino lets you play Doom in your terminal](https://nodeweekly.com/link/185485/0a4070b383) by calling out to [doomgeneric](https://nodeweekly.com/link/185486/0a4070b383) and wrapping it with [OpenTUI](https://nodeweekly.com/link/185487/0a4070b383).
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​625 — May 21, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/625)
+
+Together with 
+
+[![Frontend Masters logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_300,h_70/e_make_transparent/co_white,e_outline:5/nk0tfdvalivacz8rw7rt.png)](https://nodeweekly.com/link/185442/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fsvwj9zvfpmdmnocruui.jpg)](https://nodeweekly.com/link/185443/0a4070b383)
+
+[A Fresh Chapter and New Look for Express](https://nodeweekly.com/link/185443/0a4070b383 "expressjs.com") — For a while, Node’s long-standing web framework, *Express.js*, was looking a bit stale and projects like [Fastify](https://nodeweekly.com/link/185444/0a4070b383) were beginning to carry the torch, but [a major reboot that began in 2024](https://nodeweekly.com/link/185445/0a4070b383) brought Express back to the fore. Now Express’s brand, website, and [docs](https://nodeweekly.com/link/185446/0a4070b383) have time-travelled to 2026 too.
+
+Sebastian Beltran
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/b7435692.png)](https://nodeweekly.com/link/185442/0a4070b383)
+
+[AI Engineering Fundamentals with Scott Moss of Netflix](https://nodeweekly.com/link/185442/0a4070b383 "frontendmasters.com") — Learn to build reliable AI features. Build an AI-assisted Excalidraw app, set up eval harnesses, master context engineering, and ship agents that actually work.
+
+Frontend Masters sponsor
+
+[Introducing Staged Publishing for npm Packages](https://nodeweekly.com/link/185448/0a4070b383 "docs.npmjs.com") — Several months after first being teased, npm has released its new ‘staged publishing’ model that provides a review period before packages go live (as part of yesterday’s [npm 11.15.0 release](https://nodeweekly.com/link/185449/0a4070b383)).
+
+The npm Project
+
+💡 A [prerelease of npm 12.0](https://nodeweekly.com/link/185450/0a4070b383) has also just been released.
+
+**IN BRIEF:**
+
+* 🔒 GitHub's Jamie Magee has [proposed that `npm` make install scripts opt-in only by default](https://nodeweekly.com/link/185451/0a4070b383) to help mitigate problems increasingly caused by malevolent `postinstall` and similar scripts.
+
+* 🔒 [Shai Hulud struck again earlier this week](https://nodeweekly.com/link/185452/0a4070b383), affecting hundreds of packages. Meanwhile, [`node-ipc` was also infected](https://nodeweekly.com/link/185453/0a4070b383) with a credentials stealer.
+
+* [Deno 2.8 is being teased](https://nodeweekly.com/link/185454/0a4070b383) to be released this week with huge Node.js compatibility improvements, `import defer`, and TypeScript 6.0.3 support.
+
+[Node.js 26.2.0 (Current) Released](https://nodeweekly.com/link/185455/0a4070b383 "nodejs.org") — A modest release compared to [v26](https://nodeweekly.com/link/185456/0a4070b383) (Temporal) and [v26.1](https://nodeweekly.com/link/185457/0a4070b383) (`node:ffi`), but `stream.compose` is now marked as stable and `fs.Stats`/`BigIntStats` now support `Temporal.Instant`.
+
+Antoine du Hamel
+
+[How Node.js and V8 Keep Each Other Working](https://nodeweekly.com/link/185458/0a4070b383 "joyeecheung.github.io") — A behind-the-scenes look at how Node stays in sync with the V8 engine.
+
+Joyee Cheung
+
+[Build Durable AI Agents That Won’t Break in Production (Webinar)](https://nodeweekly.com/link/185459/0a4070b383 "orkes.io") — Learn the open-source 4-layer stack and run durable AI agents with Agentspan across LangGraph, OpenAI, and Google SDKs.
+
+Orkes sponsor
+
+📄 [Hardening TanStack After the npm Compromise](https://nodeweekly.com/link/185460/0a4070b383) – What TanStack is doing to improve supply chain security after [last week’s attack.](https://nodeweekly.com/link/185461/0a4070b383) The TanStack Team
+
+📄 [Optimizing Build Times by Migrating from Webpack to Rspack](https://nodeweekly.com/link/185462/0a4070b383) Benson Pan (Yelp)
+
+📄 [Building Automatic, Contextual Clinical Trial Audit Logging in Postgres Without Triggers](https://nodeweekly.com/link/185463/0a4070b383) – Using Drizzle, specifically. Nathan Leung (Harbor)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wmetd6i6esxnhgrtv4s7.jpg)](https://nodeweekly.com/link/185464/0a4070b383)
+
+[An Official Codemod to Migrate from Axios to `fetch`](https://nodeweekly.com/link/185464/0a4070b383 "nodejs.org") — A [codemod](https://nodeweekly.com/link/185465/0a4070b383) (used via `npx codemod`) that transforms code using Axios to leverage the WHATWG Fetch API, which is now natively available in Node.js. For some reason they don’t link to it in the post, but [it’s here](https://nodeweekly.com/link/185466/0a4070b383) if you want to try it out (and [here’s the underlying code](https://nodeweekly.com/link/185467/0a4070b383)).
+
+Augustin Mauroy
+
+[TypeORM 1.0: The DataMapper and ActiveRecord ORM](https://nodeweekly.com/link/185468/0a4070b383 "typeorm.io") — The popular TypeScript-first ORM that supports all major relational databases has reached 1.0 after years on 0.3.x, bringing cleanup and modernization work, `INSERT INTO ... SELECT` support, cross-driver transaction isolation levels, and smoother PostgreSQL enum migrations.
+
+TypeORM Team
+
+[Kanel 4.0: Generate TypeScript Types from Postgres](https://nodeweekly.com/link/185469/0a4070b383 "kristiandupont.github.io") — It inspects your database and outputs code you can add to a TypeScript project for use with something like Knex, Zod or Kysely (it has official extensions for each). [GitHub repo.](https://nodeweekly.com/link/185470/0a4070b383)
+
+Kristian Dupont
+
+* [ESLint 10.4](https://nodeweekly.com/link/185471/0a4070b383) – Adds a `includeIgnoreFile()` helper for including patterns from `.gitignore` files and other files with gitignore-style patterns.
+
+* [pnpm 11.2](https://nodeweekly.com/link/185472/0a4070b383) – The efficient package manager adds an opt-in experiment for using a Rust powered install engine.
+
+* [Vavite 7.0](https://nodeweekly.com/link/185473/0a4070b383) – Bring the power of Vite to building server-side apps, complete with Hot Module Replacement.
+
+* 🤖 [Adonis MCP 1.0](https://nodeweekly.com/link/185474/0a4070b383) – Enable AI-powered interactions on [AdonisJS](https://nodeweekly.com/link/185475/0a4070b383) apps. ([GitHub repo.](https://nodeweekly.com/link/185476/0a4070b383))
+
+* [Joist 2.2](https://nodeweekly.com/link/185477/0a4070b383) – Opinionated ORM for TypeScript, Node, and Postgres with schema-driven code generation.
+
+* [MikroORM 7.1](https://nodeweekly.com/link/185478/0a4070b383) – Another big release for the popular TypeScript ORM.
+
+📰 Classifieds
+
+Autoscaling that doesn’t suck. [Try Judoscale](https://nodeweekly.com/link/185479/0a4070b383) and see what all the fuss is about.
+
+***
+
+⚡[Clerk API Keys are now GA](https://nodeweekly.com/link/185537/0a4070b383). Let your users create credentials that delegate access to your app's API — verify server-side, revoke instantly. 1K creations and 100K verifications free per month.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pjnzwjwur1bhozwghxb3.jpg)](https://nodeweekly.com/link/185480/0a4070b383)
+
+* **😱 Bun's Zig-to-Rust porting saga continues, but what about Node...?** The [Rust-based rewrite of Bun has been merged](https://nodeweekly.com/link/185481/0a4070b383), though there are [questions over the quality](https://nodeweekly.com/link/185482/0a4070b383) of the AI-ported code. Matteo Collina and Luca Maraschi got together to [▶️ discuss the story and speculate whether Node could follow...](https://nodeweekly.com/link/185480/0a4070b383)
+
+* **🐝 Buzzin' through $5M.** [Wasp](https://nodeweekly.com/link/185483/0a4070b383) is a Rails-like framework for Node, React and Prisma, but it started life as a custom programming language of its own. Founder Matija Sosic tells the story [of why inventing a new language was an (expensive) mistake](https://nodeweekly.com/link/185484/0a4070b383) and how they landed on Node.
+
+* **🕹️ Doom in Node.js via FFI.** I knew something cool would come of [Node v26.1](https://nodeweekly.com/link/185457/0a4070b383)'s initial `node:ffi` support, and here it is: [Destino lets you play Doom in your terminal](https://nodeweekly.com/link/185485/0a4070b383) by calling out to [doomgeneric](https://nodeweekly.com/link/185486/0a4070b383) and wrapping it with [OpenTUI](https://nodeweekly.com/link/185487/0a4070b383).
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
