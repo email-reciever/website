@@ -1,0 +1,329 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: npm and pnpm introduce staged publishing
+description: npm and pnpm introduce staged publishing
+date: 星期二 07 晚上 五月 26o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/787
+origin_site: https://javascriptweekly.com/issues/787
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="npm and pnpm introduce staged publishing" url="https://javascriptweekly.com/issues/787" />
+
+<Detail client:only="react">
+	#​787 — May 26, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/787)
+
+Together with 
+
+[![Expo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1024,h_289/e_make_transparent/co_white,e_outline:15/damvoyij8zrqr3lp2edx.png)](https://javascriptweekly.com/link/185662/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kpiq6sqaxoik0wuhn14u.jpg)](https://javascriptweekly.com/link/185663/d076523b1d)
+
+[JS Crossword: All the Answers are JavaScript](https://javascriptweekly.com/link/185663/d076523b1d "lyra.horse") — This hand-crafted puzzle will seriously stretch your JavaScript knowledge. I’ve seen so many people on social media either cheering having finished it or cursing being stuck…
+
+Lyra Rebane
+
+💡 I've put some (educational!) tips at the end of this issue.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/20f71006.png)](https://javascriptweekly.com/link/185662/d076523b1d)
+
+[Expo UI Hits Stable: Native iOS & Android from One Import](https://javascriptweekly.com/link/185662/d076523b1d "try.expo.dev") — From a single import, @expo/ui ships SwiftUI on iOS and Jetpack Compose on Android with the real platform components underneath. SDK 56 also lands native drop-in replacements for seven common React Native community packages.
+
+Expo sponsor
+
+[Staged Publishing for npm Packages Goes Live](https://javascriptweekly.com/link/185664/d076523b1d "docs.npmjs.com") — npm’s ‘staged publishing’ model provides a review period with approval required before packages go live on the npm registry. Both [npm 11.15.0](https://javascriptweekly.com/link/185665/d076523b1d) and [pnpm 11.3](https://javascriptweekly.com/link/185666/d076523b1d) have added support.
+
+The npm Project
+
+💡 [In this broader writeup](https://javascriptweekly.com/link/185667/d076523b1d), GitHub also introduced npm's new `--allow-*` options to control over where npm is allowed to source packages from.
+
+**IN BRIEF:**
+
+*   [Firefox has added Web Serial support in Firefox 151](https://javascriptweekly.com/link/185668/d076523b1d) so you can connect to microcontrollers, 3D printers, and other serial-connected hardware from JS.
+    
+*   Mozilla's Ryan Hunt [says goodbye to asm.js](https://javascriptweekly.com/link/185711/d076523b1d) as Firefox's JS engine now disables optimizations for it by default.
+    
+*   🤖 [Modern Web Guidance](https://javascriptweekly.com/link/185669/d076523b1d) is a suite of expert-vetted skills to guide agents in building modern web experiences, e.g. `"begin preloading pages when users hover over important links."`
+    
+*   [TC39 held its latest meeting last week](https://javascriptweekly.com/link/185670/d076523b1d) – a roundup is due soon.
+    
+
+**RELEASES:**
+
+*   [Storybook 10.4](https://javascriptweekly.com/link/185671/d076523b1d) – the frontend component workshop – has added first-class TanStack React support and the ability for agents to set up Storybook in complex apps.
+    
+*   [Node.js v26.2.0 (Current)](https://javascriptweekly.com/link/185672/d076523b1d) and [v24.16.0 (LTS)](https://javascriptweekly.com/link/185673/d076523b1d)
+    
+*   [pnpm 11.3](https://javascriptweekly.com/link/185666/d076523b1d) – Adds `pnpm stage` for [staged publishing](https://javascriptweekly.com/link/185664/d076523b1d), `trustLockfile` for setting controls around application of trust policies, native `pkg`, `repo` and `set-script` commands & more.
+    
+*   [npm 12.0 Prerelease](https://javascriptweekly.com/link/185674/d076523b1d), [Apache ECharts 6.1](https://javascriptweekly.com/link/185675/d076523b1d) ([Demos.](https://javascriptweekly.com/link/185676/d076523b1d))
+    
+
+📖  Articles and Videos
+
+[Chrome Previews _Declarative Partial Updates_](https://javascriptweekly.com/link/185677/d076523b1d "developer.chrome.com") — Two new sets of APIs for working with HTML out-of-order, whether in the doc itself (via `&lt;template for>`) or through dynamic insertion (via `setHTML`/`streamHTML`). Experimental in Chrome 148 but [polyfills](https://javascriptweekly.com/link/185678/d076523b1d) [exist](https://javascriptweekly.com/link/185679/d076523b1d).
+
+Pollard and Rosenthal (Chrome)
+
+[Optimizing Our Build Times by Migrating from Webpack to Rspack](https://javascriptweekly.com/link/185680/d076523b1d "engineeringblog.yelp.com") — How Yelp cut build times in half with [Rspack](https://javascriptweekly.com/link/185681/d076523b1d) (a Rust-powered drop-in replacement for webpack) and what they learned about barrel files and re-exports.
+
+Benson Pan (Yelp)
+
+[Unlimited Postgres for Developers and Their Agents](https://javascriptweekly.com/link/185682/d076523b1d "ghost.build") — _ghost_ gives your agent unlimited postgres forks. No project limits, no cleanup, 1TB storage, 100 hrs/mo free. [Try for free](https://javascriptweekly.com/link/185682/d076523b1d)
+
+Ghost sponsor
+
+[Microsoft's Analysis of the Recent _Mini Shai-Hulud_ Compromise](https://javascriptweekly.com/link/185683/d076523b1d "www.microsoft.com") — A detailed post-mortem of last week’s [‘Mini Shai-Hulud’](https://javascriptweekly.com/link/185684/d076523b1d) npm security chain compromise.
+
+Microsoft Defender Security Research Team
+
+🤖 [AI-Assisted Engineers are Burning Out: Is This Fine?](https://javascriptweekly.com/link/185685/d076523b1d) – A look at the negative effects of AI-assisted coding and how to avoid burning yourself out. Ivan Chepurin
+
+📄 [A Simple Clustering Algorithm for Lists](https://javascriptweekly.com/link/185686/d076523b1d) – Some algorithm fun. Cassidy Williams
+
+🛠 Code & Tools
+
+[Deno 2.8: The 'Biggest Minor Release' to Date](https://javascriptweekly.com/link/185687/d076523b1d "deno.com") — The headline is that Node.js compatibility has jumped from 42% in Deno 2.7 to 76.4% now (higher than Bun). Deno also gets [huge perf gains](https://javascriptweekly.com/link/185688/d076523b1d) across the board and drops the `npm:` prefix requirement when adding/installing packages. Plus many other things, including:
+
+*   New commands including: `audit fix` to upgrade vulnerable dependencies, `pack` to build a project into a npm-publishable tarball, and `why` to see why a package has been installed.
+*   [Web API support](https://javascriptweekly.com/link/185689/d076523b1d) improvements, including `OffscreenCanvas` going stable.
+*   Node [`module.registerHooks()` support](https://javascriptweekly.com/link/185690/d076523b1d).
+*   Chrome DevTools can now [inspect Deno's network traffic](https://javascriptweekly.com/link/185691/d076523b1d).
+*   A [built-in CPU profiler](https://javascriptweekly.com/link/185692/d076523b1d).
+*   [import defer](https://javascriptweekly.com/link/185693/d076523b1d) support.
+*   V8 14.9 and TypeScript 6.0.3.
+
+Bartek Iwańczuk
+
+[10 Merged, 34 to Go: Fixing JS Observability Upstream](https://javascriptweekly.com/link/185694/d076523b1d "blog.sentry.io") — Every JS APM tool monkey-patches libraries. It breaks with ESM, bundlers, and non-Node runtimes. [Here's how to fix it](https://javascriptweekly.com/link/185694/d076523b1d).
+
+Sentry sponsor
+
+📄 [DOCX 9.7: Build Word `.docx` Files in JavaScript](https://javascriptweekly.com/link/185695/d076523b1d "docx.js.org") — A mature, comprehensive library for generating `docx` files both client and server side. There’s a [CodePen-based example](https://javascriptweekly.com/link/185696/d076523b1d) with the basics, plus [over 100 example scripts](https://javascriptweekly.com/link/185697/d076523b1d).
+
+Dolan Miu
+
+[tinykeys 4.0: A Tiny, Modern Library for Keybindings](https://javascriptweekly.com/link/185698/d076523b1d "jamiebuilds.github.io") — Has a very simple, straightforward API and the page includes live demos.
+
+Jamie Kyle
+
+[An Official Node.js Codemod to Migrate from Axios to `fetch`](https://javascriptweekly.com/link/185699/d076523b1d "app.codemod.com") — A [codemod](https://javascriptweekly.com/link/185700/d076523b1d) to transform code using Axios to using the Fetch API instead.
+
+The Node.js Team
+
+📱 [Hot Updater: Self-Hosted Over-the-Air Updates for React Native](https://javascriptweekly.com/link/185701/d076523b1d "hot-updater.dev") — A way to deploy updates to apps without app store submissions.
+
+Sungyu Kang
+
+*   📊 [Perspective 4.5](https://javascriptweekly.com/link/185702/d076523b1d) – Analytics and data viz component for large and streaming datasets.
+    
+*   [Partytown 0.14.0](https://javascriptweekly.com/link/185703/d076523b1d) – Relocate resource-intensive scripts into Web Workers.
+    
+*   [atproto TypeScript SDK Upgrades](https://javascriptweekly.com/link/185704/d076523b1d) – Every package in the `@atproto` namespace has been rebuilt, and all are now shipped as ESM.
+    
+*   [Kysely 0.29.0](https://javascriptweekly.com/link/185705/d076523b1d) – Popular type-safe SQL query builder.
+    
+*   [Svader 1.0](https://javascriptweekly.com/link/185706/d076523b1d) – Create GPU-rendered Svelte components.
+    
+
+📰 Classifieds
+
+🦊 [Foxit's open-source MCP server](https://javascriptweekly.com/link/185707/d076523b1d) gives AI agents 30+ PDF tools — covering PDF conversion, OCR, merge, signing, and document workflows.
+
+* * *
+
+⚙️ [Middleware, but for AI agents](https://javascriptweekly.com/link/185708/d076523b1d). Compose Claude Code, Codex & Gemini as one TypeScript harness — 100+ agent recipes. [agentfield.ai/github](https://javascriptweekly.com/link/185708/d076523b1d).
+
+* * *
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/185709/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+👀  JS Crossword Tips
+
+The [JS Crossword](https://javascriptweekly.com/link/185663/d076523b1d) _(featured at the top of the issue)_ is tough, so I have some educational tips and JS quirks to help you on your way:
+
+*   The crossword runs in the browser, so the `window` global object is in play. For example: `find(0)` and `name` return things in the browser, but not in Node.
+    
+*   Look at the 'playground' beneath the puzzle. While a clue may say `object`, the expected result may be more detailed.
+    
+*   A number like 67 can be represented multiple ways. For example: `0103 == 67` and `0x43 == 67`
+    
+*   You can go further with prefixes and suffixes on numbers. For example: `123.`, `+123`, and `+123.` all equal `123`
+    
+*   Assignments evaluate to the value that was assigned.
+    
+*   [Tagged template literals](https://javascriptweekly.com/link/185710/d076523b1d) offer a… _quirky_ way to call functions. Consider that this works in JS: `` console.log`hi` `` (though this is _not_ equivalent to `console.log('hi')`).
+    
+*   `'` is not in the allowed character list.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/185712/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​787 — May 26, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/787)
+
+Together with 
+
+[![Expo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1024,h_289/e_make_transparent/co_white,e_outline:15/damvoyij8zrqr3lp2edx.png)](https://javascriptweekly.com/link/185662/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kpiq6sqaxoik0wuhn14u.jpg)](https://javascriptweekly.com/link/185663/d076523b1d)
+
+[JS Crossword: All the Answers are JavaScript](https://javascriptweekly.com/link/185663/d076523b1d "lyra.horse") — This hand-crafted puzzle will seriously stretch your JavaScript knowledge. I’ve seen so many people on social media either cheering having finished it or cursing being stuck…
+
+Lyra Rebane
+
+💡 I've put some (educational!) tips at the end of this issue.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/20f71006.png)](https://javascriptweekly.com/link/185662/d076523b1d)
+
+[Expo UI Hits Stable: Native iOS & Android from One Import](https://javascriptweekly.com/link/185662/d076523b1d "try.expo.dev") — From a single import, @expo/ui ships SwiftUI on iOS and Jetpack Compose on Android with the real platform components underneath. SDK 56 also lands native drop-in replacements for seven common React Native community packages.
+
+Expo sponsor
+
+[Staged Publishing for npm Packages Goes Live](https://javascriptweekly.com/link/185664/d076523b1d "docs.npmjs.com") — npm’s ‘staged publishing’ model provides a review period with approval required before packages go live on the npm registry. Both [npm 11.15.0](https://javascriptweekly.com/link/185665/d076523b1d) and [pnpm 11.3](https://javascriptweekly.com/link/185666/d076523b1d) have added support.
+
+The npm Project
+
+💡 [In this broader writeup](https://javascriptweekly.com/link/185667/d076523b1d), GitHub also introduced npm's new `--allow-*` options to control over where npm is allowed to source packages from.
+
+**IN BRIEF:**
+
+* [Firefox has added Web Serial support in Firefox 151](https://javascriptweekly.com/link/185668/d076523b1d) so you can connect to microcontrollers, 3D printers, and other serial-connected hardware from JS.
+
+* Mozilla's Ryan Hunt [says goodbye to asm.js](https://javascriptweekly.com/link/185711/d076523b1d) as Firefox's JS engine now disables optimizations for it by default.
+
+* 🤖 [Modern Web Guidance](https://javascriptweekly.com/link/185669/d076523b1d) is a suite of expert-vetted skills to guide agents in building modern web experiences, e.g. `"begin preloading pages when users hover over important links."`
+
+* [TC39 held its latest meeting last week](https://javascriptweekly.com/link/185670/d076523b1d) – a roundup is due soon.
+
+**RELEASES:**
+
+* [Storybook 10.4](https://javascriptweekly.com/link/185671/d076523b1d) – the frontend component workshop – has added first-class TanStack React support and the ability for agents to set up Storybook in complex apps.
+
+* [Node.js v26.2.0 (Current)](https://javascriptweekly.com/link/185672/d076523b1d) and [v24.16.0 (LTS)](https://javascriptweekly.com/link/185673/d076523b1d)
+
+* [pnpm 11.3](https://javascriptweekly.com/link/185666/d076523b1d) – Adds `pnpm stage` for [staged publishing](https://javascriptweekly.com/link/185664/d076523b1d), `trustLockfile` for setting controls around application of trust policies, native `pkg`, `repo` and `set-script` commands & more.
+
+* [npm 12.0 Prerelease](https://javascriptweekly.com/link/185674/d076523b1d), [Apache ECharts 6.1](https://javascriptweekly.com/link/185675/d076523b1d) ([Demos.](https://javascriptweekly.com/link/185676/d076523b1d))
+
+📖  Articles and Videos
+
+[Chrome Previews *Declarative Partial Updates*](https://javascriptweekly.com/link/185677/d076523b1d "developer.chrome.com") — Two new sets of APIs for working with HTML out-of-order, whether in the doc itself (via `&lt;template for>`) or through dynamic insertion (via `setHTML`/`streamHTML`). Experimental in Chrome 148 but [polyfills](https://javascriptweekly.com/link/185678/d076523b1d) [exist](https://javascriptweekly.com/link/185679/d076523b1d).
+
+Pollard and Rosenthal (Chrome)
+
+[Optimizing Our Build Times by Migrating from Webpack to Rspack](https://javascriptweekly.com/link/185680/d076523b1d "engineeringblog.yelp.com") — How Yelp cut build times in half with [Rspack](https://javascriptweekly.com/link/185681/d076523b1d) (a Rust-powered drop-in replacement for webpack) and what they learned about barrel files and re-exports.
+
+Benson Pan (Yelp)
+
+[Unlimited Postgres for Developers and Their Agents](https://javascriptweekly.com/link/185682/d076523b1d "ghost.build") — *ghost* gives your agent unlimited postgres forks. No project limits, no cleanup, 1TB storage, 100 hrs/mo free. [Try for free](https://javascriptweekly.com/link/185682/d076523b1d)
+
+Ghost sponsor
+
+[Microsoft's Analysis of the Recent *Mini Shai-Hulud* Compromise](https://javascriptweekly.com/link/185683/d076523b1d "www.microsoft.com") — A detailed post-mortem of last week’s [‘Mini Shai-Hulud’](https://javascriptweekly.com/link/185684/d076523b1d) npm security chain compromise.
+
+Microsoft Defender Security Research Team
+
+🤖 [AI-Assisted Engineers are Burning Out: Is This Fine?](https://javascriptweekly.com/link/185685/d076523b1d) – A look at the negative effects of AI-assisted coding and how to avoid burning yourself out. Ivan Chepurin
+
+📄 [A Simple Clustering Algorithm for Lists](https://javascriptweekly.com/link/185686/d076523b1d) – Some algorithm fun. Cassidy Williams
+
+🛠 Code & Tools
+
+[Deno 2.8: The 'Biggest Minor Release' to Date](https://javascriptweekly.com/link/185687/d076523b1d "deno.com") — The headline is that Node.js compatibility has jumped from 42% in Deno 2.7 to 76.4% now (higher than Bun). Deno also gets [huge perf gains](https://javascriptweekly.com/link/185688/d076523b1d) across the board and drops the `npm:` prefix requirement when adding/installing packages. Plus many other things, including:
+
+* New commands including: `audit fix` to upgrade vulnerable dependencies, `pack` to build a project into a npm-publishable tarball, and `why` to see why a package has been installed.
+* [Web API support](https://javascriptweekly.com/link/185689/d076523b1d) improvements, including `OffscreenCanvas` going stable.
+* Node [`module.registerHooks()` support](https://javascriptweekly.com/link/185690/d076523b1d).
+* Chrome DevTools can now [inspect Deno's network traffic](https://javascriptweekly.com/link/185691/d076523b1d).
+* A [built-in CPU profiler](https://javascriptweekly.com/link/185692/d076523b1d).
+* [import defer](https://javascriptweekly.com/link/185693/d076523b1d) support.
+* V8 14.9 and TypeScript 6.0.3.
+
+Bartek Iwańczuk
+
+[10 Merged, 34 to Go: Fixing JS Observability Upstream](https://javascriptweekly.com/link/185694/d076523b1d "blog.sentry.io") — Every JS APM tool monkey-patches libraries. It breaks with ESM, bundlers, and non-Node runtimes. [Here's how to fix it](https://javascriptweekly.com/link/185694/d076523b1d).
+
+Sentry sponsor
+
+📄 [DOCX 9.7: Build Word `.docx` Files in JavaScript](https://javascriptweekly.com/link/185695/d076523b1d "docx.js.org") — A mature, comprehensive library for generating `docx` files both client and server side. There’s a [CodePen-based example](https://javascriptweekly.com/link/185696/d076523b1d) with the basics, plus [over 100 example scripts](https://javascriptweekly.com/link/185697/d076523b1d).
+
+Dolan Miu
+
+[tinykeys 4.0: A Tiny, Modern Library for Keybindings](https://javascriptweekly.com/link/185698/d076523b1d "jamiebuilds.github.io") — Has a very simple, straightforward API and the page includes live demos.
+
+Jamie Kyle
+
+[An Official Node.js Codemod to Migrate from Axios to `fetch`](https://javascriptweekly.com/link/185699/d076523b1d "app.codemod.com") — A [codemod](https://javascriptweekly.com/link/185700/d076523b1d) to transform code using Axios to using the Fetch API instead.
+
+The Node.js Team
+
+📱 [Hot Updater: Self-Hosted Over-the-Air Updates for React Native](https://javascriptweekly.com/link/185701/d076523b1d "hot-updater.dev") — A way to deploy updates to apps without app store submissions.
+
+Sungyu Kang
+
+* 📊 [Perspective 4.5](https://javascriptweekly.com/link/185702/d076523b1d) – Analytics and data viz component for large and streaming datasets.
+
+* [Partytown 0.14.0](https://javascriptweekly.com/link/185703/d076523b1d) – Relocate resource-intensive scripts into Web Workers.
+
+* [atproto TypeScript SDK Upgrades](https://javascriptweekly.com/link/185704/d076523b1d) – Every package in the `@atproto` namespace has been rebuilt, and all are now shipped as ESM.
+
+* [Kysely 0.29.0](https://javascriptweekly.com/link/185705/d076523b1d) – Popular type-safe SQL query builder.
+
+* [Svader 1.0](https://javascriptweekly.com/link/185706/d076523b1d) – Create GPU-rendered Svelte components.
+
+📰 Classifieds
+
+🦊 [Foxit's open-source MCP server](https://javascriptweekly.com/link/185707/d076523b1d) gives AI agents 30+ PDF tools — covering PDF conversion, OCR, merge, signing, and document workflows.
+
+***
+
+⚙️ [Middleware, but for AI agents](https://javascriptweekly.com/link/185708/d076523b1d). Compose Claude Code, Codex & Gemini as one TypeScript harness — 100+ agent recipes. [agentfield.ai/github](https://javascriptweekly.com/link/185708/d076523b1d).
+
+***
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/185709/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+👀  JS Crossword Tips
+
+The [JS Crossword](https://javascriptweekly.com/link/185663/d076523b1d) *(featured at the top of the issue)* is tough, so I have some educational tips and JS quirks to help you on your way:
+
+* The crossword runs in the browser, so the `window` global object is in play. For example: `find(0)` and `name` return things in the browser, but not in Node.
+
+* Look at the 'playground' beneath the puzzle. While a clue may say `object`, the expected result may be more detailed.
+
+* A number like 67 can be represented multiple ways. For example: `0103 == 67` and `0x43 == 67`
+
+* You can go further with prefixes and suffixes on numbers. For example: `123.`, `+123`, and `+123.` all equal `123`
+
+* Assignments evaluate to the value that was assigned.
+
+* [Tagged template literals](https://javascriptweekly.com/link/185710/d076523b1d) offer a… *quirky* way to call functions. Consider that this works in JS: `` console.log`hi` `` (though this is *not* equivalent to `console.log('hi')`).
+
+* `'` is not in the allowed character list.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/185712/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
