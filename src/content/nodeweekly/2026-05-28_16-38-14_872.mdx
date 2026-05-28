@@ -1,0 +1,260 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Deno hits 76% Node.js compatibility
+description: Deno hits 76% Node.js compatibility
+date: 星期四 04 下午 五月 28o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/626
+origin_site: https://nodeweekly.com/issues/626
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Deno hits 76% Node.js compatibility" url="https://nodeweekly.com/issues/626" />
+
+<Detail client:only="react">
+	#​626 — May 28, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/626)
+
+Together with 
+
+[![Orkes](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_361/e_make_transparent/co_white,e_outline:17/ontqd1qx6tzvrtjhmf3t.png)](https://nodeweekly.com/link/185781/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kvayrnm4ydznquop4zft.jpg)](https://nodeweekly.com/link/185782/0a4070b383)
+
+[A Production Playbook for Node.js Stream Leaks](https://nodeweekly.com/link/185782/0a4070b383 "frontendmasters.com") — You used `pipeline()` but your streams still leak in production. This guide covers five failure modes that sail past tests and code review, then break under real traffic, from unnoticed disconnects to timeouts that kill the response but leave an upstream fetch running. Useful if you run Node services that stream under load.
+
+Durgesh Rajubhai Pawar
+
+💡 Durgesh [covers how backpressure works](https://nodeweekly.com/link/185783/0a4070b383) (and can fail) in a prior part, if you want more of an intro to why streams don't protect you from memory exhaustion on their own.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d9fd428c.jpg)](https://nodeweekly.com/link/185781/0a4070b383)
+
+[Build Durable AI Agents That Won't Break in Production (Webinar)](https://nodeweekly.com/link/185781/0a4070b383 "orkes.io") — Learn the open-source 5-layer stack and run durable AI agents with Agentspan across LangGraph, OpenAI, and Google SDKs.
+
+Orkes sponsor
+
+[Deno 2.8 Hits 76% Node.js Compatibility](https://nodeweekly.com/link/185820/0a4070b383 "deno.com") — A significant release for the JS runtime created by Node’s original creator. Node.js compatibility jumps from 42% to 76.4% (higher than Bun). v2.8 also drops the `npm:` prefix requirement when adding/installing packages (so `deno install` is now a drop-in for `npm install`/`pnpm install` etc. even in existing Node projects).
+
+Bartek Iwańczuk
+
+**IN BRIEF:**
+
+*   [npm 11.16.0 has shipped](https://nodeweekly.com/link/185821/0a4070b383) with initial (advisory warning only) support for an _opt-in_ install-script policy using `allowScripts`. [More details here.](https://nodeweekly.com/link/185822/0a4070b383)
+    
+*   The Node team is [reconsidering the ABI stability requirement for V8 updates](https://nodeweekly.com/link/185788/0a4070b383) in major Node releases after Node 26 was delayed for V8 14.6.
+    
+*   🇮🇹 [NodeConf EU 2026](https://nodeweekly.com/link/185789/0a4070b383) takes place this September in Italy. The site has had a redesign and [the CFP is still open.](https://nodeweekly.com/link/185790/0a4070b383)
+    
+*   [macOS on Intel (x64) has become a 'tier 2' platform](https://nodeweekly.com/link/185791/0a4070b383) for Node 26 meaning if binary builds can't be made on the platform, it won't block releases for the others. You can learn more about [Node's support tiers here](https://nodeweekly.com/link/185792/0a4070b383).
+    
+
+[Node.js 24.16.0 (LTS) Released](https://nodeweekly.com/link/185785/0a4070b383 "nodejs.org") — If Node 26 is too cutting edge and LTS is more your vibe, there are still new features to be had including `crypto.randomUUIDv7()`, [`util.styleText`](https://nodeweekly.com/link/185786/0a4070b383) accepting hex colors, and [test-order randomization](https://nodeweekly.com/link/185787/0a4070b383) in Node’s test runner.
+
+Antoine du Hamel
+
+[Migrating an Express App to Next.js Using AI Agents](https://nodeweekly.com/link/185793/0a4070b383 "javascript.plainenglish.io") — James (who works on [Antigravity](https://nodeweekly.com/link/185794/0a4070b383) at Google) demonstrates how to modernize a legacy Express.js app to Next.js App Router and TypeScript. The [skills](https://nodeweekly.com/link/185795/0a4070b383) built to do this have been shared for use by anyone.
+
+James O'Reilly (Google)
+
+[Using AI to Write Better Code More Slowly](https://nodeweekly.com/link/185796/0a4070b383 "nolanlawson.com") — A prolific JavaScript developer says LLMs aren’t just for pumping out bad code quickly, they can indeed help you write higher quality code more _slowly_.
+
+Nolan Lawson
+
+📄 [Building a Custom MCP Server with Node.js](https://nodeweekly.com/link/185797/0a4070b383) Dean Hume
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lbbzvnmzi8ebujno9rrk.jpg)](https://nodeweekly.com/link/185798/0a4070b383)
+
+[ANSIS 4.3: The ANSI Color Library, Now with Hyperlinks](https://nodeweekly.com/link/185798/0a4070b383 "github.com") — An ESM _and_ CommonJS library for using the power of ANSI escape sequences for coloring and styling text in Node, Bun, Deno, and browser devtools. [v4.3](https://nodeweekly.com/link/185799/0a4070b383) adds support for [OSC 8 terminal hyperlinks](https://nodeweekly.com/link/185800/0a4070b383) (supported by [many terminal emulators](https://nodeweekly.com/link/185801/0a4070b383) now).
+
+webdiscus
+
+[Give Your Agent a DB for Every Task](https://nodeweekly.com/link/185802/0a4070b383 "ghost.build") — Most providers cap you at 2 or 3 Postgres projects. _ghost_ gives your agent unlimited. No project limits. [Try for free](https://nodeweekly.com/link/185802/0a4070b383).
+
+Ghost sponsor
+
+🤖 [Flue: An Agent Harness Framework from Astro](https://nodeweekly.com/link/185803/0a4070b383 "flueframework.com") — A TypeScript framework for building agents which run atop Node. Think something akin to Claude Code, complete with tasks, sandboxing, agent skills, etc, but entirely headless and programmable.
+
+Fred K. Schott et al.
+
+📝 [DOCX 9.7: Generate Word `.docx` Files from JavaScript](https://nodeweekly.com/link/185804/0a4070b383 "docx.js.org") — A mature library for generating `docx` (Word) files. There’s a [CodePen-based demo](https://nodeweekly.com/link/185805/0a4070b383) to show off the basics and [over 100 example scripts](https://nodeweekly.com/link/185806/0a4070b383).
+
+Dolan Miu
+
+🔒 [Helmet.js 8.2: Security Hardening for Express Apps](https://nodeweekly.com/link/185807/0a4070b383 "helmet.js.org") — Sets HTTP headers like `Content-Security-Policy` and `Strict-Transport-Security`. Aims to be easy to integrate and maintain. [v8.2](https://nodeweekly.com/link/185808/0a4070b383) is the first release in a year.
+
+Hahn and Baldwin
+
+*   [Kysely 0.29.0](https://nodeweekly.com/link/185809/0a4070b383) – Popular type-safe TypeScript SQL query builder adds compile-time table scoping, a way to enforce read-only access at the type level, and `AbortSignal`\-based query cancellation.
+    
+*   📝 [officeParser 7.1](https://nodeweekly.com/link/185810/0a4070b383) – Parse 'office' files (e.g. `docx`, `pptx`, `xlsx`, `odt`) into an AST.
+    
+*   [TypeSQL 0.24](https://nodeweekly.com/link/185811/0a4070b383) – Generate typesafe TypeScript APIs from SQL statements. Supports MySQL, Postgres, and SQLite3.
+    
+*   [pnpm 11.4](https://nodeweekly.com/link/185812/0a4070b383) – The alternative package manager gets an update focused on robustness and security improvements.
+    
+*   [dns2 3.0](https://nodeweekly.com/link/185813/0a4070b383) – Pure JavaScript DNS server and client implementation.
+    
+
+📰 Classifieds
+
+⚙️ [Middleware, but for AI agents](https://nodeweekly.com/link/185814/0a4070b383). Compose Claude Code, Codex & Gemini as one TypeScript harness — 100+ agent recipes. [agentfield.ai/github](https://nodeweekly.com/link/185814/0a4070b383).
+
+* * *
+
+Autoscaling that doesn’t suck. [Try Judoscale](https://nodeweekly.com/link/185815/0a4070b383) and see what all the fuss is about.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gdcripxpj2t9rcpieoem.jpg)](https://nodeweekly.com/link/185816/0a4070b383)
+
+*   🤖 [The results of the _State of Web Dev AI_ 2026 survey](https://nodeweekly.com/link/185816/0a4070b383) are ready to enjoy. Over 7,000 developers responded and it's packed with stats about concerns, pain points, tool choices, and what things devs are using AI for beyond coding.
+    
+*   Meanwhile, [the _State of CSS_ 2026 survey](https://nodeweekly.com/link/185817/0a4070b383) is now open to take.
+    
+*   [This JavaScript crossword](https://nodeweekly.com/link/185818/0a4070b383) is a lot of fun, if also very difficult.
+    
+*   Mozilla's Ryan Hunt [says goodbye to asm.js](https://nodeweekly.com/link/185819/0a4070b383) as Firefox's JS engine now disables optimizations for it by default.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​626 — May 28, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/626)
+
+Together with 
+
+[![Orkes](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_361/e_make_transparent/co_white,e_outline:17/ontqd1qx6tzvrtjhmf3t.png)](https://nodeweekly.com/link/185781/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kvayrnm4ydznquop4zft.jpg)](https://nodeweekly.com/link/185782/0a4070b383)
+
+[A Production Playbook for Node.js Stream Leaks](https://nodeweekly.com/link/185782/0a4070b383 "frontendmasters.com") — You used `pipeline()` but your streams still leak in production. This guide covers five failure modes that sail past tests and code review, then break under real traffic, from unnoticed disconnects to timeouts that kill the response but leave an upstream fetch running. Useful if you run Node services that stream under load.
+
+Durgesh Rajubhai Pawar
+
+💡 Durgesh [covers how backpressure works](https://nodeweekly.com/link/185783/0a4070b383) (and can fail) in a prior part, if you want more of an intro to why streams don't protect you from memory exhaustion on their own.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d9fd428c.jpg)](https://nodeweekly.com/link/185781/0a4070b383)
+
+[Build Durable AI Agents That Won't Break in Production (Webinar)](https://nodeweekly.com/link/185781/0a4070b383 "orkes.io") — Learn the open-source 5-layer stack and run durable AI agents with Agentspan across LangGraph, OpenAI, and Google SDKs.
+
+Orkes sponsor
+
+[Deno 2.8 Hits 76% Node.js Compatibility](https://nodeweekly.com/link/185820/0a4070b383 "deno.com") — A significant release for the JS runtime created by Node’s original creator. Node.js compatibility jumps from 42% to 76.4% (higher than Bun). v2.8 also drops the `npm:` prefix requirement when adding/installing packages (so `deno install` is now a drop-in for `npm install`/`pnpm install` etc. even in existing Node projects).
+
+Bartek Iwańczuk
+
+**IN BRIEF:**
+
+* [npm 11.16.0 has shipped](https://nodeweekly.com/link/185821/0a4070b383) with initial (advisory warning only) support for an *opt-in* install-script policy using `allowScripts`. [More details here.](https://nodeweekly.com/link/185822/0a4070b383)
+
+* The Node team is [reconsidering the ABI stability requirement for V8 updates](https://nodeweekly.com/link/185788/0a4070b383) in major Node releases after Node 26 was delayed for V8 14.6.
+
+* 🇮🇹 [NodeConf EU 2026](https://nodeweekly.com/link/185789/0a4070b383) takes place this September in Italy. The site has had a redesign and [the CFP is still open.](https://nodeweekly.com/link/185790/0a4070b383)
+
+* [macOS on Intel (x64) has become a 'tier 2' platform](https://nodeweekly.com/link/185791/0a4070b383) for Node 26 meaning if binary builds can't be made on the platform, it won't block releases for the others. You can learn more about [Node's support tiers here](https://nodeweekly.com/link/185792/0a4070b383).
+
+[Node.js 24.16.0 (LTS) Released](https://nodeweekly.com/link/185785/0a4070b383 "nodejs.org") — If Node 26 is too cutting edge and LTS is more your vibe, there are still new features to be had including `crypto.randomUUIDv7()`, [`util.styleText`](https://nodeweekly.com/link/185786/0a4070b383) accepting hex colors, and [test-order randomization](https://nodeweekly.com/link/185787/0a4070b383) in Node’s test runner.
+
+Antoine du Hamel
+
+[Migrating an Express App to Next.js Using AI Agents](https://nodeweekly.com/link/185793/0a4070b383 "javascript.plainenglish.io") — James (who works on [Antigravity](https://nodeweekly.com/link/185794/0a4070b383) at Google) demonstrates how to modernize a legacy Express.js app to Next.js App Router and TypeScript. The [skills](https://nodeweekly.com/link/185795/0a4070b383) built to do this have been shared for use by anyone.
+
+James O'Reilly (Google)
+
+[Using AI to Write Better Code More Slowly](https://nodeweekly.com/link/185796/0a4070b383 "nolanlawson.com") — A prolific JavaScript developer says LLMs aren’t just for pumping out bad code quickly, they can indeed help you write higher quality code more *slowly*.
+
+Nolan Lawson
+
+📄 [Building a Custom MCP Server with Node.js](https://nodeweekly.com/link/185797/0a4070b383) Dean Hume
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lbbzvnmzi8ebujno9rrk.jpg)](https://nodeweekly.com/link/185798/0a4070b383)
+
+[ANSIS 4.3: The ANSI Color Library, Now with Hyperlinks](https://nodeweekly.com/link/185798/0a4070b383 "github.com") — An ESM *and* CommonJS library for using the power of ANSI escape sequences for coloring and styling text in Node, Bun, Deno, and browser devtools. [v4.3](https://nodeweekly.com/link/185799/0a4070b383) adds support for [OSC 8 terminal hyperlinks](https://nodeweekly.com/link/185800/0a4070b383) (supported by [many terminal emulators](https://nodeweekly.com/link/185801/0a4070b383) now).
+
+webdiscus
+
+[Give Your Agent a DB for Every Task](https://nodeweekly.com/link/185802/0a4070b383 "ghost.build") — Most providers cap you at 2 or 3 Postgres projects. *ghost* gives your agent unlimited. No project limits. [Try for free](https://nodeweekly.com/link/185802/0a4070b383).
+
+Ghost sponsor
+
+🤖 [Flue: An Agent Harness Framework from Astro](https://nodeweekly.com/link/185803/0a4070b383 "flueframework.com") — A TypeScript framework for building agents which run atop Node. Think something akin to Claude Code, complete with tasks, sandboxing, agent skills, etc, but entirely headless and programmable.
+
+Fred K. Schott et al.
+
+📝 [DOCX 9.7: Generate Word `.docx` Files from JavaScript](https://nodeweekly.com/link/185804/0a4070b383 "docx.js.org") — A mature library for generating `docx` (Word) files. There’s a [CodePen-based demo](https://nodeweekly.com/link/185805/0a4070b383) to show off the basics and [over 100 example scripts](https://nodeweekly.com/link/185806/0a4070b383).
+
+Dolan Miu
+
+🔒 [Helmet.js 8.2: Security Hardening for Express Apps](https://nodeweekly.com/link/185807/0a4070b383 "helmet.js.org") — Sets HTTP headers like `Content-Security-Policy` and `Strict-Transport-Security`. Aims to be easy to integrate and maintain. [v8.2](https://nodeweekly.com/link/185808/0a4070b383) is the first release in a year.
+
+Hahn and Baldwin
+
+* [Kysely 0.29.0](https://nodeweekly.com/link/185809/0a4070b383) – Popular type-safe TypeScript SQL query builder adds compile-time table scoping, a way to enforce read-only access at the type level, and `AbortSignal`-based query cancellation.
+
+* 📝 [officeParser 7.1](https://nodeweekly.com/link/185810/0a4070b383) – Parse 'office' files (e.g. `docx`, `pptx`, `xlsx`, `odt`) into an AST.
+
+* [TypeSQL 0.24](https://nodeweekly.com/link/185811/0a4070b383) – Generate typesafe TypeScript APIs from SQL statements. Supports MySQL, Postgres, and SQLite3.
+
+* [pnpm 11.4](https://nodeweekly.com/link/185812/0a4070b383) – The alternative package manager gets an update focused on robustness and security improvements.
+
+* [dns2 3.0](https://nodeweekly.com/link/185813/0a4070b383) – Pure JavaScript DNS server and client implementation.
+
+📰 Classifieds
+
+⚙️ [Middleware, but for AI agents](https://nodeweekly.com/link/185814/0a4070b383). Compose Claude Code, Codex & Gemini as one TypeScript harness — 100+ agent recipes. [agentfield.ai/github](https://nodeweekly.com/link/185814/0a4070b383).
+
+***
+
+Autoscaling that doesn’t suck. [Try Judoscale](https://nodeweekly.com/link/185815/0a4070b383) and see what all the fuss is about.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gdcripxpj2t9rcpieoem.jpg)](https://nodeweekly.com/link/185816/0a4070b383)
+
+* 🤖 [The results of the *State of Web Dev AI* 2026 survey](https://nodeweekly.com/link/185816/0a4070b383) are ready to enjoy. Over 7,000 developers responded and it's packed with stats about concerns, pain points, tool choices, and what things devs are using AI for beyond coding.
+
+* Meanwhile, [the *State of CSS* 2026 survey](https://nodeweekly.com/link/185817/0a4070b383) is now open to take.
+
+* [This JavaScript crossword](https://nodeweekly.com/link/185818/0a4070b383) is a lot of fun, if also very difficult.
+
+* Mozilla's Ryan Hunt [says goodbye to asm.js](https://nodeweekly.com/link/185819/0a4070b383) as Firefox's JS engine now disables optimizations for it by default.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
