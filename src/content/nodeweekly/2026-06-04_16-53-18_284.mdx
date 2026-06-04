@@ -1,0 +1,223 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Find better alternatives to npm packages
+description: Find better alternatives to npm packages
+date: 星期四 04 下午 六月 4o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/627
+origin_site: https://nodeweekly.com/issues/627
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Find better alternatives to npm packages" url="https://nodeweekly.com/issues/627" />
+
+<Detail client:only="react">
+	#​627 — June 4, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/627)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/186133/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/petosggvikp84lziash3.jpg)](https://nodeweekly.com/link/186134/0a4070b383)
+
+[replacements.fyi: Find Replacements for npm Packages](https://nodeweekly.com/link/186134/0a4070b383 "replacements.fyi") — Type in a package name and get suggestions of lighter alternatives or Node APIs and code snippets that do the same task. For example: `is-number` leads to a one-liner, `axios` turns into `fetch`, and `chalk` recommends `util.styleText`. A neat idea it’d be cool to see grow further.
+
+e18e
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/89cac34a.png)](https://nodeweekly.com/link/186133/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/186133/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics.
+
+Memetria sponsor
+
+[Node.js 26.3.0 (Current) Released](https://nodeweekly.com/link/186135/0a4070b383 "nodejs.org") — `Buffer.poolSize` default [is now 64 KB](https://nodeweekly.com/link/186136/0a4070b383) for fewer allocations under heavy I/O, [`permission.drop()`](https://nodeweekly.com/link/186137/0a4070b383) joins [the permissions model API](https://nodeweekly.com/link/186138/0a4070b383), and macOS Universal binaries are no longer guaranteed for future releases (the intention is to keep them _"for as long as practical"_).
+
+Antoine du Hamel
+
+**IN BRIEF:**
+
+*   🔒 **More supply chain attacks:** Earlier this week, [numerous Red Hat packages were targeted](https://nodeweekly.com/link/186139/0a4070b383), and today, [a worm that hides within `binding.gyp` has been reported](https://nodeweekly.com/link/186140/0a4070b383) (this is a notably uncommon vector).
+    
+*   🇺🇸 [Node.js Interactive](https://nodeweekly.com/link/186141/0a4070b383) is returning as an event taking place alongside [RenderATL 2026](https://nodeweekly.com/link/186142/0a4070b383) this August 12-13 in Atlanta, Georgia.
+    
+*   [VoidZero](https://nodeweekly.com/link/186143/0a4070b383), the company behind Vite, Vitest, Rolldown, Oxc, and Vite+, [is joining Cloudflare.](https://nodeweekly.com/link/186144/0a4070b383)
+    
+*   🔒 The Express team has [shipped `multiparty 4.3.0`](https://nodeweekly.com/link/186145/0a4070b383) to address three DoS vulnerabilities.
+    
+
+🤔 [How to Evaluate an npm Package](https://nodeweekly.com/link/186146/0a4070b383 "blog.gaborkoos.com") — If [replacements.fyi](https://nodeweekly.com/link/186134/0a4070b383) _(above)_ convinced you to switch packages, learn how to spot the red flags _before_ you `npm install` with this checklist for vetting packages — covering provenance attestation, install scripts, CI quality, and more.
+
+Gabor Koos
+
+[How Wasmer Used Codex to Build a Node.js Runtime](https://nodeweekly.com/link/186147/0a4070b383 "openai.com") — A case study from OpenAI on how the [Wasmer](https://nodeweekly.com/link/186148/0a4070b383) team used OpenAI's _Codex_ agent to get Node workloads running inside a WebAssembly sandbox. (The resulting project is [the open-source _Edge.js_](https://nodeweekly.com/link/186150/0a4070b383) which you can use now.)
+
+OpenAI
+
+📊 [Benchmarking Node.js 24 vs 25 vs 26](https://nodeweekly.com/link/186152/0a4070b383 "www.repoflow.io") — Earlier this year, RepoFlow [benchmarked every Node version](https://nodeweekly.com/link/186154/0a4070b383) between 16 and 25. Now they’re focusing on recent releases, but in all but one case, _there’s little difference._
+
+RepoFlow
+
+[TypeScript Tips Everyone Should Know](https://nodeweekly.com/link/186156/0a4070b383 "github.com") — A concise checklist of tips for safer, cleaner everyday code.
+
+Matt Smith
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/uytrsfosqutjel8ocvdg.jpg)](https://nodeweekly.com/link/186158/0a4070b383)
+
+🤖 [GitHub Copilot SDK Now Generally Available](https://nodeweekly.com/link/186158/0a4070b383 "github.blog") — Available for several platforms, including Node, this SDK lets you wield the agentic engine behind Copilot in your own apps (coupled with your own custom-built tools) and it uses an existing Copilot subscription. The [getting started tutorial](https://nodeweekly.com/link/186160/0a4070b383) provides a good intro and [the cookbook](https://nodeweekly.com/link/186162/0a4070b383) includes some sample apps.
+
+GitHub
+
+[How Node's diagnostics\_channel Is Replacing APM Monkey-Patching](https://nodeweekly.com/link/186164/0a4070b383 "blog.sentry.io") — Every JS APM tool monkey-patches libraries. It breaks with ESM, bundlers, and non-Node runtimes. [Here's how to fix it](https://nodeweekly.com/link/186164/0a4070b383).
+
+Sentry sponsor
+
+[zod-hoist: A Babel Plugin to Hoist Zod Schema Definitions](https://nodeweekly.com/link/186166/0a4070b383 "github.com") — From the creator of [Slonik](https://nodeweekly.com/link/186168/0a4070b383) comes an approach to make Zod validation much faster.
+
+Gajus Kuizinas
+
+[node-redis 6.0: The Official Node.js Driver for Redis](https://nodeweekly.com/link/186170/0a4070b383 "github.com") — Coinciding with the release of [Redis 8.8](https://nodeweekly.com/link/186172/0a4070b383), the Node driver adds support for 8.8’s new array commands, switches to the RESP3 protocol by default, and more. There’s [a migration guide](https://nodeweekly.com/link/186173/0a4070b383) for 5.x users.
+
+Redis
+
+[Structon: Random-Access Binary Encoding for JavaScript](https://nodeweekly.com/link/186175/0a4070b383 "www.harper.fast") — Encodes objects into a binary format you can read field-by-field, so you can pull individual values straight out of the buffer without deserializing whole records.
+
+Kris Zyp (Harper)
+
+[Hocuspocus 4: Add Real-Time Collaboration to Any App](https://nodeweekly.com/link/186176/0a4070b383 "tiptap.dev") — A real-time collaboration backend based on [Yjs](https://nodeweekly.com/link/186177/0a4070b383) so you can quickly wire multi-user collaborative experiences into apps. It runs on Node, Bun, Deno, or Cloudflare Workers.
+
+Tiptap
+
+*   [Axios 1.17](https://nodeweekly.com/link/186179/0a4070b383) – The long-standing promise-based HTTP client adds HTTP zstd decompression on Node.
+    
+*   [pnpm 11.5](https://nodeweekly.com/link/186185/0a4070b383) – [Staged publishes are now recognized](https://nodeweekly.com/link/186187/0a4070b383) in the trust scale.
+    
+*   [node-oracledb 7.0](https://nodeweekly.com/link/186181/0a4070b383) – Official Node.js driver for Oracle Database.
+    
+*   [node-libcurl 5.1](https://nodeweekly.com/link/186183/0a4070b383) – `libcurl` bindings for Node.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​627 — June 4, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/627)
+
+Together with 
+
+[![Memetria](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_600,h_145/e_make_transparent/co_white,e_outline:7/vvpdctzacmq3xehpvwps.png)](https://nodeweekly.com/link/186133/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/petosggvikp84lziash3.jpg)](https://nodeweekly.com/link/186134/0a4070b383)
+
+[replacements.fyi: Find Replacements for npm Packages](https://nodeweekly.com/link/186134/0a4070b383 "replacements.fyi") — Type in a package name and get suggestions of lighter alternatives or Node APIs and code snippets that do the same task. For example: `is-number` leads to a one-liner, `axios` turns into `fetch`, and `chalk` recommends `util.styleText`. A neat idea it’d be cool to see grow further.
+
+e18e
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/89cac34a.png)](https://nodeweekly.com/link/186133/0a4070b383)
+
+[Memetria K/V: Efficient Redis & Valkey Hosting](https://nodeweekly.com/link/186133/0a4070b383 "dashboard.memetria.com") — Memetria K/V hosts Redis OSS and Valkey for Node.js apps, featuring large key tracking and detailed analytics.
+
+Memetria sponsor
+
+[Node.js 26.3.0 (Current) Released](https://nodeweekly.com/link/186135/0a4070b383 "nodejs.org") — `Buffer.poolSize` default [is now 64 KB](https://nodeweekly.com/link/186136/0a4070b383) for fewer allocations under heavy I/O, [`permission.drop()`](https://nodeweekly.com/link/186137/0a4070b383) joins [the permissions model API](https://nodeweekly.com/link/186138/0a4070b383), and macOS Universal binaries are no longer guaranteed for future releases (the intention is to keep them *"for as long as practical"*).
+
+Antoine du Hamel
+
+**IN BRIEF:**
+
+* 🔒 **More supply chain attacks:** Earlier this week, [numerous Red Hat packages were targeted](https://nodeweekly.com/link/186139/0a4070b383), and today, [a worm that hides within `binding.gyp` has been reported](https://nodeweekly.com/link/186140/0a4070b383) (this is a notably uncommon vector).
+
+* 🇺🇸 [Node.js Interactive](https://nodeweekly.com/link/186141/0a4070b383) is returning as an event taking place alongside [RenderATL 2026](https://nodeweekly.com/link/186142/0a4070b383) this August 12-13 in Atlanta, Georgia.
+
+* [VoidZero](https://nodeweekly.com/link/186143/0a4070b383), the company behind Vite, Vitest, Rolldown, Oxc, and Vite+, [is joining Cloudflare.](https://nodeweekly.com/link/186144/0a4070b383)
+
+* 🔒 The Express team has [shipped `multiparty 4.3.0`](https://nodeweekly.com/link/186145/0a4070b383) to address three DoS vulnerabilities.
+
+🤔 [How to Evaluate an npm Package](https://nodeweekly.com/link/186146/0a4070b383 "blog.gaborkoos.com") — If [replacements.fyi](https://nodeweekly.com/link/186134/0a4070b383) *(above)* convinced you to switch packages, learn how to spot the red flags *before* you `npm install` with this checklist for vetting packages — covering provenance attestation, install scripts, CI quality, and more.
+
+Gabor Koos
+
+[How Wasmer Used Codex to Build a Node.js Runtime](https://nodeweekly.com/link/186147/0a4070b383 "openai.com") — A case study from OpenAI on how the [Wasmer](https://nodeweekly.com/link/186148/0a4070b383) team used OpenAI's *Codex* agent to get Node workloads running inside a WebAssembly sandbox. (The resulting project is [the open-source *Edge.js*](https://nodeweekly.com/link/186150/0a4070b383) which you can use now.)
+
+OpenAI
+
+📊 [Benchmarking Node.js 24 vs 25 vs 26](https://nodeweekly.com/link/186152/0a4070b383 "www.repoflow.io") — Earlier this year, RepoFlow [benchmarked every Node version](https://nodeweekly.com/link/186154/0a4070b383) between 16 and 25. Now they’re focusing on recent releases, but in all but one case, *there’s little difference.*
+
+RepoFlow
+
+[TypeScript Tips Everyone Should Know](https://nodeweekly.com/link/186156/0a4070b383 "github.com") — A concise checklist of tips for safer, cleaner everyday code.
+
+Matt Smith
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/uytrsfosqutjel8ocvdg.jpg)](https://nodeweekly.com/link/186158/0a4070b383)
+
+🤖 [GitHub Copilot SDK Now Generally Available](https://nodeweekly.com/link/186158/0a4070b383 "github.blog") — Available for several platforms, including Node, this SDK lets you wield the agentic engine behind Copilot in your own apps (coupled with your own custom-built tools) and it uses an existing Copilot subscription. The [getting started tutorial](https://nodeweekly.com/link/186160/0a4070b383) provides a good intro and [the cookbook](https://nodeweekly.com/link/186162/0a4070b383) includes some sample apps.
+
+GitHub
+
+[How Node's diagnostics\_channel Is Replacing APM Monkey-Patching](https://nodeweekly.com/link/186164/0a4070b383 "blog.sentry.io") — Every JS APM tool monkey-patches libraries. It breaks with ESM, bundlers, and non-Node runtimes. [Here's how to fix it](https://nodeweekly.com/link/186164/0a4070b383).
+
+Sentry sponsor
+
+[zod-hoist: A Babel Plugin to Hoist Zod Schema Definitions](https://nodeweekly.com/link/186166/0a4070b383 "github.com") — From the creator of [Slonik](https://nodeweekly.com/link/186168/0a4070b383) comes an approach to make Zod validation much faster.
+
+Gajus Kuizinas
+
+[node-redis 6.0: The Official Node.js Driver for Redis](https://nodeweekly.com/link/186170/0a4070b383 "github.com") — Coinciding with the release of [Redis 8.8](https://nodeweekly.com/link/186172/0a4070b383), the Node driver adds support for 8.8’s new array commands, switches to the RESP3 protocol by default, and more. There’s [a migration guide](https://nodeweekly.com/link/186173/0a4070b383) for 5.x users.
+
+Redis
+
+[Structon: Random-Access Binary Encoding for JavaScript](https://nodeweekly.com/link/186175/0a4070b383 "www.harper.fast") — Encodes objects into a binary format you can read field-by-field, so you can pull individual values straight out of the buffer without deserializing whole records.
+
+Kris Zyp (Harper)
+
+[Hocuspocus 4: Add Real-Time Collaboration to Any App](https://nodeweekly.com/link/186176/0a4070b383 "tiptap.dev") — A real-time collaboration backend based on [Yjs](https://nodeweekly.com/link/186177/0a4070b383) so you can quickly wire multi-user collaborative experiences into apps. It runs on Node, Bun, Deno, or Cloudflare Workers.
+
+Tiptap
+
+* [Axios 1.17](https://nodeweekly.com/link/186179/0a4070b383) – The long-standing promise-based HTTP client adds HTTP zstd decompression on Node.
+
+* [pnpm 11.5](https://nodeweekly.com/link/186185/0a4070b383) – [Staged publishes are now recognized](https://nodeweekly.com/link/186187/0a4070b383) in the trust scale.
+
+* [node-oracledb 7.0](https://nodeweekly.com/link/186181/0a4070b383) – Official Node.js driver for Oracle Database.
+
+* [node-libcurl 5.1](https://nodeweekly.com/link/186183/0a4070b383) – `libcurl` bindings for Node.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
