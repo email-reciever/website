@@ -1,0 +1,233 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Every TanStack project all at once
+description: Every TanStack project all at once
+date: 星期五 05 下午 六月 5o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/477
+origin_site: https://react.statuscode.com/issues/477
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Every TanStack project all at once" url="https://react.statuscode.com/issues/477" />
+
+<Detail client:only="react">
+	#​477 — June 5, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/477)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://react.statuscode.com/link/186223/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ezbozrzpomsqiyxqrqs6.jpg)](https://react.statuscode.com/link/186224/5d0bbb4a61)
+
+[The Conductor Rewrite: What They Changed to Make It Fast](https://react.statuscode.com/link/186224/5d0bbb4a61 "performance.dev") — A founder interview turned React performance teardown on how [Conductor](https://react.statuscode.com/link/186225/5d0bbb4a61), a Mac app for coordinating coding agents, got 2x faster. It walks through a re-render trap, routing choices, and virtualization work on its chat view that added up to the win. I loved seeing the entire stack listed out too.
+
+Dennis Brotzky
+
+💡 The author previously did [a similar breakdown of Linear](https://react.statuscode.com/link/186261/5d0bbb4a61).
+
+[The Rust Port of _React Compiler_ is Nearly Ready to Go](https://react.statuscode.com/link/186227/5d0bbb4a61 "github.com") — Rick, of the React core team, notes Meta has been testing it, seen ‘great results’, and it’s likely to be merged in the next week or two. You can test it now.
+
+Hanlon, Savona, et al.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a26f6648.jpg)](https://react.statuscode.com/link/186223/5d0bbb4a61)
+
+[Next.js + Supabase: Catch N+1 Queries Before Users Do](https://react.statuscode.com/link/186223/5d0bbb4a61 "blog.sentry.io") — Learn how you can use one trace from your Next.js page load through the API route, into the Edge Function, down to the Postgres query. Auto-detect N+1 queries, drain Supabase logs into Sentry, and let Seer suggest fixes for new issues.
+
+Sentry sponsor
+
+**IN BRIEF:**
+
+*   [React 19.2.7](https://react.statuscode.com/link/186228/5d0bbb4a61), [19.1.8](https://react.statuscode.com/link/186262/5d0bbb4a61) and [19.0.7](https://react.statuscode.com/link/186229/5d0bbb4a61) have been released to fix a regression in Server Actions.
+    
+*   Lovable, a popular AI-powered site builder, has [switched to TanStack Start by default](https://react.statuscode.com/link/186230/5d0bbb4a61) for all its AIuser-created apps, and explains why.
+    
+*   In two new releases this week, `shadcn/ui` has added [an `eject` command](https://react.statuscode.com/link/186231/5d0bbb4a61) to inline shadcn's Tailwind code into your own CSS, and the ability to [use public GitHub repos as registries](https://react.statuscode.com/link/186232/5d0bbb4a61).
+    
+*   🔒 There are new versions of React Router v7 (7.16.0), v6 (6.30.4) and Remix 2 (2.17.5) to fix [seven vulnerabilities](https://react.statuscode.com/link/186233/5d0bbb4a61).
+    
+*   [VoidZero](https://react.statuscode.com/link/186234/5d0bbb4a61), the company behind Vite, Vitest, Rolldown, Oxc, and Vite+, [is joining Cloudflare.](https://react.statuscode.com/link/186235/5d0bbb4a61)
+    
+
+▶  [All 17 TanStack Projects in One App](https://react.statuscode.com/link/186236/5d0bbb4a61 "www.youtube.com") — [TanStack](https://react.statuscode.com/link/186237/5d0bbb4a61) now offers a huge suite of projects and libraries (Start, Form, Router, etc.) and this is a surprisingly good way to see what they all do in just 14 minutes.
+
+Jack Herrington
+
+[Everything You Need to Know About Source Maps](https://react.statuscode.com/link/186238/5d0bbb4a61 "neciudan.dev") — [Source maps](https://react.statuscode.com/link/186239/5d0bbb4a61) map between original source code and its minified/transformed version and are handy when debugging. Be careful to not let them expose your codebase, though…
+
+Neciu Dan
+
+[React Query Can't Fix a Slow Analytics Query](https://react.statuscode.com/link/186240/5d0bbb4a61 "www.tigerdata.com") — Blame the database, not the component. TimescaleDB extends Postgres so analytics stay fast at scale. [$1000 credit](https://react.statuscode.com/link/186240/5d0bbb4a61)
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+📄 [Component Architecture for React Server Components](https://react.statuscode.com/link/186241/5d0bbb4a61) – An exploration of how RSCs let you improve your page architecture. Aurora Scharff
+
+📄 [Things I Learned While Building Expo](https://react.statuscode.com/link/186242/5d0bbb4a61) – Evan’s been at Expo since the early days and created Expo Router, but he’s now leaving. Evan Bacon
+
+📄 [How We Cut Build Times by Two-Thirds by Deleting Our CMS](https://react.statuscode.com/link/186243/5d0bbb4a61) – A Gatsby to Astro migration. Eli Lennox (Sentry)
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qunwaqog39wgicotatxq.jpg)](https://react.statuscode.com/link/186244/5d0bbb4a61)
+
+[React Spectrum 1.4: Adobe's Complete React Design System](https://react.statuscode.com/link/186244/5d0bbb4a61 "react-spectrum.adobe.com") — The [homepage](https://react.statuscode.com/link/186245/5d0bbb4a61) does a great job of selling it, but Spectrum is a spectacular toolkit for building a high quality experience. v1.4 adds drag-and-drop support for collection components, highlight selection and `TableFooter` in `TableView`, and more.
+
+Adobe
+
+[react-call 2.0: Turn a Component Into Something You Can `await`](https://react.statuscode.com/link/186246/5d0bbb4a61 "github.com") — Lets you treat a React component like an async function. Ideal for imperative things with obvious return values like pickers, confirmations, and dialogs. v2 adds more options plus HMR persistence.
+
+Ismael Ramon
+
+[You Might Not Need An Effect 1.0: Catch Effect Anti-Patterns](https://react.statuscode.com/link/186247/5d0bbb4a61 "github.com") — An ESLint/Oxlint plugin to catch when you might not need an Effect in React. If you’d rather do it by hand, though, [the React docs explain all.](https://react.statuscode.com/link/186248/5d0bbb4a61)
+
+Nick van Dyke
+
+🍪 [c15t 2.0: Fast Consent Banners for React Apps](https://react.statuscode.com/link/186249/5d0bbb4a61 "c15t.com") — For when you need to add consent banners to your app that render as quickly as possible, keeping both the regulators happy and your users reassured.
+
+Inth
+
+*   [Mantine 9.3](https://react.statuscode.com/link/186250/5d0bbb4a61) – The huge component suite adds a responsive layout option for pagination, text-wrap controls, a hook for resizable split-panes, a way to create in-situ context menus, and more.
+    
+*   [Constate 4.0](https://react.statuscode.com/link/186251/5d0bbb4a61) – Local state manager that uses hooks and Context. Now ESM-only.
+    
+*   [React Gantt 2.7](https://react.statuscode.com/link/186252/5d0bbb4a61) – A component for the popular timeline visualization approach.
+    
+*   [Ink 7.0.5](https://react.statuscode.com/link/186253/5d0bbb4a61) – A bug fix release for the popular React TUI renderer.
+    
+*   [MUI X 9.4](https://react.statuscode.com/link/186254/5d0bbb4a61), [pnpm 11.5](https://react.statuscode.com/link/186255/5d0bbb4a61), [React Email 6.5](https://react.statuscode.com/link/186256/5d0bbb4a61)
+    
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://react.statuscode.com/link/186257/5d0bbb4a61) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+📡  And one for the future..
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ihrldmlx7alp5tnnoja6.jpg)](https://react.statuscode.com/link/186258/5d0bbb4a61)
+
+[Liquid DOM: _Liquid Glass_ for the Web](https://react.statuscode.com/link/186258/5d0bbb4a61 "github.com") — A striking implementation of Apple-style ‘liquid glass’, with React bindings. You need WebGPU and the experimental [HTML-in-Canvas API](https://react.statuscode.com/link/186259/5d0bbb4a61) enabled to get the most from it, but it’s a neat look into the (near) future of browser capabilities.
+
+Andrew Prifer
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​477 — June 5, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/477)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://react.statuscode.com/link/186223/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ezbozrzpomsqiyxqrqs6.jpg)](https://react.statuscode.com/link/186224/5d0bbb4a61)
+
+[The Conductor Rewrite: What They Changed to Make It Fast](https://react.statuscode.com/link/186224/5d0bbb4a61 "performance.dev") — A founder interview turned React performance teardown on how [Conductor](https://react.statuscode.com/link/186225/5d0bbb4a61), a Mac app for coordinating coding agents, got 2x faster. It walks through a re-render trap, routing choices, and virtualization work on its chat view that added up to the win. I loved seeing the entire stack listed out too.
+
+Dennis Brotzky
+
+💡 The author previously did [a similar breakdown of Linear](https://react.statuscode.com/link/186261/5d0bbb4a61).
+
+[The Rust Port of *React Compiler* is Nearly Ready to Go](https://react.statuscode.com/link/186227/5d0bbb4a61 "github.com") — Rick, of the React core team, notes Meta has been testing it, seen ‘great results’, and it’s likely to be merged in the next week or two. You can test it now.
+
+Hanlon, Savona, et al.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a26f6648.jpg)](https://react.statuscode.com/link/186223/5d0bbb4a61)
+
+[Next.js + Supabase: Catch N+1 Queries Before Users Do](https://react.statuscode.com/link/186223/5d0bbb4a61 "blog.sentry.io") — Learn how you can use one trace from your Next.js page load through the API route, into the Edge Function, down to the Postgres query. Auto-detect N+1 queries, drain Supabase logs into Sentry, and let Seer suggest fixes for new issues.
+
+Sentry sponsor
+
+**IN BRIEF:**
+
+* [React 19.2.7](https://react.statuscode.com/link/186228/5d0bbb4a61), [19.1.8](https://react.statuscode.com/link/186262/5d0bbb4a61) and [19.0.7](https://react.statuscode.com/link/186229/5d0bbb4a61) have been released to fix a regression in Server Actions.
+
+* Lovable, a popular AI-powered site builder, has [switched to TanStack Start by default](https://react.statuscode.com/link/186230/5d0bbb4a61) for all its AIuser-created apps, and explains why.
+
+* In two new releases this week, `shadcn/ui` has added [an `eject` command](https://react.statuscode.com/link/186231/5d0bbb4a61) to inline shadcn's Tailwind code into your own CSS, and the ability to [use public GitHub repos as registries](https://react.statuscode.com/link/186232/5d0bbb4a61).
+
+* 🔒 There are new versions of React Router v7 (7.16.0), v6 (6.30.4) and Remix 2 (2.17.5) to fix [seven vulnerabilities](https://react.statuscode.com/link/186233/5d0bbb4a61).
+
+* [VoidZero](https://react.statuscode.com/link/186234/5d0bbb4a61), the company behind Vite, Vitest, Rolldown, Oxc, and Vite+, [is joining Cloudflare.](https://react.statuscode.com/link/186235/5d0bbb4a61)
+
+▶  [All 17 TanStack Projects in One App](https://react.statuscode.com/link/186236/5d0bbb4a61 "www.youtube.com") — [TanStack](https://react.statuscode.com/link/186237/5d0bbb4a61) now offers a huge suite of projects and libraries (Start, Form, Router, etc.) and this is a surprisingly good way to see what they all do in just 14 minutes.
+
+Jack Herrington
+
+[Everything You Need to Know About Source Maps](https://react.statuscode.com/link/186238/5d0bbb4a61 "neciudan.dev") — [Source maps](https://react.statuscode.com/link/186239/5d0bbb4a61) map between original source code and its minified/transformed version and are handy when debugging. Be careful to not let them expose your codebase, though…
+
+Neciu Dan
+
+[React Query Can't Fix a Slow Analytics Query](https://react.statuscode.com/link/186240/5d0bbb4a61 "www.tigerdata.com") — Blame the database, not the component. TimescaleDB extends Postgres so analytics stay fast at scale. [$1000 credit](https://react.statuscode.com/link/186240/5d0bbb4a61)
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+📄 [Component Architecture for React Server Components](https://react.statuscode.com/link/186241/5d0bbb4a61) – An exploration of how RSCs let you improve your page architecture. Aurora Scharff
+
+📄 [Things I Learned While Building Expo](https://react.statuscode.com/link/186242/5d0bbb4a61) – Evan’s been at Expo since the early days and created Expo Router, but he’s now leaving. Evan Bacon
+
+📄 [How We Cut Build Times by Two-Thirds by Deleting Our CMS](https://react.statuscode.com/link/186243/5d0bbb4a61) – A Gatsby to Astro migration. Eli Lennox (Sentry)
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qunwaqog39wgicotatxq.jpg)](https://react.statuscode.com/link/186244/5d0bbb4a61)
+
+[React Spectrum 1.4: Adobe's Complete React Design System](https://react.statuscode.com/link/186244/5d0bbb4a61 "react-spectrum.adobe.com") — The [homepage](https://react.statuscode.com/link/186245/5d0bbb4a61) does a great job of selling it, but Spectrum is a spectacular toolkit for building a high quality experience. v1.4 adds drag-and-drop support for collection components, highlight selection and `TableFooter` in `TableView`, and more.
+
+Adobe
+
+[react-call 2.0: Turn a Component Into Something You Can `await`](https://react.statuscode.com/link/186246/5d0bbb4a61 "github.com") — Lets you treat a React component like an async function. Ideal for imperative things with obvious return values like pickers, confirmations, and dialogs. v2 adds more options plus HMR persistence.
+
+Ismael Ramon
+
+[You Might Not Need An Effect 1.0: Catch Effect Anti-Patterns](https://react.statuscode.com/link/186247/5d0bbb4a61 "github.com") — An ESLint/Oxlint plugin to catch when you might not need an Effect in React. If you’d rather do it by hand, though, [the React docs explain all.](https://react.statuscode.com/link/186248/5d0bbb4a61)
+
+Nick van Dyke
+
+🍪 [c15t 2.0: Fast Consent Banners for React Apps](https://react.statuscode.com/link/186249/5d0bbb4a61 "c15t.com") — For when you need to add consent banners to your app that render as quickly as possible, keeping both the regulators happy and your users reassured.
+
+Inth
+
+* [Mantine 9.3](https://react.statuscode.com/link/186250/5d0bbb4a61) – The huge component suite adds a responsive layout option for pagination, text-wrap controls, a hook for resizable split-panes, a way to create in-situ context menus, and more.
+
+* [Constate 4.0](https://react.statuscode.com/link/186251/5d0bbb4a61) – Local state manager that uses hooks and Context. Now ESM-only.
+
+* [React Gantt 2.7](https://react.statuscode.com/link/186252/5d0bbb4a61) – A component for the popular timeline visualization approach.
+
+* [Ink 7.0.5](https://react.statuscode.com/link/186253/5d0bbb4a61) – A bug fix release for the popular React TUI renderer.
+
+* [MUI X 9.4](https://react.statuscode.com/link/186254/5d0bbb4a61), [pnpm 11.5](https://react.statuscode.com/link/186255/5d0bbb4a61), [React Email 6.5](https://react.statuscode.com/link/186256/5d0bbb4a61)
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://react.statuscode.com/link/186257/5d0bbb4a61) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+📡  And one for the future..
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ihrldmlx7alp5tnnoja6.jpg)](https://react.statuscode.com/link/186258/5d0bbb4a61)
+
+[Liquid DOM: *Liquid Glass* for the Web](https://react.statuscode.com/link/186258/5d0bbb4a61 "github.com") — A striking implementation of Apple-style ‘liquid glass’, with React bindings. You need WebGPU and the experimental [HTML-in-Canvas API](https://react.statuscode.com/link/186259/5d0bbb4a61) enabled to get the most from it, but it’s a neat look into the (near) future of browser capabilities.
+
+Andrew Prifer
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
