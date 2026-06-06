@@ -1,0 +1,833 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Concurrency, Parallelism, and Async： Three Ideas That Sound the Same But Aren’t | Alina Kovtun✨ in Code Like A Girl
+description: Concurrency, Parallelism, and Async： Three Ideas That Sound the Same But Aren’t | Alina Kovtun✨ in Code Like A Girl
+date: 星期六 11 晚上 六月 6o 2026
+author: mediumcom
+origin_url: https://medium.com/
+origin_site: https://medium.com/
+translated: true
+avatar: /media-source/mediumcom-ico.png
+email_recorder: noreply@medium.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Concurrency, Parallelism, and Async： Three Ideas That Sound the Same But Aren’t | Alina Kovtun✨ in Code Like A Girl" url="https://medium.com/" />
+
+<Detail client:only="react">
+	Today's highlights
+
+[![Alina Kovtun✨](https://miro.medium.com/fit/c/40/40/1*Ddgp0_7ZDX4yDLhl_wbF4w@2x.jpeg)](https://medium.com/@akovtun?source=email-2b8b8ee19057-1780769223769-digest.reader-811ec52eb09a-47312e0be553----0-102------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Alina Kovtun✨](https://medium.com/@akovtun?source=email-2b8b8ee19057-1780769223769-digest.reader-811ec52eb09a-47312e0be553----0-102------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[Code Like A Girl](https://medium.com/code-like-a-girl?source=email-2b8b8ee19057-1780769223769-digest.reader-811ec52eb09a-47312e0be553----0-102------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![Concurrency, Parallelism, and Async: Three Ideas That Sound the Same But Aren’t](https://miro.medium.com/fit/c/320/214/0*0sZCsUy08zUxQcVb)](https://medium.com/@akovtun/concurrency-parallelism-and-async-three-ideas-that-sound-the-same-but-arent-47312e0be553?source=email-2b8b8ee19057-1780769223769-digest.reader-811ec52eb09a-47312e0be553----0-102------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[
+
+## Concurrency, Parallelism, and Async: Three Ideas That Sound the Same But Aren’t
+
+### A guide to how modern software handles multiple tasks…
+
+
+
+](https://medium.com/@akovtun/concurrency-parallelism-and-async-three-ideas-that-sound-the-same-but-arent-47312e0be553?source=email-2b8b8ee19057-1780769223769-digest.reader-811ec52eb09a-47312e0be553----0-102------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.6K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+17
+
+[![Jacqueline Dooley](https://miro.medium.com/fit/c/40/40/1*OcugJUMMOf--jWczXN2brw.jpeg)](https://medium.com/@jacquelinedooley?source=email-2b8b8ee19057-1780769223769-digest.reader-1576ae875ad3-1a7a4609b31f----1-109------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Jacqueline Dooley](https://medium.com/@jacquelinedooley?source=email-2b8b8ee19057-1780769223769-digest.reader-1576ae875ad3-1a7a4609b31f----1-109------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[Grief Book Club](https://medium.com/grief-book-club?source=email-2b8b8ee19057-1780769223769-digest.reader-1576ae875ad3-1a7a4609b31f----1-109------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![After Forty Years of Friendship, It Ended With a Text Message](https://miro.medium.com/fit/c/320/214/1*uxGGGkTW5rO3jTkyV5OD0g.jpeg)](https://medium.com/@jacquelinedooley/after-forty-years-of-friendship-it-ended-with-a-text-message-1a7a4609b31f?source=email-2b8b8ee19057-1780769223769-digest.reader-1576ae875ad3-1a7a4609b31f----1-109------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[
+
+## After Forty Years of Friendship, It Ended With a Text Message
+
+### What I wish I’d said to the friend who ghosted me
+
+
+
+](https://medium.com/@jacquelinedooley/after-forty-years-of-friendship-it-ended-with-a-text-message-1a7a4609b31f?source=email-2b8b8ee19057-1780769223769-digest.reader-1576ae875ad3-1a7a4609b31f----1-109------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+8.5K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+143
+
+[![James Wilkins](https://miro.medium.com/fit/c/40/40/1*F6qwxBFumXnh7my1v0MUqw.png)](https://medium.com/@jdhwilkins?source=email-2b8b8ee19057-1780769223769-digest.reader-78d064101951-4d327f998c39----2-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[James Wilkins](https://medium.com/@jdhwilkins?source=email-2b8b8ee19057-1780769223769-digest.reader-78d064101951-4d327f998c39----2-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[Artificial Intelligence in Plain English](https://medium.com/ai-in-plain-english?source=email-2b8b8ee19057-1780769223769-digest.reader-78d064101951-4d327f998c39----2-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![Claude Code: Everything you need to know in 8 minutes or less](https://miro.medium.com/fit/c/320/214/1*KPEhhV6z-5kJ6xjvNrRV_Q.jpeg)](https://medium.com/@jdhwilkins/claude-code-everything-you-need-to-know-in-8-minutes-or-less-4d327f998c39?source=email-2b8b8ee19057-1780769223769-digest.reader-78d064101951-4d327f998c39----2-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[
+
+## Claude Code: Everything you need to know in 8 minutes or less
+
+### Even if you don’t know how to code
+
+
+
+](https://medium.com/@jdhwilkins/claude-code-everything-you-need-to-know-in-8-minutes-or-less-4d327f998c39?source=email-2b8b8ee19057-1780769223769-digest.reader-78d064101951-4d327f998c39----2-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+9 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+25
+
+[![Pawan Kumawat](https://miro.medium.com/fit/c/40/40/1*3woDpE0sYiFp2eKyX8s1ew.jpeg)](https://medium.com/@pawan-kumawat?source=email-2b8b8ee19057-1780769223769-digest.reader--2bdb5c36e6d6----3-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Pawan Kumawat](https://medium.com/@pawan-kumawat?source=email-2b8b8ee19057-1780769223769-digest.reader--2bdb5c36e6d6----3-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![Angular 22 — Fetch is Now the Default](https://miro.medium.com/fit/c/320/214/1*G_gXTNZQzSaxm-Qggs_Nzw.png)](https://medium.com/@pawan-kumawat/angular-22-fetch-is-now-the-default-2bdb5c36e6d6?source=email-2b8b8ee19057-1780769223769-digest.reader--2bdb5c36e6d6----3-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[
+
+## Angular 22 — Fetch is Now the Default
+
+### In Angular 22 (expected release by mid May 2026)…
+
+
+
+](https://medium.com/@pawan-kumawat/angular-22-fetch-is-now-the-default-2bdb5c36e6d6?source=email-2b8b8ee19057-1780769223769-digest.reader--2bdb5c36e6d6----3-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+2 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+211
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Kevin - MERN Stack Developer](https://miro.medium.com/fit/c/40/40/1*aUGBohBB1VAnsoGAdjEZoQ.png)](https://medium.com/@mernstackdevbykevin?source=email-2b8b8ee19057-1780769223769-digest.reader--f95f25f5e284----4-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Kevin - MERN Stack Developer](https://medium.com/@mernstackdevbykevin?source=email-2b8b8ee19057-1780769223769-digest.reader--f95f25f5e284----4-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![ECMAScript 2026 Explained](https://miro.medium.com/fit/c/320/214/1*0y70XEO-lnpfKcpNQ2NNhA.png)](https://medium.com/@mernstackdevbykevin/ecmascript-2026-explained-f95f25f5e284?source=email-2b8b8ee19057-1780769223769-digest.reader--f95f25f5e284----4-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[
+
+## ECMAScript 2026 Explained
+
+### The biggest JS update in years just landed — here’s…
+
+
+
+](https://medium.com/@mernstackdevbykevin/ecmascript-2026-explained-f95f25f5e284?source=email-2b8b8ee19057-1780769223769-digest.reader--f95f25f5e284----4-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+70
+
+[![Brian Treese](https://miro.medium.com/fit/c/40/40/1*NBVxqwNoPyWatYkaC5eObA.png)](https://medium.com/@mrbriantreese?source=email-2b8b8ee19057-1780769223769-digest.reader-5b301f10ddcd-7e13173f5bc1----5-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Brian Treese](https://medium.com/@mrbriantreese?source=email-2b8b8ee19057-1780769223769-digest.reader-5b301f10ddcd-7e13173f5bc1----5-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[ITNEXT](https://medium.com/itnext?source=email-2b8b8ee19057-1780769223769-digest.reader-5b301f10ddcd-7e13173f5bc1----5-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![Angular’s New injectAsync() API Explained](https://miro.medium.com/fit/c/320/214/1*zwE-lPn2V4hM-khg_sWysw.jpeg)](https://medium.com/@mrbriantreese/angulars-new-injectasync-api-explained-7e13173f5bc1?source=email-2b8b8ee19057-1780769223769-digest.reader-5b301f10ddcd-7e13173f5bc1----5-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[
+
+## Angular’s New injectAsync() API Explained
+
+### Lazy-loading Angular services used to be awkward…
+
+
+
+](https://medium.com/@mrbriantreese/angulars-new-injectasync-api-explained-7e13173f5bc1?source=email-2b8b8ee19057-1780769223769-digest.reader-5b301f10ddcd-7e13173f5bc1----5-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+122
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Fareed Khan](https://miro.medium.com/fit/c/40/40/1*feiUXOR8sid6IPHSHufA-g.jpeg)](https://medium.com/@fareedkhandev?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-cd38ee3daf93----6-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Fareed Khan](https://medium.com/@fareedkhandev?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-cd38ee3daf93----6-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-cd38ee3daf93----6-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![Building Claude from Scratch: 62 Components Behind Anthropic’s Thinking Engine](https://miro.medium.com/fit/c/320/214/1*p5SMpwf67JW-98nvN4atZg.png)](https://medium.com/@fareedkhandev/building-claude-from-scratch-62-components-behind-anthropics-thinking-engine-cd38ee3daf93?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-cd38ee3daf93----6-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[
+
+## Building Claude from Scratch: 62 Components Behind Anthropic’s Thinking Engine
+
+### Machine learning patterns and agentic components, end…
+
+
+
+](https://medium.com/@fareedkhandev/building-claude-from-scratch-62-components-behind-anthropics-thinking-engine-cd38ee3daf93?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-cd38ee3daf93----6-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+80 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+9
+
+[![Tushar Kanjariya](https://miro.medium.com/fit/c/40/40/2*lSBGQKdOUsG8qNMLANgd1w.jpeg)](https://medium.com/@TusharKanjariya?source=email-2b8b8ee19057-1780769223769-digest.reader--45e53e508dc1----7-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Tushar Kanjariya](https://medium.com/@TusharKanjariya?source=email-2b8b8ee19057-1780769223769-digest.reader--45e53e508dc1----7-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![I Removed reCAPTCHA From Every Site I Build](https://miro.medium.com/fit/c/320/214/1*ituXRFkMPfYCgl9_XfGzWA.png)](https://medium.com/@TusharKanjariya/i-removed-recaptcha-from-every-site-i-build-45e53e508dc1?source=email-2b8b8ee19057-1780769223769-digest.reader--45e53e508dc1----7-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[
+
+## I Removed reCAPTCHA From Every Site I Build
+
+### Real users started failing it quietly. Here’s what I…
+
+
+
+](https://medium.com/@TusharKanjariya/i-removed-recaptcha-from-every-site-i-build-45e53e508dc1?source=email-2b8b8ee19057-1780769223769-digest.reader--45e53e508dc1----7-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+299
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+7
+
+[![Andy Murphy](https://miro.medium.com/fit/c/40/40/1*0xrDaW1PAbC6JkPyC2DuyQ.jpeg)](https://medium.com/@andycmurphy1?source=email-2b8b8ee19057-1780769223769-digest.reader--0349cb0b02f1----8-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Andy Murphy](https://medium.com/@andycmurphy1?source=email-2b8b8ee19057-1780769223769-digest.reader--0349cb0b02f1----8-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![8 Uncomfortable Quotes That Are Hard to Read, but Important to Know](https://miro.medium.com/fit/c/320/214/0*ECCmd6AEyytT9QAM)](https://medium.com/@andycmurphy1/8-uncomfortable-quotes-that-are-hard-to-read-but-important-to-know-0349cb0b02f1?source=email-2b8b8ee19057-1780769223769-digest.reader--0349cb0b02f1----8-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[
+
+## 8 Uncomfortable Quotes That Are Hard to Read, but Important to Know
+
+### Some things I read feel like a psychological…
+
+
+
+](https://medium.com/@andycmurphy1/8-uncomfortable-quotes-that-are-hard-to-read-but-important-to-know-0349cb0b02f1?source=email-2b8b8ee19057-1780769223769-digest.reader--0349cb0b02f1----8-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+3.8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+81
+
+[![Ravi Savaliya](https://miro.medium.com/fit/c/40/40/1*Xd0pZayCXYGaBK-i07iQzw.png)](https://medium.com/@savaliya.ravi.rs?source=email-2b8b8ee19057-1780769223769-digest.reader--125bcc0656a1----9-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Ravi Savaliya](https://medium.com/@savaliya.ravi.rs?source=email-2b8b8ee19057-1780769223769-digest.reader--125bcc0656a1----9-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![OverflowBar in Flutter: The Underrated Widget That Fixes Broken Layouts Instantly](https://miro.medium.com/fit/c/320/214/1*Mg3ttXvl6YXuW4Ss37ogjQ.png)](https://medium.com/@savaliya.ravi.rs/overflowbar-in-flutter-the-underrated-widget-that-fixes-broken-layouts-instantly-125bcc0656a1?source=email-2b8b8ee19057-1780769223769-digest.reader--125bcc0656a1----9-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[
+
+## OverflowBar in Flutter: The Underrated Widget That Fixes Broken Layouts…
+
+### Stop fighting Row overflow errors — use this hidden…
+
+
+
+](https://medium.com/@savaliya.ravi.rs/overflowbar-in-flutter-the-underrated-widget-that-fixes-broken-layouts-instantly-125bcc0656a1?source=email-2b8b8ee19057-1780769223769-digest.reader--125bcc0656a1----9-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+31
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Sean Veaux](https://miro.medium.com/fit/c/40/40/1*aOzETrLwFFjy_KXJf1bRFA.jpeg)](https://medium.com/@Seanveaux?source=email-2b8b8ee19057-1780769223769-digest.reader--9bb40a93ecf5----10-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Sean Veaux](https://medium.com/@Seanveaux?source=email-2b8b8ee19057-1780769223769-digest.reader--9bb40a93ecf5----10-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![This ONE Nutrient Everyone Should Include In Their Diet.](https://miro.medium.com/fit/c/320/214/1*RNuI5oZPCpL_swkduFc0kQ.jpeg)](https://medium.com/@Seanveaux/this-one-nutrient-everyone-should-include-in-their-diet-9bb40a93ecf5?source=email-2b8b8ee19057-1780769223769-digest.reader--9bb40a93ecf5----10-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[
+
+## This ONE Nutrient Everyone Should Include In Their Diet.
+
+### Everything you need to know about this missing…
+
+
+
+](https://medium.com/@Seanveaux/this-one-nutrient-everyone-should-include-in-their-diet-9bb40a93ecf5?source=email-2b8b8ee19057-1780769223769-digest.reader--9bb40a93ecf5----10-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+37
+
+[![Developer Awam](https://miro.medium.com/fit/c/40/40/1*qsQhNmEIR5gX0DX8yCa_YQ.jpeg)](https://medium.com/@developerawam?source=email-2b8b8ee19057-1780769223769-digest.reader-4b3a1ed4f11c-ced385ffc648----11-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Developer Awam](https://medium.com/@developerawam?source=email-2b8b8ee19057-1780769223769-digest.reader-4b3a1ed4f11c-ced385ffc648----11-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[JavaScript in Plain English](https://medium.com/javascript-in-plain-english?source=email-2b8b8ee19057-1780769223769-digest.reader-4b3a1ed4f11c-ced385ffc648----11-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![JavaScript 2026: The New Era of Bun, Deno, TypeScript 7, Vite and What Developers Should Learn Next](https://miro.medium.com/fit/c/320/214/1*iQOoRspSq2wDSrINc9RMZA.png)](https://medium.com/@developerawam/javascript-2026-the-new-era-of-bun-deno-typescript-7-vite-and-what-developers-should-learn-next-ced385ffc648?source=email-2b8b8ee19057-1780769223769-digest.reader-4b3a1ed4f11c-ced385ffc648----11-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[
+
+## JavaScript 2026: The New Era of Bun, Deno, TypeScript 7, Vite and What…
+
+### “For the first time in its history, the JavaScript…
+
+
+
+](https://medium.com/@developerawam/javascript-2026-the-new-era-of-bun-deno-typescript-7-vite-and-what-developers-should-learn-next-ced385ffc648?source=email-2b8b8ee19057-1780769223769-digest.reader-4b3a1ed4f11c-ced385ffc648----11-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+41
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+3
+
+[![Sachin Kasana](https://miro.medium.com/fit/c/40/40/1*IKlnY-B9CALn6-rfjTXFHQ.jpeg)](https://medium.com/@sachinkasana?source=email-2b8b8ee19057-1780769223769-digest.reader-a7e6e37eb5c6-145c73db7d9c----12-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Sachin Kasana](https://medium.com/@sachinkasana?source=email-2b8b8ee19057-1780769223769-digest.reader-a7e6e37eb5c6-145c73db7d9c----12-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[Front-end World](https://medium.com/front-end-world?source=email-2b8b8ee19057-1780769223769-digest.reader-a7e6e37eb5c6-145c73db7d9c----12-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![How We Reduced Our Node.js Cold Starts by 90%](https://miro.medium.com/fit/c/320/214/1*kvxI0soZNf2oeSYU43E1RA.png)](https://medium.com/@sachinkasana/how-we-reduced-our-node-js-cold-starts-by-90-145c73db7d9c?source=email-2b8b8ee19057-1780769223769-digest.reader-a7e6e37eb5c6-145c73db7d9c----12-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[
+
+## How We Reduced Our Node.js Cold Starts by 90%
+
+### Our Node.js APIs were fast.
+
+
+
+](https://medium.com/@sachinkasana/how-we-reduced-our-node-js-cold-starts-by-90-145c73db7d9c?source=email-2b8b8ee19057-1780769223769-digest.reader-a7e6e37eb5c6-145c73db7d9c----12-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+56
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Pawan Kumawat](https://miro.medium.com/fit/c/40/40/1*3woDpE0sYiFp2eKyX8s1ew.jpeg)](https://medium.com/@pawan-kumawat?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-d7a33f79cf30----13-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Pawan Kumawat](https://medium.com/@pawan-kumawat?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-d7a33f79cf30----13-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-d7a33f79cf30----13-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![Angular 22 —Bye ControlValueAccessor](https://miro.medium.com/fit/c/320/214/1*QauIkGdTc7j3Y9rCXuGLuA.png)](https://medium.com/@pawan-kumawat/angular-22-bye-controlvalueaccessor-d7a33f79cf30?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-d7a33f79cf30----13-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[
+
+## Angular 22 —Bye ControlValueAccessor
+
+### In latest Angular 22 prerelease (v22.0.0-rc.0) we can…
+
+
+
+](https://medium.com/@pawan-kumawat/angular-22-bye-controlvalueaccessor-d7a33f79cf30?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-d7a33f79cf30----13-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+133
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Ark Protocol](https://miro.medium.com/fit/c/40/40/1*5Af7Za2-Mu7q8X3FpdM1Kg.jpeg)](https://medium.com/@ArkProtocol1?source=email-2b8b8ee19057-1780769223769-digest.reader--55bc4e8f1e2f----14-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Ark Protocol](https://medium.com/@ArkProtocol1?source=email-2b8b8ee19057-1780769223769-digest.reader--55bc4e8f1e2f----14-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![I Built The Same App In React And Svelte — The Bundle Size Difference Was Brutal](https://miro.medium.com/fit/c/320/214/1*ZAVxK0vfUhxHOJ9Q5vj0nA.png)](https://medium.com/@ArkProtocol1/i-built-the-same-app-in-react-and-svelte-the-bundle-size-difference-was-brutal-55bc4e8f1e2f?source=email-2b8b8ee19057-1780769223769-digest.reader--55bc4e8f1e2f----14-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[
+
+## I Built The Same App In React And Svelte — The Bundle Size Difference Was…
+
+### I have shipped React for three years and last week it…
+
+
+
+](https://medium.com/@ArkProtocol1/i-built-the-same-app-in-react-and-svelte-the-bundle-size-difference-was-brutal-55bc4e8f1e2f?source=email-2b8b8ee19057-1780769223769-digest.reader--55bc4e8f1e2f----14-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+56
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Become a Medium member](https://miro.medium.com/max/1360/6b37395e36e2d6768583b0d27172b3075c079241270c50b770a18b83476ecffc)](https://medium.com/plans?source=email-2b8b8ee19057-1780769223769-digest.reader-------------------------7f86110e_2c42_4378_85d6_ecfc25864643)
+
+
+</Detail>
+
+Today's highlights
+
+[![Alina Kovtun✨](https://miro.medium.com/fit/c/40/40/1*Ddgp0_7ZDX4yDLhl_wbF4w@2x.jpeg)](https://medium.com/@akovtun?source=email-2b8b8ee19057-1780769223769-digest.reader-811ec52eb09a-47312e0be553----0-102------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Alina Kovtun✨](https://medium.com/@akovtun?source=email-2b8b8ee19057-1780769223769-digest.reader-811ec52eb09a-47312e0be553----0-102------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[Code Like A Girl](https://medium.com/code-like-a-girl?source=email-2b8b8ee19057-1780769223769-digest.reader-811ec52eb09a-47312e0be553----0-102------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![Concurrency, Parallelism, and Async: Three Ideas That Sound the Same But Aren’t](https://miro.medium.com/fit/c/320/214/0*0sZCsUy08zUxQcVb)](https://medium.com/@akovtun/concurrency-parallelism-and-async-three-ideas-that-sound-the-same-but-arent-47312e0be553?source=email-2b8b8ee19057-1780769223769-digest.reader-811ec52eb09a-47312e0be553----0-102------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+\[
+
+## Concurrency, Parallelism, and Async: Three Ideas That Sound the Same But Aren’t
+
+### A guide to how modern software handles multiple tasks…
+
+]\(https://medium.com/@akovtun/concurrency-parallelism-and-async-three-ideas-that-sound-the-same-but-arent-47312e0be553?source=email-2b8b8ee19057-1780769223769-digest.reader-811ec52eb09a-47312e0be553----0-102------------------7f86110e\_2c42\_4378\_85d6\_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.6K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+17
+
+[![Jacqueline Dooley](https://miro.medium.com/fit/c/40/40/1*OcugJUMMOf--jWczXN2brw.jpeg)](https://medium.com/@jacquelinedooley?source=email-2b8b8ee19057-1780769223769-digest.reader-1576ae875ad3-1a7a4609b31f----1-109------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Jacqueline Dooley](https://medium.com/@jacquelinedooley?source=email-2b8b8ee19057-1780769223769-digest.reader-1576ae875ad3-1a7a4609b31f----1-109------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[Grief Book Club](https://medium.com/grief-book-club?source=email-2b8b8ee19057-1780769223769-digest.reader-1576ae875ad3-1a7a4609b31f----1-109------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![After Forty Years of Friendship, It Ended With a Text Message](https://miro.medium.com/fit/c/320/214/1*uxGGGkTW5rO3jTkyV5OD0g.jpeg)](https://medium.com/@jacquelinedooley/after-forty-years-of-friendship-it-ended-with-a-text-message-1a7a4609b31f?source=email-2b8b8ee19057-1780769223769-digest.reader-1576ae875ad3-1a7a4609b31f----1-109------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+\[
+
+## After Forty Years of Friendship, It Ended With a Text Message
+
+### What I wish I’d said to the friend who ghosted me
+
+]\(https://medium.com/@jacquelinedooley/after-forty-years-of-friendship-it-ended-with-a-text-message-1a7a4609b31f?source=email-2b8b8ee19057-1780769223769-digest.reader-1576ae875ad3-1a7a4609b31f----1-109------------------7f86110e\_2c42\_4378\_85d6\_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+8.5K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+143
+
+[![James Wilkins](https://miro.medium.com/fit/c/40/40/1*F6qwxBFumXnh7my1v0MUqw.png)](https://medium.com/@jdhwilkins?source=email-2b8b8ee19057-1780769223769-digest.reader-78d064101951-4d327f998c39----2-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[James Wilkins](https://medium.com/@jdhwilkins?source=email-2b8b8ee19057-1780769223769-digest.reader-78d064101951-4d327f998c39----2-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[Artificial Intelligence in Plain English](https://medium.com/ai-in-plain-english?source=email-2b8b8ee19057-1780769223769-digest.reader-78d064101951-4d327f998c39----2-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![Claude Code: Everything you need to know in 8 minutes or less](https://miro.medium.com/fit/c/320/214/1*KPEhhV6z-5kJ6xjvNrRV_Q.jpeg)](https://medium.com/@jdhwilkins/claude-code-everything-you-need-to-know-in-8-minutes-or-less-4d327f998c39?source=email-2b8b8ee19057-1780769223769-digest.reader-78d064101951-4d327f998c39----2-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+\[
+
+## Claude Code: Everything you need to know in 8 minutes or less
+
+### Even if you don’t know how to code
+
+]\(https://medium.com/@jdhwilkins/claude-code-everything-you-need-to-know-in-8-minutes-or-less-4d327f998c39?source=email-2b8b8ee19057-1780769223769-digest.reader-78d064101951-4d327f998c39----2-73------------------7f86110e\_2c42\_4378\_85d6\_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+9 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+25
+
+[![Pawan Kumawat](https://miro.medium.com/fit/c/40/40/1*3woDpE0sYiFp2eKyX8s1ew.jpeg)](https://medium.com/@pawan-kumawat?source=email-2b8b8ee19057-1780769223769-digest.reader--2bdb5c36e6d6----3-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Pawan Kumawat](https://medium.com/@pawan-kumawat?source=email-2b8b8ee19057-1780769223769-digest.reader--2bdb5c36e6d6----3-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![Angular 22 — Fetch is Now the Default](https://miro.medium.com/fit/c/320/214/1*G_gXTNZQzSaxm-Qggs_Nzw.png)](https://medium.com/@pawan-kumawat/angular-22-fetch-is-now-the-default-2bdb5c36e6d6?source=email-2b8b8ee19057-1780769223769-digest.reader--2bdb5c36e6d6----3-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+\[
+
+## Angular 22 — Fetch is Now the Default
+
+### In Angular 22 (expected release by mid May 2026)…
+
+]\(https://medium.com/@pawan-kumawat/angular-22-fetch-is-now-the-default-2bdb5c36e6d6?source=email-2b8b8ee19057-1780769223769-digest.reader--2bdb5c36e6d6----3-99------------------7f86110e\_2c42\_4378\_85d6\_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+2 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+211
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Kevin - MERN Stack Developer](https://miro.medium.com/fit/c/40/40/1*aUGBohBB1VAnsoGAdjEZoQ.png)](https://medium.com/@mernstackdevbykevin?source=email-2b8b8ee19057-1780769223769-digest.reader--f95f25f5e284----4-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Kevin - MERN Stack Developer](https://medium.com/@mernstackdevbykevin?source=email-2b8b8ee19057-1780769223769-digest.reader--f95f25f5e284----4-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![ECMAScript 2026 Explained](https://miro.medium.com/fit/c/320/214/1*0y70XEO-lnpfKcpNQ2NNhA.png)](https://medium.com/@mernstackdevbykevin/ecmascript-2026-explained-f95f25f5e284?source=email-2b8b8ee19057-1780769223769-digest.reader--f95f25f5e284----4-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+\[
+
+## ECMAScript 2026 Explained
+
+### The biggest JS update in years just landed — here’s…
+
+]\(https://medium.com/@mernstackdevbykevin/ecmascript-2026-explained-f95f25f5e284?source=email-2b8b8ee19057-1780769223769-digest.reader--f95f25f5e284----4-99------------------7f86110e\_2c42\_4378\_85d6\_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+70
+
+[![Brian Treese](https://miro.medium.com/fit/c/40/40/1*NBVxqwNoPyWatYkaC5eObA.png)](https://medium.com/@mrbriantreese?source=email-2b8b8ee19057-1780769223769-digest.reader-5b301f10ddcd-7e13173f5bc1----5-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Brian Treese](https://medium.com/@mrbriantreese?source=email-2b8b8ee19057-1780769223769-digest.reader-5b301f10ddcd-7e13173f5bc1----5-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[ITNEXT](https://medium.com/itnext?source=email-2b8b8ee19057-1780769223769-digest.reader-5b301f10ddcd-7e13173f5bc1----5-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![Angular’s New injectAsync() API Explained](https://miro.medium.com/fit/c/320/214/1*zwE-lPn2V4hM-khg_sWysw.jpeg)](https://medium.com/@mrbriantreese/angulars-new-injectasync-api-explained-7e13173f5bc1?source=email-2b8b8ee19057-1780769223769-digest.reader-5b301f10ddcd-7e13173f5bc1----5-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+\[
+
+## Angular’s New injectAsync() API Explained
+
+### Lazy-loading Angular services used to be awkward…
+
+]\(https://medium.com/@mrbriantreese/angulars-new-injectasync-api-explained-7e13173f5bc1?source=email-2b8b8ee19057-1780769223769-digest.reader-5b301f10ddcd-7e13173f5bc1----5-99------------------7f86110e\_2c42\_4378\_85d6\_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+122
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Fareed Khan](https://miro.medium.com/fit/c/40/40/1*feiUXOR8sid6IPHSHufA-g.jpeg)](https://medium.com/@fareedkhandev?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-cd38ee3daf93----6-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Fareed Khan](https://medium.com/@fareedkhandev?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-cd38ee3daf93----6-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-cd38ee3daf93----6-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![Building Claude from Scratch: 62 Components Behind Anthropic’s Thinking Engine](https://miro.medium.com/fit/c/320/214/1*p5SMpwf67JW-98nvN4atZg.png)](https://medium.com/@fareedkhandev/building-claude-from-scratch-62-components-behind-anthropics-thinking-engine-cd38ee3daf93?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-cd38ee3daf93----6-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+\[
+
+## Building Claude from Scratch: 62 Components Behind Anthropic’s Thinking Engine
+
+### Machine learning patterns and agentic components, end…
+
+]\(https://medium.com/@fareedkhandev/building-claude-from-scratch-62-components-behind-anthropics-thinking-engine-cd38ee3daf93?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-cd38ee3daf93----6-73------------------7f86110e\_2c42\_4378\_85d6\_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+80 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+9
+
+[![Tushar Kanjariya](https://miro.medium.com/fit/c/40/40/2*lSBGQKdOUsG8qNMLANgd1w.jpeg)](https://medium.com/@TusharKanjariya?source=email-2b8b8ee19057-1780769223769-digest.reader--45e53e508dc1----7-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Tushar Kanjariya](https://medium.com/@TusharKanjariya?source=email-2b8b8ee19057-1780769223769-digest.reader--45e53e508dc1----7-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![I Removed reCAPTCHA From Every Site I Build](https://miro.medium.com/fit/c/320/214/1*ituXRFkMPfYCgl9_XfGzWA.png)](https://medium.com/@TusharKanjariya/i-removed-recaptcha-from-every-site-i-build-45e53e508dc1?source=email-2b8b8ee19057-1780769223769-digest.reader--45e53e508dc1----7-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+\[
+
+## I Removed reCAPTCHA From Every Site I Build
+
+### Real users started failing it quietly. Here’s what I…
+
+]\(https://medium.com/@TusharKanjariya/i-removed-recaptcha-from-every-site-i-build-45e53e508dc1?source=email-2b8b8ee19057-1780769223769-digest.reader--45e53e508dc1----7-99------------------7f86110e\_2c42\_4378\_85d6\_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+299
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+7
+
+[![Andy Murphy](https://miro.medium.com/fit/c/40/40/1*0xrDaW1PAbC6JkPyC2DuyQ.jpeg)](https://medium.com/@andycmurphy1?source=email-2b8b8ee19057-1780769223769-digest.reader--0349cb0b02f1----8-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Andy Murphy](https://medium.com/@andycmurphy1?source=email-2b8b8ee19057-1780769223769-digest.reader--0349cb0b02f1----8-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![8 Uncomfortable Quotes That Are Hard to Read, but Important to Know](https://miro.medium.com/fit/c/320/214/0*ECCmd6AEyytT9QAM)](https://medium.com/@andycmurphy1/8-uncomfortable-quotes-that-are-hard-to-read-but-important-to-know-0349cb0b02f1?source=email-2b8b8ee19057-1780769223769-digest.reader--0349cb0b02f1----8-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+\[
+
+## 8 Uncomfortable Quotes That Are Hard to Read, but Important to Know
+
+### Some things I read feel like a psychological…
+
+]\(https://medium.com/@andycmurphy1/8-uncomfortable-quotes-that-are-hard-to-read-but-important-to-know-0349cb0b02f1?source=email-2b8b8ee19057-1780769223769-digest.reader--0349cb0b02f1----8-73------------------7f86110e\_2c42\_4378\_85d6\_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+3.8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+81
+
+[![Ravi Savaliya](https://miro.medium.com/fit/c/40/40/1*Xd0pZayCXYGaBK-i07iQzw.png)](https://medium.com/@savaliya.ravi.rs?source=email-2b8b8ee19057-1780769223769-digest.reader--125bcc0656a1----9-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Ravi Savaliya](https://medium.com/@savaliya.ravi.rs?source=email-2b8b8ee19057-1780769223769-digest.reader--125bcc0656a1----9-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![OverflowBar in Flutter: The Underrated Widget That Fixes Broken Layouts Instantly](https://miro.medium.com/fit/c/320/214/1*Mg3ttXvl6YXuW4Ss37ogjQ.png)](https://medium.com/@savaliya.ravi.rs/overflowbar-in-flutter-the-underrated-widget-that-fixes-broken-layouts-instantly-125bcc0656a1?source=email-2b8b8ee19057-1780769223769-digest.reader--125bcc0656a1----9-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+\[
+
+## OverflowBar in Flutter: The Underrated Widget That Fixes Broken Layouts…
+
+### Stop fighting Row overflow errors — use this hidden…
+
+]\(https://medium.com/@savaliya.ravi.rs/overflowbar-in-flutter-the-underrated-widget-that-fixes-broken-layouts-instantly-125bcc0656a1?source=email-2b8b8ee19057-1780769223769-digest.reader--125bcc0656a1----9-99------------------7f86110e\_2c42\_4378\_85d6\_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+31
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Sean Veaux](https://miro.medium.com/fit/c/40/40/1*aOzETrLwFFjy_KXJf1bRFA.jpeg)](https://medium.com/@Seanveaux?source=email-2b8b8ee19057-1780769223769-digest.reader--9bb40a93ecf5----10-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Sean Veaux](https://medium.com/@Seanveaux?source=email-2b8b8ee19057-1780769223769-digest.reader--9bb40a93ecf5----10-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![This ONE Nutrient Everyone Should Include In Their Diet.](https://miro.medium.com/fit/c/320/214/1*RNuI5oZPCpL_swkduFc0kQ.jpeg)](https://medium.com/@Seanveaux/this-one-nutrient-everyone-should-include-in-their-diet-9bb40a93ecf5?source=email-2b8b8ee19057-1780769223769-digest.reader--9bb40a93ecf5----10-73------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+\[
+
+## This ONE Nutrient Everyone Should Include In Their Diet.
+
+### Everything you need to know about this missing…
+
+]\(https://medium.com/@Seanveaux/this-one-nutrient-everyone-should-include-in-their-diet-9bb40a93ecf5?source=email-2b8b8ee19057-1780769223769-digest.reader--9bb40a93ecf5----10-73------------------7f86110e\_2c42\_4378\_85d6\_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+37
+
+[![Developer Awam](https://miro.medium.com/fit/c/40/40/1*qsQhNmEIR5gX0DX8yCa_YQ.jpeg)](https://medium.com/@developerawam?source=email-2b8b8ee19057-1780769223769-digest.reader-4b3a1ed4f11c-ced385ffc648----11-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Developer Awam](https://medium.com/@developerawam?source=email-2b8b8ee19057-1780769223769-digest.reader-4b3a1ed4f11c-ced385ffc648----11-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[JavaScript in Plain English](https://medium.com/javascript-in-plain-english?source=email-2b8b8ee19057-1780769223769-digest.reader-4b3a1ed4f11c-ced385ffc648----11-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![JavaScript 2026: The New Era of Bun, Deno, TypeScript 7, Vite and What Developers Should Learn Next](https://miro.medium.com/fit/c/320/214/1*iQOoRspSq2wDSrINc9RMZA.png)](https://medium.com/@developerawam/javascript-2026-the-new-era-of-bun-deno-typescript-7-vite-and-what-developers-should-learn-next-ced385ffc648?source=email-2b8b8ee19057-1780769223769-digest.reader-4b3a1ed4f11c-ced385ffc648----11-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+\[
+
+## JavaScript 2026: The New Era of Bun, Deno, TypeScript 7, Vite and What…
+
+### “For the first time in its history, the JavaScript…
+
+]\(https://medium.com/@developerawam/javascript-2026-the-new-era-of-bun-deno-typescript-7-vite-and-what-developers-should-learn-next-ced385ffc648?source=email-2b8b8ee19057-1780769223769-digest.reader-4b3a1ed4f11c-ced385ffc648----11-99------------------7f86110e\_2c42\_4378\_85d6\_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+41
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+3
+
+[![Sachin Kasana](https://miro.medium.com/fit/c/40/40/1*IKlnY-B9CALn6-rfjTXFHQ.jpeg)](https://medium.com/@sachinkasana?source=email-2b8b8ee19057-1780769223769-digest.reader-a7e6e37eb5c6-145c73db7d9c----12-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Sachin Kasana](https://medium.com/@sachinkasana?source=email-2b8b8ee19057-1780769223769-digest.reader-a7e6e37eb5c6-145c73db7d9c----12-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[Front-end World](https://medium.com/front-end-world?source=email-2b8b8ee19057-1780769223769-digest.reader-a7e6e37eb5c6-145c73db7d9c----12-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![How We Reduced Our Node.js Cold Starts by 90%](https://miro.medium.com/fit/c/320/214/1*kvxI0soZNf2oeSYU43E1RA.png)](https://medium.com/@sachinkasana/how-we-reduced-our-node-js-cold-starts-by-90-145c73db7d9c?source=email-2b8b8ee19057-1780769223769-digest.reader-a7e6e37eb5c6-145c73db7d9c----12-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+\[
+
+## How We Reduced Our Node.js Cold Starts by 90%
+
+### Our Node.js APIs were fast.
+
+]\(https://medium.com/@sachinkasana/how-we-reduced-our-node-js-cold-starts-by-90-145c73db7d9c?source=email-2b8b8ee19057-1780769223769-digest.reader-a7e6e37eb5c6-145c73db7d9c----12-99------------------7f86110e\_2c42\_4378\_85d6\_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+56
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Pawan Kumawat](https://miro.medium.com/fit/c/40/40/1*3woDpE0sYiFp2eKyX8s1ew.jpeg)](https://medium.com/@pawan-kumawat?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-d7a33f79cf30----13-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Pawan Kumawat](https://medium.com/@pawan-kumawat?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-d7a33f79cf30----13-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-d7a33f79cf30----13-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![Angular 22 —Bye ControlValueAccessor](https://miro.medium.com/fit/c/320/214/1*QauIkGdTc7j3Y9rCXuGLuA.png)](https://medium.com/@pawan-kumawat/angular-22-bye-controlvalueaccessor-d7a33f79cf30?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-d7a33f79cf30----13-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+\[
+
+## Angular 22 —Bye ControlValueAccessor
+
+### In latest Angular 22 prerelease (v22.0.0-rc.0) we can…
+
+]\(https://medium.com/@pawan-kumawat/angular-22-bye-controlvalueaccessor-d7a33f79cf30?source=email-2b8b8ee19057-1780769223769-digest.reader-5517fd7b58a6-d7a33f79cf30----13-99------------------7f86110e\_2c42\_4378\_85d6\_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+133
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Ark Protocol](https://miro.medium.com/fit/c/40/40/1*5Af7Za2-Mu7q8X3FpdM1Kg.jpeg)](https://medium.com/@ArkProtocol1?source=email-2b8b8ee19057-1780769223769-digest.reader--55bc4e8f1e2f----14-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[Ark Protocol](https://medium.com/@ArkProtocol1?source=email-2b8b8ee19057-1780769223769-digest.reader--55bc4e8f1e2f----14-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+[![I Built The Same App In React And Svelte — The Bundle Size Difference Was Brutal](https://miro.medium.com/fit/c/320/214/1*ZAVxK0vfUhxHOJ9Q5vj0nA.png)](https://medium.com/@ArkProtocol1/i-built-the-same-app-in-react-and-svelte-the-bundle-size-difference-was-brutal-55bc4e8f1e2f?source=email-2b8b8ee19057-1780769223769-digest.reader--55bc4e8f1e2f----14-99------------------7f86110e_2c42_4378_85d6_ecfc25864643-1)
+
+\[
+
+## I Built The Same App In React And Svelte — The Bundle Size Difference Was…
+
+### I have shipped React for three years and last week it…
+
+]\(https://medium.com/@ArkProtocol1/i-built-the-same-app-in-react-and-svelte-the-bundle-size-difference-was-brutal-55bc4e8f1e2f?source=email-2b8b8ee19057-1780769223769-digest.reader--55bc4e8f1e2f----14-99------------------7f86110e\_2c42\_4378\_85d6\_ecfc25864643-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+56
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Become a Medium member](https://miro.medium.com/max/1360/6b37395e36e2d6768583b0d27172b3075c079241270c50b770a18b83476ecffc)](https://medium.com/plans?source=email-2b8b8ee19057-1780769223769-digest.reader-------------------------7f86110e_2c42_4378_85d6_ecfc25864643)
+
+
