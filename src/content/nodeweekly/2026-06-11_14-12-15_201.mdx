@@ -1,0 +1,243 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: npm install is (finally) getting safer
+description: npm install is (finally) getting safer
+date: 星期四 02 下午 六月 11o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/628
+origin_site: https://nodeweekly.com/issues/628
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="npm install is (finally) getting safer" url="https://nodeweekly.com/issues/628" />
+
+<Detail client:only="react">
+	#​628 — June 11, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/628)
+
+Together with 
+
+[![Microsoft logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_280,h_60/e_make_transparent/co_white,e_outline:7/om9hjsmudy5lsvba59eb.png)](https://nodeweekly.com/link/186405/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pluqg2zqfojqzsc4l3vl.jpg)](https://nodeweekly.com/link/186406/0a4070b383)
+
+[npm v12 to Stop Running Install Scripts by Default](https://nodeweekly.com/link/186406/0a4070b383 "github.blog") — After a year of supply chain attacks, npm v12 will no longer execute `preinstall`, `install`, or `postinstall` scripts, unless you allow them with a new `npm approve-scripts` workflow. **You can prepare today** by upgrading to [npm 11.16.0](https://nodeweekly.com/link/186407/0a4070b383) which prints warnings about anything v12 _would_ block.
+
+GitHub
+
+🔒 `npm install` will no longer resolve git or remote URLs by default either – these can be switched on using `--allow-git` and `--allow-remote`.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/24157603.png)](https://nodeweekly.com/link/186405/0a4070b383)
+
+[Come for Great PostgreSQL Talks – Virtual and Free](https://nodeweekly.com/link/186405/0a4070b383 "posetteconf.com") — Attend talks about PostgreSQL backed app development at POSETTE: An Event for Postgres 2026 (16-18 June). Join live and chat directly with PostgreSQL speakers, other developers and users. There is also swag waiting for you. [Register for updates](https://nodeweekly.com/link/186405/0a4070b383).
+
+Microsoft | AMD sponsor
+
+[Node's New Release Schedule and Version Numbers Explained](https://nodeweekly.com/link/186408/0a4070b383 "nodejsdesignpatterns.com") — Node’s moving to a one major release per year cadence as of Node 27 and adding a new ‘alpha’ channel for testing and experimentation. Luciano goes deep into how it’s happening, when, and why.
+
+Luciano Mammino
+
+**IN BRIEF:**
+
+*   🔒 [New versions of Node.js v26.x, 24.x, and 22.x](https://nodeweekly.com/link/186409/0a4070b383) will be released on, or shortly after, Wednesday, June 17 to address security issues – the highest severity of which is 'HIGH'.
+    
+*   🔒 As the [npm worms/supply chain attacks continue](https://nodeweekly.com/link/186410/0a4070b383), I was intrigued to see [this vulnerability report from 2016](https://nodeweekly.com/link/186411/0a4070b383) which predicted our current woes.
+    
+*   The [Drizzle ORM](https://nodeweekly.com/link/186412/0a4070b383) team is [𝕏 unable to publish new releases to npm](https://nodeweekly.com/link/186413/0a4070b383) due to the registry's 100MB metadata limit. Their package currently has [1,397 versions published](https://nodeweekly.com/link/186414/0a4070b383) and will need some cleanup.
+    
+*   In less alarming registry news, an npm tooling bug briefly [marked several packages with one-character names as ‘security holders’](https://nodeweekly.com/link/186415/0a4070b383) (including `c`, `i`, `n` and `x`) by mistake. A rollback is underway.
+    
+
+📊 [ESM Provision by Popular npm Packages Sees a Big Jump](https://nodeweekly.com/link/186416/0a4070b383 "github.com") — Titus’s twice-yearly look at what popular packages ship finds 38% now expose ESM (and 16% are ESM _only_), up from 33.4% six months ago.
+
+Titus Wormer
+
+[Your Event-Driven Service Deserves an Event-Ready Database](https://nodeweekly.com/link/186417/0a4070b383 "www.tigerdata.com") — TimescaleDB is Postgres built for time-ordered data. Hypertables, 95% compression, continuous aggregates. [$1000 credit](https://nodeweekly.com/link/186417/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+📄 [Uncovering the Magic Behind Playwright's Fixtures API](https://nodeweekly.com/link/186418/0a4070b383) – Learn how Playwright knows which fixtures your test needs just from its function signature. Vladimir Ivakin
+
+📄 [I Wish Deno Would Keep Doing What It Does Best](https://nodeweekly.com/link/186419/0a4070b383) – _“Early Deno set the agenda (…) What Deno is doing now runs in the opposite direction, catching up to what the ecosystem already has.”_ Hong Minhee
+
+📄 [Creating a VS Code Agent Hook to Respond to File Changes](https://nodeweekly.com/link/186420/0a4070b383) Nicholas C. Zakas
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ozu5oizurtbtf0o8rtv6.jpg)](https://nodeweekly.com/link/186421/0a4070b383)
+
+[Node-RED 5.0: The Biggest Editor Overhaul in the Project's History](https://nodeweekly.com/link/186421/0a4070b383 "nodered.org") — The Node.js _and_ 'node'-based low-code environment gets _"the biggest change to the editor experience in \[its\] history"_: updated sidebars, dark theme _(above)_, pausable debug output, and the ability to call Link nodes from Function nodes.
+
+Nick O'Leary
+
+[Bonsai: A Safe Expression Language for User-Defined Rules](https://nodeweekly.com/link/186422/0a4070b383 "danfry1.github.io") — A fast, sandboxed expression language for when you need to evaluate user-supplied rules, filters, or templates without reaching for `eval`. [Try the playground.](https://nodeweekly.com/link/186423/0a4070b383)
+
+Daniel Fry
+
+[DepsGuard: A Tool to Harden npm, pnpm, Yarn and Bun Configs](https://nodeweekly.com/link/186424/0a4070b383 "depsguard.com") — Can't wait for npm v12's safer defaults? This Rust-based tool audits and rewrites your package manager config, disabling install scripts, enforcing cooldowns, and blocking provenance downgrades.
+
+Arnica
+
+*   ⭐ [Commander.js 15.0](https://nodeweekly.com/link/186425/0a4070b383) – The popular CLI framework is now ESM-only. v14 will be maintained till May 2027 in case you have trouble migrating.
+    
+*   🎬 [NodeAV 6.0](https://nodeweekly.com/link/186426/0a4070b383) – Direct access to FFmpeg's C APIs with minimal abstractions for working with codecs, filters, streams, and more.
+    
+*   [Neutralinojs 6.8](https://nodeweekly.com/link/186427/0a4070b383) – The lightweight cross-platform app framework gets improved native file drag and drop, and a new default window policy to handle `target="_blank"` links better.
+    
+*   [Juice 12.1](https://nodeweekly.com/link/186428/0a4070b383) – Automattic's library to inline CSS stylesheets into HTML. A common HTML email production task, [as used by](https://nodeweekly.com/link/186429/0a4070b383) MJML and `node-email-templates`.
+    
+*   [Cucumber.js 13.0](https://nodeweekly.com/link/186430/0a4070b383) – The BDD test framework rebuilds its parallel runtime atop worker threads.
+    
+*   [Kanel 4.0](https://nodeweekly.com/link/186431/0a4070b383) – Generate TypeScript types from a live Postgres database.
+    
+*   [Envalid 8.2](https://nodeweekly.com/link/186432/0a4070b383) – Environment variable validation library.
+    
+
+📰 Classifieds
+
+💘 Dyno Sniper has landed! [Judoscale’s latest feature](https://nodeweekly.com/link/186433/0a4070b383) solves the noisy neighbor problem for good.
+
+* * *
+
+📬 Debug transactional email without leaving your dashboard. [Clerk Email Logs (beta)](https://nodeweekly.com/link/186434/0a4070b383) shows delivery status, bounce reasons, and open/click events.
+
+🕹️  `node_modules`, Now in 3D!
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mba2wbppbfx8s4vbh1iw.jpg)](https://nodeweekly.com/link/186435/0a4070b383)
+
+[Wander Around a Heap of Packages in `node_modules`](https://nodeweekly.com/link/186435/0a4070b383 "nesbitt.io") — An interactive browser experience where you can navigate around a `node_modules` folder FPS-style. Which, why, how? I don’t know, but when something is by packaging expert Andrew Nesbitt of [ecosyste.ms](https://nodeweekly.com/link/186436/0a4070b383), I check it out.
+
+Andrew Nesbitt
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​628 — June 11, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/628)
+
+Together with 
+
+[![Microsoft logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_280,h_60/e_make_transparent/co_white,e_outline:7/om9hjsmudy5lsvba59eb.png)](https://nodeweekly.com/link/186405/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pluqg2zqfojqzsc4l3vl.jpg)](https://nodeweekly.com/link/186406/0a4070b383)
+
+[npm v12 to Stop Running Install Scripts by Default](https://nodeweekly.com/link/186406/0a4070b383 "github.blog") — After a year of supply chain attacks, npm v12 will no longer execute `preinstall`, `install`, or `postinstall` scripts, unless you allow them with a new `npm approve-scripts` workflow. **You can prepare today** by upgrading to [npm 11.16.0](https://nodeweekly.com/link/186407/0a4070b383) which prints warnings about anything v12 *would* block.
+
+GitHub
+
+🔒 `npm install` will no longer resolve git or remote URLs by default either – these can be switched on using `--allow-git` and `--allow-remote`.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/24157603.png)](https://nodeweekly.com/link/186405/0a4070b383)
+
+[Come for Great PostgreSQL Talks – Virtual and Free](https://nodeweekly.com/link/186405/0a4070b383 "posetteconf.com") — Attend talks about PostgreSQL backed app development at POSETTE: An Event for Postgres 2026 (16-18 June). Join live and chat directly with PostgreSQL speakers, other developers and users. There is also swag waiting for you. [Register for updates](https://nodeweekly.com/link/186405/0a4070b383).
+
+Microsoft | AMD sponsor
+
+[Node's New Release Schedule and Version Numbers Explained](https://nodeweekly.com/link/186408/0a4070b383 "nodejsdesignpatterns.com") — Node’s moving to a one major release per year cadence as of Node 27 and adding a new ‘alpha’ channel for testing and experimentation. Luciano goes deep into how it’s happening, when, and why.
+
+Luciano Mammino
+
+**IN BRIEF:**
+
+* 🔒 [New versions of Node.js v26.x, 24.x, and 22.x](https://nodeweekly.com/link/186409/0a4070b383) will be released on, or shortly after, Wednesday, June 17 to address security issues – the highest severity of which is 'HIGH'.
+
+* 🔒 As the [npm worms/supply chain attacks continue](https://nodeweekly.com/link/186410/0a4070b383), I was intrigued to see [this vulnerability report from 2016](https://nodeweekly.com/link/186411/0a4070b383) which predicted our current woes.
+
+* The [Drizzle ORM](https://nodeweekly.com/link/186412/0a4070b383) team is [𝕏 unable to publish new releases to npm](https://nodeweekly.com/link/186413/0a4070b383) due to the registry's 100MB metadata limit. Their package currently has [1,397 versions published](https://nodeweekly.com/link/186414/0a4070b383) and will need some cleanup.
+
+* In less alarming registry news, an npm tooling bug briefly [marked several packages with one-character names as ‘security holders’](https://nodeweekly.com/link/186415/0a4070b383) (including `c`, `i`, `n` and `x`) by mistake. A rollback is underway.
+
+📊 [ESM Provision by Popular npm Packages Sees a Big Jump](https://nodeweekly.com/link/186416/0a4070b383 "github.com") — Titus’s twice-yearly look at what popular packages ship finds 38% now expose ESM (and 16% are ESM *only*), up from 33.4% six months ago.
+
+Titus Wormer
+
+[Your Event-Driven Service Deserves an Event-Ready Database](https://nodeweekly.com/link/186417/0a4070b383 "www.tigerdata.com") — TimescaleDB is Postgres built for time-ordered data. Hypertables, 95% compression, continuous aggregates. [$1000 credit](https://nodeweekly.com/link/186417/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+📄 [Uncovering the Magic Behind Playwright's Fixtures API](https://nodeweekly.com/link/186418/0a4070b383) – Learn how Playwright knows which fixtures your test needs just from its function signature. Vladimir Ivakin
+
+📄 [I Wish Deno Would Keep Doing What It Does Best](https://nodeweekly.com/link/186419/0a4070b383) – *“Early Deno set the agenda (…) What Deno is doing now runs in the opposite direction, catching up to what the ecosystem already has.”* Hong Minhee
+
+📄 [Creating a VS Code Agent Hook to Respond to File Changes](https://nodeweekly.com/link/186420/0a4070b383) Nicholas C. Zakas
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ozu5oizurtbtf0o8rtv6.jpg)](https://nodeweekly.com/link/186421/0a4070b383)
+
+[Node-RED 5.0: The Biggest Editor Overhaul in the Project's History](https://nodeweekly.com/link/186421/0a4070b383 "nodered.org") — The Node.js *and* 'node'-based low-code environment gets *"the biggest change to the editor experience in \[its] history"*: updated sidebars, dark theme *(above)*, pausable debug output, and the ability to call Link nodes from Function nodes.
+
+Nick O'Leary
+
+[Bonsai: A Safe Expression Language for User-Defined Rules](https://nodeweekly.com/link/186422/0a4070b383 "danfry1.github.io") — A fast, sandboxed expression language for when you need to evaluate user-supplied rules, filters, or templates without reaching for `eval`. [Try the playground.](https://nodeweekly.com/link/186423/0a4070b383)
+
+Daniel Fry
+
+[DepsGuard: A Tool to Harden npm, pnpm, Yarn and Bun Configs](https://nodeweekly.com/link/186424/0a4070b383 "depsguard.com") — Can't wait for npm v12's safer defaults? This Rust-based tool audits and rewrites your package manager config, disabling install scripts, enforcing cooldowns, and blocking provenance downgrades.
+
+Arnica
+
+* ⭐ [Commander.js 15.0](https://nodeweekly.com/link/186425/0a4070b383) – The popular CLI framework is now ESM-only. v14 will be maintained till May 2027 in case you have trouble migrating.
+
+* 🎬 [NodeAV 6.0](https://nodeweekly.com/link/186426/0a4070b383) – Direct access to FFmpeg's C APIs with minimal abstractions for working with codecs, filters, streams, and more.
+
+* [Neutralinojs 6.8](https://nodeweekly.com/link/186427/0a4070b383) – The lightweight cross-platform app framework gets improved native file drag and drop, and a new default window policy to handle `target="_blank"` links better.
+
+* [Juice 12.1](https://nodeweekly.com/link/186428/0a4070b383) – Automattic's library to inline CSS stylesheets into HTML. A common HTML email production task, [as used by](https://nodeweekly.com/link/186429/0a4070b383) MJML and `node-email-templates`.
+
+* [Cucumber.js 13.0](https://nodeweekly.com/link/186430/0a4070b383) – The BDD test framework rebuilds its parallel runtime atop worker threads.
+
+* [Kanel 4.0](https://nodeweekly.com/link/186431/0a4070b383) – Generate TypeScript types from a live Postgres database.
+
+* [Envalid 8.2](https://nodeweekly.com/link/186432/0a4070b383) – Environment variable validation library.
+
+📰 Classifieds
+
+💘 Dyno Sniper has landed! [Judoscale’s latest feature](https://nodeweekly.com/link/186433/0a4070b383) solves the noisy neighbor problem for good.
+
+***
+
+📬 Debug transactional email without leaving your dashboard. [Clerk Email Logs (beta)](https://nodeweekly.com/link/186434/0a4070b383) shows delivery status, bounce reasons, and open/click events.
+
+🕹️  `node_modules`, Now in 3D!
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mba2wbppbfx8s4vbh1iw.jpg)](https://nodeweekly.com/link/186435/0a4070b383)
+
+[Wander Around a Heap of Packages in `node_modules`](https://nodeweekly.com/link/186435/0a4070b383 "nesbitt.io") — An interactive browser experience where you can navigate around a `node_modules` folder FPS-style. Which, why, how? I don’t know, but when something is by packaging expert Andrew Nesbitt of [ecosyste.ms](https://nodeweekly.com/link/186436/0a4070b383), I check it out.
+
+Andrew Nesbitt
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
