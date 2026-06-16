@@ -1,0 +1,317 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Flow vs TypeScript in 2026
+description: Flow vs TypeScript in 2026
+date: 星期二 06 晚上 六月 16o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/790
+origin_site: https://javascriptweekly.com/issues/790
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Flow vs TypeScript in 2026" url="https://javascriptweekly.com/issues/790" />
+
+<Detail client:only="react">
+	#​790 — June 16, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/790)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://javascriptweekly.com/link/186566/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nylqu7hc7vyxog0czncx.jpg)](https://javascriptweekly.com/link/186567/d076523b1d)
+
+[Flow for TypeScript Users in 2026](https://javascriptweekly.com/link/186567/d076523b1d "medium.com") — [Flow](https://javascriptweekly.com/link/186568/d076523b1d) is Meta's mature typed dialect of JavaScript, and over the years its syntax has converged closely with TypeScript's. This post walks through where the two now differ: Flow's stricter defaults reject several crash-prone patterns TypeScript's `strict` mode accepts, and it adds features of its own, like exhaustive `match` expressions.
+
+George Zahariev (Meta)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d3d40cc9.jpg)](https://javascriptweekly.com/link/186566/d076523b1d)
+
+[Free Claude Code Course from Anthropic + Master.Dev](https://javascriptweekly.com/link/186566/d076523b1d "frontendmasters.com") — Coding is changing fast, and the engineers who thrive will be the ones who direct AI instead of guessing at it. Lydia Hallie from Anthropic teaches exactly that in our Claude Code course, [now free for everyone](https://javascriptweekly.com/link/186566/d076523b1d).
+
+Master.dev sponsor
+
+[npm v12 to Stop Running Install Scripts by Default](https://javascriptweekly.com/link/186569/d076523b1d "github.blog") — The forthcoming npm v12 will no longer execute `preinstall`/`install`/`postinstall` scripts, unless you explicitly allow them. You can get ready now by using [npm 11.16.0](https://javascriptweekly.com/link/186570/d076523b1d) which prints warnings about anything v12 _would_ block.
+
+GitHub
+
+🤖 [Code is Cheap(er)](https://javascriptweekly.com/link/186571/d076523b1d "htmx.org") — The creator of [htmx](https://javascriptweekly.com/link/186572/d076523b1d) says that while code is increasingly easy to produce, _understanding_ is still expensive, and _“complexity remains our apex predator.”_
+
+Carson Gross
+
+**IN BRIEF:**
+
+*   The pnpm team has created a [new GitHub Action to set up both `pnpm` and a JS runtime](https://javascriptweekly.com/link/186573/d076523b1d) (Node, Deno, or Bun).
+    
+*   🐈 [Compilecat](https://javascriptweekly.com/link/186574/d076523b1d) ([repo](https://javascriptweekly.com/link/186575/d076523b1d)) is a new, experimental JavaScript performance compiler that does [Closure](https://javascriptweekly.com/link/186576/d076523b1d)\-style optimizations.
+    
+*   Several major projects are taking shape in beta/pre-release stages right now, including [SvelteKit 3.0](https://javascriptweekly.com/link/186577/d076523b1d), [Vue 3.6](https://javascriptweekly.com/link/186578/d076523b1d), [Vite 8.1](https://javascriptweekly.com/link/186579/d076523b1d), and [Astro 7.0](https://javascriptweekly.com/link/186580/d076523b1d).
+    
+
+**RELEASES:**
+
+*   [Playwright 1.61](https://javascriptweekly.com/link/186581/d076523b1d) – You can now register and test passkeys, as well as read/write to `localStorage` and `sessionStorage` via a new [WebStorage](https://javascriptweekly.com/link/186582/d076523b1d) API.
+    
+*   [ESLint v10.5.0](https://javascriptweekly.com/link/186583/d076523b1d) – Five core rules now highlight smaller ranges of code to avoid shadowing other problems in editors.
+    
+*   🤖 [TanStack AI Beta](https://javascriptweekly.com/link/186584/d076523b1d) – Framework and provider-agnostic AI toolkit.
+    
+
+📖  Articles and Videos
+
+[How TanStack Cut TypeScript Type-Checking Work by Up to 86%](https://javascriptweekly.com/link/186586/d076523b1d "tanstack.com") — TanStack Table v9 ([now in beta](https://javascriptweekly.com/link/186588/d076523b1d)) made its features modular, but the generic types behind that flexibility introduced noticeable editor lag in alpha. This deep-dive shows how the team used `tsc` diagnostics to cut type-checking work by 62–86%, with lessons for anyone authoring type-heavy libraries.
+
+Kevin Van Cott (TanStack)
+
+🛠️ [React Libraries and Tools for 2026](https://javascriptweekly.com/link/186589/d076523b1d "www.robinwieruch.de") — Every year, Robin updates this post covering his opinionated list of essential React ecosystem libraries.
+
+Robin Wieruch
+
+[Your AI Writes Tests That Pass but Prove Nothing. Fix It](https://javascriptweekly.com/link/186590/d076523b1d "wallabyjs.com") — Wallaby CLI makes test generation 10x smarter with live coverage and runtime data, using 3x fewer tokens. One skill to install.
+
+Wallaby Team sponsor
+
+[Changing the Kindle's Homepage by Editing Hermes Bytecode](https://javascriptweekly.com/link/186592/d076523b1d "sighery.com") — The Kindle’s UI now runs on a [Hermes](https://javascriptweekly.com/link/186594/d076523b1d)\-powered JavaScript stack. Here’s how you can edit the bytecode Hermes produces to change the Kindle UI’s behavior.
+
+Nicholas Tarta
+
+📈 [Making `numpy-ts` as Fast as Native](https://javascriptweekly.com/link/186595/d076523b1d "nico.codes") — How a [TypeScript NumPy port](https://javascriptweekly.com/link/186596/d076523b1d) went from 15x slower to matching native, by changing not whether to use WASM, but who owns the bytes.
+
+Nico Dupont
+
+📄 [How Building an HTML-First Site Doubled Our Users Overnight](https://javascriptweekly.com/link/186597/d076523b1d) – Out with the React, and in with the Astro. Alistair Davidson
+
+📄 [Building a Real Blog Easily in Astro](https://javascriptweekly.com/link/186598/d076523b1d) – By _real_, Zell means something beyond demo-level, with excerpts, post update dates, etc. Zell Liew
+
+📄 [Streaming HTML with `textStream()` in Chrome Canary](https://javascriptweekly.com/link/186599/d076523b1d) Ollie Williams
+
+🛠 Code & Tools
+
+[eslint-plugin-unicorn 67.0: More Than 200 Powerful ESLint Rules](https://javascriptweekly.com/link/186600/d076523b1d "github.com") — Sindre’s set of curated rules has grown a lot, with almost 100 added or updated in the past few weeks alone. Like enforcing [better comments](https://javascriptweekly.com/link/186602/d076523b1d), [limiting the depth of nested calls](https://javascriptweekly.com/link/186603/d076523b1d), [preferring `Temporal` over `Date`](https://javascriptweekly.com/link/186604/d076523b1d), and [preferring HTTPS over HTTP](https://javascriptweekly.com/link/186605/d076523b1d) in URLs. These rules will seriously challenge (and improve!) your code.
+
+Sindre Sorhus et al.
+
+[zod-compiler: Compile Zod Schemas into Zero-Overhead Validators](https://javascriptweekly.com/link/186606/d076523b1d "github.com") — A build-time compiler that plugs into Vite, webpack, et al. and rewrites existing schemas into optimized, tree-shakeable validators. Claims 2–75x faster validation with no source changes and the full Zod API preserved.
+
+Gajus Kuizinas
+
+[That Slow Analytics Endpoint? It's a Database Problem](https://javascriptweekly.com/link/186607/d076523b1d "www.tigerdata.com") — Pipelines, sync lag, stale data. That's the cost of a split stack. TimescaleDB extends Postgres so your app stays fast.
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+📊 [billboard.js 4.0: A JavaScript Chart Library Based on D3](https://javascriptweekly.com/link/186608/d076523b1d "netil.medium.com") — At almost nine years old, billboard.js now has a new, opt-in canvas-based rendering mode (SVG remains the default), smaller bundles, and better performance on large datasets. There are [hundreds of demos](https://javascriptweekly.com/link/186609/d076523b1d) ranging from [donut charts](https://javascriptweekly.com/link/186610/d076523b1d) and [funnel charts](https://javascriptweekly.com/link/186611/d076523b1d) to [overlapping bar charts](https://javascriptweekly.com/link/186612/d076523b1d) and [radar charts](https://javascriptweekly.com/link/186613/d076523b1d).
+
+Jae Sung Park (NAVER)
+
+[PolyCSS: CSS 3D Engine for the DOM](https://javascriptweekly.com/link/186614/d076523b1d "polycss.com") — Renders textured 3D polygon meshes entirely in the DOM using CSS `matrix3d()` transforms — no WebGL or &lt;`canvas`\> required. Works with vanilla JS, React, and Vue. There’s a [gallery](https://javascriptweekly.com/link/186615/d076523b1d) to explore and a [live builder](https://javascriptweekly.com/link/186616/d076523b1d) if you want to play around.
+
+LayoutitStudio
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dywvkeo9lzhcxdrflnyq.jpg)](https://javascriptweekly.com/link/186617/d076523b1d)
+
+*   [Tabulator 6.5](https://javascriptweekly.com/link/186617/d076523b1d) _(above)_ – Create interactive tables from any HTML table, JS array or JSON data.
+    
+*   🕒 [`&lt;relative-time>` 5.2.0](https://javascriptweekly.com/link/186618/d076523b1d) – Web Component for formatting automatically-updating timestamps as localized strings or relative times.
+    
+*   [Fable 5.2](https://javascriptweekly.com/link/186619/d076523b1d) – No, not the LLM you can't use, but an F# to JS/TS (and now Erlang too) compiler you _can_ use. [More info.](https://javascriptweekly.com/link/186620/d076523b1d)
+    
+*   [React Native 0.86](https://javascriptweekly.com/link/186621/d076523b1d) – Edge-to-edge support on Android 15+ and improvements to its DevTools.
+    
+*   [Biome 2.5](https://javascriptweekly.com/link/186622/d076523b1d) – The fast code formatting and linting toolchain has now passed 500 lint rules.
+    
+*   [get-value 4.1](https://javascriptweekly.com/link/186623/d076523b1d) – Use paths like `a.b.c` to get a nested value from an object.
+    
+*   [axios v1.18.0](https://javascriptweekly.com/link/186624/d076523b1d) – Promise-based HTTP client for the browser and Node.
+    
+*   📊 [visx 4.0](https://javascriptweekly.com/link/186625/d076523b1d) – Airbnb's visualization primitives for React.
+    
+
+📰 Classifieds
+
+📸 Add robust in-browser barcode scanning to your web apps using [STRICH](https://javascriptweekly.com/link/186626/d076523b1d), a lean JS library. [Free 30-day trial, try the demo app today!](https://javascriptweekly.com/link/186626/d076523b1d)
+
+* * *
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/186627/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+* * *
+
+🤖 Generate 50,000 invoices overnight. [Foxit's DocGen API](https://javascriptweekly.com/link/186628/d076523b1d) merges JSON data into branded PDFs at scale, with no PDFKit and no copy-paste.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ixupyzbbgqjnvtbe54el.jpg)](https://javascriptweekly.com/link/186630/d076523b1d)
+
+*   🌐 The WebKit team [shows off MapKit JS 6](https://javascriptweekly.com/link/186630/d076523b1d) _(above)_, a way to integrate Apple Maps into your site [like in this example](https://javascriptweekly.com/link/186631/d076523b1d). You need a token from an Apple Developer account though.
+    
+*   😱 A developer was sent [a malicious JavaScript 'coding test' by a fake recruiter on LinkedIn](https://javascriptweekly.com/link/186632/d076523b1d) in an attempt to backdoor his machine. I've heard about this vector a few times this year, so be careful.
+    
+*   [WASI 0.3 (WebAssembly System Interface) has launched](https://javascriptweekly.com/link/186634/d076523b1d), bringing native async support to WebAssembly Components.
+    
+*   [performative-ui](https://javascriptweekly.com/link/186635/d076523b1d) is a fun set of modern clichéd "AI startup" UI components for React, like [ASCII hero art](https://javascriptweekly.com/link/186637/d076523b1d) and [node graph backgrounds](https://javascriptweekly.com/link/186638/d076523b1d).
+    
+*   A dev had an old USB scanner with no modern drivers, but [got it working via a browser-based WASM-powered emulator](https://javascriptweekly.com/link/186639/d076523b1d) bridged to the physical scanner through WebUSB. He previously did something similar [with an old printer](https://javascriptweekly.com/link/186640/d076523b1d).
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/186641/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​790 — June 16, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/790)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://javascriptweekly.com/link/186566/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nylqu7hc7vyxog0czncx.jpg)](https://javascriptweekly.com/link/186567/d076523b1d)
+
+[Flow for TypeScript Users in 2026](https://javascriptweekly.com/link/186567/d076523b1d "medium.com") — [Flow](https://javascriptweekly.com/link/186568/d076523b1d) is Meta's mature typed dialect of JavaScript, and over the years its syntax has converged closely with TypeScript's. This post walks through where the two now differ: Flow's stricter defaults reject several crash-prone patterns TypeScript's `strict` mode accepts, and it adds features of its own, like exhaustive `match` expressions.
+
+George Zahariev (Meta)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d3d40cc9.jpg)](https://javascriptweekly.com/link/186566/d076523b1d)
+
+[Free Claude Code Course from Anthropic + Master.Dev](https://javascriptweekly.com/link/186566/d076523b1d "frontendmasters.com") — Coding is changing fast, and the engineers who thrive will be the ones who direct AI instead of guessing at it. Lydia Hallie from Anthropic teaches exactly that in our Claude Code course, [now free for everyone](https://javascriptweekly.com/link/186566/d076523b1d).
+
+Master.dev sponsor
+
+[npm v12 to Stop Running Install Scripts by Default](https://javascriptweekly.com/link/186569/d076523b1d "github.blog") — The forthcoming npm v12 will no longer execute `preinstall`/`install`/`postinstall` scripts, unless you explicitly allow them. You can get ready now by using [npm 11.16.0](https://javascriptweekly.com/link/186570/d076523b1d) which prints warnings about anything v12 *would* block.
+
+GitHub
+
+🤖 [Code is Cheap(er)](https://javascriptweekly.com/link/186571/d076523b1d "htmx.org") — The creator of [htmx](https://javascriptweekly.com/link/186572/d076523b1d) says that while code is increasingly easy to produce, *understanding* is still expensive, and *“complexity remains our apex predator.”*
+
+Carson Gross
+
+**IN BRIEF:**
+
+* The pnpm team has created a [new GitHub Action to set up both `pnpm` and a JS runtime](https://javascriptweekly.com/link/186573/d076523b1d) (Node, Deno, or Bun).
+
+* 🐈 [Compilecat](https://javascriptweekly.com/link/186574/d076523b1d) ([repo](https://javascriptweekly.com/link/186575/d076523b1d)) is a new, experimental JavaScript performance compiler that does [Closure](https://javascriptweekly.com/link/186576/d076523b1d)-style optimizations.
+
+* Several major projects are taking shape in beta/pre-release stages right now, including [SvelteKit 3.0](https://javascriptweekly.com/link/186577/d076523b1d), [Vue 3.6](https://javascriptweekly.com/link/186578/d076523b1d), [Vite 8.1](https://javascriptweekly.com/link/186579/d076523b1d), and [Astro 7.0](https://javascriptweekly.com/link/186580/d076523b1d).
+
+**RELEASES:**
+
+* [Playwright 1.61](https://javascriptweekly.com/link/186581/d076523b1d) – You can now register and test passkeys, as well as read/write to `localStorage` and `sessionStorage` via a new [WebStorage](https://javascriptweekly.com/link/186582/d076523b1d) API.
+
+* [ESLint v10.5.0](https://javascriptweekly.com/link/186583/d076523b1d) – Five core rules now highlight smaller ranges of code to avoid shadowing other problems in editors.
+
+* 🤖 [TanStack AI Beta](https://javascriptweekly.com/link/186584/d076523b1d) – Framework and provider-agnostic AI toolkit.
+
+📖  Articles and Videos
+
+[How TanStack Cut TypeScript Type-Checking Work by Up to 86%](https://javascriptweekly.com/link/186586/d076523b1d "tanstack.com") — TanStack Table v9 ([now in beta](https://javascriptweekly.com/link/186588/d076523b1d)) made its features modular, but the generic types behind that flexibility introduced noticeable editor lag in alpha. This deep-dive shows how the team used `tsc` diagnostics to cut type-checking work by 62–86%, with lessons for anyone authoring type-heavy libraries.
+
+Kevin Van Cott (TanStack)
+
+🛠️ [React Libraries and Tools for 2026](https://javascriptweekly.com/link/186589/d076523b1d "www.robinwieruch.de") — Every year, Robin updates this post covering his opinionated list of essential React ecosystem libraries.
+
+Robin Wieruch
+
+[Your AI Writes Tests That Pass but Prove Nothing. Fix It](https://javascriptweekly.com/link/186590/d076523b1d "wallabyjs.com") — Wallaby CLI makes test generation 10x smarter with live coverage and runtime data, using 3x fewer tokens. One skill to install.
+
+Wallaby Team sponsor
+
+[Changing the Kindle's Homepage by Editing Hermes Bytecode](https://javascriptweekly.com/link/186592/d076523b1d "sighery.com") — The Kindle’s UI now runs on a [Hermes](https://javascriptweekly.com/link/186594/d076523b1d)-powered JavaScript stack. Here’s how you can edit the bytecode Hermes produces to change the Kindle UI’s behavior.
+
+Nicholas Tarta
+
+📈 [Making `numpy-ts` as Fast as Native](https://javascriptweekly.com/link/186595/d076523b1d "nico.codes") — How a [TypeScript NumPy port](https://javascriptweekly.com/link/186596/d076523b1d) went from 15x slower to matching native, by changing not whether to use WASM, but who owns the bytes.
+
+Nico Dupont
+
+📄 [How Building an HTML-First Site Doubled Our Users Overnight](https://javascriptweekly.com/link/186597/d076523b1d) – Out with the React, and in with the Astro. Alistair Davidson
+
+📄 [Building a Real Blog Easily in Astro](https://javascriptweekly.com/link/186598/d076523b1d) – By *real*, Zell means something beyond demo-level, with excerpts, post update dates, etc. Zell Liew
+
+📄 [Streaming HTML with `textStream()` in Chrome Canary](https://javascriptweekly.com/link/186599/d076523b1d) Ollie Williams
+
+🛠 Code & Tools
+
+[eslint-plugin-unicorn 67.0: More Than 200 Powerful ESLint Rules](https://javascriptweekly.com/link/186600/d076523b1d "github.com") — Sindre’s set of curated rules has grown a lot, with almost 100 added or updated in the past few weeks alone. Like enforcing [better comments](https://javascriptweekly.com/link/186602/d076523b1d), [limiting the depth of nested calls](https://javascriptweekly.com/link/186603/d076523b1d), [preferring `Temporal` over `Date`](https://javascriptweekly.com/link/186604/d076523b1d), and [preferring HTTPS over HTTP](https://javascriptweekly.com/link/186605/d076523b1d) in URLs. These rules will seriously challenge (and improve!) your code.
+
+Sindre Sorhus et al.
+
+[zod-compiler: Compile Zod Schemas into Zero-Overhead Validators](https://javascriptweekly.com/link/186606/d076523b1d "github.com") — A build-time compiler that plugs into Vite, webpack, et al. and rewrites existing schemas into optimized, tree-shakeable validators. Claims 2–75x faster validation with no source changes and the full Zod API preserved.
+
+Gajus Kuizinas
+
+[That Slow Analytics Endpoint? It's a Database Problem](https://javascriptweekly.com/link/186607/d076523b1d "www.tigerdata.com") — Pipelines, sync lag, stale data. That's the cost of a split stack. TimescaleDB extends Postgres so your app stays fast.
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+📊 [billboard.js 4.0: A JavaScript Chart Library Based on D3](https://javascriptweekly.com/link/186608/d076523b1d "netil.medium.com") — At almost nine years old, billboard.js now has a new, opt-in canvas-based rendering mode (SVG remains the default), smaller bundles, and better performance on large datasets. There are [hundreds of demos](https://javascriptweekly.com/link/186609/d076523b1d) ranging from [donut charts](https://javascriptweekly.com/link/186610/d076523b1d) and [funnel charts](https://javascriptweekly.com/link/186611/d076523b1d) to [overlapping bar charts](https://javascriptweekly.com/link/186612/d076523b1d) and [radar charts](https://javascriptweekly.com/link/186613/d076523b1d).
+
+Jae Sung Park (NAVER)
+
+[PolyCSS: CSS 3D Engine for the DOM](https://javascriptweekly.com/link/186614/d076523b1d "polycss.com") — Renders textured 3D polygon meshes entirely in the DOM using CSS `matrix3d()` transforms — no WebGL or &lt;`canvas`> required. Works with vanilla JS, React, and Vue. There’s a [gallery](https://javascriptweekly.com/link/186615/d076523b1d) to explore and a [live builder](https://javascriptweekly.com/link/186616/d076523b1d) if you want to play around.
+
+LayoutitStudio
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dywvkeo9lzhcxdrflnyq.jpg)](https://javascriptweekly.com/link/186617/d076523b1d)
+
+* [Tabulator 6.5](https://javascriptweekly.com/link/186617/d076523b1d) *(above)* – Create interactive tables from any HTML table, JS array or JSON data.
+
+* 🕒 [`&lt;relative-time>` 5.2.0](https://javascriptweekly.com/link/186618/d076523b1d) – Web Component for formatting automatically-updating timestamps as localized strings or relative times.
+
+* [Fable 5.2](https://javascriptweekly.com/link/186619/d076523b1d) – No, not the LLM you can't use, but an F# to JS/TS (and now Erlang too) compiler you *can* use. [More info.](https://javascriptweekly.com/link/186620/d076523b1d)
+
+* [React Native 0.86](https://javascriptweekly.com/link/186621/d076523b1d) – Edge-to-edge support on Android 15+ and improvements to its DevTools.
+
+* [Biome 2.5](https://javascriptweekly.com/link/186622/d076523b1d) – The fast code formatting and linting toolchain has now passed 500 lint rules.
+
+* [get-value 4.1](https://javascriptweekly.com/link/186623/d076523b1d) – Use paths like `a.b.c` to get a nested value from an object.
+
+* [axios v1.18.0](https://javascriptweekly.com/link/186624/d076523b1d) – Promise-based HTTP client for the browser and Node.
+
+* 📊 [visx 4.0](https://javascriptweekly.com/link/186625/d076523b1d) – Airbnb's visualization primitives for React.
+
+📰 Classifieds
+
+📸 Add robust in-browser barcode scanning to your web apps using [STRICH](https://javascriptweekly.com/link/186626/d076523b1d), a lean JS library. [Free 30-day trial, try the demo app today!](https://javascriptweekly.com/link/186626/d076523b1d)
+
+***
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/186627/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+***
+
+🤖 Generate 50,000 invoices overnight. [Foxit's DocGen API](https://javascriptweekly.com/link/186628/d076523b1d) merges JSON data into branded PDFs at scale, with no PDFKit and no copy-paste.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ixupyzbbgqjnvtbe54el.jpg)](https://javascriptweekly.com/link/186630/d076523b1d)
+
+* 🌐 The WebKit team [shows off MapKit JS 6](https://javascriptweekly.com/link/186630/d076523b1d) *(above)*, a way to integrate Apple Maps into your site [like in this example](https://javascriptweekly.com/link/186631/d076523b1d). You need a token from an Apple Developer account though.
+
+* 😱 A developer was sent [a malicious JavaScript 'coding test' by a fake recruiter on LinkedIn](https://javascriptweekly.com/link/186632/d076523b1d) in an attempt to backdoor his machine. I've heard about this vector a few times this year, so be careful.
+
+* [WASI 0.3 (WebAssembly System Interface) has launched](https://javascriptweekly.com/link/186634/d076523b1d), bringing native async support to WebAssembly Components.
+
+* [performative-ui](https://javascriptweekly.com/link/186635/d076523b1d) is a fun set of modern clichéd "AI startup" UI components for React, like [ASCII hero art](https://javascriptweekly.com/link/186637/d076523b1d) and [node graph backgrounds](https://javascriptweekly.com/link/186638/d076523b1d).
+
+* A dev had an old USB scanner with no modern drivers, but [got it working via a browser-based WASM-powered emulator](https://javascriptweekly.com/link/186639/d076523b1d) bridged to the physical scanner through WebUSB. He previously did something similar [with an old printer](https://javascriptweekly.com/link/186640/d076523b1d).
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/186641/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
