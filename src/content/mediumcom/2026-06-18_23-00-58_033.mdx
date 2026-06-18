@@ -1,0 +1,841 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 21 Reinforcement Learning (RL) Concepts Explained In Plain English | Dr. Ashish Bamania in Level Up Coding
+description: 21 Reinforcement Learning (RL) Concepts Explained In Plain English | Dr. Ashish Bamania in Level Up Coding
+date: 星期四 11 晚上 六月 18o 2026
+author: mediumcom
+origin_url: https://medium.com/
+origin_site: https://medium.com/
+translated: true
+avatar: /media-source/mediumcom-ico.png
+email_recorder: noreply@medium.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="21 Reinforcement Learning (RL) Concepts Explained In Plain English | Dr. Ashish Bamania in Level Up Coding" url="https://medium.com/" />
+
+<Detail client:only="react">
+	Today's highlights
+
+[![Dr. Ashish Bamania](https://miro.medium.com/fit/c/40/40/1*5R3sTJ1KZkaD9s6XmBNsQA@2x.jpeg)](https://medium.com/@bamania-ashish?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-79087514dba1----0-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Dr. Ashish Bamania](https://medium.com/@bamania-ashish?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-79087514dba1----0-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-79087514dba1----0-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![21 Reinforcement Learning (RL) Concepts Explained In Plain English](https://miro.medium.com/fit/c/320/214/0*7z1Bx02JVehrEIqp)](https://medium.com/@bamania-ashish/21-reinforcement-learning-rl-concepts-explained-in-plain-english-79087514dba1?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-79087514dba1----0-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[
+
+## 21 Reinforcement Learning (RL) Concepts Explained In Plain English
+
+### Skip the complex mathematics and finally understand RL…
+
+
+
+](https://medium.com/@bamania-ashish/21-reinforcement-learning-rl-concepts-explained-in-plain-english-79087514dba1?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-79087514dba1----0-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+19 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+861
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+4
+
+[![Burk](https://miro.medium.com/fit/c/40/40/1*iQ2uBOw6BWWzmfhzHtJveA.jpeg)](https://medium.com/@burkrosemann?source=email-2b8b8ee19057-1781806061702-digest.reader--aed49505f6b5----1-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Burk](https://medium.com/@burkrosemann?source=email-2b8b8ee19057-1781806061702-digest.reader--aed49505f6b5----1-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![Europe Is Ditching Visa And Mastercard, And It’s a Huge Step](https://miro.medium.com/fit/c/320/214/0*ZUgccUXoKWCRmrLB)](https://medium.com/@burkrosemann/europe-is-ditching-visa-and-mastercard-and-its-a-huge-step-aed49505f6b5?source=email-2b8b8ee19057-1781806061702-digest.reader--aed49505f6b5----1-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[
+
+## Europe Is Ditching Visa And Mastercard, And It’s a Huge Step
+
+### Year one in numbers
+
+
+
+](https://medium.com/@burkrosemann/europe-is-ditching-visa-and-mastercard-and-its-a-huge-step-aed49505f6b5?source=email-2b8b8ee19057-1781806061702-digest.reader--aed49505f6b5----1-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+3.7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+94
+
+[![Frank](https://miro.medium.com/fit/c/40/40/1*bU3OPo_JJEZ6PT5ve-9jKA.png)](https://medium.com/@FrankPizzuta?source=email-2b8b8ee19057-1781806061702-digest.reader--f4c1d265f51e----2-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Frank](https://medium.com/@FrankPizzuta?source=email-2b8b8ee19057-1781806061702-digest.reader--f4c1d265f51e----2-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![Curiosity as Career Insurance](https://miro.medium.com/fit/c/320/214/1*53p9SNZ0AOdGuFbI0taeKg@2x.jpeg)](https://medium.com/@FrankPizzuta/curiosity-as-career-insurance-f4c1d265f51e?source=email-2b8b8ee19057-1781806061702-digest.reader--f4c1d265f51e----2-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[
+
+## Curiosity as Career Insurance
+
+### How a project about 1900s newspapers rebuilt my career…
+
+
+
+](https://medium.com/@FrankPizzuta/curiosity-as-career-insurance-f4c1d265f51e?source=email-2b8b8ee19057-1781806061702-digest.reader--f4c1d265f51e----2-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+157
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+5
+
+[![The PyCoach](https://miro.medium.com/fit/c/40/40/1*ZIcUbGyIASJ3iXrD5oTeoA.jpeg)](https://medium.com/@frank-andrade?source=email-2b8b8ee19057-1781806061702-digest.reader-76436a11a2b0-f68034e32dbb----3-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[The PyCoach](https://medium.com/@frank-andrade?source=email-2b8b8ee19057-1781806061702-digest.reader-76436a11a2b0-f68034e32dbb----3-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[Artificial Corner](https://medium.com/artificial-corner?source=email-2b8b8ee19057-1781806061702-digest.reader-76436a11a2b0-f68034e32dbb----3-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![We Built 70+ Claude Skills. These Are The Best](https://miro.medium.com/fit/c/320/214/1*kW7Red_xIvtO0AtU6_t1Pw.png)](https://medium.com/@frank-andrade/we-built-70-claude-skills-these-are-the-best-f68034e32dbb?source=email-2b8b8ee19057-1781806061702-digest.reader-76436a11a2b0-f68034e32dbb----3-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[
+
+## We Built 70+ Claude Skills. These Are The Best
+
+### I asked 7 AI writers to share their #1 Claude skill…
+
+
+
+](https://medium.com/@frank-andrade/we-built-70-claude-skills-these-are-the-best-f68034e32dbb?source=email-2b8b8ee19057-1781806061702-digest.reader-76436a11a2b0-f68034e32dbb----3-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+41
+
+[![Desiree Peralta](https://miro.medium.com/fit/c/40/40/1*6mgEZmtgEIYKM-aqXYAgMA@2x.jpeg)](https://medium.com/@dessyperalt?source=email-2b8b8ee19057-1781806061702-digest.reader-4c1db9d0f93a-9714b1f0c6f0----4-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Desiree Peralta](https://medium.com/@dessyperalt?source=email-2b8b8ee19057-1781806061702-digest.reader-4c1db9d0f93a-9714b1f0c6f0----4-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[Publishous](https://medium.com/publishous?source=email-2b8b8ee19057-1781806061702-digest.reader-4c1db9d0f93a-9714b1f0c6f0----4-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![10,000 Women Explained Exactly Why They Never Talked to a Man Again](https://miro.medium.com/fit/c/320/214/1*AN1GV5iJWOoGL_sgbXqqBw.jpeg)](https://medium.com/@dessyperalt/10-000-women-explained-exactly-why-they-never-talked-to-a-man-again-9714b1f0c6f0?source=email-2b8b8ee19057-1781806061702-digest.reader-4c1db9d0f93a-9714b1f0c6f0----4-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[
+
+## 10,000 Women Explained Exactly Why They Never Talked to a Man Again
+
+### In case you are wondering why you never got a second…
+
+
+
+](https://medium.com/@dessyperalt/10-000-women-explained-exactly-why-they-never-talked-to-a-man-again-9714b1f0c6f0?source=email-2b8b8ee19057-1781806061702-digest.reader-4c1db9d0f93a-9714b1f0c6f0----4-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+11 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+9.2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+229
+
+[![Michael Lawrence](https://miro.medium.com/fit/c/40/40/1*qS_irCcytwd_O-fSV-tSwQ.jpeg)](https://medium.com/@michaelclawrence?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-2d18fb595362----5-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Michael Lawrence](https://medium.com/@michaelclawrence?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-2d18fb595362----5-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-2d18fb595362----5-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![AI Isn’t Replacing Developers. It’s Doing Something Worse.](https://miro.medium.com/fit/c/320/214/1*OBB8VSehGVHuDHOHfFiOSA.png)](https://medium.com/@michaelclawrence/ai-isnt-replacing-developers-it-s-doing-something-worse-2d18fb595362?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-2d18fb595362----5-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[
+
+## AI Isn’t Replacing Developers. It’s Doing Something Worse.
+
+### The replacement narrative is loud. The quiet one is…
+
+
+
+](https://medium.com/@michaelclawrence/ai-isnt-replacing-developers-it-s-doing-something-worse-2d18fb595362?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-2d18fb595362----5-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+8.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+213
+
+[![Owen Warner](https://miro.medium.com/fit/c/40/40/1*tCW9nE91zuVy2_cEjg3lHw.jpeg)](https://medium.com/@Owenwarner?source=email-2b8b8ee19057-1781806061702-digest.reader--d5614f54079d----6-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Owen Warner](https://medium.com/@Owenwarner?source=email-2b8b8ee19057-1781806061702-digest.reader--d5614f54079d----6-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![Russia’s Leaked “After Victory” Documents Exposed Putin’s Real Plan for Ukraine](https://miro.medium.com/fit/c/320/214/1*UiwOqiB9FKltIbfkn4Z4PA.png)](https://medium.com/@Owenwarner/russias-leaked-after-victory-documents-exposed-putin-s-real-plan-for-ukraine-d5614f54079d?source=email-2b8b8ee19057-1781806061702-digest.reader--d5614f54079d----6-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[
+
+## Russia’s Leaked “After Victory” Documents Exposed Putin’s Real Plan for Ukraine
+
+### Every autocrat loves a good forever war until the…
+
+
+
+](https://medium.com/@Owenwarner/russias-leaked-after-victory-documents-exposed-putin-s-real-plan-for-ukraine-d5614f54079d?source=email-2b8b8ee19057-1781806061702-digest.reader--d5614f54079d----6-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+4.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+44
+
+[![Nikhil Vemu](https://miro.medium.com/fit/c/40/40/1*2rBQc171nwxUfGiqCOVReg.jpeg)](https://medium.com/@nikhilvemu?source=email-2b8b8ee19057-1781806061702-digest.reader-d1f54550947b-5e8a36efa41b----7-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Nikhil Vemu](https://medium.com/@nikhilvemu?source=email-2b8b8ee19057-1781806061702-digest.reader-d1f54550947b-5e8a36efa41b----7-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[Mac O’Clock](https://medium.com/macoclock?source=email-2b8b8ee19057-1781806061702-digest.reader-d1f54550947b-5e8a36efa41b----7-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![iOS 26.5 Released — 11 New Features You NEED To Know!](https://miro.medium.com/fit/c/320/214/1*q-KTSY1lt6BGryWnQc2Ipw.jpeg)](https://medium.com/@nikhilvemu/ios-26-5-released-11-new-features-you-need-to-know-5e8a36efa41b?source=email-2b8b8ee19057-1781806061702-digest.reader-d1f54550947b-5e8a36efa41b----7-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[
+
+## iOS 26.5 Released — 11 New Features You NEED To Know!
+
+### Every spring, when Apple drops a .5 update, I do the…
+
+
+
+](https://medium.com/@nikhilvemu/ios-26-5-released-11-new-features-you-need-to-know-5e8a36efa41b?source=email-2b8b8ee19057-1781806061702-digest.reader-d1f54550947b-5e8a36efa41b----7-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+11 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+11
+
+[![Maia Niguel Hoskin, Ph.D.](https://miro.medium.com/fit/c/40/40/2*b0AO2SXrJrNUu5Ol21so-g.jpeg)](https://medium.com/@mnhoskin25?source=email-2b8b8ee19057-1781806061702-digest.reader-8ccfed20cbb2-d620666e5cb3----8-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Maia Niguel Hoskin, Ph.D.](https://medium.com/@mnhoskin25?source=email-2b8b8ee19057-1781806061702-digest.reader-8ccfed20cbb2-d620666e5cb3----8-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[ZORA](https://medium.com/zora?source=email-2b8b8ee19057-1781806061702-digest.reader-8ccfed20cbb2-d620666e5cb3----8-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![Would We Be This Forgiving If She Looked Different?](https://miro.medium.com/fit/c/320/214/0*hUimmMN-vxtLq5oR.jpg)](https://medium.com/@mnhoskin25/would-we-be-this-forgiving-if-she-looked-different-d620666e5cb3?source=email-2b8b8ee19057-1781806061702-digest.reader-8ccfed20cbb2-d620666e5cb3----8-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[
+
+## Would We Be This Forgiving If She Looked Different?
+
+### I’m going to ask a question that makes people…
+
+
+
+](https://medium.com/@mnhoskin25/would-we-be-this-forgiving-if-she-looked-different-d620666e5cb3?source=email-2b8b8ee19057-1781806061702-digest.reader-8ccfed20cbb2-d620666e5cb3----8-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+986
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+18
+
+[![Liora Daven](https://miro.medium.com/fit/c/40/40/1*od9gm33Bj8A83qIcLhkmFg.jpeg)](https://medium.com/@lioradaven?source=email-2b8b8ee19057-1781806061702-digest.reader-f821cb577445-19e63a284eaa----9-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Liora Daven](https://medium.com/@lioradaven?source=email-2b8b8ee19057-1781806061702-digest.reader-f821cb577445-19e63a284eaa----9-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[The Geopolitical Autopsy](https://medium.com/the-geopolitical-autopsy?source=email-2b8b8ee19057-1781806061702-digest.reader-f821cb577445-19e63a284eaa----9-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![Most People Think America Is in Debt. The Truth Is Far Stranger Than That.](https://miro.medium.com/fit/c/320/214/0*mTN5tIJjF2D7MMW7)](https://medium.com/@lioradaven/most-people-think-america-is-in-debt-the-truth-is-far-stranger-than-that-19e63a284eaa?source=email-2b8b8ee19057-1781806061702-digest.reader-f821cb577445-19e63a284eaa----9-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[
+
+## Most People Think America Is in Debt. The Truth Is Far Stranger Than That.
+
+### Here is a question that seems simple but has an answer…
+
+
+
+](https://medium.com/@lioradaven/most-people-think-america-is-in-debt-the-truth-is-far-stranger-than-that-19e63a284eaa?source=email-2b8b8ee19057-1781806061702-digest.reader-f821cb577445-19e63a284eaa----9-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+31
+
+[![Divy Yadav](https://miro.medium.com/fit/c/40/40/1*Sh8e9jzCC5a04Faiur6Fzg.png)](https://medium.com/@yadavdivy296?source=email-2b8b8ee19057-1781806061702-digest.reader-98111c9905da-f3524ee68b9c----10-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Divy Yadav](https://medium.com/@yadavdivy296?source=email-2b8b8ee19057-1781806061702-digest.reader-98111c9905da-f3524ee68b9c----10-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[Towards AI](https://medium.com/towards-artificial-intelligence?source=email-2b8b8ee19057-1781806061702-digest.reader-98111c9905da-f3524ee68b9c----10-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![9 RAG Architectures Every AI Developer Must Know: A Complete Guide with Examples](https://miro.medium.com/fit/c/320/214/1*QvmjR4YHw0NjVTDO0QfNoA.png)](https://medium.com/@yadavdivy296/rag-architectures-every-ai-developer-must-know-a-complete-guide-f3524ee68b9c?source=email-2b8b8ee19057-1781806061702-digest.reader-98111c9905da-f3524ee68b9c----10-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[
+
+## 9 RAG Architectures Every AI Developer Must Know: A Complete Guide with…
+
+### Architectures beyond Naive Rag to build reliable…
+
+
+
+](https://medium.com/@yadavdivy296/rag-architectures-every-ai-developer-must-know-a-complete-guide-f3524ee68b9c?source=email-2b8b8ee19057-1781806061702-digest.reader-98111c9905da-f3524ee68b9c----10-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+3.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+71
+
+[![Jessica Stillman](https://miro.medium.com/fit/c/40/40/2*WCWpog6WqKnaXo5lhsRLZA.jpeg)](https://medium.com/@entrylevelrebel?source=email-2b8b8ee19057-1781806061702-digest.reader--8b003c8a9f7e----11-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Jessica Stillman](https://medium.com/@entrylevelrebel?source=email-2b8b8ee19057-1781806061702-digest.reader--8b003c8a9f7e----11-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![Steve Jobs’s 10–80–10 Rule Is Even More Useful in the AI Era](https://miro.medium.com/fit/c/320/214/1*FvJd7Y5PvgIdTOvlD6uLrg.jpeg)](https://medium.com/@entrylevelrebel/steve-jobss-10-80-10-rule-is-even-more-useful-in-the-ai-era-8b003c8a9f7e?source=email-2b8b8ee19057-1781806061702-digest.reader--8b003c8a9f7e----11-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[
+
+## Steve Jobs’s 10–80–10 Rule Is Even More Useful in the AI Era
+
+### AI was a distant dream when Steve Jobs was using the…
+
+
+
+](https://medium.com/@entrylevelrebel/steve-jobss-10-80-10-rule-is-even-more-useful-in-the-ai-era-8b003c8a9f7e?source=email-2b8b8ee19057-1781806061702-digest.reader--8b003c8a9f7e----11-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+2.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+49
+
+[![Travis W. King](https://miro.medium.com/fit/c/40/40/1*B7YGJkNU8euKbhUJxM4CyQ.jpeg)](https://medium.com/@traviswking-ntaa?source=email-2b8b8ee19057-1781806061702-digest.reader-eca1ba5ae1ca-315f4e987f94----12-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Travis W. King](https://medium.com/@traviswking-ntaa?source=email-2b8b8ee19057-1781806061702-digest.reader-eca1ba5ae1ca-315f4e987f94----12-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[ILLUMINATION](https://medium.com/illumination?source=email-2b8b8ee19057-1781806061702-digest.reader-eca1ba5ae1ca-315f4e987f94----12-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![5 Very Long Books by 5 Different Authors That Are Worth Your Time](https://miro.medium.com/fit/c/320/214/1*-roPTpebwjgBMdZ6LKeLLA.jpeg)](https://medium.com/@traviswking-ntaa/5-very-long-books-by-5-different-authors-that-are-worth-your-time-315f4e987f94?source=email-2b8b8ee19057-1781806061702-digest.reader-eca1ba5ae1ca-315f4e987f94----12-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[
+
+## 5 Very Long Books by 5 Different Authors That Are Worth Your Time
+
+### Get off your cell phone and get lost in an epic summer…
+
+
+
+](https://medium.com/@traviswking-ntaa/5-very-long-books-by-5-different-authors-that-are-worth-your-time-315f4e987f94?source=email-2b8b8ee19057-1781806061702-digest.reader-eca1ba5ae1ca-315f4e987f94----12-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+23
+
+[![Patrick Duane](https://miro.medium.com/fit/c/40/40/1*3Ahd55TwjCALcd9LgDDItw.jpeg)](https://medium.com/@pdu147-98382?source=email-2b8b8ee19057-1781806061702-digest.reader-2f87c85607ff-88c7e785e52c----13-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Patrick Duane](https://medium.com/@pdu147-98382?source=email-2b8b8ee19057-1781806061702-digest.reader-2f87c85607ff-88c7e785e52c----13-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[The Gist](https://medium.com/health-fitness-travel?source=email-2b8b8ee19057-1781806061702-digest.reader-2f87c85607ff-88c7e785e52c----13-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![10 Fat-Shredding Tips to Build Your Best Body](https://miro.medium.com/fit/c/320/214/0*kMGZ3j_dM_HCwPwk)](https://medium.com/@pdu147-98382/10-fat-shredding-tips-to-build-your-best-body-88c7e785e52c?source=email-2b8b8ee19057-1781806061702-digest.reader-2f87c85607ff-88c7e785e52c----13-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[
+
+## 10 Fat-Shredding Tips to Build Your Best Body
+
+### Time to ace your fat loss journey
+
+
+
+](https://medium.com/@pdu147-98382/10-fat-shredding-tips-to-build-your-best-body-88c7e785e52c?source=email-2b8b8ee19057-1781806061702-digest.reader-2f87c85607ff-88c7e785e52c----13-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+117
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Jamie](https://miro.medium.com/fit/c/40/40/1*7tjsBMoa7vJtBKSsjf97GQ@2x.jpeg)](https://medium.com/@jamiemaserati?source=email-2b8b8ee19057-1781806061702-digest.reader--d91098e0b7ee----14-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Jamie](https://medium.com/@jamiemaserati?source=email-2b8b8ee19057-1781806061702-digest.reader--d91098e0b7ee----14-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![I Tried to Be the Perfect Husband. It Pushed My Wife Straight Into an Affair](https://miro.medium.com/fit/c/320/214/1*BJuoshRkllJFWLoLMBUoAw@2x.jpeg)](https://medium.com/@jamiemaserati/i-tried-to-be-the-perfect-husband-it-pushed-my-wife-straight-into-an-affair-d91098e0b7ee?source=email-2b8b8ee19057-1781806061702-digest.reader--d91098e0b7ee----14-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[
+
+## I Tried to Be the Perfect Husband. It Pushed My Wife Straight Into an Affair
+
+### Adrenaline, more adrenaline, and eating the divorce…
+
+
+
+](https://medium.com/@jamiemaserati/i-tried-to-be-the-perfect-husband-it-pushed-my-wife-straight-into-an-affair-d91098e0b7ee?source=email-2b8b8ee19057-1781806061702-digest.reader--d91098e0b7ee----14-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+11 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+98
+
+[![Become a Medium member](https://miro.medium.com/max/1360/6b37395e36e2d6768583b0d27172b3075c079241270c50b770a18b83476ecffc)](https://medium.com/plans?source=email-2b8b8ee19057-1781806061702-digest.reader-------------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86)
+
+
+</Detail>
+
+Today's highlights
+
+[![Dr. Ashish Bamania](https://miro.medium.com/fit/c/40/40/1*5R3sTJ1KZkaD9s6XmBNsQA@2x.jpeg)](https://medium.com/@bamania-ashish?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-79087514dba1----0-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Dr. Ashish Bamania](https://medium.com/@bamania-ashish?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-79087514dba1----0-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-79087514dba1----0-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![21 Reinforcement Learning (RL) Concepts Explained In Plain English](https://miro.medium.com/fit/c/320/214/0*7z1Bx02JVehrEIqp)](https://medium.com/@bamania-ashish/21-reinforcement-learning-rl-concepts-explained-in-plain-english-79087514dba1?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-79087514dba1----0-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+\[
+
+## 21 Reinforcement Learning (RL) Concepts Explained In Plain English
+
+### Skip the complex mathematics and finally understand RL…
+
+]\(https://medium.com/@bamania-ashish/21-reinforcement-learning-rl-concepts-explained-in-plain-english-79087514dba1?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-79087514dba1----0-109------------------7ae06f3f\_fb63\_4b9d\_9d18\_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+19 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+861
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+4
+
+[![Burk](https://miro.medium.com/fit/c/40/40/1*iQ2uBOw6BWWzmfhzHtJveA.jpeg)](https://medium.com/@burkrosemann?source=email-2b8b8ee19057-1781806061702-digest.reader--aed49505f6b5----1-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Burk](https://medium.com/@burkrosemann?source=email-2b8b8ee19057-1781806061702-digest.reader--aed49505f6b5----1-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![Europe Is Ditching Visa And Mastercard, And It’s a Huge Step](https://miro.medium.com/fit/c/320/214/0*ZUgccUXoKWCRmrLB)](https://medium.com/@burkrosemann/europe-is-ditching-visa-and-mastercard-and-its-a-huge-step-aed49505f6b5?source=email-2b8b8ee19057-1781806061702-digest.reader--aed49505f6b5----1-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+\[
+
+## Europe Is Ditching Visa And Mastercard, And It’s a Huge Step
+
+### Year one in numbers
+
+]\(https://medium.com/@burkrosemann/europe-is-ditching-visa-and-mastercard-and-its-a-huge-step-aed49505f6b5?source=email-2b8b8ee19057-1781806061702-digest.reader--aed49505f6b5----1-73------------------7ae06f3f\_fb63\_4b9d\_9d18\_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+3.7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+94
+
+[![Frank](https://miro.medium.com/fit/c/40/40/1*bU3OPo_JJEZ6PT5ve-9jKA.png)](https://medium.com/@FrankPizzuta?source=email-2b8b8ee19057-1781806061702-digest.reader--f4c1d265f51e----2-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Frank](https://medium.com/@FrankPizzuta?source=email-2b8b8ee19057-1781806061702-digest.reader--f4c1d265f51e----2-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![Curiosity as Career Insurance](https://miro.medium.com/fit/c/320/214/1*53p9SNZ0AOdGuFbI0taeKg@2x.jpeg)](https://medium.com/@FrankPizzuta/curiosity-as-career-insurance-f4c1d265f51e?source=email-2b8b8ee19057-1781806061702-digest.reader--f4c1d265f51e----2-109------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+\[
+
+## Curiosity as Career Insurance
+
+### How a project about 1900s newspapers rebuilt my career…
+
+]\(https://medium.com/@FrankPizzuta/curiosity-as-career-insurance-f4c1d265f51e?source=email-2b8b8ee19057-1781806061702-digest.reader--f4c1d265f51e----2-109------------------7ae06f3f\_fb63\_4b9d\_9d18\_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+157
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+5
+
+[![The PyCoach](https://miro.medium.com/fit/c/40/40/1*ZIcUbGyIASJ3iXrD5oTeoA.jpeg)](https://medium.com/@frank-andrade?source=email-2b8b8ee19057-1781806061702-digest.reader-76436a11a2b0-f68034e32dbb----3-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[The PyCoach](https://medium.com/@frank-andrade?source=email-2b8b8ee19057-1781806061702-digest.reader-76436a11a2b0-f68034e32dbb----3-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[Artificial Corner](https://medium.com/artificial-corner?source=email-2b8b8ee19057-1781806061702-digest.reader-76436a11a2b0-f68034e32dbb----3-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![We Built 70+ Claude Skills. These Are The Best](https://miro.medium.com/fit/c/320/214/1*kW7Red_xIvtO0AtU6_t1Pw.png)](https://medium.com/@frank-andrade/we-built-70-claude-skills-these-are-the-best-f68034e32dbb?source=email-2b8b8ee19057-1781806061702-digest.reader-76436a11a2b0-f68034e32dbb----3-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+\[
+
+## We Built 70+ Claude Skills. These Are The Best
+
+### I asked 7 AI writers to share their #1 Claude skill…
+
+]\(https://medium.com/@frank-andrade/we-built-70-claude-skills-these-are-the-best-f68034e32dbb?source=email-2b8b8ee19057-1781806061702-digest.reader-76436a11a2b0-f68034e32dbb----3-73------------------7ae06f3f\_fb63\_4b9d\_9d18\_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+41
+
+[![Desiree Peralta](https://miro.medium.com/fit/c/40/40/1*6mgEZmtgEIYKM-aqXYAgMA@2x.jpeg)](https://medium.com/@dessyperalt?source=email-2b8b8ee19057-1781806061702-digest.reader-4c1db9d0f93a-9714b1f0c6f0----4-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Desiree Peralta](https://medium.com/@dessyperalt?source=email-2b8b8ee19057-1781806061702-digest.reader-4c1db9d0f93a-9714b1f0c6f0----4-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[Publishous](https://medium.com/publishous?source=email-2b8b8ee19057-1781806061702-digest.reader-4c1db9d0f93a-9714b1f0c6f0----4-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![10,000 Women Explained Exactly Why They Never Talked to a Man Again](https://miro.medium.com/fit/c/320/214/1*AN1GV5iJWOoGL_sgbXqqBw.jpeg)](https://medium.com/@dessyperalt/10-000-women-explained-exactly-why-they-never-talked-to-a-man-again-9714b1f0c6f0?source=email-2b8b8ee19057-1781806061702-digest.reader-4c1db9d0f93a-9714b1f0c6f0----4-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+\[
+
+## 10,000 Women Explained Exactly Why They Never Talked to a Man Again
+
+### In case you are wondering why you never got a second…
+
+]\(https://medium.com/@dessyperalt/10-000-women-explained-exactly-why-they-never-talked-to-a-man-again-9714b1f0c6f0?source=email-2b8b8ee19057-1781806061702-digest.reader-4c1db9d0f93a-9714b1f0c6f0----4-73------------------7ae06f3f\_fb63\_4b9d\_9d18\_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+11 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+9.2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+229
+
+[![Michael Lawrence](https://miro.medium.com/fit/c/40/40/1*qS_irCcytwd_O-fSV-tSwQ.jpeg)](https://medium.com/@michaelclawrence?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-2d18fb595362----5-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Michael Lawrence](https://medium.com/@michaelclawrence?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-2d18fb595362----5-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-2d18fb595362----5-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![AI Isn’t Replacing Developers. It’s Doing Something Worse.](https://miro.medium.com/fit/c/320/214/1*OBB8VSehGVHuDHOHfFiOSA.png)](https://medium.com/@michaelclawrence/ai-isnt-replacing-developers-it-s-doing-something-worse-2d18fb595362?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-2d18fb595362----5-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+\[
+
+## AI Isn’t Replacing Developers. It’s Doing Something Worse.
+
+### The replacement narrative is loud. The quiet one is…
+
+]\(https://medium.com/@michaelclawrence/ai-isnt-replacing-developers-it-s-doing-something-worse-2d18fb595362?source=email-2b8b8ee19057-1781806061702-digest.reader-5517fd7b58a6-2d18fb595362----5-99------------------7ae06f3f\_fb63\_4b9d\_9d18\_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+8.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+213
+
+[![Owen Warner](https://miro.medium.com/fit/c/40/40/1*tCW9nE91zuVy2_cEjg3lHw.jpeg)](https://medium.com/@Owenwarner?source=email-2b8b8ee19057-1781806061702-digest.reader--d5614f54079d----6-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Owen Warner](https://medium.com/@Owenwarner?source=email-2b8b8ee19057-1781806061702-digest.reader--d5614f54079d----6-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![Russia’s Leaked “After Victory” Documents Exposed Putin’s Real Plan for Ukraine](https://miro.medium.com/fit/c/320/214/1*UiwOqiB9FKltIbfkn4Z4PA.png)](https://medium.com/@Owenwarner/russias-leaked-after-victory-documents-exposed-putin-s-real-plan-for-ukraine-d5614f54079d?source=email-2b8b8ee19057-1781806061702-digest.reader--d5614f54079d----6-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+\[
+
+## Russia’s Leaked “After Victory” Documents Exposed Putin’s Real Plan for Ukraine
+
+### Every autocrat loves a good forever war until the…
+
+]\(https://medium.com/@Owenwarner/russias-leaked-after-victory-documents-exposed-putin-s-real-plan-for-ukraine-d5614f54079d?source=email-2b8b8ee19057-1781806061702-digest.reader--d5614f54079d----6-99------------------7ae06f3f\_fb63\_4b9d\_9d18\_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+4.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+44
+
+[![Nikhil Vemu](https://miro.medium.com/fit/c/40/40/1*2rBQc171nwxUfGiqCOVReg.jpeg)](https://medium.com/@nikhilvemu?source=email-2b8b8ee19057-1781806061702-digest.reader-d1f54550947b-5e8a36efa41b----7-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Nikhil Vemu](https://medium.com/@nikhilvemu?source=email-2b8b8ee19057-1781806061702-digest.reader-d1f54550947b-5e8a36efa41b----7-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[Mac O’Clock](https://medium.com/macoclock?source=email-2b8b8ee19057-1781806061702-digest.reader-d1f54550947b-5e8a36efa41b----7-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![iOS 26.5 Released — 11 New Features You NEED To Know!](https://miro.medium.com/fit/c/320/214/1*q-KTSY1lt6BGryWnQc2Ipw.jpeg)](https://medium.com/@nikhilvemu/ios-26-5-released-11-new-features-you-need-to-know-5e8a36efa41b?source=email-2b8b8ee19057-1781806061702-digest.reader-d1f54550947b-5e8a36efa41b----7-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+\[
+
+## iOS 26.5 Released — 11 New Features You NEED To Know!
+
+### Every spring, when Apple drops a .5 update, I do the…
+
+]\(https://medium.com/@nikhilvemu/ios-26-5-released-11-new-features-you-need-to-know-5e8a36efa41b?source=email-2b8b8ee19057-1781806061702-digest.reader-d1f54550947b-5e8a36efa41b----7-73------------------7ae06f3f\_fb63\_4b9d\_9d18\_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+11 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+11
+
+[![Maia Niguel Hoskin, Ph.D.](https://miro.medium.com/fit/c/40/40/2*b0AO2SXrJrNUu5Ol21so-g.jpeg)](https://medium.com/@mnhoskin25?source=email-2b8b8ee19057-1781806061702-digest.reader-8ccfed20cbb2-d620666e5cb3----8-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Maia Niguel Hoskin, Ph.D.](https://medium.com/@mnhoskin25?source=email-2b8b8ee19057-1781806061702-digest.reader-8ccfed20cbb2-d620666e5cb3----8-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[ZORA](https://medium.com/zora?source=email-2b8b8ee19057-1781806061702-digest.reader-8ccfed20cbb2-d620666e5cb3----8-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![Would We Be This Forgiving If She Looked Different?](https://miro.medium.com/fit/c/320/214/0*hUimmMN-vxtLq5oR.jpg)](https://medium.com/@mnhoskin25/would-we-be-this-forgiving-if-she-looked-different-d620666e5cb3?source=email-2b8b8ee19057-1781806061702-digest.reader-8ccfed20cbb2-d620666e5cb3----8-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+\[
+
+## Would We Be This Forgiving If She Looked Different?
+
+### I’m going to ask a question that makes people…
+
+]\(https://medium.com/@mnhoskin25/would-we-be-this-forgiving-if-she-looked-different-d620666e5cb3?source=email-2b8b8ee19057-1781806061702-digest.reader-8ccfed20cbb2-d620666e5cb3----8-99------------------7ae06f3f\_fb63\_4b9d\_9d18\_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+986
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+18
+
+[![Liora Daven](https://miro.medium.com/fit/c/40/40/1*od9gm33Bj8A83qIcLhkmFg.jpeg)](https://medium.com/@lioradaven?source=email-2b8b8ee19057-1781806061702-digest.reader-f821cb577445-19e63a284eaa----9-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Liora Daven](https://medium.com/@lioradaven?source=email-2b8b8ee19057-1781806061702-digest.reader-f821cb577445-19e63a284eaa----9-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[The Geopolitical Autopsy](https://medium.com/the-geopolitical-autopsy?source=email-2b8b8ee19057-1781806061702-digest.reader-f821cb577445-19e63a284eaa----9-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![Most People Think America Is in Debt. The Truth Is Far Stranger Than That.](https://miro.medium.com/fit/c/320/214/0*mTN5tIJjF2D7MMW7)](https://medium.com/@lioradaven/most-people-think-america-is-in-debt-the-truth-is-far-stranger-than-that-19e63a284eaa?source=email-2b8b8ee19057-1781806061702-digest.reader-f821cb577445-19e63a284eaa----9-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+\[
+
+## Most People Think America Is in Debt. The Truth Is Far Stranger Than That.
+
+### Here is a question that seems simple but has an answer…
+
+]\(https://medium.com/@lioradaven/most-people-think-america-is-in-debt-the-truth-is-far-stranger-than-that-19e63a284eaa?source=email-2b8b8ee19057-1781806061702-digest.reader-f821cb577445-19e63a284eaa----9-73------------------7ae06f3f\_fb63\_4b9d\_9d18\_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+31
+
+[![Divy Yadav](https://miro.medium.com/fit/c/40/40/1*Sh8e9jzCC5a04Faiur6Fzg.png)](https://medium.com/@yadavdivy296?source=email-2b8b8ee19057-1781806061702-digest.reader-98111c9905da-f3524ee68b9c----10-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Divy Yadav](https://medium.com/@yadavdivy296?source=email-2b8b8ee19057-1781806061702-digest.reader-98111c9905da-f3524ee68b9c----10-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[Towards AI](https://medium.com/towards-artificial-intelligence?source=email-2b8b8ee19057-1781806061702-digest.reader-98111c9905da-f3524ee68b9c----10-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![9 RAG Architectures Every AI Developer Must Know: A Complete Guide with Examples](https://miro.medium.com/fit/c/320/214/1*QvmjR4YHw0NjVTDO0QfNoA.png)](https://medium.com/@yadavdivy296/rag-architectures-every-ai-developer-must-know-a-complete-guide-f3524ee68b9c?source=email-2b8b8ee19057-1781806061702-digest.reader-98111c9905da-f3524ee68b9c----10-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+\[
+
+## 9 RAG Architectures Every AI Developer Must Know: A Complete Guide with…
+
+### Architectures beyond Naive Rag to build reliable…
+
+]\(https://medium.com/@yadavdivy296/rag-architectures-every-ai-developer-must-know-a-complete-guide-f3524ee68b9c?source=email-2b8b8ee19057-1781806061702-digest.reader-98111c9905da-f3524ee68b9c----10-73------------------7ae06f3f\_fb63\_4b9d\_9d18\_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+3.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+71
+
+[![Jessica Stillman](https://miro.medium.com/fit/c/40/40/2*WCWpog6WqKnaXo5lhsRLZA.jpeg)](https://medium.com/@entrylevelrebel?source=email-2b8b8ee19057-1781806061702-digest.reader--8b003c8a9f7e----11-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Jessica Stillman](https://medium.com/@entrylevelrebel?source=email-2b8b8ee19057-1781806061702-digest.reader--8b003c8a9f7e----11-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![Steve Jobs’s 10–80–10 Rule Is Even More Useful in the AI Era](https://miro.medium.com/fit/c/320/214/1*FvJd7Y5PvgIdTOvlD6uLrg.jpeg)](https://medium.com/@entrylevelrebel/steve-jobss-10-80-10-rule-is-even-more-useful-in-the-ai-era-8b003c8a9f7e?source=email-2b8b8ee19057-1781806061702-digest.reader--8b003c8a9f7e----11-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+\[
+
+## Steve Jobs’s 10–80–10 Rule Is Even More Useful in the AI Era
+
+### AI was a distant dream when Steve Jobs was using the…
+
+]\(https://medium.com/@entrylevelrebel/steve-jobss-10-80-10-rule-is-even-more-useful-in-the-ai-era-8b003c8a9f7e?source=email-2b8b8ee19057-1781806061702-digest.reader--8b003c8a9f7e----11-73------------------7ae06f3f\_fb63\_4b9d\_9d18\_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+2.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+49
+
+[![Travis W. King](https://miro.medium.com/fit/c/40/40/1*B7YGJkNU8euKbhUJxM4CyQ.jpeg)](https://medium.com/@traviswking-ntaa?source=email-2b8b8ee19057-1781806061702-digest.reader-eca1ba5ae1ca-315f4e987f94----12-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Travis W. King](https://medium.com/@traviswking-ntaa?source=email-2b8b8ee19057-1781806061702-digest.reader-eca1ba5ae1ca-315f4e987f94----12-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[ILLUMINATION](https://medium.com/illumination?source=email-2b8b8ee19057-1781806061702-digest.reader-eca1ba5ae1ca-315f4e987f94----12-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![5 Very Long Books by 5 Different Authors That Are Worth Your Time](https://miro.medium.com/fit/c/320/214/1*-roPTpebwjgBMdZ6LKeLLA.jpeg)](https://medium.com/@traviswking-ntaa/5-very-long-books-by-5-different-authors-that-are-worth-your-time-315f4e987f94?source=email-2b8b8ee19057-1781806061702-digest.reader-eca1ba5ae1ca-315f4e987f94----12-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+\[
+
+## 5 Very Long Books by 5 Different Authors That Are Worth Your Time
+
+### Get off your cell phone and get lost in an epic summer…
+
+]\(https://medium.com/@traviswking-ntaa/5-very-long-books-by-5-different-authors-that-are-worth-your-time-315f4e987f94?source=email-2b8b8ee19057-1781806061702-digest.reader-eca1ba5ae1ca-315f4e987f94----12-99------------------7ae06f3f\_fb63\_4b9d\_9d18\_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+23
+
+[![Patrick Duane](https://miro.medium.com/fit/c/40/40/1*3Ahd55TwjCALcd9LgDDItw.jpeg)](https://medium.com/@pdu147-98382?source=email-2b8b8ee19057-1781806061702-digest.reader-2f87c85607ff-88c7e785e52c----13-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Patrick Duane](https://medium.com/@pdu147-98382?source=email-2b8b8ee19057-1781806061702-digest.reader-2f87c85607ff-88c7e785e52c----13-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)in[The Gist](https://medium.com/health-fitness-travel?source=email-2b8b8ee19057-1781806061702-digest.reader-2f87c85607ff-88c7e785e52c----13-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![10 Fat-Shredding Tips to Build Your Best Body](https://miro.medium.com/fit/c/320/214/0*kMGZ3j_dM_HCwPwk)](https://medium.com/@pdu147-98382/10-fat-shredding-tips-to-build-your-best-body-88c7e785e52c?source=email-2b8b8ee19057-1781806061702-digest.reader-2f87c85607ff-88c7e785e52c----13-99------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+\[
+
+## 10 Fat-Shredding Tips to Build Your Best Body
+
+### Time to ace your fat loss journey
+
+]\(https://medium.com/@pdu147-98382/10-fat-shredding-tips-to-build-your-best-body-88c7e785e52c?source=email-2b8b8ee19057-1781806061702-digest.reader-2f87c85607ff-88c7e785e52c----13-99------------------7ae06f3f\_fb63\_4b9d\_9d18\_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+117
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Jamie](https://miro.medium.com/fit/c/40/40/1*7tjsBMoa7vJtBKSsjf97GQ@2x.jpeg)](https://medium.com/@jamiemaserati?source=email-2b8b8ee19057-1781806061702-digest.reader--d91098e0b7ee----14-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[Jamie](https://medium.com/@jamiemaserati?source=email-2b8b8ee19057-1781806061702-digest.reader--d91098e0b7ee----14-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+[![I Tried to Be the Perfect Husband. It Pushed My Wife Straight Into an Affair](https://miro.medium.com/fit/c/320/214/1*BJuoshRkllJFWLoLMBUoAw@2x.jpeg)](https://medium.com/@jamiemaserati/i-tried-to-be-the-perfect-husband-it-pushed-my-wife-straight-into-an-affair-d91098e0b7ee?source=email-2b8b8ee19057-1781806061702-digest.reader--d91098e0b7ee----14-73------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86-1)
+
+\[
+
+## I Tried to Be the Perfect Husband. It Pushed My Wife Straight Into an Affair
+
+### Adrenaline, more adrenaline, and eating the divorce…
+
+]\(https://medium.com/@jamiemaserati/i-tried-to-be-the-perfect-husband-it-pushed-my-wife-straight-into-an-affair-d91098e0b7ee?source=email-2b8b8ee19057-1781806061702-digest.reader--d91098e0b7ee----14-73------------------7ae06f3f\_fb63\_4b9d\_9d18\_5b9172ca1d86-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+11 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+98
+
+[![Become a Medium member](https://miro.medium.com/max/1360/6b37395e36e2d6768583b0d27172b3075c079241270c50b770a18b83476ecffc)](https://medium.com/plans?source=email-2b8b8ee19057-1781806061702-digest.reader-------------------------7ae06f3f_fb63_4b9d_9d18_5b9172ca1d86)
+
+
