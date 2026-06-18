@@ -1,0 +1,247 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Extending Node instead of replacing it
+description: Extending Node instead of replacing it
+date: 星期四 04 下午 六月 18o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/629
+origin_site: https://nodeweekly.com/issues/629
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Extending Node instead of replacing it" url="https://nodeweekly.com/issues/629" />
+
+<Detail client:only="react">
+	#​629 — June 18, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/629)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://nodeweekly.com/link/186723/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xi9civhxd1figdg9lyae.jpg)](https://nodeweekly.com/link/186724/0a4070b383)
+
+[Nub: An All-in-One Toolkit That _Augments_ Node](https://nodeweekly.com/link/186724/0a4070b383 "nubjs.com") — While Bun and Deno try to replace Node, this project from Zod’s creator (and a former Bun employee) _extends_ your existing Node and package manager with nice-to-haves, like fuller TypeScript support (beyond what type stripping offers), faster and more secure package installation, and fuller `.env` handling.
+
+Colin McDonnell et al.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/eea49560.jpg)](https://nodeweekly.com/link/186723/0a4070b383)
+
+[Free Claude Code Course from Anthropic + Master.Dev](https://nodeweekly.com/link/186723/0a4070b383 "frontendmasters.com") — Coding is changing fast, and the engineers who thrive will be the ones who direct AI instead of guessing at it. Lydia Hallie from Anthropic teaches exactly that in our Claude Code course, [now free for everyone](https://nodeweekly.com/link/186723/0a4070b383).
+
+Master.dev sponsor
+
+[Node.js 26.3.1, 24.17.0, and 22.23.0 Released](https://nodeweekly.com/link/186725/0a4070b383 "nodejs.org") — The latest [round of security releases](https://nodeweekly.com/link/186726/0a4070b383) is here, with [26.3.1 (Current)](https://nodeweekly.com/link/186725/0a4070b383), [24.17.0 (LTS)](https://nodeweekly.com/link/186727/0a4070b383), and [22.23.0 (LTS)](https://nodeweekly.com/link/186728/0a4070b383) fixing _eleven_ vulnerabilities. Two are of 'high' severity: one around [normalizing hostnames for server identity checks](https://nodeweekly.com/link/186729/0a4070b383) in `tls`, and the other in [WebCrypto](https://nodeweekly.com/link/186730/0a4070b383).
+
+Antoine du Hamel
+
+🔒 The releases above also include [Undici 8.5.0](https://nodeweekly.com/link/186763/0a4070b383) which has addressed some security advisories of its own.
+
+**IN BRIEF:**
+
+*   As [npm prepares to disable install scripts](https://nodeweekly.com/link/186731/0a4070b383) by default, Andrew Nesbitt looks at [how other tools and ecosystems handle install-script allow-listing](https://nodeweekly.com/link/186732/0a4070b383).
+    
+*   [Iroh 1.0](https://nodeweekly.com/link/186733/0a4070b383) is a peer-to-peer encrypted networking stack that punches through NAT and firewalls. It's built in Rust but has [official Node.js bindings](https://nodeweekly.com/link/186734/0a4070b383).
+    
+*   [Babel 8.0 has been released](https://nodeweekly.com/link/186735/0a4070b383): no new features, but with a focus on modernization. It's ESM-only, ships TypeScript types, and no longer compiles to ES5 and CommonJS by default.
+    
+
+[Shipping `psql` Without `psql`: A Pure-TypeScript Postgres Client](https://nodeweekly.com/link/186736/0a4070b383 "neon.com") — Postgres platform _Neon_ wanted the experience of Postgres’ `psql` client in their own Node-powered CLI, without the binary dependency. Here’s how they did it using AI, a strong conformance harness, and a security review.
+
+Vadim Kharitonov (Neon)
+
+[A Backdoor in a LinkedIn Job Offer](https://nodeweekly.com/link/186737/0a4070b383 "roman.pt") — A hacker, posing as a recruiter on LinkedIn, asked the author to diagnose an issue in a Node project, but the dependencies had a backdoor included. Both the recruiter and the git repo involved also used real identities of people unrelated to the scam.
+
+Roman Imankulov
+
+[How LinkedIn Unlocked 18x Code Review Throughput](https://nodeweekly.com/link/186738/0a4070b383 "www.youtube.com") — See how LinkedIn used Orkes and multi-agent workflows to scale code reviews 18x.
+
+Orkes sponsor
+
+📄 [What are Git Worktrees, And Why Should I Use Them?](https://nodeweekly.com/link/186739/0a4070b383) – A decade-old `git` feature that's seen a boost in the AI agent era. Cassidy Williams (GitHub)
+
+📄 [Setting Node and `pnpm` Versions in Cloudflare Workers Programmatically](https://nodeweekly.com/link/186740/0a4070b383) – _“I’ve wasted a couple of hours so you don’t have to.”_ Sen Hongo
+
+📄 [Wasp Now Lets You Write Your Full-Stack Logic as a Spec in TypeScript](https://nodeweekly.com/link/186741/0a4070b383) – Say goodbye to the React + Node.js + Prisma full-stack framework’s custom `.wasp` DSL. Martin Sosic (Wasp)
+
+📄 [Why pnpm No Longer Expands Environment Variables in `.npmrc`](https://nodeweekly.com/link/186742/0a4070b383) Zoltan Kochan
+
+🛠 Code & Tools
+
+✉️ [Nodemailer 9.0: Easily Send Emails from Node.js](https://nodeweekly.com/link/186743/0a4070b383 "nodemailer.com") — A long-standing, popular way to send emails over SMTP, through SES, or Sendmail. v9.0 now validates TLS connections by default when fetching remote content.
+
+Andris Reinman
+
+[zod-compiler: Compile Zod Schemas Into Zero-Overhead Validators](https://nodeweekly.com/link/186744/0a4070b383 "github.com") — A build-time compiler that plugs into Vite, webpack, et al. and rewrites existing schemas into optimized, tree-shakeable validators, with the full Zod API preserved.
+
+Gajus Kuizinas
+
+💬 [Node Telegram Bot API 1.0/1.1](https://nodeweekly.com/link/186745/0a4070b383 "github.com") — Interact with the official [Telegram Bot API](https://nodeweekly.com/link/186746/0a4070b383) from Node. Now modernized, rewritten in TypeScript, and ESM-only, with Telegram Bot API 10.1 support.
+
+Yago
+
+[eslint-plugin-unicorn 67.0: 200+ Powerful Linting Rules](https://nodeweekly.com/link/186747/0a4070b383 "github.com") — Sindre’s set of rules that will seriously challenge (and improve) your code, whether it's [comments](https://nodeweekly.com/link/186748/0a4070b383), [the depth of nested calls](https://nodeweekly.com/link/186749/0a4070b383), [preferring `Temporal` over `Date`](https://nodeweekly.com/link/186750/0a4070b383), and more.
+
+Sindre Sorhus et al.
+
+📰 Classifieds
+
+⚙️ [`clerk deploy` walks your app to production](https://nodeweekly.com/link/186751/0a4070b383): instance clone, DNS setup, OAuth credentials, SSL check. Guided, resumable, and [available now](https://nodeweekly.com/link/186751/0a4070b383).
+
+* * *
+
+AI writes a growing share of Node services, but your reviewer hasn't caught up to its mistakes. [pr-af is AgentField's multi-agent low cost reviewer](https://nodeweekly.com/link/186752/0a4070b383): compiled per PR, runs on open/closed models. [→ Star & deploy](https://nodeweekly.com/link/186752/0a4070b383).
+
+*   [XO 3.0](https://nodeweekly.com/link/186753/0a4070b383) – Opinionated ESLint wrapper that enforces strict and readable code with zero configuration. Includes [eslint-plugin-unicorn](https://nodeweekly.com/link/186747/0a4070b383) _(above)_.
+    
+*   [Playwright 1.61](https://nodeweekly.com/link/186754/0a4070b383) – You can now register and test passkeys, as well as read/write to `localStorage` and `sessionStorage` via a new [WebStorage](https://nodeweekly.com/link/186755/0a4070b383) API.
+    
+*   [ESLint v10.5.0](https://nodeweekly.com/link/186756/0a4070b383) – Five core rules now highlight smaller ranges of code to avoid shadowing other problems in editors.
+    
+*   [Axios 1.18.0](https://nodeweekly.com/link/186757/0a4070b383) – Security fixes and hardening for the promise-based HTTP client.
+    
+*   [node-gyp 13.0](https://nodeweekly.com/link/186758/0a4070b383) – Cross-platform tool for compiling native addon modules.
+    
+*   [graphql-js 17.0](https://nodeweekly.com/link/186759/0a4070b383) – Official reference implementation of GraphQL for JavaScript.
+    
+*   [Faker 10.5](https://nodeweekly.com/link/186760/0a4070b383) – Generate realistic but fake data for testing and development.
+    
+*   [Nx 23.0](https://nodeweekly.com/link/186761/0a4070b383) – Build system for TypeScript and polyglot monorepos.
+    
+*   [BSON Parser 7.3](https://nodeweekly.com/link/186762/0a4070b383) – BSON parser library.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​629 — June 18, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/629)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://nodeweekly.com/link/186723/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xi9civhxd1figdg9lyae.jpg)](https://nodeweekly.com/link/186724/0a4070b383)
+
+[Nub: An All-in-One Toolkit That *Augments* Node](https://nodeweekly.com/link/186724/0a4070b383 "nubjs.com") — While Bun and Deno try to replace Node, this project from Zod’s creator (and a former Bun employee) *extends* your existing Node and package manager with nice-to-haves, like fuller TypeScript support (beyond what type stripping offers), faster and more secure package installation, and fuller `.env` handling.
+
+Colin McDonnell et al.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/eea49560.jpg)](https://nodeweekly.com/link/186723/0a4070b383)
+
+[Free Claude Code Course from Anthropic + Master.Dev](https://nodeweekly.com/link/186723/0a4070b383 "frontendmasters.com") — Coding is changing fast, and the engineers who thrive will be the ones who direct AI instead of guessing at it. Lydia Hallie from Anthropic teaches exactly that in our Claude Code course, [now free for everyone](https://nodeweekly.com/link/186723/0a4070b383).
+
+Master.dev sponsor
+
+[Node.js 26.3.1, 24.17.0, and 22.23.0 Released](https://nodeweekly.com/link/186725/0a4070b383 "nodejs.org") — The latest [round of security releases](https://nodeweekly.com/link/186726/0a4070b383) is here, with [26.3.1 (Current)](https://nodeweekly.com/link/186725/0a4070b383), [24.17.0 (LTS)](https://nodeweekly.com/link/186727/0a4070b383), and [22.23.0 (LTS)](https://nodeweekly.com/link/186728/0a4070b383) fixing *eleven* vulnerabilities. Two are of 'high' severity: one around [normalizing hostnames for server identity checks](https://nodeweekly.com/link/186729/0a4070b383) in `tls`, and the other in [WebCrypto](https://nodeweekly.com/link/186730/0a4070b383).
+
+Antoine du Hamel
+
+🔒 The releases above also include [Undici 8.5.0](https://nodeweekly.com/link/186763/0a4070b383) which has addressed some security advisories of its own.
+
+**IN BRIEF:**
+
+* As [npm prepares to disable install scripts](https://nodeweekly.com/link/186731/0a4070b383) by default, Andrew Nesbitt looks at [how other tools and ecosystems handle install-script allow-listing](https://nodeweekly.com/link/186732/0a4070b383).
+
+* [Iroh 1.0](https://nodeweekly.com/link/186733/0a4070b383) is a peer-to-peer encrypted networking stack that punches through NAT and firewalls. It's built in Rust but has [official Node.js bindings](https://nodeweekly.com/link/186734/0a4070b383).
+
+* [Babel 8.0 has been released](https://nodeweekly.com/link/186735/0a4070b383): no new features, but with a focus on modernization. It's ESM-only, ships TypeScript types, and no longer compiles to ES5 and CommonJS by default.
+
+[Shipping `psql` Without `psql`: A Pure-TypeScript Postgres Client](https://nodeweekly.com/link/186736/0a4070b383 "neon.com") — Postgres platform *Neon* wanted the experience of Postgres’ `psql` client in their own Node-powered CLI, without the binary dependency. Here’s how they did it using AI, a strong conformance harness, and a security review.
+
+Vadim Kharitonov (Neon)
+
+[A Backdoor in a LinkedIn Job Offer](https://nodeweekly.com/link/186737/0a4070b383 "roman.pt") — A hacker, posing as a recruiter on LinkedIn, asked the author to diagnose an issue in a Node project, but the dependencies had a backdoor included. Both the recruiter and the git repo involved also used real identities of people unrelated to the scam.
+
+Roman Imankulov
+
+[How LinkedIn Unlocked 18x Code Review Throughput](https://nodeweekly.com/link/186738/0a4070b383 "www.youtube.com") — See how LinkedIn used Orkes and multi-agent workflows to scale code reviews 18x.
+
+Orkes sponsor
+
+📄 [What are Git Worktrees, And Why Should I Use Them?](https://nodeweekly.com/link/186739/0a4070b383) – A decade-old `git` feature that's seen a boost in the AI agent era. Cassidy Williams (GitHub)
+
+📄 [Setting Node and `pnpm` Versions in Cloudflare Workers Programmatically](https://nodeweekly.com/link/186740/0a4070b383) – *“I’ve wasted a couple of hours so you don’t have to.”* Sen Hongo
+
+📄 [Wasp Now Lets You Write Your Full-Stack Logic as a Spec in TypeScript](https://nodeweekly.com/link/186741/0a4070b383) – Say goodbye to the React + Node.js + Prisma full-stack framework’s custom `.wasp` DSL. Martin Sosic (Wasp)
+
+📄 [Why pnpm No Longer Expands Environment Variables in `.npmrc`](https://nodeweekly.com/link/186742/0a4070b383) Zoltan Kochan
+
+🛠 Code & Tools
+
+✉️ [Nodemailer 9.0: Easily Send Emails from Node.js](https://nodeweekly.com/link/186743/0a4070b383 "nodemailer.com") — A long-standing, popular way to send emails over SMTP, through SES, or Sendmail. v9.0 now validates TLS connections by default when fetching remote content.
+
+Andris Reinman
+
+[zod-compiler: Compile Zod Schemas Into Zero-Overhead Validators](https://nodeweekly.com/link/186744/0a4070b383 "github.com") — A build-time compiler that plugs into Vite, webpack, et al. and rewrites existing schemas into optimized, tree-shakeable validators, with the full Zod API preserved.
+
+Gajus Kuizinas
+
+💬 [Node Telegram Bot API 1.0/1.1](https://nodeweekly.com/link/186745/0a4070b383 "github.com") — Interact with the official [Telegram Bot API](https://nodeweekly.com/link/186746/0a4070b383) from Node. Now modernized, rewritten in TypeScript, and ESM-only, with Telegram Bot API 10.1 support.
+
+Yago
+
+[eslint-plugin-unicorn 67.0: 200+ Powerful Linting Rules](https://nodeweekly.com/link/186747/0a4070b383 "github.com") — Sindre’s set of rules that will seriously challenge (and improve) your code, whether it's [comments](https://nodeweekly.com/link/186748/0a4070b383), [the depth of nested calls](https://nodeweekly.com/link/186749/0a4070b383), [preferring `Temporal` over `Date`](https://nodeweekly.com/link/186750/0a4070b383), and more.
+
+Sindre Sorhus et al.
+
+📰 Classifieds
+
+⚙️ [`clerk deploy` walks your app to production](https://nodeweekly.com/link/186751/0a4070b383): instance clone, DNS setup, OAuth credentials, SSL check. Guided, resumable, and [available now](https://nodeweekly.com/link/186751/0a4070b383).
+
+***
+
+AI writes a growing share of Node services, but your reviewer hasn't caught up to its mistakes. [pr-af is AgentField's multi-agent low cost reviewer](https://nodeweekly.com/link/186752/0a4070b383): compiled per PR, runs on open/closed models. [→ Star & deploy](https://nodeweekly.com/link/186752/0a4070b383).
+
+* [XO 3.0](https://nodeweekly.com/link/186753/0a4070b383) – Opinionated ESLint wrapper that enforces strict and readable code with zero configuration. Includes [eslint-plugin-unicorn](https://nodeweekly.com/link/186747/0a4070b383) *(above)*.
+
+* [Playwright 1.61](https://nodeweekly.com/link/186754/0a4070b383) – You can now register and test passkeys, as well as read/write to `localStorage` and `sessionStorage` via a new [WebStorage](https://nodeweekly.com/link/186755/0a4070b383) API.
+
+* [ESLint v10.5.0](https://nodeweekly.com/link/186756/0a4070b383) – Five core rules now highlight smaller ranges of code to avoid shadowing other problems in editors.
+
+* [Axios 1.18.0](https://nodeweekly.com/link/186757/0a4070b383) – Security fixes and hardening for the promise-based HTTP client.
+
+* [node-gyp 13.0](https://nodeweekly.com/link/186758/0a4070b383) – Cross-platform tool for compiling native addon modules.
+
+* [graphql-js 17.0](https://nodeweekly.com/link/186759/0a4070b383) – Official reference implementation of GraphQL for JavaScript.
+
+* [Faker 10.5](https://nodeweekly.com/link/186760/0a4070b383) – Generate realistic but fake data for testing and development.
+
+* [Nx 23.0](https://nodeweekly.com/link/186761/0a4070b383) – Build system for TypeScript and polyglot monorepos.
+
+* [BSON Parser 7.3](https://nodeweekly.com/link/186762/0a4070b383) – BSON parser library.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
