@@ -1,0 +1,841 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: How to Design a Production-Ready RAG System (Architecture + Tradeoffs) | Kuriko Iwai
+description: How to Design a Production-Ready RAG System (Architecture + Tradeoffs) | Kuriko Iwai
+date: 星期六 11 晚上 六月 20o 2026
+author: mediumcom
+origin_url: https://medium.com/
+origin_site: https://medium.com/
+translated: true
+avatar: /media-source/mediumcom-ico.png
+email_recorder: noreply@medium.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="How to Design a Production-Ready RAG System (Architecture + Tradeoffs) | Kuriko Iwai" url="https://medium.com/" />
+
+<Detail client:only="react">
+	Today's highlights
+
+[![Kuriko Iwai](https://miro.medium.com/fit/c/40/40/1*3dh0rZ0FkyCWyCXJ6qjvjg.png)](https://medium.com/@kuriko-iwai?source=email-2b8b8ee19057-1781978578454-digest.reader--507fb22083d1----0-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Kuriko Iwai](https://medium.com/@kuriko-iwai?source=email-2b8b8ee19057-1781978578454-digest.reader--507fb22083d1----0-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![How to Design a Production-Ready RAG System (Architecture + Tradeoffs)](https://miro.medium.com/fit/c/320/214/0*AT6ZUXqMPQu5Th0v)](https://medium.com/@kuriko-iwai/a-technical-roadmap-to-rag-architectures-and-decision-logic-2026-edition-507fb22083d1?source=email-2b8b8ee19057-1781978578454-digest.reader--507fb22083d1----0-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[
+
+## How to Design a Production-Ready RAG System (Architecture + Tradeoffs)
+
+### A practical guide to balancing cost, latency, and…
+
+
+
+](https://medium.com/@kuriko-iwai/a-technical-roadmap-to-rag-architectures-and-decision-logic-2026-edition-507fb22083d1?source=email-2b8b8ee19057-1781978578454-digest.reader--507fb22083d1----0-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+11 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+312
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+9
+
+[![Erdogan T](https://miro.medium.com/fit/c/40/40/1*1RdPiWqDKP-Gp7bbMktXJQ.jpeg)](https://medium.com/@erdogant?source=email-2b8b8ee19057-1781978578454-digest.reader-8993e01dcfd3-24c6cd6fa849----1-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Erdogan T](https://medium.com/@erdogant?source=email-2b8b8ee19057-1781978578454-digest.reader-8993e01dcfd3-24c6cd6fa849----1-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[Data Science Collective](https://medium.com/data-science-collective?source=email-2b8b8ee19057-1781978578454-digest.reader-8993e01dcfd3-24c6cd6fa849----1-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![A Step-by-Step Guide for Developing Your Personal Agentic System.](https://miro.medium.com/fit/c/320/214/1*po63mpOfUFmrajkBRmDkGw.png)](https://medium.com/@erdogant/a-step-by-step-guide-for-developing-your-personal-agentic-system-24c6cd6fa849?source=email-2b8b8ee19057-1781978578454-digest.reader-8993e01dcfd3-24c6cd6fa849----1-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[
+
+## A Step-by-Step Guide for Developing Your Personal Agentic System.
+
+### A complete guide to learn how to set up and create…
+
+
+
+](https://medium.com/@erdogant/a-step-by-step-guide-for-developing-your-personal-agentic-system-24c6cd6fa849?source=email-2b8b8ee19057-1781978578454-digest.reader-8993e01dcfd3-24c6cd6fa849----1-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+36 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+688
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+14
+
+[![H. Willraft](https://miro.medium.com/fit/c/40/40/1*6btCNhrKQblLOUwGhdT2SQ.png)](https://medium.com/@hwillraft?source=email-2b8b8ee19057-1781978578454-digest.reader-72954f5df4f2-1499da2bfa67----2-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[H. Willraft](https://medium.com/@hwillraft?source=email-2b8b8ee19057-1781978578454-digest.reader-72954f5df4f2-1499da2bfa67----2-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[The Haven](https://medium.com/the-haven?source=email-2b8b8ee19057-1781978578454-digest.reader-72954f5df4f2-1499da2bfa67----2-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![The Most Dangerous Book Carl Jung Ever Wrote Sat Hidden in a Bank Vault for 50 Years](https://miro.medium.com/fit/c/320/214/1*bBgx61iDR3MaMXWrraZiCA.jpeg)](https://medium.com/@hwillraft/the-most-dangerous-book-carl-jung-ever-wrote-sat-hidden-in-a-bank-vault-for-50-years-1499da2bfa67?source=email-2b8b8ee19057-1781978578454-digest.reader-72954f5df4f2-1499da2bfa67----2-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[
+
+## The Most Dangerous Book Carl Jung Ever Wrote Sat Hidden in a Bank Vault for 50…
+
+### He said it was the source of everything. Then he spent…
+
+
+
+](https://medium.com/@hwillraft/the-most-dangerous-book-carl-jung-ever-wrote-sat-hidden-in-a-bank-vault-for-50-years-1499da2bfa67?source=email-2b8b8ee19057-1781978578454-digest.reader-72954f5df4f2-1499da2bfa67----2-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+178
+
+[![Jaroslaw Wasowski](https://miro.medium.com/fit/c/40/40/1*cuhWGbyfjnM3EdO5pVGqOA.png)](https://medium.com/@wasowski.jarek?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-8118f9a4617a----3-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Jaroslaw Wasowski](https://medium.com/@wasowski.jarek?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-8118f9a4617a----3-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-8118f9a4617a----3-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![Formal Verification in Spec-Driven Development — Enterprise Level](https://miro.medium.com/fit/c/320/214/1*fczwyLS6AMKqyJwIofaBbQ.png)](https://medium.com/@wasowski.jarek/formal-verification-in-spec-driven-development-enterprise-level-8118f9a4617a?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-8118f9a4617a----3-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[
+
+## Formal Verification in Spec-Driven Development — Enterprise Level
+
+### In regulated enterprise, a specification becomes an…
+
+
+
+](https://medium.com/@wasowski.jarek/formal-verification-in-spec-driven-development-enterprise-level-8118f9a4617a?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-8118f9a4617a----3-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+268
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+3
+
+[![Oz](https://miro.medium.com/fit/c/40/40/1*e1TnXV7chl44rZzLmczPqw.jpeg)](https://medium.com/@ozwizard?source=email-2b8b8ee19057-1781978578454-digest.reader-bac78afc0c1f-6f0532202ee8----4-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Oz](https://medium.com/@ozwizard?source=email-2b8b8ee19057-1781978578454-digest.reader-bac78afc0c1f-6f0532202ee8----4-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[The Tech Notes](https://medium.com/the-tech-notes?source=email-2b8b8ee19057-1781978578454-digest.reader-bac78afc0c1f-6f0532202ee8----4-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![Kubernetes is Officially Doomed (And Linus Torvalds Warned Us)](https://miro.medium.com/fit/c/320/214/1*epc2g43XYUuCzpQWs82sgA.jpeg)](https://medium.com/@ozwizard/kubernetes-is-officially-doomed-and-linus-torvalds-warned-us-6f0532202ee8?source=email-2b8b8ee19057-1781978578454-digest.reader-bac78afc0c1f-6f0532202ee8----4-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[
+
+## Kubernetes is Officially Doomed (And Linus Torvalds Warned Us)
+
+### Why tech giants are quietly abandoning the…
+
+
+
+](https://medium.com/@ozwizard/kubernetes-is-officially-doomed-and-linus-torvalds-warned-us-6f0532202ee8?source=email-2b8b8ee19057-1781978578454-digest.reader-bac78afc0c1f-6f0532202ee8----4-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+2.6K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+105
+
+[![Marc Dauphin](https://miro.medium.com/fit/c/40/40/1*ojUZYdrn5LYfuAoF_KEDRA.jpeg)](https://medium.com/@marcdauphin?source=email-2b8b8ee19057-1781978578454-digest.reader--892bd989fea8----5-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Marc Dauphin](https://medium.com/@marcdauphin?source=email-2b8b8ee19057-1781978578454-digest.reader--892bd989fea8----5-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![My Dad and I.](https://miro.medium.com/fit/c/320/214/1*ojUZYdrn5LYfuAoF_KEDRA.jpeg)](https://medium.com/@marcdauphin/my-dad-and-i-892bd989fea8?source=email-2b8b8ee19057-1781978578454-digest.reader--892bd989fea8----5-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[
+
+## My Dad and I.
+
+### Sometimes parents don’t get the children they wanted…
+
+
+
+](https://medium.com/@marcdauphin/my-dad-and-i-892bd989fea8?source=email-2b8b8ee19057-1781978578454-digest.reader--892bd989fea8----5-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+4.5K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+165
+
+[![zhaozhiming](https://miro.medium.com/fit/c/40/40/1*MKcWgwWFa6EL01_JmxPAPQ.jpeg)](https://medium.com/@zhaozhiming?source=email-2b8b8ee19057-1781978578454-digest.reader-3fe99b2acc4-3e24ed7b8f7d----6-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[zhaozhiming](https://medium.com/@zhaozhiming?source=email-2b8b8ee19057-1781978578454-digest.reader-3fe99b2acc4-3e24ed7b8f7d----6-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[AI Advances](https://medium.com/ai-advances?source=email-2b8b8ee19057-1781978578454-digest.reader-3fe99b2acc4-3e24ed7b8f7d----6-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![The Complete Guide to Claude Code — Plugins](https://miro.medium.com/fit/c/320/214/1*Y_2jeKq-9TVFxMnMkseVSA.jpeg)](https://medium.com/@zhaozhiming/the-complete-guide-to-claude-code-plugins-3e24ed7b8f7d?source=email-2b8b8ee19057-1781978578454-digest.reader-3fe99b2acc4-3e24ed7b8f7d----6-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[
+
+## The Complete Guide to Claude Code — Plugins
+
+### An in-depth look at Claude Code’s Plugin system…
+
+
+
+](https://medium.com/@zhaozhiming/the-complete-guide-to-claude-code-plugins-3e24ed7b8f7d?source=email-2b8b8ee19057-1781978578454-digest.reader-3fe99b2acc4-3e24ed7b8f7d----6-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+13 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+241
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Fareed Khan](https://miro.medium.com/fit/c/40/40/1*feiUXOR8sid6IPHSHufA-g.jpeg)](https://medium.com/@fareedkhandev?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-2ad79f8190bb----7-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Fareed Khan](https://medium.com/@fareedkhandev?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-2ad79f8190bb----7-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-2ad79f8190bb----7-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![Building a Week-Long Running Agentic System](https://miro.medium.com/fit/c/320/214/1*pFIXxpoDf9rxe33GeOLEOQ.png)](https://medium.com/@fareedkhandev/building-a-week-long-running-agentic-system-2ad79f8190bb?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-2ad79f8190bb----7-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[
+
+## Building a Week-Long Running Agentic System
+
+### Durability is an engineering property, not a model…
+
+
+
+](https://medium.com/@fareedkhandev/building-a-week-long-running-agentic-system-2ad79f8190bb?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-2ad79f8190bb----7-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+56 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+910
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+7
+
+[![Can Artuc](https://miro.medium.com/fit/c/40/40/1*nYsxx3FENvKi2CiYIo4Xhg.png)](https://medium.com/@canartuc?source=email-2b8b8ee19057-1781978578454-digest.reader--da390a20bc1f----8-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Can Artuc](https://medium.com/@canartuc?source=email-2b8b8ee19057-1781978578454-digest.reader--da390a20bc1f----8-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![A $4 Billion Empire Broke Open Source. They Threatened One Developer. It Backfired.](https://miro.medium.com/fit/c/320/214/1*bZq_zAvwqgpyaaAbvFOr5g.jpeg)](https://medium.com/@canartuc/a-4-billion-empire-broke-open-source-they-threatened-one-developer-it-backfired-da390a20bc1f?source=email-2b8b8ee19057-1781978578454-digest.reader--da390a20bc1f----8-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[
+
+## A $4 Billion Empire Broke Open Source. They Threatened One Developer. It…
+
+### They took open-source code for free, then threatened…
+
+
+
+](https://medium.com/@canartuc/a-4-billion-empire-broke-open-source-they-threatened-one-developer-it-backfired-da390a20bc1f?source=email-2b8b8ee19057-1781978578454-digest.reader--da390a20bc1f----8-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+9 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+7.9K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+68
+
+[![Messi Li](https://miro.medium.com/fit/c/40/40/2*3NHejM-vh1xehDsjDhmS2A.jpeg)](https://medium.com/@licaomeng?source=email-2b8b8ee19057-1781978578454-digest.reader--1db4e242d08a----9-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Messi Li](https://medium.com/@licaomeng?source=email-2b8b8ee19057-1781978578454-digest.reader--1db4e242d08a----9-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![Building a Production Agent Harness: Turning Claude Code Into a Multi-Agent Engineering Pipeline](https://miro.medium.com/fit/c/320/214/0*xRnvZyB0FppYahBb.jpg)](https://medium.com/@licaomeng/building-a-production-agent-harness-turning-claude-code-into-a-multi-agent-engineering-pipeline-1db4e242d08a?source=email-2b8b8ee19057-1781978578454-digest.reader--1db4e242d08a----9-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[
+
+## Building a Production Agent Harness: Turning Claude Code Into a Multi-Agent…
+
+### A coding agent on its own is a brain in a jar. It can…
+
+
+
+](https://medium.com/@licaomeng/building-a-production-agent-harness-turning-claude-code-into-a-multi-agent-engineering-pipeline-1db4e242d08a?source=email-2b8b8ee19057-1781978578454-digest.reader--1db4e242d08a----9-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+37 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+607
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+8
+
+[![Maia Niguel Hoskin, Ph.D.](https://miro.medium.com/fit/c/40/40/2*b0AO2SXrJrNUu5Ol21so-g.jpeg)](https://medium.com/@mnhoskin25?source=email-2b8b8ee19057-1781978578454-digest.reader-8ccfed20cbb2-fac36ff1c1d1----10-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Maia Niguel Hoskin, Ph.D.](https://medium.com/@mnhoskin25?source=email-2b8b8ee19057-1781978578454-digest.reader-8ccfed20cbb2-fac36ff1c1d1----10-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[ZORA](https://medium.com/zora?source=email-2b8b8ee19057-1781978578454-digest.reader-8ccfed20cbb2-fac36ff1c1d1----10-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![I Looked At My Husband And Thought: How Is This My Life?](https://miro.medium.com/fit/c/320/214/0*e47-Jnm3cLuK_nZO)](https://medium.com/@mnhoskin25/i-looked-at-my-husband-and-thought-how-is-this-my-life-fac36ff1c1d1?source=email-2b8b8ee19057-1781978578454-digest.reader-8ccfed20cbb2-fac36ff1c1d1----10-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[
+
+## I Looked At My Husband And Thought: How Is This My Life?
+
+### The other day, I looked at my husband after a workout…
+
+
+
+](https://medium.com/@mnhoskin25/i-looked-at-my-husband-and-thought-how-is-this-my-life-fac36ff1c1d1?source=email-2b8b8ee19057-1781978578454-digest.reader-8ccfed20cbb2-fac36ff1c1d1----10-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+8.6K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+210
+
+[![Alex Punnen](https://miro.medium.com/fit/c/40/40/1*-LGo1-ORRb_uBZCFOQFzhQ.jpeg)](https://medium.com/@alexcpn?source=email-2b8b8ee19057-1781978578454-digest.reader-98111c9905da-491c71bcf835----11-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Alex Punnen](https://medium.com/@alexcpn?source=email-2b8b8ee19057-1781978578454-digest.reader-98111c9905da-491c71bcf835----11-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[Towards AI](https://medium.com/towards-artificial-intelligence?source=email-2b8b8ee19057-1781978578454-digest.reader-98111c9905da-491c71bcf835----11-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![Why Specification-Driven Development (SDD) is Not a Silver Bullet for AI-Assisted SDLC](https://miro.medium.com/fit/c/320/214/1*S1SAKi-uuNHASBgJpMYjwg.png)](https://medium.com/@alexcpn/why-specification-driven-development-sdd-is-not-a-silver-bullet-for-ai-assisted-sdlc-491c71bcf835?source=email-2b8b8ee19057-1781978578454-digest.reader-98111c9905da-491c71bcf835----11-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[
+
+## Why Specification-Driven Development (SDD) is Not a Silver Bullet for…
+
+### Using a popular SDD GitHub Spec Kit and a real-world…
+
+
+
+](https://medium.com/@alexcpn/why-specification-driven-development-sdd-is-not-a-silver-bullet-for-ai-assisted-sdlc-491c71bcf835?source=email-2b8b8ee19057-1781978578454-digest.reader-98111c9905da-491c71bcf835----11-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+339
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+11
+
+[![Daniel Warfield](https://miro.medium.com/fit/c/40/40/1*YaEyucgUXLb6TwSFW-ucXg.jpeg)](https://medium.com/@danielwarfield1?source=email-2b8b8ee19057-1781978578454-digest.reader-256b0fd08337-52aa6b4e7ebd----12-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Daniel Warfield](https://medium.com/@danielwarfield1?source=email-2b8b8ee19057-1781978578454-digest.reader-256b0fd08337-52aa6b4e7ebd----12-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[Intuitively and Exhaustively Explained](https://medium.com/intuitively-and-exhaustively-explained?source=email-2b8b8ee19057-1781978578454-digest.reader-256b0fd08337-52aa6b4e7ebd----12-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![Agent Harnesses — Intuitively and Exhaustively Explained](https://miro.medium.com/fit/c/320/214/1*ITuyyowGqAy8H2EASFEwZA.png)](https://medium.com/@danielwarfield1/agent-harnesses-intuitively-and-exhaustively-explained-52aa6b4e7ebd?source=email-2b8b8ee19057-1781978578454-digest.reader-256b0fd08337-52aa6b4e7ebd----12-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[
+
+## Agent Harnesses — Intuitively and Exhaustively Explained
+
+### A new standard for modern AI agent development
+
+
+
+](https://medium.com/@danielwarfield1/agent-harnesses-intuitively-and-exhaustively-explained-52aa6b4e7ebd?source=email-2b8b8ee19057-1781978578454-digest.reader-256b0fd08337-52aa6b4e7ebd----12-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+10 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+273
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+6
+
+[![Prateek Jain](https://miro.medium.com/fit/c/40/40/1*qXSrARHEnyR0w7Y7xlLCCw@2x.jpeg)](https://medium.com/@prateekjain.dev?source=email-2b8b8ee19057-1781978578454-digest.reader--6e84b6cc7778----13-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Prateek Jain](https://medium.com/@prateekjain.dev?source=email-2b8b8ee19057-1781978578454-digest.reader--6e84b6cc7778----13-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![You Should Move to pnpm from npm Now](https://miro.medium.com/fit/c/320/214/1*kaWWHTaPiOn5frEn7lRY5g.png)](https://medium.com/@prateekjain.dev/you-should-move-to-pnpm-from-npm-now-6e84b6cc7778?source=email-2b8b8ee19057-1781978578454-digest.reader--6e84b6cc7778----13-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[
+
+## You Should Move to pnpm from npm Now
+
+### Upgrade your package manager before a supply chain…
+
+
+
+](https://medium.com/@prateekjain.dev/you-should-move-to-pnpm-from-npm-now-6e84b6cc7778?source=email-2b8b8ee19057-1781978578454-digest.reader--6e84b6cc7778----13-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+243
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+5
+
+[![Roan Brasil Monteiro](https://miro.medium.com/fit/c/40/40/2*HngWUnkyNsjB30P1blBHJw.jpeg)](https://medium.com/@roanmonteiro?source=email-2b8b8ee19057-1781978578454-digest.reader--d7b61c7398ff----14-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Roan Brasil Monteiro](https://medium.com/@roanmonteiro?source=email-2b8b8ee19057-1781978578454-digest.reader--d7b61c7398ff----14-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![Building a Complete Personal Harness: LLM Wiki + Developer’s Second Brain in Obsidian](https://miro.medium.com/fit/c/320/214/1*06SRbFM1GVKJIg0MnCx_4w.png)](https://medium.com/@roanmonteiro/building-a-complete-personal-harness-llm-wiki-developers-second-brain-in-obsidian-d7b61c7398ff?source=email-2b8b8ee19057-1781978578454-digest.reader--d7b61c7398ff----14-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[
+
+## Building a Complete Personal Harness: LLM Wiki + Developer’s Second Brain in…
+
+### Hands-on, step-by-step tutorial for setting up an…
+
+
+
+](https://medium.com/@roanmonteiro/building-a-complete-personal-harness-llm-wiki-developers-second-brain-in-obsidian-d7b61c7398ff?source=email-2b8b8ee19057-1781978578454-digest.reader--d7b61c7398ff----14-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+23 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+790
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+13
+
+[![Become a Medium member](https://miro.medium.com/max/1360/fdd6efe83eb37854bf3b2def5b36e627bf04fff70e7276887f535f050962b87b)](https://medium.com/plans?source=email-2b8b8ee19057-1781978578454-digest.reader-------------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253)
+
+
+</Detail>
+
+Today's highlights
+
+[![Kuriko Iwai](https://miro.medium.com/fit/c/40/40/1*3dh0rZ0FkyCWyCXJ6qjvjg.png)](https://medium.com/@kuriko-iwai?source=email-2b8b8ee19057-1781978578454-digest.reader--507fb22083d1----0-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Kuriko Iwai](https://medium.com/@kuriko-iwai?source=email-2b8b8ee19057-1781978578454-digest.reader--507fb22083d1----0-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![How to Design a Production-Ready RAG System (Architecture + Tradeoffs)](https://miro.medium.com/fit/c/320/214/0*AT6ZUXqMPQu5Th0v)](https://medium.com/@kuriko-iwai/a-technical-roadmap-to-rag-architectures-and-decision-logic-2026-edition-507fb22083d1?source=email-2b8b8ee19057-1781978578454-digest.reader--507fb22083d1----0-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+\[
+
+## How to Design a Production-Ready RAG System (Architecture + Tradeoffs)
+
+### A practical guide to balancing cost, latency, and…
+
+]\(https://medium.com/@kuriko-iwai/a-technical-roadmap-to-rag-architectures-and-decision-logic-2026-edition-507fb22083d1?source=email-2b8b8ee19057-1781978578454-digest.reader--507fb22083d1----0-102------------------e1bb3e6c\_bb2d\_4d38\_82cd\_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+11 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+312
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+9
+
+[![Erdogan T](https://miro.medium.com/fit/c/40/40/1*1RdPiWqDKP-Gp7bbMktXJQ.jpeg)](https://medium.com/@erdogant?source=email-2b8b8ee19057-1781978578454-digest.reader-8993e01dcfd3-24c6cd6fa849----1-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Erdogan T](https://medium.com/@erdogant?source=email-2b8b8ee19057-1781978578454-digest.reader-8993e01dcfd3-24c6cd6fa849----1-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[Data Science Collective](https://medium.com/data-science-collective?source=email-2b8b8ee19057-1781978578454-digest.reader-8993e01dcfd3-24c6cd6fa849----1-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![A Step-by-Step Guide for Developing Your Personal Agentic System.](https://miro.medium.com/fit/c/320/214/1*po63mpOfUFmrajkBRmDkGw.png)](https://medium.com/@erdogant/a-step-by-step-guide-for-developing-your-personal-agentic-system-24c6cd6fa849?source=email-2b8b8ee19057-1781978578454-digest.reader-8993e01dcfd3-24c6cd6fa849----1-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+\[
+
+## A Step-by-Step Guide for Developing Your Personal Agentic System.
+
+### A complete guide to learn how to set up and create…
+
+]\(https://medium.com/@erdogant/a-step-by-step-guide-for-developing-your-personal-agentic-system-24c6cd6fa849?source=email-2b8b8ee19057-1781978578454-digest.reader-8993e01dcfd3-24c6cd6fa849----1-109------------------e1bb3e6c\_bb2d\_4d38\_82cd\_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+36 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+688
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+14
+
+[![H. Willraft](https://miro.medium.com/fit/c/40/40/1*6btCNhrKQblLOUwGhdT2SQ.png)](https://medium.com/@hwillraft?source=email-2b8b8ee19057-1781978578454-digest.reader-72954f5df4f2-1499da2bfa67----2-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[H. Willraft](https://medium.com/@hwillraft?source=email-2b8b8ee19057-1781978578454-digest.reader-72954f5df4f2-1499da2bfa67----2-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[The Haven](https://medium.com/the-haven?source=email-2b8b8ee19057-1781978578454-digest.reader-72954f5df4f2-1499da2bfa67----2-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![The Most Dangerous Book Carl Jung Ever Wrote Sat Hidden in a Bank Vault for 50 Years](https://miro.medium.com/fit/c/320/214/1*bBgx61iDR3MaMXWrraZiCA.jpeg)](https://medium.com/@hwillraft/the-most-dangerous-book-carl-jung-ever-wrote-sat-hidden-in-a-bank-vault-for-50-years-1499da2bfa67?source=email-2b8b8ee19057-1781978578454-digest.reader-72954f5df4f2-1499da2bfa67----2-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+\[
+
+## The Most Dangerous Book Carl Jung Ever Wrote Sat Hidden in a Bank Vault for 50…
+
+### He said it was the source of everything. Then he spent…
+
+]\(https://medium.com/@hwillraft/the-most-dangerous-book-carl-jung-ever-wrote-sat-hidden-in-a-bank-vault-for-50-years-1499da2bfa67?source=email-2b8b8ee19057-1781978578454-digest.reader-72954f5df4f2-1499da2bfa67----2-99------------------e1bb3e6c\_bb2d\_4d38\_82cd\_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+178
+
+[![Jaroslaw Wasowski](https://miro.medium.com/fit/c/40/40/1*cuhWGbyfjnM3EdO5pVGqOA.png)](https://medium.com/@wasowski.jarek?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-8118f9a4617a----3-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Jaroslaw Wasowski](https://medium.com/@wasowski.jarek?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-8118f9a4617a----3-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-8118f9a4617a----3-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![Formal Verification in Spec-Driven Development — Enterprise Level](https://miro.medium.com/fit/c/320/214/1*fczwyLS6AMKqyJwIofaBbQ.png)](https://medium.com/@wasowski.jarek/formal-verification-in-spec-driven-development-enterprise-level-8118f9a4617a?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-8118f9a4617a----3-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+\[
+
+## Formal Verification in Spec-Driven Development — Enterprise Level
+
+### In regulated enterprise, a specification becomes an…
+
+]\(https://medium.com/@wasowski.jarek/formal-verification-in-spec-driven-development-enterprise-level-8118f9a4617a?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-8118f9a4617a----3-109------------------e1bb3e6c\_bb2d\_4d38\_82cd\_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+268
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+3
+
+[![Oz](https://miro.medium.com/fit/c/40/40/1*e1TnXV7chl44rZzLmczPqw.jpeg)](https://medium.com/@ozwizard?source=email-2b8b8ee19057-1781978578454-digest.reader-bac78afc0c1f-6f0532202ee8----4-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Oz](https://medium.com/@ozwizard?source=email-2b8b8ee19057-1781978578454-digest.reader-bac78afc0c1f-6f0532202ee8----4-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[The Tech Notes](https://medium.com/the-tech-notes?source=email-2b8b8ee19057-1781978578454-digest.reader-bac78afc0c1f-6f0532202ee8----4-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![Kubernetes is Officially Doomed (And Linus Torvalds Warned Us)](https://miro.medium.com/fit/c/320/214/1*epc2g43XYUuCzpQWs82sgA.jpeg)](https://medium.com/@ozwizard/kubernetes-is-officially-doomed-and-linus-torvalds-warned-us-6f0532202ee8?source=email-2b8b8ee19057-1781978578454-digest.reader-bac78afc0c1f-6f0532202ee8----4-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+\[
+
+## Kubernetes is Officially Doomed (And Linus Torvalds Warned Us)
+
+### Why tech giants are quietly abandoning the…
+
+]\(https://medium.com/@ozwizard/kubernetes-is-officially-doomed-and-linus-torvalds-warned-us-6f0532202ee8?source=email-2b8b8ee19057-1781978578454-digest.reader-bac78afc0c1f-6f0532202ee8----4-99------------------e1bb3e6c\_bb2d\_4d38\_82cd\_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+2.6K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+105
+
+[![Marc Dauphin](https://miro.medium.com/fit/c/40/40/1*ojUZYdrn5LYfuAoF_KEDRA.jpeg)](https://medium.com/@marcdauphin?source=email-2b8b8ee19057-1781978578454-digest.reader--892bd989fea8----5-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Marc Dauphin](https://medium.com/@marcdauphin?source=email-2b8b8ee19057-1781978578454-digest.reader--892bd989fea8----5-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![My Dad and I.](https://miro.medium.com/fit/c/320/214/1*ojUZYdrn5LYfuAoF_KEDRA.jpeg)](https://medium.com/@marcdauphin/my-dad-and-i-892bd989fea8?source=email-2b8b8ee19057-1781978578454-digest.reader--892bd989fea8----5-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+\[
+
+## My Dad and I.
+
+### Sometimes parents don’t get the children they wanted…
+
+]\(https://medium.com/@marcdauphin/my-dad-and-i-892bd989fea8?source=email-2b8b8ee19057-1781978578454-digest.reader--892bd989fea8----5-102------------------e1bb3e6c\_bb2d\_4d38\_82cd\_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+4.5K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+165
+
+[![zhaozhiming](https://miro.medium.com/fit/c/40/40/1*MKcWgwWFa6EL01_JmxPAPQ.jpeg)](https://medium.com/@zhaozhiming?source=email-2b8b8ee19057-1781978578454-digest.reader-3fe99b2acc4-3e24ed7b8f7d----6-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[zhaozhiming](https://medium.com/@zhaozhiming?source=email-2b8b8ee19057-1781978578454-digest.reader-3fe99b2acc4-3e24ed7b8f7d----6-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[AI Advances](https://medium.com/ai-advances?source=email-2b8b8ee19057-1781978578454-digest.reader-3fe99b2acc4-3e24ed7b8f7d----6-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![The Complete Guide to Claude Code — Plugins](https://miro.medium.com/fit/c/320/214/1*Y_2jeKq-9TVFxMnMkseVSA.jpeg)](https://medium.com/@zhaozhiming/the-complete-guide-to-claude-code-plugins-3e24ed7b8f7d?source=email-2b8b8ee19057-1781978578454-digest.reader-3fe99b2acc4-3e24ed7b8f7d----6-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+\[
+
+## The Complete Guide to Claude Code — Plugins
+
+### An in-depth look at Claude Code’s Plugin system…
+
+]\(https://medium.com/@zhaozhiming/the-complete-guide-to-claude-code-plugins-3e24ed7b8f7d?source=email-2b8b8ee19057-1781978578454-digest.reader-3fe99b2acc4-3e24ed7b8f7d----6-109------------------e1bb3e6c\_bb2d\_4d38\_82cd\_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+13 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+241
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Fareed Khan](https://miro.medium.com/fit/c/40/40/1*feiUXOR8sid6IPHSHufA-g.jpeg)](https://medium.com/@fareedkhandev?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-2ad79f8190bb----7-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Fareed Khan](https://medium.com/@fareedkhandev?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-2ad79f8190bb----7-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-2ad79f8190bb----7-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![Building a Week-Long Running Agentic System](https://miro.medium.com/fit/c/320/214/1*pFIXxpoDf9rxe33GeOLEOQ.png)](https://medium.com/@fareedkhandev/building-a-week-long-running-agentic-system-2ad79f8190bb?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-2ad79f8190bb----7-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+\[
+
+## Building a Week-Long Running Agentic System
+
+### Durability is an engineering property, not a model…
+
+]\(https://medium.com/@fareedkhandev/building-a-week-long-running-agentic-system-2ad79f8190bb?source=email-2b8b8ee19057-1781978578454-digest.reader-5517fd7b58a6-2ad79f8190bb----7-109------------------e1bb3e6c\_bb2d\_4d38\_82cd\_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+56 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+910
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+7
+
+[![Can Artuc](https://miro.medium.com/fit/c/40/40/1*nYsxx3FENvKi2CiYIo4Xhg.png)](https://medium.com/@canartuc?source=email-2b8b8ee19057-1781978578454-digest.reader--da390a20bc1f----8-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Can Artuc](https://medium.com/@canartuc?source=email-2b8b8ee19057-1781978578454-digest.reader--da390a20bc1f----8-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![A $4 Billion Empire Broke Open Source. They Threatened One Developer. It Backfired.](https://miro.medium.com/fit/c/320/214/1*bZq_zAvwqgpyaaAbvFOr5g.jpeg)](https://medium.com/@canartuc/a-4-billion-empire-broke-open-source-they-threatened-one-developer-it-backfired-da390a20bc1f?source=email-2b8b8ee19057-1781978578454-digest.reader--da390a20bc1f----8-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+\[
+
+## A $4 Billion Empire Broke Open Source. They Threatened One Developer. It…
+
+### They took open-source code for free, then threatened…
+
+]\(https://medium.com/@canartuc/a-4-billion-empire-broke-open-source-they-threatened-one-developer-it-backfired-da390a20bc1f?source=email-2b8b8ee19057-1781978578454-digest.reader--da390a20bc1f----8-102------------------e1bb3e6c\_bb2d\_4d38\_82cd\_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+9 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+7.9K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+68
+
+[![Messi Li](https://miro.medium.com/fit/c/40/40/2*3NHejM-vh1xehDsjDhmS2A.jpeg)](https://medium.com/@licaomeng?source=email-2b8b8ee19057-1781978578454-digest.reader--1db4e242d08a----9-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Messi Li](https://medium.com/@licaomeng?source=email-2b8b8ee19057-1781978578454-digest.reader--1db4e242d08a----9-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![Building a Production Agent Harness: Turning Claude Code Into a Multi-Agent Engineering Pipeline](https://miro.medium.com/fit/c/320/214/0*xRnvZyB0FppYahBb.jpg)](https://medium.com/@licaomeng/building-a-production-agent-harness-turning-claude-code-into-a-multi-agent-engineering-pipeline-1db4e242d08a?source=email-2b8b8ee19057-1781978578454-digest.reader--1db4e242d08a----9-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+\[
+
+## Building a Production Agent Harness: Turning Claude Code Into a Multi-Agent…
+
+### A coding agent on its own is a brain in a jar. It can…
+
+]\(https://medium.com/@licaomeng/building-a-production-agent-harness-turning-claude-code-into-a-multi-agent-engineering-pipeline-1db4e242d08a?source=email-2b8b8ee19057-1781978578454-digest.reader--1db4e242d08a----9-109------------------e1bb3e6c\_bb2d\_4d38\_82cd\_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+37 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+607
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+8
+
+[![Maia Niguel Hoskin, Ph.D.](https://miro.medium.com/fit/c/40/40/2*b0AO2SXrJrNUu5Ol21so-g.jpeg)](https://medium.com/@mnhoskin25?source=email-2b8b8ee19057-1781978578454-digest.reader-8ccfed20cbb2-fac36ff1c1d1----10-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Maia Niguel Hoskin, Ph.D.](https://medium.com/@mnhoskin25?source=email-2b8b8ee19057-1781978578454-digest.reader-8ccfed20cbb2-fac36ff1c1d1----10-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[ZORA](https://medium.com/zora?source=email-2b8b8ee19057-1781978578454-digest.reader-8ccfed20cbb2-fac36ff1c1d1----10-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![I Looked At My Husband And Thought: How Is This My Life?](https://miro.medium.com/fit/c/320/214/0*e47-Jnm3cLuK_nZO)](https://medium.com/@mnhoskin25/i-looked-at-my-husband-and-thought-how-is-this-my-life-fac36ff1c1d1?source=email-2b8b8ee19057-1781978578454-digest.reader-8ccfed20cbb2-fac36ff1c1d1----10-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+\[
+
+## I Looked At My Husband And Thought: How Is This My Life?
+
+### The other day, I looked at my husband after a workout…
+
+]\(https://medium.com/@mnhoskin25/i-looked-at-my-husband-and-thought-how-is-this-my-life-fac36ff1c1d1?source=email-2b8b8ee19057-1781978578454-digest.reader-8ccfed20cbb2-fac36ff1c1d1----10-99------------------e1bb3e6c\_bb2d\_4d38\_82cd\_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+8.6K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+210
+
+[![Alex Punnen](https://miro.medium.com/fit/c/40/40/1*-LGo1-ORRb_uBZCFOQFzhQ.jpeg)](https://medium.com/@alexcpn?source=email-2b8b8ee19057-1781978578454-digest.reader-98111c9905da-491c71bcf835----11-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Alex Punnen](https://medium.com/@alexcpn?source=email-2b8b8ee19057-1781978578454-digest.reader-98111c9905da-491c71bcf835----11-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[Towards AI](https://medium.com/towards-artificial-intelligence?source=email-2b8b8ee19057-1781978578454-digest.reader-98111c9905da-491c71bcf835----11-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![Why Specification-Driven Development (SDD) is Not a Silver Bullet for AI-Assisted SDLC](https://miro.medium.com/fit/c/320/214/1*S1SAKi-uuNHASBgJpMYjwg.png)](https://medium.com/@alexcpn/why-specification-driven-development-sdd-is-not-a-silver-bullet-for-ai-assisted-sdlc-491c71bcf835?source=email-2b8b8ee19057-1781978578454-digest.reader-98111c9905da-491c71bcf835----11-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+\[
+
+## Why Specification-Driven Development (SDD) is Not a Silver Bullet for…
+
+### Using a popular SDD GitHub Spec Kit and a real-world…
+
+]\(https://medium.com/@alexcpn/why-specification-driven-development-sdd-is-not-a-silver-bullet-for-ai-assisted-sdlc-491c71bcf835?source=email-2b8b8ee19057-1781978578454-digest.reader-98111c9905da-491c71bcf835----11-102------------------e1bb3e6c\_bb2d\_4d38\_82cd\_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+339
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+11
+
+[![Daniel Warfield](https://miro.medium.com/fit/c/40/40/1*YaEyucgUXLb6TwSFW-ucXg.jpeg)](https://medium.com/@danielwarfield1?source=email-2b8b8ee19057-1781978578454-digest.reader-256b0fd08337-52aa6b4e7ebd----12-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Daniel Warfield](https://medium.com/@danielwarfield1?source=email-2b8b8ee19057-1781978578454-digest.reader-256b0fd08337-52aa6b4e7ebd----12-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)in[Intuitively and Exhaustively Explained](https://medium.com/intuitively-and-exhaustively-explained?source=email-2b8b8ee19057-1781978578454-digest.reader-256b0fd08337-52aa6b4e7ebd----12-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![Agent Harnesses — Intuitively and Exhaustively Explained](https://miro.medium.com/fit/c/320/214/1*ITuyyowGqAy8H2EASFEwZA.png)](https://medium.com/@danielwarfield1/agent-harnesses-intuitively-and-exhaustively-explained-52aa6b4e7ebd?source=email-2b8b8ee19057-1781978578454-digest.reader-256b0fd08337-52aa6b4e7ebd----12-109------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+\[
+
+## Agent Harnesses — Intuitively and Exhaustively Explained
+
+### A new standard for modern AI agent development
+
+]\(https://medium.com/@danielwarfield1/agent-harnesses-intuitively-and-exhaustively-explained-52aa6b4e7ebd?source=email-2b8b8ee19057-1781978578454-digest.reader-256b0fd08337-52aa6b4e7ebd----12-109------------------e1bb3e6c\_bb2d\_4d38\_82cd\_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+10 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+273
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+6
+
+[![Prateek Jain](https://miro.medium.com/fit/c/40/40/1*qXSrARHEnyR0w7Y7xlLCCw@2x.jpeg)](https://medium.com/@prateekjain.dev?source=email-2b8b8ee19057-1781978578454-digest.reader--6e84b6cc7778----13-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Prateek Jain](https://medium.com/@prateekjain.dev?source=email-2b8b8ee19057-1781978578454-digest.reader--6e84b6cc7778----13-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![You Should Move to pnpm from npm Now](https://miro.medium.com/fit/c/320/214/1*kaWWHTaPiOn5frEn7lRY5g.png)](https://medium.com/@prateekjain.dev/you-should-move-to-pnpm-from-npm-now-6e84b6cc7778?source=email-2b8b8ee19057-1781978578454-digest.reader--6e84b6cc7778----13-99------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+\[
+
+## You Should Move to pnpm from npm Now
+
+### Upgrade your package manager before a supply chain…
+
+]\(https://medium.com/@prateekjain.dev/you-should-move-to-pnpm-from-npm-now-6e84b6cc7778?source=email-2b8b8ee19057-1781978578454-digest.reader--6e84b6cc7778----13-99------------------e1bb3e6c\_bb2d\_4d38\_82cd\_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+243
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+5
+
+[![Roan Brasil Monteiro](https://miro.medium.com/fit/c/40/40/2*HngWUnkyNsjB30P1blBHJw.jpeg)](https://medium.com/@roanmonteiro?source=email-2b8b8ee19057-1781978578454-digest.reader--d7b61c7398ff----14-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[Roan Brasil Monteiro](https://medium.com/@roanmonteiro?source=email-2b8b8ee19057-1781978578454-digest.reader--d7b61c7398ff----14-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+[![Building a Complete Personal Harness: LLM Wiki + Developer’s Second Brain in Obsidian](https://miro.medium.com/fit/c/320/214/1*06SRbFM1GVKJIg0MnCx_4w.png)](https://medium.com/@roanmonteiro/building-a-complete-personal-harness-llm-wiki-developers-second-brain-in-obsidian-d7b61c7398ff?source=email-2b8b8ee19057-1781978578454-digest.reader--d7b61c7398ff----14-102------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253-1)
+
+\[
+
+## Building a Complete Personal Harness: LLM Wiki + Developer’s Second Brain in…
+
+### Hands-on, step-by-step tutorial for setting up an…
+
+]\(https://medium.com/@roanmonteiro/building-a-complete-personal-harness-llm-wiki-developers-second-brain-in-obsidian-d7b61c7398ff?source=email-2b8b8ee19057-1781978578454-digest.reader--d7b61c7398ff----14-102------------------e1bb3e6c\_bb2d\_4d38\_82cd\_3227505cd253-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+23 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+790
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+13
+
+[![Become a Medium member](https://miro.medium.com/max/1360/fdd6efe83eb37854bf3b2def5b36e627bf04fff70e7276887f535f050962b87b)](https://medium.com/plans?source=email-2b8b8ee19057-1781978578454-digest.reader-------------------------e1bb3e6c_bb2d_4d38_82cd_3227505cd253)
+
+
