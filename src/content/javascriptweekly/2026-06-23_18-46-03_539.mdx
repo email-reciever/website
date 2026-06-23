@@ -1,0 +1,313 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Babel 8.0, Vite 8.1, and TypeScript 7.0 RC
+description: Babel 8.0, Vite 8.1, and TypeScript 7.0 RC
+date: 星期二 06 晚上 六月 23o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/791
+origin_site: https://javascriptweekly.com/issues/791
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Babel 8.0, Vite 8.1, and TypeScript 7.0 RC" url="https://javascriptweekly.com/issues/791" />
+
+<Detail client:only="react">
+	#​791 — June 23, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/791)
+
+Together with 
+
+[![Greptile](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_308/co_white,e_outline:25/mvysygc5u6xqa3gvmetk.png)](https://javascriptweekly.com/link/186908/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nmuo98ex7rzsd4bj7hcu.jpg)](https://javascriptweekly.com/link/186910/d076523b1d)
+
+[Desktop Apps With `deno desktop`](https://javascriptweekly.com/link/186910/d076523b1d "docs.deno.com") — Deno 2.9 (or the 'canary' build _now_) can turn JavaScript projects into self-contained apps on macOS, Windows, and Linux. Unlike Electron, you can opt to use the default OS WebView _or_ a bundled Chromium backend, plus you get cross-compilation and automatic support for apps built on frameworks like Next.js and SvelteKit.
+
+The Deno Project
+
+📉 It's not in the post, but a `--compress` option gets packaged app sizes down a lot – from 65MB to 19MB in my test with a basic app.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/e4cf1123.png)](https://javascriptweekly.com/link/186908/d076523b1d)
+
+[Catch Runtime Bugs Before Your JS PR Merges](https://javascriptweekly.com/link/186908/d076523b1d) — Some JavaScript bugs only show up after the app runs. Greptile reviews each PR with full repo context, runs the code in a sandbox, and returns screenshots, logs, and traces as proof of what broke. Use Greptile in GitHub, GitLab, or from your terminal.
+
+Greptile sponsor
+
+[Babel 8.0 Released: The JavaScript Transpiler](https://javascriptweekly.com/link/186911/d076523b1d "babeljs.io") — It’s been _eight years_ since [Babel 7.0](https://javascriptweekly.com/link/186912/d076523b1d), and despite the rise of tools like SWC and Oxc, weekly downloads of the `@babel` packages have increased 380x since. v8.0 is a modernization release that goes ESM-only and targets ~ES2023 by default (vs ES5 before).
+
+Babel Team
+
+[TypeScript 7.0 Release Candidate](https://javascriptweekly.com/link/186913/d076523b1d "devblogs.microsoft.com") — A step closer for the Go-powered TypeScript compiler that promises ~10x faster build performance. _(I've seen people on social media getting very excited by this.)_
+
+Daniel Rosenwasser (Microsoft)
+
+**IN BRIEF:**
+
+*   Cloudflare has added the ability to [create and deploy Workers on 'temporary accounts'](https://javascriptweekly.com/link/186914/d076523b1d). Ostensibly 'for AI agents', but you can use them yourself too, and get a Worker running for 60 minutes with no strings attached.
+    
+*   TC39 delegate Luca Casonato has made [a proposal to add built-in localized time formatting](https://javascriptweekly.com/link/186915/d076523b1d) to `&lt;time>`, akin to GitHub's [`&lt;relative-time>` element](https://javascriptweekly.com/link/186916/d076523b1d).
+    
+*   🤖 [MDN has introduced an official MCP server](https://javascriptweekly.com/link/186917/d076523b1d) to provide better access to MDN's up-to-date JS and frontend docs to coding agents.
+    
+*   The Bun team has proposed [adding shared-memory threads to JavaScriptCore](https://javascriptweekly.com/link/186918/d076523b1d) (a more traditional threading approach versus [worker threads](https://javascriptweekly.com/link/186919/d076523b1d)).
+    
+
+**RELEASES:**
+
+*   ⭐ [Vite 8.1](https://javascriptweekly.com/link/186920/d076523b1d) – Adds experimental support for 'bundled dev mode' which radically speeds up dev server startup and full reloads on large apps. Also adds [WASM/ESM integration](https://javascriptweekly.com/link/186921/d076523b1d) support.
+    
+*   ⭐ [Astro 7.0](https://javascriptweekly.com/link/186922/d076523b1d) – The popular web framework gets faster build times, with `.astro` compilation and Markdown/MDX processing going through a Rust-powered pipeline. _Advanced Routing_ also gives you full control over the request pipeline.
+    
+*   [pnpm 11.7](https://javascriptweekly.com/link/186923/d076523b1d) and [11.8](https://javascriptweekly.com/link/186924/d076523b1d) – `pnpm install` gets a `--dry-run` option, `--frozen-store` adds support for read-only package stores, and more.
+    
+*   [Node.js v26.3.1 (Current)](https://javascriptweekly.com/link/186925/d076523b1d), [v24.17.0 (LTS)](https://javascriptweekly.com/link/186926/d076523b1d), and [v22.23.0 (LTS)](https://javascriptweekly.com/link/186927/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[How an Underrated Refactor Saved 90% Memory Usage](https://javascriptweekly.com/link/186928/d076523b1d "tanstack.com") — The tale of how [TanStack Table](https://javascriptweekly.com/link/186929/d076523b1d) v9 uses less memory than v8 on large tables, thanks to a simple idea: storing methods on shared prototypes instead of creating them for every object. Benchmarks included, plus a pattern other libraries can copy.
+
+Kevin Van Cott (TanStack)
+
+[You Already Know Enough JavaScript to Ship a Real Mobile App](https://javascriptweekly.com/link/186930/d076523b1d "try.expo.dev") — Build for iOS and Android from one codebase with React. Expo handles builds, the App Store, and updates.
+
+Expo sponsor
+
+📄 [`window.showDirectoryPicker` Opens Up a Whole New World](https://javascriptweekly.com/link/186931/d076523b1d) – Chrome 86+ added a way to [let users open a local directory](https://javascriptweekly.com/link/186932/d076523b1d) for use by webapps. Steve Harrison
+
+📄 [What are Git Worktrees, And Why Should I Use Them?](https://javascriptweekly.com/link/186933/d076523b1d) – A decade-old `git` feature that's seen a boost in the AI agent era. Cassidy Williams (GitHub)
+
+📄 [TanStack Start: A Mental Model for Next.js Devs](https://javascriptweekly.com/link/186934/d076523b1d) – Maps TanStack Start onto Next.js concepts with side-by-side code comparisons. Adarsha Acharya
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nxajoklg677glwqkf5yz.jpg)](https://javascriptweekly.com/link/186935/d076523b1d)
+
+[FullCalendar 7.0: A Full Sized JavaScript Calendar](https://javascriptweekly.com/link/186935/d076523b1d "fullcalendar.io") — A Google Calendar-style experience for your own apps. Works with React, Vue and Angular ([v7.0](https://javascriptweekly.com/link/186937/d076523b1d) adds Angular 22 support), but can be used with plain JavaScript. [Here’s a demo](https://javascriptweekly.com/link/186938/d076523b1d) where you can play with the themes and styling approaches. MIT licensed with commercial extensions.
+
+FullCalendar LLC
+
+🤖 [Eve: Like Next.js, But for Building Agents](https://javascriptweekly.com/link/186939/d076523b1d "vercel.com") — A new framework from Vercel that provides Next.js-esque structure for building AI-powered agents using TypeScript and Markdown.
+
+Vercel
+
+[Your Charts Endpoint Doesn't Need a Second Database](https://javascriptweekly.com/link/186940/d076523b1d "www.tigerdata.com") — It's the query behind it, not the render. TimescaleDB extends Postgres for analytics. [Get $1000 credit to start](https://javascriptweekly.com/link/186940/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[ForesightJS 4: Predictive User Intent Library for the Web](https://javascriptweekly.com/link/186941/d076523b1d "foresightjs.com") — Predicts intent from pointer and keyboard cues to prefetch content before it's needed for a snappier user experience. [v4.0](https://javascriptweekly.com/link/186942/d076523b1d) adds official React and Vue packages with [a declarative `&lt;Foresight>` component](https://javascriptweekly.com/link/186943/d076523b1d) in v4.2.
+
+ForesightJS, Inc.
+
+[Prop For That: What JS Knows, Now CSS Knows](https://javascriptweekly.com/link/186945/d076523b1d "nerdy.dev") — Provides CSS with access to values you'd often need JS to provide (e.g. pointer position, time, a slider’s value). Add attributes to HTML and live values show up as custom properties, bridging the JS–CSS gap. [The demo page](https://javascriptweekly.com/link/186946/d076523b1d) is neat.
+
+Adam Argyle
+
+[Kage: Shadow a Website for Offline Viewing](https://javascriptweekly.com/link/186947/d076523b1d "kage.tamnd.com") — A tool to clone a site and serve it up for offline viewing. The difference vs _"Save As"_ is it handles JS-rendered sites by saving the DOM using a headless browser. [Repo.](https://javascriptweekly.com/link/186948/d076523b1d)
+
+Duc-Tam Nguyen
+
+[goja: An ECMAScript/JavaScript Engine in Pure Go](https://javascriptweekly.com/link/186949/d076523b1d "github.com") — A mature JavaScript engine for adding scripting functionality to Go apps without CGo/V8.
+
+Dmitry Panov
+
+*   [Anime.js 4.5](https://javascriptweekly.com/link/186950/d076523b1d) – The powerful animation engine [adds adapters](https://javascriptweekly.com/link/186951/d076523b1d) to support animating non-DOM objects like Three.js meshes or a canvas context.
+    
+*   [Ink 7.1](https://javascriptweekly.com/link/186952/d076523b1d) – The popular TUI renderer [adds `suspendTerminal()`](https://javascriptweekly.com/link/186953/d076523b1d) for temporarily handing the terminal over to a child process (like an editor).
+    
+*   [Nuxt UI 4.9](https://javascriptweekly.com/link/186954/d076523b1d) – The Vue UI library improves its calendar component, adds uniform focus styles, and adds `useTour` for driving guided tours.
+    
+*   [Nx 23.0](https://javascriptweekly.com/link/186955/d076523b1d) – The monorepo tool's yearly major. Now `nx migrate` can hand migrations off to AI agents.
+    
+*   ☀️ [SunCalc 2.0](https://javascriptweekly.com/link/186956/d076523b1d) – Calculate the position and phase of the Sun and Moon.
+    
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/186957/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+* * *
+
+🚀 Take your app from dev to production in one command. `clerk deploy` handles DNS and OAuth: [clerk.com/changelog/2026-06-10-clerk-deploy](https://javascriptweekly.com/link/186958/d076523b1d)
+
+* * *
+
+[Handsontable](https://javascriptweekly.com/link/186959/d076523b1d): Production-ready data grid that feels like Excel. Rock-solid reliability, performance at scale. [Try now](https://javascriptweekly.com/link/186959/d076523b1d).
+
+* * *
+
+🦊 Extract tables, text, forms, and images from any PDF as structured JSON. [Foxit's API](https://javascriptweekly.com/link/186960/d076523b1d) combines OCR, layout recognition, and AI parsing.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nxgy3hvrsiv7govtlok8.jpg)](https://javascriptweekly.com/link/186961/d076523b1d)
+
+*   A developer [code-golfed a signal implementation](https://javascriptweekly.com/link/186961/d076523b1d) to just 33 bytes _(above)_. I had to stare at it for a solid minute before it clicked, but mercifully, a Redditor [breaks down exactly what's going on](https://javascriptweekly.com/link/186962/d076523b1d).
+    
+*   🔒 GitHub has [released `actions/checkout` v7](https://javascriptweekly.com/link/186963/d076523b1d) that _"refuses common pwn request patterns by default"_ including refusing to fetch fork pull request code in `pull_request_target` and `workflow_run` workflows.
+    
+*   If you're a GitHub project maintainer getting flooded with PRs, [GitHub now has the ability to limit the number of PRs](https://javascriptweekly.com/link/186964/d076523b1d) any single user can open at once.
+    
+*   Tim Wehrle [stored a website in a favicon.](https://javascriptweekly.com/link/186965/d076523b1d) Why? Why not?
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/186966/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​791 — June 23, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/791)
+
+Together with 
+
+[![Greptile](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_308/co_white,e_outline:25/mvysygc5u6xqa3gvmetk.png)](https://javascriptweekly.com/link/186908/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nmuo98ex7rzsd4bj7hcu.jpg)](https://javascriptweekly.com/link/186910/d076523b1d)
+
+[Desktop Apps With `deno desktop`](https://javascriptweekly.com/link/186910/d076523b1d "docs.deno.com") — Deno 2.9 (or the 'canary' build *now*) can turn JavaScript projects into self-contained apps on macOS, Windows, and Linux. Unlike Electron, you can opt to use the default OS WebView *or* a bundled Chromium backend, plus you get cross-compilation and automatic support for apps built on frameworks like Next.js and SvelteKit.
+
+The Deno Project
+
+📉 It's not in the post, but a `--compress` option gets packaged app sizes down a lot – from 65MB to 19MB in my test with a basic app.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/e4cf1123.png)](https://javascriptweekly.com/link/186908/d076523b1d)
+
+[Catch Runtime Bugs Before Your JS PR Merges](https://javascriptweekly.com/link/186908/d076523b1d) — Some JavaScript bugs only show up after the app runs. Greptile reviews each PR with full repo context, runs the code in a sandbox, and returns screenshots, logs, and traces as proof of what broke. Use Greptile in GitHub, GitLab, or from your terminal.
+
+Greptile sponsor
+
+[Babel 8.0 Released: The JavaScript Transpiler](https://javascriptweekly.com/link/186911/d076523b1d "babeljs.io") — It’s been *eight years* since [Babel 7.0](https://javascriptweekly.com/link/186912/d076523b1d), and despite the rise of tools like SWC and Oxc, weekly downloads of the `@babel` packages have increased 380x since. v8.0 is a modernization release that goes ESM-only and targets ~ES2023 by default (vs ES5 before).
+
+Babel Team
+
+[TypeScript 7.0 Release Candidate](https://javascriptweekly.com/link/186913/d076523b1d "devblogs.microsoft.com") — A step closer for the Go-powered TypeScript compiler that promises ~10x faster build performance. *(I've seen people on social media getting very excited by this.)*
+
+Daniel Rosenwasser (Microsoft)
+
+**IN BRIEF:**
+
+* Cloudflare has added the ability to [create and deploy Workers on 'temporary accounts'](https://javascriptweekly.com/link/186914/d076523b1d). Ostensibly 'for AI agents', but you can use them yourself too, and get a Worker running for 60 minutes with no strings attached.
+
+* TC39 delegate Luca Casonato has made [a proposal to add built-in localized time formatting](https://javascriptweekly.com/link/186915/d076523b1d) to `&lt;time>`, akin to GitHub's [`&lt;relative-time>` element](https://javascriptweekly.com/link/186916/d076523b1d).
+
+* 🤖 [MDN has introduced an official MCP server](https://javascriptweekly.com/link/186917/d076523b1d) to provide better access to MDN's up-to-date JS and frontend docs to coding agents.
+
+* The Bun team has proposed [adding shared-memory threads to JavaScriptCore](https://javascriptweekly.com/link/186918/d076523b1d) (a more traditional threading approach versus [worker threads](https://javascriptweekly.com/link/186919/d076523b1d)).
+
+**RELEASES:**
+
+* ⭐ [Vite 8.1](https://javascriptweekly.com/link/186920/d076523b1d) – Adds experimental support for 'bundled dev mode' which radically speeds up dev server startup and full reloads on large apps. Also adds [WASM/ESM integration](https://javascriptweekly.com/link/186921/d076523b1d) support.
+
+* ⭐ [Astro 7.0](https://javascriptweekly.com/link/186922/d076523b1d) – The popular web framework gets faster build times, with `.astro` compilation and Markdown/MDX processing going through a Rust-powered pipeline. *Advanced Routing* also gives you full control over the request pipeline.
+
+* [pnpm 11.7](https://javascriptweekly.com/link/186923/d076523b1d) and [11.8](https://javascriptweekly.com/link/186924/d076523b1d) – `pnpm install` gets a `--dry-run` option, `--frozen-store` adds support for read-only package stores, and more.
+
+* [Node.js v26.3.1 (Current)](https://javascriptweekly.com/link/186925/d076523b1d), [v24.17.0 (LTS)](https://javascriptweekly.com/link/186926/d076523b1d), and [v22.23.0 (LTS)](https://javascriptweekly.com/link/186927/d076523b1d)
+
+📖  Articles and Videos
+
+[How an Underrated Refactor Saved 90% Memory Usage](https://javascriptweekly.com/link/186928/d076523b1d "tanstack.com") — The tale of how [TanStack Table](https://javascriptweekly.com/link/186929/d076523b1d) v9 uses less memory than v8 on large tables, thanks to a simple idea: storing methods on shared prototypes instead of creating them for every object. Benchmarks included, plus a pattern other libraries can copy.
+
+Kevin Van Cott (TanStack)
+
+[You Already Know Enough JavaScript to Ship a Real Mobile App](https://javascriptweekly.com/link/186930/d076523b1d "try.expo.dev") — Build for iOS and Android from one codebase with React. Expo handles builds, the App Store, and updates.
+
+Expo sponsor
+
+📄 [`window.showDirectoryPicker` Opens Up a Whole New World](https://javascriptweekly.com/link/186931/d076523b1d) – Chrome 86+ added a way to [let users open a local directory](https://javascriptweekly.com/link/186932/d076523b1d) for use by webapps. Steve Harrison
+
+📄 [What are Git Worktrees, And Why Should I Use Them?](https://javascriptweekly.com/link/186933/d076523b1d) – A decade-old `git` feature that's seen a boost in the AI agent era. Cassidy Williams (GitHub)
+
+📄 [TanStack Start: A Mental Model for Next.js Devs](https://javascriptweekly.com/link/186934/d076523b1d) – Maps TanStack Start onto Next.js concepts with side-by-side code comparisons. Adarsha Acharya
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nxajoklg677glwqkf5yz.jpg)](https://javascriptweekly.com/link/186935/d076523b1d)
+
+[FullCalendar 7.0: A Full Sized JavaScript Calendar](https://javascriptweekly.com/link/186935/d076523b1d "fullcalendar.io") — A Google Calendar-style experience for your own apps. Works with React, Vue and Angular ([v7.0](https://javascriptweekly.com/link/186937/d076523b1d) adds Angular 22 support), but can be used with plain JavaScript. [Here’s a demo](https://javascriptweekly.com/link/186938/d076523b1d) where you can play with the themes and styling approaches. MIT licensed with commercial extensions.
+
+FullCalendar LLC
+
+🤖 [Eve: Like Next.js, But for Building Agents](https://javascriptweekly.com/link/186939/d076523b1d "vercel.com") — A new framework from Vercel that provides Next.js-esque structure for building AI-powered agents using TypeScript and Markdown.
+
+Vercel
+
+[Your Charts Endpoint Doesn't Need a Second Database](https://javascriptweekly.com/link/186940/d076523b1d "www.tigerdata.com") — It's the query behind it, not the render. TimescaleDB extends Postgres for analytics. [Get $1000 credit to start](https://javascriptweekly.com/link/186940/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[ForesightJS 4: Predictive User Intent Library for the Web](https://javascriptweekly.com/link/186941/d076523b1d "foresightjs.com") — Predicts intent from pointer and keyboard cues to prefetch content before it's needed for a snappier user experience. [v4.0](https://javascriptweekly.com/link/186942/d076523b1d) adds official React and Vue packages with [a declarative `&lt;Foresight>` component](https://javascriptweekly.com/link/186943/d076523b1d) in v4.2.
+
+ForesightJS, Inc.
+
+[Prop For That: What JS Knows, Now CSS Knows](https://javascriptweekly.com/link/186945/d076523b1d "nerdy.dev") — Provides CSS with access to values you'd often need JS to provide (e.g. pointer position, time, a slider’s value). Add attributes to HTML and live values show up as custom properties, bridging the JS–CSS gap. [The demo page](https://javascriptweekly.com/link/186946/d076523b1d) is neat.
+
+Adam Argyle
+
+[Kage: Shadow a Website for Offline Viewing](https://javascriptweekly.com/link/186947/d076523b1d "kage.tamnd.com") — A tool to clone a site and serve it up for offline viewing. The difference vs *"Save As"* is it handles JS-rendered sites by saving the DOM using a headless browser. [Repo.](https://javascriptweekly.com/link/186948/d076523b1d)
+
+Duc-Tam Nguyen
+
+[goja: An ECMAScript/JavaScript Engine in Pure Go](https://javascriptweekly.com/link/186949/d076523b1d "github.com") — A mature JavaScript engine for adding scripting functionality to Go apps without CGo/V8.
+
+Dmitry Panov
+
+* [Anime.js 4.5](https://javascriptweekly.com/link/186950/d076523b1d) – The powerful animation engine [adds adapters](https://javascriptweekly.com/link/186951/d076523b1d) to support animating non-DOM objects like Three.js meshes or a canvas context.
+
+* [Ink 7.1](https://javascriptweekly.com/link/186952/d076523b1d) – The popular TUI renderer [adds `suspendTerminal()`](https://javascriptweekly.com/link/186953/d076523b1d) for temporarily handing the terminal over to a child process (like an editor).
+
+* [Nuxt UI 4.9](https://javascriptweekly.com/link/186954/d076523b1d) – The Vue UI library improves its calendar component, adds uniform focus styles, and adds `useTour` for driving guided tours.
+
+* [Nx 23.0](https://javascriptweekly.com/link/186955/d076523b1d) – The monorepo tool's yearly major. Now `nx migrate` can hand migrations off to AI agents.
+
+* ☀️ [SunCalc 2.0](https://javascriptweekly.com/link/186956/d076523b1d) – Calculate the position and phase of the Sun and Moon.
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/186957/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+***
+
+🚀 Take your app from dev to production in one command. `clerk deploy` handles DNS and OAuth: [clerk.com/changelog/2026-06-10-clerk-deploy](https://javascriptweekly.com/link/186958/d076523b1d)
+
+***
+
+[Handsontable](https://javascriptweekly.com/link/186959/d076523b1d): Production-ready data grid that feels like Excel. Rock-solid reliability, performance at scale. [Try now](https://javascriptweekly.com/link/186959/d076523b1d).
+
+***
+
+🦊 Extract tables, text, forms, and images from any PDF as structured JSON. [Foxit's API](https://javascriptweekly.com/link/186960/d076523b1d) combines OCR, layout recognition, and AI parsing.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nxgy3hvrsiv7govtlok8.jpg)](https://javascriptweekly.com/link/186961/d076523b1d)
+
+* A developer [code-golfed a signal implementation](https://javascriptweekly.com/link/186961/d076523b1d) to just 33 bytes *(above)*. I had to stare at it for a solid minute before it clicked, but mercifully, a Redditor [breaks down exactly what's going on](https://javascriptweekly.com/link/186962/d076523b1d).
+
+* 🔒 GitHub has [released `actions/checkout` v7](https://javascriptweekly.com/link/186963/d076523b1d) that *"refuses common pwn request patterns by default"* including refusing to fetch fork pull request code in `pull_request_target` and `workflow_run` workflows.
+
+* If you're a GitHub project maintainer getting flooded with PRs, [GitHub now has the ability to limit the number of PRs](https://javascriptweekly.com/link/186964/d076523b1d) any single user can open at once.
+
+* Tim Wehrle [stored a website in a favicon.](https://javascriptweekly.com/link/186965/d076523b1d) Why? Why not?
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/186966/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
