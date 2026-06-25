@@ -1,0 +1,244 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node.js 26.4 lands package maps
+description: Node.js 26.4 lands package maps
+date: 星期四 03 下午 六月 25o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/630
+origin_site: https://nodeweekly.com/issues/630
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node.js 26.4 lands package maps" url="https://nodeweekly.com/issues/630" />
+
+<Detail client:only="react">
+	#​630 — June 25, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/630)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/187034/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/z3a4qdwxuxpfyblgqzw4.jpg)](https://nodeweekly.com/link/187035/0a4070b383)
+
+[Node.js 26.4 Adds Package Maps](https://nodeweekly.com/link/187035/0a4070b383 "nodejs.org") — A minor release whose headline feature is the (experimental) implementation of [package maps](https://nodeweekly.com/link/187037/0a4070b383) (which let Node resolve packages from a static JSON file rather than walking `node_modules`). Matteo Collina’s [node:vfs subsystem](https://nodeweekly.com/link/187038/0a4070b383) also _begins_ to make an appearance.
+
+Antoine du Hamel
+
+💡 [Node v24.18.0 (LTS)](https://nodeweekly.com/link/187076/0a4070b383) and [v22.23.1 (LTS)](https://nodeweekly.com/link/187077/0a4070b383) have also been released.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2c2408da.png)](https://nodeweekly.com/link/187034/0a4070b383)
+
+[That Analytics Route is Blocking Your Event Loop](https://nodeweekly.com/link/187034/0a4070b383 "www.tigerdata.com") — Crunching big result sets in Node ties up the event loop and stalls other requests. TimescaleDB extends Postgres so the database aggregates instead. Hypertables, 95% compression, continuous aggregates. No second database. [Get $1000 credit to start](https://nodeweekly.com/link/187034/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Blocking Install Scripts is Not a Silver Bullet](https://nodeweekly.com/link/187039/0a4070b383 "nodesource.com") — [npm v12](https://nodeweekly.com/link/187040/0a4070b383) won't run install scripts by default, but Ulises argues that only removes one attack trigger, not a capability, since a compromised dependency’s code still runs on import! He shows why, even then, Node's [permissions model](https://nodeweekly.com/link/187041/0a4070b383) and sandboxing are the layers that actually limit what that code can do.
+
+Ulises Gascon
+
+**IN BRIEF:**
+
+*   The [first preview release of `npm` 12 is here](https://nodeweekly.com/link/187042/0a4070b383) if you want to get testing.
+    
+*   [Deno](https://nodeweekly.com/link/187043/0a4070b383) has begun to show off a [new feature to create cross-platform desktop apps](https://nodeweekly.com/link/187044/0a4070b383). Think Electron-style apps, but on top of Deno with cross-compilation, framework auto-detection, and a choice between bundling a Chromium runtime or using the system's WebView.
+    
+*   Vercel has opened [a public beta of WebSockets support](https://nodeweekly.com/link/187045/0a4070b383) in Vercel Functions. You can write normal Node.js code using `ws` with no extra setup.
+    
+*   The `pnpm` project is [working on `pnpr`](https://nodeweekly.com/link/187046/0a4070b383), an experimental pnpm-compatible npm registry server, written in Rust.
+    
+
+[What If npm Ran on AT Protocol?](https://nodeweekly.com/link/187047/0a4070b383 "www.jasnell.me") — James, a long-standing Node core contributor, ponders what a package system built atop the protocol Bluesky uses could look like: _“It’s just an idea I couldn’t get out of my head until I wrote it down.”_
+
+James M Snell
+
+[Benchmarking 5 WebSocket Servers for Node.js](https://nodeweekly.com/link/187048/0a4070b383 "evilmartians.com") — A banned IP, a lying load generator, and a 20× latency illusion turned a routine benchmark run into quite the detective story.
+
+Irina Nazarova
+
+[Your Node App Has an N+1 Problem. AppSignal Shows You Where](https://nodeweekly.com/link/187049/0a4070b383 "www.appsignal.com") — Auto-detects N+1 queries in Prisma, Express, and Koa. One install, minutes to first trace. [Free 30-day trial, no card](https://nodeweekly.com/link/187049/0a4070b383).
+
+AppSignal sponsor
+
+📄 [JavaScript Still Can't Ship a 'Full-Stack Module'](https://nodeweekly.com/link/187050/0a4070b383) – Thoughts on modules which provide frontend and backend code ready to go, as you might see in ecosystems like Rails and Laravel. Mihovil Ilakovac
+
+📊 [The Performance of WebAssembly Runtimes in 2026](https://nodeweekly.com/link/187051/0a4070b383) – Mostly focused on dedicated options, but also including Node/V8. Frank Denis
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/b1kuykh8i2jmbor2kxdh.jpg)](https://nodeweekly.com/link/187052/0a4070b383)
+
+🤖 [Eve: A Next.js-Style Framework for Building Agents](https://nodeweekly.com/link/187052/0a4070b383 "vercel.com") — A new framework from Vercel that provides Next.js-esque structure for building AI-powered agents using TypeScript and Markdown. It's quite Vercel-flavored by default, but I found you can run it entirely independently of Vercel with a few settings tweaks and your own keys. [Project homepage.](https://nodeweekly.com/link/187053/0a4070b383)
+
+Vercel
+
+[TypeScript 7.0 Release Candidate](https://nodeweekly.com/link/187054/0a4070b383 "devblogs.microsoft.com") — A step closer for the Go-powered TypeScript compiler that promises ~10x faster build performance. A reminder that `moduleResolution: node` / `node10` are no longer supported and `@types` packages you need have to be listed explicitly.
+
+Daniel Rosenwasser (Microsoft)
+
+🔐 [AccessControl 3.0: Role and Attribute-based Access Control](https://nodeweekly.com/link/187055/0a4070b383 "onury.io") — A role and attribute-based (RBAC/ABAC) access control library that, [as of v3](https://nodeweekly.com/link/187056/0a4070b383), now has a real policy engine available to apply conditions to grants, enforced ownership, mandatory restriction gates, audit hooks, and more. [GitHub repo](https://nodeweekly.com/link/187057/0a4070b383).
+
+Onur Yıldırım
+
+[Camaro 6.5: A High Performance XML to JSON Converter](https://nodeweekly.com/link/187058/0a4070b383 "github.com") — Uses bindings to [pugixml](https://nodeweekly.com/link/187059/0a4070b383), a fast C++ XML parser.
+
+Tuan Anh Tran
+
+*   [Tedious 20.0](https://nodeweekly.com/link/187060/0a4070b383) – TDS module for connecting to SQL Server. A related release is the SQL Server client library [node-mssql 12.6](https://nodeweekly.com/link/187061/0a4070b383) which uses Tedious (or [msnodesqlv8](https://nodeweekly.com/link/187062/0a4070b383)).
+    
+*   [Chardet 2.2](https://nodeweekly.com/link/187063/0a4070b383) – Character encoding detection library that uses statistical methods to detect [around 30 different encodings](https://nodeweekly.com/link/187064/0a4070b383).
+    
+*   [cookie 2.0](https://nodeweekly.com/link/187065/0a4070b383) – HTTP cookie parser and serializer library. Now faster and ESM only.
+    
+
+📰 Classifieds
+
+🧐 Where to host? Judoscale’s [cost comparison calculator](https://nodeweekly.com/link/187066/0a4070b383) puts the PaaS alternatives head-to-head.
+
+* * *
+
+⚙️ Run AI agents like microservices — every agent an auto-generated API: schemas, versioning, no glue code. 100+ recipes, TypeScript SDK. [→ Star on GitHub](https://nodeweekly.com/link/187067/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+*   Cloudflare has added the ability to [create and deploy Workers on 'temporary accounts'](https://nodeweekly.com/link/187068/0a4070b383). Ostensibly 'for AI agents', but you can use them yourself too, and get a Worker (which have [increased Node.js compatibility](https://nodeweekly.com/link/187070/0a4070b383) nowadays) running for 60 minutes with no strings attached.
+    
+*   The Bun team has proposed [adding shared-memory threads to JavaScriptCore](https://nodeweekly.com/link/187071/0a4070b383) (a more traditional threading approach versus [worker threads](https://nodeweekly.com/link/187072/0a4070b383)).
+    
+*   🔒 GitHub has [released `actions/checkout` v7](https://nodeweekly.com/link/187073/0a4070b383) that _"refuses common pwn request patterns by default"_ including refusing to fetch fork pull request code in `pull_request_target` and `workflow_run` workflows.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​630 — June 25, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/630)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/187034/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/z3a4qdwxuxpfyblgqzw4.jpg)](https://nodeweekly.com/link/187035/0a4070b383)
+
+[Node.js 26.4 Adds Package Maps](https://nodeweekly.com/link/187035/0a4070b383 "nodejs.org") — A minor release whose headline feature is the (experimental) implementation of [package maps](https://nodeweekly.com/link/187037/0a4070b383) (which let Node resolve packages from a static JSON file rather than walking `node_modules`). Matteo Collina’s [node:vfs subsystem](https://nodeweekly.com/link/187038/0a4070b383) also *begins* to make an appearance.
+
+Antoine du Hamel
+
+💡 [Node v24.18.0 (LTS)](https://nodeweekly.com/link/187076/0a4070b383) and [v22.23.1 (LTS)](https://nodeweekly.com/link/187077/0a4070b383) have also been released.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2c2408da.png)](https://nodeweekly.com/link/187034/0a4070b383)
+
+[That Analytics Route is Blocking Your Event Loop](https://nodeweekly.com/link/187034/0a4070b383 "www.tigerdata.com") — Crunching big result sets in Node ties up the event loop and stalls other requests. TimescaleDB extends Postgres so the database aggregates instead. Hypertables, 95% compression, continuous aggregates. No second database. [Get $1000 credit to start](https://nodeweekly.com/link/187034/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Blocking Install Scripts is Not a Silver Bullet](https://nodeweekly.com/link/187039/0a4070b383 "nodesource.com") — [npm v12](https://nodeweekly.com/link/187040/0a4070b383) won't run install scripts by default, but Ulises argues that only removes one attack trigger, not a capability, since a compromised dependency’s code still runs on import! He shows why, even then, Node's [permissions model](https://nodeweekly.com/link/187041/0a4070b383) and sandboxing are the layers that actually limit what that code can do.
+
+Ulises Gascon
+
+**IN BRIEF:**
+
+* The [first preview release of `npm` 12 is here](https://nodeweekly.com/link/187042/0a4070b383) if you want to get testing.
+
+* [Deno](https://nodeweekly.com/link/187043/0a4070b383) has begun to show off a [new feature to create cross-platform desktop apps](https://nodeweekly.com/link/187044/0a4070b383). Think Electron-style apps, but on top of Deno with cross-compilation, framework auto-detection, and a choice between bundling a Chromium runtime or using the system's WebView.
+
+* Vercel has opened [a public beta of WebSockets support](https://nodeweekly.com/link/187045/0a4070b383) in Vercel Functions. You can write normal Node.js code using `ws` with no extra setup.
+
+* The `pnpm` project is [working on `pnpr`](https://nodeweekly.com/link/187046/0a4070b383), an experimental pnpm-compatible npm registry server, written in Rust.
+
+[What If npm Ran on AT Protocol?](https://nodeweekly.com/link/187047/0a4070b383 "www.jasnell.me") — James, a long-standing Node core contributor, ponders what a package system built atop the protocol Bluesky uses could look like: *“It’s just an idea I couldn’t get out of my head until I wrote it down.”*
+
+James M Snell
+
+[Benchmarking 5 WebSocket Servers for Node.js](https://nodeweekly.com/link/187048/0a4070b383 "evilmartians.com") — A banned IP, a lying load generator, and a 20× latency illusion turned a routine benchmark run into quite the detective story.
+
+Irina Nazarova
+
+[Your Node App Has an N+1 Problem. AppSignal Shows You Where](https://nodeweekly.com/link/187049/0a4070b383 "www.appsignal.com") — Auto-detects N+1 queries in Prisma, Express, and Koa. One install, minutes to first trace. [Free 30-day trial, no card](https://nodeweekly.com/link/187049/0a4070b383).
+
+AppSignal sponsor
+
+📄 [JavaScript Still Can't Ship a 'Full-Stack Module'](https://nodeweekly.com/link/187050/0a4070b383) – Thoughts on modules which provide frontend and backend code ready to go, as you might see in ecosystems like Rails and Laravel. Mihovil Ilakovac
+
+📊 [The Performance of WebAssembly Runtimes in 2026](https://nodeweekly.com/link/187051/0a4070b383) – Mostly focused on dedicated options, but also including Node/V8. Frank Denis
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/b1kuykh8i2jmbor2kxdh.jpg)](https://nodeweekly.com/link/187052/0a4070b383)
+
+🤖 [Eve: A Next.js-Style Framework for Building Agents](https://nodeweekly.com/link/187052/0a4070b383 "vercel.com") — A new framework from Vercel that provides Next.js-esque structure for building AI-powered agents using TypeScript and Markdown. It's quite Vercel-flavored by default, but I found you can run it entirely independently of Vercel with a few settings tweaks and your own keys. [Project homepage.](https://nodeweekly.com/link/187053/0a4070b383)
+
+Vercel
+
+[TypeScript 7.0 Release Candidate](https://nodeweekly.com/link/187054/0a4070b383 "devblogs.microsoft.com") — A step closer for the Go-powered TypeScript compiler that promises ~10x faster build performance. A reminder that `moduleResolution: node` / `node10` are no longer supported and `@types` packages you need have to be listed explicitly.
+
+Daniel Rosenwasser (Microsoft)
+
+🔐 [AccessControl 3.0: Role and Attribute-based Access Control](https://nodeweekly.com/link/187055/0a4070b383 "onury.io") — A role and attribute-based (RBAC/ABAC) access control library that, [as of v3](https://nodeweekly.com/link/187056/0a4070b383), now has a real policy engine available to apply conditions to grants, enforced ownership, mandatory restriction gates, audit hooks, and more. [GitHub repo](https://nodeweekly.com/link/187057/0a4070b383).
+
+Onur Yıldırım
+
+[Camaro 6.5: A High Performance XML to JSON Converter](https://nodeweekly.com/link/187058/0a4070b383 "github.com") — Uses bindings to [pugixml](https://nodeweekly.com/link/187059/0a4070b383), a fast C++ XML parser.
+
+Tuan Anh Tran
+
+* [Tedious 20.0](https://nodeweekly.com/link/187060/0a4070b383) – TDS module for connecting to SQL Server. A related release is the SQL Server client library [node-mssql 12.6](https://nodeweekly.com/link/187061/0a4070b383) which uses Tedious (or [msnodesqlv8](https://nodeweekly.com/link/187062/0a4070b383)).
+
+* [Chardet 2.2](https://nodeweekly.com/link/187063/0a4070b383) – Character encoding detection library that uses statistical methods to detect [around 30 different encodings](https://nodeweekly.com/link/187064/0a4070b383).
+
+* [cookie 2.0](https://nodeweekly.com/link/187065/0a4070b383) – HTTP cookie parser and serializer library. Now faster and ESM only.
+
+📰 Classifieds
+
+🧐 Where to host? Judoscale’s [cost comparison calculator](https://nodeweekly.com/link/187066/0a4070b383) puts the PaaS alternatives head-to-head.
+
+***
+
+⚙️ Run AI agents like microservices — every agent an auto-generated API: schemas, versioning, no glue code. 100+ recipes, TypeScript SDK. [→ Star on GitHub](https://nodeweekly.com/link/187067/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+A roundup of some other interesting stories in the broader landscape:
+
+* Cloudflare has added the ability to [create and deploy Workers on 'temporary accounts'](https://nodeweekly.com/link/187068/0a4070b383). Ostensibly 'for AI agents', but you can use them yourself too, and get a Worker (which have [increased Node.js compatibility](https://nodeweekly.com/link/187070/0a4070b383) nowadays) running for 60 minutes with no strings attached.
+
+* The Bun team has proposed [adding shared-memory threads to JavaScriptCore](https://nodeweekly.com/link/187071/0a4070b383) (a more traditional threading approach versus [worker threads](https://nodeweekly.com/link/187072/0a4070b383)).
+
+* 🔒 GitHub has [released `actions/checkout` v7](https://nodeweekly.com/link/187073/0a4070b383) that *"refuses common pwn request patterns by default"* including refusing to fetch fork pull request code in `pull_request_target` and `workflow_run` workflows.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
