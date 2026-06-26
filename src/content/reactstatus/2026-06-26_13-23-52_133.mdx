@@ -1,0 +1,246 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Dan Abramov joins the Next.js team
+description: Dan Abramov joins the Next.js team
+date: 星期五 01 下午 六月 26o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/480
+origin_site: https://react.statuscode.com/issues/480
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Dan Abramov joins the Next.js team" url="https://react.statuscode.com/issues/480" />
+
+<Detail client:only="react">
+	#​480 — June 26, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/480)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://react.statuscode.com/link/187130/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/iwsfel0vwljz7a6wvivj.jpg)](https://react.statuscode.com/link/187131/5d0bbb4a61)
+
+[Making Next.js Navigations Feel Instant Without Going Full SPA](https://react.statuscode.com/link/187131/5d0bbb4a61 "nextjs.org") — A preview of Next.js 16.3 is available that tackles a common gripe about Server Components: sluggish navigation. New opt-in behaviors keep the server-side benefits, while making navigations feel like an SPA. They’ve also created [🤖 an agent skill](https://react.statuscode.com/link/187133/5d0bbb4a61) to help existing projects adopt the new features.
+
+Clark, Story and the Next.js Team
+
+🎉 In [a Bluesky thread](https://react.statuscode.com/link/187134/5d0bbb4a61) commenting on the release, Dan Abramov revealed [he's joining the Next.js team](https://react.statuscode.com/link/187135/5d0bbb4a61) on a part-time basis!
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/432b659e.png)](https://react.statuscode.com/link/187130/5d0bbb4a61)
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://react.statuscode.com/link/187130/5d0bbb4a61 "www.meticulous.ai") — Notion, Dropbox, Wiz and LaunchDarkly now use a testing paradigm they can’t work without. Built by former Palantir engineers, Meticulous automatically creates an evolving suite of E2E UI tests, delivering exhaustive coverage with no developer effort.
+
+Meticulous sponsor
+
+**IN BRIEF:**
+
+*   [Vite 8.1](https://react.statuscode.com/link/187136/5d0bbb4a61) includes a 'bundled dev mode' that makes apps with large numbers of modules boot/reload faster (testing on an app with 10,000 components showed a 15x speedup, with more modest gains on real-world apps).
+    
+*   [Rsbuild 2.1](https://react.statuscode.com/link/187137/5d0bbb4a61) has been released and now includes the new Rust implementation of React Compiler, plus TanStack Start support.
+    
+*   Meanwhile, Rolldown and Vite have temporarily [𝕏 _removed_ the initial Rust React Compiler integration](https://react.statuscode.com/link/187138/5d0bbb4a61) citing a 17% increase in binary size.
+    
+
+[Moving Linear from styled‑components to StyleX](https://react.statuscode.com/link/187139/5d0bbb4a61 "www.skovhus.dev") — Linear migrated its React apps away from a runtime CSS-in-JS approach for ~30% faster renders when navigating between pages. An agent-built codemod (of some 100k lines!) did the grunt work, but Kenneth is honest about what still needed a human touch.
+
+Kenneth Skovhus
+
+[Writing Custom Renderers for React](https://react.statuscode.com/link/187140/5d0bbb4a61 "www.callstack.com") — When React 19 deprecated React Test Renderer, the React Native Testing Library maintainer built his own. The upside? We get a tour of the reconciler internals he had to wrangle along the way.
+
+Maciej Jastrzębski (Callstack)
+
+[You Write React. You Can Ship It to the App Store This Week](https://react.statuscode.com/link/187141/5d0bbb4a61 "try.expo.dev") — One React codebase, real apps on iOS and Android. Expo handles the builds, the store, and updates. [Start free](https://react.statuscode.com/link/187141/5d0bbb4a61).
+
+Expo sponsor
+
+📄 [Waku’s Unique Feature: Slices](https://react.statuscode.com/link/187142/5d0bbb4a61) – A slice is a reusable component with its own render config, and a lazy mode that loads independently, akin to Astro’s server islands. Daishi Kato
+
+📄 [How an Underrated Refactor Saved 90% Memory Usage](https://react.statuscode.com/link/187143/5d0bbb4a61) – The tale of how [TanStack Table](https://react.statuscode.com/link/187144/5d0bbb4a61) v9 uses _far_ less memory than v8 on large tables. Kevin Van Cott (TanStack)
+
+📄 [Building a Video Call App with Filters in React Native](https://react.statuscode.com/link/187145/5d0bbb4a61) Ritesh Shukla
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/edufdnsa3faxxatpmwxy.jpg)](https://react.statuscode.com/link/187146/5d0bbb4a61)
+
+[Takumi 2.0 Beta: Render React Components to Images](https://react.statuscode.com/link/187146/5d0bbb4a61 "takumi.kane.tw") — A Rust-powered engine that renders JSX to images _without_ a headless browser. v2.0 adds SVG output support, on-demand Google Fonts use, improved non-Latin character support, and new docs. There’s a [v2 upgrade guide](https://react.statuscode.com/link/187147/5d0bbb4a61) for existing users. _(TanStack uses this on their site.)_
+
+Kane Wang et al.
+
+[ForesightJS 4: Predictive User Intent for Web Pages](https://react.statuscode.com/link/187148/5d0bbb4a61 "foresightjs.com") — Predicts user intent from mouse and keyboard cues to prefetch content for a snappier UX. [v4.0](https://react.statuscode.com/link/187149/5d0bbb4a61) adds a React package with [a declarative `&lt;Foresight>` component](https://react.statuscode.com/link/187151/5d0bbb4a61).
+
+ForesightJS, Inc.
+
+[cnfast: A Faster Drop-In Replacement for `cn()`](https://react.statuscode.com/link/187152/5d0bbb4a61 "github.com") — `shadcn/ui` ships a `cn()` helper to compose and merge Tailwind class names. cnfast is a faster, drop-in replacement.
+
+Aiden Bai
+
+🤖 [Eve: Like Next.js, But for Building Agents](https://react.statuscode.com/link/187153/5d0bbb4a61 "vercel.com") — A new framework from Vercel that provides Next.js-esque structure for building AI-powered agents using TypeScript and Markdown.
+
+Vercel
+
+*   [TinyBase v8.5](https://react.statuscode.com/link/187154/5d0bbb4a61) – Reactive data store and sync engine backend for powering apps that need to feel fast _and_ work offline. v8.5 adds a module for rendering reactive SVG chart components in React apps.
+    
+*   [React Admin 5.15](https://react.statuscode.com/link/187155/5d0bbb4a61) – SPA framework providing a React and Material Design frontend to REST or GraphQL APIs. v5.15 adds [MUI v9](https://react.statuscode.com/link/187156/5d0bbb4a61) support.
+    
+*   📊 [Recharts 3.9](https://react.statuscode.com/link/187157/5d0bbb4a61) – React + D3 charting library. v3.9 adds [new animations](https://react.statuscode.com/link/187158/5d0bbb4a61) and a guide to using them.
+    
+*   [RedwoodSDK 1.5](https://react.statuscode.com/link/187159/5d0bbb4a61) – The Cloudflare-based server-first React framework adds Vite 8 support.
+    
+*   [React Native Reanimated 4.5](https://react.statuscode.com/link/187160/5d0bbb4a61) – Declarative API for smooth animations.
+    
+*   [ReactUse 1.0](https://react.statuscode.com/link/187161/5d0bbb4a61) – A library of 160+ production-ready hooks.
+    
+*   [Mantine v9.4](https://react.statuscode.com/link/187162/5d0bbb4a61) – Popular, extensive component suite.
+    
+
+📰 Classifieds
+
+🏢 [Add org context to OAuth flows](https://react.statuscode.com/link/187163/5d0bbb4a61): users pick an org, clients get an org\_id claim.
+
+* * *
+
+⚛️ You compose React from components. Compose your AI backend the same way — agents as typed APIs, native TypeScript SDK, 100+ recipes. [→ Star on GitHub](https://react.statuscode.com/link/187164/5d0bbb4a61).
+
+📢  Elsewhere in the ecosystem
+
+*   [Deno 2.9](https://react.statuscode.com/link/187165/5d0bbb4a61) has been released with the headline feature being [a way to create cross-platform desktop apps](https://react.statuscode.com/link/187166/5d0bbb4a61).
+    
+*   [Node.js v26.4 (Current)](https://react.statuscode.com/link/187167/5d0bbb4a61) has been released with experimental support for [package maps](https://react.statuscode.com/link/187168/5d0bbb4a61) which let Node resolve packages from a static JSON file rather than walking `node_modules`.
+    
+*   The [first preview release of `npm` 12 is available](https://react.statuscode.com/link/187169/5d0bbb4a61) if you want to get testing.
+    
+*   Ever struggled to understand what the [AT Protocol](https://react.statuscode.com/link/187170/5d0bbb4a61) is and how it relates to Bluesky? Dan Abramov clears it up in [There Are No Instances in atproto](https://react.statuscode.com/link/187172/5d0bbb4a61), comparing atproto's architecture to RSS vs Mastodon's approach.
+    
+*   Sticking with atproto, Node's James M Snell ponders the possibility [of running the npm package system on AT Protocol.](https://react.statuscode.com/link/187174/5d0bbb4a61)
+    
+*   🕹️ [A Quake port rendered entirely with CSS](https://react.statuscode.com/link/187175/5d0bbb4a61) and DOM elements (no WebGL or canvas) – that's cool, right?
+    
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​480 — June 26, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/480)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://react.statuscode.com/link/187130/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/iwsfel0vwljz7a6wvivj.jpg)](https://react.statuscode.com/link/187131/5d0bbb4a61)
+
+[Making Next.js Navigations Feel Instant Without Going Full SPA](https://react.statuscode.com/link/187131/5d0bbb4a61 "nextjs.org") — A preview of Next.js 16.3 is available that tackles a common gripe about Server Components: sluggish navigation. New opt-in behaviors keep the server-side benefits, while making navigations feel like an SPA. They’ve also created [🤖 an agent skill](https://react.statuscode.com/link/187133/5d0bbb4a61) to help existing projects adopt the new features.
+
+Clark, Story and the Next.js Team
+
+🎉 In [a Bluesky thread](https://react.statuscode.com/link/187134/5d0bbb4a61) commenting on the release, Dan Abramov revealed [he's joining the Next.js team](https://react.statuscode.com/link/187135/5d0bbb4a61) on a part-time basis!
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/432b659e.png)](https://react.statuscode.com/link/187130/5d0bbb4a61)
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://react.statuscode.com/link/187130/5d0bbb4a61 "www.meticulous.ai") — Notion, Dropbox, Wiz and LaunchDarkly now use a testing paradigm they can’t work without. Built by former Palantir engineers, Meticulous automatically creates an evolving suite of E2E UI tests, delivering exhaustive coverage with no developer effort.
+
+Meticulous sponsor
+
+**IN BRIEF:**
+
+* [Vite 8.1](https://react.statuscode.com/link/187136/5d0bbb4a61) includes a 'bundled dev mode' that makes apps with large numbers of modules boot/reload faster (testing on an app with 10,000 components showed a 15x speedup, with more modest gains on real-world apps).
+
+* [Rsbuild 2.1](https://react.statuscode.com/link/187137/5d0bbb4a61) has been released and now includes the new Rust implementation of React Compiler, plus TanStack Start support.
+
+* Meanwhile, Rolldown and Vite have temporarily [𝕏 *removed* the initial Rust React Compiler integration](https://react.statuscode.com/link/187138/5d0bbb4a61) citing a 17% increase in binary size.
+
+[Moving Linear from styled‑components to StyleX](https://react.statuscode.com/link/187139/5d0bbb4a61 "www.skovhus.dev") — Linear migrated its React apps away from a runtime CSS-in-JS approach for ~30% faster renders when navigating between pages. An agent-built codemod (of some 100k lines!) did the grunt work, but Kenneth is honest about what still needed a human touch.
+
+Kenneth Skovhus
+
+[Writing Custom Renderers for React](https://react.statuscode.com/link/187140/5d0bbb4a61 "www.callstack.com") — When React 19 deprecated React Test Renderer, the React Native Testing Library maintainer built his own. The upside? We get a tour of the reconciler internals he had to wrangle along the way.
+
+Maciej Jastrzębski (Callstack)
+
+[You Write React. You Can Ship It to the App Store This Week](https://react.statuscode.com/link/187141/5d0bbb4a61 "try.expo.dev") — One React codebase, real apps on iOS and Android. Expo handles the builds, the store, and updates. [Start free](https://react.statuscode.com/link/187141/5d0bbb4a61).
+
+Expo sponsor
+
+📄 [Waku’s Unique Feature: Slices](https://react.statuscode.com/link/187142/5d0bbb4a61) – A slice is a reusable component with its own render config, and a lazy mode that loads independently, akin to Astro’s server islands. Daishi Kato
+
+📄 [How an Underrated Refactor Saved 90% Memory Usage](https://react.statuscode.com/link/187143/5d0bbb4a61) – The tale of how [TanStack Table](https://react.statuscode.com/link/187144/5d0bbb4a61) v9 uses *far* less memory than v8 on large tables. Kevin Van Cott (TanStack)
+
+📄 [Building a Video Call App with Filters in React Native](https://react.statuscode.com/link/187145/5d0bbb4a61) Ritesh Shukla
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/edufdnsa3faxxatpmwxy.jpg)](https://react.statuscode.com/link/187146/5d0bbb4a61)
+
+[Takumi 2.0 Beta: Render React Components to Images](https://react.statuscode.com/link/187146/5d0bbb4a61 "takumi.kane.tw") — A Rust-powered engine that renders JSX to images *without* a headless browser. v2.0 adds SVG output support, on-demand Google Fonts use, improved non-Latin character support, and new docs. There’s a [v2 upgrade guide](https://react.statuscode.com/link/187147/5d0bbb4a61) for existing users. *(TanStack uses this on their site.)*
+
+Kane Wang et al.
+
+[ForesightJS 4: Predictive User Intent for Web Pages](https://react.statuscode.com/link/187148/5d0bbb4a61 "foresightjs.com") — Predicts user intent from mouse and keyboard cues to prefetch content for a snappier UX. [v4.0](https://react.statuscode.com/link/187149/5d0bbb4a61) adds a React package with [a declarative `&lt;Foresight>` component](https://react.statuscode.com/link/187151/5d0bbb4a61).
+
+ForesightJS, Inc.
+
+[cnfast: A Faster Drop-In Replacement for `cn()`](https://react.statuscode.com/link/187152/5d0bbb4a61 "github.com") — `shadcn/ui` ships a `cn()` helper to compose and merge Tailwind class names. cnfast is a faster, drop-in replacement.
+
+Aiden Bai
+
+🤖 [Eve: Like Next.js, But for Building Agents](https://react.statuscode.com/link/187153/5d0bbb4a61 "vercel.com") — A new framework from Vercel that provides Next.js-esque structure for building AI-powered agents using TypeScript and Markdown.
+
+Vercel
+
+* [TinyBase v8.5](https://react.statuscode.com/link/187154/5d0bbb4a61) – Reactive data store and sync engine backend for powering apps that need to feel fast *and* work offline. v8.5 adds a module for rendering reactive SVG chart components in React apps.
+
+* [React Admin 5.15](https://react.statuscode.com/link/187155/5d0bbb4a61) – SPA framework providing a React and Material Design frontend to REST or GraphQL APIs. v5.15 adds [MUI v9](https://react.statuscode.com/link/187156/5d0bbb4a61) support.
+
+* 📊 [Recharts 3.9](https://react.statuscode.com/link/187157/5d0bbb4a61) – React + D3 charting library. v3.9 adds [new animations](https://react.statuscode.com/link/187158/5d0bbb4a61) and a guide to using them.
+
+* [RedwoodSDK 1.5](https://react.statuscode.com/link/187159/5d0bbb4a61) – The Cloudflare-based server-first React framework adds Vite 8 support.
+
+* [React Native Reanimated 4.5](https://react.statuscode.com/link/187160/5d0bbb4a61) – Declarative API for smooth animations.
+
+* [ReactUse 1.0](https://react.statuscode.com/link/187161/5d0bbb4a61) – A library of 160+ production-ready hooks.
+
+* [Mantine v9.4](https://react.statuscode.com/link/187162/5d0bbb4a61) – Popular, extensive component suite.
+
+📰 Classifieds
+
+🏢 [Add org context to OAuth flows](https://react.statuscode.com/link/187163/5d0bbb4a61): users pick an org, clients get an org\_id claim.
+
+***
+
+⚛️ You compose React from components. Compose your AI backend the same way — agents as typed APIs, native TypeScript SDK, 100+ recipes. [→ Star on GitHub](https://react.statuscode.com/link/187164/5d0bbb4a61).
+
+📢  Elsewhere in the ecosystem
+
+* [Deno 2.9](https://react.statuscode.com/link/187165/5d0bbb4a61) has been released with the headline feature being [a way to create cross-platform desktop apps](https://react.statuscode.com/link/187166/5d0bbb4a61).
+
+* [Node.js v26.4 (Current)](https://react.statuscode.com/link/187167/5d0bbb4a61) has been released with experimental support for [package maps](https://react.statuscode.com/link/187168/5d0bbb4a61) which let Node resolve packages from a static JSON file rather than walking `node_modules`.
+
+* The [first preview release of `npm` 12 is available](https://react.statuscode.com/link/187169/5d0bbb4a61) if you want to get testing.
+
+* Ever struggled to understand what the [AT Protocol](https://react.statuscode.com/link/187170/5d0bbb4a61) is and how it relates to Bluesky? Dan Abramov clears it up in [There Are No Instances in atproto](https://react.statuscode.com/link/187172/5d0bbb4a61), comparing atproto's architecture to RSS vs Mastodon's approach.
+
+* Sticking with atproto, Node's James M Snell ponders the possibility [of running the npm package system on AT Protocol.](https://react.statuscode.com/link/187174/5d0bbb4a61)
+
+* 🕹️ [A Quake port rendered entirely with CSS](https://react.statuscode.com/link/187175/5d0bbb4a61) and DOM elements (no WebGL or canvas) – that's cool, right?
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
