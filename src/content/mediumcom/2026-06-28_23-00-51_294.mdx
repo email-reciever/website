@@ -1,0 +1,833 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 8 Angular 22 Signals Mistakes to Avoid | anthony-kigotho in Level Up Coding
+description: 8 Angular 22 Signals Mistakes to Avoid | anthony-kigotho in Level Up Coding
+date: 星期日 11 晚上 六月 28o 2026
+author: mediumcom
+origin_url: https://medium.com/
+origin_site: https://medium.com/
+translated: true
+avatar: /media-source/mediumcom-ico.png
+email_recorder: noreply@medium.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="8 Angular 22 Signals Mistakes to Avoid | anthony-kigotho in Level Up Coding" url="https://medium.com/" />
+
+<Detail client:only="react">
+	Today's highlights
+
+[![anthony-kigotho](https://miro.medium.com/fit/c/40/40/1*553vyFMLt1gVVAAzBIMbaw.jpeg)](https://medium.com/@anthony-kigotho?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-d120f9e98858----0-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[anthony-kigotho](https://medium.com/@anthony-kigotho?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-d120f9e98858----0-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-d120f9e98858----0-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![8 Angular 22 Signals Mistakes to Avoid](https://miro.medium.com/fit/c/320/214/1*NVDK22OsMOMHPl0vUPJTZQ.png)](https://medium.com/@anthony-kigotho/10-angular-22-signals-mistakes-to-avoid-d120f9e98858?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-d120f9e98858----0-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[
+
+## 8 Angular 22 Signals Mistakes to Avoid
+
+### 1\. Expose signal state as readonly
+
+
+
+](https://medium.com/@anthony-kigotho/10-angular-22-signals-mistakes-to-avoid-d120f9e98858?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-d120f9e98858----0-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+73
+
+[![Thomas Oppong](https://miro.medium.com/fit/c/40/40/1*K4RSsTUgj-UeJuc69C_oLA.jpeg)](https://medium.com/@thomas-oppong?source=email-2b8b8ee19057-1782669994380-digest.reader-120fbcaac315-306872879aff----1-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Thomas Oppong](https://medium.com/@thomas-oppong?source=email-2b8b8ee19057-1782669994380-digest.reader-120fbcaac315-306872879aff----1-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[Personal Growth](https://medium.com/personal-growth?source=email-2b8b8ee19057-1782669994380-digest.reader-120fbcaac315-306872879aff----1-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![Democritus Cracked The Happiness Code. These Are His Surprising Secrets For a Good Life](https://miro.medium.com/fit/c/320/214/1*zEgpWKQsOc4G6BEPlVUgyw.jpeg)](https://medium.com/@thomas-oppong/democritus-cracked-the-happiness-code-these-are-his-surprising-secrets-for-a-good-life-306872879aff?source=email-2b8b8ee19057-1782669994380-digest.reader-120fbcaac315-306872879aff----1-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[
+
+## Democritus Cracked The Happiness Code. These Are His Surprising Secrets For a…
+
+### This little-known philosopher figured out the sources…
+
+
+
+](https://medium.com/@thomas-oppong/democritus-cracked-the-happiness-code-these-are-his-surprising-secrets-for-a-good-life-306872879aff?source=email-2b8b8ee19057-1782669994380-digest.reader-120fbcaac315-306872879aff----1-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+462
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+14
+
+[![Fabrizia Ausiello](https://miro.medium.com/fit/c/40/40/1*WQ_QG2qAwf-kPO6BOz_SdA.png)](https://medium.com/@fabriziaa?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-a0abe75ae21e----2-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Fabrizia Ausiello](https://medium.com/@fabriziaa?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-a0abe75ae21e----2-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[UX Collective](https://medium.com/user-experience-design-1?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-a0abe75ae21e----2-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![Liquid Glass: who gets to decide how an interface looks?](https://miro.medium.com/fit/c/320/214/1*pJm4WsYuQuCzawpE5BCxCQ.png)](https://medium.com/@fabriziaa/liquid-glass-who-gets-to-decide-how-an-interface-looks-a0abe75ae21e?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-a0abe75ae21e----2-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[
+
+## Liquid Glass: who gets to decide how an interface looks?
+
+### Notes from the 2026 WWDC keynote
+
+
+
+](https://medium.com/@fabriziaa/liquid-glass-who-gets-to-decide-how-an-interface-looks-a0abe75ae21e?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-a0abe75ae21e----2-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+246
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+5
+
+[![The PyCoach](https://miro.medium.com/fit/c/40/40/1*ZIcUbGyIASJ3iXrD5oTeoA.jpeg)](https://medium.com/@frank-andrade?source=email-2b8b8ee19057-1782669994380-digest.reader-76436a11a2b0-f68034e32dbb----3-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[The PyCoach](https://medium.com/@frank-andrade?source=email-2b8b8ee19057-1782669994380-digest.reader-76436a11a2b0-f68034e32dbb----3-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[Artificial Corner](https://medium.com/artificial-corner?source=email-2b8b8ee19057-1782669994380-digest.reader-76436a11a2b0-f68034e32dbb----3-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![We Built 70+ Claude Skills. These Are The Best](https://miro.medium.com/fit/c/320/214/1*kW7Red_xIvtO0AtU6_t1Pw.png)](https://medium.com/@frank-andrade/we-built-70-claude-skills-these-are-the-best-f68034e32dbb?source=email-2b8b8ee19057-1782669994380-digest.reader-76436a11a2b0-f68034e32dbb----3-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[
+
+## We Built 70+ Claude Skills. These Are The Best
+
+### I asked 7 AI writers to share their #1 Claude skill…
+
+
+
+](https://medium.com/@frank-andrade/we-built-70-claude-skills-these-are-the-best-f68034e32dbb?source=email-2b8b8ee19057-1782669994380-digest.reader-76436a11a2b0-f68034e32dbb----3-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+44
+
+[![Nurkhon](https://miro.medium.com/fit/c/40/40/1*8qlwI5YHQJFpIHAO5bw_5A.png)](https://medium.com/@nurxmedov?source=email-2b8b8ee19057-1782669994380-digest.reader--3c303648c347----4-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Nurkhon](https://medium.com/@nurxmedov?source=email-2b8b8ee19057-1782669994380-digest.reader--3c303648c347----4-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![Stop trusting AI design output — use these 5 judgment rules instead](https://miro.medium.com/fit/c/320/214/1*Q8m9g-Re4tVNgy7n3YdFdA.png)](https://medium.com/@nurxmedov/stop-trusting-ai-design-output-use-these-5-judgment-rules-instead-3c303648c347?source=email-2b8b8ee19057-1782669994380-digest.reader--3c303648c347----4-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[
+
+## Stop trusting AI design output — use these 5 judgment rules instead
+
+### Why the efficiency-trust gap is breaking design teams…
+
+
+
+](https://medium.com/@nurxmedov/stop-trusting-ai-design-output-use-these-5-judgment-rules-instead-3c303648c347?source=email-2b8b8ee19057-1782669994380-digest.reader--3c303648c347----4-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+380
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+8
+
+[![Kevin Muldoon](https://miro.medium.com/fit/c/40/40/1*Tayb4TKw4t3FGFtTcrr82g.jpeg)](https://medium.com/@caoimghgin?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-2bc47ef03a58----5-102------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Kevin Muldoon](https://medium.com/@caoimghgin?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-2bc47ef03a58----5-102------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[UX Collective](https://medium.com/user-experience-design-1?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-2bc47ef03a58----5-102------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![The color statistic that’s been wrong for 80 years](https://miro.medium.com/fit/c/320/214/1*WjP7mUuUWo8DSnRtsoWlHA.png)](https://medium.com/@caoimghgin/the-color-statistic-thats-been-wrong-for-80-years-2bc47ef03a58?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-2bc47ef03a58----5-102------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[
+
+## The color statistic that’s been wrong for 80 years
+
+### The estimate everyone repeated and nobody verified
+
+
+
+](https://medium.com/@caoimghgin/the-color-statistic-thats-been-wrong-for-80-years-2bc47ef03a58?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-2bc47ef03a58----5-102------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+10 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+34
+
+[![The Useful Tech](https://miro.medium.com/fit/c/40/40/1*huaATcaUP76fICcfufubLw.png)](https://medium.com/@theusefultech?source=email-2b8b8ee19057-1782669994380-digest.reader-953b148ade73-297f86e6345d----6-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[The Useful Tech](https://medium.com/@theusefultech?source=email-2b8b8ee19057-1782669994380-digest.reader-953b148ade73-297f86e6345d----6-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[The Useful Tech](https://medium.com/the-useful-tech?source=email-2b8b8ee19057-1782669994380-digest.reader-953b148ade73-297f86e6345d----6-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![9 Ridiculously Useful macOS Tahoe Settings You’re 100% Not Using](https://miro.medium.com/fit/c/320/214/1*vCZRETrCPH68kjKBRPAXwQ.png)](https://medium.com/@theusefultech/9-ridiculously-useful-macos-tahoe-settings-youre-100-not-using-297f86e6345d?source=email-2b8b8ee19057-1782669994380-digest.reader-953b148ade73-297f86e6345d----6-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[
+
+## 9 Ridiculously Useful macOS Tahoe Settings You’re 100% Not Using
+
+### Settings so hidden that even Apple’s own feature pages…
+
+
+
+](https://medium.com/@theusefultech/9-ridiculously-useful-macos-tahoe-settings-youre-100-not-using-297f86e6345d?source=email-2b8b8ee19057-1782669994380-digest.reader-953b148ade73-297f86e6345d----6-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+13 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.6K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+31
+
+[![Raja Sekar](https://miro.medium.com/fit/c/40/40/1*1QBHmpPV3uGCWu1n_c8VqQ.jpeg)](https://medium.com/@raja96?source=email-2b8b8ee19057-1782669994380-digest.reader-2b6792fe7b4f-54e59f93c9ad----7-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Raja Sekar](https://medium.com/@raja96?source=email-2b8b8ee19057-1782669994380-digest.reader-2b6792fe7b4f-54e59f93c9ad----7-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[The Useful Life](https://medium.com/the-useful-life?source=email-2b8b8ee19057-1782669994380-digest.reader-2b6792fe7b4f-54e59f93c9ad----7-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![11 Tiny Lifestyle Changes That Fixed My Attention Span](https://miro.medium.com/fit/c/320/214/1*Y2osAuR3MOESRzI_PrhUBQ.png)](https://medium.com/@raja96/11-tiny-lifestyle-changes-that-fixed-my-attention-span-54e59f93c9ad?source=email-2b8b8ee19057-1782669994380-digest.reader-2b6792fe7b4f-54e59f93c9ad----7-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[
+
+## 11 Tiny Lifestyle Changes That Fixed My Attention Span
+
+### The boring habits that pulled me out of brain fog
+
+
+
+](https://medium.com/@raja96/11-tiny-lifestyle-changes-that-fixed-my-attention-span-54e59f93c9ad?source=email-2b8b8ee19057-1782669994380-digest.reader-2b6792fe7b4f-54e59f93c9ad----7-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+2.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+60
+
+[![Shalitha Suranga](https://miro.medium.com/fit/c/40/40/1*3sLPPPykpFXoPCr3OYlunw.jpeg)](https://medium.com/@shalithasuranga?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-4fa3f7bcd5fd----8-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Shalitha Suranga](https://medium.com/@shalithasuranga?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-4fa3f7bcd5fd----8-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-4fa3f7bcd5fd----8-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![C3: The Best Modern C Alternative That Nobody Knows About](https://miro.medium.com/fit/c/320/214/1*mKH23iqTlHvhuuuLjYkKPA.png)](https://medium.com/@shalithasuranga/c3-the-best-modern-c-alternative-that-nobody-knows-about-4fa3f7bcd5fd?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-4fa3f7bcd5fd----8-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[
+
+## C3: The Best Modern C Alternative That Nobody Knows About
+
+### C3 will be more popular than Zig, Go, C++, Rust, or D…
+
+
+
+](https://medium.com/@shalithasuranga/c3-the-best-modern-c-alternative-that-nobody-knows-about-4fa3f7bcd5fd?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-4fa3f7bcd5fd----8-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+377
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+26
+
+[![Yashita Sharma](https://miro.medium.com/fit/c/40/40/1*2jgD24TRDZty7qniM52BQw.png)](https://medium.com/@figmaebae?source=email-2b8b8ee19057-1782669994380-digest.reader-48e972f5c24e-1f030abcfecd----9-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Yashita Sharma](https://medium.com/@figmaebae?source=email-2b8b8ee19057-1782669994380-digest.reader-48e972f5c24e-1f030abcfecd----9-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[Bootcamp](https://medium.com/design-bootcamp?source=email-2b8b8ee19057-1782669994380-digest.reader-48e972f5c24e-1f030abcfecd----9-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![AI Won’t Replace Designers. But It Is Changing What Designers Get Paid For.](https://miro.medium.com/focal/320/214/50/10/1*VG2Wl808H9-3sppaMQvCWA.png)](https://medium.com/@figmaebae/ai-wont-replace-designers-but-it-is-changing-what-designers-get-paid-for-1f030abcfecd?source=email-2b8b8ee19057-1782669994380-digest.reader-48e972f5c24e-1f030abcfecd----9-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[
+
+## AI Won’t Replace Designers. But It Is Changing What Designers Get Paid For.
+
+### Let’s get the scary part out of the way first.
+
+
+
+](https://medium.com/@figmaebae/ai-wont-replace-designers-but-it-is-changing-what-designers-get-paid-for-1f030abcfecd?source=email-2b8b8ee19057-1782669994380-digest.reader-48e972f5c24e-1f030abcfecd----9-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+756
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+16
+
+[![Desiree Peralta](https://miro.medium.com/fit/c/40/40/1*6mgEZmtgEIYKM-aqXYAgMA@2x.jpeg)](https://medium.com/@dessyperalt?source=email-2b8b8ee19057-1782669994380-digest.reader-4c1db9d0f93a-7bb6909160a3----10-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Desiree Peralta](https://medium.com/@dessyperalt?source=email-2b8b8ee19057-1782669994380-digest.reader-4c1db9d0f93a-7bb6909160a3----10-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[Publishous](https://medium.com/publishous?source=email-2b8b8ee19057-1782669994380-digest.reader-4c1db9d0f93a-7bb6909160a3----10-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![Why AI Porn Is More Dangerous Than You Think](https://miro.medium.com/fit/c/320/214/0*t-61QYxMxAm7j1NR)](https://medium.com/@dessyperalt/why-ai-porn-is-more-dangerous-than-you-think-7bb6909160a3?source=email-2b8b8ee19057-1782669994380-digest.reader-4c1db9d0f93a-7bb6909160a3----10-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[
+
+## Why AI Porn Is More Dangerous Than You Think
+
+### If this becomes a thing, we are doomed.
+
+
+
+](https://medium.com/@dessyperalt/why-ai-porn-is-more-dangerous-than-you-think-7bb6909160a3?source=email-2b8b8ee19057-1782669994380-digest.reader-4c1db9d0f93a-7bb6909160a3----10-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+6.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+316
+
+[![Youssef Hosni](https://miro.medium.com/fit/c/40/40/1*cBxasbWXomjJrHV2_Fh8zw.jpeg)](https://medium.com/@yousefhosni?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-42f31d73a57f----11-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Youssef Hosni](https://medium.com/@yousefhosni?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-42f31d73a57f----11-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-42f31d73a57f----11-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![Claude Cowork 101: From Prompts to Deliverables & Automated Workflows](https://miro.medium.com/fit/c/320/214/1*H17MNuKbjGnuU16OExOTCw.png)](https://medium.com/@yousefhosni/claude-cowork-101-from-prompts-to-deliverables-automated-workflows-42f31d73a57f?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-42f31d73a57f----11-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[
+
+## Claude Cowork 101: From Prompts to Deliverables & Automated Workflows
+
+### Most people use Claude as a chatbot: they ask a…
+
+
+
+](https://medium.com/@yousefhosni/claude-cowork-101-from-prompts-to-deliverables-automated-workflows-42f31d73a57f?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-42f31d73a57f----11-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+41 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+619
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+8
+
+[![Nick Babich](https://miro.medium.com/fit/c/40/40/1*DvFE_85Tc3fObRgRww9ZTQ.jpeg)](https://medium.com/@101?source=email-2b8b8ee19057-1782669994380-digest.reader-819cc2aaeee0-1852ccf5e1d1----12-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Nick Babich](https://medium.com/@101?source=email-2b8b8ee19057-1782669994380-digest.reader-819cc2aaeee0-1852ccf5e1d1----12-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[UX Planet](https://medium.com/ux-planet?source=email-2b8b8ee19057-1782669994380-digest.reader-819cc2aaeee0-1852ccf5e1d1----12-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![Figma Config 2026 Recap](https://miro.medium.com/fit/c/320/214/1*KcOJ5sqJvrJ_1JqHIlOojw.png)](https://medium.com/@101/figma-config-2026-recap-1852ccf5e1d1?source=email-2b8b8ee19057-1782669994380-digest.reader-819cc2aaeee0-1852ccf5e1d1----12-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[
+
+## Figma Config 2026 Recap
+
+### What’s new in Figma for product designers
+
+
+
+](https://medium.com/@101/figma-config-2026-recap-1852ccf5e1d1?source=email-2b8b8ee19057-1782669994380-digest.reader-819cc2aaeee0-1852ccf5e1d1----12-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+167
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+3
+
+[![Geets](https://miro.medium.com/fit/c/40/40/1*HW_6CVkImDUj2TJD_JrXBA.jpeg)](https://medium.com/@gtks1212?source=email-2b8b8ee19057-1782669994380-digest.reader--11ebac697cca----13-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Geets](https://medium.com/@gtks1212?source=email-2b8b8ee19057-1782669994380-digest.reader--11ebac697cca----13-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![These 12 Foods Made My Grandfather Look Half His Age](https://miro.medium.com/fit/c/320/214/0*0b8F9B95KMTUG3fz.jpg)](https://medium.com/@gtks1212/these-12-foods-made-my-grandfather-look-half-his-age-11ebac697cca?source=email-2b8b8ee19057-1782669994380-digest.reader--11ebac697cca----13-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[
+
+## These 12 Foods Made My Grandfather Look Half His Age
+
+### My grandfather never cared about expensive…
+
+
+
+](https://medium.com/@gtks1212/these-12-foods-made-my-grandfather-look-half-his-age-11ebac697cca?source=email-2b8b8ee19057-1782669994380-digest.reader--11ebac697cca----13-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+803
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+13
+
+[![Corina Stirbu](https://miro.medium.com/fit/c/40/40/1*0AdVA6sXQKnos9t7PdAJsw.png)](https://medium.com/@corinastirbu?source=email-2b8b8ee19057-1782669994380-digest.reader--405db3eccbe8----14-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Corina Stirbu](https://medium.com/@corinastirbu?source=email-2b8b8ee19057-1782669994380-digest.reader--405db3eccbe8----14-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![You don’t need a pricing model; you need a full monetization strategy](https://miro.medium.com/freeze/fit/c/320/214/1*BifvwC_c8J6UiwnU3f1prw.gif)](https://medium.com/@corinastirbu/you-dont-need-a-pricing-model-you-need-a-full-monetization-strategy-405db3eccbe8?source=email-2b8b8ee19057-1782669994380-digest.reader--405db3eccbe8----14-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[
+
+## You don’t need a pricing model; you need a full monetization strategy
+
+### Monetisation isn’t just about setting a price, and…
+
+
+
+](https://medium.com/@corinastirbu/you-dont-need-a-pricing-model-you-need-a-full-monetization-strategy-405db3eccbe8?source=email-2b8b8ee19057-1782669994380-digest.reader--405db3eccbe8----14-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+370
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+12
+
+[![Write on Medium](https://miro.medium.com/max/1360/0a282e8385c2f908271621219fec60181ef042b94164af733ebb6b67235b51c0)](https://medium.com/write?source=email-2b8b8ee19057-1782669994380-digest.reader-------------------------c6259781_452f_46d6_9634_c6a9643fd4e6)
+
+
+</Detail>
+
+Today's highlights
+
+[![anthony-kigotho](https://miro.medium.com/fit/c/40/40/1*553vyFMLt1gVVAAzBIMbaw.jpeg)](https://medium.com/@anthony-kigotho?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-d120f9e98858----0-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[anthony-kigotho](https://medium.com/@anthony-kigotho?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-d120f9e98858----0-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-d120f9e98858----0-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![8 Angular 22 Signals Mistakes to Avoid](https://miro.medium.com/fit/c/320/214/1*NVDK22OsMOMHPl0vUPJTZQ.png)](https://medium.com/@anthony-kigotho/10-angular-22-signals-mistakes-to-avoid-d120f9e98858?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-d120f9e98858----0-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+\[
+
+## 8 Angular 22 Signals Mistakes to Avoid
+
+### 1. Expose signal state as readonly
+
+]\(https://medium.com/@anthony-kigotho/10-angular-22-signals-mistakes-to-avoid-d120f9e98858?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-d120f9e98858----0-99------------------c6259781\_452f\_46d6\_9634\_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+73
+
+[![Thomas Oppong](https://miro.medium.com/fit/c/40/40/1*K4RSsTUgj-UeJuc69C_oLA.jpeg)](https://medium.com/@thomas-oppong?source=email-2b8b8ee19057-1782669994380-digest.reader-120fbcaac315-306872879aff----1-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Thomas Oppong](https://medium.com/@thomas-oppong?source=email-2b8b8ee19057-1782669994380-digest.reader-120fbcaac315-306872879aff----1-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[Personal Growth](https://medium.com/personal-growth?source=email-2b8b8ee19057-1782669994380-digest.reader-120fbcaac315-306872879aff----1-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![Democritus Cracked The Happiness Code. These Are His Surprising Secrets For a Good Life](https://miro.medium.com/fit/c/320/214/1*zEgpWKQsOc4G6BEPlVUgyw.jpeg)](https://medium.com/@thomas-oppong/democritus-cracked-the-happiness-code-these-are-his-surprising-secrets-for-a-good-life-306872879aff?source=email-2b8b8ee19057-1782669994380-digest.reader-120fbcaac315-306872879aff----1-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+\[
+
+## Democritus Cracked The Happiness Code. These Are His Surprising Secrets For a…
+
+### This little-known philosopher figured out the sources…
+
+]\(https://medium.com/@thomas-oppong/democritus-cracked-the-happiness-code-these-are-his-surprising-secrets-for-a-good-life-306872879aff?source=email-2b8b8ee19057-1782669994380-digest.reader-120fbcaac315-306872879aff----1-99------------------c6259781\_452f\_46d6\_9634\_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+462
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+14
+
+[![Fabrizia Ausiello](https://miro.medium.com/fit/c/40/40/1*WQ_QG2qAwf-kPO6BOz_SdA.png)](https://medium.com/@fabriziaa?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-a0abe75ae21e----2-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Fabrizia Ausiello](https://medium.com/@fabriziaa?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-a0abe75ae21e----2-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[UX Collective](https://medium.com/user-experience-design-1?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-a0abe75ae21e----2-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![Liquid Glass: who gets to decide how an interface looks?](https://miro.medium.com/fit/c/320/214/1*pJm4WsYuQuCzawpE5BCxCQ.png)](https://medium.com/@fabriziaa/liquid-glass-who-gets-to-decide-how-an-interface-looks-a0abe75ae21e?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-a0abe75ae21e----2-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+\[
+
+## Liquid Glass: who gets to decide how an interface looks?
+
+### Notes from the 2026 WWDC keynote
+
+]\(https://medium.com/@fabriziaa/liquid-glass-who-gets-to-decide-how-an-interface-looks-a0abe75ae21e?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-a0abe75ae21e----2-109------------------c6259781\_452f\_46d6\_9634\_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+246
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+5
+
+[![The PyCoach](https://miro.medium.com/fit/c/40/40/1*ZIcUbGyIASJ3iXrD5oTeoA.jpeg)](https://medium.com/@frank-andrade?source=email-2b8b8ee19057-1782669994380-digest.reader-76436a11a2b0-f68034e32dbb----3-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[The PyCoach](https://medium.com/@frank-andrade?source=email-2b8b8ee19057-1782669994380-digest.reader-76436a11a2b0-f68034e32dbb----3-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[Artificial Corner](https://medium.com/artificial-corner?source=email-2b8b8ee19057-1782669994380-digest.reader-76436a11a2b0-f68034e32dbb----3-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![We Built 70+ Claude Skills. These Are The Best](https://miro.medium.com/fit/c/320/214/1*kW7Red_xIvtO0AtU6_t1Pw.png)](https://medium.com/@frank-andrade/we-built-70-claude-skills-these-are-the-best-f68034e32dbb?source=email-2b8b8ee19057-1782669994380-digest.reader-76436a11a2b0-f68034e32dbb----3-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+\[
+
+## We Built 70+ Claude Skills. These Are The Best
+
+### I asked 7 AI writers to share their #1 Claude skill…
+
+]\(https://medium.com/@frank-andrade/we-built-70-claude-skills-these-are-the-best-f68034e32dbb?source=email-2b8b8ee19057-1782669994380-digest.reader-76436a11a2b0-f68034e32dbb----3-99------------------c6259781\_452f\_46d6\_9634\_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+44
+
+[![Nurkhon](https://miro.medium.com/fit/c/40/40/1*8qlwI5YHQJFpIHAO5bw_5A.png)](https://medium.com/@nurxmedov?source=email-2b8b8ee19057-1782669994380-digest.reader--3c303648c347----4-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Nurkhon](https://medium.com/@nurxmedov?source=email-2b8b8ee19057-1782669994380-digest.reader--3c303648c347----4-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![Stop trusting AI design output — use these 5 judgment rules instead](https://miro.medium.com/fit/c/320/214/1*Q8m9g-Re4tVNgy7n3YdFdA.png)](https://medium.com/@nurxmedov/stop-trusting-ai-design-output-use-these-5-judgment-rules-instead-3c303648c347?source=email-2b8b8ee19057-1782669994380-digest.reader--3c303648c347----4-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+\[
+
+## Stop trusting AI design output — use these 5 judgment rules instead
+
+### Why the efficiency-trust gap is breaking design teams…
+
+]\(https://medium.com/@nurxmedov/stop-trusting-ai-design-output-use-these-5-judgment-rules-instead-3c303648c347?source=email-2b8b8ee19057-1782669994380-digest.reader--3c303648c347----4-109------------------c6259781\_452f\_46d6\_9634\_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+380
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+8
+
+[![Kevin Muldoon](https://miro.medium.com/fit/c/40/40/1*Tayb4TKw4t3FGFtTcrr82g.jpeg)](https://medium.com/@caoimghgin?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-2bc47ef03a58----5-102------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Kevin Muldoon](https://medium.com/@caoimghgin?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-2bc47ef03a58----5-102------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[UX Collective](https://medium.com/user-experience-design-1?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-2bc47ef03a58----5-102------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![The color statistic that’s been wrong for 80 years](https://miro.medium.com/fit/c/320/214/1*WjP7mUuUWo8DSnRtsoWlHA.png)](https://medium.com/@caoimghgin/the-color-statistic-thats-been-wrong-for-80-years-2bc47ef03a58?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-2bc47ef03a58----5-102------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+\[
+
+## The color statistic that’s been wrong for 80 years
+
+### The estimate everyone repeated and nobody verified
+
+]\(https://medium.com/@caoimghgin/the-color-statistic-thats-been-wrong-for-80-years-2bc47ef03a58?source=email-2b8b8ee19057-1782669994380-digest.reader-138adf9c44c-2bc47ef03a58----5-102------------------c6259781\_452f\_46d6\_9634\_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+10 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+34
+
+[![The Useful Tech](https://miro.medium.com/fit/c/40/40/1*huaATcaUP76fICcfufubLw.png)](https://medium.com/@theusefultech?source=email-2b8b8ee19057-1782669994380-digest.reader-953b148ade73-297f86e6345d----6-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[The Useful Tech](https://medium.com/@theusefultech?source=email-2b8b8ee19057-1782669994380-digest.reader-953b148ade73-297f86e6345d----6-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[The Useful Tech](https://medium.com/the-useful-tech?source=email-2b8b8ee19057-1782669994380-digest.reader-953b148ade73-297f86e6345d----6-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![9 Ridiculously Useful macOS Tahoe Settings You’re 100% Not Using](https://miro.medium.com/fit/c/320/214/1*vCZRETrCPH68kjKBRPAXwQ.png)](https://medium.com/@theusefultech/9-ridiculously-useful-macos-tahoe-settings-youre-100-not-using-297f86e6345d?source=email-2b8b8ee19057-1782669994380-digest.reader-953b148ade73-297f86e6345d----6-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+\[
+
+## 9 Ridiculously Useful macOS Tahoe Settings You’re 100% Not Using
+
+### Settings so hidden that even Apple’s own feature pages…
+
+]\(https://medium.com/@theusefultech/9-ridiculously-useful-macos-tahoe-settings-youre-100-not-using-297f86e6345d?source=email-2b8b8ee19057-1782669994380-digest.reader-953b148ade73-297f86e6345d----6-109------------------c6259781\_452f\_46d6\_9634\_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+13 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.6K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+31
+
+[![Raja Sekar](https://miro.medium.com/fit/c/40/40/1*1QBHmpPV3uGCWu1n_c8VqQ.jpeg)](https://medium.com/@raja96?source=email-2b8b8ee19057-1782669994380-digest.reader-2b6792fe7b4f-54e59f93c9ad----7-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Raja Sekar](https://medium.com/@raja96?source=email-2b8b8ee19057-1782669994380-digest.reader-2b6792fe7b4f-54e59f93c9ad----7-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[The Useful Life](https://medium.com/the-useful-life?source=email-2b8b8ee19057-1782669994380-digest.reader-2b6792fe7b4f-54e59f93c9ad----7-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![11 Tiny Lifestyle Changes That Fixed My Attention Span](https://miro.medium.com/fit/c/320/214/1*Y2osAuR3MOESRzI_PrhUBQ.png)](https://medium.com/@raja96/11-tiny-lifestyle-changes-that-fixed-my-attention-span-54e59f93c9ad?source=email-2b8b8ee19057-1782669994380-digest.reader-2b6792fe7b4f-54e59f93c9ad----7-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+\[
+
+## 11 Tiny Lifestyle Changes That Fixed My Attention Span
+
+### The boring habits that pulled me out of brain fog
+
+]\(https://medium.com/@raja96/11-tiny-lifestyle-changes-that-fixed-my-attention-span-54e59f93c9ad?source=email-2b8b8ee19057-1782669994380-digest.reader-2b6792fe7b4f-54e59f93c9ad----7-99------------------c6259781\_452f\_46d6\_9634\_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+2.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+60
+
+[![Shalitha Suranga](https://miro.medium.com/fit/c/40/40/1*3sLPPPykpFXoPCr3OYlunw.jpeg)](https://medium.com/@shalithasuranga?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-4fa3f7bcd5fd----8-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Shalitha Suranga](https://medium.com/@shalithasuranga?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-4fa3f7bcd5fd----8-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-4fa3f7bcd5fd----8-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![C3: The Best Modern C Alternative That Nobody Knows About](https://miro.medium.com/fit/c/320/214/1*mKH23iqTlHvhuuuLjYkKPA.png)](https://medium.com/@shalithasuranga/c3-the-best-modern-c-alternative-that-nobody-knows-about-4fa3f7bcd5fd?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-4fa3f7bcd5fd----8-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+\[
+
+## C3: The Best Modern C Alternative That Nobody Knows About
+
+### C3 will be more popular than Zig, Go, C++, Rust, or D…
+
+]\(https://medium.com/@shalithasuranga/c3-the-best-modern-c-alternative-that-nobody-knows-about-4fa3f7bcd5fd?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-4fa3f7bcd5fd----8-73------------------c6259781\_452f\_46d6\_9634\_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+377
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+26
+
+[![Yashita Sharma](https://miro.medium.com/fit/c/40/40/1*2jgD24TRDZty7qniM52BQw.png)](https://medium.com/@figmaebae?source=email-2b8b8ee19057-1782669994380-digest.reader-48e972f5c24e-1f030abcfecd----9-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Yashita Sharma](https://medium.com/@figmaebae?source=email-2b8b8ee19057-1782669994380-digest.reader-48e972f5c24e-1f030abcfecd----9-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[Bootcamp](https://medium.com/design-bootcamp?source=email-2b8b8ee19057-1782669994380-digest.reader-48e972f5c24e-1f030abcfecd----9-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![AI Won’t Replace Designers. But It Is Changing What Designers Get Paid For.](https://miro.medium.com/focal/320/214/50/10/1*VG2Wl808H9-3sppaMQvCWA.png)](https://medium.com/@figmaebae/ai-wont-replace-designers-but-it-is-changing-what-designers-get-paid-for-1f030abcfecd?source=email-2b8b8ee19057-1782669994380-digest.reader-48e972f5c24e-1f030abcfecd----9-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+\[
+
+## AI Won’t Replace Designers. But It Is Changing What Designers Get Paid For.
+
+### Let’s get the scary part out of the way first.
+
+]\(https://medium.com/@figmaebae/ai-wont-replace-designers-but-it-is-changing-what-designers-get-paid-for-1f030abcfecd?source=email-2b8b8ee19057-1782669994380-digest.reader-48e972f5c24e-1f030abcfecd----9-99------------------c6259781\_452f\_46d6\_9634\_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+756
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+16
+
+[![Desiree Peralta](https://miro.medium.com/fit/c/40/40/1*6mgEZmtgEIYKM-aqXYAgMA@2x.jpeg)](https://medium.com/@dessyperalt?source=email-2b8b8ee19057-1782669994380-digest.reader-4c1db9d0f93a-7bb6909160a3----10-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Desiree Peralta](https://medium.com/@dessyperalt?source=email-2b8b8ee19057-1782669994380-digest.reader-4c1db9d0f93a-7bb6909160a3----10-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[Publishous](https://medium.com/publishous?source=email-2b8b8ee19057-1782669994380-digest.reader-4c1db9d0f93a-7bb6909160a3----10-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![Why AI Porn Is More Dangerous Than You Think](https://miro.medium.com/fit/c/320/214/0*t-61QYxMxAm7j1NR)](https://medium.com/@dessyperalt/why-ai-porn-is-more-dangerous-than-you-think-7bb6909160a3?source=email-2b8b8ee19057-1782669994380-digest.reader-4c1db9d0f93a-7bb6909160a3----10-73------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+\[
+
+## Why AI Porn Is More Dangerous Than You Think
+
+### If this becomes a thing, we are doomed.
+
+]\(https://medium.com/@dessyperalt/why-ai-porn-is-more-dangerous-than-you-think-7bb6909160a3?source=email-2b8b8ee19057-1782669994380-digest.reader-4c1db9d0f93a-7bb6909160a3----10-73------------------c6259781\_452f\_46d6\_9634\_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+6.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+316
+
+[![Youssef Hosni](https://miro.medium.com/fit/c/40/40/1*cBxasbWXomjJrHV2_Fh8zw.jpeg)](https://medium.com/@yousefhosni?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-42f31d73a57f----11-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Youssef Hosni](https://medium.com/@yousefhosni?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-42f31d73a57f----11-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-42f31d73a57f----11-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![Claude Cowork 101: From Prompts to Deliverables & Automated Workflows](https://miro.medium.com/fit/c/320/214/1*H17MNuKbjGnuU16OExOTCw.png)](https://medium.com/@yousefhosni/claude-cowork-101-from-prompts-to-deliverables-automated-workflows-42f31d73a57f?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-42f31d73a57f----11-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+\[
+
+## Claude Cowork 101: From Prompts to Deliverables & Automated Workflows
+
+### Most people use Claude as a chatbot: they ask a…
+
+]\(https://medium.com/@yousefhosni/claude-cowork-101-from-prompts-to-deliverables-automated-workflows-42f31d73a57f?source=email-2b8b8ee19057-1782669994380-digest.reader-5517fd7b58a6-42f31d73a57f----11-109------------------c6259781\_452f\_46d6\_9634\_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+41 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+619
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+8
+
+[![Nick Babich](https://miro.medium.com/fit/c/40/40/1*DvFE_85Tc3fObRgRww9ZTQ.jpeg)](https://medium.com/@101?source=email-2b8b8ee19057-1782669994380-digest.reader-819cc2aaeee0-1852ccf5e1d1----12-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Nick Babich](https://medium.com/@101?source=email-2b8b8ee19057-1782669994380-digest.reader-819cc2aaeee0-1852ccf5e1d1----12-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)in[UX Planet](https://medium.com/ux-planet?source=email-2b8b8ee19057-1782669994380-digest.reader-819cc2aaeee0-1852ccf5e1d1----12-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![Figma Config 2026 Recap](https://miro.medium.com/fit/c/320/214/1*KcOJ5sqJvrJ_1JqHIlOojw.png)](https://medium.com/@101/figma-config-2026-recap-1852ccf5e1d1?source=email-2b8b8ee19057-1782669994380-digest.reader-819cc2aaeee0-1852ccf5e1d1----12-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+\[
+
+## Figma Config 2026 Recap
+
+### What’s new in Figma for product designers
+
+]\(https://medium.com/@101/figma-config-2026-recap-1852ccf5e1d1?source=email-2b8b8ee19057-1782669994380-digest.reader-819cc2aaeee0-1852ccf5e1d1----12-99------------------c6259781\_452f\_46d6\_9634\_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+167
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+3
+
+[![Geets](https://miro.medium.com/fit/c/40/40/1*HW_6CVkImDUj2TJD_JrXBA.jpeg)](https://medium.com/@gtks1212?source=email-2b8b8ee19057-1782669994380-digest.reader--11ebac697cca----13-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Geets](https://medium.com/@gtks1212?source=email-2b8b8ee19057-1782669994380-digest.reader--11ebac697cca----13-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![These 12 Foods Made My Grandfather Look Half His Age](https://miro.medium.com/fit/c/320/214/0*0b8F9B95KMTUG3fz.jpg)](https://medium.com/@gtks1212/these-12-foods-made-my-grandfather-look-half-his-age-11ebac697cca?source=email-2b8b8ee19057-1782669994380-digest.reader--11ebac697cca----13-99------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+\[
+
+## These 12 Foods Made My Grandfather Look Half His Age
+
+### My grandfather never cared about expensive…
+
+]\(https://medium.com/@gtks1212/these-12-foods-made-my-grandfather-look-half-his-age-11ebac697cca?source=email-2b8b8ee19057-1782669994380-digest.reader--11ebac697cca----13-99------------------c6259781\_452f\_46d6\_9634\_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+803
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+13
+
+[![Corina Stirbu](https://miro.medium.com/fit/c/40/40/1*0AdVA6sXQKnos9t7PdAJsw.png)](https://medium.com/@corinastirbu?source=email-2b8b8ee19057-1782669994380-digest.reader--405db3eccbe8----14-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[Corina Stirbu](https://medium.com/@corinastirbu?source=email-2b8b8ee19057-1782669994380-digest.reader--405db3eccbe8----14-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+[![You don’t need a pricing model; you need a full monetization strategy](https://miro.medium.com/freeze/fit/c/320/214/1*BifvwC_c8J6UiwnU3f1prw.gif)](https://medium.com/@corinastirbu/you-dont-need-a-pricing-model-you-need-a-full-monetization-strategy-405db3eccbe8?source=email-2b8b8ee19057-1782669994380-digest.reader--405db3eccbe8----14-109------------------c6259781_452f_46d6_9634_c6a9643fd4e6-1)
+
+\[
+
+## You don’t need a pricing model; you need a full monetization strategy
+
+### Monetisation isn’t just about setting a price, and…
+
+]\(https://medium.com/@corinastirbu/you-dont-need-a-pricing-model-you-need-a-full-monetization-strategy-405db3eccbe8?source=email-2b8b8ee19057-1782669994380-digest.reader--405db3eccbe8----14-109------------------c6259781\_452f\_46d6\_9634\_c6a9643fd4e6-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+370
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+12
+
+[![Write on Medium](https://miro.medium.com/max/1360/0a282e8385c2f908271621219fec60181ef042b94164af733ebb6b67235b51c0)](https://medium.com/write?source=email-2b8b8ee19057-1782669994380-digest.reader-------------------------c6259781_452f_46d6_9634_c6a9643fd4e6)
+
+
