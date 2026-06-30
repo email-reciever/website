@@ -1,0 +1,297 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Will npm v12 reject your .npmrc?
+description: Will npm v12 reject your .npmrc?
+date: 星期二 06 晚上 六月 30o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/792
+origin_site: https://javascriptweekly.com/issues/792
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Will npm v12 reject your .npmrc?" url="https://javascriptweekly.com/issues/792" />
+
+<Detail client:only="react">
+	#​792 — June 30, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/792)
+
+Together with 
+
+[![Microsoft logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_280,h_60/e_make_transparent/co_white,e_outline:7/om9hjsmudy5lsvba59eb.png)](https://javascriptweekly.com/link/187213/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qtj2k52lfpbuywujp0wz.jpg)](https://javascriptweekly.com/link/187214/d076523b1d)
+
+[Deno 2.9 Released](https://javascriptweekly.com/link/187214/d076523b1d "deno.com") — A huge release for the runtime: `deno desktop` turns scripts and framework-based projects into native, self-contained desktop apps, quick migration from npm/pnpm/Yarn/Bun lockfiles, big test runner improvements, ~2x faster cold starts, and a target of Node.js 26 compatibility.
+
+Bartek Iwańczuk
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f45344d1.png)](https://javascriptweekly.com/link/187213/d076523b1d)
+
+[44 Recorded PostgreSQL Talks Are Now Available to Watch](https://javascriptweekly.com/link/187213/d076523b1d "aka.ms") — Explore 44 talks about PostgreSQL-backed app development, Postgres performance & AI, Postgres 19, Azure HorizonDB and more. All sessions are available on YouTube. Learn directly from Postgres experts at your own pace. [Check out the playlist](https://javascriptweekly.com/link/187213/d076523b1d).
+
+Microsoft | AMD sponsor
+
+[Iterating Faster on VS Code with TypeScript 7](https://javascriptweekly.com/link/187215/d076523b1d "code.visualstudio.com") — How the VS Code team incrementally adopted the Go-based TypeScript 7 compiler ([currently in RC](https://javascriptweekly.com/link/187216/d076523b1d)) while it was still being built. Type-checking the source went from 36s to 5s, with `npm run watch` going from 80s to ~20s.
+
+The VS Code Team (Microsoft)
+
+**IN BRIEF:**
+
+*   The [second preview release of `npm` 12 is available](https://javascriptweekly.com/link/187217/d076523b1d) for testing. This is worth doing, as Colin McDonnell has already noticed [npm 12 hard-errors on unrecognized keys](https://javascriptweekly.com/link/187218/d076523b1d) in `.npmrc` files.
+    
+*   🔒 [npm now locks 'high impact accounts'](https://javascriptweekly.com/link/187219/d076523b1d) (maintainers of the most popular packages) into a 72-hour read-only mode when they change their email or use a 2FA recovery code.
+    
+*   The Svelte team has just [posted the latest monthly Svelte update](https://javascriptweekly.com/link/187274/d076523b1d). In related news, Svelte creator Rich Harris was recently asked [▶️ for his takes on working with AI and Svelte.](https://javascriptweekly.com/link/187275/d076523b1d)
+    
+
+**RELEASES:**
+
+*   🤖 [AI SDK v7](https://javascriptweekly.com/link/187223/d076523b1d) – Vercel's SDK that provides an abstraction for building against any AI model provider.
+    
+*   [Node.js v26.4 (Current)](https://javascriptweekly.com/link/187221/d076523b1d) adds experimental [package map support](https://javascriptweekly.com/link/187222/d076523b1d) to resolve packages from a static JSON file instead of walking `node_modules`.
+    
+*   [Formisch v1 RC](https://javascriptweekly.com/link/187224/d076523b1d) – Schema-first, headless type-safe form state library.
+    
+*   [Prettier 3.9](https://javascriptweekly.com/link/187225/d076523b1d), [Rspack 2.1](https://javascriptweekly.com/link/187273/d076523b1d), [Electron 43](https://javascriptweekly.com/link/187227/d076523b1d), [ESLint 10.6](https://javascriptweekly.com/link/187228/d076523b1d), [pnpm 11.9](https://javascriptweekly.com/link/187229/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[Why Drizzle Couldn't Publish New Releases on npm for a Month](https://javascriptweekly.com/link/187230/d076523b1d "www.vlt.io") — As well as explaining why the creators of [the popular ORM](https://javascriptweekly.com/link/187231/d076523b1d) ran into the problem, Evert shares some tips to see if you're at risk of the same problem, and how to avoid it entirely.
+
+Evert Pot
+
+[The Shifting Line Between CSS States and JavaScript Events](https://javascriptweekly.com/link/187235/d076523b1d "css-tricks.com") — A tour of the (more than you’d think) CSS pseudo-classes that can stand in for JS event listeners, plus a look at the experimental/future `event-trigger` syntax.
+
+Daniel Schwarz
+
+[Real-Time Analytics on Your Operational Postgres Table](https://javascriptweekly.com/link/187234/d076523b1d "www.tigerdata.com") — Polling just hides the lag. TimescaleDB's continuous aggregates keep data fresh on read. [Get $1000 credit to start](https://javascriptweekly.com/link/187234/d076523b1d).
+
+Tiger Data (Creators of TimescaleDB) sponsor
+
+[Blocking Install Scripts is Not a Silver Bullet](https://javascriptweekly.com/link/187232/d076523b1d "nodesource.com") — [npm v12](https://javascriptweekly.com/link/187233/d076523b1d) won't run install scripts by default, but Ulises argues that only solves part of the supply chain security problem.
+
+Ulises Gascon
+
+[Moving Linear from styled‑components to StyleX](https://javascriptweekly.com/link/187237/d076523b1d "www.skovhus.dev") — A migration away from a runtime CSS-in-JS approach yielded ~30% faster renders when navigating between pages.
+
+Kenneth Skovhus (Linear)
+
+📺 [How Tanner Linsley Built TanStack to Outlive Him](https://javascriptweekly.com/link/187238/d076523b1d) – A _very_ smoothly produced 15 minute interview with the creator of [TanStack](https://javascriptweekly.com/link/187239/d076523b1d). The Build Log
+
+📄 [Benchmarking 5 WebSocket Servers for Node.js](https://javascriptweekly.com/link/187240/d076523b1d) Irina Nazarova
+
+📄 [Handling Mutations with TanStack Query for Vue](https://javascriptweekly.com/link/187241/d076523b1d) Marina Mosti
+
+📄 [Parsing Arbitrary Dates in Strings with Chrono and a Web Component](https://javascriptweekly.com/link/187242/d076523b1d) Raymond Camden
+
+🛠 Code & Tools
+
+[Nub: An All-in-One Toolkit That _Augments_ Node.js](https://javascriptweekly.com/link/187243/d076523b1d "nubjs.com") — While Bun or Deno can _replace_ Node, this project from [Zod](https://javascriptweekly.com/link/187244/d076523b1d)’s creator _extends_ Node with nice-to-haves, like fuller TypeScript support, faster & more secure package installation, better `.env` handling, and [a web-standard `Worker`](https://javascriptweekly.com/link/187245/d076523b1d).
+
+Colin McDonnell et al.
+
+[Gea: A Compiler-First Reactive UI Framework](https://javascriptweekly.com/link/187246/d076523b1d "geajs.com") — A UI framework that goes all in on "compile the framework away": no VDOM, JSX transformed into string templates, proxy-based stores, and 'surgical' DOM patching. The big win is [_tiny_ build sizes](https://javascriptweekly.com/link/187247/d076523b1d).
+
+Armagan Amcalar
+
+[Stop Alt-Tabbing to the Dashboard When CI Breaks](https://javascriptweekly.com/link/187248/d076523b1d "fandf.co") — Depot CI's new API and CLI let you query runs, pull logs, and diagnose failures without leaving your terminal.
+
+Depot sponsor
+
+[`&lt;qr-code>` 2.0: Web Component for Generating QR Codes](https://javascriptweekly.com/link/187249/d076523b1d "github.com") — An easy way to display QR codes in the browser using pure JavaScript. A 13 year old solution that’s been modernized and is now ESM only. [Live demo.](https://javascriptweekly.com/link/187250/d076523b1d)
+
+Eduard Castellano
+
+[spartan/ui 1.0: shadcn/ui-Style UI Primitives for Angular](https://javascriptweekly.com/link/187251/d076523b1d "spartan.ng") — If you’re an Angular developer who’s ever envied the copy and paste simplicity of [shadcn/ui](https://javascriptweekly.com/link/187252/d076523b1d), this is for you.
+
+Robin Goetz
+
+*   [Wakaru 1.6](https://javascriptweekly.com/link/187253/d076523b1d) – JavaScript decompiler and bundle splitter. Now with even better 'source-like' output, particularly from bundled React apps.
+    
+*   🎬 [TurboRes 1.0](https://javascriptweekly.com/link/187254/d076523b1d) – Fast Zig/WASM-powered Apple ProRes video decoder for JS environments. From the creator of [Mediabunny](https://javascriptweekly.com/link/187255/d076523b1d).
+    
+*   📊 [ngx-charts 24.0](https://javascriptweekly.com/link/187256/d076523b1d) – Declarative charting framework for Angular. [Interactive demo](https://javascriptweekly.com/link/187257/d076523b1d).
+    
+*   [GopherJS 1.21.0](https://javascriptweekly.com/link/187258/d076523b1d) – A Go to JavaScript transpiler. Now supporting up to Go 1.21.13.
+    
+*   [whatwg-url 17.0](https://javascriptweekly.com/link/187259/d076523b1d) – JS implementation of the WHATWG URL Standard. [Demo](https://javascriptweekly.com/link/187260/d076523b1d).
+    
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/187261/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+* * *
+
+Build TypeScript-first AI agents in your codebase. No timeouts, durable queues, & full tracing. [Ship your first agent in minutes with Trigger.dev](https://javascriptweekly.com/link/187262/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tcos8ddslkdxrldqs26i.jpg)](https://javascriptweekly.com/link/187263/d076523b1d)
+
+*   📊 Frank Denis wanted to [see the performance of WebAssembly runtimes in 2026](https://javascriptweekly.com/link/187263/d076523b1d) and pitted nine options against one another, including Bun and Node/V8's options.
+    
+*   GitHub is continuing with efforts to make project management less overwhelming in the agentic era. Now [you can restrict issue creation to collaborators with write access](https://javascriptweekly.com/link/187264/d076523b1d).
+    
+*   Meta has ported [Flow](https://javascriptweekly.com/link/187265/d076523b1d), the static type checker for its typed dialect of JavaScript, [from OCaml to Rust](https://javascriptweekly.com/link/187266/d076523b1d).
+    
+*   The `pnpm` project is [working on `pnpr`](https://javascriptweekly.com/link/187220/d076523b1d), an experimental pnpm-compatible npm registry server, written in Rust.
+    
+*   [Git 2.55 has been released](https://javascriptweekly.com/link/187268/d076523b1d) with `git history fixup` for 'fixing up' earlier commits, faster `git status` on Linux, and more.
+    
+*   🐘 [Postgres 19 is currently in beta](https://javascriptweekly.com/link/187269/d076523b1d), with the final release expected this September. Craig Kerstiens [looks ahead to what's interesting in Postgres 19](https://javascriptweekly.com/link/187270/d076523b1d) for users and developers.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/187271/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​792 — June 30, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/792)
+
+Together with 
+
+[![Microsoft logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_280,h_60/e_make_transparent/co_white,e_outline:7/om9hjsmudy5lsvba59eb.png)](https://javascriptweekly.com/link/187213/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qtj2k52lfpbuywujp0wz.jpg)](https://javascriptweekly.com/link/187214/d076523b1d)
+
+[Deno 2.9 Released](https://javascriptweekly.com/link/187214/d076523b1d "deno.com") — A huge release for the runtime: `deno desktop` turns scripts and framework-based projects into native, self-contained desktop apps, quick migration from npm/pnpm/Yarn/Bun lockfiles, big test runner improvements, ~2x faster cold starts, and a target of Node.js 26 compatibility.
+
+Bartek Iwańczuk
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/f45344d1.png)](https://javascriptweekly.com/link/187213/d076523b1d)
+
+[44 Recorded PostgreSQL Talks Are Now Available to Watch](https://javascriptweekly.com/link/187213/d076523b1d "aka.ms") — Explore 44 talks about PostgreSQL-backed app development, Postgres performance & AI, Postgres 19, Azure HorizonDB and more. All sessions are available on YouTube. Learn directly from Postgres experts at your own pace. [Check out the playlist](https://javascriptweekly.com/link/187213/d076523b1d).
+
+Microsoft | AMD sponsor
+
+[Iterating Faster on VS Code with TypeScript 7](https://javascriptweekly.com/link/187215/d076523b1d "code.visualstudio.com") — How the VS Code team incrementally adopted the Go-based TypeScript 7 compiler ([currently in RC](https://javascriptweekly.com/link/187216/d076523b1d)) while it was still being built. Type-checking the source went from 36s to 5s, with `npm run watch` going from 80s to ~20s.
+
+The VS Code Team (Microsoft)
+
+**IN BRIEF:**
+
+* The [second preview release of `npm` 12 is available](https://javascriptweekly.com/link/187217/d076523b1d) for testing. This is worth doing, as Colin McDonnell has already noticed [npm 12 hard-errors on unrecognized keys](https://javascriptweekly.com/link/187218/d076523b1d) in `.npmrc` files.
+
+* 🔒 [npm now locks 'high impact accounts'](https://javascriptweekly.com/link/187219/d076523b1d) (maintainers of the most popular packages) into a 72-hour read-only mode when they change their email or use a 2FA recovery code.
+
+* The Svelte team has just [posted the latest monthly Svelte update](https://javascriptweekly.com/link/187274/d076523b1d). In related news, Svelte creator Rich Harris was recently asked [▶️ for his takes on working with AI and Svelte.](https://javascriptweekly.com/link/187275/d076523b1d)
+
+**RELEASES:**
+
+* 🤖 [AI SDK v7](https://javascriptweekly.com/link/187223/d076523b1d) – Vercel's SDK that provides an abstraction for building against any AI model provider.
+
+* [Node.js v26.4 (Current)](https://javascriptweekly.com/link/187221/d076523b1d) adds experimental [package map support](https://javascriptweekly.com/link/187222/d076523b1d) to resolve packages from a static JSON file instead of walking `node_modules`.
+
+* [Formisch v1 RC](https://javascriptweekly.com/link/187224/d076523b1d) – Schema-first, headless type-safe form state library.
+
+* [Prettier 3.9](https://javascriptweekly.com/link/187225/d076523b1d), [Rspack 2.1](https://javascriptweekly.com/link/187273/d076523b1d), [Electron 43](https://javascriptweekly.com/link/187227/d076523b1d), [ESLint 10.6](https://javascriptweekly.com/link/187228/d076523b1d), [pnpm 11.9](https://javascriptweekly.com/link/187229/d076523b1d)
+
+📖  Articles and Videos
+
+[Why Drizzle Couldn't Publish New Releases on npm for a Month](https://javascriptweekly.com/link/187230/d076523b1d "www.vlt.io") — As well as explaining why the creators of [the popular ORM](https://javascriptweekly.com/link/187231/d076523b1d) ran into the problem, Evert shares some tips to see if you're at risk of the same problem, and how to avoid it entirely.
+
+Evert Pot
+
+[The Shifting Line Between CSS States and JavaScript Events](https://javascriptweekly.com/link/187235/d076523b1d "css-tricks.com") — A tour of the (more than you’d think) CSS pseudo-classes that can stand in for JS event listeners, plus a look at the experimental/future `event-trigger` syntax.
+
+Daniel Schwarz
+
+[Real-Time Analytics on Your Operational Postgres Table](https://javascriptweekly.com/link/187234/d076523b1d "www.tigerdata.com") — Polling just hides the lag. TimescaleDB's continuous aggregates keep data fresh on read. [Get $1000 credit to start](https://javascriptweekly.com/link/187234/d076523b1d).
+
+Tiger Data (Creators of TimescaleDB) sponsor
+
+[Blocking Install Scripts is Not a Silver Bullet](https://javascriptweekly.com/link/187232/d076523b1d "nodesource.com") — [npm v12](https://javascriptweekly.com/link/187233/d076523b1d) won't run install scripts by default, but Ulises argues that only solves part of the supply chain security problem.
+
+Ulises Gascon
+
+[Moving Linear from styled‑components to StyleX](https://javascriptweekly.com/link/187237/d076523b1d "www.skovhus.dev") — A migration away from a runtime CSS-in-JS approach yielded ~30% faster renders when navigating between pages.
+
+Kenneth Skovhus (Linear)
+
+📺 [How Tanner Linsley Built TanStack to Outlive Him](https://javascriptweekly.com/link/187238/d076523b1d) – A *very* smoothly produced 15 minute interview with the creator of [TanStack](https://javascriptweekly.com/link/187239/d076523b1d). The Build Log
+
+📄 [Benchmarking 5 WebSocket Servers for Node.js](https://javascriptweekly.com/link/187240/d076523b1d) Irina Nazarova
+
+📄 [Handling Mutations with TanStack Query for Vue](https://javascriptweekly.com/link/187241/d076523b1d) Marina Mosti
+
+📄 [Parsing Arbitrary Dates in Strings with Chrono and a Web Component](https://javascriptweekly.com/link/187242/d076523b1d) Raymond Camden
+
+🛠 Code & Tools
+
+[Nub: An All-in-One Toolkit That *Augments* Node.js](https://javascriptweekly.com/link/187243/d076523b1d "nubjs.com") — While Bun or Deno can *replace* Node, this project from [Zod](https://javascriptweekly.com/link/187244/d076523b1d)’s creator *extends* Node with nice-to-haves, like fuller TypeScript support, faster & more secure package installation, better `.env` handling, and [a web-standard `Worker`](https://javascriptweekly.com/link/187245/d076523b1d).
+
+Colin McDonnell et al.
+
+[Gea: A Compiler-First Reactive UI Framework](https://javascriptweekly.com/link/187246/d076523b1d "geajs.com") — A UI framework that goes all in on "compile the framework away": no VDOM, JSX transformed into string templates, proxy-based stores, and 'surgical' DOM patching. The big win is [*tiny* build sizes](https://javascriptweekly.com/link/187247/d076523b1d).
+
+Armagan Amcalar
+
+[Stop Alt-Tabbing to the Dashboard When CI Breaks](https://javascriptweekly.com/link/187248/d076523b1d "fandf.co") — Depot CI's new API and CLI let you query runs, pull logs, and diagnose failures without leaving your terminal.
+
+Depot sponsor
+
+[`&lt;qr-code>` 2.0: Web Component for Generating QR Codes](https://javascriptweekly.com/link/187249/d076523b1d "github.com") — An easy way to display QR codes in the browser using pure JavaScript. A 13 year old solution that’s been modernized and is now ESM only. [Live demo.](https://javascriptweekly.com/link/187250/d076523b1d)
+
+Eduard Castellano
+
+[spartan/ui 1.0: shadcn/ui-Style UI Primitives for Angular](https://javascriptweekly.com/link/187251/d076523b1d "spartan.ng") — If you’re an Angular developer who’s ever envied the copy and paste simplicity of [shadcn/ui](https://javascriptweekly.com/link/187252/d076523b1d), this is for you.
+
+Robin Goetz
+
+* [Wakaru 1.6](https://javascriptweekly.com/link/187253/d076523b1d) – JavaScript decompiler and bundle splitter. Now with even better 'source-like' output, particularly from bundled React apps.
+
+* 🎬 [TurboRes 1.0](https://javascriptweekly.com/link/187254/d076523b1d) – Fast Zig/WASM-powered Apple ProRes video decoder for JS environments. From the creator of [Mediabunny](https://javascriptweekly.com/link/187255/d076523b1d).
+
+* 📊 [ngx-charts 24.0](https://javascriptweekly.com/link/187256/d076523b1d) – Declarative charting framework for Angular. [Interactive demo](https://javascriptweekly.com/link/187257/d076523b1d).
+
+* [GopherJS 1.21.0](https://javascriptweekly.com/link/187258/d076523b1d) – A Go to JavaScript transpiler. Now supporting up to Go 1.21.13.
+
+* [whatwg-url 17.0](https://javascriptweekly.com/link/187259/d076523b1d) – JS implementation of the WHATWG URL Standard. [Demo](https://javascriptweekly.com/link/187260/d076523b1d).
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/187261/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+***
+
+Build TypeScript-first AI agents in your codebase. No timeouts, durable queues, & full tracing. [Ship your first agent in minutes with Trigger.dev](https://javascriptweekly.com/link/187262/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tcos8ddslkdxrldqs26i.jpg)](https://javascriptweekly.com/link/187263/d076523b1d)
+
+* 📊 Frank Denis wanted to [see the performance of WebAssembly runtimes in 2026](https://javascriptweekly.com/link/187263/d076523b1d) and pitted nine options against one another, including Bun and Node/V8's options.
+
+* GitHub is continuing with efforts to make project management less overwhelming in the agentic era. Now [you can restrict issue creation to collaborators with write access](https://javascriptweekly.com/link/187264/d076523b1d).
+
+* Meta has ported [Flow](https://javascriptweekly.com/link/187265/d076523b1d), the static type checker for its typed dialect of JavaScript, [from OCaml to Rust](https://javascriptweekly.com/link/187266/d076523b1d).
+
+* The `pnpm` project is [working on `pnpr`](https://javascriptweekly.com/link/187220/d076523b1d), an experimental pnpm-compatible npm registry server, written in Rust.
+
+* [Git 2.55 has been released](https://javascriptweekly.com/link/187268/d076523b1d) with `git history fixup` for 'fixing up' earlier commits, faster `git status` on Linux, and more.
+
+* 🐘 [Postgres 19 is currently in beta](https://javascriptweekly.com/link/187269/d076523b1d), with the final release expected this September. Craig Kerstiens [looks ahead to what's interesting in Postgres 19](https://javascriptweekly.com/link/187270/d076523b1d) for users and developers.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/187271/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
