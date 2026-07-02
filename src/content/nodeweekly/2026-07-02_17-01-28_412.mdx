@@ -1,0 +1,215 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 37 CLI best practices for Node devs
+description: 37 CLI best practices for Node devs
+date: 星期四 05 下午 七月 2o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/631
+origin_site: https://nodeweekly.com/issues/631
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="37 CLI best practices for Node devs" url="https://nodeweekly.com/issues/631" />
+
+<Detail client:only="react">
+	#​631 — July 2, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/631)
+
+Together with 
+
+[![agentfield.ai](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_229/e_make_transparent/co_white,e_outline:10/kfuqkwkso6tqxqr2r1jz.png)](https://nodeweekly.com/link/187346/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/loqd69ivy01lxicgjmzb.jpg)](https://nodeweekly.com/link/187345/0a4070b383)
+
+[So You Want to Land Your First Node.js Core Contribution?](https://nodeweekly.com/link/187345/0a4070b383 "github.com") — Joyee Cheung has put together a new, official guide for anyone considering making their _first_ contribution to the Node project, including where to look for issues to work on and how to improve the chances of your work making the cut.
+
+Joyee Cheung
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/c0d67c99.png)](https://nodeweekly.com/link/187346/0a4070b383)
+
+[Your Autonomous Engineering Team, in TypeScript](https://nodeweekly.com/link/187346/0a4070b383 "agentfield.ai") — One call spins up an orchestrated fleet — planner, architect, coders, QA, reviewers — that plans, builds, tests and ships production-grade PRs. TypeScript SDK, agents as typed APIs, open- and closed-source models.
+
+AgentField.ai sponsor
+
+[37 Node CLI App Best Practices](https://nodeweekly.com/link/187347/0a4070b383 "github.com") — A long-standing, but now modernized, set of guidelines for building _“successful, empathic and user-friendly”_ CLI tools, plus an appendix [rounding up the most popular CLI framework options.](https://nodeweekly.com/link/187348/0a4070b383) Now also includes [a SKILL.md file](https://nodeweekly.com/link/187349/0a4070b383) you can point agents to.
+
+Liran Tal
+
+**IN BRIEF:**
+
+*   [Nub](https://nodeweekly.com/link/187351/0a4070b383), a toolkit that _adds_ useful features to Node (rather than replacing it), is now a single self-contained binary and has [added a web-standard `Worker` mechanism](https://nodeweekly.com/link/187352/0a4070b383) to Node.
+    
+*   🔒 [npm now locks 'high impact accounts'](https://nodeweekly.com/link/187353/0a4070b383) (those maintaining the most popular packages) into a 72-hour read-only mode when they change their email or use a 2FA recovery code.
+    
+*   [npm 11.18.0](https://nodeweekly.com/link/187354/0a4070b383) promotes the _linked_ install strategy to stable, where packages are installed in `node_modules/.store` and linked in place, so code can only reach dependencies it actually declared. [More info here](https://nodeweekly.com/link/187355/0a4070b383).
+    
+
+[Why Drizzle ORM Couldn't Publish New Releases on npm for a Month](https://nodeweekly.com/link/187356/0a4070b383 "www.vlt.io") — As well as explaining why [the popular ORM](https://nodeweekly.com/link/187357/0a4070b383) ran into the problem, Evert shares tips to see if you run a similar risk, and how to mitigate it.
+
+Evert Pot
+
+[Iterating Faster on VS Code with TypeScript 7](https://nodeweekly.com/link/187358/0a4070b383 "code.visualstudio.com") — The tale of how the VS Code team adopted the Go-based TypeScript 7 compiler and got a 7x reduction in type checking time.
+
+The VS Code Team (Microsoft)
+
+📄 [Roll Your Own File-Based Router in Under 50 Lines of Code](https://nodeweekly.com/link/187359/0a4070b383) – One for users of [Wasp](https://nodeweekly.com/link/187360/0a4070b383), the Node.js + React + Prisma full-stack framework. Carlos Precioso (Wasp)
+
+📄 [Finding Memory Leaks with Heap Snapshot Analysis in N|Solid](https://nodeweekly.com/link/187361/0a4070b383) – Using the N|Solid extension to capture a heap snapshot to trace a memory leak in VS Code. Estefany Aguilar (NodeSource)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kzedvu35x9jp0gdecxg9.jpg)](https://nodeweekly.com/link/187362/0a4070b383)
+
+[Node-GTK 4.0: GTK Bindings for Node](https://nodeweekly.com/link/187362/0a4070b383 "github.com") — Bindings to the popular [GTK](https://nodeweekly.com/link/187363/0a4070b383) desktop widget toolkit for building Linux, macOS and Windows apps. Now supports Node 26 and includes an `npx node-gtk create app-name` command to spin up a project. Worked well on macOS once I had the dependencies in place!
+
+Rom Grk et al.
+
+[Schedule Node.js Scripts Across Your Server Fleet with xyOps](https://nodeweekly.com/link/187364/0a4070b383) — Run unlimited Node, Shell, HTTP, and Docker jobs with live logs, alerts, snapshots, and visual workflows. Self-hosted.
+
+xyOps sponsor
+
+🤖 [Vercel AI SDK 7: An SDK for Working with AI Model Providers](https://nodeweekly.com/link/187365/0a4070b383 "vercel.com") — Provider-agnostic library for building AI apps (no Vercel services needed). v7 focuses on _agents_, but adds WebSocket sessions for real-time transcription/voice agents, and video generation support for several providers.
+
+Martynus, Grammel, Arntz, et al.
+
+[Electron 43: Faster Startup and V8 15](https://nodeweekly.com/link/187366/0a4070b383 "www.electronjs.org") — Updates to Chromium 150, Node 24.17, and V8 15, with faster startup via a Node boot snapshot and bytecode-cached preloads. Adds rounded corners on Linux, matching Windows and macOS. v43 is also the final line to ship 32-bit binaries.
+
+John Kleinschmidt
+
+*   [Deno 2.9](https://nodeweekly.com/link/187367/0a4070b383) – The alternative runtime rolls out its new desktop app generator, improves support for npm/pnpm/yarn/Bun lockfiles, improves its test runner substantially, and more.
+    
+*   [Git 2.55](https://nodeweekly.com/link/187368/0a4070b383) – Adds `git history fixup` for 'fixing up' earlier commits, faster `git status` on Linux, and more.
+    
+*   [pg-promise 12.7](https://nodeweekly.com/link/187369/0a4070b383) – Node 26 is now officially supported by the popular Postgres client library.
+    
+*   [Middy 7.7](https://nodeweekly.com/link/187370/0a4070b383) – Node.js middleware engine for AWS Lambda. ([Release notes](https://nodeweekly.com/link/187371/0a4070b383))
+    
+*   [Fastify 5.9](https://nodeweekly.com/link/187372/0a4070b383) – Lots of bug fixes, and introduces [`request.mediaType`](https://nodeweekly.com/link/187373/0a4070b383).
+    
+*   [Knex 3.3](https://nodeweekly.com/link/187374/0a4070b383) – Batteries-included, multi-dialect SQL query builder.
+    
+*   [JS YAML 5.2](https://nodeweekly.com/link/187375/0a4070b383) – Fast YAML 1.2 parser and writer library. ([Demo.](https://nodeweekly.com/link/187376/0a4070b383))
+    
+
+📰 Classifieds
+
+🚀 [Crystallize is hiring a remote SRE](https://nodeweekly.com/link/187377/0a4070b383): Node/TS, GraphQL, AWS, MongoDB, Cloudflare Workers.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​631 — July 2, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/631)
+
+Together with 
+
+[![agentfield.ai](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_229/e_make_transparent/co_white,e_outline:10/kfuqkwkso6tqxqr2r1jz.png)](https://nodeweekly.com/link/187346/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/loqd69ivy01lxicgjmzb.jpg)](https://nodeweekly.com/link/187345/0a4070b383)
+
+[So You Want to Land Your First Node.js Core Contribution?](https://nodeweekly.com/link/187345/0a4070b383 "github.com") — Joyee Cheung has put together a new, official guide for anyone considering making their *first* contribution to the Node project, including where to look for issues to work on and how to improve the chances of your work making the cut.
+
+Joyee Cheung
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/c0d67c99.png)](https://nodeweekly.com/link/187346/0a4070b383)
+
+[Your Autonomous Engineering Team, in TypeScript](https://nodeweekly.com/link/187346/0a4070b383 "agentfield.ai") — One call spins up an orchestrated fleet — planner, architect, coders, QA, reviewers — that plans, builds, tests and ships production-grade PRs. TypeScript SDK, agents as typed APIs, open- and closed-source models.
+
+AgentField.ai sponsor
+
+[37 Node CLI App Best Practices](https://nodeweekly.com/link/187347/0a4070b383 "github.com") — A long-standing, but now modernized, set of guidelines for building *“successful, empathic and user-friendly”* CLI tools, plus an appendix [rounding up the most popular CLI framework options.](https://nodeweekly.com/link/187348/0a4070b383) Now also includes [a SKILL.md file](https://nodeweekly.com/link/187349/0a4070b383) you can point agents to.
+
+Liran Tal
+
+**IN BRIEF:**
+
+* [Nub](https://nodeweekly.com/link/187351/0a4070b383), a toolkit that *adds* useful features to Node (rather than replacing it), is now a single self-contained binary and has [added a web-standard `Worker` mechanism](https://nodeweekly.com/link/187352/0a4070b383) to Node.
+
+* 🔒 [npm now locks 'high impact accounts'](https://nodeweekly.com/link/187353/0a4070b383) (those maintaining the most popular packages) into a 72-hour read-only mode when they change their email or use a 2FA recovery code.
+
+* [npm 11.18.0](https://nodeweekly.com/link/187354/0a4070b383) promotes the *linked* install strategy to stable, where packages are installed in `node_modules/.store` and linked in place, so code can only reach dependencies it actually declared. [More info here](https://nodeweekly.com/link/187355/0a4070b383).
+
+[Why Drizzle ORM Couldn't Publish New Releases on npm for a Month](https://nodeweekly.com/link/187356/0a4070b383 "www.vlt.io") — As well as explaining why [the popular ORM](https://nodeweekly.com/link/187357/0a4070b383) ran into the problem, Evert shares tips to see if you run a similar risk, and how to mitigate it.
+
+Evert Pot
+
+[Iterating Faster on VS Code with TypeScript 7](https://nodeweekly.com/link/187358/0a4070b383 "code.visualstudio.com") — The tale of how the VS Code team adopted the Go-based TypeScript 7 compiler and got a 7x reduction in type checking time.
+
+The VS Code Team (Microsoft)
+
+📄 [Roll Your Own File-Based Router in Under 50 Lines of Code](https://nodeweekly.com/link/187359/0a4070b383) – One for users of [Wasp](https://nodeweekly.com/link/187360/0a4070b383), the Node.js + React + Prisma full-stack framework. Carlos Precioso (Wasp)
+
+📄 [Finding Memory Leaks with Heap Snapshot Analysis in N|Solid](https://nodeweekly.com/link/187361/0a4070b383) – Using the N|Solid extension to capture a heap snapshot to trace a memory leak in VS Code. Estefany Aguilar (NodeSource)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kzedvu35x9jp0gdecxg9.jpg)](https://nodeweekly.com/link/187362/0a4070b383)
+
+[Node-GTK 4.0: GTK Bindings for Node](https://nodeweekly.com/link/187362/0a4070b383 "github.com") — Bindings to the popular [GTK](https://nodeweekly.com/link/187363/0a4070b383) desktop widget toolkit for building Linux, macOS and Windows apps. Now supports Node 26 and includes an `npx node-gtk create app-name` command to spin up a project. Worked well on macOS once I had the dependencies in place!
+
+Rom Grk et al.
+
+[Schedule Node.js Scripts Across Your Server Fleet with xyOps](https://nodeweekly.com/link/187364/0a4070b383) — Run unlimited Node, Shell, HTTP, and Docker jobs with live logs, alerts, snapshots, and visual workflows. Self-hosted.
+
+xyOps sponsor
+
+🤖 [Vercel AI SDK 7: An SDK for Working with AI Model Providers](https://nodeweekly.com/link/187365/0a4070b383 "vercel.com") — Provider-agnostic library for building AI apps (no Vercel services needed). v7 focuses on *agents*, but adds WebSocket sessions for real-time transcription/voice agents, and video generation support for several providers.
+
+Martynus, Grammel, Arntz, et al.
+
+[Electron 43: Faster Startup and V8 15](https://nodeweekly.com/link/187366/0a4070b383 "www.electronjs.org") — Updates to Chromium 150, Node 24.17, and V8 15, with faster startup via a Node boot snapshot and bytecode-cached preloads. Adds rounded corners on Linux, matching Windows and macOS. v43 is also the final line to ship 32-bit binaries.
+
+John Kleinschmidt
+
+* [Deno 2.9](https://nodeweekly.com/link/187367/0a4070b383) – The alternative runtime rolls out its new desktop app generator, improves support for npm/pnpm/yarn/Bun lockfiles, improves its test runner substantially, and more.
+
+* [Git 2.55](https://nodeweekly.com/link/187368/0a4070b383) – Adds `git history fixup` for 'fixing up' earlier commits, faster `git status` on Linux, and more.
+
+* [pg-promise 12.7](https://nodeweekly.com/link/187369/0a4070b383) – Node 26 is now officially supported by the popular Postgres client library.
+
+* [Middy 7.7](https://nodeweekly.com/link/187370/0a4070b383) – Node.js middleware engine for AWS Lambda. ([Release notes](https://nodeweekly.com/link/187371/0a4070b383))
+
+* [Fastify 5.9](https://nodeweekly.com/link/187372/0a4070b383) – Lots of bug fixes, and introduces [`request.mediaType`](https://nodeweekly.com/link/187373/0a4070b383).
+
+* [Knex 3.3](https://nodeweekly.com/link/187374/0a4070b383) – Batteries-included, multi-dialect SQL query builder.
+
+* [JS YAML 5.2](https://nodeweekly.com/link/187375/0a4070b383) – Fast YAML 1.2 parser and writer library. ([Demo.](https://nodeweekly.com/link/187376/0a4070b383))
+
+📰 Classifieds
+
+🚀 [Crystallize is hiring a remote SRE](https://nodeweekly.com/link/187377/0a4070b383): Node/TS, GraphQL, AWS, MongoDB, Cloudflare Workers.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
