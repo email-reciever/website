@@ -1,0 +1,281 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: What's new in ECMAScript 2026 (and usable today)
+description: What's new in ECMAScript 2026 (and usable today)
+date: 星期二 05 下午 七月 7o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/793
+origin_site: https://javascriptweekly.com/issues/793
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="What's new in ECMAScript 2026 (and usable today)" url="https://javascriptweekly.com/issues/793" />
+
+<Detail client:only="react">
+	#​793 — July 7, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/793)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/187515/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/uspa69xtit607rmfzdnq.jpg)](https://javascriptweekly.com/link/187516/d076523b1d)
+
+[Vite+ Beta: A Web Dev Toolchain Behind One Command](https://javascriptweekly.com/link/187516/d076523b1d "voidzero.dev") — Vite+ is the [Vite](https://javascriptweekly.com/link/187517/d076523b1d) team’s ‘unified toolchain’ that brings Vite, Vitest, Oxlint, and similar tools together under a single `vp` command, whether for running a dev server, tests, formatting, or bundling.
+
+VoidZero
+
+💡 Vite+ was originally intended to be a commercial project to fund work on Vite and related projects, but was open sourced under the MIT license earlier this year.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/eb4e5347.png)](https://javascriptweekly.com/link/187515/d076523b1d)
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://javascriptweekly.com/link/187515/d076523b1d "www.meticulous.ai") — Notion, Dropbox, Wiz and LaunchDarkly now use a testing paradigm they can’t work without. Built by former Palantir engineers, Meticulous automatically creates an evolving suite of E2E UI tests, delivering exhaustive coverage with no developer effort.
+
+Meticulous sponsor
+
+[What's New in ECMAScript 2026](https://javascriptweekly.com/link/187518/d076523b1d "pawelgrzybek.com") — The 876 page [ECMAScript 2026 spec](https://javascriptweekly.com/link/187519/d076523b1d) was approved last week, and this round-up covers several main new features that made the cut, from `Array.fromAsync` to native `Uint8Array` Base64/Hex conversion, with examples for each. All are already in browsers and runtimes (except `Math.sumPrecise` in Node) so you can likely use them today.
+
+Pawel Grzybek
+
+**IN BRIEF:**
+
+*   🕹️ [js1024, the annual 1KB code-golf competition, is open for entries](https://javascriptweekly.com/link/187520/d076523b1d). The theme is 'dreaming', and you've got 1,024 bytes to make something neat. Here's [last year's winner](https://javascriptweekly.com/link/187521/d076523b1d) to get a feel for the caliber.
+    
+*   There's [a TC39 proposal to standardize a `code` property on `Error`](https://javascriptweekly.com/link/187522/d076523b1d) (long a de-facto Node convention). Its champion, James Snell, hopes to advance it at this month's plenary.
+    
+
+**RELEASES:**
+
+*   [vinext 1.0 Beta](https://javascriptweekly.com/link/187523/d076523b1d) – Cloudflare's Vite plugin reimplementing Next.js's API surface.
+    
+*   [webpack-dev-server 6.0](https://javascriptweekly.com/link/187524/d076523b1d) – The official webpack dev server with live reloading upgrades to Express 5 and native ESM.
+    
+*   [Dependency Cruiser 18.0](https://javascriptweekly.com/link/187525/d076523b1d) – Tool to validate and graph project dependencies.
+    
+*   [npm 11.18.0](https://javascriptweekly.com/link/187526/d076523b1d), [pnpm 11.10](https://javascriptweekly.com/link/187527/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[Working with AI: A Concrete Example](https://javascriptweekly.com/link/187528/d076523b1d "htmx.org") — The creator of [htmx](https://javascriptweekly.com/link/187529/d076523b1d) reflects on the role of AI in his work with a practical example of using Claude to investigate a bug report. He also touches on how AI fits in with being an ‘older developer’, a topic I rarely see brought up.
+
+Carson Gross
+
+[How Medal Cut Its Electron Frontend Bundle from 40MB to 2.7MB](https://javascriptweekly.com/link/187530/d076523b1d "medal.tv") — A gaming metaphor heavy tale of slashing an Electron app’s bundle from 40MB+ to 2.7MB using Vite, Rolldown, code splitting, and aggressive dead-code elimination.
+
+Rick Zhang (Medal)
+
+[Streaming Real-Time HDR Reflections to Every Device with Miris](https://javascriptweekly.com/link/187531/d076523b1d "www.miris.com") — Miris built a WebXR car configurator that streams a 1.2GB asset in real-time with HDR reflections across any device.
+
+Miris sponsor
+
+📄 [A Guide to Hydration and Rendering Strategies](https://javascriptweekly.com/link/187532/d076523b1d) – SSR, streaming, islands, resumability, and RSC, compared. Neciu Dan
+
+📄 [WebGL Without a GPU](https://javascriptweekly.com/link/187533/d076523b1d) – Useful tips for testing or taking screenshots of WebGL-rendered experiences. Kiko Beats
+
+📄 [Understanding TypeScript's Distributive Conditional Types](https://javascriptweekly.com/link/187534/d076523b1d) Tejas Bubane
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/g8yrt7uc0jzjbppk5dzs.jpg)](https://javascriptweekly.com/link/187536/d076523b1d)
+
+[Wordgard: A New Rich Text Editor Library from ProseMirror's Creator](https://javascriptweekly.com/link/187536/d076523b1d "wordgard.net") — With [Eloquent JavaScript](https://javascriptweekly.com/link/187537/d076523b1d) and [ProseMirror](https://javascriptweekly.com/link/187538/d076523b1d) under his belt, not many people know more about JavaScript _and_ making good editor controls than Marijn. Modular, supports collaborative editing, and thoughtfully built. [Live demo](https://javascriptweekly.com/link/187539/d076523b1d) and [how to get started](https://javascriptweekly.com/link/187540/d076523b1d).
+
+Marijn Haverbeke
+
+[The TypeScript-Native AI Backend for Autonomous Software](https://javascriptweekly.com/link/187541/d076523b1d "agentfield.ai") — Orchestrate agents as typed APIs — then spin up software factories that ship production-grade PRs. [Open source](https://javascriptweekly.com/link/187541/d076523b1d).
+
+Agentfield.ai sponsor
+
+[Astryx: Meta Open Sources Its Design System](https://javascriptweekly.com/link/187563/d076523b1d "astryx.atmeta.com") — A design system used by 13,000+ apps inside Meta is now open source with 150+ React components, theming options, dark mode, and CLI tooling.
+
+Meta
+
+[Driver.js v1.6: Present In-App Tours, Highlights, and Contextual Help](https://javascriptweekly.com/link/187543/d076523b1d "driverjs.com") — A library for making on-page tours and contextual help systems. It’s been around for several years, but is well maintained with numerous demos on the homepage.
+
+Kamran Ahmed
+
+✉️ [Upyo 0.5: A Cross-Runtime Email Sending Library](https://javascriptweekly.com/link/187544/d076523b1d "upyo.org") — A unified, type-safe API for sending emails both on SMTP and HTTP-based (e.g. SendGrid or Amazon SES) providers from Node, Deno, Bun, or edge function runtimes.
+
+Hong Minhee
+
+📄 [Things You No Longer Need JavaScript For](https://javascriptweekly.com/link/187545/d076523b1d) – A catalog of patterns modern HTML and CSS can now handle alone. Aaron T. Grogg
+
+*   [ESLint Plugin Perfectionist 5.10](https://javascriptweekly.com/link/187546/d076523b1d) – For when you're _really_ particular about how things like objects, imports, and types are ordered, whether alphabetically, by length, etc.
+    
+*   [TinyBase 9.0](https://javascriptweekly.com/link/187547/d076523b1d) – Bug fix and stability release for the reactive data store and sync engine backend.
+    
+*   [wavesurfer.js 7.12.10](https://javascriptweekly.com/link/187548/d076523b1d) – Interactive waveform rendering for playing audio.
+    
+*   [React Google Maps 1.9](https://javascriptweekly.com/link/187549/d076523b1d) – Use a Google map as a reactive component.
+    
+
+📰 Classifieds
+
+💛 This Sept, [ZurichJS Conf](https://javascriptweekly.com/link/187550/d076523b1d) brings world-class JS speakers, hands-on workshops and an exclusive VIP afterparty, nonprofit and affordable.
+
+* * *
+
+Queries that run in milliseconds on petabytes of data. [TimescaleDB extends Postgres to perform at massive scale](https://javascriptweekly.com/link/187551/d076523b1d).
+
+* * *
+
+🦊 Most PDF translators don't tell you which parts to trust. [Here's how to build a pipeline](https://javascriptweekly.com/link/187552/d076523b1d) with confidence scoring baked in.
+
+📢  Elsewhere in the ecosystem
+
+*   🤖 [Safari has introduced an MCP server](https://javascriptweekly.com/link/187553/d076523b1d) in its latest preview release, providing agents with a way to connect to a Safari window and emulate the user experience while debugging.
+    
+*   [`shadcn/ui` has switched to Base UI as its default component library](https://javascriptweekly.com/link/187555/d076523b1d) (from Radix). Radix isn't going away, but [Base UI](https://javascriptweekly.com/link/187556/d076523b1d) is recommended for new projects.
+    
+*   [PocketJS](https://javascriptweekly.com/link/187554/d076523b1d) is a project that brings a JavaScript VM, Vue Vapor, and Solid UI into an 8MB memory budget, and can, curiously, run on the Sony PSP, as well as in WASM and natively on macOS.
+    
+*   📈 [Commit History](https://javascriptweekly.com/link/187557/d076523b1d) is an online tool that creates charts of a user's GitHub commits over time. A nice addition for your [profile README](https://javascriptweekly.com/link/187558/d076523b1d), or check out [Sindre Sorhus's chart](https://javascriptweekly.com/link/187559/d076523b1d) to see the legendary maintainer's consistency over the years.
+    
+*   🎉 [PGlite](https://javascriptweekly.com/link/187560/d076523b1d), a WebAssembly build of Postgres for use in JavaScript environments, [celebrates reaching 10 million weekly downloads](https://javascriptweekly.com/link/187561/d076523b1d) while explaining the use cases and how to get started with it yourself.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/187562/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​793 — July 7, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/793)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/187515/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/uspa69xtit607rmfzdnq.jpg)](https://javascriptweekly.com/link/187516/d076523b1d)
+
+[Vite+ Beta: A Web Dev Toolchain Behind One Command](https://javascriptweekly.com/link/187516/d076523b1d "voidzero.dev") — Vite+ is the [Vite](https://javascriptweekly.com/link/187517/d076523b1d) team’s ‘unified toolchain’ that brings Vite, Vitest, Oxlint, and similar tools together under a single `vp` command, whether for running a dev server, tests, formatting, or bundling.
+
+VoidZero
+
+💡 Vite+ was originally intended to be a commercial project to fund work on Vite and related projects, but was open sourced under the MIT license earlier this year.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/eb4e5347.png)](https://javascriptweekly.com/link/187515/d076523b1d)
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://javascriptweekly.com/link/187515/d076523b1d "www.meticulous.ai") — Notion, Dropbox, Wiz and LaunchDarkly now use a testing paradigm they can’t work without. Built by former Palantir engineers, Meticulous automatically creates an evolving suite of E2E UI tests, delivering exhaustive coverage with no developer effort.
+
+Meticulous sponsor
+
+[What's New in ECMAScript 2026](https://javascriptweekly.com/link/187518/d076523b1d "pawelgrzybek.com") — The 876 page [ECMAScript 2026 spec](https://javascriptweekly.com/link/187519/d076523b1d) was approved last week, and this round-up covers several main new features that made the cut, from `Array.fromAsync` to native `Uint8Array` Base64/Hex conversion, with examples for each. All are already in browsers and runtimes (except `Math.sumPrecise` in Node) so you can likely use them today.
+
+Pawel Grzybek
+
+**IN BRIEF:**
+
+* 🕹️ [js1024, the annual 1KB code-golf competition, is open for entries](https://javascriptweekly.com/link/187520/d076523b1d). The theme is 'dreaming', and you've got 1,024 bytes to make something neat. Here's [last year's winner](https://javascriptweekly.com/link/187521/d076523b1d) to get a feel for the caliber.
+
+* There's [a TC39 proposal to standardize a `code` property on `Error`](https://javascriptweekly.com/link/187522/d076523b1d) (long a de-facto Node convention). Its champion, James Snell, hopes to advance it at this month's plenary.
+
+**RELEASES:**
+
+* [vinext 1.0 Beta](https://javascriptweekly.com/link/187523/d076523b1d) – Cloudflare's Vite plugin reimplementing Next.js's API surface.
+
+* [webpack-dev-server 6.0](https://javascriptweekly.com/link/187524/d076523b1d) – The official webpack dev server with live reloading upgrades to Express 5 and native ESM.
+
+* [Dependency Cruiser 18.0](https://javascriptweekly.com/link/187525/d076523b1d) – Tool to validate and graph project dependencies.
+
+* [npm 11.18.0](https://javascriptweekly.com/link/187526/d076523b1d), [pnpm 11.10](https://javascriptweekly.com/link/187527/d076523b1d)
+
+📖  Articles and Videos
+
+[Working with AI: A Concrete Example](https://javascriptweekly.com/link/187528/d076523b1d "htmx.org") — The creator of [htmx](https://javascriptweekly.com/link/187529/d076523b1d) reflects on the role of AI in his work with a practical example of using Claude to investigate a bug report. He also touches on how AI fits in with being an ‘older developer’, a topic I rarely see brought up.
+
+Carson Gross
+
+[How Medal Cut Its Electron Frontend Bundle from 40MB to 2.7MB](https://javascriptweekly.com/link/187530/d076523b1d "medal.tv") — A gaming metaphor heavy tale of slashing an Electron app’s bundle from 40MB+ to 2.7MB using Vite, Rolldown, code splitting, and aggressive dead-code elimination.
+
+Rick Zhang (Medal)
+
+[Streaming Real-Time HDR Reflections to Every Device with Miris](https://javascriptweekly.com/link/187531/d076523b1d "www.miris.com") — Miris built a WebXR car configurator that streams a 1.2GB asset in real-time with HDR reflections across any device.
+
+Miris sponsor
+
+📄 [A Guide to Hydration and Rendering Strategies](https://javascriptweekly.com/link/187532/d076523b1d) – SSR, streaming, islands, resumability, and RSC, compared. Neciu Dan
+
+📄 [WebGL Without a GPU](https://javascriptweekly.com/link/187533/d076523b1d) – Useful tips for testing or taking screenshots of WebGL-rendered experiences. Kiko Beats
+
+📄 [Understanding TypeScript's Distributive Conditional Types](https://javascriptweekly.com/link/187534/d076523b1d) Tejas Bubane
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/g8yrt7uc0jzjbppk5dzs.jpg)](https://javascriptweekly.com/link/187536/d076523b1d)
+
+[Wordgard: A New Rich Text Editor Library from ProseMirror's Creator](https://javascriptweekly.com/link/187536/d076523b1d "wordgard.net") — With [Eloquent JavaScript](https://javascriptweekly.com/link/187537/d076523b1d) and [ProseMirror](https://javascriptweekly.com/link/187538/d076523b1d) under his belt, not many people know more about JavaScript *and* making good editor controls than Marijn. Modular, supports collaborative editing, and thoughtfully built. [Live demo](https://javascriptweekly.com/link/187539/d076523b1d) and [how to get started](https://javascriptweekly.com/link/187540/d076523b1d).
+
+Marijn Haverbeke
+
+[The TypeScript-Native AI Backend for Autonomous Software](https://javascriptweekly.com/link/187541/d076523b1d "agentfield.ai") — Orchestrate agents as typed APIs — then spin up software factories that ship production-grade PRs. [Open source](https://javascriptweekly.com/link/187541/d076523b1d).
+
+Agentfield.ai sponsor
+
+[Astryx: Meta Open Sources Its Design System](https://javascriptweekly.com/link/187563/d076523b1d "astryx.atmeta.com") — A design system used by 13,000+ apps inside Meta is now open source with 150+ React components, theming options, dark mode, and CLI tooling.
+
+Meta
+
+[Driver.js v1.6: Present In-App Tours, Highlights, and Contextual Help](https://javascriptweekly.com/link/187543/d076523b1d "driverjs.com") — A library for making on-page tours and contextual help systems. It’s been around for several years, but is well maintained with numerous demos on the homepage.
+
+Kamran Ahmed
+
+✉️ [Upyo 0.5: A Cross-Runtime Email Sending Library](https://javascriptweekly.com/link/187544/d076523b1d "upyo.org") — A unified, type-safe API for sending emails both on SMTP and HTTP-based (e.g. SendGrid or Amazon SES) providers from Node, Deno, Bun, or edge function runtimes.
+
+Hong Minhee
+
+📄 [Things You No Longer Need JavaScript For](https://javascriptweekly.com/link/187545/d076523b1d) – A catalog of patterns modern HTML and CSS can now handle alone. Aaron T. Grogg
+
+* [ESLint Plugin Perfectionist 5.10](https://javascriptweekly.com/link/187546/d076523b1d) – For when you're *really* particular about how things like objects, imports, and types are ordered, whether alphabetically, by length, etc.
+
+* [TinyBase 9.0](https://javascriptweekly.com/link/187547/d076523b1d) – Bug fix and stability release for the reactive data store and sync engine backend.
+
+* [wavesurfer.js 7.12.10](https://javascriptweekly.com/link/187548/d076523b1d) – Interactive waveform rendering for playing audio.
+
+* [React Google Maps 1.9](https://javascriptweekly.com/link/187549/d076523b1d) – Use a Google map as a reactive component.
+
+📰 Classifieds
+
+💛 This Sept, [ZurichJS Conf](https://javascriptweekly.com/link/187550/d076523b1d) brings world-class JS speakers, hands-on workshops and an exclusive VIP afterparty, nonprofit and affordable.
+
+***
+
+Queries that run in milliseconds on petabytes of data. [TimescaleDB extends Postgres to perform at massive scale](https://javascriptweekly.com/link/187551/d076523b1d).
+
+***
+
+🦊 Most PDF translators don't tell you which parts to trust. [Here's how to build a pipeline](https://javascriptweekly.com/link/187552/d076523b1d) with confidence scoring baked in.
+
+📢  Elsewhere in the ecosystem
+
+* 🤖 [Safari has introduced an MCP server](https://javascriptweekly.com/link/187553/d076523b1d) in its latest preview release, providing agents with a way to connect to a Safari window and emulate the user experience while debugging.
+
+* [`shadcn/ui` has switched to Base UI as its default component library](https://javascriptweekly.com/link/187555/d076523b1d) (from Radix). Radix isn't going away, but [Base UI](https://javascriptweekly.com/link/187556/d076523b1d) is recommended for new projects.
+
+* [PocketJS](https://javascriptweekly.com/link/187554/d076523b1d) is a project that brings a JavaScript VM, Vue Vapor, and Solid UI into an 8MB memory budget, and can, curiously, run on the Sony PSP, as well as in WASM and natively on macOS.
+
+* 📈 [Commit History](https://javascriptweekly.com/link/187557/d076523b1d) is an online tool that creates charts of a user's GitHub commits over time. A nice addition for your [profile README](https://javascriptweekly.com/link/187558/d076523b1d), or check out [Sindre Sorhus's chart](https://javascriptweekly.com/link/187559/d076523b1d) to see the legendary maintainer's consistency over the years.
+
+* 🎉 [PGlite](https://javascriptweekly.com/link/187560/d076523b1d), a WebAssembly build of Postgres for use in JavaScript environments, [celebrates reaching 10 million weekly downloads](https://javascriptweekly.com/link/187561/d076523b1d) while explaining the use cases and how to get started with it yourself.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/187562/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
