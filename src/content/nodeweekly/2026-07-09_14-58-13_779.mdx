@@ -1,0 +1,231 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: npm v12 and TypeScript 7 released
+description: npm v12 and TypeScript 7 released
+date: 星期四 02 下午 七月 9o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/632
+origin_site: https://nodeweekly.com/issues/632
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="npm v12 and TypeScript 7 released" url="https://nodeweekly.com/issues/632" />
+
+<Detail client:only="react">
+	#​632 — July 9, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/632)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://nodeweekly.com/link/187639/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yl9a45qyggteictlikwu.jpg)](https://nodeweekly.com/link/187640/0a4070b383)
+
+[npm v12 Ships with Install Scripts Off by Default](https://nodeweekly.com/link/187640/0a4070b383 "github.blog") — npm 12 is now GA with [many breaking changes](https://nodeweekly.com/link/187641/0a4070b383). The headline change is lifecycle scripts and implicit `node-gyp` builds no longer run by default. Socket’s Sarah Gooding [writes more about the practical implications](https://nodeweekly.com/link/187642/0a4070b383) including, thankfully, that unknown `.npmrc` keys will now only [_warn_ rather than error](https://nodeweekly.com/link/187643/0a4070b383) as they did in the pre-releases.
+
+GitHub
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/b3c40c31.jpg)](https://nodeweekly.com/link/187639/0a4070b383)
+
+[Your Next.js App Is Already Tracing. Now Make It Useful](https://nodeweekly.com/link/187639/0a4070b383 "blog.sentry.io") — When a Next.js page is slow, the hard part is finding which part is responsible: middleware, SSR, an API route, a query, or a fetch call. 🔍 Next.js is already tracing all of it. [Here's how to actually see it and put it to use](https://nodeweekly.com/link/187639/0a4070b383).
+
+Sentry sponsor
+
+[Node.js 26.5.0 (Current) Released](https://nodeweekly.com/link/187644/0a4070b383 "nodejs.org") — Key additions include the ability to [import text files into ES modules](https://nodeweekly.com/link/187645/0a4070b383) via import attributes (behind [an experimental flag](https://nodeweekly.com/link/187676/0a4070b383)), `blob.textStream()` (good for streaming large blob content), and being able to [sample event-loop delay per iteration](https://nodeweekly.com/link/187646/0a4070b383) via `perf_hooks`.
+
+Richard Lau
+
+**IN BRIEF:**
+
+*   Bun's Jarred Sumner wrote up [the full story of rewriting Bun in Rust](https://nodeweekly.com/link/187647/0a4070b383), a somewhat controversial AI-powered port that will power Bun 1.4 onward. The cost? ~$165k of [Fable](https://nodeweekly.com/link/187648/0a4070b383) usage, at API prices.
+    
+*   James Snell has [a TC39 proposal to standardize a `code` property on `Error`](https://nodeweekly.com/link/187649/0a4070b383) (as has long been common in Node).
+    
+*   [Better Auth](https://nodeweekly.com/link/187650/0a4070b383), the framework-agnostic auth library, [is joining Vercel](https://nodeweekly.com/link/187651/0a4070b383).
+    
+
+[TypeScript 7.0 Released](https://nodeweekly.com/link/187652/0a4070b383 "devblogs.microsoft.com") — Over a year after [announcing TypeScript would be ported to Go](https://nodeweekly.com/link/187653/0a4070b383), the final release is out. Don't rush to upgrade: TS 7.0 doesn't ship with an API yet, and [6.0](https://nodeweekly.com/link/187654/0a4070b383) is still a good stepping stone. If you _do_ upgrade, expect to see huge build time speedups, once `moduleResolution: node` is switched to `nodenext` and you've sorted out `"types": ["node"]`.
+
+Microsoft
+
+[CVE-2026-48931 Shouldn't Have Been a CVE](https://nodeweekly.com/link/187655/0a4070b383 "adventures.nodeland.dev") — A candid post-mortem from a Node maintainer explaining a recent snafu around an HTTP/1.1 poisoning issue he now argues shouldn’t have been a CVE, especially after the fix broke node-fetch, Firebase, and the official Docker images.
+
+Matteo Collina
+
+[What's New in ECMAScript 2026](https://nodeweekly.com/link/187656/0a4070b383 "pawelgrzybek.com") — The [ECMAScript 2026 spec](https://nodeweekly.com/link/187657/0a4070b383) was approved last week, and this round-up covers several main new features that made the cut, with all (except `Math.sumPrecise`) available in Node today.
+
+Pawel Grzybek
+
+📄 [You Shouldn't Trust Trusted Publishing](https://nodeweekly.com/link/187658/0a4070b383) – npm [added trusted publishing](https://nodeweekly.com/link/187659/0a4070b383), but it’s authentication, not a safety or quality badge. Matteo Collina has also [written about this from the npm perspective](https://nodeweekly.com/link/187660/0a4070b383) before. William Woodruff
+
+📄 [Node.js Worker Threads in Production](https://nodeweekly.com/link/187661/0a4070b383) – Hard-won lessons from running worker threads at scale. Aaron Harper (Inngest)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ufi8jm6wnm93dzs3zqdo.jpg)](https://nodeweekly.com/link/187662/0a4070b383)
+
+[terminal-image 5.0: Display Images in the Terminal](https://nodeweekly.com/link/187662/0a4070b383 "github.com") — Works in any terminal that supports colors by rendering colored blocks, but can render images inline in terminals that support inline graphics. v5.0 improves iTerm2 support by using its native inline image support, rather than the Kitty protocol.
+
+Sindre Sorhus
+
+[Full-Text Search in Drizzle Without a Second System](https://nodeweekly.com/link/187663/0a4070b383 "github.com") — Try the official ParadeDB integration for Drizzle. Search your live Postgres tables. No ETL, no Elasticsearch cluster.
+
+ParadeDB sponsor
+
+[eslint-node-test: ESLint Rules for Node's Built-In Test Runner](https://nodeweekly.com/link/187664/0a4070b383 "github.com") — In Sindre’s own words: _“If you use the Node.js test runner (`node:test`), you may like the new ESLint plugin I cooked up. 64_ \[now 82\] _rules to improve your tests, prevent mistakes, and enforce style.”_
+
+Sindre Sorhus
+
+✉️ [Upyo 0.5: A Cross-Runtime Email Sending Library](https://nodeweekly.com/link/187665/0a4070b383 "upyo.org") — A unified, type-safe API for sending emails both on SMTP and HTTP-based (e.g. SendGrid or Amazon SES) providers from Node, Deno, Bun, and edge function runtimes.
+
+Hong Minhee
+
+[webpack-dev-server 6.0: The Official webpack Dev Server](https://nodeweekly.com/link/187666/0a4070b383 "github.com") — Bumps Express up to v5, drops support for older Node versions, adds support to be used as a webpack plugin, and switches to ESM.
+
+webpack
+
+*   [XO 4.0](https://nodeweekly.com/link/187667/0a4070b383) – Opinionated but configurable ESLint wrapper that includes numerous popular ESLint plugins and rules out of the box.
+    
+*   [ESLint Plugin Perfectionist 5.10](https://nodeweekly.com/link/187668/0a4070b383) – For when you're _really_ particular about the ordering of things like objects, imports, and types.
+    
+*   [MongoDB Node.js Driver 7.5](https://nodeweekly.com/link/187669/0a4070b383) – Official driver for MongoDB. Now supports Queryable Encryption string queries on MongoDB 9.0.
+    
+*   🐍 [node-calls-python 1.2](https://nodeweekly.com/link/187670/0a4070b383) – Call Python from Node directly, in-process, without spawning processes.
+    
+*   [FoalTS 5.3](https://nodeweekly.com/link/187671/0a4070b383) – The full-featured Node.js app framework adds a new `dev-verbose` logging format.
+    
+*   [Fastify 5.10.0](https://nodeweekly.com/link/187672/0a4070b383) – The fast and low overhead web framework.
+    
+*   [feed 6.0](https://nodeweekly.com/link/187673/0a4070b383) – RSS, JSON, and Atom feed generator library.
+    
+
+📰 Classifieds
+
+📈 [Crystallize seeks a remote SRE](https://nodeweekly.com/link/187674/0a4070b383) who thinks in SLOs, not heroics. Node/TS, GraphQL.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​632 — July 9, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/632)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://nodeweekly.com/link/187639/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yl9a45qyggteictlikwu.jpg)](https://nodeweekly.com/link/187640/0a4070b383)
+
+[npm v12 Ships with Install Scripts Off by Default](https://nodeweekly.com/link/187640/0a4070b383 "github.blog") — npm 12 is now GA with [many breaking changes](https://nodeweekly.com/link/187641/0a4070b383). The headline change is lifecycle scripts and implicit `node-gyp` builds no longer run by default. Socket’s Sarah Gooding [writes more about the practical implications](https://nodeweekly.com/link/187642/0a4070b383) including, thankfully, that unknown `.npmrc` keys will now only [*warn* rather than error](https://nodeweekly.com/link/187643/0a4070b383) as they did in the pre-releases.
+
+GitHub
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/b3c40c31.jpg)](https://nodeweekly.com/link/187639/0a4070b383)
+
+[Your Next.js App Is Already Tracing. Now Make It Useful](https://nodeweekly.com/link/187639/0a4070b383 "blog.sentry.io") — When a Next.js page is slow, the hard part is finding which part is responsible: middleware, SSR, an API route, a query, or a fetch call. 🔍 Next.js is already tracing all of it. [Here's how to actually see it and put it to use](https://nodeweekly.com/link/187639/0a4070b383).
+
+Sentry sponsor
+
+[Node.js 26.5.0 (Current) Released](https://nodeweekly.com/link/187644/0a4070b383 "nodejs.org") — Key additions include the ability to [import text files into ES modules](https://nodeweekly.com/link/187645/0a4070b383) via import attributes (behind [an experimental flag](https://nodeweekly.com/link/187676/0a4070b383)), `blob.textStream()` (good for streaming large blob content), and being able to [sample event-loop delay per iteration](https://nodeweekly.com/link/187646/0a4070b383) via `perf_hooks`.
+
+Richard Lau
+
+**IN BRIEF:**
+
+* Bun's Jarred Sumner wrote up [the full story of rewriting Bun in Rust](https://nodeweekly.com/link/187647/0a4070b383), a somewhat controversial AI-powered port that will power Bun 1.4 onward. The cost? ~$165k of [Fable](https://nodeweekly.com/link/187648/0a4070b383) usage, at API prices.
+
+* James Snell has [a TC39 proposal to standardize a `code` property on `Error`](https://nodeweekly.com/link/187649/0a4070b383) (as has long been common in Node).
+
+* [Better Auth](https://nodeweekly.com/link/187650/0a4070b383), the framework-agnostic auth library, [is joining Vercel](https://nodeweekly.com/link/187651/0a4070b383).
+
+[TypeScript 7.0 Released](https://nodeweekly.com/link/187652/0a4070b383 "devblogs.microsoft.com") — Over a year after [announcing TypeScript would be ported to Go](https://nodeweekly.com/link/187653/0a4070b383), the final release is out. Don't rush to upgrade: TS 7.0 doesn't ship with an API yet, and [6.0](https://nodeweekly.com/link/187654/0a4070b383) is still a good stepping stone. If you *do* upgrade, expect to see huge build time speedups, once `moduleResolution: node` is switched to `nodenext` and you've sorted out `"types": ["node"]`.
+
+Microsoft
+
+[CVE-2026-48931 Shouldn't Have Been a CVE](https://nodeweekly.com/link/187655/0a4070b383 "adventures.nodeland.dev") — A candid post-mortem from a Node maintainer explaining a recent snafu around an HTTP/1.1 poisoning issue he now argues shouldn’t have been a CVE, especially after the fix broke node-fetch, Firebase, and the official Docker images.
+
+Matteo Collina
+
+[What's New in ECMAScript 2026](https://nodeweekly.com/link/187656/0a4070b383 "pawelgrzybek.com") — The [ECMAScript 2026 spec](https://nodeweekly.com/link/187657/0a4070b383) was approved last week, and this round-up covers several main new features that made the cut, with all (except `Math.sumPrecise`) available in Node today.
+
+Pawel Grzybek
+
+📄 [You Shouldn't Trust Trusted Publishing](https://nodeweekly.com/link/187658/0a4070b383) – npm [added trusted publishing](https://nodeweekly.com/link/187659/0a4070b383), but it’s authentication, not a safety or quality badge. Matteo Collina has also [written about this from the npm perspective](https://nodeweekly.com/link/187660/0a4070b383) before. William Woodruff
+
+📄 [Node.js Worker Threads in Production](https://nodeweekly.com/link/187661/0a4070b383) – Hard-won lessons from running worker threads at scale. Aaron Harper (Inngest)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ufi8jm6wnm93dzs3zqdo.jpg)](https://nodeweekly.com/link/187662/0a4070b383)
+
+[terminal-image 5.0: Display Images in the Terminal](https://nodeweekly.com/link/187662/0a4070b383 "github.com") — Works in any terminal that supports colors by rendering colored blocks, but can render images inline in terminals that support inline graphics. v5.0 improves iTerm2 support by using its native inline image support, rather than the Kitty protocol.
+
+Sindre Sorhus
+
+[Full-Text Search in Drizzle Without a Second System](https://nodeweekly.com/link/187663/0a4070b383 "github.com") — Try the official ParadeDB integration for Drizzle. Search your live Postgres tables. No ETL, no Elasticsearch cluster.
+
+ParadeDB sponsor
+
+[eslint-node-test: ESLint Rules for Node's Built-In Test Runner](https://nodeweekly.com/link/187664/0a4070b383 "github.com") — In Sindre’s own words: *“If you use the Node.js test runner (`node:test`), you may like the new ESLint plugin I cooked up. 64* \[now 82] *rules to improve your tests, prevent mistakes, and enforce style.”*
+
+Sindre Sorhus
+
+✉️ [Upyo 0.5: A Cross-Runtime Email Sending Library](https://nodeweekly.com/link/187665/0a4070b383 "upyo.org") — A unified, type-safe API for sending emails both on SMTP and HTTP-based (e.g. SendGrid or Amazon SES) providers from Node, Deno, Bun, and edge function runtimes.
+
+Hong Minhee
+
+[webpack-dev-server 6.0: The Official webpack Dev Server](https://nodeweekly.com/link/187666/0a4070b383 "github.com") — Bumps Express up to v5, drops support for older Node versions, adds support to be used as a webpack plugin, and switches to ESM.
+
+webpack
+
+* [XO 4.0](https://nodeweekly.com/link/187667/0a4070b383) – Opinionated but configurable ESLint wrapper that includes numerous popular ESLint plugins and rules out of the box.
+
+* [ESLint Plugin Perfectionist 5.10](https://nodeweekly.com/link/187668/0a4070b383) – For when you're *really* particular about the ordering of things like objects, imports, and types.
+
+* [MongoDB Node.js Driver 7.5](https://nodeweekly.com/link/187669/0a4070b383) – Official driver for MongoDB. Now supports Queryable Encryption string queries on MongoDB 9.0.
+
+* 🐍 [node-calls-python 1.2](https://nodeweekly.com/link/187670/0a4070b383) – Call Python from Node directly, in-process, without spawning processes.
+
+* [FoalTS 5.3](https://nodeweekly.com/link/187671/0a4070b383) – The full-featured Node.js app framework adds a new `dev-verbose` logging format.
+
+* [Fastify 5.10.0](https://nodeweekly.com/link/187672/0a4070b383) – The fast and low overhead web framework.
+
+* [feed 6.0](https://nodeweekly.com/link/187673/0a4070b383) – RSS, JSON, and Atom feed generator library.
+
+📰 Classifieds
+
+📈 [Crystallize seeks a remote SRE](https://nodeweekly.com/link/187674/0a4070b383) who thinks in SLOs, not heroics. Node/TS, GraphQL.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
