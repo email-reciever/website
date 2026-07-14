@@ -1,0 +1,306 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: npm 12, TypeScript 7, and Bun in Rust
+description: npm 12, TypeScript 7, and Bun in Rust
+date: 星期二 06 晚上 七月 14o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/794
+origin_site: https://javascriptweekly.com/issues/794
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="npm 12, TypeScript 7, and Bun in Rust" url="https://javascriptweekly.com/issues/794" />
+
+<Detail client:only="react">
+	#​794 — July 14, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/794)
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_187/e_make_transparent/co_white,e_outline:20/hxaajcewmf94f29l9dka.png)](https://javascriptweekly.com/link/187843/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vznfsck17p4he0yi3eae.jpg)](https://javascriptweekly.com/link/187844/d076523b1d)
+
+📈 [TanStack's npm Package Download Charts](https://javascriptweekly.com/link/187844/d076523b1d "tanstack.com") — A quick way to chart package popularity over time, look for trends, and see what libraries and tools have soared or fallen. The default view compares TanStack's packages against several common packages, but you can enter any packages you wish, or see pre-defined sets like build tools, component libraries, or UI frameworks.
+
+TanStack
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/81f2de52.png)](https://javascriptweekly.com/link/187843/d076523b1d)
+
+[Your AI Writes the Code. CodeRabbit Reviews It](https://javascriptweekly.com/link/187843/d076523b1d "coderabbit.link") — AI can write the code, but you still own what ships. CodeRabbit is the AI-native review layer that catches the bugs and edge cases humans skim past, so what merges matches what you intended. [Free to try, 2-click install](https://javascriptweekly.com/link/187843/d076523b1d).
+
+CodeRabbit sponsor
+
+[Rewriting Bun in Rust](https://javascriptweekly.com/link/187845/d076523b1d "bun.com") — Bun's creator shares the full story of porting the JavaScript runtime from Zig to Rust, with the assistance of many Claude Code instances churning through ~$165k in usage (at API prices). The Rust version forms the basis of Bun 1.4, expected any day now.
+
+Jarred Sumner
+
+[npm v12 Released: Install Scripts are Off by Default](https://javascriptweekly.com/link/187846/d076523b1d "github.blog") — npm 12 is now GA with [many breaking changes](https://javascriptweekly.com/link/187847/d076523b1d). The big change is lifecycle scripts no longer run by default, but here are [more practical implications to consider](https://javascriptweekly.com/link/187848/d076523b1d). It may also be worth upgrading [via 11.18.0](https://javascriptweekly.com/link/187849/d076523b1d) first.
+
+GitHub
+
+**IN BRIEF:**
+
+*   TC39's 115th meeting takes place next week. [Here's the agenda](https://javascriptweekly.com/link/187850/d076523b1d), including [Await Dictionary](https://javascriptweekly.com/link/187851/d076523b1d) aiming for Stage 3, plus [Decimal](https://javascriptweekly.com/link/187852/d076523b1d), Import Defer and [Map.take](https://javascriptweekly.com/link/187853/d076523b1d).
+    
+*   [Next.js now has a formal security release program](https://javascriptweekly.com/link/187854/d076523b1d) with monthly announcements and scheduled releases. The first is expected on July 20.
+    
+*   ⚠️ The `jscrambler` npm package [suffered a supply chain attack at the weekend](https://javascriptweekly.com/link/187855/d076523b1d) which Socket detected within six minutes.
+    
+*   The [Porffor](https://javascriptweekly.com/link/187856/d076523b1d) ahead-of-time JavaScript compiler [is now self-hosting](https://javascriptweekly.com/link/187857/d076523b1d) (can compile itself with itself).
+    
+*   [Vercel has acquired](https://javascriptweekly.com/link/187858/d076523b1d) the team behind [Better Auth](https://javascriptweekly.com/link/187859/d076523b1d), the popular auth library.
+    
+
+**RELEASES:**
+
+*   ⭐ [TypeScript 7.0](https://javascriptweekly.com/link/187860/d076523b1d) – The final release of the "10x faster" Go-powered version of the TypeScript compiler is here. A (temporary) lack of a full API means many users are recommended to [stay on 6.0](https://javascriptweekly.com/link/187861/d076523b1d) for now, though.
+    
+*   [Node.js 26.5.0 (Current)](https://javascriptweekly.com/link/187862/d076523b1d) – Adds support for [importing text files in ES modules](https://javascriptweekly.com/link/187863/d076523b1d) via import attributes, plus `blob.textStream()`.
+    
+*   [ESLint 10.7](https://javascriptweekly.com/link/187864/d076523b1d), [Storybook 10.5](https://javascriptweekly.com/link/187865/d076523b1d), [Vite DevTools 0.4](https://javascriptweekly.com/link/187866/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[`Proxy` and `Reflect`: Redefining How Objects Fundamentally Work](https://javascriptweekly.com/link/187867/d076523b1d "piccalil.li") — A deep dive into intercepting the internal operations of JavaScript objects, covering why `Reflect` exists at all, and ending with a small reactive state system (essentially [how Vue 3's reactivity works](https://javascriptweekly.com/link/187868/d076523b1d)).
+
+Mat Marquis
+
+[In Defense of Polyfills](https://javascriptweekly.com/link/187869/d076523b1d "lea.verou.me") — Prolific standards editor Anne van Kesteren said polyfilling is harmful. Lea disagrees, arguing _"ponyfills are just userland libraries with better marketing"_ and a web without polyfills would be a stagnant one.
+
+Lea Verou
+
+[Sentry + GitHub: Bugs Diagnosed and Fixed, Live](https://javascriptweekly.com/link/187870/d076523b1d "sentry.io") — Sentry catches it, Seer diagnoses it, Copilot writes the fix. Watch Sentry and GitHub break a script live July 15th.
+
+Sentry sponsor
+
+[Collaborative Editing in Wordgard](https://javascriptweekly.com/link/187871/d076523b1d "marijnhaverbeke.nl") — Marijn recently released his new [Wordgard](https://javascriptweekly.com/link/187872/d076523b1d) rich text editor (and ProseMirror successor). Here's his third take on collaborative editing in eleven years, still based on operational transformation (OT) rather than CRDTs.
+
+Marijn Haverbeke
+
+💡 We missed [Marijn's Wordgard release post](https://javascriptweekly.com/link/187873/d076523b1d) in last week's Wordgard feature. He explains why and how he built it (no LLMs!) and why he's _not_ taking pull requests.
+
+[Reverse Engineering ChatGPT's Web Stack](https://javascriptweekly.com/link/187874/d076523b1d "performance.dev") — The author spent days breaking down ChatGPT's page source, bundles, and requests. React Router 7, TanStack Query, Radix, and ProseMirror all make an appearance.
+
+Dennis Brotzky
+
+📄 [Playwright on GitHub Actions: A Setup That Actually Runs Fast](https://javascriptweekly.com/link/187875/d076523b1d) Jakob Norlin
+
+📄 [Building Persistent Page Transitions with WebGPU and Vanilla JS](https://javascriptweekly.com/link/187876/d076523b1d) Ben Paine
+
+📄 [SolidJS 2.0: A React Developer's First Look at Signals and Async](https://javascriptweekly.com/link/187877/d076523b1d) Dennis Morello
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/solv9pgf1thozoexx7xt.jpg)](https://javascriptweekly.com/link/187878/d076523b1d)
+
+[LiteRT.js: High Performance Web AI Inference from Google](https://javascriptweekly.com/link/187878/d076523b1d "developers.googleblog.com") — A JavaScript binding of [LiteRT](https://javascriptweekly.com/link/187879/d076523b1d) for running AI directly inside the web browser, boasting more performance than the TensorFlow.js approach. Here's [a CodePen-hosted demo](https://javascriptweekly.com/link/187880/d076523b1d) of using it to do image upscaling (surprisingly quickly!)
+
+Yu, Ristić, Soulanille, Parikh (Google)
+
+[Full-Text Search in Drizzle Without a Second System](https://javascriptweekly.com/link/187881/d076523b1d "github.com") — Try the official ParadeDB integration for Drizzle. Search your live Postgres tables. No ETL, no Elasticsearch cluster.
+
+ParadeDB sponsor
+
+[Babylon Lite: A Faster, Smaller, WebGPU-Only 3D Engine](https://javascriptweekly.com/link/187882/d076523b1d "doc.babylonjs.com") — [Babylon.js](https://javascriptweekly.com/link/187883/d076523b1d) is a powerful, long-standing 3D engine, but what would they do if rebuilding from scratch? This! _Lite_ is much faster and smaller, but with some tradeoffs.
+
+Babylon.js Team
+
+[Ant: A JavaScript Runtime in a 9MB Binary](https://javascriptweekly.com/link/187884/d076523b1d "antjs.org") — No V8, JavaScriptCore or SpiderMonkey involved, this is a JS runtime built in C that ships as a 9MB binary, can run npm packages, and boasts incredibly short cold start times.
+
+theMackabu
+
+*   🔎 [Fuse.js 7.5](https://javascriptweekly.com/link/187885/d076523b1d) – The popular fuzzy search library fixes a variety of scoring and ranking bugs (so ordering may shift for some queries). ([Homepage](https://javascriptweekly.com/link/187886/d076523b1d) and [demo](https://javascriptweekly.com/link/187887/d076523b1d))
+    
+*   [Nano ID 6.0](https://javascriptweekly.com/link/187888/d076523b1d) – Tiny, secure, URL-friendly unique string ID generator. `nanoid()` and `customAlphabet()` get 4x faster in 6.0.
+    
+*   [Mantine Vue](https://javascriptweekly.com/link/187889/d076523b1d) – A port of the popular [Mantine](https://javascriptweekly.com/link/187890/d076523b1d) React component library for use with Vue.
+    
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/187891/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+* * *
+
+Your dashboard is slow because the query is slow. [TimescaleDB extends Postgres](https://javascriptweekly.com/link/187892/d076523b1d) for analytics at scale, no second DB.
+
+* * *
+
+⚡Sync live context across your entire agent stack. Merget’s now live, build & [win a year of Claude Max](https://javascriptweekly.com/link/187893/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/g1r2xzmiqtaoiqzrs2ds.jpg)](https://javascriptweekly.com/link/187894/d076523b1d)
+
+*   [FracturedJson](https://javascriptweekly.com/link/187894/d076523b1d) is a JSON formatter that produces 'human-readable but fairly compact' output. If you have a big lump of JSON, this makes it more pleasant to look through. It also supports non-standard JSON comments.
+    
+*   [Cloudflare has unveiled Precursor](https://javascriptweekly.com/link/187895/d076523b1d), a client-side verification system that uses injected JS to collect behavioral signals (e.g. pointer movement) in an attempt to improve bot detection.
+    
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/s6l7inruzpaoyfcqhhvn.jpg)](https://javascriptweekly.com/link/187896/d076523b1d)
+
+*   🔠 [Geist Pixel](https://javascriptweekly.com/link/187897/d076523b1d) _(above)_, the latest member of Vercel's _Geist_ family of fonts, is [now available to use on Google Fonts](https://javascriptweekly.com/link/187896/d076523b1d).
+    
+*   Devographics, best known for its [State of JavaScript](https://javascriptweekly.com/link/187898/d076523b1d) surveys, is back with a more general [_State of Devs_ survey](https://javascriptweekly.com/link/187899/d076523b1d) to take.
+    
+*   [A scrolling visualization of the ~200ms life of an HTTP request.](https://javascriptweekly.com/link/187900/d076523b1d)
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/187901/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​794 — July 14, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/794)
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_187/e_make_transparent/co_white,e_outline:20/hxaajcewmf94f29l9dka.png)](https://javascriptweekly.com/link/187843/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/vznfsck17p4he0yi3eae.jpg)](https://javascriptweekly.com/link/187844/d076523b1d)
+
+📈 [TanStack's npm Package Download Charts](https://javascriptweekly.com/link/187844/d076523b1d "tanstack.com") — A quick way to chart package popularity over time, look for trends, and see what libraries and tools have soared or fallen. The default view compares TanStack's packages against several common packages, but you can enter any packages you wish, or see pre-defined sets like build tools, component libraries, or UI frameworks.
+
+TanStack
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/81f2de52.png)](https://javascriptweekly.com/link/187843/d076523b1d)
+
+[Your AI Writes the Code. CodeRabbit Reviews It](https://javascriptweekly.com/link/187843/d076523b1d "coderabbit.link") — AI can write the code, but you still own what ships. CodeRabbit is the AI-native review layer that catches the bugs and edge cases humans skim past, so what merges matches what you intended. [Free to try, 2-click install](https://javascriptweekly.com/link/187843/d076523b1d).
+
+CodeRabbit sponsor
+
+[Rewriting Bun in Rust](https://javascriptweekly.com/link/187845/d076523b1d "bun.com") — Bun's creator shares the full story of porting the JavaScript runtime from Zig to Rust, with the assistance of many Claude Code instances churning through ~$165k in usage (at API prices). The Rust version forms the basis of Bun 1.4, expected any day now.
+
+Jarred Sumner
+
+[npm v12 Released: Install Scripts are Off by Default](https://javascriptweekly.com/link/187846/d076523b1d "github.blog") — npm 12 is now GA with [many breaking changes](https://javascriptweekly.com/link/187847/d076523b1d). The big change is lifecycle scripts no longer run by default, but here are [more practical implications to consider](https://javascriptweekly.com/link/187848/d076523b1d). It may also be worth upgrading [via 11.18.0](https://javascriptweekly.com/link/187849/d076523b1d) first.
+
+GitHub
+
+**IN BRIEF:**
+
+* TC39's 115th meeting takes place next week. [Here's the agenda](https://javascriptweekly.com/link/187850/d076523b1d), including [Await Dictionary](https://javascriptweekly.com/link/187851/d076523b1d) aiming for Stage 3, plus [Decimal](https://javascriptweekly.com/link/187852/d076523b1d), Import Defer and [Map.take](https://javascriptweekly.com/link/187853/d076523b1d).
+
+* [Next.js now has a formal security release program](https://javascriptweekly.com/link/187854/d076523b1d) with monthly announcements and scheduled releases. The first is expected on July 20.
+
+* ⚠️ The `jscrambler` npm package [suffered a supply chain attack at the weekend](https://javascriptweekly.com/link/187855/d076523b1d) which Socket detected within six minutes.
+
+* The [Porffor](https://javascriptweekly.com/link/187856/d076523b1d) ahead-of-time JavaScript compiler [is now self-hosting](https://javascriptweekly.com/link/187857/d076523b1d) (can compile itself with itself).
+
+* [Vercel has acquired](https://javascriptweekly.com/link/187858/d076523b1d) the team behind [Better Auth](https://javascriptweekly.com/link/187859/d076523b1d), the popular auth library.
+
+**RELEASES:**
+
+* ⭐ [TypeScript 7.0](https://javascriptweekly.com/link/187860/d076523b1d) – The final release of the "10x faster" Go-powered version of the TypeScript compiler is here. A (temporary) lack of a full API means many users are recommended to [stay on 6.0](https://javascriptweekly.com/link/187861/d076523b1d) for now, though.
+
+* [Node.js 26.5.0 (Current)](https://javascriptweekly.com/link/187862/d076523b1d) – Adds support for [importing text files in ES modules](https://javascriptweekly.com/link/187863/d076523b1d) via import attributes, plus `blob.textStream()`.
+
+* [ESLint 10.7](https://javascriptweekly.com/link/187864/d076523b1d), [Storybook 10.5](https://javascriptweekly.com/link/187865/d076523b1d), [Vite DevTools 0.4](https://javascriptweekly.com/link/187866/d076523b1d)
+
+📖  Articles and Videos
+
+[`Proxy` and `Reflect`: Redefining How Objects Fundamentally Work](https://javascriptweekly.com/link/187867/d076523b1d "piccalil.li") — A deep dive into intercepting the internal operations of JavaScript objects, covering why `Reflect` exists at all, and ending with a small reactive state system (essentially [how Vue 3's reactivity works](https://javascriptweekly.com/link/187868/d076523b1d)).
+
+Mat Marquis
+
+[In Defense of Polyfills](https://javascriptweekly.com/link/187869/d076523b1d "lea.verou.me") — Prolific standards editor Anne van Kesteren said polyfilling is harmful. Lea disagrees, arguing *"ponyfills are just userland libraries with better marketing"* and a web without polyfills would be a stagnant one.
+
+Lea Verou
+
+[Sentry + GitHub: Bugs Diagnosed and Fixed, Live](https://javascriptweekly.com/link/187870/d076523b1d "sentry.io") — Sentry catches it, Seer diagnoses it, Copilot writes the fix. Watch Sentry and GitHub break a script live July 15th.
+
+Sentry sponsor
+
+[Collaborative Editing in Wordgard](https://javascriptweekly.com/link/187871/d076523b1d "marijnhaverbeke.nl") — Marijn recently released his new [Wordgard](https://javascriptweekly.com/link/187872/d076523b1d) rich text editor (and ProseMirror successor). Here's his third take on collaborative editing in eleven years, still based on operational transformation (OT) rather than CRDTs.
+
+Marijn Haverbeke
+
+💡 We missed [Marijn's Wordgard release post](https://javascriptweekly.com/link/187873/d076523b1d) in last week's Wordgard feature. He explains why and how he built it (no LLMs!) and why he's *not* taking pull requests.
+
+[Reverse Engineering ChatGPT's Web Stack](https://javascriptweekly.com/link/187874/d076523b1d "performance.dev") — The author spent days breaking down ChatGPT's page source, bundles, and requests. React Router 7, TanStack Query, Radix, and ProseMirror all make an appearance.
+
+Dennis Brotzky
+
+📄 [Playwright on GitHub Actions: A Setup That Actually Runs Fast](https://javascriptweekly.com/link/187875/d076523b1d) Jakob Norlin
+
+📄 [Building Persistent Page Transitions with WebGPU and Vanilla JS](https://javascriptweekly.com/link/187876/d076523b1d) Ben Paine
+
+📄 [SolidJS 2.0: A React Developer's First Look at Signals and Async](https://javascriptweekly.com/link/187877/d076523b1d) Dennis Morello
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/solv9pgf1thozoexx7xt.jpg)](https://javascriptweekly.com/link/187878/d076523b1d)
+
+[LiteRT.js: High Performance Web AI Inference from Google](https://javascriptweekly.com/link/187878/d076523b1d "developers.googleblog.com") — A JavaScript binding of [LiteRT](https://javascriptweekly.com/link/187879/d076523b1d) for running AI directly inside the web browser, boasting more performance than the TensorFlow.js approach. Here's [a CodePen-hosted demo](https://javascriptweekly.com/link/187880/d076523b1d) of using it to do image upscaling (surprisingly quickly!)
+
+Yu, Ristić, Soulanille, Parikh (Google)
+
+[Full-Text Search in Drizzle Without a Second System](https://javascriptweekly.com/link/187881/d076523b1d "github.com") — Try the official ParadeDB integration for Drizzle. Search your live Postgres tables. No ETL, no Elasticsearch cluster.
+
+ParadeDB sponsor
+
+[Babylon Lite: A Faster, Smaller, WebGPU-Only 3D Engine](https://javascriptweekly.com/link/187882/d076523b1d "doc.babylonjs.com") — [Babylon.js](https://javascriptweekly.com/link/187883/d076523b1d) is a powerful, long-standing 3D engine, but what would they do if rebuilding from scratch? This! *Lite* is much faster and smaller, but with some tradeoffs.
+
+Babylon.js Team
+
+[Ant: A JavaScript Runtime in a 9MB Binary](https://javascriptweekly.com/link/187884/d076523b1d "antjs.org") — No V8, JavaScriptCore or SpiderMonkey involved, this is a JS runtime built in C that ships as a 9MB binary, can run npm packages, and boasts incredibly short cold start times.
+
+theMackabu
+
+* 🔎 [Fuse.js 7.5](https://javascriptweekly.com/link/187885/d076523b1d) – The popular fuzzy search library fixes a variety of scoring and ranking bugs (so ordering may shift for some queries). ([Homepage](https://javascriptweekly.com/link/187886/d076523b1d) and [demo](https://javascriptweekly.com/link/187887/d076523b1d))
+
+* [Nano ID 6.0](https://javascriptweekly.com/link/187888/d076523b1d) – Tiny, secure, URL-friendly unique string ID generator. `nanoid()` and `customAlphabet()` get 4x faster in 6.0.
+
+* [Mantine Vue](https://javascriptweekly.com/link/187889/d076523b1d) – A port of the popular [Mantine](https://javascriptweekly.com/link/187890/d076523b1d) React component library for use with Vue.
+
+📰 Classifieds
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/187891/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+***
+
+Your dashboard is slow because the query is slow. [TimescaleDB extends Postgres](https://javascriptweekly.com/link/187892/d076523b1d) for analytics at scale, no second DB.
+
+***
+
+⚡Sync live context across your entire agent stack. Merget’s now live, build & [win a year of Claude Max](https://javascriptweekly.com/link/187893/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/g1r2xzmiqtaoiqzrs2ds.jpg)](https://javascriptweekly.com/link/187894/d076523b1d)
+
+* [FracturedJson](https://javascriptweekly.com/link/187894/d076523b1d) is a JSON formatter that produces 'human-readable but fairly compact' output. If you have a big lump of JSON, this makes it more pleasant to look through. It also supports non-standard JSON comments.
+
+* [Cloudflare has unveiled Precursor](https://javascriptweekly.com/link/187895/d076523b1d), a client-side verification system that uses injected JS to collect behavioral signals (e.g. pointer movement) in an attempt to improve bot detection.
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/s6l7inruzpaoyfcqhhvn.jpg)](https://javascriptweekly.com/link/187896/d076523b1d)
+
+* 🔠 [Geist Pixel](https://javascriptweekly.com/link/187897/d076523b1d) *(above)*, the latest member of Vercel's *Geist* family of fonts, is [now available to use on Google Fonts](https://javascriptweekly.com/link/187896/d076523b1d).
+
+* Devographics, best known for its [State of JavaScript](https://javascriptweekly.com/link/187898/d076523b1d) surveys, is back with a more general [*State of Devs* survey](https://javascriptweekly.com/link/187899/d076523b1d) to take.
+
+* [A scrolling visualization of the ~200ms life of an HTTP request.](https://javascriptweekly.com/link/187900/d076523b1d)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/187901/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
