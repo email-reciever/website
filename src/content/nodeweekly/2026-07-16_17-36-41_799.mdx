@@ -1,0 +1,260 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: The life of a ~200ms HTTP request to a Node app
+description: The life of a ~200ms HTTP request to a Node app
+date: 星期四 05 下午 七月 16o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/633
+origin_site: https://nodeweekly.com/issues/633
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="The life of a ~200ms HTTP request to a Node app" url="https://nodeweekly.com/issues/633" />
+
+<Detail client:only="react">
+	#​633 — July 16, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/633)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://nodeweekly.com/link/187973/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dilnllzd34vzt8qhuhgu.jpg)](https://nodeweekly.com/link/187974/0a4070b383)
+
+[Follow a Single HTTP Request Through Its ~200ms Life](https://nodeweekly.com/link/187974/0a4070b383 "200ms.thenodebook.com") — From the creator of [NodeBook](https://nodeweekly.com/link/187975/0a4070b383), a thorough guide to Node's internals, comes a scroll-driven visualization following _every step_ a single HTTP POST request takes from the user's click to Node's event loop and on to a database behind it.
+
+Ishtmeet Singh
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d17bc7e7.png)](https://nodeweekly.com/link/187973/0a4070b383)
+
+[The Best Harness Wins, Not the Best Model. Learn Harness Engineering](https://nodeweekly.com/link/187973/0a4070b383 "master.dev") — Scott Moss (Netflix) teaches you to wrap an LLM in a production-grade harness. Learn durable execution, sandboxing, memory, and multi-agent orchestration.
+
+Master.dev sponsor
+
+[Fetch Needs Error Codes](https://nodeweekly.com/link/187976/0a4070b383 "www.jasnell.me") — `e.cause.code` lets you find out why a `fetch()` failed in Node, but the spec says failures are just bare `TypeError`s, so HTTP/2/3 typed signals like _"safe to retry this POST"_ go missing. James, who created Node's error code convention, is pushing a TC39 proposal to standardize a fix.
+
+James M Snell
+
+**IN BRIEF:**
+
+*   [Ant](https://nodeweekly.com/link/187977/0a4070b383) is a new entry to the growing field of JavaScript runtimes. This time, it's an independent engine written in C packed into a 9MB binary that boasts very low cold start times and can run Hono apps.
+    
+*   If you're considering using Go at all, [this 'from Express to Fiber' guide](https://nodeweekly.com/link/187978/0a4070b383) with examples in both JavaScript and Go (on the Express-inspired [Fiber](https://nodeweekly.com/link/187979/0a4070b383) framework) could be helpful.
+    
+*   🇮🇹 [NodeConf EU 2026](https://nodeweekly.com/link/187980/0a4070b383) takes place this September 29-30 in Italy. [Tickets](https://nodeweekly.com/link/187981/0a4070b383) are still available.
+    
+*   [Vercel is deprecating Node 20](https://nodeweekly.com/link/187982/0a4070b383) for _Builds_ and _Functions_ on October 1, 2026.
+    
+
+[`Proxy` and `Reflect`: Redefining How Objects Fundamentally Work](https://nodeweekly.com/link/187983/0a4070b383 "piccalil.li") — A deep dive into intercepting the internal operations of JavaScript objects, covering why `Reflect` exists at all, and ending with a small reactive state system.
+
+Mat Marquis
+
+[Telegram Serverless: Run Telegram Bots on Telegram's Servers](https://nodeweekly.com/link/187984/0a4070b383 "core.telegram.org") — Creating a bot for Telegram is easy (it has [a _great_ API](https://nodeweekly.com/link/187985/0a4070b383)) with libraries like [node-telegram-bot-api](https://nodeweekly.com/link/187986/0a4070b383), but it's starting to support running them on its _own_ servers.
+
+Telegram
+
+💡 The serverless program is in beta, so not all users will have access to it yet.
+
+📄 [A Gentle Introduction to Git Worktrees](https://nodeweekly.com/link/187987/0a4070b383) – For when you need to check out multiple branches into separate directories simultaneously. Nicholas C. Zakas
+
+📄 [Playwright on GitHub Actions: A Setup That Actually Runs Fast](https://nodeweekly.com/link/187988/0a4070b383) – How to cut Playwright CI time by caching browser binaries, lifting the scaffold's one-worker cap, and more. Jakob Norlin
+
+📄 [6 Security Settings Every GitHub Maintainer Should Enable This Week](https://nodeweekly.com/link/187989/0a4070b383) Joseph Katsioloudes (GitHub)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/p3ow0hsqzactzle7wsgv.jpg)](https://nodeweekly.com/link/187990/0a4070b383)
+
+[LiteParse 2: Fast, Light PDF Document Parsing](https://nodeweekly.com/link/187990/0a4070b383 "github.com") — A PDF parser built in Rust with bindings for Node (plus WASM, Rust, and Python) — it worked great in my testing. It includes OCR, handles layouts/is spatially aware, and is fast (a complex 140-page PDF took ~10 seconds). [Here's how to get started from Node](https://nodeweekly.com/link/187991/0a4070b383).
+
+LlamaIndex
+
+[One Postgres for Your API and Your Analytics](https://nodeweekly.com/link/187994/0a4070b383 "www.tigerdata.com") — TimescaleDB extends Postgres so your app and analytics run in one database at scale. [Get $1000 credit to start](https://nodeweekly.com/link/187994/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[`actions/setup-node@v7`: Install Node in GitHub Actions](https://nodeweekly.com/link/187992/0a4070b383 "github.com") — The popular way to set up an Actions workflow with a version of Node brings changes supporting GitHub's cache-poisoning defenses, inspired by recent exploits. There are also [new docs](https://nodeweekly.com/link/187993/0a4070b383) on publishing to npm with Trusted Publisher (OIDC).
+
+GitHub
+
+🎬 [Mediabunny: A Full Media Toolkit for JavaScript](https://nodeweekly.com/link/187995/0a4070b383 "mediabunny.dev") — It's been a year since we mentioned this library for reading/writing/converting media formats (MP4, MP3, [and more](https://nodeweekly.com/link/187996/0a4070b383)). Since then, it's added Apple ProRes, HLS read/write, and [a new `server` package](https://nodeweekly.com/link/187997/0a4070b383) that makes it all even easier to use from Node.
+
+Vanilagy
+
+[Tinbase: A Supabase-Compatible Backend in a Single Binary](https://nodeweekly.com/link/187998/0a4070b383 "www.tinbase.dev") — Provides a local Supabase-like dev experience using a JS backend built atop [PGlite](https://nodeweekly.com/link/187999/0a4070b383) and [pg-mem](https://nodeweekly.com/link/188000/0a4070b383). A sort of mini, local-only Postgres wrapped in the same APIs as Supabase, so `supabase-js` works unchanged.
+
+Sanket Sahu
+
+[`@neon/sdk`: Neon's New TypeScript Client Library](https://nodeweekly.com/link/188001/0a4070b383 "neon.com") — For users of the [Neon](https://nodeweekly.com/link/188002/0a4070b383) Postgres platform to manage projects, branches, and databases from code.
+
+Andre Landgraf (Neon)
+
+*   [Nano ID 6.0](https://nodeweekly.com/link/188003/0a4070b383) – Generate tiny URL-friendly unique string identifiers. Now 4x faster and drops Node 18/20 support.
+    
+*   [c8 12.0](https://nodeweekly.com/link/188004/0a4070b383) – Istanbul-compatible coverage reports using Node's built-in V8 data. Node's test runner also has its own [experimental code coverage reporting](https://nodeweekly.com/link/188005/0a4070b383).
+    
+*   [np 12.0](https://nodeweekly.com/link/188006/0a4070b383) – Sindre Sorhus's "better `npm publish`" adds support for npm 12 and staged publishing.
+    
+*   [HyperExpress 7.0](https://nodeweekly.com/link/188007/0a4070b383) – A high performance Node server powered by uWebSockets.js.
+    
+*   [Helmet 8.3](https://nodeweekly.com/link/188008/0a4070b383) – HTTP security header hardening for Express apps.
+    
+*   [node-auth0 6.0](https://nodeweekly.com/link/188009/0a4070b383) – One for [Auth0](https://nodeweekly.com/link/188010/0a4070b383) users.
+    
+*   [ESLint 10.7](https://nodeweekly.com/link/188011/0a4070b383)
+    
+
+📢  Elsewhere in the ecosystem
+
+*   TypeScript-using AWS SDK for JavaScript v3 users need to be aware of [changes to the library's support for TypeScript versions](https://nodeweekly.com/link/188012/0a4070b383).
+    
+*   GitHub's [Dependabot is now giving packages a three-day default cooldown](https://nodeweekly.com/link/188013/0a4070b383) before opening version update PRs, though security fixes are exempt.
+    
+*   TC39's 115th meeting takes place next week. [Here's the agenda](https://nodeweekly.com/link/188014/0a4070b383), including [Await Dictionary](https://nodeweekly.com/link/188015/0a4070b383) aiming for Stage 3, plus [Decimal](https://nodeweekly.com/link/188016/0a4070b383), Import Defer, and [Map.take](https://nodeweekly.com/link/188017/0a4070b383).
+    
+*   📁 [Cloudflare has launched 'Drop'](https://nodeweekly.com/link/188018/0a4070b383), a way to quickly get a site live by dropping a folder or ZIP onto a page, similar to [Netlify's service of the same name](https://nodeweekly.com/link/188019/0a4070b383).
+    
+*   [plx](https://nodeweekly.com/link/188020/0a4070b383) is a transpiler for Postgres stored functions that converts JavaScript, PHP, Python, Ruby, and even COBOL, to Postgres's own PL/pgSQL language.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​633 — July 16, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/633)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://nodeweekly.com/link/187973/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dilnllzd34vzt8qhuhgu.jpg)](https://nodeweekly.com/link/187974/0a4070b383)
+
+[Follow a Single HTTP Request Through Its ~200ms Life](https://nodeweekly.com/link/187974/0a4070b383 "200ms.thenodebook.com") — From the creator of [NodeBook](https://nodeweekly.com/link/187975/0a4070b383), a thorough guide to Node's internals, comes a scroll-driven visualization following *every step* a single HTTP POST request takes from the user's click to Node's event loop and on to a database behind it.
+
+Ishtmeet Singh
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d17bc7e7.png)](https://nodeweekly.com/link/187973/0a4070b383)
+
+[The Best Harness Wins, Not the Best Model. Learn Harness Engineering](https://nodeweekly.com/link/187973/0a4070b383 "master.dev") — Scott Moss (Netflix) teaches you to wrap an LLM in a production-grade harness. Learn durable execution, sandboxing, memory, and multi-agent orchestration.
+
+Master.dev sponsor
+
+[Fetch Needs Error Codes](https://nodeweekly.com/link/187976/0a4070b383 "www.jasnell.me") — `e.cause.code` lets you find out why a `fetch()` failed in Node, but the spec says failures are just bare `TypeError`s, so HTTP/2/3 typed signals like *"safe to retry this POST"* go missing. James, who created Node's error code convention, is pushing a TC39 proposal to standardize a fix.
+
+James M Snell
+
+**IN BRIEF:**
+
+* [Ant](https://nodeweekly.com/link/187977/0a4070b383) is a new entry to the growing field of JavaScript runtimes. This time, it's an independent engine written in C packed into a 9MB binary that boasts very low cold start times and can run Hono apps.
+
+* If you're considering using Go at all, [this 'from Express to Fiber' guide](https://nodeweekly.com/link/187978/0a4070b383) with examples in both JavaScript and Go (on the Express-inspired [Fiber](https://nodeweekly.com/link/187979/0a4070b383) framework) could be helpful.
+
+* 🇮🇹 [NodeConf EU 2026](https://nodeweekly.com/link/187980/0a4070b383) takes place this September 29-30 in Italy. [Tickets](https://nodeweekly.com/link/187981/0a4070b383) are still available.
+
+* [Vercel is deprecating Node 20](https://nodeweekly.com/link/187982/0a4070b383) for *Builds* and *Functions* on October 1, 2026.
+
+[`Proxy` and `Reflect`: Redefining How Objects Fundamentally Work](https://nodeweekly.com/link/187983/0a4070b383 "piccalil.li") — A deep dive into intercepting the internal operations of JavaScript objects, covering why `Reflect` exists at all, and ending with a small reactive state system.
+
+Mat Marquis
+
+[Telegram Serverless: Run Telegram Bots on Telegram's Servers](https://nodeweekly.com/link/187984/0a4070b383 "core.telegram.org") — Creating a bot for Telegram is easy (it has [a *great* API](https://nodeweekly.com/link/187985/0a4070b383)) with libraries like [node-telegram-bot-api](https://nodeweekly.com/link/187986/0a4070b383), but it's starting to support running them on its *own* servers.
+
+Telegram
+
+💡 The serverless program is in beta, so not all users will have access to it yet.
+
+📄 [A Gentle Introduction to Git Worktrees](https://nodeweekly.com/link/187987/0a4070b383) – For when you need to check out multiple branches into separate directories simultaneously. Nicholas C. Zakas
+
+📄 [Playwright on GitHub Actions: A Setup That Actually Runs Fast](https://nodeweekly.com/link/187988/0a4070b383) – How to cut Playwright CI time by caching browser binaries, lifting the scaffold's one-worker cap, and more. Jakob Norlin
+
+📄 [6 Security Settings Every GitHub Maintainer Should Enable This Week](https://nodeweekly.com/link/187989/0a4070b383) Joseph Katsioloudes (GitHub)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/p3ow0hsqzactzle7wsgv.jpg)](https://nodeweekly.com/link/187990/0a4070b383)
+
+[LiteParse 2: Fast, Light PDF Document Parsing](https://nodeweekly.com/link/187990/0a4070b383 "github.com") — A PDF parser built in Rust with bindings for Node (plus WASM, Rust, and Python) — it worked great in my testing. It includes OCR, handles layouts/is spatially aware, and is fast (a complex 140-page PDF took ~10 seconds). [Here's how to get started from Node](https://nodeweekly.com/link/187991/0a4070b383).
+
+LlamaIndex
+
+[One Postgres for Your API and Your Analytics](https://nodeweekly.com/link/187994/0a4070b383 "www.tigerdata.com") — TimescaleDB extends Postgres so your app and analytics run in one database at scale. [Get $1000 credit to start](https://nodeweekly.com/link/187994/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[`actions/setup-node@v7`: Install Node in GitHub Actions](https://nodeweekly.com/link/187992/0a4070b383 "github.com") — The popular way to set up an Actions workflow with a version of Node brings changes supporting GitHub's cache-poisoning defenses, inspired by recent exploits. There are also [new docs](https://nodeweekly.com/link/187993/0a4070b383) on publishing to npm with Trusted Publisher (OIDC).
+
+GitHub
+
+🎬 [Mediabunny: A Full Media Toolkit for JavaScript](https://nodeweekly.com/link/187995/0a4070b383 "mediabunny.dev") — It's been a year since we mentioned this library for reading/writing/converting media formats (MP4, MP3, [and more](https://nodeweekly.com/link/187996/0a4070b383)). Since then, it's added Apple ProRes, HLS read/write, and [a new `server` package](https://nodeweekly.com/link/187997/0a4070b383) that makes it all even easier to use from Node.
+
+Vanilagy
+
+[Tinbase: A Supabase-Compatible Backend in a Single Binary](https://nodeweekly.com/link/187998/0a4070b383 "www.tinbase.dev") — Provides a local Supabase-like dev experience using a JS backend built atop [PGlite](https://nodeweekly.com/link/187999/0a4070b383) and [pg-mem](https://nodeweekly.com/link/188000/0a4070b383). A sort of mini, local-only Postgres wrapped in the same APIs as Supabase, so `supabase-js` works unchanged.
+
+Sanket Sahu
+
+[`@neon/sdk`: Neon's New TypeScript Client Library](https://nodeweekly.com/link/188001/0a4070b383 "neon.com") — For users of the [Neon](https://nodeweekly.com/link/188002/0a4070b383) Postgres platform to manage projects, branches, and databases from code.
+
+Andre Landgraf (Neon)
+
+* [Nano ID 6.0](https://nodeweekly.com/link/188003/0a4070b383) – Generate tiny URL-friendly unique string identifiers. Now 4x faster and drops Node 18/20 support.
+
+* [c8 12.0](https://nodeweekly.com/link/188004/0a4070b383) – Istanbul-compatible coverage reports using Node's built-in V8 data. Node's test runner also has its own [experimental code coverage reporting](https://nodeweekly.com/link/188005/0a4070b383).
+
+* [np 12.0](https://nodeweekly.com/link/188006/0a4070b383) – Sindre Sorhus's "better `npm publish`" adds support for npm 12 and staged publishing.
+
+* [HyperExpress 7.0](https://nodeweekly.com/link/188007/0a4070b383) – A high performance Node server powered by uWebSockets.js.
+
+* [Helmet 8.3](https://nodeweekly.com/link/188008/0a4070b383) – HTTP security header hardening for Express apps.
+
+* [node-auth0 6.0](https://nodeweekly.com/link/188009/0a4070b383) – One for [Auth0](https://nodeweekly.com/link/188010/0a4070b383) users.
+
+* [ESLint 10.7](https://nodeweekly.com/link/188011/0a4070b383)
+
+📢  Elsewhere in the ecosystem
+
+* TypeScript-using AWS SDK for JavaScript v3 users need to be aware of [changes to the library's support for TypeScript versions](https://nodeweekly.com/link/188012/0a4070b383).
+
+* GitHub's [Dependabot is now giving packages a three-day default cooldown](https://nodeweekly.com/link/188013/0a4070b383) before opening version update PRs, though security fixes are exempt.
+
+* TC39's 115th meeting takes place next week. [Here's the agenda](https://nodeweekly.com/link/188014/0a4070b383), including [Await Dictionary](https://nodeweekly.com/link/188015/0a4070b383) aiming for Stage 3, plus [Decimal](https://nodeweekly.com/link/188016/0a4070b383), Import Defer, and [Map.take](https://nodeweekly.com/link/188017/0a4070b383).
+
+* 📁 [Cloudflare has launched 'Drop'](https://nodeweekly.com/link/188018/0a4070b383), a way to quickly get a site live by dropping a folder or ZIP onto a page, similar to [Netlify's service of the same name](https://nodeweekly.com/link/188019/0a4070b383).
+
+* [plx](https://nodeweekly.com/link/188020/0a4070b383) is a transpiler for Postgres stored functions that converts JavaScript, PHP, Python, Ruby, and even COBOL, to Postgres's own PL/pgSQL language.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
