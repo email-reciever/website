@@ -1,0 +1,219 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Domenic Denicola's modern dev setup
+description: Domenic Denicola's modern dev setup
+date: 星期四 06 晚上 七月 23o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/634
+origin_site: https://nodeweekly.com/issues/634
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Domenic Denicola's modern dev setup" url="https://nodeweekly.com/issues/634" />
+
+<Detail client:only="react">
+	#​634 — July 23, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/634)
+
+Together with 
+
+[![ParadeDB](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_164/e_make_transparent/co_white,e_outline:17/cdd8ciarsq6m8xam8oc3.png)](https://nodeweekly.com/link/188350/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/phw1ia6ck6daytvjsy7q.jpg)](https://nodeweekly.com/link/188351/0a4070b383)
+
+[No, We Can't Harden Node.js Against Prototype Pollution](https://nodeweekly.com/link/188351/0a4070b383 "adventures.nodeland.dev") — An explanation of why the Node team rejects prototype pollution reports against core: each assumes the attacker can already write to `Object.prototype`, by which point the game is over. The true fix lives at the boundary where untrusted JSON becomes objects.
+
+Matteo Collina
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/9fdaa696.png)](https://nodeweekly.com/link/188350/0a4070b383)
+
+[Full-Text Search in Drizzle Without a Second System](https://nodeweekly.com/link/188350/0a4070b383 "github.com") — Try the official ParadeDB integration for Drizzle. Search your live Postgres tables. No stale results, no ETL, no Elasticsearch cluster.
+
+ParadeDB sponsor
+
+[Domenic Denicola's Agentic Coding Setup](https://nodeweekly.com/link/188352/0a4070b383 "domenic.me") — It's fascinating when a prolific developer (Domenic was a key figure in [the adoption of promises in JavaScript](https://nodeweekly.com/link/188353/0a4070b383), creating [jsdom](https://nodeweekly.com/link/188354/0a4070b383), and [much more](https://nodeweekly.com/link/188382/0a4070b383)) shares their workflow. This is no exception, covering areas like disposable VMs, Tailscale, and worktrees.
+
+Domenic Denicola
+
+**IN BRIEF:**
+
+*   ⚠️ [A round of July 27 Node.js security releases](https://nodeweekly.com/link/188355/0a4070b383) has been announced, with Node 26.x, 24.x, 22.x being updated to resolve a HIGH severity issue.
+    
+*   🏆 The OpenJS Foundation is showcasing [a ranking of the top contributors to its projects](https://nodeweekly.com/link/188356/0a4070b383) (which [include](https://nodeweekly.com/link/188357/0a4070b383) Node, Express, and Electron) in the past year. Matteo Collina leads the way…just!
+    
+*   Over on 𝕏, [the Bun team is teasing](https://nodeweekly.com/link/188358/0a4070b383) the imminent release of [Bun](https://nodeweekly.com/link/188359/0a4070b383) 1.4, which will have the _"biggest jump in Node.js compatibility since Bun v1.0"._
+    
+*   [pnpm has had a flurry of releases](https://nodeweekly.com/link/188376/0a4070b383) introducing native workspace release management, a `doctor` command to diagnose installation issues, and more.
+    
+*   ESLint now provides [official 'codemods' for automating ESLint version migrations](https://nodeweekly.com/link/188360/0a4070b383), with v8→v9 and v9→v10 available.
+    
+
+[better-sqlite3 13.0: The Popular SQLite Library Moves to N-API](https://nodeweekly.com/link/188377/0a4070b383 "github.com") — The good news is prebuilt binaries should now work across different versions of Node and Electron. There's also a new `db.explain()` method and a `preparedStatement.toString()` method to get the expanded SQL of a prepared statement.
+
+Joshua Wise
+
+[High-Ingest Analytics, Still Just Postgres](https://nodeweekly.com/link/188361/0a4070b383 "www.tigerdata.com") — TimescaleDB extends Postgres to ingest and query events at scale. One database, standard SQL. [Get $1000 credit to start](https://nodeweekly.com/link/188361/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+📄 [Unpacking the AsyncAPI npm Supply Chain Compromise](https://nodeweekly.com/link/188378/0a4070b383) – It seems attackers have already adapted to a world where post-install scripts are no longer run. Microsoft Security Research
+
+📄 [New Study Identifies 53 Slopsquatting Targets Across 5 Popular LLMs](https://nodeweekly.com/link/188379/0a4070b383) – LLMs continue to make up npm package names. Sarah Gooding
+
+📄 [Running Background Jobs in Node.js with BullMQ](https://nodeweekly.com/link/188362/0a4070b383) Flavio Copes
+
+🛠 Code & Tools
+
+[Execa 10.0: Better Process Execution from Node](https://nodeweekly.com/link/188365/0a4070b383 "github.com") — A powerful way to run processes that makes passing in input, processing output, handling errors, piping things around, and handling streams easy. [v10](https://nodeweekly.com/link/188366/0a4070b383) trims the API and adds new stream conversion powers and a `killDescendants` option to terminate a subprocess's descendant processes.
+
+Sindre Sorhus
+
+[eslint-package-json: Powerful ESLint Rules for `package.json`](https://nodeweekly.com/link/188363/0a4070b383 "github.com") — An ESLint plugin that catches `package.json` mistakes like invalid names, bad version ranges, broken `exports`, redundant `files` entries, and more, and fixes many of them automatically.
+
+Sindre Sorhus
+
+🤖 [BotKit: Build Standalone ActivityPub Bots](https://nodeweekly.com/link/188364/0a4070b383 "botkit.fedify.dev") — A way to run a bot (or multiple bots) that Mastodon users can see and follow but without needing an account anywhere. Write it all in JavaScript and self-host. I spun one up with Node (temporarily) and it worked well.
+
+Fedify
+
+*   [Nub 0.5](https://nodeweekly.com/link/188367/0a4070b383) – The [all-in-one toolkit](https://nodeweekly.com/link/188368/0a4070b383) that augments Node's feature set. v0.5 adds `nub init` as a way to quickly scaffold new projects.
+    
+*   [odiff 4.5](https://nodeweekly.com/link/188369/0a4070b383) – Fast SIMD-powered image comparison library. Written in Zig with Node bindings.
+    
+*   [node-html-to-image 6.2](https://nodeweekly.com/link/188370/0a4070b383) – A function to generate images from HTML.
+    
+*   [find-my-way 9.7](https://nodeweekly.com/link/188371/0a4070b383) – Fast radix-tree based HTTP router used by Fastify.
+    
+*   [Gitify 7.0](https://nodeweekly.com/link/188372/0a4070b383) – Electron-powered Git notifications menu bar app.
+    
+*   [Verdaccio 6.8](https://nodeweekly.com/link/188380/0a4070b383) – Self-hostable Node.js private proxy registry.
+    
+*   [Piscina 5.3](https://nodeweekly.com/link/188373/0a4070b383) – Popular worker thread pool implementation.
+    
+*   [Prisma 7.9](https://nodeweekly.com/link/188374/0a4070b383)
+    
+
+📰 Classifieds
+
+⚡ [Zuplo](https://nodeweekly.com/link/188375/0a4070b383) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://nodeweekly.com/link/188375/0a4070b383).
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​634 — July 23, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/634)
+
+Together with 
+
+[![ParadeDB](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_164/e_make_transparent/co_white,e_outline:17/cdd8ciarsq6m8xam8oc3.png)](https://nodeweekly.com/link/188350/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/phw1ia6ck6daytvjsy7q.jpg)](https://nodeweekly.com/link/188351/0a4070b383)
+
+[No, We Can't Harden Node.js Against Prototype Pollution](https://nodeweekly.com/link/188351/0a4070b383 "adventures.nodeland.dev") — An explanation of why the Node team rejects prototype pollution reports against core: each assumes the attacker can already write to `Object.prototype`, by which point the game is over. The true fix lives at the boundary where untrusted JSON becomes objects.
+
+Matteo Collina
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/9fdaa696.png)](https://nodeweekly.com/link/188350/0a4070b383)
+
+[Full-Text Search in Drizzle Without a Second System](https://nodeweekly.com/link/188350/0a4070b383 "github.com") — Try the official ParadeDB integration for Drizzle. Search your live Postgres tables. No stale results, no ETL, no Elasticsearch cluster.
+
+ParadeDB sponsor
+
+[Domenic Denicola's Agentic Coding Setup](https://nodeweekly.com/link/188352/0a4070b383 "domenic.me") — It's fascinating when a prolific developer (Domenic was a key figure in [the adoption of promises in JavaScript](https://nodeweekly.com/link/188353/0a4070b383), creating [jsdom](https://nodeweekly.com/link/188354/0a4070b383), and [much more](https://nodeweekly.com/link/188382/0a4070b383)) shares their workflow. This is no exception, covering areas like disposable VMs, Tailscale, and worktrees.
+
+Domenic Denicola
+
+**IN BRIEF:**
+
+* ⚠️ [A round of July 27 Node.js security releases](https://nodeweekly.com/link/188355/0a4070b383) has been announced, with Node 26.x, 24.x, 22.x being updated to resolve a HIGH severity issue.
+
+* 🏆 The OpenJS Foundation is showcasing [a ranking of the top contributors to its projects](https://nodeweekly.com/link/188356/0a4070b383) (which [include](https://nodeweekly.com/link/188357/0a4070b383) Node, Express, and Electron) in the past year. Matteo Collina leads the way…just!
+
+* Over on 𝕏, [the Bun team is teasing](https://nodeweekly.com/link/188358/0a4070b383) the imminent release of [Bun](https://nodeweekly.com/link/188359/0a4070b383) 1.4, which will have the *"biggest jump in Node.js compatibility since Bun v1.0".*
+
+* [pnpm has had a flurry of releases](https://nodeweekly.com/link/188376/0a4070b383) introducing native workspace release management, a `doctor` command to diagnose installation issues, and more.
+
+* ESLint now provides [official 'codemods' for automating ESLint version migrations](https://nodeweekly.com/link/188360/0a4070b383), with v8→v9 and v9→v10 available.
+
+[better-sqlite3 13.0: The Popular SQLite Library Moves to N-API](https://nodeweekly.com/link/188377/0a4070b383 "github.com") — The good news is prebuilt binaries should now work across different versions of Node and Electron. There's also a new `db.explain()` method and a `preparedStatement.toString()` method to get the expanded SQL of a prepared statement.
+
+Joshua Wise
+
+[High-Ingest Analytics, Still Just Postgres](https://nodeweekly.com/link/188361/0a4070b383 "www.tigerdata.com") — TimescaleDB extends Postgres to ingest and query events at scale. One database, standard SQL. [Get $1000 credit to start](https://nodeweekly.com/link/188361/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+📄 [Unpacking the AsyncAPI npm Supply Chain Compromise](https://nodeweekly.com/link/188378/0a4070b383) – It seems attackers have already adapted to a world where post-install scripts are no longer run. Microsoft Security Research
+
+📄 [New Study Identifies 53 Slopsquatting Targets Across 5 Popular LLMs](https://nodeweekly.com/link/188379/0a4070b383) – LLMs continue to make up npm package names. Sarah Gooding
+
+📄 [Running Background Jobs in Node.js with BullMQ](https://nodeweekly.com/link/188362/0a4070b383) Flavio Copes
+
+🛠 Code & Tools
+
+[Execa 10.0: Better Process Execution from Node](https://nodeweekly.com/link/188365/0a4070b383 "github.com") — A powerful way to run processes that makes passing in input, processing output, handling errors, piping things around, and handling streams easy. [v10](https://nodeweekly.com/link/188366/0a4070b383) trims the API and adds new stream conversion powers and a `killDescendants` option to terminate a subprocess's descendant processes.
+
+Sindre Sorhus
+
+[eslint-package-json: Powerful ESLint Rules for `package.json`](https://nodeweekly.com/link/188363/0a4070b383 "github.com") — An ESLint plugin that catches `package.json` mistakes like invalid names, bad version ranges, broken `exports`, redundant `files` entries, and more, and fixes many of them automatically.
+
+Sindre Sorhus
+
+🤖 [BotKit: Build Standalone ActivityPub Bots](https://nodeweekly.com/link/188364/0a4070b383 "botkit.fedify.dev") — A way to run a bot (or multiple bots) that Mastodon users can see and follow but without needing an account anywhere. Write it all in JavaScript and self-host. I spun one up with Node (temporarily) and it worked well.
+
+Fedify
+
+* [Nub 0.5](https://nodeweekly.com/link/188367/0a4070b383) – The [all-in-one toolkit](https://nodeweekly.com/link/188368/0a4070b383) that augments Node's feature set. v0.5 adds `nub init` as a way to quickly scaffold new projects.
+
+* [odiff 4.5](https://nodeweekly.com/link/188369/0a4070b383) – Fast SIMD-powered image comparison library. Written in Zig with Node bindings.
+
+* [node-html-to-image 6.2](https://nodeweekly.com/link/188370/0a4070b383) – A function to generate images from HTML.
+
+* [find-my-way 9.7](https://nodeweekly.com/link/188371/0a4070b383) – Fast radix-tree based HTTP router used by Fastify.
+
+* [Gitify 7.0](https://nodeweekly.com/link/188372/0a4070b383) – Electron-powered Git notifications menu bar app.
+
+* [Verdaccio 6.8](https://nodeweekly.com/link/188380/0a4070b383) – Self-hostable Node.js private proxy registry.
+
+* [Piscina 5.3](https://nodeweekly.com/link/188373/0a4070b383) – Popular worker thread pool implementation.
+
+* [Prisma 7.9](https://nodeweekly.com/link/188374/0a4070b383)
+
+📰 Classifieds
+
+⚡ [Zuplo](https://nodeweekly.com/link/188375/0a4070b383) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://nodeweekly.com/link/188375/0a4070b383).
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
