@@ -1,0 +1,309 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Anders Hejlsberg demos TypeScript 7's 10x speedup
+description: Anders Hejlsberg demos TypeScript 7's 10x speedup
+date: 星期二 01 下午 七月 28o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/796
+origin_site: https://javascriptweekly.com/issues/796
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Anders Hejlsberg demos TypeScript 7's 10x speedup" url="https://javascriptweekly.com/issues/796" />
+
+<Detail client:only="react">
+	#​796 — July 28, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/796)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://javascriptweekly.com/link/188464/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/upfoks2bijkfgfdyf7i3.jpg)](https://javascriptweekly.com/link/188465/d076523b1d)
+
+[Rust Is Eating JavaScript (Still, in 2026)](https://javascriptweekly.com/link/188465/d076523b1d "leerob.com") — Our most-read link of 2021 gets an update for 2026. Lee Robinson (then Vercel, now Cursor) predicted Rust would be used to reimplement more and more JavaScript ecosystem tooling, and Rspack, Biome, Turbopack, and [Bun's recent rewrite](https://javascriptweekly.com/link/188466/d076523b1d) keep proving him right.
+
+Lee Robinson
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/0f9a422d.png)](https://javascriptweekly.com/link/188464/d076523b1d)
+
+[Frontend Architecture: Monoliths to Microfrontends](https://javascriptweekly.com/link/188464/d076523b1d "master.dev") — Maxi Ferreira walks through modular monoliths, monorepos, and microfrontends so you can pick the right structure for your codebase and know the real cost before you commit.
+
+Master.dev sponsor
+
+[Octane: React's Programming Model, But _Compiled_](https://javascriptweekly.com/link/188467/d076523b1d "octanejs.dev") — From the creator of [Inferno](https://javascriptweekly.com/link/188468/d076523b1d) comes a successor: a compiled React-like framework ([differences explained here](https://javascriptweekly.com/link/188469/d076523b1d)) that generates reactivity ahead of time with no VDOM. Supports TSX/JSX and TSRX, with integrations for TanStack Query and Router, plus other common React libraries.
+
+Dominic Gannaway
+
+**IN BRIEF:**
+
+*   😄 [htmx 4.0](https://javascriptweekly.com/link/188470/d076523b1d) is, curiously, pitching itself as _"the first JavaScript library to [release exclusively on the Game Boy](https://javascriptweekly.com/link/188527/d076523b1d)"_ with a commemorative cartridge.
+    
+*   At last week's TC39 meeting, [Await Dictionary](https://javascriptweekly.com/link/188472/d076523b1d) (`Promise.allKeyed`) progressed to Stage 3.
+    
+*   Ryan Dahl [says](https://javascriptweekly.com/link/188529/d076523b1d) that `deno compile` will soon [support using QuickJS instead of V8](https://javascriptweekly.com/link/188473/d076523b1d) for making radically smaller binaries from JS/TS projects.
+    
+*   Node.js has [a new API docs site in preview](https://javascriptweekly.com/link/188474/d076523b1d) (now includes search!)
+    
+*   [Oxlint's type-aware linting is now stable](https://javascriptweekly.com/link/188475/d076523b1d).
+    
+
+**RELEASES:**
+
+*   [pnpm has had a flurry of releases](https://javascriptweekly.com/link/188476/d076523b1d) introducing native workspace release management, a `doctor` command to diagnose installation issues, and more.
+    
+*   [React 19.2.8](https://javascriptweekly.com/link/188477/d076523b1d), [19.1.9](https://javascriptweekly.com/link/188478/d076523b1d) and [19.0.8](https://javascriptweekly.com/link/188479/d076523b1d) to fix a potential [DoS vulnerability](https://javascriptweekly.com/link/188530/d076523b1d) in server function endpoints.
+    
+*   [Ember 7.1](https://javascriptweekly.com/link/188480/d076523b1d) – Adds a wide variety of new helpers and operators, and docs modernization.
+    
+*   [Nuxt 4.5.1 and 3.21.10](https://javascriptweekly.com/link/188481/d076523b1d) – Security patch releases after last week's [big Nuxt 4.5 release](https://javascriptweekly.com/link/188482/d076523b1d).
+    
+*   [ESLint 10.8](https://javascriptweekly.com/link/188483/d076523b1d), [Deno 2.9.4](https://javascriptweekly.com/link/188484/d076523b1d), [Prisma 7.9](https://javascriptweekly.com/link/188485/d076523b1d), [React Router 8.3](https://javascriptweekly.com/link/188486/d076523b1d), [Vue 3.6 RC2](https://javascriptweekly.com/link/188487/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/c_crop,g_south,w_w,h_h_sub_50/bjd0nutn9yncyimrgifx.jpg)](https://javascriptweekly.com/link/188488/d076523b1d)
+
+▶  [The Creator of TypeScript Shows Off TypeScript 7](https://javascriptweekly.com/link/188488/d076523b1d "www.youtube.com") — Anders Hejlsberg demos the 10x speedup gained by the new Go-based TypeScript compiler on VS Code's 1.3M line codebase. He also covers the new LSP language server and why compiler API users (Vue, Astro, Svelte) must stay on TypeScript 6.
+
+Anders Hejlsberg (Microsoft)
+
+[Domenic Denicola's Agentic Coding Setup](https://javascriptweekly.com/link/188489/d076523b1d "domenic.me") — It's fascinating when a prolific developer (Domenic was a key figure in [the adoption of promises in JavaScript](https://javascriptweekly.com/link/188490/d076523b1d), creating [jsdom](https://javascriptweekly.com/link/188491/d076523b1d), and [much more](https://javascriptweekly.com/link/188492/d076523b1d)) shares their workflow. This is no exception, covering areas like disposable VMs, Tailscale, and worktrees.
+
+Domenic Denicola
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://javascriptweekly.com/link/188493/d076523b1d "www.meticulous.ai") — Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/188493/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+Meticulous sponsor
+
+[How Medium Built Its New 'Table of Contents' Feature](https://javascriptweekly.com/link/188494/d076523b1d "medium.engineering") — How the content site built a dynamic table of contents widget for all its articles, inspired by a third-party Chrome extension that did the same thing.
+
+Scott Batson (Medium)
+
+📄 [Introducing Deferred Module Evaluation with `import defer`](https://javascriptweekly.com/link/188495/d076523b1d) – Currently at stage 3 in the TC39 process. Nitay Neeman
+
+📄 [Measuring Component Performance with the Container Timing API](https://javascriptweekly.com/link/188496/d076523b1d) – Now in a Chrome [origin trial](https://javascriptweekly.com/link/188497/d076523b1d). Harry Roberts
+
+📄 [No, We Can't Harden Node.js Against Prototype Pollution](https://javascriptweekly.com/link/188498/d076523b1d) Matteo Collina
+
+📄 [Cloudflare Workers and Hyperdrive with SvelteKit](https://javascriptweekly.com/link/188499/d076523b1d) Adam Rackis
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/sky6dwpemejqzgjdwgjt.jpg)](https://javascriptweekly.com/link/188500/d076523b1d)
+
+🌐 [MapLibre GL JS 6.0: Interactive Vector Maps for the Web](https://javascriptweekly.com/link/188500/d076523b1d "maplibre.org") — A WebGL-powered library for rendering interactive vector tile maps, forked from Mapbox GL JS after its 2020 relicensing. Version 6 goes ESM-only, requires WebGL 2, and lands broad performance gains. [Release notes](https://javascriptweekly.com/link/188501/d076523b1d) and a [v5 to v6 migration guide](https://javascriptweekly.com/link/188502/d076523b1d).
+
+MapLibre
+
+[Ship Translations Without Redeploying. Made by the i18next Team](https://javascriptweekly.com/link/188503/d076523b1d "www.locize.com") — The cloud TMS from the i18next team. saveMissing, in-context editor, AI translation, CDN. Free tier, Swiss-made.
+
+Locize sponsor
+
+[Bruno 4.0: An Open-Source HTTP API Client App](https://javascriptweekly.com/link/188504/d076523b1d "github.com") — An open source, JavaScript-powered lightweight alternative to something like Postman for testing and making requests against HTTP APIs.
+
+Anoop M D, Anusree P S and Contributors
+
+[tslog 5: Zero-Dependency Logger for Node, Deno, Bun and Browsers](https://javascriptweekly.com/link/188505/d076523b1d "tslog.js.org") — A ground-up rewrite, now ESM-only, and also covers workers and React Native. Pretty output by default, JSON optionally, plus middleware, file/HTTP/worker transports, secret masking, and error stacks that resolve through source maps to your original `.ts` lines. [GitHub repo.](https://javascriptweekly.com/link/188506/d076523b1d)
+
+Eugene Terehov
+
+[eslint-package-json: Powerful ESLint Rules for `package.json`](https://javascriptweekly.com/link/188507/d076523b1d "github.com") — An ESLint plugin that catches `package.json` mistakes like invalid names, bad version ranges, broken `exports`, redundant `files` entries, and more, and fixes many of them automatically.
+
+Sindre Sorhus
+
+[Shadscan: Deterministic UI Audits for `shadcn` Apps](https://javascriptweekly.com/link/188508/d076523b1d "www.shadscan.com") — A tool that statically analyzes your shadcn components using almost 60 deterministic checks (no AI or API keys needed) around fundamental accessibility, state, and composition best practices.
+
+OrcDev
+
+*   [Slick 2.0](https://javascriptweekly.com/link/188509/d076523b1d) – Ken Wheeler's classic jQuery carousel control ([demos](https://javascriptweekly.com/link/188510/d076523b1d)). Now compatible with [jQuery 4.0](https://javascriptweekly.com/link/188511/d076523b1d)!
+    
+*   [isomorphic-git 1.40](https://javascriptweekly.com/link/188512/d076523b1d) – Pure JS implementation of Git for Node and browsers.
+    
+*   [Satori 0.29](https://javascriptweekly.com/link/188513/d076523b1d) – Library to convert HTML and CSS with JSX syntax into SVG.
+    
+*   [dompdf.js 2.0](https://javascriptweekly.com/link/188514/d076523b1d) – Converts HTML to multi-page PDFs in the browser.
+    
+*   [Verdaccio 6.9](https://javascriptweekly.com/link/188528/d076523b1d) – Self-hostable Node.js private proxy registry.
+    
+
+📰 Classifieds
+
+From $500 a month to hundreds of thousands of downloads in six months. [How one solo Expo app actually grew usage and revenue](https://javascriptweekly.com/link/188516/d076523b1d).
+
+* * *
+
+You shipped the feature. The data grew. The query got slow. [TimescaleDB](https://javascriptweekly.com/link/188517/d076523b1d) extends Postgres for analytics at scale, no second database.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ricngwidlwclsggxe3dh.jpg)](https://javascriptweekly.com/link/188518/d076523b1d)
+
+*   [js1024](https://javascriptweekly.com/link/188519/d076523b1d) is an annual JavaScript _code-golfing_ competition where people try to squeeze as much out of 1024 bytes as possible. This year's run just closed [and you can try all the entries (and see their code) here](https://javascriptweekly.com/link/188518/d076523b1d) – the winners will be announced next week.
+    
+*   🏆 The _OpenJS Foundation_ has [a ranking of the top contributors to its projects](https://javascriptweekly.com/link/188520/d076523b1d) (which [include](https://javascriptweekly.com/link/188521/d076523b1d) Node, Express, and Electron) in the past year.
+    
+*   🤖 In [How I Stopped Running Out of Tokens](https://javascriptweekly.com/link/188522/d076523b1d), a dev whose company uses Claude Enterprise shares tools you can use (e.g. [rtk](https://javascriptweekly.com/link/188523/d076523b1d)) to get more out of your limits.
+    
+*   [LLMs are continuing to hallucinate package names](https://javascriptweekly.com/link/188524/d076523b1d), giving potential 'slopsquatters' opportunities for malicious deeds.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/188525/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​796 — July 28, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/796)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://javascriptweekly.com/link/188464/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/upfoks2bijkfgfdyf7i3.jpg)](https://javascriptweekly.com/link/188465/d076523b1d)
+
+[Rust Is Eating JavaScript (Still, in 2026)](https://javascriptweekly.com/link/188465/d076523b1d "leerob.com") — Our most-read link of 2021 gets an update for 2026. Lee Robinson (then Vercel, now Cursor) predicted Rust would be used to reimplement more and more JavaScript ecosystem tooling, and Rspack, Biome, Turbopack, and [Bun's recent rewrite](https://javascriptweekly.com/link/188466/d076523b1d) keep proving him right.
+
+Lee Robinson
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/0f9a422d.png)](https://javascriptweekly.com/link/188464/d076523b1d)
+
+[Frontend Architecture: Monoliths to Microfrontends](https://javascriptweekly.com/link/188464/d076523b1d "master.dev") — Maxi Ferreira walks through modular monoliths, monorepos, and microfrontends so you can pick the right structure for your codebase and know the real cost before you commit.
+
+Master.dev sponsor
+
+[Octane: React's Programming Model, But *Compiled*](https://javascriptweekly.com/link/188467/d076523b1d "octanejs.dev") — From the creator of [Inferno](https://javascriptweekly.com/link/188468/d076523b1d) comes a successor: a compiled React-like framework ([differences explained here](https://javascriptweekly.com/link/188469/d076523b1d)) that generates reactivity ahead of time with no VDOM. Supports TSX/JSX and TSRX, with integrations for TanStack Query and Router, plus other common React libraries.
+
+Dominic Gannaway
+
+**IN BRIEF:**
+
+* 😄 [htmx 4.0](https://javascriptweekly.com/link/188470/d076523b1d) is, curiously, pitching itself as *"the first JavaScript library to [release exclusively on the Game Boy](https://javascriptweekly.com/link/188527/d076523b1d)"* with a commemorative cartridge.
+
+* At last week's TC39 meeting, [Await Dictionary](https://javascriptweekly.com/link/188472/d076523b1d) (`Promise.allKeyed`) progressed to Stage 3.
+
+* Ryan Dahl [says](https://javascriptweekly.com/link/188529/d076523b1d) that `deno compile` will soon [support using QuickJS instead of V8](https://javascriptweekly.com/link/188473/d076523b1d) for making radically smaller binaries from JS/TS projects.
+
+* Node.js has [a new API docs site in preview](https://javascriptweekly.com/link/188474/d076523b1d) (now includes search!)
+
+* [Oxlint's type-aware linting is now stable](https://javascriptweekly.com/link/188475/d076523b1d).
+
+**RELEASES:**
+
+* [pnpm has had a flurry of releases](https://javascriptweekly.com/link/188476/d076523b1d) introducing native workspace release management, a `doctor` command to diagnose installation issues, and more.
+
+* [React 19.2.8](https://javascriptweekly.com/link/188477/d076523b1d), [19.1.9](https://javascriptweekly.com/link/188478/d076523b1d) and [19.0.8](https://javascriptweekly.com/link/188479/d076523b1d) to fix a potential [DoS vulnerability](https://javascriptweekly.com/link/188530/d076523b1d) in server function endpoints.
+
+* [Ember 7.1](https://javascriptweekly.com/link/188480/d076523b1d) – Adds a wide variety of new helpers and operators, and docs modernization.
+
+* [Nuxt 4.5.1 and 3.21.10](https://javascriptweekly.com/link/188481/d076523b1d) – Security patch releases after last week's [big Nuxt 4.5 release](https://javascriptweekly.com/link/188482/d076523b1d).
+
+* [ESLint 10.8](https://javascriptweekly.com/link/188483/d076523b1d), [Deno 2.9.4](https://javascriptweekly.com/link/188484/d076523b1d), [Prisma 7.9](https://javascriptweekly.com/link/188485/d076523b1d), [React Router 8.3](https://javascriptweekly.com/link/188486/d076523b1d), [Vue 3.6 RC2](https://javascriptweekly.com/link/188487/d076523b1d)
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/c_crop,g_south,w_w,h_h_sub_50/bjd0nutn9yncyimrgifx.jpg)](https://javascriptweekly.com/link/188488/d076523b1d)
+
+▶  [The Creator of TypeScript Shows Off TypeScript 7](https://javascriptweekly.com/link/188488/d076523b1d "www.youtube.com") — Anders Hejlsberg demos the 10x speedup gained by the new Go-based TypeScript compiler on VS Code's 1.3M line codebase. He also covers the new LSP language server and why compiler API users (Vue, Astro, Svelte) must stay on TypeScript 6.
+
+Anders Hejlsberg (Microsoft)
+
+[Domenic Denicola's Agentic Coding Setup](https://javascriptweekly.com/link/188489/d076523b1d "domenic.me") — It's fascinating when a prolific developer (Domenic was a key figure in [the adoption of promises in JavaScript](https://javascriptweekly.com/link/188490/d076523b1d), creating [jsdom](https://javascriptweekly.com/link/188491/d076523b1d), and [much more](https://javascriptweekly.com/link/188492/d076523b1d)) shares their workflow. This is no exception, covering areas like disposable VMs, Tailscale, and worktrees.
+
+Domenic Denicola
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://javascriptweekly.com/link/188493/d076523b1d "www.meticulous.ai") — Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/188493/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+Meticulous sponsor
+
+[How Medium Built Its New 'Table of Contents' Feature](https://javascriptweekly.com/link/188494/d076523b1d "medium.engineering") — How the content site built a dynamic table of contents widget for all its articles, inspired by a third-party Chrome extension that did the same thing.
+
+Scott Batson (Medium)
+
+📄 [Introducing Deferred Module Evaluation with `import defer`](https://javascriptweekly.com/link/188495/d076523b1d) – Currently at stage 3 in the TC39 process. Nitay Neeman
+
+📄 [Measuring Component Performance with the Container Timing API](https://javascriptweekly.com/link/188496/d076523b1d) – Now in a Chrome [origin trial](https://javascriptweekly.com/link/188497/d076523b1d). Harry Roberts
+
+📄 [No, We Can't Harden Node.js Against Prototype Pollution](https://javascriptweekly.com/link/188498/d076523b1d) Matteo Collina
+
+📄 [Cloudflare Workers and Hyperdrive with SvelteKit](https://javascriptweekly.com/link/188499/d076523b1d) Adam Rackis
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/sky6dwpemejqzgjdwgjt.jpg)](https://javascriptweekly.com/link/188500/d076523b1d)
+
+🌐 [MapLibre GL JS 6.0: Interactive Vector Maps for the Web](https://javascriptweekly.com/link/188500/d076523b1d "maplibre.org") — A WebGL-powered library for rendering interactive vector tile maps, forked from Mapbox GL JS after its 2020 relicensing. Version 6 goes ESM-only, requires WebGL 2, and lands broad performance gains. [Release notes](https://javascriptweekly.com/link/188501/d076523b1d) and a [v5 to v6 migration guide](https://javascriptweekly.com/link/188502/d076523b1d).
+
+MapLibre
+
+[Ship Translations Without Redeploying. Made by the i18next Team](https://javascriptweekly.com/link/188503/d076523b1d "www.locize.com") — The cloud TMS from the i18next team. saveMissing, in-context editor, AI translation, CDN. Free tier, Swiss-made.
+
+Locize sponsor
+
+[Bruno 4.0: An Open-Source HTTP API Client App](https://javascriptweekly.com/link/188504/d076523b1d "github.com") — An open source, JavaScript-powered lightweight alternative to something like Postman for testing and making requests against HTTP APIs.
+
+Anoop M D, Anusree P S and Contributors
+
+[tslog 5: Zero-Dependency Logger for Node, Deno, Bun and Browsers](https://javascriptweekly.com/link/188505/d076523b1d "tslog.js.org") — A ground-up rewrite, now ESM-only, and also covers workers and React Native. Pretty output by default, JSON optionally, plus middleware, file/HTTP/worker transports, secret masking, and error stacks that resolve through source maps to your original `.ts` lines. [GitHub repo.](https://javascriptweekly.com/link/188506/d076523b1d)
+
+Eugene Terehov
+
+[eslint-package-json: Powerful ESLint Rules for `package.json`](https://javascriptweekly.com/link/188507/d076523b1d "github.com") — An ESLint plugin that catches `package.json` mistakes like invalid names, bad version ranges, broken `exports`, redundant `files` entries, and more, and fixes many of them automatically.
+
+Sindre Sorhus
+
+[Shadscan: Deterministic UI Audits for `shadcn` Apps](https://javascriptweekly.com/link/188508/d076523b1d "www.shadscan.com") — A tool that statically analyzes your shadcn components using almost 60 deterministic checks (no AI or API keys needed) around fundamental accessibility, state, and composition best practices.
+
+OrcDev
+
+* [Slick 2.0](https://javascriptweekly.com/link/188509/d076523b1d) – Ken Wheeler's classic jQuery carousel control ([demos](https://javascriptweekly.com/link/188510/d076523b1d)). Now compatible with [jQuery 4.0](https://javascriptweekly.com/link/188511/d076523b1d)!
+
+* [isomorphic-git 1.40](https://javascriptweekly.com/link/188512/d076523b1d) – Pure JS implementation of Git for Node and browsers.
+
+* [Satori 0.29](https://javascriptweekly.com/link/188513/d076523b1d) – Library to convert HTML and CSS with JSX syntax into SVG.
+
+* [dompdf.js 2.0](https://javascriptweekly.com/link/188514/d076523b1d) – Converts HTML to multi-page PDFs in the browser.
+
+* [Verdaccio 6.9](https://javascriptweekly.com/link/188528/d076523b1d) – Self-hostable Node.js private proxy registry.
+
+📰 Classifieds
+
+From $500 a month to hundreds of thousands of downloads in six months. [How one solo Expo app actually grew usage and revenue](https://javascriptweekly.com/link/188516/d076523b1d).
+
+***
+
+You shipped the feature. The data grew. The query got slow. [TimescaleDB](https://javascriptweekly.com/link/188517/d076523b1d) extends Postgres for analytics at scale, no second database.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ricngwidlwclsggxe3dh.jpg)](https://javascriptweekly.com/link/188518/d076523b1d)
+
+* [js1024](https://javascriptweekly.com/link/188519/d076523b1d) is an annual JavaScript *code-golfing* competition where people try to squeeze as much out of 1024 bytes as possible. This year's run just closed [and you can try all the entries (and see their code) here](https://javascriptweekly.com/link/188518/d076523b1d) – the winners will be announced next week.
+
+* 🏆 The *OpenJS Foundation* has [a ranking of the top contributors to its projects](https://javascriptweekly.com/link/188520/d076523b1d) (which [include](https://javascriptweekly.com/link/188521/d076523b1d) Node, Express, and Electron) in the past year.
+
+* 🤖 In [How I Stopped Running Out of Tokens](https://javascriptweekly.com/link/188522/d076523b1d), a dev whose company uses Claude Enterprise shares tools you can use (e.g. [rtk](https://javascriptweekly.com/link/188523/d076523b1d)) to get more out of your limits.
+
+* [LLMs are continuing to hallucinate package names](https://javascriptweekly.com/link/188524/d076523b1d), giving potential 'slopsquatters' opportunities for malicious deeds.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/188525/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
