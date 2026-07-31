@@ -1,0 +1,220 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: TanStack's new look, and life without RSC
+description: TanStack's new look, and life without RSC
+date: 星期五 01 下午 七月 31o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/485
+origin_site: https://react.statuscode.com/issues/485
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="TanStack's new look, and life without RSC" url="https://react.statuscode.com/issues/485" />
+
+<Detail client:only="react">
+	#​485 — July 31, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/485)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://react.statuscode.com/link/188709/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/akpfqgbra3ttj1oqbrg6.jpg)](https://react.statuscode.com/link/188710/5d0bbb4a61)
+
+[Octane: React's Programming Model, But _Compiled_](https://react.statuscode.com/link/188710/5d0bbb4a61 "octanejs.dev") — From the creator of [Inferno](https://react.statuscode.com/link/188711/5d0bbb4a61) comes a successor: a compiled React-_like_ framework (the [differences from React are here](https://react.statuscode.com/link/188712/5d0bbb4a61)) that generates reactivity ahead of time with no VDOM. Supports TSX/JSX and TSRX, with integrations for TanStack Query and Router, plus other common React libraries.
+
+Dominic Gannaway
+
+💡 Expect to see a lot of experimentation around Octane in coming weeks. For example, Steve Faulkner has created [Nextane](https://react.statuscode.com/link/188713/5d0bbb4a61), an experimental riff on Cloudflare's [Vinext](https://react.statuscode.com/link/188714/5d0bbb4a61) 'Next.js on Vite', to get the Next.js Pages Router but on Octane.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/65655689.jpg)](https://react.statuscode.com/link/188709/5d0bbb4a61)
+
+[Join Sentry Live: How Etsy Stays Crash-Free](https://react.statuscode.com/link/188709/5d0bbb4a61 "sentry.io") — Sentry and Etsy break down how Etsy preps for peak traffic, debugs in real time, and ties crashes to revenue impact. Real stories and practical takeaways for teams shipping at scale.
+
+Sentry sponsor
+
+[Why TanStack Stopped Using RSC on Its Site](https://react.statuscode.com/link/188715/5d0bbb4a61 "tanstack.com") — Tanner, armed with lots of numbers, explains why [tanstack.com](https://react.statuscode.com/link/188716/5d0bbb4a61) dropped React Server Components after shrinking its markdown and highlighting stack to 27KB. Plain SSR now serves smaller pages with lower blocking time, and the code is easier to follow.
+
+Tanner Linsley
+
+💡 TanStack has also [rolled out a full rebrand](https://react.statuscode.com/link/188717/5d0bbb4a61) and [new landing page](https://react.statuscode.com/link/188716/5d0bbb4a61).
+
+▶  [React Debugging with Performance Tracks](https://react.statuscode.com/link/188718/5d0bbb4a61 "www.youtube.com") — A 15 minute tutorial covering [React Performance tracks](https://react.statuscode.com/link/188719/5d0bbb4a61), React-specific entries that appear in your browser's DevTools.
+
+Shruti Kapoor
+
+[Experimenting with RSCs for Performance and UX in Next.js](https://react.statuscode.com/link/188720/5d0bbb4a61 "aurorascharff.no") — Aurora digs into three interesting patterns that arose while building a social app on Next.js 16.3 (currently in preview, but expected imminently).
+
+Aurora Scharff
+
+📄 [Your SPA is Leaking Memory: 'Soak Test' It](https://react.statuscode.com/link/188721/5d0bbb4a61) – Loop a Playwright flow in a single browser context and use DOM node and listener counts to catch memory leaks before users do. Den Odell
+
+📄 [The State of Zero-Runtime CSS-in-JS, Mid-2026](https://react.statuscode.com/link/188722/5d0bbb4a61) – From the maintainer of [Linaria](https://react.statuscode.com/link/188723/5d0bbb4a61) and creator of [dx-styles](https://react.statuscode.com/link/188724/5d0bbb4a61). Anton Evzhakov
+
+📄 [Building a Real-Time Face Recognition App in React Native with VisionCamera](https://react.statuscode.com/link/188725/5d0bbb4a61) Patrick Kabwe (Margelo)
+
+📄 [A Modern Storybook Tutorial: Stories, Interaction Tests, and CI](https://react.statuscode.com/link/188726/5d0bbb4a61) Flavio Copes
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nnljwr4x66nwcbdacajr.jpg)](https://react.statuscode.com/link/188727/5d0bbb4a61)
+
+[Introducing TanStack _Markdown_ and _Highlight_](https://react.statuscode.com/link/188727/5d0bbb4a61 "tanstack.com") — As part of removing RSCs from its site _(covered above)_, TanStack built two new libraries: a 4.9KB [Markdown parser](https://react.statuscode.com/link/188728/5d0bbb4a61) with a serializable AST, and an 8KB [highlighter](https://react.statuscode.com/link/188729/5d0bbb4a61) for 25 languages, replacing a ~358KB [Shiki](https://react.statuscode.com/link/188730/5d0bbb4a61)\-based approach. They're in alpha, TanStack's using them in prod…
+
+Tanner Linsley
+
+💡 It's been a productive week for TanStack – they've also released [an alpha of TanStack Charts](https://react.statuscode.com/link/188731/5d0bbb4a61), their take on creating a grammar for charts that AI agents can write. Microsoft is also experimenting in this area with [Flint](https://react.statuscode.com/link/188732/5d0bbb4a61).
+
+[_Sign in with Google_ for React Native](https://react.statuscode.com/link/188733/5d0bbb4a61 "thoughtbot.com") — `@thoughtbot/react-native-social-auth` is a modern Google Sign-In library for React Native on both iOS and Android with a first-party Expo config plugin.
+
+Oluwatomi Oluwafemi Alu (Thoughtbot)
+
+[OverflowGuard: A Component That Knows When Content Won't Fit](https://react.statuscode.com/link/188734/5d0bbb4a61 "overflowguard.dev") — A 2KB component that detects when toolbar or nav content stops fitting its container, so you can collapse to icons or a hamburger without magic breakpoints.
+
+Artur Marczyk
+
+*   [MobX 7.0](https://react.statuscode.com/link/188735/5d0bbb4a61) – The popular state manager slims down, removes deprecations, [updates its React bindings](https://react.statuscode.com/link/188736/5d0bbb4a61), and now always uses Proxy-backed observable objects and arrays.
+    
+*   [Mantine 9.5](https://react.statuscode.com/link/188737/5d0bbb4a61) – The popular full-featured React component suite. Date pickers gain a native month/year select, and there's a new [SunburstChart](https://react.statuscode.com/link/188738/5d0bbb4a61) component.
+    
+*   [React Ace 15.0](https://react.statuscode.com/link/188739/5d0bbb4a61) – Component that wraps the [Ace](https://react.statuscode.com/link/188740/5d0bbb4a61) code editor. Now ships a native ESM build alongside CommonJS, fixing import interop under Vite 8.
+    
+*   📸 [VisionCamera 5.2](https://react.statuscode.com/link/188741/5d0bbb4a61) – Powerful camera library for React Native. Adds `zoom`, `exposure` and torch control to &lt;`SkiaCamera`\>.
+    
+*   [react-router-hono-server 3.0](https://react.statuscode.com/link/188742/5d0bbb4a61) – Spin up a [Hono](https://react.statuscode.com/link/188743/5d0bbb4a61)\-based server for your React Router app in seconds. Now targets React Router v8.
+    
+*   [Virtua 0.50](https://react.statuscode.com/link/188744/5d0bbb4a61) – A zero-config ~3KB virtual list and grid component for React, Vue, Solid and Svelte – now joined by Angular. ([Demo](https://react.statuscode.com/link/188745/5d0bbb4a61))
+    
+*   [react-x11 1.2](https://react.statuscode.com/link/188746/5d0bbb4a61) – A React renderer whose host environment is an X11 server.
+    
+
+📰 Classifieds
+
+You only need 3 tools to build mobile apps with AI: Skills, MCP and the right AI workflow. [Full guide/video in the blog](https://react.statuscode.com/link/188747/5d0bbb4a61).
+
+* * *
+
+Your components re-render in milliseconds. The analytics query behind them doesn't. [TimescaleDB extends Postgres](https://react.statuscode.com/link/188748/5d0bbb4a61) so it can.
+
+📊  A Smaller Chart Bonus
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/koj3st9ccsp2uyf0kdyg.jpg)](https://react.statuscode.com/link/188749/5d0bbb4a61)
+
+[Microcharts: Word-Sized Charts for React](https://react.statuscode.com/link/188749/5d0bbb4a61 "microcharts.dev") — I'm a big fan of [Edward Tufte's](https://react.statuscode.com/link/188750/5d0bbb4a61) numerous data visualization books and a concept he popularized was _sparklines_, small dense charts that fit inline with text. Microcharts brings the idea to React with 106 chart types. [GitHub repo](https://react.statuscode.com/link/188751/5d0bbb4a61).
+
+Ganapati V S
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​485 — July 31, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/485)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://react.statuscode.com/link/188709/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/akpfqgbra3ttj1oqbrg6.jpg)](https://react.statuscode.com/link/188710/5d0bbb4a61)
+
+[Octane: React's Programming Model, But *Compiled*](https://react.statuscode.com/link/188710/5d0bbb4a61 "octanejs.dev") — From the creator of [Inferno](https://react.statuscode.com/link/188711/5d0bbb4a61) comes a successor: a compiled React-*like* framework (the [differences from React are here](https://react.statuscode.com/link/188712/5d0bbb4a61)) that generates reactivity ahead of time with no VDOM. Supports TSX/JSX and TSRX, with integrations for TanStack Query and Router, plus other common React libraries.
+
+Dominic Gannaway
+
+💡 Expect to see a lot of experimentation around Octane in coming weeks. For example, Steve Faulkner has created [Nextane](https://react.statuscode.com/link/188713/5d0bbb4a61), an experimental riff on Cloudflare's [Vinext](https://react.statuscode.com/link/188714/5d0bbb4a61) 'Next.js on Vite', to get the Next.js Pages Router but on Octane.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/65655689.jpg)](https://react.statuscode.com/link/188709/5d0bbb4a61)
+
+[Join Sentry Live: How Etsy Stays Crash-Free](https://react.statuscode.com/link/188709/5d0bbb4a61 "sentry.io") — Sentry and Etsy break down how Etsy preps for peak traffic, debugs in real time, and ties crashes to revenue impact. Real stories and practical takeaways for teams shipping at scale.
+
+Sentry sponsor
+
+[Why TanStack Stopped Using RSC on Its Site](https://react.statuscode.com/link/188715/5d0bbb4a61 "tanstack.com") — Tanner, armed with lots of numbers, explains why [tanstack.com](https://react.statuscode.com/link/188716/5d0bbb4a61) dropped React Server Components after shrinking its markdown and highlighting stack to 27KB. Plain SSR now serves smaller pages with lower blocking time, and the code is easier to follow.
+
+Tanner Linsley
+
+💡 TanStack has also [rolled out a full rebrand](https://react.statuscode.com/link/188717/5d0bbb4a61) and [new landing page](https://react.statuscode.com/link/188716/5d0bbb4a61).
+
+▶  [React Debugging with Performance Tracks](https://react.statuscode.com/link/188718/5d0bbb4a61 "www.youtube.com") — A 15 minute tutorial covering [React Performance tracks](https://react.statuscode.com/link/188719/5d0bbb4a61), React-specific entries that appear in your browser's DevTools.
+
+Shruti Kapoor
+
+[Experimenting with RSCs for Performance and UX in Next.js](https://react.statuscode.com/link/188720/5d0bbb4a61 "aurorascharff.no") — Aurora digs into three interesting patterns that arose while building a social app on Next.js 16.3 (currently in preview, but expected imminently).
+
+Aurora Scharff
+
+📄 [Your SPA is Leaking Memory: 'Soak Test' It](https://react.statuscode.com/link/188721/5d0bbb4a61) – Loop a Playwright flow in a single browser context and use DOM node and listener counts to catch memory leaks before users do. Den Odell
+
+📄 [The State of Zero-Runtime CSS-in-JS, Mid-2026](https://react.statuscode.com/link/188722/5d0bbb4a61) – From the maintainer of [Linaria](https://react.statuscode.com/link/188723/5d0bbb4a61) and creator of [dx-styles](https://react.statuscode.com/link/188724/5d0bbb4a61). Anton Evzhakov
+
+📄 [Building a Real-Time Face Recognition App in React Native with VisionCamera](https://react.statuscode.com/link/188725/5d0bbb4a61) Patrick Kabwe (Margelo)
+
+📄 [A Modern Storybook Tutorial: Stories, Interaction Tests, and CI](https://react.statuscode.com/link/188726/5d0bbb4a61) Flavio Copes
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nnljwr4x66nwcbdacajr.jpg)](https://react.statuscode.com/link/188727/5d0bbb4a61)
+
+[Introducing TanStack *Markdown* and *Highlight*](https://react.statuscode.com/link/188727/5d0bbb4a61 "tanstack.com") — As part of removing RSCs from its site *(covered above)*, TanStack built two new libraries: a 4.9KB [Markdown parser](https://react.statuscode.com/link/188728/5d0bbb4a61) with a serializable AST, and an 8KB [highlighter](https://react.statuscode.com/link/188729/5d0bbb4a61) for 25 languages, replacing a ~358KB [Shiki](https://react.statuscode.com/link/188730/5d0bbb4a61)-based approach. They're in alpha, TanStack's using them in prod…
+
+Tanner Linsley
+
+💡 It's been a productive week for TanStack – they've also released [an alpha of TanStack Charts](https://react.statuscode.com/link/188731/5d0bbb4a61), their take on creating a grammar for charts that AI agents can write. Microsoft is also experimenting in this area with [Flint](https://react.statuscode.com/link/188732/5d0bbb4a61).
+
+[*Sign in with Google* for React Native](https://react.statuscode.com/link/188733/5d0bbb4a61 "thoughtbot.com") — `@thoughtbot/react-native-social-auth` is a modern Google Sign-In library for React Native on both iOS and Android with a first-party Expo config plugin.
+
+Oluwatomi Oluwafemi Alu (Thoughtbot)
+
+[OverflowGuard: A Component That Knows When Content Won't Fit](https://react.statuscode.com/link/188734/5d0bbb4a61 "overflowguard.dev") — A 2KB component that detects when toolbar or nav content stops fitting its container, so you can collapse to icons or a hamburger without magic breakpoints.
+
+Artur Marczyk
+
+* [MobX 7.0](https://react.statuscode.com/link/188735/5d0bbb4a61) – The popular state manager slims down, removes deprecations, [updates its React bindings](https://react.statuscode.com/link/188736/5d0bbb4a61), and now always uses Proxy-backed observable objects and arrays.
+
+* [Mantine 9.5](https://react.statuscode.com/link/188737/5d0bbb4a61) – The popular full-featured React component suite. Date pickers gain a native month/year select, and there's a new [SunburstChart](https://react.statuscode.com/link/188738/5d0bbb4a61) component.
+
+* [React Ace 15.0](https://react.statuscode.com/link/188739/5d0bbb4a61) – Component that wraps the [Ace](https://react.statuscode.com/link/188740/5d0bbb4a61) code editor. Now ships a native ESM build alongside CommonJS, fixing import interop under Vite 8.
+
+* 📸 [VisionCamera 5.2](https://react.statuscode.com/link/188741/5d0bbb4a61) – Powerful camera library for React Native. Adds `zoom`, `exposure` and torch control to &lt;`SkiaCamera`>.
+
+* [react-router-hono-server 3.0](https://react.statuscode.com/link/188742/5d0bbb4a61) – Spin up a [Hono](https://react.statuscode.com/link/188743/5d0bbb4a61)-based server for your React Router app in seconds. Now targets React Router v8.
+
+* [Virtua 0.50](https://react.statuscode.com/link/188744/5d0bbb4a61) – A zero-config ~3KB virtual list and grid component for React, Vue, Solid and Svelte – now joined by Angular. ([Demo](https://react.statuscode.com/link/188745/5d0bbb4a61))
+
+* [react-x11 1.2](https://react.statuscode.com/link/188746/5d0bbb4a61) – A React renderer whose host environment is an X11 server.
+
+📰 Classifieds
+
+You only need 3 tools to build mobile apps with AI: Skills, MCP and the right AI workflow. [Full guide/video in the blog](https://react.statuscode.com/link/188747/5d0bbb4a61).
+
+***
+
+Your components re-render in milliseconds. The analytics query behind them doesn't. [TimescaleDB extends Postgres](https://react.statuscode.com/link/188748/5d0bbb4a61) so it can.
+
+📊  A Smaller Chart Bonus
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/koj3st9ccsp2uyf0kdyg.jpg)](https://react.statuscode.com/link/188749/5d0bbb4a61)
+
+[Microcharts: Word-Sized Charts for React](https://react.statuscode.com/link/188749/5d0bbb4a61 "microcharts.dev") — I'm a big fan of [Edward Tufte's](https://react.statuscode.com/link/188750/5d0bbb4a61) numerous data visualization books and a concept he popularized was *sparklines*, small dense charts that fit inline with text. Microcharts brings the idea to React with 106 chart types. [GitHub repo](https://react.statuscode.com/link/188751/5d0bbb4a61).
+
+Ganapati V S
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
