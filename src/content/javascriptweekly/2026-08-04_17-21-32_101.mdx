@@ -1,0 +1,313 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Reimplementing htmx from scratch
+description: Reimplementing htmx from scratch
+date: 星期二 05 下午 八月 4o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/797
+origin_site: https://javascriptweekly.com/issues/797
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Reimplementing htmx from scratch" url="https://javascriptweekly.com/issues/797" />
+
+<Detail client:only="react">
+	#​797 — August 4, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/797)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://javascriptweekly.com/link/188753/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/sk9fe6nujcbnpxh2pkor.jpg)](https://javascriptweekly.com/link/188754/d076523b1d)
+
+[Next.js 16.3 Released](https://javascriptweekly.com/link/188754/d076523b1d "nextjs.org") — The newly expanded Next.js team (now including [Dan Abramov](https://javascriptweekly.com/link/188755/d076523b1d) and [𝕏 Pete Hunt](https://javascriptweekly.com/link/188756/d076523b1d)!) has dropped the latest version of the popular React framework, complete with faster builds, optional TypeScript 7 type checking, faster SSR, [Instant Navigations](https://javascriptweekly.com/link/188757/d076523b1d), [AI improvements](https://javascriptweekly.com/link/188758/d076523b1d), and more.
+
+The Next.js Team
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/0f9a422d.png)](https://javascriptweekly.com/link/188753/d076523b1d)
+
+[Frontend Architecture: Monoliths to Microfrontends](https://javascriptweekly.com/link/188753/d076523b1d "master.dev") — Maxi Ferreira walks through modular monoliths, monorepos, and microfrontends so you can pick the right structure for your codebase and know the real cost before you commit.
+
+Master.dev sponsor
+
+[Let's Make the Worst `htmx` Ever](https://javascriptweekly.com/link/188759/d076523b1d "zserge.com") — After making [the 'worst' React](https://javascriptweekly.com/link/188760/d076523b1d) and [Vue.js](https://javascriptweekly.com/link/188761/d076523b1d) implementations, Serge tackles rebuilding the essence of [htmx](https://javascriptweekly.com/link/188762/d076523b1d) from scratch. A fun way to understand what htmx actually does under the hood.
+
+Serge Zaitsev
+
+[The Secure Way to Release an `npm` Package in 2026](https://javascriptweekly.com/link/188763/d076523b1d "evilmartians.com") — A practical guide to publishing `npm` packages more safely, written by the author of numerous popular packages (e.g. [postcss](https://javascriptweekly.com/link/188764/d076523b1d)). As well as showing _how_ to use staged publishing and trusted publishing, he explains _why_ they help.
+
+Andrey Sitnik
+
+💡 GitHub is continuing to [focus on npm security](https://javascriptweekly.com/link/188766/d076523b1d), and is starting to [scan every npm package for malware](https://javascriptweekly.com/link/188767/d076523b1d) at publish time. This will have some implications, including a delay between publishing and availability for installation.
+
+**IN BRIEF:**
+
+*   🚨 **Developing incident:** The popular `keyv` and `cacheable` packages were [compromised today with a credential-stealing worm](https://javascriptweekly.com/link/188768/d076523b1d). The repercussions are ongoing with [hundreds more packages](https://javascriptweekly.com/link/188822/d076523b1d) compromised so far.
+    
+*   Monthly updates from [the Astro team](https://javascriptweekly.com/link/188769/d076523b1d) and [the Svelte team](https://javascriptweekly.com/link/188770/d076523b1d). The first preview releases of SvelteKit 3 are now available.
+    
+*   ⚖️ The _Deno vs Oracle_ JavaScript™ trademark case rattles on with [Deno consenting to a _fifth_ extension request](https://javascriptweekly.com/link/188771/d076523b1d) as discovery continues.
+    
+*   Popular JS library factory [_TanStack_ has rebranded](https://javascriptweekly.com/link/188772/d076523b1d) and introduced [new 'Markdown' and 'Highlight' libraries](https://javascriptweekly.com/link/188773/d076523b1d).
+    
+
+**RELEASES:**
+
+*   [MobX 7.0](https://javascriptweekly.com/link/188774/d076523b1d) – The popular state manager slims down, removes deprecations, [updates its React bindings](https://javascriptweekly.com/link/188775/d076523b1d), and now always uses Proxy-backed observable objects and arrays.
+    
+*   [Javy 9.1](https://javascriptweekly.com/link/188776/d076523b1d) – Toolchain for compiling JavaScript to WebAssembly for WASM runtimes.
+    
+*   [Node.js v26.6.0 (Current)](https://javascriptweekly.com/link/188777/d076523b1d) and [v24.19.0 (LTS)](https://javascriptweekly.com/link/188778/d076523b1d)
+    
+*   [Vite 8.2](https://javascriptweekly.com/link/188779/d076523b1d), [React Three Fiber 9.7](https://javascriptweekly.com/link/188780/d076523b1d), [Lerna 10.0](https://javascriptweekly.com/link/188818/d076523b1d), [Hono 4.13.0](https://javascriptweekly.com/link/188782/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[Your SPA is Leaking Memory: 'Soak Test' It](https://javascriptweekly.com/link/188783/d076523b1d "denodell.com") — How to run a Playwright 'soak test' that loops a user flow within the same browser context, watches DOM node and listener counts, and fails CI when a memory leak creeps in.
+
+Den Odell
+
+[Your JSON is Lying to You](https://javascriptweekly.com/link/188784/d076523b1d "blog.gaborkoos.com") — A reminder that a `JSON.parse`/`JSON.stringify` round-trip is far from lossless, with big integers, `undefined`, `Date`, and more, altered or lost along the way. Gabor covers the nastier gotchas and practical ways to make the conversion boundaries explicit.
+
+Gabor Koos
+
+[Don’t Just Code—Grow as a Technologist](https://javascriptweekly.com/link/188785/d076523b1d "jobs.fidelity.com") — Explore new technology, sharpen your existing skills and build new ones when you work in tech at Fidelity.
+
+Fidelity Careers sponsor
+
+[cdnjs at 9 Billion Requests a Day: A Migration Story](https://javascriptweekly.com/link/188786/d076523b1d "blog.cloudflare.com") — [cdnjs](https://javascriptweekly.com/link/188787/d076523b1d) is a popular, free CDN for loading JavaScript libraries without bundling or self-hosting (which LLMs _really_ seem to like). Cloudflare explains how it now runs entirely on Workers and R2.
+
+Simona Badoiu (Cloudflare)
+
+[Adding Go's `defer` to the TypeScript Compiler](https://javascriptweekly.com/link/188788/d076523b1d "healeycodes.com") — In Go, `defer` delays the execution of a function call until the surrounding function finishes. Can you just fork TypeScript and add language features? Yes! Should you? Probably not, as [`using`](https://javascriptweekly.com/link/188789/d076523b1d) is already a good fit for the use case.
+
+Andrew Healey
+
+📄 [Learning Remix 3](https://javascriptweekly.com/link/188792/d076523b1d) – By porting a Solid 2.0 demo to Remix 3's server-first model. Mark Malstrom
+
+📄 [Why npm Dependency Trees Are So Big](https://javascriptweekly.com/link/188793/d076523b1d) Andrew Nesbitt
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/zzctbd5nks5jg4ur4cir.jpg)](https://javascriptweekly.com/link/188794/d076523b1d)
+
+[TanStack Charts: A New Chart Grammar Option](https://javascriptweekly.com/link/188794/d076523b1d "tanstack.com") — In the past few weeks, TanStack has been rapidly iterating on a new, framework-neutral way to declaratively specify a large number of chart-related visualizations in JavaScript. Output renders to SVG or canvas and can be styled as you wish. [Here's a comparison](https://javascriptweekly.com/link/188795/d076523b1d) against other established options.
+
+TanStack
+
+[An Open Source PR Reviewer Just Ranked #2 of 42 on Code-Review-Bench](https://javascriptweekly.com/link/188796/d076523b1d "agentfield.ai") — PR-AF outranks the commercial tools. Verified findings only, ~10x cheaper, self-hosted. Drops into GitHub Actions.
+
+Agentfield.ai sponsor
+
+[MicroDiff 1.6: Fast Object and Array Comparison Library](https://javascriptweekly.com/link/188797/d076523b1d "github.com") — Given two objects or arrays, it returns the differences (think `diff` but for JS objects). This week's release adds support for Temporal types.
+
+Jacob Jackson
+
+💡 Jacob has a post from 2022 covering [how microdiff is so fast](https://javascriptweekly.com/link/188819/d076523b1d).
+
+[Virtua: Virtual List and Grid Component for Multiple Frameworks](https://javascriptweekly.com/link/188798/d076523b1d "github.com") — A fast and small virtual list/grid component for React, Vue, Solid, Svelte, and Angular. [Here's a demo](https://javascriptweekly.com/link/188799/d076523b1d) and [a comparison table](https://javascriptweekly.com/link/188800/d076523b1d) against other solutions.
+
+inokawa
+
+📊 [Perspective 5: Interactive Analytics and Data Vis Component](https://javascriptweekly.com/link/188801/d076523b1d "perspective-dev.github.io") — Originally built by JP Morgan, a WASM-powered data visualization component suited to large and/or real-time streaming datasets. 5.0/5.1 just dropped with numerous fixes, `wasm64` builds, and [window columns](https://javascriptweekly.com/link/188802/d076523b1d).
+
+OpenJS Foundation
+
+*   [Neutralinojs 6.9](https://javascriptweekly.com/link/188803/d076523b1d) – The lightweight Electron alternative has a new C++ network API for making HTTP requests free of the webview's CORS restrictions.
+    
+*   [DukPy 0.6](https://javascriptweekly.com/link/188804/d076523b1d) – Simple JavaScript interpreter for Python. Now uses the QuickJS-NG engine to support more modern JavaScript and Promises.
+    
+*   [isomorphic-git 1.40.0](https://javascriptweekly.com/link/188805/d076523b1d) – A pure JS implementation of Git for Node & browsers.
+    
+*   [better-result 3.0](https://javascriptweekly.com/link/188806/d076523b1d) – Lightweight `Result` type for TypeScript with generator-based composition.
+    
+*   [ip-address 10.4](https://javascriptweekly.com/link/188807/d076523b1d) – Parse, validate and manipulate IP (v4 and v6) addresses.
+    
+
+📰 Classifieds
+
+⚡ Stop being the integration layer. [Build a CRM-to-signed-PDF pipeline in n8n](https://javascriptweekly.com/link/188820/d076523b1d) with plain HTTP calls. No SDK, no manual file handling.
+
+* * *
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/188809/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+* * *
+
+⚡ [Zuplo](https://javascriptweekly.com/link/188810/d076523b1d) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://javascriptweekly.com/link/188810/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+*   Did you know JavaScript supports a third type of comment (beyond `//` and `/* */`)? [▶️ Mat Marquis shows off hashbang comments](https://javascriptweekly.com/link/188811/d076523b1d) in a short YouTube video. And yes, [they're in the language spec!](https://javascriptweekly.com/link/188821/d076523b1d)
+    
+*   🤖 GitHub's Sean Goedecke says [LLMs reward expertise](https://javascriptweekly.com/link/188812/d076523b1d), with the most important prompting skill being expertise in the domain you're prompting for.
+    
+*   Microsoft is previewing [a way to call native Windows APIs from Node](https://javascriptweekly.com/link/188813/d076523b1d) (and therefore Electron) _without_ native addons, via a new dynamic Windows Runtime API (WinRT) projection.
+    
+*   Cloudflare _Workers_ has added [support for inbound TCP connections and gRPC](https://javascriptweekly.com/link/188814/d076523b1d) _(in private beta)_.
+    
+*   [Stacked pull requests are now in public preview](https://javascriptweekly.com/link/188815/d076523b1d) on GitHub.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/188816/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​797 — August 4, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/797)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://javascriptweekly.com/link/188753/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/sk9fe6nujcbnpxh2pkor.jpg)](https://javascriptweekly.com/link/188754/d076523b1d)
+
+[Next.js 16.3 Released](https://javascriptweekly.com/link/188754/d076523b1d "nextjs.org") — The newly expanded Next.js team (now including [Dan Abramov](https://javascriptweekly.com/link/188755/d076523b1d) and [𝕏 Pete Hunt](https://javascriptweekly.com/link/188756/d076523b1d)!) has dropped the latest version of the popular React framework, complete with faster builds, optional TypeScript 7 type checking, faster SSR, [Instant Navigations](https://javascriptweekly.com/link/188757/d076523b1d), [AI improvements](https://javascriptweekly.com/link/188758/d076523b1d), and more.
+
+The Next.js Team
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/0f9a422d.png)](https://javascriptweekly.com/link/188753/d076523b1d)
+
+[Frontend Architecture: Monoliths to Microfrontends](https://javascriptweekly.com/link/188753/d076523b1d "master.dev") — Maxi Ferreira walks through modular monoliths, monorepos, and microfrontends so you can pick the right structure for your codebase and know the real cost before you commit.
+
+Master.dev sponsor
+
+[Let's Make the Worst `htmx` Ever](https://javascriptweekly.com/link/188759/d076523b1d "zserge.com") — After making [the 'worst' React](https://javascriptweekly.com/link/188760/d076523b1d) and [Vue.js](https://javascriptweekly.com/link/188761/d076523b1d) implementations, Serge tackles rebuilding the essence of [htmx](https://javascriptweekly.com/link/188762/d076523b1d) from scratch. A fun way to understand what htmx actually does under the hood.
+
+Serge Zaitsev
+
+[The Secure Way to Release an `npm` Package in 2026](https://javascriptweekly.com/link/188763/d076523b1d "evilmartians.com") — A practical guide to publishing `npm` packages more safely, written by the author of numerous popular packages (e.g. [postcss](https://javascriptweekly.com/link/188764/d076523b1d)). As well as showing *how* to use staged publishing and trusted publishing, he explains *why* they help.
+
+Andrey Sitnik
+
+💡 GitHub is continuing to [focus on npm security](https://javascriptweekly.com/link/188766/d076523b1d), and is starting to [scan every npm package for malware](https://javascriptweekly.com/link/188767/d076523b1d) at publish time. This will have some implications, including a delay between publishing and availability for installation.
+
+**IN BRIEF:**
+
+* 🚨 **Developing incident:** The popular `keyv` and `cacheable` packages were [compromised today with a credential-stealing worm](https://javascriptweekly.com/link/188768/d076523b1d). The repercussions are ongoing with [hundreds more packages](https://javascriptweekly.com/link/188822/d076523b1d) compromised so far.
+
+* Monthly updates from [the Astro team](https://javascriptweekly.com/link/188769/d076523b1d) and [the Svelte team](https://javascriptweekly.com/link/188770/d076523b1d). The first preview releases of SvelteKit 3 are now available.
+
+* ⚖️ The *Deno vs Oracle* JavaScript™ trademark case rattles on with [Deno consenting to a *fifth* extension request](https://javascriptweekly.com/link/188771/d076523b1d) as discovery continues.
+
+* Popular JS library factory [*TanStack* has rebranded](https://javascriptweekly.com/link/188772/d076523b1d) and introduced [new 'Markdown' and 'Highlight' libraries](https://javascriptweekly.com/link/188773/d076523b1d).
+
+**RELEASES:**
+
+* [MobX 7.0](https://javascriptweekly.com/link/188774/d076523b1d) – The popular state manager slims down, removes deprecations, [updates its React bindings](https://javascriptweekly.com/link/188775/d076523b1d), and now always uses Proxy-backed observable objects and arrays.
+
+* [Javy 9.1](https://javascriptweekly.com/link/188776/d076523b1d) – Toolchain for compiling JavaScript to WebAssembly for WASM runtimes.
+
+* [Node.js v26.6.0 (Current)](https://javascriptweekly.com/link/188777/d076523b1d) and [v24.19.0 (LTS)](https://javascriptweekly.com/link/188778/d076523b1d)
+
+* [Vite 8.2](https://javascriptweekly.com/link/188779/d076523b1d), [React Three Fiber 9.7](https://javascriptweekly.com/link/188780/d076523b1d), [Lerna 10.0](https://javascriptweekly.com/link/188818/d076523b1d), [Hono 4.13.0](https://javascriptweekly.com/link/188782/d076523b1d)
+
+📖  Articles and Videos
+
+[Your SPA is Leaking Memory: 'Soak Test' It](https://javascriptweekly.com/link/188783/d076523b1d "denodell.com") — How to run a Playwright 'soak test' that loops a user flow within the same browser context, watches DOM node and listener counts, and fails CI when a memory leak creeps in.
+
+Den Odell
+
+[Your JSON is Lying to You](https://javascriptweekly.com/link/188784/d076523b1d "blog.gaborkoos.com") — A reminder that a `JSON.parse`/`JSON.stringify` round-trip is far from lossless, with big integers, `undefined`, `Date`, and more, altered or lost along the way. Gabor covers the nastier gotchas and practical ways to make the conversion boundaries explicit.
+
+Gabor Koos
+
+[Don’t Just Code—Grow as a Technologist](https://javascriptweekly.com/link/188785/d076523b1d "jobs.fidelity.com") — Explore new technology, sharpen your existing skills and build new ones when you work in tech at Fidelity.
+
+Fidelity Careers sponsor
+
+[cdnjs at 9 Billion Requests a Day: A Migration Story](https://javascriptweekly.com/link/188786/d076523b1d "blog.cloudflare.com") — [cdnjs](https://javascriptweekly.com/link/188787/d076523b1d) is a popular, free CDN for loading JavaScript libraries without bundling or self-hosting (which LLMs *really* seem to like). Cloudflare explains how it now runs entirely on Workers and R2.
+
+Simona Badoiu (Cloudflare)
+
+[Adding Go's `defer` to the TypeScript Compiler](https://javascriptweekly.com/link/188788/d076523b1d "healeycodes.com") — In Go, `defer` delays the execution of a function call until the surrounding function finishes. Can you just fork TypeScript and add language features? Yes! Should you? Probably not, as [`using`](https://javascriptweekly.com/link/188789/d076523b1d) is already a good fit for the use case.
+
+Andrew Healey
+
+📄 [Learning Remix 3](https://javascriptweekly.com/link/188792/d076523b1d) – By porting a Solid 2.0 demo to Remix 3's server-first model. Mark Malstrom
+
+📄 [Why npm Dependency Trees Are So Big](https://javascriptweekly.com/link/188793/d076523b1d) Andrew Nesbitt
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/zzctbd5nks5jg4ur4cir.jpg)](https://javascriptweekly.com/link/188794/d076523b1d)
+
+[TanStack Charts: A New Chart Grammar Option](https://javascriptweekly.com/link/188794/d076523b1d "tanstack.com") — In the past few weeks, TanStack has been rapidly iterating on a new, framework-neutral way to declaratively specify a large number of chart-related visualizations in JavaScript. Output renders to SVG or canvas and can be styled as you wish. [Here's a comparison](https://javascriptweekly.com/link/188795/d076523b1d) against other established options.
+
+TanStack
+
+[An Open Source PR Reviewer Just Ranked #2 of 42 on Code-Review-Bench](https://javascriptweekly.com/link/188796/d076523b1d "agentfield.ai") — PR-AF outranks the commercial tools. Verified findings only, ~10x cheaper, self-hosted. Drops into GitHub Actions.
+
+Agentfield.ai sponsor
+
+[MicroDiff 1.6: Fast Object and Array Comparison Library](https://javascriptweekly.com/link/188797/d076523b1d "github.com") — Given two objects or arrays, it returns the differences (think `diff` but for JS objects). This week's release adds support for Temporal types.
+
+Jacob Jackson
+
+💡 Jacob has a post from 2022 covering [how microdiff is so fast](https://javascriptweekly.com/link/188819/d076523b1d).
+
+[Virtua: Virtual List and Grid Component for Multiple Frameworks](https://javascriptweekly.com/link/188798/d076523b1d "github.com") — A fast and small virtual list/grid component for React, Vue, Solid, Svelte, and Angular. [Here's a demo](https://javascriptweekly.com/link/188799/d076523b1d) and [a comparison table](https://javascriptweekly.com/link/188800/d076523b1d) against other solutions.
+
+inokawa
+
+📊 [Perspective 5: Interactive Analytics and Data Vis Component](https://javascriptweekly.com/link/188801/d076523b1d "perspective-dev.github.io") — Originally built by JP Morgan, a WASM-powered data visualization component suited to large and/or real-time streaming datasets. 5.0/5.1 just dropped with numerous fixes, `wasm64` builds, and [window columns](https://javascriptweekly.com/link/188802/d076523b1d).
+
+OpenJS Foundation
+
+* [Neutralinojs 6.9](https://javascriptweekly.com/link/188803/d076523b1d) – The lightweight Electron alternative has a new C++ network API for making HTTP requests free of the webview's CORS restrictions.
+
+* [DukPy 0.6](https://javascriptweekly.com/link/188804/d076523b1d) – Simple JavaScript interpreter for Python. Now uses the QuickJS-NG engine to support more modern JavaScript and Promises.
+
+* [isomorphic-git 1.40.0](https://javascriptweekly.com/link/188805/d076523b1d) – A pure JS implementation of Git for Node & browsers.
+
+* [better-result 3.0](https://javascriptweekly.com/link/188806/d076523b1d) – Lightweight `Result` type for TypeScript with generator-based composition.
+
+* [ip-address 10.4](https://javascriptweekly.com/link/188807/d076523b1d) – Parse, validate and manipulate IP (v4 and v6) addresses.
+
+📰 Classifieds
+
+⚡ Stop being the integration layer. [Build a CRM-to-signed-PDF pipeline in n8n](https://javascriptweekly.com/link/188820/d076523b1d) with plain HTTP calls. No SDK, no manual file handling.
+
+***
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/188809/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+***
+
+⚡ [Zuplo](https://javascriptweekly.com/link/188810/d076523b1d) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://javascriptweekly.com/link/188810/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+* Did you know JavaScript supports a third type of comment (beyond `//` and `/* */`)? [▶️ Mat Marquis shows off hashbang comments](https://javascriptweekly.com/link/188811/d076523b1d) in a short YouTube video. And yes, [they're in the language spec!](https://javascriptweekly.com/link/188821/d076523b1d)
+
+* 🤖 GitHub's Sean Goedecke says [LLMs reward expertise](https://javascriptweekly.com/link/188812/d076523b1d), with the most important prompting skill being expertise in the domain you're prompting for.
+
+* Microsoft is previewing [a way to call native Windows APIs from Node](https://javascriptweekly.com/link/188813/d076523b1d) (and therefore Electron) *without* native addons, via a new dynamic Windows Runtime API (WinRT) projection.
+
+* Cloudflare *Workers* has added [support for inbound TCP connections and gRPC](https://javascriptweekly.com/link/188814/d076523b1d) *(in private beta)*.
+
+* [Stacked pull requests are now in public preview](https://javascriptweekly.com/link/188815/d076523b1d) on GitHub.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/188816/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
