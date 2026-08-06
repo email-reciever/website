@@ -1,0 +1,252 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node.js 26.7, vlt 1.0, and Shai-Hulud Returns
+description: Node.js 26.7, vlt 1.0, and Shai-Hulud Returns
+date: 星期四 04 下午 八月 6o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/636
+origin_site: https://nodeweekly.com/issues/636
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node.js 26.7, vlt 1.0, and Shai-Hulud Returns" url="https://nodeweekly.com/issues/636" />
+
+<Detail client:only="react">
+	#​636 — August 6, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/636)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://nodeweekly.com/link/188889/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bc5keokbeeeetqnie36v.jpg)](https://nodeweekly.com/link/188890/0a4070b383)
+
+[Node.js 26.7.0 (Current) Released](https://nodeweekly.com/link/188890/0a4070b383 "nodejs.org") — Landing just two days after [26.6](https://nodeweekly.com/link/188891/0a4070b383), coverage reports can now include files your tests didn't touch with [`--test-coverage-include-all`](https://nodeweekly.com/link/188892/0a4070b383), FFI and SQLite pick up crash fixes, and Perfetto tracing support lands, though you'll need a custom build to use it.
+
+Antoine du Hamel
+
+💡 [Node v24.19.0 (LTS)](https://nodeweekly.com/link/188893/0a4070b383) is also a noteworthy update, adding `--experimental-import-text`, `fs.readFile()` can reuse a buffer you supply, and `setKeepAlive` exposes `TCP_KEEPINTVL` and `TCP_KEEPCNT`.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2fc0d85b.jpg)](https://nodeweekly.com/link/188889/0a4070b383)
+
+[Join Sentry Live: How Etsy Stays Crash-Free](https://nodeweekly.com/link/188889/0a4070b383 "sentry.io") — Sentry and Etsy break down how Etsy's engineering team preps for peak traffic, debugs in real time, and ties crashes to revenue impact. Real stories and practical takeaways for teams running services at scale.
+
+Sentry sponsor
+
+🚨 [Shai-Hulud Strikes Again, Affecting `keyv` and 400+ Packages](https://nodeweekly.com/link/188894/0a4070b383 "research.jfrog.com") — A credential-stealing worm was rolled out as part of a false [keyv](https://nodeweekly.com/link/188895/0a4070b383) 6.0 release this week, and quickly spread. A reminder to check out [npm v12](https://nodeweekly.com/link/188896/0a4070b383), [pnpm](https://nodeweekly.com/link/188897/0a4070b383), or vlt (below), all of which block install scripts by default, the mechanism this worm relied on.
+
+Shavit Satou (JFrog)
+
+[vlt 1.0: An `npm` Alternative With CSS-Like Selectors](https://nodeweekly.com/link/188898/0a4070b383 "www.vlt.io") — After two years, Darcy Clarke's drop-in `npm` alternative hits 1.0. A key draw is `vlt query`, which lets you use 60+ CSS-like selectors over your dependency graph (half of which are security related). vlt also offers hosted private package registries.
+
+Darcy Clarke
+
+💡 In 2023, Darcy wrote ["The massive bug at the heart of the npm ecosystem"](https://nodeweekly.com/link/188899/0a4070b383), a post that was prescient of current packaging headaches.
+
+**IN BRIEF:**
+
+*   ⚠️ The Express team has [announced security releases for `body-parser`](https://nodeweekly.com/link/188900/0a4070b383) to address a DoS vulnerability.
+    
+*   [`net.BlockList`](https://nodeweekly.com/link/188901/0a4070b383), used to prevent network access to/from specified IP addresses and ranges, is [gaining new methods and getting much faster](https://nodeweekly.com/link/188902/0a4070b383).
+    
+*   There's a proposal and initial implementation to [bring the HTML spec's _Web Worker API_ to Node](https://nodeweekly.com/link/188903/0a4070b383).
+    
+*   [ZIP archive support is coming to `node:zlib`](https://nodeweekly.com/link/188904/0a4070b383) in a future release.
+    
+
+📄 [What's New in Mongoose 9.9: Major Performance Improvements](https://nodeweekly.com/link/188905/0a4070b383) – [Mongoose](https://nodeweekly.com/link/188906/0a4070b383) is a popular MongoDB object modelling solution. Valeri Karpov
+
+📄 [Debugging Stuck Node.js Processes](https://nodeweekly.com/link/188907/0a4070b383) – A trick for catching event loop blockers that never yield. Winona Schroeer-Smith
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kpdqracqa9nmngvovohb.jpg)](https://nodeweekly.com/link/188908/0a4070b383)
+
+[anydoc: Convert 14 Document Formats into Markdown](https://nodeweekly.com/link/188908/0a4070b383 "firecrawl.github.io") — A Rust-powered library (with Node.js and WASM bindings) that converts Word, PowerPoint, Excel, OpenDocument, RTF, EPUB, CSV, and PDF documents into Markdown. I tried it on a 1,600 page PDF and it took less than 2 seconds. There's also an in-browser demo to try it out. [GitHub repo](https://nodeweekly.com/link/188909/0a4070b383).
+
+Firecrawl
+
+💡 Firecrawl also has [pdf-inspector](https://nodeweekly.com/link/188910/0a4070b383) focused specifically on extracting text from PDFs (with positional awareness). [Liteparse](https://nodeweekly.com/link/188911/0a4070b383) is also worth considering if you want OCR for scanned / non-text PDFs.
+
+[You Added a Cache to Hide a Slow Query](https://nodeweekly.com/link/188912/0a4070b383 "www.tigerdata.com") — TimescaleDB makes the query fast in Postgres, so you cache less and serve fresh data. [Get $1000 credit to start](https://nodeweekly.com/link/188912/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[ioredis 6.0: Robust, Full-Featured Redis Client for Node](https://nodeweekly.com/link/188913/0a4070b383 "github.com") — v6.0, the first major release in four years, adds [RESP3](https://nodeweekly.com/link/188914/0a4070b383) and support for new [Redis 8.10](https://nodeweekly.com/link/188915/0a4070b383) features.
+
+The ioredis Team
+
+[MicroDiff 1.6: Fast Object and Array Comparison Library](https://nodeweekly.com/link/188916/0a4070b383 "github.com") — Given two objects or arrays, it returns the differences (think `diff` but for JS objects). This week's release adds support for Temporal types.
+
+Jacob Jackson
+
+[Devalue 5.9: Get the Job Done When `JSON.stringify` Can't](https://nodeweekly.com/link/188917/0a4070b383 "github.com") — A library from the Svelte project that's like `JSON.stringify` but can tackle cyclical and repeated references, regexes, `Map`/`Set`, and custom types. [Try it here](https://nodeweekly.com/link/188918/0a4070b383).
+
+Svelte
+
+*   [node-x11 3.8](https://nodeweekly.com/link/188919/0a4070b383) – An X Window System protocol client library with no dependencies, GLX / OpenGL support, and even the ability to [work in the browser](https://nodeweekly.com/link/188920/0a4070b383) against a JavaScript X-server emulator.
+    
+*   [pnpm 11.20](https://nodeweekly.com/link/188921/0a4070b383) – Mostly security hardening, but also adds an `npmjs:` prefix you can use to more succinctly pin a dependency to the public registry. Note that [pnpm 12.0](https://nodeweekly.com/link/188922/0a4070b383) has also reached RC stage.
+    
+*   [Hono 4.13.0](https://nodeweekly.com/link/188923/0a4070b383) – The small, fast Web standards-based web framework focuses on performance and adds HTTP QUERY method support.
+    
+*   [graphql-upload 18.0](https://nodeweekly.com/link/188924/0a4070b383) – Middleware that adds support for GraphQL multipart requests to Node.js GraphQL servers.
+    
+*   [cron-parser 5.7](https://nodeweekly.com/link/188925/0a4070b383) – Library for parsing and manipulating `cron` expressions.
+    
+
+📰 Classifieds
+
+⚡ [Zuplo](https://nodeweekly.com/link/188926/0a4070b383) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://nodeweekly.com/link/188926/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rsttgpy4jk534dz2b9m8.jpg)](https://nodeweekly.com/link/188927/0a4070b383)
+
+*   Did you know JavaScript supports a third type of comment (beyond `//` and `/* */`)? [▶️ Mat Marquis shows off hashbang comments](https://nodeweekly.com/link/188927/0a4070b383) in a short YouTube video. And yes, [they're in the language spec!](https://nodeweekly.com/link/188928/0a4070b383)
+    
+*   🤖 Fred K. Schott, of [Astro](https://nodeweekly.com/link/188929/0a4070b383) fame, has [unveiled Flue 2.0](https://nodeweekly.com/link/188930/0a4070b383), the latest version of his TypeScript-based open agent framework.
+    
+*   ⚖️ The _Deno vs Oracle_ JavaScript™ trademark case rumbles on with [Deno consenting to a _fifth_ extension request](https://nodeweekly.com/link/188931/0a4070b383) as discovery continues.
+    
+*   📺 SQLite's Richard Hipp gave [▶️ a detailed 50-minute talk on SQLite's reliability](https://nodeweekly.com/link/188932/0a4070b383) and the tools, practices, and design choices that have given it its strong reputation.
+    
+*   📊 The [results of the _State of CSS 2026_ survey](https://nodeweekly.com/link/188933/0a4070b383) have been released.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​636 — August 6, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/636)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://nodeweekly.com/link/188889/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bc5keokbeeeetqnie36v.jpg)](https://nodeweekly.com/link/188890/0a4070b383)
+
+[Node.js 26.7.0 (Current) Released](https://nodeweekly.com/link/188890/0a4070b383 "nodejs.org") — Landing just two days after [26.6](https://nodeweekly.com/link/188891/0a4070b383), coverage reports can now include files your tests didn't touch with [`--test-coverage-include-all`](https://nodeweekly.com/link/188892/0a4070b383), FFI and SQLite pick up crash fixes, and Perfetto tracing support lands, though you'll need a custom build to use it.
+
+Antoine du Hamel
+
+💡 [Node v24.19.0 (LTS)](https://nodeweekly.com/link/188893/0a4070b383) is also a noteworthy update, adding `--experimental-import-text`, `fs.readFile()` can reuse a buffer you supply, and `setKeepAlive` exposes `TCP_KEEPINTVL` and `TCP_KEEPCNT`.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/2fc0d85b.jpg)](https://nodeweekly.com/link/188889/0a4070b383)
+
+[Join Sentry Live: How Etsy Stays Crash-Free](https://nodeweekly.com/link/188889/0a4070b383 "sentry.io") — Sentry and Etsy break down how Etsy's engineering team preps for peak traffic, debugs in real time, and ties crashes to revenue impact. Real stories and practical takeaways for teams running services at scale.
+
+Sentry sponsor
+
+🚨 [Shai-Hulud Strikes Again, Affecting `keyv` and 400+ Packages](https://nodeweekly.com/link/188894/0a4070b383 "research.jfrog.com") — A credential-stealing worm was rolled out as part of a false [keyv](https://nodeweekly.com/link/188895/0a4070b383) 6.0 release this week, and quickly spread. A reminder to check out [npm v12](https://nodeweekly.com/link/188896/0a4070b383), [pnpm](https://nodeweekly.com/link/188897/0a4070b383), or vlt (below), all of which block install scripts by default, the mechanism this worm relied on.
+
+Shavit Satou (JFrog)
+
+[vlt 1.0: An `npm` Alternative With CSS-Like Selectors](https://nodeweekly.com/link/188898/0a4070b383 "www.vlt.io") — After two years, Darcy Clarke's drop-in `npm` alternative hits 1.0. A key draw is `vlt query`, which lets you use 60+ CSS-like selectors over your dependency graph (half of which are security related). vlt also offers hosted private package registries.
+
+Darcy Clarke
+
+💡 In 2023, Darcy wrote ["The massive bug at the heart of the npm ecosystem"](https://nodeweekly.com/link/188899/0a4070b383), a post that was prescient of current packaging headaches.
+
+**IN BRIEF:**
+
+* ⚠️ The Express team has [announced security releases for `body-parser`](https://nodeweekly.com/link/188900/0a4070b383) to address a DoS vulnerability.
+
+* [`net.BlockList`](https://nodeweekly.com/link/188901/0a4070b383), used to prevent network access to/from specified IP addresses and ranges, is [gaining new methods and getting much faster](https://nodeweekly.com/link/188902/0a4070b383).
+
+* There's a proposal and initial implementation to [bring the HTML spec's *Web Worker API* to Node](https://nodeweekly.com/link/188903/0a4070b383).
+
+* [ZIP archive support is coming to `node:zlib`](https://nodeweekly.com/link/188904/0a4070b383) in a future release.
+
+📄 [What's New in Mongoose 9.9: Major Performance Improvements](https://nodeweekly.com/link/188905/0a4070b383) – [Mongoose](https://nodeweekly.com/link/188906/0a4070b383) is a popular MongoDB object modelling solution. Valeri Karpov
+
+📄 [Debugging Stuck Node.js Processes](https://nodeweekly.com/link/188907/0a4070b383) – A trick for catching event loop blockers that never yield. Winona Schroeer-Smith
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kpdqracqa9nmngvovohb.jpg)](https://nodeweekly.com/link/188908/0a4070b383)
+
+[anydoc: Convert 14 Document Formats into Markdown](https://nodeweekly.com/link/188908/0a4070b383 "firecrawl.github.io") — A Rust-powered library (with Node.js and WASM bindings) that converts Word, PowerPoint, Excel, OpenDocument, RTF, EPUB, CSV, and PDF documents into Markdown. I tried it on a 1,600 page PDF and it took less than 2 seconds. There's also an in-browser demo to try it out. [GitHub repo](https://nodeweekly.com/link/188909/0a4070b383).
+
+Firecrawl
+
+💡 Firecrawl also has [pdf-inspector](https://nodeweekly.com/link/188910/0a4070b383) focused specifically on extracting text from PDFs (with positional awareness). [Liteparse](https://nodeweekly.com/link/188911/0a4070b383) is also worth considering if you want OCR for scanned / non-text PDFs.
+
+[You Added a Cache to Hide a Slow Query](https://nodeweekly.com/link/188912/0a4070b383 "www.tigerdata.com") — TimescaleDB makes the query fast in Postgres, so you cache less and serve fresh data. [Get $1000 credit to start](https://nodeweekly.com/link/188912/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[ioredis 6.0: Robust, Full-Featured Redis Client for Node](https://nodeweekly.com/link/188913/0a4070b383 "github.com") — v6.0, the first major release in four years, adds [RESP3](https://nodeweekly.com/link/188914/0a4070b383) and support for new [Redis 8.10](https://nodeweekly.com/link/188915/0a4070b383) features.
+
+The ioredis Team
+
+[MicroDiff 1.6: Fast Object and Array Comparison Library](https://nodeweekly.com/link/188916/0a4070b383 "github.com") — Given two objects or arrays, it returns the differences (think `diff` but for JS objects). This week's release adds support for Temporal types.
+
+Jacob Jackson
+
+[Devalue 5.9: Get the Job Done When `JSON.stringify` Can't](https://nodeweekly.com/link/188917/0a4070b383 "github.com") — A library from the Svelte project that's like `JSON.stringify` but can tackle cyclical and repeated references, regexes, `Map`/`Set`, and custom types. [Try it here](https://nodeweekly.com/link/188918/0a4070b383).
+
+Svelte
+
+* [node-x11 3.8](https://nodeweekly.com/link/188919/0a4070b383) – An X Window System protocol client library with no dependencies, GLX / OpenGL support, and even the ability to [work in the browser](https://nodeweekly.com/link/188920/0a4070b383) against a JavaScript X-server emulator.
+
+* [pnpm 11.20](https://nodeweekly.com/link/188921/0a4070b383) – Mostly security hardening, but also adds an `npmjs:` prefix you can use to more succinctly pin a dependency to the public registry. Note that [pnpm 12.0](https://nodeweekly.com/link/188922/0a4070b383) has also reached RC stage.
+
+* [Hono 4.13.0](https://nodeweekly.com/link/188923/0a4070b383) – The small, fast Web standards-based web framework focuses on performance and adds HTTP QUERY method support.
+
+* [graphql-upload 18.0](https://nodeweekly.com/link/188924/0a4070b383) – Middleware that adds support for GraphQL multipart requests to Node.js GraphQL servers.
+
+* [cron-parser 5.7](https://nodeweekly.com/link/188925/0a4070b383) – Library for parsing and manipulating `cron` expressions.
+
+📰 Classifieds
+
+⚡ [Zuplo](https://nodeweekly.com/link/188926/0a4070b383) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://nodeweekly.com/link/188926/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rsttgpy4jk534dz2b9m8.jpg)](https://nodeweekly.com/link/188927/0a4070b383)
+
+* Did you know JavaScript supports a third type of comment (beyond `//` and `/* */`)? [▶️ Mat Marquis shows off hashbang comments](https://nodeweekly.com/link/188927/0a4070b383) in a short YouTube video. And yes, [they're in the language spec!](https://nodeweekly.com/link/188928/0a4070b383)
+
+* 🤖 Fred K. Schott, of [Astro](https://nodeweekly.com/link/188929/0a4070b383) fame, has [unveiled Flue 2.0](https://nodeweekly.com/link/188930/0a4070b383), the latest version of his TypeScript-based open agent framework.
+
+* ⚖️ The *Deno vs Oracle* JavaScript™ trademark case rumbles on with [Deno consenting to a *fifth* extension request](https://nodeweekly.com/link/188931/0a4070b383) as discovery continues.
+
+* 📺 SQLite's Richard Hipp gave [▶️ a detailed 50-minute talk on SQLite's reliability](https://nodeweekly.com/link/188932/0a4070b383) and the tools, practices, and design choices that have given it its strong reputation.
+
+* 📊 The [results of the *State of CSS 2026* survey](https://nodeweekly.com/link/188933/0a4070b383) have been released.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
