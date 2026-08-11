@@ -1,0 +1,309 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Shipping less JavaScript with Baseline
+description: Shipping less JavaScript with Baseline
+date: 星期二 08 晚上 八月 11o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/798
+origin_site: https://javascriptweekly.com/issues/798
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Shipping less JavaScript with Baseline" url="https://javascriptweekly.com/issues/798" />
+
+<Detail client:only="react">
+	#​798 — August 11, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/798)
+
+🏖️ A brief scheduling note: **We're taking a summer break next week, so we'll be back in your inbox on August 25.** Catch you then!  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![Render](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_500,h_100/e_make_transparent/co_white,e_outline:7/bil3olyaqqkao0fkbhis.png)](https://javascriptweekly.com/link/189061/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hwbgtoneensejphb9l4r.jpg)](https://javascriptweekly.com/link/189062/d076523b1d)
+
+[Migrating a Large Flow Monorepo to TypeScript](https://javascriptweekly.com/link/189062/d076523b1d "engineeringblog.yelp.com") — Over several years, Yelp moved 1.4 million lines off [Flow](https://javascriptweekly.com/link/189063/d076523b1d), and this writeup is more useful as a guide to running _any_ long migration than as a Flow story. It was a big win on its own terms, with type coverage up from 83% to 96%.
+
+Shawn Walton (Yelp)
+
+💡 If you missed it, Yelp also wrote about [its webpack to Rspack migration](https://javascriptweekly.com/link/189119/d076523b1d).
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/c2161169.jpg)](https://javascriptweekly.com/link/189061/d076523b1d)
+
+[Render Runs JavaScript, Front to Back](https://javascriptweekly.com/link/189061/d076523b1d "dashboard.render.com") — Link your repo and Render takes it from there. Wire up your Vite site to your Hono API to your BullMQ job to your distributed agent workflow, all on one platform. Loop in your agent with official Render `/plugins` for Codex and Claude Code. Start free and scale from there.
+
+Render sponsor
+
+[Kitesurf: Cloudflare's Agent-First Browser in V8 Isolates](https://javascriptweekly.com/link/189064/d076523b1d "blog.cloudflare.com") — A browser engine that runs on _Workers_ with one isolate per page. Aimed at agents rather than humans, it uses 3-7x less CPU and memory than Chromium, at the cost of being slower. You can [try it out now](https://javascriptweekly.com/link/189065/d076523b1d) in beta, and it'll be open sourced in due course.
+
+Martinho, Constant, Figueira, and Duarte (Cloudflare)
+
+**IN BRIEF:**
+
+*   [pnpm 12, the Rust rewrite](https://javascriptweekly.com/link/189066/d076523b1d), is now a release candidate, and only three things differ from pnpm 11.
+    
+*   Bun 1.4 continues to be [teased on 𝕏](https://javascriptweekly.com/link/189067/d076523b1d) on an almost daily basis, and is expected any day now, though creator Jarred Sumner has been distracted by [trying to solve the Riemann hypothesis](https://javascriptweekly.com/link/189068/d076523b1d).
+    
+*   🔒 A [12-year-old weak PRNG in `crypto-js`](https://javascriptweekly.com/link/189069/d076523b1d) was used to drain crypto wallets, though only if you generated secrets with it on a pre-4.0.0 (2020!) release.
+    
+
+**RELEASES:**
+
+*   [Deno 2.9.5](https://javascriptweekly.com/link/189070/d076523b1d) – Adds an [experimental QuickJS backend](https://javascriptweekly.com/link/189071/d076523b1d) for `deno compile` and `deno desktop`.
+    
+*   [Node.js 26.7.0 (Current)](https://javascriptweekly.com/link/189072/d076523b1d) – Adds `--test-coverage-include-all`, FFI and SQLite crash fixes, and initial support for Perfetto tracing.
+    
+*   [SolidStart v2](https://javascriptweekly.com/link/189073/d076523b1d) – [SolidJS](https://javascriptweekly.com/link/189074/d076523b1d)'s equivalent of Next.js or SvelteKit.
+    
+*   [Preact 11 Release Candidate](https://javascriptweekly.com/link/189075/d076523b1d), [Astro 7.2](https://javascriptweekly.com/link/189076/d076523b1d), [Motion 13.1](https://javascriptweekly.com/link/189077/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[How _Baseline_ Can Help You Ship Less JavaScript](https://javascriptweekly.com/link/189078/d076523b1d "www.smashingmagazine.com") — A practical audit method for your dependencies. Groups them into clusters (`Intl`, HTTP, UI primitives, `lodash`), gives you questions to ask before deleting things, and works through a case where a swap can make your bundle _bigger_ ([Day.js](https://javascriptweekly.com/link/189118/d076523b1d) → Temporal). A familiar theme developed into a rigorous, reusable audit.
+
+Jad Joubran
+
+[Making More npm Packages Work with jsDelivr ESM Mode](https://javascriptweekly.com/link/189080/d076523b1d "www.jsdelivr.com") — [jsDelivr](https://javascriptweekly.com/link/189081/d076523b1d) is a popular CDN used to load npm packages into pages without a build step. This is a thorough, technical tour of what happens when converting packages to browser ESM (via its `/+esm` endpoint) and all the ways CommonJS finds to make that hard.
+
+Martin Kolárik (jsDelivr)
+
+[Join Sentry Live: How Etsy Stays Crash-Free](https://javascriptweekly.com/link/189079/d076523b1d "sentry.io") — Sentry and Etsy break down how they prep for peak traffic and debug in real time.
+
+Sentry sponsor
+
+[Progressive Enhancement Inside of JavaScript](https://javascriptweekly.com/link/189082/d076523b1d "remysharp.com") — Working on a train, a patchy data connection got Remy to notice users can interact with a page before its JavaScript is ready, with a neat fix being to bind a handler early and replay the intent later.
+
+Remy Sharp
+
+📄 [How the Astro Team Built a 'Software Factory' to Slash Its Issue Count](https://javascriptweekly.com/link/189083/d076523b1d) – Agent-driven triage took Astro from over 200 open issues to 30. Matthew Phillips
+
+📄 [Debugging Stuck Node.js Processes](https://javascriptweekly.com/link/189084/d076523b1d) – A trick for catching event loop blockers that never yield. Winona Schroeer-Smith
+
+📺 [Stop Reviewing Diffs. Start Reviewing Systems](https://javascriptweekly.com/link/189085/d076523b1d) Kent C. Dodds
+
+🛠 Code & Tools
+
+[celld: _Durable Objects_ on Your Own S3 Bucket](https://javascriptweekly.com/link/189086/d076523b1d "celld.dev") — A self-hosted take on Cloudflare's Workers and Durable Objects from Deno. V8 plus SQLite and Litestream's LTX coordinate through an S3 bucket with no consensus layer. [GitHub repo](https://javascriptweekly.com/link/189087/d076523b1d).
+
+Ryan Dahl (Deno)
+
+😅 On self-hosting Durable Objects with `workerd`, _"You beat us to it!"_ said Durable Objects creator Kenton Varda [on Hacker News](https://javascriptweekly.com/link/189088/d076523b1d), later adding _"celld is definitely ahead of us here. No doubt about that."_
+
+[That Slow Tab Isn't the UI. It's the Query](https://javascriptweekly.com/link/189089/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres so queries stay fast at scale, straight from live data. [Get $1000 credit to start](https://javascriptweekly.com/link/189089/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[_hucre_ 1.0: A Zero-Dependency Spreadsheet Engine](https://javascriptweekly.com/link/189090/d076523b1d "github.com") — An MIT-licensed, tree-shakeable engine for reading and writing common spreadsheet formats, including support for things like embedded images, hyperlinks, password protection, and pivot tables.
+
+Wind
+
+[vlt 1.0: An `npm` Alternative With CSS-Like Selectors](https://javascriptweekly.com/link/189091/d076523b1d "www.vlt.io") — A drop-in `npm` alternative with a key draw being `vlt query`, which lets you use 60+ CSS-like selectors over your dependency graph (of which half are security related). vlt also offers hosted private package registries.
+
+Darcy Clarke
+
+[TanStack Table v9: A Faster, More Modular Foundation](https://javascriptweekly.com/link/189092/d076523b1d "tanstack.com") — The headless table library gets a tree-shakeable architecture, state moves to [TanStack Store](https://javascriptweekly.com/link/189093/d076523b1d) for [fine-grained reactivity](https://javascriptweekly.com/link/189094/d076523b1d), and there are [big memory wins](https://javascriptweekly.com/link/189095/d076523b1d) for large datasets.
+
+Kevin Van Cott
+
+*   [devalue 5.9](https://javascriptweekly.com/link/189096/d076523b1d) – The Svelte project's more powerful `JSON.stringify` supporting more JS language features.
+    
+*   [Svelte Select 6.0](https://javascriptweekly.com/link/189097/d076523b1d) – A select/autocomplete/typeahead Svelte component. Now requires Svelte 5.
+    
+*   [fuzzysort 4.0](https://javascriptweekly.com/link/189098/d076523b1d) – Fast, small fuzzy search library with ranking and custom scoring.
+    
+*   [GTKX 1.0](https://javascriptweekly.com/link/189099/d076523b1d) – Build native GTK4 desktop apps with React and TypeScript.
+    
+*   [Belgie 0.40](https://javascriptweekly.com/link/189100/d076523b1d) – Embeds a permissioned [Deno](https://javascriptweekly.com/link/189101/d076523b1d) runtime in Python.
+    
+
+📰 Classifieds
+
+Which screen is slow, and on which devices? [Expo Observe](https://javascriptweekly.com/link/189102/d076523b1d) is production performance monitoring for your mobile app.
+
+* * *
+
+🤖 Block bots at login without slowing down real users. No CAPTCHAs, zero friction. [Try Fingerprint for free](https://javascriptweekly.com/link/189103/d076523b1d).
+
+* * *
+
+⚡ [Merget](https://javascriptweekly.com/link/189104/d076523b1d) is Git for AI-written code. It reviews every coding session and catches what your agent missed. Free for teams now: [merget.ai](https://javascriptweekly.com/link/189104/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kkcqg7kjmncbzeusexlr.jpg)](https://javascriptweekly.com/link/189105/d076523b1d)
+
+*   The [js1024](https://javascriptweekly.com/link/189106/d076523b1d) code golfing contest is over and we have [three winners](https://javascriptweekly.com/link/189107/d076523b1d)! [Skydreams](https://javascriptweekly.com/link/189105/d076523b1d), a _Super Monkey Ball_\-like experience, came in first place. You can read the [readable](https://javascriptweekly.com/link/189108/d076523b1d) and [minified](https://javascriptweekly.com/link/189109/d076523b1d) source if you want to see the techniques used.
+    
+*   Docker has entered the agent sandbox game with [Docker Sandboxes](https://javascriptweekly.com/link/189110/d076523b1d), a free way to run coding agents in their own microVMs with a Docker daemon inside.
+    
+*   MCP goes _stateless_ with [the 2026-07-28 spec](https://javascriptweekly.com/link/189111/d076523b1d), so no more sticky sessions or open streams. [Cloudflare covers what changed](https://javascriptweekly.com/link/189112/d076523b1d) and what it takes to migrate.
+    
+*   [scriptc](https://javascriptweekly.com/link/189113/d076523b1d) is a new, experimental TypeScript-to-native compiler from Vercel Labs. With `--dynamic`, unsupported or dynamic portions are run in a bundled QuickJS engine.
+    
+*   📊 The [results of the _State of CSS 2026_ survey](https://javascriptweekly.com/link/189115/d076523b1d) have been released.
+    
+
+I'm off on vacation at the end of this week, so see you again on August 25! Or in [Node Weekly](https://javascriptweekly.com/link/189120/d076523b1d) and [React Status](https://javascriptweekly.com/link/189121/d076523b1d) if you subscribe to those… ;-)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/189116/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​798 — August 11, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/798)
+
+🏖️ A brief scheduling note: **We're taking a summer break next week, so we'll be back in your inbox on August 25.** Catch you then!\
+\_\_\
+*Your editor, Peter Cooper*
+
+Together with 
+
+[![Render](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_500,h_100/e_make_transparent/co_white,e_outline:7/bil3olyaqqkao0fkbhis.png)](https://javascriptweekly.com/link/189061/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hwbgtoneensejphb9l4r.jpg)](https://javascriptweekly.com/link/189062/d076523b1d)
+
+[Migrating a Large Flow Monorepo to TypeScript](https://javascriptweekly.com/link/189062/d076523b1d "engineeringblog.yelp.com") — Over several years, Yelp moved 1.4 million lines off [Flow](https://javascriptweekly.com/link/189063/d076523b1d), and this writeup is more useful as a guide to running *any* long migration than as a Flow story. It was a big win on its own terms, with type coverage up from 83% to 96%.
+
+Shawn Walton (Yelp)
+
+💡 If you missed it, Yelp also wrote about [its webpack to Rspack migration](https://javascriptweekly.com/link/189119/d076523b1d).
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/c2161169.jpg)](https://javascriptweekly.com/link/189061/d076523b1d)
+
+[Render Runs JavaScript, Front to Back](https://javascriptweekly.com/link/189061/d076523b1d "dashboard.render.com") — Link your repo and Render takes it from there. Wire up your Vite site to your Hono API to your BullMQ job to your distributed agent workflow, all on one platform. Loop in your agent with official Render `/plugins` for Codex and Claude Code. Start free and scale from there.
+
+Render sponsor
+
+[Kitesurf: Cloudflare's Agent-First Browser in V8 Isolates](https://javascriptweekly.com/link/189064/d076523b1d "blog.cloudflare.com") — A browser engine that runs on *Workers* with one isolate per page. Aimed at agents rather than humans, it uses 3-7x less CPU and memory than Chromium, at the cost of being slower. You can [try it out now](https://javascriptweekly.com/link/189065/d076523b1d) in beta, and it'll be open sourced in due course.
+
+Martinho, Constant, Figueira, and Duarte (Cloudflare)
+
+**IN BRIEF:**
+
+* [pnpm 12, the Rust rewrite](https://javascriptweekly.com/link/189066/d076523b1d), is now a release candidate, and only three things differ from pnpm 11.
+
+* Bun 1.4 continues to be [teased on 𝕏](https://javascriptweekly.com/link/189067/d076523b1d) on an almost daily basis, and is expected any day now, though creator Jarred Sumner has been distracted by [trying to solve the Riemann hypothesis](https://javascriptweekly.com/link/189068/d076523b1d).
+
+* 🔒 A [12-year-old weak PRNG in `crypto-js`](https://javascriptweekly.com/link/189069/d076523b1d) was used to drain crypto wallets, though only if you generated secrets with it on a pre-4.0.0 (2020!) release.
+
+**RELEASES:**
+
+* [Deno 2.9.5](https://javascriptweekly.com/link/189070/d076523b1d) – Adds an [experimental QuickJS backend](https://javascriptweekly.com/link/189071/d076523b1d) for `deno compile` and `deno desktop`.
+
+* [Node.js 26.7.0 (Current)](https://javascriptweekly.com/link/189072/d076523b1d) – Adds `--test-coverage-include-all`, FFI and SQLite crash fixes, and initial support for Perfetto tracing.
+
+* [SolidStart v2](https://javascriptweekly.com/link/189073/d076523b1d) – [SolidJS](https://javascriptweekly.com/link/189074/d076523b1d)'s equivalent of Next.js or SvelteKit.
+
+* [Preact 11 Release Candidate](https://javascriptweekly.com/link/189075/d076523b1d), [Astro 7.2](https://javascriptweekly.com/link/189076/d076523b1d), [Motion 13.1](https://javascriptweekly.com/link/189077/d076523b1d)
+
+📖  Articles and Videos
+
+[How *Baseline* Can Help You Ship Less JavaScript](https://javascriptweekly.com/link/189078/d076523b1d "www.smashingmagazine.com") — A practical audit method for your dependencies. Groups them into clusters (`Intl`, HTTP, UI primitives, `lodash`), gives you questions to ask before deleting things, and works through a case where a swap can make your bundle *bigger* ([Day.js](https://javascriptweekly.com/link/189118/d076523b1d) → Temporal). A familiar theme developed into a rigorous, reusable audit.
+
+Jad Joubran
+
+[Making More npm Packages Work with jsDelivr ESM Mode](https://javascriptweekly.com/link/189080/d076523b1d "www.jsdelivr.com") — [jsDelivr](https://javascriptweekly.com/link/189081/d076523b1d) is a popular CDN used to load npm packages into pages without a build step. This is a thorough, technical tour of what happens when converting packages to browser ESM (via its `/+esm` endpoint) and all the ways CommonJS finds to make that hard.
+
+Martin Kolárik (jsDelivr)
+
+[Join Sentry Live: How Etsy Stays Crash-Free](https://javascriptweekly.com/link/189079/d076523b1d "sentry.io") — Sentry and Etsy break down how they prep for peak traffic and debug in real time.
+
+Sentry sponsor
+
+[Progressive Enhancement Inside of JavaScript](https://javascriptweekly.com/link/189082/d076523b1d "remysharp.com") — Working on a train, a patchy data connection got Remy to notice users can interact with a page before its JavaScript is ready, with a neat fix being to bind a handler early and replay the intent later.
+
+Remy Sharp
+
+📄 [How the Astro Team Built a 'Software Factory' to Slash Its Issue Count](https://javascriptweekly.com/link/189083/d076523b1d) – Agent-driven triage took Astro from over 200 open issues to 30. Matthew Phillips
+
+📄 [Debugging Stuck Node.js Processes](https://javascriptweekly.com/link/189084/d076523b1d) – A trick for catching event loop blockers that never yield. Winona Schroeer-Smith
+
+📺 [Stop Reviewing Diffs. Start Reviewing Systems](https://javascriptweekly.com/link/189085/d076523b1d) Kent C. Dodds
+
+🛠 Code & Tools
+
+[celld: *Durable Objects* on Your Own S3 Bucket](https://javascriptweekly.com/link/189086/d076523b1d "celld.dev") — A self-hosted take on Cloudflare's Workers and Durable Objects from Deno. V8 plus SQLite and Litestream's LTX coordinate through an S3 bucket with no consensus layer. [GitHub repo](https://javascriptweekly.com/link/189087/d076523b1d).
+
+Ryan Dahl (Deno)
+
+😅 On self-hosting Durable Objects with `workerd`, *"You beat us to it!"* said Durable Objects creator Kenton Varda [on Hacker News](https://javascriptweekly.com/link/189088/d076523b1d), later adding *"celld is definitely ahead of us here. No doubt about that."*
+
+[That Slow Tab Isn't the UI. It's the Query](https://javascriptweekly.com/link/189089/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres so queries stay fast at scale, straight from live data. [Get $1000 credit to start](https://javascriptweekly.com/link/189089/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[*hucre* 1.0: A Zero-Dependency Spreadsheet Engine](https://javascriptweekly.com/link/189090/d076523b1d "github.com") — An MIT-licensed, tree-shakeable engine for reading and writing common spreadsheet formats, including support for things like embedded images, hyperlinks, password protection, and pivot tables.
+
+Wind
+
+[vlt 1.0: An `npm` Alternative With CSS-Like Selectors](https://javascriptweekly.com/link/189091/d076523b1d "www.vlt.io") — A drop-in `npm` alternative with a key draw being `vlt query`, which lets you use 60+ CSS-like selectors over your dependency graph (of which half are security related). vlt also offers hosted private package registries.
+
+Darcy Clarke
+
+[TanStack Table v9: A Faster, More Modular Foundation](https://javascriptweekly.com/link/189092/d076523b1d "tanstack.com") — The headless table library gets a tree-shakeable architecture, state moves to [TanStack Store](https://javascriptweekly.com/link/189093/d076523b1d) for [fine-grained reactivity](https://javascriptweekly.com/link/189094/d076523b1d), and there are [big memory wins](https://javascriptweekly.com/link/189095/d076523b1d) for large datasets.
+
+Kevin Van Cott
+
+* [devalue 5.9](https://javascriptweekly.com/link/189096/d076523b1d) – The Svelte project's more powerful `JSON.stringify` supporting more JS language features.
+
+* [Svelte Select 6.0](https://javascriptweekly.com/link/189097/d076523b1d) – A select/autocomplete/typeahead Svelte component. Now requires Svelte 5.
+
+* [fuzzysort 4.0](https://javascriptweekly.com/link/189098/d076523b1d) – Fast, small fuzzy search library with ranking and custom scoring.
+
+* [GTKX 1.0](https://javascriptweekly.com/link/189099/d076523b1d) – Build native GTK4 desktop apps with React and TypeScript.
+
+* [Belgie 0.40](https://javascriptweekly.com/link/189100/d076523b1d) – Embeds a permissioned [Deno](https://javascriptweekly.com/link/189101/d076523b1d) runtime in Python.
+
+📰 Classifieds
+
+Which screen is slow, and on which devices? [Expo Observe](https://javascriptweekly.com/link/189102/d076523b1d) is production performance monitoring for your mobile app.
+
+***
+
+🤖 Block bots at login without slowing down real users. No CAPTCHAs, zero friction. [Try Fingerprint for free](https://javascriptweekly.com/link/189103/d076523b1d).
+
+***
+
+⚡ [Merget](https://javascriptweekly.com/link/189104/d076523b1d) is Git for AI-written code. It reviews every coding session and catches what your agent missed. Free for teams now: [merget.ai](https://javascriptweekly.com/link/189104/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/kkcqg7kjmncbzeusexlr.jpg)](https://javascriptweekly.com/link/189105/d076523b1d)
+
+* The [js1024](https://javascriptweekly.com/link/189106/d076523b1d) code golfing contest is over and we have [three winners](https://javascriptweekly.com/link/189107/d076523b1d)! [Skydreams](https://javascriptweekly.com/link/189105/d076523b1d), a *Super Monkey Ball*-like experience, came in first place. You can read the [readable](https://javascriptweekly.com/link/189108/d076523b1d) and [minified](https://javascriptweekly.com/link/189109/d076523b1d) source if you want to see the techniques used.
+
+* Docker has entered the agent sandbox game with [Docker Sandboxes](https://javascriptweekly.com/link/189110/d076523b1d), a free way to run coding agents in their own microVMs with a Docker daemon inside.
+
+* MCP goes *stateless* with [the 2026-07-28 spec](https://javascriptweekly.com/link/189111/d076523b1d), so no more sticky sessions or open streams. [Cloudflare covers what changed](https://javascriptweekly.com/link/189112/d076523b1d) and what it takes to migrate.
+
+* [scriptc](https://javascriptweekly.com/link/189113/d076523b1d) is a new, experimental TypeScript-to-native compiler from Vercel Labs. With `--dynamic`, unsupported or dynamic portions are run in a bundled QuickJS engine.
+
+* 📊 The [results of the *State of CSS 2026* survey](https://javascriptweekly.com/link/189115/d076523b1d) have been released.
+
+I'm off on vacation at the end of this week, so see you again on August 25! Or in [Node Weekly](https://javascriptweekly.com/link/189120/d076523b1d) and [React Status](https://javascriptweekly.com/link/189121/d076523b1d) if you subscribe to those… ;-)
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/189116/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
