@@ -1,0 +1,223 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Building terminal UIs with HTML and CSS
+description: Building terminal UIs with HTML and CSS
+date: 星期四 06 晚上 八月 13o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/637
+origin_site: https://nodeweekly.com/issues/637
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Building terminal UIs with HTML and CSS" url="https://nodeweekly.com/issues/637" />
+
+<Detail client:only="react">
+	#​637 — August 13, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/637)
+
+🗓️ We're taking a summer break next week, so will be back in your inbox on August 27.  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://nodeweekly.com/link/189246/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/k7oreeb8z7biws7m37fb.jpg)](https://nodeweekly.com/link/189255/0a4070b383)
+
+[TermDOM: Build Terminal UIs with HTML, CSS and the DOM](https://nodeweekly.com/link/189255/0a4070b383 "termdom.org") — Like the look of [Ink](https://nodeweekly.com/link/189256/0a4070b383) but don't like React? TermDOM implements a DOM, cascade and layout engine that paints to the terminal, so you can write a TUI with HTML and CSS. Pure JS, no native or WASM dependencies, and the official [TodoMVC runs](https://nodeweekly.com/link/189267/0a4070b383) with only a stylesheet swap. Early days, but I like the idea!
+
+Brian Kim
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/fb37fe8e.png)](https://nodeweekly.com/link/189246/0a4070b383)
+
+[Harness Engineering: How to Wrangle Your Agents](https://nodeweekly.com/link/189246/0a4070b383 "master.dev") — The models keep changing. The harness is the part you build. Scott Moss (Netflix) shows how: durable execution, sandboxed tool calls, memory systems, and multi-agent handoffs.
+
+Master.dev sponsor
+
+[Fastify 6.0 Enters Alpha](https://nodeweekly.com/link/189268/0a4070b383 "github.com") — It's been two years since [Fastify](https://nodeweekly.com/link/189269/0a4070b383), the popular low overhead web framework, [dropped v5](https://nodeweekly.com/link/189270/0a4070b383), but v6 is coming into sight. It's largely shaping up as a 'spring clean' release requiring Node 24 at minimum but should be good for initial testing. [More background here](https://nodeweekly.com/link/189271/0a4070b383).
+
+The Fastify Team
+
+**IN BRIEF:**
+
+*   Node maintainer Matteo Collina explains [how he 'triages the AI horde'](https://nodeweekly.com/link/189272/0a4070b383) when it comes to handling 20-40 security reports each week.
+    
+*   [Bun](https://nodeweekly.com/link/189273/0a4070b383) 1.4's release appears to be _imminent_ with [𝕏 Node.js compatibility teased](https://nodeweekly.com/link/189274/0a4070b383) as the biggest enhancement. It hasn't dropped as we go to press, but keep an eye [on their blog](https://nodeweekly.com/link/189275/0a4070b383), as no doubt it'll land minutes after we hit send! 😂
+    
+*   [`node:domain`](https://nodeweekly.com/link/189248/0a4070b383), deprecated in the docs since 2015, [could become _runtime_\-deprecated in Node 27](https://nodeweekly.com/link/189249/0a4070b383) — if you're still using it, speak up now.
+    
+*   ⚠️ Several teams are [reporting out-of-memory crashes after upgrading from Node 24.18.1 to 24.19.0](https://nodeweekly.com/link/189250/0a4070b383) (and rolling back fixes it). Nothing confirmed yet, so add your data if affected.
+    
+*   Vercel now offers a [one-click Node.js upgrade mechanism](https://nodeweekly.com/link/189247/0a4070b383) for deprecated Node.js versions (notably new Node 20-based builds will _fail_ after Oct 1).
+    
+
+[Adding a Second Middleware Broke Our TypeScript Types](https://nodeweekly.com/link/189251/0a4070b383 "www.inngest.com") — A TypeScript detective story in which adding a second middleware could collapse a return type to `&lcub;}`. The culprit was a widely used key-filtering idiom that leaks `undefined` when properties are optional.
+
+Linell Bonnette (Inngest)
+
+📄 [5 Useful `npx` Helpers](https://nodeweekly.com/link/189252/0a4070b383) – A reminder that `npx` makes it easy to run one-off tools. Jens shares five he likes for spell checking, cleaning up JS projects, and more. Jens Oliver Meiert
+
+📄 [Fixing the Dual-Write Problem in Node.js with the Outbox Pattern](https://nodeweekly.com/link/189253/0a4070b383) – Making your database and message queue agree. Gabor Koos
+
+📄 [A Deep Dive into How Hono Is Built](https://nodeweekly.com/link/189254/0a4070b383) Flavio Copes
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xfcfc6xxiuck4vvkliii.jpg)](https://nodeweekly.com/link/189276/0a4070b383)
+
+[DeepSeek Harness: DeepSeek's New Node-Powered Agent Harness](https://nodeweekly.com/link/189276/0a4070b383 "deepseek.com") — Today, the popular Chinese model lab unveiled its own Claude Code-alike and already racked up 30k stars. It's not a typical CLI harness, though, but runs through a web UI. Curiously, _everything_ is a plugin, built atop [Cordis](https://nodeweekly.com/link/189277/0a4070b383), an existing Node plugin system whose author DeepSeek has hired. [GitHub repo](https://nodeweekly.com/link/189278/0a4070b383).
+
+DeepSeek
+
+[unbash: Fast 0-Dependency Bash Parsing Library](https://nodeweekly.com/link/189279/0a4070b383 "github.com") — The parser [Knip](https://nodeweekly.com/link/189280/0a4070b383) uses to make sense of shell scripts, as a standalone library. It turns bash code into a typed AST that can then be used for classification, permission checks, rewriting commands, and more.
+
+Lars Kappert
+
+[Full-Text Search in Drizzle Without a Second System](https://nodeweekly.com/link/189258/0a4070b383 "github.com") — Try the official ParadeDB integration for Drizzle. Search your live Postgres tables. No ETL, no Elasticsearch cluster.
+
+ParadeDB sponsor
+
+[njsscan 1.0: A Semantic-Aware SAST Tool for Node](https://nodeweekly.com/link/189259/0a4070b383 "github.com") — A `pip`\-installable, zero-config security scanner that finds insecure patterns in Node apps using ~70 `semgrep`\-powered rules for XSS, SSRF, `eval`, JWT and NoSQL injection.
+
+Ajin Abraham (OpenSecurity)
+
+[Hucre 1.0: A Zero-Dependency Spreadsheet Engine](https://nodeweekly.com/link/189260/0a4070b383 "github.com") — A library for reading and writing common spreadsheet formats, including things like embedded images, hyperlinks, password protection, and tables.
+
+Wind
+
+*   [NodeBB 4.15.0](https://nodeweekly.com/link/189261/0a4070b383) – The Node-powered forum software ([demo site here](https://nodeweekly.com/link/189262/0a4070b383)) gets lots of bug fixes and enhances fediverse support.
+    
+*   [smol-toml 1.8](https://nodeweekly.com/link/189263/0a4070b383) – Small, fast, spec-compliant TOML 1.1 parser/serializer.
+    
+*   [BullMQ 6.1](https://nodeweekly.com/link/189264/0a4070b383) – Fast, reliable Redis- or Postgres-based distributed queue.
+    
+*   [swift-node 0.1.2](https://nodeweekly.com/link/189265/0a4070b383) – Write the native part of a Node module in Swift.
+    
+*   [Vitest 5.0 Release Candidate](https://nodeweekly.com/link/189281/0a4070b383)
+    
+
+We'll be back in two weeks on August 27 – see you then! Unless you're a [React Status](https://nodeweekly.com/link/189266/0a4070b383) subscriber too, in which case… see you tomorrow ;-)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​637 — August 13, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/637)
+
+🗓️ We're taking a summer break next week, so will be back in your inbox on August 27.\
+\_\_\
+*Your editor, Peter Cooper*
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://nodeweekly.com/link/189246/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/k7oreeb8z7biws7m37fb.jpg)](https://nodeweekly.com/link/189255/0a4070b383)
+
+[TermDOM: Build Terminal UIs with HTML, CSS and the DOM](https://nodeweekly.com/link/189255/0a4070b383 "termdom.org") — Like the look of [Ink](https://nodeweekly.com/link/189256/0a4070b383) but don't like React? TermDOM implements a DOM, cascade and layout engine that paints to the terminal, so you can write a TUI with HTML and CSS. Pure JS, no native or WASM dependencies, and the official [TodoMVC runs](https://nodeweekly.com/link/189267/0a4070b383) with only a stylesheet swap. Early days, but I like the idea!
+
+Brian Kim
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/fb37fe8e.png)](https://nodeweekly.com/link/189246/0a4070b383)
+
+[Harness Engineering: How to Wrangle Your Agents](https://nodeweekly.com/link/189246/0a4070b383 "master.dev") — The models keep changing. The harness is the part you build. Scott Moss (Netflix) shows how: durable execution, sandboxed tool calls, memory systems, and multi-agent handoffs.
+
+Master.dev sponsor
+
+[Fastify 6.0 Enters Alpha](https://nodeweekly.com/link/189268/0a4070b383 "github.com") — It's been two years since [Fastify](https://nodeweekly.com/link/189269/0a4070b383), the popular low overhead web framework, [dropped v5](https://nodeweekly.com/link/189270/0a4070b383), but v6 is coming into sight. It's largely shaping up as a 'spring clean' release requiring Node 24 at minimum but should be good for initial testing. [More background here](https://nodeweekly.com/link/189271/0a4070b383).
+
+The Fastify Team
+
+**IN BRIEF:**
+
+* Node maintainer Matteo Collina explains [how he 'triages the AI horde'](https://nodeweekly.com/link/189272/0a4070b383) when it comes to handling 20-40 security reports each week.
+
+* [Bun](https://nodeweekly.com/link/189273/0a4070b383) 1.4's release appears to be *imminent* with [𝕏 Node.js compatibility teased](https://nodeweekly.com/link/189274/0a4070b383) as the biggest enhancement. It hasn't dropped as we go to press, but keep an eye [on their blog](https://nodeweekly.com/link/189275/0a4070b383), as no doubt it'll land minutes after we hit send! 😂
+
+* [`node:domain`](https://nodeweekly.com/link/189248/0a4070b383), deprecated in the docs since 2015, [could become *runtime*-deprecated in Node 27](https://nodeweekly.com/link/189249/0a4070b383) — if you're still using it, speak up now.
+
+* ⚠️ Several teams are [reporting out-of-memory crashes after upgrading from Node 24.18.1 to 24.19.0](https://nodeweekly.com/link/189250/0a4070b383) (and rolling back fixes it). Nothing confirmed yet, so add your data if affected.
+
+* Vercel now offers a [one-click Node.js upgrade mechanism](https://nodeweekly.com/link/189247/0a4070b383) for deprecated Node.js versions (notably new Node 20-based builds will *fail* after Oct 1).
+
+[Adding a Second Middleware Broke Our TypeScript Types](https://nodeweekly.com/link/189251/0a4070b383 "www.inngest.com") — A TypeScript detective story in which adding a second middleware could collapse a return type to `&lcub;}`. The culprit was a widely used key-filtering idiom that leaks `undefined` when properties are optional.
+
+Linell Bonnette (Inngest)
+
+📄 [5 Useful `npx` Helpers](https://nodeweekly.com/link/189252/0a4070b383) – A reminder that `npx` makes it easy to run one-off tools. Jens shares five he likes for spell checking, cleaning up JS projects, and more. Jens Oliver Meiert
+
+📄 [Fixing the Dual-Write Problem in Node.js with the Outbox Pattern](https://nodeweekly.com/link/189253/0a4070b383) – Making your database and message queue agree. Gabor Koos
+
+📄 [A Deep Dive into How Hono Is Built](https://nodeweekly.com/link/189254/0a4070b383) Flavio Copes
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xfcfc6xxiuck4vvkliii.jpg)](https://nodeweekly.com/link/189276/0a4070b383)
+
+[DeepSeek Harness: DeepSeek's New Node-Powered Agent Harness](https://nodeweekly.com/link/189276/0a4070b383 "deepseek.com") — Today, the popular Chinese model lab unveiled its own Claude Code-alike and already racked up 30k stars. It's not a typical CLI harness, though, but runs through a web UI. Curiously, *everything* is a plugin, built atop [Cordis](https://nodeweekly.com/link/189277/0a4070b383), an existing Node plugin system whose author DeepSeek has hired. [GitHub repo](https://nodeweekly.com/link/189278/0a4070b383).
+
+DeepSeek
+
+[unbash: Fast 0-Dependency Bash Parsing Library](https://nodeweekly.com/link/189279/0a4070b383 "github.com") — The parser [Knip](https://nodeweekly.com/link/189280/0a4070b383) uses to make sense of shell scripts, as a standalone library. It turns bash code into a typed AST that can then be used for classification, permission checks, rewriting commands, and more.
+
+Lars Kappert
+
+[Full-Text Search in Drizzle Without a Second System](https://nodeweekly.com/link/189258/0a4070b383 "github.com") — Try the official ParadeDB integration for Drizzle. Search your live Postgres tables. No ETL, no Elasticsearch cluster.
+
+ParadeDB sponsor
+
+[njsscan 1.0: A Semantic-Aware SAST Tool for Node](https://nodeweekly.com/link/189259/0a4070b383 "github.com") — A `pip`-installable, zero-config security scanner that finds insecure patterns in Node apps using ~70 `semgrep`-powered rules for XSS, SSRF, `eval`, JWT and NoSQL injection.
+
+Ajin Abraham (OpenSecurity)
+
+[Hucre 1.0: A Zero-Dependency Spreadsheet Engine](https://nodeweekly.com/link/189260/0a4070b383 "github.com") — A library for reading and writing common spreadsheet formats, including things like embedded images, hyperlinks, password protection, and tables.
+
+Wind
+
+* [NodeBB 4.15.0](https://nodeweekly.com/link/189261/0a4070b383) – The Node-powered forum software ([demo site here](https://nodeweekly.com/link/189262/0a4070b383)) gets lots of bug fixes and enhances fediverse support.
+
+* [smol-toml 1.8](https://nodeweekly.com/link/189263/0a4070b383) – Small, fast, spec-compliant TOML 1.1 parser/serializer.
+
+* [BullMQ 6.1](https://nodeweekly.com/link/189264/0a4070b383) – Fast, reliable Redis- or Postgres-based distributed queue.
+
+* [swift-node 0.1.2](https://nodeweekly.com/link/189265/0a4070b383) – Write the native part of a Node module in Swift.
+
+* [Vitest 5.0 Release Candidate](https://nodeweekly.com/link/189281/0a4070b383)
+
+We'll be back in two weeks on August 27 – see you then! Unless you're a [React Status](https://nodeweekly.com/link/189266/0a4070b383) subscriber too, in which case… see you tomorrow ;-)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
