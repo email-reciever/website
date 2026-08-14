@@ -1,0 +1,233 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: The Next.js team is doing a Reddit AMA
+description: The Next.js team is doing a Reddit AMA
+date: 星期五 04 下午 八月 14o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/487
+origin_site: https://react.statuscode.com/issues/487
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="The Next.js team is doing a Reddit AMA" url="https://react.statuscode.com/issues/487" />
+
+<Detail client:only="react">
+	#​487 — August 14, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/487)
+
+🗓️ We're taking a break next week, so we're back in your inbox on August 28.  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://react.statuscode.com/link/189318/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gtnjd4ymausiuh6vt3lz.jpg)](https://react.statuscode.com/link/189319/5d0bbb4a61)
+
+[A Tour of TanStack Form v2: Now in Alpha](https://react.statuscode.com/link/189319/5d0bbb4a61 "tanstack.com") — The headless form library has been rebuilt from the ground up after a year of v1 feedback. The big change is validation: instead of one handler per event, validators become a pipeline where each declares its own triggers and conditions. Type safety and SSR improve too.
+
+Luca Jakob (TanStack)
+
+[React Native 0.87 Released](https://react.statuscode.com/link/189320/5d0bbb4a61 "reactnative.dev") — Its public JavaScript API is now the _[Strict TypeScript API](https://react.statuscode.com/link/189321/5d0bbb4a61)_ with types generated from RN's source. [Metro](https://react.statuscode.com/link/189322/5d0bbb4a61) bumps to the leaner v0.87, and there's (experimental) Swift Package Manager support for iOS.
+
+Peng, Cucci, Dall'Agnol, and Falch
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a9c133ca.png)](https://react.statuscode.com/link/189318/5d0bbb4a61)
+
+[Frontend Architecture: Monoliths to Microfrontends](https://react.statuscode.com/link/189318/5d0bbb4a61 "master.dev") — Maxi Ferreira walks through modular monoliths, monorepos, and microfrontends so you can pick the right structure for your codebase and know the real cost before you commit.
+
+Master.dev sponsor
+
+[Migrating a Large Flow Monorepo to TypeScript](https://react.statuscode.com/link/189323/5d0bbb4a61 "engineeringblog.yelp.com") — Yelp picked Flow in 2017 as it handled React better than TypeScript did. A fair call at the time, but undoing that took years of converting hundreds of packages and 1.4 million lines of code, with both typecheckers running the whole time.
+
+Shawn Walton (Yelp)
+
+**IN BRIEF:**
+
+*   👥 The Next.js team (now including Dan Abramov and Pete Hunt) is doing an AMA (Ask Me Anything) on Reddit this coming Tuesday (August 18). You can [post your questions on this thread](https://react.statuscode.com/link/189324/5d0bbb4a61) in advance.
+    
+*   [Biome 2.5.8](https://react.statuscode.com/link/189325/5d0bbb4a61) is out with a new [`useReactCompiler` rule](https://react.statuscode.com/link/189326/5d0bbb4a61) that runs React Compiler in lint mode and reports which components and hooks wouldn't compile safely (effectively a 'dry run' before you enable the compiler).
+    
+*   🇫🇷 [React Native Connection](https://react.statuscode.com/link/189327/5d0bbb4a61), the French React Native conference, returns to Paris on September 24.
+    
+
+[Making Navigations Instant in v0](https://react.statuscode.com/link/189328/5d0bbb4a61 "nextjs.org") — Next.js 16.3 includes an `instant()` test helper for Playwright that asserts what is painted before the network responds. Vercel looped an agent against it to speed up its AI app builder, [v0](https://react.statuscode.com/link/189329/5d0bbb4a61).
+
+Jude Gao (Next.js Team)
+
+▶  [Own the RSC Pipeline: Cache and Compose It Yourself](https://react.statuscode.com/link/189330/5d0bbb4a61 "www.youtube.com") — RSC is a primitive, not an architecture, argues the contributor behind TanStack Start's implementation. It's two React functions and a stream, so you can cache it, and even take it offline. _(18 minutes.)_
+
+Manuel Schiller
+
+[Making Referential Stability a Type](https://react.statuscode.com/link/189331/5d0bbb4a61 "www.jovidecroock.com") — Jovi, of the Preact core team, turns referential stability into a branded type, so a component can demand a stable array or callback and `tsc` rejects the inline literal. Experimental.
+
+Jovi De Croock
+
+📄 [Scanning Barcodes in React Native Apps](https://react.statuscode.com/link/189332/5d0bbb4a61) – A pleasantly thorough roundup of the options from the creator of VisionCamera. Marc Rousavy
+
+📺 [React Native Tools That Actually Save Me Time](https://react.statuscode.com/link/189333/5d0bbb4a61) Simon Grimm
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pll76rbdbs9pumnj7csz.jpg)](https://react.statuscode.com/link/189334/5d0bbb4a61)
+
+[GTKX 1.0: The React Framework for Linux](https://react.statuscode.com/link/189334/5d0bbb4a61 "gtkx.dev") — A way to build native Linux desktop apps with React. Write JSX, get real GTK4 and Adwaita widgets with no webview, in an ordinary Node process with npm packages and even Fast Refresh support.
+
+Eugenio Depalo
+
+💡 1.0 is the big release, but [GTKX 1.1](https://react.statuscode.com/link/189335/5d0bbb4a61) landed just after with a `gtkx deploy` command that produces a distributable Flatpak, `.deb`/`.rpm` and AppImage in one go.
+
+[kbar 1.0: A Cmd+K Interface for React Apps](https://react.statuscode.com/link/189336/5d0bbb4a61 "kbar.vercel.app") — After five years of betas, this simple way to add in-page commands and search now fully supports React 18 and 19. You can try it out right on the page too.
+
+Tim Chang
+
+[Liquid Gooey: Liquid/Gooey Effects for React](https://react.statuscode.com/link/189337/5d0bbb4a61 "gooey.jakubantalik.com") — More subtle and pleasing than I imagined at first. Nice demos on the homepage.
+
+Jakub Antalik
+
+*   [React Hook Form 7.85.0](https://react.statuscode.com/link/189338/5d0bbb4a61) – Adds support for React 19.2's &lt;`Activity`\>.
+    
+*   [Motion 13.1](https://react.statuscode.com/link/189339/5d0bbb4a61) – The animation library's Reorder component gains multidimensional reordering, axis detection, and RTL support.
+    
+*   [Next.js 16.3.1](https://react.statuscode.com/link/189340/5d0bbb4a61) – Cleans up some elements of the [16.3 release](https://react.statuscode.com/link/189341/5d0bbb4a61) like repeated prefetch loops, cache entries being discarded too eagerly after a tag revalidation, and `headers()` returning a stale view of the request.
+    
+*   [Sonner 2.0.8](https://react.statuscode.com/link/189342/5d0bbb4a61) – The first release in over a year for the popular toast component ([demo](https://react.statuscode.com/link/189343/5d0bbb4a61)).
+    
+
+📰 Classifieds
+
+🎤 Dive deep into React in the heart of London. [Join React Advanced](https://react.statuscode.com/link/189344/5d0bbb4a61): 2 days of talks & workshops for senior React engineers. Oct 23 & 26.
+
+* * *
+
+Meet [chat.agent on Trigger.dev](https://react.statuscode.com/link/189345/5d0bbb4a61): durable AI agents built with the AI SDK you already use. Long-lived LLM sessions that survive deploys, crashes & refreshes.
+
+* * *
+
+📉 Cold launch, time to interactive and per-route timings from real users, tied to the build that changed them: [Expo Observe](https://react.statuscode.com/link/189346/5d0bbb4a61).
+
+And that's a wrap! We'll see you again on Friday, August 28! 👋
+
+_P.S. A huge thanks to everyone who's sent in submissions lately. There have been so many that I've fallen well behind, but every email gets read and I'll catch up on my return :-)_
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​487 — August 14, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/487)
+
+🗓️ We're taking a break next week, so we're back in your inbox on August 28.\
+\_\_\
+*Your editor, Peter Cooper*
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://react.statuscode.com/link/189318/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/gtnjd4ymausiuh6vt3lz.jpg)](https://react.statuscode.com/link/189319/5d0bbb4a61)
+
+[A Tour of TanStack Form v2: Now in Alpha](https://react.statuscode.com/link/189319/5d0bbb4a61 "tanstack.com") — The headless form library has been rebuilt from the ground up after a year of v1 feedback. The big change is validation: instead of one handler per event, validators become a pipeline where each declares its own triggers and conditions. Type safety and SSR improve too.
+
+Luca Jakob (TanStack)
+
+[React Native 0.87 Released](https://react.statuscode.com/link/189320/5d0bbb4a61 "reactnative.dev") — Its public JavaScript API is now the *[Strict TypeScript API](https://react.statuscode.com/link/189321/5d0bbb4a61)* with types generated from RN's source. [Metro](https://react.statuscode.com/link/189322/5d0bbb4a61) bumps to the leaner v0.87, and there's (experimental) Swift Package Manager support for iOS.
+
+Peng, Cucci, Dall'Agnol, and Falch
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a9c133ca.png)](https://react.statuscode.com/link/189318/5d0bbb4a61)
+
+[Frontend Architecture: Monoliths to Microfrontends](https://react.statuscode.com/link/189318/5d0bbb4a61 "master.dev") — Maxi Ferreira walks through modular monoliths, monorepos, and microfrontends so you can pick the right structure for your codebase and know the real cost before you commit.
+
+Master.dev sponsor
+
+[Migrating a Large Flow Monorepo to TypeScript](https://react.statuscode.com/link/189323/5d0bbb4a61 "engineeringblog.yelp.com") — Yelp picked Flow in 2017 as it handled React better than TypeScript did. A fair call at the time, but undoing that took years of converting hundreds of packages and 1.4 million lines of code, with both typecheckers running the whole time.
+
+Shawn Walton (Yelp)
+
+**IN BRIEF:**
+
+* 👥 The Next.js team (now including Dan Abramov and Pete Hunt) is doing an AMA (Ask Me Anything) on Reddit this coming Tuesday (August 18). You can [post your questions on this thread](https://react.statuscode.com/link/189324/5d0bbb4a61) in advance.
+
+* [Biome 2.5.8](https://react.statuscode.com/link/189325/5d0bbb4a61) is out with a new [`useReactCompiler` rule](https://react.statuscode.com/link/189326/5d0bbb4a61) that runs React Compiler in lint mode and reports which components and hooks wouldn't compile safely (effectively a 'dry run' before you enable the compiler).
+
+* 🇫🇷 [React Native Connection](https://react.statuscode.com/link/189327/5d0bbb4a61), the French React Native conference, returns to Paris on September 24.
+
+[Making Navigations Instant in v0](https://react.statuscode.com/link/189328/5d0bbb4a61 "nextjs.org") — Next.js 16.3 includes an `instant()` test helper for Playwright that asserts what is painted before the network responds. Vercel looped an agent against it to speed up its AI app builder, [v0](https://react.statuscode.com/link/189329/5d0bbb4a61).
+
+Jude Gao (Next.js Team)
+
+▶  [Own the RSC Pipeline: Cache and Compose It Yourself](https://react.statuscode.com/link/189330/5d0bbb4a61 "www.youtube.com") — RSC is a primitive, not an architecture, argues the contributor behind TanStack Start's implementation. It's two React functions and a stream, so you can cache it, and even take it offline. *(18 minutes.)*
+
+Manuel Schiller
+
+[Making Referential Stability a Type](https://react.statuscode.com/link/189331/5d0bbb4a61 "www.jovidecroock.com") — Jovi, of the Preact core team, turns referential stability into a branded type, so a component can demand a stable array or callback and `tsc` rejects the inline literal. Experimental.
+
+Jovi De Croock
+
+📄 [Scanning Barcodes in React Native Apps](https://react.statuscode.com/link/189332/5d0bbb4a61) – A pleasantly thorough roundup of the options from the creator of VisionCamera. Marc Rousavy
+
+📺 [React Native Tools That Actually Save Me Time](https://react.statuscode.com/link/189333/5d0bbb4a61) Simon Grimm
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pll76rbdbs9pumnj7csz.jpg)](https://react.statuscode.com/link/189334/5d0bbb4a61)
+
+[GTKX 1.0: The React Framework for Linux](https://react.statuscode.com/link/189334/5d0bbb4a61 "gtkx.dev") — A way to build native Linux desktop apps with React. Write JSX, get real GTK4 and Adwaita widgets with no webview, in an ordinary Node process with npm packages and even Fast Refresh support.
+
+Eugenio Depalo
+
+💡 1.0 is the big release, but [GTKX 1.1](https://react.statuscode.com/link/189335/5d0bbb4a61) landed just after with a `gtkx deploy` command that produces a distributable Flatpak, `.deb`/`.rpm` and AppImage in one go.
+
+[kbar 1.0: A Cmd+K Interface for React Apps](https://react.statuscode.com/link/189336/5d0bbb4a61 "kbar.vercel.app") — After five years of betas, this simple way to add in-page commands and search now fully supports React 18 and 19. You can try it out right on the page too.
+
+Tim Chang
+
+[Liquid Gooey: Liquid/Gooey Effects for React](https://react.statuscode.com/link/189337/5d0bbb4a61 "gooey.jakubantalik.com") — More subtle and pleasing than I imagined at first. Nice demos on the homepage.
+
+Jakub Antalik
+
+* [React Hook Form 7.85.0](https://react.statuscode.com/link/189338/5d0bbb4a61) – Adds support for React 19.2's &lt;`Activity`>.
+
+* [Motion 13.1](https://react.statuscode.com/link/189339/5d0bbb4a61) – The animation library's Reorder component gains multidimensional reordering, axis detection, and RTL support.
+
+* [Next.js 16.3.1](https://react.statuscode.com/link/189340/5d0bbb4a61) – Cleans up some elements of the [16.3 release](https://react.statuscode.com/link/189341/5d0bbb4a61) like repeated prefetch loops, cache entries being discarded too eagerly after a tag revalidation, and `headers()` returning a stale view of the request.
+
+* [Sonner 2.0.8](https://react.statuscode.com/link/189342/5d0bbb4a61) – The first release in over a year for the popular toast component ([demo](https://react.statuscode.com/link/189343/5d0bbb4a61)).
+
+📰 Classifieds
+
+🎤 Dive deep into React in the heart of London. [Join React Advanced](https://react.statuscode.com/link/189344/5d0bbb4a61): 2 days of talks & workshops for senior React engineers. Oct 23 & 26.
+
+***
+
+Meet [chat.agent on Trigger.dev](https://react.statuscode.com/link/189345/5d0bbb4a61): durable AI agents built with the AI SDK you already use. Long-lived LLM sessions that survive deploys, crashes & refreshes.
+
+***
+
+📉 Cold launch, time to interactive and per-route timings from real users, tied to the build that changed them: [Expo Observe](https://react.statuscode.com/link/189346/5d0bbb4a61).
+
+And that's a wrap! We'll see you again on Friday, August 28! 👋
+
+*P.S. A huge thanks to everyone who's sent in submissions lately. There have been so many that I've fallen well behind, but every email gets read and I'll catch up on my return :-)*
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
