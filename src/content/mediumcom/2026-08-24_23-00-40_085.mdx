@@ -1,0 +1,825 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 8 TypeScript Anti-Patterns I Flag in Every Code Review | Ray Hu
+description: 8 TypeScript Anti-Patterns I Flag in Every Code Review | Ray Hu
+date: 星期一 11 晚上 八月 24o 2026
+author: mediumcom
+origin_url: https://medium.com/
+origin_site: https://medium.com/
+translated: true
+avatar: /media-source/mediumcom-ico.png
+email_recorder: noreply@medium.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="8 TypeScript Anti-Patterns I Flag in Every Code Review | Ray Hu" url="https://medium.com/" />
+
+<Detail client:only="react">
+	Today's highlights
+
+[![Ray Hu](https://miro.medium.com/fit/c/40/40/1*LDQtvV81nDTvjzVBmzF20Q.jpeg)](https://medium.com/@coolercoder?source=email-2b8b8ee19057-1787594938844-digest.reader--222f06da9e74----0-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Ray Hu](https://medium.com/@coolercoder?source=email-2b8b8ee19057-1787594938844-digest.reader--222f06da9e74----0-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![8 TypeScript Anti-Patterns I Flag in Every Code Review](https://miro.medium.com/fit/c/320/214/1*BihEcBLvCcrO5F8pS7F1qg.png)](https://medium.com/@coolercoder/8-typescript-anti-patterns-i-flag-in-every-code-review-222f06da9e74?source=email-2b8b8ee19057-1787594938844-digest.reader--222f06da9e74----0-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[
+
+## 8 TypeScript Anti-Patterns I Flag in Every Code Review
+
+### Every any you write is 30 seconds saved and 30 minutes…
+
+
+
+](https://medium.com/@coolercoder/8-typescript-anti-patterns-i-flag-in-every-code-review-222f06da9e74?source=email-2b8b8ee19057-1787594938844-digest.reader--222f06da9e74----0-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+186
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+4
+
+[![Desiree Peralta](https://miro.medium.com/fit/c/40/40/1*6mgEZmtgEIYKM-aqXYAgMA@2x.jpeg)](https://medium.com/@dessyperalt?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-2249ea9100e6----1-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Desiree Peralta](https://medium.com/@dessyperalt?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-2249ea9100e6----1-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)in[Books Are Our Superpower](https://medium.com/books-are-our-superpower?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-2249ea9100e6----1-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![“Women Are Basically Reading Porn”](https://miro.medium.com/fit/c/320/214/0*026XzVY5XiA2tT_M)](https://medium.com/@dessyperalt/women-are-basically-reading-porn-2249ea9100e6?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-2249ea9100e6----1-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[
+
+## “Women Are Basically Reading Porn”
+
+### And other misogynistic comments I receive when I say…
+
+
+
+](https://medium.com/@dessyperalt/women-are-basically-reading-porn-2249ea9100e6?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-2249ea9100e6----1-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+14.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+983
+
+[![ShipWithRathor](https://miro.medium.com/fit/c/40/40/1*FCwY16QezCMZw9DLDr5PPQ.jpeg)](https://medium.com/@garoono?source=email-2b8b8ee19057-1787594938844-digest.reader--5258032addcf----2-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[ShipWithRathor](https://medium.com/@garoono?source=email-2b8b8ee19057-1787594938844-digest.reader--5258032addcf----2-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![React Native vs Flutter in 2026: The $5,000 Decision Most Startups Get Wrong](https://miro.medium.com/fit/c/320/214/1*m-C23NY34aJECUhcdwbx0g.jpeg)](https://medium.com/@garoono/react-native-vs-flutter-in-2026-the-5-000-decision-most-startups-get-wrong-5258032addcf?source=email-2b8b8ee19057-1787594938844-digest.reader--5258032addcf----2-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[
+
+## React Native vs Flutter in 2026: The $5,000 Decision Most Startups Get Wrong
+
+### A founder I know burned through roughly $5,000 and…
+
+
+
+](https://medium.com/@garoono/react-native-vs-flutter-in-2026-the-5-000-decision-most-startups-get-wrong-5258032addcf?source=email-2b8b8ee19057-1787594938844-digest.reader--5258032addcf----2-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+6
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Dr. Leon Eversberg](https://miro.medium.com/fit/c/40/40/1*0v8ZX7K0MEgzuUVpdERRbQ.png)](https://medium.com/@leoneversberg?source=email-2b8b8ee19057-1787594938844-digest.reader-98111c9905da-47265b651657----3-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Dr. Leon Eversberg](https://medium.com/@leoneversberg?source=email-2b8b8ee19057-1787594938844-digest.reader-98111c9905da-47265b651657----3-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)in[Towards AI](https://medium.com/towards-artificial-intelligence?source=email-2b8b8ee19057-1787594938844-digest.reader-98111c9905da-47265b651657----3-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![How Does Anthropic Watermark AI-Generated Content?](https://miro.medium.com/fit/c/320/214/1*J2baDZaT6meoxpqrX5uWrg.png)](https://medium.com/@leoneversberg/how-does-anthropic-watermark-ai-generated-content-47265b651657?source=email-2b8b8ee19057-1787594938844-digest.reader-98111c9905da-47265b651657----3-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[
+
+## How Does Anthropic Watermark AI-Generated Content?
+
+### Learn how AI watermarks are hidden in text and files…
+
+
+
+](https://medium.com/@leoneversberg/how-does-anthropic-watermark-ai-generated-content-47265b651657?source=email-2b8b8ee19057-1787594938844-digest.reader-98111c9905da-47265b651657----3-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+9 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+772
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+16
+
+[![Sean Veaux](https://miro.medium.com/fit/c/40/40/1*aOzETrLwFFjy_KXJf1bRFA.jpeg)](https://medium.com/@Seanveaux?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-ee5e7e6b5b17----4-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Sean Veaux](https://medium.com/@Seanveaux?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-ee5e7e6b5b17----4-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)in[Books Are Our Superpower](https://medium.com/books-are-our-superpower?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-ee5e7e6b5b17----4-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![5 Books That Made Me Smarter than 99% of People.](https://miro.medium.com/fit/c/320/214/1*tSdTxSo5JjAO9juSZ3xisQ.jpeg)](https://medium.com/@Seanveaux/5-books-that-made-me-smarter-than-99-people-ee5e7e6b5b17?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-ee5e7e6b5b17----4-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[
+
+## 5 Books That Made Me Smarter than 99% of People.
+
+### You can hack your brain to become more intelligent
+
+
+
+](https://medium.com/@Seanveaux/5-books-that-made-me-smarter-than-99-people-ee5e7e6b5b17?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-ee5e7e6b5b17----4-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+4.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+144
+
+[![Dr. Patricia Schmidt 🧠](https://miro.medium.com/fit/c/40/40/1*RWsfG_g05Xvz258iCDk1mw.png)](https://medium.com/@creatorschmidt?source=email-2b8b8ee19057-1787594938844-digest.reader-84ac01765c52-a2738d855aa2----5-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Dr. Patricia Schmidt 🧠](https://medium.com/@creatorschmidt?source=email-2b8b8ee19057-1787594938844-digest.reader-84ac01765c52-a2738d855aa2----5-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)in[Write A Catalyst](https://medium.com/write-a-catalyst?source=email-2b8b8ee19057-1787594938844-digest.reader-84ac01765c52-a2738d855aa2----5-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![As a Neuroscientist, I Use These 7 Strategies to Remember What I Learn](https://miro.medium.com/fit/c/320/214/0*uL0pyAWd93lsWAhF)](https://medium.com/@creatorschmidt/as-a-neuroscientist-i-use-these-7-strategies-to-remember-what-i-learn-a2738d855aa2?source=email-2b8b8ee19057-1787594938844-digest.reader-84ac01765c52-a2738d855aa2----5-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[
+
+## As a Neuroscientist, I Use These 7 Strategies to Remember What I Learn
+
+### The most popular study strategy is ineffective, but…
+
+
+
+](https://medium.com/@creatorschmidt/as-a-neuroscientist-i-use-these-7-strategies-to-remember-what-i-learn-a2738d855aa2?source=email-2b8b8ee19057-1787594938844-digest.reader-84ac01765c52-a2738d855aa2----5-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+3.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+55
+
+[![Nicolas](https://miro.medium.com/fit/c/40/40/1*k_l0HCng_rE7byQsMl3n9g.png)](https://medium.com/@flutter-app?source=email-2b8b8ee19057-1787594938844-digest.reader--19f22a07f8ec----6-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Nicolas](https://medium.com/@flutter-app?source=email-2b8b8ee19057-1787594938844-digest.reader--19f22a07f8ec----6-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![Flutter 3.47 Has Arrived Which Will Effect The Way You develop App](https://miro.medium.com/fit/c/320/214/1*K0m3HvSFW7JE2Wv9hCmnbA.png)](https://medium.com/@flutter-app/flutter-3-47-has-arrived-which-will-effect-the-way-you-develop-app-19f22a07f8ec?source=email-2b8b8ee19057-1787594938844-digest.reader--19f22a07f8ec----6-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[
+
+## Flutter 3.47 Has Arrived Which Will Effect The Way You develop App
+
+### Most of the releases from SDKs are noise — a boring…
+
+
+
+](https://medium.com/@flutter-app/flutter-3-47-has-arrived-which-will-effect-the-way-you-develop-app-19f22a07f8ec?source=email-2b8b8ee19057-1787594938844-digest.reader--19f22a07f8ec----6-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+25
+
+[![Long After the Thrill](https://miro.medium.com/fit/c/40/40/1*swAEpol5XHK-EyqV-i-sRg.jpeg)](https://medium.com/@longafterthethrill?source=email-2b8b8ee19057-1787594938844-digest.reader--adc0d976319c----7-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Long After the Thrill](https://medium.com/@longafterthethrill?source=email-2b8b8ee19057-1787594938844-digest.reader--adc0d976319c----7-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![I Wore the Special Mormon Underwear](https://miro.medium.com/fit/c/320/214/0*hukPp9y6o-eM_IZl.jpeg)](https://medium.com/@longafterthethrill/jesus-and-bunnies-and-eggs-oh-my-adc0d976319c?source=email-2b8b8ee19057-1787594938844-digest.reader--adc0d976319c----7-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[
+
+## I Wore the Special Mormon Underwear
+
+### Here’s what the “super secret” symbols sewn into them…
+
+
+
+](https://medium.com/@longafterthethrill/jesus-and-bunnies-and-eggs-oh-my-adc0d976319c?source=email-2b8b8ee19057-1787594938844-digest.reader--adc0d976319c----7-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+5.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+135
+
+[![The Thread Whisperer](https://miro.medium.com/fit/c/40/40/1*1OJwhDGJkOyNc7-ya2TA7w.jpeg)](https://medium.com/@maahisoft20?source=email-2b8b8ee19057-1787594938844-digest.reader--d6a90594cace----8-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[The Thread Whisperer](https://medium.com/@maahisoft20?source=email-2b8b8ee19057-1787594938844-digest.reader--d6a90594cace----8-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![Forget JSON Web Tokens: Server-Side Sessions Cut Our Auth Bugs By 70%](https://miro.medium.com/fit/c/320/214/1*kBhLDaAUq3f29fZc9LB8vw.png)](https://medium.com/@maahisoft20/forget-json-web-tokens-server-side-sessions-cut-our-auth-bugs-by-70-d6a90594cace?source=email-2b8b8ee19057-1787594938844-digest.reader--d6a90594cace----8-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[
+
+## Forget JSON Web Tokens: Server-Side Sessions Cut Our Auth Bugs By 70%
+
+### We were proud of our JWT setup. Stateless, scalable…
+
+
+
+](https://medium.com/@maahisoft20/forget-json-web-tokens-server-side-sessions-cut-our-auth-bugs-by-70-d6a90594cace?source=email-2b8b8ee19057-1787594938844-digest.reader--d6a90594cace----8-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+254
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+19
+
+[![ShipWithRathor](https://miro.medium.com/fit/c/40/40/1*FCwY16QezCMZw9DLDr5PPQ.jpeg)](https://medium.com/@garoono?source=email-2b8b8ee19057-1787594938844-digest.reader--c4442dff2806----9-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[ShipWithRathor](https://medium.com/@garoono?source=email-2b8b8ee19057-1787594938844-digest.reader--c4442dff2806----9-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![7 Flutter Packages I Deleted From Every App (and What I Use Instead)](https://miro.medium.com/fit/c/320/214/1*f3aKLbizDhFroSLbMujnKw.jpeg)](https://medium.com/@garoono/copy-of-7-flutter-packages-i-deleted-from-every-app-and-what-i-use-instead-c4442dff2806?source=email-2b8b8ee19057-1787594938844-digest.reader--c4442dff2806----9-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[
+
+## 7 Flutter Packages I Deleted From Every App (and What I Use Instead)
+
+### Every dependency you add is a small loan. It works…
+
+
+
+](https://medium.com/@garoono/copy-of-7-flutter-packages-i-deleted-from-every-app-and-what-i-use-instead-c4442dff2806?source=email-2b8b8ee19057-1787594938844-digest.reader--c4442dff2806----9-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+32
+
+[![Gaddam.Naveen](https://miro.medium.com/fit/c/40/40/1*ZE-CfQ1ViASqLlwps6EiBg.jpeg)](https://medium.com/@gaddamnaveen192?source=email-2b8b8ee19057-1787594938844-digest.reader--48207796ac0e----10-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Gaddam.Naveen](https://medium.com/@gaddamnaveen192?source=email-2b8b8ee19057-1787594938844-digest.reader--48207796ac0e----10-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![1 vs 100 vs 1,000 vs 10,000: The Batch Size Experiment Every Backend Engineer Should Know](https://miro.medium.com/fit/c/320/214/1*Eg0BI_pEYwMWLP7Mfgh-XA.png)](https://medium.com/@gaddamnaveen192/1-vs-100-vs-1-000-vs-10-000-the-batch-size-experiment-every-backend-engineer-should-know-48207796ac0e?source=email-2b8b8ee19057-1787594938844-digest.reader--48207796ac0e----10-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[
+
+## 1 vs 100 vs 1,000 vs 10,000: The Batch Size Experiment Every Backend Engineer…
+
+### How to Efficiently Insert 5 Million Records into a…
+
+
+
+](https://medium.com/@gaddamnaveen192/1-vs-100-vs-1-000-vs-10-000-the-batch-size-experiment-every-backend-engineer-should-know-48207796ac0e?source=email-2b8b8ee19057-1787594938844-digest.reader--48207796ac0e----10-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+15 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+67
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+3
+
+[![Matt Bentley](https://miro.medium.com/fit/c/40/40/1*nUZ_xcK6heGCMT4SHpSsuA.jpeg)](https://medium.com/@mattbentley_67939?source=email-2b8b8ee19057-1787594938844-digest.reader-5517fd7b58a6-cee06616b2cd----11-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Matt Bentley](https://medium.com/@mattbentley_67939?source=email-2b8b8ee19057-1787594938844-digest.reader-5517fd7b58a6-cee06616b2cd----11-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1787594938844-digest.reader-5517fd7b58a6-cee06616b2cd----11-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![Don’t Do Design by Coincidence](https://miro.medium.com/fit/c/320/214/1*ii9lffcwSjnUIGYNN6G2Xg.png)](https://medium.com/@mattbentley_67939/dont-do-design-by-coincidence-cee06616b2cd?source=email-2b8b8ee19057-1787594938844-digest.reader-5517fd7b58a6-cee06616b2cd----11-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[
+
+## Don’t Do Design by Coincidence
+
+### Your AI design tools are still producing slop, it’s…
+
+
+
+](https://medium.com/@mattbentley_67939/dont-do-design-by-coincidence-cee06616b2cd?source=email-2b8b8ee19057-1787594938844-digest.reader-5517fd7b58a6-cee06616b2cd----11-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+11 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+200
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Rahul K.](https://miro.medium.com/fit/c/40/40/1*ER2ta_D8A1zOl5gHu58dJQ.jpeg)](https://medium.com/@rahulnetwork?source=email-2b8b8ee19057-1787594938844-digest.reader-c61b43ec687d-fc8b18c73a70----12-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Rahul K.](https://medium.com/@rahulnetwork?source=email-2b8b8ee19057-1787594938844-digest.reader-c61b43ec687d-fc8b18c73a70----12-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)in[Activated Thinker](https://medium.com/activated-thinker?source=email-2b8b8ee19057-1787594938844-digest.reader-c61b43ec687d-fc8b18c73a70----12-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![Stop Wasting Cash on These 10 Overpriced Modern Lifestyle Habits Today](https://miro.medium.com/fit/c/320/214/0*YL-Q8TYXYEP-kjwi)](https://medium.com/@rahulnetwork/stop-wasting-cash-on-these-10-overpriced-modern-lifestyle-habits-today-fc8b18c73a70?source=email-2b8b8ee19057-1787594938844-digest.reader-c61b43ec687d-fc8b18c73a70----12-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[
+
+## Stop Wasting Cash on These 10 Overpriced Modern Lifestyle Habits Today
+
+### Discover which modern expenses quietly waste money…
+
+
+
+](https://medium.com/@rahulnetwork/stop-wasting-cash-on-these-10-overpriced-modern-lifestyle-habits-today-fc8b18c73a70?source=email-2b8b8ee19057-1787594938844-digest.reader-c61b43ec687d-fc8b18c73a70----12-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+15 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.5K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+73
+
+[![ShipWithRathor](https://miro.medium.com/fit/c/40/40/1*FCwY16QezCMZw9DLDr5PPQ.jpeg)](https://medium.com/@garoono?source=email-2b8b8ee19057-1787594938844-digest.reader--8af94d8945f0----13-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[ShipWithRathor](https://medium.com/@garoono?source=email-2b8b8ee19057-1787594938844-digest.reader--8af94d8945f0----13-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![12 Flutter Widgets I Never Knew Existed Until App #20](https://miro.medium.com/fit/c/320/214/1*EhabbMGwziWfzP8CY1pmYw.jpeg)](https://medium.com/@garoono/copy-of-12-flutter-widgets-i-never-knew-existed-until-app-20-8af94d8945f0?source=email-2b8b8ee19057-1787594938844-digest.reader--8af94d8945f0----13-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[
+
+## 12 Flutter Widgets I Never Knew Existed Until App #20
+
+### I’ve shipped 32 apps in the last six years. Somewhere…
+
+
+
+](https://medium.com/@garoono/copy-of-12-flutter-widgets-i-never-knew-existed-until-app-20-8af94d8945f0?source=email-2b8b8ee19057-1787594938844-digest.reader--8af94d8945f0----13-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+34
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Divya Sabade](https://miro.medium.com/fit/c/40/40/1*6sbe0yNg1mfzNR64JvEmUw.jpeg)](https://medium.com/@sabade.divya?source=email-2b8b8ee19057-1787594938844-digest.reader-48e972f5c24e-c106ce7cadf8----14-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Divya Sabade](https://medium.com/@sabade.divya?source=email-2b8b8ee19057-1787594938844-digest.reader-48e972f5c24e-c106ce7cadf8----14-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)in[Bootcamp](https://medium.com/design-bootcamp?source=email-2b8b8ee19057-1787594938844-digest.reader-48e972f5c24e-c106ce7cadf8----14-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![I Sat in Engineering Meetings for a Year Without Understanding What a Branch Was](https://miro.medium.com/fit/c/320/214/0*atvj9-J9EFfFKvok)](https://medium.com/@sabade.divya/i-sat-in-engineering-meetings-for-two-years-without-understanding-what-a-branch-was-c106ce7cadf8?source=email-2b8b8ee19057-1787594938844-digest.reader-48e972f5c24e-c106ce7cadf8----14-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[
+
+## I Sat in Engineering Meetings for a Year Without Understanding What a Branch…
+
+### This is what I wish someone had explained to me on day…
+
+
+
+](https://medium.com/@sabade.divya/i-sat-in-engineering-meetings-for-two-years-without-understanding-what-a-branch-was-c106ce7cadf8?source=email-2b8b8ee19057-1787594938844-digest.reader-48e972f5c24e-c106ce7cadf8----14-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+60
+
+[![Download the Medium App](https://miro.medium.com/max/1360/b45a35cf900895c2a6f4c9db90ee725dd016aef7b67da1455d7849701f1562f1)](https://medium.com/download-app?source=email-2b8b8ee19057-1787594938844-digest.reader-------------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad)
+
+
+</Detail>
+
+Today's highlights
+
+[![Ray Hu](https://miro.medium.com/fit/c/40/40/1*LDQtvV81nDTvjzVBmzF20Q.jpeg)](https://medium.com/@coolercoder?source=email-2b8b8ee19057-1787594938844-digest.reader--222f06da9e74----0-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Ray Hu](https://medium.com/@coolercoder?source=email-2b8b8ee19057-1787594938844-digest.reader--222f06da9e74----0-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![8 TypeScript Anti-Patterns I Flag in Every Code Review](https://miro.medium.com/fit/c/320/214/1*BihEcBLvCcrO5F8pS7F1qg.png)](https://medium.com/@coolercoder/8-typescript-anti-patterns-i-flag-in-every-code-review-222f06da9e74?source=email-2b8b8ee19057-1787594938844-digest.reader--222f06da9e74----0-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+\[
+
+## 8 TypeScript Anti-Patterns I Flag in Every Code Review
+
+### Every any you write is 30 seconds saved and 30 minutes…
+
+]\(https://medium.com/@coolercoder/8-typescript-anti-patterns-i-flag-in-every-code-review-222f06da9e74?source=email-2b8b8ee19057-1787594938844-digest.reader--222f06da9e74----0-99------------------3c26f34c\_bf01\_420d\_a32b\_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+186
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+4
+
+[![Desiree Peralta](https://miro.medium.com/fit/c/40/40/1*6mgEZmtgEIYKM-aqXYAgMA@2x.jpeg)](https://medium.com/@dessyperalt?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-2249ea9100e6----1-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Desiree Peralta](https://medium.com/@dessyperalt?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-2249ea9100e6----1-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)in[Books Are Our Superpower](https://medium.com/books-are-our-superpower?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-2249ea9100e6----1-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![“Women Are Basically Reading Porn”](https://miro.medium.com/fit/c/320/214/0*026XzVY5XiA2tT_M)](https://medium.com/@dessyperalt/women-are-basically-reading-porn-2249ea9100e6?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-2249ea9100e6----1-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+\[
+
+## “Women Are Basically Reading Porn”
+
+### And other misogynistic comments I receive when I say…
+
+]\(https://medium.com/@dessyperalt/women-are-basically-reading-porn-2249ea9100e6?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-2249ea9100e6----1-102------------------3c26f34c\_bf01\_420d\_a32b\_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+14.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+983
+
+[![ShipWithRathor](https://miro.medium.com/fit/c/40/40/1*FCwY16QezCMZw9DLDr5PPQ.jpeg)](https://medium.com/@garoono?source=email-2b8b8ee19057-1787594938844-digest.reader--5258032addcf----2-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[ShipWithRathor](https://medium.com/@garoono?source=email-2b8b8ee19057-1787594938844-digest.reader--5258032addcf----2-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![React Native vs Flutter in 2026: The $5,000 Decision Most Startups Get Wrong](https://miro.medium.com/fit/c/320/214/1*m-C23NY34aJECUhcdwbx0g.jpeg)](https://medium.com/@garoono/react-native-vs-flutter-in-2026-the-5-000-decision-most-startups-get-wrong-5258032addcf?source=email-2b8b8ee19057-1787594938844-digest.reader--5258032addcf----2-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+\[
+
+## React Native vs Flutter in 2026: The $5,000 Decision Most Startups Get Wrong
+
+### A founder I know burned through roughly $5,000 and…
+
+]\(https://medium.com/@garoono/react-native-vs-flutter-in-2026-the-5-000-decision-most-startups-get-wrong-5258032addcf?source=email-2b8b8ee19057-1787594938844-digest.reader--5258032addcf----2-99------------------3c26f34c\_bf01\_420d\_a32b\_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+6
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Dr. Leon Eversberg](https://miro.medium.com/fit/c/40/40/1*0v8ZX7K0MEgzuUVpdERRbQ.png)](https://medium.com/@leoneversberg?source=email-2b8b8ee19057-1787594938844-digest.reader-98111c9905da-47265b651657----3-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Dr. Leon Eversberg](https://medium.com/@leoneversberg?source=email-2b8b8ee19057-1787594938844-digest.reader-98111c9905da-47265b651657----3-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)in[Towards AI](https://medium.com/towards-artificial-intelligence?source=email-2b8b8ee19057-1787594938844-digest.reader-98111c9905da-47265b651657----3-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![How Does Anthropic Watermark AI-Generated Content?](https://miro.medium.com/fit/c/320/214/1*J2baDZaT6meoxpqrX5uWrg.png)](https://medium.com/@leoneversberg/how-does-anthropic-watermark-ai-generated-content-47265b651657?source=email-2b8b8ee19057-1787594938844-digest.reader-98111c9905da-47265b651657----3-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+\[
+
+## How Does Anthropic Watermark AI-Generated Content?
+
+### Learn how AI watermarks are hidden in text and files…
+
+]\(https://medium.com/@leoneversberg/how-does-anthropic-watermark-ai-generated-content-47265b651657?source=email-2b8b8ee19057-1787594938844-digest.reader-98111c9905da-47265b651657----3-109------------------3c26f34c\_bf01\_420d\_a32b\_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+9 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+772
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+16
+
+[![Sean Veaux](https://miro.medium.com/fit/c/40/40/1*aOzETrLwFFjy_KXJf1bRFA.jpeg)](https://medium.com/@Seanveaux?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-ee5e7e6b5b17----4-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Sean Veaux](https://medium.com/@Seanveaux?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-ee5e7e6b5b17----4-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)in[Books Are Our Superpower](https://medium.com/books-are-our-superpower?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-ee5e7e6b5b17----4-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![5 Books That Made Me Smarter than 99% of People.](https://miro.medium.com/fit/c/320/214/1*tSdTxSo5JjAO9juSZ3xisQ.jpeg)](https://medium.com/@Seanveaux/5-books-that-made-me-smarter-than-99-people-ee5e7e6b5b17?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-ee5e7e6b5b17----4-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+\[
+
+## 5 Books That Made Me Smarter than 99% of People.
+
+### You can hack your brain to become more intelligent
+
+]\(https://medium.com/@Seanveaux/5-books-that-made-me-smarter-than-99-people-ee5e7e6b5b17?source=email-2b8b8ee19057-1787594938844-digest.reader-83a207239c74-ee5e7e6b5b17----4-73------------------3c26f34c\_bf01\_420d\_a32b\_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+4.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+144
+
+[![Dr. Patricia Schmidt 🧠](https://miro.medium.com/fit/c/40/40/1*RWsfG_g05Xvz258iCDk1mw.png)](https://medium.com/@creatorschmidt?source=email-2b8b8ee19057-1787594938844-digest.reader-84ac01765c52-a2738d855aa2----5-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Dr. Patricia Schmidt 🧠](https://medium.com/@creatorschmidt?source=email-2b8b8ee19057-1787594938844-digest.reader-84ac01765c52-a2738d855aa2----5-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)in[Write A Catalyst](https://medium.com/write-a-catalyst?source=email-2b8b8ee19057-1787594938844-digest.reader-84ac01765c52-a2738d855aa2----5-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![As a Neuroscientist, I Use These 7 Strategies to Remember What I Learn](https://miro.medium.com/fit/c/320/214/0*uL0pyAWd93lsWAhF)](https://medium.com/@creatorschmidt/as-a-neuroscientist-i-use-these-7-strategies-to-remember-what-i-learn-a2738d855aa2?source=email-2b8b8ee19057-1787594938844-digest.reader-84ac01765c52-a2738d855aa2----5-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+\[
+
+## As a Neuroscientist, I Use These 7 Strategies to Remember What I Learn
+
+### The most popular study strategy is ineffective, but…
+
+]\(https://medium.com/@creatorschmidt/as-a-neuroscientist-i-use-these-7-strategies-to-remember-what-i-learn-a2738d855aa2?source=email-2b8b8ee19057-1787594938844-digest.reader-84ac01765c52-a2738d855aa2----5-102------------------3c26f34c\_bf01\_420d\_a32b\_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+3.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+55
+
+[![Nicolas](https://miro.medium.com/fit/c/40/40/1*k_l0HCng_rE7byQsMl3n9g.png)](https://medium.com/@flutter-app?source=email-2b8b8ee19057-1787594938844-digest.reader--19f22a07f8ec----6-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Nicolas](https://medium.com/@flutter-app?source=email-2b8b8ee19057-1787594938844-digest.reader--19f22a07f8ec----6-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![Flutter 3.47 Has Arrived Which Will Effect The Way You develop App](https://miro.medium.com/fit/c/320/214/1*K0m3HvSFW7JE2Wv9hCmnbA.png)](https://medium.com/@flutter-app/flutter-3-47-has-arrived-which-will-effect-the-way-you-develop-app-19f22a07f8ec?source=email-2b8b8ee19057-1787594938844-digest.reader--19f22a07f8ec----6-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+\[
+
+## Flutter 3.47 Has Arrived Which Will Effect The Way You develop App
+
+### Most of the releases from SDKs are noise — a boring…
+
+]\(https://medium.com/@flutter-app/flutter-3-47-has-arrived-which-will-effect-the-way-you-develop-app-19f22a07f8ec?source=email-2b8b8ee19057-1787594938844-digest.reader--19f22a07f8ec----6-99------------------3c26f34c\_bf01\_420d\_a32b\_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+25
+
+[![Long After the Thrill](https://miro.medium.com/fit/c/40/40/1*swAEpol5XHK-EyqV-i-sRg.jpeg)](https://medium.com/@longafterthethrill?source=email-2b8b8ee19057-1787594938844-digest.reader--adc0d976319c----7-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Long After the Thrill](https://medium.com/@longafterthethrill?source=email-2b8b8ee19057-1787594938844-digest.reader--adc0d976319c----7-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![I Wore the Special Mormon Underwear](https://miro.medium.com/fit/c/320/214/0*hukPp9y6o-eM_IZl.jpeg)](https://medium.com/@longafterthethrill/jesus-and-bunnies-and-eggs-oh-my-adc0d976319c?source=email-2b8b8ee19057-1787594938844-digest.reader--adc0d976319c----7-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+\[
+
+## I Wore the Special Mormon Underwear
+
+### Here’s what the “super secret” symbols sewn into them…
+
+]\(https://medium.com/@longafterthethrill/jesus-and-bunnies-and-eggs-oh-my-adc0d976319c?source=email-2b8b8ee19057-1787594938844-digest.reader--adc0d976319c----7-73------------------3c26f34c\_bf01\_420d\_a32b\_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+5.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+135
+
+[![The Thread Whisperer](https://miro.medium.com/fit/c/40/40/1*1OJwhDGJkOyNc7-ya2TA7w.jpeg)](https://medium.com/@maahisoft20?source=email-2b8b8ee19057-1787594938844-digest.reader--d6a90594cace----8-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[The Thread Whisperer](https://medium.com/@maahisoft20?source=email-2b8b8ee19057-1787594938844-digest.reader--d6a90594cace----8-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![Forget JSON Web Tokens: Server-Side Sessions Cut Our Auth Bugs By 70%](https://miro.medium.com/fit/c/320/214/1*kBhLDaAUq3f29fZc9LB8vw.png)](https://medium.com/@maahisoft20/forget-json-web-tokens-server-side-sessions-cut-our-auth-bugs-by-70-d6a90594cace?source=email-2b8b8ee19057-1787594938844-digest.reader--d6a90594cace----8-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+\[
+
+## Forget JSON Web Tokens: Server-Side Sessions Cut Our Auth Bugs By 70%
+
+### We were proud of our JWT setup. Stateless, scalable…
+
+]\(https://medium.com/@maahisoft20/forget-json-web-tokens-server-side-sessions-cut-our-auth-bugs-by-70-d6a90594cace?source=email-2b8b8ee19057-1787594938844-digest.reader--d6a90594cace----8-99------------------3c26f34c\_bf01\_420d\_a32b\_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+254
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+19
+
+[![ShipWithRathor](https://miro.medium.com/fit/c/40/40/1*FCwY16QezCMZw9DLDr5PPQ.jpeg)](https://medium.com/@garoono?source=email-2b8b8ee19057-1787594938844-digest.reader--c4442dff2806----9-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[ShipWithRathor](https://medium.com/@garoono?source=email-2b8b8ee19057-1787594938844-digest.reader--c4442dff2806----9-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![7 Flutter Packages I Deleted From Every App (and What I Use Instead)](https://miro.medium.com/fit/c/320/214/1*f3aKLbizDhFroSLbMujnKw.jpeg)](https://medium.com/@garoono/copy-of-7-flutter-packages-i-deleted-from-every-app-and-what-i-use-instead-c4442dff2806?source=email-2b8b8ee19057-1787594938844-digest.reader--c4442dff2806----9-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+\[
+
+## 7 Flutter Packages I Deleted From Every App (and What I Use Instead)
+
+### Every dependency you add is a small loan. It works…
+
+]\(https://medium.com/@garoono/copy-of-7-flutter-packages-i-deleted-from-every-app-and-what-i-use-instead-c4442dff2806?source=email-2b8b8ee19057-1787594938844-digest.reader--c4442dff2806----9-99------------------3c26f34c\_bf01\_420d\_a32b\_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+32
+
+[![Gaddam.Naveen](https://miro.medium.com/fit/c/40/40/1*ZE-CfQ1ViASqLlwps6EiBg.jpeg)](https://medium.com/@gaddamnaveen192?source=email-2b8b8ee19057-1787594938844-digest.reader--48207796ac0e----10-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Gaddam.Naveen](https://medium.com/@gaddamnaveen192?source=email-2b8b8ee19057-1787594938844-digest.reader--48207796ac0e----10-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![1 vs 100 vs 1,000 vs 10,000: The Batch Size Experiment Every Backend Engineer Should Know](https://miro.medium.com/fit/c/320/214/1*Eg0BI_pEYwMWLP7Mfgh-XA.png)](https://medium.com/@gaddamnaveen192/1-vs-100-vs-1-000-vs-10-000-the-batch-size-experiment-every-backend-engineer-should-know-48207796ac0e?source=email-2b8b8ee19057-1787594938844-digest.reader--48207796ac0e----10-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+\[
+
+## 1 vs 100 vs 1,000 vs 10,000: The Batch Size Experiment Every Backend Engineer…
+
+### How to Efficiently Insert 5 Million Records into a…
+
+]\(https://medium.com/@gaddamnaveen192/1-vs-100-vs-1-000-vs-10-000-the-batch-size-experiment-every-backend-engineer-should-know-48207796ac0e?source=email-2b8b8ee19057-1787594938844-digest.reader--48207796ac0e----10-99------------------3c26f34c\_bf01\_420d\_a32b\_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+15 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+67
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+3
+
+[![Matt Bentley](https://miro.medium.com/fit/c/40/40/1*nUZ_xcK6heGCMT4SHpSsuA.jpeg)](https://medium.com/@mattbentley_67939?source=email-2b8b8ee19057-1787594938844-digest.reader-5517fd7b58a6-cee06616b2cd----11-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Matt Bentley](https://medium.com/@mattbentley_67939?source=email-2b8b8ee19057-1787594938844-digest.reader-5517fd7b58a6-cee06616b2cd----11-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1787594938844-digest.reader-5517fd7b58a6-cee06616b2cd----11-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![Don’t Do Design by Coincidence](https://miro.medium.com/fit/c/320/214/1*ii9lffcwSjnUIGYNN6G2Xg.png)](https://medium.com/@mattbentley_67939/dont-do-design-by-coincidence-cee06616b2cd?source=email-2b8b8ee19057-1787594938844-digest.reader-5517fd7b58a6-cee06616b2cd----11-102------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+\[
+
+## Don’t Do Design by Coincidence
+
+### Your AI design tools are still producing slop, it’s…
+
+]\(https://medium.com/@mattbentley\_67939/dont-do-design-by-coincidence-cee06616b2cd?source=email-2b8b8ee19057-1787594938844-digest.reader-5517fd7b58a6-cee06616b2cd----11-102------------------3c26f34c\_bf01\_420d\_a32b\_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+11 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+200
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Rahul K.](https://miro.medium.com/fit/c/40/40/1*ER2ta_D8A1zOl5gHu58dJQ.jpeg)](https://medium.com/@rahulnetwork?source=email-2b8b8ee19057-1787594938844-digest.reader-c61b43ec687d-fc8b18c73a70----12-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Rahul K.](https://medium.com/@rahulnetwork?source=email-2b8b8ee19057-1787594938844-digest.reader-c61b43ec687d-fc8b18c73a70----12-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)in[Activated Thinker](https://medium.com/activated-thinker?source=email-2b8b8ee19057-1787594938844-digest.reader-c61b43ec687d-fc8b18c73a70----12-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![Stop Wasting Cash on These 10 Overpriced Modern Lifestyle Habits Today](https://miro.medium.com/fit/c/320/214/0*YL-Q8TYXYEP-kjwi)](https://medium.com/@rahulnetwork/stop-wasting-cash-on-these-10-overpriced-modern-lifestyle-habits-today-fc8b18c73a70?source=email-2b8b8ee19057-1787594938844-digest.reader-c61b43ec687d-fc8b18c73a70----12-73------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+\[
+
+## Stop Wasting Cash on These 10 Overpriced Modern Lifestyle Habits Today
+
+### Discover which modern expenses quietly waste money…
+
+]\(https://medium.com/@rahulnetwork/stop-wasting-cash-on-these-10-overpriced-modern-lifestyle-habits-today-fc8b18c73a70?source=email-2b8b8ee19057-1787594938844-digest.reader-c61b43ec687d-fc8b18c73a70----12-73------------------3c26f34c\_bf01\_420d\_a32b\_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+15 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.5K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+73
+
+[![ShipWithRathor](https://miro.medium.com/fit/c/40/40/1*FCwY16QezCMZw9DLDr5PPQ.jpeg)](https://medium.com/@garoono?source=email-2b8b8ee19057-1787594938844-digest.reader--8af94d8945f0----13-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[ShipWithRathor](https://medium.com/@garoono?source=email-2b8b8ee19057-1787594938844-digest.reader--8af94d8945f0----13-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![12 Flutter Widgets I Never Knew Existed Until App #20](https://miro.medium.com/fit/c/320/214/1*EhabbMGwziWfzP8CY1pmYw.jpeg)](https://medium.com/@garoono/copy-of-12-flutter-widgets-i-never-knew-existed-until-app-20-8af94d8945f0?source=email-2b8b8ee19057-1787594938844-digest.reader--8af94d8945f0----13-99------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+\[
+
+## 12 Flutter Widgets I Never Knew Existed Until App #20
+
+### I’ve shipped 32 apps in the last six years. Somewhere…
+
+]\(https://medium.com/@garoono/copy-of-12-flutter-widgets-i-never-knew-existed-until-app-20-8af94d8945f0?source=email-2b8b8ee19057-1787594938844-digest.reader--8af94d8945f0----13-99------------------3c26f34c\_bf01\_420d\_a32b\_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+4 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+34
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Divya Sabade](https://miro.medium.com/fit/c/40/40/1*6sbe0yNg1mfzNR64JvEmUw.jpeg)](https://medium.com/@sabade.divya?source=email-2b8b8ee19057-1787594938844-digest.reader-48e972f5c24e-c106ce7cadf8----14-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[Divya Sabade](https://medium.com/@sabade.divya?source=email-2b8b8ee19057-1787594938844-digest.reader-48e972f5c24e-c106ce7cadf8----14-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)in[Bootcamp](https://medium.com/design-bootcamp?source=email-2b8b8ee19057-1787594938844-digest.reader-48e972f5c24e-c106ce7cadf8----14-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+[![I Sat in Engineering Meetings for a Year Without Understanding What a Branch Was](https://miro.medium.com/fit/c/320/214/0*atvj9-J9EFfFKvok)](https://medium.com/@sabade.divya/i-sat-in-engineering-meetings-for-two-years-without-understanding-what-a-branch-was-c106ce7cadf8?source=email-2b8b8ee19057-1787594938844-digest.reader-48e972f5c24e-c106ce7cadf8----14-109------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad-1)
+
+\[
+
+## I Sat in Engineering Meetings for a Year Without Understanding What a Branch…
+
+### This is what I wish someone had explained to me on day…
+
+]\(https://medium.com/@sabade.divya/i-sat-in-engineering-meetings-for-two-years-without-understanding-what-a-branch-was-c106ce7cadf8?source=email-2b8b8ee19057-1787594938844-digest.reader-48e972f5c24e-c106ce7cadf8----14-109------------------3c26f34c\_bf01\_420d\_a32b\_f0d5c28504ad-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+60
+
+[![Download the Medium App](https://miro.medium.com/max/1360/b45a35cf900895c2a6f4c9db90ee725dd016aef7b67da1455d7849701f1562f1)](https://medium.com/download-app?source=email-2b8b8ee19057-1787594938844-digest.reader-------------------------3c26f34c_bf01_420d_a32b_f0d5c28504ad)
+
+
