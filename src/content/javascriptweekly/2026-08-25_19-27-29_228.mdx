@@ -1,0 +1,297 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Bun 1.4 is (finally) fresh out of the oven
+description: Bun 1.4 is (finally) fresh out of the oven
+date: 星期二 07 晚上 八月 25o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/799
+origin_site: https://javascriptweekly.com/issues/799
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Bun 1.4 is (finally) fresh out of the oven" url="https://javascriptweekly.com/issues/799" />
+
+<Detail client:only="react">
+	#​799 — August 25, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/799)
+
+🏖️ I'm back from an intense week of Disney vacationing with the family, so I feel more tired than before I left 😅… but it's time to catch up with all things JavaScript!  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![Webflow](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_215/e_make_transparent/co_white,e_outline:17/wjyfnbcwhpwpyfcknxgi.png)](https://javascriptweekly.com/link/189348/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jgkycdtzpabaibtigxfp.jpg)](https://javascriptweekly.com/link/189397/d076523b1d)
+
+[Bun 1.4: Now More Node.js Compatible Than Ever](https://javascriptweekly.com/link/189397/d076523b1d "bun.com") — Several weeks after it was initially expected to launch, Bun's [big AI-powered rewrite from Zig to Rust](https://javascriptweekly.com/link/189398/d076523b1d) is here, complete with traditional [▶️ release video](https://javascriptweekly.com/link/189399/d076523b1d). A lot of effort has been put into compatibility, not just with Node, but Next.js, Playwright, Vitest, and Nuxt too. Throughput and CPU/memory usage also see huge improvements.
+
+The Bun Team
+
+☕ Grab the biggest coffee you can if you intend to get through the release post. It's easily the longest I've ever seen in fifteen years of running this newsletter.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/89dbfa4d.png)](https://javascriptweekly.com/link/189348/d076523b1d)
+
+[Webflow for Developers](https://javascriptweekly.com/link/189348/d076523b1d "developers.webflow.com") — Most tools make you choose between visual builders and real code. Webflow gives you both: APIs, SDKs, Code Components, and Webflow Cloud to deploy custom apps, plus an MCP server to build with agents.
+
+Webflow sponsor
+
+🎵 [Music Theory for JavaScript Developers](https://javascriptweekly.com/link/189349/d076523b1d "runjs.app") — A from-first-principles tour of music theory, deriving the twelve notes, scales, chords and progressions from plain arithmetic, with runnable Web Audio examples throughout.
+
+Luke Haas
+
+[Solid 2.0 RC: The Big &lt;Reveal>](https://javascriptweekly.com/link/189400/d076523b1d "www.solidjs.com") — Async now lives in the reactive graph, so async data flows through ordinary memos. `createResource`, `batch` and `startTransition` are gone. SolidStart gets retired into a `start: true` flag on the Vite plugin, and the API is now frozen.
+
+Ryan Carniato
+
+**IN BRIEF:**
+
+*   Aurora Scharff shows off [how Next.js 16.3 helps developers build 'app-like' experiences](https://javascriptweekly.com/link/189350/d076523b1d).
+    
+*   Aviv Keller presents [a recap of everything from Node.js Interactive 2026](https://javascriptweekly.com/link/189401/d076523b1d) which took place in Atlanta two weeks ago.
+    
+*   🤖 [TanStack AI has entered its RC phase](https://javascriptweekly.com/link/189351/d076523b1d) with a look at the journey so far and its main feature set.
+    
+*   Oxlint has [gained React Compiler support](https://javascriptweekly.com/link/189402/d076523b1d).
+    
+
+**RELEASES:**
+
+*   [Electron 44](https://javascriptweekly.com/link/189353/d076523b1d) – No post yet, but it has dropped 32-bit support, requires macOS 13+, `clipboard` is now aligned with the W3C Clipboard API, and added `net.WebSocket` and the ability to set window opacity on Linux.
+    
+*   [Waku 1.0 RC](https://javascriptweekly.com/link/189354/d076523b1d) – Minimal RSC-first React framework, now API-frozen ahead of v1 final, adding type-safe navigation that catches bad routes at compile time and experimental instant paints from cached route shells.
+    
+*   [SvelteKit 3 Release Candidate](https://javascriptweekly.com/link/189403/d076523b1d), [React Native 0.87](https://javascriptweekly.com/link/189355/d076523b1d), [ESLint 10.9](https://javascriptweekly.com/link/189356/d076523b1d) (and [10.9.1](https://javascriptweekly.com/link/189357/d076523b1d)), [Axios 1.20.0](https://javascriptweekly.com/link/189358/d076523b1d), [pnpm 11.23](https://javascriptweekly.com/link/189359/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[The Wicked Reason Removing Code Beats Better Scheduling](https://javascriptweekly.com/link/189361/d076523b1d "infrequently.org") — A lot of performance work goes into shuffling when things load, when the bigger win is usually not sending the code at all. Alex Russell makes the case that this is a management problem more than a technical one.
+
+Alex Russell
+
+[ESM and CommonJS: What `import` and `require` Actually Do](https://javascriptweekly.com/link/189362/d076523b1d "blog.gaborkoos.com") — They look like the same operation, but Gabor shows how an ESM `import` stays wired to the exporter's binding, while a destructured `require()` only holds a _copy_. The consequences show up in circular dependencies and published packages.
+
+Gabor Koos
+
+[Build with Strategy. Lead with Curiosity](https://javascriptweekly.com/link/189363/d076523b1d "jobs.fidelity.com") — Fidelity is looking for technologists that ask questions, challenge conventions and care about the impact of their products.
+
+Fidelity Careers sponsor
+
+[How Cloudflare Moved Its Blog to Its Own WordPress Alternative](https://javascriptweekly.com/link/189364/d076523b1d "blog.cloudflare.com") — How Cloudflare moved its main blog onto [EmDash](https://javascriptweekly.com/link/189365/d076523b1d), the Astro CMS it's building. Interesting parts include the k6 load tests and using a proxy Worker to ramp up traffic during switchover.
+
+Jackson, Carneiro, and Dutton (Cloudflare)
+
+📺 [The Creator of TypeScript on 10x Faster TypeScript and Why AI Won't Replace SWEs](https://javascriptweekly.com/link/189366/d076523b1d) – A candid hour-long interview with Microsoft's Anders Hejlsberg. Ryan Peterman
+
+📄 [Hiding Internal State in TypeScript Objects](https://javascriptweekly.com/link/189367/d076523b1d) – How a non-exported `unique symbol` used as a property key keeps internal state out of `Object.keys` and `JSON.stringify`. Carlos Menezes
+
+📄 [Reliable Query Prefetching with TanStack Router](https://javascriptweekly.com/link/189368/d076523b1d) Dominik Dorfmeister
+
+📄 [I Patched the TypeScript Compiler to Add Up Nine Numbers](https://javascriptweekly.com/link/189369/d076523b1d) Hugo Vilela
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tcpdkzgmos3kjf4wj5mw.jpg)](https://javascriptweekly.com/link/189370/d076523b1d)
+
+[MicroLighter: A 2KB Syntax Highlighter That Doesn't Touch the DOM](https://javascriptweekly.com/link/189370/d076523b1d "daverupert.com") — A small, client-side syntax highlighter that makes use of the [CSS Custom Highlights API](https://javascriptweekly.com/link/189371/d076523b1d). No dependencies, and with themes for light and dark modes. The homepage has some [live demos](https://javascriptweekly.com/link/189372/d076523b1d).
+
+Dave Rupert
+
+[TermDOM: Build Terminal UIs with HTML, CSS and DOM](https://javascriptweekly.com/link/189373/d076523b1d "termdom.org") — A real DOM and layout engine to paint to the terminal, so you can write a TUI with vanilla JS (or framework of choice) and HTML (not just React, as with [Ink](https://javascriptweekly.com/link/189374/d076523b1d)). This week's [v0.1.5 release](https://javascriptweekly.com/link/189375/d076523b1d) adds CSS grid support.
+
+Brian Kim
+
+[Full-Text Search in Drizzle Without a Second System](https://javascriptweekly.com/link/189376/d076523b1d "github.com") — Try the official ParadeDB integration for Drizzle. Search your live Postgres tables. No ETL, no Elasticsearch cluster.
+
+ParadeDB sponsor
+
+[Formisch 1.0: Framework-Agnostic Schema-Based Form Library](https://javascriptweekly.com/link/189377/d076523b1d "formisch.dev") — A headless form library where a [Valibot](https://javascriptweekly.com/link/189378/d076523b1d) schema drives types and validation across eight frameworks. v1 adds Angular and React Native support, migration guides for TanStack Form/React Hook Form/Formik users, plus Markdown docs for agents.
+
+Formisch Team
+
+[Stryker Mutator 10.0: Test Your Tests with Mutation Testing](https://javascriptweekly.com/link/189379/d076523b1d "stryker-mutator.io") — Stryker makes [small, deliberate changes](https://javascriptweekly.com/link/189380/d076523b1d) to your code and checks whether your test suite catches them. If it doesn't, your tests may be too lax and need work. Here's [how to get started](https://javascriptweekly.com/link/189381/d076523b1d).
+
+Jansen, de Lang, et al.
+
+*   [Ionic Framework v9](https://javascriptweekly.com/link/189382/d076523b1d) – The mobile-first UI toolkit for React, Angular and Vue returns after a two-year gap with React Router 6 support, zoneless change detection in Angular 21+, and more. There's [an upgrade guide for v8 users](https://javascriptweekly.com/link/189383/d076523b1d).
+    
+*   [Papa Parse 5.7](https://javascriptweekly.com/link/189384/d076523b1d) – Fast, flexible CSV-to-JSON and JSON-to-CSV library.
+    
+*   🌐 [MapLibre GL JS 6.6](https://javascriptweekly.com/link/189385/d076523b1d) – GPU-accelerated vector tile rendering library for interactive maps in the browser.
+    
+*   📊 [Plotly.js 4.0](https://javascriptweekly.com/link/189386/d076523b1d) – Standalone library for creating interactive data visualizations.
+    
+*   [GTKX 1.3](https://javascriptweekly.com/link/189387/d076523b1d) – Create native GTK-powered Linux desktop apps with React.
+    
+*   📺 [YouTube.js 18.0](https://javascriptweekly.com/link/189388/d076523b1d) – JavaScript client for YouTube's internal API.
+    
+
+📢  Elsewhere in the ecosystem
+
+Some other interesting tidbits in the broader landscape:
+
+*   Last week the Next.js team [did an AMA (Ask Me Anything) on Reddit](https://javascriptweekly.com/link/189389/d076523b1d) and the thread is packed with answers and insights.
+    
+*   🖼️ Jake Archibald posts [an update on Firefox's coming support for JPEG XL](https://javascriptweekly.com/link/189390/d076523b1d) which Chrome is also planning to support soon.
+    
+*   📊 Gajus Kuizinas has put together a [CSS-in-JS Arena](https://javascriptweekly.com/link/189391/d076523b1d) comparing StyleX, Panda CSS and his own brand new [Bamboo CSS](https://javascriptweekly.com/link/189392/d076523b1d) on the same React Router 8 app.
+    
+*   Did you know splitting a git commit [is now a single command](https://javascriptweekly.com/link/189393/d076523b1d) (in [Git 2.54+](https://javascriptweekly.com/link/189404/d076523b1d))? `git history split &lt;ref>` walks the change hunk by hunk and prompts for both messages.
+    
+*   🕹️ [An N64 emulator written in JavaScript](https://javascriptweekly.com/link/189394/d076523b1d). If you have a ROM file to use, you can [play with it here](https://javascriptweekly.com/link/189405/d076523b1d).
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/189395/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​799 — August 25, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/799)
+
+🏖️ I'm back from an intense week of Disney vacationing with the family, so I feel more tired than before I left 😅… but it's time to catch up with all things JavaScript!\
+\_\_\
+*Your editor, Peter Cooper*
+
+Together with 
+
+[![Webflow](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_215/e_make_transparent/co_white,e_outline:17/wjyfnbcwhpwpyfcknxgi.png)](https://javascriptweekly.com/link/189348/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jgkycdtzpabaibtigxfp.jpg)](https://javascriptweekly.com/link/189397/d076523b1d)
+
+[Bun 1.4: Now More Node.js Compatible Than Ever](https://javascriptweekly.com/link/189397/d076523b1d "bun.com") — Several weeks after it was initially expected to launch, Bun's [big AI-powered rewrite from Zig to Rust](https://javascriptweekly.com/link/189398/d076523b1d) is here, complete with traditional [▶️ release video](https://javascriptweekly.com/link/189399/d076523b1d). A lot of effort has been put into compatibility, not just with Node, but Next.js, Playwright, Vitest, and Nuxt too. Throughput and CPU/memory usage also see huge improvements.
+
+The Bun Team
+
+☕ Grab the biggest coffee you can if you intend to get through the release post. It's easily the longest I've ever seen in fifteen years of running this newsletter.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/89dbfa4d.png)](https://javascriptweekly.com/link/189348/d076523b1d)
+
+[Webflow for Developers](https://javascriptweekly.com/link/189348/d076523b1d "developers.webflow.com") — Most tools make you choose between visual builders and real code. Webflow gives you both: APIs, SDKs, Code Components, and Webflow Cloud to deploy custom apps, plus an MCP server to build with agents.
+
+Webflow sponsor
+
+🎵 [Music Theory for JavaScript Developers](https://javascriptweekly.com/link/189349/d076523b1d "runjs.app") — A from-first-principles tour of music theory, deriving the twelve notes, scales, chords and progressions from plain arithmetic, with runnable Web Audio examples throughout.
+
+Luke Haas
+
+[Solid 2.0 RC: The Big &lt;Reveal>](https://javascriptweekly.com/link/189400/d076523b1d "www.solidjs.com") — Async now lives in the reactive graph, so async data flows through ordinary memos. `createResource`, `batch` and `startTransition` are gone. SolidStart gets retired into a `start: true` flag on the Vite plugin, and the API is now frozen.
+
+Ryan Carniato
+
+**IN BRIEF:**
+
+* Aurora Scharff shows off [how Next.js 16.3 helps developers build 'app-like' experiences](https://javascriptweekly.com/link/189350/d076523b1d).
+
+* Aviv Keller presents [a recap of everything from Node.js Interactive 2026](https://javascriptweekly.com/link/189401/d076523b1d) which took place in Atlanta two weeks ago.
+
+* 🤖 [TanStack AI has entered its RC phase](https://javascriptweekly.com/link/189351/d076523b1d) with a look at the journey so far and its main feature set.
+
+* Oxlint has [gained React Compiler support](https://javascriptweekly.com/link/189402/d076523b1d).
+
+**RELEASES:**
+
+* [Electron 44](https://javascriptweekly.com/link/189353/d076523b1d) – No post yet, but it has dropped 32-bit support, requires macOS 13+, `clipboard` is now aligned with the W3C Clipboard API, and added `net.WebSocket` and the ability to set window opacity on Linux.
+
+* [Waku 1.0 RC](https://javascriptweekly.com/link/189354/d076523b1d) – Minimal RSC-first React framework, now API-frozen ahead of v1 final, adding type-safe navigation that catches bad routes at compile time and experimental instant paints from cached route shells.
+
+* [SvelteKit 3 Release Candidate](https://javascriptweekly.com/link/189403/d076523b1d), [React Native 0.87](https://javascriptweekly.com/link/189355/d076523b1d), [ESLint 10.9](https://javascriptweekly.com/link/189356/d076523b1d) (and [10.9.1](https://javascriptweekly.com/link/189357/d076523b1d)), [Axios 1.20.0](https://javascriptweekly.com/link/189358/d076523b1d), [pnpm 11.23](https://javascriptweekly.com/link/189359/d076523b1d)
+
+📖  Articles and Videos
+
+[The Wicked Reason Removing Code Beats Better Scheduling](https://javascriptweekly.com/link/189361/d076523b1d "infrequently.org") — A lot of performance work goes into shuffling when things load, when the bigger win is usually not sending the code at all. Alex Russell makes the case that this is a management problem more than a technical one.
+
+Alex Russell
+
+[ESM and CommonJS: What `import` and `require` Actually Do](https://javascriptweekly.com/link/189362/d076523b1d "blog.gaborkoos.com") — They look like the same operation, but Gabor shows how an ESM `import` stays wired to the exporter's binding, while a destructured `require()` only holds a *copy*. The consequences show up in circular dependencies and published packages.
+
+Gabor Koos
+
+[Build with Strategy. Lead with Curiosity](https://javascriptweekly.com/link/189363/d076523b1d "jobs.fidelity.com") — Fidelity is looking for technologists that ask questions, challenge conventions and care about the impact of their products.
+
+Fidelity Careers sponsor
+
+[How Cloudflare Moved Its Blog to Its Own WordPress Alternative](https://javascriptweekly.com/link/189364/d076523b1d "blog.cloudflare.com") — How Cloudflare moved its main blog onto [EmDash](https://javascriptweekly.com/link/189365/d076523b1d), the Astro CMS it's building. Interesting parts include the k6 load tests and using a proxy Worker to ramp up traffic during switchover.
+
+Jackson, Carneiro, and Dutton (Cloudflare)
+
+📺 [The Creator of TypeScript on 10x Faster TypeScript and Why AI Won't Replace SWEs](https://javascriptweekly.com/link/189366/d076523b1d) – A candid hour-long interview with Microsoft's Anders Hejlsberg. Ryan Peterman
+
+📄 [Hiding Internal State in TypeScript Objects](https://javascriptweekly.com/link/189367/d076523b1d) – How a non-exported `unique symbol` used as a property key keeps internal state out of `Object.keys` and `JSON.stringify`. Carlos Menezes
+
+📄 [Reliable Query Prefetching with TanStack Router](https://javascriptweekly.com/link/189368/d076523b1d) Dominik Dorfmeister
+
+📄 [I Patched the TypeScript Compiler to Add Up Nine Numbers](https://javascriptweekly.com/link/189369/d076523b1d) Hugo Vilela
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/tcpdkzgmos3kjf4wj5mw.jpg)](https://javascriptweekly.com/link/189370/d076523b1d)
+
+[MicroLighter: A 2KB Syntax Highlighter That Doesn't Touch the DOM](https://javascriptweekly.com/link/189370/d076523b1d "daverupert.com") — A small, client-side syntax highlighter that makes use of the [CSS Custom Highlights API](https://javascriptweekly.com/link/189371/d076523b1d). No dependencies, and with themes for light and dark modes. The homepage has some [live demos](https://javascriptweekly.com/link/189372/d076523b1d).
+
+Dave Rupert
+
+[TermDOM: Build Terminal UIs with HTML, CSS and DOM](https://javascriptweekly.com/link/189373/d076523b1d "termdom.org") — A real DOM and layout engine to paint to the terminal, so you can write a TUI with vanilla JS (or framework of choice) and HTML (not just React, as with [Ink](https://javascriptweekly.com/link/189374/d076523b1d)). This week's [v0.1.5 release](https://javascriptweekly.com/link/189375/d076523b1d) adds CSS grid support.
+
+Brian Kim
+
+[Full-Text Search in Drizzle Without a Second System](https://javascriptweekly.com/link/189376/d076523b1d "github.com") — Try the official ParadeDB integration for Drizzle. Search your live Postgres tables. No ETL, no Elasticsearch cluster.
+
+ParadeDB sponsor
+
+[Formisch 1.0: Framework-Agnostic Schema-Based Form Library](https://javascriptweekly.com/link/189377/d076523b1d "formisch.dev") — A headless form library where a [Valibot](https://javascriptweekly.com/link/189378/d076523b1d) schema drives types and validation across eight frameworks. v1 adds Angular and React Native support, migration guides for TanStack Form/React Hook Form/Formik users, plus Markdown docs for agents.
+
+Formisch Team
+
+[Stryker Mutator 10.0: Test Your Tests with Mutation Testing](https://javascriptweekly.com/link/189379/d076523b1d "stryker-mutator.io") — Stryker makes [small, deliberate changes](https://javascriptweekly.com/link/189380/d076523b1d) to your code and checks whether your test suite catches them. If it doesn't, your tests may be too lax and need work. Here's [how to get started](https://javascriptweekly.com/link/189381/d076523b1d).
+
+Jansen, de Lang, et al.
+
+* [Ionic Framework v9](https://javascriptweekly.com/link/189382/d076523b1d) – The mobile-first UI toolkit for React, Angular and Vue returns after a two-year gap with React Router 6 support, zoneless change detection in Angular 21+, and more. There's [an upgrade guide for v8 users](https://javascriptweekly.com/link/189383/d076523b1d).
+
+* [Papa Parse 5.7](https://javascriptweekly.com/link/189384/d076523b1d) – Fast, flexible CSV-to-JSON and JSON-to-CSV library.
+
+* 🌐 [MapLibre GL JS 6.6](https://javascriptweekly.com/link/189385/d076523b1d) – GPU-accelerated vector tile rendering library for interactive maps in the browser.
+
+* 📊 [Plotly.js 4.0](https://javascriptweekly.com/link/189386/d076523b1d) – Standalone library for creating interactive data visualizations.
+
+* [GTKX 1.3](https://javascriptweekly.com/link/189387/d076523b1d) – Create native GTK-powered Linux desktop apps with React.
+
+* 📺 [YouTube.js 18.0](https://javascriptweekly.com/link/189388/d076523b1d) – JavaScript client for YouTube's internal API.
+
+📢  Elsewhere in the ecosystem
+
+Some other interesting tidbits in the broader landscape:
+
+* Last week the Next.js team [did an AMA (Ask Me Anything) on Reddit](https://javascriptweekly.com/link/189389/d076523b1d) and the thread is packed with answers and insights.
+
+* 🖼️ Jake Archibald posts [an update on Firefox's coming support for JPEG XL](https://javascriptweekly.com/link/189390/d076523b1d) which Chrome is also planning to support soon.
+
+* 📊 Gajus Kuizinas has put together a [CSS-in-JS Arena](https://javascriptweekly.com/link/189391/d076523b1d) comparing StyleX, Panda CSS and his own brand new [Bamboo CSS](https://javascriptweekly.com/link/189392/d076523b1d) on the same React Router 8 app.
+
+* Did you know splitting a git commit [is now a single command](https://javascriptweekly.com/link/189393/d076523b1d) (in [Git 2.54+](https://javascriptweekly.com/link/189404/d076523b1d))? `git history split &lt;ref>` walks the change hunk by hunk and prompts for both messages.
+
+* 🕹️ [An N64 emulator written in JavaScript](https://javascriptweekly.com/link/189394/d076523b1d). If you have a ROM file to use, you can [play with it here](https://javascriptweekly.com/link/189405/d076523b1d).
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/189395/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
