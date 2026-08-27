@@ -1,0 +1,841 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Building an AI Agent from Scratch： No Magic, Just a Deterministic Loop | Sergey Nes in Level Up Coding
+description: Building an AI Agent from Scratch： No Magic, Just a Deterministic Loop | Sergey Nes in Level Up Coding
+date: 星期四 11 晚上 八月 27o 2026
+author: mediumcom
+origin_url: https://medium.com/
+origin_site: https://medium.com/
+translated: true
+avatar: /media-source/mediumcom-ico.png
+email_recorder: noreply@medium.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Building an AI Agent from Scratch： No Magic, Just a Deterministic Loop | Sergey Nes in Level Up Coding" url="https://medium.com/" />
+
+<Detail client:only="react">
+	Today's highlights
+
+[![Sergey Nes](https://miro.medium.com/fit/c/40/40/1*NLB9mnyUPQ8yN3o3bW_TfA.png)](https://medium.com/@sergey-nes?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-a916161705fb----0-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Sergey Nes](https://medium.com/@sergey-nes?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-a916161705fb----0-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-a916161705fb----0-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![Building an AI Agent from Scratch: No Magic, Just a Deterministic Loop](https://miro.medium.com/fit/c/320/214/1*t0QDDqOfv5uyn2rpnrYsyA.png)](https://medium.com/@sergey-nes/building-an-ai-agent-from-scratch-no-magic-just-a-deterministic-loop-a916161705fb?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-a916161705fb----0-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[
+
+## Building an AI Agent from Scratch: No Magic, Just a Deterministic Loop
+
+### I was using Claude, Codex, Cursor, Gemini, Copilot, or…
+
+
+
+](https://medium.com/@sergey-nes/building-an-ai-agent-from-scratch-no-magic-just-a-deterministic-loop-a916161705fb?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-a916161705fb----0-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+13 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+2.2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+71
+
+[![Thomas Oppong](https://miro.medium.com/fit/c/40/40/1*K4RSsTUgj-UeJuc69C_oLA.jpeg)](https://medium.com/@thomas-oppong?source=email-2b8b8ee19057-1787854242029-digest.reader--c79cfabaee7c----1-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Thomas Oppong](https://medium.com/@thomas-oppong?source=email-2b8b8ee19057-1787854242029-digest.reader--c79cfabaee7c----1-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![This is Feynman’s Thinking Habit. It Made Him a Genius](https://miro.medium.com/fit/c/320/214/1*jVb18jVNXhKe7UBXTT-4jg.jpeg)](https://medium.com/@thomas-oppong/this-is-feynmans-thinking-habit-it-made-him-a-genius-c79cfabaee7c?source=email-2b8b8ee19057-1787854242029-digest.reader--c79cfabaee7c----1-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[
+
+## This is Feynman’s Thinking Habit. It Made Him a Genius
+
+### Think 10x clearer with this simple mental trick.
+
+
+
+](https://medium.com/@thomas-oppong/this-is-feynmans-thinking-habit-it-made-him-a-genius-c79cfabaee7c?source=email-2b8b8ee19057-1787854242029-digest.reader--c79cfabaee7c----1-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+13.7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+302
+
+[![Kevin - MERN Stack Developer](https://miro.medium.com/fit/c/40/40/1*aUGBohBB1VAnsoGAdjEZoQ.png)](https://medium.com/@mernstackdevbykevin?source=email-2b8b8ee19057-1787854242029-digest.reader--0c0c48299efd----2-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Kevin - MERN Stack Developer](https://medium.com/@mernstackdevbykevin?source=email-2b8b8ee19057-1787854242029-digest.reader--0c0c48299efd----2-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![I Built a SaaS with React and Next.js — Here’s What Nobody Tells You](https://miro.medium.com/fit/c/320/214/1*IUwl9YG3KmtDsD4om62mhw.png)](https://medium.com/@mernstackdevbykevin/i-built-a-saas-with-react-and-next-js-heres-what-nobody-tells-you-0c0c48299efd?source=email-2b8b8ee19057-1787854242029-digest.reader--0c0c48299efd----2-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[
+
+## I Built a SaaS with React and Next.js — Here’s What Nobody Tells You
+
+### A practical, no-fluff guide to architecting a real…
+
+
+
+](https://medium.com/@mernstackdevbykevin/i-built-a-saas-with-react-and-next-js-heres-what-nobody-tells-you-0c0c48299efd?source=email-2b8b8ee19057-1787854242029-digest.reader--0c0c48299efd----2-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+8
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Youssef Hosni](https://miro.medium.com/fit/c/40/40/1*Wftd4SJciOP8CoW3xJqeJQ.jpeg)](https://medium.com/@yousefhosni?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-6f422390a143----3-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Youssef Hosni](https://medium.com/@yousefhosni?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-6f422390a143----3-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-6f422390a143----3-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![How to Create Loops with Claude Code: A Practical Guide to Agentic Automation](https://miro.medium.com/fit/c/320/214/1*WbMmltJlf6xsaKxctAiUpg.png)](https://medium.com/@yousefhosni/how-to-create-loops-with-claude-code-a-practical-guide-to-agentic-automation-6f422390a143?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-6f422390a143----3-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[
+
+## How to Create Loops with Claude Code: A Practical Guide to Agentic Automation
+
+### Claude Loop Engineering: How to Design Agents That…
+
+
+
+](https://medium.com/@yousefhosni/how-to-create-loops-with-claude-code-a-practical-guide-to-agentic-automation-6f422390a143?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-6f422390a143----3-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+63 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+29
+
+[![Darius Foroux](https://miro.medium.com/fit/c/40/40/1*G8AjDNKe3_NBl14pXfJ2NA.jpeg)](https://medium.com/@dariusforoux?source=email-2b8b8ee19057-1787854242029-digest.reader--408f14719dd6----4-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Darius Foroux](https://medium.com/@dariusforoux?source=email-2b8b8ee19057-1787854242029-digest.reader--408f14719dd6----4-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![The Simplest Way to Stop Procrastinating](https://miro.medium.com/fit/c/320/214/1*Lft-2_C4_eC7QTupK5oaeQ.png)](https://medium.com/@dariusforoux/the-simplest-way-to-stop-procrastinating-408f14719dd6?source=email-2b8b8ee19057-1787854242029-digest.reader--408f14719dd6----4-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[
+
+## The Simplest Way to Stop Procrastinating
+
+### Make it easy to start.
+
+
+
+](https://medium.com/@dariusforoux/the-simplest-way-to-stop-procrastinating-408f14719dd6?source=email-2b8b8ee19057-1787854242029-digest.reader--408f14719dd6----4-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+40
+
+[![Fareed Khan](https://miro.medium.com/fit/c/40/40/1*feiUXOR8sid6IPHSHufA-g.jpeg)](https://medium.com/@fareedkhandev?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-cd38ee3daf93----5-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Fareed Khan](https://medium.com/@fareedkhandev?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-cd38ee3daf93----5-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-cd38ee3daf93----5-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![Building Claude from Scratch: 62 Components Behind Anthropic’s Thinking Engine](https://miro.medium.com/fit/c/320/214/1*p5SMpwf67JW-98nvN4atZg.png)](https://medium.com/@fareedkhandev/building-claude-from-scratch-62-components-behind-anthropics-thinking-engine-cd38ee3daf93?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-cd38ee3daf93----5-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[
+
+## Building Claude from Scratch: 62 Components Behind Anthropic’s Thinking Engine
+
+### Machine learning patterns and agentic components, end…
+
+
+
+](https://medium.com/@fareedkhandev/building-claude-from-scratch-62-components-behind-anthropics-thinking-engine-cd38ee3daf93?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-cd38ee3daf93----5-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+80 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+10
+
+[![Liam Hunter-Bailey](https://miro.medium.com/fit/c/40/40/1*4I7NGEOdiLFZN_x-L40-Zg.jpeg)](https://medium.com/@liamhb?source=email-2b8b8ee19057-1787854242029-digest.reader-69d8be4015f1-aa4e113af0af----6-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Liam Hunter-Bailey](https://medium.com/@liamhb?source=email-2b8b8ee19057-1787854242029-digest.reader-69d8be4015f1-aa4e113af0af----6-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[Globetrotters](https://medium.com/globetrotters?source=email-2b8b8ee19057-1787854242029-digest.reader-69d8be4015f1-aa4e113af0af----6-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![I Spent 2 Weeks in China. I Won’t Be Back.](https://miro.medium.com/focal/320/214/50/54/1*hJNQWbiLGJL36Ykr3CGYYQ.jpeg)](https://medium.com/@liamhb/i-spent-2-weeks-in-china-i-wont-be-back-aa4e113af0af?source=email-2b8b8ee19057-1787854242029-digest.reader-69d8be4015f1-aa4e113af0af----6-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[
+
+## I Spent 2 Weeks in China. I Won’t Be Back.
+
+### My honest experience visiting a country I desperately…
+
+
+
+](https://medium.com/@liamhb/i-spent-2-weeks-in-china-i-wont-be-back-aa4e113af0af?source=email-2b8b8ee19057-1787854242029-digest.reader-69d8be4015f1-aa4e113af0af----6-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+9 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+11.7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+433
+
+[![Darius Foroux](https://miro.medium.com/fit/c/40/40/1*G8AjDNKe3_NBl14pXfJ2NA.jpeg)](https://medium.com/@dariusforoux?source=email-2b8b8ee19057-1787854242029-digest.reader--e44b571d61ee----7-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Darius Foroux](https://medium.com/@dariusforoux?source=email-2b8b8ee19057-1787854242029-digest.reader--e44b571d61ee----7-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![How to Protect Your Mind From Constant Distraction](https://miro.medium.com/fit/c/320/214/1*bM_ME9_EwM7Bgs9_0aktoA.png)](https://medium.com/@dariusforoux/how-to-protect-your-mind-from-constant-distraction-e44b571d61ee?source=email-2b8b8ee19057-1787854242029-digest.reader--e44b571d61ee----7-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[
+
+## How to Protect Your Mind From Constant Distraction
+
+### Use a simple filter to decide what deserves your…
+
+
+
+](https://medium.com/@dariusforoux/how-to-protect-your-mind-from-constant-distraction-e44b571d61ee?source=email-2b8b8ee19057-1787854242029-digest.reader--e44b571d61ee----7-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+2.8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+88
+
+[![Stephanie Shen](https://miro.medium.com/fit/c/40/40/0*kt7Vn21xO_GsnyLy.png)](https://medium.com/@jshen9889?source=email-2b8b8ee19057-1787854242029-digest.reader-eca1ba5ae1ca-a6ac186b2b64----8-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Stephanie Shen](https://medium.com/@jshen9889?source=email-2b8b8ee19057-1787854242029-digest.reader-eca1ba5ae1ca-a6ac186b2b64----8-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[ILLUMINATION](https://medium.com/illumination?source=email-2b8b8ee19057-1787854242029-digest.reader-eca1ba5ae1ca-a6ac186b2b64----8-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![What Makes Us Human?](https://miro.medium.com/fit/c/320/214/1*qrNtW6wWkpr03KIzvGYWxQ.jpeg)](https://medium.com/@jshen9889/what-makes-us-human-a6ac186b2b64?source=email-2b8b8ee19057-1787854242029-digest.reader-eca1ba5ae1ca-a6ac186b2b64----8-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[
+
+## What Makes Us Human?
+
+### Rethinking the brain, emotion, art, and intelligence…
+
+
+
+](https://medium.com/@jshen9889/what-makes-us-human-a6ac186b2b64?source=email-2b8b8ee19057-1787854242029-digest.reader-eca1ba5ae1ca-a6ac186b2b64----8-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+4.8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+188
+
+[![Haz Techy Content](https://miro.medium.com/fit/c/40/40/1*o_WIcF7P-T6aDhWv80lBOA.jpeg)](https://medium.com/@haztechycontent?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-fe355bae7c75----9-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Haz Techy Content](https://medium.com/@haztechycontent?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-fe355bae7c75----9-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-fe355bae7c75----9-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![Open Source Apps To Replace Your Every Subscription (And don’t suck)](https://miro.medium.com/fit/c/320/214/1*OFccZzxveVoMQqmPTmqikg.png)](https://medium.com/@haztechycontent/open-source-apps-to-replace-your-every-subscription-and-dont-suck-fe355bae7c75?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-fe355bae7c75----9-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[
+
+## Open Source Apps To Replace Your Every Subscription (And don’t suck)
+
+### So recently I turned 18 and got my first credit card…
+
+
+
+](https://medium.com/@haztechycontent/open-source-apps-to-replace-your-every-subscription-and-dont-suck-fe355bae7c75?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-fe355bae7c75----9-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+853
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+19
+
+[![Darius Foroux](https://miro.medium.com/fit/c/40/40/1*G8AjDNKe3_NBl14pXfJ2NA.jpeg)](https://medium.com/@dariusforoux?source=email-2b8b8ee19057-1787854242029-digest.reader--9a4c07bcda04----10-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Darius Foroux](https://medium.com/@dariusforoux?source=email-2b8b8ee19057-1787854242029-digest.reader--9a4c07bcda04----10-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![Do Less, Finish More](https://miro.medium.com/fit/c/320/214/1*HidBjs2YzkLZiD6VpHeaRg.png)](https://medium.com/@dariusforoux/do-less-finish-more-9a4c07bcda04?source=email-2b8b8ee19057-1787854242029-digest.reader--9a4c07bcda04----10-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[
+
+## Do Less, Finish More
+
+### The fastest way to become more productive is to give…
+
+
+
+](https://medium.com/@dariusforoux/do-less-finish-more-9a4c07bcda04?source=email-2b8b8ee19057-1787854242029-digest.reader--9a4c07bcda04----10-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+64
+
+[![Sabit](https://miro.medium.com/fit/c/40/40/1*A2ErxY-iWGAMYjETE5qILw.jpeg)](https://medium.com/@tibas?source=email-2b8b8ee19057-1787854242029-digest.reader-38213727bbd6-67341d196765----11-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Sabit](https://medium.com/@tibas?source=email-2b8b8ee19057-1787854242029-digest.reader-38213727bbd6-67341d196765----11-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[Bash\_DevOps\_AI](https://medium.com/my-lifes-mirrow?source=email-2b8b8ee19057-1787854242029-digest.reader-38213727bbd6-67341d196765----11-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![The Linux Command That Tells You Exactly Where Your Internet Is Slowing Down](https://miro.medium.com/fit/c/320/214/0*jm5I-kP1TGltviax)](https://medium.com/@tibas/the-linux-command-that-tells-you-exactly-where-your-internet-is-slowing-down-67341d196765?source=email-2b8b8ee19057-1787854242029-digest.reader-38213727bbd6-67341d196765----11-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[
+
+## The Linux Command That Tells You Exactly Where Your Internet Is Slowing Down
+
+### This command traces the exact path your data takes and…
+
+
+
+](https://medium.com/@tibas/the-linux-command-that-tells-you-exactly-where-your-internet-is-slowing-down-67341d196765?source=email-2b8b8ee19057-1787854242029-digest.reader-38213727bbd6-67341d196765----11-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+111
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Constantin Patrascu](https://miro.medium.com/fit/c/40/40/1*Pw4W6sJexa6ANtmVEAKVcA.png)](https://medium.com/@constantinpatrascu?source=email-2b8b8ee19057-1787854242029-digest.reader-9b33c3191090-1020b00597f2----12-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Constantin Patrascu](https://medium.com/@constantinpatrascu?source=email-2b8b8ee19057-1787854242029-digest.reader-9b33c3191090-1020b00597f2----12-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[Read or Die — HQ](https://medium.com/read-or-die-hq?source=email-2b8b8ee19057-1787854242029-digest.reader-9b33c3191090-1020b00597f2----12-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![Your Addiction Reveals What You’re Running From](https://miro.medium.com/focal/320/214/50/92/0*BqDYmkh2doQlkhMA)](https://medium.com/@constantinpatrascu/your-addiction-reveals-what-youre-running-from-1020b00597f2?source=email-2b8b8ee19057-1787854242029-digest.reader-9b33c3191090-1020b00597f2----12-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[
+
+## Your Addiction Reveals What You’re Running From
+
+### What problem the narcotics solve is more important…
+
+
+
+](https://medium.com/@constantinpatrascu/your-addiction-reveals-what-youre-running-from-1020b00597f2?source=email-2b8b8ee19057-1787854242029-digest.reader-9b33c3191090-1020b00597f2----12-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+6.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+114
+
+[![John DeVore](https://miro.medium.com/fit/c/40/40/1*3pV-__rrRcHq_uQ1XeC_UA.png)](https://medium.com/@johndevore?source=email-2b8b8ee19057-1787854242029-digest.reader--3e00ad67018b----13-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[John DeVore](https://medium.com/@johndevore?source=email-2b8b8ee19057-1787854242029-digest.reader--3e00ad67018b----13-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![Cigarettes are bad. I miss them.](https://miro.medium.com/fit/c/320/214/1*_MFbHcwwiDLj6wFK1en-Qg.jpeg)](https://medium.com/@johndevore/cigarettes-are-bad-i-miss-them-3e00ad67018b?source=email-2b8b8ee19057-1787854242029-digest.reader--3e00ad67018b----13-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[
+
+## Cigarettes are bad. I miss them.
+
+### Don’t start smoking, kids
+
+
+
+](https://medium.com/@johndevore/cigarettes-are-bad-i-miss-them-3e00ad67018b?source=email-2b8b8ee19057-1787854242029-digest.reader--3e00ad67018b----13-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+3.9K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+107
+
+[![Jason McBride](https://miro.medium.com/fit/c/40/40/1*e2d-qbfDDTDl_t9AfbQ7_g@2x.jpeg)](https://medium.com/@jasoncmcbride?source=email-2b8b8ee19057-1787854242029-digest.reader-e991aef5c04d-19677eca675e----14-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Jason McBride](https://medium.com/@jasoncmcbride?source=email-2b8b8ee19057-1787854242029-digest.reader-e991aef5c04d-19677eca675e----14-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[McBride Essays](https://medium.com/mcbride-essays?source=email-2b8b8ee19057-1787854242029-digest.reader-e991aef5c04d-19677eca675e----14-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![How to Be Happy Today](https://miro.medium.com/fit/c/320/214/1*GO2_gi0PrJpomuA0c5nzsQ.jpeg)](https://medium.com/@jasoncmcbride/how-to-be-happy-today-19677eca675e?source=email-2b8b8ee19057-1787854242029-digest.reader-e991aef5c04d-19677eca675e----14-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[
+
+## How to Be Happy Today
+
+### Without changing your entire life
+
+
+
+](https://medium.com/@jasoncmcbride/how-to-be-happy-today-19677eca675e?source=email-2b8b8ee19057-1787854242029-digest.reader-e991aef5c04d-19677eca675e----14-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+5.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+269
+
+[![Become a Medium member](https://miro.medium.com/max/1360/6b37395e36e2d6768583b0d27172b3075c079241270c50b770a18b83476ecffc)](https://medium.com/plans?source=email-2b8b8ee19057-1787854242029-digest.reader-------------------------80dda4f9_bafd_47a6_9457_0f123eecba4a)
+
+
+</Detail>
+
+Today's highlights
+
+[![Sergey Nes](https://miro.medium.com/fit/c/40/40/1*NLB9mnyUPQ8yN3o3bW_TfA.png)](https://medium.com/@sergey-nes?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-a916161705fb----0-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Sergey Nes](https://medium.com/@sergey-nes?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-a916161705fb----0-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-a916161705fb----0-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![Building an AI Agent from Scratch: No Magic, Just a Deterministic Loop](https://miro.medium.com/fit/c/320/214/1*t0QDDqOfv5uyn2rpnrYsyA.png)](https://medium.com/@sergey-nes/building-an-ai-agent-from-scratch-no-magic-just-a-deterministic-loop-a916161705fb?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-a916161705fb----0-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+\[
+
+## Building an AI Agent from Scratch: No Magic, Just a Deterministic Loop
+
+### I was using Claude, Codex, Cursor, Gemini, Copilot, or…
+
+]\(https://medium.com/@sergey-nes/building-an-ai-agent-from-scratch-no-magic-just-a-deterministic-loop-a916161705fb?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-a916161705fb----0-102------------------80dda4f9\_bafd\_47a6\_9457\_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+13 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+2.2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+71
+
+[![Thomas Oppong](https://miro.medium.com/fit/c/40/40/1*K4RSsTUgj-UeJuc69C_oLA.jpeg)](https://medium.com/@thomas-oppong?source=email-2b8b8ee19057-1787854242029-digest.reader--c79cfabaee7c----1-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Thomas Oppong](https://medium.com/@thomas-oppong?source=email-2b8b8ee19057-1787854242029-digest.reader--c79cfabaee7c----1-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![This is Feynman’s Thinking Habit. It Made Him a Genius](https://miro.medium.com/fit/c/320/214/1*jVb18jVNXhKe7UBXTT-4jg.jpeg)](https://medium.com/@thomas-oppong/this-is-feynmans-thinking-habit-it-made-him-a-genius-c79cfabaee7c?source=email-2b8b8ee19057-1787854242029-digest.reader--c79cfabaee7c----1-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+\[
+
+## This is Feynman’s Thinking Habit. It Made Him a Genius
+
+### Think 10x clearer with this simple mental trick.
+
+]\(https://medium.com/@thomas-oppong/this-is-feynmans-thinking-habit-it-made-him-a-genius-c79cfabaee7c?source=email-2b8b8ee19057-1787854242029-digest.reader--c79cfabaee7c----1-73------------------80dda4f9\_bafd\_47a6\_9457\_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+7 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+13.7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+302
+
+[![Kevin - MERN Stack Developer](https://miro.medium.com/fit/c/40/40/1*aUGBohBB1VAnsoGAdjEZoQ.png)](https://medium.com/@mernstackdevbykevin?source=email-2b8b8ee19057-1787854242029-digest.reader--0c0c48299efd----2-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Kevin - MERN Stack Developer](https://medium.com/@mernstackdevbykevin?source=email-2b8b8ee19057-1787854242029-digest.reader--0c0c48299efd----2-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![I Built a SaaS with React and Next.js — Here’s What Nobody Tells You](https://miro.medium.com/fit/c/320/214/1*IUwl9YG3KmtDsD4om62mhw.png)](https://medium.com/@mernstackdevbykevin/i-built-a-saas-with-react-and-next-js-heres-what-nobody-tells-you-0c0c48299efd?source=email-2b8b8ee19057-1787854242029-digest.reader--0c0c48299efd----2-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+\[
+
+## I Built a SaaS with React and Next.js — Here’s What Nobody Tells You
+
+### A practical, no-fluff guide to architecting a real…
+
+]\(https://medium.com/@mernstackdevbykevin/i-built-a-saas-with-react-and-next-js-heres-what-nobody-tells-you-0c0c48299efd?source=email-2b8b8ee19057-1787854242029-digest.reader--0c0c48299efd----2-99------------------80dda4f9\_bafd\_47a6\_9457\_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+8
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Youssef Hosni](https://miro.medium.com/fit/c/40/40/1*Wftd4SJciOP8CoW3xJqeJQ.jpeg)](https://medium.com/@yousefhosni?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-6f422390a143----3-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Youssef Hosni](https://medium.com/@yousefhosni?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-6f422390a143----3-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-6f422390a143----3-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![How to Create Loops with Claude Code: A Practical Guide to Agentic Automation](https://miro.medium.com/fit/c/320/214/1*WbMmltJlf6xsaKxctAiUpg.png)](https://medium.com/@yousefhosni/how-to-create-loops-with-claude-code-a-practical-guide-to-agentic-automation-6f422390a143?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-6f422390a143----3-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+\[
+
+## How to Create Loops with Claude Code: A Practical Guide to Agentic Automation
+
+### Claude Loop Engineering: How to Design Agents That…
+
+]\(https://medium.com/@yousefhosni/how-to-create-loops-with-claude-code-a-practical-guide-to-agentic-automation-6f422390a143?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-6f422390a143----3-109------------------80dda4f9\_bafd\_47a6\_9457\_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+63 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+29
+
+[![Darius Foroux](https://miro.medium.com/fit/c/40/40/1*G8AjDNKe3_NBl14pXfJ2NA.jpeg)](https://medium.com/@dariusforoux?source=email-2b8b8ee19057-1787854242029-digest.reader--408f14719dd6----4-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Darius Foroux](https://medium.com/@dariusforoux?source=email-2b8b8ee19057-1787854242029-digest.reader--408f14719dd6----4-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![The Simplest Way to Stop Procrastinating](https://miro.medium.com/fit/c/320/214/1*Lft-2_C4_eC7QTupK5oaeQ.png)](https://medium.com/@dariusforoux/the-simplest-way-to-stop-procrastinating-408f14719dd6?source=email-2b8b8ee19057-1787854242029-digest.reader--408f14719dd6----4-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+\[
+
+## The Simplest Way to Stop Procrastinating
+
+### Make it easy to start.
+
+]\(https://medium.com/@dariusforoux/the-simplest-way-to-stop-procrastinating-408f14719dd6?source=email-2b8b8ee19057-1787854242029-digest.reader--408f14719dd6----4-73------------------80dda4f9\_bafd\_47a6\_9457\_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+40
+
+[![Fareed Khan](https://miro.medium.com/fit/c/40/40/1*feiUXOR8sid6IPHSHufA-g.jpeg)](https://medium.com/@fareedkhandev?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-cd38ee3daf93----5-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Fareed Khan](https://medium.com/@fareedkhandev?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-cd38ee3daf93----5-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-cd38ee3daf93----5-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![Building Claude from Scratch: 62 Components Behind Anthropic’s Thinking Engine](https://miro.medium.com/fit/c/320/214/1*p5SMpwf67JW-98nvN4atZg.png)](https://medium.com/@fareedkhandev/building-claude-from-scratch-62-components-behind-anthropics-thinking-engine-cd38ee3daf93?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-cd38ee3daf93----5-109------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+\[
+
+## Building Claude from Scratch: 62 Components Behind Anthropic’s Thinking Engine
+
+### Machine learning patterns and agentic components, end…
+
+]\(https://medium.com/@fareedkhandev/building-claude-from-scratch-62-components-behind-anthropics-thinking-engine-cd38ee3daf93?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-cd38ee3daf93----5-109------------------80dda4f9\_bafd\_47a6\_9457\_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+80 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+10
+
+[![Liam Hunter-Bailey](https://miro.medium.com/fit/c/40/40/1*4I7NGEOdiLFZN_x-L40-Zg.jpeg)](https://medium.com/@liamhb?source=email-2b8b8ee19057-1787854242029-digest.reader-69d8be4015f1-aa4e113af0af----6-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Liam Hunter-Bailey](https://medium.com/@liamhb?source=email-2b8b8ee19057-1787854242029-digest.reader-69d8be4015f1-aa4e113af0af----6-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[Globetrotters](https://medium.com/globetrotters?source=email-2b8b8ee19057-1787854242029-digest.reader-69d8be4015f1-aa4e113af0af----6-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![I Spent 2 Weeks in China. I Won’t Be Back.](https://miro.medium.com/focal/320/214/50/54/1*hJNQWbiLGJL36Ykr3CGYYQ.jpeg)](https://medium.com/@liamhb/i-spent-2-weeks-in-china-i-wont-be-back-aa4e113af0af?source=email-2b8b8ee19057-1787854242029-digest.reader-69d8be4015f1-aa4e113af0af----6-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+\[
+
+## I Spent 2 Weeks in China. I Won’t Be Back.
+
+### My honest experience visiting a country I desperately…
+
+]\(https://medium.com/@liamhb/i-spent-2-weeks-in-china-i-wont-be-back-aa4e113af0af?source=email-2b8b8ee19057-1787854242029-digest.reader-69d8be4015f1-aa4e113af0af----6-73------------------80dda4f9\_bafd\_47a6\_9457\_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+9 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+11.7K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+433
+
+[![Darius Foroux](https://miro.medium.com/fit/c/40/40/1*G8AjDNKe3_NBl14pXfJ2NA.jpeg)](https://medium.com/@dariusforoux?source=email-2b8b8ee19057-1787854242029-digest.reader--e44b571d61ee----7-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Darius Foroux](https://medium.com/@dariusforoux?source=email-2b8b8ee19057-1787854242029-digest.reader--e44b571d61ee----7-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![How to Protect Your Mind From Constant Distraction](https://miro.medium.com/fit/c/320/214/1*bM_ME9_EwM7Bgs9_0aktoA.png)](https://medium.com/@dariusforoux/how-to-protect-your-mind-from-constant-distraction-e44b571d61ee?source=email-2b8b8ee19057-1787854242029-digest.reader--e44b571d61ee----7-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+\[
+
+## How to Protect Your Mind From Constant Distraction
+
+### Use a simple filter to decide what deserves your…
+
+]\(https://medium.com/@dariusforoux/how-to-protect-your-mind-from-constant-distraction-e44b571d61ee?source=email-2b8b8ee19057-1787854242029-digest.reader--e44b571d61ee----7-73------------------80dda4f9\_bafd\_47a6\_9457\_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+2.8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+88
+
+[![Stephanie Shen](https://miro.medium.com/fit/c/40/40/0*kt7Vn21xO_GsnyLy.png)](https://medium.com/@jshen9889?source=email-2b8b8ee19057-1787854242029-digest.reader-eca1ba5ae1ca-a6ac186b2b64----8-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Stephanie Shen](https://medium.com/@jshen9889?source=email-2b8b8ee19057-1787854242029-digest.reader-eca1ba5ae1ca-a6ac186b2b64----8-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[ILLUMINATION](https://medium.com/illumination?source=email-2b8b8ee19057-1787854242029-digest.reader-eca1ba5ae1ca-a6ac186b2b64----8-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![What Makes Us Human?](https://miro.medium.com/fit/c/320/214/1*qrNtW6wWkpr03KIzvGYWxQ.jpeg)](https://medium.com/@jshen9889/what-makes-us-human-a6ac186b2b64?source=email-2b8b8ee19057-1787854242029-digest.reader-eca1ba5ae1ca-a6ac186b2b64----8-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+\[
+
+## What Makes Us Human?
+
+### Rethinking the brain, emotion, art, and intelligence…
+
+]\(https://medium.com/@jshen9889/what-makes-us-human-a6ac186b2b64?source=email-2b8b8ee19057-1787854242029-digest.reader-eca1ba5ae1ca-a6ac186b2b64----8-102------------------80dda4f9\_bafd\_47a6\_9457\_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+4.8K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+188
+
+[![Haz Techy Content](https://miro.medium.com/fit/c/40/40/1*o_WIcF7P-T6aDhWv80lBOA.jpeg)](https://medium.com/@haztechycontent?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-fe355bae7c75----9-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Haz Techy Content](https://medium.com/@haztechycontent?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-fe355bae7c75----9-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-fe355bae7c75----9-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![Open Source Apps To Replace Your Every Subscription (And don’t suck)](https://miro.medium.com/fit/c/320/214/1*OFccZzxveVoMQqmPTmqikg.png)](https://medium.com/@haztechycontent/open-source-apps-to-replace-your-every-subscription-and-dont-suck-fe355bae7c75?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-fe355bae7c75----9-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+\[
+
+## Open Source Apps To Replace Your Every Subscription (And don’t suck)
+
+### So recently I turned 18 and got my first credit card…
+
+]\(https://medium.com/@haztechycontent/open-source-apps-to-replace-your-every-subscription-and-dont-suck-fe355bae7c75?source=email-2b8b8ee19057-1787854242029-digest.reader-5517fd7b58a6-fe355bae7c75----9-99------------------80dda4f9\_bafd\_47a6\_9457\_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+853
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+19
+
+[![Darius Foroux](https://miro.medium.com/fit/c/40/40/1*G8AjDNKe3_NBl14pXfJ2NA.jpeg)](https://medium.com/@dariusforoux?source=email-2b8b8ee19057-1787854242029-digest.reader--9a4c07bcda04----10-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Darius Foroux](https://medium.com/@dariusforoux?source=email-2b8b8ee19057-1787854242029-digest.reader--9a4c07bcda04----10-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![Do Less, Finish More](https://miro.medium.com/fit/c/320/214/1*HidBjs2YzkLZiD6VpHeaRg.png)](https://medium.com/@dariusforoux/do-less-finish-more-9a4c07bcda04?source=email-2b8b8ee19057-1787854242029-digest.reader--9a4c07bcda04----10-73------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+\[
+
+## Do Less, Finish More
+
+### The fastest way to become more productive is to give…
+
+]\(https://medium.com/@dariusforoux/do-less-finish-more-9a4c07bcda04?source=email-2b8b8ee19057-1787854242029-digest.reader--9a4c07bcda04----10-73------------------80dda4f9\_bafd\_47a6\_9457\_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+64
+
+[![Sabit](https://miro.medium.com/fit/c/40/40/1*A2ErxY-iWGAMYjETE5qILw.jpeg)](https://medium.com/@tibas?source=email-2b8b8ee19057-1787854242029-digest.reader-38213727bbd6-67341d196765----11-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Sabit](https://medium.com/@tibas?source=email-2b8b8ee19057-1787854242029-digest.reader-38213727bbd6-67341d196765----11-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[Bash\_DevOps\_AI](https://medium.com/my-lifes-mirrow?source=email-2b8b8ee19057-1787854242029-digest.reader-38213727bbd6-67341d196765----11-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![The Linux Command That Tells You Exactly Where Your Internet Is Slowing Down](https://miro.medium.com/fit/c/320/214/0*jm5I-kP1TGltviax)](https://medium.com/@tibas/the-linux-command-that-tells-you-exactly-where-your-internet-is-slowing-down-67341d196765?source=email-2b8b8ee19057-1787854242029-digest.reader-38213727bbd6-67341d196765----11-99------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+\[
+
+## The Linux Command That Tells You Exactly Where Your Internet Is Slowing Down
+
+### This command traces the exact path your data takes and…
+
+]\(https://medium.com/@tibas/the-linux-command-that-tells-you-exactly-where-your-internet-is-slowing-down-67341d196765?source=email-2b8b8ee19057-1787854242029-digest.reader-38213727bbd6-67341d196765----11-99------------------80dda4f9\_bafd\_47a6\_9457\_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+111
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Constantin Patrascu](https://miro.medium.com/fit/c/40/40/1*Pw4W6sJexa6ANtmVEAKVcA.png)](https://medium.com/@constantinpatrascu?source=email-2b8b8ee19057-1787854242029-digest.reader-9b33c3191090-1020b00597f2----12-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Constantin Patrascu](https://medium.com/@constantinpatrascu?source=email-2b8b8ee19057-1787854242029-digest.reader-9b33c3191090-1020b00597f2----12-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[Read or Die — HQ](https://medium.com/read-or-die-hq?source=email-2b8b8ee19057-1787854242029-digest.reader-9b33c3191090-1020b00597f2----12-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![Your Addiction Reveals What You’re Running From](https://miro.medium.com/focal/320/214/50/92/0*BqDYmkh2doQlkhMA)](https://medium.com/@constantinpatrascu/your-addiction-reveals-what-youre-running-from-1020b00597f2?source=email-2b8b8ee19057-1787854242029-digest.reader-9b33c3191090-1020b00597f2----12-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+\[
+
+## Your Addiction Reveals What You’re Running From
+
+### What problem the narcotics solve is more important…
+
+]\(https://medium.com/@constantinpatrascu/your-addiction-reveals-what-youre-running-from-1020b00597f2?source=email-2b8b8ee19057-1787854242029-digest.reader-9b33c3191090-1020b00597f2----12-102------------------80dda4f9\_bafd\_47a6\_9457\_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+6.4K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+114
+
+[![John DeVore](https://miro.medium.com/fit/c/40/40/1*3pV-__rrRcHq_uQ1XeC_UA.png)](https://medium.com/@johndevore?source=email-2b8b8ee19057-1787854242029-digest.reader--3e00ad67018b----13-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[John DeVore](https://medium.com/@johndevore?source=email-2b8b8ee19057-1787854242029-digest.reader--3e00ad67018b----13-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![Cigarettes are bad. I miss them.](https://miro.medium.com/fit/c/320/214/1*_MFbHcwwiDLj6wFK1en-Qg.jpeg)](https://medium.com/@johndevore/cigarettes-are-bad-i-miss-them-3e00ad67018b?source=email-2b8b8ee19057-1787854242029-digest.reader--3e00ad67018b----13-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+\[
+
+## Cigarettes are bad. I miss them.
+
+### Don’t start smoking, kids
+
+]\(https://medium.com/@johndevore/cigarettes-are-bad-i-miss-them-3e00ad67018b?source=email-2b8b8ee19057-1787854242029-digest.reader--3e00ad67018b----13-102------------------80dda4f9\_bafd\_47a6\_9457\_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+3.9K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+107
+
+[![Jason McBride](https://miro.medium.com/fit/c/40/40/1*e2d-qbfDDTDl_t9AfbQ7_g@2x.jpeg)](https://medium.com/@jasoncmcbride?source=email-2b8b8ee19057-1787854242029-digest.reader-e991aef5c04d-19677eca675e----14-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[Jason McBride](https://medium.com/@jasoncmcbride?source=email-2b8b8ee19057-1787854242029-digest.reader-e991aef5c04d-19677eca675e----14-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)in[McBride Essays](https://medium.com/mcbride-essays?source=email-2b8b8ee19057-1787854242029-digest.reader-e991aef5c04d-19677eca675e----14-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+[![How to Be Happy Today](https://miro.medium.com/fit/c/320/214/1*GO2_gi0PrJpomuA0c5nzsQ.jpeg)](https://medium.com/@jasoncmcbride/how-to-be-happy-today-19677eca675e?source=email-2b8b8ee19057-1787854242029-digest.reader-e991aef5c04d-19677eca675e----14-102------------------80dda4f9_bafd_47a6_9457_0f123eecba4a-1)
+
+\[
+
+## How to Be Happy Today
+
+### Without changing your entire life
+
+]\(https://medium.com/@jasoncmcbride/how-to-be-happy-today-19677eca675e?source=email-2b8b8ee19057-1787854242029-digest.reader-e991aef5c04d-19677eca675e----14-102------------------80dda4f9\_bafd\_47a6\_9457\_0f123eecba4a-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+6 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+5.1K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+269
+
+[![Become a Medium member](https://miro.medium.com/max/1360/6b37395e36e2d6768583b0d27172b3075c079241270c50b770a18b83476ecffc)](https://medium.com/plans?source=email-2b8b8ee19057-1787854242029-digest.reader-------------------------80dda4f9_bafd_47a6_9457_0f123eecba4a)
+
+
