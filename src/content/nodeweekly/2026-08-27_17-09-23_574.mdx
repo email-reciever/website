@@ -1,0 +1,231 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node 26.8 reads and writes ZIP files
+description: Node 26.8 reads and writes ZIP files
+date: 星期四 05 下午 八月 27o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/638
+origin_site: https://nodeweekly.com/issues/638
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node 26.8 reads and writes ZIP files" url="https://nodeweekly.com/issues/638" />
+
+<Detail client:only="react">
+	#​638 — August 27, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/638)
+
+🗓️ We're back! If you missed us last week, we took a brief summer vacation :-)  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![agentfield.ai](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_229/e_make_transparent/co_white,e_outline:10/kfuqkwkso6tqxqr2r1jz.png)](https://nodeweekly.com/link/189476/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jndmfwg6izjwgqc7sfs9.jpg)](https://nodeweekly.com/link/189477/0a4070b383)
+
+[A Recap of Node.js Interactive 2026](https://nodeweekly.com/link/189477/0a4070b383 "nodejs.org") — _Node.js Interactive_ returned for the first time since 2019 as part of this month's _RenderATL_ event with Node contributors and invited speakers tackling Node's near-term roadmap in areas like AI, supply chain security, WinterCG becoming Ecma TC55, work on QUIC and HTTP/3 support, and Node's move to one major release a year.
+
+Aviv Keller
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/4509c04e.png)](https://nodeweekly.com/link/189476/0a4070b383)
+
+[Open Source Just Out-Reviewed the Commercial Tools](https://nodeweekly.com/link/189476/0a4070b383 "agentfield.ai") — PR-AF places #2 of 42 on Martian's Code-Review-Bench, ahead of CodeRabbit, Copilot, and Devin, at ~10x lower cost per review. It plans the review per PR, runs reviewer agents in parallel, and verifies every finding against your source. Self-hosted.
+
+AgentField.ai sponsor
+
+[Node.js 26.8.0 (Current) Released](https://nodeweekly.com/link/189478/0a4070b383 "nodejs.org") — Among a variety of additions, Node can [read and write ZIP archives](https://nodeweekly.com/link/189479/0a4070b383) without a third-party dependency. Plus **Node's REPL now has [basic syntax highlighting](https://nodeweekly.com/link/189480/0a4070b383) support.** [v26.8.1](https://nodeweekly.com/link/189481/0a4070b383) landed hours later to fix a broken version string.
+
+Antoine du Hamel
+
+💡 [Node 24.20.0 (LTS)](https://nodeweekly.com/link/189482/0a4070b383) also landed with several backported features including package maps, permission auditing, `node:stream/iter`, and [WebAssembly JSPI](https://nodeweekly.com/link/189483/0a4070b383).
+
+**IN BRIEF:**
+
+*   🤚 The [latest annual Node.js user survey](https://nodeweekly.com/link/189484/0a4070b383) has just launched. As always, your responses help shape the future priorities of the Node.js team.
+    
+*   💡 Aviv Keller has proposed [reimplementing `fs.glob` natively in C++](https://nodeweekly.com/link/189485/0a4070b383), calling straight into libuv and benching at over twice the speed of the current version. Not landed yet, but there are some _big_ names on this thread.
+    
+*   James Snell is [seeking early feedback](https://nodeweekly.com/link/189486/0a4070b383) on a proposed Fetch Server API, part of Node's unified HTTP API initiative, offering one handler model for HTTP/1.1, 2 and 3.
+    
+*   [TermDOM](https://nodeweekly.com/link/189487/0a4070b383), featured in our [last issue](https://nodeweekly.com/issues/637), lets you build TUI apps with HTML and CSS in Node, and [now](https://nodeweekly.com/link/189488/0a4070b383) supports CSS Grid for layout.
+    
+*   AWS Lambda has introduced [a new Node.js 26 runtime in preview](https://nodeweekly.com/link/189489/0a4070b383).
+    
+
+🤖 [Node's Official AI Use Policy and Guidelines](https://nodeweekly.com/link/189490/0a4070b383 "github.com") — Merged into Node's contributing docs after months of debate, PRs with AI code you haven't understood or tested can be closed unreviewed, bot-opened PRs need pre-approval, and more to be aware of. Plus, don't use AI to claim _"good first issue"_ tasks!
+
+Node.js Project
+
+📄 [Query Pipelining in node-postgres: 2-3x More Throughput](https://nodeweekly.com/link/189491/0a4070b383) – More throughput and lower latency from one config change is always worth looking into. Matteo Collina
+
+📄 [ESM vs CommonJS: What `import` and `require` Actually Do](https://nodeweekly.com/link/189492/0a4070b383) Gabor Koos
+
+🛠 Code & Tools
+
+[pnpm 12: Rewritten in Rust, Same Commands and Lockfile](https://nodeweekly.com/link/189493/0a4070b383 "pnpm.io") — The Rust rewrite is stable, but all of v11's commands, flags and lockfile format carry over with only a [handful of changes](https://nodeweekly.com/link/189494/0a4070b383). A global `node` now follows the version your project pins, too. Note that npm's `latest` tag still points to pnpm 11, so you'll need `pnpm self-update next-12` to upgrade.
+
+Zoltan Kochan
+
+[Better Auth 1.7 Ships a Standards-Based OAuth Server](https://nodeweekly.com/link/189495/0a4070b383 "better-auth.com") — A big OAuth provider release with DPoP, per-API token rules and device code flow, plus MCP auth in its own package. Breaking changes make the upgrade guide required reading.
+
+Gustavo Valverde
+
+[Outgrowing Cron? Meet xyOps for Self-Hosted Ops Automation](https://nodeweekly.com/link/189496/0a4070b383) — Schedule jobs, run Node scripts, monitor servers, and automate response. Open source, from the Cronicle team.
+
+xyOps sponsor
+
+[GTKX: Build Linux Desktop Apps with Node, GTK and React](https://nodeweekly.com/link/189497/0a4070b383 "gtkx.dev") — Build Linux desktop apps with real GTK4 and Adwaita widgets with no webview involved. Write JSX and get real widgets in an ordinary Node process with npm package and Fast Refresh support.
+
+Eugenio Depalo
+
+[Stryker Mutator 10.0: Test Your Tests with Mutation Testing](https://nodeweekly.com/link/189498/0a4070b383 "stryker-mutator.io") — Stryker deliberately [changes](https://nodeweekly.com/link/189499/0a4070b383) your code to see if your test suite catches the mutations. If not, your tests are too lax and need work. Here's [how to get started](https://nodeweekly.com/link/189500/0a4070b383).
+
+Jansen, de Lang, et al.
+
+[SVGO 4.1: Node-Powered SVG Optimizer](https://nodeweekly.com/link/189501/0a4070b383 "svgo.dev") — SVGs often contain redundant information. You can use SVGO as a CLI tool or Node library to slim them down. [v4.1](https://nodeweekly.com/link/189502/0a4070b383) has stricter XML validation and security improvements.
+
+Kir Belevich
+
+*   [Electron 44](https://nodeweekly.com/link/189503/0a4070b383) – 32-bit builds are gone, macOS 13+ is now required, `clipboard` is aligned with the W3C Clipboard API, `net.WebSocket` is added, plus the ability to set window opacity on Linux.
+    
+*   [lz4-napi 2.10.0](https://nodeweekly.com/link/189504/0a4070b383) – N-API bindings for LZ4 compression/decompression, implemented in Rust and backed by [lz4\_flex](https://nodeweekly.com/link/189505/0a4070b383).
+    
+*   🤖 [grammY 1.46.0](https://nodeweekly.com/link/189506/0a4070b383) – The framework for building Telegram bots from Node now supports the latest [Telegram Bot API 10.3](https://nodeweekly.com/link/189507/0a4070b383).
+    
+*   [Axios 1.20.0](https://nodeweekly.com/link/189508/0a4070b383) – The long-standing HTTP client for the browser and Node.js.
+    
+*   [node-mongodb-native 7.6](https://nodeweekly.com/link/189509/0a4070b383) – MongoDB 4.2 support has been dropped entirely.
+    
+*   📺 [YouTube.js 18.0](https://nodeweekly.com/link/189510/0a4070b383) – JavaScript client for YouTube's internal API.
+    
+*   [node-x11 4.1](https://nodeweekly.com/link/189514/0a4070b383) – Feature-rich X11 protocol client library.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​638 — August 27, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/638)
+
+🗓️ We're back! If you missed us last week, we took a brief summer vacation :-)\
+\_\_\
+*Your editor, Peter Cooper*
+
+Together with 
+
+[![agentfield.ai](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_229/e_make_transparent/co_white,e_outline:10/kfuqkwkso6tqxqr2r1jz.png)](https://nodeweekly.com/link/189476/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jndmfwg6izjwgqc7sfs9.jpg)](https://nodeweekly.com/link/189477/0a4070b383)
+
+[A Recap of Node.js Interactive 2026](https://nodeweekly.com/link/189477/0a4070b383 "nodejs.org") — *Node.js Interactive* returned for the first time since 2019 as part of this month's *RenderATL* event with Node contributors and invited speakers tackling Node's near-term roadmap in areas like AI, supply chain security, WinterCG becoming Ecma TC55, work on QUIC and HTTP/3 support, and Node's move to one major release a year.
+
+Aviv Keller
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/4509c04e.png)](https://nodeweekly.com/link/189476/0a4070b383)
+
+[Open Source Just Out-Reviewed the Commercial Tools](https://nodeweekly.com/link/189476/0a4070b383 "agentfield.ai") — PR-AF places #2 of 42 on Martian's Code-Review-Bench, ahead of CodeRabbit, Copilot, and Devin, at ~10x lower cost per review. It plans the review per PR, runs reviewer agents in parallel, and verifies every finding against your source. Self-hosted.
+
+AgentField.ai sponsor
+
+[Node.js 26.8.0 (Current) Released](https://nodeweekly.com/link/189478/0a4070b383 "nodejs.org") — Among a variety of additions, Node can [read and write ZIP archives](https://nodeweekly.com/link/189479/0a4070b383) without a third-party dependency. Plus **Node's REPL now has [basic syntax highlighting](https://nodeweekly.com/link/189480/0a4070b383) support.** [v26.8.1](https://nodeweekly.com/link/189481/0a4070b383) landed hours later to fix a broken version string.
+
+Antoine du Hamel
+
+💡 [Node 24.20.0 (LTS)](https://nodeweekly.com/link/189482/0a4070b383) also landed with several backported features including package maps, permission auditing, `node:stream/iter`, and [WebAssembly JSPI](https://nodeweekly.com/link/189483/0a4070b383).
+
+**IN BRIEF:**
+
+* 🤚 The [latest annual Node.js user survey](https://nodeweekly.com/link/189484/0a4070b383) has just launched. As always, your responses help shape the future priorities of the Node.js team.
+
+* 💡 Aviv Keller has proposed [reimplementing `fs.glob` natively in C++](https://nodeweekly.com/link/189485/0a4070b383), calling straight into libuv and benching at over twice the speed of the current version. Not landed yet, but there are some *big* names on this thread.
+
+* James Snell is [seeking early feedback](https://nodeweekly.com/link/189486/0a4070b383) on a proposed Fetch Server API, part of Node's unified HTTP API initiative, offering one handler model for HTTP/1.1, 2 and 3.
+
+* [TermDOM](https://nodeweekly.com/link/189487/0a4070b383), featured in our [last issue](https://nodeweekly.com/issues/637), lets you build TUI apps with HTML and CSS in Node, and [now](https://nodeweekly.com/link/189488/0a4070b383) supports CSS Grid for layout.
+
+* AWS Lambda has introduced [a new Node.js 26 runtime in preview](https://nodeweekly.com/link/189489/0a4070b383).
+
+🤖 [Node's Official AI Use Policy and Guidelines](https://nodeweekly.com/link/189490/0a4070b383 "github.com") — Merged into Node's contributing docs after months of debate, PRs with AI code you haven't understood or tested can be closed unreviewed, bot-opened PRs need pre-approval, and more to be aware of. Plus, don't use AI to claim *"good first issue"* tasks!
+
+Node.js Project
+
+📄 [Query Pipelining in node-postgres: 2-3x More Throughput](https://nodeweekly.com/link/189491/0a4070b383) – More throughput and lower latency from one config change is always worth looking into. Matteo Collina
+
+📄 [ESM vs CommonJS: What `import` and `require` Actually Do](https://nodeweekly.com/link/189492/0a4070b383) Gabor Koos
+
+🛠 Code & Tools
+
+[pnpm 12: Rewritten in Rust, Same Commands and Lockfile](https://nodeweekly.com/link/189493/0a4070b383 "pnpm.io") — The Rust rewrite is stable, but all of v11's commands, flags and lockfile format carry over with only a [handful of changes](https://nodeweekly.com/link/189494/0a4070b383). A global `node` now follows the version your project pins, too. Note that npm's `latest` tag still points to pnpm 11, so you'll need `pnpm self-update next-12` to upgrade.
+
+Zoltan Kochan
+
+[Better Auth 1.7 Ships a Standards-Based OAuth Server](https://nodeweekly.com/link/189495/0a4070b383 "better-auth.com") — A big OAuth provider release with DPoP, per-API token rules and device code flow, plus MCP auth in its own package. Breaking changes make the upgrade guide required reading.
+
+Gustavo Valverde
+
+[Outgrowing Cron? Meet xyOps for Self-Hosted Ops Automation](https://nodeweekly.com/link/189496/0a4070b383) — Schedule jobs, run Node scripts, monitor servers, and automate response. Open source, from the Cronicle team.
+
+xyOps sponsor
+
+[GTKX: Build Linux Desktop Apps with Node, GTK and React](https://nodeweekly.com/link/189497/0a4070b383 "gtkx.dev") — Build Linux desktop apps with real GTK4 and Adwaita widgets with no webview involved. Write JSX and get real widgets in an ordinary Node process with npm package and Fast Refresh support.
+
+Eugenio Depalo
+
+[Stryker Mutator 10.0: Test Your Tests with Mutation Testing](https://nodeweekly.com/link/189498/0a4070b383 "stryker-mutator.io") — Stryker deliberately [changes](https://nodeweekly.com/link/189499/0a4070b383) your code to see if your test suite catches the mutations. If not, your tests are too lax and need work. Here's [how to get started](https://nodeweekly.com/link/189500/0a4070b383).
+
+Jansen, de Lang, et al.
+
+[SVGO 4.1: Node-Powered SVG Optimizer](https://nodeweekly.com/link/189501/0a4070b383 "svgo.dev") — SVGs often contain redundant information. You can use SVGO as a CLI tool or Node library to slim them down. [v4.1](https://nodeweekly.com/link/189502/0a4070b383) has stricter XML validation and security improvements.
+
+Kir Belevich
+
+* [Electron 44](https://nodeweekly.com/link/189503/0a4070b383) – 32-bit builds are gone, macOS 13+ is now required, `clipboard` is aligned with the W3C Clipboard API, `net.WebSocket` is added, plus the ability to set window opacity on Linux.
+
+* [lz4-napi 2.10.0](https://nodeweekly.com/link/189504/0a4070b383) – N-API bindings for LZ4 compression/decompression, implemented in Rust and backed by [lz4\_flex](https://nodeweekly.com/link/189505/0a4070b383).
+
+* 🤖 [grammY 1.46.0](https://nodeweekly.com/link/189506/0a4070b383) – The framework for building Telegram bots from Node now supports the latest [Telegram Bot API 10.3](https://nodeweekly.com/link/189507/0a4070b383).
+
+* [Axios 1.20.0](https://nodeweekly.com/link/189508/0a4070b383) – The long-standing HTTP client for the browser and Node.js.
+
+* [node-mongodb-native 7.6](https://nodeweekly.com/link/189509/0a4070b383) – MongoDB 4.2 support has been dropped entirely.
+
+* 📺 [YouTube.js 18.0](https://nodeweekly.com/link/189510/0a4070b383) – JavaScript client for YouTube's internal API.
+
+* [node-x11 4.1](https://nodeweekly.com/link/189514/0a4070b383) – Feature-rich X11 protocol client library.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
