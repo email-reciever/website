@@ -1,0 +1,242 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Moving a 400-route app from Next.js to TanStack Start
+description: Moving a 400-route app from Next.js to TanStack Start
+date: 星期五 06 晚上 八月 28o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/488
+origin_site: https://react.statuscode.com/issues/488
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Moving a 400-route app from Next.js to TanStack Start" url="https://react.statuscode.com/issues/488" />
+
+<Detail client:only="react">
+	#​488 — August 28, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/488)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://react.statuscode.com/link/189626/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/osspuzqgnjn3ggmsvqfq.jpg)](https://react.statuscode.com/link/189625/5d0bbb4a61)
+
+[How Lovable Migrated from Next.js to TanStack Start](https://react.statuscode.com/link/189625/5d0bbb4a61 "lovable.dev") — Lovable moved nearly 400 routes and more than 850K lines of code off a Next.js app running on Vercel onto TanStack Start on its own platform. The heart of the story is how they ran _both_ frameworks in parallel behind a proxy, with a shared folder of code between them.
+
+Alexander Lebedev (Lovable)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/e4370cbe.png)](https://react.statuscode.com/link/189626/5d0bbb4a61)
+
+[Real-Time UI, Real-Time Data. No Pipeline](https://react.statuscode.com/link/189626/5d0bbb4a61 "www.tigerdata.com") — Your components update instantly, but the data behind them crawls through a pipeline. TimescaleDB extends Postgres so dashboards read live data at scale, no sync lag. Hypertables, compression, continuous aggregates. [Get $1000 credit to start](https://react.statuscode.com/link/189626/5d0bbb4a61).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[What We Learnt Building a Data Grid in React, Vue, and Svelte](https://react.statuscode.com/link/189627/5d0bbb4a61 "svar.dev") — SVAR ships the same data grid for React, Vue and Svelte, so they know how frameworks differ. But do those differences affect performance? Barely. No winner is declared, as _"the expensive parts of a fast data grid turned out to be almost entirely framework-independent."_
+
+Maksim Kozhukh (SVAR)
+
+**IN BRIEF:**
+
+*   ⚠️ [Two critical unauthenticated RCEs affecting Next.js have been patched.](https://react.statuscode.com/link/189628/5d0bbb4a61) Update to 16.3.3 or 15.5.24, as appropriate.
+    
+*   React's [_Canary_](https://react.statuscode.com/link/189629/5d0bbb4a61) channel has [a `browser()` API](https://react.statuscode.com/link/189630/5d0bbb4a61) for components that can't render on the server. `use(browser())` stops server rendering that component, leaves the nearest &lt;`Suspense`\> fallback in its place, then renders as normal in the browser.
+    
+*   [Parallel transitions are now on by default](https://react.statuscode.com/link/189631/5d0bbb4a61) in Canary builds, React Native included. Already in production at Meta and may make it into React 19.3. If you're unfamiliar with the concept, [learn more about them here](https://react.statuscode.com/link/189668/5d0bbb4a61).
+    
+
+[Reliable Query Prefetching with TanStack Router](https://react.statuscode.com/link/189634/5d0bbb4a61 "tkdodo.eu") — Prefetch in a loader and you're writing the query twice, and those copies can drift over time. Dominik's fix puts `queryOptions` in route context so the loader and component use the same definition, and sub-routes get them too.
+
+Dominik Dorfmeister
+
+[Building App-like Experiences with Next.js 16.3](https://react.statuscode.com/link/189633/5d0bbb4a61 "nextjs.org") — A practical look at Instant Navigations, Cache Components and Partial Prefetching, demoed in four cloneable open-source apps.
+
+Aurora Scharff
+
+📄 [Building a 3D AI Avatar in React Native](https://react.statuscode.com/link/189635/5d0bbb4a61) – How to render a cutesy 3D 'AI assistant' with [React Native Filament](https://react.statuscode.com/link/189636/5d0bbb4a61). Dave Mkpa-Eke (Margelo)
+
+📄 [Making _React Testing Library_ Tests 43% Faster](https://react.statuscode.com/link/189637/5d0bbb4a61) Scott Cooper
+
+📄 [Coordinating Optimistic Updates in Next.js](https://react.statuscode.com/link/189638/5d0bbb4a61) Aurora Scharff
+
+🛠  Code, Tools & Libraries
+
+[Oxlint Gets React Compiler Support](https://react.statuscode.com/link/189639/5d0bbb4a61 "oxc.rs") — [Oxlint](https://react.statuscode.com/link/189669/5d0bbb4a61) now includes 22 rules that run React Compiler's own validation passes to catch [Rules of React](https://react.statuscode.com/link/189640/5d0bbb4a61) violations. Oxc also ships a package that applies the automatic memoization itself, which it claims can be over 10 times faster than the Babel plugin.
+
+Boshen (Oxc)
+
+[Waku 1.0 RC: The Minimal React Framework Freezes Its API](https://react.statuscode.com/link/189641/5d0bbb4a61 "waku.gg") — The minimal React framework built around Server Components is at release candidate, so the public APIs are now fixed and this is the last chance to give feedback that affects the final v1 release.
+
+Sophia Andren
+
+[Rifm 1.0: React Input Format and Mask](https://react.statuscode.com/link/189642/5d0bbb4a61 "trysound.github.io") — A small, dependency-free hook & component for building formatted & masked inputs without losing cursor position.
+
+Bogdan Chadkin
+
+[TanStack Query Adds Simpler `query` and `infiniteQuery` Methods](https://react.statuscode.com/link/189664/5d0bbb4a61 "github.com") — Landing in [5.102.0](https://react.statuscode.com/link/189667/5d0bbb4a61) ([billed by Dominik](https://react.statuscode.com/link/189665/5d0bbb4a61) as the _"biggest release since v5"_): `QueryClient`'s new `query`/`infiniteQuery` are intended to replace `fetchQuery`/`fetchInfiniteQuery`.
+
+TanStack
+
+*   📱 [Ionic Framework v9](https://react.statuscode.com/link/189645/5d0bbb4a61) – The mobile-first UI toolkit for React, Angular and Vue returns after a two-year gap with React Router 6 support and more. There's [an upgrade guide for v8 users](https://react.statuscode.com/link/189646/5d0bbb4a61).
+    
+*   [GTKX 1.5](https://react.statuscode.com/link/189647/5d0bbb4a61) – Create native GTK-powered Linux desktop apps with React. Now with an adapter to connect React Hook Form to native Adwaita controls.
+    
+*   [Streamdown 2.6](https://react.statuscode.com/link/189648/5d0bbb4a61) – Vercel's replacement for `react-markdown` focused on AI-powered streaming of Markdown content. ([Homepage](https://react.statuscode.com/link/189649/5d0bbb4a61).)
+    
+*   [react-jsonschema-form 6.8](https://react.statuscode.com/link/189650/5d0bbb4a61) – Component for declaratively building web forms using JSON Schema. ([Playground](https://react.statuscode.com/link/189651/5d0bbb4a61).)
+    
+*   [nuqs 2.10](https://react.statuscode.com/link/189652/5d0bbb4a61) – Type-safe search params state manager. Like `useState`, but stored in the URL query string.
+    
+*   [Material UI 9.4](https://react.statuscode.com/link/189653/5d0bbb4a61) – Comprehensive React component suite.
+    
+
+📰 Classifieds
+
+🌌 Ever heard a React talk in a planetarium? React Summit US, 4th edition: Nov 17 & 20, New York & Online. [Reserve your spot!](https://react.statuscode.com/link/189654/5d0bbb4a61)
+
+* * *
+
+Meet [chat.agent on Trigger.dev](https://react.statuscode.com/link/189655/5d0bbb4a61): durable AI agents built with the AI SDK you already use. Long-lived LLM sessions that survive deploys, crashes & refreshes.
+
+💬  The Next.js team answered your questions
+
+The Next.js team spent a morning on Reddit's `r/nextjs` [answering user-submitted questions](https://react.statuscode.com/link/189656/5d0bbb4a61) on Next.js 16.3, the App Router, RSC, caching and upgrades. A few responses are worth a closer look:
+
+*   [Why no 'proper middleware' or GET Server Actions?](https://react.statuscode.com/link/189657/5d0bbb4a61) – The thread's top-voted question asks why TanStack Start has both and Next.js neither. Pete Hunt
+    
+*   ['I agree that it has gotten more complicated over the years'](https://react.statuscode.com/link/189658/5d0bbb4a61) – Told Next.js is an overengineered mess and that RSC made it an "architectural disaster", Pete concedes the complexity but considers the latter claim unfair. Pete Hunt
+    
+*   [Built-in pagination and infinite loading?](https://react.statuscode.com/link/189659/5d0bbb4a61) – "We're working on it", with no details yet. In the meantime, Andrew suggests [SWR](https://react.statuscode.com/link/189660/5d0bbb4a61) or TanStack Query. Andrew Clark
+    
+*   [What the team is most excited about next](https://react.statuscode.com/link/189661/5d0bbb4a61) – Primitives for fetching data outside navigations, static-aware primitives for feature flags and experiments, and Fragment refs and View Transitions going stable in React 19.3. Sam, Aurora and Joseph
+    
+*   ['TanStack Start is pretty good too'](https://react.statuscode.com/link/189662/5d0bbb4a61) – When a reader is told to just switch frameworks, Pete's reply is disarming: _"Hey that's not very nice! TanStack Start is pretty good too though and their new branding is great."_ Pete Hunt
+    
+
+_(Apologies if any of the links above demand a Reddit login. Apparently they are starting to do that more often now.)_
+
+It'd be neat if the core React team did one of these sometime – the React Native team [did one a decade ago](https://react.statuscode.com/link/189663/5d0bbb4a61) that was very popular.
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​488 — August 28, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/488)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://react.statuscode.com/link/189626/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/osspuzqgnjn3ggmsvqfq.jpg)](https://react.statuscode.com/link/189625/5d0bbb4a61)
+
+[How Lovable Migrated from Next.js to TanStack Start](https://react.statuscode.com/link/189625/5d0bbb4a61 "lovable.dev") — Lovable moved nearly 400 routes and more than 850K lines of code off a Next.js app running on Vercel onto TanStack Start on its own platform. The heart of the story is how they ran *both* frameworks in parallel behind a proxy, with a shared folder of code between them.
+
+Alexander Lebedev (Lovable)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/e4370cbe.png)](https://react.statuscode.com/link/189626/5d0bbb4a61)
+
+[Real-Time UI, Real-Time Data. No Pipeline](https://react.statuscode.com/link/189626/5d0bbb4a61 "www.tigerdata.com") — Your components update instantly, but the data behind them crawls through a pipeline. TimescaleDB extends Postgres so dashboards read live data at scale, no sync lag. Hypertables, compression, continuous aggregates. [Get $1000 credit to start](https://react.statuscode.com/link/189626/5d0bbb4a61).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[What We Learnt Building a Data Grid in React, Vue, and Svelte](https://react.statuscode.com/link/189627/5d0bbb4a61 "svar.dev") — SVAR ships the same data grid for React, Vue and Svelte, so they know how frameworks differ. But do those differences affect performance? Barely. No winner is declared, as *"the expensive parts of a fast data grid turned out to be almost entirely framework-independent."*
+
+Maksim Kozhukh (SVAR)
+
+**IN BRIEF:**
+
+* ⚠️ [Two critical unauthenticated RCEs affecting Next.js have been patched.](https://react.statuscode.com/link/189628/5d0bbb4a61) Update to 16.3.3 or 15.5.24, as appropriate.
+
+* React's [*Canary*](https://react.statuscode.com/link/189629/5d0bbb4a61) channel has [a `browser()` API](https://react.statuscode.com/link/189630/5d0bbb4a61) for components that can't render on the server. `use(browser())` stops server rendering that component, leaves the nearest &lt;`Suspense`> fallback in its place, then renders as normal in the browser.
+
+* [Parallel transitions are now on by default](https://react.statuscode.com/link/189631/5d0bbb4a61) in Canary builds, React Native included. Already in production at Meta and may make it into React 19.3. If you're unfamiliar with the concept, [learn more about them here](https://react.statuscode.com/link/189668/5d0bbb4a61).
+
+[Reliable Query Prefetching with TanStack Router](https://react.statuscode.com/link/189634/5d0bbb4a61 "tkdodo.eu") — Prefetch in a loader and you're writing the query twice, and those copies can drift over time. Dominik's fix puts `queryOptions` in route context so the loader and component use the same definition, and sub-routes get them too.
+
+Dominik Dorfmeister
+
+[Building App-like Experiences with Next.js 16.3](https://react.statuscode.com/link/189633/5d0bbb4a61 "nextjs.org") — A practical look at Instant Navigations, Cache Components and Partial Prefetching, demoed in four cloneable open-source apps.
+
+Aurora Scharff
+
+📄 [Building a 3D AI Avatar in React Native](https://react.statuscode.com/link/189635/5d0bbb4a61) – How to render a cutesy 3D 'AI assistant' with [React Native Filament](https://react.statuscode.com/link/189636/5d0bbb4a61). Dave Mkpa-Eke (Margelo)
+
+📄 [Making *React Testing Library* Tests 43% Faster](https://react.statuscode.com/link/189637/5d0bbb4a61) Scott Cooper
+
+📄 [Coordinating Optimistic Updates in Next.js](https://react.statuscode.com/link/189638/5d0bbb4a61) Aurora Scharff
+
+🛠  Code, Tools & Libraries
+
+[Oxlint Gets React Compiler Support](https://react.statuscode.com/link/189639/5d0bbb4a61 "oxc.rs") — [Oxlint](https://react.statuscode.com/link/189669/5d0bbb4a61) now includes 22 rules that run React Compiler's own validation passes to catch [Rules of React](https://react.statuscode.com/link/189640/5d0bbb4a61) violations. Oxc also ships a package that applies the automatic memoization itself, which it claims can be over 10 times faster than the Babel plugin.
+
+Boshen (Oxc)
+
+[Waku 1.0 RC: The Minimal React Framework Freezes Its API](https://react.statuscode.com/link/189641/5d0bbb4a61 "waku.gg") — The minimal React framework built around Server Components is at release candidate, so the public APIs are now fixed and this is the last chance to give feedback that affects the final v1 release.
+
+Sophia Andren
+
+[Rifm 1.0: React Input Format and Mask](https://react.statuscode.com/link/189642/5d0bbb4a61 "trysound.github.io") — A small, dependency-free hook & component for building formatted & masked inputs without losing cursor position.
+
+Bogdan Chadkin
+
+[TanStack Query Adds Simpler `query` and `infiniteQuery` Methods](https://react.statuscode.com/link/189664/5d0bbb4a61 "github.com") — Landing in [5.102.0](https://react.statuscode.com/link/189667/5d0bbb4a61) ([billed by Dominik](https://react.statuscode.com/link/189665/5d0bbb4a61) as the *"biggest release since v5"*): `QueryClient`'s new `query`/`infiniteQuery` are intended to replace `fetchQuery`/`fetchInfiniteQuery`.
+
+TanStack
+
+* 📱 [Ionic Framework v9](https://react.statuscode.com/link/189645/5d0bbb4a61) – The mobile-first UI toolkit for React, Angular and Vue returns after a two-year gap with React Router 6 support and more. There's [an upgrade guide for v8 users](https://react.statuscode.com/link/189646/5d0bbb4a61).
+
+* [GTKX 1.5](https://react.statuscode.com/link/189647/5d0bbb4a61) – Create native GTK-powered Linux desktop apps with React. Now with an adapter to connect React Hook Form to native Adwaita controls.
+
+* [Streamdown 2.6](https://react.statuscode.com/link/189648/5d0bbb4a61) – Vercel's replacement for `react-markdown` focused on AI-powered streaming of Markdown content. ([Homepage](https://react.statuscode.com/link/189649/5d0bbb4a61).)
+
+* [react-jsonschema-form 6.8](https://react.statuscode.com/link/189650/5d0bbb4a61) – Component for declaratively building web forms using JSON Schema. ([Playground](https://react.statuscode.com/link/189651/5d0bbb4a61).)
+
+* [nuqs 2.10](https://react.statuscode.com/link/189652/5d0bbb4a61) – Type-safe search params state manager. Like `useState`, but stored in the URL query string.
+
+* [Material UI 9.4](https://react.statuscode.com/link/189653/5d0bbb4a61) – Comprehensive React component suite.
+
+📰 Classifieds
+
+🌌 Ever heard a React talk in a planetarium? React Summit US, 4th edition: Nov 17 & 20, New York & Online. [Reserve your spot!](https://react.statuscode.com/link/189654/5d0bbb4a61)
+
+***
+
+Meet [chat.agent on Trigger.dev](https://react.statuscode.com/link/189655/5d0bbb4a61): durable AI agents built with the AI SDK you already use. Long-lived LLM sessions that survive deploys, crashes & refreshes.
+
+💬  The Next.js team answered your questions
+
+The Next.js team spent a morning on Reddit's `r/nextjs` [answering user-submitted questions](https://react.statuscode.com/link/189656/5d0bbb4a61) on Next.js 16.3, the App Router, RSC, caching and upgrades. A few responses are worth a closer look:
+
+* [Why no 'proper middleware' or GET Server Actions?](https://react.statuscode.com/link/189657/5d0bbb4a61) – The thread's top-voted question asks why TanStack Start has both and Next.js neither. Pete Hunt
+
+* ['I agree that it has gotten more complicated over the years'](https://react.statuscode.com/link/189658/5d0bbb4a61) – Told Next.js is an overengineered mess and that RSC made it an "architectural disaster", Pete concedes the complexity but considers the latter claim unfair. Pete Hunt
+
+* [Built-in pagination and infinite loading?](https://react.statuscode.com/link/189659/5d0bbb4a61) – "We're working on it", with no details yet. In the meantime, Andrew suggests [SWR](https://react.statuscode.com/link/189660/5d0bbb4a61) or TanStack Query. Andrew Clark
+
+* [What the team is most excited about next](https://react.statuscode.com/link/189661/5d0bbb4a61) – Primitives for fetching data outside navigations, static-aware primitives for feature flags and experiments, and Fragment refs and View Transitions going stable in React 19.3. Sam, Aurora and Joseph
+
+* ['TanStack Start is pretty good too'](https://react.statuscode.com/link/189662/5d0bbb4a61) – When a reader is told to just switch frameworks, Pete's reply is disarming: *"Hey that's not very nice! TanStack Start is pretty good too though and their new branding is great."* Pete Hunt
+
+*(Apologies if any of the links above demand a Reddit login. Apparently they are starting to do that more often now.)*
+
+It'd be neat if the core React team did one of these sometime – the React Native team [did one a decade ago](https://react.statuscode.com/link/189663/5d0bbb4a61) that was very popular.
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
