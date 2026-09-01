@@ -1,0 +1,293 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: How to fit Minesweeper into 247 bytes
+description: How to fit Minesweeper into 247 bytes
+date: 星期二 10 晚上 九月 1o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/800
+origin_site: https://javascriptweekly.com/issues/800
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="How to fit Minesweeper into 247 bytes" url="https://javascriptweekly.com/issues/800" />
+
+<Detail client:only="react">
+	#​800 — September 1, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/800)
+
+**Issue 800!** I'm not doing anything to celebrate, but I know many of you have been here for _years_, so thanks for your continued support. Maybe I'll do something for issue 1000, though at current velocity that'll be late 2030... ;-)  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_187/e_make_transparent/co_white,e_outline:20/hxaajcewmf94f29l9dka.png)](https://javascriptweekly.com/link/189670/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bx17eefknqp64qnr1fet.jpg)](https://javascriptweekly.com/link/189671/d076523b1d)
+
+[The Depths of JavaScript: Minesweeper in 247 Bytes](https://javascriptweekly.com/link/189671/d076523b1d "yui.dev") — An analysis of a playable 8x8 Minesweeper implementation in one line of JavaScript, complete with flags and cascading blank cells. The author's 658-byte version is impressive enough, but this post covers the tricks to make it 62% smaller than that!
+
+yui and DNEK
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/8de3904f.png)](https://javascriptweekly.com/link/189670/d076523b1d)
+
+[Stop Reviewing PRs in the Order They Arrived. Review in the Order That Matters](https://javascriptweekly.com/link/189670/d076523b1d "coderabbit.link") — CodeRabbit Triage is a reviewer-first prioritization layer for the PR queue: a self-updating, cross-repository inbox that tells you which pull request to review next, how deeply to review it and which ones may be safe to close.
+
+CodeRabbit sponsor
+
+[Remix 3 RC: A Full-Stack Framework with No React Required](https://javascriptweekly.com/link/189717/d076523b1d "remix.run") — Remix's big rewrite from its previous life as a React framework into an independent full-stack framework is largely done. This post makes a good pitch, but even better is the [all-new homepage](https://javascriptweekly.com/link/189718/d076523b1d) explaining how Remix offers everything you need to build a modern webapp in 'a single package'.
+
+Brooks Lybrand
+
+💡 The final release is due on October 2 but it's more than ready to start working with.
+
+[pnpm 12: Rewritten in Rust, Same Commands and Lockfile](https://javascriptweekly.com/link/189672/d076523b1d "pnpm.io") — The Rust rewrite is stable, and nearly all of v11's commands, flags and lockfile format carry over with only a [handful of changes](https://javascriptweekly.com/link/189673/d076523b1d). npm's `latest` tag still points to pnpm 11, though, so you'd need `pnpm self-update next-12` to upgrade.
+
+Zoltan Kochan
+
+**IN BRIEF:**
+
+*   TypeScript has [landed support for import-attribute-aware ambient modules](https://javascriptweekly.com/link/189719/d076523b1d). Declarations such as `declare module "*" with &lcub; type: "css" }` can now match imports carrying that attribute.
+    
+*   Dani Sandoval rounds up [what's new in the Svelte world this month](https://javascriptweekly.com/link/189676/d076523b1d) including Svelte 5.57's new `SvelteMap` methods, SvelteKit 3 reaching RC, and an `ai-tools` add-on for the `sv` CLI.
+    
+*   Sarah Rainsberger rounds up [what's new in Astro this month](https://javascriptweekly.com/link/189677/d076523b1d) too, including Matthew Phillips taking over as 'Project Steward', and a new [Astro Playground](https://javascriptweekly.com/link/189729/d076523b1d).
+    
+
+**RELEASES:**
+
+*   ⭐ [Rspack 2.2, Rsbuild 2.2, and Rslint 0.9](https://javascriptweekly.com/link/189678/d076523b1d) – Faster builds and HMR, shorter module IDs, and Node.js chunk splitting on by default in Rsbuild. Notably, Rslint now implements all rules and presets from `@typescript-eslint`.
+    
+*   [Cypress 16](https://javascriptweekly.com/link/189720/d076523b1d), [NestJS 12](https://javascriptweekly.com/link/189681/d076523b1d), [Vue 3.6 RC6](https://javascriptweekly.com/link/189682/d076523b1d), [Deno 2.9.6](https://javascriptweekly.com/link/189683/d076523b1d), [Mocha 12.0](https://javascriptweekly.com/link/189684/d076523b1d), [Electron 44](https://javascriptweekly.com/link/189685/d076523b1d) (mentioned last week but there's now an official post).
+    
+*   [Node.js v26.8.0 (Current)](https://javascriptweekly.com/link/189686/d076523b1d) and [Node.js v24.20.0 (LTS)](https://javascriptweekly.com/link/189687/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[The Browser's New Email Verification API](https://javascriptweekly.com/link/189691/d076523b1d "resend.com") — A look at a WICG proposal to get rid of the 'go and check your inbox' headache with the browser and email provider using a token the server verifies on submit. Chrome origin trial and Gmail only for now.
+
+Phil Nash
+
+[Lovable's Migration from Next.js to TanStack Start](https://javascriptweekly.com/link/189692/d076523b1d "lovable.dev") — How Lovable migrated a ~850K LOC app from Next.js to TanStack Start while running both in parallel behind a proxy, with a shared folder of code between them.
+
+Alexander Lebedev (Lovable)
+
+[What We Learned Building a Data Grid in React, Vue, and Svelte](https://javascriptweekly.com/link/189689/d076523b1d "svar.dev") — SVAR ships the same data grid for React, Vue and Svelte, and says the most crucial, performance-impacting elements remain the same whatever the framework.
+
+Maksim Kozhukh (SVAR)
+
+📄 [The Problem with Concurrent Linter Fixes](https://javascriptweekly.com/link/189693/d076523b1d) – Applying several autofixes at once can produce broken code that a "fix-then-reanalyze" loop wouldn't. Jeroen Engels
+
+📄 [Bumping the Major Version of Your JavaScript Library is User Hostile](https://javascriptweekly.com/link/189694/d076523b1d) James Healy
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/eo9krbjjdoksfuqz7faw.jpg)](https://javascriptweekly.com/link/189721/d076523b1d)
+
+[Uppy 6.0: A Modular JavaScript File Uploader](https://javascriptweekly.com/link/189721/d076523b1d "uppy.io") — Resumable uploads from disk, Dropbox or GDrive, with wrappers for React, Vue, Svelte & Angular. This version focuses on clean-up, with a rewritten S3 plugin and fewer packages to manage.
+
+Transloadit
+
+[Zod 4.5: Faster Parsing, 9x Less Memory Per Schema](https://javascriptweekly.com/link/189722/d076523b1d "zod.dev") — A big performance release for the popular TypeScript-first schema validation library. In a deep dive, Colin explains [how method memoization helped cut](https://javascriptweekly.com/link/189723/d076523b1d) a bare `z.string()` from using 7.5KB of heap to just 784 bytes.
+
+Colin McDonnell
+
+[Know JavaScript? You're Ready to Ship a Mobile App](https://javascriptweekly.com/link/189695/d076523b1d "try.expo.dev") — Your React skills already ship mobile apps. Expo does the builds, store submission, and updates. No Xcode.
+
+Expo sponsor
+
+[htmx 4.0: The Anti-SPA Library's First Major Release in Two Years](https://javascriptweekly.com/link/189724/d076523b1d "four.htmx.org") — The library that swaps HTML fragments into pages using nothing but attributes moves from `XMLHttpRequest` to the Fetch API. Attribute inheritance is now opt-in, events have been standardized/renamed, and [morphing swaps](https://javascriptweekly.com/link/189725/d076523b1d) and [`&lt;hx-partial>`](https://javascriptweekly.com/link/189726/d076523b1d) are new features. There's a full [what's new in htmx 4 guide](https://javascriptweekly.com/link/189727/d076523b1d) too.
+
+Carson Gross
+
+💡 If you're new to htmx, [this page of patterns for common use cases](https://javascriptweekly.com/link/189728/d076523b1d) provides a great hands-on introduction.
+
+[Svelte Bits: Animated UI Components for Svelte](https://javascriptweekly.com/link/189696/d076523b1d "sveltebits.xyz") — A Svelte port of [React Bits](https://javascriptweekly.com/link/189697/d076523b1d) (by the same creator), the popular suite of animation components for React.
+
+David Haz
+
+*   🗓️ [Schedule-X 4.7](https://javascriptweekly.com/link/189700/d076523b1d) – Large, schedule-style calendar control for React, Vue, Angular, Svelte and Preact apps.
+    
+*   [Mantine 9.6](https://javascriptweekly.com/link/189680/d076523b1d) – Popular, extensive React component suite. Adds a new media 'lightbox' component and more.
+    
+*   🖼️ [Cropper.js 2.2](https://javascriptweekly.com/link/189701/d076523b1d) – A mature image cropping control with [a playground](https://javascriptweekly.com/link/189702/d076523b1d) where you can give it a spin.
+    
+*   [noble-curves 2.4](https://javascriptweekly.com/link/189703/d076523b1d) – Audited, minimal JS implementation of elliptic curve cryptography.
+    
+
+📰 Classifieds
+
+⚡[Zuplo](https://javascriptweekly.com/link/189705/d076523b1d) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://javascriptweekly.com/link/189705/d076523b1d).
+
+* * *
+
+📄 Turn messy PDFs into structured JSON. [See how Foxit’s Structural Extraction API](https://javascriptweekly.com/link/189706/d076523b1d) preserves tables, fields, and layout in four REST calls.
+
+* * *
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/189707/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+📢  Elsewhere in the ecosystem
+
+*   🤖 Addy Osmani says [mastery still comes from 'doing the reps'](https://javascriptweekly.com/link/189708/d076523b1d), and that agents finishing tasks for you means building expertise has to be a more deliberate act.
+    
+*   ∑ [Lean](https://javascriptweekly.com/link/189709/d076523b1d), a language for writing machine-checked mathematical proofs, has a verifier that's "just" a type checker, so here's [the concept demonstrated in TypeScript](https://javascriptweekly.com/link/189710/d076523b1d) instead!
+    
+*   🚫 [Google has removed all remaining Manifest V2 extensions from the Chrome Web Store](https://javascriptweekly.com/link/189711/d076523b1d)… uBlock Origin included.
+    
+*   AWS Lambda has introduced [a new Node.js 26 runtime in preview](https://javascriptweekly.com/link/189713/d076523b1d).
+    
+*   A detailed look at many of the things that [should go in a modern HTML boilerplate](https://javascriptweekly.com/link/189714/d076523b1d).
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/189715/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​800 — September 1, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/800)
+
+**Issue 800!** I'm not doing anything to celebrate, but I know many of you have been here for *years*, so thanks for your continued support. Maybe I'll do something for issue 1000, though at current velocity that'll be late 2030... ;-)\
+\_\_\
+*Your editor, Peter Cooper*
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_187/e_make_transparent/co_white,e_outline:20/hxaajcewmf94f29l9dka.png)](https://javascriptweekly.com/link/189670/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bx17eefknqp64qnr1fet.jpg)](https://javascriptweekly.com/link/189671/d076523b1d)
+
+[The Depths of JavaScript: Minesweeper in 247 Bytes](https://javascriptweekly.com/link/189671/d076523b1d "yui.dev") — An analysis of a playable 8x8 Minesweeper implementation in one line of JavaScript, complete with flags and cascading blank cells. The author's 658-byte version is impressive enough, but this post covers the tricks to make it 62% smaller than that!
+
+yui and DNEK
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/8de3904f.png)](https://javascriptweekly.com/link/189670/d076523b1d)
+
+[Stop Reviewing PRs in the Order They Arrived. Review in the Order That Matters](https://javascriptweekly.com/link/189670/d076523b1d "coderabbit.link") — CodeRabbit Triage is a reviewer-first prioritization layer for the PR queue: a self-updating, cross-repository inbox that tells you which pull request to review next, how deeply to review it and which ones may be safe to close.
+
+CodeRabbit sponsor
+
+[Remix 3 RC: A Full-Stack Framework with No React Required](https://javascriptweekly.com/link/189717/d076523b1d "remix.run") — Remix's big rewrite from its previous life as a React framework into an independent full-stack framework is largely done. This post makes a good pitch, but even better is the [all-new homepage](https://javascriptweekly.com/link/189718/d076523b1d) explaining how Remix offers everything you need to build a modern webapp in 'a single package'.
+
+Brooks Lybrand
+
+💡 The final release is due on October 2 but it's more than ready to start working with.
+
+[pnpm 12: Rewritten in Rust, Same Commands and Lockfile](https://javascriptweekly.com/link/189672/d076523b1d "pnpm.io") — The Rust rewrite is stable, and nearly all of v11's commands, flags and lockfile format carry over with only a [handful of changes](https://javascriptweekly.com/link/189673/d076523b1d). npm's `latest` tag still points to pnpm 11, though, so you'd need `pnpm self-update next-12` to upgrade.
+
+Zoltan Kochan
+
+**IN BRIEF:**
+
+* TypeScript has [landed support for import-attribute-aware ambient modules](https://javascriptweekly.com/link/189719/d076523b1d). Declarations such as `declare module "*" with &lcub; type: "css" }` can now match imports carrying that attribute.
+
+* Dani Sandoval rounds up [what's new in the Svelte world this month](https://javascriptweekly.com/link/189676/d076523b1d) including Svelte 5.57's new `SvelteMap` methods, SvelteKit 3 reaching RC, and an `ai-tools` add-on for the `sv` CLI.
+
+* Sarah Rainsberger rounds up [what's new in Astro this month](https://javascriptweekly.com/link/189677/d076523b1d) too, including Matthew Phillips taking over as 'Project Steward', and a new [Astro Playground](https://javascriptweekly.com/link/189729/d076523b1d).
+
+**RELEASES:**
+
+* ⭐ [Rspack 2.2, Rsbuild 2.2, and Rslint 0.9](https://javascriptweekly.com/link/189678/d076523b1d) – Faster builds and HMR, shorter module IDs, and Node.js chunk splitting on by default in Rsbuild. Notably, Rslint now implements all rules and presets from `@typescript-eslint`.
+
+* [Cypress 16](https://javascriptweekly.com/link/189720/d076523b1d), [NestJS 12](https://javascriptweekly.com/link/189681/d076523b1d), [Vue 3.6 RC6](https://javascriptweekly.com/link/189682/d076523b1d), [Deno 2.9.6](https://javascriptweekly.com/link/189683/d076523b1d), [Mocha 12.0](https://javascriptweekly.com/link/189684/d076523b1d), [Electron 44](https://javascriptweekly.com/link/189685/d076523b1d) (mentioned last week but there's now an official post).
+
+* [Node.js v26.8.0 (Current)](https://javascriptweekly.com/link/189686/d076523b1d) and [Node.js v24.20.0 (LTS)](https://javascriptweekly.com/link/189687/d076523b1d)
+
+📖  Articles and Videos
+
+[The Browser's New Email Verification API](https://javascriptweekly.com/link/189691/d076523b1d "resend.com") — A look at a WICG proposal to get rid of the 'go and check your inbox' headache with the browser and email provider using a token the server verifies on submit. Chrome origin trial and Gmail only for now.
+
+Phil Nash
+
+[Lovable's Migration from Next.js to TanStack Start](https://javascriptweekly.com/link/189692/d076523b1d "lovable.dev") — How Lovable migrated a ~850K LOC app from Next.js to TanStack Start while running both in parallel behind a proxy, with a shared folder of code between them.
+
+Alexander Lebedev (Lovable)
+
+[What We Learned Building a Data Grid in React, Vue, and Svelte](https://javascriptweekly.com/link/189689/d076523b1d "svar.dev") — SVAR ships the same data grid for React, Vue and Svelte, and says the most crucial, performance-impacting elements remain the same whatever the framework.
+
+Maksim Kozhukh (SVAR)
+
+📄 [The Problem with Concurrent Linter Fixes](https://javascriptweekly.com/link/189693/d076523b1d) – Applying several autofixes at once can produce broken code that a "fix-then-reanalyze" loop wouldn't. Jeroen Engels
+
+📄 [Bumping the Major Version of Your JavaScript Library is User Hostile](https://javascriptweekly.com/link/189694/d076523b1d) James Healy
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/eo9krbjjdoksfuqz7faw.jpg)](https://javascriptweekly.com/link/189721/d076523b1d)
+
+[Uppy 6.0: A Modular JavaScript File Uploader](https://javascriptweekly.com/link/189721/d076523b1d "uppy.io") — Resumable uploads from disk, Dropbox or GDrive, with wrappers for React, Vue, Svelte & Angular. This version focuses on clean-up, with a rewritten S3 plugin and fewer packages to manage.
+
+Transloadit
+
+[Zod 4.5: Faster Parsing, 9x Less Memory Per Schema](https://javascriptweekly.com/link/189722/d076523b1d "zod.dev") — A big performance release for the popular TypeScript-first schema validation library. In a deep dive, Colin explains [how method memoization helped cut](https://javascriptweekly.com/link/189723/d076523b1d) a bare `z.string()` from using 7.5KB of heap to just 784 bytes.
+
+Colin McDonnell
+
+[Know JavaScript? You're Ready to Ship a Mobile App](https://javascriptweekly.com/link/189695/d076523b1d "try.expo.dev") — Your React skills already ship mobile apps. Expo does the builds, store submission, and updates. No Xcode.
+
+Expo sponsor
+
+[htmx 4.0: The Anti-SPA Library's First Major Release in Two Years](https://javascriptweekly.com/link/189724/d076523b1d "four.htmx.org") — The library that swaps HTML fragments into pages using nothing but attributes moves from `XMLHttpRequest` to the Fetch API. Attribute inheritance is now opt-in, events have been standardized/renamed, and [morphing swaps](https://javascriptweekly.com/link/189725/d076523b1d) and [`&lt;hx-partial>`](https://javascriptweekly.com/link/189726/d076523b1d) are new features. There's a full [what's new in htmx 4 guide](https://javascriptweekly.com/link/189727/d076523b1d) too.
+
+Carson Gross
+
+💡 If you're new to htmx, [this page of patterns for common use cases](https://javascriptweekly.com/link/189728/d076523b1d) provides a great hands-on introduction.
+
+[Svelte Bits: Animated UI Components for Svelte](https://javascriptweekly.com/link/189696/d076523b1d "sveltebits.xyz") — A Svelte port of [React Bits](https://javascriptweekly.com/link/189697/d076523b1d) (by the same creator), the popular suite of animation components for React.
+
+David Haz
+
+* 🗓️ [Schedule-X 4.7](https://javascriptweekly.com/link/189700/d076523b1d) – Large, schedule-style calendar control for React, Vue, Angular, Svelte and Preact apps.
+
+* [Mantine 9.6](https://javascriptweekly.com/link/189680/d076523b1d) – Popular, extensive React component suite. Adds a new media 'lightbox' component and more.
+
+* 🖼️ [Cropper.js 2.2](https://javascriptweekly.com/link/189701/d076523b1d) – A mature image cropping control with [a playground](https://javascriptweekly.com/link/189702/d076523b1d) where you can give it a spin.
+
+* [noble-curves 2.4](https://javascriptweekly.com/link/189703/d076523b1d) – Audited, minimal JS implementation of elliptic curve cryptography.
+
+📰 Classifieds
+
+⚡[Zuplo](https://javascriptweekly.com/link/189705/d076523b1d) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://javascriptweekly.com/link/189705/d076523b1d).
+
+***
+
+📄 Turn messy PDFs into structured JSON. [See how Foxit’s Structural Extraction API](https://javascriptweekly.com/link/189706/d076523b1d) preserves tables, fields, and layout in four REST calls.
+
+***
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/189707/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+📢  Elsewhere in the ecosystem
+
+* 🤖 Addy Osmani says [mastery still comes from 'doing the reps'](https://javascriptweekly.com/link/189708/d076523b1d), and that agents finishing tasks for you means building expertise has to be a more deliberate act.
+
+* ∑ [Lean](https://javascriptweekly.com/link/189709/d076523b1d), a language for writing machine-checked mathematical proofs, has a verifier that's "just" a type checker, so here's [the concept demonstrated in TypeScript](https://javascriptweekly.com/link/189710/d076523b1d) instead!
+
+* 🚫 [Google has removed all remaining Manifest V2 extensions from the Chrome Web Store](https://javascriptweekly.com/link/189711/d076523b1d)… uBlock Origin included.
+
+* AWS Lambda has introduced [a new Node.js 26 runtime in preview](https://javascriptweekly.com/link/189713/d076523b1d).
+
+* A detailed look at many of the things that [should go in a modern HTML boilerplate](https://javascriptweekly.com/link/189714/d076523b1d).
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/189715/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
