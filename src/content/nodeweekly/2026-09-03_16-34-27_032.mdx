@@ -1,0 +1,260 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Bun now passes 80.5% of Node's test suite
+description: Bun now passes 80.5% of Node's test suite
+date: 星期四 04 下午 九月 3o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/639
+origin_site: https://nodeweekly.com/issues/639
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Bun now passes 80.5% of Node's test suite" url="https://nodeweekly.com/issues/639" />
+
+<Detail client:only="react">
+	#​639 — September 3, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/639)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/189809/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qgfr3ewk2uld85sd6ry6.jpg)](https://nodeweekly.com/link/189810/0a4070b383)
+
+[NestJS 12 Released with ESM-First Packages, Rspack and Vitest](https://nodeweekly.com/link/189810/0a4070b383 "trilon.io") — The progressive framework gets its biggest release in years, going ESM-first (CJS is still an option), replacing webpack with Rspack, adding [Standard Schema](https://nodeweekly.com/link/189811/0a4070b383) support for easy interop with Zod, Valibot and friends, plus structured logging, [a brand new homepage](https://nodeweekly.com/link/189812/0a4070b383), and more.
+
+Kamil Mysliwiec
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/e81c4a7d.png)](https://nodeweekly.com/link/189809/0a4070b383)
+
+[One Slow Query Starves Your Whole Connection Pool](https://nodeweekly.com/link/189809/0a4070b383 "www.tigerdata.com") — A heavy analytics query holds a connection while everything else waits. TimescaleDB extends Postgres so those queries return fast, freeing the pool. Hypertables, compression, continuous aggregates. One database, not two. [Get $1000 credit to start](https://nodeweekly.com/link/189809/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+📊 [Bun 1.4 Now Passes 80% of Node's Test Suite](https://nodeweekly.com/link/189813/0a4070b383 "bun.com") — [Bun 1.4](https://nodeweekly.com/link/189814/0a4070b383)'s headline feature is a [big jump in Node.js compatibility](https://nodeweekly.com/link/189815/0a4070b383) as part of its goal of being a _"drop-in replacement"_. This page lets you see the project's progress and where Bun is strong and weak.
+
+Bun Project
+
+**IN BRIEF:**
+
+*   Matteo Collina has landed [`node:ffi` enabled by default](https://nodeweekly.com/link/189816/0a4070b383), so calling into a native C library will no longer need `--experimental-ffi`, an addon, or `node-gyp`. It remains experimental, warns on first load, and hasn't shipped in a release yet.
+    
+*   Matteo has also added support for _Single Executable Applications_ to [mount their bundled assets as a read-only virtual file system](https://nodeweekly.com/link/189817/0a4070b383) by setting `"useVfs": true` in the config.
+    
+*   🔒 Express has patched [six vulnerabilities across `hbs`, `multer` and `morgan`](https://nodeweekly.com/link/189818/0a4070b383).
+    
+*   Node's issue tracker reaches issue `2**16` with [a proposal to remove dual ESM/CJS code samples in the API docs](https://nodeweekly.com/link/189819/0a4070b383).
+    
+
+[Rewriting a Node.js Service in Go with AI Agents](https://nodeweekly.com/link/189820/0a4070b383 "www.checklyhq.com") — A very 2026 tale of an overnight porting run, with a focus on doing agentic engineering well. Good takeaways on building a test harness _first_ and the rollout experience.
+
+Edvinas Janusevicius (Checkly)
+
+[Your Trace Shows the Slow Span. Not the Exception](https://nodeweekly.com/link/189823/0a4070b383 "blog.sentry.io") — OTLP carries traces and logs, not errors. Sentry's OtlpIntegration connects both in one trace waterfall. [Learn more about Sentry’s OTLP](https://nodeweekly.com/link/189823/0a4070b383).
+
+Sentry sponsor
+
+📄 [Detecting SQLite Full Table Scans in Node.js](https://nodeweekly.com/link/189824/0a4070b383) – Did you know SQLite counts the rows scanned by statements and you can read it after the query runs? CodeSilva
+
+📄 [Workers vs Processes in Node](https://nodeweekly.com/link/189825/0a4070b383) Ishtmeet Singh
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/deovjytt53exk0rla8fs.jpg)](https://nodeweekly.com/link/189826/0a4070b383)
+
+[Drydock: Diff Your `npm` Tarballs Before You Publish](https://nodeweekly.com/link/189826/0a4070b383 "drydock.org") — From a Preact core team member comes a tool to diff built npm tarballs against the last published version, flagging install scripts, network access and new binaries. It can then gate your _Actions_ publish job or watch npm's new staged publishing flow.
+
+Jovi De Croock
+
+💡 You can get a quick taste without installing anything: [this web-based diff viewer](https://nodeweekly.com/link/189827/0a4070b383) can compare two versions of an npm package file by file.
+
+[srvx 1.0: One `fetch` Handler for Node, Deno and Bun](https://nodeweekly.com/link/189828/0a4070b383 "srvx.h3.dev") — You can export a handler that takes a web-standard `Request` and returns a `Response`, then run it unchanged on Node, Deno or Bun. Includes a CLI with watcher and static serving, and `srvx fetch` can hit your handler without starting a server.
+
+Pooya Parsa
+
+[NVM for Windows 2.0: Node Version Manager for Windows](https://nodeweekly.com/link/189829/0a4070b383 "docs.nvm-windows.com") — A modern Node workflow for Windows users with version pinning, native integrations, auto-install of missing versions, and more. v2 is a rewrite that introduces a lighter shim-based mechanism and _no longer needs admin privileges_. [GitHub repo](https://nodeweekly.com/link/189830/0a4070b383).
+
+Author Software Inc
+
+[Got 16.0: Built-In HTTP/2 and QUERY Method Support](https://nodeweekly.com/link/189831/0a4070b383 "github.com") — The popular Node HTTP client now has a built-in HTTP/2 client, its own DNS cache, fewer dependencies, and support for the newly standardized [`QUERY` HTTP method](https://nodeweekly.com/link/189832/0a4070b383).
+
+Sindre Sorhus
+
+[SimpleWebAuthn 14.0: Now with Post-Quantum Passkeys](https://nodeweekly.com/link/189833/0a4070b383 "github.com") — The passkeys library now verifies post-quantum ML-DSA passkeys and, on Node 24.7 and up, prefers ML-DSA-44 at registration by default.
+
+Matthew Miller
+
+*   [Restify 12.0](https://nodeweekly.com/link/189834/0a4070b383) – The REST API framework returns after a two and a half year gap with Node 26 support and `url.parse()` replaced with WHATWG URL. Existing users have [a few breaking changes](https://nodeweekly.com/link/189835/0a4070b383) to note.
+    
+*   [Zod 4.5](https://nodeweekly.com/link/189836/0a4070b383) – A big performance release for the popular TypeScript-first schema validation library.
+    
+*   [np 12.1](https://nodeweekly.com/link/189837/0a4070b383) – Sindre Sorhus's improved `npm publish` workflow gets some speedups.
+    
+*   [express-rate-limit 8.7](https://nodeweekly.com/link/189838/0a4070b383) – Rate-limiting middleware for Express.
+    
+
+📰 Classifieds
+
+⚡ [Zuplo](https://nodeweekly.com/link/189839/0a4070b383) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://nodeweekly.com/link/189839/0a4070b383).
+
+* * *
+
+📉 Headout cut chargebacks 90% with Fingerprint. [Stop payment fraud](https://nodeweekly.com/link/189840/0a4070b383) with 100+ signals such as Browser Bot and VPN detection.
+
+* * *
+
+🎟️ Join us at [Supabase](https://nodeweekly.com/link/189848/0a4070b383) Select on Oct 2. Learn from the industry’s best builders and meet people building dev tools. [Apply to attend with 25% off: SUPAWEEKLY](https://nodeweekly.com/link/189848/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fcozfyfgnkfzsddwssvn.jpg)](https://nodeweekly.com/link/189842/0a4070b383)
+
+*   [htmx 4.0 has landed](https://nodeweekly.com/link/189842/0a4070b383), the first major release in two years, with [lots of changes](https://nodeweekly.com/link/189843/0a4070b383). It remains a neat way to add interactivity to server-rendered pages without reaching for a frontend framework.
+    
+*   🤔 Upon finding eight versions of `glob` across five major version lines in his employer's monorepo, James Healy is [imploring library maintainers](https://nodeweekly.com/link/189844/0a4070b383) to bump their major versions as rarely as they can.
+    
+*   A developer shares the techniques behind squeezing an implementation of Minesweeper [into just 247 bytes of JavaScript](https://nodeweekly.com/link/189845/0a4070b383).
+    
+*   🤚 The [2026 Node.js user survey](https://nodeweekly.com/link/189846/0a4070b383) is still open. Your responses guide the core team and its priorities.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​639 — September 3, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/639)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/189809/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/qgfr3ewk2uld85sd6ry6.jpg)](https://nodeweekly.com/link/189810/0a4070b383)
+
+[NestJS 12 Released with ESM-First Packages, Rspack and Vitest](https://nodeweekly.com/link/189810/0a4070b383 "trilon.io") — The progressive framework gets its biggest release in years, going ESM-first (CJS is still an option), replacing webpack with Rspack, adding [Standard Schema](https://nodeweekly.com/link/189811/0a4070b383) support for easy interop with Zod, Valibot and friends, plus structured logging, [a brand new homepage](https://nodeweekly.com/link/189812/0a4070b383), and more.
+
+Kamil Mysliwiec
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/e81c4a7d.png)](https://nodeweekly.com/link/189809/0a4070b383)
+
+[One Slow Query Starves Your Whole Connection Pool](https://nodeweekly.com/link/189809/0a4070b383 "www.tigerdata.com") — A heavy analytics query holds a connection while everything else waits. TimescaleDB extends Postgres so those queries return fast, freeing the pool. Hypertables, compression, continuous aggregates. One database, not two. [Get $1000 credit to start](https://nodeweekly.com/link/189809/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+📊 [Bun 1.4 Now Passes 80% of Node's Test Suite](https://nodeweekly.com/link/189813/0a4070b383 "bun.com") — [Bun 1.4](https://nodeweekly.com/link/189814/0a4070b383)'s headline feature is a [big jump in Node.js compatibility](https://nodeweekly.com/link/189815/0a4070b383) as part of its goal of being a *"drop-in replacement"*. This page lets you see the project's progress and where Bun is strong and weak.
+
+Bun Project
+
+**IN BRIEF:**
+
+* Matteo Collina has landed [`node:ffi` enabled by default](https://nodeweekly.com/link/189816/0a4070b383), so calling into a native C library will no longer need `--experimental-ffi`, an addon, or `node-gyp`. It remains experimental, warns on first load, and hasn't shipped in a release yet.
+
+* Matteo has also added support for *Single Executable Applications* to [mount their bundled assets as a read-only virtual file system](https://nodeweekly.com/link/189817/0a4070b383) by setting `"useVfs": true` in the config.
+
+* 🔒 Express has patched [six vulnerabilities across `hbs`, `multer` and `morgan`](https://nodeweekly.com/link/189818/0a4070b383).
+
+* Node's issue tracker reaches issue `2**16` with [a proposal to remove dual ESM/CJS code samples in the API docs](https://nodeweekly.com/link/189819/0a4070b383).
+
+[Rewriting a Node.js Service in Go with AI Agents](https://nodeweekly.com/link/189820/0a4070b383 "www.checklyhq.com") — A very 2026 tale of an overnight porting run, with a focus on doing agentic engineering well. Good takeaways on building a test harness *first* and the rollout experience.
+
+Edvinas Janusevicius (Checkly)
+
+[Your Trace Shows the Slow Span. Not the Exception](https://nodeweekly.com/link/189823/0a4070b383 "blog.sentry.io") — OTLP carries traces and logs, not errors. Sentry's OtlpIntegration connects both in one trace waterfall. [Learn more about Sentry’s OTLP](https://nodeweekly.com/link/189823/0a4070b383).
+
+Sentry sponsor
+
+📄 [Detecting SQLite Full Table Scans in Node.js](https://nodeweekly.com/link/189824/0a4070b383) – Did you know SQLite counts the rows scanned by statements and you can read it after the query runs? CodeSilva
+
+📄 [Workers vs Processes in Node](https://nodeweekly.com/link/189825/0a4070b383) Ishtmeet Singh
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/deovjytt53exk0rla8fs.jpg)](https://nodeweekly.com/link/189826/0a4070b383)
+
+[Drydock: Diff Your `npm` Tarballs Before You Publish](https://nodeweekly.com/link/189826/0a4070b383 "drydock.org") — From a Preact core team member comes a tool to diff built npm tarballs against the last published version, flagging install scripts, network access and new binaries. It can then gate your *Actions* publish job or watch npm's new staged publishing flow.
+
+Jovi De Croock
+
+💡 You can get a quick taste without installing anything: [this web-based diff viewer](https://nodeweekly.com/link/189827/0a4070b383) can compare two versions of an npm package file by file.
+
+[srvx 1.0: One `fetch` Handler for Node, Deno and Bun](https://nodeweekly.com/link/189828/0a4070b383 "srvx.h3.dev") — You can export a handler that takes a web-standard `Request` and returns a `Response`, then run it unchanged on Node, Deno or Bun. Includes a CLI with watcher and static serving, and `srvx fetch` can hit your handler without starting a server.
+
+Pooya Parsa
+
+[NVM for Windows 2.0: Node Version Manager for Windows](https://nodeweekly.com/link/189829/0a4070b383 "docs.nvm-windows.com") — A modern Node workflow for Windows users with version pinning, native integrations, auto-install of missing versions, and more. v2 is a rewrite that introduces a lighter shim-based mechanism and *no longer needs admin privileges*. [GitHub repo](https://nodeweekly.com/link/189830/0a4070b383).
+
+Author Software Inc
+
+[Got 16.0: Built-In HTTP/2 and QUERY Method Support](https://nodeweekly.com/link/189831/0a4070b383 "github.com") — The popular Node HTTP client now has a built-in HTTP/2 client, its own DNS cache, fewer dependencies, and support for the newly standardized [`QUERY` HTTP method](https://nodeweekly.com/link/189832/0a4070b383).
+
+Sindre Sorhus
+
+[SimpleWebAuthn 14.0: Now with Post-Quantum Passkeys](https://nodeweekly.com/link/189833/0a4070b383 "github.com") — The passkeys library now verifies post-quantum ML-DSA passkeys and, on Node 24.7 and up, prefers ML-DSA-44 at registration by default.
+
+Matthew Miller
+
+* [Restify 12.0](https://nodeweekly.com/link/189834/0a4070b383) – The REST API framework returns after a two and a half year gap with Node 26 support and `url.parse()` replaced with WHATWG URL. Existing users have [a few breaking changes](https://nodeweekly.com/link/189835/0a4070b383) to note.
+
+* [Zod 4.5](https://nodeweekly.com/link/189836/0a4070b383) – A big performance release for the popular TypeScript-first schema validation library.
+
+* [np 12.1](https://nodeweekly.com/link/189837/0a4070b383) – Sindre Sorhus's improved `npm publish` workflow gets some speedups.
+
+* [express-rate-limit 8.7](https://nodeweekly.com/link/189838/0a4070b383) – Rate-limiting middleware for Express.
+
+📰 Classifieds
+
+⚡ [Zuplo](https://nodeweekly.com/link/189839/0a4070b383) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://nodeweekly.com/link/189839/0a4070b383).
+
+***
+
+📉 Headout cut chargebacks 90% with Fingerprint. [Stop payment fraud](https://nodeweekly.com/link/189840/0a4070b383) with 100+ signals such as Browser Bot and VPN detection.
+
+***
+
+🎟️ Join us at [Supabase](https://nodeweekly.com/link/189848/0a4070b383) Select on Oct 2. Learn from the industry’s best builders and meet people building dev tools. [Apply to attend with 25% off: SUPAWEEKLY](https://nodeweekly.com/link/189848/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fcozfyfgnkfzsddwssvn.jpg)](https://nodeweekly.com/link/189842/0a4070b383)
+
+* [htmx 4.0 has landed](https://nodeweekly.com/link/189842/0a4070b383), the first major release in two years, with [lots of changes](https://nodeweekly.com/link/189843/0a4070b383). It remains a neat way to add interactivity to server-rendered pages without reaching for a frontend framework.
+
+* 🤔 Upon finding eight versions of `glob` across five major version lines in his employer's monorepo, James Healy is [imploring library maintainers](https://nodeweekly.com/link/189844/0a4070b383) to bump their major versions as rarely as they can.
+
+* A developer shares the techniques behind squeezing an implementation of Minesweeper [into just 247 bytes of JavaScript](https://nodeweekly.com/link/189845/0a4070b383).
+
+* 🤚 The [2026 Node.js user survey](https://nodeweekly.com/link/189846/0a4070b383) is still open. Your responses guide the core team and its priorities.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
