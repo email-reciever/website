@@ -1,0 +1,313 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: When 8 chunks weigh more than 355
+description: When 8 chunks weigh more than 355
+date: 星期二 07 晚上 九月 8o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/801
+origin_site: https://javascriptweekly.com/issues/801
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="When 8 chunks weigh more than 355" url="https://javascriptweekly.com/issues/801" />
+
+<Detail client:only="react">
+	#​801 — September 8, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/801)
+
+Together with 
+
+[![Greptile](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_308/co_white,e_outline:25/mvysygc5u6xqa3gvmetk.png)](https://javascriptweekly.com/link/189986/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wq9zwktpt9rxrly3oo74.jpg)](https://javascriptweekly.com/link/189987/d076523b1d)
+
+[How Turbopack Chunks Your JavaScript](https://javascriptweekly.com/link/189987/d076523b1d "nextjs.org") — Starting from the _Network_ tab and working up, a look at chunking strategy and the tradeoffs bundlers make between fewer requests and less code (e.g. 8 chunks can weigh more than 355 do), backed by numbers from bundling the official Next.js site itself.
+
+Sam Poder
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d1dbac0d.png)](https://javascriptweekly.com/link/189986/d076523b1d)
+
+[Catch Runtime Bugs Before Your JS PR Merges](https://javascriptweekly.com/link/189986/d076523b1d "www.greptile.com") — Greptile now runs your code to find bugs. T-Rex runs your PR branch in a sandbox, uses browser agents to click through your UI, and attaches screenshots and videos as evidence of the issue directly in the PR.
+
+Greptile sponsor
+
+[Vitest 5.0 Focuses on Speed and Test Debugging](https://javascriptweekly.com/link/189988/d076523b1d "vitest.dev") — A major release for the Vite-native test runner, with a benchmark repo showing up to 53% faster runs on dependency-heavy apps. The new [Trace View](https://javascriptweekly.com/link/189989/d076523b1d) replays _Browser Mode_ tests step by step, and [`vitest doctor`](https://javascriptweekly.com/link/189990/d076523b1d) recommends settings to make your suite run faster.
+
+Vitest Team
+
+[How Safari Fixed Top-Level `await`](https://javascriptweekly.com/link/189991/d076523b1d "webkit.org") — Safari's module loader was originally built on an abandoned spec proposal and adding top-level `await` caused years of _"cannot access before initialization"_ errors. Safari 27 brings full spec compliance for it, but it took a ground-up rewrite and this post explains the complexity.
+
+Kai Tamkun (WebKit)
+
+**IN BRIEF:**
+
+*   🎂 [jQuery 1.0 is 20 years old](https://javascriptweekly.com/link/189992/d076523b1d). InfoQ looks back at how `$()` helped us dodge the browser wars and why many sites still use it. Ten years further back, [Microsoft shipped JavaScript in _Internet Explorer_](https://javascriptweekly.com/link/189993/d076523b1d) as [JScript](https://javascriptweekly.com/link/189994/d076523b1d) to dodge trademark issues.
+    
+*   [Two men have been arrested over the TeamPCP npm supply chain attacks](https://javascriptweekly.com/link/189995/d076523b1d). TeamPCP is suspected of cloning the Shai-Hulud worm, resulting in the ['Mini Shai-Hulud'](https://javascriptweekly.com/link/189996/d076523b1d) waves.
+    
+*   [VoidZero's latest update](https://javascriptweekly.com/link/189997/d076523b1d) celebrates Vitest passing 100m weekly downloads, React Compiler support reaching Vite, and the latest on Rolldown, Vite+ and [ViteConf](https://javascriptweekly.com/link/189998/d076523b1d) (taking place online this October 15th).
+    
+
+**RELEASES:**
+
+*   [deck.gl 9.4](https://javascriptweekly.com/link/189999/d076523b1d) – The GPU-powered data visualization library extends its experimental WebGPU support in what's expected to be the final v9 release.
+    
+*   [Bun 1.4.1](https://javascriptweekly.com/link/190000/d076523b1d) and [1.4.2](https://javascriptweekly.com/link/190001/d076523b1d) – Big idle memory usage drops, smaller `bun build` bundles, `Bun.serve` speaks HTTP/2 on the same port as HTTP/1.1, and more.
+    
+*   [NVM for Windows 2.0](https://javascriptweekly.com/link/190002/d076523b1d) – A Node version manager for Windows. No longer needs admin privileges in v2.
+    
+*   [Astro 7.3](https://javascriptweekly.com/link/190003/d076523b1d), [ESLint 10.10.0](https://javascriptweekly.com/link/190004/d076523b1d), [Storybook 10.6](https://javascriptweekly.com/link/190005/d076523b1d), [Vuetify 4.2](https://javascriptweekly.com/link/190006/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ayffabov5k9i9tii8xeb.jpg)](https://javascriptweekly.com/link/190007/d076523b1d)
+
+▶  [The Story of VS Code](https://javascriptweekly.com/link/190007/d076523b1d "www.youtube.com") — An official movie-length documentary on [Visual Studio Code](https://javascriptweekly.com/link/190008/d076523b1d)'s journey from a Swiss skunkworks to now. Its founding engineers cover the decisions made in areas like Electron, LSP, and the extension API, plus candid talk about the various forks now springing up.
+
+Microsoft and Stefan Kingham
+
+😅 We also learn that at the 2015 launch they drank a beer per 100 Hacker News upvotes… and had to stop at 1,400 (votes, not beers!)
+
+[Half Past Fetch: What `await fetch()` Waits For](https://javascriptweekly.com/link/190009/d076523b1d "blog.gaborkoos.com") — Did you know `await fetch(url)` waits for the headers, not the full body? Gabor digs into some surprising consequences of that for connections, `clone()`, aborts, and timeouts.
+
+Gábor Koós
+
+[Your AI Writes Tests That Pass but Prove Nothing. Fix It](https://javascriptweekly.com/link/190010/d076523b1d "wallabyjs.com") — Wallaby CLI makes test generation 10x smarter with live coverage and runtime data, using 3x fewer tokens. [One skill to install](https://javascriptweekly.com/link/190010/d076523b1d).
+
+Wallaby Team sponsor
+
+[10 Anti-'Slop' Moves for Frontend Projects](https://javascriptweekly.com/link/190011/d076523b1d "evilmartians.com") — A walkthrough of automated checks that cut how much code you have to review, covering OpenAPI codegen, layer boundaries, mutation testing, and using CI to make it all stick.
+
+Yuri Mikhin (Evil Martians)
+
+[The Browser's Main Thread is Expensive](https://javascriptweekly.com/link/190012/d076523b1d "kciter.so") — A thorough look, complete with demos, at spending your main thread time well, including splitting, batching, prioritizing, and deferring tasks, then getting work off it entirely.
+
+Lee Sun-Hyoup
+
+📄 [Why I Ported Moonshine to JavaScript](https://javascriptweekly.com/link/190013/d076523b1d) – Pete’s low-latency speech to text runtime now runs in the browser to avoid round trips to a server. Pete Warden
+
+📺 [How Can Someone Actually Change JavaScript?](https://javascriptweekly.com/link/190014/d076523b1d) – A 2-minute explainer from a TC39 delegate. Mikhail Barash
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jtleeynffjs0yrixzyqg.jpg)](https://javascriptweekly.com/link/190015/d076523b1d)
+
+[Dropzone.js 6.x: The Drag and Drop Uploader Returns](https://javascriptweekly.com/link/190015/d076523b1d "www.dropzone.dev") — A major update for the library that handles the browser side of drag and drop uploading. After a 5 year(!) beta, v6.0, 6.1, and 6.2 landed over two days, bringing no dependencies, smaller bundles, and fixes for chunked uploads that could corrupt files.
+
+Mat Simon
+
+[Rslib 1.0: A Build Tool for Shipping JavaScript Libraries](https://javascriptweekly.com/link/190016/d076523b1d "rslib.rs") — From the Rspack team, a unified build pipeline that handles the irritating parts of publishing packages, like getting ESM and CJS working side by side, Module Federation output, and component CSS across React, Vue, Svelte and Solid.
+
+Chenwei Dai, Elecmonkey, et al.
+
+[Balance build time with your time](https://javascriptweekly.com/link/190017/d076523b1d "jobs.fidelity.com") — Our technologists do meaningful work, and we give them the support to have a meaningful life, too.
+
+Fidelity Careers sponsor
+
+[vgpu: Render WebGPU Shaders in the Browser or Node.js](https://javascriptweekly.com/link/190018/d076523b1d "vgpu.sh") — Provides a way to use the same shader in the browser or render headlessly with Node (to a high-resolution PNG or MP4 video). WGSL modules import and export like TypeScript does.
+
+Vercel
+
+[SimpleWebAuthn 14.0: Now with Post-Quantum Passkeys](https://javascriptweekly.com/link/190019/d076523b1d "github.com") — The passkeys library now verifies post-quantum ML-DSA passkeys and, on Node 24.7 and up, prefers ML-DSA-44 at registration by default.
+
+Matthew Miller
+
+*   [ESLint Config Inspector 3.4](https://javascriptweekly.com/link/190020/d076523b1d) – Adds timing analysis making it easier to identify the rules slowing down your lint runs.
+    
+*   [GPUIX 0.7](https://javascriptweekly.com/link/190021/d076523b1d) – Build native GPU-accelerated desktop apps with React and TypeScript atop the framework used by [Zed](https://javascriptweekly.com/link/190022/d076523b1d).
+    
+*   [memlab 2.0.5](https://javascriptweekly.com/link/190023/d076523b1d) – Meta's framework for finding memory leaks in both browser and Node.js JavaScript apps.
+    
+*   🎵 [Astro LilyPond](https://javascriptweekly.com/link/190024/d076523b1d) – Build-time rendering of text to musical notation for Astro.
+    
+*   📊 [vue-echarts 8.3](https://javascriptweekly.com/link/190025/d076523b1d) – Vue.js component for Apache ECharts.
+    
+
+📰 Classifieds
+
+💻 [Join Fingerprint on Sept 16](https://javascriptweekly.com/link/190026/d076523b1d). Learn how to stop fake signups with Device Intelligence, and build protection that works, for free.
+
+* * *
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/190027/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+* * *
+
+Charts crawling as your data grows? [TimescaleDB](https://javascriptweekly.com/link/190028/d076523b1d) extends Postgres to stay fast at scale, straight from live data. [Get $1000 credit](https://javascriptweekly.com/link/190028/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/r4xavp1sxq6ebnecqxkd.jpg)](https://javascriptweekly.com/link/190029/d076523b1d)
+
+*   ✨ GitHub has [a new privacy-safe star history API](https://javascriptweekly.com/link/190030/d076523b1d), so charting a repo's growth over time no longer means scraping or approximating it. [Star-History](https://javascriptweekly.com/link/190031/d076523b1d) shares [a little more background](https://javascriptweekly.com/link/190032/d076523b1d) and you can use it to chart projects' star counts, as above ([for example](https://javascriptweekly.com/link/190029/d076523b1d)).
+    
+*   Robin Wieruch argues that, due to the advent of agentic coding, [building things from primitives rather than high-level libraries](https://javascriptweekly.com/link/190033/d076523b1d) makes more sense, using D3 vs Recharts as an example.
+    
+*   [You don't need `initial-scale=1.0` in your viewport meta tag](https://javascriptweekly.com/link/190034/d076523b1d), claims Declan Chidlow, as it worked around quirks in old versions of iOS.
+    
+*   Got a browser-compatibility pain point? [Submit it as an Interop 2027 idea](https://javascriptweekly.com/link/190035/d076523b1d) (by September 23).
+    
+*   👕 TIL you can [buy official Vue.js merch](https://javascriptweekly.com/link/190036/d076523b1d)!
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/190037/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​801 — September 8, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/801)
+
+Together with 
+
+[![Greptile](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_308/co_white,e_outline:25/mvysygc5u6xqa3gvmetk.png)](https://javascriptweekly.com/link/189986/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wq9zwktpt9rxrly3oo74.jpg)](https://javascriptweekly.com/link/189987/d076523b1d)
+
+[How Turbopack Chunks Your JavaScript](https://javascriptweekly.com/link/189987/d076523b1d "nextjs.org") — Starting from the *Network* tab and working up, a look at chunking strategy and the tradeoffs bundlers make between fewer requests and less code (e.g. 8 chunks can weigh more than 355 do), backed by numbers from bundling the official Next.js site itself.
+
+Sam Poder
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d1dbac0d.png)](https://javascriptweekly.com/link/189986/d076523b1d)
+
+[Catch Runtime Bugs Before Your JS PR Merges](https://javascriptweekly.com/link/189986/d076523b1d "www.greptile.com") — Greptile now runs your code to find bugs. T-Rex runs your PR branch in a sandbox, uses browser agents to click through your UI, and attaches screenshots and videos as evidence of the issue directly in the PR.
+
+Greptile sponsor
+
+[Vitest 5.0 Focuses on Speed and Test Debugging](https://javascriptweekly.com/link/189988/d076523b1d "vitest.dev") — A major release for the Vite-native test runner, with a benchmark repo showing up to 53% faster runs on dependency-heavy apps. The new [Trace View](https://javascriptweekly.com/link/189989/d076523b1d) replays *Browser Mode* tests step by step, and [`vitest doctor`](https://javascriptweekly.com/link/189990/d076523b1d) recommends settings to make your suite run faster.
+
+Vitest Team
+
+[How Safari Fixed Top-Level `await`](https://javascriptweekly.com/link/189991/d076523b1d "webkit.org") — Safari's module loader was originally built on an abandoned spec proposal and adding top-level `await` caused years of *"cannot access before initialization"* errors. Safari 27 brings full spec compliance for it, but it took a ground-up rewrite and this post explains the complexity.
+
+Kai Tamkun (WebKit)
+
+**IN BRIEF:**
+
+* 🎂 [jQuery 1.0 is 20 years old](https://javascriptweekly.com/link/189992/d076523b1d). InfoQ looks back at how `$()` helped us dodge the browser wars and why many sites still use it. Ten years further back, [Microsoft shipped JavaScript in *Internet Explorer*](https://javascriptweekly.com/link/189993/d076523b1d) as [JScript](https://javascriptweekly.com/link/189994/d076523b1d) to dodge trademark issues.
+
+* [Two men have been arrested over the TeamPCP npm supply chain attacks](https://javascriptweekly.com/link/189995/d076523b1d). TeamPCP is suspected of cloning the Shai-Hulud worm, resulting in the ['Mini Shai-Hulud'](https://javascriptweekly.com/link/189996/d076523b1d) waves.
+
+* [VoidZero's latest update](https://javascriptweekly.com/link/189997/d076523b1d) celebrates Vitest passing 100m weekly downloads, React Compiler support reaching Vite, and the latest on Rolldown, Vite+ and [ViteConf](https://javascriptweekly.com/link/189998/d076523b1d) (taking place online this October 15th).
+
+**RELEASES:**
+
+* [deck.gl 9.4](https://javascriptweekly.com/link/189999/d076523b1d) – The GPU-powered data visualization library extends its experimental WebGPU support in what's expected to be the final v9 release.
+
+* [Bun 1.4.1](https://javascriptweekly.com/link/190000/d076523b1d) and [1.4.2](https://javascriptweekly.com/link/190001/d076523b1d) – Big idle memory usage drops, smaller `bun build` bundles, `Bun.serve` speaks HTTP/2 on the same port as HTTP/1.1, and more.
+
+* [NVM for Windows 2.0](https://javascriptweekly.com/link/190002/d076523b1d) – A Node version manager for Windows. No longer needs admin privileges in v2.
+
+* [Astro 7.3](https://javascriptweekly.com/link/190003/d076523b1d), [ESLint 10.10.0](https://javascriptweekly.com/link/190004/d076523b1d), [Storybook 10.6](https://javascriptweekly.com/link/190005/d076523b1d), [Vuetify 4.2](https://javascriptweekly.com/link/190006/d076523b1d)
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ayffabov5k9i9tii8xeb.jpg)](https://javascriptweekly.com/link/190007/d076523b1d)
+
+▶  [The Story of VS Code](https://javascriptweekly.com/link/190007/d076523b1d "www.youtube.com") — An official movie-length documentary on [Visual Studio Code](https://javascriptweekly.com/link/190008/d076523b1d)'s journey from a Swiss skunkworks to now. Its founding engineers cover the decisions made in areas like Electron, LSP, and the extension API, plus candid talk about the various forks now springing up.
+
+Microsoft and Stefan Kingham
+
+😅 We also learn that at the 2015 launch they drank a beer per 100 Hacker News upvotes… and had to stop at 1,400 (votes, not beers!)
+
+[Half Past Fetch: What `await fetch()` Waits For](https://javascriptweekly.com/link/190009/d076523b1d "blog.gaborkoos.com") — Did you know `await fetch(url)` waits for the headers, not the full body? Gabor digs into some surprising consequences of that for connections, `clone()`, aborts, and timeouts.
+
+Gábor Koós
+
+[Your AI Writes Tests That Pass but Prove Nothing. Fix It](https://javascriptweekly.com/link/190010/d076523b1d "wallabyjs.com") — Wallaby CLI makes test generation 10x smarter with live coverage and runtime data, using 3x fewer tokens. [One skill to install](https://javascriptweekly.com/link/190010/d076523b1d).
+
+Wallaby Team sponsor
+
+[10 Anti-'Slop' Moves for Frontend Projects](https://javascriptweekly.com/link/190011/d076523b1d "evilmartians.com") — A walkthrough of automated checks that cut how much code you have to review, covering OpenAPI codegen, layer boundaries, mutation testing, and using CI to make it all stick.
+
+Yuri Mikhin (Evil Martians)
+
+[The Browser's Main Thread is Expensive](https://javascriptweekly.com/link/190012/d076523b1d "kciter.so") — A thorough look, complete with demos, at spending your main thread time well, including splitting, batching, prioritizing, and deferring tasks, then getting work off it entirely.
+
+Lee Sun-Hyoup
+
+📄 [Why I Ported Moonshine to JavaScript](https://javascriptweekly.com/link/190013/d076523b1d) – Pete’s low-latency speech to text runtime now runs in the browser to avoid round trips to a server. Pete Warden
+
+📺 [How Can Someone Actually Change JavaScript?](https://javascriptweekly.com/link/190014/d076523b1d) – A 2-minute explainer from a TC39 delegate. Mikhail Barash
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jtleeynffjs0yrixzyqg.jpg)](https://javascriptweekly.com/link/190015/d076523b1d)
+
+[Dropzone.js 6.x: The Drag and Drop Uploader Returns](https://javascriptweekly.com/link/190015/d076523b1d "www.dropzone.dev") — A major update for the library that handles the browser side of drag and drop uploading. After a 5 year(!) beta, v6.0, 6.1, and 6.2 landed over two days, bringing no dependencies, smaller bundles, and fixes for chunked uploads that could corrupt files.
+
+Mat Simon
+
+[Rslib 1.0: A Build Tool for Shipping JavaScript Libraries](https://javascriptweekly.com/link/190016/d076523b1d "rslib.rs") — From the Rspack team, a unified build pipeline that handles the irritating parts of publishing packages, like getting ESM and CJS working side by side, Module Federation output, and component CSS across React, Vue, Svelte and Solid.
+
+Chenwei Dai, Elecmonkey, et al.
+
+[Balance build time with your time](https://javascriptweekly.com/link/190017/d076523b1d "jobs.fidelity.com") — Our technologists do meaningful work, and we give them the support to have a meaningful life, too.
+
+Fidelity Careers sponsor
+
+[vgpu: Render WebGPU Shaders in the Browser or Node.js](https://javascriptweekly.com/link/190018/d076523b1d "vgpu.sh") — Provides a way to use the same shader in the browser or render headlessly with Node (to a high-resolution PNG or MP4 video). WGSL modules import and export like TypeScript does.
+
+Vercel
+
+[SimpleWebAuthn 14.0: Now with Post-Quantum Passkeys](https://javascriptweekly.com/link/190019/d076523b1d "github.com") — The passkeys library now verifies post-quantum ML-DSA passkeys and, on Node 24.7 and up, prefers ML-DSA-44 at registration by default.
+
+Matthew Miller
+
+* [ESLint Config Inspector 3.4](https://javascriptweekly.com/link/190020/d076523b1d) – Adds timing analysis making it easier to identify the rules slowing down your lint runs.
+
+* [GPUIX 0.7](https://javascriptweekly.com/link/190021/d076523b1d) – Build native GPU-accelerated desktop apps with React and TypeScript atop the framework used by [Zed](https://javascriptweekly.com/link/190022/d076523b1d).
+
+* [memlab 2.0.5](https://javascriptweekly.com/link/190023/d076523b1d) – Meta's framework for finding memory leaks in both browser and Node.js JavaScript apps.
+
+* 🎵 [Astro LilyPond](https://javascriptweekly.com/link/190024/d076523b1d) – Build-time rendering of text to musical notation for Astro.
+
+* 📊 [vue-echarts 8.3](https://javascriptweekly.com/link/190025/d076523b1d) – Vue.js component for Apache ECharts.
+
+📰 Classifieds
+
+💻 [Join Fingerprint on Sept 16](https://javascriptweekly.com/link/190026/d076523b1d). Learn how to stop fake signups with Device Intelligence, and build protection that works, for free.
+
+***
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/190027/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+***
+
+Charts crawling as your data grows? [TimescaleDB](https://javascriptweekly.com/link/190028/d076523b1d) extends Postgres to stay fast at scale, straight from live data. [Get $1000 credit](https://javascriptweekly.com/link/190028/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/r4xavp1sxq6ebnecqxkd.jpg)](https://javascriptweekly.com/link/190029/d076523b1d)
+
+* ✨ GitHub has [a new privacy-safe star history API](https://javascriptweekly.com/link/190030/d076523b1d), so charting a repo's growth over time no longer means scraping or approximating it. [Star-History](https://javascriptweekly.com/link/190031/d076523b1d) shares [a little more background](https://javascriptweekly.com/link/190032/d076523b1d) and you can use it to chart projects' star counts, as above ([for example](https://javascriptweekly.com/link/190029/d076523b1d)).
+
+* Robin Wieruch argues that, due to the advent of agentic coding, [building things from primitives rather than high-level libraries](https://javascriptweekly.com/link/190033/d076523b1d) makes more sense, using D3 vs Recharts as an example.
+
+* [You don't need `initial-scale=1.0` in your viewport meta tag](https://javascriptweekly.com/link/190034/d076523b1d), claims Declan Chidlow, as it worked around quirks in old versions of iOS.
+
+* Got a browser-compatibility pain point? [Submit it as an Interop 2027 idea](https://javascriptweekly.com/link/190035/d076523b1d) (by September 23).
+
+* 👕 TIL you can [buy official Vue.js merch](https://javascriptweekly.com/link/190036/d076523b1d)!
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/190037/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
