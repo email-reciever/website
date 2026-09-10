@@ -1,0 +1,264 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node is getting a built-in benchmark runner
+description: Node is getting a built-in benchmark runner
+date: 星期四 06 晚上 九月 10o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/640
+origin_site: https://nodeweekly.com/issues/640
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node is getting a built-in benchmark runner" url="https://nodeweekly.com/issues/640" />
+
+<Detail client:only="react">
+	#​640 — September 10, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/640)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://nodeweekly.com/link/190179/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/euwt3muj9vbng2e7z9gu.jpg)](https://nodeweekly.com/link/190180/0a4070b383)
+
+[Cloudflare Workers Gets a New, Node.js-Aligned Module Registry](https://nodeweekly.com/link/190180/0a4070b383 "blog.cloudflare.com") — _Workers_ [enabled Node.js compatibility](https://nodeweekly.com/link/190181/0a4070b383) by default last month, meaning you can use most of Node’s built-in APIs in your Workers. Now there’s an opt-in way to load modules that resolves import paths as proper URLs, bringing `import.meta` and Node's `require(esm)` rules with it.
+
+Logan Gatlin and James Snell (Cloudflare)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/3d7cb94a.png)](https://nodeweekly.com/link/190179/0a4070b383)
+
+[Confidently Deploy and Manage Containerized Apps on Kubernetes](https://nodeweekly.com/link/190179/0a4070b383 "master.dev") — Join this detailed video course with Erik Reinert and learn how to deploy and manage production-grade containerized applications on Kubernetes. You'll cover infrastructure, testing, rollbacks, autoscaling and more, all before pushing your cluster to EKS.
+
+Master.dev sponsor
+
+📊 [`node:bench`: Node Core Gets a Built-In Benchmark Runner](https://nodeweekly.com/link/190182/0a4070b383 "www.jasnell.me") — Node has had a built-in test runner for years but no benchmark runner. James's experimental `node:bench` module has [landed on main](https://nodeweekly.com/link/190183/0a4070b383), so expect to see it soon. It's modelled on `node:test`, with a `node --bench` CLI and JSON reporter.
+
+James M Snell
+
+**IN BRIEF:**
+
+*   [Node.js v26.8.2 (Current)](https://nodeweekly.com/link/190184/0a4070b383) and [v24.21.0 (LTS)](https://nodeweekly.com/link/190185/0a4070b383) are out, both including a security release of Undici that fixes [several vulnerabilities](https://nodeweekly.com/link/190186/0a4070b383), plus OpenSSL 3.5.8 and numerous tweaks and fixes.
+    
+*   🔒 Researchers at GitLab found [a CVSS 10.0 sandbox escape in `vm2`](https://nodeweekly.com/link/190187/0a4070b383), the widely used Node sandboxing library. The reported escape was patched in 3.11.7+, but the writeup argues `vm2` shouldn't be used for genuinely untrusted code (though `vm2`'s own docs [are also honest about this](https://nodeweekly.com/link/190188/0a4070b383)).
+    
+*   Zod creator Colin McDonnell has landed [a change that speeds up Node's startup](https://nodeweekly.com/link/190189/0a4070b383) (by a millisecond or so, granted) by seeding V8's non-cryptographic entropy from the OS rather than OpenSSL.
+    
+*   This year's TSC elections went uncontested: [Matteo Collina staying Chair and Rafael Gonzaga becoming Vice-Chair](https://nodeweekly.com/link/190190/0a4070b383).
+    
+
+[Fuzzing the State Machines Inside My HTTP Client](https://nodeweekly.com/link/190191/0a4070b383 "blog.gaborkoos.com") — A practical case for property-based testing, made by adding [fast-check](https://nodeweekly.com/link/190192/0a4070b383) properties to [ffetch](https://nodeweekly.com/link/190193/0a4070b383)’s 206 passing tests. Thousands of generated cases found 11 real bugs in code considered fully tested.
+
+Gabor Koos
+
+[Add MCP Server Monitoring to Your Node.js Project](https://nodeweekly.com/link/190194/0a4070b383 "sentry.io") — A single function call. See who is connecting, which tools drag, and the failures MCP never throws.
+
+Sentry sponsor
+
+📄 [Is Prisma 8 Ready for Long-Lived Production Apps?](https://nodeweekly.com/link/190195/0a4070b383) – A response to community worries about Prisma 8's new migration model. Will Madden (Prisma)
+
+📄 [Containerizing and Slimming Node Apps with Paketo Buildpacks](https://nodeweekly.com/link/190196/0a4070b383) Costas Papastathis (Paketo)
+
+📄 [What `await fetch()` Actually Waits For](https://nodeweekly.com/link/190197/0a4070b383) Gabor Koos
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pbtktrh32hrdvb3kwjjd.jpg)](https://nodeweekly.com/link/190198/0a4070b383)
+
+[Rslib 1.0: A Build Tool for JavaScript Libraries and CLIs](https://nodeweekly.com/link/190198/0a4070b383 "rslib.rs") — Rspack's answer to `tsup`/`tsdown` goes 1.0 with a stable config and JS API. It can [infer syntax targets](https://nodeweekly.com/link/190199/0a4070b383) from `engines.node`, [generates declarations faster](https://nodeweekly.com/link/190200/0a4070b383) with TypeScript 7, and (experimentally) [build Node SEA executables](https://nodeweekly.com/link/190201/0a4070b383).
+
+Chenwei Dai, Elecmonkey, et al.
+
+[vgpu: Render WebGPU Shaders in the Browser or Node.js](https://nodeweekly.com/link/190202/0a4070b383 "vgpu.sh") — Provides a way to use the same shader in the browser or render headlessly with Node (to a high-resolution PNG or MP4 video). WGSL modules import and export like TypeScript does.
+
+Vercel
+
+[MikroORM 7.2: Row Level Security, a WASM SQLite Driver, and More](https://nodeweekly.com/link/190203/0a4070b383 "mikro-orm.io") — A TypeScript ORM for SQL databases and MongoDB. 7.2 adds native Postgres row level security, with policies as entity metadata, plus `through` relations and a WASM sql.js driver (yes, [you can now use MikroORM in the browser!](https://nodeweekly.com/link/190204/0a4070b383))
+
+Martin Adámek
+
+[Javet 6.0: A Way to Embed Node.js and V8 in Java](https://nodeweekly.com/link/190205/0a4070b383 "www.caoccao.com") — A Java library that embeds a real Node.js runtime (now v26) in the JVM. Java code can load npm packages, call into running Node code, and run multiple Node instances side by side. [GitHub repo](https://nodeweekly.com/link/190206/0a4070b383).
+
+Sam Cao
+
+[eslint-plugin-regexp 3.3: ESLint Plugin for Finding Regex Mistakes](https://nodeweekly.com/link/190207/0a4070b383 "github.com") — There’s a [neat online demo](https://nodeweekly.com/link/190208/0a4070b383) to show off the things it can catch.
+
+Yosuke Ota
+
+*   [parse-xml 5.0](https://nodeweekly.com/link/190228/0a4070b383) – The fast, compliant XML parser [goes ESM-only](https://nodeweekly.com/link/190209/0a4070b383). The API is unchanged and `require()` still works on Node 22+.
+    
+*   [dhcp.js 1.0](https://nodeweekly.com/link/190210/0a4070b383) – DHCPv4 client, server, and tools for Node. We covered the [explainer blog post](https://nodeweekly.com/link/190211/0a4070b383) about this project nine years ago!
+    
+*   [pnpm 12.4](https://nodeweekly.com/link/190212/0a4070b383) – The fast drop-in `npm` replacement can now manage npm, Python, and Cargo dependencies in the same workspace.
+    
+*   ✉️ [Nodemailer 10.0](https://nodeweekly.com/link/190213/0a4070b383) – The popular e-mail sending library has migrated to TypeScript with ESM and CJS builds.
+    
+*   ⚠️ [Fastify 5.12.2](https://nodeweekly.com/link/190214/0a4070b383) – Includes fixes for four high-severity issues, including validation and auth bypasses.
+    
+*   [tinybench 6.2](https://nodeweekly.com/link/190215/0a4070b383) – Simple, tiny and lightweight benchmarking library with precise timing.
+    
+*   🌐 [supercluster 9.1](https://nodeweekly.com/link/190216/0a4070b383) – Mapbox's fast geospatial point clustering library.
+    
+
+📰 Classifieds
+
+🎯 Catch promo abuse at signup. [Fingerprint’s visitor ID](https://nodeweekly.com/link/190217/0a4070b383) persists for months, not days, so abusers can’t hide. [Try it for free](https://nodeweekly.com/link/190217/0a4070b383).
+
+* * *
+
+Your API is fast until it hits analytics. [TimescaleDB](https://nodeweekly.com/link/190218/0a4070b383) extends Postgres so those queries return in ms at scale. [Get $1000 credit](https://nodeweekly.com/link/190218/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+*   [React 19.3 is out](https://nodeweekly.com/link/190219/0a4070b383) with stable view transitions and fragment refs, [Trusted Types](https://nodeweekly.com/link/190220/0a4070b383) support, and a `browser()` API used via `use(browser())` to let components skip server-side rendering when they need browser-only APIs.
+    
+*   📺 Microsoft released [a movie-length documentary about VS Code](https://nodeweekly.com/link/190221/0a4070b383), directed by Stefan Kingham. It covers the editor's technical roots, touching on Node's arrival on Windows and its evolution through node-webkit (now [NW.js](https://nodeweekly.com/link/190222/0a4070b383)) and Electron.
+    
+*   The team behind Tailwind CSS [is joining Shopify](https://nodeweekly.com/link/190223/0a4070b383), though they say _"nothing changes with Tailwind CSS or any of our other open-source projects."_
+    
+*   🔒 Two men have been [arrested over the TeamPCP npm supply chain attacks](https://nodeweekly.com/link/190224/0a4070b383). TeamPCP is suspected of cloning the Shai-Hulud worm, resulting in the so-called ['Mini Shai-Hulud'](https://nodeweekly.com/link/190225/0a4070b383) waves.
+    
+*   📺 [How can someone actually _change_ JavaScript?](https://nodeweekly.com/link/190226/0a4070b383) A two-minute explainer of the basics from TC39 delegate Mikhail Barash.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​640 — September 10, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/640)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://nodeweekly.com/link/190179/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/euwt3muj9vbng2e7z9gu.jpg)](https://nodeweekly.com/link/190180/0a4070b383)
+
+[Cloudflare Workers Gets a New, Node.js-Aligned Module Registry](https://nodeweekly.com/link/190180/0a4070b383 "blog.cloudflare.com") — *Workers* [enabled Node.js compatibility](https://nodeweekly.com/link/190181/0a4070b383) by default last month, meaning you can use most of Node’s built-in APIs in your Workers. Now there’s an opt-in way to load modules that resolves import paths as proper URLs, bringing `import.meta` and Node's `require(esm)` rules with it.
+
+Logan Gatlin and James Snell (Cloudflare)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/3d7cb94a.png)](https://nodeweekly.com/link/190179/0a4070b383)
+
+[Confidently Deploy and Manage Containerized Apps on Kubernetes](https://nodeweekly.com/link/190179/0a4070b383 "master.dev") — Join this detailed video course with Erik Reinert and learn how to deploy and manage production-grade containerized applications on Kubernetes. You'll cover infrastructure, testing, rollbacks, autoscaling and more, all before pushing your cluster to EKS.
+
+Master.dev sponsor
+
+📊 [`node:bench`: Node Core Gets a Built-In Benchmark Runner](https://nodeweekly.com/link/190182/0a4070b383 "www.jasnell.me") — Node has had a built-in test runner for years but no benchmark runner. James's experimental `node:bench` module has [landed on main](https://nodeweekly.com/link/190183/0a4070b383), so expect to see it soon. It's modelled on `node:test`, with a `node --bench` CLI and JSON reporter.
+
+James M Snell
+
+**IN BRIEF:**
+
+* [Node.js v26.8.2 (Current)](https://nodeweekly.com/link/190184/0a4070b383) and [v24.21.0 (LTS)](https://nodeweekly.com/link/190185/0a4070b383) are out, both including a security release of Undici that fixes [several vulnerabilities](https://nodeweekly.com/link/190186/0a4070b383), plus OpenSSL 3.5.8 and numerous tweaks and fixes.
+
+* 🔒 Researchers at GitLab found [a CVSS 10.0 sandbox escape in `vm2`](https://nodeweekly.com/link/190187/0a4070b383), the widely used Node sandboxing library. The reported escape was patched in 3.11.7+, but the writeup argues `vm2` shouldn't be used for genuinely untrusted code (though `vm2`'s own docs [are also honest about this](https://nodeweekly.com/link/190188/0a4070b383)).
+
+* Zod creator Colin McDonnell has landed [a change that speeds up Node's startup](https://nodeweekly.com/link/190189/0a4070b383) (by a millisecond or so, granted) by seeding V8's non-cryptographic entropy from the OS rather than OpenSSL.
+
+* This year's TSC elections went uncontested: [Matteo Collina staying Chair and Rafael Gonzaga becoming Vice-Chair](https://nodeweekly.com/link/190190/0a4070b383).
+
+[Fuzzing the State Machines Inside My HTTP Client](https://nodeweekly.com/link/190191/0a4070b383 "blog.gaborkoos.com") — A practical case for property-based testing, made by adding [fast-check](https://nodeweekly.com/link/190192/0a4070b383) properties to [ffetch](https://nodeweekly.com/link/190193/0a4070b383)’s 206 passing tests. Thousands of generated cases found 11 real bugs in code considered fully tested.
+
+Gabor Koos
+
+[Add MCP Server Monitoring to Your Node.js Project](https://nodeweekly.com/link/190194/0a4070b383 "sentry.io") — A single function call. See who is connecting, which tools drag, and the failures MCP never throws.
+
+Sentry sponsor
+
+📄 [Is Prisma 8 Ready for Long-Lived Production Apps?](https://nodeweekly.com/link/190195/0a4070b383) – A response to community worries about Prisma 8's new migration model. Will Madden (Prisma)
+
+📄 [Containerizing and Slimming Node Apps with Paketo Buildpacks](https://nodeweekly.com/link/190196/0a4070b383) Costas Papastathis (Paketo)
+
+📄 [What `await fetch()` Actually Waits For](https://nodeweekly.com/link/190197/0a4070b383) Gabor Koos
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pbtktrh32hrdvb3kwjjd.jpg)](https://nodeweekly.com/link/190198/0a4070b383)
+
+[Rslib 1.0: A Build Tool for JavaScript Libraries and CLIs](https://nodeweekly.com/link/190198/0a4070b383 "rslib.rs") — Rspack's answer to `tsup`/`tsdown` goes 1.0 with a stable config and JS API. It can [infer syntax targets](https://nodeweekly.com/link/190199/0a4070b383) from `engines.node`, [generates declarations faster](https://nodeweekly.com/link/190200/0a4070b383) with TypeScript 7, and (experimentally) [build Node SEA executables](https://nodeweekly.com/link/190201/0a4070b383).
+
+Chenwei Dai, Elecmonkey, et al.
+
+[vgpu: Render WebGPU Shaders in the Browser or Node.js](https://nodeweekly.com/link/190202/0a4070b383 "vgpu.sh") — Provides a way to use the same shader in the browser or render headlessly with Node (to a high-resolution PNG or MP4 video). WGSL modules import and export like TypeScript does.
+
+Vercel
+
+[MikroORM 7.2: Row Level Security, a WASM SQLite Driver, and More](https://nodeweekly.com/link/190203/0a4070b383 "mikro-orm.io") — A TypeScript ORM for SQL databases and MongoDB. 7.2 adds native Postgres row level security, with policies as entity metadata, plus `through` relations and a WASM sql.js driver (yes, [you can now use MikroORM in the browser!](https://nodeweekly.com/link/190204/0a4070b383))
+
+Martin Adámek
+
+[Javet 6.0: A Way to Embed Node.js and V8 in Java](https://nodeweekly.com/link/190205/0a4070b383 "www.caoccao.com") — A Java library that embeds a real Node.js runtime (now v26) in the JVM. Java code can load npm packages, call into running Node code, and run multiple Node instances side by side. [GitHub repo](https://nodeweekly.com/link/190206/0a4070b383).
+
+Sam Cao
+
+[eslint-plugin-regexp 3.3: ESLint Plugin for Finding Regex Mistakes](https://nodeweekly.com/link/190207/0a4070b383 "github.com") — There’s a [neat online demo](https://nodeweekly.com/link/190208/0a4070b383) to show off the things it can catch.
+
+Yosuke Ota
+
+* [parse-xml 5.0](https://nodeweekly.com/link/190228/0a4070b383) – The fast, compliant XML parser [goes ESM-only](https://nodeweekly.com/link/190209/0a4070b383). The API is unchanged and `require()` still works on Node 22+.
+
+* [dhcp.js 1.0](https://nodeweekly.com/link/190210/0a4070b383) – DHCPv4 client, server, and tools for Node. We covered the [explainer blog post](https://nodeweekly.com/link/190211/0a4070b383) about this project nine years ago!
+
+* [pnpm 12.4](https://nodeweekly.com/link/190212/0a4070b383) – The fast drop-in `npm` replacement can now manage npm, Python, and Cargo dependencies in the same workspace.
+
+* ✉️ [Nodemailer 10.0](https://nodeweekly.com/link/190213/0a4070b383) – The popular e-mail sending library has migrated to TypeScript with ESM and CJS builds.
+
+* ⚠️ [Fastify 5.12.2](https://nodeweekly.com/link/190214/0a4070b383) – Includes fixes for four high-severity issues, including validation and auth bypasses.
+
+* [tinybench 6.2](https://nodeweekly.com/link/190215/0a4070b383) – Simple, tiny and lightweight benchmarking library with precise timing.
+
+* 🌐 [supercluster 9.1](https://nodeweekly.com/link/190216/0a4070b383) – Mapbox's fast geospatial point clustering library.
+
+📰 Classifieds
+
+🎯 Catch promo abuse at signup. [Fingerprint’s visitor ID](https://nodeweekly.com/link/190217/0a4070b383) persists for months, not days, so abusers can’t hide. [Try it for free](https://nodeweekly.com/link/190217/0a4070b383).
+
+***
+
+Your API is fast until it hits analytics. [TimescaleDB](https://nodeweekly.com/link/190218/0a4070b383) extends Postgres so those queries return in ms at scale. [Get $1000 credit](https://nodeweekly.com/link/190218/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+* [React 19.3 is out](https://nodeweekly.com/link/190219/0a4070b383) with stable view transitions and fragment refs, [Trusted Types](https://nodeweekly.com/link/190220/0a4070b383) support, and a `browser()` API used via `use(browser())` to let components skip server-side rendering when they need browser-only APIs.
+
+* 📺 Microsoft released [a movie-length documentary about VS Code](https://nodeweekly.com/link/190221/0a4070b383), directed by Stefan Kingham. It covers the editor's technical roots, touching on Node's arrival on Windows and its evolution through node-webkit (now [NW.js](https://nodeweekly.com/link/190222/0a4070b383)) and Electron.
+
+* The team behind Tailwind CSS [is joining Shopify](https://nodeweekly.com/link/190223/0a4070b383), though they say *"nothing changes with Tailwind CSS or any of our other open-source projects."*
+
+* 🔒 Two men have been [arrested over the TeamPCP npm supply chain attacks](https://nodeweekly.com/link/190224/0a4070b383). TeamPCP is suspected of cloning the Shai-Hulud worm, resulting in the so-called ['Mini Shai-Hulud'](https://nodeweekly.com/link/190225/0a4070b383) waves.
+
+* 📺 [How can someone actually *change* JavaScript?](https://nodeweekly.com/link/190226/0a4070b383) A two-minute explainer of the basics from TC39 delegate Mikhail Barash.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
