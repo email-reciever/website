@@ -1,0 +1,235 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Why Shopify is moving off React Native
+description: Why Shopify is moving off React Native
+date: 星期五 02 下午 九月 11o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/490
+origin_site: https://react.statuscode.com/issues/490
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Why Shopify is moving off React Native" url="https://react.statuscode.com/issues/490" />
+
+<Detail client:only="react">
+	#​490 — September 11, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/490)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://react.statuscode.com/link/190229/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/o4qesq8gfg3dinfofghi.jpg)](https://react.statuscode.com/link/190230/5d0bbb4a61)
+
+What's New in React 19.3
+
+[React 19.3 is here with a _huuuge_ release post](https://react.statuscode.com/link/190230/5d0bbb4a61) (that's packed with examples) bringing two anticipated APIs out of experimental status, as well as some [Server Components additions](https://react.statuscode.com/link/190231/5d0bbb4a61). Here are some of the goodies:
+
+*   **Fragment Refs:** Manage focus, events and measurements across a group of DOM nodes (a _component_, say!) _without_ adding a wrapper element that could disrupt your layout.
+    
+*   **View Transitions:** &lt;`ViewTransition`\> animates elements entering, leaving or changing in transition updates, with support for Suspense reveals and animations you can customize with CSS.
+    
+
+💡 For a hands-on feel, [Chris Coyier's review of `&lt;ViewTransition>`](https://react.statuscode.com/link/190232/5d0bbb4a61) from January still holds up, though it doesn't cover `addTransitionType`.
+
+*   **Trusted Types support:** React now preserves trusted objects when passing values to DOM APIs like `innerHTML`, avoiding string coercion that caused browsers enforcing [Trusted Types](https://react.statuscode.com/link/190233/5d0bbb4a61) to reject them.
+    
+*   **Opt out of server rendering:** [`use(browser())`](https://react.statuscode.com/link/190234/5d0bbb4a61) lets a component render only in the browser, showing its nearest Suspense fallback in the generated HTML.
+    
+
+Elsewhere, &lt;`Activity`\> gains Server Component support, there's support for the new &lt;`select`\> parsing rules, and transitions now render independently, so a slow one no longer blocks unrelated ones. [The full release notes](https://react.statuscode.com/link/190235/5d0bbb4a61) (not the same as the release post!) paint the full picture.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/75249b97.png)](https://react.statuscode.com/link/190229/5d0bbb4a61)
+
+[Live Components Deserve Live Data, Not a Stale Cache](https://react.statuscode.com/link/190229/5d0bbb4a61 "www.tigerdata.com") — Your components re-render instantly, but they read a cache that's minutes behind, because the live query is too slow to hit every render. TimescaleDB extends Postgres so dashboards query live data fast at scale. [Get $1000 credit to start](https://react.statuscode.com/link/190229/5d0bbb4a61).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Native is Now the Future of Mobile at Shopify](https://react.statuscode.com/link/190236/5d0bbb4a61 "shopify.engineering") — Six years after going all-in on React Native, Shopify is rebuilding its apps in Swift and Kotlin, arguing coding agents have cut the cost of building the same features twice. We also learn what's going to happen to React Native Skia, FlashList and Restyle.
+
+Shopify Engineering
+
+📊 A [companion post covers the 12-week Shop app rewrite](https://react.statuscode.com/link/190237/5d0bbb4a61), with before-and-after startup, stability and app-size metrics.  
+  
+🤔 **But not everyone's convinced:** In [a busy `r/reactnative` thread](https://react.statuscode.com/link/190238/5d0bbb4a61), one of Expo's founders [suggests](https://react.statuscode.com/link/190239/5d0bbb4a61) Shopify made _"more of a political decision than a technical one"_ and that they were comparing an old-architecture app against a fresh rewrite.
+
+**IN BRIEF:**
+
+*   [Tailwind Labs, creator of Tailwind CSS, is joining Shopify](https://react.statuscode.com/link/190240/5d0bbb4a61). The open source projects stay MIT-licensed with the same team.
+    
+*   [React DevTools 8.0 is out](https://react.statuscode.com/link/190241/5d0bbb4a61) with the _Suspense_ tab on by default and the Timeline profiler gone, with the browser's _Performance_ panel taking over. There's also [an experimental package](https://react.statuscode.com/link/190242/5d0bbb4a61) that exposes React DevTools to coding agents through `chrome-devtools-mcp`.
+    
+*   TanStack has published [a write-up of its partnership with Vercel](https://react.statuscode.com/link/190243/5d0bbb4a61), with new TanStack AI adapters for Vercel's AI Gateway and Sandbox now available.
+    
+*   [Expo Modules 2.0 is on the way](https://react.statuscode.com/link/190244/5d0bbb4a61), introducing annotation-based Swift and Kotlin classes for writing native modules.
+    
+
+[React Now Rusted All the Way Out](https://react.statuscode.com/link/190245/5d0bbb4a61 "blog.master.dev") — A team moved a 1000+ file React Router app onto oxc's Rust port of the React Compiler and watched the compile step drop from 14.3s to 0.81s. Better still, the port already handles patterns the Babel-based 1.0 skips, and the post ends with the Vite config to make the switch.
+
+Andrew Patton
+
+📄 [What It Actually Takes to Migrate Discord to React Native's New Architecture](https://react.statuscode.com/link/190248/5d0bbb4a61) – Only 14% of the tickets covered the migration itself. The rest was all in the _long tail_. Kamil Delekta (Software Mansion)
+
+🤖 [How the Next.js Team Closed 1,500 GitHub Issues in One Month](https://react.statuscode.com/link/190249/5d0bbb4a61) – You won't be surprised that agents were involved. Marcos Hernanz (Next.js)
+
+📄 [Your React App Can Unmount When a Reader Turns On Chrome Translate](https://react.statuscode.com/link/190250/5d0bbb4a61) – Why the classic `removeChild` error happens, and why the usual monkey-patch can hide the crash while leaving the UI broken. Davlat Aliev
+
+📄 [The Golden Switch: Migrating From Gatsby to Astro in Under 9¾ Days](https://react.statuscode.com/link/190251/5d0bbb4a61) – Keeping their React components, after substantial prep work. Evil Martians
+
+📰 Classifieds
+
+🗽[The biggest React conference in the US!](https://react.statuscode.com/link/190252/5d0bbb4a61) React, modern web dev & AI's growing role. Nov 17 & 20, New York & Online. [Check it out!](https://react.statuscode.com/link/190252/5d0bbb4a61)
+
+* * *
+
+Know React? You already know how to ship a mobile app. [Expo handles cloud builds, app store submission, and OTA updates](https://react.statuscode.com/link/190253/5d0bbb4a61). No Xcode required.
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rrafub0hos1swqnddjcv.jpg)](https://react.statuscode.com/link/190254/5d0bbb4a61)
+
+[Jotai 3.0: A Leaner, ESM-Only Release of the Atomic State Manager](https://react.statuscode.com/link/190254/5d0bbb4a61 "github.com") — The familiar hooks remain, but the package is modernized: ESM only, React 18 and TypeScript 5.5 minimums, `atomFamily` moved to `jotai-family`, and `loadable` removed in favor of `unwrap`. Daishi explains [the one behavioral change here](https://react.statuscode.com/link/190255/5d0bbb4a61).
+
+Daishi Kato
+
+[React Native ExecuTorch 0.10: Run AI Models On-Device](https://react.statuscode.com/link/190256/5d0bbb4a61 "github.com") — A ground-up rewrite of the on-device AI library. Opaque native modules give way to inspectable TypeScript pipelines you can tweak and chain (no C++ needed), with Core ML, MLX and Vulkan acceleration underneath. [The homepage](https://react.statuscode.com/link/190257/5d0bbb4a61) shows what it can do.
+
+Software Mansion
+
+[Vidact: Compiles React Components Down to Direct DOM Code](https://react.statuscode.com/link/190258/5d0bbb4a61 "www.vidact.dev") — A compiler that takes React-style function components and hooks and emits direct DOM operations, a la Solid, with no VDOM or React runtime in the bundle. Beta, and unsupported React patterns will fail at build time.
+
+Mohamad Mohebifar
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hmlqx96kvtkdta8ze9t0.jpg)](https://react.statuscode.com/link/190259/5d0bbb4a61)
+
+*   🗾 [React Google Maps 1.10](https://react.statuscode.com/link/190260/5d0bbb4a61) – Components and hooks for the Google Maps JavaScript API. Now with an expanded set of declarative 3D components, including models and markers ([demo](https://react.statuscode.com/link/190259/5d0bbb4a61)).
+    
+*   [Lexical 0.50](https://react.statuscode.com/link/190261/5d0bbb4a61) – Meta's extensible text editor framework. Now with HMR support and a new `@lexical/compiler` package for build-time tree-shaking annotations.
+    
+*   [Base UI 1.8](https://react.statuscode.com/link/190262/5d0bbb4a61) – The unstyled component library that's now `shadcn/ui`'s default.
+    
+*   [wouter 3.11](https://react.statuscode.com/link/190263/5d0bbb4a61) – Minimalist-friendly ~2KB routing for React [and Preact](https://react.statuscode.com/link/190264/5d0bbb4a61).
+    
+*   [React Native 0.88 Release Candidate](https://react.statuscode.com/link/190265/5d0bbb4a61)
+    
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​490 — September 11, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/490)
+
+Together with 
+
+[![Tiger Data logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://react.statuscode.com/link/190229/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/o4qesq8gfg3dinfofghi.jpg)](https://react.statuscode.com/link/190230/5d0bbb4a61)
+
+What's New in React 19.3
+
+[React 19.3 is here with a *huuuge* release post](https://react.statuscode.com/link/190230/5d0bbb4a61) (that's packed with examples) bringing two anticipated APIs out of experimental status, as well as some [Server Components additions](https://react.statuscode.com/link/190231/5d0bbb4a61). Here are some of the goodies:
+
+* **Fragment Refs:** Manage focus, events and measurements across a group of DOM nodes (a *component*, say!) *without* adding a wrapper element that could disrupt your layout.
+
+* **View Transitions:** &lt;`ViewTransition`> animates elements entering, leaving or changing in transition updates, with support for Suspense reveals and animations you can customize with CSS.
+
+💡 For a hands-on feel, [Chris Coyier's review of `&lt;ViewTransition>`](https://react.statuscode.com/link/190232/5d0bbb4a61) from January still holds up, though it doesn't cover `addTransitionType`.
+
+* **Trusted Types support:** React now preserves trusted objects when passing values to DOM APIs like `innerHTML`, avoiding string coercion that caused browsers enforcing [Trusted Types](https://react.statuscode.com/link/190233/5d0bbb4a61) to reject them.
+
+* **Opt out of server rendering:** [`use(browser())`](https://react.statuscode.com/link/190234/5d0bbb4a61) lets a component render only in the browser, showing its nearest Suspense fallback in the generated HTML.
+
+Elsewhere, &lt;`Activity`> gains Server Component support, there's support for the new &lt;`select`> parsing rules, and transitions now render independently, so a slow one no longer blocks unrelated ones. [The full release notes](https://react.statuscode.com/link/190235/5d0bbb4a61) (not the same as the release post!) paint the full picture.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/75249b97.png)](https://react.statuscode.com/link/190229/5d0bbb4a61)
+
+[Live Components Deserve Live Data, Not a Stale Cache](https://react.statuscode.com/link/190229/5d0bbb4a61 "www.tigerdata.com") — Your components re-render instantly, but they read a cache that's minutes behind, because the live query is too slow to hit every render. TimescaleDB extends Postgres so dashboards query live data fast at scale. [Get $1000 credit to start](https://react.statuscode.com/link/190229/5d0bbb4a61).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Native is Now the Future of Mobile at Shopify](https://react.statuscode.com/link/190236/5d0bbb4a61 "shopify.engineering") — Six years after going all-in on React Native, Shopify is rebuilding its apps in Swift and Kotlin, arguing coding agents have cut the cost of building the same features twice. We also learn what's going to happen to React Native Skia, FlashList and Restyle.
+
+Shopify Engineering
+
+📊 A [companion post covers the 12-week Shop app rewrite](https://react.statuscode.com/link/190237/5d0bbb4a61), with before-and-after startup, stability and app-size metrics.
+
+🤔 **But not everyone's convinced:** In [a busy `r/reactnative` thread](https://react.statuscode.com/link/190238/5d0bbb4a61), one of Expo's founders [suggests](https://react.statuscode.com/link/190239/5d0bbb4a61) Shopify made *"more of a political decision than a technical one"* and that they were comparing an old-architecture app against a fresh rewrite.
+
+**IN BRIEF:**
+
+* [Tailwind Labs, creator of Tailwind CSS, is joining Shopify](https://react.statuscode.com/link/190240/5d0bbb4a61). The open source projects stay MIT-licensed with the same team.
+
+* [React DevTools 8.0 is out](https://react.statuscode.com/link/190241/5d0bbb4a61) with the *Suspense* tab on by default and the Timeline profiler gone, with the browser's *Performance* panel taking over. There's also [an experimental package](https://react.statuscode.com/link/190242/5d0bbb4a61) that exposes React DevTools to coding agents through `chrome-devtools-mcp`.
+
+* TanStack has published [a write-up of its partnership with Vercel](https://react.statuscode.com/link/190243/5d0bbb4a61), with new TanStack AI adapters for Vercel's AI Gateway and Sandbox now available.
+
+* [Expo Modules 2.0 is on the way](https://react.statuscode.com/link/190244/5d0bbb4a61), introducing annotation-based Swift and Kotlin classes for writing native modules.
+
+[React Now Rusted All the Way Out](https://react.statuscode.com/link/190245/5d0bbb4a61 "blog.master.dev") — A team moved a 1000+ file React Router app onto oxc's Rust port of the React Compiler and watched the compile step drop from 14.3s to 0.81s. Better still, the port already handles patterns the Babel-based 1.0 skips, and the post ends with the Vite config to make the switch.
+
+Andrew Patton
+
+📄 [What It Actually Takes to Migrate Discord to React Native's New Architecture](https://react.statuscode.com/link/190248/5d0bbb4a61) – Only 14% of the tickets covered the migration itself. The rest was all in the *long tail*. Kamil Delekta (Software Mansion)
+
+🤖 [How the Next.js Team Closed 1,500 GitHub Issues in One Month](https://react.statuscode.com/link/190249/5d0bbb4a61) – You won't be surprised that agents were involved. Marcos Hernanz (Next.js)
+
+📄 [Your React App Can Unmount When a Reader Turns On Chrome Translate](https://react.statuscode.com/link/190250/5d0bbb4a61) – Why the classic `removeChild` error happens, and why the usual monkey-patch can hide the crash while leaving the UI broken. Davlat Aliev
+
+📄 [The Golden Switch: Migrating From Gatsby to Astro in Under 9¾ Days](https://react.statuscode.com/link/190251/5d0bbb4a61) – Keeping their React components, after substantial prep work. Evil Martians
+
+📰 Classifieds
+
+🗽[The biggest React conference in the US!](https://react.statuscode.com/link/190252/5d0bbb4a61) React, modern web dev & AI's growing role. Nov 17 & 20, New York & Online. [Check it out!](https://react.statuscode.com/link/190252/5d0bbb4a61)
+
+***
+
+Know React? You already know how to ship a mobile app. [Expo handles cloud builds, app store submission, and OTA updates](https://react.statuscode.com/link/190253/5d0bbb4a61). No Xcode required.
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rrafub0hos1swqnddjcv.jpg)](https://react.statuscode.com/link/190254/5d0bbb4a61)
+
+[Jotai 3.0: A Leaner, ESM-Only Release of the Atomic State Manager](https://react.statuscode.com/link/190254/5d0bbb4a61 "github.com") — The familiar hooks remain, but the package is modernized: ESM only, React 18 and TypeScript 5.5 minimums, `atomFamily` moved to `jotai-family`, and `loadable` removed in favor of `unwrap`. Daishi explains [the one behavioral change here](https://react.statuscode.com/link/190255/5d0bbb4a61).
+
+Daishi Kato
+
+[React Native ExecuTorch 0.10: Run AI Models On-Device](https://react.statuscode.com/link/190256/5d0bbb4a61 "github.com") — A ground-up rewrite of the on-device AI library. Opaque native modules give way to inspectable TypeScript pipelines you can tweak and chain (no C++ needed), with Core ML, MLX and Vulkan acceleration underneath. [The homepage](https://react.statuscode.com/link/190257/5d0bbb4a61) shows what it can do.
+
+Software Mansion
+
+[Vidact: Compiles React Components Down to Direct DOM Code](https://react.statuscode.com/link/190258/5d0bbb4a61 "www.vidact.dev") — A compiler that takes React-style function components and hooks and emits direct DOM operations, a la Solid, with no VDOM or React runtime in the bundle. Beta, and unsupported React patterns will fail at build time.
+
+Mohamad Mohebifar
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hmlqx96kvtkdta8ze9t0.jpg)](https://react.statuscode.com/link/190259/5d0bbb4a61)
+
+* 🗾 [React Google Maps 1.10](https://react.statuscode.com/link/190260/5d0bbb4a61) – Components and hooks for the Google Maps JavaScript API. Now with an expanded set of declarative 3D components, including models and markers ([demo](https://react.statuscode.com/link/190259/5d0bbb4a61)).
+
+* [Lexical 0.50](https://react.statuscode.com/link/190261/5d0bbb4a61) – Meta's extensible text editor framework. Now with HMR support and a new `@lexical/compiler` package for build-time tree-shaking annotations.
+
+* [Base UI 1.8](https://react.statuscode.com/link/190262/5d0bbb4a61) – The unstyled component library that's now `shadcn/ui`'s default.
+
+* [wouter 3.11](https://react.statuscode.com/link/190263/5d0bbb4a61) – Minimalist-friendly ~2KB routing for React [and Preact](https://react.statuscode.com/link/190264/5d0bbb4a61).
+
+* [React Native 0.88 Release Candidate](https://react.statuscode.com/link/190265/5d0bbb4a61)
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
