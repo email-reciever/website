@@ -1,0 +1,841 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: On Building an Open Source AI Video-to-Audio Editor | Ida Silfverskiöld in Level Up Coding
+description: On Building an Open Source AI Video-to-Audio Editor | Ida Silfverskiöld in Level Up Coding
+date: 星期一 11 晚上 九月 14o 2026
+author: mediumcom
+origin_url: https://medium.com/
+origin_site: https://medium.com/
+translated: true
+avatar: /media-source/mediumcom-ico.png
+email_recorder: noreply@medium.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="On Building an Open Source AI Video-to-Audio Editor | Ida Silfverskiöld in Level Up Coding" url="https://medium.com/" />
+
+<Detail client:only="react">
+	Today's highlights
+
+[![Ida Silfverskiöld](https://miro.medium.com/fit/c/40/40/1*-PJYZEnMvuSpoVNkHyVeZg.png)](https://medium.com/@ilsilfverskiold?source=email-2b8b8ee19057-1789409378025-digest.reader-5517fd7b58a6-d9682f1aee2c----0-108------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Ida Silfverskiöld](https://medium.com/@ilsilfverskiold?source=email-2b8b8ee19057-1789409378025-digest.reader-5517fd7b58a6-d9682f1aee2c----0-108------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1789409378025-digest.reader-5517fd7b58a6-d9682f1aee2c----0-108------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![On Building an Open Source AI Video-to-Audio Editor](https://miro.medium.com/fit/c/320/214/1*BGlTu_0eLwGHJ3fU2t5byg.png)](https://medium.com/@ilsilfverskiold/on-building-an-open-source-ai-video-to-audio-editor-d9682f1aee2c?source=email-2b8b8ee19057-1789409378025-digest.reader-5517fd7b58a6-d9682f1aee2c----0-108------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[
+
+## On Building an Open Source AI Video-to-Audio Editor
+
+### Something that fixes the whole voice drift thing
+
+
+
+](https://medium.com/@ilsilfverskiold/on-building-an-open-source-ai-video-to-audio-editor-d9682f1aee2c?source=email-2b8b8ee19057-1789409378025-digest.reader-5517fd7b58a6-d9682f1aee2c----0-108------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+186
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Michael Burnett](https://miro.medium.com/fit/c/40/40/1*_nRlSLLxOANILDkX_ubCqQ.png)](https://medium.com/@dtls?source=email-2b8b8ee19057-1789409378025-digest.reader-138adf9c44c-59e3013c3c23----1-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Michael Burnett](https://medium.com/@dtls?source=email-2b8b8ee19057-1789409378025-digest.reader-138adf9c44c-59e3013c3c23----1-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)in[UX Collective](https://medium.com/user-experience-design-1?source=email-2b8b8ee19057-1789409378025-digest.reader-138adf9c44c-59e3013c3c23----1-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![The origins — the birth, lonely childhood, and adoption of software](https://miro.medium.com/fit/c/320/214/1*tK7I0aqCexN7fqGL3RoCzQ.png)](https://medium.com/@dtls/the-origins-the-birth-lonely-childhood-and-adoption-of-software-59e3013c3c23?source=email-2b8b8ee19057-1789409378025-digest.reader-138adf9c44c-59e3013c3c23----1-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[
+
+## The origins — the birth, lonely childhood, and adoption of software
+
+### Side A, meaning is irrelevant to the problem
+
+
+
+](https://medium.com/@dtls/the-origins-the-birth-lonely-childhood-and-adoption-of-software-59e3013c3c23?source=email-2b8b8ee19057-1789409378025-digest.reader-138adf9c44c-59e3013c3c23----1-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+25 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+216
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+5
+
+[![Attila Vágó](https://miro.medium.com/fit/c/40/40/1*Ilzy6aGvG__n7QzdkiL41A.jpeg)](https://medium.com/@attilavago?source=email-2b8b8ee19057-1789409378025-digest.reader--c9c3c1e9767f----2-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Attila Vágó](https://medium.com/@attilavago?source=email-2b8b8ee19057-1789409378025-digest.reader--c9c3c1e9767f----2-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![Don’t Learn To Code. Learn A Trade Instead.](https://miro.medium.com/fit/c/320/214/1*oDZtK2jsje0OrkiSU85FVw.png)](https://medium.com/@attilavago/dont-learn-to-code-learn-a-trade-instead-c9c3c1e9767f?source=email-2b8b8ee19057-1789409378025-digest.reader--c9c3c1e9767f----2-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[
+
+## Don’t Learn To Code. Learn A Trade Instead.
+
+### I don’t believe becoming a software engineer is the…
+
+
+
+](https://medium.com/@attilavago/dont-learn-to-code-learn-a-trade-instead-c9c3c1e9767f?source=email-2b8b8ee19057-1789409378025-digest.reader--c9c3c1e9767f----2-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+31
+
+[![Can Artuc](https://miro.medium.com/fit/c/40/40/1*nYsxx3FENvKi2CiYIo4Xhg.png)](https://medium.com/@canartuc?source=email-2b8b8ee19057-1789409378025-digest.reader--e02faac0cb69----3-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Can Artuc](https://medium.com/@canartuc?source=email-2b8b8ee19057-1789409378025-digest.reader--e02faac0cb69----3-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![Fedora 44: An Open Linux Release Ubuntu Cannot Copy](https://miro.medium.com/fit/c/320/214/1*EWYZq_WbpdfHHcSNt2hUDA.jpeg)](https://medium.com/@canartuc/fedora-44-an-open-linux-release-ubuntu-cannot-copy-e02faac0cb69?source=email-2b8b8ee19057-1789409378025-digest.reader--e02faac0cb69----3-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[
+
+## Fedora 44: An Open Linux Release Ubuntu Cannot Copy
+
+### Zero telemetry, packages you can host yourself, and a…
+
+
+
+](https://medium.com/@canartuc/fedora-44-an-open-linux-release-ubuntu-cannot-copy-e02faac0cb69?source=email-2b8b8ee19057-1789409378025-digest.reader--e02faac0cb69----3-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+706
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+15
+
+[![Chacko](https://miro.medium.com/fit/c/40/40/1*Sre5HbLjQKQQkDBiKtz7Ng.png)](https://medium.com/@sajucrajan?source=email-2b8b8ee19057-1789409378025-digest.reader-bc0ac0298a47-40330af8b0c8----4-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Chacko](https://medium.com/@sajucrajan?source=email-2b8b8ee19057-1789409378025-digest.reader-bc0ac0298a47-40330af8b0c8----4-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)in[IT Chronicles](https://medium.com/it-chronicles?source=email-2b8b8ee19057-1789409378025-digest.reader-bc0ac0298a47-40330af8b0c8----4-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![The Real Cost of an AI Coding Assistant](https://miro.medium.com/fit/c/320/214/1*5AteAZEaluNhVl8ypEDQbA.png)](https://medium.com/@sajucrajan/the-real-cost-of-an-ai-coding-assistant-40330af8b0c8?source=email-2b8b8ee19057-1789409378025-digest.reader-bc0ac0298a47-40330af8b0c8----4-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[
+
+## The Real Cost of an AI Coding Assistant
+
+### GitHub Copilot went from charging per prompt to per…
+
+
+
+](https://medium.com/@sajucrajan/the-real-cost-of-an-ai-coding-assistant-40330af8b0c8?source=email-2b8b8ee19057-1789409378025-digest.reader-bc0ac0298a47-40330af8b0c8----4-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+485
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+19
+
+[![Abbey Wade](https://miro.medium.com/fit/c/40/40/1*JGWen4g48l_z405xJV9G_A@2x.jpeg)](https://medium.com/@abbeywade?source=email-2b8b8ee19057-1789409378025-digest.reader-1576ae875ad3-a5e468b2d672----5-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Abbey Wade](https://medium.com/@abbeywade?source=email-2b8b8ee19057-1789409378025-digest.reader-1576ae875ad3-a5e468b2d672----5-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)in[Grief Book Club](https://medium.com/grief-book-club?source=email-2b8b8ee19057-1789409378025-digest.reader-1576ae875ad3-a5e468b2d672----5-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![I Used to Be A Daughter](https://miro.medium.com/fit/c/320/214/1*BmPs3qLPC5OvDRrMmxJozw.jpeg)](https://medium.com/@abbeywade/i-used-to-be-a-daughter-a5e468b2d672?source=email-2b8b8ee19057-1789409378025-digest.reader-1576ae875ad3-a5e468b2d672----5-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[
+
+## I Used to Be A Daughter
+
+### I chose being me instead.
+
+
+
+](https://medium.com/@abbeywade/i-used-to-be-a-daughter-a5e468b2d672?source=email-2b8b8ee19057-1789409378025-digest.reader-1576ae875ad3-a5e468b2d672----5-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+9 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+5.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+163
+
+[![Darren Broemmer](https://miro.medium.com/fit/c/40/40/2*bUtngkY23hVcOsFRXVoTqQ.jpeg)](https://medium.com/@darren-broemmer?source=email-2b8b8ee19057-1789409378025-digest.reader--168c19fca876----6-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Darren Broemmer](https://medium.com/@darren-broemmer?source=email-2b8b8ee19057-1789409378025-digest.reader--168c19fca876----6-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![Vector Databases Explained: The Infrastructure Behind Modern AI](https://miro.medium.com/fit/c/320/214/1*xAbiMn55bU7pxdc78POP-w.png)](https://medium.com/@darren-broemmer/vector-databases-explained-the-infrastructure-behind-modern-ai-168c19fca876?source=email-2b8b8ee19057-1789409378025-digest.reader--168c19fca876----6-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[
+
+## Vector Databases Explained: The Infrastructure Behind Modern AI
+
+### You’ve probably heard the term vector database used in…
+
+
+
+](https://medium.com/@darren-broemmer/vector-databases-explained-the-infrastructure-behind-modern-ai-168c19fca876?source=email-2b8b8ee19057-1789409378025-digest.reader--168c19fca876----6-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+458
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+15
+
+[![Kevin - MERN Stack Developer](https://miro.medium.com/fit/c/40/40/1*aUGBohBB1VAnsoGAdjEZoQ.png)](https://medium.com/@mernstackdevbykevin?source=email-2b8b8ee19057-1789409378025-digest.reader--9e9863286ea8----7-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Kevin - MERN Stack Developer](https://medium.com/@mernstackdevbykevin?source=email-2b8b8ee19057-1789409378025-digest.reader--9e9863286ea8----7-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![WebAssembly + React](https://miro.medium.com/fit/c/320/214/1*UJzjkrtBGDslADpMn4MQTg.png)](https://medium.com/@mernstackdevbykevin/webassembly-react-9e9863286ea8?source=email-2b8b8ee19057-1789409378025-digest.reader--9e9863286ea8----7-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[
+
+## WebAssembly + React
+
+### Why More React + TypeScript Devs are Reaching for Wasm…
+
+
+
+](https://medium.com/@mernstackdevbykevin/webassembly-react-9e9863286ea8?source=email-2b8b8ee19057-1789409378025-digest.reader--9e9863286ea8----7-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+52
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Ravi Savaliya](https://miro.medium.com/fit/c/40/40/1*Xd0pZayCXYGaBK-i07iQzw.png)](https://medium.com/@savaliya.ravi.rs?source=email-2b8b8ee19057-1789409378025-digest.reader--a4fbd3ea5aaa----8-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Ravi Savaliya](https://medium.com/@savaliya.ravi.rs?source=email-2b8b8ee19057-1789409378025-digest.reader--a4fbd3ea5aaa----8-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![Flutter Widgets That Can Replace Hundreds of Lines of Code](https://miro.medium.com/fit/c/320/214/1*OpgyYTFRutSWjC4Nm9HXTw.png)](https://medium.com/@savaliya.ravi.rs/flutter-widgets-that-can-replace-hundreds-of-lines-of-code-a4fbd3ea5aaa?source=email-2b8b8ee19057-1789409378025-digest.reader--a4fbd3ea5aaa----8-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[
+
+## Flutter Widgets That Can Replace Hundreds of Lines of Code
+
+### Discover powerful built-in Flutter widgets that can…
+
+
+
+](https://medium.com/@savaliya.ravi.rs/flutter-widgets-that-can-replace-hundreds-of-lines-of-code-a4fbd3ea5aaa?source=email-2b8b8ee19057-1789409378025-digest.reader--a4fbd3ea5aaa----8-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+40
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+3
+
+[![Taimur Ijlal](https://miro.medium.com/fit/c/40/40/1*MGJd3DuWu5hAKz0H2bxEig.png)](https://medium.com/@taimurcloud123?source=email-2b8b8ee19057-1789409378025-digest.reader-35e7a49c6df5-c82ad251ff54----9-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Taimur Ijlal](https://medium.com/@taimurcloud123?source=email-2b8b8ee19057-1789409378025-digest.reader-35e7a49c6df5-c82ad251ff54----9-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)in[AWS in Plain English](https://medium.com/aws-in-plain-english?source=email-2b8b8ee19057-1789409378025-digest.reader-35e7a49c6df5-c82ad251ff54----9-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![The Cybersecurity Industry Is Entering Its Third Era](https://miro.medium.com/fit/c/320/214/1*YYvm9D9CuKMKae9wtgh5Zw.png)](https://medium.com/@taimurcloud123/the-cybersecurity-industry-is-entering-its-third-era-c82ad251ff54?source=email-2b8b8ee19057-1789409378025-digest.reader-35e7a49c6df5-c82ad251ff54----9-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[
+
+## The Cybersecurity Industry Is Entering Its Third Era
+
+### I remember when a security architecture discussion…
+
+
+
+](https://medium.com/@taimurcloud123/the-cybersecurity-industry-is-entering-its-third-era-c82ad251ff54?source=email-2b8b8ee19057-1789409378025-digest.reader-35e7a49c6df5-c82ad251ff54----9-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+307
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+4
+
+[![Gaddam.Naveen](https://miro.medium.com/fit/c/40/40/1*ZE-CfQ1ViASqLlwps6EiBg.jpeg)](https://medium.com/@gaddamnaveen192?source=email-2b8b8ee19057-1789409378025-digest.reader--b420aad63655----10-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Gaddam.Naveen](https://medium.com/@gaddamnaveen192?source=email-2b8b8ee19057-1789409378025-digest.reader--b420aad63655----10-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![From 5 Seconds to 300ms: How I Fix Database Performance Problems in Production](https://miro.medium.com/fit/c/320/214/1*pC7ejdhWVIHIpariVvDOZg.png)](https://medium.com/@gaddamnaveen192/from-5-seconds-to-300ms-how-i-fix-database-performance-problems-in-production-b420aad63655?source=email-2b8b8ee19057-1789409378025-digest.reader--b420aad63655----10-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[
+
+## From 5 Seconds to 300ms: How I Fix Database Performance Problems in Production
+
+### Free Link
+
+
+
+](https://medium.com/@gaddamnaveen192/from-5-seconds-to-300ms-how-i-fix-database-performance-problems-in-production-b420aad63655?source=email-2b8b8ee19057-1789409378025-digest.reader--b420aad63655----10-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+128
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+3
+
+[![Alex Besson](https://miro.medium.com/fit/c/40/40/1*W6mMN7RSyJyOP6yJJ9Q2pw.jpeg)](https://medium.com/@bessonwrites?source=email-2b8b8ee19057-1789409378025-digest.reader-30d32c722963-bb16823c8b3a----11-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Alex Besson](https://medium.com/@bessonwrites?source=email-2b8b8ee19057-1789409378025-digest.reader-30d32c722963-bb16823c8b3a----11-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)in[Change Your Mind Change Your Life](https://medium.com/change-your-mind?source=email-2b8b8ee19057-1789409378025-digest.reader-30d32c722963-bb16823c8b3a----11-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![12 of the Most Philosophical Dostoyevsky Quotes](https://miro.medium.com/focal/320/214/50/41/1*X9xiGE7Bcv5Be4mMuncL8w.jpeg)](https://medium.com/@bessonwrites/12-of-the-most-philosophical-dostoyevsky-quotes-bb16823c8b3a?source=email-2b8b8ee19057-1789409378025-digest.reader-30d32c722963-bb16823c8b3a----11-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[
+
+## 12 of the Most Philosophical Dostoyevsky Quotes
+
+### From one of the deepest writers in the history of…
+
+
+
+](https://medium.com/@bessonwrites/12-of-the-most-philosophical-dostoyevsky-quotes-bb16823c8b3a?source=email-2b8b8ee19057-1789409378025-digest.reader-30d32c722963-bb16823c8b3a----11-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+19
+
+[![John DeVore](https://miro.medium.com/fit/c/40/40/1*3pV-__rrRcHq_uQ1XeC_UA.png)](https://medium.com/@johndevore?source=email-2b8b8ee19057-1789409378025-digest.reader--3e00ad67018b----12-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[John DeVore](https://medium.com/@johndevore?source=email-2b8b8ee19057-1789409378025-digest.reader--3e00ad67018b----12-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![Cigarettes are bad. I miss them.](https://miro.medium.com/fit/c/320/214/1*_MFbHcwwiDLj6wFK1en-Qg.jpeg)](https://medium.com/@johndevore/cigarettes-are-bad-i-miss-them-3e00ad67018b?source=email-2b8b8ee19057-1789409378025-digest.reader--3e00ad67018b----12-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[
+
+## Cigarettes are bad. I miss them.
+
+### Don’t start smoking, kids
+
+
+
+](https://medium.com/@johndevore/cigarettes-are-bad-i-miss-them-3e00ad67018b?source=email-2b8b8ee19057-1789409378025-digest.reader--3e00ad67018b----12-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+3.9K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+109
+
+[![Devansh Patel](https://miro.medium.com/fit/c/40/40/1*En7UAF5vDf0UH8yRPjRoxQ.png)](https://medium.com/@v3n0m?source=email-2b8b8ee19057-1789409378025-digest.reader-35e63bb1d2ad-ad0dc5687b3d----13-73------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Devansh Patel](https://medium.com/@v3n0m?source=email-2b8b8ee19057-1789409378025-digest.reader-35e63bb1d2ad-ad0dc5687b3d----13-73------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)in[MeetCyber](https://medium.com/meetcyber?source=email-2b8b8ee19057-1789409378025-digest.reader-35e63bb1d2ad-ad0dc5687b3d----13-73------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![20 Linux Commands That Turns Your Terminal Into a Loaded Weapon](https://miro.medium.com/fit/c/320/214/0*R6DRUmFBlH96xxqO)](https://medium.com/@v3n0m/20-linux-commands-that-turn-your-terminal-into-a-loaded-weapon-ad0dc5687b3d?source=email-2b8b8ee19057-1789409378025-digest.reader-35e63bb1d2ad-ad0dc5687b3d----13-73------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[
+
+## 20 Linux Commands That Turns Your Terminal Into a Loaded Weapon
+
+### Linux does not babysit you.
+
+
+
+](https://medium.com/@v3n0m/20-linux-commands-that-turn-your-terminal-into-a-loaded-weapon-ad0dc5687b3d?source=email-2b8b8ee19057-1789409378025-digest.reader-35e63bb1d2ad-ad0dc5687b3d----13-73------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+16 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+513
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+6
+
+[![Mohit Vaswani](https://miro.medium.com/fit/c/40/40/1*RMWsiluD3e7Jk0CF6Ymskg.jpeg)](https://medium.com/@hii_mohit?source=email-2b8b8ee19057-1789409378025-digest.reader--9a35b8fe5a83----14-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Mohit Vaswani](https://medium.com/@hii_mohit?source=email-2b8b8ee19057-1789409378025-digest.reader--9a35b8fe5a83----14-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![9 Claude Code Plugins Every Developer Should Install in 2026](https://miro.medium.com/fit/c/320/214/1*wOjMNfDGPPcQy6_xM4jP6w.png)](https://medium.com/@hii_mohit/9-claude-code-plugins-every-developer-should-install-in-2026-9a35b8fe5a83?source=email-2b8b8ee19057-1789409378025-digest.reader--9a35b8fe5a83----14-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[
+
+## 9 Claude Code Plugins Every Developer Should Install in 2026
+
+### Claude Code Plugins
+
+
+
+](https://medium.com/@hii_mohit/9-claude-code-plugins-every-developer-should-install-in-2026-9a35b8fe5a83?source=email-2b8b8ee19057-1789409378025-digest.reader--9a35b8fe5a83----14-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+988
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+27
+
+[![Write on Medium](https://miro.medium.com/max/1360/ba3fbd837113f5e467399bd050dfc1f79e2d7ca0c7ad9c340c1893aaccbc4a83)](https://medium.com/write?source=email-2b8b8ee19057-1789409378025-digest.reader-------------------------085970ce_5a06_4874_be7d_b9c1d234774c)
+
+
+</Detail>
+
+Today's highlights
+
+[![Ida Silfverskiöld](https://miro.medium.com/fit/c/40/40/1*-PJYZEnMvuSpoVNkHyVeZg.png)](https://medium.com/@ilsilfverskiold?source=email-2b8b8ee19057-1789409378025-digest.reader-5517fd7b58a6-d9682f1aee2c----0-108------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Ida Silfverskiöld](https://medium.com/@ilsilfverskiold?source=email-2b8b8ee19057-1789409378025-digest.reader-5517fd7b58a6-d9682f1aee2c----0-108------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)in[Level Up Coding](https://medium.com/gitconnected?source=email-2b8b8ee19057-1789409378025-digest.reader-5517fd7b58a6-d9682f1aee2c----0-108------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![On Building an Open Source AI Video-to-Audio Editor](https://miro.medium.com/fit/c/320/214/1*BGlTu_0eLwGHJ3fU2t5byg.png)](https://medium.com/@ilsilfverskiold/on-building-an-open-source-ai-video-to-audio-editor-d9682f1aee2c?source=email-2b8b8ee19057-1789409378025-digest.reader-5517fd7b58a6-d9682f1aee2c----0-108------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+\[
+
+## On Building an Open Source AI Video-to-Audio Editor
+
+### Something that fixes the whole voice drift thing
+
+]\(https://medium.com/@ilsilfverskiold/on-building-an-open-source-ai-video-to-audio-editor-d9682f1aee2c?source=email-2b8b8ee19057-1789409378025-digest.reader-5517fd7b58a6-d9682f1aee2c----0-108------------------085970ce\_5a06\_4874\_be7d\_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+186
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+2
+
+[![Michael Burnett](https://miro.medium.com/fit/c/40/40/1*_nRlSLLxOANILDkX_ubCqQ.png)](https://medium.com/@dtls?source=email-2b8b8ee19057-1789409378025-digest.reader-138adf9c44c-59e3013c3c23----1-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Michael Burnett](https://medium.com/@dtls?source=email-2b8b8ee19057-1789409378025-digest.reader-138adf9c44c-59e3013c3c23----1-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)in[UX Collective](https://medium.com/user-experience-design-1?source=email-2b8b8ee19057-1789409378025-digest.reader-138adf9c44c-59e3013c3c23----1-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![The origins — the birth, lonely childhood, and adoption of software](https://miro.medium.com/fit/c/320/214/1*tK7I0aqCexN7fqGL3RoCzQ.png)](https://medium.com/@dtls/the-origins-the-birth-lonely-childhood-and-adoption-of-software-59e3013c3c23?source=email-2b8b8ee19057-1789409378025-digest.reader-138adf9c44c-59e3013c3c23----1-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+\[
+
+## The origins — the birth, lonely childhood, and adoption of software
+
+### Side A, meaning is irrelevant to the problem
+
+]\(https://medium.com/@dtls/the-origins-the-birth-lonely-childhood-and-adoption-of-software-59e3013c3c23?source=email-2b8b8ee19057-1789409378025-digest.reader-138adf9c44c-59e3013c3c23----1-109------------------085970ce\_5a06\_4874\_be7d\_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+25 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+216
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+5
+
+[![Attila Vágó](https://miro.medium.com/fit/c/40/40/1*Ilzy6aGvG__n7QzdkiL41A.jpeg)](https://medium.com/@attilavago?source=email-2b8b8ee19057-1789409378025-digest.reader--c9c3c1e9767f----2-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Attila Vágó](https://medium.com/@attilavago?source=email-2b8b8ee19057-1789409378025-digest.reader--c9c3c1e9767f----2-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![Don’t Learn To Code. Learn A Trade Instead.](https://miro.medium.com/fit/c/320/214/1*oDZtK2jsje0OrkiSU85FVw.png)](https://medium.com/@attilavago/dont-learn-to-code-learn-a-trade-instead-c9c3c1e9767f?source=email-2b8b8ee19057-1789409378025-digest.reader--c9c3c1e9767f----2-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+\[
+
+## Don’t Learn To Code. Learn A Trade Instead.
+
+### I don’t believe becoming a software engineer is the…
+
+]\(https://medium.com/@attilavago/dont-learn-to-code-learn-a-trade-instead-c9c3c1e9767f?source=email-2b8b8ee19057-1789409378025-digest.reader--c9c3c1e9767f----2-109------------------085970ce\_5a06\_4874\_be7d\_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+31
+
+[![Can Artuc](https://miro.medium.com/fit/c/40/40/1*nYsxx3FENvKi2CiYIo4Xhg.png)](https://medium.com/@canartuc?source=email-2b8b8ee19057-1789409378025-digest.reader--e02faac0cb69----3-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Can Artuc](https://medium.com/@canartuc?source=email-2b8b8ee19057-1789409378025-digest.reader--e02faac0cb69----3-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![Fedora 44: An Open Linux Release Ubuntu Cannot Copy](https://miro.medium.com/fit/c/320/214/1*EWYZq_WbpdfHHcSNt2hUDA.jpeg)](https://medium.com/@canartuc/fedora-44-an-open-linux-release-ubuntu-cannot-copy-e02faac0cb69?source=email-2b8b8ee19057-1789409378025-digest.reader--e02faac0cb69----3-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+\[
+
+## Fedora 44: An Open Linux Release Ubuntu Cannot Copy
+
+### Zero telemetry, packages you can host yourself, and a…
+
+]\(https://medium.com/@canartuc/fedora-44-an-open-linux-release-ubuntu-cannot-copy-e02faac0cb69?source=email-2b8b8ee19057-1789409378025-digest.reader--e02faac0cb69----3-109------------------085970ce\_5a06\_4874\_be7d\_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+706
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+15
+
+[![Chacko](https://miro.medium.com/fit/c/40/40/1*Sre5HbLjQKQQkDBiKtz7Ng.png)](https://medium.com/@sajucrajan?source=email-2b8b8ee19057-1789409378025-digest.reader-bc0ac0298a47-40330af8b0c8----4-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Chacko](https://medium.com/@sajucrajan?source=email-2b8b8ee19057-1789409378025-digest.reader-bc0ac0298a47-40330af8b0c8----4-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)in[IT Chronicles](https://medium.com/it-chronicles?source=email-2b8b8ee19057-1789409378025-digest.reader-bc0ac0298a47-40330af8b0c8----4-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![The Real Cost of an AI Coding Assistant](https://miro.medium.com/fit/c/320/214/1*5AteAZEaluNhVl8ypEDQbA.png)](https://medium.com/@sajucrajan/the-real-cost-of-an-ai-coding-assistant-40330af8b0c8?source=email-2b8b8ee19057-1789409378025-digest.reader-bc0ac0298a47-40330af8b0c8----4-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+\[
+
+## The Real Cost of an AI Coding Assistant
+
+### GitHub Copilot went from charging per prompt to per…
+
+]\(https://medium.com/@sajucrajan/the-real-cost-of-an-ai-coding-assistant-40330af8b0c8?source=email-2b8b8ee19057-1789409378025-digest.reader-bc0ac0298a47-40330af8b0c8----4-102------------------085970ce\_5a06\_4874\_be7d\_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+485
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+19
+
+[![Abbey Wade](https://miro.medium.com/fit/c/40/40/1*JGWen4g48l_z405xJV9G_A@2x.jpeg)](https://medium.com/@abbeywade?source=email-2b8b8ee19057-1789409378025-digest.reader-1576ae875ad3-a5e468b2d672----5-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Abbey Wade](https://medium.com/@abbeywade?source=email-2b8b8ee19057-1789409378025-digest.reader-1576ae875ad3-a5e468b2d672----5-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)in[Grief Book Club](https://medium.com/grief-book-club?source=email-2b8b8ee19057-1789409378025-digest.reader-1576ae875ad3-a5e468b2d672----5-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![I Used to Be A Daughter](https://miro.medium.com/fit/c/320/214/1*BmPs3qLPC5OvDRrMmxJozw.jpeg)](https://medium.com/@abbeywade/i-used-to-be-a-daughter-a5e468b2d672?source=email-2b8b8ee19057-1789409378025-digest.reader-1576ae875ad3-a5e468b2d672----5-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+\[
+
+## I Used to Be A Daughter
+
+### I chose being me instead.
+
+]\(https://medium.com/@abbeywade/i-used-to-be-a-daughter-a5e468b2d672?source=email-2b8b8ee19057-1789409378025-digest.reader-1576ae875ad3-a5e468b2d672----5-102------------------085970ce\_5a06\_4874\_be7d\_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+9 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+5.3K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+163
+
+[![Darren Broemmer](https://miro.medium.com/fit/c/40/40/2*bUtngkY23hVcOsFRXVoTqQ.jpeg)](https://medium.com/@darren-broemmer?source=email-2b8b8ee19057-1789409378025-digest.reader--168c19fca876----6-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Darren Broemmer](https://medium.com/@darren-broemmer?source=email-2b8b8ee19057-1789409378025-digest.reader--168c19fca876----6-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![Vector Databases Explained: The Infrastructure Behind Modern AI](https://miro.medium.com/fit/c/320/214/1*xAbiMn55bU7pxdc78POP-w.png)](https://medium.com/@darren-broemmer/vector-databases-explained-the-infrastructure-behind-modern-ai-168c19fca876?source=email-2b8b8ee19057-1789409378025-digest.reader--168c19fca876----6-109------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+\[
+
+## Vector Databases Explained: The Infrastructure Behind Modern AI
+
+### You’ve probably heard the term vector database used in…
+
+]\(https://medium.com/@darren-broemmer/vector-databases-explained-the-infrastructure-behind-modern-ai-168c19fca876?source=email-2b8b8ee19057-1789409378025-digest.reader--168c19fca876----6-109------------------085970ce\_5a06\_4874\_be7d\_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+458
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+15
+
+[![Kevin - MERN Stack Developer](https://miro.medium.com/fit/c/40/40/1*aUGBohBB1VAnsoGAdjEZoQ.png)](https://medium.com/@mernstackdevbykevin?source=email-2b8b8ee19057-1789409378025-digest.reader--9e9863286ea8----7-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Kevin - MERN Stack Developer](https://medium.com/@mernstackdevbykevin?source=email-2b8b8ee19057-1789409378025-digest.reader--9e9863286ea8----7-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![WebAssembly + React](https://miro.medium.com/fit/c/320/214/1*UJzjkrtBGDslADpMn4MQTg.png)](https://medium.com/@mernstackdevbykevin/webassembly-react-9e9863286ea8?source=email-2b8b8ee19057-1789409378025-digest.reader--9e9863286ea8----7-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+\[
+
+## WebAssembly + React
+
+### Why More React + TypeScript Devs are Reaching for Wasm…
+
+]\(https://medium.com/@mernstackdevbykevin/webassembly-react-9e9863286ea8?source=email-2b8b8ee19057-1789409378025-digest.reader--9e9863286ea8----7-99------------------085970ce\_5a06\_4874\_be7d\_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+52
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+1
+
+[![Ravi Savaliya](https://miro.medium.com/fit/c/40/40/1*Xd0pZayCXYGaBK-i07iQzw.png)](https://medium.com/@savaliya.ravi.rs?source=email-2b8b8ee19057-1789409378025-digest.reader--a4fbd3ea5aaa----8-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Ravi Savaliya](https://medium.com/@savaliya.ravi.rs?source=email-2b8b8ee19057-1789409378025-digest.reader--a4fbd3ea5aaa----8-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![Flutter Widgets That Can Replace Hundreds of Lines of Code](https://miro.medium.com/fit/c/320/214/1*OpgyYTFRutSWjC4Nm9HXTw.png)](https://medium.com/@savaliya.ravi.rs/flutter-widgets-that-can-replace-hundreds-of-lines-of-code-a4fbd3ea5aaa?source=email-2b8b8ee19057-1789409378025-digest.reader--a4fbd3ea5aaa----8-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+\[
+
+## Flutter Widgets That Can Replace Hundreds of Lines of Code
+
+### Discover powerful built-in Flutter widgets that can…
+
+]\(https://medium.com/@savaliya.ravi.rs/flutter-widgets-that-can-replace-hundreds-of-lines-of-code-a4fbd3ea5aaa?source=email-2b8b8ee19057-1789409378025-digest.reader--a4fbd3ea5aaa----8-99------------------085970ce\_5a06\_4874\_be7d\_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+3 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+40
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+3
+
+[![Taimur Ijlal](https://miro.medium.com/fit/c/40/40/1*MGJd3DuWu5hAKz0H2bxEig.png)](https://medium.com/@taimurcloud123?source=email-2b8b8ee19057-1789409378025-digest.reader-35e7a49c6df5-c82ad251ff54----9-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Taimur Ijlal](https://medium.com/@taimurcloud123?source=email-2b8b8ee19057-1789409378025-digest.reader-35e7a49c6df5-c82ad251ff54----9-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)in[AWS in Plain English](https://medium.com/aws-in-plain-english?source=email-2b8b8ee19057-1789409378025-digest.reader-35e7a49c6df5-c82ad251ff54----9-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![The Cybersecurity Industry Is Entering Its Third Era](https://miro.medium.com/fit/c/320/214/1*YYvm9D9CuKMKae9wtgh5Zw.png)](https://medium.com/@taimurcloud123/the-cybersecurity-industry-is-entering-its-third-era-c82ad251ff54?source=email-2b8b8ee19057-1789409378025-digest.reader-35e7a49c6df5-c82ad251ff54----9-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+\[
+
+## The Cybersecurity Industry Is Entering Its Third Era
+
+### I remember when a security architecture discussion…
+
+]\(https://medium.com/@taimurcloud123/the-cybersecurity-industry-is-entering-its-third-era-c82ad251ff54?source=email-2b8b8ee19057-1789409378025-digest.reader-35e7a49c6df5-c82ad251ff54----9-102------------------085970ce\_5a06\_4874\_be7d\_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+14 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+307
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+4
+
+[![Gaddam.Naveen](https://miro.medium.com/fit/c/40/40/1*ZE-CfQ1ViASqLlwps6EiBg.jpeg)](https://medium.com/@gaddamnaveen192?source=email-2b8b8ee19057-1789409378025-digest.reader--b420aad63655----10-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Gaddam.Naveen](https://medium.com/@gaddamnaveen192?source=email-2b8b8ee19057-1789409378025-digest.reader--b420aad63655----10-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![From 5 Seconds to 300ms: How I Fix Database Performance Problems in Production](https://miro.medium.com/fit/c/320/214/1*pC7ejdhWVIHIpariVvDOZg.png)](https://medium.com/@gaddamnaveen192/from-5-seconds-to-300ms-how-i-fix-database-performance-problems-in-production-b420aad63655?source=email-2b8b8ee19057-1789409378025-digest.reader--b420aad63655----10-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+\[
+
+## From 5 Seconds to 300ms: How I Fix Database Performance Problems in Production
+
+### Free Link
+
+]\(https://medium.com/@gaddamnaveen192/from-5-seconds-to-300ms-how-i-fix-database-performance-problems-in-production-b420aad63655?source=email-2b8b8ee19057-1789409378025-digest.reader--b420aad63655----10-99------------------085970ce\_5a06\_4874\_be7d\_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+12 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+128
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+3
+
+[![Alex Besson](https://miro.medium.com/fit/c/40/40/1*W6mMN7RSyJyOP6yJJ9Q2pw.jpeg)](https://medium.com/@bessonwrites?source=email-2b8b8ee19057-1789409378025-digest.reader-30d32c722963-bb16823c8b3a----11-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Alex Besson](https://medium.com/@bessonwrites?source=email-2b8b8ee19057-1789409378025-digest.reader-30d32c722963-bb16823c8b3a----11-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)in[Change Your Mind Change Your Life](https://medium.com/change-your-mind?source=email-2b8b8ee19057-1789409378025-digest.reader-30d32c722963-bb16823c8b3a----11-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![12 of the Most Philosophical Dostoyevsky Quotes](https://miro.medium.com/focal/320/214/50/41/1*X9xiGE7Bcv5Be4mMuncL8w.jpeg)](https://medium.com/@bessonwrites/12-of-the-most-philosophical-dostoyevsky-quotes-bb16823c8b3a?source=email-2b8b8ee19057-1789409378025-digest.reader-30d32c722963-bb16823c8b3a----11-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+\[
+
+## 12 of the Most Philosophical Dostoyevsky Quotes
+
+### From one of the deepest writers in the history of…
+
+]\(https://medium.com/@bessonwrites/12-of-the-most-philosophical-dostoyevsky-quotes-bb16823c8b3a?source=email-2b8b8ee19057-1789409378025-digest.reader-30d32c722963-bb16823c8b3a----11-99------------------085970ce\_5a06\_4874\_be7d\_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+5 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+1.2K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+19
+
+[![John DeVore](https://miro.medium.com/fit/c/40/40/1*3pV-__rrRcHq_uQ1XeC_UA.png)](https://medium.com/@johndevore?source=email-2b8b8ee19057-1789409378025-digest.reader--3e00ad67018b----12-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[John DeVore](https://medium.com/@johndevore?source=email-2b8b8ee19057-1789409378025-digest.reader--3e00ad67018b----12-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![Cigarettes are bad. I miss them.](https://miro.medium.com/fit/c/320/214/1*_MFbHcwwiDLj6wFK1en-Qg.jpeg)](https://medium.com/@johndevore/cigarettes-are-bad-i-miss-them-3e00ad67018b?source=email-2b8b8ee19057-1789409378025-digest.reader--3e00ad67018b----12-102------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+\[
+
+## Cigarettes are bad. I miss them.
+
+### Don’t start smoking, kids
+
+]\(https://medium.com/@johndevore/cigarettes-are-bad-i-miss-them-3e00ad67018b?source=email-2b8b8ee19057-1789409378025-digest.reader--3e00ad67018b----12-102------------------085970ce\_5a06\_4874\_be7d\_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+3.9K
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+109
+
+[![Devansh Patel](https://miro.medium.com/fit/c/40/40/1*En7UAF5vDf0UH8yRPjRoxQ.png)](https://medium.com/@v3n0m?source=email-2b8b8ee19057-1789409378025-digest.reader-35e63bb1d2ad-ad0dc5687b3d----13-73------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Devansh Patel](https://medium.com/@v3n0m?source=email-2b8b8ee19057-1789409378025-digest.reader-35e63bb1d2ad-ad0dc5687b3d----13-73------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)in[MeetCyber](https://medium.com/meetcyber?source=email-2b8b8ee19057-1789409378025-digest.reader-35e63bb1d2ad-ad0dc5687b3d----13-73------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![20 Linux Commands That Turns Your Terminal Into a Loaded Weapon](https://miro.medium.com/fit/c/320/214/0*R6DRUmFBlH96xxqO)](https://medium.com/@v3n0m/20-linux-commands-that-turn-your-terminal-into-a-loaded-weapon-ad0dc5687b3d?source=email-2b8b8ee19057-1789409378025-digest.reader-35e63bb1d2ad-ad0dc5687b3d----13-73------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+\[
+
+## 20 Linux Commands That Turns Your Terminal Into a Loaded Weapon
+
+### Linux does not babysit you.
+
+]\(https://medium.com/@v3n0m/20-linux-commands-that-turn-your-terminal-into-a-loaded-weapon-ad0dc5687b3d?source=email-2b8b8ee19057-1789409378025-digest.reader-35e63bb1d2ad-ad0dc5687b3d----13-73------------------085970ce\_5a06\_4874\_be7d\_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+16 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+513
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+6
+
+[![Mohit Vaswani](https://miro.medium.com/fit/c/40/40/1*RMWsiluD3e7Jk0CF6Ymskg.jpeg)](https://medium.com/@hii_mohit?source=email-2b8b8ee19057-1789409378025-digest.reader--9a35b8fe5a83----14-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[Mohit Vaswani](https://medium.com/@hii_mohit?source=email-2b8b8ee19057-1789409378025-digest.reader--9a35b8fe5a83----14-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+[![9 Claude Code Plugins Every Developer Should Install in 2026](https://miro.medium.com/fit/c/320/214/1*wOjMNfDGPPcQy6_xM4jP6w.png)](https://medium.com/@hii_mohit/9-claude-code-plugins-every-developer-should-install-in-2026-9a35b8fe5a83?source=email-2b8b8ee19057-1789409378025-digest.reader--9a35b8fe5a83----14-99------------------085970ce_5a06_4874_be7d_b9c1d234774c-1)
+
+\[
+
+## 9 Claude Code Plugins Every Developer Should Install in 2026
+
+### Claude Code Plugins
+
+]\(https://medium.com/@hii\_mohit/9-claude-code-plugins-every-developer-should-install-in-2026-9a35b8fe5a83?source=email-2b8b8ee19057-1789409378025-digest.reader--9a35b8fe5a83----14-99------------------085970ce\_5a06\_4874\_be7d\_b9c1d234774c-1)
+
+![Member-only content](https://miro.medium.com/fit/c/30/30/1*Zz6z7U4dGjkNKQy1cxU7iw@2x.png)
+
+8 min read
+
+![Claps](https://miro.medium.com/fit/c/32/32/15179c17ea56cc631c7aa437c6f487f42797bb0a1053ee7f7cc7fca905445942)
+
+988
+
+![Responses](https://miro.medium.com/fit/c/32/32/7e20b295db3744e82c784a6bfc830a875110046ab5850df5a1d872355af7d787)
+
+27
+
+[![Write on Medium](https://miro.medium.com/max/1360/ba3fbd837113f5e467399bd050dfc1f79e2d7ca0c7ad9c340c1893aaccbc4a83)](https://medium.com/write?source=email-2b8b8ee19057-1789409378025-digest.reader-------------------------085970ce_5a06_4874_be7d_b9c1d234774c)
+
+
