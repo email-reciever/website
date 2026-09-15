@@ -1,0 +1,289 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Functional programming jargon, mapped out
+description: Functional programming jargon, mapped out
+date: 星期二 06 晚上 九月 15o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/802
+origin_site: https://javascriptweekly.com/issues/802
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Functional programming jargon, mapped out" url="https://javascriptweekly.com/issues/802" />
+
+<Detail client:only="react">
+	#​802 — September 15, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/802)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://javascriptweekly.com/link/190309/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yasnr77llfxhnd7g3ffz.jpg)](https://javascriptweekly.com/link/190310/d076523b1d)
+
+[Functional Programming Jargon, Mapped and Explained](https://javascriptweekly.com/link/190310/d076523b1d "hemanth.github.io") — Currying, purity, functors, monads…? If FP terms ever go over your head, TC39 delegate Hemanth HM's [popular jargon reference](https://javascriptweekly.com/link/190311/d076523b1d) is now an explorable map of concepts showing how they relate, each with a simple definition and JavaScript example.
+
+Hemanth HM
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/17105ae7.png)](https://javascriptweekly.com/link/190309/d076523b1d)
+
+[Stay Sharp in the Age of AI](https://javascriptweekly.com/link/190309/d076523b1d "master.dev") — Master.dev instructors build at Anthropic, OpenAI, Netflix, Google, and Stripe. Learn from them with hundreds of courses, live workshops, and expanded AI learning paths. [New members get $100 off a yearly membership](https://javascriptweekly.com/link/190309/d076523b1d).
+
+Master.dev sponsor
+
+[Modern Web Types: TypeScript Support for Newer Web APIs](https://javascriptweekly.com/link/190312/d076523b1d "philipwalton.com") — TypeScript's DOM types only include APIs shipped in _multiple_ browser engines, so things like element-scoped `startViewTransition` and `fetchLater` throw up errors. [modern-web-types](https://javascriptweekly.com/link/190313/d076523b1d) is a drop-in `lib.dom` replacement that adds missing interfaces/members shipped in any single browser engine.
+
+Philip Walton (Google)
+
+[React 19.3 Released](https://javascriptweekly.com/link/190314/d076523b1d "react.dev") — A significant minor release making view transitions and Fragment Refs stable, adding Trusted Types support, and more. We covered it in more depth in [last week's _React Status_](https://javascriptweekly.com/link/190315/d076523b1d).
+
+The React Team
+
+**IN BRIEF:**
+
+*   🔒 Attackers are [scanning for exposed Vite dev servers](https://javascriptweekly.com/link/190316/d076523b1d) exploiting a `server.fs.deny` bypass (patched in Vite 7.3.2 and 8.0.5 earlier this year) to grab credentials from `.env` files. Vite listens on localhost by default, but double check your setup.
+    
+*   [Safari 27](https://javascriptweekly.com/link/190317/d076523b1d) shipped yesterday (alongside macOS/iOS 27), bringing the module loader rewrite [we covered last week](https://javascriptweekly.com/link/190318/d076523b1d), so top-level `await` now works reliably in all major browsers.
+    
+*   TC39 meets in Tokyo in two weeks. [Here's the agenda](https://javascriptweekly.com/link/190319/d076523b1d) with three iterator helper follow-ups ([join](https://javascriptweekly.com/link/190320/d076523b1d), [includes](https://javascriptweekly.com/link/190321/d076523b1d) and [chunking](https://javascriptweekly.com/link/190322/d076523b1d)) all up for Stage 4, plus more.
+    
+*   🔒 Starting this Thursday, [the OpenJS Foundation's CVE team is taking a break](https://javascriptweekly.com/link/190323/d076523b1d) till October 6 due to burnout driven by a surge of AI-generated reports. Actively exploited issues will still get a response.
+    
+*   🔒 [npm now places a temporary 72-hour 'security hold'](https://javascriptweekly.com/link/190369/d076523b1d) on _any_ account after a successful recovery-code sign-in.
+    
+
+**RELEASES:**
+
+*   [pnpm 12.4](https://javascriptweekly.com/link/190324/d076523b1d) – The package manager can now manage Rust crates and Python packages alongside npm ones in a single workspace.
+    
+*   [Playwright 1.63](https://javascriptweekly.com/link/190326/d076523b1d) – Tests can now declare a named `lock` so those sharing a resource never run concurrently.
+    
+*   [Node.js v26.8.2 (Current)](https://javascriptweekly.com/link/190327/d076523b1d) and [v24.21.0 (LTS)](https://javascriptweekly.com/link/190328/d076523b1d) – Both include a security release of Undici to fix numerous vulnerabilities.
+    
+*   [React Router 8.4](https://javascriptweekly.com/link/190372/d076523b1d), [Vite 8.3](https://javascriptweekly.com/link/190330/d076523b1d), [Moment.js 2.31.0](https://javascriptweekly.com/link/190331/d076523b1d) (security release).
+    
+
+📖  Articles and Videos
+
+[A Design Space Exploration of `async`/`await`](https://javascriptweekly.com/link/190332/d076523b1d "cel.cs.brown.edu") — A simple `async`/`await` example produces different results in JavaScript, Rust, Python and Swift. Test your mental model with a quiz, then learn about the design choices behind the differences.
+
+Gavin Gray
+
+[Native is Now the Future of Mobile at Shopify](https://javascriptweekly.com/link/190336/d076523b1d "shopify.engineering") — Shopify is rewriting its React Native mobile apps in Swift/Kotlin. The main argument is coding agents have cut the cost of writing everything twice, while the upsides of native remain.
+
+Mustafa Ali (Shopify)
+
+[Workshop: From an Error to the Logs That Explain It](https://javascriptweekly.com/link/190335/d076523b1d "sentry.io") — Reading logs next to traces and errors, holding context across services, and cutting the noise.
+
+Sentry sponsor
+
+[A Deep Dive into StyleX](https://javascriptweekly.com/link/190333/d076523b1d "flaviocopes.com") — A hands-on tour of Meta's [StyleX](https://javascriptweekly.com/link/190334/d076523b1d), which turns JavaScript style objects into plain atomic CSS at build time, and why it can be a good fit for coding agents in particular.
+
+Flavio Copes
+
+📄 ['Nobody Pays for Open Source: We Can Force Them To'](https://javascriptweekly.com/link/190370/d076523b1d) – Laurie Voss ran npm for five years and thinks registries are an untapped lever for funding maintainers. Laurie Voss
+
+📄 [Anecdotally, Programmers Dislike `reduce`](https://javascriptweekly.com/link/190337/d076523b1d) – `map` and `filter` sail through code review, but `reduce` draws complaints. Evan has a few theories why. Evan Hahn
+
+🛠 Code & Tools
+
+[SnapDOM 3.0: Turn DOM Elements Into Images, Canvas and More](https://javascriptweekly.com/link/190341/d076523b1d "snapdom.dev") — Zero-dependency [html2canvas](https://javascriptweekly.com/link/190342/d076523b1d) alternative with support for pseudo-elements and Shadow DOM. [v3.0](https://javascriptweekly.com/link/190343/d076523b1d) adds 'incremental recapture' for faster repeat captures, automatic web font embedding, and `fromString()` for turning raw HTML markup into images.
+
+Zumerlab
+
+[Your App Didn't Get Slower. Your Data Got Bigger](https://javascriptweekly.com/link/190344/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres so queries stay fast at scale, even as your data grows. [Get $1000 credit to start](https://javascriptweekly.com/link/190344/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Fallow: Codebase Intelligence for TypeScript and JavaScript](https://javascriptweekly.com/link/190345/d076523b1d "docs.fallow.tools") — A fast, zero-config Rust binary that finds dead code, duplication, circular dependencies and complexity hotspots in JS/TS projects. It's also pitched as a deterministic check for AI agent coding loops. [GitHub repo](https://javascriptweekly.com/link/190346/d076523b1d).
+
+Bart Waardenburg
+
+🎨 [category-colors: Generate 'Least Wrong' Color Palettes for Charts](https://javascriptweekly.com/link/190347/d076523b1d "mattstromawn.com") — Matt devised [this algorithm for picking categorical chart colors](https://javascriptweekly.com/link/190348/d076523b1d) in 2022 while design director at Stripe. It's now available as [an npm package](https://javascriptweekly.com/link/190349/d076523b1d), and you can [try it out on the Web here](https://javascriptweekly.com/link/190371/d076523b1d).
+
+Matt Ström-Awn
+
+*   [React DevTools 8.0](https://javascriptweekly.com/link/190350/d076523b1d) ([Chrome Web Store](https://javascriptweekly.com/link/190351/d076523b1d)) – The Suspense tab is now on by default, the Timeline profiler is gone (use your browser's _Performance_ panel instead), and inspecting a DOM node now shows its matching React component.
+    
+*   [Zod 4.6](https://javascriptweekly.com/link/190325/d076523b1d) – Adds `.validate()`, a boolean check that skips building errors and is up to 35x faster than `.safeParse().success` on invalid input with compiled schemas.
+    
+*   [Javet 6.0](https://javascriptweekly.com/link/190352/d076523b1d) – Embed Node.js v26's runtime in the JVM for full interop with Java.
+    
+*   [parse-xml 5.0](https://javascriptweekly.com/link/190353/d076523b1d) – The fast, compliant XML parser [goes ESM-only](https://javascriptweekly.com/link/190354/d076523b1d).
+    
+*   🕹️ [n64js 1.0](https://javascriptweekly.com/link/190355/d076523b1d) – A Nintendo 64 emulator in pure JavaScript.
+    
+
+📰 Classifieds
+
+💻 [Free live coding workshop, Sept 16](https://javascriptweekly.com/link/190356/d076523b1d). Build signup protection with Fingerprint that catches fake signups, no matter how they cover their tracks.
+
+* * *
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/190357/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+* * *
+
+⚡ [Zuplo](https://javascriptweekly.com/link/190358/d076523b1d) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://javascriptweekly.com/link/190358/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wwfey07te8tmpqvviapc.jpg)](https://javascriptweekly.com/link/190359/d076523b1d)
+
+*   🕹️ This year's [js13kGames](https://javascriptweekly.com/link/190359/d076523b1d) entries are in with a record [317 games squeezed into 13KB each](https://javascriptweekly.com/link/190360/d076523b1d). Frank Force's [SP13KTRA](https://javascriptweekly.com/link/190361/d076523b1d) racer and the [Hornbound](https://javascriptweekly.com/link/190362/d076523b1d) roguelike are good places to start, and you can dig around the public repos of every project too.
+    
+*   Chris Coyier rounds up [new and emerging HTML features worth knowing about](https://javascriptweekly.com/link/190365/d076523b1d), like the `&lt;geolocation>` and `&lt;install>` elements, as well as HTML-in-Canvas and improvements to `&lt;select>` customization.
+    
+*   The first [Three.js Conference](https://javascriptweekly.com/link/190363/d076523b1d) took place in Paris last week, and Codrops has [a live-blog writeup of both days](https://javascriptweekly.com/link/190364/d076523b1d), including Mr.doob's talk. No recordings yet.
+    
+*   Tailwind Labs, the team behind Tailwind CSS, [is joining Shopify](https://javascriptweekly.com/link/190366/d076523b1d). Tailwind CSS is to remain maintained and open source – phew! 😅
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/190367/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​802 — September 15, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/802)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://javascriptweekly.com/link/190309/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yasnr77llfxhnd7g3ffz.jpg)](https://javascriptweekly.com/link/190310/d076523b1d)
+
+[Functional Programming Jargon, Mapped and Explained](https://javascriptweekly.com/link/190310/d076523b1d "hemanth.github.io") — Currying, purity, functors, monads…? If FP terms ever go over your head, TC39 delegate Hemanth HM's [popular jargon reference](https://javascriptweekly.com/link/190311/d076523b1d) is now an explorable map of concepts showing how they relate, each with a simple definition and JavaScript example.
+
+Hemanth HM
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/17105ae7.png)](https://javascriptweekly.com/link/190309/d076523b1d)
+
+[Stay Sharp in the Age of AI](https://javascriptweekly.com/link/190309/d076523b1d "master.dev") — Master.dev instructors build at Anthropic, OpenAI, Netflix, Google, and Stripe. Learn from them with hundreds of courses, live workshops, and expanded AI learning paths. [New members get $100 off a yearly membership](https://javascriptweekly.com/link/190309/d076523b1d).
+
+Master.dev sponsor
+
+[Modern Web Types: TypeScript Support for Newer Web APIs](https://javascriptweekly.com/link/190312/d076523b1d "philipwalton.com") — TypeScript's DOM types only include APIs shipped in *multiple* browser engines, so things like element-scoped `startViewTransition` and `fetchLater` throw up errors. [modern-web-types](https://javascriptweekly.com/link/190313/d076523b1d) is a drop-in `lib.dom` replacement that adds missing interfaces/members shipped in any single browser engine.
+
+Philip Walton (Google)
+
+[React 19.3 Released](https://javascriptweekly.com/link/190314/d076523b1d "react.dev") — A significant minor release making view transitions and Fragment Refs stable, adding Trusted Types support, and more. We covered it in more depth in [last week's *React Status*](https://javascriptweekly.com/link/190315/d076523b1d).
+
+The React Team
+
+**IN BRIEF:**
+
+* 🔒 Attackers are [scanning for exposed Vite dev servers](https://javascriptweekly.com/link/190316/d076523b1d) exploiting a `server.fs.deny` bypass (patched in Vite 7.3.2 and 8.0.5 earlier this year) to grab credentials from `.env` files. Vite listens on localhost by default, but double check your setup.
+
+* [Safari 27](https://javascriptweekly.com/link/190317/d076523b1d) shipped yesterday (alongside macOS/iOS 27), bringing the module loader rewrite [we covered last week](https://javascriptweekly.com/link/190318/d076523b1d), so top-level `await` now works reliably in all major browsers.
+
+* TC39 meets in Tokyo in two weeks. [Here's the agenda](https://javascriptweekly.com/link/190319/d076523b1d) with three iterator helper follow-ups ([join](https://javascriptweekly.com/link/190320/d076523b1d), [includes](https://javascriptweekly.com/link/190321/d076523b1d) and [chunking](https://javascriptweekly.com/link/190322/d076523b1d)) all up for Stage 4, plus more.
+
+* 🔒 Starting this Thursday, [the OpenJS Foundation's CVE team is taking a break](https://javascriptweekly.com/link/190323/d076523b1d) till October 6 due to burnout driven by a surge of AI-generated reports. Actively exploited issues will still get a response.
+
+* 🔒 [npm now places a temporary 72-hour 'security hold'](https://javascriptweekly.com/link/190369/d076523b1d) on *any* account after a successful recovery-code sign-in.
+
+**RELEASES:**
+
+* [pnpm 12.4](https://javascriptweekly.com/link/190324/d076523b1d) – The package manager can now manage Rust crates and Python packages alongside npm ones in a single workspace.
+
+* [Playwright 1.63](https://javascriptweekly.com/link/190326/d076523b1d) – Tests can now declare a named `lock` so those sharing a resource never run concurrently.
+
+* [Node.js v26.8.2 (Current)](https://javascriptweekly.com/link/190327/d076523b1d) and [v24.21.0 (LTS)](https://javascriptweekly.com/link/190328/d076523b1d) – Both include a security release of Undici to fix numerous vulnerabilities.
+
+* [React Router 8.4](https://javascriptweekly.com/link/190372/d076523b1d), [Vite 8.3](https://javascriptweekly.com/link/190330/d076523b1d), [Moment.js 2.31.0](https://javascriptweekly.com/link/190331/d076523b1d) (security release).
+
+📖  Articles and Videos
+
+[A Design Space Exploration of `async`/`await`](https://javascriptweekly.com/link/190332/d076523b1d "cel.cs.brown.edu") — A simple `async`/`await` example produces different results in JavaScript, Rust, Python and Swift. Test your mental model with a quiz, then learn about the design choices behind the differences.
+
+Gavin Gray
+
+[Native is Now the Future of Mobile at Shopify](https://javascriptweekly.com/link/190336/d076523b1d "shopify.engineering") — Shopify is rewriting its React Native mobile apps in Swift/Kotlin. The main argument is coding agents have cut the cost of writing everything twice, while the upsides of native remain.
+
+Mustafa Ali (Shopify)
+
+[Workshop: From an Error to the Logs That Explain It](https://javascriptweekly.com/link/190335/d076523b1d "sentry.io") — Reading logs next to traces and errors, holding context across services, and cutting the noise.
+
+Sentry sponsor
+
+[A Deep Dive into StyleX](https://javascriptweekly.com/link/190333/d076523b1d "flaviocopes.com") — A hands-on tour of Meta's [StyleX](https://javascriptweekly.com/link/190334/d076523b1d), which turns JavaScript style objects into plain atomic CSS at build time, and why it can be a good fit for coding agents in particular.
+
+Flavio Copes
+
+📄 ['Nobody Pays for Open Source: We Can Force Them To'](https://javascriptweekly.com/link/190370/d076523b1d) – Laurie Voss ran npm for five years and thinks registries are an untapped lever for funding maintainers. Laurie Voss
+
+📄 [Anecdotally, Programmers Dislike `reduce`](https://javascriptweekly.com/link/190337/d076523b1d) – `map` and `filter` sail through code review, but `reduce` draws complaints. Evan has a few theories why. Evan Hahn
+
+🛠 Code & Tools
+
+[SnapDOM 3.0: Turn DOM Elements Into Images, Canvas and More](https://javascriptweekly.com/link/190341/d076523b1d "snapdom.dev") — Zero-dependency [html2canvas](https://javascriptweekly.com/link/190342/d076523b1d) alternative with support for pseudo-elements and Shadow DOM. [v3.0](https://javascriptweekly.com/link/190343/d076523b1d) adds 'incremental recapture' for faster repeat captures, automatic web font embedding, and `fromString()` for turning raw HTML markup into images.
+
+Zumerlab
+
+[Your App Didn't Get Slower. Your Data Got Bigger](https://javascriptweekly.com/link/190344/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres so queries stay fast at scale, even as your data grows. [Get $1000 credit to start](https://javascriptweekly.com/link/190344/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Fallow: Codebase Intelligence for TypeScript and JavaScript](https://javascriptweekly.com/link/190345/d076523b1d "docs.fallow.tools") — A fast, zero-config Rust binary that finds dead code, duplication, circular dependencies and complexity hotspots in JS/TS projects. It's also pitched as a deterministic check for AI agent coding loops. [GitHub repo](https://javascriptweekly.com/link/190346/d076523b1d).
+
+Bart Waardenburg
+
+🎨 [category-colors: Generate 'Least Wrong' Color Palettes for Charts](https://javascriptweekly.com/link/190347/d076523b1d "mattstromawn.com") — Matt devised [this algorithm for picking categorical chart colors](https://javascriptweekly.com/link/190348/d076523b1d) in 2022 while design director at Stripe. It's now available as [an npm package](https://javascriptweekly.com/link/190349/d076523b1d), and you can [try it out on the Web here](https://javascriptweekly.com/link/190371/d076523b1d).
+
+Matt Ström-Awn
+
+* [React DevTools 8.0](https://javascriptweekly.com/link/190350/d076523b1d) ([Chrome Web Store](https://javascriptweekly.com/link/190351/d076523b1d)) – The Suspense tab is now on by default, the Timeline profiler is gone (use your browser's *Performance* panel instead), and inspecting a DOM node now shows its matching React component.
+
+* [Zod 4.6](https://javascriptweekly.com/link/190325/d076523b1d) – Adds `.validate()`, a boolean check that skips building errors and is up to 35x faster than `.safeParse().success` on invalid input with compiled schemas.
+
+* [Javet 6.0](https://javascriptweekly.com/link/190352/d076523b1d) – Embed Node.js v26's runtime in the JVM for full interop with Java.
+
+* [parse-xml 5.0](https://javascriptweekly.com/link/190353/d076523b1d) – The fast, compliant XML parser [goes ESM-only](https://javascriptweekly.com/link/190354/d076523b1d).
+
+* 🕹️ [n64js 1.0](https://javascriptweekly.com/link/190355/d076523b1d) – A Nintendo 64 emulator in pure JavaScript.
+
+📰 Classifieds
+
+💻 [Free live coding workshop, Sept 16](https://javascriptweekly.com/link/190356/d076523b1d). Build signup protection with Fingerprint that catches fake signups, no matter how they cover their tracks.
+
+***
+
+Flaky tests slowing down dev? [Meticulous](https://javascriptweekly.com/link/190357/d076523b1d) gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+***
+
+⚡ [Zuplo](https://javascriptweekly.com/link/190358/d076523b1d) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://javascriptweekly.com/link/190358/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wwfey07te8tmpqvviapc.jpg)](https://javascriptweekly.com/link/190359/d076523b1d)
+
+* 🕹️ This year's [js13kGames](https://javascriptweekly.com/link/190359/d076523b1d) entries are in with a record [317 games squeezed into 13KB each](https://javascriptweekly.com/link/190360/d076523b1d). Frank Force's [SP13KTRA](https://javascriptweekly.com/link/190361/d076523b1d) racer and the [Hornbound](https://javascriptweekly.com/link/190362/d076523b1d) roguelike are good places to start, and you can dig around the public repos of every project too.
+
+* Chris Coyier rounds up [new and emerging HTML features worth knowing about](https://javascriptweekly.com/link/190365/d076523b1d), like the `&lt;geolocation>` and `&lt;install>` elements, as well as HTML-in-Canvas and improvements to `&lt;select>` customization.
+
+* The first [Three.js Conference](https://javascriptweekly.com/link/190363/d076523b1d) took place in Paris last week, and Codrops has [a live-blog writeup of both days](https://javascriptweekly.com/link/190364/d076523b1d), including Mr.doob's talk. No recordings yet.
+
+* Tailwind Labs, the team behind Tailwind CSS, [is joining Shopify](https://javascriptweekly.com/link/190366/d076523b1d). Tailwind CSS is to remain maintained and open source – phew! 😅
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/190367/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
