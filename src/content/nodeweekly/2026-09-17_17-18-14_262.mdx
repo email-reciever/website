@@ -1,0 +1,262 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node 26.9 turns on FFI by default
+description: Node 26.9 turns on FFI by default
+date: 星期四 05 下午 九月 17o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/641
+origin_site: https://nodeweekly.com/issues/641
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node 26.9 turns on FFI by default" url="https://nodeweekly.com/issues/641" />
+
+<Detail client:only="react">
+	#​641 — September 17, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/641)
+
+Together with 
+
+[![Tiger Data](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/190503/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/p1qsibnkmb1pqggvhpdk.jpg)](https://nodeweekly.com/link/190504/0a4070b383)
+
+[Why (and How) GitHub Ported Copilot's Runtime from Node to Rust](https://nodeweekly.com/link/190504/0a4070b383 "github.blog") — GitHub's _Copilot_ runtime moved to Rust, ported in pieces behind [napi-rs](https://nodeweekly.com/link/190505/0a4070b383) shims while shipping daily. Startup times and memory usage inspired the move, but the gold for porters is in the regressions they hit involving number types, `||` semantics, and blocking the event loop.
+
+Stephen Toub (Microsoft)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/fe329987.png)](https://nodeweekly.com/link/190503/0a4070b383)
+
+[That p99 Spike Is One Slow Analytics Query](https://nodeweekly.com/link/190503/0a4070b383 "www.tigerdata.com") — One endpoint runs an analytics query over millions of rows, and latency spikes for everyone. TimescaleDB extends Postgres so that query returns in milliseconds at scale. Hypertables, compression, continuous aggregates. [Get $1000 credit to start](https://nodeweekly.com/link/190503/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+**IN BRIEF:**
+
+*   Node is to get [`util.debounce()` and `util.throttle()` functions](https://nodeweekly.com/link/190506/0a4070b383), two staples of utility libraries. They've landed on main for a future release.
+    
+*   🔒 [Moment.js 2.31.0](https://nodeweekly.com/link/190507/0a4070b383) is a key update. The date library is in 'maintenance mode', but gets 25M downloads a week, and v2.31.0 [fixes a path traversal vulnerability](https://nodeweekly.com/link/190508/0a4070b383).
+    
+*   The Node.js Web Team's [redesigned API docs](https://nodeweekly.com/link/190509/0a4070b383) have [been merged](https://nodeweekly.com/link/190510/0a4070b383) and should reach `nodejs.org/api` alongside a release soon.
+    
+*   In Node 27, the HTTP client will [reject responses with more headers than `request.maxHeadersCount`](https://nodeweekly.com/link/190511/0a4070b383) (1000 by default right now) instead of just truncating them.
+    
+
+[Node.js 26.9.0 (Current) Released](https://nodeweekly.com/link/190512/0a4070b383 "nodejs.org") — A reasonably significant minor release that brings a few new things to the table:
+
+*   [`node:ffi`](https://nodeweekly.com/link/190513/0a4070b383) is enabled by default (but still _experimental_), so you can call functions in native libraries without writing an addon.
+*   [`node:bench`](https://nodeweekly.com/link/190514/0a4070b383) is a new benchmarking module modeled on `node:test`.
+*   [Web Workers now have an experimental implementation](https://nodeweekly.com/link/190515/0a4070b383) (behind a flag), so browser-style `new Worker()` and `postMessage`, etc. can be used.
+*   [Worker threads start up to twice as fast](https://nodeweekly.com/link/190516/0a4070b383) (per initial benchmarks) and use less memory, as they now start from Node's [built-in snapshot](https://nodeweekly.com/link/190517/0a4070b383).
+
+Antoine du Hamel (Node.js Team)
+
+[Stay Sharp in the Age of AI](https://nodeweekly.com/link/190518/0a4070b383 "master.dev") — Master.dev instructors build at Anthropic, OpenAI, Netflix, Google, and Stripe. Learn from them via courses, workshops, and AI learning paths. [New members get $100 off a yearly membership](https://nodeweekly.com/link/190518/0a4070b383).
+
+Master.dev sponsor
+
+📄 [Connection Reuse is the Money](https://nodeweekly.com/link/190519/0a4070b383) – How a webhook sender cut its repeat TLS handshakes with one Undici [Agent](https://nodeweekly.com/link/190520/0a4070b383) per destination. Mike Murray
+
+📄 [Email, Decoupled from Where and How](https://nodeweekly.com/link/190521/0a4070b383) – The design behind [Upyo](https://nodeweekly.com/link/190522/0a4070b383), a web-standards-based email library for Node, Deno, Bun and edge runtimes that works with many providers. Hong Minhee
+
+📄 [A Deep Dive into JavaScript Engines: Writing Code That Makes V8 Happy](https://nodeweekly.com/link/190523/0a4070b383) Audrey Doyen
+
+📄 [Five Software Engineering Roles for Working with AI](https://nodeweekly.com/link/190524/0a4070b383) Nicholas C. Zakas
+
+📄 [How to Implement a Distributed Circuit Breaker](https://nodeweekly.com/link/190525/0a4070b383) Gabor Koos
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wyik6kkj35wmos4bkr2r.jpg)](https://nodeweekly.com/link/190526/0a4070b383)
+
+[Eraser Diagrams: Diagrams as Code, Minus the Layout Engine](https://nodeweekly.com/link/190526/0a4070b383 "www.eraser.io") — A Node API/CLI for rendering JSON diagrams to PNG or HTML. Unlike Mermaid or D2, there's no auto-layout engine, so you (or your LLM!) get to control just where things go, while connection routing, icons and styling are handled for you.
+
+Eraser
+
+[`@platformatic/memcached`: A Faster memcached Client](https://nodeweekly.com/link/190527/0a4070b383 "blog.platformatic.dev") — A zero-dependency [memcached](https://nodeweekly.com/link/190528/0a4070b383) client built on the modern meta protocol, pipelining over a single connection. Claims to be "roughly 3x" the speed of alternatives.
+
+Matteo Collina (Platformatic)
+
+[jsdom 30.1: The Release That's 'Feeling the AGI'](https://nodeweekly.com/link/190529/0a4070b383 "github.com") — The pure-JS DOM implementation gets faster DOM construction, mutations, `getComputedStyle()` and event dispatch, plus lower memory use. Much of it came from Scott's Codex-assisted PRs, which Domenic praises for being carefully curated.
+
+Domenic Denicola and Scott Cooper
+
+*   [XO 5.0](https://nodeweekly.com/link/190530/0a4070b383) – The zero-config ESLint wrapper now lints `package.json` files and enforces import file extensions in TypeScript.
+    
+*   [officeParser 8.0](https://nodeweekly.com/link/190531/0a4070b383) – Parse Office files (`docx`, `pptx`, `xlsx`, etc.) and PDFs into an AST. Now with a rewritten PDF extractor.
+    
+*   [oclif 6.0](https://nodeweekly.com/link/190532/0a4070b383) – Salesforce's framework for building Node CLIs drops support for installing legacy plugins.
+    
+*   [pg-boss 12.33](https://nodeweekly.com/link/190533/0a4070b383) – The Postgres-backed job queue adds a `TestClock` so tests needn't wait on timers.
+    
+*   [Aedes 1.2](https://nodeweekly.com/link/190534/0a4070b383) – Barebone MQTT broker that runs on any stream server.
+    
+*   🔒 [Express 4.22.3](https://nodeweekly.com/link/190535/0a4070b383) – A security release for those on Express 4.
+    
+
+📰 Classifieds
+
+⚡ [Zuplo](https://nodeweekly.com/link/190536/0a4070b383) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://nodeweekly.com/link/190536/0a4070b383).
+
+* * *
+
+🛡️ Not all bots deserve blocking. [Fingerprint Bot Detection](https://nodeweekly.com/link/190537/0a4070b383) stops content scrapers while letting legit AI agents through. [Try for free](https://nodeweekly.com/link/190537/0a4070b383).
+
+* * *
+
+🎟️ Join us at [Supabase Select](https://nodeweekly.com/link/190538/0a4070b383) on October 2. Bring your hardest questions to the engineers building Supabase at the Ask Supabase booth. [Apply to attend with 25% off: SUPAWEEKLY](https://nodeweekly.com/link/190538/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ztdu0xshlulicymdyo7u.jpg)](https://nodeweekly.com/link/190539/0a4070b383)
+
+*   [npmchart.com](https://nodeweekly.com/link/190539/0a4070b383) _(above)_ is a new option for tracking download trends and repo activity of npm packages. [Here's the chart for `express`](https://nodeweekly.com/link/190540/0a4070b383), for example.
+    
+*   [A review of sixteen weeks of package manager releases](https://nodeweekly.com/link/190541/0a4070b383) across ecosystems finds similar new defences rolling out, like cooldowns, blocking install scripts (as in [npm 12](https://nodeweekly.com/link/190542/0a4070b383)), and publish-time scans, which [npm has done since July](https://nodeweekly.com/link/190543/0a4070b383).
+    
+*   Those npm 12 defaults won't reach current Node lines, though. Last month, the Release WG [decided npm 12 is _"far too disruptive"_](https://nodeweekly.com/link/190544/0a4070b383) for Node 22, 24 or 26, so it'll arrive in Node 27.
+    
+*   GitHub Actions has [a new `cache-mode` setting](https://nodeweekly.com/link/190545/0a4070b383) to limit cache access per workflow or job, a defence against the kind of cache poisoning that [compromised TanStack's npm packages in May](https://nodeweekly.com/link/190546/0a4070b383).
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​641 — September 17, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/641)
+
+Together with 
+
+[![Tiger Data](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_282/e_make_transparent/co_white,e_outline:30/px1u7kjyvz7xnbm6ytir.png)](https://nodeweekly.com/link/190503/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/p1qsibnkmb1pqggvhpdk.jpg)](https://nodeweekly.com/link/190504/0a4070b383)
+
+[Why (and How) GitHub Ported Copilot's Runtime from Node to Rust](https://nodeweekly.com/link/190504/0a4070b383 "github.blog") — GitHub's *Copilot* runtime moved to Rust, ported in pieces behind [napi-rs](https://nodeweekly.com/link/190505/0a4070b383) shims while shipping daily. Startup times and memory usage inspired the move, but the gold for porters is in the regressions they hit involving number types, `||` semantics, and blocking the event loop.
+
+Stephen Toub (Microsoft)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/fe329987.png)](https://nodeweekly.com/link/190503/0a4070b383)
+
+[That p99 Spike Is One Slow Analytics Query](https://nodeweekly.com/link/190503/0a4070b383 "www.tigerdata.com") — One endpoint runs an analytics query over millions of rows, and latency spikes for everyone. TimescaleDB extends Postgres so that query returns in milliseconds at scale. Hypertables, compression, continuous aggregates. [Get $1000 credit to start](https://nodeweekly.com/link/190503/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+**IN BRIEF:**
+
+* Node is to get [`util.debounce()` and `util.throttle()` functions](https://nodeweekly.com/link/190506/0a4070b383), two staples of utility libraries. They've landed on main for a future release.
+
+* 🔒 [Moment.js 2.31.0](https://nodeweekly.com/link/190507/0a4070b383) is a key update. The date library is in 'maintenance mode', but gets 25M downloads a week, and v2.31.0 [fixes a path traversal vulnerability](https://nodeweekly.com/link/190508/0a4070b383).
+
+* The Node.js Web Team's [redesigned API docs](https://nodeweekly.com/link/190509/0a4070b383) have [been merged](https://nodeweekly.com/link/190510/0a4070b383) and should reach `nodejs.org/api` alongside a release soon.
+
+* In Node 27, the HTTP client will [reject responses with more headers than `request.maxHeadersCount`](https://nodeweekly.com/link/190511/0a4070b383) (1000 by default right now) instead of just truncating them.
+
+[Node.js 26.9.0 (Current) Released](https://nodeweekly.com/link/190512/0a4070b383 "nodejs.org") — A reasonably significant minor release that brings a few new things to the table:
+
+* [`node:ffi`](https://nodeweekly.com/link/190513/0a4070b383) is enabled by default (but still *experimental*), so you can call functions in native libraries without writing an addon.
+* [`node:bench`](https://nodeweekly.com/link/190514/0a4070b383) is a new benchmarking module modeled on `node:test`.
+* [Web Workers now have an experimental implementation](https://nodeweekly.com/link/190515/0a4070b383) (behind a flag), so browser-style `new Worker()` and `postMessage`, etc. can be used.
+* [Worker threads start up to twice as fast](https://nodeweekly.com/link/190516/0a4070b383) (per initial benchmarks) and use less memory, as they now start from Node's [built-in snapshot](https://nodeweekly.com/link/190517/0a4070b383).
+
+Antoine du Hamel (Node.js Team)
+
+[Stay Sharp in the Age of AI](https://nodeweekly.com/link/190518/0a4070b383 "master.dev") — Master.dev instructors build at Anthropic, OpenAI, Netflix, Google, and Stripe. Learn from them via courses, workshops, and AI learning paths. [New members get $100 off a yearly membership](https://nodeweekly.com/link/190518/0a4070b383).
+
+Master.dev sponsor
+
+📄 [Connection Reuse is the Money](https://nodeweekly.com/link/190519/0a4070b383) – How a webhook sender cut its repeat TLS handshakes with one Undici [Agent](https://nodeweekly.com/link/190520/0a4070b383) per destination. Mike Murray
+
+📄 [Email, Decoupled from Where and How](https://nodeweekly.com/link/190521/0a4070b383) – The design behind [Upyo](https://nodeweekly.com/link/190522/0a4070b383), a web-standards-based email library for Node, Deno, Bun and edge runtimes that works with many providers. Hong Minhee
+
+📄 [A Deep Dive into JavaScript Engines: Writing Code That Makes V8 Happy](https://nodeweekly.com/link/190523/0a4070b383) Audrey Doyen
+
+📄 [Five Software Engineering Roles for Working with AI](https://nodeweekly.com/link/190524/0a4070b383) Nicholas C. Zakas
+
+📄 [How to Implement a Distributed Circuit Breaker](https://nodeweekly.com/link/190525/0a4070b383) Gabor Koos
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wyik6kkj35wmos4bkr2r.jpg)](https://nodeweekly.com/link/190526/0a4070b383)
+
+[Eraser Diagrams: Diagrams as Code, Minus the Layout Engine](https://nodeweekly.com/link/190526/0a4070b383 "www.eraser.io") — A Node API/CLI for rendering JSON diagrams to PNG or HTML. Unlike Mermaid or D2, there's no auto-layout engine, so you (or your LLM!) get to control just where things go, while connection routing, icons and styling are handled for you.
+
+Eraser
+
+[`@platformatic/memcached`: A Faster memcached Client](https://nodeweekly.com/link/190527/0a4070b383 "blog.platformatic.dev") — A zero-dependency [memcached](https://nodeweekly.com/link/190528/0a4070b383) client built on the modern meta protocol, pipelining over a single connection. Claims to be "roughly 3x" the speed of alternatives.
+
+Matteo Collina (Platformatic)
+
+[jsdom 30.1: The Release That's 'Feeling the AGI'](https://nodeweekly.com/link/190529/0a4070b383 "github.com") — The pure-JS DOM implementation gets faster DOM construction, mutations, `getComputedStyle()` and event dispatch, plus lower memory use. Much of it came from Scott's Codex-assisted PRs, which Domenic praises for being carefully curated.
+
+Domenic Denicola and Scott Cooper
+
+* [XO 5.0](https://nodeweekly.com/link/190530/0a4070b383) – The zero-config ESLint wrapper now lints `package.json` files and enforces import file extensions in TypeScript.
+
+* [officeParser 8.0](https://nodeweekly.com/link/190531/0a4070b383) – Parse Office files (`docx`, `pptx`, `xlsx`, etc.) and PDFs into an AST. Now with a rewritten PDF extractor.
+
+* [oclif 6.0](https://nodeweekly.com/link/190532/0a4070b383) – Salesforce's framework for building Node CLIs drops support for installing legacy plugins.
+
+* [pg-boss 12.33](https://nodeweekly.com/link/190533/0a4070b383) – The Postgres-backed job queue adds a `TestClock` so tests needn't wait on timers.
+
+* [Aedes 1.2](https://nodeweekly.com/link/190534/0a4070b383) – Barebone MQTT broker that runs on any stream server.
+
+* 🔒 [Express 4.22.3](https://nodeweekly.com/link/190535/0a4070b383) – A security release for those on Express 4.
+
+📰 Classifieds
+
+⚡ [Zuplo](https://nodeweekly.com/link/190536/0a4070b383) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://nodeweekly.com/link/190536/0a4070b383).
+
+***
+
+🛡️ Not all bots deserve blocking. [Fingerprint Bot Detection](https://nodeweekly.com/link/190537/0a4070b383) stops content scrapers while letting legit AI agents through. [Try for free](https://nodeweekly.com/link/190537/0a4070b383).
+
+***
+
+🎟️ Join us at [Supabase Select](https://nodeweekly.com/link/190538/0a4070b383) on October 2. Bring your hardest questions to the engineers building Supabase at the Ask Supabase booth. [Apply to attend with 25% off: SUPAWEEKLY](https://nodeweekly.com/link/190538/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ztdu0xshlulicymdyo7u.jpg)](https://nodeweekly.com/link/190539/0a4070b383)
+
+* [npmchart.com](https://nodeweekly.com/link/190539/0a4070b383) *(above)* is a new option for tracking download trends and repo activity of npm packages. [Here's the chart for `express`](https://nodeweekly.com/link/190540/0a4070b383), for example.
+
+* [A review of sixteen weeks of package manager releases](https://nodeweekly.com/link/190541/0a4070b383) across ecosystems finds similar new defences rolling out, like cooldowns, blocking install scripts (as in [npm 12](https://nodeweekly.com/link/190542/0a4070b383)), and publish-time scans, which [npm has done since July](https://nodeweekly.com/link/190543/0a4070b383).
+
+* Those npm 12 defaults won't reach current Node lines, though. Last month, the Release WG [decided npm 12 is *"far too disruptive"*](https://nodeweekly.com/link/190544/0a4070b383) for Node 22, 24 or 26, so it'll arrive in Node 27.
+
+* GitHub Actions has [a new `cache-mode` setting](https://nodeweekly.com/link/190545/0a4070b383) to limit cache access per workflow or job, a defence against the kind of cache poisoning that [compromised TanStack's npm packages in May](https://nodeweekly.com/link/190546/0a4070b383).
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
