@@ -1,0 +1,230 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Why Lovable built a Vite-compatible dev server in Rust
+description: Why Lovable built a Vite-compatible dev server in Rust
+date: 星期五 04 下午 九月 18o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/491
+origin_site: https://react.statuscode.com/issues/491
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Why Lovable built a Vite-compatible dev server in Rust" url="https://react.statuscode.com/issues/491" />
+
+<Detail client:only="react">
+	#​491 — September 18, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/491)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://react.statuscode.com/link/190589/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/quq4fg4kyd0bg7hnz44s.jpg)](https://react.statuscode.com/link/190590/5d0bbb4a61)
+
+[Do Frameworks Matter Anymore?](https://react.statuscode.com/link/190590/5d0bbb4a61 "brookslybrand.com") — A Remix team member picks at the _just-let-AI-use-React_ trope. If frameworks don't matter, why use React? Skip one and agents improvise their own makeshift 'frameworks', so Brooks wants new, better ones with solid abstractions and constraints.
+
+Brooks Lybrand
+
+💡 If agents _are_ reading your code, structure seems to matter a lot. [One developer's experiment](https://react.statuscode.com/link/190591/5d0bbb4a61) found an over-abstracted React app cost agents up to 5x more to work on.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/765111c3.png)](https://react.statuscode.com/link/190589/5d0bbb4a61)
+
+[Stay Sharp in the Age of AI](https://react.statuscode.com/link/190589/5d0bbb4a61 "master.dev") — Master.dev instructors build at Anthropic, OpenAI, Netflix, Google, and Stripe. Learn from them with hundreds of courses, live workshops, and expanded AI learning paths. [New members get $100 off a yearly membership](https://react.statuscode.com/link/190589/5d0bbb4a61).
+
+Master.dev sponsor
+
+[OJ: A Rust-Native, Vite-Compatible Dev Server](https://react.statuscode.com/link/190592/5d0bbb4a61 "lovable.dev") — Lovable spins up a million Vite dev servers a day, so one of its engineers [built OJ](https://react.statuscode.com/link/190593/5d0bbb4a61), a Rust dev server that reads your existing `vite.config.ts` and runs Vite plugins, but focused on low memory use and cold start times. It's [open source](https://react.statuscode.com/link/190594/5d0bbb4a61) but experimental.
+
+Raphael Amorim (Lovable)
+
+**IN BRIEF:**
+
+*   [React Router 8.4](https://react.statuscode.com/link/190595/5d0bbb4a61) reduces re-renders: components that only call `useLocation` (say) no longer re-render when a navigation starts. There's also an opt-in, _unstable_ route matcher that cuts navigation times by up to 88% on large apps.
+    
+*   [Motion](https://react.statuscode.com/link/190596/5d0bbb4a61) 13.4 has landed adding [AnimateView](https://react.statuscode.com/link/190597/5d0bbb4a61) to animate elements between different views using the browser's native View Transition API and React 19.3's [`ViewTransition` component](https://react.statuscode.com/link/190598/5d0bbb4a61).
+    
+*   📱 [Expo SDK 58 is in beta](https://react.statuscode.com/link/190599/5d0bbb4a61), built for iOS 27 on React Native 0.88 RC, with _App Intents_ support and a new CLI tool aimed at coding agents.
+    
+
+[React Activity: When a Render No Longer Guarantees an Effect](https://react.statuscode.com/link/190600/5d0bbb4a61 "hackernoon.com") — React 19.2's [`&lt;Activity>`](https://react.statuscode.com/link/190601/5d0bbb4a61) can render a hidden tree without mounting its Effects, which caused a leak in a legacy hook that subscribed during render. A practical rundown of what to audit before adopting it.
+
+Sergey Levkovich
+
+📄 [Real-Time and Offline are the Same Problem](https://react.statuscode.com/link/190602/5d0bbb4a61) – Lessons from wiring TanStack DB into [React Admin](https://react.statuscode.com/link/190603/5d0bbb4a61). Matthieu Hochlander (Marmelab)
+
+📄 [From 1,256ms to 96ms: Fixing INP in a Massive React Dropdown](https://react.statuscode.com/link/190605/5d0bbb4a61) Giovanni Tramutola (Subito)
+
+📄 [Migrating 1,100 Files to Redux Toolkit v2 Without a Code Freeze](https://react.statuscode.com/link/190604/5d0bbb4a61) Walter Rafelsberger (Elastic)
+
+📄 [A Deep Dive into StyleX](https://react.statuscode.com/link/190606/5d0bbb4a61) Flavio Copes
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/afaokicwppgsd63qh1c5.jpg)](https://react.statuscode.com/link/190607/5d0bbb4a61)
+
+[`@shadcn/lint`: An Agent-First Linter for Tailwind Design Systems](https://react.statuscode.com/link/190607/5d0bbb4a61 "github.com") — A new ESLint/Oxlint plugin that lets you declare which Tailwind classes each component accepts, with errors that tell agents which tokens or variants to use instead.
+
+shadcn Team
+
+[React Konva: Canvas Components for Complex 2D Graphics](https://react.statuscode.com/link/190608/5d0bbb4a61 "konvajs.org") — Components for the [Konva](https://react.statuscode.com/link/190609/5d0bbb4a61) 2D canvas scene graph library you might use to build whiteboards, diagram/design editors, etc. Now requires React 19.3. [Repo](https://react.statuscode.com/link/190610/5d0bbb4a61).
+
+Konva
+
+[React Simple Maps 5.0: Composable SVG Maps for React Apps](https://react.statuscode.com/link/190611/5d0bbb4a61 "www.react-simple-maps.io") — Powered by [d3-geo](https://react.statuscode.com/link/190612/5d0bbb4a61) and [topojson](https://react.statuscode.com/link/190613/5d0bbb4a61) and provides a declarative API for defining maps to render. [The docs](https://react.statuscode.com/link/190614/5d0bbb4a61) are particularly good.
+
+Z Creative Labs
+
+[Astryx 0.6: Meta's React Design System Gets Responsive Themes](https://react.statuscode.com/link/190615/5d0bbb4a61 "astryx.atmeta.com") — Meta's React design system now lets themes adapt to viewport, pointer type, and contrast preferences in CSS. If you missed the excitement when Astryx launched back in June, [learn more here](https://react.statuscode.com/link/190616/5d0bbb4a61).
+
+Meta
+
+*   🗓️ [ilamy Calendar 3.0](https://react.statuscode.com/link/190617/5d0bbb4a61) – 'Full calendar' component. [v3.0](https://react.statuscode.com/link/190618/5d0bbb4a61) aligns an event's end point with RFC 5545 and the Google Calendar API. ([Demo](https://react.statuscode.com/link/190619/5d0bbb4a61))
+    
+*   📊 [billboard.js 4.1](https://react.statuscode.com/link/190620/5d0bbb4a61) – The popular charting library has brought its React component into the main package.
+    
+*   [React Native Skia 2.12](https://react.statuscode.com/link/190621/5d0bbb4a61) – High-performance Skia-powered 2D graphics library.
+    
+*   [SSGOI 7.1](https://react.statuscode.com/link/190623/5d0bbb4a61) – Native app-like page transitions built on the Web Animations API.
+    
+*   [react-native-nitro-sqlite 9.8](https://react.statuscode.com/link/190622/5d0bbb4a61) – JSI-backed SQLite library for React Native.
+    
+
+📰 Classifieds
+
+[Build with strategy. Lead with curiosity](https://react.statuscode.com/link/190624/5d0bbb4a61) - Fidelity is looking for technologists that ask questions, challenge conventions and care about the impact of their products.
+
+* * *
+
+⚡ [Zuplo](https://react.statuscode.com/link/190625/5d0bbb4a61) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://react.statuscode.com/link/190625/5d0bbb4a61).
+
+📢  Elsewhere in the ecosystem
+
+*   ⚠️ Attackers are [scanning for exposed Vite dev servers](https://react.statuscode.com/link/190626/5d0bbb4a61) to exploit a bug (patched in Vite 7.3.2 and 8.0.5) to access `.env` files. Check your setup if you haven't updated in a while.
+    
+*   TC39's Hemanth HM has a popular [functional programming 'jargon' reference](https://react.statuscode.com/link/190627/5d0bbb4a61), but has now also created [a visual map of FP concepts](https://react.statuscode.com/link/190628/5d0bbb4a61) including JavaScript examples of each.
+    
+*   Philip Walton shows how [TypeScript can complain when you use newer Web APIs](https://react.statuscode.com/link/190629/5d0bbb4a61) due to its DOM types only covering APIs shipped in _multiple_ engines. His new [modern-web-types](https://react.statuscode.com/link/190630/5d0bbb4a61) `lib.dom` replacement fills in those gaps.
+    
+*   GitHub Actions now has [a `cache-mode` setting](https://react.statuscode.com/link/190631/5d0bbb4a61) to limit cache access per workflow/job, a defence against the kind of cache poisoning that [compromised TanStack's npm packages a few months ago](https://react.statuscode.com/link/190632/5d0bbb4a61).
+    
+*   Vercel has [unveiled a 'flat rate' CDN pricing option](https://react.statuscode.com/link/190633/5d0bbb4a61) (for _Pro_ teams) which might take the sting out of some of your bills…
+    
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​491 — September 18, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/491)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://react.statuscode.com/link/190589/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/quq4fg4kyd0bg7hnz44s.jpg)](https://react.statuscode.com/link/190590/5d0bbb4a61)
+
+[Do Frameworks Matter Anymore?](https://react.statuscode.com/link/190590/5d0bbb4a61 "brookslybrand.com") — A Remix team member picks at the *just-let-AI-use-React* trope. If frameworks don't matter, why use React? Skip one and agents improvise their own makeshift 'frameworks', so Brooks wants new, better ones with solid abstractions and constraints.
+
+Brooks Lybrand
+
+💡 If agents *are* reading your code, structure seems to matter a lot. [One developer's experiment](https://react.statuscode.com/link/190591/5d0bbb4a61) found an over-abstracted React app cost agents up to 5x more to work on.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/765111c3.png)](https://react.statuscode.com/link/190589/5d0bbb4a61)
+
+[Stay Sharp in the Age of AI](https://react.statuscode.com/link/190589/5d0bbb4a61 "master.dev") — Master.dev instructors build at Anthropic, OpenAI, Netflix, Google, and Stripe. Learn from them with hundreds of courses, live workshops, and expanded AI learning paths. [New members get $100 off a yearly membership](https://react.statuscode.com/link/190589/5d0bbb4a61).
+
+Master.dev sponsor
+
+[OJ: A Rust-Native, Vite-Compatible Dev Server](https://react.statuscode.com/link/190592/5d0bbb4a61 "lovable.dev") — Lovable spins up a million Vite dev servers a day, so one of its engineers [built OJ](https://react.statuscode.com/link/190593/5d0bbb4a61), a Rust dev server that reads your existing `vite.config.ts` and runs Vite plugins, but focused on low memory use and cold start times. It's [open source](https://react.statuscode.com/link/190594/5d0bbb4a61) but experimental.
+
+Raphael Amorim (Lovable)
+
+**IN BRIEF:**
+
+* [React Router 8.4](https://react.statuscode.com/link/190595/5d0bbb4a61) reduces re-renders: components that only call `useLocation` (say) no longer re-render when a navigation starts. There's also an opt-in, *unstable* route matcher that cuts navigation times by up to 88% on large apps.
+
+* [Motion](https://react.statuscode.com/link/190596/5d0bbb4a61) 13.4 has landed adding [AnimateView](https://react.statuscode.com/link/190597/5d0bbb4a61) to animate elements between different views using the browser's native View Transition API and React 19.3's [`ViewTransition` component](https://react.statuscode.com/link/190598/5d0bbb4a61).
+
+* 📱 [Expo SDK 58 is in beta](https://react.statuscode.com/link/190599/5d0bbb4a61), built for iOS 27 on React Native 0.88 RC, with *App Intents* support and a new CLI tool aimed at coding agents.
+
+[React Activity: When a Render No Longer Guarantees an Effect](https://react.statuscode.com/link/190600/5d0bbb4a61 "hackernoon.com") — React 19.2's [`&lt;Activity>`](https://react.statuscode.com/link/190601/5d0bbb4a61) can render a hidden tree without mounting its Effects, which caused a leak in a legacy hook that subscribed during render. A practical rundown of what to audit before adopting it.
+
+Sergey Levkovich
+
+📄 [Real-Time and Offline are the Same Problem](https://react.statuscode.com/link/190602/5d0bbb4a61) – Lessons from wiring TanStack DB into [React Admin](https://react.statuscode.com/link/190603/5d0bbb4a61). Matthieu Hochlander (Marmelab)
+
+📄 [From 1,256ms to 96ms: Fixing INP in a Massive React Dropdown](https://react.statuscode.com/link/190605/5d0bbb4a61) Giovanni Tramutola (Subito)
+
+📄 [Migrating 1,100 Files to Redux Toolkit v2 Without a Code Freeze](https://react.statuscode.com/link/190604/5d0bbb4a61) Walter Rafelsberger (Elastic)
+
+📄 [A Deep Dive into StyleX](https://react.statuscode.com/link/190606/5d0bbb4a61) Flavio Copes
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/afaokicwppgsd63qh1c5.jpg)](https://react.statuscode.com/link/190607/5d0bbb4a61)
+
+[`@shadcn/lint`: An Agent-First Linter for Tailwind Design Systems](https://react.statuscode.com/link/190607/5d0bbb4a61 "github.com") — A new ESLint/Oxlint plugin that lets you declare which Tailwind classes each component accepts, with errors that tell agents which tokens or variants to use instead.
+
+shadcn Team
+
+[React Konva: Canvas Components for Complex 2D Graphics](https://react.statuscode.com/link/190608/5d0bbb4a61 "konvajs.org") — Components for the [Konva](https://react.statuscode.com/link/190609/5d0bbb4a61) 2D canvas scene graph library you might use to build whiteboards, diagram/design editors, etc. Now requires React 19.3. [Repo](https://react.statuscode.com/link/190610/5d0bbb4a61).
+
+Konva
+
+[React Simple Maps 5.0: Composable SVG Maps for React Apps](https://react.statuscode.com/link/190611/5d0bbb4a61 "www.react-simple-maps.io") — Powered by [d3-geo](https://react.statuscode.com/link/190612/5d0bbb4a61) and [topojson](https://react.statuscode.com/link/190613/5d0bbb4a61) and provides a declarative API for defining maps to render. [The docs](https://react.statuscode.com/link/190614/5d0bbb4a61) are particularly good.
+
+Z Creative Labs
+
+[Astryx 0.6: Meta's React Design System Gets Responsive Themes](https://react.statuscode.com/link/190615/5d0bbb4a61 "astryx.atmeta.com") — Meta's React design system now lets themes adapt to viewport, pointer type, and contrast preferences in CSS. If you missed the excitement when Astryx launched back in June, [learn more here](https://react.statuscode.com/link/190616/5d0bbb4a61).
+
+Meta
+
+* 🗓️ [ilamy Calendar 3.0](https://react.statuscode.com/link/190617/5d0bbb4a61) – 'Full calendar' component. [v3.0](https://react.statuscode.com/link/190618/5d0bbb4a61) aligns an event's end point with RFC 5545 and the Google Calendar API. ([Demo](https://react.statuscode.com/link/190619/5d0bbb4a61))
+
+* 📊 [billboard.js 4.1](https://react.statuscode.com/link/190620/5d0bbb4a61) – The popular charting library has brought its React component into the main package.
+
+* [React Native Skia 2.12](https://react.statuscode.com/link/190621/5d0bbb4a61) – High-performance Skia-powered 2D graphics library.
+
+* [SSGOI 7.1](https://react.statuscode.com/link/190623/5d0bbb4a61) – Native app-like page transitions built on the Web Animations API.
+
+* [react-native-nitro-sqlite 9.8](https://react.statuscode.com/link/190622/5d0bbb4a61) – JSI-backed SQLite library for React Native.
+
+📰 Classifieds
+
+[Build with strategy. Lead with curiosity](https://react.statuscode.com/link/190624/5d0bbb4a61) - Fidelity is looking for technologists that ask questions, challenge conventions and care about the impact of their products.
+
+***
+
+⚡ [Zuplo](https://react.statuscode.com/link/190625/5d0bbb4a61) puts every API, AI, and MCP request behind one gateway. Route traffic, guard your MCP servers, and cap your AI costs. [Try it free](https://react.statuscode.com/link/190625/5d0bbb4a61).
+
+📢  Elsewhere in the ecosystem
+
+* ⚠️ Attackers are [scanning for exposed Vite dev servers](https://react.statuscode.com/link/190626/5d0bbb4a61) to exploit a bug (patched in Vite 7.3.2 and 8.0.5) to access `.env` files. Check your setup if you haven't updated in a while.
+
+* TC39's Hemanth HM has a popular [functional programming 'jargon' reference](https://react.statuscode.com/link/190627/5d0bbb4a61), but has now also created [a visual map of FP concepts](https://react.statuscode.com/link/190628/5d0bbb4a61) including JavaScript examples of each.
+
+* Philip Walton shows how [TypeScript can complain when you use newer Web APIs](https://react.statuscode.com/link/190629/5d0bbb4a61) due to its DOM types only covering APIs shipped in *multiple* engines. His new [modern-web-types](https://react.statuscode.com/link/190630/5d0bbb4a61) `lib.dom` replacement fills in those gaps.
+
+* GitHub Actions now has [a `cache-mode` setting](https://react.statuscode.com/link/190631/5d0bbb4a61) to limit cache access per workflow/job, a defence against the kind of cache poisoning that [compromised TanStack's npm packages a few months ago](https://react.statuscode.com/link/190632/5d0bbb4a61).
+
+* Vercel has [unveiled a 'flat rate' CDN pricing option](https://react.statuscode.com/link/190633/5d0bbb4a61) (for *Pro* teams) which might take the sting out of some of your bills…
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
