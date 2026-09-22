@@ -1,0 +1,326 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: JavaScript desktop apps in under 10MB
+description: JavaScript desktop apps in under 10MB
+date: 星期二 07 晚上 九月 22o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/803
+origin_site: https://javascriptweekly.com/issues/803
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="JavaScript desktop apps in under 10MB" url="https://javascriptweekly.com/issues/803" />
+
+<Detail client:only="react">
+	#​803 — September 22, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/803)
+
+Together with 
+
+[![ParadeDB](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_164/e_make_transparent/co_white,e_outline:17/cdd8ciarsq6m8xam8oc3.png)](https://javascriptweekly.com/link/190635/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/l5ejacd7rpbkelmaxdto.jpg)](https://javascriptweekly.com/link/190636/d076523b1d)
+
+[tinyjs: Build JavaScript Desktop Apps in &lt;10MB](https://javascriptweekly.com/link/190636/d076523b1d "tinyjs.app") — I built an app with this and was impressed. You get a [txiki.js](https://javascriptweekly.com/link/190637/d076523b1d)\-powered backend with full system access (including FFI!), native webview rendering, and tiny macOS, Linux, and Windows builds. It even makes it easy to sign/notarize the final app.
+
+Tarwin Stroh-Spijer
+
+There are lots of great options in this space though:
+
+*   [Electrobun](https://javascriptweekly.com/link/190638/d076523b1d) offers richer multi-window and GPU features, at the cost of a larger TypeScript runtime – though it can instead use Zig, Rust, Go, or Odin for a tiny native main process.
+    
+*   [Perry](https://javascriptweekly.com/link/190639/d076523b1d) is a TypeScript to native AOT compiler whose primary UI model renders AppKit, Win32 and GTK4 widgets for a more conventionally native feel.
+    
+*   [Electron](https://javascriptweekly.com/link/190640/d076523b1d) and the experimental [Deno Desktop](https://javascriptweekly.com/link/190695/d076523b1d) are powerful, but their executables typically run several times larger.
+    
+*   [Neutralinojs](https://javascriptweekly.com/link/190642/d076523b1d) apps can be even smaller than tinyjs's, but you lose the general-purpose JavaScript privileged backend by design.
+    
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/5c853e9e.png)](https://javascriptweekly.com/link/190635/d076523b1d)
+
+[Full-Text Search in Drizzle Without a Second System](https://javascriptweekly.com/link/190635/d076523b1d "github.com") — Try the official ParadeDB integration for Drizzle. Search your live Postgres tables. No ETL, no Elasticsearch. ParadeDB cloud coming soon.
+
+ParadeDB sponsor
+
+[Persistent Databases in the Browser with DuckDB-Wasm and OPFS](https://javascriptweekly.com/link/190643/d076523b1d "duckdb.org") — A walkthrough of running [DuckDB](https://javascriptweekly.com/link/190644/d076523b1d) in the browser with a database file that survives reloads using the [Origin Private File System](https://javascriptweekly.com/link/190645/d076523b1d) now supported by all major browsers.
+
+Piovesan and Wielenga (DuckDB)
+
+[How Linear Reworked Its CI for 4x the Tests](https://javascriptweekly.com/link/190646/d076523b1d "linear.app") — Eager agents grew Linear's test suite, and its CI costs with it! They share some remedies: rewriting type-aware ESLint rules as plain AST checks cut lint time 55% and eased a move to [Oxlint](https://javascriptweekly.com/link/190647/d076523b1d), while selectively turning off Vitest's isolation saved a further 17% a month.
+
+Mufeez Amjad (Linear)
+
+**IN BRIEF:**
+
+*   Lovable [rewrote Vite's dev server in Rust](https://javascriptweekly.com/link/190648/d076523b1d) (calling it [OJ](https://javascriptweekly.com/link/190649/d076523b1d)) for performance reasons, but Evan You [disputes the benchmark](https://javascriptweekly.com/link/190650/d076523b1d) and predicts AI will have everyone maintaining _"their own slop fork"_.
+    
+*   📊 [npmchart.com](https://javascriptweekly.com/link/190651/d076523b1d) plots download trends, releases and repo activity for any npm package (here's [Svelte's](https://javascriptweekly.com/link/190652/d076523b1d), for example), and lets you compare packages.
+    
+*   🔒 npm now offers [stage-only tokens](https://javascriptweekly.com/link/190653/d076523b1d) to let automated workflows stage a release for a maintainer to approve with 2FA. This offers a migration path for those who can't move to [trusted publishing](https://javascriptweekly.com/link/190654/d076523b1d) yet.
+    
+
+**RELEASES:**
+
+*   [Turborepo 2.11](https://javascriptweekly.com/link/190655/d076523b1d) – Experimental Rust, Python and Go support joins the task graph, plus up to 4x faster startup over 2.9.
+    
+*   [ESLint 10.11.0](https://javascriptweekly.com/link/190656/d076523b1d) – Performance update with faster startup and linting.
+    
+*   [Node.js 26.10.0 (Current)](https://javascriptweekly.com/link/190657/d076523b1d) – Adds [`util.debounce`/`throttle`](https://javascriptweekly.com/link/190658/d076523b1d).
+    
+*   📊 [billboard.js 4.1](https://javascriptweekly.com/link/190659/d076523b1d), [QuickJS-ng 0.17.0](https://javascriptweekly.com/link/190660/d076523b1d), [VueUse 15.0](https://javascriptweekly.com/link/190661/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[An Undercover Analyst Infiltrated the Gang Behind 'Mini Shai-Hulud'](https://javascriptweekly.com/link/190662/d076523b1d "www.wired.com") — Bad news for the group behind this spring's cascading supply chain attacks… Google had a mole in their group chat! WIRED explains how the group was monitored and disrupted, leading to [two recent arrests](https://javascriptweekly.com/link/190663/d076523b1d).
+
+Andy Greenberg (WIRED)
+
+[The V8 Runtime Undermined My Constant-Time JavaScript Library](https://javascriptweekly.com/link/190664/d076523b1d "soatok.blog") — A look at how even branchless JavaScript can leak secrets through CPU cache behavior, due to quirks in how V8 handles booleans and `-0`.
+
+Soatok Dreamseeker
+
+[Your UI Isn't Slow. It's Waiting on the Data](https://javascriptweekly.com/link/190665/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres so the data behind your UI loads fast as it grows. [Get $1000 credit to start](https://javascriptweekly.com/link/190665/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Do Frameworks Matter Anymore?](https://javascriptweekly.com/link/190666/d076523b1d "brookslybrand.com") — If you're using AI, you're either using a framework or your agent is building an ad-hoc one on the fly. A Remix team member argues that's a good reason to _want_ frameworks, and _better_ ones, too.
+
+Brooks Lybrand
+
+📄 [We Are All Product Engineers Now](https://javascriptweekly.com/link/190668/d076523b1d) – Laurie argues that understanding what customers need becomes a core developer skill. Laurie Voss
+
+📺 [Is AI Changing How JavaScript Itself Gets Designed?](https://javascriptweekly.com/link/190667/d076523b1d) – A 2-minute take from TC39 delegate Michael Ficarra. JetBrains
+
+📄 [Solid 2.0: It's the Little Things](https://javascriptweekly.com/link/190669/d076523b1d) – Six touches that change how [SolidJS 2.0](https://javascriptweekly.com/link/190670/d076523b1d) feels. Brenley Dueck
+
+📄 [How Notion Handles Concurrent Editing with CRDTs](https://javascriptweekly.com/link/190671/d076523b1d) Nehmzow and Guo (Notion)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xuy1lcdg0vlkmjacpeux.jpg)](https://javascriptweekly.com/link/190672/d076523b1d)
+
+[Plotly.js 4: A Big Update for the Popular Charting Library](https://javascriptweekly.com/link/190672/d076523b1d "plotly.com") — Now ships its own TypeScript types, adds ‘quiver’ plots _(above)_ for drawing vector fields (with many awesome examples in the post), accepts CSS Color 4 color strings, and removes Mapbox GL in favor of MapLibre (no token needed!)
+
+Chris Parmer
+
+🤖 [Transformers.js v4.3: Run AI Models in the Browser](https://javascriptweekly.com/link/190673/d076523b1d "github.com") — Adds support for structured output (e.g. JSON), using WebGPU on Safari 26+, and DeepSeek v4. [The docs](https://javascriptweekly.com/link/190674/d076523b1d) have had an overhaul and there’s now an [agent skill](https://javascriptweekly.com/link/190675/d076523b1d) you can use.
+
+Hugging Face
+
+💡 Hugging Face also released [a collection of 207 Apache-2.0 WebGPU kernels](https://javascriptweekly.com/link/190676/d076523b1d) — matmul, attention and quantization ops for your own runtime.
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://javascriptweekly.com/link/190677/d076523b1d "www.meticulous.ai") — Flaky tests slowing down dev? Meticulous gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+Meticulous sponsor
+
+[`@shadcn/lint`: An Agent-First Linter for Tailwind](https://javascriptweekly.com/link/190678/d076523b1d "github.com") — An ESLint/Oxlint plugin to enforce rules like _"no raw colors"_ and _"no restyling `&lt;Button>` from outside"_ with errors to steer agents back to your variants and tokens.
+
+shadcn
+
+[Devframe: A Framework for Building DevTools That Run Anywhere](https://javascriptweekly.com/link/190679/d076523b1d "devfra.me") — From the developer behind Vitest and Nuxt DevTools, _"a framework for building DevTools, in the same way Nuxt or Next.js provides a framework \[for web apps\]"_. Define a tool once and Devframe turns it into a Web Standard request handler you can mount almost anywhere.
+
+Anthony Fu
+
+✉️ [Mailflare: A Self-Hosted Inbox Built Entirely on Cloudflare](https://javascriptweekly.com/link/190680/d076523b1d "github.com") — A self-hosted inbox for custom domains built on Cloudflare’s Email Routing, Workers, D1 and R2. AGPL 3.0 licensed.
+
+Hieu Nguyen
+
+*   [gridstack.js 14.0](https://javascriptweekly.com/link/190681/d076523b1d) – The popular drag-and-drop dashboard layout library adds a `list` mode that reflows widgets like a reorderable list. ([Demos](https://javascriptweekly.com/link/190682/d076523b1d).)
+    
+*   🖼️ [image-dimensions 2.6](https://javascriptweekly.com/link/190683/d076523b1d) – Quickly get an image's dimensions by reading the least amount of data.
+    
+*   [Feedsmith 3.0](https://javascriptweekly.com/link/190684/d076523b1d) – A fast way to parse and generate web feeds, including RSS, Atom, and JSON.
+    
+
+📰 Classifieds
+
+[A developer's guide to adding eSignature to your app with an API](https://javascriptweekly.com/link/190685/d076523b1d): How signing workflows and embedded signing work, and the core steps to add signing to your product with Foxit.
+
+* * *
+
+🧩 CAPTCHA was built for a different internet. Replace it with invisible bot detection with a few lines of code. [Try Fingerprint for free](https://javascriptweekly.com/link/190696/d076523b1d).
+
+* * *
+
+Meet [chat.agent on Trigger.dev](https://javascriptweekly.com/link/190687/d076523b1d): durable AI agents built with the AI SDK you already use. Long-lived LLM sessions that survive deploys, crashes & refreshes.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ybmk2nasvvasjcjmkclc.jpg)](https://javascriptweekly.com/link/190688/d076523b1d)
+
+*   I love these [pure CSS 'hand drawn' annotations](https://javascriptweekly.com/link/190688/d076523b1d) _(above)_ you can add to any page in a `data-note` attribute.
+    
+*   Cloudflare's Sunil Pai writes about [the senior engineer 'death spiral'](https://javascriptweekly.com/link/190689/d076523b1d), where you go dark for weeks to prove yourself in a new role and end up burning out.
+    
+*   🤖 Simon Willison [writes about Jev](https://javascriptweekly.com/link/190690/d076523b1d), a new, fast 'decision model' taking developer social media by storm. Feed it semi-structured state and one or more questions and you get only numbers back (probabilities, choices and scores).
+    
+*   GitHub Actions has [a new `cache-mode` setting](https://javascriptweekly.com/link/190691/d076523b1d) to limit cache access per workflow or job, a defence against the kind of cache poisoning that [compromised TanStack's npm packages in May](https://javascriptweekly.com/link/190692/d076523b1d).
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/190693/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​803 — September 22, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/803)
+
+Together with 
+
+[![ParadeDB](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_164/e_make_transparent/co_white,e_outline:17/cdd8ciarsq6m8xam8oc3.png)](https://javascriptweekly.com/link/190635/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/l5ejacd7rpbkelmaxdto.jpg)](https://javascriptweekly.com/link/190636/d076523b1d)
+
+[tinyjs: Build JavaScript Desktop Apps in &lt;10MB](https://javascriptweekly.com/link/190636/d076523b1d "tinyjs.app") — I built an app with this and was impressed. You get a [txiki.js](https://javascriptweekly.com/link/190637/d076523b1d)-powered backend with full system access (including FFI!), native webview rendering, and tiny macOS, Linux, and Windows builds. It even makes it easy to sign/notarize the final app.
+
+Tarwin Stroh-Spijer
+
+There are lots of great options in this space though:
+
+* [Electrobun](https://javascriptweekly.com/link/190638/d076523b1d) offers richer multi-window and GPU features, at the cost of a larger TypeScript runtime – though it can instead use Zig, Rust, Go, or Odin for a tiny native main process.
+
+* [Perry](https://javascriptweekly.com/link/190639/d076523b1d) is a TypeScript to native AOT compiler whose primary UI model renders AppKit, Win32 and GTK4 widgets for a more conventionally native feel.
+
+* [Electron](https://javascriptweekly.com/link/190640/d076523b1d) and the experimental [Deno Desktop](https://javascriptweekly.com/link/190695/d076523b1d) are powerful, but their executables typically run several times larger.
+
+* [Neutralinojs](https://javascriptweekly.com/link/190642/d076523b1d) apps can be even smaller than tinyjs's, but you lose the general-purpose JavaScript privileged backend by design.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/5c853e9e.png)](https://javascriptweekly.com/link/190635/d076523b1d)
+
+[Full-Text Search in Drizzle Without a Second System](https://javascriptweekly.com/link/190635/d076523b1d "github.com") — Try the official ParadeDB integration for Drizzle. Search your live Postgres tables. No ETL, no Elasticsearch. ParadeDB cloud coming soon.
+
+ParadeDB sponsor
+
+[Persistent Databases in the Browser with DuckDB-Wasm and OPFS](https://javascriptweekly.com/link/190643/d076523b1d "duckdb.org") — A walkthrough of running [DuckDB](https://javascriptweekly.com/link/190644/d076523b1d) in the browser with a database file that survives reloads using the [Origin Private File System](https://javascriptweekly.com/link/190645/d076523b1d) now supported by all major browsers.
+
+Piovesan and Wielenga (DuckDB)
+
+[How Linear Reworked Its CI for 4x the Tests](https://javascriptweekly.com/link/190646/d076523b1d "linear.app") — Eager agents grew Linear's test suite, and its CI costs with it! They share some remedies: rewriting type-aware ESLint rules as plain AST checks cut lint time 55% and eased a move to [Oxlint](https://javascriptweekly.com/link/190647/d076523b1d), while selectively turning off Vitest's isolation saved a further 17% a month.
+
+Mufeez Amjad (Linear)
+
+**IN BRIEF:**
+
+* Lovable [rewrote Vite's dev server in Rust](https://javascriptweekly.com/link/190648/d076523b1d) (calling it [OJ](https://javascriptweekly.com/link/190649/d076523b1d)) for performance reasons, but Evan You [disputes the benchmark](https://javascriptweekly.com/link/190650/d076523b1d) and predicts AI will have everyone maintaining *"their own slop fork"*.
+
+* 📊 [npmchart.com](https://javascriptweekly.com/link/190651/d076523b1d) plots download trends, releases and repo activity for any npm package (here's [Svelte's](https://javascriptweekly.com/link/190652/d076523b1d), for example), and lets you compare packages.
+
+* 🔒 npm now offers [stage-only tokens](https://javascriptweekly.com/link/190653/d076523b1d) to let automated workflows stage a release for a maintainer to approve with 2FA. This offers a migration path for those who can't move to [trusted publishing](https://javascriptweekly.com/link/190654/d076523b1d) yet.
+
+**RELEASES:**
+
+* [Turborepo 2.11](https://javascriptweekly.com/link/190655/d076523b1d) – Experimental Rust, Python and Go support joins the task graph, plus up to 4x faster startup over 2.9.
+
+* [ESLint 10.11.0](https://javascriptweekly.com/link/190656/d076523b1d) – Performance update with faster startup and linting.
+
+* [Node.js 26.10.0 (Current)](https://javascriptweekly.com/link/190657/d076523b1d) – Adds [`util.debounce`/`throttle`](https://javascriptweekly.com/link/190658/d076523b1d).
+
+* 📊 [billboard.js 4.1](https://javascriptweekly.com/link/190659/d076523b1d), [QuickJS-ng 0.17.0](https://javascriptweekly.com/link/190660/d076523b1d), [VueUse 15.0](https://javascriptweekly.com/link/190661/d076523b1d)
+
+📖  Articles and Videos
+
+[An Undercover Analyst Infiltrated the Gang Behind 'Mini Shai-Hulud'](https://javascriptweekly.com/link/190662/d076523b1d "www.wired.com") — Bad news for the group behind this spring's cascading supply chain attacks… Google had a mole in their group chat! WIRED explains how the group was monitored and disrupted, leading to [two recent arrests](https://javascriptweekly.com/link/190663/d076523b1d).
+
+Andy Greenberg (WIRED)
+
+[The V8 Runtime Undermined My Constant-Time JavaScript Library](https://javascriptweekly.com/link/190664/d076523b1d "soatok.blog") — A look at how even branchless JavaScript can leak secrets through CPU cache behavior, due to quirks in how V8 handles booleans and `-0`.
+
+Soatok Dreamseeker
+
+[Your UI Isn't Slow. It's Waiting on the Data](https://javascriptweekly.com/link/190665/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres so the data behind your UI loads fast as it grows. [Get $1000 credit to start](https://javascriptweekly.com/link/190665/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[Do Frameworks Matter Anymore?](https://javascriptweekly.com/link/190666/d076523b1d "brookslybrand.com") — If you're using AI, you're either using a framework or your agent is building an ad-hoc one on the fly. A Remix team member argues that's a good reason to *want* frameworks, and *better* ones, too.
+
+Brooks Lybrand
+
+📄 [We Are All Product Engineers Now](https://javascriptweekly.com/link/190668/d076523b1d) – Laurie argues that understanding what customers need becomes a core developer skill. Laurie Voss
+
+📺 [Is AI Changing How JavaScript Itself Gets Designed?](https://javascriptweekly.com/link/190667/d076523b1d) – A 2-minute take from TC39 delegate Michael Ficarra. JetBrains
+
+📄 [Solid 2.0: It's the Little Things](https://javascriptweekly.com/link/190669/d076523b1d) – Six touches that change how [SolidJS 2.0](https://javascriptweekly.com/link/190670/d076523b1d) feels. Brenley Dueck
+
+📄 [How Notion Handles Concurrent Editing with CRDTs](https://javascriptweekly.com/link/190671/d076523b1d) Nehmzow and Guo (Notion)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xuy1lcdg0vlkmjacpeux.jpg)](https://javascriptweekly.com/link/190672/d076523b1d)
+
+[Plotly.js 4: A Big Update for the Popular Charting Library](https://javascriptweekly.com/link/190672/d076523b1d "plotly.com") — Now ships its own TypeScript types, adds ‘quiver’ plots *(above)* for drawing vector fields (with many awesome examples in the post), accepts CSS Color 4 color strings, and removes Mapbox GL in favor of MapLibre (no token needed!)
+
+Chris Parmer
+
+🤖 [Transformers.js v4.3: Run AI Models in the Browser](https://javascriptweekly.com/link/190673/d076523b1d "github.com") — Adds support for structured output (e.g. JSON), using WebGPU on Safari 26+, and DeepSeek v4. [The docs](https://javascriptweekly.com/link/190674/d076523b1d) have had an overhaul and there’s now an [agent skill](https://javascriptweekly.com/link/190675/d076523b1d) you can use.
+
+Hugging Face
+
+💡 Hugging Face also released [a collection of 207 Apache-2.0 WebGPU kernels](https://javascriptweekly.com/link/190676/d076523b1d) — matmul, attention and quantization ops for your own runtime.
+
+[Still Writing Tests Manually? Meticulous AI Is Here](https://javascriptweekly.com/link/190677/d076523b1d "www.meticulous.ai") — Flaky tests slowing down dev? Meticulous gives engineers confidence to ship faster by autonomously testing every edge case of your web app.
+
+Meticulous sponsor
+
+[`@shadcn/lint`: An Agent-First Linter for Tailwind](https://javascriptweekly.com/link/190678/d076523b1d "github.com") — An ESLint/Oxlint plugin to enforce rules like *"no raw colors"* and *"no restyling `&lt;Button>` from outside"* with errors to steer agents back to your variants and tokens.
+
+shadcn
+
+[Devframe: A Framework for Building DevTools That Run Anywhere](https://javascriptweekly.com/link/190679/d076523b1d "devfra.me") — From the developer behind Vitest and Nuxt DevTools, *"a framework for building DevTools, in the same way Nuxt or Next.js provides a framework \[for web apps]"*. Define a tool once and Devframe turns it into a Web Standard request handler you can mount almost anywhere.
+
+Anthony Fu
+
+✉️ [Mailflare: A Self-Hosted Inbox Built Entirely on Cloudflare](https://javascriptweekly.com/link/190680/d076523b1d "github.com") — A self-hosted inbox for custom domains built on Cloudflare’s Email Routing, Workers, D1 and R2. AGPL 3.0 licensed.
+
+Hieu Nguyen
+
+* [gridstack.js 14.0](https://javascriptweekly.com/link/190681/d076523b1d) – The popular drag-and-drop dashboard layout library adds a `list` mode that reflows widgets like a reorderable list. ([Demos](https://javascriptweekly.com/link/190682/d076523b1d).)
+
+* 🖼️ [image-dimensions 2.6](https://javascriptweekly.com/link/190683/d076523b1d) – Quickly get an image's dimensions by reading the least amount of data.
+
+* [Feedsmith 3.0](https://javascriptweekly.com/link/190684/d076523b1d) – A fast way to parse and generate web feeds, including RSS, Atom, and JSON.
+
+📰 Classifieds
+
+[A developer's guide to adding eSignature to your app with an API](https://javascriptweekly.com/link/190685/d076523b1d): How signing workflows and embedded signing work, and the core steps to add signing to your product with Foxit.
+
+***
+
+🧩 CAPTCHA was built for a different internet. Replace it with invisible bot detection with a few lines of code. [Try Fingerprint for free](https://javascriptweekly.com/link/190696/d076523b1d).
+
+***
+
+Meet [chat.agent on Trigger.dev](https://javascriptweekly.com/link/190687/d076523b1d): durable AI agents built with the AI SDK you already use. Long-lived LLM sessions that survive deploys, crashes & refreshes.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ybmk2nasvvasjcjmkclc.jpg)](https://javascriptweekly.com/link/190688/d076523b1d)
+
+* I love these [pure CSS 'hand drawn' annotations](https://javascriptweekly.com/link/190688/d076523b1d) *(above)* you can add to any page in a `data-note` attribute.
+
+* Cloudflare's Sunil Pai writes about [the senior engineer 'death spiral'](https://javascriptweekly.com/link/190689/d076523b1d), where you go dark for weeks to prove yourself in a new role and end up burning out.
+
+* 🤖 Simon Willison [writes about Jev](https://javascriptweekly.com/link/190690/d076523b1d), a new, fast 'decision model' taking developer social media by storm. Feed it semi-structured state and one or more questions and you get only numbers back (probabilities, choices and scores).
+
+* GitHub Actions has [a new `cache-mode` setting](https://javascriptweekly.com/link/190691/d076523b1d) to limit cache access per workflow or job, a defence against the kind of cache poisoning that [compromised TanStack's npm packages in May](https://javascriptweekly.com/link/190692/d076523b1d).
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/190693/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
