@@ -1,0 +1,272 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 12 Node built-ins that replace npm packages
+description: 12 Node built-ins that replace npm packages
+date: 星期四 04 下午 九月 24o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/642
+origin_site: https://nodeweekly.com/issues/642
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="12 Node built-ins that replace npm packages" url="https://nodeweekly.com/issues/642" />
+
+<Detail client:only="react">
+	#​642 — September 24, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/642)
+
+⚠️ We're taking a week off next week, so we'll be back on Thursday, October 8.  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![agentfield.ai](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_314/e_make_transparent/co_white,e_outline:10/dy2daidfoserzvblukbv.jpg)](https://nodeweekly.com/link/190757/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rjkg96w3qff4rlobgivq.jpg)](https://nodeweekly.com/link/190758/0a4070b383)
+
+[Node.js Built-ins That Replaced npm Packages](https://nodeweekly.com/link/190758/0a4070b383 "flaviocopes.com") — A practical tour of 12 Node built-ins that replace packages like `axios`, `dotenv`, `nodemon` and `chalk`. Each is explained with its stability level in Node 24 LTS and gotchas that might make you want to stick with your existing dependency anyway.
+
+Flavio Copes
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/9a068ba0.jpg)](https://nodeweekly.com/link/190757/0a4070b383)
+
+[CodeAF: The Open-Source Software Factory for Open Models](https://nodeweekly.com/link/190757/0a4070b383 "agentfield.ai") — Instead of juggling a terminal for every agent, you get one window for every project. Hand work off: it splits it into parts, runs them in parallel, tests what comes back and merges what passes. Many models, one session: the right one for each call.
+
+AgentField.ai sponsor
+
+[Node.js 26.10.0 (Current) Released](https://nodeweekly.com/link/190759/0a4070b383 "nodejs.org") — Built-in, promise-based [`util.debounce()` and `util.throttle()`](https://nodeweekly.com/link/190760/0a4070b383) arrive, complete with `AbortSignal` support. There’s also `[util.markPromiseAsHandled()](https://nodeweekly.com/link/190761/0a4070b383)` to help retire `.catch(() => &lcub;})` hacks. Plus a little more besides.
+
+Antoine du Hamel
+
+💡 [Node v22.23.3 (LTS)](https://nodeweekly.com/link/190762/0a4070b383) also landed with updated root certificates and dependencies (OpenSSL, npm, and Undici) plus minor fixes.
+
+**IN BRIEF:**
+
+*   From Node.js 27, [Intel Macs drop to only having 'experimental' support](https://nodeweekly.com/link/190763/0a4070b383), meaning no official x64 macOS builds and an arm64-only installer.
+    
+*   James Snell has proposed [a `--process-timeout` flag](https://nodeweekly.com/link/190764/0a4070b383) that kills a stuck process, even one in a tight loop, and reports what kept it alive.
+    
+*   GitHub Actions has [removed Node 20 from its runners](https://nodeweekly.com/link/190765/0a4070b383) so if you maintain an action, switch `runs.using` to `node24` and publish a new release.
+    
+*   Yagiz Nizipli has opened [a PR that shrinks the `node` binary by about a third](https://nodeweekly.com/link/190766/0a4070b383) (147MB to 95MB on macOS arm64) using extra compression and stripping symbols. Notably, 𝕏 [Grok was used](https://nodeweekly.com/link/190767/0a4070b383) to do this work.
+    
+*   Daniel Lemire explains how AI-assisted experimentation [made several libraries that ship in Node faster](https://nodeweekly.com/link/190768/0a4070b383), including Ada, simdjson and simdutf.
+    
+
+[npm Tokens Can Now Stage Releases Without Publishing Them](https://nodeweekly.com/link/190769/0a4070b383 "github.blog") — A new token permission lets CI stage npm releases but not publish them, with a maintainer approving each staged version with 2FA. It offers a migration path ahead of npm's planned ending of direct publishing using bypass-2FA tokens in January 2027 if you can’t use [trusted publishing](https://nodeweekly.com/link/190770/0a4070b383) yet.
+
+GitHub / npm team
+
+📄 [How I Traced a Node.js Streams Bug in `Duplex.from()`](https://nodeweekly.com/link/190771/0a4070b383) – A first-time core contributor's path from issue to PR. Aman Chadha
+
+📄 [Publishing a Subfolder to npm for Cleaner Package Paths](https://nodeweekly.com/link/190772/0a4070b383) – How to keep `dist/` (or `src/`) out of your package's import paths. Bramus
+
+📄 [Faster SSE Responses with Async Generators and `Promise.race()`](https://nodeweekly.com/link/190773/0a4070b383) Valeri Karpov
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ooj579buk2rduxf6awis.jpg)](https://nodeweekly.com/link/190774/0a4070b383)
+
+[secure-eval-worker: A Safer `eval()` via Node's Permission Model](https://nodeweekly.com/link/190774/0a4070b383 "blog.platformatic.dev") — A new way to run untrusted (or AI-generated) JavaScript in a locked-down worker with timeouts, memory caps, and access only to the host functions you choose. Node 26 only, and not a true sandbox.
+
+Matteo Collina and Luca Maraschi
+
+🔒 [CVE Lite CLI: Scan Your Lockfile, Get the Upgrades to Run](https://nodeweekly.com/link/190775/0a4070b383 "owasp.github.io") — An OWASP-backed scanner that reads your lockfile, checks it against OSV and npm’s advisories, and gives you npm/pnpm/Yarn/Bun commands to use, including which parent package(s) to bump for transitive issues.
+
+Sonu Kapoor and OWASP
+
+[Your Nightly Rollup Job Is a Query That Got Too Big](https://nodeweekly.com/link/190776/0a4070b383 "www.tigerdata.com") — TimescaleDB extends Postgres with continuous aggregates to keep rollups fresh. No batch job. [Get $1000 credit to start](https://nodeweekly.com/link/190776/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+🤖 [Transformers.js v4.3: Run AI Models from JavaScript](https://nodeweekly.com/link/190777/0a4070b383 "github.com") — Adds support for structured output (e.g. JSON), using WebGPU on Safari 26+, and DeepSeek v4. [The docs](https://nodeweekly.com/link/190778/0a4070b383) have had an overhaul and there’s now an [agent skill](https://nodeweekly.com/link/190779/0a4070b383) you can use.
+
+Hugging Face
+
+[vitest-gpu and jest-gpu: Test WebGL and WebGPU Code Without a Browser](https://nodeweekly.com/link/190780/0a4070b383 "ben3d.ca") — Vitest and Jest environments that give tests WebGL and WebGPU contexts in Node, so you can compile shaders, run compute passes, or diff frames against baselines _sans_ browser.
+
+Ben Houston
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lsy7rbj3vk6l9lzqxhgd.jpg)](https://nodeweekly.com/link/190781/0a4070b383)
+
+*   [Superdiff 4.3](https://nodeweekly.com/link/190782/0a4070b383) – A library that produces diffs of objects, arrays and text. [v4.3 can now diff code](https://nodeweekly.com/link/190781/0a4070b383) by line and token too _(above)_.
+    
+*   [dotenv 18.0](https://nodeweekly.com/link/190783/0a4070b383) – The popular `.env` file loader. [v18 adds a CLI](https://nodeweekly.com/link/190784/0a4070b383) and a faster opt-in parser, but drops `-r dotenv/config` preloading in favor of `dotenv run --`.
+    
+*   [Tinypool 2.2](https://nodeweekly.com/link/190785/0a4070b383) – Minimal worker thread pool and Piscina fork. Now [accepts a `URL` instance](https://nodeweekly.com/link/190786/0a4070b383) as the filename.
+    
+*   [NestJS 12.1](https://nodeweekly.com/link/190787/0a4070b383) – Now with [built-in cookie support](https://nodeweekly.com/link/190788/0a4070b383), [CSRF](https://nodeweekly.com/link/190789/0a4070b383) protection, and security headers.
+    
+*   [mongodb-memory-server 11.3](https://nodeweekly.com/link/190790/0a4070b383) – Spin up real MongoDB servers for tests.
+    
+*   [SuperTest 7.3](https://nodeweekly.com/link/190791/0a4070b383) – Library for testing Node HTTP servers using a fluent API.
+    
+*   [SQL Formatter 15.9](https://nodeweekly.com/link/190792/0a4070b383) – Library for pretty-printing SQL queries.
+    
+
+📰 Classifieds
+
+🚫 Ban the device, not just the account. [Fingerprint's visitor ID](https://nodeweekly.com/link/190793/0a4070b383) catches ban evaders — even incognito or behind a proxy.
+
+* * *
+
+🎟️ Join us at [Supabase Select](https://nodeweekly.com/link/190794/0a4070b383) on October 2. Get first-hand information about what's coming soon in Supabase. [Apply to attend with 25% off: SUPAWEEKLY](https://nodeweekly.com/link/190794/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+*   [pnpm 12.6](https://nodeweekly.com/link/190795/0a4070b383) can now dedupe dependency versions across a workspace as it installs, keeps `node_modules` working after a project is moved (macOS and Linux only), and adds `--save-types` for `@types/*` packages.
+    
+*   Coding agents quadrupled Linear's test suite, so [its team reworked their CI](https://nodeweekly.com/link/190796/0a4070b383) to get costs down: rewriting type-aware ESLint rules as plain AST checks cut lint time 55%, and selectively disabling Vitest's isolation saved a further 17% a month.
+    
+*   Cloudflare's Sunil Pai wrote about [the senior engineer 'death spiral'](https://nodeweekly.com/link/190797/0a4070b383), where you go quiet for weeks to prove yourself in a new role and end up burning out.
+    
+*   🧪 [A 'periodic table' of all 115 standard HTML elements!](https://nodeweekly.com/link/190798/0a4070b383)
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​642 — September 24, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/642)
+
+⚠️ We're taking a week off next week, so we'll be back on Thursday, October 8.\
+\_\_\
+*Your editor, Peter Cooper*
+
+Together with 
+
+[![agentfield.ai](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_314/e_make_transparent/co_white,e_outline:10/dy2daidfoserzvblukbv.jpg)](https://nodeweekly.com/link/190757/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rjkg96w3qff4rlobgivq.jpg)](https://nodeweekly.com/link/190758/0a4070b383)
+
+[Node.js Built-ins That Replaced npm Packages](https://nodeweekly.com/link/190758/0a4070b383 "flaviocopes.com") — A practical tour of 12 Node built-ins that replace packages like `axios`, `dotenv`, `nodemon` and `chalk`. Each is explained with its stability level in Node 24 LTS and gotchas that might make you want to stick with your existing dependency anyway.
+
+Flavio Copes
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/9a068ba0.jpg)](https://nodeweekly.com/link/190757/0a4070b383)
+
+[CodeAF: The Open-Source Software Factory for Open Models](https://nodeweekly.com/link/190757/0a4070b383 "agentfield.ai") — Instead of juggling a terminal for every agent, you get one window for every project. Hand work off: it splits it into parts, runs them in parallel, tests what comes back and merges what passes. Many models, one session: the right one for each call.
+
+AgentField.ai sponsor
+
+[Node.js 26.10.0 (Current) Released](https://nodeweekly.com/link/190759/0a4070b383 "nodejs.org") — Built-in, promise-based [`util.debounce()` and `util.throttle()`](https://nodeweekly.com/link/190760/0a4070b383) arrive, complete with `AbortSignal` support. There’s also `[util.markPromiseAsHandled()](https://nodeweekly.com/link/190761/0a4070b383)` to help retire `.catch(() => &lcub;})` hacks. Plus a little more besides.
+
+Antoine du Hamel
+
+💡 [Node v22.23.3 (LTS)](https://nodeweekly.com/link/190762/0a4070b383) also landed with updated root certificates and dependencies (OpenSSL, npm, and Undici) plus minor fixes.
+
+**IN BRIEF:**
+
+* From Node.js 27, [Intel Macs drop to only having 'experimental' support](https://nodeweekly.com/link/190763/0a4070b383), meaning no official x64 macOS builds and an arm64-only installer.
+
+* James Snell has proposed [a `--process-timeout` flag](https://nodeweekly.com/link/190764/0a4070b383) that kills a stuck process, even one in a tight loop, and reports what kept it alive.
+
+* GitHub Actions has [removed Node 20 from its runners](https://nodeweekly.com/link/190765/0a4070b383) so if you maintain an action, switch `runs.using` to `node24` and publish a new release.
+
+* Yagiz Nizipli has opened [a PR that shrinks the `node` binary by about a third](https://nodeweekly.com/link/190766/0a4070b383) (147MB to 95MB on macOS arm64) using extra compression and stripping symbols. Notably, 𝕏 [Grok was used](https://nodeweekly.com/link/190767/0a4070b383) to do this work.
+
+* Daniel Lemire explains how AI-assisted experimentation [made several libraries that ship in Node faster](https://nodeweekly.com/link/190768/0a4070b383), including Ada, simdjson and simdutf.
+
+[npm Tokens Can Now Stage Releases Without Publishing Them](https://nodeweekly.com/link/190769/0a4070b383 "github.blog") — A new token permission lets CI stage npm releases but not publish them, with a maintainer approving each staged version with 2FA. It offers a migration path ahead of npm's planned ending of direct publishing using bypass-2FA tokens in January 2027 if you can’t use [trusted publishing](https://nodeweekly.com/link/190770/0a4070b383) yet.
+
+GitHub / npm team
+
+📄 [How I Traced a Node.js Streams Bug in `Duplex.from()`](https://nodeweekly.com/link/190771/0a4070b383) – A first-time core contributor's path from issue to PR. Aman Chadha
+
+📄 [Publishing a Subfolder to npm for Cleaner Package Paths](https://nodeweekly.com/link/190772/0a4070b383) – How to keep `dist/` (or `src/`) out of your package's import paths. Bramus
+
+📄 [Faster SSE Responses with Async Generators and `Promise.race()`](https://nodeweekly.com/link/190773/0a4070b383) Valeri Karpov
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ooj579buk2rduxf6awis.jpg)](https://nodeweekly.com/link/190774/0a4070b383)
+
+[secure-eval-worker: A Safer `eval()` via Node's Permission Model](https://nodeweekly.com/link/190774/0a4070b383 "blog.platformatic.dev") — A new way to run untrusted (or AI-generated) JavaScript in a locked-down worker with timeouts, memory caps, and access only to the host functions you choose. Node 26 only, and not a true sandbox.
+
+Matteo Collina and Luca Maraschi
+
+🔒 [CVE Lite CLI: Scan Your Lockfile, Get the Upgrades to Run](https://nodeweekly.com/link/190775/0a4070b383 "owasp.github.io") — An OWASP-backed scanner that reads your lockfile, checks it against OSV and npm’s advisories, and gives you npm/pnpm/Yarn/Bun commands to use, including which parent package(s) to bump for transitive issues.
+
+Sonu Kapoor and OWASP
+
+[Your Nightly Rollup Job Is a Query That Got Too Big](https://nodeweekly.com/link/190776/0a4070b383 "www.tigerdata.com") — TimescaleDB extends Postgres with continuous aggregates to keep rollups fresh. No batch job. [Get $1000 credit to start](https://nodeweekly.com/link/190776/0a4070b383).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+🤖 [Transformers.js v4.3: Run AI Models from JavaScript](https://nodeweekly.com/link/190777/0a4070b383 "github.com") — Adds support for structured output (e.g. JSON), using WebGPU on Safari 26+, and DeepSeek v4. [The docs](https://nodeweekly.com/link/190778/0a4070b383) have had an overhaul and there’s now an [agent skill](https://nodeweekly.com/link/190779/0a4070b383) you can use.
+
+Hugging Face
+
+[vitest-gpu and jest-gpu: Test WebGL and WebGPU Code Without a Browser](https://nodeweekly.com/link/190780/0a4070b383 "ben3d.ca") — Vitest and Jest environments that give tests WebGL and WebGPU contexts in Node, so you can compile shaders, run compute passes, or diff frames against baselines *sans* browser.
+
+Ben Houston
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lsy7rbj3vk6l9lzqxhgd.jpg)](https://nodeweekly.com/link/190781/0a4070b383)
+
+* [Superdiff 4.3](https://nodeweekly.com/link/190782/0a4070b383) – A library that produces diffs of objects, arrays and text. [v4.3 can now diff code](https://nodeweekly.com/link/190781/0a4070b383) by line and token too *(above)*.
+
+* [dotenv 18.0](https://nodeweekly.com/link/190783/0a4070b383) – The popular `.env` file loader. [v18 adds a CLI](https://nodeweekly.com/link/190784/0a4070b383) and a faster opt-in parser, but drops `-r dotenv/config` preloading in favor of `dotenv run --`.
+
+* [Tinypool 2.2](https://nodeweekly.com/link/190785/0a4070b383) – Minimal worker thread pool and Piscina fork. Now [accepts a `URL` instance](https://nodeweekly.com/link/190786/0a4070b383) as the filename.
+
+* [NestJS 12.1](https://nodeweekly.com/link/190787/0a4070b383) – Now with [built-in cookie support](https://nodeweekly.com/link/190788/0a4070b383), [CSRF](https://nodeweekly.com/link/190789/0a4070b383) protection, and security headers.
+
+* [mongodb-memory-server 11.3](https://nodeweekly.com/link/190790/0a4070b383) – Spin up real MongoDB servers for tests.
+
+* [SuperTest 7.3](https://nodeweekly.com/link/190791/0a4070b383) – Library for testing Node HTTP servers using a fluent API.
+
+* [SQL Formatter 15.9](https://nodeweekly.com/link/190792/0a4070b383) – Library for pretty-printing SQL queries.
+
+📰 Classifieds
+
+🚫 Ban the device, not just the account. [Fingerprint's visitor ID](https://nodeweekly.com/link/190793/0a4070b383) catches ban evaders — even incognito or behind a proxy.
+
+***
+
+🎟️ Join us at [Supabase Select](https://nodeweekly.com/link/190794/0a4070b383) on October 2. Get first-hand information about what's coming soon in Supabase. [Apply to attend with 25% off: SUPAWEEKLY](https://nodeweekly.com/link/190794/0a4070b383).
+
+📢  Elsewhere in the ecosystem
+
+* [pnpm 12.6](https://nodeweekly.com/link/190795/0a4070b383) can now dedupe dependency versions across a workspace as it installs, keeps `node_modules` working after a project is moved (macOS and Linux only), and adds `--save-types` for `@types/*` packages.
+
+* Coding agents quadrupled Linear's test suite, so [its team reworked their CI](https://nodeweekly.com/link/190796/0a4070b383) to get costs down: rewriting type-aware ESLint rules as plain AST checks cut lint time 55%, and selectively disabling Vitest's isolation saved a further 17% a month.
+
+* Cloudflare's Sunil Pai wrote about [the senior engineer 'death spiral'](https://nodeweekly.com/link/190797/0a4070b383), where you go quiet for weeks to prove yourself in a new role and end up burning out.
+
+* 🧪 [A 'periodic table' of all 115 standard HTML elements!](https://nodeweekly.com/link/190798/0a4070b383)
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
