@@ -1,0 +1,229 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Signals come to React-Redux
+description: Signals come to React-Redux
+date: 星期五 05 下午 九月 25o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/492
+origin_site: https://react.statuscode.com/issues/492
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Signals come to React-Redux" url="https://react.statuscode.com/issues/492" />
+
+<Detail client:only="react">
+	#​492 — September 25, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/492)
+
+👋 We're taking a week off next week, so we'll be back on Friday, October 9.  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_187/e_make_transparent/co_white,e_outline:20/hxaajcewmf94f29l9dka.png)](https://react.statuscode.com/link/190896/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wurtgptbln8tma7ldkus.jpg)](https://react.statuscode.com/link/190897/5d0bbb4a61)
+
+[Rendering Huge Pull Requests in the GitHub _Copilot_ App](https://react.statuscode.com/link/190897/5d0bbb4a61 "github.blog") — GitHub's [desktop Copilot app](https://react.statuscode.com/link/190898/5d0bbb4a61) is built on React (atop [Tauri](https://react.statuscode.com/link/190899/5d0bbb4a61)), but to show PRs with 2000+ files and a million changed lines, it renders its code rows _outside_ React. A worthwhile read if you build UIs that need to stay fast at scale, and they're upfront about the mistakes they made along the way.
+
+Alberto Gimeno (GitHub)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a903eb2f.png)](https://react.statuscode.com/link/190896/5d0bbb4a61)
+
+[Fewer Findings. Only Real Risks](https://react.statuscode.com/link/190896/5d0bbb4a61 "coderabbit.link") — AI-generated code can introduce vulnerabilities that are easy to miss in a pull request. **CodeRabbit Security** continuously reviews your codebase for complex bugs and security risks, using full-codebase context to follow data flows, dependencies, and patterns beyond the latest diff.
+
+CodeRabbit sponsor
+
+[Redact: An Alternative 'Projection' of React](https://react.statuscode.com/link/190900/5d0bbb4a61 "github.com") — Back in May, Tanner Linsley [explained how he’d built](https://react.statuscode.com/link/190901/5d0bbb4a61) a synchronous, React-compatible runtime. It’s now at v0.1 with React 19.3 API support, a drop-in Vite plugin, and a useful [compatibility table](https://react.statuscode.com/link/190902/5d0bbb4a61).
+
+TanStack
+
+💡 The runtime is a fraction of React's size, but the trade-off is no concurrent rendering ([this Japanese blog post](https://react.statuscode.com/link/190903/5d0bbb4a61) has a nice look into that). There's also no license yet, and it can be considered experimental.
+
+**IN BRIEF:**
+
+*   ⚠️ Using `next/og` on Node? [Next.js 16.3.6](https://react.statuscode.com/link/190904/5d0bbb4a61) fixes a critical RCE in `ImageResponse` affecting v16.2+. [A scheduled release next week](https://react.statuscode.com/link/190905/5d0bbb4a61) will fix nine more vulnerabilities.
+    
+*   [Astro](https://react.statuscode.com/link/190906/5d0bbb4a61)'s React integration [reaches v7.0](https://react.statuscode.com/link/190907/5d0bbb4a61), moving from Babel to Oxc and adding React Compiler support with a `compiler: true` option.
+    
+*   Vercel has [made its bug bounty program public](https://react.statuscode.com/link/190908/5d0bbb4a61), folding its private and open source programs (which covered Next.js) into one.
+    
+
+[React-Redux 9.4 Alpha Adds Opt-In `useSignalSelector`](https://react.statuscode.com/link/190909/5d0bbb4a61 "github.com") — Redux runs every mounted selector on every dispatch, which gets costly in huge apps. The new opt-in, signals-based `useSignalSelector` tracks which state each selector reads, so a dispatch only re-runs selectors whose data changed.
+
+Mark Erikson
+
+💡 Alpha 0, above, has the full explainer, but [Alpha 1](https://react.statuscode.com/link/190910/5d0bbb4a61) landed yesterday with a key bugfix and corrected benchmarks.
+
+📄 [Helix: How Shopify is Using LLMs to Move Its App Off React Native](https://react.statuscode.com/link/190911/5d0bbb4a61) – A look behind the scenes of Shopify's [recently announced migration](https://react.statuscode.com/link/190912/5d0bbb4a61) from React Native to Swift and Kotlin. Talha Naqvi (Shopify)
+
+📄 [Props Are Not a Design System](https://react.statuscode.com/link/190913/5d0bbb4a61) – Why arbitrary style props make every button a one-off. Robert Vitonsky
+
+📄 [AI, Open Source, and the Long Road to _TanStack Charts_](https://react.statuscode.com/link/190914/5d0bbb4a61) – A look into how Tanner builds with agents now. Tanner Linsley
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lccwqt7l0qcob0e72z9o.jpg)](https://react.statuscode.com/link/190915/5d0bbb4a61)
+
+[Playroom: Design with JSX, Powered by Your Own Component Library](https://react.statuscode.com/link/190915/5d0bbb4a61 "github.com") — A browser-based JSX playground, wired up to your own component library, that renders every theme and viewport width side by side as you edit during dev/testing. [Check out this live demo](https://react.statuscode.com/link/190916/5d0bbb4a61).
+
+SEEK
+
+💡 Along similar lines, Nearform has just released [v5](https://react.statuscode.com/link/190917/5d0bbb4a61) of [React Live](https://react.statuscode.com/link/190918/5d0bbb4a61), a live editing experience for React components but better suited for use in docs, blog posts, etc.
+
+[pdfcn: Copy-Paste Components for Making PDFs](https://react.statuscode.com/link/190919/5d0bbb4a61 "www.pdfcn.dev") — Takes the shadcn approach to PDF generation, with components for tables, headers, lists, and larger blocks for things like invoices and reports. Rendering is done with [Takumi](https://react.statuscode.com/link/190920/5d0bbb4a61) or [Forme](https://react.statuscode.com/link/190921/5d0bbb4a61), both WASM-based engines that don't need a headless browser.
+
+Aniket Pawar
+
+[loading-dev: CSS-Animated Loading Indicators for React](https://react.statuscode.com/link/190922/5d0bbb4a61 "loading.dev") — 29 CSS-animated loading spinners for React 19+. You set size, color and duration, and they respect reduced motion. You can [customize and play with](https://react.statuscode.com/link/190923/5d0bbb4a61) each of them too.
+
+Jakub Krehel and Paul Faivret
+
+*   [React Native Reanimated 4.7](https://react.statuscode.com/link/190924/5d0bbb4a61) – Create smooth animations and interactions in React Native apps. Layout animations now run on its new engine by default.
+    
+*   [gridstack.js 14.0](https://react.statuscode.com/link/190925/5d0bbb4a61) – The popular drag-and-drop dashboard layout library adds a `list` mode that reflows widgets like a reorderable list. ([Demos](https://react.statuscode.com/link/190926/5d0bbb4a61).)
+    
+*   😀 [Frimousse 0.4](https://react.statuscode.com/link/190927/5d0bbb4a61) – Lightweight, unstyled emoji picker component.
+    
+*   [React Three Fiber 9.8](https://react.statuscode.com/link/190928/5d0bbb4a61) – Now compatible with React 19.3.
+    
+
+📰 Classifieds
+
+The future of mobile development is agentic. For years, mobile shipped slower than the web. Now, agents are coding/testing/shipping [all on Expo](https://react.statuscode.com/link/190929/5d0bbb4a61).
+
+* * *
+
+🐻 Build apps, not walls — for the AI era. Learn from library authors, core teams & top engineers. [See you in Berlin & online, Dec 4 & 7!](https://react.statuscode.com/link/190930/5d0bbb4a61)
+
+* * *
+
+[Build products that help people build their lives](https://react.statuscode.com/link/190931/5d0bbb4a61) - Fidelity technologists can change the way our clients invest - for the better and for everyone.
+
+And finally…
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ovbpaehwz8p6qlfastfd.jpg)](https://react.statuscode.com/link/190932/5d0bbb4a61)
+
+[Animal Island UI: A 'Kawaii' React Component Library](https://react.statuscode.com/link/190932/5d0bbb4a61 "guokaigdg.github.io") — Originally based on Animal Crossing imagery (for which Nintendo [issued a DMCA takedown](https://react.statuscode.com/link/190933/5d0bbb4a61)) but now with its own assets and MIT licensed. The site’s in Chinese but it's easy to [browse the components](https://react.statuscode.com/link/190934/5d0bbb4a61), and the [GitHub README](https://react.statuscode.com/link/190935/5d0bbb4a61) is in English.
+
+guokaigdg
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​492 — September 25, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/492)
+
+👋 We're taking a week off next week, so we'll be back on Friday, October 9.\
+\_\_\
+*Your editor, Peter Cooper*
+
+Together with 
+
+[![Code Rabbit](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_187/e_make_transparent/co_white,e_outline:20/hxaajcewmf94f29l9dka.png)](https://react.statuscode.com/link/190896/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/wurtgptbln8tma7ldkus.jpg)](https://react.statuscode.com/link/190897/5d0bbb4a61)
+
+[Rendering Huge Pull Requests in the GitHub *Copilot* App](https://react.statuscode.com/link/190897/5d0bbb4a61 "github.blog") — GitHub's [desktop Copilot app](https://react.statuscode.com/link/190898/5d0bbb4a61) is built on React (atop [Tauri](https://react.statuscode.com/link/190899/5d0bbb4a61)), but to show PRs with 2000+ files and a million changed lines, it renders its code rows *outside* React. A worthwhile read if you build UIs that need to stay fast at scale, and they're upfront about the mistakes they made along the way.
+
+Alberto Gimeno (GitHub)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/a903eb2f.png)](https://react.statuscode.com/link/190896/5d0bbb4a61)
+
+[Fewer Findings. Only Real Risks](https://react.statuscode.com/link/190896/5d0bbb4a61 "coderabbit.link") — AI-generated code can introduce vulnerabilities that are easy to miss in a pull request. **CodeRabbit Security** continuously reviews your codebase for complex bugs and security risks, using full-codebase context to follow data flows, dependencies, and patterns beyond the latest diff.
+
+CodeRabbit sponsor
+
+[Redact: An Alternative 'Projection' of React](https://react.statuscode.com/link/190900/5d0bbb4a61 "github.com") — Back in May, Tanner Linsley [explained how he’d built](https://react.statuscode.com/link/190901/5d0bbb4a61) a synchronous, React-compatible runtime. It’s now at v0.1 with React 19.3 API support, a drop-in Vite plugin, and a useful [compatibility table](https://react.statuscode.com/link/190902/5d0bbb4a61).
+
+TanStack
+
+💡 The runtime is a fraction of React's size, but the trade-off is no concurrent rendering ([this Japanese blog post](https://react.statuscode.com/link/190903/5d0bbb4a61) has a nice look into that). There's also no license yet, and it can be considered experimental.
+
+**IN BRIEF:**
+
+* ⚠️ Using `next/og` on Node? [Next.js 16.3.6](https://react.statuscode.com/link/190904/5d0bbb4a61) fixes a critical RCE in `ImageResponse` affecting v16.2+. [A scheduled release next week](https://react.statuscode.com/link/190905/5d0bbb4a61) will fix nine more vulnerabilities.
+
+* [Astro](https://react.statuscode.com/link/190906/5d0bbb4a61)'s React integration [reaches v7.0](https://react.statuscode.com/link/190907/5d0bbb4a61), moving from Babel to Oxc and adding React Compiler support with a `compiler: true` option.
+
+* Vercel has [made its bug bounty program public](https://react.statuscode.com/link/190908/5d0bbb4a61), folding its private and open source programs (which covered Next.js) into one.
+
+[React-Redux 9.4 Alpha Adds Opt-In `useSignalSelector`](https://react.statuscode.com/link/190909/5d0bbb4a61 "github.com") — Redux runs every mounted selector on every dispatch, which gets costly in huge apps. The new opt-in, signals-based `useSignalSelector` tracks which state each selector reads, so a dispatch only re-runs selectors whose data changed.
+
+Mark Erikson
+
+💡 Alpha 0, above, has the full explainer, but [Alpha 1](https://react.statuscode.com/link/190910/5d0bbb4a61) landed yesterday with a key bugfix and corrected benchmarks.
+
+📄 [Helix: How Shopify is Using LLMs to Move Its App Off React Native](https://react.statuscode.com/link/190911/5d0bbb4a61) – A look behind the scenes of Shopify's [recently announced migration](https://react.statuscode.com/link/190912/5d0bbb4a61) from React Native to Swift and Kotlin. Talha Naqvi (Shopify)
+
+📄 [Props Are Not a Design System](https://react.statuscode.com/link/190913/5d0bbb4a61) – Why arbitrary style props make every button a one-off. Robert Vitonsky
+
+📄 [AI, Open Source, and the Long Road to *TanStack Charts*](https://react.statuscode.com/link/190914/5d0bbb4a61) – A look into how Tanner builds with agents now. Tanner Linsley
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lccwqt7l0qcob0e72z9o.jpg)](https://react.statuscode.com/link/190915/5d0bbb4a61)
+
+[Playroom: Design with JSX, Powered by Your Own Component Library](https://react.statuscode.com/link/190915/5d0bbb4a61 "github.com") — A browser-based JSX playground, wired up to your own component library, that renders every theme and viewport width side by side as you edit during dev/testing. [Check out this live demo](https://react.statuscode.com/link/190916/5d0bbb4a61).
+
+SEEK
+
+💡 Along similar lines, Nearform has just released [v5](https://react.statuscode.com/link/190917/5d0bbb4a61) of [React Live](https://react.statuscode.com/link/190918/5d0bbb4a61), a live editing experience for React components but better suited for use in docs, blog posts, etc.
+
+[pdfcn: Copy-Paste Components for Making PDFs](https://react.statuscode.com/link/190919/5d0bbb4a61 "www.pdfcn.dev") — Takes the shadcn approach to PDF generation, with components for tables, headers, lists, and larger blocks for things like invoices and reports. Rendering is done with [Takumi](https://react.statuscode.com/link/190920/5d0bbb4a61) or [Forme](https://react.statuscode.com/link/190921/5d0bbb4a61), both WASM-based engines that don't need a headless browser.
+
+Aniket Pawar
+
+[loading-dev: CSS-Animated Loading Indicators for React](https://react.statuscode.com/link/190922/5d0bbb4a61 "loading.dev") — 29 CSS-animated loading spinners for React 19+. You set size, color and duration, and they respect reduced motion. You can [customize and play with](https://react.statuscode.com/link/190923/5d0bbb4a61) each of them too.
+
+Jakub Krehel and Paul Faivret
+
+* [React Native Reanimated 4.7](https://react.statuscode.com/link/190924/5d0bbb4a61) – Create smooth animations and interactions in React Native apps. Layout animations now run on its new engine by default.
+
+* [gridstack.js 14.0](https://react.statuscode.com/link/190925/5d0bbb4a61) – The popular drag-and-drop dashboard layout library adds a `list` mode that reflows widgets like a reorderable list. ([Demos](https://react.statuscode.com/link/190926/5d0bbb4a61).)
+
+* 😀 [Frimousse 0.4](https://react.statuscode.com/link/190927/5d0bbb4a61) – Lightweight, unstyled emoji picker component.
+
+* [React Three Fiber 9.8](https://react.statuscode.com/link/190928/5d0bbb4a61) – Now compatible with React 19.3.
+
+📰 Classifieds
+
+The future of mobile development is agentic. For years, mobile shipped slower than the web. Now, agents are coding/testing/shipping [all on Expo](https://react.statuscode.com/link/190929/5d0bbb4a61).
+
+***
+
+🐻 Build apps, not walls — for the AI era. Learn from library authors, core teams & top engineers. [See you in Berlin & online, Dec 4 & 7!](https://react.statuscode.com/link/190930/5d0bbb4a61)
+
+***
+
+[Build products that help people build their lives](https://react.statuscode.com/link/190931/5d0bbb4a61) - Fidelity technologists can change the way our clients invest - for the better and for everyone.
+
+And finally…
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ovbpaehwz8p6qlfastfd.jpg)](https://react.statuscode.com/link/190932/5d0bbb4a61)
+
+[Animal Island UI: A 'Kawaii' React Component Library](https://react.statuscode.com/link/190932/5d0bbb4a61 "guokaigdg.github.io") — Originally based on Animal Crossing imagery (for which Nintendo [issued a DMCA takedown](https://react.statuscode.com/link/190933/5d0bbb4a61)) but now with its own assets and MIT licensed. The site’s in Chinese but it's easy to [browse the components](https://react.statuscode.com/link/190934/5d0bbb4a61), and the [GitHub README](https://react.statuscode.com/link/190935/5d0bbb4a61) is in English.
+
+guokaigdg
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
