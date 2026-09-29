@@ -1,0 +1,289 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: A-ha's Take on Me, recreated in pure JavaScript
+description: A-ha's Take on Me, recreated in pure JavaScript
+date: 星期二 06 晚上 九月 29o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/804
+origin_site: https://javascriptweekly.com/issues/804
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="A-ha's Take on Me, recreated in pure JavaScript" url="https://javascriptweekly.com/issues/804" />
+
+<Detail client:only="react">
+	#​804 — September 29, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/804)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/190937/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/holotoxy8ll41zticmyu.jpg)](https://javascriptweekly.com/link/190938/d076523b1d)
+
+[How Anthropic Made Claude's Apps 3x Faster in Two Weeks](https://javascriptweekly.com/link/190938/d076523b1d "claude.dev") — A grab bag of performance lessons from a sprint that cut p75 'time-to-typeable' from 3.1s to 0.55s. Em dashes (_the irony!_) pushed V8 onto a slower regex path, a stray `location.reload()` caused half a million hidden reloads a day, and more.
+
+Wang, Attard, and G (Anthropic)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/da313728.png)](https://javascriptweekly.com/link/190937/d076523b1d)
+
+[Still Writing Tests? Meticulous Is Here](https://javascriptweekly.com/link/190937/d076523b1d "www.meticulous.ai") — Notion, Dropbox and Wiz are now using a testing paradigm they can’t ship without. Built by former Palantir engineers, Meticulous creates an evolving suite of deterministic E2E UI tests, delivering exhaustive coverage with zero developer effort.
+
+Meticulous AI sponsor
+
+[Vite+ 1.0: One CLI for Your Entire JavaScript Toolchain](https://javascriptweekly.com/link/190939/d076523b1d "voidzero.dev") — The single `vp` command can now manage your Node runtime (if you wish), package manager, dev server, linting, formatting, testing, builds and task running, configured from `vite.config.ts`. [`vp migrate`](https://javascriptweekly.com/link/190940/d076523b1d) can be used to bring existing Vite, Vitest, ESLint, tsup, and similar setups into Vite+.
+
+VoidZero
+
+💡 Evan You also [looks back at four months of VoidZero at Cloudflare](https://javascriptweekly.com/link/190941/d076523b1d), including work on the Oxc React Compiler, Vitest 5, stable type-aware linting, and more.
+
+**IN BRIEF:**
+
+*   The [latest TC39 meeting](https://javascriptweekly.com/link/190942/d076523b1d) is taking place in Tokyo now, and three iterator proposals have already advanced to stage 4: [chunking](https://javascriptweekly.com/link/190943/d076523b1d), [join](https://javascriptweekly.com/link/190944/d076523b1d) and [includes](https://javascriptweekly.com/link/190945/d076523b1d) (the latter just [shipped in Chrome 154](https://javascriptweekly.com/link/190946/d076523b1d)).
+    
+*   Jarred Sumner shared [𝕏 a preview of Bun compiling JavaScript ahead of time](https://javascriptweekly.com/link/190947/d076523b1d): 24% faster startup and 48% less memory for Claude Code, but ~2x binary size.
+    
+*   🎉 Cloudflare _finally_ has [a single CLI for all of its APIs](https://javascriptweekly.com/link/190948/d076523b1d). `cf` is written in TypeScript and covers everything, whereas Wrangler only ever covered a subset.
+    
+*   The Angular team is [building a partly Rust-powered compiler](https://javascriptweekly.com/link/190949/d076523b1d), because TypeScript 7's Go port lacks APIs the current one relies on.
+    
+
+**RELEASES:**
+
+*   [MSW (Mock Service Worker) 3.0](https://javascriptweekly.com/link/190950/d076523b1d) – The popular API mocking library is now ESM-only, adds a Vite plugin, supports GraphQL subscriptions, and can intercept page navigations and form submissions.
+    
+*   [Vinext 1.0](https://javascriptweekly.com/link/190951/d076523b1d) – Cloudflare's Vite-based Next.js reimplementation now supports the Pages and App Routers, and offers a migration path for existing apps.
+    
+*   [Mermaid 12.0](https://javascriptweekly.com/link/190952/d076523b1d) – The diagramming tool now defaults to the ELK layout engine for flowchart, class, state and similar diagrams, so existing ones will look different unless you set `layout: dagre`. Also adds [UML use case diagrams](https://javascriptweekly.com/link/190953/d076523b1d).
+    
+*   [pnpm 12.8](https://javascriptweekly.com/link/190954/d076523b1d), [Angular 22.2](https://javascriptweekly.com/link/190955/d076523b1d), [TinyBase 10](https://javascriptweekly.com/link/190956/d076523b1d), [QUnit 3.0](https://javascriptweekly.com/link/190957/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/q97l6jlstbu4nz3us8ex.jpg)](https://javascriptweekly.com/link/190958/d076523b1d)
+
+[The Grand Unifying Architecture of Frontend](https://javascriptweekly.com/link/190958/d076523b1d "dev.to") — SolidJS's creator argues that HTMX, React, LiveView, and friends differ mostly in how they split the same three jobs (navigation, content, and instant UI feedback) between client and server. He then shows how [Solid 2.0](https://javascriptweekly.com/link/190959/d076523b1d) aims to cover the whole spectrum.
+
+Ryan Carniato
+
+[Build Products That Help People Build Their Lives](https://javascriptweekly.com/link/190960/d076523b1d "jobs.fidelity.com") — Fidelity technologists can change the way our clients invest - for the better and for everyone.
+
+Fidelity Careers sponsor
+
+[Optimizing Objects with `null` Prototypes](https://javascriptweekly.com/link/190961/d076523b1d "adventures.nodeland.dev") — In V8, objects created with `&lcub; __proto__: null }` or `Object.create(null)` start in a slower 'dictionary mode'. Matteo shows how creating a plain object and then setting its prototype to `null` preserves fast properties.
+
+Matteo Collina
+
+💡 If you fancy going deeper, [Fast properties in V8](https://javascriptweekly.com/link/190962/d076523b1d) is the V8 team's 2017 explainer of how objects switch between fast and 'dictionary' mode.
+
+[Node.js Built-ins That Replace npm Packages](https://javascriptweekly.com/link/190963/d076523b1d "flaviocopes.com") — A tour of 12 Node built-ins that replace common ecosystem packages along with their stability levels and some gotchas that might keep you using the established alternatives.
+
+Flavio Copes
+
+📄 [JavaScript's Greatest Pun? `$&lcub;&lcub; }}`](https://javascriptweekly.com/link/190964/d076523b1d) – Looks like Mustache, but `$&lcub;&lcub; name }}` passes an object using shorthand properties to a tag function, preserving both the variable's name and value. Nishant Shukla
+
+📄 [How GitHub Improved Performance by Moving Off CSS-in-JS](https://javascriptweekly.com/link/190965/d076523b1d) Josh Black and Marie Lucca (GitHub)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yvxogbuz6gl1ubyguxml.jpg)](https://javascriptweekly.com/link/190966/d076523b1d)
+
+[Size Limit: A JavaScript Performance Budgeting Tool](https://javascriptweekly.com/link/190966/d076523b1d "github.com") — Set a size or load-time budget for your code and this tool can fail CI (or flag a PR) if a change goes over it. You can also do one-off checks and see visualizations of where the bytes are. Framework-agnostic and doesn’t care which bundler or CI you use.
+
+Andrey Sitnik
+
+[Your UI Gets Blamed for a Slow Query](https://javascriptweekly.com/link/190967/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres so the query behind your UI returns fast as data grows. [Get $1000 credit to start](https://javascriptweekly.com/link/190967/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[EmDash 1.0: Cloudflare's _WordPress_ 'Successor' is Now Stable](https://javascriptweekly.com/link/190968/d076523b1d "blog.cloudflare.com") — An Astro-based alternative to WordPress, now with a decentralized AT Protocol-based plugin registry and plugins that run in sandboxes. It’s not Cloudflare-only, either, as it also runs on Node.js.
+
+Buscemi, Kane, and Pham (Cloudflare)
+
+📝 [DOCX 9.8: Generate Word `.docx` Files from JavaScript](https://javascriptweekly.com/link/190969/d076523b1d "github.com") — A comprehensive library for generating `docx` files. It’s only a few months since we linked to it, but this is a _big_ release with support for charts, shapes and watermarks, plus more math notation support. ([Homepage](https://javascriptweekly.com/link/190970/d076523b1d).)
+
+Dolan Miu
+
+*   🔊 [wavesurfer 8.0](https://javascriptweekly.com/link/190971/d076523b1d) – Popular audio waveform renderer and player. Refactored for better efficiency, with numerous bug fixes.
+    
+*   [pretty-bytes 7.2](https://javascriptweekly.com/link/190972/d076523b1d) – Convert byte quantities into human readable strings.
+    
+*   ✉️ [postal-mime 4.0](https://javascriptweekly.com/link/190973/d076523b1d) – An email parsing library that works everywhere.
+    
+*   [Typia 15.0](https://javascriptweekly.com/link/190974/d076523b1d) – Turn pure TypeScript types into runtime validators.
+    
+
+📰 Classifieds
+
+The future of mobile development is agentic. For years, mobile shipped slower than the web. Now, agents are coding/testing/shipping [all on Expo](https://javascriptweekly.com/link/190975/d076523b1d).
+
+* * *
+
+🤖 Blocking all bots breaks AI agents. Blocking none invites fraud. [Fingerprint](https://javascriptweekly.com/link/190976/d076523b1d) tells verified agents from bad actors.
+
+* * *
+
+[SurveyJS](https://javascriptweekly.com/link/190977/d076523b1d): Build complex forms faster with a drag-and-drop builder for any JavaScript app. Self-hosted and backend-agnostic.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jilmudkfxkr6xbomw3gi.jpg)](https://javascriptweekly.com/link/190978/d076523b1d)
+
+*   🎵 Tonny Espeset has [recreated the '80s hit _Take on Me_ by A-ha in pure JavaScript](https://javascriptweekly.com/link/190978/d076523b1d) (**along with synthesized vocals!**), running through the always-entertaining [Dittytoy](https://javascriptweekly.com/link/190979/d076523b1d) online JavaScript music playground.
+    
+*   [Git 2.56](https://javascriptweekly.com/link/190980/d076523b1d) has just been released. It adds `git add --resolved` to safely stage merge conflict fixes, `git branch --delete-merged` for bulk branch cleanup, and more. All explained within.
+    
+*   TanStack's Tanner Linsley [built Redact](https://javascriptweekly.com/link/190981/d076523b1d), _'an alternative logical projection of React'_ aiming for full API compatibility with a simpler implementation, smaller bundles and better performance. It's now [on GitHub](https://javascriptweekly.com/link/190982/d076523b1d).
+    
+*   [A quick history of why certain port numbers](https://javascriptweekly.com/link/190983/d076523b1d) like 3000 and 8080 are commonly used in development.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/190984/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​804 — September 29, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/804)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/190937/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/holotoxy8ll41zticmyu.jpg)](https://javascriptweekly.com/link/190938/d076523b1d)
+
+[How Anthropic Made Claude's Apps 3x Faster in Two Weeks](https://javascriptweekly.com/link/190938/d076523b1d "claude.dev") — A grab bag of performance lessons from a sprint that cut p75 'time-to-typeable' from 3.1s to 0.55s. Em dashes (*the irony!*) pushed V8 onto a slower regex path, a stray `location.reload()` caused half a million hidden reloads a day, and more.
+
+Wang, Attard, and G (Anthropic)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/da313728.png)](https://javascriptweekly.com/link/190937/d076523b1d)
+
+[Still Writing Tests? Meticulous Is Here](https://javascriptweekly.com/link/190937/d076523b1d "www.meticulous.ai") — Notion, Dropbox and Wiz are now using a testing paradigm they can’t ship without. Built by former Palantir engineers, Meticulous creates an evolving suite of deterministic E2E UI tests, delivering exhaustive coverage with zero developer effort.
+
+Meticulous AI sponsor
+
+[Vite+ 1.0: One CLI for Your Entire JavaScript Toolchain](https://javascriptweekly.com/link/190939/d076523b1d "voidzero.dev") — The single `vp` command can now manage your Node runtime (if you wish), package manager, dev server, linting, formatting, testing, builds and task running, configured from `vite.config.ts`. [`vp migrate`](https://javascriptweekly.com/link/190940/d076523b1d) can be used to bring existing Vite, Vitest, ESLint, tsup, and similar setups into Vite+.
+
+VoidZero
+
+💡 Evan You also [looks back at four months of VoidZero at Cloudflare](https://javascriptweekly.com/link/190941/d076523b1d), including work on the Oxc React Compiler, Vitest 5, stable type-aware linting, and more.
+
+**IN BRIEF:**
+
+* The [latest TC39 meeting](https://javascriptweekly.com/link/190942/d076523b1d) is taking place in Tokyo now, and three iterator proposals have already advanced to stage 4: [chunking](https://javascriptweekly.com/link/190943/d076523b1d), [join](https://javascriptweekly.com/link/190944/d076523b1d) and [includes](https://javascriptweekly.com/link/190945/d076523b1d) (the latter just [shipped in Chrome 154](https://javascriptweekly.com/link/190946/d076523b1d)).
+
+* Jarred Sumner shared [𝕏 a preview of Bun compiling JavaScript ahead of time](https://javascriptweekly.com/link/190947/d076523b1d): 24% faster startup and 48% less memory for Claude Code, but ~2x binary size.
+
+* 🎉 Cloudflare *finally* has [a single CLI for all of its APIs](https://javascriptweekly.com/link/190948/d076523b1d). `cf` is written in TypeScript and covers everything, whereas Wrangler only ever covered a subset.
+
+* The Angular team is [building a partly Rust-powered compiler](https://javascriptweekly.com/link/190949/d076523b1d), because TypeScript 7's Go port lacks APIs the current one relies on.
+
+**RELEASES:**
+
+* [MSW (Mock Service Worker) 3.0](https://javascriptweekly.com/link/190950/d076523b1d) – The popular API mocking library is now ESM-only, adds a Vite plugin, supports GraphQL subscriptions, and can intercept page navigations and form submissions.
+
+* [Vinext 1.0](https://javascriptweekly.com/link/190951/d076523b1d) – Cloudflare's Vite-based Next.js reimplementation now supports the Pages and App Routers, and offers a migration path for existing apps.
+
+* [Mermaid 12.0](https://javascriptweekly.com/link/190952/d076523b1d) – The diagramming tool now defaults to the ELK layout engine for flowchart, class, state and similar diagrams, so existing ones will look different unless you set `layout: dagre`. Also adds [UML use case diagrams](https://javascriptweekly.com/link/190953/d076523b1d).
+
+* [pnpm 12.8](https://javascriptweekly.com/link/190954/d076523b1d), [Angular 22.2](https://javascriptweekly.com/link/190955/d076523b1d), [TinyBase 10](https://javascriptweekly.com/link/190956/d076523b1d), [QUnit 3.0](https://javascriptweekly.com/link/190957/d076523b1d)
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/q97l6jlstbu4nz3us8ex.jpg)](https://javascriptweekly.com/link/190958/d076523b1d)
+
+[The Grand Unifying Architecture of Frontend](https://javascriptweekly.com/link/190958/d076523b1d "dev.to") — SolidJS's creator argues that HTMX, React, LiveView, and friends differ mostly in how they split the same three jobs (navigation, content, and instant UI feedback) between client and server. He then shows how [Solid 2.0](https://javascriptweekly.com/link/190959/d076523b1d) aims to cover the whole spectrum.
+
+Ryan Carniato
+
+[Build Products That Help People Build Their Lives](https://javascriptweekly.com/link/190960/d076523b1d "jobs.fidelity.com") — Fidelity technologists can change the way our clients invest - for the better and for everyone.
+
+Fidelity Careers sponsor
+
+[Optimizing Objects with `null` Prototypes](https://javascriptweekly.com/link/190961/d076523b1d "adventures.nodeland.dev") — In V8, objects created with `&lcub; __proto__: null }` or `Object.create(null)` start in a slower 'dictionary mode'. Matteo shows how creating a plain object and then setting its prototype to `null` preserves fast properties.
+
+Matteo Collina
+
+💡 If you fancy going deeper, [Fast properties in V8](https://javascriptweekly.com/link/190962/d076523b1d) is the V8 team's 2017 explainer of how objects switch between fast and 'dictionary' mode.
+
+[Node.js Built-ins That Replace npm Packages](https://javascriptweekly.com/link/190963/d076523b1d "flaviocopes.com") — A tour of 12 Node built-ins that replace common ecosystem packages along with their stability levels and some gotchas that might keep you using the established alternatives.
+
+Flavio Copes
+
+📄 [JavaScript's Greatest Pun? `$&lcub;&lcub; }}`](https://javascriptweekly.com/link/190964/d076523b1d) – Looks like Mustache, but `$&lcub;&lcub; name }}` passes an object using shorthand properties to a tag function, preserving both the variable's name and value. Nishant Shukla
+
+📄 [How GitHub Improved Performance by Moving Off CSS-in-JS](https://javascriptweekly.com/link/190965/d076523b1d) Josh Black and Marie Lucca (GitHub)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yvxogbuz6gl1ubyguxml.jpg)](https://javascriptweekly.com/link/190966/d076523b1d)
+
+[Size Limit: A JavaScript Performance Budgeting Tool](https://javascriptweekly.com/link/190966/d076523b1d "github.com") — Set a size or load-time budget for your code and this tool can fail CI (or flag a PR) if a change goes over it. You can also do one-off checks and see visualizations of where the bytes are. Framework-agnostic and doesn’t care which bundler or CI you use.
+
+Andrey Sitnik
+
+[Your UI Gets Blamed for a Slow Query](https://javascriptweekly.com/link/190967/d076523b1d "www.tigerdata.com") — TimescaleDB extends Postgres so the query behind your UI returns fast as data grows. [Get $1000 credit to start](https://javascriptweekly.com/link/190967/d076523b1d).
+
+Tiger Data (creators of TimescaleDB) sponsor
+
+[EmDash 1.0: Cloudflare's *WordPress* 'Successor' is Now Stable](https://javascriptweekly.com/link/190968/d076523b1d "blog.cloudflare.com") — An Astro-based alternative to WordPress, now with a decentralized AT Protocol-based plugin registry and plugins that run in sandboxes. It’s not Cloudflare-only, either, as it also runs on Node.js.
+
+Buscemi, Kane, and Pham (Cloudflare)
+
+📝 [DOCX 9.8: Generate Word `.docx` Files from JavaScript](https://javascriptweekly.com/link/190969/d076523b1d "github.com") — A comprehensive library for generating `docx` files. It’s only a few months since we linked to it, but this is a *big* release with support for charts, shapes and watermarks, plus more math notation support. ([Homepage](https://javascriptweekly.com/link/190970/d076523b1d).)
+
+Dolan Miu
+
+* 🔊 [wavesurfer 8.0](https://javascriptweekly.com/link/190971/d076523b1d) – Popular audio waveform renderer and player. Refactored for better efficiency, with numerous bug fixes.
+
+* [pretty-bytes 7.2](https://javascriptweekly.com/link/190972/d076523b1d) – Convert byte quantities into human readable strings.
+
+* ✉️ [postal-mime 4.0](https://javascriptweekly.com/link/190973/d076523b1d) – An email parsing library that works everywhere.
+
+* [Typia 15.0](https://javascriptweekly.com/link/190974/d076523b1d) – Turn pure TypeScript types into runtime validators.
+
+📰 Classifieds
+
+The future of mobile development is agentic. For years, mobile shipped slower than the web. Now, agents are coding/testing/shipping [all on Expo](https://javascriptweekly.com/link/190975/d076523b1d).
+
+***
+
+🤖 Blocking all bots breaks AI agents. Blocking none invites fraud. [Fingerprint](https://javascriptweekly.com/link/190976/d076523b1d) tells verified agents from bad actors.
+
+***
+
+[SurveyJS](https://javascriptweekly.com/link/190977/d076523b1d): Build complex forms faster with a drag-and-drop builder for any JavaScript app. Self-hosted and backend-agnostic.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jilmudkfxkr6xbomw3gi.jpg)](https://javascriptweekly.com/link/190978/d076523b1d)
+
+* 🎵 Tonny Espeset has [recreated the '80s hit *Take on Me* by A-ha in pure JavaScript](https://javascriptweekly.com/link/190978/d076523b1d) (**along with synthesized vocals!**), running through the always-entertaining [Dittytoy](https://javascriptweekly.com/link/190979/d076523b1d) online JavaScript music playground.
+
+* [Git 2.56](https://javascriptweekly.com/link/190980/d076523b1d) has just been released. It adds `git add --resolved` to safely stage merge conflict fixes, `git branch --delete-merged` for bulk branch cleanup, and more. All explained within.
+
+* TanStack's Tanner Linsley [built Redact](https://javascriptweekly.com/link/190981/d076523b1d), *'an alternative logical projection of React'* aiming for full API compatibility with a simpler implementation, smaller bundles and better performance. It's now [on GitHub](https://javascriptweekly.com/link/190982/d076523b1d).
+
+* [A quick history of why certain port numbers](https://javascriptweekly.com/link/190983/d076523b1d) like 3000 and 8080 are commonly used in development.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/190984/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
