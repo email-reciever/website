@@ -1,0 +1,268 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: When worker threads beat processes for Node efficiency
+description: When worker threads beat processes for Node efficiency
+date: 星期四 04 下午 十月 8o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/643
+origin_site: https://nodeweekly.com/issues/643
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="When worker threads beat processes for Node efficiency" url="https://nodeweekly.com/issues/643" />
+
+<Detail client:only="react">
+	#​643 — October 8, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/643)
+
+📝 We're back after taking last week off – you didn't miss an issue :-) If you want one neat thing to check out today, look for the voice synth package below, it's a fun way to relive a bit of 80s nostalgia!  
+\_\_  
+Peter Cooper, your editor
+
+Together with 
+
+[![Serp API](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_318/e_make_transparent/co_white,e_outline:15/qunbgchsn7czljkekjsk.png)](https://nodeweekly.com/link/191260/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/etusntxehcije4b6ody0.jpg)](https://nodeweekly.com/link/191261/0a4070b383)
+
+[How Booking.com Cut the Cost of Its Biggest Node.js Service by 38%](https://nodeweekly.com/link/191261/0a4070b383 "medium.com") — The online travel company moved its biggest React SSR service from pm2’s process-based cluster approach to Platformatic’s [Watt](https://nodeweekly.com/link/191262/0a4070b383) and worker threads, then tuned load balancing and V8’s GC to get noteworthy gains.
+
+Ilya Malyavin (Booking.com)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/195cf43d.png)](https://nodeweekly.com/link/191260/0a4070b383)
+
+[100+ Search Engines. One Simple API](https://nodeweekly.com/link/191260/0a4070b383 "serpapi.com") — Build with real-time search data from Google, YouTube, Amazon, and more. SerpApi delivers structured results in JSON and Markdown for AI agents and your next app. Skip scraping headaches. [Start building with a simple API](https://nodeweekly.com/link/191260/0a4070b383).
+
+SerpApi sponsor
+
+[Node.js 26.11.0 (Current) Released](https://nodeweekly.com/link/191263/0a4070b383 "nodejs.org") — A more substantial minor release than usual with a new [`--process-timeout` flag](https://nodeweekly.com/link/191264/0a4070b383) that ends a process after a set time (even mid-busy-loop), `node:sqlite` gets [virtual table support](https://nodeweekly.com/link/191265/0a4070b383), [`Buffer.stringLength()`](https://nodeweekly.com/link/191266/0a4070b383), and Alpine (x64) is promoted to tier 2 support.
+
+Antoine du Hamel
+
+⚠️ 26.11 also rolled out [the new docs design](https://nodeweekly.com/link/191267/0a4070b383), but a bug was found that caused the docs to not render to HTML, so [v26.11.1](https://nodeweekly.com/link/191268/0a4070b383) reverts back to the old docs design for now.
+
+**IN BRIEF:**
+
+*   While we were away last week, VoidZero dropped [Vite+ 1.0](https://nodeweekly.com/link/191269/0a4070b383), its single command (`vp`) Node.js version, package, and frontend toolchain manager. Node's [download page](https://nodeweekly.com/link/191270/0a4070b383) has already updated to offering Vite+ as an option.
+    
+*   With [this commit](https://nodeweekly.com/link/191271/0a4070b383), future releases of Node should [load most ES modules synchronously](https://nodeweekly.com/link/191272/0a4070b383), only taking the async path for top-level `await`, loader hooks and the like.
+    
+*   [V8 15.5 has landed](https://nodeweekly.com/link/191273/0a4070b383) on Node's main branch, ahead of Node 27. A big jump from Node 26's V8 14.6.
+    
+
+[Optimizing Objects with `null` Prototypes](https://nodeweekly.com/link/191274/0a4070b383 "adventures.nodeland.dev") — In V8, objects created with `&lcub; __proto__: null }` or `Object.create(null)` start off in a slower ‘dictionary mode’. Creating a plain object and nulling the prototype afterwards keeps it fast, as Matteo shows.
+
+Matteo Collina
+
+[I Tested 11 HTTP Resilience Libraries](https://nodeweekly.com/link/191275/0a4070b383 "blog.gaborkoos.com") — [ffetch](https://nodeweekly.com/link/191276/0a4070b383)'s creator tests how a variety of fetch wrappers (like [Ky](https://nodeweekly.com/link/191277/0a4070b383), [ofetch](https://nodeweekly.com/link/191278/0a4070b383), and [Wretch](https://nodeweekly.com/link/191279/0a4070b383)) handle retries, timeouts and cancellation, and where those policies interact badly.
+
+Gabor Koos
+
+[Find Auth Gaps in Your Node APIs Before Hackers Do](https://nodeweekly.com/link/191280/0a4070b383 "fandf.co") — [SonarQube Hunter Agent](https://nodeweekly.com/link/191280/0a4070b383) hunts intent-based vulnerabilities and drops verified findings right into your issue list.
+
+SonarSource sponsor
+
+📄 [Node.js Thread Pools on Busy Machines](https://nodeweekly.com/link/191281/0a4070b383) – Why sizing the thread pool from the CPU count backfires when other processes share the machine. Matteo Collina (Platformatic)
+
+📄 [Maintaining `wait-on` at Agent Speed](https://nodeweekly.com/link/191282/0a4070b383) – [wait-on](https://nodeweekly.com/link/191283/0a4070b383)'s new co-maintainer reflects on his first week managing things agent-style. Kevin Old
+
+📄 [How to Compile JavaScript into a Single Executable](https://nodeweekly.com/link/191284/0a4070b383) – A comparison of the Node, Bun and Deno approaches. Flavio Copes
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/zl46xknjbzir2w3qx7sk.jpg)](https://nodeweekly.com/link/191285/0a4070b383)
+
+[DOCX 9.9: Generate Word `.docx` Files from JavaScript](https://nodeweekly.com/link/191285/0a4070b383 "github.com") — A comprehensive library for generating `docx` files. 9.8 recently added support for charts, shapes and watermarks, and 9.9 adds a way to lay out documents the way Word itself does. [Homepage](https://nodeweekly.com/link/191286/0a4070b383).
+
+Dolan Miu
+
+[H3 v2: The UnJS HTTP Framework is Rebuilt on Web Standards](https://nodeweekly.com/link/191287/0a4070b383 "h3.dev") — A minimal HTTP framework best known for powering Nitro and Nuxt’s server layer. v2 is a rewrite around standard `Request` and `Response`, so one app runs on Node, Bun, Deno and Workers, with `URLPattern`\-style routing and `(event, next)` middleware. [More info here](https://nodeweekly.com/link/191288/0a4070b383).
+
+Pooya Parsa
+
+🤖 [Klattsch: Retro 1980s Vocal Synthesis](https://nodeweekly.com/link/191289/0a4070b383 "crashunited.itch.io") — 1980s-style phonemes to speech in a single npm package! It's very flexible, you can even make it sing, akin to HAL in _2001_. Works in Node but you can also run it in the browser.
+
+Crash United
+
+[Feedsmith 3.0: Fast Web Feed Parser and Generator](https://nodeweekly.com/link/191290/0a4070b383 "feedsmith.dev") — [Parse and generate](https://nodeweekly.com/link/191291/0a4070b383) RSS, Atom, and JSON feeds from JavaScript, in both browsers and Node. v2.x users will find [this migration guide](https://nodeweekly.com/link/191292/0a4070b383) useful.
+
+Maciej Lamberski
+
+*   [pnpm 12.10](https://nodeweekly.com/link/191293/0a4070b383) – An experimental `loaded` linker lets Node load dependencies straight from pnpm's store, skipping `node_modules` linking.
+    
+*   [Hono 5.0 RC](https://nodeweekly.com/link/191294/0a4070b383) – The web-standards server framework goes ESM-only, requires Node 22.12+, and moves runtime adapters into separate packages.
+    
+*   [Execa 10.1](https://nodeweekly.com/link/191295/0a4070b383) – The process execution library fixes behaviors you may have relied on, like `extendEnv: false` still inheriting `process.env`.
+    
+*   [Effect 4.0](https://nodeweekly.com/link/191296/0a4070b383) – The TypeScript effect system gets a rewritten dependency-free core and consolidated packages.
+    
+*   ⚠️ [Handlebars 4.7.10](https://nodeweekly.com/link/191297/0a4070b383) – Fixes two critical JavaScript injection flaws. Earlier 4.x releases are affected.
+    
+*   [he 2.0](https://nodeweekly.com/link/191298/0a4070b383) – Mathias Bynens' HTML entity encoder/decoder gets its first release in 8 years and moves to ESM with named exports.
+    
+
+📰 Classifieds
+
+[CodeAF](https://nodeweekly.com/link/191299/0a4070b383) fixed 2x OpenCode's issues and nearly 4x Claude Code's on the same model, at up to 4.8x less per fix. [New release, open source](https://nodeweekly.com/link/191299/0a4070b383).
+
+* * *
+
+🚫 Ban the device, not just the account. [Fingerprint's visitor ID](https://nodeweekly.com/link/191307/0a4070b383) catches ban evaders — even incognito or behind a proxy.
+
+📢  Elsewhere in the ecosystem
+
+*   **`.node` domains?** Confused by the huge number of TLDs available to register? Get ready for more as ICANN has unveiled [a whole new round of them](https://nodeweekly.com/link/191300/0a4070b383) – you can browse [the proposed new gTLDs here](https://nodeweekly.com/link/191301/0a4070b383) which… includes `.node`!
+    
+*   Sindre Sorhus, the prolific npm package author, [has disabled outside pull requests](https://nodeweekly.com/link/191302/0a4070b383) on his repos due to AI, but will keep maintaining them.
+    
+*   Daniel Lemire [timed linking the Node binary](https://nodeweekly.com/link/191303/0a4070b383) with GNU `ld`, `gold`, and `mold`. Mold won easily, which may be useful if you're rebuilding Node a _lot_.
+    
+*   Theo Browne's [ts-rust](https://nodeweekly.com/link/191304/0a4070b383) is an experimental Rust port of the TypeScript 7 compiler, built almost entirely by AI agents.
+    
+*   📊 The [2026 _Stack Overflow_ Developer Survey results](https://nodeweekly.com/link/191305/0a4070b383) are out, drawing on 30,903 responses.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​643 — October 8, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/643)
+
+📝 We're back after taking last week off – you didn't miss an issue :-) If you want one neat thing to check out today, look for the voice synth package below, it's a fun way to relive a bit of 80s nostalgia!\
+\_\_\
+Peter Cooper, your editor
+
+Together with 
+
+[![Serp API](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_318/e_make_transparent/co_white,e_outline:15/qunbgchsn7czljkekjsk.png)](https://nodeweekly.com/link/191260/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/etusntxehcije4b6ody0.jpg)](https://nodeweekly.com/link/191261/0a4070b383)
+
+[How Booking.com Cut the Cost of Its Biggest Node.js Service by 38%](https://nodeweekly.com/link/191261/0a4070b383 "medium.com") — The online travel company moved its biggest React SSR service from pm2’s process-based cluster approach to Platformatic’s [Watt](https://nodeweekly.com/link/191262/0a4070b383) and worker threads, then tuned load balancing and V8’s GC to get noteworthy gains.
+
+Ilya Malyavin (Booking.com)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/195cf43d.png)](https://nodeweekly.com/link/191260/0a4070b383)
+
+[100+ Search Engines. One Simple API](https://nodeweekly.com/link/191260/0a4070b383 "serpapi.com") — Build with real-time search data from Google, YouTube, Amazon, and more. SerpApi delivers structured results in JSON and Markdown for AI agents and your next app. Skip scraping headaches. [Start building with a simple API](https://nodeweekly.com/link/191260/0a4070b383).
+
+SerpApi sponsor
+
+[Node.js 26.11.0 (Current) Released](https://nodeweekly.com/link/191263/0a4070b383 "nodejs.org") — A more substantial minor release than usual with a new [`--process-timeout` flag](https://nodeweekly.com/link/191264/0a4070b383) that ends a process after a set time (even mid-busy-loop), `node:sqlite` gets [virtual table support](https://nodeweekly.com/link/191265/0a4070b383), [`Buffer.stringLength()`](https://nodeweekly.com/link/191266/0a4070b383), and Alpine (x64) is promoted to tier 2 support.
+
+Antoine du Hamel
+
+⚠️ 26.11 also rolled out [the new docs design](https://nodeweekly.com/link/191267/0a4070b383), but a bug was found that caused the docs to not render to HTML, so [v26.11.1](https://nodeweekly.com/link/191268/0a4070b383) reverts back to the old docs design for now.
+
+**IN BRIEF:**
+
+* While we were away last week, VoidZero dropped [Vite+ 1.0](https://nodeweekly.com/link/191269/0a4070b383), its single command (`vp`) Node.js version, package, and frontend toolchain manager. Node's [download page](https://nodeweekly.com/link/191270/0a4070b383) has already updated to offering Vite+ as an option.
+
+* With [this commit](https://nodeweekly.com/link/191271/0a4070b383), future releases of Node should [load most ES modules synchronously](https://nodeweekly.com/link/191272/0a4070b383), only taking the async path for top-level `await`, loader hooks and the like.
+
+* [V8 15.5 has landed](https://nodeweekly.com/link/191273/0a4070b383) on Node's main branch, ahead of Node 27. A big jump from Node 26's V8 14.6.
+
+[Optimizing Objects with `null` Prototypes](https://nodeweekly.com/link/191274/0a4070b383 "adventures.nodeland.dev") — In V8, objects created with `&lcub; __proto__: null }` or `Object.create(null)` start off in a slower ‘dictionary mode’. Creating a plain object and nulling the prototype afterwards keeps it fast, as Matteo shows.
+
+Matteo Collina
+
+[I Tested 11 HTTP Resilience Libraries](https://nodeweekly.com/link/191275/0a4070b383 "blog.gaborkoos.com") — [ffetch](https://nodeweekly.com/link/191276/0a4070b383)'s creator tests how a variety of fetch wrappers (like [Ky](https://nodeweekly.com/link/191277/0a4070b383), [ofetch](https://nodeweekly.com/link/191278/0a4070b383), and [Wretch](https://nodeweekly.com/link/191279/0a4070b383)) handle retries, timeouts and cancellation, and where those policies interact badly.
+
+Gabor Koos
+
+[Find Auth Gaps in Your Node APIs Before Hackers Do](https://nodeweekly.com/link/191280/0a4070b383 "fandf.co") — [SonarQube Hunter Agent](https://nodeweekly.com/link/191280/0a4070b383) hunts intent-based vulnerabilities and drops verified findings right into your issue list.
+
+SonarSource sponsor
+
+📄 [Node.js Thread Pools on Busy Machines](https://nodeweekly.com/link/191281/0a4070b383) – Why sizing the thread pool from the CPU count backfires when other processes share the machine. Matteo Collina (Platformatic)
+
+📄 [Maintaining `wait-on` at Agent Speed](https://nodeweekly.com/link/191282/0a4070b383) – [wait-on](https://nodeweekly.com/link/191283/0a4070b383)'s new co-maintainer reflects on his first week managing things agent-style. Kevin Old
+
+📄 [How to Compile JavaScript into a Single Executable](https://nodeweekly.com/link/191284/0a4070b383) – A comparison of the Node, Bun and Deno approaches. Flavio Copes
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/zl46xknjbzir2w3qx7sk.jpg)](https://nodeweekly.com/link/191285/0a4070b383)
+
+[DOCX 9.9: Generate Word `.docx` Files from JavaScript](https://nodeweekly.com/link/191285/0a4070b383 "github.com") — A comprehensive library for generating `docx` files. 9.8 recently added support for charts, shapes and watermarks, and 9.9 adds a way to lay out documents the way Word itself does. [Homepage](https://nodeweekly.com/link/191286/0a4070b383).
+
+Dolan Miu
+
+[H3 v2: The UnJS HTTP Framework is Rebuilt on Web Standards](https://nodeweekly.com/link/191287/0a4070b383 "h3.dev") — A minimal HTTP framework best known for powering Nitro and Nuxt’s server layer. v2 is a rewrite around standard `Request` and `Response`, so one app runs on Node, Bun, Deno and Workers, with `URLPattern`-style routing and `(event, next)` middleware. [More info here](https://nodeweekly.com/link/191288/0a4070b383).
+
+Pooya Parsa
+
+🤖 [Klattsch: Retro 1980s Vocal Synthesis](https://nodeweekly.com/link/191289/0a4070b383 "crashunited.itch.io") — 1980s-style phonemes to speech in a single npm package! It's very flexible, you can even make it sing, akin to HAL in *2001*. Works in Node but you can also run it in the browser.
+
+Crash United
+
+[Feedsmith 3.0: Fast Web Feed Parser and Generator](https://nodeweekly.com/link/191290/0a4070b383 "feedsmith.dev") — [Parse and generate](https://nodeweekly.com/link/191291/0a4070b383) RSS, Atom, and JSON feeds from JavaScript, in both browsers and Node. v2.x users will find [this migration guide](https://nodeweekly.com/link/191292/0a4070b383) useful.
+
+Maciej Lamberski
+
+* [pnpm 12.10](https://nodeweekly.com/link/191293/0a4070b383) – An experimental `loaded` linker lets Node load dependencies straight from pnpm's store, skipping `node_modules` linking.
+
+* [Hono 5.0 RC](https://nodeweekly.com/link/191294/0a4070b383) – The web-standards server framework goes ESM-only, requires Node 22.12+, and moves runtime adapters into separate packages.
+
+* [Execa 10.1](https://nodeweekly.com/link/191295/0a4070b383) – The process execution library fixes behaviors you may have relied on, like `extendEnv: false` still inheriting `process.env`.
+
+* [Effect 4.0](https://nodeweekly.com/link/191296/0a4070b383) – The TypeScript effect system gets a rewritten dependency-free core and consolidated packages.
+
+* ⚠️ [Handlebars 4.7.10](https://nodeweekly.com/link/191297/0a4070b383) – Fixes two critical JavaScript injection flaws. Earlier 4.x releases are affected.
+
+* [he 2.0](https://nodeweekly.com/link/191298/0a4070b383) – Mathias Bynens' HTML entity encoder/decoder gets its first release in 8 years and moves to ESM with named exports.
+
+📰 Classifieds
+
+[CodeAF](https://nodeweekly.com/link/191299/0a4070b383) fixed 2x OpenCode's issues and nearly 4x Claude Code's on the same model, at up to 4.8x less per fix. [New release, open source](https://nodeweekly.com/link/191299/0a4070b383).
+
+***
+
+🚫 Ban the device, not just the account. [Fingerprint's visitor ID](https://nodeweekly.com/link/191307/0a4070b383) catches ban evaders — even incognito or behind a proxy.
+
+📢  Elsewhere in the ecosystem
+
+* **`.node` domains?** Confused by the huge number of TLDs available to register? Get ready for more as ICANN has unveiled [a whole new round of them](https://nodeweekly.com/link/191300/0a4070b383) – you can browse [the proposed new gTLDs here](https://nodeweekly.com/link/191301/0a4070b383) which… includes `.node`!
+
+* Sindre Sorhus, the prolific npm package author, [has disabled outside pull requests](https://nodeweekly.com/link/191302/0a4070b383) on his repos due to AI, but will keep maintaining them.
+
+* Daniel Lemire [timed linking the Node binary](https://nodeweekly.com/link/191303/0a4070b383) with GNU `ld`, `gold`, and `mold`. Mold won easily, which may be useful if you're rebuilding Node a *lot*.
+
+* Theo Browne's [ts-rust](https://nodeweekly.com/link/191304/0a4070b383) is an experimental Rust port of the TypeScript 7 compiler, built almost entirely by AI agents.
+
+* 📊 The [2026 *Stack Overflow* Developer Survey results](https://nodeweekly.com/link/191305/0a4070b383) are out, drawing on 30,903 responses.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
