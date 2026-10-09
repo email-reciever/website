@@ -1,0 +1,258 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Next.js 16.4, and a new way to visualize React apps
+description: Next.js 16.4, and a new way to visualize React apps
+date: 星期五 05 下午 十月 9o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/493
+origin_site: https://react.statuscode.com/issues/493
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Next.js 16.4, and a new way to visualize React apps" url="https://react.statuscode.com/issues/493" />
+
+<Detail client:only="react">
+	#​493 — October 9, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/493)
+
+ℹ️ We're back from a week off, but we're taking next week off too, so will be back on Friday, October 23.  
+\_\_  
+_Your editor, Peter Cooper_
+
+Together with 
+
+[![SurveyJS logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1000,h_410/e_make_transparent/co_white,e_outline:20/yrja59qflovcjwojxypq.png)](https://react.statuscode.com/link/191401/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fe3wu7d71nyuy9efyaox.jpg)](https://react.statuscode.com/link/191402/5d0bbb4a61)
+
+[A Visual Notation for React's Parent and Owner Trees](https://react.statuscode.com/link/191402/5d0bbb4a61 "julesblom.com") — A proposed diagram notation for React apps that shows both where each element ends up (the parent tree) and which component created it (the owner tree), with marks for context, Suspense, memo, error boundaries and RSC. There's also [a playground](https://react.statuscode.com/link/191403/5d0bbb4a61) that draws trees from code you paste in.
+
+Jules Blom
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/4e4ce890.png)](https://react.statuscode.com/link/191401/5d0bbb4a61)
+
+[React Form Builder with Full Control Over UI and Data](https://react.statuscode.com/link/191401/5d0bbb4a61 "surveyjs.io") — Build complex JSON-driven forms in React with a drag-and-drop builder. Configure validation and logic, customize themes and UI, connect to any backend, and keep form data in your own infrastructure.
+
+SurveyJS sponsor
+
+[Next.js 16.4 Makes Cache Components the Recommended Default](https://react.statuscode.com/link/191404/5d0bbb4a61 "nextjs.org") — The big news is [Cache Components](https://react.statuscode.com/link/191405/5d0bbb4a61) is now recommended, and enabled by default if you use `create-next-app`. [Agentic tooling](https://react.statuscode.com/link/191406/5d0bbb4a61) gets some upgrades, and there are [smaller improvements](https://react.statuscode.com/link/191407/5d0bbb4a61) for all apps.
+
+The Next.js Team
+
+**IN BRIEF:**
+
+*   The React Foundation's working groups will meet in person for the first time at the [Contributors Summit](https://react.statuscode.com/link/191408/5d0bbb4a61) in London next month. It's invite-only, but contributors can [nominate themselves](https://react.statuscode.com/link/191409/5d0bbb4a61).
+    
+*   📱 Following in Shopify's footsteps, [Coinbase says it's moving its app off React Native](https://react.statuscode.com/link/191410/5d0bbb4a61) too, repeating the _"AI coding agents have collapsed the cost of building a feature twice"_ idea and saying they can access new platform features sooner.
+    
+*   Barbara Markiewicz, formerly of Callstack, [𝕏 has joined the React Foundation](https://react.statuscode.com/link/191411/5d0bbb4a61) as its Director of Community.
+    
+
+[Can We Make React Faster Using the React Compiler?](https://react.statuscode.com/link/191412/5d0bbb4a61 "jimmyhmiller.com") — Digs into the React Compiler’s output, then prototypes extra compiler passes like inlining, blocks and selector inference to see how much faster React could get.
+
+Jimmy Miller
+
+[React Aria's New Swipeable Sheet and the CSS Tricks Behind It](https://react.statuscode.com/link/191413/5d0bbb4a61 "react-aria.adobe.com") — [React Aria](https://react.statuscode.com/link/191414/5d0bbb4a61) has a new swipeable [Sheet component](https://react.statuscode.com/link/191415/5d0bbb4a61), and Devon explains how it works. Rather than handle touch events in JavaScript, it uses an oversized scroll container with CSS scroll snapping and view timelines to get native momentum, rubber-banding, gesture-synced animations, and more.
+
+Devon Govett (Adobe)
+
+📄 [Making React Context Cheap with React Compiler](https://react.statuscode.com/link/191416/5d0bbb4a61) – Can React Compiler avoid the need for context selectors? A 5,000-radio benchmark suggests it can. Jenna Smith
+
+📄 [React Folder Structure Best Practices (2026 Edition)](https://react.statuscode.com/link/191417/5d0bbb4a61) Robin Wieruch
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xev4fnt8ayacadkzw5go.jpg)](https://react.statuscode.com/link/191418/5d0bbb4a61)
+
+[TanStack Charts 1.0: Composable, Typed Charts](https://react.statuscode.com/link/191418/5d0bbb4a61 "tanstack.com") — Almost a decade after creating [React Charts](https://react.statuscode.com/link/191419/5d0bbb4a61), Tanner returns with a rethink: charts composed from typed marks and scales, rendered with SVG or Canvas, with a React adapter. The [example catalog](https://react.statuscode.com/link/191420/5d0bbb4a61) shows off its range, along with code samples.
+
+Tanner Linsley
+
+[Ink 8: React for CLIs Gets Scrollable Views](https://react.statuscode.com/link/191421/5d0bbb4a61 "github.com") — The popular TUI renderer, as used by Claude Code and Gemini CLI. New props on `Box` enable scrollable views, `render()` takes any Node stream, and incremental rendering only rewrites changed parts of lines for less flicker.
+
+Vadim Demedes
+
+[Redux Toolkit 2.13: TypeScript 7 Support and a Steadier `useQuery`](https://react.statuscode.com/link/191422/5d0bbb4a61 "github.com") — Adds official TypeScript 7 support and fixes `useQuery` creating a new selector on every render (which could flip `isSuccess` mid-refetch).
+
+Mark Erikson
+
+💡 In other good news, the docs for all the Redux libraries now live together on [redux.js.org](https://react.statuscode.com/link/191423/5d0bbb4a61), including those [for Redux Toolkit](https://react.statuscode.com/link/191424/5d0bbb4a61).
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rgnwjhbzdrqa7dl0695h.jpg)](https://react.statuscode.com/link/191425/5d0bbb4a61)
+
+*   [Mantine 9.7](https://react.statuscode.com/link/191425/5d0bbb4a61) – The popular component suite adds a new app onboarding [Tour component](https://react.statuscode.com/link/191426/5d0bbb4a61) (_shown above_), plus its MCP server now exposes far more of the docs.
+    
+*   [React Native Skia 3.0](https://react.statuscode.com/link/191427/5d0bbb4a61) – Now uses Skia's new Graphite GPU backend, which you can [▶️ see in action here](https://react.statuscode.com/link/191428/5d0bbb4a61).
+    
+*   [React Native Testing Library 14.1](https://react.statuscode.com/link/191429/5d0bbb4a61) – Now supports React Native 0.88 and React 19.3, and adds a `pullToRefresh()` user event.
+    
+*   [Lexical 0.51](https://react.statuscode.com/link/191430/5d0bbb4a61) – Meta's extensible text editor framework. Now ESM-only, and _“a big step towards Lexical 1.0.”_
+    
+*   [Base UI 1.9](https://react.statuscode.com/link/191431/5d0bbb4a61) – Unstyled, accessible React components. Adds filterable menus (in preview) plus many focus and Drawer fixes.
+    
+*   ⭐ [MSW 3.0](https://react.statuscode.com/link/191432/5d0bbb4a61) – Popular API mocking library. Now ESM-only, with GraphQL subscription support and a lighter footprint.
+    
+*   [React Aria 1.22](https://react.statuscode.com/link/191433/5d0bbb4a61) – Adds a new swipeable `Sheet` component, [explained here](https://react.statuscode.com/link/191413/5d0bbb4a61).
+    
+*   [Material UI 9.5](https://react.statuscode.com/link/191434/5d0bbb4a61)
+    
+
+📰 Classifieds
+
+[Expo is mobile AI infrastructure](https://react.statuscode.com/link/191435/5d0bbb4a61): Your agents build, test and ship iOS and Android apps, and you approve what goes out. [Try it](https://react.statuscode.com/link/191435/5d0bbb4a61).
+
+* * *
+
+Build TypeScript-first AI agents in your codebase. No timeouts, durable queues, & full tracing. [Ship your first agent in minutes with Trigger.dev](https://react.statuscode.com/link/191436/5d0bbb4a61).
+
+* * *
+
+Bring your wild ideas to [Mozilla Festival](https://react.statuscode.com/link/191437/5d0bbb4a61). Gather and connect with other developers and creatives in Barcelona, Oct. 28-30. [Get your badge](https://react.statuscode.com/link/191437/5d0bbb4a61).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/i0c745kvfckcevjrlsvu.jpg)](https://react.statuscode.com/link/191438/5d0bbb4a61)
+
+*   ✨ Want effects that ripple, glow or melt into ASCII without writing shader code? [Shaders](https://react.statuscode.com/link/191438/5d0bbb4a61) has open sourced its WebGPU engine and [190+ effect components](https://react.statuscode.com/link/191439/5d0bbb4a61), which drop into React like any other component.
+    
+*   Six years after work began, [Preact 11 is here](https://react.statuscode.com/link/191440/5d0bbb4a61). The tiny React alternative gains [Hydration 2.0](https://react.statuscode.com/link/191441/5d0bbb4a61) and automatic ref forwarding, and if you use `preact/compat` to run React code on it, the [upgrade guide](https://react.statuscode.com/link/191442/5d0bbb4a61) is worth a look.
+    
+*   Last week, [Remix 3.0](https://react.statuscode.com/link/191443/5d0bbb4a61) went stable, and it's no longer built on React. Curious what the post-React Remix is like? Sergio Xalambrí reflects on [six months of building with v3](https://react.statuscode.com/link/191444/5d0bbb4a61).
+    
+*   🤖 Theo Browne set AI agents loose on porting TypeScript 7 to Rust, and [ts-rust](https://react.statuscode.com/link/191445/5d0bbb4a61) is the (very experimental) result.
+    
+*   🚨 Breaking news as we go to press: [Deno is joining Cloudflare](https://react.statuscode.com/link/191447/5d0bbb4a61).
+    
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​493 — October 9, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/493)
+
+ℹ️ We're back from a week off, but we're taking next week off too, so will be back on Friday, October 23.\
+\_\_\
+*Your editor, Peter Cooper*
+
+Together with 
+
+[![SurveyJS logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1000,h_410/e_make_transparent/co_white,e_outline:20/yrja59qflovcjwojxypq.png)](https://react.statuscode.com/link/191401/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/fe3wu7d71nyuy9efyaox.jpg)](https://react.statuscode.com/link/191402/5d0bbb4a61)
+
+[A Visual Notation for React's Parent and Owner Trees](https://react.statuscode.com/link/191402/5d0bbb4a61 "julesblom.com") — A proposed diagram notation for React apps that shows both where each element ends up (the parent tree) and which component created it (the owner tree), with marks for context, Suspense, memo, error boundaries and RSC. There's also [a playground](https://react.statuscode.com/link/191403/5d0bbb4a61) that draws trees from code you paste in.
+
+Jules Blom
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/4e4ce890.png)](https://react.statuscode.com/link/191401/5d0bbb4a61)
+
+[React Form Builder with Full Control Over UI and Data](https://react.statuscode.com/link/191401/5d0bbb4a61 "surveyjs.io") — Build complex JSON-driven forms in React with a drag-and-drop builder. Configure validation and logic, customize themes and UI, connect to any backend, and keep form data in your own infrastructure.
+
+SurveyJS sponsor
+
+[Next.js 16.4 Makes Cache Components the Recommended Default](https://react.statuscode.com/link/191404/5d0bbb4a61 "nextjs.org") — The big news is [Cache Components](https://react.statuscode.com/link/191405/5d0bbb4a61) is now recommended, and enabled by default if you use `create-next-app`. [Agentic tooling](https://react.statuscode.com/link/191406/5d0bbb4a61) gets some upgrades, and there are [smaller improvements](https://react.statuscode.com/link/191407/5d0bbb4a61) for all apps.
+
+The Next.js Team
+
+**IN BRIEF:**
+
+* The React Foundation's working groups will meet in person for the first time at the [Contributors Summit](https://react.statuscode.com/link/191408/5d0bbb4a61) in London next month. It's invite-only, but contributors can [nominate themselves](https://react.statuscode.com/link/191409/5d0bbb4a61).
+
+* 📱 Following in Shopify's footsteps, [Coinbase says it's moving its app off React Native](https://react.statuscode.com/link/191410/5d0bbb4a61) too, repeating the *"AI coding agents have collapsed the cost of building a feature twice"* idea and saying they can access new platform features sooner.
+
+* Barbara Markiewicz, formerly of Callstack, [𝕏 has joined the React Foundation](https://react.statuscode.com/link/191411/5d0bbb4a61) as its Director of Community.
+
+[Can We Make React Faster Using the React Compiler?](https://react.statuscode.com/link/191412/5d0bbb4a61 "jimmyhmiller.com") — Digs into the React Compiler’s output, then prototypes extra compiler passes like inlining, blocks and selector inference to see how much faster React could get.
+
+Jimmy Miller
+
+[React Aria's New Swipeable Sheet and the CSS Tricks Behind It](https://react.statuscode.com/link/191413/5d0bbb4a61 "react-aria.adobe.com") — [React Aria](https://react.statuscode.com/link/191414/5d0bbb4a61) has a new swipeable [Sheet component](https://react.statuscode.com/link/191415/5d0bbb4a61), and Devon explains how it works. Rather than handle touch events in JavaScript, it uses an oversized scroll container with CSS scroll snapping and view timelines to get native momentum, rubber-banding, gesture-synced animations, and more.
+
+Devon Govett (Adobe)
+
+📄 [Making React Context Cheap with React Compiler](https://react.statuscode.com/link/191416/5d0bbb4a61) – Can React Compiler avoid the need for context selectors? A 5,000-radio benchmark suggests it can. Jenna Smith
+
+📄 [React Folder Structure Best Practices (2026 Edition)](https://react.statuscode.com/link/191417/5d0bbb4a61) Robin Wieruch
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xev4fnt8ayacadkzw5go.jpg)](https://react.statuscode.com/link/191418/5d0bbb4a61)
+
+[TanStack Charts 1.0: Composable, Typed Charts](https://react.statuscode.com/link/191418/5d0bbb4a61 "tanstack.com") — Almost a decade after creating [React Charts](https://react.statuscode.com/link/191419/5d0bbb4a61), Tanner returns with a rethink: charts composed from typed marks and scales, rendered with SVG or Canvas, with a React adapter. The [example catalog](https://react.statuscode.com/link/191420/5d0bbb4a61) shows off its range, along with code samples.
+
+Tanner Linsley
+
+[Ink 8: React for CLIs Gets Scrollable Views](https://react.statuscode.com/link/191421/5d0bbb4a61 "github.com") — The popular TUI renderer, as used by Claude Code and Gemini CLI. New props on `Box` enable scrollable views, `render()` takes any Node stream, and incremental rendering only rewrites changed parts of lines for less flicker.
+
+Vadim Demedes
+
+[Redux Toolkit 2.13: TypeScript 7 Support and a Steadier `useQuery`](https://react.statuscode.com/link/191422/5d0bbb4a61 "github.com") — Adds official TypeScript 7 support and fixes `useQuery` creating a new selector on every render (which could flip `isSuccess` mid-refetch).
+
+Mark Erikson
+
+💡 In other good news, the docs for all the Redux libraries now live together on [redux.js.org](https://react.statuscode.com/link/191423/5d0bbb4a61), including those [for Redux Toolkit](https://react.statuscode.com/link/191424/5d0bbb4a61).
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/rgnwjhbzdrqa7dl0695h.jpg)](https://react.statuscode.com/link/191425/5d0bbb4a61)
+
+* [Mantine 9.7](https://react.statuscode.com/link/191425/5d0bbb4a61) – The popular component suite adds a new app onboarding [Tour component](https://react.statuscode.com/link/191426/5d0bbb4a61) (*shown above*), plus its MCP server now exposes far more of the docs.
+
+* [React Native Skia 3.0](https://react.statuscode.com/link/191427/5d0bbb4a61) – Now uses Skia's new Graphite GPU backend, which you can [▶️ see in action here](https://react.statuscode.com/link/191428/5d0bbb4a61).
+
+* [React Native Testing Library 14.1](https://react.statuscode.com/link/191429/5d0bbb4a61) – Now supports React Native 0.88 and React 19.3, and adds a `pullToRefresh()` user event.
+
+* [Lexical 0.51](https://react.statuscode.com/link/191430/5d0bbb4a61) – Meta's extensible text editor framework. Now ESM-only, and *“a big step towards Lexical 1.0.”*
+
+* [Base UI 1.9](https://react.statuscode.com/link/191431/5d0bbb4a61) – Unstyled, accessible React components. Adds filterable menus (in preview) plus many focus and Drawer fixes.
+
+* ⭐ [MSW 3.0](https://react.statuscode.com/link/191432/5d0bbb4a61) – Popular API mocking library. Now ESM-only, with GraphQL subscription support and a lighter footprint.
+
+* [React Aria 1.22](https://react.statuscode.com/link/191433/5d0bbb4a61) – Adds a new swipeable `Sheet` component, [explained here](https://react.statuscode.com/link/191413/5d0bbb4a61).
+
+* [Material UI 9.5](https://react.statuscode.com/link/191434/5d0bbb4a61)
+
+📰 Classifieds
+
+[Expo is mobile AI infrastructure](https://react.statuscode.com/link/191435/5d0bbb4a61): Your agents build, test and ship iOS and Android apps, and you approve what goes out. [Try it](https://react.statuscode.com/link/191435/5d0bbb4a61).
+
+***
+
+Build TypeScript-first AI agents in your codebase. No timeouts, durable queues, & full tracing. [Ship your first agent in minutes with Trigger.dev](https://react.statuscode.com/link/191436/5d0bbb4a61).
+
+***
+
+Bring your wild ideas to [Mozilla Festival](https://react.statuscode.com/link/191437/5d0bbb4a61). Gather and connect with other developers and creatives in Barcelona, Oct. 28-30. [Get your badge](https://react.statuscode.com/link/191437/5d0bbb4a61).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/i0c745kvfckcevjrlsvu.jpg)](https://react.statuscode.com/link/191438/5d0bbb4a61)
+
+* ✨ Want effects that ripple, glow or melt into ASCII without writing shader code? [Shaders](https://react.statuscode.com/link/191438/5d0bbb4a61) has open sourced its WebGPU engine and [190+ effect components](https://react.statuscode.com/link/191439/5d0bbb4a61), which drop into React like any other component.
+
+* Six years after work began, [Preact 11 is here](https://react.statuscode.com/link/191440/5d0bbb4a61). The tiny React alternative gains [Hydration 2.0](https://react.statuscode.com/link/191441/5d0bbb4a61) and automatic ref forwarding, and if you use `preact/compat` to run React code on it, the [upgrade guide](https://react.statuscode.com/link/191442/5d0bbb4a61) is worth a look.
+
+* Last week, [Remix 3.0](https://react.statuscode.com/link/191443/5d0bbb4a61) went stable, and it's no longer built on React. Curious what the post-React Remix is like? Sergio Xalambrí reflects on [six months of building with v3](https://react.statuscode.com/link/191444/5d0bbb4a61).
+
+* 🤖 Theo Browne set AI agents loose on porting TypeScript 7 to Rust, and [ts-rust](https://react.statuscode.com/link/191445/5d0bbb4a61) is the (very experimental) result.
+
+* 🚨 Breaking news as we go to press: [Deno is joining Cloudflare](https://react.statuscode.com/link/191447/5d0bbb4a61).
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
