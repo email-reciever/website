@@ -1,57 +1,42 @@
 /**
- * @description general markdown transformer
+ * @description general markdown translator
  */
 
-import { unified } from 'unified';
-import remarkParse from 'remark-parse';
-import remarkStringify from 'remark-stringify';
+import remarkParse from "remark-parse";
+import remarkStringify from "remark-stringify";
+import { unified } from "unified";
+import { type PluginOptions, remarkCodePlugin } from "../remarks/remark-code-plugin";
+import { translate } from "../utils/translate";
 
-import { translate } from '../utils/translate';
-import { td } from '../utils/td';
-import { remarkCodePlugin, type PluginOptions } from '../remarks/remark-code-plugin';
-import type { LinkItem, CollectLinks } from '../types';
-
-function translatedLinkSource(getLinks: () => LinkItem[]) {
-	return async () => {
-		if (getLinks().length) {
-			const { turndown } = new td();
-			try {
-				// jsdom do not use node:* prefix for node modules. wait for a instand lib
-				// https://github.com/jsdom/jsdom/issues/3753
-				// const linkSource = await Promise.all(
-				// 	getLinks().map(({ url }) => {
-				// 		if (url) {
-				// 			return JSDOM.fromURL(url)
-				// 			// attemp use largest dom to get content for translate
-				// 		}
-				// 	})
-				// );
-			} catch (e) {}
-		}
-	};
+export interface TranslateResult {
+  content: string;
+  /** true only when the translate service actually changed the content */
+  translated: boolean;
 }
 
 async function processMD(markdown: string, ...codePluginParams: PluginOptions) {
-	const md = await unified()
-		.use(remarkParse)
-		.use(remarkCodePlugin, ...codePluginParams)
-		.use(remarkStringify)
-		.process(markdown);
-	return String(md);
+  const md = await unified()
+    .use(remarkParse)
+    .use(remarkCodePlugin, ...codePluginParams)
+    .use(remarkStringify)
+    .process(markdown);
+  return String(md);
 }
 
-export async function md(markdown: string, env: Env, collectLinkPlugin?: CollectLinks) {
-	// first site all code node
-	const positionCodeMarkdown = await processMD(markdown);
-	// translate it
-	try {
-		const translateContent = await translate(positionCodeMarkdown, env);
-		const fallbackCodeContent = await processMD(translateContent, true, markdown);
+export async function md(markdown: string, env: Env): Promise<TranslateResult> {
+  // first sit all code nodes with position placeholders (protect code from the translator)
+  const positionCodeMarkdown = await processMD(markdown);
+  try {
+    const translateContent = await translate(positionCodeMarkdown, env);
+    if (translateContent?.length && translateContent !== positionCodeMarkdown) {
+      // restore the original code blocks by position
+      const fallbackCodeContent = await processMD(translateContent, true, markdown);
+      return { content: String(fallbackCodeContent), translated: true };
+    }
+  } catch (e) {
+    console.log(e);
+  }
 
-		return String(fallbackCodeContent);
-	} catch (r) {
-		console.log(r);
-	}
-
-	return markdown;
+  // translate failed or is disabled: keep the original content, mark as untranslated
+  return { content: markdown, translated: false };
 }

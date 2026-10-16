@@ -1,1 +1,1 @@
-export type * from './markdown-extends'
+export type * from "./markdown-extends";

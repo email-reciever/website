@@ -1,68 +1,60 @@
-import type { RouterMiddleware } from '$oak'
-import pm from '$pm'
-import chunk from '$chunk'
-import { resolve } from 'node:path'
+import { resolve } from "node:path";
+import type { RouterMiddleware } from "$oak";
+import pm from "$pm";
 
 function delay(time = 1000) {
   return new Promise((r) => {
-    setTimeout(r, time)
-  })
+    setTimeout(r, time);
+  });
 }
 
-export const batchUpdate: RouterMiddleware<
-  '/batch-update' | '/batch-update/:type'
-> = async (ctx) => {
-  const type = ctx.params.type
+export const batchUpdate: RouterMiddleware<"/batch-update" | "/batch-update/:type"> = async (
+  ctx,
+) => {
+  const type = ctx.params.type;
   try {
-    const dirName = resolve(
-      import.meta.dirname!,
-      '../../../../',
-      'batch',
-      type!
-    )
-    const updateQueue: Record<string, unknown>[] = []
+    const dirName = resolve(import.meta.dirname!, "../../../../", "batch", type!);
+    const updateQueue: Record<string, unknown>[] = [];
     for (const entry of Deno.readDirSync(dirName)) {
-      const { name, isFile } = entry
+      const { name, isFile } = entry;
       if (isFile) {
-        const fileName = resolve(dirName, name)
-        const { headers, date, html, text, subject } = await pm.parse(
-          Deno.readFileSync(fileName)
-        )
+        const fileName = resolve(dirName, name);
+        const { headers, date, html, text, subject } = await pm.parse(Deno.readFileSync(fileName));
         const payload = {
           md: text,
           type,
           html,
           title: subject,
           date,
-          headers
-        }
+          headers,
+        };
         try {
           const url =
-            Deno.env.get('USE_LOCAL') === 'true'
-              ? Deno.env.get('WORKER_LOCAL')
-              : Deno.env.get('WORKER')
+            Deno.env.get("USE_LOCAL") === "true"
+              ? Deno.env.get("WORKER_LOCAL")
+              : Deno.env.get("WORKER");
           const response = await fetch(url!, {
-            method: 'POST',
-            body: JSON.stringify(payload)
-          }).then((response) => response.json())
+            method: "POST",
+            body: JSON.stringify(payload),
+          }).then((response) => response.json());
 
           if (response.translated) {
-            Deno.removeSync(fileName)
+            Deno.removeSync(fileName);
             updateQueue.push({
               name,
-              response
-            })
-            await delay()
-            console.log(`${name} create success`)
+              response,
+            });
+            await delay();
+            console.log(`${name} create success`);
           }
-        } catch (e) {}
+        } catch (_e) {}
       }
     }
 
     ctx.response.body = {
       updateQueue,
       count: updateQueue.length,
-      names: updateQueue.map((v) => v.name)
-    }
-  } catch (e) {}
-}
+      names: updateQueue.map((v) => v.name),
+    };
+  } catch (_e) {}
+};

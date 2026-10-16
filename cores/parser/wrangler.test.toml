@@ -1,0 +1,27 @@
+#:schema node_modules/wrangler/config-schema.json
+compatibility_date = "2025-09-01"
+compatibility_flags = ["nodejs_compat"]
+main = "src/index.ts"
+name = "subscribe-email"
+
+[vars]
+OPEN_ACTION = "opened"
+OPEN_USER = "innocces"
+SELF_EMAIL = "jiangjiangjiangxi@gmail.com"
+TR_SERVE = "https://email-reciever.deno.dev"
+# optional translation overrides:
+# TR_MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast"   # Workers AI model (ai provider)
+# TR_PROVIDER = "google"                                  # 'google' (non-AI, default) or 'ai'
+
+# RSS direct-subscription sync (utils/rss.ts), also triggerable via POST /rss
+[triggers]
+crons = ["0 */6 * * *"]
+
+# deno server (TR_SERVE) is only used for dev-mode file writes, batch replay
+# and discord notifications — translation runs on Workers AI (AI binding)
+# secrets (set via `wrangler secret put`): REPO_TOKEN, ZHIHU_COOKIE, ENV
+
+# raw email log bucket
+[[r2_buckets]]
+binding = "LOGGER"
+bucket_name = "email-reciever-logger"

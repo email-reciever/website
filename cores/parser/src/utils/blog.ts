@@ -1,79 +1,81 @@
-import { WHITELISTS } from '@email.reciever/consts/white-lists';
-import { local } from '../adapters/local';
-import { github } from '../adapters/github';
+import { WHITELISTS } from "@email.reciever/consts/white-lists";
+import type { Frontmatter } from "@email.reciever/types/markdown-extends";
+import dayjs from "dayjs";
+import { dump as yamlDump } from "js-yaml";
+import { type FileInfo, github } from "../adapters/github";
+import { local } from "../adapters/local";
+import type { WlKeys } from "../types";
+import { logger } from "./logger";
+import { toManifestEntry, upsertManifest } from "./manifest";
 
-import dayjs from 'dayjs';
-
-import type { frontmatter } from '@email.reciever/types/markdown-extends';
-import type { WlKeys } from '../types';
-
-export function checkEmailSendValid(send: any) {
-	return Object.values(WHITELISTS).includes(send);
+export function checkEmailSendValid(send: string) {
+  return (Object.values(WHITELISTS) as string[]).includes(send);
 }
 
-export function getEmailSenderType(email: any) {
-	return Object.keys(WHITELISTS)
-		.find((v) => WHITELISTS[v as WlKeys] === email)!
-		.toLocaleLowerCase() as Lowercase<WlKeys>;
+export function getEmailSenderType(email: string) {
+  const entry = Object.entries(WHITELISTS).find(([, value]) => value === email);
+  // callers must pass checkEmailSendValid first, so the entry always exists
+  return (entry?.[0] ?? "").toLowerCase() as Lowercase<WlKeys>;
 }
 
-// https://docs.astro.build/en/guides/markdown-content/#escaping-special-characters
-export function escapeUnsafeCharactors(content = '') {
-	return content.replace(/</g, '&lt;').replace(/{/g, '&lcub;');
-}
-
-export async function createBlog(translateContent: string, originContent: string, frontMatter: frontmatter, env: Env) {
-	const frontMatterContent = Object.entries(frontMatter)
-		.map(([k, v]) => `${k}: ${v}`)
-		.join('\n');
-
-	const content = `---
-${frontMatterContent}
+/**
+ * Compose the final markdown file: YAML frontmatter + body.
+ * Output is plain markdown — no MDX/JSX involved, so the old
+ * `<`/`{` escaping hacks (escapeUnsafeCharactors) are gone for good.
+ */
+export function composeMarkdown(content: string, frontMatter: Frontmatter) {
+  const fm = yamlDump(frontMatter, { lineWidth: -1, noRefs: true });
+  return `---
+${fm.trimEnd()}
 ---
 
-import { Detail } from '@/components/Detail.tsx';
-import { Reference } from '@/components/Reference.tsx';
-
-<Reference client:only="react" title="${frontMatter.title}" url="${frontMatter.origin_url}" />
-
-${
-	frontMatter.translated
-		? `<Detail client:only="react">
-	${escapeUnsafeCharactors(originContent)}
-</Detail>`
-		: ''
-}
-
-${escapeUnsafeCharactors(translateContent)}
-
+${content.trim()}
 `;
-
-	const { author } = frontMatter;
-	const fileName = dayjs().format('YYYY-MM-DD_HH-mm-ss_SSS');
-	// astro use filename for slug, some charactor may cause route error, use current-date-timestamp
-	const path = `src/content/${author}/${fileName}.mdx`;
-
-	if (env.ENV === 'dev') {
-		await local({ path, content }, env);
-	} else {
-		await github({ path, content }, env);
-	}
 }
 
-export function createCommonFrontmatter(title: string, author: string, origin_url: string, date?: string) {
-	const withFormatDate = dayjs(date).format('dddd hh A MMMM Do YYYY');
-	const avatar = `/media-source/${author}-ico.png`;
-	// deal charactor ':', it will cause astro js-yml error
-	const escapeTitle = title.replace(/:/gi, '：').replace(/"/gi, '”');
-	return {
-		layout: '../../layouts/BlogLayout.astro',
-		title: escapeTitle,
-		description: escapeTitle,
-		date: withFormatDate,
-		author,
-		origin_url,
-		origin_site: origin_url,
-		translated: true,
-		avatar,
-	};
+/**
+ * Publish a post:
+ * 1. write `content/{author}/{timestamp}.md` to the repo (GitHub API or local dev server)
+ * 2. upsert the manifest entry for the website list page
+ *
+ * Manifest failure does not block the post itself — it only logs.
+ */
+export async function createBlog(content: string, frontMatter: Frontmatter, env: Env) {
+  const { author } = frontMatter;
+  // timestamp filename: unique, sortable, free of special chars that break routing
+  const slug = dayjs().format("YYYY-MM-DD_HH-mm-ss_SSS");
+  const payload: FileInfo = {
+    path: `content/${author}/${slug}.md`,
+    content: composeMarkdown(content, frontMatter),
+  };
+
+  if (env.ENV === "dev") {
+    await local(payload, env);
+  } else {
+    await github(payload, env);
+  }
+
+  try {
+    await upsertManifest(toManifestEntry(frontMatter, slug), env);
+  } catch (e) {
+    logger(env, "manifest update failed", payload.path, e);
+  }
+}
+
+export function createCommonFrontmatter(
+  title: string,
+  author: string,
+  origin_url: string,
+  date?: string | Date,
+): Frontmatter {
+  const parsed = dayjs(date);
+  return {
+    title,
+    description: title,
+    date: (parsed.isValid() ? parsed : dayjs()).toISOString(),
+    author,
+    origin_url,
+    translated: true,
+    avatar: `/media-source/${author}-ico.png`,
+  };
 }

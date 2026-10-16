@@ -1,7 +1,26 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.5.15/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
   "files": {
-    "ignore": [".astro/*", "cores/**", "cores/**/dist/*"]
+    "includes": [
+      "**",
+      "!**/dist",
+      "!**/.wrangler",
+      "!**/.tanstack",
+      "!**/.output",
+      "!**/content",
+      "!website/src/styles/app.css",
+      "!website/src/routeTree.gen.ts",
+      "!website/public",
+      "!packages/turndown",
+      "!manifest.json",
+      "!*.metadata.json",
+      "!**/worker-configuration.d.ts"
+    ]
   },
   "formatter": {
     "enabled": true,
@@ -9,13 +28,32 @@
     "lineWidth": 100,
     "indentWidth": 2
   },
-  "organizeImports": {
-    "enabled": true
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
   },
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "preset": "recommended"
     }
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["cores/parser/**", "packages/server/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noNonNullAssertion": "off"
+          },
+          "suspicious": {
+            "noExplicitAny": "off"
+          }
+        }
+      }
+    }
+  ]
 }

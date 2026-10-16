@@ -1,8 +1,9 @@
 {
-	"extends": "../tsconfig.json",
-	"compilerOptions": {
-		"types": ["@cloudflare/workers-types/experimental", "@cloudflare/vitest-pool-workers"]
-	},
-	"include": ["./**/*.ts", "../src/env.d.ts"],
-	"exclude": []
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "types": ["@cloudflare/vitest-plugin/types"]
+  },
+	"include": ["./**/*.ts", "../worker-configuration.d.ts", "../env.d.ts"],
+  "exclude": []
 }

@@ -1,55 +1,24 @@
 {
   "name": "@email.reciever/consts",
-  "private": true,
   "version": "0.0.1",
+  "private": true,
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
-    "./white-lists": {
-      "import": "./dist/white-lists.js",
-      "require": "./dist/white-lists.cjs",
-      "types": "./dist/white-lists.d.ts",
-      "default": "./dist/white-lists.cjs"
-    },
-    "./github": {
-      "import": "./dist/github.js",
-      "require": "./dist/github.cjs",
-      "types": "./dist/github.d.ts",
-      "default": "./dist/github.cjs"
-    },
-    "./regexp": {
-      "import": "./dist/regexp.js",
-      "require": "./dist/regexp.cjs",
-      "types": "./dist/regexp.d.ts",
-      "default": "./dist/regexp.cjs"
-    },
-    "./zhihu": {
-      "import": "./dist/zhihu.js",
-      "require": "./dist/zhihu.cjs",
-      "types": "./dist/zhihu.d.ts",
-      "default": "./dist/zhihu.cjs"
-    },
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.cjs"
-    }
+    ".": "./src/index.ts",
+    "./white-lists": "./src/white-lists.ts",
+    "./github": "./src/github.ts",
+    "./regexp": "./src/regexp.ts",
+    "./zhihu": "./src/zhihu.ts",
+    "./rss": "./src/rss.ts",
+    "./archives": "./src/archives.ts"
   },
   "files": [
-    "src",
-    "dist"
+    "src"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "check": "tsc --noEmit"
   },
   "devDependencies": {
-    "typescript": "^5.5.4",
-    "vite": "^5.4.1",
-    "vite-plugin-dts": "4.0.0-beta.2"
+    "typescript": "^5.9.3"
   }
 }

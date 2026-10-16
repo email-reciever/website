@@ -1,0 +1,20 @@
+name: Subscribe-rss
+
+# RSS 直连订阅的手动/备份触发。
+# 常规同步由 worker 自身的 cron 触发(wrangler.toml [triggers],每 6 小时),
+# 此 workflow 仅用于手动补跑:POST worker 的 /rss 路由。
+# 需要在仓库 secrets 配置 WORKER_RSS_URL = https://<worker>/rss
+
+on:
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: send trigger curl
+        uses: indiesdev/curl@v1.1
+        with:
+          method: 'POST'
+          url: ${{ secrets.WORKER_RSS_URL }}
+          timeout: 300000

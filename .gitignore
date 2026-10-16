@@ -1,16 +1,28 @@
 # build output
 dist/
+.output/
 batch/
 
-# generated types
+# generated types / caches
 .astro/
-.wrangler
+.tanstack/
+.wrangler/
+*.tsbuildinfo
 
 # dependencies
 node_modules/
+website/node_modules
 cores/*/node_modules
 packages/*/node_modules
-cores/*/starter-bot.memory-card.json
+
+# ai agent scratch files
+.ai-md/
+.agents/
+.agent/
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.opencode/
 
 # logs
 npm-debug.log*
@@ -20,8 +32,8 @@ pnpm-debug.log*
 
 # environment variables
 .env
-.env.local
-.env.production
+.env.*
+!.env.example
 
 # macOS-specific files
 .DS_Store

@@ -3,8 +3,8 @@
  */
 
 export type HrefItem = {
-	url: string;
-	title: string;
+  url: string;
+  title: string;
 };
 
-export async function link(hrefs: HrefItem[]) {}
+export async function link(_hrefs: HrefItem[]) {}
