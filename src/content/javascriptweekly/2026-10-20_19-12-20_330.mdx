@@ -1,0 +1,321 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: The up to 8x faster Rust port of TypeScript
+description: The up to 8x faster Rust port of TypeScript
+date: 星期二 07 晚上 十月 20o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/807
+origin_site: https://javascriptweekly.com/issues/807
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="The up to 8x faster Rust port of TypeScript" url="https://javascriptweekly.com/issues/807" />
+
+<Detail client:only="react">
+	#​807 — October 20, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/807)
+
+Together with 
+
+[![Svix](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_386/e_make_transparent/co_white,e_outline:13/uokdi3wp1cp3vvnshdmd.png)](https://javascriptweekly.com/link/191668/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nuezexh7haulvsllbugt.jpg)](https://javascriptweekly.com/link/191669/d076523b1d)
+
+[tsrs: Cloudflare and VoidZero's Rust Port of TypeScript](https://javascriptweekly.com/link/191669/d076523b1d "blog.cloudflare.com") — A Rust port of the Go-based TypeScript 7 compiler, built with [some input from the TypeScript team](https://javascriptweekly.com/link/191670/d076523b1d) and heading into [Oxc](https://javascriptweekly.com/link/191671/d076523b1d). Benchmarks claim up to 8x the speed of TypeScript 7.0 and it runs in WebAssembly. Experimental, but `npx tsrs` works.
+
+Chen, Mitropoulos and Nakazawa (Cloudflare / VoidZero)
+
+💡 Max Schwenk started the port with agents writing the code, and [tells the full tale here](https://javascriptweekly.com/link/191672/d076523b1d), including how it took his company's typecheck from 80 seconds to 7.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/dc7dffad.png)](https://javascriptweekly.com/link/191668/d076523b1d)
+
+[Send Webhooks from Your TypeScript API in Minutes](https://javascriptweekly.com/link/191668/d076523b1d "link.svix.com") — One typed npm package, one call per event. Svix handles retries, signing, delivery logs, and a portal for your customers, so you don't build any of it. Resend sends 200M+ webhooks a year through it.
+
+Svix sponsor
+
+[Thank You, Deno: Competition Keeps JavaScript Moving](https://javascriptweekly.com/link/191673/d076523b1d "www.vlt.io") — Last week we covered [Deno joining Cloudflare](https://javascriptweekly.com/link/191674/d076523b1d) and the future of the Deno runtime. Deno was valuable, says Darcy, as it (and Bun) made the entire ecosystem better by pushing Node and npm to adopt its best ideas.
+
+Darcy Clarke (vlt)
+
+**IN BRIEF:**
+
+*   🔒 [Next.js has patched two critical RCE flaws](https://javascriptweekly.com/link/191675/d076523b1d): one in `use cache` functions via an [upstream React Server Components bug](https://javascriptweekly.com/link/191676/d076523b1d) and one in the image optimizer's SVG handling. Upgrade to 16.4.1 or 15.5.28; a [public PoC](https://javascriptweekly.com/link/191677/d076523b1d) is already out.
+    
+*   🔒 [Node.js security releases are due tomorrow](https://javascriptweekly.com/link/191678/d076523b1d) for the 26.x, 24.x and 22.x lines, with the highest severity issue rated high.
+    
+*   Bun compiling JavaScript ahead-of-time, [previewed a few weeks ago](https://javascriptweekly.com/link/191679/d076523b1d), now has [a draft PR](https://javascriptweekly.com/link/191680/d076523b1d) to produce binaries with no JIT or bytecode.
+    
+
+**RELEASES:**
+
+*   [Node.js v26.12.0 (Current)](https://javascriptweekly.com/link/191681/d076523b1d) and [v24.22.0 (LTS)](https://javascriptweekly.com/link/191682/d076523b1d) – 26.12 can now synchronously load most ES modules and marks the config file stable; 24.22 gains `util.throttle` and `util.debounce`.
+    
+*   [Astro 7.4](https://javascriptweekly.com/link/191683/d076523b1d) – Adds a `--timings` flag for `astro build` to see where build time is spent, plus experimental parallel prerendering across worker threads.
+    
+*   [React Router 8.5](https://javascriptweekly.com/link/191684/d076523b1d) – Deprecates its own view transition APIs in favor of React's &lt;`ViewTransition`\> component, and adds an experimental 'API-only' mode.
+    
+*   [Pretext 1.0](https://javascriptweekly.com/link/191685/d076523b1d) – Multiline text layout without touching the DOM. 1.0 ports browsers' own line breakers, so results more closely match what would render.
+    
+*   [React Native 0.88](https://javascriptweekly.com/link/191686/d076523b1d), [Elysia 2.0 RC](https://javascriptweekly.com/link/191687/d076523b1d), [ESLint 10.13](https://javascriptweekly.com/link/191688/d076523b1d), [tsup 9.0](https://javascriptweekly.com/link/191689/d076523b1d), [Vuetify 4.3](https://javascriptweekly.com/link/191690/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[The Tetris Script That Becomes _Snake_ Once Prettified?](https://javascriptweekly.com/link/191691/d076523b1d "trustsig.eu") — You'd think pretty-printers and deobfuscators at least leave a script's _logic_ alone, but no. See how chaining semantic quirks in such tools can turn the 'cleaned up' output into a different program!
+
+Robert Vähhi (TrustSig)
+
+[Do Web Components Have a Future If Nobody is Writing Them?](https://javascriptweekly.com/link/191692/d076523b1d "nolanlawson.com") — Nolan has spent years building and defending web components, so this thoughtful, if a little melancholy, piece carries some weight.
+
+Nolan Lawson
+
+[Your CI Was Built for Humans. Your Agents Need Something Else](https://javascriptweekly.com/link/191693/d076523b1d "try.expo.dev") — Expo is mobile AI infrastructure. Your agents build, test and ship iOS and Android apps in the background.
+
+Expo sponsor
+
+▶  [ViteConf 2026: The Full Replay](https://javascriptweekly.com/link/191694/d076523b1d "www.youtube.com") — Last week's ViteConf brought ~30 talks including Evan You's keynote on tooling in the agentic era, plus updates on Vitest 5, Vite DevTools, and a faster parser coming to Oxc. It's 10 hours, but there's a hero with timestamps in the comments.
+
+ViteConf
+
+💡 One of the bigger announcements: [Void, the Vite team's full-stack SDK and deploy platform, is now open source](https://javascriptweekly.com/link/191695/d076523b1d).
+
+[How to Gaslight JavaScript Programmers (with Proxies)](https://javascriptweekly.com/link/191696/d076523b1d "www.bryanpg.com") — `Proxy`, introduced as part of ES6 back in the day, has plenty of practical uses but can also make objects behave in curious, unexpected ways. Complete with live, editable examples.
+
+Bryan Gillespie
+
+[How Miro Moved 70,000 Tests from Jest to Vitest](https://javascriptweekly.com/link/191697/d076523b1d "nothing-else.blog") — The story of moving ~70,000 tests across an 800-package monorepo to Vitest, with AI agents doing most of the laborious work.
+
+Sergey Nikitin
+
+📄 [Upgrading to Zod 4 Cut Our Worker CPU by a Third](https://javascriptweekly.com/link/191698/d076523b1d) – A Zod 3 to 4.5 migration at 100 million parses a day. Chris Arderne
+
+📄 [Using `replace()` as an Iterator](https://javascriptweekly.com/link/191699/d076523b1d) – An old regex-callback-for-side-effects idiom, benchmarked against alternatives. Eugene Lazutkin
+
+📄 [Recursion is DEAD and HTML Killed It](https://javascriptweekly.com/link/191700/d076523b1d) – Hands-on with Chromium's experimental [Declarative Partial Updates](https://javascriptweekly.com/link/191701/d076523b1d) proposal. Dave Rupert
+
+📺 [NightMonkey: Compiling JavaScript Ahead of Time to WebAssembly](https://javascriptweekly.com/link/191702/d076523b1d) – An hour-long VMIL 2026 talk from a Wasmtime engineer. Chris Fallin
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ywzqx0owlyt7kwf7wgrk.jpg)](https://javascriptweekly.com/link/191703/d076523b1d)
+
+[Maplair: A Batteries-Included, Tree-Shakeable Fork of Leaflet](https://javascriptweekly.com/link/191703/d076523b1d "maplair.org") — Still in alpha since last year, one of Leaflet's contributors has forked it, rolling in the 2.0 work plus rotation, fullscreen, search, heatmaps and more – all tree-shakeable.
+
+Simon Legner
+
+💡 The same day, Leaflet's creator [posted a candid update](https://javascriptweekly.com/link/191704/d076523b1d) about his experiences living in Ukraine and a plan to get Leaflet 2.0 released.
+
+[Embeddable DOCX, XLSX & PPTX Editor for Users and AI](https://javascriptweekly.com/link/191707/d076523b1d "playground.developers.thinkfree.com") — Let your AI edit existing files via object-level APIs. Users review and keep editing the same file. [Try Playground](https://javascriptweekly.com/link/191708/d076523b1d).
+
+Thinkfree sponsor
+
+📊 [Chartist 2.0: The Lightweight SVG Charting Library Returns](https://javascriptweekly.com/link/191705/d076523b1d "chartist.dev") — A CSS-styled SVG charting library from 2014 that _"went stale over the last years"_ makes a comeback with a composable API, server-side rendering to SVG, terminal charts, and still ~12KB gzipped for a line chart. There's [a migration guide](https://javascriptweekly.com/link/191706/d076523b1d) for 1.x users.
+
+Gion Kunz et al.
+
+[Pele: Mermaid Diagrams as Lightweight, Themeable SVG](https://javascriptweekly.com/link/191709/d076523b1d "pele.run") — Zero-dependency renderer for the Mermaid diagram syntax with responsive layouts and SVG you can theme with CSS variables. Around a sixth the size of Mermaid.js. [Try the playground](https://javascriptweekly.com/link/191710/d076523b1d).
+
+Steph Ango (Obsidian)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/anvwoxijoc5lx7t5nnkh.jpg)](https://javascriptweekly.com/link/191711/d076523b1d)
+
+[`&lt;rich-input>`: A Rich Input Field with GitHub-Style Search Filters](https://javascriptweekly.com/link/191711/d076523b1d "rich-input.netlify.app") — A web component for GitHub-style search boxes: free text mixed with autocompleted `key:value` filters, highlighted in place.
+
+Bramus Van Damme
+
+*   [Chokidar 6.0](https://javascriptweekly.com/link/191712/d076523b1d) – The file watcher behind much of JS tooling. [Rewritten to check changes against the disk before reporting](https://javascriptweekly.com/link/191713/d076523b1d) to avoid stray events after a burst of edits, say.
+    
+*   [Happy DOM 21.0](https://javascriptweekly.com/link/191714/d076523b1d) – Headless browser environment in pure JavaScript, popular for testing. [Now blocks stylesheet and `iframe` loading by default](https://javascriptweekly.com/link/191715/d076523b1d).
+    
+*   [p-queue 10.0](https://javascriptweekly.com/link/191716/d076523b1d) – Promise queue with concurrency control. [Now dependency-free](https://javascriptweekly.com/link/191717/d076523b1d) and an `EventTarget`.
+    
+*   [Paper.js 0.13](https://javascriptweekly.com/link/191718/d076523b1d) and [0.14](https://javascriptweekly.com/link/191719/d076523b1d) – Vector graphics scripting framework for canvas. First notable releases in years. ([Homepage](https://javascriptweekly.com/link/191720/d076523b1d) with [demos](https://javascriptweekly.com/link/191721/d076523b1d).)
+    
+*   🕹️ [LittleJS 1.27](https://javascriptweekly.com/link/191722/d076523b1d) – Dependency-free HTML5 game engine that now does 3D too.
+    
+*   🖼️ [Skia Canvas 4.0](https://javascriptweekly.com/link/191723/d076523b1d) – Canvas API for Node, built on Skia.
+    
+
+📰 Classifieds
+
+🕵️ Muse doesn’t announce itself. Meta’s AI agent browses like a real user. [See how Fingerprint detects it](https://javascriptweekly.com/link/191724/d076523b1d) by name and try free for yourself.
+
+* * *
+
+🎬 Your app needs video, not a video team. Upload any format to [Hyperserve's API](https://javascriptweekly.com/link/191725/d076523b1d), get back MP4 on a global CDN. Ship video in an afternoon.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/t1yy7vc2vsopynkoyvrc.jpg)](https://javascriptweekly.com/link/191726/d076523b1d)
+
+*   🖼️ **JPEG XL:** The modern image format is now supported by all major browsers, with [Firefox 158](https://javascriptweekly.com/link/191727/d076523b1d) the latest to enable it by default. Jake Archibald [pits it against AVIF in this extensive review](https://javascriptweekly.com/link/191728/d076523b1d). What I find amazing is [what it's able to render in under 100 bytes](https://javascriptweekly.com/link/191726/d076523b1d).
+    
+*   **NodeConf EU 2026:** The [▶️ latest NodeConf EU talks](https://javascriptweekly.com/link/191729/d076523b1d) are up, including James Snell's case for [a common minimum API every runtime should support](https://javascriptweekly.com/link/191730/d076523b1d), plus sessions on [V8 heap management](https://javascriptweekly.com/link/191731/d076523b1d) and [Emscripten and WebAssembly](https://javascriptweekly.com/link/191732/d076523b1d).
+    
+*   **A new social network:** [/dev/null](https://javascriptweekly.com/link/191733/d076523b1d) is a GitHub-oriented social network for developers, built from scratch in 48 hours. It already has over 8000 members, [including me](https://javascriptweekly.com/link/191734/d076523b1d). It's been a lot of fun so far!
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/191735/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​807 — October 20, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/807)
+
+Together with 
+
+[![Svix](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_386/e_make_transparent/co_white,e_outline:13/uokdi3wp1cp3vvnshdmd.png)](https://javascriptweekly.com/link/191668/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nuezexh7haulvsllbugt.jpg)](https://javascriptweekly.com/link/191669/d076523b1d)
+
+[tsrs: Cloudflare and VoidZero's Rust Port of TypeScript](https://javascriptweekly.com/link/191669/d076523b1d "blog.cloudflare.com") — A Rust port of the Go-based TypeScript 7 compiler, built with [some input from the TypeScript team](https://javascriptweekly.com/link/191670/d076523b1d) and heading into [Oxc](https://javascriptweekly.com/link/191671/d076523b1d). Benchmarks claim up to 8x the speed of TypeScript 7.0 and it runs in WebAssembly. Experimental, but `npx tsrs` works.
+
+Chen, Mitropoulos and Nakazawa (Cloudflare / VoidZero)
+
+💡 Max Schwenk started the port with agents writing the code, and [tells the full tale here](https://javascriptweekly.com/link/191672/d076523b1d), including how it took his company's typecheck from 80 seconds to 7.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/dc7dffad.png)](https://javascriptweekly.com/link/191668/d076523b1d)
+
+[Send Webhooks from Your TypeScript API in Minutes](https://javascriptweekly.com/link/191668/d076523b1d "link.svix.com") — One typed npm package, one call per event. Svix handles retries, signing, delivery logs, and a portal for your customers, so you don't build any of it. Resend sends 200M+ webhooks a year through it.
+
+Svix sponsor
+
+[Thank You, Deno: Competition Keeps JavaScript Moving](https://javascriptweekly.com/link/191673/d076523b1d "www.vlt.io") — Last week we covered [Deno joining Cloudflare](https://javascriptweekly.com/link/191674/d076523b1d) and the future of the Deno runtime. Deno was valuable, says Darcy, as it (and Bun) made the entire ecosystem better by pushing Node and npm to adopt its best ideas.
+
+Darcy Clarke (vlt)
+
+**IN BRIEF:**
+
+* 🔒 [Next.js has patched two critical RCE flaws](https://javascriptweekly.com/link/191675/d076523b1d): one in `use cache` functions via an [upstream React Server Components bug](https://javascriptweekly.com/link/191676/d076523b1d) and one in the image optimizer's SVG handling. Upgrade to 16.4.1 or 15.5.28; a [public PoC](https://javascriptweekly.com/link/191677/d076523b1d) is already out.
+
+* 🔒 [Node.js security releases are due tomorrow](https://javascriptweekly.com/link/191678/d076523b1d) for the 26.x, 24.x and 22.x lines, with the highest severity issue rated high.
+
+* Bun compiling JavaScript ahead-of-time, [previewed a few weeks ago](https://javascriptweekly.com/link/191679/d076523b1d), now has [a draft PR](https://javascriptweekly.com/link/191680/d076523b1d) to produce binaries with no JIT or bytecode.
+
+**RELEASES:**
+
+* [Node.js v26.12.0 (Current)](https://javascriptweekly.com/link/191681/d076523b1d) and [v24.22.0 (LTS)](https://javascriptweekly.com/link/191682/d076523b1d) – 26.12 can now synchronously load most ES modules and marks the config file stable; 24.22 gains `util.throttle` and `util.debounce`.
+
+* [Astro 7.4](https://javascriptweekly.com/link/191683/d076523b1d) – Adds a `--timings` flag for `astro build` to see where build time is spent, plus experimental parallel prerendering across worker threads.
+
+* [React Router 8.5](https://javascriptweekly.com/link/191684/d076523b1d) – Deprecates its own view transition APIs in favor of React's &lt;`ViewTransition`> component, and adds an experimental 'API-only' mode.
+
+* [Pretext 1.0](https://javascriptweekly.com/link/191685/d076523b1d) – Multiline text layout without touching the DOM. 1.0 ports browsers' own line breakers, so results more closely match what would render.
+
+* [React Native 0.88](https://javascriptweekly.com/link/191686/d076523b1d), [Elysia 2.0 RC](https://javascriptweekly.com/link/191687/d076523b1d), [ESLint 10.13](https://javascriptweekly.com/link/191688/d076523b1d), [tsup 9.0](https://javascriptweekly.com/link/191689/d076523b1d), [Vuetify 4.3](https://javascriptweekly.com/link/191690/d076523b1d)
+
+📖  Articles and Videos
+
+[The Tetris Script That Becomes *Snake* Once Prettified?](https://javascriptweekly.com/link/191691/d076523b1d "trustsig.eu") — You'd think pretty-printers and deobfuscators at least leave a script's *logic* alone, but no. See how chaining semantic quirks in such tools can turn the 'cleaned up' output into a different program!
+
+Robert Vähhi (TrustSig)
+
+[Do Web Components Have a Future If Nobody is Writing Them?](https://javascriptweekly.com/link/191692/d076523b1d "nolanlawson.com") — Nolan has spent years building and defending web components, so this thoughtful, if a little melancholy, piece carries some weight.
+
+Nolan Lawson
+
+[Your CI Was Built for Humans. Your Agents Need Something Else](https://javascriptweekly.com/link/191693/d076523b1d "try.expo.dev") — Expo is mobile AI infrastructure. Your agents build, test and ship iOS and Android apps in the background.
+
+Expo sponsor
+
+▶  [ViteConf 2026: The Full Replay](https://javascriptweekly.com/link/191694/d076523b1d "www.youtube.com") — Last week's ViteConf brought ~30 talks including Evan You's keynote on tooling in the agentic era, plus updates on Vitest 5, Vite DevTools, and a faster parser coming to Oxc. It's 10 hours, but there's a hero with timestamps in the comments.
+
+ViteConf
+
+💡 One of the bigger announcements: [Void, the Vite team's full-stack SDK and deploy platform, is now open source](https://javascriptweekly.com/link/191695/d076523b1d).
+
+[How to Gaslight JavaScript Programmers (with Proxies)](https://javascriptweekly.com/link/191696/d076523b1d "www.bryanpg.com") — `Proxy`, introduced as part of ES6 back in the day, has plenty of practical uses but can also make objects behave in curious, unexpected ways. Complete with live, editable examples.
+
+Bryan Gillespie
+
+[How Miro Moved 70,000 Tests from Jest to Vitest](https://javascriptweekly.com/link/191697/d076523b1d "nothing-else.blog") — The story of moving ~70,000 tests across an 800-package monorepo to Vitest, with AI agents doing most of the laborious work.
+
+Sergey Nikitin
+
+📄 [Upgrading to Zod 4 Cut Our Worker CPU by a Third](https://javascriptweekly.com/link/191698/d076523b1d) – A Zod 3 to 4.5 migration at 100 million parses a day. Chris Arderne
+
+📄 [Using `replace()` as an Iterator](https://javascriptweekly.com/link/191699/d076523b1d) – An old regex-callback-for-side-effects idiom, benchmarked against alternatives. Eugene Lazutkin
+
+📄 [Recursion is DEAD and HTML Killed It](https://javascriptweekly.com/link/191700/d076523b1d) – Hands-on with Chromium's experimental [Declarative Partial Updates](https://javascriptweekly.com/link/191701/d076523b1d) proposal. Dave Rupert
+
+📺 [NightMonkey: Compiling JavaScript Ahead of Time to WebAssembly](https://javascriptweekly.com/link/191702/d076523b1d) – An hour-long VMIL 2026 talk from a Wasmtime engineer. Chris Fallin
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ywzqx0owlyt7kwf7wgrk.jpg)](https://javascriptweekly.com/link/191703/d076523b1d)
+
+[Maplair: A Batteries-Included, Tree-Shakeable Fork of Leaflet](https://javascriptweekly.com/link/191703/d076523b1d "maplair.org") — Still in alpha since last year, one of Leaflet's contributors has forked it, rolling in the 2.0 work plus rotation, fullscreen, search, heatmaps and more – all tree-shakeable.
+
+Simon Legner
+
+💡 The same day, Leaflet's creator [posted a candid update](https://javascriptweekly.com/link/191704/d076523b1d) about his experiences living in Ukraine and a plan to get Leaflet 2.0 released.
+
+[Embeddable DOCX, XLSX & PPTX Editor for Users and AI](https://javascriptweekly.com/link/191707/d076523b1d "playground.developers.thinkfree.com") — Let your AI edit existing files via object-level APIs. Users review and keep editing the same file. [Try Playground](https://javascriptweekly.com/link/191708/d076523b1d).
+
+Thinkfree sponsor
+
+📊 [Chartist 2.0: The Lightweight SVG Charting Library Returns](https://javascriptweekly.com/link/191705/d076523b1d "chartist.dev") — A CSS-styled SVG charting library from 2014 that *"went stale over the last years"* makes a comeback with a composable API, server-side rendering to SVG, terminal charts, and still ~12KB gzipped for a line chart. There's [a migration guide](https://javascriptweekly.com/link/191706/d076523b1d) for 1.x users.
+
+Gion Kunz et al.
+
+[Pele: Mermaid Diagrams as Lightweight, Themeable SVG](https://javascriptweekly.com/link/191709/d076523b1d "pele.run") — Zero-dependency renderer for the Mermaid diagram syntax with responsive layouts and SVG you can theme with CSS variables. Around a sixth the size of Mermaid.js. [Try the playground](https://javascriptweekly.com/link/191710/d076523b1d).
+
+Steph Ango (Obsidian)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/anvwoxijoc5lx7t5nnkh.jpg)](https://javascriptweekly.com/link/191711/d076523b1d)
+
+[`&lt;rich-input>`: A Rich Input Field with GitHub-Style Search Filters](https://javascriptweekly.com/link/191711/d076523b1d "rich-input.netlify.app") — A web component for GitHub-style search boxes: free text mixed with autocompleted `key:value` filters, highlighted in place.
+
+Bramus Van Damme
+
+* [Chokidar 6.0](https://javascriptweekly.com/link/191712/d076523b1d) – The file watcher behind much of JS tooling. [Rewritten to check changes against the disk before reporting](https://javascriptweekly.com/link/191713/d076523b1d) to avoid stray events after a burst of edits, say.
+
+* [Happy DOM 21.0](https://javascriptweekly.com/link/191714/d076523b1d) – Headless browser environment in pure JavaScript, popular for testing. [Now blocks stylesheet and `iframe` loading by default](https://javascriptweekly.com/link/191715/d076523b1d).
+
+* [p-queue 10.0](https://javascriptweekly.com/link/191716/d076523b1d) – Promise queue with concurrency control. [Now dependency-free](https://javascriptweekly.com/link/191717/d076523b1d) and an `EventTarget`.
+
+* [Paper.js 0.13](https://javascriptweekly.com/link/191718/d076523b1d) and [0.14](https://javascriptweekly.com/link/191719/d076523b1d) – Vector graphics scripting framework for canvas. First notable releases in years. ([Homepage](https://javascriptweekly.com/link/191720/d076523b1d) with [demos](https://javascriptweekly.com/link/191721/d076523b1d).)
+
+* 🕹️ [LittleJS 1.27](https://javascriptweekly.com/link/191722/d076523b1d) – Dependency-free HTML5 game engine that now does 3D too.
+
+* 🖼️ [Skia Canvas 4.0](https://javascriptweekly.com/link/191723/d076523b1d) – Canvas API for Node, built on Skia.
+
+📰 Classifieds
+
+🕵️ Muse doesn’t announce itself. Meta’s AI agent browses like a real user. [See how Fingerprint detects it](https://javascriptweekly.com/link/191724/d076523b1d) by name and try free for yourself.
+
+***
+
+🎬 Your app needs video, not a video team. Upload any format to [Hyperserve's API](https://javascriptweekly.com/link/191725/d076523b1d), get back MP4 on a global CDN. Ship video in an afternoon.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/t1yy7vc2vsopynkoyvrc.jpg)](https://javascriptweekly.com/link/191726/d076523b1d)
+
+* 🖼️ **JPEG XL:** The modern image format is now supported by all major browsers, with [Firefox 158](https://javascriptweekly.com/link/191727/d076523b1d) the latest to enable it by default. Jake Archibald [pits it against AVIF in this extensive review](https://javascriptweekly.com/link/191728/d076523b1d). What I find amazing is [what it's able to render in under 100 bytes](https://javascriptweekly.com/link/191726/d076523b1d).
+
+* **NodeConf EU 2026:** The [▶️ latest NodeConf EU talks](https://javascriptweekly.com/link/191729/d076523b1d) are up, including James Snell's case for [a common minimum API every runtime should support](https://javascriptweekly.com/link/191730/d076523b1d), plus sessions on [V8 heap management](https://javascriptweekly.com/link/191731/d076523b1d) and [Emscripten and WebAssembly](https://javascriptweekly.com/link/191732/d076523b1d).
+
+* **A new social network:** [/dev/null](https://javascriptweekly.com/link/191733/d076523b1d) is a GitHub-oriented social network for developers, built from scratch in 48 hours. It already has over 8000 members, [including me](https://javascriptweekly.com/link/191734/d076523b1d). It's been a lot of fun so far!
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/191735/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
