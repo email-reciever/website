@@ -1,0 +1,254 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: TanStack Start is finally stable
+description: TanStack Start is finally stable
+date: 星期五 04 下午 十月 23o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/494
+origin_site: https://react.statuscode.com/issues/494
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="TanStack Start is finally stable" url="https://react.statuscode.com/issues/494" />
+
+<Detail client:only="react">
+	#​494 — October 23, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/494)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://react.statuscode.com/link/191927/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ejihjkazanj4b02abevr.jpg)](https://react.statuscode.com/link/191882/5d0bbb4a61)
+
+TanStack Start Reaches 1.0
+
+After a year as a release candidate, [TanStack Start 1.0 is officially stable](https://react.statuscode.com/link/191882/5d0bbb4a61). Tanner Linsley explains how it grew out of _TanStack Router_, and is candid about RSC, which felt like _"this box we had to check to be taken seriously as a React framework"_, and which [tanstack.com](https://react.statuscode.com/link/191926/5d0bbb4a61) itself no longer uses. Plus:
+
+*   📊 [The same app in Start and Next.js 16.4, benchmarked](https://react.statuscode.com/link/191883/5d0bbb4a61) – _Start_ handled 2.9x-8.6x more dynamic requests and built ~1.7x faster with type-checking included.
+    
+*   🚚 Moving over? There are official guides for [migrating from Next.js](https://react.statuscode.com/link/191884/5d0bbb4a61) and [from the RC](https://react.statuscode.com/link/191885/5d0bbb4a61). Sarthak Mishra [moved his site over from Astro](https://react.statuscode.com/link/191886/5d0bbb4a61) (and explains why) and Lovable offers older projects a migration option ([here's how one went](https://react.statuscode.com/link/191887/5d0bbb4a61)).
+    
+*   💬 Ryan Carniato called it [_"a React metaframework with an architecture I can get behind"_](https://react.statuscode.com/link/191888/5d0bbb4a61), while in [the r/reactjs thread](https://react.statuscode.com/link/191889/5d0bbb4a61) Tanner explained why '1.0' is listed as `1.169` on npm.
+    
+
+* * *
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/927c2926.png)](https://react.statuscode.com/link/191927/5d0bbb4a61)
+
+[TypeScript in the Age of AI](https://react.statuscode.com/link/191927/5d0bbb4a61 "master.dev") — Knowing TypeScript deeply is how you get better code out of AI. Adam Rackis of Spotify shows you how to steer AI toward simpler, correct types and catch the mistakes it slips in.
+
+Master.dev sponsor
+
+**IN BRIEF:**
+
+*   ⚠️ Last week, [Next.js patched two critical RCEs](https://react.statuscode.com/link/191890/5d0bbb4a61), one rooted in React Server Components, and [a public PoC](https://react.statuscode.com/link/191891/5d0bbb4a61) is now out. Update Next.js to 16.4.1 or 15.5.28; for other RSC setups, update the `react-server-dom-*` packages to 19.3.1 (or 19.2.9/19.1.10/19.0.9).
+    
+*   [React DevTools for agents now has official docs](https://react.statuscode.com/link/191892/5d0bbb4a61), covering how it exposes profiling and component data to coding agents through Chrome DevTools MCP.
+    
+*   📱 [Expo SDK 58](https://react.statuscode.com/link/191893/5d0bbb4a61) is out, using the new [React Native 0.88](https://react.statuscode.com/link/191894/5d0bbb4a61), targeting iOS 27 and ready for the iPhone Duo on day one.
+    
+*   [React Native for Web has active maintainers again](https://react.statuscode.com/link/191895/5d0bbb4a61) and is moving to the React Foundation's GitHub org.
+    
+*   [TypeScript 7.1 is now in beta](https://react.statuscode.com/link/191896/5d0bbb4a61), adding a programmatic API and more speed. Type-checking MUI's docs is 1.9x faster and uses half the memory.
+    
+
+[Improving Navigation Experience in v0 with Next.js 16.4](https://react.statuscode.com/link/191897/5d0bbb4a61 "nextjs.org") — How the Next.js team used Partial Prefetching, intent-based prefetching and the new `navigation()` API to cut loading skeletons across its [v0](https://react.statuscode.com/link/191898/5d0bbb4a61) AI app builder.
+
+Aurora Scharff (Vercel)
+
+[React Only Where Needed: Owner's Next.js to Astro Move](https://react.statuscode.com/link/191899/5d0bbb4a61 "building.owner.com") — Owner's 10,000+ restaurant sites now run on Astro and Cloudflare Workers, keeping React for interactive islands. Menu-page p75 LCP went from 5.4s to 0.7s.
+
+Selden and Hanford (Owner)
+
+[Dead Code Shouldn't Exist](https://react.statuscode.com/link/191900/5d0bbb4a61 "tkdodo.eu") — The slides and transcript from a popular talk Dominik has given at several conferences this year on how Sentry removed 28K lines of unused code with [Knip](https://react.statuscode.com/link/191901/5d0bbb4a61).
+
+Dominik Dorfmeister
+
+🤖 [Testing AI-Generated Code: Lint the Pattern, Test the Decision](https://react.statuscode.com/link/191902/5d0bbb4a61) – Structural lint rules and shared harnesses beat a test beside every component. Robin Wieruch
+
+📱 [Apple Didn't Invent the Foldable. It Might Make You Support One.](https://react.statuscode.com/link/191903/5d0bbb4a61) – Getting a React Native app ready for the iPhone Duo's three compatibility tiers. Sean Barker (Infinite Red)
+
+📄 [Loading a 9MB WebAssembly Module Earlier Made Recraft's Editor 17% Faster](https://react.statuscode.com/link/191904/5d0bbb4a61) – Suspending components left the module's download waiting its turn in the React tree. Sergey Patrakeev (Recraft)
+
+🛠  Code, Tools & Libraries
+
+[![Pixel demo: graphical React apps running in a terminal](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nishfkuexsqapfi2rcgp.jpg)](https://react.statuscode.com/link/191905/5d0bbb4a61)
+
+[Pixel: Build Graphical Applications in the Terminal](https://react.statuscode.com/link/191905/5d0bbb4a61 "pixelgui.com") — Like _Ink_, but with "pixel perfect" graphics. It's a React renderer that draws rounded corners, gradients and proper fonts in terminals that support the Kitty graphics protocol, and that can even embed Chromium WebViews to run web apps in a pane(!)
+
+Rob Pruzan (Zenbu Labs)
+
+[TanStack Hotkeys Beta: A Type-Safe Library for Keyboard Shortcuts](https://react.statuscode.com/link/191906/5d0bbb4a61 "tanstack.com") — _Hotkeys_ takes care of the fiddly, cross-platform edge cases of keyboard shortcuts, sequences, and user-recorded hotkeys. The beta adds [scopes](https://react.statuscode.com/link/191907/5d0bbb4a61), so that, say, a dialog's `Escape` doesn't close the panel behind it. Try the demo on the homepage.
+
+TanStack
+
+[React Router 8.5 Hands View Transitions Over to React](https://react.statuscode.com/link/191908/5d0bbb4a61 "reactrouter.com") — Its own view transition APIs are deprecated in favor of React 19.3's `&lt;ViewTransition>`. [Migrating](https://react.statuscode.com/link/191909/5d0bbb4a61) starts with wrapping an `&lt;Outlet>` and removing the old props and state styling. There's also an unstable ['API-only' mode](https://react.statuscode.com/link/191910/5d0bbb4a61) that serves static HTML but keeps a server for loaders and actions.
+
+Remix Team
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v1792586346/br715i8krli31hn0g9bi.png)](https://react.statuscode.com/link/191911/5d0bbb4a61)
+
+[env.style: Style Every Environment with Colors or Custom Icons](https://react.statuscode.com/link/191911/5d0bbb4a61 "www.env.style") — A utility that wraps your Next.js config or Vite setup to tint the favicon per environment at build time, so you can see at a glance where you are.
+
+Ryan George
+
+[Tamagui 3: One React UI Codebase for Web and Native](https://react.statuscode.com/link/191912/5d0bbb4a61 "tamagui.dev") — A styling system and UI kit for sharing one codebase between React web apps and React Native. v3 adds an opt-in (beta) C++ native runtime that applies theme changes without re-rendering, plus React Strict DOM and Tailwind-style syntax.
+
+Nate Wienert
+
+*   [Hydrogen 2026.10](https://react.statuscode.com/link/191913/5d0bbb4a61) – Shopify's commerce toolkit is now a library you can drop into existing Next.js or React Router apps.
+    
+*   [Morphicons 2.0](https://react.statuscode.com/link/191914/5d0bbb4a61) – Spring-physics morphing between SVG icons. Now filled icons morph too, not just stroked ones. [See it in action on its homepage](https://react.statuscode.com/link/191915/5d0bbb4a61).
+    
+*   [Unistyles 3.6](https://react.statuscode.com/link/191916/5d0bbb4a61) – High-performance React Native styling library. Now with an experimental zero-config Metro integration instead of the Babel plugin.
+    
+*   [Motion 14.6](https://react.statuscode.com/link/191917/5d0bbb4a61) – Adds keyboard grab-and-move to `Reorder` lists, plus `stepFrames` for deterministic animation testing.
+    
+
+📰 Classifieds
+
+Build and deploy durable AI agents in TypeScript, without managing your own infrastructure. [Ship your first agent with Trigger.dev](https://react.statuscode.com/link/191918/5d0bbb4a61).
+
+* * *
+
+[Expo is mobile AI infrastructure](https://react.statuscode.com/link/191919/5d0bbb4a61): Your agents build, test and ship iOS and Android apps, and you approve what goes out. [Try it](https://react.statuscode.com/link/191919/5d0bbb4a61).
+
+🎶  And finally… make a little noise
+
+[![Strudel Flow: a musical pad connected to voice and filter nodes](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dtm0yamwanrjkzjtlgke.jpg)](https://react.statuscode.com/link/191920/5d0bbb4a61)
+
+Fancy making a little music with React? [Strudel Flow 2](https://react.statuscode.com/link/191920/5d0bbb4a61) is an open source React app built with [React Flow](https://react.statuscode.com/link/191921/5d0bbb4a61) and `shadcn/ui`. Connect instruments and effects to generate [Strudel](https://react.statuscode.com/link/191922/5d0bbb4a61) code, or load a community patch and start turning knobs.
+
+The [source code](https://react.statuscode.com/link/191923/5d0bbb4a61) offers a neat extension point: define an instrument or effect in a small `.node.ts` file, then supply a React component for a custom interface. As [the team says](https://react.statuscode.com/link/191924/5d0bbb4a61), _"coding is a fun thing to do for its own sake."_ 🤘
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​494 — October 23, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/494)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://react.statuscode.com/link/191927/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ejihjkazanj4b02abevr.jpg)](https://react.statuscode.com/link/191882/5d0bbb4a61)
+
+TanStack Start Reaches 1.0
+
+After a year as a release candidate, [TanStack Start 1.0 is officially stable](https://react.statuscode.com/link/191882/5d0bbb4a61). Tanner Linsley explains how it grew out of *TanStack Router*, and is candid about RSC, which felt like *"this box we had to check to be taken seriously as a React framework"*, and which [tanstack.com](https://react.statuscode.com/link/191926/5d0bbb4a61) itself no longer uses. Plus:
+
+* 📊 [The same app in Start and Next.js 16.4, benchmarked](https://react.statuscode.com/link/191883/5d0bbb4a61) – *Start* handled 2.9x-8.6x more dynamic requests and built ~1.7x faster with type-checking included.
+
+* 🚚 Moving over? There are official guides for [migrating from Next.js](https://react.statuscode.com/link/191884/5d0bbb4a61) and [from the RC](https://react.statuscode.com/link/191885/5d0bbb4a61). Sarthak Mishra [moved his site over from Astro](https://react.statuscode.com/link/191886/5d0bbb4a61) (and explains why) and Lovable offers older projects a migration option ([here's how one went](https://react.statuscode.com/link/191887/5d0bbb4a61)).
+
+* 💬 Ryan Carniato called it [*"a React metaframework with an architecture I can get behind"*](https://react.statuscode.com/link/191888/5d0bbb4a61), while in [the r/reactjs thread](https://react.statuscode.com/link/191889/5d0bbb4a61) Tanner explained why '1.0' is listed as `1.169` on npm.
+
+***
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/927c2926.png)](https://react.statuscode.com/link/191927/5d0bbb4a61)
+
+[TypeScript in the Age of AI](https://react.statuscode.com/link/191927/5d0bbb4a61 "master.dev") — Knowing TypeScript deeply is how you get better code out of AI. Adam Rackis of Spotify shows you how to steer AI toward simpler, correct types and catch the mistakes it slips in.
+
+Master.dev sponsor
+
+**IN BRIEF:**
+
+* ⚠️ Last week, [Next.js patched two critical RCEs](https://react.statuscode.com/link/191890/5d0bbb4a61), one rooted in React Server Components, and [a public PoC](https://react.statuscode.com/link/191891/5d0bbb4a61) is now out. Update Next.js to 16.4.1 or 15.5.28; for other RSC setups, update the `react-server-dom-*` packages to 19.3.1 (or 19.2.9/19.1.10/19.0.9).
+
+* [React DevTools for agents now has official docs](https://react.statuscode.com/link/191892/5d0bbb4a61), covering how it exposes profiling and component data to coding agents through Chrome DevTools MCP.
+
+* 📱 [Expo SDK 58](https://react.statuscode.com/link/191893/5d0bbb4a61) is out, using the new [React Native 0.88](https://react.statuscode.com/link/191894/5d0bbb4a61), targeting iOS 27 and ready for the iPhone Duo on day one.
+
+* [React Native for Web has active maintainers again](https://react.statuscode.com/link/191895/5d0bbb4a61) and is moving to the React Foundation's GitHub org.
+
+* [TypeScript 7.1 is now in beta](https://react.statuscode.com/link/191896/5d0bbb4a61), adding a programmatic API and more speed. Type-checking MUI's docs is 1.9x faster and uses half the memory.
+
+[Improving Navigation Experience in v0 with Next.js 16.4](https://react.statuscode.com/link/191897/5d0bbb4a61 "nextjs.org") — How the Next.js team used Partial Prefetching, intent-based prefetching and the new `navigation()` API to cut loading skeletons across its [v0](https://react.statuscode.com/link/191898/5d0bbb4a61) AI app builder.
+
+Aurora Scharff (Vercel)
+
+[React Only Where Needed: Owner's Next.js to Astro Move](https://react.statuscode.com/link/191899/5d0bbb4a61 "building.owner.com") — Owner's 10,000+ restaurant sites now run on Astro and Cloudflare Workers, keeping React for interactive islands. Menu-page p75 LCP went from 5.4s to 0.7s.
+
+Selden and Hanford (Owner)
+
+[Dead Code Shouldn't Exist](https://react.statuscode.com/link/191900/5d0bbb4a61 "tkdodo.eu") — The slides and transcript from a popular talk Dominik has given at several conferences this year on how Sentry removed 28K lines of unused code with [Knip](https://react.statuscode.com/link/191901/5d0bbb4a61).
+
+Dominik Dorfmeister
+
+🤖 [Testing AI-Generated Code: Lint the Pattern, Test the Decision](https://react.statuscode.com/link/191902/5d0bbb4a61) – Structural lint rules and shared harnesses beat a test beside every component. Robin Wieruch
+
+📱 [Apple Didn't Invent the Foldable. It Might Make You Support One.](https://react.statuscode.com/link/191903/5d0bbb4a61) – Getting a React Native app ready for the iPhone Duo's three compatibility tiers. Sean Barker (Infinite Red)
+
+📄 [Loading a 9MB WebAssembly Module Earlier Made Recraft's Editor 17% Faster](https://react.statuscode.com/link/191904/5d0bbb4a61) – Suspending components left the module's download waiting its turn in the React tree. Sergey Patrakeev (Recraft)
+
+🛠  Code, Tools & Libraries
+
+[![Pixel demo: graphical React apps running in a terminal](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/nishfkuexsqapfi2rcgp.jpg)](https://react.statuscode.com/link/191905/5d0bbb4a61)
+
+[Pixel: Build Graphical Applications in the Terminal](https://react.statuscode.com/link/191905/5d0bbb4a61 "pixelgui.com") — Like *Ink*, but with "pixel perfect" graphics. It's a React renderer that draws rounded corners, gradients and proper fonts in terminals that support the Kitty graphics protocol, and that can even embed Chromium WebViews to run web apps in a pane(!)
+
+Rob Pruzan (Zenbu Labs)
+
+[TanStack Hotkeys Beta: A Type-Safe Library for Keyboard Shortcuts](https://react.statuscode.com/link/191906/5d0bbb4a61 "tanstack.com") — *Hotkeys* takes care of the fiddly, cross-platform edge cases of keyboard shortcuts, sequences, and user-recorded hotkeys. The beta adds [scopes](https://react.statuscode.com/link/191907/5d0bbb4a61), so that, say, a dialog's `Escape` doesn't close the panel behind it. Try the demo on the homepage.
+
+TanStack
+
+[React Router 8.5 Hands View Transitions Over to React](https://react.statuscode.com/link/191908/5d0bbb4a61 "reactrouter.com") — Its own view transition APIs are deprecated in favor of React 19.3's `&lt;ViewTransition>`. [Migrating](https://react.statuscode.com/link/191909/5d0bbb4a61) starts with wrapping an `&lt;Outlet>` and removing the old props and state styling. There's also an unstable ['API-only' mode](https://react.statuscode.com/link/191910/5d0bbb4a61) that serves static HTML but keeps a server for loaders and actions.
+
+Remix Team
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v1792586346/br715i8krli31hn0g9bi.png)](https://react.statuscode.com/link/191911/5d0bbb4a61)
+
+[env.style: Style Every Environment with Colors or Custom Icons](https://react.statuscode.com/link/191911/5d0bbb4a61 "www.env.style") — A utility that wraps your Next.js config or Vite setup to tint the favicon per environment at build time, so you can see at a glance where you are.
+
+Ryan George
+
+[Tamagui 3: One React UI Codebase for Web and Native](https://react.statuscode.com/link/191912/5d0bbb4a61 "tamagui.dev") — A styling system and UI kit for sharing one codebase between React web apps and React Native. v3 adds an opt-in (beta) C++ native runtime that applies theme changes without re-rendering, plus React Strict DOM and Tailwind-style syntax.
+
+Nate Wienert
+
+* [Hydrogen 2026.10](https://react.statuscode.com/link/191913/5d0bbb4a61) – Shopify's commerce toolkit is now a library you can drop into existing Next.js or React Router apps.
+
+* [Morphicons 2.0](https://react.statuscode.com/link/191914/5d0bbb4a61) – Spring-physics morphing between SVG icons. Now filled icons morph too, not just stroked ones. [See it in action on its homepage](https://react.statuscode.com/link/191915/5d0bbb4a61).
+
+* [Unistyles 3.6](https://react.statuscode.com/link/191916/5d0bbb4a61) – High-performance React Native styling library. Now with an experimental zero-config Metro integration instead of the Babel plugin.
+
+* [Motion 14.6](https://react.statuscode.com/link/191917/5d0bbb4a61) – Adds keyboard grab-and-move to `Reorder` lists, plus `stepFrames` for deterministic animation testing.
+
+📰 Classifieds
+
+Build and deploy durable AI agents in TypeScript, without managing your own infrastructure. [Ship your first agent with Trigger.dev](https://react.statuscode.com/link/191918/5d0bbb4a61).
+
+***
+
+[Expo is mobile AI infrastructure](https://react.statuscode.com/link/191919/5d0bbb4a61): Your agents build, test and ship iOS and Android apps, and you approve what goes out. [Try it](https://react.statuscode.com/link/191919/5d0bbb4a61).
+
+🎶  And finally… make a little noise
+
+[![Strudel Flow: a musical pad connected to voice and filter nodes](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dtm0yamwanrjkzjtlgke.jpg)](https://react.statuscode.com/link/191920/5d0bbb4a61)
+
+Fancy making a little music with React? [Strudel Flow 2](https://react.statuscode.com/link/191920/5d0bbb4a61) is an open source React app built with [React Flow](https://react.statuscode.com/link/191921/5d0bbb4a61) and `shadcn/ui`. Connect instruments and effects to generate [Strudel](https://react.statuscode.com/link/191922/5d0bbb4a61) code, or load a community patch and start turning knobs.
+
+The [source code](https://react.statuscode.com/link/191923/5d0bbb4a61) offers a neat extension point: define an instrument or effect in a small `.node.ts` file, then supply a React component for a custom interface. As [the team says](https://react.statuscode.com/link/191924/5d0bbb4a61), *"coding is a fun thing to do for its own sake."* 🤘
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
