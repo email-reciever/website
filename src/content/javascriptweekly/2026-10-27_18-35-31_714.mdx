@@ -1,0 +1,305 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Rebuilding the original GTA engine in JavaScript
+description: Rebuilding the original GTA engine in JavaScript
+date: 星期二 06 晚上 十月 27o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/808
+origin_site: https://javascriptweekly.com/issues/808
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Rebuilding the original GTA engine in JavaScript" url="https://javascriptweekly.com/issues/808" />
+
+<Detail client:only="react">
+	#​808 — October 27, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/808)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/191992/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/d78ifnbyoegacu1b82sf.jpg)](https://javascriptweekly.com/link/191993/d076523b1d)
+
+[TanStack AI 1.0: The Vendor-Neutral AI Toolkit Goes Stable](https://javascriptweekly.com/link/191993/d076523b1d "tanstack.com") — TanStack's framework-agnostic AI toolkit reaches 1.0, with stable APIs for chat, tools and media, plus 23 provider adapters. [A new agent harness](https://javascriptweekly.com/link/191994/d076523b1d) supports long-running sessions, but its APIs remain experimental.
+
+Tuzlak, Herrington, et al. (TanStack)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/03592c49.png)](https://javascriptweekly.com/link/191992/d076523b1d)
+
+[Would You Let Your AI Agent Grade Its Own Homework?](https://javascriptweekly.com/link/191992/d076523b1d "www.meticulous.ai") — Agents write code faster than ever. They even review their own work. But who’s reviewing them? Dropbox, Notion & ElevenLabs don’t take the risk. With Meticulous, every change is exhaustively verified, with zero developer effort.
+
+Meticulous sponsor
+
+[Announcing TypeScript 7.1 Beta](https://javascriptweekly.com/link/191995/d076523b1d "devblogs.microsoft.com") — TypeScript 7 gets [a programmatic API](https://javascriptweekly.com/link/192049/d076523b1d), plus 'content mappers', a plugin point for checking code embedded in files such as Vue, Svelte, and Astro components. Also new are [source phase imports](https://javascriptweekly.com/link/192050/d076523b1d) and `--target es2026`.
+
+Daniel Rosenwasser (Microsoft)
+
+[GTA.js: 1997's _Grand Theft Auto_, But in JavaScript](https://javascriptweekly.com/link/191996/d076523b1d "www.bram.us") — Bramus has been reimplementing the original top-down GTA's engine in JavaScript and WebGL, loading Liberty City from the game's original demo files. [Play it here](https://javascriptweekly.com/link/191997/d076523b1d).
+
+Bramus Van Damme
+
+💡 Fittingly, Pat Kerr, whose 1996 Atari ST prototype formed the basis of the original game's vehicle physics, recently [rebuilt it in JavaScript](https://javascriptweekly.com/link/191998/d076523b1d).
+
+**IN BRIEF:**
+
+*   Deno's Bartek Iwańczuk says the team is [working on getting Deno into a foundation](https://javascriptweekly.com/link/191999/d076523b1d). Meanwhile, a new fork, [Ende](https://javascriptweekly.com/link/192000/d076523b1d), plans to drop Node compatibility and refocus on sandboxing.
+    
+*   [Safari 27.1 previews the Device Posture and Viewport Segments APIs](https://javascriptweekly.com/link/192001/d076523b1d) behind feature flags on the iPhone Duo, letting JavaScript detect folds and inspect screen segments.
+    
+*   [Chrome 156 has reached stable](https://javascriptweekly.com/link/192002/d076523b1d) and no longer caches module fetch failures, so a dynamic `import()` that fails due to a network or HTTP error can be retried.
+    
+
+**RELEASES:**
+
+*   [Node.js v26.12.1 (Current)](https://javascriptweekly.com/link/192003/d076523b1d), [v24.22.1 (LTS)](https://javascriptweekly.com/link/192004/d076523b1d) and [v22.23.4](https://javascriptweekly.com/link/192005/d076523b1d) – Security releases fixing ten CVEs, including the ['Node2Shell' Brotli decoder flaw](https://javascriptweekly.com/link/192006/d076523b1d), which can lead to remote code execution when an app decompresses malicious data. _(Also, Node 26 is due to become LTS tomorrow.)_
+    
+*   [Bun 1.4.4](https://javascriptweekly.com/link/192007/d076523b1d) – Adds `bun fmt`, a Prettier-compatible formatter that uses your existing Prettier or oxfmt config. It's _very_ fast.
+    
+*   [Electron 45](https://javascriptweekly.com/link/192008/d076523b1d) – Upgrades to Chromium 156, Node 24.22 and V8 15.6, and adds hooks for the [Prompt API](https://javascriptweekly.com/link/192009/d076523b1d) so apps can plug in a local model.
+    
+*   [pnpm 12.16](https://javascriptweekly.com/link/192010/d076523b1d), [Remix 3.1](https://javascriptweekly.com/link/192011/d076523b1d), [axios 1.21](https://javascriptweekly.com/link/192012/d076523b1d), [Deno 2.9.8](https://javascriptweekly.com/link/192013/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[Parser Combinators in TypeScript, Built From Scratch](https://javascriptweekly.com/link/192014/d076523b1d "t3.at") — Parser combinators sit between regexes and heavyweight tools like tree-sitter. This animated, step-by-step walkthrough shows the basic elements of building them, concluding in an example turning `ping` output into typed objects.
+
+Florian Schindler
+
+[Dead Code Shouldn't Exist: How Sentry Cut 28,000 Lines](https://javascriptweekly.com/link/192015/d076523b1d "tkdodo.eu") — A talk Dominik has given at six conferences this year, now as swipeable slides with a full transcript. He covers how unused code can cost more than you might think, and how Sentry used [Knip](https://javascriptweekly.com/link/192016/d076523b1d) to remove 28,000 lines.
+
+Dominik Dorfmeister (Sentry)
+
+[AI.js Day 2026: Frontend's Scariest AI Questions, Live on Channel 13, Nov 13](https://javascriptweekly.com/link/192025/d076523b1d "lp.jetbrains.com") — No hype, just the AI questions frontend devs are afraid to ask. [Save your spot](https://javascriptweekly.com/link/192025/d076523b1d).
+
+JetBrains sponsor
+
+[Building an Isolated Preview for AI-Generated HTML](https://javascriptweekly.com/link/192018/d076523b1d "blog.master.dev") — Rendering model-written HTML in a `srcdoc` iframe runs it on your own origin. A security engineer breaks the naive approach, then rebuilds it using `sandbox` and a strict CSP, with demos showing what each one blocks.
+
+Keshav Malik
+
+[A First Look at TypeScript 7.1's Content Mappers](https://javascriptweekly.com/link/192019/d076523b1d "jovidecroock.com") — TypeScript 7 ignores tsserver plugins, but 7.1's content mappers can turn non-TS files into TypeScript. Here's how they work, applied to CSS modules and `.graphql` files.
+
+Jovi De Croock
+
+📄 [How Engines Turn Dynamic Objects Into Fast Field Access](https://javascriptweekly.com/link/192020/d076523b1d) – Shapes and inline caches, explained with runnable sketches. Max Bernstein
+
+📄 [Software is Slow Because of Bad Design, Not Slow Languages](https://javascriptweekly.com/link/192021/d076523b1d) Sean Goedecke (GitHub)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lvhon6ibgjv0prddvf5z.jpg)](https://javascriptweekly.com/link/192022/d076523b1d)
+
+[Structs: TC39's Shared Structs Proposal, But Usable Today](https://javascriptweekly.com/link/192022/d076523b1d "structs.arv.tools") — A former TC39 delegate's implementation of the Stage 2 [structs proposal](https://javascriptweekly.com/link/192023/d076523b1d). The idea is you get shared memory between workers, so threads can work on the same objects instead of serializing copies back and forth. There's a [playground](https://javascriptweekly.com/link/192024/d076523b1d) too.
+
+Erik Arvidsson
+
+[Introducing TanStack Redact: A Slimmer React Runtime](https://javascriptweekly.com/link/192026/d076523b1d "tanstack.com") — A build plugin swaps React and React DOM for a smaller reimplementation in the browser with no code changes. It works with Vite, Start, Vinext and Next.js, and while TanStack reports 20-70% smaller client builds, rendering is _synchronous only_.
+
+Tanner Linsley (TanStack)
+
+[AI Tests That Catch Real Bugs](https://javascriptweekly.com/link/192017/d076523b1d "wallabyjs.com") — AI can write low-value tests that pass without checking much. Wallaby helps your agent refine assertions and catch bugs.
+
+Wallaby Team sponsor
+
+[Verdaccio 7.0: The Self-Hosted npm Registry Adds Staged Publishing and 2FA](https://javascriptweekly.com/link/192027/d076523b1d "github.com") — A mature, lightweight way to self-host your own npm registry and proxy. v7 adds experimental staged publishing (where new versions need approval before going live) and 2FA, plus stricter ownership checks.
+
+Verdaccio Team
+
+[Biome 2.6 Adds Markdown, YAML and SCSS Support](https://javascriptweekly.com/link/192028/d076523b1d "biomejs.dev") — The Rust-powered alternative to Prettier and ESLint adds formatting support for Markdown, YAML and SCSS, along with initial linting support. JavaScript plugins for custom lint rules are available as a developer preview.
+
+Biome Core Team
+
+*   ☕ [CoffeeScript 2.7.1](https://javascriptweekly.com/link/192029/d076523b1d) – The first release in four and a half years brings Node 22+ fixes and `with &lcub; type: 'json' }` import attributes.
+
+💡 If you never used [CoffeeScript](https://javascriptweekly.com/link/192030/d076523b1d), it is/was a Ruby- and Python-flavored language that compiled to JavaScript. [Brendan Eich held up its arrow functions and lightweight classes](https://javascriptweekly.com/link/192031/d076523b1d) as models for what went into ES6 (ES2015).
+
+*   [oxlint 1.89](https://javascriptweekly.com/link/192032/d076523b1d) – The Rust-based linter now counts the upstream recommended rules of its React, Vue, Next.js, Jest/Vitest, and other plugins as 'recommended' so expect more reports if you upgrade.
+    
+*   [Mutative 2.0](https://javascriptweekly.com/link/192037/d076523b1d) – Immer-style efficient immutable updates library. The author reports a 3.6x speedup over Immer across a benchmark suite.
+    
+*   [SonicJS 3.0](https://javascriptweekly.com/link/192035/d076523b1d) – Headless CMS for Cloudflare Workers, built on Hono. v3 rebuilds the data layer, auth and plugin system. [Homepage](https://javascriptweekly.com/link/192036/d076523b1d).
+    
+*   [query-string 10.0](https://javascriptweekly.com/link/192033/d076523b1d) – Parse and stringify URL query strings. [Now throws for values it can't represent](https://javascriptweekly.com/link/192034/d076523b1d).
+    
+*   [ShareDB 7.0](https://javascriptweekly.com/link/192038/d076523b1d) – Realtime database backend based on operational transformation.
+    
+
+📰 Classifieds
+
+📱 [Expo is mobile AI infrastructure](https://javascriptweekly.com/link/192039/d076523b1d). Your agent writes the code, and Expo gets your iOS and Android app built and into the stores. [Try it](https://javascriptweekly.com/link/192039/d076523b1d).
+
+* * *
+
+🧩 CAPTCHAs can frustrate real users and cost you conversions. [Try Fingerprint’s bot detection for free](https://javascriptweekly.com/link/192040/d076523b1d) and stop abuse without the friction.
+
+📢  Elsewhere in the ecosystem
+
+*   🔒 **Node2Shell:** [ELLIO now reports exploit traffic in the wild](https://javascriptweekly.com/link/192006/d076523b1d) for the Brotli RCE fixed in the Node releases (as mentioned earlier). The flaw is in Google's Brotli library, so [bundled copies elsewhere need patching too](https://javascriptweekly.com/link/192041/d076523b1d).
+    
+*   Sentry has [given $1m to open source maintainers this year](https://javascriptweekly.com/link/192042/d076523b1d). JavaScript recipients include pnpm, TanStack, MSW, Knip and three Three.js maintainers, plus the OpenJS Foundation.
+    
+*   🎉 [CSS-Tricks, the popular web dev resource, is independent again](https://javascriptweekly.com/link/192043/d076523b1d), now owned by longtime editor Geoff Graham.
+    
+*   Arc, the design-led Chromium browser popular with developers, [is being sunset](https://javascriptweekly.com/link/192044/d076523b1d) with The Browser Company steering everyone to [Dia](https://javascriptweekly.com/link/192045/d076523b1d).
+    
+*   📄 Google Docs [can now open, edit and collaborate on Markdown files natively](https://javascriptweekly.com/link/192046/d076523b1d) and Drive renders previews of them too.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/192047/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​808 — October 27, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/808)
+
+Together with 
+
+[![Meticulous](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png)](https://javascriptweekly.com/link/191992/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/d78ifnbyoegacu1b82sf.jpg)](https://javascriptweekly.com/link/191993/d076523b1d)
+
+[TanStack AI 1.0: The Vendor-Neutral AI Toolkit Goes Stable](https://javascriptweekly.com/link/191993/d076523b1d "tanstack.com") — TanStack's framework-agnostic AI toolkit reaches 1.0, with stable APIs for chat, tools and media, plus 23 provider adapters. [A new agent harness](https://javascriptweekly.com/link/191994/d076523b1d) supports long-running sessions, but its APIs remain experimental.
+
+Tuzlak, Herrington, et al. (TanStack)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/03592c49.png)](https://javascriptweekly.com/link/191992/d076523b1d)
+
+[Would You Let Your AI Agent Grade Its Own Homework?](https://javascriptweekly.com/link/191992/d076523b1d "www.meticulous.ai") — Agents write code faster than ever. They even review their own work. But who’s reviewing them? Dropbox, Notion & ElevenLabs don’t take the risk. With Meticulous, every change is exhaustively verified, with zero developer effort.
+
+Meticulous sponsor
+
+[Announcing TypeScript 7.1 Beta](https://javascriptweekly.com/link/191995/d076523b1d "devblogs.microsoft.com") — TypeScript 7 gets [a programmatic API](https://javascriptweekly.com/link/192049/d076523b1d), plus 'content mappers', a plugin point for checking code embedded in files such as Vue, Svelte, and Astro components. Also new are [source phase imports](https://javascriptweekly.com/link/192050/d076523b1d) and `--target es2026`.
+
+Daniel Rosenwasser (Microsoft)
+
+[GTA.js: 1997's *Grand Theft Auto*, But in JavaScript](https://javascriptweekly.com/link/191996/d076523b1d "www.bram.us") — Bramus has been reimplementing the original top-down GTA's engine in JavaScript and WebGL, loading Liberty City from the game's original demo files. [Play it here](https://javascriptweekly.com/link/191997/d076523b1d).
+
+Bramus Van Damme
+
+💡 Fittingly, Pat Kerr, whose 1996 Atari ST prototype formed the basis of the original game's vehicle physics, recently [rebuilt it in JavaScript](https://javascriptweekly.com/link/191998/d076523b1d).
+
+**IN BRIEF:**
+
+* Deno's Bartek Iwańczuk says the team is [working on getting Deno into a foundation](https://javascriptweekly.com/link/191999/d076523b1d). Meanwhile, a new fork, [Ende](https://javascriptweekly.com/link/192000/d076523b1d), plans to drop Node compatibility and refocus on sandboxing.
+
+* [Safari 27.1 previews the Device Posture and Viewport Segments APIs](https://javascriptweekly.com/link/192001/d076523b1d) behind feature flags on the iPhone Duo, letting JavaScript detect folds and inspect screen segments.
+
+* [Chrome 156 has reached stable](https://javascriptweekly.com/link/192002/d076523b1d) and no longer caches module fetch failures, so a dynamic `import()` that fails due to a network or HTTP error can be retried.
+
+**RELEASES:**
+
+* [Node.js v26.12.1 (Current)](https://javascriptweekly.com/link/192003/d076523b1d), [v24.22.1 (LTS)](https://javascriptweekly.com/link/192004/d076523b1d) and [v22.23.4](https://javascriptweekly.com/link/192005/d076523b1d) – Security releases fixing ten CVEs, including the ['Node2Shell' Brotli decoder flaw](https://javascriptweekly.com/link/192006/d076523b1d), which can lead to remote code execution when an app decompresses malicious data. *(Also, Node 26 is due to become LTS tomorrow.)*
+
+* [Bun 1.4.4](https://javascriptweekly.com/link/192007/d076523b1d) – Adds `bun fmt`, a Prettier-compatible formatter that uses your existing Prettier or oxfmt config. It's *very* fast.
+
+* [Electron 45](https://javascriptweekly.com/link/192008/d076523b1d) – Upgrades to Chromium 156, Node 24.22 and V8 15.6, and adds hooks for the [Prompt API](https://javascriptweekly.com/link/192009/d076523b1d) so apps can plug in a local model.
+
+* [pnpm 12.16](https://javascriptweekly.com/link/192010/d076523b1d), [Remix 3.1](https://javascriptweekly.com/link/192011/d076523b1d), [axios 1.21](https://javascriptweekly.com/link/192012/d076523b1d), [Deno 2.9.8](https://javascriptweekly.com/link/192013/d076523b1d)
+
+📖  Articles and Videos
+
+[Parser Combinators in TypeScript, Built From Scratch](https://javascriptweekly.com/link/192014/d076523b1d "t3.at") — Parser combinators sit between regexes and heavyweight tools like tree-sitter. This animated, step-by-step walkthrough shows the basic elements of building them, concluding in an example turning `ping` output into typed objects.
+
+Florian Schindler
+
+[Dead Code Shouldn't Exist: How Sentry Cut 28,000 Lines](https://javascriptweekly.com/link/192015/d076523b1d "tkdodo.eu") — A talk Dominik has given at six conferences this year, now as swipeable slides with a full transcript. He covers how unused code can cost more than you might think, and how Sentry used [Knip](https://javascriptweekly.com/link/192016/d076523b1d) to remove 28,000 lines.
+
+Dominik Dorfmeister (Sentry)
+
+[AI.js Day 2026: Frontend's Scariest AI Questions, Live on Channel 13, Nov 13](https://javascriptweekly.com/link/192025/d076523b1d "lp.jetbrains.com") — No hype, just the AI questions frontend devs are afraid to ask. [Save your spot](https://javascriptweekly.com/link/192025/d076523b1d).
+
+JetBrains sponsor
+
+[Building an Isolated Preview for AI-Generated HTML](https://javascriptweekly.com/link/192018/d076523b1d "blog.master.dev") — Rendering model-written HTML in a `srcdoc` iframe runs it on your own origin. A security engineer breaks the naive approach, then rebuilds it using `sandbox` and a strict CSP, with demos showing what each one blocks.
+
+Keshav Malik
+
+[A First Look at TypeScript 7.1's Content Mappers](https://javascriptweekly.com/link/192019/d076523b1d "jovidecroock.com") — TypeScript 7 ignores tsserver plugins, but 7.1's content mappers can turn non-TS files into TypeScript. Here's how they work, applied to CSS modules and `.graphql` files.
+
+Jovi De Croock
+
+📄 [How Engines Turn Dynamic Objects Into Fast Field Access](https://javascriptweekly.com/link/192020/d076523b1d) – Shapes and inline caches, explained with runnable sketches. Max Bernstein
+
+📄 [Software is Slow Because of Bad Design, Not Slow Languages](https://javascriptweekly.com/link/192021/d076523b1d) Sean Goedecke (GitHub)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lvhon6ibgjv0prddvf5z.jpg)](https://javascriptweekly.com/link/192022/d076523b1d)
+
+[Structs: TC39's Shared Structs Proposal, But Usable Today](https://javascriptweekly.com/link/192022/d076523b1d "structs.arv.tools") — A former TC39 delegate's implementation of the Stage 2 [structs proposal](https://javascriptweekly.com/link/192023/d076523b1d). The idea is you get shared memory between workers, so threads can work on the same objects instead of serializing copies back and forth. There's a [playground](https://javascriptweekly.com/link/192024/d076523b1d) too.
+
+Erik Arvidsson
+
+[Introducing TanStack Redact: A Slimmer React Runtime](https://javascriptweekly.com/link/192026/d076523b1d "tanstack.com") — A build plugin swaps React and React DOM for a smaller reimplementation in the browser with no code changes. It works with Vite, Start, Vinext and Next.js, and while TanStack reports 20-70% smaller client builds, rendering is *synchronous only*.
+
+Tanner Linsley (TanStack)
+
+[AI Tests That Catch Real Bugs](https://javascriptweekly.com/link/192017/d076523b1d "wallabyjs.com") — AI can write low-value tests that pass without checking much. Wallaby helps your agent refine assertions and catch bugs.
+
+Wallaby Team sponsor
+
+[Verdaccio 7.0: The Self-Hosted npm Registry Adds Staged Publishing and 2FA](https://javascriptweekly.com/link/192027/d076523b1d "github.com") — A mature, lightweight way to self-host your own npm registry and proxy. v7 adds experimental staged publishing (where new versions need approval before going live) and 2FA, plus stricter ownership checks.
+
+Verdaccio Team
+
+[Biome 2.6 Adds Markdown, YAML and SCSS Support](https://javascriptweekly.com/link/192028/d076523b1d "biomejs.dev") — The Rust-powered alternative to Prettier and ESLint adds formatting support for Markdown, YAML and SCSS, along with initial linting support. JavaScript plugins for custom lint rules are available as a developer preview.
+
+Biome Core Team
+
+* ☕ [CoffeeScript 2.7.1](https://javascriptweekly.com/link/192029/d076523b1d) – The first release in four and a half years brings Node 22+ fixes and `with &lcub; type: 'json' }` import attributes.
+
+💡 If you never used [CoffeeScript](https://javascriptweekly.com/link/192030/d076523b1d), it is/was a Ruby- and Python-flavored language that compiled to JavaScript. [Brendan Eich held up its arrow functions and lightweight classes](https://javascriptweekly.com/link/192031/d076523b1d) as models for what went into ES6 (ES2015).
+
+* [oxlint 1.89](https://javascriptweekly.com/link/192032/d076523b1d) – The Rust-based linter now counts the upstream recommended rules of its React, Vue, Next.js, Jest/Vitest, and other plugins as 'recommended' so expect more reports if you upgrade.
+
+* [Mutative 2.0](https://javascriptweekly.com/link/192037/d076523b1d) – Immer-style efficient immutable updates library. The author reports a 3.6x speedup over Immer across a benchmark suite.
+
+* [SonicJS 3.0](https://javascriptweekly.com/link/192035/d076523b1d) – Headless CMS for Cloudflare Workers, built on Hono. v3 rebuilds the data layer, auth and plugin system. [Homepage](https://javascriptweekly.com/link/192036/d076523b1d).
+
+* [query-string 10.0](https://javascriptweekly.com/link/192033/d076523b1d) – Parse and stringify URL query strings. [Now throws for values it can't represent](https://javascriptweekly.com/link/192034/d076523b1d).
+
+* [ShareDB 7.0](https://javascriptweekly.com/link/192038/d076523b1d) – Realtime database backend based on operational transformation.
+
+📰 Classifieds
+
+📱 [Expo is mobile AI infrastructure](https://javascriptweekly.com/link/192039/d076523b1d). Your agent writes the code, and Expo gets your iOS and Android app built and into the stores. [Try it](https://javascriptweekly.com/link/192039/d076523b1d).
+
+***
+
+🧩 CAPTCHAs can frustrate real users and cost you conversions. [Try Fingerprint’s bot detection for free](https://javascriptweekly.com/link/192040/d076523b1d) and stop abuse without the friction.
+
+📢  Elsewhere in the ecosystem
+
+* 🔒 **Node2Shell:** [ELLIO now reports exploit traffic in the wild](https://javascriptweekly.com/link/192006/d076523b1d) for the Brotli RCE fixed in the Node releases (as mentioned earlier). The flaw is in Google's Brotli library, so [bundled copies elsewhere need patching too](https://javascriptweekly.com/link/192041/d076523b1d).
+
+* Sentry has [given $1m to open source maintainers this year](https://javascriptweekly.com/link/192042/d076523b1d). JavaScript recipients include pnpm, TanStack, MSW, Knip and three Three.js maintainers, plus the OpenJS Foundation.
+
+* 🎉 [CSS-Tricks, the popular web dev resource, is independent again](https://javascriptweekly.com/link/192043/d076523b1d), now owned by longtime editor Geoff Graham.
+
+* Arc, the design-led Chromium browser popular with developers, [is being sunset](https://javascriptweekly.com/link/192044/d076523b1d) with The Browser Company steering everyone to [Dia](https://javascriptweekly.com/link/192045/d076523b1d).
+
+* 📄 Google Docs [can now open, edit and collaborate on Markdown files natively](https://javascriptweekly.com/link/192046/d076523b1d) and Drive renders previews of them too.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/192047/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
