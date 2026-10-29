@@ -1,0 +1,255 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node security releases to fix a Brotli flaw
+description: Node security releases to fix a Brotli flaw
+date: 星期四 03 下午 十月 29o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/645
+origin_site: https://nodeweekly.com/issues/645
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node security releases to fix a Brotli flaw" url="https://nodeweekly.com/issues/645" />
+
+<Detail client:only="react">
+	#​645 — October 29, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/645)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://nodeweekly.com/link/192127/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/f0gg9aczxjjc0lxcgr7g.jpg)](https://nodeweekly.com/link/192128/0a4070b383)
+
+[Node.js 26 'Lithium' Is Now the Active LTS Line](https://nodeweekly.com/link/192128/0a4070b383 "nodejs.org") — Node.js 26.13.0 promotes Node 26 to long-term support, with updates through April 2029, making it the new line to target for production. Node 24 has moved into maintenance and 22 remains in maintenance until April 2027 – [the Node releases page](https://nodeweekly.com/link/192129/0a4070b383) has a neat graph to visualize this.
+
+Node.js Release Team
+
+💡 Meanwhile, Node 27's [first alpha](https://nodeweekly.com/link/192130/0a4070b383), the first release under Node's [new annual release schedule](https://nodeweekly.com/link/192131/0a4070b383), is being prepared and should land later today.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/fc046e7d.png)](https://nodeweekly.com/link/192127/0a4070b383)
+
+[Build an Agent that Never Sleeps](https://nodeweekly.com/link/192127/0a4070b383 "master.dev") — Most agents stop when you close the chat. Learn to build one that keeps working: it triages incidents, asks your permission before risky fixes, and picks up where it left off after a crash.
+
+Master.dev sponsor
+
+[Upgrade Now: Node's October Security Releases Fix a Brotli Flaw](https://nodeweekly.com/link/192132/0a4070b383 "nodejs.org") — Last week's releases (26.12.1, 24.22.1 and 22.23.4) fix ten CVEs, including [a flaw in the bundled Brotli decoder](https://nodeweekly.com/link/192170/0a4070b383), since dubbed [_Node2Shell_](https://nodeweekly.com/link/192133/0a4070b383), that can allow remote code execution if apps decompress malicious Brotli data, such as through `node:zlib`.
+
+Node.js Project
+
+**IN BRIEF:**
+
+*   🔒 Express [explains a body-parser bug](https://nodeweekly.com/link/192135/0a4070b383) where trailing bytes after a gzipped body can let a request crash a process. It's fixed in 2.4.0 and 1.20.9.
+    
+*   After [a TSC vote](https://nodeweekly.com/link/192136/0a4070b383), Node has merged a new experimental flag to [strip types from TypeScript in `node_modules`](https://nodeweekly.com/link/192137/0a4070b383), but only inside packages marked private, such as monorepo workspaces.
+    
+*   [Electron 45](https://nodeweekly.com/link/192138/0a4070b383) is out, moving to Chromium 156, V8 15.6 and Node 24.22. Sandboxed preload scripts lose the `Buffer` and `setImmediate` globals, and Electron 42 has now reached its _end-of-life_.
+    
+*   GitHub Actions [workflow lockfiles are now generally available](https://nodeweekly.com/link/192139/0a4070b383) letting you pin actions and their dependencies in participating workflows.
+    
+
+[The Web Can't Afford a JavaScript Runtime Monoculture](https://nodeweekly.com/link/192140/0a4070b383 "redmonk.com") — With Deno's runtime set to wind down after its team's move to Cloudflare, the field of major server-side runtimes could narrow to Node, Bun and `workerd`. An analyst draws on IE6, Chromium's dominance and the io.js fork to argue why that might worry us.
+
+Kate Holterhoff (RedMonk)
+
+💡 Meanwhile, Deno's team says it's [working on getting Deno into a foundation](https://nodeweekly.com/link/192141/0a4070b383), and an initial fork, [Ende](https://nodeweekly.com/link/192142/0a4070b383), has appeared.
+
+[Reylo: Import `.sql` Files into TypeScript with Full Type Inference](https://nodeweekly.com/link/192143/0a4070b383 "reylo.dev") — From the creator of Zod: write queries in plain `.sql` files and `import` them into TypeScript, with row and param types inferred from the SQL. No codegen step, but it relies on TypeScript 7.1's [new content mappers](https://nodeweekly.com/link/192144/0a4070b383) (now in beta).
+
+Colin McDonnell
+
+[Up to 10x Faster Postgres for I/O-Heavy Workloads](https://nodeweekly.com/link/192145/0a4070b383 "clickhouse.com") — Managed Postgres on local NVMe, natively integrated with ClickHouse for real-time analytics.
+
+ClickHouse Managed Postgres sponsor
+
+📄 [Why Parallel Publishes Can Briefly Break npm Installs](https://nodeweekly.com/link/192146/0a4070b383) – Monorepo releases can land before their own dependencies. Evert Pot (vlt)
+
+📄 [`node:vfs`: What Shipped, How It Works, and Its Limits](https://nodeweekly.com/link/192147/0a4070b383) Matteo Collina (Platformatic)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yfk5ezruwtf6osle2mkp.jpg)](https://nodeweekly.com/link/192148/0a4070b383)
+
+[Dependency Cruiser 18.7: Validate and Visualize Your Dependencies](https://nodeweekly.com/link/192148/0a4070b383 "github.com") — Set rules about what may depend on what (no circular imports, say, or no reaching into another package's internals), check them in CI, and render the results as graphs. There's [a page of graphs for real projects](https://nodeweekly.com/link/192149/0a4070b383) like Yarn and React.
+
+Sander Verweij
+
+[OpenTelemetry JS 3.0 Released](https://nodeweekly.com/link/192150/0a4070b383 "github.com") — OpenTelemetry's JavaScript SDK now ships dual ESM/CommonJS builds with strict `exports` maps (so deep imports break), and merges the Node, web and base trace SDKs into a single package.
+
+OpenTelemetry
+
+💡 Meanwhile, a new repo under the Node.js org, [microtel](https://nodeweekly.com/link/192151/0a4070b383), prototypes a minimal OpenTelemetry implementation meant to eventually land in Node itself.
+
+[bundle: Ship a Node App as One Signed File](https://nodeweekly.com/link/192152/0a4070b383 "bundle.pipobscure.com") — Freezes a Node app and its dependency tree into a signed ZIP that Node 26's experimental virtual file system runs directly, with no `npm install` needed. Its author wrote several of the core VFS pieces it builds on.
+
+Philipp Dunkel
+
+[gpuix-svelte: Native Desktop Apps from Svelte, No Webview](https://nodeweekly.com/link/192153/0a4070b383 "gpuix-svelte.stanislav.garden") — Draws Svelte components natively using [GPUI](https://nodeweekly.com/link/192154/0a4070b383), the GPU-powered UI framework behind Zed, while your code runs in Node or Bun. Experimental, as it relies on Svelte's unreleased custom renderers feature. [GitHub repo.](https://nodeweekly.com/link/192155/0a4070b383)
+
+Stanislav Khromov
+
+[sqlite-js-stream: Litestream, Rewritten for Node by an AI Agent](https://nodeweekly.com/link/192156/0a4070b383 "blog.platformatic.dev") — [Litestream](https://nodeweekly.com/link/192157/0a4070b383) continuously streams SQLite's write-ahead log to S3 so a single-file database can be recovered. Platformatic has ported the Go tool to TypeScript running directly on `node:sqlite`.
+
+Matteo Collina (Platformatic)
+
+📰 Classifieds
+
+🛒 AI agents are completing purchases for real customers. [Fingerprint](https://nodeweekly.com/link/192158/0a4070b383) identifies them so you don’t block a sale. [Learn how](https://nodeweekly.com/link/192158/0a4070b383).
+
+* * *
+
+📄 [Invoices in, JSON out](https://nodeweekly.com/link/192159/0a4070b383). Pull line items, totals, dates and vendor details from invoice PDFs with [Foxit's extraction API](https://nodeweekly.com/link/192159/0a4070b383).
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mzbu4tbh2l2opaj725sv.jpg)](https://nodeweekly.com/link/192160/0a4070b383)
+
+*   [Chokidar 6.0](https://nodeweekly.com/link/192160/0a4070b383) – A rewrite of the popular file watching library _(above)_. v6 confirms changes against the filesystem before emitting events.
+    
+*   [Verdaccio 7.0](https://nodeweekly.com/link/192161/0a4070b383) – Lightweight, self-hostable private npm registry and proxy. [v7 adds staged publishing and 2FA](https://nodeweekly.com/link/192162/0a4070b383) and requires Node 24+.
+    
+*   [AVA 8.2](https://nodeweekly.com/link/192163/0a4070b383) – Long-standing Node test runner. [v8.1 can be up to 50% faster](https://nodeweekly.com/link/192164/0a4070b383) on many common workloads while 8.2 rolls out some fixes.
+    
+*   [path-to-regexp 9.0](https://nodeweekly.com/link/192165/0a4070b383) – Library that turns paths like `/user/:name` into regular expressions, as used by Express. [Now ESM-only](https://nodeweekly.com/link/192166/0a4070b383), with a subtle change to how ambiguous segments match.
+    
+*   [Directus 12.6](https://nodeweekly.com/link/192167/0a4070b383) – Connect any SQL database and get instant REST and GraphQL APIs, a visual management Studio, and a native MCP server for AI agents.
+    
+*   [Croner 11.0](https://nodeweekly.com/link/192168/0a4070b383) – Library to trigger functions or evaluate cron expressions.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​645 — October 29, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/645)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://nodeweekly.com/link/192127/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/f0gg9aczxjjc0lxcgr7g.jpg)](https://nodeweekly.com/link/192128/0a4070b383)
+
+[Node.js 26 'Lithium' Is Now the Active LTS Line](https://nodeweekly.com/link/192128/0a4070b383 "nodejs.org") — Node.js 26.13.0 promotes Node 26 to long-term support, with updates through April 2029, making it the new line to target for production. Node 24 has moved into maintenance and 22 remains in maintenance until April 2027 – [the Node releases page](https://nodeweekly.com/link/192129/0a4070b383) has a neat graph to visualize this.
+
+Node.js Release Team
+
+💡 Meanwhile, Node 27's [first alpha](https://nodeweekly.com/link/192130/0a4070b383), the first release under Node's [new annual release schedule](https://nodeweekly.com/link/192131/0a4070b383), is being prepared and should land later today.
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/fc046e7d.png)](https://nodeweekly.com/link/192127/0a4070b383)
+
+[Build an Agent that Never Sleeps](https://nodeweekly.com/link/192127/0a4070b383 "master.dev") — Most agents stop when you close the chat. Learn to build one that keeps working: it triages incidents, asks your permission before risky fixes, and picks up where it left off after a crash.
+
+Master.dev sponsor
+
+[Upgrade Now: Node's October Security Releases Fix a Brotli Flaw](https://nodeweekly.com/link/192132/0a4070b383 "nodejs.org") — Last week's releases (26.12.1, 24.22.1 and 22.23.4) fix ten CVEs, including [a flaw in the bundled Brotli decoder](https://nodeweekly.com/link/192170/0a4070b383), since dubbed [*Node2Shell*](https://nodeweekly.com/link/192133/0a4070b383), that can allow remote code execution if apps decompress malicious Brotli data, such as through `node:zlib`.
+
+Node.js Project
+
+**IN BRIEF:**
+
+* 🔒 Express [explains a body-parser bug](https://nodeweekly.com/link/192135/0a4070b383) where trailing bytes after a gzipped body can let a request crash a process. It's fixed in 2.4.0 and 1.20.9.
+
+* After [a TSC vote](https://nodeweekly.com/link/192136/0a4070b383), Node has merged a new experimental flag to [strip types from TypeScript in `node_modules`](https://nodeweekly.com/link/192137/0a4070b383), but only inside packages marked private, such as monorepo workspaces.
+
+* [Electron 45](https://nodeweekly.com/link/192138/0a4070b383) is out, moving to Chromium 156, V8 15.6 and Node 24.22. Sandboxed preload scripts lose the `Buffer` and `setImmediate` globals, and Electron 42 has now reached its *end-of-life*.
+
+* GitHub Actions [workflow lockfiles are now generally available](https://nodeweekly.com/link/192139/0a4070b383) letting you pin actions and their dependencies in participating workflows.
+
+[The Web Can't Afford a JavaScript Runtime Monoculture](https://nodeweekly.com/link/192140/0a4070b383 "redmonk.com") — With Deno's runtime set to wind down after its team's move to Cloudflare, the field of major server-side runtimes could narrow to Node, Bun and `workerd`. An analyst draws on IE6, Chromium's dominance and the io.js fork to argue why that might worry us.
+
+Kate Holterhoff (RedMonk)
+
+💡 Meanwhile, Deno's team says it's [working on getting Deno into a foundation](https://nodeweekly.com/link/192141/0a4070b383), and an initial fork, [Ende](https://nodeweekly.com/link/192142/0a4070b383), has appeared.
+
+[Reylo: Import `.sql` Files into TypeScript with Full Type Inference](https://nodeweekly.com/link/192143/0a4070b383 "reylo.dev") — From the creator of Zod: write queries in plain `.sql` files and `import` them into TypeScript, with row and param types inferred from the SQL. No codegen step, but it relies on TypeScript 7.1's [new content mappers](https://nodeweekly.com/link/192144/0a4070b383) (now in beta).
+
+Colin McDonnell
+
+[Up to 10x Faster Postgres for I/O-Heavy Workloads](https://nodeweekly.com/link/192145/0a4070b383 "clickhouse.com") — Managed Postgres on local NVMe, natively integrated with ClickHouse for real-time analytics.
+
+ClickHouse Managed Postgres sponsor
+
+📄 [Why Parallel Publishes Can Briefly Break npm Installs](https://nodeweekly.com/link/192146/0a4070b383) – Monorepo releases can land before their own dependencies. Evert Pot (vlt)
+
+📄 [`node:vfs`: What Shipped, How It Works, and Its Limits](https://nodeweekly.com/link/192147/0a4070b383) Matteo Collina (Platformatic)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yfk5ezruwtf6osle2mkp.jpg)](https://nodeweekly.com/link/192148/0a4070b383)
+
+[Dependency Cruiser 18.7: Validate and Visualize Your Dependencies](https://nodeweekly.com/link/192148/0a4070b383 "github.com") — Set rules about what may depend on what (no circular imports, say, or no reaching into another package's internals), check them in CI, and render the results as graphs. There's [a page of graphs for real projects](https://nodeweekly.com/link/192149/0a4070b383) like Yarn and React.
+
+Sander Verweij
+
+[OpenTelemetry JS 3.0 Released](https://nodeweekly.com/link/192150/0a4070b383 "github.com") — OpenTelemetry's JavaScript SDK now ships dual ESM/CommonJS builds with strict `exports` maps (so deep imports break), and merges the Node, web and base trace SDKs into a single package.
+
+OpenTelemetry
+
+💡 Meanwhile, a new repo under the Node.js org, [microtel](https://nodeweekly.com/link/192151/0a4070b383), prototypes a minimal OpenTelemetry implementation meant to eventually land in Node itself.
+
+[bundle: Ship a Node App as One Signed File](https://nodeweekly.com/link/192152/0a4070b383 "bundle.pipobscure.com") — Freezes a Node app and its dependency tree into a signed ZIP that Node 26's experimental virtual file system runs directly, with no `npm install` needed. Its author wrote several of the core VFS pieces it builds on.
+
+Philipp Dunkel
+
+[gpuix-svelte: Native Desktop Apps from Svelte, No Webview](https://nodeweekly.com/link/192153/0a4070b383 "gpuix-svelte.stanislav.garden") — Draws Svelte components natively using [GPUI](https://nodeweekly.com/link/192154/0a4070b383), the GPU-powered UI framework behind Zed, while your code runs in Node or Bun. Experimental, as it relies on Svelte's unreleased custom renderers feature. [GitHub repo.](https://nodeweekly.com/link/192155/0a4070b383)
+
+Stanislav Khromov
+
+[sqlite-js-stream: Litestream, Rewritten for Node by an AI Agent](https://nodeweekly.com/link/192156/0a4070b383 "blog.platformatic.dev") — [Litestream](https://nodeweekly.com/link/192157/0a4070b383) continuously streams SQLite's write-ahead log to S3 so a single-file database can be recovered. Platformatic has ported the Go tool to TypeScript running directly on `node:sqlite`.
+
+Matteo Collina (Platformatic)
+
+📰 Classifieds
+
+🛒 AI agents are completing purchases for real customers. [Fingerprint](https://nodeweekly.com/link/192158/0a4070b383) identifies them so you don’t block a sale. [Learn how](https://nodeweekly.com/link/192158/0a4070b383).
+
+***
+
+📄 [Invoices in, JSON out](https://nodeweekly.com/link/192159/0a4070b383). Pull line items, totals, dates and vendor details from invoice PDFs with [Foxit's extraction API](https://nodeweekly.com/link/192159/0a4070b383).
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mzbu4tbh2l2opaj725sv.jpg)](https://nodeweekly.com/link/192160/0a4070b383)
+
+* [Chokidar 6.0](https://nodeweekly.com/link/192160/0a4070b383) – A rewrite of the popular file watching library *(above)*. v6 confirms changes against the filesystem before emitting events.
+
+* [Verdaccio 7.0](https://nodeweekly.com/link/192161/0a4070b383) – Lightweight, self-hostable private npm registry and proxy. [v7 adds staged publishing and 2FA](https://nodeweekly.com/link/192162/0a4070b383) and requires Node 24+.
+
+* [AVA 8.2](https://nodeweekly.com/link/192163/0a4070b383) – Long-standing Node test runner. [v8.1 can be up to 50% faster](https://nodeweekly.com/link/192164/0a4070b383) on many common workloads while 8.2 rolls out some fixes.
+
+* [path-to-regexp 9.0](https://nodeweekly.com/link/192165/0a4070b383) – Library that turns paths like `/user/:name` into regular expressions, as used by Express. [Now ESM-only](https://nodeweekly.com/link/192166/0a4070b383), with a subtle change to how ambiguous segments match.
+
+* [Directus 12.6](https://nodeweekly.com/link/192167/0a4070b383) – Connect any SQL database and get instant REST and GraphQL APIs, a visual management Studio, and a native MCP server for AI agents.
+
+* [Croner 11.0](https://nodeweekly.com/link/192168/0a4070b383) – Library to trigger functions or evaluate cron expressions.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
