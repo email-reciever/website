@@ -1,0 +1,224 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: TanStack's smaller React for the browser
+description: TanStack's smaller React for the browser
+date: 星期五 04 下午 十月 30o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/495
+origin_site: https://react.statuscode.com/issues/495
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="TanStack's smaller React for the browser" url="https://react.statuscode.com/issues/495" />
+
+<Detail client:only="react">
+	#​495 — October 30, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/495)
+
+Together with 
+
+[![Expo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1024,h_289/e_make_transparent/co_white,e_outline:15/damvoyij8zrqr3lp2edx.png)](https://react.statuscode.com/link/192217/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/aanjymzij2eewsfnkhro.jpg)](https://react.statuscode.com/link/192218/5d0bbb4a61)
+
+Putting MUI, Mantine, Ant Design  
+and React Spectrum Under Load
+
+Den Odell wanted to see how popular design systems cope when you give them real work, [so he timed ten of them](https://react.statuscode.com/link/192218/5d0bbb4a61), including MUI, Mantine, Ant Design and React Spectrum, and profiled the slowest cases. _"Performance belongs on the design system team's priority list, next to accessibility,"_ he says. Some highlights:
+
+*   📊 With the CPU slowed 4x, opening a 249-country dropdown took 84ms in Mantine and 134ms in Ant Design, but over 200ms in MUI and React Spectrum, both of which froze the UI past his 100ms budget.
+    
+*   🔍 React Spectrum's problem was React Aria measuring options one at a time and forcing layout for each. Den [filed an issue](https://react.statuscode.com/link/192219/5d0bbb4a61) and [a fix is in review](https://react.statuscode.com/link/192220/5d0bbb4a61).
+    
+*   ⚖️ Framework alone didn't decide the results as non-React Ionic was by far the slowest to open (1,266ms) yet was quick at checking 100 checkboxes, while MUI handled them in 70ms compared to Ant Design's 421ms.
+    
+*   🧪 Want to try this on your own components? [Den's Playwright tests are available on GitHub](https://react.statuscode.com/link/192221/5d0bbb4a61).
+    
+
+* * *
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/9acd8d7c.png)](https://react.statuscode.com/link/192217/5d0bbb4a61)
+
+[Agentic Mobile Development Needs Mobile AI Infrastructure](https://react.statuscode.com/link/192217/5d0bbb4a61 "try.expo.dev") — Your agent writes mobile screens fast. Getting them built and into the App Store is where it stalls. Expo is mobile AI infrastructure: native builds, store submits, over-the-air updates and workflows your agent can run. [Start free](https://react.statuscode.com/link/192217/5d0bbb4a61).
+
+Expo sponsor
+
+[TanStack Redact: A Smaller React for the Browser](https://react.statuscode.com/link/192222/5d0bbb4a61 "tanstack.com") — A drop-in replacement for React/React DOM in the browser. Add it to your build config (Start, Vite, Vinext and Next.js are supported) and ship less JavaScript. But it renders _synchronously_, with no time slicing, so [the compatibility guide](https://react.statuscode.com/link/192223/5d0bbb4a61) is handy.
+
+Tanner Linsley
+
+💬 Does Redact pay off? [On r/reactjs](https://react.statuscode.com/link/192224/5d0bbb4a61), commenters pondered who needs it and how it differs from Preact, while [one tester](https://react.statuscode.com/link/192225/5d0bbb4a61) found re-renders cost about twice the CPU across two production sites.
+
+**IN BRIEF:**
+
+*   ⚠️ Next.js has [a security release scheduled for November 3](https://react.statuscode.com/link/192226/5d0bbb4a61), fixing seven medium-severity vulnerabilities. Advisories will be published with the patches.
+    
+*   Dan Abramov is [fuzzing React's Flight protocol](https://react.statuscode.com/link/192227/5d0bbb4a61), the format behind Server Components, by streaming random value graphs through the real server and client. It's turned up [six stream bugs](https://react.statuscode.com/link/192228/5d0bbb4a61) and [three writer bugs](https://react.statuscode.com/link/192229/5d0bbb4a61) so far.
+    
+*   [TanStack AI 1.0](https://react.statuscode.com/link/192230/5d0bbb4a61) is stable: a vendor-neutral AI toolkit with React hooks like `useChat()`, 23 provider adapters and MCP support.
+    
+*   📱 [React Native Windows 0.85](https://react.statuscode.com/link/192231/5d0bbb4a61) completes its move to the New Architecture, and there's more React Native on the desktop with [Expo Desktop](https://react.statuscode.com/link/192232/5d0bbb4a61) (an independent project – not by _Expo_) and [Legend Spark](https://react.statuscode.com/link/192233/5d0bbb4a61) for macOS.
+    
+
+[`React.lazy`, Suspense and the Hidden 300ms Startup Delay](https://react.statuscode.com/link/192234/5d0bbb4a61 "tabwidgets.com") — A lazy component can suspend on its first render even when its code is already loaded, and React can throttle reveals of suspended content to once every 300ms. Here's how one team traced the delay, and what fixed it.
+
+Matthew Wong (Tab Widgets)
+
+[TanStack DB 1.0 RC1, and How 'Oracles' Found Its Bugs](https://react.statuscode.com/link/192235/5d0bbb4a61 "tanstack.com") — The reactive client data layer is now API stable, but check [the migration guide](https://react.statuscode.com/link/192236/5d0bbb4a61), as mutation handlers, hooks and errors have changed. Kyle explains how agents, checked against simple reference models, found many of the bugs fixed.
+
+Kyle Mathews (TanStack)
+
+🤖 [Ship Less JavaScript in Next.js with Your AI Agent](https://react.statuscode.com/link/192237/5d0bbb4a61) – A new skill hunts bundle bloat using Turbopack's module graph. Will Binns-Smith (Vercel)
+
+📄 [Porting 287,000 Lines of React to Foldkit in 3 Days](https://react.statuscode.com/link/192238/5d0bbb4a61) – Focuses on how they built a harness to ensure visual and behavioral parity. David Granzin (Maple)
+
+📄 [Async React and Progressive Server Actions](https://react.statuscode.com/link/192239/5d0bbb4a61) – How to keep server action forms working before hydration, even with optimistic UI. Jacob Ebey
+
+📊 [React Compiler in Next.js 16.4: Babel vs Rust, Benchmarked](https://react.statuscode.com/link/192240/5d0bbb4a61) Waseem Anjum
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xtwpcvsmvv8w2vtstmyq.jpg)](https://react.statuscode.com/link/192241/5d0bbb4a61)
+
+[Puck 0.24: The Visual Page Editor for React](https://react.statuscode.com/link/192241/5d0bbb4a61 "puckeditor.com") — A drag-and-drop page editor you embed in your own app, using your own components. 0.24 lets you lay out a component's settings panel as you wish, improves drag and drop, and more. [GitHub repo.](https://react.statuscode.com/link/192242/5d0bbb4a61)
+
+Fede Bonel Tozzi
+
+[`react-window` 2.5: Virtualized Lists That Scroll with the Page](https://react.statuscode.com/link/192243/5d0bbb4a61 "github.com") — Brian's long-standing virtualization library adds a `scrollElement` prop, so lists/grids can scroll along with the page or an ancestor, plus a headless `useVirtualizer()` for building your own virtualized layouts. [Docs and demos](https://react.statuscode.com/link/192244/5d0bbb4a61).
+
+Brian Vaughn
+
+[Vinext 1.4: The Vite-Powered Next.js Reimplementation Gets Faster](https://react.statuscode.com/link/192245/5d0bbb4a61 "vinext.dev") — A Vite plugin that reimplements the Next.js API so you can deploy anywhere. 1.4 focuses on performance, with a _Hacker News_ clone example now using 43% less server CPU per request vs 1.3, putting it slightly ahead of Next.js in that test.
+
+James Anderson
+
+*   [OpenTUI 0.8](https://react.statuscode.com/link/192246/5d0bbb4a61) – Terminal UI library with React bindings that powers [OpenCode](https://react.statuscode.com/link/192247/5d0bbb4a61). Now repaints only what changed each frame.
+    
+*   [React Hook Form 7.91](https://react.statuscode.com/link/192248/5d0bbb4a61) – Lots of `useFieldArray` and async validation fixes, plus fewer re-renders. v8 is also now at beta 5.
+    
+*   [React-Toastify 11.2](https://react.statuscode.com/link/192249/5d0bbb4a61) – Popular toast notification library. Now with `theme="auto"` to follow the OS color scheme.
+    
+*   [emoji-picker-react 5.1](https://react.statuscode.com/link/192250/5d0bbb4a61) – Full-featured customizable emoji picker. [Live demo](https://react.statuscode.com/link/192251/5d0bbb4a61).
+    
+
+🎃  And finally…
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mrytfwvqa2twlozoynlt.jpg)](https://react.statuscode.com/link/192252/5d0bbb4a61)
+
+Halloween is almost upon us, so how about [a round of Graveyard Pinball](https://react.statuscode.com/link/192252/5d0bbb4a61)? It's built with React Three Fiber, with skulls, cauldrons and a skeleton mage. Its creator [explains more about how it works here](https://react.statuscode.com/link/192253/5d0bbb4a61), including how the 3D table actually uses 2D physics.
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​495 — October 30, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/495)
+
+Together with 
+
+[![Expo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1024,h_289/e_make_transparent/co_white,e_outline:15/damvoyij8zrqr3lp2edx.png)](https://react.statuscode.com/link/192217/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/aanjymzij2eewsfnkhro.jpg)](https://react.statuscode.com/link/192218/5d0bbb4a61)
+
+Putting MUI, Mantine, Ant Design\
+and React Spectrum Under Load
+
+Den Odell wanted to see how popular design systems cope when you give them real work, [so he timed ten of them](https://react.statuscode.com/link/192218/5d0bbb4a61), including MUI, Mantine, Ant Design and React Spectrum, and profiled the slowest cases. *"Performance belongs on the design system team's priority list, next to accessibility,"* he says. Some highlights:
+
+* 📊 With the CPU slowed 4x, opening a 249-country dropdown took 84ms in Mantine and 134ms in Ant Design, but over 200ms in MUI and React Spectrum, both of which froze the UI past his 100ms budget.
+
+* 🔍 React Spectrum's problem was React Aria measuring options one at a time and forcing layout for each. Den [filed an issue](https://react.statuscode.com/link/192219/5d0bbb4a61) and [a fix is in review](https://react.statuscode.com/link/192220/5d0bbb4a61).
+
+* ⚖️ Framework alone didn't decide the results as non-React Ionic was by far the slowest to open (1,266ms) yet was quick at checking 100 checkboxes, while MUI handled them in 70ms compared to Ant Design's 421ms.
+
+* 🧪 Want to try this on your own components? [Den's Playwright tests are available on GitHub](https://react.statuscode.com/link/192221/5d0bbb4a61).
+
+***
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/9acd8d7c.png)](https://react.statuscode.com/link/192217/5d0bbb4a61)
+
+[Agentic Mobile Development Needs Mobile AI Infrastructure](https://react.statuscode.com/link/192217/5d0bbb4a61 "try.expo.dev") — Your agent writes mobile screens fast. Getting them built and into the App Store is where it stalls. Expo is mobile AI infrastructure: native builds, store submits, over-the-air updates and workflows your agent can run. [Start free](https://react.statuscode.com/link/192217/5d0bbb4a61).
+
+Expo sponsor
+
+[TanStack Redact: A Smaller React for the Browser](https://react.statuscode.com/link/192222/5d0bbb4a61 "tanstack.com") — A drop-in replacement for React/React DOM in the browser. Add it to your build config (Start, Vite, Vinext and Next.js are supported) and ship less JavaScript. But it renders *synchronously*, with no time slicing, so [the compatibility guide](https://react.statuscode.com/link/192223/5d0bbb4a61) is handy.
+
+Tanner Linsley
+
+💬 Does Redact pay off? [On r/reactjs](https://react.statuscode.com/link/192224/5d0bbb4a61), commenters pondered who needs it and how it differs from Preact, while [one tester](https://react.statuscode.com/link/192225/5d0bbb4a61) found re-renders cost about twice the CPU across two production sites.
+
+**IN BRIEF:**
+
+* ⚠️ Next.js has [a security release scheduled for November 3](https://react.statuscode.com/link/192226/5d0bbb4a61), fixing seven medium-severity vulnerabilities. Advisories will be published with the patches.
+
+* Dan Abramov is [fuzzing React's Flight protocol](https://react.statuscode.com/link/192227/5d0bbb4a61), the format behind Server Components, by streaming random value graphs through the real server and client. It's turned up [six stream bugs](https://react.statuscode.com/link/192228/5d0bbb4a61) and [three writer bugs](https://react.statuscode.com/link/192229/5d0bbb4a61) so far.
+
+* [TanStack AI 1.0](https://react.statuscode.com/link/192230/5d0bbb4a61) is stable: a vendor-neutral AI toolkit with React hooks like `useChat()`, 23 provider adapters and MCP support.
+
+* 📱 [React Native Windows 0.85](https://react.statuscode.com/link/192231/5d0bbb4a61) completes its move to the New Architecture, and there's more React Native on the desktop with [Expo Desktop](https://react.statuscode.com/link/192232/5d0bbb4a61) (an independent project – not by *Expo*) and [Legend Spark](https://react.statuscode.com/link/192233/5d0bbb4a61) for macOS.
+
+[`React.lazy`, Suspense and the Hidden 300ms Startup Delay](https://react.statuscode.com/link/192234/5d0bbb4a61 "tabwidgets.com") — A lazy component can suspend on its first render even when its code is already loaded, and React can throttle reveals of suspended content to once every 300ms. Here's how one team traced the delay, and what fixed it.
+
+Matthew Wong (Tab Widgets)
+
+[TanStack DB 1.0 RC1, and How 'Oracles' Found Its Bugs](https://react.statuscode.com/link/192235/5d0bbb4a61 "tanstack.com") — The reactive client data layer is now API stable, but check [the migration guide](https://react.statuscode.com/link/192236/5d0bbb4a61), as mutation handlers, hooks and errors have changed. Kyle explains how agents, checked against simple reference models, found many of the bugs fixed.
+
+Kyle Mathews (TanStack)
+
+🤖 [Ship Less JavaScript in Next.js with Your AI Agent](https://react.statuscode.com/link/192237/5d0bbb4a61) – A new skill hunts bundle bloat using Turbopack's module graph. Will Binns-Smith (Vercel)
+
+📄 [Porting 287,000 Lines of React to Foldkit in 3 Days](https://react.statuscode.com/link/192238/5d0bbb4a61) – Focuses on how they built a harness to ensure visual and behavioral parity. David Granzin (Maple)
+
+📄 [Async React and Progressive Server Actions](https://react.statuscode.com/link/192239/5d0bbb4a61) – How to keep server action forms working before hydration, even with optimistic UI. Jacob Ebey
+
+📊 [React Compiler in Next.js 16.4: Babel vs Rust, Benchmarked](https://react.statuscode.com/link/192240/5d0bbb4a61) Waseem Anjum
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/xtwpcvsmvv8w2vtstmyq.jpg)](https://react.statuscode.com/link/192241/5d0bbb4a61)
+
+[Puck 0.24: The Visual Page Editor for React](https://react.statuscode.com/link/192241/5d0bbb4a61 "puckeditor.com") — A drag-and-drop page editor you embed in your own app, using your own components. 0.24 lets you lay out a component's settings panel as you wish, improves drag and drop, and more. [GitHub repo.](https://react.statuscode.com/link/192242/5d0bbb4a61)
+
+Fede Bonel Tozzi
+
+[`react-window` 2.5: Virtualized Lists That Scroll with the Page](https://react.statuscode.com/link/192243/5d0bbb4a61 "github.com") — Brian's long-standing virtualization library adds a `scrollElement` prop, so lists/grids can scroll along with the page or an ancestor, plus a headless `useVirtualizer()` for building your own virtualized layouts. [Docs and demos](https://react.statuscode.com/link/192244/5d0bbb4a61).
+
+Brian Vaughn
+
+[Vinext 1.4: The Vite-Powered Next.js Reimplementation Gets Faster](https://react.statuscode.com/link/192245/5d0bbb4a61 "vinext.dev") — A Vite plugin that reimplements the Next.js API so you can deploy anywhere. 1.4 focuses on performance, with a *Hacker News* clone example now using 43% less server CPU per request vs 1.3, putting it slightly ahead of Next.js in that test.
+
+James Anderson
+
+* [OpenTUI 0.8](https://react.statuscode.com/link/192246/5d0bbb4a61) – Terminal UI library with React bindings that powers [OpenCode](https://react.statuscode.com/link/192247/5d0bbb4a61). Now repaints only what changed each frame.
+
+* [React Hook Form 7.91](https://react.statuscode.com/link/192248/5d0bbb4a61) – Lots of `useFieldArray` and async validation fixes, plus fewer re-renders. v8 is also now at beta 5.
+
+* [React-Toastify 11.2](https://react.statuscode.com/link/192249/5d0bbb4a61) – Popular toast notification library. Now with `theme="auto"` to follow the OS color scheme.
+
+* [emoji-picker-react 5.1](https://react.statuscode.com/link/192250/5d0bbb4a61) – Full-featured customizable emoji picker. [Live demo](https://react.statuscode.com/link/192251/5d0bbb4a61).
+
+🎃  And finally…
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mrytfwvqa2twlozoynlt.jpg)](https://react.statuscode.com/link/192252/5d0bbb4a61)
+
+Halloween is almost upon us, so how about [a round of Graveyard Pinball](https://react.statuscode.com/link/192252/5d0bbb4a61)? It's built with React Three Fiber, with skulls, cauldrons and a skeleton mage. Its creator [explains more about how it works here](https://react.statuscode.com/link/192253/5d0bbb4a61), including how the 3D table actually uses 2D physics.
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
