@@ -1,0 +1,337 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: What Claude spends building with 12 JavaScript stacks
+description: What Claude spends building with 12 JavaScript stacks
+date: 星期二 06 晚上 十一月 3o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/809
+origin_site: https://javascriptweekly.com/issues/809
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="What Claude spends building with 12 JavaScript stacks" url="https://javascriptweekly.com/issues/809" />
+
+<Detail client:only="react">
+	#​809 — November 3, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/809)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://javascriptweekly.com/link/192301/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dhcgdjewfv50joacutkm.jpg)](https://javascriptweekly.com/link/192302/d076523b1d)
+
+The AI Cost of JavaScript Frameworks
+
+[Nolan Lawson had Claude build the same app](https://javascriptweekly.com/link/192302/d076523b1d) five times in each of twelve JS stacks to test common _"X is better for agents"_ claims. Costs varied significantly between runs, and [Gautam Parab found](https://javascriptweekly.com/link/192303/d076523b1d) that the observed cost ranges overlapped or touched for most pairs of frameworks.
+
+But a clearer difference was in the median amount of JavaScript sent to browsers: 0KB for Astro, 18K for Hono+htmx, 36K for SvelteKit, and 115–142K for React Router, TanStack Start and Next.js. If you've gone "hands-free", Nolan asks, why stick to a particular stack you chose when you wrote all the code? [His benchmark](https://javascriptweekly.com/link/192304/d076523b1d) is on GitHub to try for yourself.
+
+Nolan Lawson
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/3575e54e.png)](https://javascriptweekly.com/link/192301/d076523b1d)
+
+[Run AI Coding Models on Your Own Machine](https://javascriptweekly.com/link/192301/d076523b1d "master.dev") — Local models are now good enough for everyday coding. Learn to run them on your own Mac or GPU, wire them into your editor and terminal agents, and keep your code private with no per-token bill.
+
+Master.dev sponsor
+
+[Why Is This Fingerprinting Script 'Creating Bioweapons'?](https://javascriptweekly.com/link/192305/d076523b1d "nullpt.rs") — A crawl of sites to collect canvas fingerprinting examples (which you can see, visually, at [fingerprint.garden](https://javascriptweekly.com/link/192306/d076523b1d)) found an anti-analysis technique where JavaScript identifiers were named after… _taboo_ topics, with a prompt hidden in invisible Unicode, all designed to make LLMs refuse to work on the code!
+
+Veritas
+
+💡 Canvas fingerprinting is a technique that uses quirks of how different clients render canvas elements, in order to [distinguish browser environments](https://javascriptweekly.com/link/192307/d076523b1d).
+
+**IN BRIEF:**
+
+*   😄 Bartosz shares [a creative way to generate strings and run code](https://javascriptweekly.com/link/192308/d076523b1d) without parentheses or quotes. Good old JavaScript fun!
+    
+*   📊 GitHub's [Octoverse 2026 report](https://javascriptweekly.com/link/192309/d076523b1d) has TypeScript as the most used language on GitHub by contributors (with JS at third), and ~44% of merged TypeScript PRs showing AI involvement. Plus a lot more besides.
+    
+*   GitHub Actions will [block `pull_request_target` by default in public repos](https://javascriptweekly.com/link/192310/d076523b1d) from December 2, unless an event policy explicitly allows it, with brownouts on November 9 & 16.
+    
+*   Cloudflare Workers now [supports the Temporal API natively](https://javascriptweekly.com/link/192311/d076523b1d) behind a `temporal` compatibility flag. It'll be available by default from December 1.
+    
+
+**RELEASES:**
+
+*   [Node.js v27.0 (Alpha)](https://javascriptweekly.com/link/192312/d076523b1d) and [v26.13.0 (LTS)](https://javascriptweekly.com/link/192313/d076523b1d) – Node 26 is now the 'Lithium' LTS line, and 27 is the first ever Node 'alpha'. Under Node's new [release process](https://javascriptweekly.com/link/192314/d076523b1d), every line spends six months in alpha before going _Current_.
+    
+*   [Vitest 5.1](https://javascriptweekly.com/link/192315/d076523b1d) – A new `--since-last-run` flag reruns only tests affected by your edits, plus there's an interactive snapshot review feature.
+    
+*   [Rspack 2.3](https://javascriptweekly.com/link/192316/d076523b1d) – The Rust-based webpack alternative adopts [SWC Next](https://javascriptweekly.com/link/192317/d076523b1d) and its rewritten parser. The team reports 5-20% faster builds and less peak memory use.
+    
+*   [Leaflet 2.0 Beta 1](https://javascriptweekly.com/link/192318/d076523b1d) – The mapping library's first major in a decade goes tree-shakeable, ships TypeScript types, and drops its default export.
+    
+*   [Effect 4.1](https://javascriptweekly.com/link/192319/d076523b1d), [pnpm 12.17](https://javascriptweekly.com/link/192320/d076523b1d), [ESLint 10.14.0](https://javascriptweekly.com/link/192321/d076523b1d), [Nuxt DevTools v4](https://javascriptweekly.com/link/192322/d076523b1d)
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jz81mfwsiw9cmfmuz7qi.jpg)](https://javascriptweekly.com/link/192323/d076523b1d)
+
+["_No, npm, 'estee' is not a typo of 'testem'_"](https://javascriptweekly.com/link/192323/d076523b1d "smoores.dev") — Shane tried to publish a CLI called `estee` and hit npm's typosquatting filter, which (as best as we can tell) rejects names within a small [Levenshtein distance](https://javascriptweekly.com/link/192324/d076523b1d) of popular packages' names.
+
+Shane Friedman
+
+[Shrinking `clarity.js`: When Cleaner Code Gzips Worse](https://javascriptweekly.com/link/192325/d076523b1d "clarity.microsoft.com") — Microsoft let an agent run 50+ size experiments on its analytics script. A big win came from dropping `import *` namespace objects, while good-practice refactors like extracting helpers actually made the gzipped output _bigger_.
+
+Manu Nair (Microsoft)
+
+[Workshop: How to Implement Session Replay](https://javascriptweekly.com/link/192326/d076523b1d "sentry.io") — Filters, custom tags, and sampling settings for finding the sessions that matter. Nov 5, 10am PT.
+
+Sentry sponsor
+
+['Nothing Installs at Our Company Until It's a Week Old'](https://javascriptweekly.com/link/192327/d076523b1d "brunoj.com") — Many recent package hijacks were caught within hours, so Bruno's company now makes new releases wait a week. He explains what this approach broke, what cooldowns don't stop, and settings for popular package managers.
+
+Bruno Jurković
+
+[Timing Ten Design Systems, Then Fixing the Slow Ones](https://javascriptweekly.com/link/192328/d076523b1d "denodell.com") — Den timed ten design systems (MUI, Ant Design, and Ionic among them) opening a 249-option select and ticking 100 checkboxes, then profiled the slow ones to find out why.
+
+Den Odell
+
+[Using Bun? Dependabot Can't See Most of Your Dependencies](https://javascriptweekly.com/link/192329/d076523b1d "charpeni.com") — GitHub's dependency graph doesn't parse `bun.lock`, so Dependabot alerts cover only direct dependencies. Nicolas has some tips for improving matters.
+
+Nicolas Charpentier (Shortcut)
+
+📄 [How Hard Is It to Check for Whitespace?](https://javascriptweekly.com/link/192330/d076523b1d) – Why Java, Python and JavaScript disagree on what counts as whitespace. Sergey Tselovalnikov
+
+📄 [A Proposal: How to Hire Junior Engineers in the Age of AI](https://javascriptweekly.com/link/192331/d076523b1d) – The npm co-founder thinks traditional coding interviews are dead. Laurie Voss
+
+📄 [How to Make `postMessage` Type-Safe in Under 350 Bytes](https://javascriptweekly.com/link/192332/d076523b1d) Pavel Grinchenko (Evil Martians)
+
+📄 [The Web Can't Afford a JavaScript Runtime Monoculture](https://javascriptweekly.com/link/192333/d076523b1d) Kate Holterhoff (RedMonk)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mwjj3fo3dcfpooypxjfz.jpg)](https://javascriptweekly.com/link/192334/d076523b1d)
+
+[Handwired: Compile Regular JavaScript into a Neural Net](https://javascriptweekly.com/link/192334/d076523b1d "chenglou.me") — A new mind-bender from [Pretext](https://javascriptweekly.com/link/192335/d076523b1d)'s creator: a compiler that turns JavaScript into an exact network of ReLUs and matrix multiplies that run on the GPU. Demos include a 130-layer 'mini desktop' and a WebGPU search over 100K JSON documents.
+
+Cheng Lou
+
+[Build Smarter JavaScript Applications With Live Search Data](https://javascriptweekly.com/link/192339/d076523b1d "serpapi.com") — Add search, shopping, maps, news, trends, flights and hotels results with a single developer-friendly JavaScript SDK.
+
+SerpApi sponsor
+
+🌐 [x18n: Lint and Maintain i18n Files for Any Framework](https://javascriptweekly.com/link/192337/d076523b1d "x18n.dev") — Anthony Fu's successor to [i18n-ally](https://javascriptweekly.com/link/192338/d076523b1d) scans locale files and translation calls and reports missing, unused and broken keys (like how `tsc --noEmit` reports type errors).
+
+Anthony Fu
+
+[djs: A New 'Suspend Anywhere' JavaScript Engine](https://javascriptweekly.com/link/192340/d076523b1d "github.com") — Armin (of [Flask](https://javascriptweekly.com/link/192341/d076523b1d) fame) built an engine to run scripts in WebAssembly that can snapshot the VM's state and resume elsewhere, even mid-`await`.
+
+Armin Ronacher
+
+[webframe: Run a Web Page Like a Command-Line Program](https://javascriptweekly.com/link/192342/d076523b1d "github.com") — Point it at a URL or HTML file and it runs the page in a hidden system web view, piping `console.log()` to stdout and exceptions to stderr. No bundled browser or Playwright needed.
+
+Jeff Lindsay
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/habczwydrpwycxp8usru.jpg)](https://javascriptweekly.com/link/192343/d076523b1d)
+
+[phoria2: A Small WebGL 2 Library for 3D Charts](https://javascriptweekly.com/link/192343/d076523b1d "kevs3d.co.uk") — A dependency-free 3D library aimed at dashboards and product viewers, with an API you can 'learn in an afternoon'. Plenty of live demos on the page.
+
+Kevin Roast
+
+*   [Shiki 4.6](https://javascriptweekly.com/link/192344/d076523b1d) – Powerful code syntax highlighter, now with faster decoration handling and compressed Oniguruma WASM binary.
+    
+*   [Preact 11.1](https://javascriptweekly.com/link/192345/d076523b1d) – A new `preact/compat/compiler-runtime` entry point lets code compiled by React Compiler run on Preact too.
+    
+*   [Postgres.js 4.0](https://javascriptweekly.com/link/192346/d076523b1d) – The popular Postgres client for Node, Bun and Cloudflare Workers gets a rewrite and goes ESM-only.
+    
+
+📰 Classifieds
+
+💸 Every OTP you send costs money. Fraudsters trigger them by the thousands. [Fingerprint](https://javascriptweekly.com/link/192348/d076523b1d) recognizes the device before you text. [Learn how](https://javascriptweekly.com/link/192348/d076523b1d).
+
+* * *
+
+Your coding agent can write the app. [Expo](https://javascriptweekly.com/link/192349/d076523b1d) is the agentic mobile infrastructure that takes it from a repo to the App Store.
+
+* * *
+
+[CodeAF](https://javascriptweekly.com/link/192350/d076523b1d) fixed 2x OpenCode's issues and nearly 4x Claude Code's on the same open model, at up to 4.8x less per fix. Open source, Apache 2.0.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/puujepssorqipappmqpg.jpg)](https://javascriptweekly.com/link/192351/d076523b1d)
+
+*   Chrome 157 is due today with the headline feature being [HTML-in-Canvas](https://javascriptweekly.com/link/192351/d076523b1d) for drawing live, interactive DOM elements into 2D, WebGL and WebGPU canvases. This feature has [numerous striking applications](https://javascriptweekly.com/link/192352/d076523b1d).
+    
+*   ☕ [CheerpJ 5.0](https://javascriptweekly.com/link/192353/d076523b1d) brings Java 21 and 25 to the browser via WebAssembly, ships the full JDK so you can compile Java in a tab, and previews a new WasmGC-based engine the team hopes will run Minecraft and IntelliJ one day.
+    
+*   🤖 LLM-whisperer Simon Willison [looks at the world of browser games being built with coding agents](https://javascriptweekly.com/link/192354/d076523b1d), and argues October was the point where agents got good enough to ship playable games.
+    
+*   🕹️ Talking of games… GitHub's game jam [_Game Off_ is back for its 14th year](https://javascriptweekly.com/link/192355/d076523b1d) with the theme 'SHIFT'. Entries are due on [itch.io](https://javascriptweekly.com/link/192356/d076523b1d) by December 1.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/192357/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​809 — November 3, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/809)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://javascriptweekly.com/link/192301/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/dhcgdjewfv50joacutkm.jpg)](https://javascriptweekly.com/link/192302/d076523b1d)
+
+The AI Cost of JavaScript Frameworks
+
+[Nolan Lawson had Claude build the same app](https://javascriptweekly.com/link/192302/d076523b1d) five times in each of twelve JS stacks to test common *"X is better for agents"* claims. Costs varied significantly between runs, and [Gautam Parab found](https://javascriptweekly.com/link/192303/d076523b1d) that the observed cost ranges overlapped or touched for most pairs of frameworks.
+
+But a clearer difference was in the median amount of JavaScript sent to browsers: 0KB for Astro, 18K for Hono+htmx, 36K for SvelteKit, and 115–142K for React Router, TanStack Start and Next.js. If you've gone "hands-free", Nolan asks, why stick to a particular stack you chose when you wrote all the code? [His benchmark](https://javascriptweekly.com/link/192304/d076523b1d) is on GitHub to try for yourself.
+
+Nolan Lawson
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/3575e54e.png)](https://javascriptweekly.com/link/192301/d076523b1d)
+
+[Run AI Coding Models on Your Own Machine](https://javascriptweekly.com/link/192301/d076523b1d "master.dev") — Local models are now good enough for everyday coding. Learn to run them on your own Mac or GPU, wire them into your editor and terminal agents, and keep your code private with no per-token bill.
+
+Master.dev sponsor
+
+[Why Is This Fingerprinting Script 'Creating Bioweapons'?](https://javascriptweekly.com/link/192305/d076523b1d "nullpt.rs") — A crawl of sites to collect canvas fingerprinting examples (which you can see, visually, at [fingerprint.garden](https://javascriptweekly.com/link/192306/d076523b1d)) found an anti-analysis technique where JavaScript identifiers were named after… *taboo* topics, with a prompt hidden in invisible Unicode, all designed to make LLMs refuse to work on the code!
+
+Veritas
+
+💡 Canvas fingerprinting is a technique that uses quirks of how different clients render canvas elements, in order to [distinguish browser environments](https://javascriptweekly.com/link/192307/d076523b1d).
+
+**IN BRIEF:**
+
+* 😄 Bartosz shares [a creative way to generate strings and run code](https://javascriptweekly.com/link/192308/d076523b1d) without parentheses or quotes. Good old JavaScript fun!
+
+* 📊 GitHub's [Octoverse 2026 report](https://javascriptweekly.com/link/192309/d076523b1d) has TypeScript as the most used language on GitHub by contributors (with JS at third), and ~44% of merged TypeScript PRs showing AI involvement. Plus a lot more besides.
+
+* GitHub Actions will [block `pull_request_target` by default in public repos](https://javascriptweekly.com/link/192310/d076523b1d) from December 2, unless an event policy explicitly allows it, with brownouts on November 9 & 16.
+
+* Cloudflare Workers now [supports the Temporal API natively](https://javascriptweekly.com/link/192311/d076523b1d) behind a `temporal` compatibility flag. It'll be available by default from December 1.
+
+**RELEASES:**
+
+* [Node.js v27.0 (Alpha)](https://javascriptweekly.com/link/192312/d076523b1d) and [v26.13.0 (LTS)](https://javascriptweekly.com/link/192313/d076523b1d) – Node 26 is now the 'Lithium' LTS line, and 27 is the first ever Node 'alpha'. Under Node's new [release process](https://javascriptweekly.com/link/192314/d076523b1d), every line spends six months in alpha before going *Current*.
+
+* [Vitest 5.1](https://javascriptweekly.com/link/192315/d076523b1d) – A new `--since-last-run` flag reruns only tests affected by your edits, plus there's an interactive snapshot review feature.
+
+* [Rspack 2.3](https://javascriptweekly.com/link/192316/d076523b1d) – The Rust-based webpack alternative adopts [SWC Next](https://javascriptweekly.com/link/192317/d076523b1d) and its rewritten parser. The team reports 5-20% faster builds and less peak memory use.
+
+* [Leaflet 2.0 Beta 1](https://javascriptweekly.com/link/192318/d076523b1d) – The mapping library's first major in a decade goes tree-shakeable, ships TypeScript types, and drops its default export.
+
+* [Effect 4.1](https://javascriptweekly.com/link/192319/d076523b1d), [pnpm 12.17](https://javascriptweekly.com/link/192320/d076523b1d), [ESLint 10.14.0](https://javascriptweekly.com/link/192321/d076523b1d), [Nuxt DevTools v4](https://javascriptweekly.com/link/192322/d076523b1d)
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/jz81mfwsiw9cmfmuz7qi.jpg)](https://javascriptweekly.com/link/192323/d076523b1d)
+
+["*No, npm, 'estee' is not a typo of 'testem'*"](https://javascriptweekly.com/link/192323/d076523b1d "smoores.dev") — Shane tried to publish a CLI called `estee` and hit npm's typosquatting filter, which (as best as we can tell) rejects names within a small [Levenshtein distance](https://javascriptweekly.com/link/192324/d076523b1d) of popular packages' names.
+
+Shane Friedman
+
+[Shrinking `clarity.js`: When Cleaner Code Gzips Worse](https://javascriptweekly.com/link/192325/d076523b1d "clarity.microsoft.com") — Microsoft let an agent run 50+ size experiments on its analytics script. A big win came from dropping `import *` namespace objects, while good-practice refactors like extracting helpers actually made the gzipped output *bigger*.
+
+Manu Nair (Microsoft)
+
+[Workshop: How to Implement Session Replay](https://javascriptweekly.com/link/192326/d076523b1d "sentry.io") — Filters, custom tags, and sampling settings for finding the sessions that matter. Nov 5, 10am PT.
+
+Sentry sponsor
+
+['Nothing Installs at Our Company Until It's a Week Old'](https://javascriptweekly.com/link/192327/d076523b1d "brunoj.com") — Many recent package hijacks were caught within hours, so Bruno's company now makes new releases wait a week. He explains what this approach broke, what cooldowns don't stop, and settings for popular package managers.
+
+Bruno Jurković
+
+[Timing Ten Design Systems, Then Fixing the Slow Ones](https://javascriptweekly.com/link/192328/d076523b1d "denodell.com") — Den timed ten design systems (MUI, Ant Design, and Ionic among them) opening a 249-option select and ticking 100 checkboxes, then profiled the slow ones to find out why.
+
+Den Odell
+
+[Using Bun? Dependabot Can't See Most of Your Dependencies](https://javascriptweekly.com/link/192329/d076523b1d "charpeni.com") — GitHub's dependency graph doesn't parse `bun.lock`, so Dependabot alerts cover only direct dependencies. Nicolas has some tips for improving matters.
+
+Nicolas Charpentier (Shortcut)
+
+📄 [How Hard Is It to Check for Whitespace?](https://javascriptweekly.com/link/192330/d076523b1d) – Why Java, Python and JavaScript disagree on what counts as whitespace. Sergey Tselovalnikov
+
+📄 [A Proposal: How to Hire Junior Engineers in the Age of AI](https://javascriptweekly.com/link/192331/d076523b1d) – The npm co-founder thinks traditional coding interviews are dead. Laurie Voss
+
+📄 [How to Make `postMessage` Type-Safe in Under 350 Bytes](https://javascriptweekly.com/link/192332/d076523b1d) Pavel Grinchenko (Evil Martians)
+
+📄 [The Web Can't Afford a JavaScript Runtime Monoculture](https://javascriptweekly.com/link/192333/d076523b1d) Kate Holterhoff (RedMonk)
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mwjj3fo3dcfpooypxjfz.jpg)](https://javascriptweekly.com/link/192334/d076523b1d)
+
+[Handwired: Compile Regular JavaScript into a Neural Net](https://javascriptweekly.com/link/192334/d076523b1d "chenglou.me") — A new mind-bender from [Pretext](https://javascriptweekly.com/link/192335/d076523b1d)'s creator: a compiler that turns JavaScript into an exact network of ReLUs and matrix multiplies that run on the GPU. Demos include a 130-layer 'mini desktop' and a WebGPU search over 100K JSON documents.
+
+Cheng Lou
+
+[Build Smarter JavaScript Applications With Live Search Data](https://javascriptweekly.com/link/192339/d076523b1d "serpapi.com") — Add search, shopping, maps, news, trends, flights and hotels results with a single developer-friendly JavaScript SDK.
+
+SerpApi sponsor
+
+🌐 [x18n: Lint and Maintain i18n Files for Any Framework](https://javascriptweekly.com/link/192337/d076523b1d "x18n.dev") — Anthony Fu's successor to [i18n-ally](https://javascriptweekly.com/link/192338/d076523b1d) scans locale files and translation calls and reports missing, unused and broken keys (like how `tsc --noEmit` reports type errors).
+
+Anthony Fu
+
+[djs: A New 'Suspend Anywhere' JavaScript Engine](https://javascriptweekly.com/link/192340/d076523b1d "github.com") — Armin (of [Flask](https://javascriptweekly.com/link/192341/d076523b1d) fame) built an engine to run scripts in WebAssembly that can snapshot the VM's state and resume elsewhere, even mid-`await`.
+
+Armin Ronacher
+
+[webframe: Run a Web Page Like a Command-Line Program](https://javascriptweekly.com/link/192342/d076523b1d "github.com") — Point it at a URL or HTML file and it runs the page in a hidden system web view, piping `console.log()` to stdout and exceptions to stderr. No bundled browser or Playwright needed.
+
+Jeff Lindsay
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/habczwydrpwycxp8usru.jpg)](https://javascriptweekly.com/link/192343/d076523b1d)
+
+[phoria2: A Small WebGL 2 Library for 3D Charts](https://javascriptweekly.com/link/192343/d076523b1d "kevs3d.co.uk") — A dependency-free 3D library aimed at dashboards and product viewers, with an API you can 'learn in an afternoon'. Plenty of live demos on the page.
+
+Kevin Roast
+
+* [Shiki 4.6](https://javascriptweekly.com/link/192344/d076523b1d) – Powerful code syntax highlighter, now with faster decoration handling and compressed Oniguruma WASM binary.
+
+* [Preact 11.1](https://javascriptweekly.com/link/192345/d076523b1d) – A new `preact/compat/compiler-runtime` entry point lets code compiled by React Compiler run on Preact too.
+
+* [Postgres.js 4.0](https://javascriptweekly.com/link/192346/d076523b1d) – The popular Postgres client for Node, Bun and Cloudflare Workers gets a rewrite and goes ESM-only.
+
+📰 Classifieds
+
+💸 Every OTP you send costs money. Fraudsters trigger them by the thousands. [Fingerprint](https://javascriptweekly.com/link/192348/d076523b1d) recognizes the device before you text. [Learn how](https://javascriptweekly.com/link/192348/d076523b1d).
+
+***
+
+Your coding agent can write the app. [Expo](https://javascriptweekly.com/link/192349/d076523b1d) is the agentic mobile infrastructure that takes it from a repo to the App Store.
+
+***
+
+[CodeAF](https://javascriptweekly.com/link/192350/d076523b1d) fixed 2x OpenCode's issues and nearly 4x Claude Code's on the same open model, at up to 4.8x less per fix. Open source, Apache 2.0.
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/puujepssorqipappmqpg.jpg)](https://javascriptweekly.com/link/192351/d076523b1d)
+
+* Chrome 157 is due today with the headline feature being [HTML-in-Canvas](https://javascriptweekly.com/link/192351/d076523b1d) for drawing live, interactive DOM elements into 2D, WebGL and WebGPU canvases. This feature has [numerous striking applications](https://javascriptweekly.com/link/192352/d076523b1d).
+
+* ☕ [CheerpJ 5.0](https://javascriptweekly.com/link/192353/d076523b1d) brings Java 21 and 25 to the browser via WebAssembly, ships the full JDK so you can compile Java in a tab, and previews a new WasmGC-based engine the team hopes will run Minecraft and IntelliJ one day.
+
+* 🤖 LLM-whisperer Simon Willison [looks at the world of browser games being built with coding agents](https://javascriptweekly.com/link/192354/d076523b1d), and argues October was the point where agents got good enough to ship playable games.
+
+* 🕹️ Talking of games… GitHub's game jam [*Game Off* is back for its 14th year](https://javascriptweekly.com/link/192355/d076523b1d) with the theme 'SHIFT'. Entries are due on [itch.io](https://javascriptweekly.com/link/192356/d076523b1d) by December 1.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/192357/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
