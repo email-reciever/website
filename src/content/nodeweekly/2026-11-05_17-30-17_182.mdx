@@ -1,0 +1,284 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Node 27's first alpha brings breaking changes
+description: Node 27's first alpha brings breaking changes
+date: 星期四 05 下午 十一月 5o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/646
+origin_site: https://nodeweekly.com/issues/646
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Node 27's first alpha brings breaking changes" url="https://nodeweekly.com/issues/646" />
+
+<Detail client:only="react">
+	#​646 — November 5, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/646)
+
+Together with 
+
+[![agentfield.ai](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_314/e_make_transparent/co_white,e_outline:10/dy2daidfoserzvblukbv.jpg)](https://nodeweekly.com/link/192445/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hnxmfhto3xr3zd6fwsd1.jpg)](https://nodeweekly.com/link/192446/0a4070b383)
+
+[Node.js 27 Alpha: The First Release Under Node's New Schedule](https://nodeweekly.com/link/192446/0a4070b383 "nodejs.org") — Under Node's [new release model](https://nodeweekly.com/link/192447/0a4070b383), each major release spends six months in alpha before stable release — so v27's final is due next April. Alphas are built from `main` with breaking changes, and are meant for library authors / testing rather than prod.
+
+*   **V8 15.6** brings [`Math.sumPrecise()`](https://nodeweekly.com/link/192448/0a4070b383), [`Iterator.zip()`](https://nodeweekly.com/link/192449/0a4070b383) and other iterator helpers by default, and [`import defer`](https://nodeweekly.com/link/192450/0a4070b383) and [immutable `ArrayBuffer`s](https://nodeweekly.com/link/192451/0a4070b383) are available behind flags.
+    
+*   **There's a new default heap limit** of half of physical memory (clamped between 256MB and 4GB), and memory held by `Buffer`s [counts toward it](https://nodeweekly.com/link/192452/0a4070b383). If you relied on the old defaults, you can set `--max-old-space-size`.
+    
+*   `v8.serialize()`, `structuredClone()` and `postMessage()` use a new format unreadable by older Nodes, so take care with mixed-version use.
+    
+*   [`fs.glob`](https://nodeweekly.com/link/192453/0a4070b383) is now implemented natively, there's an experimental [`net/promises`](https://nodeweekly.com/link/192454/0a4070b383) API, and [`--allow-env`](https://nodeweekly.com/link/192455/0a4070b383) joins the permission model.
+    
+*   [npm 12(.1)](https://nodeweekly.com/link/192456/0a4070b383) is now bundled so [there are breaking changes](https://nodeweekly.com/link/192457/0a4070b383) to be aware of.
+    
+
+Rafael Gonzaga (Node.js Release Team)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d44103ba.png)](https://nodeweekly.com/link/192445/0a4070b383)
+
+[Stop Babysitting Chats. Run Your Own Software Factory](https://nodeweekly.com/link/192445/0a4070b383 "agentfield.ai") — A chat per agent, each one waiting on you. CodeAF does the middle: it splits the work, runs the parts in parallel, tests what came back, merges what passed and asks only when it must. #1 of ten coding harnesses on DeepSWE, at the lowest cost per fix.
+
+CodeAF by AgentField AI sponsor
+
+[Notable V8 Changes from Node.js 26 to 27](https://nodeweekly.com/link/192458/0a4070b383 "nodejs.org") — Further to the Node 27 updates above, here's a fantastic roundup of what new things V8 15.6 brings to the table for Node users. It's a big update as Node 26 uses V8 14.6.
+
+Joyee Cheung
+
+['Nothing Installs at Our Company Until It's a Week Old'](https://nodeweekly.com/link/192459/0a4070b383 "brunoj.com") — Bruno put a proxy between his company and npm that refuses releases under seven days old. Twelve days on, he shares the numbers, the lockfiles it broke, and some practical advice if you want to do it yourself.
+
+Bruno Jurković
+
+**IN BRIEF:**
+
+*   Express's [October security roundup](https://nodeweekly.com/link/192460/0a4070b383) covers DoS fixes in `body-parser` and `multer`, plus its official line on the Brotli flaw: upgrade Node (but there's a workaround if you can't).
+    
+*   Vercel builds now [block known-malicious npm package versions](https://nodeweekly.com/link/192461/0a4070b383) before and during install, with no configuration needed.
+    
+*   🔒 It's a busy week for server framework security updates: [Fastify 5.12.8](https://nodeweekly.com/link/192462/0a4070b383) heads a wave of Fastify advisories including a [critical proxy prefix escape](https://nodeweekly.com/link/192463/0a4070b383), [Hono 4.13.16](https://nodeweekly.com/link/192464/0a4070b383) fixes several issues, and [Nuxt 4.6.4 and Nitro 2.13.6](https://nodeweekly.com/link/192465/0a4070b383) close eleven more.
+    
+
+[Signing and Attestations Across Package Registries](https://nodeweekly.com/link/192466/0a4070b383 "nesbitt.io") — A registry-by-registry survey of what npm, PyPI, RubyGems, crates.io, Go and others sign, which produce provenance attestations, and which offer trusted publishing, concluding with a handy comparison table.
+
+Andrew Nesbitt
+
+💡 Related: [mise now verifies npm provenance by default](https://nodeweekly.com/link/192467/0a4070b383) and pins tools it installs to the repos that built them.
+
+[Parcel 3 Alpha: The Bundler Now Rewritten in Rust](https://nodeweekly.com/link/192468/0a4070b383 "v3.parceljs.org") — Parcel's core is now a standalone Rust binary, with builds up to 100x faster on a large monorepo as a result. Plugins can be written in Rust, Go, Swift or C, or in JS/TS on a custom runtime, and there's HMR for Node targets.
+
+Devon Govett
+
+📄 [Fuzzers vs. AI: Six Months of Hunting V8 Bugs](https://nodeweekly.com/link/192469/0a4070b383) – Fuzzilli and the BigSleep LLM agent compared on real production counts. Google Project Zero
+
+📄 [No, npm, `estee` Is Not a Typo of `testem`](https://nodeweekly.com/link/192470/0a4070b383) – On npm's typosquat heuristic and the math of four-letter names. Shane Friedman
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mgn4x8vitsmy06gi578a.jpg)](https://nodeweekly.com/link/192471/0a4070b383)
+
+[Wiki.js 3: A Modern Wiki App Built on Node](https://nodeweekly.com/link/192471/0a4070b383 "js.wiki") — A mature project packed with features and an ecosystem of modules to integrate with other systems. Note that it's AGPL licensed. [GitHub repo.](https://nodeweekly.com/link/192472/0a4070b383)
+
+Requarks
+
+[Should You Use a Log or a Metric?](https://nodeweekly.com/link/192473/0a4070b383 "blog.sentry.io") — Learn when to reach for a log and when for a metric, with one signup handler as the example. [Read the post](https://nodeweekly.com/link/192473/0a4070b383).
+
+Sentry sponsor
+
+[Postgres.js 4.0: A Ground-Up Rewrite of the Popular Postgres Client](https://nodeweekly.com/link/192474/0a4070b383 "github.com") — The public API is largely unchanged, but the rewrite gains a scheduler that stops fast queries waiting behind slow ones, `AbortSignal` support, and more. It's ESM-only and param typing has changed, so [the upgrade guide](https://nodeweekly.com/link/192475/0a4070b383) is a must-read for users.
+
+Rasmus Porsager
+
+[NestJS 12.3: A Native node:http Platform Adapter](https://nodeweekly.com/link/192476/0a4070b383 "github.com") — The server framework has long sat on top of Express or Fastify. [A third adapter](https://nodeweekly.com/link/192477/0a4070b383) now runs on `node:http`, with Express-style request helpers but no Express dependency.
+
+NestJS
+
+[jsdom 31.0: A New CSS Engine and a Switch to @napi-rs/canvas](https://nodeweekly.com/link/192478/0a4070b383 "github.com") — The pure-JS DOM behind countless test suites gains an integrated CSS implementation (supporting cascade layers, nesting, and `@scope`), swaps `canvas` for `@napi-rs/canvas`, and pauses parsing at blocking scripts.
+
+Domenic Denicola et al.
+
+[Vitest 5.1: Run Only the Tests Your Last Change Affected](https://nodeweekly.com/link/192479/0a4070b383 "vitest.dev") — An experimental `--since-last-run` flag records which files each test loaded and reruns only what your edits touched, with no Git involved.
+
+Vitest Team
+
+[Nitro v3 Reaches Release Candidate](https://nodeweekly.com/link/192480/0a4070b383 "nitro.build") — The server toolkit under Nuxt and friends gets a frozen API, an install a fraction of v2's size, Vitest-based route testing, and an experimental `nitro serve` that runs your source in production with no build step.
+
+Pooya Parsa (UnJS)
+
+📰 Classifieds
+
+🤖 Your free AI tier is being farmed by a person with fifty accounts. [Fingerprint](https://nodeweekly.com/link/192481/0a4070b383) recognizes the device behind every signup. [Try it free](https://nodeweekly.com/link/192481/0a4070b383).
+
+* * *
+
+🕐 Calgary or Winnipeg an hour off since Nov 1? Node 22 and 24 bundle tz data an OS update won't fix. [Tested fixes](https://nodeweekly.com/link/192482/0a4070b383) from an AI-run company.
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hmdgewt2uh5ustlkqfmu.jpg)](https://nodeweekly.com/link/192483/0a4070b383)
+
+*   [ora 10](https://nodeweekly.com/link/192483/0a4070b383) – The elegant terminal spinner _(above)_ now requires Node 22 and erases only its own frame, leaving your program's output intact.
+    
+*   [Vite+ 1.5](https://nodeweekly.com/link/192484/0a4070b383) – VoidZero's all-in-one toolchain adds a `node --import vite-plus/register` hook so the built-in test runner, AVA or `NODE_OPTIONS` can run TypeScript through its loader.
+    
+*   [Got 16.2](https://nodeweekly.com/link/192485/0a4070b383) – Sindre Sorhus's "human-friendly" HTTP request library. `.json()` now accepts a Standard Schema validator (Zod, Valibot, ArkType) so responses are validated and typed in one call.
+    
+*   [fast-json-stringify 7.3](https://nodeweekly.com/link/192486/0a4070b383) – Fastify's serializer gains an option to lean on V8's new `JSON.stringify` fast path (in Node 25+) for [double the throughput](https://nodeweekly.com/link/192487/0a4070b383).
+    
+*   [express-fileupload 1.6](https://nodeweekly.com/link/192488/0a4070b383) – Fixes a ReDoS in its `Content-Type` check where a run of semicolons could stall the event loop.
+    
+*   [marked-terminal 8.0](https://nodeweekly.com/link/192489/0a4070b383) – Render Markdown in the terminal. A TypeScript rewrite with a new `mt` CLI and support for images via the Kitty and iTerm2 graphics protocols.
+    
+*   [Koa 3.3](https://nodeweekly.com/link/192490/0a4070b383) – A hardening-flavored minor for the Express successor.
+    
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​646 — November 5, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/646)
+
+Together with 
+
+[![agentfield.ai](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_314/e_make_transparent/co_white,e_outline:10/dy2daidfoserzvblukbv.jpg)](https://nodeweekly.com/link/192445/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hnxmfhto3xr3zd6fwsd1.jpg)](https://nodeweekly.com/link/192446/0a4070b383)
+
+[Node.js 27 Alpha: The First Release Under Node's New Schedule](https://nodeweekly.com/link/192446/0a4070b383 "nodejs.org") — Under Node's [new release model](https://nodeweekly.com/link/192447/0a4070b383), each major release spends six months in alpha before stable release — so v27's final is due next April. Alphas are built from `main` with breaking changes, and are meant for library authors / testing rather than prod.
+
+* **V8 15.6** brings [`Math.sumPrecise()`](https://nodeweekly.com/link/192448/0a4070b383), [`Iterator.zip()`](https://nodeweekly.com/link/192449/0a4070b383) and other iterator helpers by default, and [`import defer`](https://nodeweekly.com/link/192450/0a4070b383) and [immutable `ArrayBuffer`s](https://nodeweekly.com/link/192451/0a4070b383) are available behind flags.
+
+* **There's a new default heap limit** of half of physical memory (clamped between 256MB and 4GB), and memory held by `Buffer`s [counts toward it](https://nodeweekly.com/link/192452/0a4070b383). If you relied on the old defaults, you can set `--max-old-space-size`.
+
+* `v8.serialize()`, `structuredClone()` and `postMessage()` use a new format unreadable by older Nodes, so take care with mixed-version use.
+
+* [`fs.glob`](https://nodeweekly.com/link/192453/0a4070b383) is now implemented natively, there's an experimental [`net/promises`](https://nodeweekly.com/link/192454/0a4070b383) API, and [`--allow-env`](https://nodeweekly.com/link/192455/0a4070b383) joins the permission model.
+
+* [npm 12(.1)](https://nodeweekly.com/link/192456/0a4070b383) is now bundled so [there are breaking changes](https://nodeweekly.com/link/192457/0a4070b383) to be aware of.
+
+Rafael Gonzaga (Node.js Release Team)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d44103ba.png)](https://nodeweekly.com/link/192445/0a4070b383)
+
+[Stop Babysitting Chats. Run Your Own Software Factory](https://nodeweekly.com/link/192445/0a4070b383 "agentfield.ai") — A chat per agent, each one waiting on you. CodeAF does the middle: it splits the work, runs the parts in parallel, tests what came back, merges what passed and asks only when it must. #1 of ten coding harnesses on DeepSWE, at the lowest cost per fix.
+
+CodeAF by AgentField AI sponsor
+
+[Notable V8 Changes from Node.js 26 to 27](https://nodeweekly.com/link/192458/0a4070b383 "nodejs.org") — Further to the Node 27 updates above, here's a fantastic roundup of what new things V8 15.6 brings to the table for Node users. It's a big update as Node 26 uses V8 14.6.
+
+Joyee Cheung
+
+['Nothing Installs at Our Company Until It's a Week Old'](https://nodeweekly.com/link/192459/0a4070b383 "brunoj.com") — Bruno put a proxy between his company and npm that refuses releases under seven days old. Twelve days on, he shares the numbers, the lockfiles it broke, and some practical advice if you want to do it yourself.
+
+Bruno Jurković
+
+**IN BRIEF:**
+
+* Express's [October security roundup](https://nodeweekly.com/link/192460/0a4070b383) covers DoS fixes in `body-parser` and `multer`, plus its official line on the Brotli flaw: upgrade Node (but there's a workaround if you can't).
+
+* Vercel builds now [block known-malicious npm package versions](https://nodeweekly.com/link/192461/0a4070b383) before and during install, with no configuration needed.
+
+* 🔒 It's a busy week for server framework security updates: [Fastify 5.12.8](https://nodeweekly.com/link/192462/0a4070b383) heads a wave of Fastify advisories including a [critical proxy prefix escape](https://nodeweekly.com/link/192463/0a4070b383), [Hono 4.13.16](https://nodeweekly.com/link/192464/0a4070b383) fixes several issues, and [Nuxt 4.6.4 and Nitro 2.13.6](https://nodeweekly.com/link/192465/0a4070b383) close eleven more.
+
+[Signing and Attestations Across Package Registries](https://nodeweekly.com/link/192466/0a4070b383 "nesbitt.io") — A registry-by-registry survey of what npm, PyPI, RubyGems, crates.io, Go and others sign, which produce provenance attestations, and which offer trusted publishing, concluding with a handy comparison table.
+
+Andrew Nesbitt
+
+💡 Related: [mise now verifies npm provenance by default](https://nodeweekly.com/link/192467/0a4070b383) and pins tools it installs to the repos that built them.
+
+[Parcel 3 Alpha: The Bundler Now Rewritten in Rust](https://nodeweekly.com/link/192468/0a4070b383 "v3.parceljs.org") — Parcel's core is now a standalone Rust binary, with builds up to 100x faster on a large monorepo as a result. Plugins can be written in Rust, Go, Swift or C, or in JS/TS on a custom runtime, and there's HMR for Node targets.
+
+Devon Govett
+
+📄 [Fuzzers vs. AI: Six Months of Hunting V8 Bugs](https://nodeweekly.com/link/192469/0a4070b383) – Fuzzilli and the BigSleep LLM agent compared on real production counts. Google Project Zero
+
+📄 [No, npm, `estee` Is Not a Typo of `testem`](https://nodeweekly.com/link/192470/0a4070b383) – On npm's typosquat heuristic and the math of four-letter names. Shane Friedman
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mgn4x8vitsmy06gi578a.jpg)](https://nodeweekly.com/link/192471/0a4070b383)
+
+[Wiki.js 3: A Modern Wiki App Built on Node](https://nodeweekly.com/link/192471/0a4070b383 "js.wiki") — A mature project packed with features and an ecosystem of modules to integrate with other systems. Note that it's AGPL licensed. [GitHub repo.](https://nodeweekly.com/link/192472/0a4070b383)
+
+Requarks
+
+[Should You Use a Log or a Metric?](https://nodeweekly.com/link/192473/0a4070b383 "blog.sentry.io") — Learn when to reach for a log and when for a metric, with one signup handler as the example. [Read the post](https://nodeweekly.com/link/192473/0a4070b383).
+
+Sentry sponsor
+
+[Postgres.js 4.0: A Ground-Up Rewrite of the Popular Postgres Client](https://nodeweekly.com/link/192474/0a4070b383 "github.com") — The public API is largely unchanged, but the rewrite gains a scheduler that stops fast queries waiting behind slow ones, `AbortSignal` support, and more. It's ESM-only and param typing has changed, so [the upgrade guide](https://nodeweekly.com/link/192475/0a4070b383) is a must-read for users.
+
+Rasmus Porsager
+
+[NestJS 12.3: A Native node:http Platform Adapter](https://nodeweekly.com/link/192476/0a4070b383 "github.com") — The server framework has long sat on top of Express or Fastify. [A third adapter](https://nodeweekly.com/link/192477/0a4070b383) now runs on `node:http`, with Express-style request helpers but no Express dependency.
+
+NestJS
+
+[jsdom 31.0: A New CSS Engine and a Switch to @napi-rs/canvas](https://nodeweekly.com/link/192478/0a4070b383 "github.com") — The pure-JS DOM behind countless test suites gains an integrated CSS implementation (supporting cascade layers, nesting, and `@scope`), swaps `canvas` for `@napi-rs/canvas`, and pauses parsing at blocking scripts.
+
+Domenic Denicola et al.
+
+[Vitest 5.1: Run Only the Tests Your Last Change Affected](https://nodeweekly.com/link/192479/0a4070b383 "vitest.dev") — An experimental `--since-last-run` flag records which files each test loaded and reruns only what your edits touched, with no Git involved.
+
+Vitest Team
+
+[Nitro v3 Reaches Release Candidate](https://nodeweekly.com/link/192480/0a4070b383 "nitro.build") — The server toolkit under Nuxt and friends gets a frozen API, an install a fraction of v2's size, Vitest-based route testing, and an experimental `nitro serve` that runs your source in production with no build step.
+
+Pooya Parsa (UnJS)
+
+📰 Classifieds
+
+🤖 Your free AI tier is being farmed by a person with fifty accounts. [Fingerprint](https://nodeweekly.com/link/192481/0a4070b383) recognizes the device behind every signup. [Try it free](https://nodeweekly.com/link/192481/0a4070b383).
+
+***
+
+🕐 Calgary or Winnipeg an hour off since Nov 1? Node 22 and 24 bundle tz data an OS update won't fix. [Tested fixes](https://nodeweekly.com/link/192482/0a4070b383) from an AI-run company.
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/hmdgewt2uh5ustlkqfmu.jpg)](https://nodeweekly.com/link/192483/0a4070b383)
+
+* [ora 10](https://nodeweekly.com/link/192483/0a4070b383) – The elegant terminal spinner *(above)* now requires Node 22 and erases only its own frame, leaving your program's output intact.
+
+* [Vite+ 1.5](https://nodeweekly.com/link/192484/0a4070b383) – VoidZero's all-in-one toolchain adds a `node --import vite-plus/register` hook so the built-in test runner, AVA or `NODE_OPTIONS` can run TypeScript through its loader.
+
+* [Got 16.2](https://nodeweekly.com/link/192485/0a4070b383) – Sindre Sorhus's "human-friendly" HTTP request library. `.json()` now accepts a Standard Schema validator (Zod, Valibot, ArkType) so responses are validated and typed in one call.
+
+* [fast-json-stringify 7.3](https://nodeweekly.com/link/192486/0a4070b383) – Fastify's serializer gains an option to lean on V8's new `JSON.stringify` fast path (in Node 25+) for [double the throughput](https://nodeweekly.com/link/192487/0a4070b383).
+
+* [express-fileupload 1.6](https://nodeweekly.com/link/192488/0a4070b383) – Fixes a ReDoS in its `Content-Type` check where a run of semicolons could stall the event loop.
+
+* [marked-terminal 8.0](https://nodeweekly.com/link/192489/0a4070b383) – Render Markdown in the terminal. A TypeScript rewrite with a new `mt` CLI and support for images via the Kitty and iTerm2 graphics protocols.
+
+* [Koa 3.3](https://nodeweekly.com/link/192490/0a4070b383) – A hardening-flavored minor for the Express successor.
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
