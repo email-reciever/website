@@ -1,0 +1,242 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: Redux Toolkit's road to 3.0
+description: Redux Toolkit's road to 3.0
+date: 星期五 07 晚上 十一月 6o 2026
+author: reactstatus
+origin_url: https://react.statuscode.com/issues/496
+origin_site: https://react.statuscode.com/issues/496
+translated: true
+avatar: /media-source/reactstatus-ico.png
+email_recorder: react@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="Redux Toolkit's road to 3.0" url="https://react.statuscode.com/issues/496" />
+
+<Detail client:only="react">
+	#​496 — November 6, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/496)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://react.statuscode.com/link/192556/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ouvobggjw2zmigv3z8xx.jpg)](https://react.statuscode.com/link/192557/5d0bbb4a61)
+
+[Discord Dropping Electron _and_ React Native for a Rust Rewrite](https://react.statuscode.com/link/192557/5d0bbb4a61 "www.theverge.com") — Discord, one of React Native's best-known users, is moving away, with its CTO 𝕏 [showing off a Rust desktop client](https://react.statuscode.com/link/192558/5d0bbb4a61) built on GPUI using 290MB of RAM, with mobile keeping native UI over Rust code shared with the desktop client.
+
+Tom Warren (The Verge)
+
+▶️ Just prior to this reveal, Software Mansion interviewed Discord's Chas Jhin about how React Native development works at Discord's scale, in the ominously titled ['Maybe React Native Is Impossible'](https://react.statuscode.com/link/192559/5d0bbb4a61).
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/01c20d97.png)](https://react.statuscode.com/link/192556/5d0bbb4a61)
+
+[Run AI Coding Models on Your Own Machine](https://react.statuscode.com/link/192556/5d0bbb4a61 "master.dev") — Local models are now good enough for everyday coding. Learn to run them on your own Mac or GPU, wire them into your editor and terminal agents, and keep your code private with no per-token bill.
+
+Master.dev sponsor
+
+[A Roadmap for Redux Toolkit v2.x and 3.0](https://react.statuscode.com/link/192560/5d0bbb4a61 "github.com") — Mark Erikson has laid out the roadmap for Redux (complete with a neat history lesson) with RTK 3.0 expected in six to eight months, going ESM-only with 'React 19-scale' breaking changes. But a run of 2.x releases will ship the groundwork first, starting with [2.14](https://react.statuscode.com/link/192561/5d0bbb4a61) this week.
+
+Mark Erikson
+
+**IN BRIEF:**
+
+*   ⚠️ Update to Next.js 16.4.5 or 15.5.29, as appropriate: [the November security release](https://react.statuscode.com/link/192562/5d0bbb4a61) fixes seven advisories. Most are Cache Components bugs, so the post is worth reading.
+    
+*   🤖 TanStack Query maintainer Dominik Dorfmeister says [work on Query v6 can start once 'slop PRs' stop coming in](https://react.statuscode.com/link/192563/5d0bbb4a61) and taking up his time, leading to a thread on the effects of AI-made contributions on maintainers.
+    
+*   Vercel is [folding Next.js's Data Cache into Runtime Cache](https://react.statuscode.com/link/192564/5d0bbb4a61) with bigger allocations but… new per-read and per-write pricing. Hobby teams migrate on November 29, but [check the dates and prices](https://react.statuscode.com/link/192565/5d0bbb4a61) for your use case.
+    
+*   Vercel builds also now [block known-malicious npm package versions](https://react.statuscode.com/link/192566/5d0bbb4a61) before and during install, on all plans and with no configuration needed.
+    
+
+[Next.js is Prototyping Go(lang) Route Handlers](https://react.statuscode.com/link/192567/5d0bbb4a61 "github.com") — A merged experimental PR lets an App Router route be a `route.go` file exporting `GET` and friends, compiled by Turbopack and run in supervised Go-powered workers. Tim says Rust could follow along the same path.
+
+Tim Neutkens (Vercel)
+
+[Understanding React Internals: A Deep Dive](https://react.statuscode.com/link/192568/5d0bbb4a61 "www.alexandretrotel.org") — A seven-part, source-grounded tour of React's internals that, unusually, starts from the server end before getting to fibers, lanes and the commit phase.
+
+Alexandre Trotel
+
+[Amazon's React Native-Based _Vega_ OS Hits 2.0](https://react.statuscode.com/link/192569/5d0bbb4a61 "developer.amazon.com") — Vega, the React Native-based OS behind newer Fire TV devices, is out of beta. SDK 2.0 takes apps from RN 0.72 to 0.83, bringing the React Compiler and Hermes v1 into play. [The release notes](https://react.statuscode.com/link/192570/5d0bbb4a61) go into more detail than the post.
+
+Barak Schlosser (Amazon)
+
+📄 [Why We Finally Left Next.js for TanStack Start](https://react.statuscode.com/link/192571/5d0bbb4a61) – Production memory leaks in two Next.js 16.3 releases were the last straw. Harrison Milbradt
+
+📄 [Writable Derived State: Stop Synchronizing State](https://react.statuscode.com/link/192572/5d0bbb4a61) – Using `clientData ?? serverData` instead of a `useEffect` that wipes user edits on refetch. Corbin Crutchley
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bl5l2bsrtakodwasfc7d.jpg)](https://react.statuscode.com/link/192574/5d0bbb4a61)
+
+[Skullet: Skeleton Loading States Measured from Your Components](https://react.statuscode.com/link/192574/5d0bbb4a61) — Hand it sample data and it renders your real component invisibly, measures everything, and draws a matching skeleton to reduce layout shifts when data arrives. The [docs](https://react.statuscode.com/link/192575/5d0bbb4a61) have a neat [How it Works](https://react.statuscode.com/link/192576/5d0bbb4a61) section explaining the technique.
+
+Lochie Axon
+
+[Parcel 3 Alpha: A Rust Rewrite with React Compiler, Tailwind and RSC](https://react.statuscode.com/link/192577/5d0bbb4a61 "v3.parceljs.org") — Parcel's core is now a Rust binary with no Node dependency, and the team reports cold builds up to 100x faster than v2. React Compiler (opt-in), Tailwind and MDX are built in, with RSC support in beta.
+
+Devon Govett (Parcel)
+
+🤖 [Reticle: Let Coding Agents Verify Their Changes Against Your Running App](https://react.statuscode.com/link/192578/5d0bbb4a61 "github.com") — A dev-only SDK and MCP server so coding agents can drive your running app, inspect network requests, application state, and console activity, and return a pass, fail or 'can't tell' verdict with what needs fixing.
+
+Reticle Labs
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pqjgb8mjxtsjhmrzjeis.jpg)](https://react.statuscode.com/link/192579/5d0bbb4a61)
+
+[react-resizable-panels Gets a VS Code-Style `Workspace` Component](https://react.statuscode.com/link/192580/5d0bbb4a61 "github.com") — Brian Vaughn's popular panel library now does dockable tabs you can drag to split or merge panes, and moved tabs keep their state rather than remounting. There's [a live demo here](https://react.statuscode.com/link/192579/5d0bbb4a61).
+
+Brian Vaughn
+
+*   [Preact 11.2](https://react.statuscode.com/link/192581/5d0bbb4a61) – Now has a [runtime for React Compiler output](https://react.statuscode.com/link/192582/5d0bbb4a61) via `preact/compat`, plus scoped custom element registries in shadow roots.
+    
+*   [XState 6.0 Beta](https://react.statuscode.com/link/192583/5d0bbb4a61) – _"No further breaking changes are planned"_ for public APIs, and [`@xstate/react` 7](https://react.statuscode.com/link/192584/5d0bbb4a61) is in beta alongside.
+    
+*   [TanStack Redact 0.3](https://react.statuscode.com/link/192585/5d0bbb4a61) – The lightweight, synchronous-only React / React DOM replacement adds browser SPA plugins for Webpack and Rspack.
+    
+*   [React Native 0.89 RC](https://react.statuscode.com/link/192586/5d0bbb4a61) – Faster text layout and native module calls, legacy bridge APIs gone. Stable expected in December.
+    
+*   [Storybook 11.0 Beta](https://react.statuscode.com/link/192587/5d0bbb4a61)
+    
+
+📰 Classifieds
+
+🤖 [Fimo](https://react.statuscode.com/link/192588/5d0bbb4a61) gives your marketers a visual editor and AI agents for SEO and GEO. No more tickets for your React devs. By the Strapi team.
+
+* * *
+
+[QVAC](https://react.statuscode.com/link/192589/5d0bbb4a61) allows you to run any AI capabilities for free, on your phone or laptop, privately. [Try the QVAC SDK now on GitHub](https://react.statuscode.com/link/192589/5d0bbb4a61).
+
+📢  Elsewhere in the ecosystem
+
+*   James Long [has been reviving _Prepack_](https://react.statuscode.com/link/192590/5d0bbb4a61), Facebook's abandoned JavaScript partial evaluator. There's a [React demo](https://react.statuscode.com/link/192591/5d0bbb4a61) where a pretend site is server rendered three ways, by React, by Prepack's output (which essentially 'compiles' React away), and a hybrid, with the render times to compare.
+    
+*   [Node.js 27 _Alpha_](https://react.statuscode.com/link/192592/5d0bbb4a61) has landed, the first version using Node's new [release process](https://react.statuscode.com/link/192593/5d0bbb4a61) (where a release will spend six months in 'alpha' before going _Current_), while [Node 26](https://react.statuscode.com/link/192594/5d0bbb4a61) is now the new LTS line.
+    
+*   Chrome 157 rolled out this week with [HTML-in-Canvas now stable](https://react.statuscode.com/link/192595/5d0bbb4a61). It provides a way to draw real DOM elements into 2D, WebGL and WebGPU canvases. [The demos](https://react.statuscode.com/link/192596/5d0bbb4a61) are striking.
+    
+*   Vercel has released [Geist Serif](https://react.statuscode.com/link/192597/5d0bbb4a61), a new serif font that shares metrics with [Geist Sans](https://react.statuscode.com/link/192598/5d0bbb4a61) so the two can mix cleanly. It's not on Google Fonts yet, but the [`geist` npm package](https://react.statuscode.com/link/192599/5d0bbb4a61) includes it.
+    
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
+</Detail>
+
+\#​496 — November 6, 2026
+
+[Read on the Web](https://react.statuscode.com/issues/496)
+
+Together with 
+
+[![Master.dev](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_245/co_white,e_outline:17/cgiteem1q7kgf8yoheqo.png)](https://react.statuscode.com/link/192556/5d0bbb4a61)
+
+ React Status
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/ouvobggjw2zmigv3z8xx.jpg)](https://react.statuscode.com/link/192557/5d0bbb4a61)
+
+[Discord Dropping Electron *and* React Native for a Rust Rewrite](https://react.statuscode.com/link/192557/5d0bbb4a61 "www.theverge.com") — Discord, one of React Native's best-known users, is moving away, with its CTO 𝕏 [showing off a Rust desktop client](https://react.statuscode.com/link/192558/5d0bbb4a61) built on GPUI using 290MB of RAM, with mobile keeping native UI over Rust code shared with the desktop client.
+
+Tom Warren (The Verge)
+
+▶️ Just prior to this reveal, Software Mansion interviewed Discord's Chas Jhin about how React Native development works at Discord's scale, in the ominously titled ['Maybe React Native Is Impossible'](https://react.statuscode.com/link/192559/5d0bbb4a61).
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/01c20d97.png)](https://react.statuscode.com/link/192556/5d0bbb4a61)
+
+[Run AI Coding Models on Your Own Machine](https://react.statuscode.com/link/192556/5d0bbb4a61 "master.dev") — Local models are now good enough for everyday coding. Learn to run them on your own Mac or GPU, wire them into your editor and terminal agents, and keep your code private with no per-token bill.
+
+Master.dev sponsor
+
+[A Roadmap for Redux Toolkit v2.x and 3.0](https://react.statuscode.com/link/192560/5d0bbb4a61 "github.com") — Mark Erikson has laid out the roadmap for Redux (complete with a neat history lesson) with RTK 3.0 expected in six to eight months, going ESM-only with 'React 19-scale' breaking changes. But a run of 2.x releases will ship the groundwork first, starting with [2.14](https://react.statuscode.com/link/192561/5d0bbb4a61) this week.
+
+Mark Erikson
+
+**IN BRIEF:**
+
+* ⚠️ Update to Next.js 16.4.5 or 15.5.29, as appropriate: [the November security release](https://react.statuscode.com/link/192562/5d0bbb4a61) fixes seven advisories. Most are Cache Components bugs, so the post is worth reading.
+
+* 🤖 TanStack Query maintainer Dominik Dorfmeister says [work on Query v6 can start once 'slop PRs' stop coming in](https://react.statuscode.com/link/192563/5d0bbb4a61) and taking up his time, leading to a thread on the effects of AI-made contributions on maintainers.
+
+* Vercel is [folding Next.js's Data Cache into Runtime Cache](https://react.statuscode.com/link/192564/5d0bbb4a61) with bigger allocations but… new per-read and per-write pricing. Hobby teams migrate on November 29, but [check the dates and prices](https://react.statuscode.com/link/192565/5d0bbb4a61) for your use case.
+
+* Vercel builds also now [block known-malicious npm package versions](https://react.statuscode.com/link/192566/5d0bbb4a61) before and during install, on all plans and with no configuration needed.
+
+[Next.js is Prototyping Go(lang) Route Handlers](https://react.statuscode.com/link/192567/5d0bbb4a61 "github.com") — A merged experimental PR lets an App Router route be a `route.go` file exporting `GET` and friends, compiled by Turbopack and run in supervised Go-powered workers. Tim says Rust could follow along the same path.
+
+Tim Neutkens (Vercel)
+
+[Understanding React Internals: A Deep Dive](https://react.statuscode.com/link/192568/5d0bbb4a61 "www.alexandretrotel.org") — A seven-part, source-grounded tour of React's internals that, unusually, starts from the server end before getting to fibers, lanes and the commit phase.
+
+Alexandre Trotel
+
+[Amazon's React Native-Based *Vega* OS Hits 2.0](https://react.statuscode.com/link/192569/5d0bbb4a61 "developer.amazon.com") — Vega, the React Native-based OS behind newer Fire TV devices, is out of beta. SDK 2.0 takes apps from RN 0.72 to 0.83, bringing the React Compiler and Hermes v1 into play. [The release notes](https://react.statuscode.com/link/192570/5d0bbb4a61) go into more detail than the post.
+
+Barak Schlosser (Amazon)
+
+📄 [Why We Finally Left Next.js for TanStack Start](https://react.statuscode.com/link/192571/5d0bbb4a61) – Production memory leaks in two Next.js 16.3 releases were the last straw. Harrison Milbradt
+
+📄 [Writable Derived State: Stop Synchronizing State](https://react.statuscode.com/link/192572/5d0bbb4a61) – Using `clientData ?? serverData` instead of a `useEffect` that wipes user edits on refetch. Corbin Crutchley
+
+🛠  Code, Tools & Libraries
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/bl5l2bsrtakodwasfc7d.jpg)](https://react.statuscode.com/link/192574/5d0bbb4a61)
+
+[Skullet: Skeleton Loading States Measured from Your Components](https://react.statuscode.com/link/192574/5d0bbb4a61) — Hand it sample data and it renders your real component invisibly, measures everything, and draws a matching skeleton to reduce layout shifts when data arrives. The [docs](https://react.statuscode.com/link/192575/5d0bbb4a61) have a neat [How it Works](https://react.statuscode.com/link/192576/5d0bbb4a61) section explaining the technique.
+
+Lochie Axon
+
+[Parcel 3 Alpha: A Rust Rewrite with React Compiler, Tailwind and RSC](https://react.statuscode.com/link/192577/5d0bbb4a61 "v3.parceljs.org") — Parcel's core is now a Rust binary with no Node dependency, and the team reports cold builds up to 100x faster than v2. React Compiler (opt-in), Tailwind and MDX are built in, with RSC support in beta.
+
+Devon Govett (Parcel)
+
+🤖 [Reticle: Let Coding Agents Verify Their Changes Against Your Running App](https://react.statuscode.com/link/192578/5d0bbb4a61 "github.com") — A dev-only SDK and MCP server so coding agents can drive your running app, inspect network requests, application state, and console activity, and return a pass, fail or 'can't tell' verdict with what needs fixing.
+
+Reticle Labs
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pqjgb8mjxtsjhmrzjeis.jpg)](https://react.statuscode.com/link/192579/5d0bbb4a61)
+
+[react-resizable-panels Gets a VS Code-Style `Workspace` Component](https://react.statuscode.com/link/192580/5d0bbb4a61 "github.com") — Brian Vaughn's popular panel library now does dockable tabs you can drag to split or merge panes, and moved tabs keep their state rather than remounting. There's [a live demo here](https://react.statuscode.com/link/192579/5d0bbb4a61).
+
+Brian Vaughn
+
+* [Preact 11.2](https://react.statuscode.com/link/192581/5d0bbb4a61) – Now has a [runtime for React Compiler output](https://react.statuscode.com/link/192582/5d0bbb4a61) via `preact/compat`, plus scoped custom element registries in shadow roots.
+
+* [XState 6.0 Beta](https://react.statuscode.com/link/192583/5d0bbb4a61) – *"No further breaking changes are planned"* for public APIs, and [`@xstate/react` 7](https://react.statuscode.com/link/192584/5d0bbb4a61) is in beta alongside.
+
+* [TanStack Redact 0.3](https://react.statuscode.com/link/192585/5d0bbb4a61) – The lightweight, synchronous-only React / React DOM replacement adds browser SPA plugins for Webpack and Rspack.
+
+* [React Native 0.89 RC](https://react.statuscode.com/link/192586/5d0bbb4a61) – Faster text layout and native module calls, legacy bridge APIs gone. Stable expected in December.
+
+* [Storybook 11.0 Beta](https://react.statuscode.com/link/192587/5d0bbb4a61)
+
+📰 Classifieds
+
+🤖 [Fimo](https://react.statuscode.com/link/192588/5d0bbb4a61) gives your marketers a visual editor and AI agents for SEO and GEO. No more tickets for your React devs. By the Strapi team.
+
+***
+
+[QVAC](https://react.statuscode.com/link/192589/5d0bbb4a61) allows you to run any AI capabilities for free, on your phone or laptop, privately. [Try the QVAC SDK now on GitHub](https://react.statuscode.com/link/192589/5d0bbb4a61).
+
+📢  Elsewhere in the ecosystem
+
+* James Long [has been reviving *Prepack*](https://react.statuscode.com/link/192590/5d0bbb4a61), Facebook's abandoned JavaScript partial evaluator. There's a [React demo](https://react.statuscode.com/link/192591/5d0bbb4a61) where a pretend site is server rendered three ways, by React, by Prepack's output (which essentially 'compiles' React away), and a hybrid, with the render times to compare.
+
+* [Node.js 27 *Alpha*](https://react.statuscode.com/link/192592/5d0bbb4a61) has landed, the first version using Node's new [release process](https://react.statuscode.com/link/192593/5d0bbb4a61) (where a release will spend six months in 'alpha' before going *Current*), while [Node 26](https://react.statuscode.com/link/192594/5d0bbb4a61) is now the new LTS line.
+
+* Chrome 157 rolled out this week with [HTML-in-Canvas now stable](https://react.statuscode.com/link/192595/5d0bbb4a61). It provides a way to draw real DOM elements into 2D, WebGL and WebGPU canvases. [The demos](https://react.statuscode.com/link/192596/5d0bbb4a61) are striking.
+
+* Vercel has released [Geist Serif](https://react.statuscode.com/link/192597/5d0bbb4a61), a new serif font that shares metrics with [Geist Sans](https://react.statuscode.com/link/192598/5d0bbb4a61) so the two can mix cleanly. It's not on Google Fonts yet, but the [`geist` npm package](https://react.statuscode.com/link/192599/5d0bbb4a61) includes it.
+
+Curated by Peter Cooper and Terence C. Gannon.
+
+A **[Cooperpress](https://cooperpress.com/)** publication.
+
+
