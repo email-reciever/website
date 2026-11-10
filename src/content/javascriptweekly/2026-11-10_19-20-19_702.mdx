@@ -1,0 +1,297 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: How X (Twitter) is rebuilding its web app
+description: How X (Twitter) is rebuilding its web app
+date: 星期二 07 晚上 十一月 10o 2026
+author: javascriptweekly
+origin_url: https://javascriptweekly.com/issues/810
+origin_site: https://javascriptweekly.com/issues/810
+translated: true
+avatar: /media-source/javascriptweekly-ico.png
+email_recorder: jsw@peterc.org
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="How X (Twitter) is rebuilding its web app" url="https://javascriptweekly.com/issues/810" />
+
+<Detail client:only="react">
+	#​810 — November 10, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/810)
+
+Together with 
+
+[![Svix](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_386/e_make_transparent/co_white,e_outline:13/uokdi3wp1cp3vvnshdmd.png)](https://javascriptweekly.com/link/192645/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/oxtotle26xtvjolphndc.jpg)](https://javascriptweekly.com/link/192646/d076523b1d)
+
+[How X (Twitter) is Rebuilding Its Web App](https://javascriptweekly.com/link/192646/d076523b1d "blog.x.com") — X is replacing 3 servers with one app built on React, Vite and Fastify. Yagiz, famed for his performance work on Node, explains the streaming architecture behind it, along with some bottlenecks they had to fix, like how hundreds of tiny JavaScript files slowed startup.
+
+Yagiz Nizipli (X Engineering Blog)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/966f3f3a.png)](https://javascriptweekly.com/link/192645/d076523b1d)
+
+[Why Standard Webhooks Hit 118m npm Downloads a Month](https://javascriptweekly.com/link/192645/d076523b1d "link.svix.com") — OpenAI, Anthropic, and Gemini all sign webhooks with Standard Webhooks, the open spec Svix started. That's one finding in the State of Webhooks 2027, where we scored 489 API companies on retries and signatures. [Immediate download, no email required](https://javascriptweekly.com/link/192645/d076523b1d).
+
+Svix sponsor
+
+[Parcel 3 Alpha: The Bundler Rewritten in Rust](https://javascriptweekly.com/link/192647/d076523b1d "v3.parceljs.org") — A ground-up Rust rewrite of the popular bundler that the team reports is up to 100x faster than Parcel 2 at cold builds of React Spectrum. It runs as a standalone binary without Node, with support for native plugins written in Rust, Go or Swift, while JavaScript plugins run on an embedded QuickJS runtime.
+
+The Parcel Team
+
+**IN BRIEF:**
+
+*   📊 The [State of JavaScript 2026 survey is now open](https://javascriptweekly.com/link/192648/d076523b1d). Share the features, libraries and tools you use and like, and discover a few new ones along the way. We'll share the results once they're out.
+    
+*   TypeScript 7's Go-powered compiler now has [an experimental WebAssembly build](https://javascriptweekly.com/link/192649/d076523b1d) which already powers an early [TypeScript Playground v2](https://javascriptweekly.com/link/192650/d076523b1d).
+    
+*   ESLint [now officially lints shell scripts](https://javascriptweekly.com/link/192651/d076523b1d) with the `@eslint/shell` plugin adding ShellCheck-like rules for Bash, sh and mksh.
+    
+
+**RELEASES:**
+
+*   [Playwright 1.65](https://javascriptweekly.com/link/192652/d076523b1d) – The browser testing tool's test runner can now run under Bun, plus there's a new failures reporter.
+    
+*   [Storybook 11 Beta](https://javascriptweekly.com/link/192653/d076523b1d) – The UI component workshop gets more agent-ready, with official skills, Claude/Codex plugins, headless CLI tools, and more.
+    
+*   🔒 Vite has disclosed [a critical remote code execution flaw](https://javascriptweekly.com/link/192654/d076523b1d) affecting _dev_ servers exposed to the network via `--host` or `server.host`. Upgrade to 8.3.7, 8.2.5, 8.1.7, 7.3.8 or 6.4.6.
+    
+*   🔒 Next.js [16.4.5 and 15.5.29 fix seven security issues](https://javascriptweekly.com/link/192655/d076523b1d), including a high-severity cross-tenant cache disclosure.
+    
+*   🔒 Node.js [security releases are due tomorrow](https://javascriptweekly.com/link/192656/d076523b1d) (or shortly after) for the 26.x, 24.x and 22.x lines.
+    
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yjfttwj00vb3oqvzibqd.jpg)](https://javascriptweekly.com/link/192657/d076523b1d)
+
+[Experiments with Multithreaded JavaScript](https://javascriptweekly.com/link/192657/d076523b1d "blog.arv.tools") — What would JavaScript look like if threads could share objects directly? Former TC39 delegate Erik Arvidsson explores three approaches: in a [Porffor](https://javascriptweekly.com/link/192658/d076523b1d) fork, as a TypeScript library with an ownership checker, and as an implementation of the [TC39 structs proposal](https://javascriptweekly.com/link/192659/d076523b1d). Each has a playground to try.
+
+Erik Arvidsson
+
+[The New JavaScript Features Between V8 14.6 and 15.6](https://javascriptweekly.com/link/192660/d076523b1d "nodejs.org") — Node 27, released in alpha recently, is built on V8 15.6, and Joyee tours what that brings to developers, including `Math.sumPrecise`, new iterator methods, and some behavior changes in sorting, dates and promises, all with sample code.
+
+Joyee Cheung
+
+[How to Build Your Own Automated Debugging Workflow](https://javascriptweekly.com/link/192661/d076523b1d "sentry.io") — Connect your coding agent to Sentry and turn errors into fix PRs. See the guides and recipes in the resource hub.
+
+Sentry sponsor
+
+[Spreading Liquid with `three.js`](https://javascriptweekly.com/link/192662/d076523b1d "mofu-dev.com") — A technical explanation of a 'liquid-spreading' effect originally built for a cosmetics site. The in-page demo is fun to play with and this could be handy if you want to create paint-like effects.
+
+Misaki Nakano
+
+[Reviving Facebook's Abandoned JavaScript Optimizer](https://javascriptweekly.com/link/192663/d076523b1d "jamesbox.exe.xyz") — Prettier creator James Long put agents to work resurrecting [Prepack](https://javascriptweekly.com/link/192664/d076523b1d), Facebook's attempt to make JavaScript faster by running it ahead of time. There's [an experimental demo](https://javascriptweekly.com/link/192665/d076523b1d) that shows off the gains on a sample React app.
+
+James Long
+
+[Yavashark: Building a JavaScript Engine for 950 Days Straight](https://javascriptweekly.com/link/192666/d076523b1d "yavashark.dev") — A solo developer's progress report on a Rust-based engine they're building that passes around 82% of test262 and can server-render a React app. There's [a playground](https://javascriptweekly.com/link/192667/d076523b1d) to try it for yourself.
+
+Sharktheone
+
+📄 [A Fifth Object Shape Made the Same Loop Twice as Slow](https://javascriptweekly.com/link/192668/d076523b1d) – V8's hidden classes and inline caches in action. Mohsen Fallahnejad
+
+📺 [ReactiveScript: Early Findings](https://javascriptweekly.com/link/192669/d076523b1d) – A lengthy stream by Solid's creator on [ReactiveScript](https://javascriptweekly.com/link/192670/d076523b1d), his experimental reactive UI language he [first shared in 2021](https://javascriptweekly.com/link/192671/d076523b1d). Ryan Carniato
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mhgipfuzi5v4n6zlnbaj.jpg)](https://javascriptweekly.com/link/192672/d076523b1d)
+
+[EmbedPDF 3.0: A PDF Viewer for Any JavaScript App](https://javascriptweekly.com/link/192672/d076523b1d "www.embedpdf.com") — An open-source PDF viewer for vanilla JavaScript, React, Vue, Svelte and Angular. The [v3 rebuild](https://javascriptweekly.com/link/192673/d076523b1d) offers a ready-made viewer, headless components for custom UIs, and a standalone PDF engine. [Try the demo.](https://javascriptweekly.com/link/192674/d076523b1d)
+
+EmbedPDF
+
+[Embed an Office Editor Your App's AI Agent Can Use](https://javascriptweekly.com/link/192675/d076523b1d "playground.developers.thinkfree.com") — DOCX/XLSX/PPTX editing in your app with your model and workflow. Agents make targeted edits, and users refine the file.
+
+Thinkfree sponsor
+
+[chrome-capture: Record a Chrome Tab at 60-120fps to an MP4 File](https://javascriptweekly.com/link/192676/d076523b1d "github.com") — It's been _three_ years since we've linked to Paul Irish (once a frequent fixture in JavaScript Weekly!) but he's back with a neat, compact tool you can run with `npx` to record a Chrome tab at high quality _including audio_ to an `MP4` video.
+
+Paul Irish
+
+[Text.js: React Apps That Render in the Browser Console](https://javascriptweekly.com/link/192677/d076523b1d "textjs.org") — Really! A React 19 framework whose 'screen' is the DevTools console, with routing, keyboard input, layout primitives and ASCII fonts. Open the console on the homepage to try it, then `bunx create-text-app` if you're tempted. [GitHub repo.](https://javascriptweekly.com/link/192678/d076523b1d)
+
+Anomaly
+
+[Jeasx 3.0: Server-Rendered JSX, Now Streaming](https://javascriptweekly.com/link/192679/d076523b1d "www.jeasx.dev") — A minimal framework that uses JSX purely as a server-side templating language (with no React and no hydration) on top of Fastify and esbuild. v3 streams pages while async components are still loading and renders ~2x faster. [Live examples.](https://javascriptweekly.com/link/192680/d076523b1d)
+
+Jeasx
+
+*   [Rolldown 1.3](https://javascriptweekly.com/link/192681/d076523b1d) – The Rust-powered bundler adds experimental support for import attributes, but there are breaking changes to be aware of.
+    
+*   [jsdom 31.0](https://javascriptweekly.com/link/192682/d076523b1d) – The pure JS implementation of DOM/HTML standards adds a new CSS engine and switches to a Skia-backed canvas backend.
+    
+*   [Remix 3.2](https://javascriptweekly.com/link/192683/d076523b1d) – The full-stack framework adds nonce-based Content Security Policy middleware.
+    
+*   [Wiki.js 3.3](https://javascriptweekly.com/link/192684/d076523b1d) – Open source JavaScript and Node.js-powered wiki app.
+    
+
+📰 Classifieds
+
+📺 [JetBrains AI.js Day 2026](https://javascriptweekly.com/link/192685/d076523b1d): Frontend's scariest AI questions answered live on channel 13, Nov 13. [Register now!](https://javascriptweekly.com/link/192685/d076523b1d)
+
+* * *
+
+🔑 One subscription, a dozen people. [Fingerprint](https://javascriptweekly.com/link/192686/d076523b1d) shows how many devices are really behind each account. [Try it free](https://javascriptweekly.com/link/192686/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lpocbjy3uza3w1yogw1i.jpg)](https://javascriptweekly.com/link/192687/d076523b1d)
+
+*   📺 I've been enjoying Arjay McCandless's YouTube channel lately as he's been focusing on maxing out VPSes with different stacks (and often being surprised by the results). This time, he [compares 22 combinations of JavaScript runtimes and frameworks](https://javascriptweekly.com/link/192687/d076523b1d) to see how many users they can handle!
+    
+*   🌙 Safari 27.3 beta introduces [Adaptive Dark Mode](https://javascriptweekly.com/link/192688/d076523b1d), an opt-in feature that automatically darkens light websites that don't provide their own dark theme.
+    
+*   🎨 Three.js creator mrdoob is posting [daily visual experiments for Codevember](https://javascriptweekly.com/link/192689/d076523b1d), complete with live demos and source.
+    
+*   💰 Cloudflare has [handed out the first $301,300](https://javascriptweekly.com/link/192690/d076523b1d) of the $1M _Vite Ecosystem Fund_ it pledged when VoidZero joined, spread across 44 projects and maintainers, including e18e.
+    
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/192691/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US  
+We are not endorsed by or affiliated with Oracle.
+
+
+</Detail>
+
+\#​810 — November 10, 2026
+
+[Read on the Web](https://javascriptweekly.com/issues/810)
+
+Together with 
+
+[![Svix](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_1280,h_386/e_make_transparent/co_white,e_outline:13/uokdi3wp1cp3vvnshdmd.png)](https://javascriptweekly.com/link/192645/d076523b1d)
+
+JavaScript Weekly
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/oxtotle26xtvjolphndc.jpg)](https://javascriptweekly.com/link/192646/d076523b1d)
+
+[How X (Twitter) is Rebuilding Its Web App](https://javascriptweekly.com/link/192646/d076523b1d "blog.x.com") — X is replacing 3 servers with one app built on React, Vite and Fastify. Yagiz, famed for his performance work on Node, explains the streaming architecture behind it, along with some bottlenecks they had to fix, like how hundreds of tiny JavaScript files slowed startup.
+
+Yagiz Nizipli (X Engineering Blog)
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/966f3f3a.png)](https://javascriptweekly.com/link/192645/d076523b1d)
+
+[Why Standard Webhooks Hit 118m npm Downloads a Month](https://javascriptweekly.com/link/192645/d076523b1d "link.svix.com") — OpenAI, Anthropic, and Gemini all sign webhooks with Standard Webhooks, the open spec Svix started. That's one finding in the State of Webhooks 2027, where we scored 489 API companies on retries and signatures. [Immediate download, no email required](https://javascriptweekly.com/link/192645/d076523b1d).
+
+Svix sponsor
+
+[Parcel 3 Alpha: The Bundler Rewritten in Rust](https://javascriptweekly.com/link/192647/d076523b1d "v3.parceljs.org") — A ground-up Rust rewrite of the popular bundler that the team reports is up to 100x faster than Parcel 2 at cold builds of React Spectrum. It runs as a standalone binary without Node, with support for native plugins written in Rust, Go or Swift, while JavaScript plugins run on an embedded QuickJS runtime.
+
+The Parcel Team
+
+**IN BRIEF:**
+
+* 📊 The [State of JavaScript 2026 survey is now open](https://javascriptweekly.com/link/192648/d076523b1d). Share the features, libraries and tools you use and like, and discover a few new ones along the way. We'll share the results once they're out.
+
+* TypeScript 7's Go-powered compiler now has [an experimental WebAssembly build](https://javascriptweekly.com/link/192649/d076523b1d) which already powers an early [TypeScript Playground v2](https://javascriptweekly.com/link/192650/d076523b1d).
+
+* ESLint [now officially lints shell scripts](https://javascriptweekly.com/link/192651/d076523b1d) with the `@eslint/shell` plugin adding ShellCheck-like rules for Bash, sh and mksh.
+
+**RELEASES:**
+
+* [Playwright 1.65](https://javascriptweekly.com/link/192652/d076523b1d) – The browser testing tool's test runner can now run under Bun, plus there's a new failures reporter.
+
+* [Storybook 11 Beta](https://javascriptweekly.com/link/192653/d076523b1d) – The UI component workshop gets more agent-ready, with official skills, Claude/Codex plugins, headless CLI tools, and more.
+
+* 🔒 Vite has disclosed [a critical remote code execution flaw](https://javascriptweekly.com/link/192654/d076523b1d) affecting *dev* servers exposed to the network via `--host` or `server.host`. Upgrade to 8.3.7, 8.2.5, 8.1.7, 7.3.8 or 6.4.6.
+
+* 🔒 Next.js [16.4.5 and 15.5.29 fix seven security issues](https://javascriptweekly.com/link/192655/d076523b1d), including a high-severity cross-tenant cache disclosure.
+
+* 🔒 Node.js [security releases are due tomorrow](https://javascriptweekly.com/link/192656/d076523b1d) (or shortly after) for the 26.x, 24.x and 22.x lines.
+
+📖  Articles and Videos
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/yjfttwj00vb3oqvzibqd.jpg)](https://javascriptweekly.com/link/192657/d076523b1d)
+
+[Experiments with Multithreaded JavaScript](https://javascriptweekly.com/link/192657/d076523b1d "blog.arv.tools") — What would JavaScript look like if threads could share objects directly? Former TC39 delegate Erik Arvidsson explores three approaches: in a [Porffor](https://javascriptweekly.com/link/192658/d076523b1d) fork, as a TypeScript library with an ownership checker, and as an implementation of the [TC39 structs proposal](https://javascriptweekly.com/link/192659/d076523b1d). Each has a playground to try.
+
+Erik Arvidsson
+
+[The New JavaScript Features Between V8 14.6 and 15.6](https://javascriptweekly.com/link/192660/d076523b1d "nodejs.org") — Node 27, released in alpha recently, is built on V8 15.6, and Joyee tours what that brings to developers, including `Math.sumPrecise`, new iterator methods, and some behavior changes in sorting, dates and promises, all with sample code.
+
+Joyee Cheung
+
+[How to Build Your Own Automated Debugging Workflow](https://javascriptweekly.com/link/192661/d076523b1d "sentry.io") — Connect your coding agent to Sentry and turn errors into fix PRs. See the guides and recipes in the resource hub.
+
+Sentry sponsor
+
+[Spreading Liquid with `three.js`](https://javascriptweekly.com/link/192662/d076523b1d "mofu-dev.com") — A technical explanation of a 'liquid-spreading' effect originally built for a cosmetics site. The in-page demo is fun to play with and this could be handy if you want to create paint-like effects.
+
+Misaki Nakano
+
+[Reviving Facebook's Abandoned JavaScript Optimizer](https://javascriptweekly.com/link/192663/d076523b1d "jamesbox.exe.xyz") — Prettier creator James Long put agents to work resurrecting [Prepack](https://javascriptweekly.com/link/192664/d076523b1d), Facebook's attempt to make JavaScript faster by running it ahead of time. There's [an experimental demo](https://javascriptweekly.com/link/192665/d076523b1d) that shows off the gains on a sample React app.
+
+James Long
+
+[Yavashark: Building a JavaScript Engine for 950 Days Straight](https://javascriptweekly.com/link/192666/d076523b1d "yavashark.dev") — A solo developer's progress report on a Rust-based engine they're building that passes around 82% of test262 and can server-render a React app. There's [a playground](https://javascriptweekly.com/link/192667/d076523b1d) to try it for yourself.
+
+Sharktheone
+
+📄 [A Fifth Object Shape Made the Same Loop Twice as Slow](https://javascriptweekly.com/link/192668/d076523b1d) – V8's hidden classes and inline caches in action. Mohsen Fallahnejad
+
+📺 [ReactiveScript: Early Findings](https://javascriptweekly.com/link/192669/d076523b1d) – A lengthy stream by Solid's creator on [ReactiveScript](https://javascriptweekly.com/link/192670/d076523b1d), his experimental reactive UI language he [first shared in 2021](https://javascriptweekly.com/link/192671/d076523b1d). Ryan Carniato
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/mhgipfuzi5v4n6zlnbaj.jpg)](https://javascriptweekly.com/link/192672/d076523b1d)
+
+[EmbedPDF 3.0: A PDF Viewer for Any JavaScript App](https://javascriptweekly.com/link/192672/d076523b1d "www.embedpdf.com") — An open-source PDF viewer for vanilla JavaScript, React, Vue, Svelte and Angular. The [v3 rebuild](https://javascriptweekly.com/link/192673/d076523b1d) offers a ready-made viewer, headless components for custom UIs, and a standalone PDF engine. [Try the demo.](https://javascriptweekly.com/link/192674/d076523b1d)
+
+EmbedPDF
+
+[Embed an Office Editor Your App's AI Agent Can Use](https://javascriptweekly.com/link/192675/d076523b1d "playground.developers.thinkfree.com") — DOCX/XLSX/PPTX editing in your app with your model and workflow. Agents make targeted edits, and users refine the file.
+
+Thinkfree sponsor
+
+[chrome-capture: Record a Chrome Tab at 60-120fps to an MP4 File](https://javascriptweekly.com/link/192676/d076523b1d "github.com") — It's been *three* years since we've linked to Paul Irish (once a frequent fixture in JavaScript Weekly!) but he's back with a neat, compact tool you can run with `npx` to record a Chrome tab at high quality *including audio* to an `MP4` video.
+
+Paul Irish
+
+[Text.js: React Apps That Render in the Browser Console](https://javascriptweekly.com/link/192677/d076523b1d "textjs.org") — Really! A React 19 framework whose 'screen' is the DevTools console, with routing, keyboard input, layout primitives and ASCII fonts. Open the console on the homepage to try it, then `bunx create-text-app` if you're tempted. [GitHub repo.](https://javascriptweekly.com/link/192678/d076523b1d)
+
+Anomaly
+
+[Jeasx 3.0: Server-Rendered JSX, Now Streaming](https://javascriptweekly.com/link/192679/d076523b1d "www.jeasx.dev") — A minimal framework that uses JSX purely as a server-side templating language (with no React and no hydration) on top of Fastify and esbuild. v3 streams pages while async components are still loading and renders ~2x faster. [Live examples.](https://javascriptweekly.com/link/192680/d076523b1d)
+
+Jeasx
+
+* [Rolldown 1.3](https://javascriptweekly.com/link/192681/d076523b1d) – The Rust-powered bundler adds experimental support for import attributes, but there are breaking changes to be aware of.
+
+* [jsdom 31.0](https://javascriptweekly.com/link/192682/d076523b1d) – The pure JS implementation of DOM/HTML standards adds a new CSS engine and switches to a Skia-backed canvas backend.
+
+* [Remix 3.2](https://javascriptweekly.com/link/192683/d076523b1d) – The full-stack framework adds nonce-based Content Security Policy middleware.
+
+* [Wiki.js 3.3](https://javascriptweekly.com/link/192684/d076523b1d) – Open source JavaScript and Node.js-powered wiki app.
+
+📰 Classifieds
+
+📺 [JetBrains AI.js Day 2026](https://javascriptweekly.com/link/192685/d076523b1d): Frontend's scariest AI questions answered live on channel 13, Nov 13. [Register now!](https://javascriptweekly.com/link/192685/d076523b1d)
+
+***
+
+🔑 One subscription, a dozen people. [Fingerprint](https://javascriptweekly.com/link/192686/d076523b1d) shows how many devices are really behind each account. [Try it free](https://javascriptweekly.com/link/192686/d076523b1d).
+
+📢  Elsewhere in the ecosystem
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/lpocbjy3uza3w1yogw1i.jpg)](https://javascriptweekly.com/link/192687/d076523b1d)
+
+* 📺 I've been enjoying Arjay McCandless's YouTube channel lately as he's been focusing on maxing out VPSes with different stacks (and often being surprised by the results). This time, he [compares 22 combinations of JavaScript runtimes and frameworks](https://javascriptweekly.com/link/192687/d076523b1d) to see how many users they can handle!
+
+* 🌙 Safari 27.3 beta introduces [Adaptive Dark Mode](https://javascriptweekly.com/link/192688/d076523b1d), an opt-in feature that automatically darkens light websites that don't provide their own dark theme.
+
+* 🎨 Three.js creator mrdoob is posting [daily visual experiments for Codevember](https://javascriptweekly.com/link/192689/d076523b1d), complete with live demos and source.
+
+* 💰 Cloudflare has [handed out the first $301,300](https://javascriptweekly.com/link/192690/d076523b1d) of the $1M *Vite Ecosystem Fund* it pledged when VoidZero joined, spread across 44 projects and maintainers, including e18e.
+
+Published by [Cooperpress](https://cooperpress.com/) and edited by [Peter Cooper](https://javascriptweekly.com/link/192691/d076523b1d)
+
+'JavaScript' is a trademark of Oracle Corporation in the US\
+We are not endorsed by or affiliated with Oracle.
+
+
