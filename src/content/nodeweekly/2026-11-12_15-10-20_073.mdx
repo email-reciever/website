@@ -1,0 +1,243 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: 22 Node, Bun and Deno stacks benchmarked
+description: 22 Node, Bun and Deno stacks benchmarked
+date: 星期四 03 下午 十一月 12o 2026
+author: nodeweekly
+origin_url: https://nodeweekly.com/issues/647
+origin_site: https://nodeweekly.com/issues/647
+translated: true
+avatar: /media-source/nodeweekly-ico.png
+email_recorder: node@cooperpress.com
+---
+
+import { Detail } from '@/components/Detail.tsx';
+import { Reference } from '@/components/Reference.tsx';
+
+<Reference client:only="react" title="22 Node, Bun and Deno stacks benchmarked" url="https://nodeweekly.com/issues/647" />
+
+<Detail client:only="react">
+	#​647 — November 12, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/647)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://nodeweekly.com/link/192770/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pyetbikxg73hznqspgx3.jpg)](https://nodeweekly.com/link/192771/0a4070b383)
+
+[An Experimental 'Green Threads' Implementation for Node](https://nodeweekly.com/link/192771/0a4070b383 "github.com") — James has opened a PR that adds a new, lightweight kind of worker that shares a small pool of OS threads, with each worker getting its own V8 isolate (but no Node APIs). His numbers show a thousand of them using about 1GB of memory vs 6.7GB for regular worker threads. Early days, but a promising idea that deserves feedback.
+
+James M Snell
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d695db78.png)](https://nodeweekly.com/link/192770/0a4070b383)
+
+[Debug Errors and Agents Faster: Sentry Changelog Live](https://nodeweekly.com/link/192770/0a4070b383 "sentry.io") — A walkthrough of what’s new for debugging errors and performance issues, including fixing production bugs with Seer and tracing the agents you build. Live Q&A. Nov 18, 10am PT. [Save your spot](https://nodeweekly.com/link/192770/0a4070b383).
+
+Sentry sponsor
+
+🔒 [This Week's Node.js Security Releases](https://nodeweekly.com/link/192772/0a4070b383 "nodejs.org") — Node [v26.13.1](https://nodeweekly.com/link/192773/0a4070b383), [v24.22.3](https://nodeweekly.com/link/192774/0a4070b383) and [v22.23.5](https://nodeweekly.com/link/192775/0a4070b383) patch a lot of HTTP/2 and TLS flaws, plus others in `zlib` and the permission model (seven are rated 'high' in severity). The worst bug can allow a remote client to read memory belonging to other connections. v26 and v24 also get [last week's Undici fixes](https://nodeweekly.com/link/192776/0a4070b383).
+
+The Node.js Project
+
+🤖 Five of the bugs were reported by Chris Rohlf _"in collaboration with Claude and Anthropic Research"_, with another credited to Trail of Bits (OpenAI).
+
+[What's New in Node.js 27](https://nodeweekly.com/link/192777/0a4070b383 "nodejsdesignpatterns.com") — The co-author of _Node.js Design Patterns_ has put together an example-led tour of the latest (alpha) Node release, going from the new iterator helpers and promise-based `node:net/promises` API to the now-unflagged virtual file system, plus the [v27 breaking changes](https://nodeweekly.com/link/192779/0a4070b383) to get prepared for.
+
+Luciano Mammino
+
+**IN BRIEF:**
+
+*   The browser-style [Web Worker API](https://nodeweekly.com/link/192780/0a4070b383) is now enabled by default on Node's `main` branch, so expect it in a future Node 27 alpha release.
+    
+*   Sadly, JavaScript function hosting platform [_Val Town_ is winding down](https://nodeweekly.com/link/192781/0a4070b383). Tom MacWright, who advocated for its move to Deno (from `vm2`), [wrote this week about that choice](https://nodeweekly.com/link/192782/0a4070b383) saying Deno's sandbox never let them down.
+    
+*   Netlify has introduced [Netlify Server](https://nodeweekly.com/link/192783/0a4070b383), a long-running Node-powered backend process for WebSockets and in-memory state, now in early access.
+    
+*   An open PR [proposes a built-in `node:yaml` module](https://nodeweekly.com/link/192784/0a4070b383) for parsing YAML.
+    
+*   📊 The [State of JavaScript 2026 survey is now open](https://nodeweekly.com/link/192785/0a4070b383) to take.
+    
+
+[How X is Rebuilding Its Web App on Fastify and Node 26](https://nodeweekly.com/link/192786/0a4070b383 "blog.x.com") — X is replacing three servers with one built on Fastify and Platformatic Watt, running worker threads on Node 26. Yagiz covers the streaming architecture, the event loop stalls they had to fix, and how it's making X faster on the Web.
+
+Yagiz Nizipli (X Engineering)
+
+[Keep Your CI Workflow While Upgrading the Runner at Half the Cost](https://nodeweekly.com/link/192787/0a4070b383 "www.warpbuild.com") — Switch to a WarpBuild runner in your Node job and see faster builds. Try it with $50 in free credits using `START50`.
+
+WarpBuild sponsor
+
+[A Malicious npm Release, Published via Trusted Publishing](https://nodeweekly.com/link/192788/0a4070b383 "socket.dev") — A tour of the process and code behind the recent hijacking of Ethersphere's `bee-js` release process and how a backdoored version was published with valid provenance.
+
+Socket Research Team
+
+[Your JS Error Is Lying to You](https://nodeweekly.com/link/192789/0a4070b383 "blog.gaborkoos.com") — If you've ever seen `"err":&lcub;}` logged for an error that definitely had a message, Gábor's look into what an `Error` loses between creation and the log line could be helpful.
+
+Gábor Koós
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/h8j5savawaakzrkz99in.jpg)](https://nodeweekly.com/link/192790/0a4070b383)
+
+[forges: One Client for GitHub, GitLab and Other Git Forges](https://nodeweekly.com/link/192790/0a4070b383 "forges.link") — From Nuxt's lead maintainer, this is a single typed client for working with issues, PRs, notifications, checks and webhooks across GitHub, GitLab, Bitbucket, Codeberg, Gitea, Azure DevOps and more.
+
+Daniel Roe
+
+[AWS Emulator: An _Official_ Local Emulator for AWS APIs](https://nodeweekly.com/link/192791/0a4070b383 "github.com") — It's built in Rust, but there's now an officially supported way to point your AWS SDK or CLI at a local endpoint covering hundreds of its service interfaces. In [the release post](https://nodeweekly.com/link/192792/0a4070b383), Amazon suggests it's largely aimed at agents, while [also revealing](https://nodeweekly.com/link/192793/0a4070b383) the emulator itself was built with agents (and how).
+
+Amazon Web Services
+
+[chrome-capture: Record a Chrome Tab at 60 FPS to MP4](https://nodeweekly.com/link/192794/0a4070b383 "github.com") — A neat, compact tool you can run with `npx` to record a Chrome 153+ tab at high quality to an MP4 file with no `ffmpeg` needed.
+
+Paul Irish
+
+*   [Playwright 1.65](https://nodeweekly.com/link/192796/0a4070b383) – Microsoft's browser automation library. Its test runner can now run under Bun too (with a few caveats), and there are a few potentially breaking changes for existing users who upgrade…
+    
+*   [vlt 1.7](https://nodeweekly.com/link/192797/0a4070b383) – The package manager adds `vlt deploy` for copying a workspace and production dependencies into a standalone folder, and now pins git dependencies to a commit.
+    
+*   [Postgres.js 4.1](https://nodeweekly.com/link/192798/0a4070b383) – Follows the recent [big 4.0 release](https://nodeweekly.com/link/192799/0a4070b383) with `sql.batch()`, a `query_timeout` option, and restored Node 18 support.
+    
+
+📰 Classifieds
+
+⏱️ JSON in Postgres: still fast at 1M rows? [ExoBench benchmarks your query at scale](https://nodeweekly.com/link/192800/0a4070b383), from Claude or Cursor. Now in preview.
+
+* * *
+
+🔓 Your auth validates once at login. After that, a stolen cookie works from anywhere. [Fingerprint](https://nodeweekly.com/link/192801/0a4070b383) catches it. [Try it free](https://nodeweekly.com/link/192801/0a4070b383).
+
+📊  22 JavaScript Stack Combos Benchmarked
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/eneurpfovmek9rkeielf.jpg)](https://nodeweekly.com/link/192802/0a4070b383)
+
+[▶ I Tested Every JavaScript Runtime](https://nodeweekly.com/link/192802/0a4070b383 "www.youtube.com") — A fun benchmark of the same Postgres-backed API app running on Node, Bun and Deno using each of their popular frameworks. In his tests, runtime choice made a bigger difference than framework choice. [The code and full results](https://nodeweekly.com/link/192803/0a4070b383) are on GitHub too.
+
+Arjay McCandless
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. _Thanks!_
+
+* * *
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+* * *
+
+Published by Cooper Press Ltd.  
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
+</Detail>
+
+\#​647 — November 12, 2026
+
+[Read on the Web](https://nodeweekly.com/issues/647)
+
+Together with 
+
+[![Sentry logo](https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,e_trim,w_350,h_100/e_make_transparent/co_white,e_outline:7/xdmchdxkka938lxfr86f.png)](https://nodeweekly.com/link/192770/0a4070b383)
+
+![Node.js Weekly](https://res.cloudinary.com/cpress/image/upload/v1653576619/lgfqinzbdqttwmhvljxb.png)
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/pyetbikxg73hznqspgx3.jpg)](https://nodeweekly.com/link/192771/0a4070b383)
+
+[An Experimental 'Green Threads' Implementation for Node](https://nodeweekly.com/link/192771/0a4070b383 "github.com") — James has opened a PR that adds a new, lightweight kind of worker that shares a small pool of OS threads, with each worker getting its own V8 isolate (but no Node APIs). His numbers show a thousand of them using about 1GB of memory vs 6.7GB for regular worker threads. Early days, but a promising idea that deserves feedback.
+
+James M Snell
+
+[![](https://res.cloudinary.com/cpress/image/upload/c_limit,w_480,h_480,q_auto/copm/d695db78.png)](https://nodeweekly.com/link/192770/0a4070b383)
+
+[Debug Errors and Agents Faster: Sentry Changelog Live](https://nodeweekly.com/link/192770/0a4070b383 "sentry.io") — A walkthrough of what’s new for debugging errors and performance issues, including fixing production bugs with Seer and tracing the agents you build. Live Q\&A. Nov 18, 10am PT. [Save your spot](https://nodeweekly.com/link/192770/0a4070b383).
+
+Sentry sponsor
+
+🔒 [This Week's Node.js Security Releases](https://nodeweekly.com/link/192772/0a4070b383 "nodejs.org") — Node [v26.13.1](https://nodeweekly.com/link/192773/0a4070b383), [v24.22.3](https://nodeweekly.com/link/192774/0a4070b383) and [v22.23.5](https://nodeweekly.com/link/192775/0a4070b383) patch a lot of HTTP/2 and TLS flaws, plus others in `zlib` and the permission model (seven are rated 'high' in severity). The worst bug can allow a remote client to read memory belonging to other connections. v26 and v24 also get [last week's Undici fixes](https://nodeweekly.com/link/192776/0a4070b383).
+
+The Node.js Project
+
+🤖 Five of the bugs were reported by Chris Rohlf *"in collaboration with Claude and Anthropic Research"*, with another credited to Trail of Bits (OpenAI).
+
+[What's New in Node.js 27](https://nodeweekly.com/link/192777/0a4070b383 "nodejsdesignpatterns.com") — The co-author of *Node.js Design Patterns* has put together an example-led tour of the latest (alpha) Node release, going from the new iterator helpers and promise-based `node:net/promises` API to the now-unflagged virtual file system, plus the [v27 breaking changes](https://nodeweekly.com/link/192779/0a4070b383) to get prepared for.
+
+Luciano Mammino
+
+**IN BRIEF:**
+
+* The browser-style [Web Worker API](https://nodeweekly.com/link/192780/0a4070b383) is now enabled by default on Node's `main` branch, so expect it in a future Node 27 alpha release.
+
+* Sadly, JavaScript function hosting platform [*Val Town* is winding down](https://nodeweekly.com/link/192781/0a4070b383). Tom MacWright, who advocated for its move to Deno (from `vm2`), [wrote this week about that choice](https://nodeweekly.com/link/192782/0a4070b383) saying Deno's sandbox never let them down.
+
+* Netlify has introduced [Netlify Server](https://nodeweekly.com/link/192783/0a4070b383), a long-running Node-powered backend process for WebSockets and in-memory state, now in early access.
+
+* An open PR [proposes a built-in `node:yaml` module](https://nodeweekly.com/link/192784/0a4070b383) for parsing YAML.
+
+* 📊 The [State of JavaScript 2026 survey is now open](https://nodeweekly.com/link/192785/0a4070b383) to take.
+
+[How X is Rebuilding Its Web App on Fastify and Node 26](https://nodeweekly.com/link/192786/0a4070b383 "blog.x.com") — X is replacing three servers with one built on Fastify and Platformatic Watt, running worker threads on Node 26. Yagiz covers the streaming architecture, the event loop stalls they had to fix, and how it's making X faster on the Web.
+
+Yagiz Nizipli (X Engineering)
+
+[Keep Your CI Workflow While Upgrading the Runner at Half the Cost](https://nodeweekly.com/link/192787/0a4070b383 "www.warpbuild.com") — Switch to a WarpBuild runner in your Node job and see faster builds. Try it with $50 in free credits using `START50`.
+
+WarpBuild sponsor
+
+[A Malicious npm Release, Published via Trusted Publishing](https://nodeweekly.com/link/192788/0a4070b383 "socket.dev") — A tour of the process and code behind the recent hijacking of Ethersphere's `bee-js` release process and how a backdoored version was published with valid provenance.
+
+Socket Research Team
+
+[Your JS Error Is Lying to You](https://nodeweekly.com/link/192789/0a4070b383 "blog.gaborkoos.com") — If you've ever seen `"err":&lcub;}` logged for an error that definitely had a message, Gábor's look into what an `Error` loses between creation and the log line could be helpful.
+
+Gábor Koós
+
+🛠 Code & Tools
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/h8j5savawaakzrkz99in.jpg)](https://nodeweekly.com/link/192790/0a4070b383)
+
+[forges: One Client for GitHub, GitLab and Other Git Forges](https://nodeweekly.com/link/192790/0a4070b383 "forges.link") — From Nuxt's lead maintainer, this is a single typed client for working with issues, PRs, notifications, checks and webhooks across GitHub, GitLab, Bitbucket, Codeberg, Gitea, Azure DevOps and more.
+
+Daniel Roe
+
+[AWS Emulator: An *Official* Local Emulator for AWS APIs](https://nodeweekly.com/link/192791/0a4070b383 "github.com") — It's built in Rust, but there's now an officially supported way to point your AWS SDK or CLI at a local endpoint covering hundreds of its service interfaces. In [the release post](https://nodeweekly.com/link/192792/0a4070b383), Amazon suggests it's largely aimed at agents, while [also revealing](https://nodeweekly.com/link/192793/0a4070b383) the emulator itself was built with agents (and how).
+
+Amazon Web Services
+
+[chrome-capture: Record a Chrome Tab at 60 FPS to MP4](https://nodeweekly.com/link/192794/0a4070b383 "github.com") — A neat, compact tool you can run with `npx` to record a Chrome 153+ tab at high quality to an MP4 file with no `ffmpeg` needed.
+
+Paul Irish
+
+* [Playwright 1.65](https://nodeweekly.com/link/192796/0a4070b383) – Microsoft's browser automation library. Its test runner can now run under Bun too (with a few caveats), and there are a few potentially breaking changes for existing users who upgrade…
+
+* [vlt 1.7](https://nodeweekly.com/link/192797/0a4070b383) – The package manager adds `vlt deploy` for copying a workspace and production dependencies into a standalone folder, and now pins git dependencies to a commit.
+
+* [Postgres.js 4.1](https://nodeweekly.com/link/192798/0a4070b383) – Follows the recent [big 4.0 release](https://nodeweekly.com/link/192799/0a4070b383) with `sql.batch()`, a `query_timeout` option, and restored Node 18 support.
+
+📰 Classifieds
+
+⏱️ JSON in Postgres: still fast at 1M rows? [ExoBench benchmarks your query at scale](https://nodeweekly.com/link/192800/0a4070b383), from Claude or Cursor. Now in preview.
+
+***
+
+🔓 Your auth validates once at login. After that, a stolen cookie works from anywhere. [Fingerprint](https://nodeweekly.com/link/192801/0a4070b383) catches it. [Try it free](https://nodeweekly.com/link/192801/0a4070b383).
+
+📊  22 JavaScript Stack Combos Benchmarked
+
+[![](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/eneurpfovmek9rkeielf.jpg)](https://nodeweekly.com/link/192802/0a4070b383)
+
+[▶ I Tested Every JavaScript Runtime](https://nodeweekly.com/link/192802/0a4070b383 "www.youtube.com") — A fun benchmark of the same Postgres-backed API app running on Node, Bun and Deno using each of their popular frameworks. In his tests, runtime choice made a bigger difference than framework choice. [The code and full results](https://nodeweekly.com/link/192803/0a4070b383) are on GitHub too.
+
+Arjay McCandless
+
+**Got a link for us?** Reply and tell us. We can't include everything but we'll look at anything you send. *Thanks!*
+
+***
+
+**Sponsorship:** Email `[kristina@cooperpress.com](mailto:kristina@cooperpress.com)` for details.
+
+***
+
+Published by Cooper Press Ltd.\
+Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom
+
+
