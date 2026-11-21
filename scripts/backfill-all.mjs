@@ -121,6 +121,16 @@ async function main() {
     // Empty bodies are already in the manifest — retry them in place, without
     // the "already known URL" filter used for genuinely missing items.
     for (const item of data.emptyCandidates || []) {
+      // The audit snapshot may be stale: translate-local can already have
+      // filled these posts. Skip ones whose body is no longer empty.
+      try {
+        const raw = await readFile(path.join(ROOT, "content", author, `${item.slug}.md`), "utf8");
+        const match = /^---\n([\s\S]*?)\n---\n?/.exec(raw);
+        const body = match ? raw.slice(match[0].length) : raw;
+        if (body.trim().length >= 80) continue;
+      } catch {
+        /* file missing — keep the candidate */
+      }
       emptyCandidates.push({ ...item, author, via: "empty" });
     }
     const items = [

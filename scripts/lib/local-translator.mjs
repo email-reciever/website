@@ -200,6 +200,8 @@ export async function openLocalTranslator() {
   }
 
   async function translateMarkdown(markdown) {
+    // Keep the tab frontmost between tasks; background tabs can be throttled.
+    await send("Page.bringToFront");
     const lines = markdown.split("\n");
     const result = [];
     let inFence = false;
