@@ -13,8 +13,9 @@
  *   node scripts/backfill-all.mjs --limit 10
  *   node scripts/backfill-all.mjs --author reactdigest --limit 5 --dry-run
  */
-import { createRequire } from "node:module";
+
 import { readFile, writeFile } from "node:fs/promises";
+import { createRequire } from "node:module";
 import path from "node:path";
 import { openLocalTranslator } from "./lib/local-translator.mjs";
 import { CRAWL_HEADERS } from "./lib/sources.mjs";
@@ -78,8 +79,11 @@ function extractMeta(html) {
 function htmlToMarkdown(html) {
   const $ = cheerio.load(html);
   $("script,style,nav,footer,header,aside,form,noscript,iframe").remove();
-  const root =
-    $("article").first().length ? $("article").first() : $("main").first().length ? $("main").first() : $("body");
+  const root = $("article").first().length
+    ? $("article").first()
+    : $("main").first().length
+      ? $("main").first()
+      : $("body");
   const td = Turndown();
   return td.turndown(root.html() || "").trim();
 }
@@ -110,7 +114,9 @@ async function main() {
     }
   }
 
-  console.log(`candidates: ${candidates.length}, processing up to ${limit}${dryRun ? " (dry run)" : ""}`);
+  console.log(
+    `candidates: ${candidates.length}, processing up to ${limit}${dryRun ? " (dry run)" : ""}`,
+  );
   if (!candidates.length) return;
 
   const translator = await openLocalTranslator();
@@ -133,7 +139,8 @@ async function main() {
         }
         const { title, date } = extractMeta(html);
         const translated = await translator.translateMarkdown(markdown);
-        const rawTitle = candidate.title && candidate.title !== "untitled" ? candidate.title : title;
+        const rawTitle =
+          candidate.title && candidate.title !== "untitled" ? candidate.title : title;
         const finalTitle = decode(rawTitle);
 
         console.log(
@@ -154,11 +161,7 @@ async function main() {
         };
         const fmYaml = yaml.dump(fm, { lineWidth: -1, noRefs: true }).trimEnd();
         const file = path.join(ROOT, "content", candidate.author, `${slug}.md`);
-        await writeFile(
-          file,
-          `---\n${fmYaml}\n---\n\n${translated.markdown.trim()}\n`,
-          "utf8",
-        );
+        await writeFile(file, `---\n${fmYaml}\n---\n\n${translated.markdown.trim()}\n`, "utf8");
         manifest.posts.push({
           author: candidate.author,
           slug,

@@ -14,13 +14,9 @@ import { spawn } from "node:child_process";
 import { mkdir } from "node:fs/promises";
 import path from "node:path";
 
-const CHROME =
-  process.env.CHROME || "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
+const CHROME = process.env.CHROME || "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const PORT = Number(process.env.TRANSLATOR_PORT || 9361);
-const PROFILE = path.join(
-  process.env.TMPDIR || "/tmp",
-  "email-reciever-translator-profile",
-);
+const PROFILE = path.join(process.env.TMPDIR || "/tmp", "email-reciever-translator-profile");
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -135,19 +131,16 @@ export async function openLocalTranslator() {
     clickCount: 1,
   });
 
-  const init = await send(
-    "Runtime.evaluate",
-    {
-      expression: `(async () => {
+  const init = await send("Runtime.evaluate", {
+    expression: `(async () => {
         const options = { sourceLanguage: 'en', targetLanguage: 'zh' };
         const availability = await Translator.availability(options);
         window.__tr = await Translator.create(options);
         return { availability };
       })()`,
-      awaitPromise: true,
-      returnByValue: true,
-    },
-  );
+    awaitPromise: true,
+    returnByValue: true,
+  });
   if (init.result?.exceptionDetails) {
     throw new Error(`Translator init failed: ${JSON.stringify(init.result.exceptionDetails)}`);
   }
@@ -158,14 +151,11 @@ export async function openLocalTranslator() {
     const proseOnly = out.replace(/\[\d+\]/g, "").trim();
     if (!proseOnly) return line;
 
-    const res = await send(
-      "Runtime.evaluate",
-      {
-        expression: `window.__tr.translate(${JSON.stringify(out)})`,
-        awaitPromise: true,
-        returnByValue: true,
-      },
-    );
+    const res = await send("Runtime.evaluate", {
+      expression: `window.__tr.translate(${JSON.stringify(out)})`,
+      awaitPromise: true,
+      returnByValue: true,
+    });
     if (res.result?.exceptionDetails) throw new Error("line translation failed");
     const translated = res.result?.result?.value;
     if (typeof translated !== "string") return line;

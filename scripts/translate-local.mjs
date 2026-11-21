@@ -7,8 +7,9 @@
  *   node scripts/translate-local.mjs --limit 20
  *   node scripts/translate-local.mjs --author tyler --limit 5 --dry-run
  */
-import { createRequire } from "node:module";
+
 import { readFile, writeFile } from "node:fs/promises";
+import { createRequire } from "node:module";
 import path from "node:path";
 import { openLocalTranslator } from "./lib/local-translator.mjs";
 
@@ -44,7 +45,9 @@ async function main() {
       post.author !== "ajiang",
   );
 
-  console.log(`candidates: ${candidates.length}, processing up to ${limit}${dryRun ? " (dry run)" : ""}`);
+  console.log(
+    `candidates: ${candidates.length}, processing up to ${limit}${dryRun ? " (dry run)" : ""}`,
+  );
   if (!candidates.length) return;
 
   const translator = await openLocalTranslator();

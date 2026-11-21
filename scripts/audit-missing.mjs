@@ -76,7 +76,11 @@ for (const post of posts) {
   }
 }
 
-const report = { generatedAt: new Date().toISOString(), sources: {}, totals: { feedMissing: 0, issueMissing: 0, archiveMissing: 0 } };
+const report = {
+  generatedAt: new Date().toISOString(),
+  sources: {},
+  totals: { feedMissing: 0, issueMissing: 0, archiveMissing: 0 },
+};
 
 for (const [key, url] of Object.entries(FEEDS)) {
   try {
@@ -130,7 +134,11 @@ for (const [key, conf] of Object.entries(ARCHIVES)) {
     const html = (await Promise.all(pages.map((p) => fetchText(p).catch(() => "")))).join("\n");
     const entries = [...html.matchAll(conf.selector)].map((m) => ({
       url: m[1].startsWith("http") ? m[1] : `${conf.base}${m[1]}`,
-      title: m[2]?.replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").trim() || "",
+      title:
+        m[2]
+          ?.replace(/<[^>]+>/g, "")
+          .replace(/&amp;/g, "&")
+          .trim() || "",
     }));
     const urls = new Map();
     for (const entry of entries) if (!urls.has(entry.url)) urls.set(entry.url, entry.title);
@@ -160,8 +168,10 @@ console.log(`missing audit → ${OUT}`);
 for (const [key, data] of Object.entries(report.sources)) {
   const bits = [];
   if (data.feedMissing !== undefined) bits.push(`feed ${data.feedMissing}/${data.feedItems}`);
-  if (data.issueMissing !== undefined) bits.push(`issues ${data.issueMissing} (${data.issueRange})`);
-  if (data.archiveMissing !== undefined) bits.push(`archive ${data.archiveMissing}/${data.archiveLinks}`);
+  if (data.issueMissing !== undefined)
+    bits.push(`issues ${data.issueMissing} (${data.issueRange})`);
+  if (data.archiveMissing !== undefined)
+    bits.push(`archive ${data.archiveMissing}/${data.archiveLinks}`);
   if (data.feedError || data.archiveError) bits.push(data.feedError || data.archiveError);
   if (bits.length) console.log(`  ${key.padEnd(18)} ${bits.join(" · ")}`);
 }
