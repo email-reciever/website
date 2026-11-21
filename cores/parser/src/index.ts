@@ -214,13 +214,19 @@ export default {
         return Response.json({ error: "unknown source", source: key }, { status: 404 });
       }
       return Response.json({ source: key, synced: Date.now() });
-    } else if (pathname === "/weekly/drill" && request.method === "POST") {
+    } else if (pathname === "/weekly/drill") {
+      const cors = {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type",
+      };
+      if (request.method === "OPTIONS") return new Response(null, { headers: cors });
       try {
         const body = (await request.json()) as { urls?: string[] };
         const items = await drillUrls(body.urls ?? [], env);
-        return Response.json({ items, drilledAt: Date.now() });
+        return Response.json({ items, drilledAt: Date.now() }, { headers: cors });
       } catch (error) {
-        return Response.json({ error: String(error) }, { status: 503 });
+        return Response.json({ error: String(error) }, { status: 503, headers: cors });
       }
     } else if (pathname === "/tts" && request.method === "POST") {
       // Keyless online TTS for weekly narration when no macOS runner is around.

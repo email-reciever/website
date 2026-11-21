@@ -266,11 +266,14 @@ function DrilledList({ items }: { items: DrilledItem[] }) {
   const drill = async (url: string) => {
     setBusy(url);
     try {
-      const response = await fetch("/api/drill", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ urls: [url] }),
-      });
+      const response = await fetch(
+        "https://subscribe-email.jiangjiangjiangxi.workers.dev/weekly/drill",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ urls: [url] }),
+        },
+      );
       const data = (await response.json()) as {
         items?: Array<{ links?: Array<{ url: string; text: string }> }>;
       };
