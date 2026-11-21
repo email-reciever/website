@@ -25,6 +25,9 @@ const arg = (name, fallback) => {
 const limit = Number(arg("limit", 20));
 const authorFilter = arg("author", "");
 const dryRun = process.argv.includes("--dry-run");
+// When another writer (backfill) is running, skip the manifest write here and
+// rebuild the index from content/** afterwards instead.
+const skipManifest = process.argv.includes("--no-manifest");
 
 function splitFrontmatter(raw) {
   const match = /^---\n([\s\S]*?)\n---\n?/.exec(raw);
@@ -88,7 +91,7 @@ async function main() {
     await translator.close();
   }
 
-  if (!dryRun && done) {
+  if (!dryRun && !skipManifest && done) {
     await writeFile(MANIFEST, `${JSON.stringify(manifest)}\n`, "utf8");
   }
   console.log(`translated ${done} posts${dryRun ? " (dry run)" : ""}`);

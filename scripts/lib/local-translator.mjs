@@ -16,7 +16,9 @@ import path from "node:path";
 
 const CHROME = process.env.CHROME || "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const PORT = Number(process.env.TRANSLATOR_PORT || 9361);
-const PROFILE = path.join(process.env.TMPDIR || "/tmp", "email-reciever-translator-profile");
+const PROFILE =
+  process.env.TRANSLATOR_PROFILE ||
+  path.join(process.env.TMPDIR || "/tmp", "email-reciever-translator-profile");
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
