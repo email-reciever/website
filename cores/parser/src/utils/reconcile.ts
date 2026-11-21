@@ -164,6 +164,13 @@ export async function reconcileSource(key: SenderType, env: Env, adapter: Adapte
     // Nothing to do when the post is healthy and the source has not changed.
     if (!deficient && fm.source_hash === hash) return;
 
+    // Never replace an existing translation with raw source when both providers
+    // are unavailable (e.g. Workers AI daily quota exhausted + gtx 429).
+    if (fm.translated && !rendered.translated) {
+      logger(env, `reconcile skipped: translation unavailable for ${key}/${target.slug}`);
+      return;
+    }
+
     await updateBlog(target, rendered.content, rendered, hash, env);
     logger(env, `reconciled: ${key}/${target.slug} (${deficient ? "repair" : "source changed"})`);
   } catch (e) {
