@@ -98,6 +98,8 @@ sequenceDiagram
 
 **调度**:cron(`[triggers]` 每 6h 常规同步 + 每日 03:15 历史回填)+ 手动 `POST /rss`、`POST /rss?backfill=1`(GH workflow `subscribe-rss.yml` / `backfill-rss.yml`,复用 secrets `WORKER_RSS_URL`)。回填从 feed **最旧的缺失条目**开始,按 GUID 元数据 + manifest 的 `origin_url` 双重去重,每源每次 1 篇串行推进,避免免费额度耗尽。
 
+**内容校正**(`utils/reconcile.ts`,worker cron `45 4 * * *` + `reconcile-content.yml` + `POST /rss?reconcile=1`):按 `origin_url` 找到已归档文章对应的源条目,优先修复空正文 / 未翻译 / 缺 `source_hash` 的文章,源 HTML 哈希变化时**原地更新同一 slug**(不新建文章),并同步 manifest。每源每次 1 篇,与回填共用 fan-out 机制。
+
 > **fan-out(2026-11 修复)**:一个 invocation 同步全部 17 个源会耗尽 Workers 免费版 50 次 subrequest(第 5 个之后的源永远失败)。现在 `/rss` 与 cron 通过 `SELF` service binding 调用 `/rss/:source`,每个源在独立 invocation 中运行、拥有独立预算 —— 不能用 `fetch(自己的 workers.dev URL)`,Cloudflare 会报 1042。fan-out **串行**执行(并发会让 manifest 竞争),每源每次最多 1 篇,以控制 CPU 时间。全量同步约 100–260s。
 
 **未能直连的源**(继续走邮件链路):producthunt(归档页为客户端渲染,正文藏在 hydration JSON 里,cheerio 不可靠 —— 已探查确认)、medium、insidergithub、modular、arcupdate、syntaxfm、rnn。`us3.campaign-archive.com/feed` 是 Mailchimp 账户级 URL,裸路径 404,alexkondov 已改由其自有博客爬取。两条链路并存互不影响;已直连的源建议停掉对应邮件转发,避免同期双发。

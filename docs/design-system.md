@@ -62,7 +62,7 @@ brand-fidelity: 5
 ## 图标
 
 favicon / 站点 logo 由 **Kubai Icons** skill 的 duotone 风格绘制(16 网格、浅色主体 + 品牌色点缀)。
-物体选「邮件」(收件/订阅),主色 `#00e5ff`,辅色由 `secondary(主色)` 推导为 `#99f5ff`;
+物体选「RSS 馈源」(通用订阅符号,涵盖博客与 newsletter),主色 `#00e5ff`,辅色由 `secondary(主色)` 推导为 `#99f5ff`;
 在 64/48/24/16px 下用 `check.mjs` 自检为 0 findings 后导出静态 SVG。skill 全局安装于
 `~/.agents/skills/kubai-icons`。
 
