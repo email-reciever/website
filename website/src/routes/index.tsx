@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
+import { useEffect, useRef } from "react";
+import { HeroScene } from "@/components/HeroScene";
 import { Pagination } from "@/components/Pagination";
 import { PostCard } from "@/components/PostCard";
 import { SearchBar } from "@/components/SearchBar";
@@ -38,65 +40,111 @@ export const Route = createFileRoute("/")({
 function ListPage() {
   const { posts, total, page, totalPages, counts } = Route.useLoaderData();
   const { q, source } = Route.useSearch();
+  const stageRef = useRef<HTMLElement>(null);
+
+  // scroll becomes a slow camera push through the stage — one set-piece,
+  // no competing motion elsewhere on the page.
+  useEffect(() => {
+    const stage = stageRef.current;
+    if (!stage) return;
+    const onScroll = () => {
+      const y = Math.min(window.scrollY, 760);
+      stage.style.setProperty("--cam", String(y * 0.16));
+      stage.style.setProperty("--fade", String(Math.max(0, 1 - y / 680)));
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-      <section className="mesh-hero mb-10 border-b border-base-300/70">
-        <div className="flex flex-col gap-7 py-12 sm:py-16">
-          <div className="flex flex-col gap-4">
-            <div className="mono-label">Email Reciever / Library</div>
-            <h1 className="max-w-3xl text-4xl leading-[1.08] font-semibold tracking-[-0.045em] sm:text-6xl">
-              技术通讯，
-              <br className="hidden sm:block" />
-              读成中文。
-            </h1>
-            <p className="max-w-xl text-[15px] leading-relaxed text-base-content/55">
-              邮件与 RSS 直接入库，自动切片、翻译、归档。
-              <span className="font-mono text-xs text-base-content/40">
-                {" "}
-                {Object.keys(counts).length} sources / {total} posts
-              </span>
-            </p>
+    <div className="mx-auto w-full max-w-7xl">
+      <section ref={stageRef} className="hero-stage border-b border-base-300/60">
+        <HeroScene />
+        <div className="hero-content scan-grid absolute inset-0" />
+
+        <div className="hero-content relative mx-auto flex min-h-[min(86vh,760px)] max-w-7xl flex-col justify-between px-5 py-10 sm:px-8 sm:py-14">
+          <div className="flex items-center justify-between gap-4">
+            <span className="mono-label !text-[rgba(0,229,255,0.75)]">
+              {`${SITE.title} / Intelligence feed`}
+            </span>
+            <span className="mono-label hidden sm:inline">EST. 2024 · AUTO-TRANSLATED</span>
           </div>
-          <SearchBar />
+
+          <div className="cine-reveal flex flex-col gap-7 py-16">
+            <div className="flex flex-col gap-1">
+              <h1 className="hero-title display-caps text-[clamp(3.4rem,11vw,10rem)]">
+                Read the
+                <br />
+                <span className="text-[var(--signal)]">signal.</span>
+              </h1>
+              <div className="hero-rule mt-7 max-w-2xl" />
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-300/80 sm:text-lg">
+                来自 {Object.keys(counts).length} 个技术订阅源的内容，自动切片、翻译、归档。
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[0.6875rem] tracking-[0.18em] text-slate-400/70 uppercase">
+              <span>{total} documents indexed</span>
+              <span className="text-[var(--signal)]">/</span>
+              <span>17 live sources</span>
+              <span className="text-[var(--signal)]">/</span>
+              <span>zh-CN output</span>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-5">
+            <SearchBar />
+            <div className="flex items-center gap-3">
+              <span className="mono-label">Scroll to explore</span>
+              <span className="h-px flex-1 bg-gradient-to-r from-[var(--signal)]/60 to-transparent" />
+              <span className="font-mono text-[10px] text-slate-500">↓</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="mb-6 flex items-center gap-3 overflow-x-auto pb-1">
-        <span className="mono-label shrink-0">Sources</span>
+      <section className="flex flex-col gap-4 border-b border-base-300/60 px-5 py-8 sm:px-8">
+        <div className="flex items-baseline gap-4">
+          <h2 className="display-caps text-2xl sm:text-3xl">Archive</h2>
+          <span className="mono-label">/ all sources</span>
+        </div>
         <SourceTabs counts={counts} />
       </section>
 
-      {posts.length === 0 ? (
-        <div className="flex min-h-64 flex-col items-center justify-center gap-2 text-base-content/50">
-          <p className="text-lg">没有匹配的文章</p>
-          <Link
-            to="/"
-            search={{ source: undefined, q: undefined, page: undefined }}
-            className="btn btn-sm"
-          >
-            清除筛选
-          </Link>
-        </div>
-      ) : (
-        <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post) => (
-            <PostCard key={`${post.author}/${post.slug}`} post={post} />
-          ))}
-        </section>
-      )}
-
-      <div className="mt-8 flex flex-col items-center gap-3">
-        <Pagination page={page} totalPages={totalPages} />
-        {(q || source) && (
-          <Link
-            to="/"
-            search={{ source: undefined, q: undefined, page: undefined }}
-            className="link link-hover text-sm text-base-content/50"
-          >
-            清除筛选条件
-          </Link>
+      <div className="px-5 py-10 sm:px-8">
+        {posts.length === 0 ? (
+          <div className="flex min-h-64 flex-col items-center justify-center gap-4 text-center">
+            <p className="font-mono text-sm tracking-[0.2em] text-base-content/50 uppercase">
+              No signal found
+            </p>
+            <Link
+              to="/"
+              search={{ source: undefined, q: undefined, page: undefined }}
+              className="btn-cine h-9 px-5"
+            >
+              清除筛选
+            </Link>
+          </div>
+        ) : (
+          <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {posts.map((post) => (
+              <PostCard key={`${post.author}/${post.slug}`} post={post} />
+            ))}
+          </section>
         )}
+
+        <div className="mt-12 flex flex-col items-center gap-4">
+          <Pagination page={page} totalPages={totalPages} />
+          {(q || source) && (
+            <Link
+              to="/"
+              search={{ source: undefined, q: undefined, page: undefined }}
+              className="font-mono text-[11px] tracking-[0.14em] text-base-content/45 uppercase hover:text-[var(--signal)]"
+            >
+              Reset filters
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );

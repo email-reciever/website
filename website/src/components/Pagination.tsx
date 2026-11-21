@@ -9,9 +9,7 @@ function pageHref<S extends object>(search: S, page: number) {
   return (prev: S) => ({ ...prev, ...search, page: page > 1 ? page : undefined });
 }
 
-/**
- * Compact windowed pagination (daisyUI `join`). Page number lives in ?page=.
- */
+/** Compact windowed pagination. Page number lives in ?page=. */
 export function Pagination({ page, totalPages }: PaginationProps) {
   const search = useSearch({ from: "/" });
 
@@ -23,17 +21,18 @@ export function Pagination({ page, totalPages }: PaginationProps) {
   for (let p = windowStart; p <= windowEnd; p++) pages.push(p);
 
   const base =
-    "inline-flex h-9 min-w-9 items-center justify-center rounded-lg border px-2 font-mono text-xs transition-colors";
+    "inline-flex h-10 min-w-10 items-center justify-center border px-2 font-mono text-xs tracking-[0.08em] transition-colors";
   const idle =
-    "border-base-300/70 bg-base-100/40 text-base-content/60 hover:border-base-content/25 hover:text-base-content";
+    "border-base-300/60 text-base-content/55 hover:border-[var(--signal)]/60 hover:text-[var(--signal)]";
+  const on = "border-[var(--signal)] bg-[var(--signal)] text-black";
 
   return (
-    <nav className="flex items-center gap-1.5" aria-label="分页">
+    <nav className="flex items-center gap-2" aria-label="分页">
       <Link
         to="/"
         search={pageHref(search, page - 1)}
         aria-disabled={page <= 1}
-        className={`${base} ${page <= 1 ? "pointer-events-none border-base-300/40 text-base-content/25" : idle}`}
+        className={`${base} ${page <= 1 ? "pointer-events-none border-base-300/30 text-base-content/20" : idle}`}
       >
         ‹
       </Link>
@@ -42,7 +41,7 @@ export function Pagination({ page, totalPages }: PaginationProps) {
           key={p}
           to="/"
           search={pageHref(search, p)}
-          className={`${base} ${p === page ? "border-base-content/20 bg-base-content text-base-100" : idle}`}
+          className={`${base} ${p === page ? on : idle}`}
         >
           {p}
         </Link>
@@ -51,7 +50,9 @@ export function Pagination({ page, totalPages }: PaginationProps) {
         to="/"
         search={pageHref(search, page + 1)}
         aria-disabled={page >= totalPages}
-        className={`${base} ${page >= totalPages ? "pointer-events-none border-base-300/40 text-base-content/25" : idle}`}
+        className={`${base} ${
+          page >= totalPages ? "pointer-events-none border-base-300/30 text-base-content/20" : idle
+        }`}
       >
         ›
       </Link>

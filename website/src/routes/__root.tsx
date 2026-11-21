@@ -66,7 +66,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <HeadContent />
       </head>
-      <body className="flex min-h-dvh flex-col bg-base-200 font-sans antialiased selection:bg-base-content/20">
+      <body className="flex min-h-dvh flex-col bg-base-200 font-sans antialiased selection:bg-[var(--signal)] selection:text-black">
         {children}
         <Scripts />
       </body>
@@ -78,15 +78,15 @@ function RootError({ error }: { error: unknown }) {
   const message = error instanceof Error ? error.message : "服务出了点问题";
   return (
     <RootDocument>
-      <section className="mx-auto flex min-h-[60vh] max-w-3xl flex-col items-center justify-center gap-4 px-4 text-center">
+      <section className="flex min-h-[70vh] flex-col items-center justify-center gap-6 px-5 text-center">
+        <div className="h-px w-16 bg-[var(--signal)]" />
         <div className="mono-label">Error / 500</div>
-        <h1 className="text-6xl font-semibold tracking-tight text-base-content/30">:(</h1>
-        <p className="text-sm text-base-content/60">{message}</p>
-        <a
-          href="/"
-          className="inline-flex h-9 items-center rounded-lg bg-base-content px-4 text-[13px] font-medium text-base-100 transition-opacity hover:opacity-85"
-        >
-          返回首页
+        <h1 className="display-caps text-7xl text-white/20 sm:text-8xl">Lost signal</h1>
+        <p className="max-w-md font-mono text-xs tracking-[0.1em] text-base-content/50">
+          {message}
+        </p>
+        <a href="/" className="btn-cine h-10 px-6">
+          Return to feed
         </a>
       </section>
     </RootDocument>
@@ -95,15 +95,15 @@ function RootError({ error }: { error: unknown }) {
 
 function NotFound() {
   return (
-    <section className="mx-auto flex min-h-[60vh] max-w-3xl flex-col items-center justify-center gap-4 px-4 text-center">
+    <section className="flex min-h-[70vh] flex-col items-center justify-center gap-6 px-5 text-center">
+      <div className="h-px w-16 bg-[var(--signal)]" />
       <div className="mono-label">Error / 404</div>
-      <h1 className="text-7xl font-semibold tracking-tight text-base-content/25">404</h1>
-      <p className="text-sm text-base-content/60">这篇文章不存在或已被移除</p>
-      <a
-        href="/"
-        className="inline-flex h-9 items-center rounded-lg bg-base-content px-4 text-[13px] font-medium text-base-100 transition-opacity hover:opacity-85"
-      >
-        返回首页
+      <h1 className="display-caps text-8xl text-white/20 sm:text-9xl">No signal</h1>
+      <p className="font-mono text-xs tracking-[0.1em] text-base-content/50">
+        这篇文章不存在或已被移除
+      </p>
+      <a href="/" className="btn-cine h-10 px-6">
+        Return to feed
       </a>
     </section>
   );

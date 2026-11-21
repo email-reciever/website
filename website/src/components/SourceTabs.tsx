@@ -13,44 +13,40 @@ export function SourceTabs({ counts }: { counts: Record<string, number> }) {
     .filter(([key]) => SOURCES[key])
     .sort((a, b) => b[1] - a[1]);
 
+  const base =
+    "inline-flex h-9 items-center gap-2 border px-3 font-mono text-[11px] tracking-[0.08em] transition-colors";
+  const idle =
+    "border-base-300/60 text-base-content/55 hover:border-[var(--signal)]/60 hover:text-[var(--signal)]";
+  const on = "border-[var(--signal)] bg-[var(--signal)] text-black";
+
   return (
-    <div className="flex flex-wrap items-center gap-1.5" role="tablist">
+    <div className="flex flex-wrap gap-2" role="tablist">
       <Link
         to="/"
         search={{ source: undefined, q: undefined, page: undefined }}
-        className={`inline-flex h-8 items-center gap-1.5 rounded-lg border px-3 text-[13px] font-medium transition-colors ${
-          active === "all"
-            ? "border-base-content/20 bg-base-content text-base-100"
-            : "border-base-300/70 bg-base-100/40 text-base-content/60 hover:border-base-content/25 hover:text-base-content"
-        }`}
+        className={`${base} ${active === "all" ? on : idle}`}
       >
         全部
-        <span className="font-mono text-[10px] opacity-60">
-          {Object.values(counts).reduce((sum, n) => sum + n, 0)}
-        </span>
+        <span className="opacity-60">{Object.values(counts).reduce((s, n) => s + n, 0)}</span>
       </Link>
       {entries.map(([key, count]) => (
         <Link
           key={key}
           to="/"
           search={{ source: key, q: undefined, page: undefined }}
-          className={`inline-flex h-8 items-center gap-1.5 rounded-lg border px-2.5 text-[13px] font-medium transition-colors ${
-            active === key
-              ? "border-base-content/20 bg-base-content text-base-100"
-              : "border-base-300/70 bg-base-100/40 text-base-content/60 hover:border-base-content/25 hover:text-base-content"
-          }`}
+          className={`${base} ${active === key ? on : idle}`}
           title={SOURCES[key].note}
         >
           <img
             src={sourceIcon(key)}
             alt=""
-            className={`h-3.5 w-3.5 rounded-sm ${active === key ? "" : "opacity-70 grayscale"}`}
+            className={`h-3.5 w-3.5 ${active === key ? "" : "grayscale opacity-60"}`}
             width="14"
             height="14"
             loading="lazy"
           />
           {sourceLabel(key)}
-          <span className="font-mono text-[10px] opacity-50">{count}</span>
+          <span className="opacity-60">{count}</span>
         </Link>
       ))}
     </div>

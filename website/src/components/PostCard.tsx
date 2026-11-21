@@ -9,36 +9,37 @@ export function PostCard({ post }: { post: ManifestEntry }) {
     <Link
       to={href}
       params={{ author: post.author, slug: post.slug }}
-      className="post-card group card relative overflow-hidden rounded-xl border border-base-300/80 bg-base-100 transition-[border-color,transform] duration-200 ease-out hover:-translate-y-0.5 hover:border-base-content/25"
+      className="cine-card group flex flex-col"
     >
-      <figure className="relative h-28 overflow-hidden border-b border-base-300/60">
+      <figure className="relative h-32 overflow-hidden border-b border-base-300/50">
         <img
           src={sourceBanner(post.author)}
           alt={sourceLabel(post.author)}
           loading="lazy"
           className="card-banner h-full w-full object-cover object-left-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-base-100 via-base-100/35 to-transparent" />
-        <div className="absolute bottom-2 left-3 flex items-center gap-2">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+        <div className="absolute bottom-2.5 left-3 right-3 flex items-center gap-2">
           <img
             src={sourceIcon(post.author)}
             alt=""
-            className="h-4 w-4 rounded-sm"
-            width="16"
-            height="16"
+            className="h-3.5 w-3.5"
+            width="14"
+            height="14"
           />
-          <span className="text-[11px] font-medium tracking-wide text-base-content/80">
+          <span className="font-mono text-[10px] tracking-[0.12em] text-white uppercase">
             {sourceLabel(post.author)}
           </span>
           {sourceNote(post.author) && (
-            <span className="hidden text-[11px] text-base-content/45 sm:inline">
+            <span className="hidden truncate font-mono text-[10px] text-white/45 sm:inline">
               · {sourceNote(post.author)}
             </span>
           )}
         </div>
       </figure>
-      <div className="card-body gap-2 p-4">
-        <h2 className="card-title line-clamp-2 text-[15px] leading-snug font-semibold tracking-tight transition-colors group-hover:text-base-content">
+
+      <div className="flex flex-1 flex-col gap-3 p-4">
+        <h2 className="line-clamp-2 text-[15px] leading-snug font-semibold tracking-tight text-base-content transition-colors group-hover:text-[var(--signal)]">
           {post.title}
         </h2>
         {post.description && post.description !== post.title && (
@@ -46,11 +47,11 @@ export function PostCard({ post }: { post: ManifestEntry }) {
             {post.description}
           </p>
         )}
-        <div className="mt-1 flex items-center justify-between border-t border-base-300/50 pt-3 font-mono text-[11px] text-base-content/45">
+        <div className="mt-auto flex items-center justify-between border-t border-base-300/40 pt-3 font-mono text-[10px] tracking-[0.1em] text-base-content/45">
           <span>{formatDate(post.date)}</span>
           <div className="flex items-center gap-2">
-            {post.subAuthor && <span className="max-w-28 truncate">{post.subAuthor}</span>}
-            <span className={post.translated ? "text-base-content/70" : "text-base-content/35"}>
+            {post.subAuthor && <span className="max-w-24 truncate">{post.subAuthor}</span>}
+            <span className={post.translated ? "text-[var(--signal)]" : "text-base-content/35"}>
               {post.translated ? "译" : "原"}
             </span>
           </div>
