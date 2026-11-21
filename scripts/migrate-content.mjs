@@ -211,7 +211,9 @@ function upsert(posts, entry) {
 
 async function writeManifest(posts) {
   posts.sort((a, b) => String(b.date).localeCompare(String(a.date)));
-  await writeFile(MANIFEST, `${JSON.stringify({ posts }, null, 2)}\n`, "utf8");
+  // Compact JSON: the worker writes this way, and GitHub's Contents API stops
+  // returning `content` above 1 MB. Keep the file as small as possible.
+  await writeFile(MANIFEST, `${JSON.stringify({ posts })}\n`, "utf8");
 }
 
 /* -------------------------------------------------------------------------- */

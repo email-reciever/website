@@ -34,7 +34,18 @@ export async function githubRead(fileName: string, env: Env) {
   if (status < 300) {
     logger(env, "fetch metadata success", fileName);
     const { content, sha } = data as any;
-    return { content: content.length ? decode(content) : undefined, sha };
+    if (content?.length) {
+      return { content: decode(content), sha };
+    }
+    // The Contents API omits `content` for blobs larger than 1 MB (manifest.json
+    // is ~1.05 MB). Fetch the same blob through the Git API instead.
+    if (sha) {
+      const { data: blob } = await $github.rest.git.getBlob({ ...$repo, file_sha: sha });
+      if (blob?.content) {
+        return { content: decode(blob.content), sha };
+      }
+    }
+    return { content: undefined, sha };
   }
 }
 
