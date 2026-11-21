@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Explicitly welcome AI crawlers — we publish llms.txt and a full sitemap.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://email-reciever-website.jiangjiangjiangxi.workers.dev/sitemap.xml

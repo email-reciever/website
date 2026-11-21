@@ -9,10 +9,12 @@ OPEN_ACTION = "opened"
 OPEN_USER = "innocces"
 SELF_EMAIL = "jiangjiangjiangxi@gmail.com"
 TR_SERVE = "https://email-reciever.deno.dev"
-# Translation: the keyless google gtx endpoint returned 429 from Cloudflare
-# egress on the first live sync — use Workers AI as the primary channel.
-# Bigger chunks (4000 vs 1200 chars) also cut subrequests sharply.
-TR_PROVIDER = "ai"
+# Translation: Workers AI's free neuron allocation was exhausted and the gtx
+# endpoint returns 429 from Cloudflare egress. MyMemory is keyless and verified
+# to preserve markdown + our code placeholders; it is the primary channel,
+# with Workers AI and gtx as fallbacks.
+TR_PROVIDER = "mymemory"
+MYMEMORY_EMAIL = "jiangjiangjiangxi@gmail.com"
 # TR_MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast"   # Workers AI model override
 # cron fan-out: syncing every source in one invocation exhausts the free-plan
 # subrequest budget, so /rss and scheduled dispatch one source per invocation

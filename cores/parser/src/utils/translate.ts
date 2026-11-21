@@ -1,37 +1,31 @@
 /**
  * Structure-preserving markdown translation with a provider chain.
  *
- * Two interchangeable providers, driven by the `TR_PROVIDER` env var:
+ * - `mymemory` (default, keyless): api.mymemory.translated.net — 5k chars/day
+ *   anonymous, 50k with the `de` email param, ~480 bytes per request. It keeps
+ *   markdown links/emphasis and our <P|.../> code placeholders intact.
+ * - `ai`: Workers AI instruct LLM (`TR_MODEL`), large chunks but a limited free
+ *   neuron allocation.
+ * - `google`: the keyless gtx endpoint; often 429 from datacenter IPs.
  *
- * - `google` (default, non-AI): the translate.googleapis.com `gtx` endpoint —
- *   the same engine the old pipeline used, minus the free-proxy detour that
- *   made it unstable. Called directly from the worker, keyless.
- * - `ai`: Workers AI instruct LLM (`TR_MODEL` to override), more faithful at
- *   keeping markdown structure, but depends on the Workers AI service.
- *
- * Whichever provider is chosen, the other one acts as automatic fallback per
- * chunk. Both run behind the same machinery:
- *
- * 1. md() has already replaced every fenced code block with a positional
- *    placeholder token like <P|12-5-99/> (see remarks/remark-code-plugin.ts)
- * 2. this module splits the protected markdown into paragraph-boundary
- *    chunks sized for the active provider
- * 3. every chunk is validated: the multiset of placeholder tokens must be
- *    identical before and after translation; mismatched chunks are retried
- * 4. if all attempts fail, translate() throws and md() keeps the original
- *    content with translated=false
+ * Whichever provider is primary, the others are fallbacks per chunk. Every
+ * chunk is validated: the multiset of placeholder tokens must match, otherwise
+ * the next provider is tried. If all fail, md() keeps the original with
+ * translated=false.
  */
 import { logger } from "./logger";
 
-type Provider = "google" | "ai";
+type Provider = "mymemory" | "ai" | "google";
 
-const DEFAULT_PROVIDER: Provider = "google";
-/** gtx GET URLs must stay short; the AI provider can take bigger chunks */
-const GOOGLE_CHUNK_CHARS = 1200;
-const AI_CHUNK_CHARS = 4000;
-const CHUNK_TIMEOUT_MS = 120_000;
-/** attempts per provider: primary first (retry once), then the fallback */
+const DEFAULT_PROVIDER: Provider = "mymemory";
+/** outer chunk sizes; MyMemory splits its chunks into small HTTP requests */
+const CHUNK_CHARS: Record<Provider, number> = { mymemory: 1200, ai: 4000, google: 1200 };
+const MYMEMORY_REQUEST_CHARS = 420;
+const CHUNK_TIMEOUT_MS = 45_000;
 const THROTTLE_MS = 300;
+const MYMEMORY_THROTTLE_MS = 200;
+/** Workers free plan: 50 subrequests per invocation. Keep translation under it. */
+const MAX_TRANSLATE_REQUESTS = 36;
 
 const MARKER_RE = /<P\|\d+-\d+-\d+\/>/g;
 
@@ -50,9 +44,7 @@ const GTX_HEADERS: Record<string, string> = {
 };
 
 function splitIntoChunks(markdown: string, limit: number): string[] {
-  if (markdown.length <= limit) {
-    return [markdown];
-  }
+  if (markdown.length <= limit) return [markdown];
   const blocks = markdown.split(/\n{2,}/);
   const chunks: string[] = [];
   let current = "";
@@ -64,9 +56,7 @@ function splitIntoChunks(markdown: string, limit: number): string[] {
       current = current ? `${current}\n\n${block}` : block;
     }
   }
-  if (current) {
-    chunks.push(current);
-  }
+  if (current) chunks.push(current);
   return chunks;
 }
 
@@ -85,8 +75,62 @@ function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-/** keyless google translate endpoint; returns sentence segments joined back together */
-async function googleTranslate(chunk: string): Promise<string> {
+/** keyless, quota-friendly provider; sends many small GETs per outer chunk */
+async function myMemoryTranslate(chunk: string, env: Env, budget: { used: number }) {
+  if (MARKER_RE.test(chunk)) {
+    // A split could cut a code placeholder — let the LLM providers handle it.
+    MARKER_RE.lastIndex = 0;
+    throw new Error("mymemory skipped: chunk contains code placeholders");
+  }
+  MARKER_RE.lastIndex = 0;
+
+  const pieces: string[] = [];
+  for (let i = 0; i < chunk.length; i += MYMEMORY_REQUEST_CHARS) {
+    pieces.push(chunk.slice(i, i + MYMEMORY_REQUEST_CHARS));
+  }
+
+  const translated: string[] = [];
+  for (const piece of pieces) {
+    if (budget.used >= MAX_TRANSLATE_REQUESTS) {
+      throw new Error("translation request budget exhausted");
+    }
+    budget.used += 1;
+    const params = new URLSearchParams({ q: piece, langpair: "en|zh-CN" });
+    if (env.MYMEMORY_EMAIL) params.set("de", env.MYMEMORY_EMAIL);
+    const data = (await withTimeout(
+      fetch(`https://api.mymemory.translated.net/get?${params}`, { headers: GTX_HEADERS }).then(
+        (response) => {
+          if (!response.ok) throw new Error(`mymemory responded ${response.status}`);
+          return response.json();
+        },
+      ),
+      CHUNK_TIMEOUT_MS,
+    )) as {
+      responseStatus?: number;
+      quotaFinished?: boolean;
+      responseData?: { translatedText?: string };
+      responseDetails?: string;
+    };
+    const text = data?.responseData?.translatedText?.trim();
+    if (
+      data?.responseStatus !== 200 ||
+      data?.quotaFinished ||
+      !text ||
+      text.toLowerCase() === piece.toLowerCase()
+    ) {
+      throw new Error(`mymemory failed: ${data?.responseDetails ?? "empty/quota"}`);
+    }
+    translated.push(text);
+    await sleep(MYMEMORY_THROTTLE_MS);
+  }
+  return translated.join("");
+}
+
+/** keyless google gtx endpoint (often rate-limited from datacenter IPs) */
+async function googleTranslate(chunk: string, budget: { used: number }) {
+  if (budget.used >= MAX_TRANSLATE_REQUESTS)
+    throw new Error("translation request budget exhausted");
+  budget.used += 1;
   const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=zh-CN&dt=t&q=${encodeURIComponent(chunk)}`;
   const data = (await withTimeout(
     fetch(url, { headers: GTX_HEADERS }).then((response) => {
@@ -101,7 +145,10 @@ async function googleTranslate(chunk: string): Promise<string> {
 }
 
 /** Workers AI instruct LLM translation */
-async function aiTranslate(chunk: string, env: Env): Promise<string> {
+async function aiTranslate(chunk: string, env: Env, budget: { used: number }) {
+  if (budget.used >= MAX_TRANSLATE_REQUESTS)
+    throw new Error("translation request budget exhausted");
+  budget.used += 1;
   const model = env.TR_MODEL ?? "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
   const result = (await withTimeout(
     env.AI.run(model, {
@@ -115,7 +162,6 @@ async function aiTranslate(chunk: string, env: Env): Promise<string> {
   )) as { response?: string };
 
   let text = result?.response ?? "";
-  // some reasoning-capable models emit traces inside special blocks — strip them
   const traceStart = text.indexOf("<think>");
   const traceEnd = text.indexOf("</think>");
   if (traceStart !== -1 && traceEnd > traceStart) {
@@ -125,55 +171,60 @@ async function aiTranslate(chunk: string, env: Env): Promise<string> {
   return text.trim();
 }
 
+async function providerTranslate(
+  provider: Provider,
+  chunk: string,
+  env: Env,
+  budget: { used: number },
+): Promise<string> {
+  switch (provider) {
+    case "mymemory":
+      return myMemoryTranslate(chunk, env, budget);
+    case "google":
+      return googleTranslate(chunk, budget);
+    case "ai":
+      return aiTranslate(chunk, env, budget);
+  }
+}
+
 async function translateChunk(
   chunk: string,
-  chain: [Provider, Provider],
+  chain: Provider[],
   env: Env,
+  budget: { used: number },
 ): Promise<string> {
   const expected = markersOf(chunk).join("\n");
-  // One attempt per provider. Each attempt costs a subrequest on Workers; four
-  // attempts × ~17 chunks blew the free-plan subrequest budget during the first
-  // live sync. A failed chunk now falls back once and otherwise degrades to the
-  // original prose (translated=false), which is the documented failure mode.
-  const attempts: Provider[] = [chain[0], chain[1]];
-
-  for (const provider of attempts) {
+  for (const provider of chain) {
     try {
-      const translated =
-        provider === "google" ? await googleTranslate(chunk) : await aiTranslate(chunk, env);
-      if (markersOf(translated).join("\n") === expected) {
-        return translated;
-      }
+      const translated = await providerTranslate(provider, chunk, env, budget);
+      if (markersOf(translated).join("\n") === expected) return translated;
       logger(env, `translate marker mismatch (${provider})`);
     } catch (e) {
       logger(env, `translate provider failed (${provider})`, e);
     }
-    // be polite to the keyless endpoint
     await sleep(THROTTLE_MS);
   }
-
   throw new Error(`translation failed on all providers for chunk (${expected.length} markers)`);
 }
 
-/**
- * Translate protected markdown into Chinese.
- * Throws on failure — md() treats any throw as "translation unavailable"
- * and keeps the original content (translated=false).
- */
+/** Translate protected markdown into Chinese. Throws on failure — md() keeps
+ * the original content with translated=false. */
 export async function translate(content: string, env: Env): Promise<string> {
-  if (!content.trim()) {
-    return content;
-  }
+  if (!content.trim()) return content;
 
-  const primary: Provider = env.TR_PROVIDER === "ai" ? "ai" : DEFAULT_PROVIDER;
-  const chain: [Provider, Provider] = primary === "ai" ? ["ai", "google"] : ["google", "ai"];
-  const chunkSize = chain.includes("google") ? GOOGLE_CHUNK_CHARS : AI_CHUNK_CHARS;
+  const primary = (env.TR_PROVIDER as Provider | undefined) ?? DEFAULT_PROVIDER;
+  const chain: Provider[] =
+    primary === "ai"
+      ? ["ai", "mymemory", "google"]
+      : primary === "google"
+        ? ["google", "mymemory", "ai"]
+        : ["mymemory", "ai", "google"];
 
-  const chunks = splitIntoChunks(content, chunkSize);
+  const chunks = splitIntoChunks(content, CHUNK_CHARS[primary]);
+  const budget = { used: 0 };
   const translated: string[] = [];
-  // sequential: keeps rate limits happy and memory flat
   for (const chunk of chunks) {
-    translated.push(await translateChunk(chunk, chain, env));
+    translated.push(await translateChunk(chunk, chain, env, budget));
   }
   return translated.join("\n\n");
 }

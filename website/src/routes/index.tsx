@@ -7,6 +7,7 @@ import { PostCard } from "@/components/PostCard";
 import { SearchBar } from "@/components/SearchBar";
 import { SourceTabs } from "@/components/SourceTabs";
 import { listPosts } from "@/lib/content";
+import { useT } from "@/lib/i18n";
 import { SITE } from "@/lib/sources";
 import type { ListQuery } from "@/lib/types";
 
@@ -40,6 +41,7 @@ export const Route = createFileRoute("/")({
 function ListPage() {
   const { posts, total, page, totalPages, counts } = Route.useLoaderData();
   const { q, source } = Route.useSearch();
+  const t = useT();
   const stageRef = useRef<HTMLElement>(null);
 
   // scroll becomes a slow camera push through the stage — one set-piece,
@@ -80,22 +82,24 @@ function ListPage() {
               </h1>
               <div className="hero-rule mt-7 max-w-2xl" />
               <p className="mt-6 max-w-xl text-base leading-relaxed text-[var(--stage-muted)] sm:text-lg">
-                来自 {Object.keys(counts).length} 个技术订阅源的内容，自动切片、翻译、归档。
+                {t("intro", { n: Object.keys(counts).length })}
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[0.6875rem] tracking-[0.18em] text-[var(--stage-meta)] uppercase">
-              <span>{total} documents indexed</span>
+              <span>
+                {total} {t("docs")}
+              </span>
               <span className="text-[var(--signal)]">/</span>
-              <span>17 direct feeds</span>
+              <span>17 {t("directFeeds")}</span>
               <span className="text-[var(--signal)]">/</span>
-              <span>zh-CN output</span>
+              <span>{t("output")}</span>
             </div>
           </div>
 
           <div className="flex flex-col gap-5">
             <SearchBar />
             <div className="flex items-center gap-3">
-              <span className="mono-label">Scroll to explore</span>
+              <span className="mono-label">{t("scroll")}</span>
               <span className="h-px flex-1 bg-gradient-to-r from-[var(--signal)]/60 to-transparent" />
               <span className="font-mono text-[10px] text-[var(--stage-lite)]">↓</span>
             </div>
@@ -106,7 +110,7 @@ function ListPage() {
       <section className="flex flex-col gap-4 border-b border-base-300/60 px-5 py-8 sm:px-8">
         <div className="flex items-baseline gap-4">
           <h2 className="display-caps text-2xl sm:text-3xl">Archive</h2>
-          <span className="mono-label">/ all sources</span>
+          <span className="mono-label">{t("allSources")}</span>
         </div>
         <SourceTabs counts={counts} />
       </section>
@@ -115,14 +119,14 @@ function ListPage() {
         {posts.length === 0 ? (
           <div className="flex min-h-64 flex-col items-center justify-center gap-4 text-center">
             <p className="font-mono text-sm tracking-[0.2em] text-base-content/50 uppercase">
-              No signal found
+              {t("noSignal")}
             </p>
             <Link
               to="/"
               search={{ source: undefined, q: undefined, page: undefined }}
               className="btn-cine h-9 px-5"
             >
-              清除筛选
+              {t("reset")}
             </Link>
           </div>
         ) : (
@@ -141,7 +145,7 @@ function ListPage() {
               search={{ source: undefined, q: undefined, page: undefined }}
               className="font-mono text-[11px] tracking-[0.14em] text-base-content/45 uppercase hover:text-[var(--signal)]"
             >
-              Reset filters
+              {t("reset")}
             </Link>
           )}
         </div>

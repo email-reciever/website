@@ -1,5 +1,6 @@
 import { useRouter, useSearch } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { useT } from "@/lib/i18n";
 
 /**
  * Debounced client search — writes ?q= into the URL so results are shareable.
@@ -8,6 +9,7 @@ import { useEffect, useState } from "react";
 export function SearchBar() {
   const router = useRouter();
   const { q } = useSearch({ from: "/" });
+  const t = useT();
   const [value, setValue] = useState(q ?? "");
 
   useEffect(() => {
@@ -35,7 +37,7 @@ export function SearchBar() {
         type="search"
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        placeholder="SEARCH THE ARCHIVE"
+        placeholder={t("search")}
         className="grow bg-transparent font-mono text-xs tracking-[0.08em] text-[var(--input-fg)] outline-none placeholder:text-[var(--stage-lite)]"
       />
       {value ? (

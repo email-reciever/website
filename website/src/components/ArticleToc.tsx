@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { useT } from "@/lib/i18n";
 import type { TocItem } from "@/lib/toc";
 
 /** Section rail for long reads — prose stays primary, the TOC only navigates. */
 export function ArticleToc({ items }: { items: TocItem[] }) {
+  const t = useT();
   const [active, setActive] = useState("");
 
   useEffect(() => {
@@ -26,7 +28,9 @@ export function ArticleToc({ items }: { items: TocItem[] }) {
 
   return (
     <nav aria-label="目录">
-      <div className="mono-label mb-3">Contents / {items.length}</div>
+      <div className="mono-label mb-3">
+        {t("contents")} / {items.length}
+      </div>
       <div className="flex flex-col">
         {items.map((item) => (
           <a

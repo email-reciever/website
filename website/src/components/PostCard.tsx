@@ -1,9 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { formatDate } from "@/lib/date";
+import { useT } from "@/lib/i18n";
 import { sourceBanner, sourceIcon, sourceLabel, sourceNote } from "@/lib/sources";
 import type { ManifestEntry } from "@/lib/types";
 
 export function PostCard({ post }: { post: ManifestEntry }) {
+  const t = useT();
   const href = "/post/$author/$slug";
   return (
     <Link
@@ -52,7 +54,7 @@ export function PostCard({ post }: { post: ManifestEntry }) {
           <div className="flex items-center gap-2">
             {post.subAuthor && <span className="max-w-24 truncate">{post.subAuthor}</span>}
             <span className={post.translated ? "text-[var(--signal)]" : "text-base-content/35"}>
-              {post.translated ? "译" : "原"}
+              {post.translated ? t("translated") : t("original")}
             </span>
           </div>
         </div>

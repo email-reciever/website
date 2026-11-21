@@ -9,7 +9,9 @@
 [![React 19](https://img.shields.io/badge/React-19-61dafb?style=flat-square)](https://react.dev/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-00e5ff?style=flat-square)](./LICENSE)
 
-**[ 在线站点 ](https://email-reciever-website.jiangjiangjiangxi.workers.dev/)** · **[ 架构设计 ](./docs/architecture.md)** · **[ 视觉规范 ](./docs/design-system.md)**
+**[ 在线站点 ](https://email-reciever-website.jiangjiangjiangxi.workers.dev/)** · **[ 订阅 ](https://email-reciever-website.jiangjiangjiangxi.workers.dev/subscribe)** · **[ 架构设计 ](./docs/architecture.md)** · **[ 视觉规范 ](./docs/design-system.md)**
+
+**语言 / Language:** [中文](./README.md) · [English](./README.en.md)
 
 </div>
 
@@ -22,7 +24,7 @@
 一封邮件、一个 RSS feed、一个归档页进来；一篇结构完整、已翻译成中文的 Markdown 文章出去。
 
 - **收录**：Gmail 转发 → Cloudflare Email Routing；RSS / 归档页 → worker cron 每 6h 拉取；GitHub Issue → 单篇录入
-- **处理**：按订阅源切片 → 保留代码块占位符 → Google `gtx` / Workers AI 双通道翻译（429 时自动切 AI）
+- **处理**：按订阅源切片 → 保留代码块占位符 → MyMemory（免 key）→ Workers AI → Google `gtx` 三级翻译回退;占位符多重集校验保证代码块不被译坏
 - **存储**：`content/{author}/{timestamp}.md` + `manifest.json`，全部落在 GitHub
 - **阅读**：TanStack Start 在请求时从 raw CDN 取数，两级缓存；界面为 Active Theory 式电影感舞台，详情页用编辑式阅读节奏
 
@@ -107,9 +109,17 @@ Worker secrets：`REPO_TOKEN`、`ZHIHU_COOKIE`（`wrangler secret put`）；`ENV
 | 常规同步     | worker cron `0 */6 * * *`                          | 每个源取最新 1 条未入库内容                                    |
 | **历史回填** | worker cron `15 3 * * *` + `backfill-rss.yml` 每日 | 从最旧的缺失条目开始回填，按 `origin_url` 与 manifest 双重去重 |
 | 手动回填     | `POST <worker>/rss?backfill=1`                     | 立即触发一轮全源回填                                           |
+| **内容校正** | worker cron `45 4 * * *` + `reconcile-content.yml` | 修复空正文 / 缺译文;源 HTML 变化时原地更新同一 slug            |
 | 知乎         | `subscribe-zhihu.yml` 每 7 天                      | RSSHub 抓取                                                    |
 
 回填受 Workers 免费额度约束（50 subrequest / 10ms CPU 每次调用），所以按「每源每次 1 篇」串行推进；跑完一轮约 2–4 分钟。
+
+## ▍订阅与大模型
+
+- 本站自己的 RSS 2.0 源：`/rss.xml`（支持 ETag / 304，5 分钟缓存），页面 `/subscribe` 可复制订阅地址并预览最近文章
+- 给大模型的索引：`/llms.txt`（精简）与 `/llms-full.txt`（完整上下文），`robots.txt` 显式允许 GPTBot / ClaudeBot / Googlebot
+- `sitemap.xml` 由 manifest 动态生成，含全部文章 URL 与 `lastmod`
+- 每篇文章有 JSON-LD `Article` 结构化数据（见详情页 head）
 
 ## ▍索引修复
 

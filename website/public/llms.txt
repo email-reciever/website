@@ -1,0 +1,46 @@
+# Email Reciever
+
+> A Chinese reading site that collects developer newsletters, RSS feeds and
+> archive pages, translates them into Simplified Chinese, and archives them as
+> plain Markdown on GitHub. 2,500+ posts from 27 sources.
+
+## Site
+
+- [Home / archive](https://email-reciever-website.jiangjiangjiangxi.workers.dev/): filterable list of every post (source, search, pagination in the URL).
+- [Subscribe](https://email-reciever-website.jiangjiangjiangxi.workers.dev/subscribe): feed URL and subscription instructions.
+- [RSS feed](https://email-reciever-website.jiangjiangjiangxi.workers.dev/rss.xml): RSS 2.0, latest 50 posts.
+- [Sitemap](https://email-reciever-website.jiangjiangjiangxi.workers.dev/sitemap.xml): every post URL with lastmod dates.
+
+## How the site works
+
+- Content lives at `content/{author}/{YYYY-MM-DD_HH-mm-ss_SSS}.md` in the
+  GitHub repository `email-reciever/website`, branch `main`.
+- `manifest.json` at the repository root is the index. Each entry has
+  `author`, `slug`, `title`, `description`, `date`, `origin_url`, `translated`.
+- Detail page URLs are `/post/{author}/{slug}` — the same slugs as the files.
+- The site fetches raw Markdown at request time from
+  `https://raw.githubusercontent.com/email-reciever/website/main/content/{author}/{slug}.md`
+  and renders it with @tanstack/markdown + sanitize-html.
+
+## Direct raw URLs for LLMs
+
+- Index: https://raw.githubusercontent.com/email-reciever/website/main/manifest.json
+- A post: https://raw.githubusercontent.com/email-reciever/website/main/content/{author}/{slug}.md
+- Architecture: https://raw.githubusercontent.com/email-reciever/website/main/docs/architecture.md
+- Visual system: https://raw.githubusercontent.com/email-reciever/website/main/docs/design-system.md
+
+## Source whitelist (author keys)
+
+ajiang, alexkondov, arcupdate, astro, cloudflareblog, csstricks, frontendfocus,
+garymarcus, importai, insidergithub, javascriptweekly, mediumcom, mittechai,
+modular, awsml, nodeweekly, others, producthunt, reactdigest, reactstatus, rnn,
+smashingmag, syntaxfm, svelte, tyler, typescript, zhihu
+
+## Notes
+
+- `translated: true` means the body is a Chinese translation; `false` means
+  translation was unavailable and the body is the original English text.
+- Frontmatter is real YAML. Code blocks are protected during translation with
+  positional placeholders and restored afterwards.
+- The site is SSR on Cloudflare Workers; there is no API key or login required
+  to read any content.

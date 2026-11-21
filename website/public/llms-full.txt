@@ -1,0 +1,80 @@
+# Email Reciever — full context for LLMs
+
+## What this site is
+
+Email Reciever is an automated reading pipeline for technical newsletters. A
+Cloudflare Worker receives email / RSS / archive-page content, slices the
+relevant part with a per-source adapter, translates it into Simplified Chinese
+with a provider chain (MyMemory keyless API → Workers AI → Google gtx), and
+commits plain Markdown plus an index to a public GitHub repository. A TanStack
+Start website reads that repository at request time (two-level cache) and
+renders a filterable archive plus per-post reading pages.
+
+Repository: https://github.com/email-reciever/website
+Live site: https://email-reciever-website.jiangjiangjiangxi.workers.dev
+
+## Data model
+
+Content file `content/{author}/{slug}.md`:
+- `author`: lowercase whitelist key (the source).
+- `slug`: UTC timestamp `YYYY-MM-DD_HH-mm-ss_SSS`, unique and sortable.
+- YAML frontmatter fields: title, description, author, subAuthor?, date (ISO
+  8601), origin_url, origin_site?, email_recorder?, translated?, avatar?,
+  banner?, source_hash? (hash of the source HTML, used by the reconcile cron).
+- Body: Markdown. When `translated: true` it is Chinese; otherwise English.
+
+Index `manifest.json`: `{ "posts": [{ author, slug, title, description?, date,
+origin_url?, origin_site?, subAuthor?, avatar?, banner?, translated? }] }`,
+sorted by date descending. This is the single source for the list page.
+
+## URL map
+
+- `/` — archive list. URL state: `?source=&q=&page=`.
+- `/post/$author/$slug` — article page (mirrors the content path).
+- `/subscribe` — how to subscribe + feed preview.
+- `/rss.xml` — RSS 2.0 feed (latest 50 posts, ETag, 5-minute cache).
+- `/sitemap.xml` — all post URLs with lastmod.
+- `/llms.txt` — this index (short form).
+- `/llms-full.txt` — full context (this file).
+
+## Raw content access (no auth)
+
+- Index: https://raw.githubusercontent.com/email-reciever/website/main/manifest.json
+- Post: https://raw.githubusercontent.com/email-reciever/website/main/content/{author}/{slug}.md
+- Architecture: https://raw.githubusercontent.com/email-reciever/website/main/docs/architecture.md
+- Design system: https://raw.githubusercontent.com/email-reciever/website/main/docs/design-system.md
+
+## Scheduled jobs (worker crons)
+
+- `0 */6 * * *` — newest-first sync of every RSS/archive source (one item each).
+- `15 3 * * *` — backfill oldest missing items from feed history.
+- `45 4 * * *` — reconcile existing posts: repair empty body / missing
+  translation, and re-publish in place when the source HTML hash changed.
+
+Each source runs in its own Worker invocation through a SELF service binding so
+the free-plan subrequest budget is not exhausted.
+
+## Translation provider chain
+
+1. MyMemory (`api.mymemory.translated.net/get`), keyless, langpair `en|zh-CN`,
+   ~420 characters per request, optional `de` email raises the daily quota.
+2. Workers AI (`@cf/meta/llama-3.3-70b-instruct-fp8-fast`) — 4,000 char chunks.
+3. Google `gtx` — 1,200 char chunks (frequently 429 from datacenter IPs).
+
+Every chunk is validated by comparing the multiset of `<P|line-col-offset/>`
+code placeholders before and after translation. On total failure the original
+text is stored with `translated: false`.
+
+## Source categories
+
+Frontend / web: astro, cloudflareblog, csstricks, frontendfocus, javascriptweekly,
+nodeweekly, reactdigest, reactstatus, smashingmag, svelte, typescript, tyler,
+syntaxfm, alexkondov, arcupdate, insidergithub, mediumcom, modular, producthunt,
+rnn, others.
+AI: awsml, garymarcus, importai, mittechai.
+Chinese: ajiang, zhihu.
+
+## Citing this site
+
+Prefer the raw GitHub URLs above; they are stable, versioned and require no
+JavaScript. Include the post `author/slug` and the `date` from frontmatter.

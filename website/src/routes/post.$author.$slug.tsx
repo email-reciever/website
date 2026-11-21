@@ -8,6 +8,7 @@ import { PostCard } from "@/components/PostCard";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { getPostPage, getRelatedPosts } from "@/lib/content";
 import { formatDate } from "@/lib/date";
+import { useT } from "@/lib/i18n";
 import { sourceIcon, sourceLabel } from "@/lib/sources";
 import { extractHeadings } from "@/lib/toc";
 import type { ManifestEntry } from "@/lib/types";
@@ -42,6 +43,7 @@ export const Route = createFileRoute("/post/$author/$slug")({
 });
 
 function PostPage() {
+  const t = useT();
   const { entry, html } = Route.useLoaderData();
   const originURL =
     entry.origin_url && entry.origin_url !== "javascript:;" ? entry.origin_url : undefined;
@@ -129,7 +131,7 @@ function PostPage() {
                   <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-current" aria-hidden>
                     <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3Zm-9 2h6v2H5v12h12v-6h2v8H3V5h2Z" />
                   </svg>
-                  Read original
+                  {t("readOriginal")}
                 </a>
               )}
             </header>
@@ -138,16 +140,16 @@ function PostPage() {
               <Markdown html={html} />
             ) : (
               <div className="border border-base-300/60 border-l-2 border-l-[var(--signal)] p-5 font-mono text-xs tracking-[0.1em] text-base-content/55 uppercase">
-                No body content available — try reading the original.
+                {t("noBody")}
               </div>
             )}
 
             {/* colophon — deliberately quiet, closes the reading session */}
             <div className="mt-16 flex flex-col gap-2 border-t border-base-300/60 pt-6 font-mono text-[10px] tracking-[0.14em] text-base-content/30 uppercase">
               <span>
-                End of document / {entry.author} / {entry.slug}
+                {t("endDoc")} / {entry.author} / {entry.slug}
               </span>
-              <span>Archived & translated automatically · Made for the open web</span>
+              <span>{t("archived")}</span>
             </div>
           </div>
 
@@ -157,13 +159,13 @@ function PostPage() {
 
               {entry.subAuthor && (
                 <div className="border border-base-300/60 bg-base-100/40 p-4">
-                  <div className="mono-label mb-2">Author</div>
+                  <div className="mono-label mb-2">{t("author")}</div>
                   <p className="text-sm font-medium">{entry.subAuthor}</p>
                 </div>
               )}
 
               <div className="border border-base-300/60 bg-base-100/40 p-4">
-                <div className="mono-label mb-2">Source</div>
+                <div className="mono-label mb-2">{t("source")}</div>
                 <Link
                   to="/"
                   search={{ source: entry.author, q: undefined, page: undefined }}
@@ -181,7 +183,7 @@ function PostPage() {
               </div>
 
               <div className="border border-base-300/60 bg-base-100/40 p-4">
-                <div className="mono-label mb-2">Meta</div>
+                <div className="mono-label mb-2">{t("meta")}</div>
                 <dl className="flex flex-col gap-1.5 font-mono text-[10px] tracking-[0.08em] text-base-content/55">
                   <div className="flex justify-between gap-2">
                     <dt>slug</dt>
@@ -200,7 +202,7 @@ function PostPage() {
         {related.data && related.data.length > 0 && (
           <section className="mt-20 border-t border-base-300/60 pt-10">
             <div className="mb-6 flex items-baseline gap-4">
-              <h2 className="display-caps text-xl">Related signal</h2>
+              <h2 className="display-caps text-xl">{t("related")}</h2>
               <span className="mono-label">/ {sourceLabel(entry.author)}</span>
             </div>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">

@@ -11,6 +11,7 @@ import "@/styles/app.css";
 
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { useT } from "@/lib/i18n";
 
 interface RouterContext {
   queryClient: QueryClient;
@@ -23,6 +24,35 @@ export const Route = createRootRouteWithContext<RouterContext>()({
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "description", content: "订阅邮件自动翻译与归档 —— 技术 newsletter 的中文阅读站" },
       { title: "Email Reciever — 订阅阅读" },
+    ],
+    links: [
+      {
+        rel: "alternate",
+        type: "application/rss+xml",
+        title: "Email Reciever RSS",
+        href: "/rss.xml",
+      },
+      { rel: "canonical", href: "https://email-reciever-website.jiangjiangjiangxi.workers.dev/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Email Reciever",
+          alternateName: "Email Reciever 订阅阅读",
+          url: "https://email-reciever-website.jiangjiangjiangxi.workers.dev/",
+          description: "技术 newsletter 自动翻译与归档 — 中文阅读站",
+          inLanguage: "zh-CN",
+          potentialAction: {
+            "@type": "SearchAction",
+            target:
+              "https://email-reciever-website.jiangjiangjiangxi.workers.dev/?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
+        }),
+      },
     ],
   }),
   component: RootComponent,
@@ -75,18 +105,21 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
 }
 
 function RootError({ error }: { error: unknown }) {
+  const t = useT();
   const message = error instanceof Error ? error.message : "服务出了点问题";
   return (
     <RootDocument>
       <section className="flex min-h-[70vh] flex-col items-center justify-center gap-6 px-5 text-center">
         <div className="h-px w-16 bg-[var(--signal)]" />
         <div className="mono-label">Error / 500</div>
-        <h1 className="display-caps text-7xl text-base-content/20 sm:text-8xl">Lost signal</h1>
+        <h1 className="display-caps text-7xl text-base-content/20 sm:text-8xl">
+          {t("lostSignal")}
+        </h1>
         <p className="max-w-md font-mono text-xs tracking-[0.1em] text-base-content/50">
           {message}
         </p>
         <a href="/" className="btn-cine h-10 px-6">
-          Return to feed
+          {t("returnFeed")}
         </a>
       </section>
     </RootDocument>
@@ -94,14 +127,15 @@ function RootError({ error }: { error: unknown }) {
 }
 
 function NotFound() {
+  const t = useT();
   return (
     <section className="flex min-h-[70vh] flex-col items-center justify-center gap-6 px-5 text-center">
       <div className="h-px w-16 bg-[var(--signal)]" />
       <div className="mono-label">Error / 404</div>
-      <h1 className="display-caps text-8xl text-base-content/20 sm:text-9xl">No signal</h1>
-      <p className="font-mono text-xs tracking-[0.1em] text-base-content/50">
-        这篇文章不存在或已被移除
-      </p>
+      <h1 className="display-caps text-8xl text-base-content/20 sm:text-9xl">
+        {t("noSignalTitle")}
+      </h1>
+      <p className="font-mono text-xs tracking-[0.1em] text-base-content/50">{t("notFoundDesc")}</p>
       <a href="/" className="btn-cine h-10 px-6">
         Return to feed
       </a>

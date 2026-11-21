@@ -10,8 +10,10 @@ interface Env {
   ENV?: "dev";
   /** optional override for the Workers AI translation model */
   TR_MODEL?: string;
-  /** translation provider chain primary: 'google' (non-AI, default) or 'ai' */
-  TR_PROVIDER?: "google" | "ai";
+  /** translation provider chain primary */
+  TR_PROVIDER?: "mymemory" | "ai" | "google";
+  /** email raises MyMemory's keyless daily quota from 5k to 50k chars */
+  MYMEMORY_EMAIL?: string;
   /** self service binding used by the cron fan-out (fresh subrequest budget per source) */
   SELF: Fetcher;
 }
