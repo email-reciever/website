@@ -110,7 +110,7 @@ export async function openLocalTranslator() {
       const timer = setTimeout(() => {
         pending.delete(i);
         reject(new Error(`CDP timeout: ${method}`));
-      }, 120_000);
+      }, 60_000);
       pending.set(i, (msg) => {
         clearTimeout(timer);
         resolve(msg);
@@ -157,21 +157,46 @@ export async function openLocalTranslator() {
     throw new Error(`Translator init failed: ${JSON.stringify(init.result.exceptionDetails)}`);
   }
 
+  /** split a long line at whitespace, never cutting a `[N]` protection token */
+  function piecesForTranslation(text, limit = 1400) {
+    const raw = text.split(/(\s+)/);
+    const pieces = [];
+    let current = "";
+    for (const part of raw) {
+      if (!part) continue;
+      if (current && current.length + part.length > limit) {
+        pieces.push(current);
+        current = part;
+      } else {
+        current += part;
+      }
+    }
+    if (current) pieces.push(current);
+    return pieces;
+  }
+
   async function translateLine(line) {
     if (!line.trim()) return line;
     const { out, stash } = protectLine(line);
     const proseOnly = out.replace(/\[\d+\]/g, "").trim();
     if (!proseOnly) return line;
 
-    const res = await send("Runtime.evaluate", {
-      expression: `window.__tr.translate(${JSON.stringify(out)})`,
-      awaitPromise: true,
-      returnByValue: true,
-    });
-    if (res.result?.exceptionDetails) throw new Error("line translation failed");
-    const translated = res.result?.result?.value;
-    if (typeof translated !== "string") return line;
-    return restoreLine(translated, stash);
+    const done = [];
+    for (const piece of piecesForTranslation(out)) {
+      if (!piece.trim()) {
+        done.push(piece);
+        continue;
+      }
+      const res = await send("Runtime.evaluate", {
+        expression: `window.__tr.translate(${JSON.stringify(piece)})`,
+        awaitPromise: true,
+        returnByValue: true,
+      });
+      if (res.result?.exceptionDetails) throw new Error("line translation failed");
+      const translated = res.result?.result?.value;
+      done.push(typeof translated === "string" ? translated : piece);
+    }
+    return restoreLine(done.join(""), stash);
   }
 
   async function translateMarkdown(markdown) {

@@ -129,7 +129,10 @@ async function main() {
       ...(data.archiveCandidates || []).map((i) => ({ ...i, via: "archive" })),
     ];
     for (const item of items) {
-      if (!item.url || seen.has(normalize(item.url))) continue;
+      // react.status.com is unreachable from this network — retrying every run
+      // only wastes time. It can be revisited when the host is reachable again.
+      if (!item.url || item.url.includes("react.status.com") || seen.has(normalize(item.url)))
+        continue;
       seen.add(normalize(item.url));
       candidates.push({ ...item, author });
     }
