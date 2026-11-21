@@ -17,7 +17,7 @@
 
 ---
 
-![Home — cinematic signal stage and archive](docs/screenshots/home-split.png)
+![Home — dark / light comparison](docs/screenshots/home-en-split.png)
 
 ## ▍What it does
 
@@ -45,11 +45,11 @@ Key decision: content is read from `main` **at runtime**, so content must be pus
 
 ## ▍Interface
 
-![Detail — reading progress, TOC rail, prose and colophon](docs/screenshots/detail-split.png)
+![Detail — dark / light comparison](docs/screenshots/detail-en-split.png)
 
 The interface uses **Active Theory** visual language: a dark stage with one electric-cyan accent, zero radius, no CSS shadows, and one canvas particle set-piece; scrolling pushes the camera slowly forward. Detail pages keep the same system and borrow only beautiful-article's reading rhythm (TOC, progress, 68ch measure, colophon). Light mode is the inverted version of the same language — no black holes.
 
-![Mobile home](docs/screenshots/mobile.png)
+![Mobile home](docs/screenshots/mobile-en.png)
 
 ## ▍Layout
 

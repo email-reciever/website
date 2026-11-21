@@ -17,7 +17,7 @@
 
 ---
 
-![首页 — 电影感信号舞台与档案流](docs/screenshots/home.png)
+![首页 — 明暗主题对比（左暗右亮）](docs/screenshots/home-split.png)
 
 ## ▍它做什么
 
@@ -45,11 +45,9 @@ flowchart LR
 
 ## ▍界面
 
-![详情页 — 阅读进度、目录轨、正文与 colophon](docs/screenshots/detail.png)
+![详情页 — 明暗主题对比（左暗右亮）](docs/screenshots/detail-split.png)
 
 界面采用 **Active Theory** 视觉语言：深色舞台 + 单一电光青强调色、零圆角、无 CSS 阴影、一处 canvas 粒子场景作为唯一高潮；滚动时镜头缓慢推进。详情页沿用同一套色板，只借用 beautiful-article 的编辑式阅读节奏（目录、进度、68ch 行宽、colophon）——不引入第二套视觉系统。浅色模式是同一套语言的反相版本，舞台、导航、页脚同步切换，不留黑洞。
-
-![浅色模式首页](docs/screenshots/light.png)
 
 ![移动端首页](docs/screenshots/mobile.png)
 
