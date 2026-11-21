@@ -218,7 +218,7 @@ export default {
       try {
         const body = (await request.json()) as { text?: string };
         const audio = await synthesize(String(body.text ?? ""), env);
-        return new Response(new Blob([audio], { type: "audio/mpeg" }), {
+        return new Response(new Blob([audio.buffer as ArrayBuffer], { type: "audio/mpeg" }), {
           status: 200,
           headers: { "Content-Type": "audio/mpeg", "Cache-Control": "public, max-age=86400" },
         });
