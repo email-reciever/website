@@ -117,7 +117,10 @@ export async function openLocalTranslator() {
   await sleep(3500);
 
   // A real click satisfies the user-gesture requirement while the language
-  // pack downloads; after the first run the profile keeps it cached.
+  // pack downloads; after the first run the profile keeps it cached. The tab
+  // must be frontmost or the synthesized click is not treated as activation.
+  await send("Page.bringToFront");
+  await sleep(400);
   await send("Input.dispatchMouseEvent", {
     type: "mousePressed",
     x: 120,
