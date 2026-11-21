@@ -3,5 +3,11 @@
   "name": "email-reciever-website",
   "compatibility_date": "2026-09-01",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "@tanstack/react-start/server-entry"
+  "main": "@tanstack/react-start/server-entry",
+  "services": [
+    {
+      "binding": "PARSER",
+      "service": "subscribe-email"
+    }
+  ]
 }

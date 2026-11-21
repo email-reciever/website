@@ -1,15 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const WORKER = "https://subscribe-email.jiangjiangjiangxi.workers.dev";
-
-/** Proxy to the Worker's Browserless drill endpoint (keeps the key server-side). */
+/** Proxy to the parser Worker through a Service Binding — a Worker cannot
+ * fetch another Worker's workers.dev URL (Cloudflare error 1042). */
 export const Route = createFileRoute("/api/drill")({
   server: {
     handlers: {
       POST: async ({ request }) => {
         try {
           const body = (await request.json()) as { urls?: string[] };
-          const response = await fetch(`${WORKER}/weekly/drill`, {
+          const parser = (process.env as unknown as { PARSER: { fetch: typeof fetch } }).PARSER;
+          const response = await parser.fetch("https://parser.internal/weekly/drill", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ urls: (body.urls ?? []).slice(0, 3) }),
