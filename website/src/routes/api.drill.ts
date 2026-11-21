@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 const WORKER = "https://subscribe-email.jiangjiangjiangxi.workers.dev";
 
 /** Proxy to the Worker's Browserless drill endpoint (keeps the key server-side). */
-export const Route = createFileRoute("/api.drill")({
+export const Route = createFileRoute("/api/drill")({
   server: {
     handlers: {
       POST: async ({ request }) => {
