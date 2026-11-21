@@ -88,18 +88,56 @@ function WeeklyPage() {
         </div>
       </div>
 
-      {/* Reserved slots for the upcoming Remotion video + narration audio. */}
-      <section className="mb-10 grid grid-cols-1 gap-4 border border-base-300/60 p-5 sm:grid-cols-2">
-        <div className="flex flex-col gap-2">
-          <div className="mono-label">video / remotion slot</div>
-          <div className="flex h-28 items-center justify-center border border-dashed border-base-300/70 font-mono text-[11px] tracking-[0.12em] text-base-content/40 uppercase">
-            周总结速览视频 · 待生成
+      <section className="mb-10 grid grid-cols-1 gap-4 border border-base-300/60 p-5 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center justify-between gap-3">
+            <div className="mono-label">video / remotion</div>
+            <a
+              href={`/weekly/${digest.week.key}.mp4`}
+              target="_blank"
+              rel="noreferrer"
+              className="font-mono text-[10px] tracking-[0.12em] text-[var(--signal)] uppercase"
+            >
+              open file ↗
+            </a>
           </div>
+          <video
+            controls
+            preload="metadata"
+            poster={`/weekly/${digest.week.key}-poster.png`}
+            className="w-full border border-base-300/70 bg-black"
+          >
+            <source src={`/weekly/${digest.week.key}.mp4`} type="video/mp4" />
+            <track
+              kind="captions"
+              src={`/weekly/${digest.week.key}.vtt`}
+              srcLang="zh"
+              label="中文"
+              default
+            />
+            你的浏览器不支持视频播放。
+          </video>
         </div>
-        <div className="flex flex-col gap-2">
-          <div className="mono-label">audio / narration slot</div>
-          <div className="flex h-28 items-center justify-center border border-dashed border-base-300/70 font-mono text-[11px] tracking-[0.12em] text-base-content/40 uppercase">
-            语音导读 · 待生成
+        <div className="flex flex-col gap-3">
+          <div className="mono-label">audio / narration</div>
+          <div className="flex min-h-28 flex-col justify-center gap-4 border border-base-300/70 p-5">
+            <p className="text-[13px] leading-relaxed text-base-content/60">
+              中文语音导读,由 macOS 中文语音合成,与视频同步生成。
+            </p>
+            <audio controls preload="metadata" className="w-full">
+              <source src={`/weekly/${digest.week.key}.m4a`} type="audio/mp4" />
+              <track
+                kind="captions"
+                src={`/weekly/${digest.week.key}.vtt`}
+                srcLang="zh"
+                label="中文"
+                default
+              />
+              你的浏览器不支持音频播放。
+            </audio>
+            <a href={`/weekly/${digest.week.key}.m4a`} download className="btn-cine h-9 w-fit px-4">
+              下载音频
+            </a>
           </div>
         </div>
       </section>

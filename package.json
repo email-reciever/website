@@ -17,6 +17,7 @@
     "translate:local": "node scripts/translate-local.mjs",
     "normalize:slugs": "node scripts/normalize-slugs.mjs",
     "weekly:digest": "node scripts/weekly-digest.mjs",
+    "weekly:media": "node scripts/weekly-media.mjs",
     "parser:dev": "corepack pnpm -F=\"@email.reciever/parser\" dev",
     "parser:deploy": "corepack pnpm -F=\"@email.reciever/parser\" run deploy",
     "parser:test": "corepack pnpm -F=\"@email.reciever/parser\" test",

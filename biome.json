@@ -13,6 +13,7 @@
       "!**/.tanstack",
       "!**/.output",
       "!**/content",
+      "!video",
       "!website/src/styles/app.css",
       "!website/src/routeTree.gen.ts",
       "!website/public",
