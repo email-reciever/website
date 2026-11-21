@@ -1,65 +1,122 @@
-# Email Reciever
+<div align="center">
 
-订阅自动翻译与归档站:Cloudflare Worker 通过邮件转发、RSS 直连或列表页爬取收取订阅内容 → 解析、经 Google 翻译 / Workers AI 双通道翻译成中文 Markdown → 存入本仓库 → [TanStack Start](https://tanstack.com/start) 网站运行时从 GitHub 读取渲染。
+# ▚ EMAIL RECIEVER
 
-## 架构
+**把全世界的技术通讯，读成中文。**
+
+[![Cloudflare Workers](https://img.shields.io/badge/edge-Cloud%20Workers-orange?style=flat-square)](https://workers.cloudflare.com/)
+[![TanStack Start](https://img.shields.io/badge/app-TanStack%20Start-ff4154?style=flat-square)](https://tanstack.com/start)
+[![React 19](https://img.shields.io/badge/React-19-61dafb?style=flat-square)](https://react.dev/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-00e5ff?style=flat-square)](./LICENSE)
+
+**[ 在线站点 ](https://email-reciever-website.jiangjiangjiangxi.workers.dev/)** · **[ 架构设计 ](./docs/architecture.md)** · **[ 视觉规范 ](./docs/design-system.md)**
+
+</div>
+
+---
+
+![首页 — 电影感信号舞台与档案流](docs/screenshots/home.png)
+
+## ▍它做什么
+
+一封邮件、一个 RSS feed、一个归档页进来；一篇结构完整、已翻译成中文的 Markdown 文章出去。
+
+- **收录**：Gmail 转发 → Cloudflare Email Routing；RSS / 归档页 → worker cron 每 6h 拉取；GitHub Issue → 单篇录入
+- **处理**：按订阅源切片 → 保留代码块占位符 → Google `gtx` / Workers AI 双通道翻译（429 时自动切 AI）
+- **存储**：`content/{author}/{timestamp}.md` + `manifest.json`，全部落在 GitHub
+- **阅读**：TanStack Start 在请求时从 raw CDN 取数，两级缓存；界面为 Active Theory 式电影感舞台，详情页用编辑式阅读节奏
+
+> 2,500+ 篇文章不在构建期打包 —— 这正是从 Astro 全量 SSG 迁移到 SSR 的原因。
+
+## ▍架构
 
 ```mermaid
 flowchart LR
-    A[订阅邮件<br/>Gmail 转发] -->|Cloudflare Email Routing| B[parser worker<br/>cores/parser]
-    R[订阅源 RSS / 归档页<br/>直连 cron] -->|每 6h 拉取 + GUID 去重| B
-    Z[知乎 RSSHub] -->|GH Actions cron| B
-    B -->|切片 + 双通道翻译<br/>+ 生成 Markdown| C[(GitHub 仓库<br/>content/ + manifest.json)]
-    C -->|raw.githubusercontent.com| D[website<br/>website/]
-    D -->|SSR + 边缘缓存| E[Cloudflare Workers]
+    M[邮件 / RSS / 归档页] -->|Email Routing · cron 6h| W[parser worker]
+    Z[知乎 RSSHub] -->|GH Actions| W
+    W -->|切片 · 翻译 · 写入| G[(GitHub<br/>content/ + manifest.json)]
+    G -->|raw.githubusercontent| S[website worker]
+    S -->|SSR + 边缘缓存| U[读者]
 ```
 
-- **内容不在构建期打包**(这也是本次重构的起因 —— 2400+ 篇文章全量 SSG 超出了 Cloudflare Pages 的构建限制),网站在请求时通过 raw CDN 拉取,两级缓存(edge cache + worker 内存)扛住流量。
-- `manifest.json` 是全部文章的元数据索引,parser 每发布一篇就同步更新;列表页只读这一个文件。
+核心取舍：内容在**运行时**从 `main` 分支读取，所以推送内容必须先于部署；索引 `manifest.json` 是列表页唯一数据源。详见 [架构设计](./docs/architecture.md)。
 
-## 目录
+## ▍界面
 
-| 路径                | 说明                                                                                                  |
-| ------------------- | ----------------------------------------------------------------------------------------------------- |
-| `website/`          | TanStack Start 站点(React 19 + @tanstack/markdown + Tailwind 4 + daisyUI 5),部署到 Cloudflare Workers |
-| `cores/parser/`     | Worker:接收邮件 / RSS 直连 / 归档页爬取、按订阅源切片、google gtx + Workers AI 翻译、写入仓库         |
-| `packages/consts`   | 订阅源白名单 / RSS 源清单等常量(parser 与 website 共享)                                               |
-| `packages/turndown` | HTML → Markdown 转换器(带自定义规则的 fork)                                                           |
-| `packages/server`   | Deno 辅助服务:本地写入、批量补发、Discord 通知                                                        |
-| `packages/dts`      | frontmatter 等类型定义                                                                                |
-| `content/`          | 文章正文 `{author}/{timestamp}.md`                                                                    |
-| `manifest.json`     | 文章索引(网站列表页数据源)                                                                            |
+![详情页 — 阅读进度、目录轨、正文与 colophon](docs/screenshots/detail.png)
 
-## 开发
+界面采用 **Active Theory** 视觉语言：纯黑舞台 + 单一电光青强调色、零圆角、无 CSS 阴影、一处 canvas 粒子场景作为唯一高潮；滚动时镜头缓慢推进。详情页沿用同一套色板，只借用 beautiful-article 的编辑式阅读节奏（目录、进度、68ch 行宽、colophon）——不引入第二套视觉系统。
+
+![移动端首页](docs/screenshots/mobile.png)
+
+## ▍目录
+
+| 路径                          | 说明                                                      |
+| ----------------------------- | --------------------------------------------------------- |
+| `website/`                    | TanStack Start + React 19 站点，部署到 Cloudflare Workers |
+| `cores/parser/`               | Worker：收信 / RSS / 爬取、切片、翻译、写入 GitHub        |
+| `packages/consts`             | 白名单、RSS 源、归档源配置（源码直出）                    |
+| `packages/turndown`           | HTML → Markdown 转换器（fork）                            |
+| `packages/server`             | Deno 辅助服务：本地写入、批量补发、Discord 通知           |
+| `packages/dts`                | frontmatter 类型契约                                      |
+| `scripts/migrate-content.mjs` | 遗留 MDX 迁移 / 索引重建 / 全量回填                       |
+| `content/`                    | 文章正文 `{author}/{timestamp}.md`                        |
+| `manifest.json`               | 文章索引（列表页唯一数据源）                              |
+
+## ▍开发
 
 ```bash
-pnpm install          # 安装(根 package.json 管理工具链)
-
+pnpm install          # 安装（postinstall 会构建 turndown fork）
 pnpm dev              # 网站本地开发
-pnpm parser:dev       # worker 本地开发(wrangler dev)
-pnpm parser:test      # worker 测试(vitest + workers pool)
-pnpm sr               # deno 辅助服务
+pnpm parser:dev       # worker 本地开发
+pnpm parser:test      # worker 测试
+pnpm sr               # Deno 辅助服务
 
-pnpm check            # biome lint / format 检查
+pnpm check            # biome
 pnpm format           # biome 自动修复
-
-pnpm migrate          # 增量收编 src/content 中的遗留 MDX(幂等)
-pnpm migrate:rebuild  # 索引漂移时从 content/**/*.md 全量重建 manifest.json
+pnpm build            # 网站构建 + 类型检查
 ```
 
-## 部署
+## ▍部署
+
+> 因为内容在运行时从 `main` 拉取，**顺序很重要**：先推内容，再部署网站。
 
 ```bash
-pnpm deploy           # 网站构建 + wrangler deploy(Cloudflare Workers)
-pnpm parser:deploy    # Email Worker 部署
+# 1. 提交并推送内容 + 代码到 main
+git push origin main
+
+# 2. 等待 raw CDN 传播（~5min），确认数据到位
+curl -s https://raw.githubusercontent.com/email-reciever/website/main/manifest.json \
+  | jq '.posts | length'
+
+# 3. 部署网站（worker: email-reciever-website）
+pnpm run deploy
+
+# 4. 部署 parser（worker: subscribe-email）
+pnpm run parser:deploy
 ```
 
-Worker secret 通过 `wrangler secret put`(REPO_TOKEN / ZHIHU_COOKIE / ENV)管理,详见 `docs/architecture.md`。
+Worker secrets：`REPO_TOKEN`、`ZHIHU_COOKIE`（`wrangler secret put`）；`ENV` 不要设成 `dev`，否则写入会走本地 deno 服务。
 
-## 提交新订阅源 / 收录文章
+## ▍定时任务
 
-- 新订阅源:提 Issue 使用 `[Subscribe]` 模板
-- 收录外部文章:提 Issue 使用 `[Recorder]` 模板,Worker 会抓取、翻译并在 Issue 下回评
+| 任务         | 触发                                               | 行为                                                           |
+| ------------ | -------------------------------------------------- | -------------------------------------------------------------- |
+| 常规同步     | worker cron `0 */6 * * *`                          | 每个源取最新 1 条未入库内容                                    |
+| **历史回填** | worker cron `15 3 * * *` + `backfill-rss.yml` 每日 | 从最旧的缺失条目开始回填，按 `origin_url` 与 manifest 双重去重 |
+| 手动回填     | `POST <worker>/rss?backfill=1`                     | 立即触发一轮全源回填                                           |
+| 知乎         | `subscribe-zhihu.yml` 每 7 天                      | RSSHub 抓取                                                    |
+
+回填受 Workers 免费额度约束（50 subrequest / 10ms CPU 每次调用），所以按「每源每次 1 篇」串行推进；跑完一轮约 2–4 分钟。
+
+## ▍索引修复
+
+若 `manifest.json` 漂移或异常缩小：
+
+```bash
+pnpm run migrate:rebuild     # 从 content/**/*.md 全量重建（写紧凑 JSON）
+pnpm migrate                 # 增量收编 src/content 中遗留的 MDX
+```
 
 ## License
 

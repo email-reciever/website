@@ -96,7 +96,7 @@ sequenceDiagram
 - **alexkondov**:博客归档 `alexkondov.com/articles/`,条目链接有稳定的 `.article-link` 类;SSR 全文直接 article 模式
 - 爬取前先对照去重列表,已发布的条目只花一次列表页请求
 
-**调度**:cron(`[triggers]` 每 6h)+ 手动 `POST /rss`(GH workflow `subscribe-rss.yml`,secrets `WORKER_RSS_URL`)。
+**调度**:cron(`[triggers]` 每 6h 常规同步 + 每日 03:15 历史回填)+ 手动 `POST /rss`、`POST /rss?backfill=1`(GH workflow `subscribe-rss.yml` / `backfill-rss.yml`,复用 secrets `WORKER_RSS_URL`)。回填从 feed **最旧的缺失条目**开始,按 GUID 元数据 + manifest 的 `origin_url` 双重去重,每源每次 1 篇串行推进,避免免费额度耗尽。
 
 > **fan-out(2026-11 修复)**:一个 invocation 同步全部 17 个源会耗尽 Workers 免费版 50 次 subrequest(第 5 个之后的源永远失败)。现在 `/rss` 与 cron 通过 `SELF` service binding 调用 `/rss/:source`,每个源在独立 invocation 中运行、拥有独立预算 —— 不能用 `fetch(自己的 workers.dev URL)`,Cloudflare 会报 1042。fan-out **串行**执行(并发会让 manifest 竞争),每源每次最多 1 篇,以控制 CPU 时间。全量同步约 100–260s。
 

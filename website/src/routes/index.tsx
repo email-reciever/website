@@ -86,7 +86,7 @@ function ListPage() {
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[0.6875rem] tracking-[0.18em] text-slate-400/70 uppercase">
               <span>{total} documents indexed</span>
               <span className="text-[var(--signal)]">/</span>
-              <span>17 live sources</span>
+              <span>17 direct feeds</span>
               <span className="text-[var(--signal)]">/</span>
               <span>zh-CN output</span>
             </div>
