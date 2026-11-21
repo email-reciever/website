@@ -1,0 +1,22 @@
+name: Rss-backfill
+
+# 历史内容回填:逐个源拉取 feed 中尚未入库的**较早**条目。
+# worker 自身也有每日 cron(wrangler.toml 的 15 3 * * *),此 workflow 用于
+# 手动立即触发以及云端 cron 失效时的备份。
+# 复用已有 secret: WORKER_RSS_URL = https://<worker>/rss
+
+on:
+  schedule:
+    - cron: "20 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: backfill missing history
+        uses: indiesdev/curl@v1.1
+        with:
+          method: "POST"
+          url: "${{ secrets.WORKER_RSS_URL }}?backfill=1"
+          timeout: 600000

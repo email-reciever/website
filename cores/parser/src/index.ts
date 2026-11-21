@@ -38,6 +38,9 @@ import { syncArchiveSource } from "./utils/scrape";
 
 dayjs.locale("zh-cn");
 
+/** daily backfill cron — walks older feed items missing from the project */
+const BACKFILL_CRON = "15 3 * * *";
+
 const ALL_SYNC_KEYS = [
   ...(Object.keys(RSS_SOURCES) as SenderType[]),
   ...(Object.keys(ARCHIVES_SOURCES) as SenderType[]),
@@ -49,8 +52,12 @@ const ALL_SYNC_KEYS = [
  * free-plan budget after the first few. A self-fetch gives every source a
  * fresh budget; the fan-out itself costs only 17 subrequests.
  */
-async function fanOutSync(env: Env) {
+async function fanOutSync(env: Env, backfill = false) {
   const detail: Array<{ key: SenderType; status: number; body: string }> = [];
+  const path = (key: SenderType) =>
+    backfill
+      ? `https://rss.internal/rss/backfill/${encodeURIComponent(key)}`
+      : `https://rss.internal/rss/${encodeURIComponent(key)}`;
   // Serialized: concurrent invocations race on manifest.json's
   // read-modify-write and GitHub rejects the competing commits, so new posts
   // land on disk but miss the index. One at a time keeps the index exact.
@@ -59,9 +66,7 @@ async function fanOutSync(env: Env) {
     const batch = ALL_SYNC_KEYS.slice(i, i + batchSize);
     const results = await Promise.allSettled(
       batch.map(async (key) => {
-        const res = await env.SELF.fetch(`https://rss.internal/rss/${encodeURIComponent(key)}`, {
-          method: "POST",
-        });
+        const res = await env.SELF.fetch(path(key), { method: "POST" });
         const body = await res.text();
         return { key, status: res.status, body: body.slice(0, 120) };
       }),
@@ -161,9 +166,25 @@ export default {
       await zhihu("", "", [], env);
       return Response.json({ fetch: Date.now() });
     } else if (pathname === "/rss") {
-      // manual trigger: fan out one source per invocation
-      const detail = await fanOutSync(env);
-      return Response.json({ synced: Date.now(), sources: ALL_SYNC_KEYS.length, detail });
+      // manual trigger: ?backfill=1 walks older missing items instead of newest
+      const backfill = new URL(url).searchParams.get("backfill") === "1";
+      const detail = await fanOutSync(env, backfill);
+      return Response.json({
+        synced: Date.now(),
+        mode: backfill ? "backfill" : "sync",
+        sources: ALL_SYNC_KEYS.length,
+        detail,
+      });
+    } else if (pathname.startsWith("/rss/backfill/")) {
+      const key = decodeURIComponent(pathname.slice("/rss/backfill/".length)) as SenderType;
+      if (key in RSS_SOURCES) {
+        await syncRssSource(key, env, adapter, { backfill: true });
+      } else if (key in ARCHIVES_SOURCES) {
+        await syncArchiveSource(key, env, adapter, { backfill: true });
+      } else {
+        return Response.json({ error: "unknown source", source: key }, { status: 404 });
+      }
+      return Response.json({ source: key, mode: "backfill", synced: Date.now() });
     } else if (pathname.startsWith("/rss/")) {
       // single-source worker invoked by the fan-out above (or called directly)
       const key = decodeURIComponent(pathname.slice("/rss/".length)) as SenderType;
@@ -191,8 +212,7 @@ export default {
   // direct-subscription sync (RSS feeds + archive scrapes), crons in wrangler.toml.
   // Fan out via self-fetch so every source gets its own subrequest budget.
   async scheduled(controller, env) {
-    void controller;
-    await fanOutSync(env);
+    await fanOutSync(env, controller.cron === BACKFILL_CRON);
   },
   async email(message, env, _ctx) {
     try {

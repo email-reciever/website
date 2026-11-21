@@ -7,11 +7,12 @@
  * `{source}.metadata.json` and publishes through the same slicing /
  * translating pipeline as emails.
  *
- * Source list lives in packages/consts/src/rss.ts:
- * - `newsletter` mode: a feed item IS a full newsletter issue (HTML identical
- *   to the email body), so existing email adapters slice it as usual
- * - `article` mode: a feed item is a single article; html2md converts it
- *   directly, then it goes through translation
+ * Two modes:
+ * - normal (`/rss`): newest-first, 1 item per source per run
+ * - backfill (`/rss?backfill=1`): oldest-first, walks the feed history for
+ *   items that are in the feed but missing from the project. Dedupes against
+ *   BOTH the GUID metadata and the live manifest (origin_url), so a pruned or
+ *   missing metadata file can never create duplicates.
  */
 
 import type { RssSource } from "@email.reciever/consts/rss";
@@ -26,6 +27,7 @@ import {
   readProcessed,
 } from "./ingest";
 import { logger } from "./logger";
+import { readManifest } from "./manifest";
 
 interface FeedItem {
   title?: string | Record<string, unknown>;
@@ -39,7 +41,12 @@ interface FeedItem {
 const textOf = (value?: string | Record<string, unknown>): string =>
   typeof value === "string" ? value : "";
 
-async function fetchNewItems(feed: string, processed: string[]): Promise<IngestItem[]> {
+export interface SyncOptions {
+  backfill?: boolean;
+}
+
+/** every item in the feed, newest first — callers decide which slice to ingest */
+async function fetchFeedItems(feed: string): Promise<IngestItem[]> {
   const xml = await fetch(feed, { headers: CRAWL_HEADERS }).then((response) => {
     if (!response.ok) throw new Error(`feed fetch failed: ${feed} → ${response.status}`);
     return response.text();
@@ -56,18 +63,39 @@ async function fetchNewItems(feed: string, processed: string[]): Promise<IngestI
       html: textOf(item["content:encoded"]) || textOf(item.description),
       pubDate: textOf(item.pubDate) || undefined,
     }))
-    .filter((item) => item.guid && !processed.includes(item.guid) && item.html)
-    .slice(0, MAX_ITEMS_PER_RUN);
+    .filter((item) => item.guid && item.html);
+}
+
+/** origin URLs already present in the project — the authoritative dedupe set
+ * for backfilling (metadata files can be missing or pruned) */
+async function knownLinks(env: Env): Promise<Set<string>> {
+  const { manifest } = await readManifest(env);
+  return new Set(
+    manifest.posts.map((p) => p.origin_url).filter((url): url is string => Boolean(url)),
+  );
 }
 
 /** sync one feed source — called in its own Worker invocation via /rss/:source
  * so each source gets a fresh subrequest budget (free plan: 50 per invocation) */
-export async function syncRssSource(key: SenderType, env: Env, adapter: AdapterMap) {
+export async function syncRssSource(
+  key: SenderType,
+  env: Env,
+  adapter: AdapterMap,
+  opts: SyncOptions = {},
+) {
   const conf = RSS_SOURCES[key as keyof typeof RSS_SOURCES] as RssSource | undefined;
   if (!conf) return;
   try {
     const processed = await readProcessed(key, env);
-    const items = await fetchNewItems(conf.feed, processed);
+    const known = opts.backfill ? await knownLinks(env) : new Set<string>();
+    const candidates = (await fetchFeedItems(conf.feed)).filter(
+      (item) => !processed.includes(item.guid) && !known.has(item.link),
+    );
+    // backfill deliberately starts at the oldest missing item; normal sync
+    // keeps taking the newest one. Each invocation still ingests just one item.
+    const items = opts.backfill
+      ? [...candidates].reverse().slice(0, MAX_ITEMS_PER_RUN)
+      : candidates.slice(0, MAX_ITEMS_PER_RUN);
     await ingestItems(key, conf.mode, items, adapter, env);
   } catch (e) {
     logger(env, `rss sync failed: ${key}`, e);
