@@ -149,7 +149,7 @@ export async function buildWeeklyDigest(weekKey?: string): Promise<WeeklyDigest>
     const saved = await getSavedDigest(week.key);
     if (saved) {
       drilled = saved.drilled ?? [];
-      source = "browserless";
+      source = saved.source === "browserless" ? "browserless" : "archive";
     }
   } catch {
     /* keep the extractive digest */
