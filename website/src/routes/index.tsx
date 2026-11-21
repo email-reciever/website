@@ -40,20 +40,30 @@ function ListPage() {
   const { q, source } = Route.useSearch();
 
   return (
-    <div className="container mx-auto max-w-6xl px-4 py-8">
-      <section className="mb-8 flex flex-col gap-4">
-        <div className="flex flex-col gap-1">
-          <h1 className="text-2xl font-black tracking-tight sm:text-3xl">
-            订阅<span className="text-primary">阅读</span>
-          </h1>
-          <p className="text-sm text-base-content/60">
-            来自 {Object.keys(counts).length} 个技术订阅源 · 共 {total} 篇 · 自动翻译归档
-          </p>
+    <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
+      <section className="mesh-hero mb-10 border-b border-base-300/70">
+        <div className="flex flex-col gap-7 py-12 sm:py-16">
+          <div className="flex flex-col gap-4">
+            <div className="mono-label">Email Reciever / Library</div>
+            <h1 className="max-w-3xl text-4xl leading-[1.08] font-semibold tracking-[-0.045em] sm:text-6xl">
+              技术通讯，
+              <br className="hidden sm:block" />
+              读成中文。
+            </h1>
+            <p className="max-w-xl text-[15px] leading-relaxed text-base-content/55">
+              邮件与 RSS 直接入库，自动切片、翻译、归档。
+              <span className="font-mono text-xs text-base-content/40">
+                {" "}
+                {Object.keys(counts).length} sources / {total} posts
+              </span>
+            </p>
+          </div>
+          <SearchBar />
         </div>
-        <SearchBar />
       </section>
 
-      <section className="mb-6 overflow-x-auto pb-1">
+      <section className="mb-6 flex items-center gap-3 overflow-x-auto pb-1">
+        <span className="mono-label shrink-0">Sources</span>
         <SourceTabs counts={counts} />
       </section>
 

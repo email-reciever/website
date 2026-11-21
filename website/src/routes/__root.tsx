@@ -4,6 +4,8 @@ import { createRootRouteWithContext, HeadContent, Outlet, Scripts } from "@tanst
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import type { ReactNode } from "react";
 
+import "@fontsource-variable/geist";
+import "@fontsource-variable/geist-mono";
 import "@fontsource-variable/noto-sans-sc";
 import "@/styles/app.css";
 
@@ -64,7 +66,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <HeadContent />
       </head>
-      <body className="flex min-h-dvh flex-col bg-base-200 font-sans antialiased">
+      <body className="flex min-h-dvh flex-col bg-base-200 font-sans antialiased selection:bg-base-content/20">
         {children}
         <Scripts />
       </body>
@@ -76,10 +78,14 @@ function RootError({ error }: { error: unknown }) {
   const message = error instanceof Error ? error.message : "服务出了点问题";
   return (
     <RootDocument>
-      <section className="container mx-auto flex min-h-[60vh] max-w-3xl flex-col items-center justify-center gap-4 px-4 text-center">
-        <h1 className="text-5xl font-black text-error/30">:(</h1>
-        <p className="text-base-content/70">{message}</p>
-        <a href="/" className="btn btn-primary btn-sm">
+      <section className="mx-auto flex min-h-[60vh] max-w-3xl flex-col items-center justify-center gap-4 px-4 text-center">
+        <div className="mono-label">Error / 500</div>
+        <h1 className="text-6xl font-semibold tracking-tight text-base-content/30">:(</h1>
+        <p className="text-sm text-base-content/60">{message}</p>
+        <a
+          href="/"
+          className="inline-flex h-9 items-center rounded-lg bg-base-content px-4 text-[13px] font-medium text-base-100 transition-opacity hover:opacity-85"
+        >
           返回首页
         </a>
       </section>
@@ -89,10 +95,14 @@ function RootError({ error }: { error: unknown }) {
 
 function NotFound() {
   return (
-    <section className="container mx-auto flex min-h-[60vh] max-w-3xl flex-col items-center justify-center gap-4 px-4 text-center">
-      <h1 className="text-7xl font-black text-primary/30">404</h1>
-      <p className="text-lg text-base-content/60">这篇文章不存在或已被移除</p>
-      <a href="/" className="btn btn-primary btn-sm">
+    <section className="mx-auto flex min-h-[60vh] max-w-3xl flex-col items-center justify-center gap-4 px-4 text-center">
+      <div className="mono-label">Error / 404</div>
+      <h1 className="text-7xl font-semibold tracking-tight text-base-content/25">404</h1>
+      <p className="text-sm text-base-content/60">这篇文章不存在或已被移除</p>
+      <a
+        href="/"
+        className="inline-flex h-9 items-center rounded-lg bg-base-content px-4 text-[13px] font-medium text-base-100 transition-opacity hover:opacity-85"
+      >
         返回首页
       </a>
     </section>

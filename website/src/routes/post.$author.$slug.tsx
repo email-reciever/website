@@ -50,47 +50,53 @@ function PostPage() {
   });
 
   return (
-    <article className="container mx-auto max-w-6xl px-4 py-8">
-      <nav className="breadcrumbs mb-6 text-sm text-base-content/50">
-        <ul>
-          <li>
-            <Link to="/" search={{ source: undefined, q: undefined, page: undefined }}>
-              首页
-            </Link>
-          </li>
-          <li>
-            <Link to="/" search={{ source: entry.author, q: undefined, page: undefined }}>
-              {sourceLabel(entry.author)}
-            </Link>
-          </li>
-          <li className="max-w-48 truncate opacity-70">{entry.title}</li>
-        </ul>
+    <article className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6">
+      <nav className="mb-8 flex items-center gap-2 font-mono text-[11px] text-base-content/45">
+        <Link
+          to="/"
+          search={{ source: undefined, q: undefined, page: undefined }}
+          className="hover:text-base-content"
+        >
+          /index
+        </Link>
+        <span className="text-base-content/25">/</span>
+        <Link
+          to="/"
+          search={{ source: entry.author, q: undefined, page: undefined }}
+          className="hover:text-base-content"
+        >
+          {entry.author}
+        </Link>
+        <span className="text-base-content/25">/</span>
+        <span className="max-w-48 truncate text-base-content/60">{entry.slug}</span>
       </nav>
 
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_280px]">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_260px]">
         <div className="min-w-0">
-          <header className="mb-8 flex flex-col gap-4">
-            <div className="flex flex-wrap items-center gap-2">
+          <header className="mb-9 flex flex-col gap-5 border-b border-base-300/70 pb-8">
+            <div className="flex flex-wrap items-center gap-2.5 font-mono text-[11px] text-base-content/50">
               <img
                 src={sourceIcon(entry.author)}
                 alt=""
-                className="h-5 w-5 rounded"
-                width="20"
-                height="20"
+                className="h-4 w-4 rounded-sm"
+                width="16"
+                height="16"
               />
-              <span className="text-sm font-semibold">{sourceLabel(entry.author)}</span>
-              <span className="text-sm text-base-content/50">{formatDate(entry.date)}</span>
-              {entry.translated ? (
-                <span className="badge badge-primary badge-sm">已翻译</span>
-              ) : (
-                <span className="badge badge-ghost badge-sm">原文</span>
-              )}
+              <span className="tracking-wide text-base-content/70">
+                {sourceLabel(entry.author)}
+              </span>
+              <span className="text-base-content/25">·</span>
+              <span>{formatDate(entry.date)}</span>
+              <span className="text-base-content/25">·</span>
+              <span className={entry.translated ? "text-base-content/70" : "text-base-content/40"}>
+                {entry.translated ? "TRANSLATED" : "ORIGINAL"}
+              </span>
             </div>
-            <h1 className="text-2xl leading-tight font-black tracking-tight sm:text-3xl">
+            <h1 className="text-3xl leading-[1.15] font-semibold tracking-[-0.035em] text-wrap-pretty sm:text-[2.6rem]">
               {entry.title}
             </h1>
             {entry.description && entry.description !== entry.title && (
-              <p className="border-l-4 border-primary/50 pl-3 text-base-content/70">
+              <p className="max-w-2xl border-l-2 border-base-content/25 pl-4 text-[15px] leading-relaxed text-base-content/60">
                 {entry.description}
               </p>
             )}
@@ -99,7 +105,7 @@ function PostPage() {
                 src={entry.banner}
                 alt=""
                 loading="lazy"
-                className="max-h-56 w-full rounded-xl object-cover"
+                className="detail-banner mt-1 max-h-56 w-full rounded-xl border border-base-300 object-cover"
               />
             )}
             {originURL && (
@@ -107,7 +113,7 @@ function PostPage() {
                 href={originURL}
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn-outline btn-sm w-fit gap-2"
+                className="inline-flex h-9 w-fit items-center gap-2.5 rounded-lg bg-base-content px-4 text-[13px] font-medium text-base-100 transition-opacity hover:opacity-85"
               >
                 <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-current" aria-hidden>
                   <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3Zm-9 2h6v2H5v12h12v-6h2v8H3V5h2Z" />
@@ -127,41 +133,55 @@ function PostPage() {
         </div>
 
         <aside className="hidden lg:block">
-          <div className="sticky top-20 flex flex-col gap-4">
+          <div className="sticky top-20 flex flex-col gap-3">
             {entry.subAuthor && (
-              <div className="card bg-base-100 shadow-sm ring-1 ring-base-300/40">
-                <div className="card-body gap-1 p-4">
-                  <h3 className="text-xs font-semibold text-base-content/50">作者</h3>
-                  <p className="text-sm font-medium">{entry.subAuthor}</p>
-                </div>
+              <div className="rounded-xl border border-base-300/70 bg-base-100/50 p-4">
+                <div className="mono-label mb-1.5">Author</div>
+                <p className="text-sm font-medium">{entry.subAuthor}</p>
               </div>
             )}
-            <div className="card bg-base-100 shadow-sm ring-1 ring-base-300/40">
-              <div className="card-body gap-1 p-4">
-                <h3 className="text-xs font-semibold text-base-content/50">订阅源</h3>
-                <Link
-                  to="/"
-                  search={{ source: entry.author, q: undefined, page: undefined }}
-                  className="flex items-center gap-2 text-sm font-medium hover:text-primary"
-                >
-                  <img
-                    src={sourceIcon(entry.author)}
-                    alt=""
-                    className="h-4 w-4 rounded"
-                    width="16"
-                    height="16"
-                  />
-                  {sourceLabel(entry.author)}
-                </Link>
-              </div>
+            <div className="rounded-xl border border-base-300/70 bg-base-100/50 p-4">
+              <div className="mono-label mb-2">Source</div>
+              <Link
+                to="/"
+                search={{ source: entry.author, q: undefined, page: undefined }}
+                className="flex items-center gap-2 text-sm font-medium transition-colors hover:text-base-content"
+              >
+                <img
+                  src={sourceIcon(entry.author)}
+                  alt=""
+                  className="h-4 w-4 rounded-sm grayscale"
+                  width="16"
+                  height="16"
+                />
+                {sourceLabel(entry.author)}
+              </Link>
+            </div>
+            <div className="rounded-xl border border-base-300/70 bg-base-100/50 p-4">
+              <div className="mono-label mb-2">Meta</div>
+              <dl className="flex flex-col gap-1.5 font-mono text-[11px] text-base-content/55">
+                <div className="flex justify-between gap-2">
+                  <dt>slug</dt>
+                  <dd className="max-w-32 truncate text-base-content/70">{entry.slug}</dd>
+                </div>
+                <div className="flex justify-between gap-2">
+                  <dt>status</dt>
+                  <dd className="text-base-content/70">{entry.translated ? "zh" : "en"}</dd>
+                </div>
+              </dl>
             </div>
           </div>
         </aside>
       </div>
 
       {related.data && related.data.length > 0 && (
-        <section className="mt-14">
-          <h2 className="mb-4 text-lg font-bold">来自 {sourceLabel(entry.author)} 的更多文章</h2>
+        <section className="mt-16 border-t border-base-300/70 pt-10">
+          <div className="mb-5 flex items-baseline gap-3">
+            <h2 className="text-lg font-semibold tracking-tight">
+              更多来自 {sourceLabel(entry.author)}
+            </h2>
+            <span className="mono-label">related</span>
+          </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {related.data.slice(0, 3).map((post: ManifestEntry) => (
               <PostCard key={`${post.author}/${post.slug}`} post={post} />

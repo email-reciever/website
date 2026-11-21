@@ -4,18 +4,19 @@ import { SITE } from "@/lib/sources";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-30 border-b border-base-300/60 bg-base-100/80 backdrop-blur">
-      <div className="navbar mx-auto max-w-6xl px-4">
-        <div className="navbar-start gap-1">
+    <header className="sticky top-0 z-30 border-b border-base-300/70 bg-base-200/75 backdrop-blur-xl">
+      <div className="navbar mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="navbar-start gap-2.5">
           <Link to="/" className="flex items-center gap-2.5">
             <img
               src="/media-source/email-reciever.svg"
               alt="logo"
-              className="h-8 w-8"
-              width="32"
-              height="32"
+              className="h-7 w-7"
+              width="28"
+              height="28"
             />
-            <span className="text-lg font-bold tracking-tight">{SITE.title}</span>
+            <span className="text-[15px] font-semibold tracking-tight">{SITE.title}</span>
+            <span className="mono-label mt-0.5 hidden sm:inline">/ feed</span>
           </Link>
         </div>
         <div className="navbar-end gap-1">
@@ -23,7 +24,7 @@ export function Header() {
             href={SITE.repo}
             target="_blank"
             rel="noreferrer"
-            className="btn btn-ghost btn-sm gap-2"
+            className="btn btn-ghost btn-sm gap-2 font-normal text-base-content/60 hover:text-base-content"
             aria-label="GitHub 仓库"
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>

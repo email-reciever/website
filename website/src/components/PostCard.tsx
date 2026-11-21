@@ -9,50 +9,50 @@ export function PostCard({ post }: { post: ManifestEntry }) {
     <Link
       to={href}
       params={{ author: post.author, slug: post.slug }}
-      className="group card bg-base-100 shadow-sm ring-1 ring-base-300/40 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:ring-primary/40"
+      className="post-card group card relative overflow-hidden rounded-xl border border-base-300/80 bg-base-100 transition-[border-color,transform] duration-200 ease-out hover:-translate-y-0.5 hover:border-base-content/25"
     >
-      <figure className="relative h-28 overflow-hidden">
+      <figure className="relative h-28 overflow-hidden border-b border-base-300/60">
         <img
           src={sourceBanner(post.author)}
           alt={sourceLabel(post.author)}
           loading="lazy"
-          className="h-full w-full object-cover object-left-top transition-transform duration-300 group-hover:scale-[1.03]"
+          className="card-banner h-full w-full object-cover object-left-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-base-100 via-base-100/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-base-100 via-base-100/35 to-transparent" />
         <div className="absolute bottom-2 left-3 flex items-center gap-2">
           <img
             src={sourceIcon(post.author)}
             alt=""
-            className="h-5 w-5 rounded"
-            width="20"
-            height="20"
+            className="h-4 w-4 rounded-sm"
+            width="16"
+            height="16"
           />
-          <span className="text-xs font-semibold text-base-content/80">
+          <span className="text-[11px] font-medium tracking-wide text-base-content/80">
             {sourceLabel(post.author)}
           </span>
           {sourceNote(post.author) && (
-            <span className="hidden text-xs text-base-content/50 sm:inline">
+            <span className="hidden text-[11px] text-base-content/45 sm:inline">
               · {sourceNote(post.author)}
             </span>
           )}
         </div>
       </figure>
-      <div className="card-body gap-2 p-4 pt-2">
-        <h2 className="card-title line-clamp-2 text-base leading-snug font-semibold transition-colors group-hover:text-primary">
+      <div className="card-body gap-2 p-4">
+        <h2 className="card-title line-clamp-2 text-[15px] leading-snug font-semibold tracking-tight transition-colors group-hover:text-base-content">
           {post.title}
         </h2>
         {post.description && post.description !== post.title && (
-          <p className="line-clamp-2 text-sm text-base-content/60">{post.description}</p>
+          <p className="line-clamp-2 text-[13px] leading-relaxed text-base-content/55">
+            {post.description}
+          </p>
         )}
-        <div className="card-actions items-center justify-between pt-1 text-xs text-base-content/50">
+        <div className="mt-1 flex items-center justify-between border-t border-base-300/50 pt-3 font-mono text-[11px] text-base-content/45">
           <span>{formatDate(post.date)}</span>
-          <div className="flex items-center gap-1.5">
-            {post.subAuthor && <span className="max-w-32 truncate">{post.subAuthor}</span>}
-            {post.translated ? (
-              <span className="badge badge-ghost badge-xs">已翻译</span>
-            ) : (
-              <span className="badge badge-outline badge-xs">原文</span>
-            )}
+          <div className="flex items-center gap-2">
+            {post.subAuthor && <span className="max-w-28 truncate">{post.subAuthor}</span>}
+            <span className={post.translated ? "text-base-content/70" : "text-base-content/35"}>
+              {post.translated ? "译" : "原"}
+            </span>
           </div>
         </div>
       </div>

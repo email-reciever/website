@@ -9,23 +9,248 @@
 /* scan components/routes for utility classes (v4 usually auto-detects) */
 @source "../**/*.{ts,tsx}";
 
+/* ---------------------------------------------------------------------------
+ * Design system — "vercel-mesh": black-and-white precision, one gradient mesh.
+ * daisyUI is kept only as the semantic-token/component layer; its dim/light
+ * themes are overridden below so every component inherits the same palette.
+ * ------------------------------------------------------------------------- */
 @theme {
 	--font-sans:
-		"Noto Sans SC Variable", ui-sans-serif, system-ui, -apple-system, "PingFang SC", "Microsoft YaHei",
-		sans-serif;
+		"Geist Variable", "Noto Sans SC Variable", ui-sans-serif, system-ui, -apple-system, "PingFang SC",
+		"Microsoft YaHei", sans-serif;
 	--font-mono:
-		ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", "JetBrains Mono", monospace;
+		"Geist Mono Variable", ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas,
+		"Liberation Mono", monospace;
+
+	--color-mesh-cyan: #0070f3;
+	--color-mesh-magenta: #ff0080;
+	--color-mesh-orange: #f5a623;
+
+	--ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+	--mesh-cyan: #0070f3;
+	--mesh-magenta: #ff0080;
+	--mesh-orange: #f5a623;
+	--ease-out-quint: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* dark — the canonical surface. data-theme key stays `dim` for compatibility. */
+:root[data-theme="dim"] {
+	color-scheme: dark;
+
+	--color-base-100: #0a0a0a;
+	--color-base-200: #000000;
+	--color-base-300: #1f1f1f;
+	--color-base-content: #ededed;
+
+	--color-primary: #ffffff;
+	--color-primary-content: #000000;
+	--color-secondary: #888888;
+	--color-secondary-content: #000000;
+	--color-accent: #888888;
+	--color-accent-content: #000000;
+	--color-neutral: #111111;
+	--color-neutral-content: #ededed;
+
+	--color-info: #0070f3;
+	--color-info-content: #ffffff;
+	--color-success: #50e3c2;
+	--color-success-content: #000000;
+	--color-warning: #f5a623;
+	--color-warning-content: #000000;
+	--color-error: #ff0080;
+	--color-error-content: #ffffff;
+
+	--radius-selector: 0.5rem;
+	--radius-field: 0.5rem;
+	--radius-box: 0.75rem;
+}
+
+/* light — same geometry, inverted ground. still no colored buttons. */
+:root[data-theme="light"] {
+	color-scheme: light;
+
+	--color-base-100: #ffffff;
+	--color-base-200: #fafafa;
+	--color-base-300: #e5e5e5;
+	--color-base-content: #111111;
+
+	--color-primary: #000000;
+	--color-primary-content: #ffffff;
+	--color-secondary: #666666;
+	--color-secondary-content: #ffffff;
+	--color-accent: #666666;
+	--color-accent-content: #ffffff;
+	--color-neutral: #f4f4f4;
+	--color-neutral-content: #111111;
+
+	--color-info: #0070f3;
+	--color-info-content: #ffffff;
+	--color-success: #0f9b76;
+	--color-success-content: #ffffff;
+	--color-warning: #b3730a;
+	--color-warning-content: #ffffff;
+	--color-error: #c40062;
+	--color-error-content: #ffffff;
+
+	--radius-selector: 0.5rem;
+	--radius-field: 0.5rem;
+	--radius-box: 0.75rem;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+		background-color: var(--color-base-200);
+	}
+
+	body {
+		letter-spacing: -0.012em;
+	}
+
+	::selection {
+		background-color: color-mix(in oklab, var(--mesh-cyan) 38%, transparent);
+		color: #ffffff;
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--color-primary);
+		outline-offset: 2px;
+	}
+
+	input[type="search"]::-webkit-search-cancel-button {
+		display: none;
+	}
 }
 
 /* ---------------------------------------------------------------------------
- * markdown typography — hand-rolled on daisyUI semantic tokens so both the
- * dim/light themes work automatically
+ * Signature moves — one mesh in the hero, selective card glow, mono readouts.
+ * ------------------------------------------------------------------------- */
+
+.mesh-hero {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	background-color: var(--color-base-200);
+}
+
+.mesh-hero::before {
+	content: "";
+	position: absolute;
+	inset: -35% -12% 0;
+	z-index: -1;
+	pointer-events: none;
+	background:
+		radial-gradient(38% 58% at 16% 18%, rgba(0, 112, 243, 0.32), transparent 70%),
+		radial-gradient(34% 52% at 50% 4%, rgba(255, 0, 128, 0.2), transparent 72%),
+		radial-gradient(30% 46% at 84% 28%, rgba(245, 166, 35, 0.14), transparent 74%);
+	filter: blur(72px) saturate(115%);
+	-webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 42%, transparent 100%);
+	mask-image: linear-gradient(to bottom, #000 0%, #000 42%, transparent 100%);
+	animation: mesh-drift 18s ease-in-out infinite alternate;
+}
+
+:root[data-theme="light"] .mesh-hero::before {
+	opacity: 0.3;
+	filter: blur(80px);
+}
+
+@keyframes mesh-drift {
+	0% {
+		transform: translate3d(-2%, -1%, 0) scale(1);
+	}
+	50% {
+		transform: translate3d(2%, 2%, 0) scale(1.06);
+	}
+	100% {
+		transform: translate3d(-1%, 1%, 0) scale(1.02);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.mesh-hero::before {
+		animation: none;
+	}
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+/* posts "light up" from below on hover — the only glow outside the hero */
+.post-card {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+}
+
+.post-card::after {
+	content: "";
+	position: absolute;
+	inset: auto -28% -62% -28%;
+	height: 100%;
+	z-index: -1;
+	pointer-events: none;
+	opacity: 0;
+	background: radial-gradient(
+		50% 70% at 50% 100%,
+		rgba(0, 112, 243, 0.28),
+		rgba(255, 0, 128, 0.13) 45%,
+		transparent 72%
+	);
+	filter: blur(30px);
+	transition: opacity 350ms var(--ease-out-quint);
+}
+
+.post-card:hover::after,
+.post-card:focus-visible::after {
+	opacity: 1;
+}
+
+.post-card img.card-banner {
+	filter: grayscale(1) contrast(1.04);
+	opacity: 0.72;
+	transition:
+		filter 500ms var(--ease-out-quint),
+		opacity 500ms var(--ease-out-quint),
+		transform 500ms var(--ease-out-quint);
+}
+
+.post-card:hover img.card-banner,
+.post-card:focus-visible img.card-banner {
+	filter: grayscale(0);
+	opacity: 1;
+	transform: scale(1.03);
+}
+
+img.detail-banner {
+	filter: grayscale(0.85);
+	transition: filter 600ms var(--ease-out-quint);
+}
+
+img.detail-banner:hover {
+	filter: grayscale(0);
+}
+
+.mono-label {
+	font-family: var(--font-mono);
+	font-size: 0.6875rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: color-mix(in oklab, var(--color-base-content) 45%, transparent);
+}
+
+/* ---------------------------------------------------------------------------
+ * markdown typography — hand-rolled on the same semantic tokens so dim/light
+ * both work. Type scale and hairlines only; no decorative color.
  * ------------------------------------------------------------------------- */
 .markdown-body {
 	font-size: 1rem;
 	line-height: 1.85;
 	color: var(--color-base-content);
 	word-break: break-word;
+	text-wrap: pretty;
 }
 
 .markdown-body > *:first-child {
@@ -39,8 +264,9 @@
 .markdown-body h5,
 .markdown-body h6 {
 	scroll-margin-top: 5rem;
-	font-weight: 700;
-	line-height: 1.4;
+	font-weight: 600;
+	line-height: 1.35;
+	letter-spacing: -0.02em;
 }
 
 .markdown-body h1 {
@@ -50,14 +276,14 @@
 
 .markdown-body h2 {
 	margin: 2.25rem 0 0.9rem;
-	font-size: 1.35em;
+	font-size: 1.32em;
 	border-bottom: 1px solid var(--color-base-300);
-	padding-bottom: 0.35rem;
+	padding-bottom: 0.4rem;
 }
 
 .markdown-body h3 {
 	margin: 1.75rem 0 0.75rem;
-	font-size: 1.18em;
+	font-size: 1.16em;
 }
 
 .markdown-body h4,
@@ -72,12 +298,15 @@
 }
 
 .markdown-body a {
-	color: var(--color-primary);
+	color: var(--color-base-content);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
 	text-underline-offset: 3px;
+	text-decoration-color: color-mix(in oklab, var(--color-base-content) 35%, transparent);
 }
 
 .markdown-body a:hover {
-	text-decoration: underline;
+	text-decoration-color: var(--color-base-content);
 }
 
 .markdown-body strong {
@@ -103,16 +332,16 @@
 }
 
 .markdown-body li::marker {
-	color: var(--color-primary);
+	color: color-mix(in oklab, var(--color-base-content) 40%, transparent);
 }
 
 .markdown-body blockquote {
 	margin: 1.25rem 0;
-	border-inline-start: 4px solid var(--color-primary);
-	opacity: 0.9;
-	background-color: color-mix(in oklab, var(--color-primary) 6%, transparent);
+	border-inline-start: 2px solid color-mix(in oklab, var(--color-base-content) 35%, transparent);
+	background-color: color-mix(in oklab, var(--color-base-content) 4%, transparent);
 	border-radius: 0 0.5rem 0.5rem 0;
 	padding: 0.75rem 1rem;
+	color: color-mix(in oklab, var(--color-base-content) 82%, transparent);
 }
 
 .markdown-body blockquote p {
@@ -133,11 +362,11 @@
 .markdown-body pre {
 	margin: 1.25rem 0;
 	overflow-x: auto;
-	border-radius: 0.75rem;
+	border-radius: 0.5rem;
 	padding: 1rem 1.25rem;
 	font-size: 0.875rem;
 	line-height: 1.7;
-	background-color: color-mix(in oklab, var(--color-base-content) 6%, var(--color-base-100));
+	background-color: color-mix(in oklab, var(--color-base-content) 5%, var(--color-base-100));
 	border: 1px solid var(--color-base-300);
 }
 
@@ -151,14 +380,14 @@
 	margin: 1.25rem 0;
 	max-width: 100%;
 	height: auto;
-	border-radius: 0.75rem;
+	border-radius: 0.5rem;
 	border: 1px solid var(--color-base-300);
 }
 
 .markdown-body video {
 	margin: 1.25rem 0;
 	max-width: 100%;
-	border-radius: 0.75rem;
+	border-radius: 0.5rem;
 }
 
 .markdown-body table {
@@ -178,8 +407,8 @@
 }
 
 .markdown-body th {
-	background-color: var(--color-base-200);
-	font-weight: 700;
+	background-color: color-mix(in oklab, var(--color-base-content) 4%, transparent);
+	font-weight: 600;
 }
 
 .markdown-body hr {
@@ -190,9 +419,9 @@
 
 .markdown-body details {
 	margin: 1.25rem 0;
-	border-radius: 0.75rem;
+	border-radius: 0.5rem;
 	border: 1px solid var(--color-base-300);
-	background-color: var(--color-base-200);
+	background-color: color-mix(in oklab, var(--color-base-content) 3%, transparent);
 	padding: 0.75rem 1rem;
 }
 
@@ -207,5 +436,5 @@
 
 .markdown-body iframe {
 	max-width: 100%;
-	border-radius: 0.75rem;
+	border-radius: 0.5rem;
 }

@@ -27,7 +27,7 @@ export function SearchBar() {
   }, [value, q, router]);
 
   return (
-    <label className="input input-bordered flex w-full items-center gap-2 bg-base-100 sm:max-w-xs">
+    <label className="flex h-10 w-full items-center gap-2.5 rounded-lg border border-base-300/80 bg-base-100/60 px-3 transition-colors focus-within:border-base-content/40 sm:max-w-xs">
       <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0 fill-base-content/40" aria-hidden>
         <path d="M10 2a8 8 0 1 0 4.9 14.32l4.4 4.39a1 1 0 0 0 1.41-1.42l-4.39-4.4A8 8 0 0 0 10 2Zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12Z" />
       </svg>
@@ -36,17 +36,21 @@ export function SearchBar() {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder="搜索标题 / 作者 / 摘要"
-        className="grow bg-transparent text-sm outline-none placeholder:text-base-content/40"
+        className="grow bg-transparent text-sm outline-none placeholder:text-base-content/35"
       />
-      {value && (
+      {value ? (
         <button
           type="button"
-          className="btn btn-ghost btn-xs btn-circle"
+          className="flex h-5 w-5 items-center justify-center rounded font-mono text-xs text-base-content/50 transition-colors hover:bg-base-content/10 hover:text-base-content"
           onClick={() => setValue("")}
           aria-label="清空"
         >
           ✕
         </button>
+      ) : (
+        <kbd className="hidden rounded border border-base-300 px-1.5 py-0.5 font-mono text-[10px] text-base-content/35 sm:inline">
+          /
+        </kbd>
       )}
     </label>
   );
