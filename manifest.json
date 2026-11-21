@@ -13,6 +13,26 @@
     },
     {
       "author": "alexkondov",
+      "slug": "2026-11-21_06-28-29_342",
+      "title": "The ripple effects of AI psychosis",
+      "description": "The ripple effects of AI psychosis",
+      "date": "2026-11-21T06:28:29.342Z",
+      "origin_url": "https://alexkondov.com/the-ripple-effects-of-ai-psychosis/",
+      "avatar": "/media-source/alexkondov-ico.png",
+      "translated": true
+    },
+    {
+      "author": "tyler",
+      "slug": "2026-11-21_06-26-41_848",
+      "title": "A Tailscale Tale",
+      "description": "A Tailscale Tale",
+      "date": "2026-11-21T06:26:41.848Z",
+      "origin_url": "https://bytes.dev/archives/539",
+      "avatar": "/media-source/tyler-ico.png",
+      "translated": true
+    },
+    {
+      "author": "alexkondov",
       "slug": "2026-11-21_06-22-09_675",
       "title": "How I build UIs",
       "description": "How I build UIs",
@@ -42,6 +62,16 @@
       "translated": true
     },
     {
+      "author": "awsml",
+      "slug": "2026-11-21_06-27-39_224",
+      "title": "Cut self-hosted LLM cost and latency with the distributed KV caching agent skill",
+      "description": "Cut self-hosted LLM cost and latency with the distributed KV caching agent skill",
+      "date": "2026-11-21T00:14:26.000Z",
+      "origin_url": "https://aws.amazon.com/blogs/machine-learning/cut-self-hosted-llm-cost-and-latency-with-the-distributed-kv-caching-agent-skill/",
+      "avatar": "/media-source/awsml-ico.png",
+      "translated": true
+    },
+    {
       "author": "tyler",
       "slug": "2026-11-20_21-11-39_134",
       "title": "Bytes： Solid 2.0 is thriving",
@@ -65,6 +95,16 @@
     {
       "author": "cloudflareblog",
       "slug": "2026-11-21_06-08-49_097",
+      "title": "How Cloudflare WAF helps protect against phpAfterShell and other critical PHP flaws",
+      "description": "How Cloudflare WAF helps protect against phpAfterShell and other critical PHP flaws",
+      "date": "2026-11-20T20:00:45.000Z",
+      "origin_url": "https://blog.cloudflare.com/phpaftershell-waf-protection/",
+      "avatar": "/media-source/cloudflareblog-ico.png",
+      "translated": false
+    },
+    {
+      "author": "cloudflareblog",
+      "slug": "2026-11-21_06-24-50_299",
       "title": "How Cloudflare WAF helps protect against phpAfterShell and other critical PHP flaws",
       "description": "How Cloudflare WAF helps protect against phpAfterShell and other critical PHP flaws",
       "date": "2026-11-20T20:00:45.000Z",
@@ -187,6 +227,26 @@
       "translated": false
     },
     {
+      "author": "csstricks",
+      "slug": "2026-11-21_06-25-07_008",
+      "title": "When Everything Has Changed, What Do We Do Next?",
+      "description": "When Everything Has Changed, What Do We Do Next?",
+      "date": "2026-11-18T14:55:21.000Z",
+      "origin_url": "https://css-tricks.com/when-everything-has-changed/",
+      "avatar": "/media-source/csstricks-ico.png",
+      "translated": true
+    },
+    {
+      "author": "mittechai",
+      "slug": "2026-11-21_06-26-33_812",
+      "title": "The AI Hype Index: AI is everywhere",
+      "description": "The AI Hype Index: AI is everywhere",
+      "date": "2026-11-18T14:42:44.000Z",
+      "origin_url": "https://www.technologyreview.com/2026/11/18/1148650/ai-hype-index-ai-is-everywhere/",
+      "avatar": "/media-source/mittechai-ico.png",
+      "translated": true
+    },
+    {
       "author": "frontendfocus",
       "slug": "2026-11-21_06-08-22_579",
       "title": "What developers think of HTML right now",
@@ -216,6 +276,16 @@
       "origin_url": "https://c5e21242.click.convertkit-mail.com/27ur84roxviohgvvl3ku3hggp0d65tghm2v3/m2h7h6u3rno523smhq/aHR0cHM6Ly9ieXRlcy5kZXYvYXJjaGl2ZXMvNTM5",
       "origin_site": "https://c5e21242.click.convertkit-mail.com/27ur84roxviohgvvl3ku3hggp0d65tghm2v3/m2h7h6u3rno523smhq/aHR0cHM6Ly9ieXRlcy5kZXYvYXJjaGl2ZXMvNTM5",
       "avatar": "/media-source/tyler-ico.png",
+      "translated": true
+    },
+    {
+      "author": "garymarcus",
+      "slug": "2026-11-21_06-26-57_143",
+      "title": "Wake up! America’s infrastructure is melting. And AI appears to be partly responsible.",
+      "description": "Wake up! America’s infrastructure is melting. And AI appears to be partly responsible.",
+      "date": "2026-11-17T14:21:39.000Z",
+      "origin_url": "https://garymarcus.substack.com/p/wake-up-americas-infrastructure-is",
+      "avatar": "/media-source/garymarcus-ico.png",
       "translated": true
     },
     {
@@ -386,6 +456,26 @@
       "translated": false
     },
     {
+      "author": "importai",
+      "slug": "2026-11-21_06-26-15_869",
+      "title": "Import AI 480: Self-sustaining space economies; AI for science progress, and Meta builds perfect hands for a superintelligence",
+      "description": "Import AI 480: Self-sustaining space economies; AI for science progress, and Meta builds perfect hands for a superintelligence",
+      "date": "2026-11-09T13:31:34.000Z",
+      "origin_url": "https://importai.substack.com/p/import-ai-480-self-sustaining-space",
+      "avatar": "/media-source/importai-ico.png",
+      "translated": false
+    },
+    {
+      "author": "reactdigest",
+      "slug": "2026-11-21_06-24-47_930",
+      "title": "AI cost of JavaScript frameworks",
+      "description": "AI cost of JavaScript frameworks",
+      "date": "2026-11-08T19:25:00.000Z",
+      "origin_url": "https://reactdigest.net/newsletters/2405-ai-cost-of-javascript-frameworks",
+      "avatar": "/media-source/reactdigest-ico.png",
+      "translated": true
+    },
+    {
       "author": "reactstatus",
       "slug": "2026-11-06_19-21-56_425",
       "title": "Redux Toolkit's road to 3.0",
@@ -416,6 +506,16 @@
       "origin_url": "https://9792d4f1.click.kit-mail3.com/0vu29end3da9hx0qlgeflhvv7046wbnh59odq/x0hph6hem5mn0wigul/aHR0cHM6Ly9ibG9nLnNlbnRyeS5pby9hZ2VudC10cmFjaW5nLXVzZS1jYXNlcy8=",
       "origin_site": "https://9792d4f1.click.kit-mail3.com/0vu29end3da9hx0qlgeflhvv7046wbnh59odq/x0hph6hem5mn0wigul/aHR0cHM6Ly9ibG9nLnNlbnRyeS5pby9hZ2VudC10cmFjaW5nLXVzZS1jYXNlcy8=",
       "avatar": "/media-source/syntaxfm-ico.png",
+      "translated": true
+    },
+    {
+      "author": "smashingmag",
+      "slug": "2026-11-21_06-24-56_836",
+      "title": "A New Community For In-House UX People",
+      "description": "A New Community For In-House UX People",
+      "date": "2026-11-06T08:00:00.000Z",
+      "origin_url": "https://smashingmagazine.com/2026/11/ux-insiders-community-in-house-ux-people/",
+      "avatar": "/media-source/smashingmag-ico.png",
       "translated": true
     },
     {
@@ -471,6 +571,16 @@
       "origin_site": "https://c5e21242.click.convertkit-mail.com/38u3l732zwhkhr63z3qarh44p0v4nf7h4oml/e0hph0u7zodzp9a8h2/aHR0cHM6Ly9ieXRlcy5kZXYvYXJjaGl2ZXMvNTM1",
       "avatar": "/media-source/tyler-ico.png",
       "translated": true
+    },
+    {
+      "author": "javascriptweekly",
+      "slug": "2026-11-21_06-24-21_768",
+      "title": "What Claude spends building with 12 JavaScript stacks",
+      "description": "What Claude spends building with 12 JavaScript stacks",
+      "date": "2026-11-03T00:00:00.000Z",
+      "origin_url": "https://javascriptweekly.com/link/192358/rss",
+      "avatar": "/media-source/javascriptweekly-ico.png",
+      "translated": false
     },
     {
       "author": "astro",
@@ -826,6 +936,16 @@
       "description": "What’s new in Svelte: October 2026",
       "date": "2026-10-01T00:00:00.000Z",
       "origin_url": "https://svelte.dev/blog/whats-new-in-svelte-october-2026",
+      "avatar": "/media-source/svelte-ico.png",
+      "translated": true
+    },
+    {
+      "author": "svelte",
+      "slug": "2026-11-21_06-25-15_828",
+      "title": "SvelteKit 3 is here",
+      "description": "SvelteKit 3 is here",
+      "date": "2026-10-01T00:00:00.000Z",
+      "origin_url": "https://svelte.dev/blog/sveltekit-3-is-here",
       "avatar": "/media-source/svelte-ico.png",
       "translated": true
     },
@@ -1332,6 +1452,16 @@
       "origin_url": "https://c5e21242.click.convertkit-mail.com/xmurv9rn37i6hpm8wggs5h20rmo9gfnhlemx/6qhehoul9g2rgrfohk/aHR0cHM6Ly9ieXRlcy5kZXYvYXJjaGl2ZXMvNTE5",
       "origin_site": "https://c5e21242.click.convertkit-mail.com/xmurv9rn37i6hpm8wggs5h20rmo9gfnhlemx/6qhehoul9g2rgrfohk/aHR0cHM6Ly9ieXRlcy5kZXYvYXJjaGl2ZXMvNTE5",
       "avatar": "/media-source/tyler-ico.png",
+      "translated": true
+    },
+    {
+      "author": "astro",
+      "slug": "2026-11-21_06-24-29_478",
+      "title": "Affordable and Fast Migration",
+      "description": "Affordable and Fast Migration",
+      "date": "2026-09-08T00:00:00.000Z",
+      "origin_url": "https://astro.build/case-studies/evil-martians/",
+      "avatar": "/media-source/astro-ico.png",
       "translated": true
     },
     {
@@ -2729,6 +2859,16 @@
       "origin_url": "https://frontendfoc.us/issues/749",
       "origin_site": "https://frontendfoc.us/issues/749",
       "avatar": "/media-source/frontendfocus-ico.png",
+      "translated": false
+    },
+    {
+      "author": "typescript",
+      "slug": "2026-11-21_06-26-20_105",
+      "title": "Announcing TypeScript 7.0",
+      "description": "Announcing TypeScript 7.0",
+      "date": "2026-07-08T15:58:29.000Z",
+      "origin_url": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/",
+      "avatar": "/media-source/typescript-ico.png",
       "translated": false
     },
     {

@@ -51,9 +51,10 @@ const ALL_SYNC_KEYS = [
  */
 async function fanOutSync(env: Env) {
   const detail: Array<{ key: SenderType; status: number; body: string }> = [];
-  // Batches of 4: running 17 translation-heavy invocations at once trips the
-  // free-plan CPU limit on larger feeds.
-  const batchSize = 4;
+  // Serialized: concurrent invocations race on manifest.json's
+  // read-modify-write and GitHub rejects the competing commits, so new posts
+  // land on disk but miss the index. One at a time keeps the index exact.
+  const batchSize = 1;
   for (let i = 0; i < ALL_SYNC_KEYS.length; i += batchSize) {
     const batch = ALL_SYNC_KEYS.slice(i, i + batchSize);
     const results = await Promise.allSettled(
