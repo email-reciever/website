@@ -30,6 +30,7 @@ import {
   createCommonFrontmatter,
   getEmailSenderType,
 } from "./utils/blog";
+import { drillUrls } from "./utils/drill";
 import { forward } from "./utils/forward";
 import { issue } from "./utils/issue";
 import { logger } from "./utils/logger";
@@ -213,6 +214,14 @@ export default {
         return Response.json({ error: "unknown source", source: key }, { status: 404 });
       }
       return Response.json({ source: key, synced: Date.now() });
+    } else if (pathname === "/weekly/drill" && request.method === "POST") {
+      try {
+        const body = (await request.json()) as { urls?: string[] };
+        const items = await drillUrls(body.urls ?? [], env);
+        return Response.json({ items, drilledAt: Date.now() });
+      } catch (error) {
+        return Response.json({ error: String(error) }, { status: 503 });
+      }
     } else if (pathname === "/tts" && request.method === "POST") {
       // Keyless online TTS for weekly narration when no macOS runner is around.
       try {
