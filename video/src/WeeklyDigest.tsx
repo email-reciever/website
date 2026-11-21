@@ -1,6 +1,7 @@
 import { Audio } from "@remotion/media";
 import {
   AbsoluteFill,
+  CanvasImage,
   Easing,
   interpolate,
   Sequence,
@@ -10,6 +11,7 @@ import {
 } from "remotion";
 import data from "./weekly.json";
 import timing from "./media-timing.json";
+import highlightImages from "./highlight-images.json";
 
 const CYAN = "#00E5FF";
 const INK = "#F2FBFF";
@@ -126,7 +128,12 @@ const Stats: React.FC = () => {
   );
 };
 
-const Highlight: React.FC<{ index: number; title: string; source: string }> = ({ index, title, source }) => {
+const Highlight: React.FC<{ index: number; title: string; source: string; image?: string }> = ({
+  index,
+  title,
+  source,
+  image,
+}) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const p = rise(frame, fps, 4);
@@ -136,22 +143,41 @@ const Highlight: React.FC<{ index: number; title: string; source: string }> = ({
       <div style={{ fontFamily: "GeistMono, monospace", fontSize: 26, letterSpacing: 8, color: CYAN }}>
         {String(index + 1).padStart(2, "0")} / HIGHLIGHT · {source.toUpperCase()}
       </div>
-      <div
-        style={{
-          opacity: p,
-          translate: `0 ${interpolate(p, [0, 1], [50, 0])}px`,
-          fontSize: 74,
-          fontWeight: 700,
-          lineHeight: 1.12,
-          letterSpacing: -3,
-          color: INK,
-          marginTop: 110,
-          maxWidth: 1600,
-        }}
-      >
-        {title}
+      <div style={{ display: "flex", gap: 70, alignItems: "flex-start", marginTop: 90 }}>
+        <div
+          style={{
+            opacity: p,
+            translate: `0 ${interpolate(p, [0, 1], [50, 0])}px`,
+            fontSize: image ? 64 : 74,
+            fontWeight: 700,
+            lineHeight: 1.12,
+            letterSpacing: -3,
+            color: INK,
+            flex: 1,
+          }}
+        >
+          {title}
+        </div>
+        {image ? (
+          <div
+            style={{
+              opacity: rise(frame, fps, 12),
+              width: 620,
+              height: 400,
+              border: `2px solid ${CYAN}`,
+              padding: 12,
+              background: "rgba(0,229,255,0.05)",
+              flexShrink: 0,
+            }}
+          >
+            <CanvasImage
+              src={staticFile(image)}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </div>
+        ) : null}
       </div>
-      <div style={{ marginTop: 90, height: 3, width: interpolate(frame, [8, 60], [0, 1680], { extrapolateRight: "clamp" }), background: CYAN }} />
+      <div style={{ marginTop: 70, height: 3, width: interpolate(frame, [8, 60], [0, 1680], { extrapolateRight: "clamp" }), background: CYAN }} />
     </AbsoluteFill>
   );
 };
@@ -260,7 +286,12 @@ export const WeeklyDigest: React.FC = () => {
             from={frames(item.from)}
             durationInFrames={frames(item.to - item.from)}
           >
-            <Highlight index={index} title={post.title} source={post.author} />
+            <Highlight
+              index={index}
+              title={post.title}
+              source={post.author}
+              image={highlightImages[index]}
+            />
           </Sequence>
         );
       })}

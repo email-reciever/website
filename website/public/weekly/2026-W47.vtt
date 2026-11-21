@@ -1,28 +1,31 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:03.000
+00:00:00.000 --> 00:00:02.000
 欢迎收看 Email Reciever 周总结。
 
-00:00:03.000 --> 00:00:10.000
+00:00:02.000 --> 00:00:09.000
 本周时间范围 2026/11/16 — 2026/11/22 20:00。
 
-00:00:10.000 --> 00:00:15.000
+00:00:09.000 --> 00:00:14.000
 去重后共收录 58 篇文章，来自 15 个技术订阅源。
 
-00:00:15.000 --> 00:00:17.000
+00:00:14.000 --> 00:00:23.000
+本周三条主线：AI 基础设施进入治理时代，安全与信任成为另一面，Web 平台正在回归。
+
+00:00:23.000 --> 00:00:24.000
 本周要点开始。
 
-00:00:17.000 --> 00:00:27.000
+00:00:24.000 --> 00:00:33.000
 第1条，New in AWS Quick: More capable flows, an updated web experience, and agents that work together。
 
-00:00:27.000 --> 00:00:34.000
+00:00:33.000 --> 00:00:42.000
 第2条，Cut self-hosted LLM cost and latency with the distributed KV caching agent skill。
 
-00:00:34.000 --> 00:00:43.000
+00:00:42.000 --> 00:00:52.000
 第3条，Introducing managed cluster extensions for observability and user management in Amazon SageMaker HyperPod Slurm。
 
-00:00:43.000 --> 00:00:51.000
+00:00:52.000 --> 00:01:01.000
 热门关键词包括：amazon，sagemaker，bedrock，aws，inference，cloudflare。
 
-00:00:51.000 --> 00:00:55.000
+00:01:01.000 --> 00:01:04.000
 更多内容，请访问 Email Reciever 网站。
