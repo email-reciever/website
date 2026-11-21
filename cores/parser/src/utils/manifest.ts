@@ -5,6 +5,11 @@
  * single source of the post list, so the list page never needs to walk
  * the whole content tree or parse frontmatter of every file.
  * The parser keeps it in sync every time a post is published.
+ *
+ * Concurrency: the RSS fan-out runs several sources at once, each publishing
+ * through createBlog → upsertManifest. A failed read must NEVER be treated as
+ * an empty index (that would shrink the manifest to just the current post),
+ * and read-modify-write must retry when another writer changed the file.
  */
 
 import type { Frontmatter } from "@email.reciever/types/markdown-extends";
@@ -12,6 +17,11 @@ import { type FileInfo, github, githubRead } from "../adapters/github";
 import { local, localRead } from "../adapters/local";
 
 export const MANIFEST_PATH = "manifest.json";
+
+/** tripwire: a healthy index has thousands of posts; refuse to write a
+ * truncated one produced by a failed/stale GitHub read. */
+const MIN_SAFE_POSTS = 100;
+const MAX_RETRIES = 5;
 
 export interface ManifestEntry {
   author: string;
@@ -57,34 +67,51 @@ export async function readManifest(env: Env): Promise<{ manifest: Manifest; sha?
     response = await githubRead(MANIFEST_PATH, env);
   }
 
-  const { content = '{ "posts": [] }', sha } = response ?? {};
-  return { manifest: JSON.parse(content) as Manifest, sha };
+  if (!response?.content) {
+    // Never fall back to `{ posts: [] }` — a transient 404/500 would otherwise
+    // make the next write replace the whole index with a single entry.
+    throw new Error("manifest read failed — refusing to write an empty index");
+  }
+  return { manifest: JSON.parse(response.content) as Manifest, sha: response.sha };
 }
 
 /**
  * Insert or update one entry, keep posts sorted by date desc.
- * `sha` is required when the manifest already exists on GitHub (update).
+ * Retries with a fresh read when a concurrent fan-out writer changed the file.
  */
 export async function upsertManifest(entry: ManifestEntry, env: Env) {
-  const { manifest, sha } = await readManifest(env);
-  const posts = manifest.posts ?? [];
-  const index = posts.findIndex((p) => p.author === entry.author && p.slug === entry.slug);
-  if (index >= 0) {
-    posts[index] = entry;
-  } else {
-    posts.push(entry);
-  }
-  posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+  for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+    try {
+      const { manifest, sha } = await readManifest(env);
+      const posts = manifest.posts ?? [];
+      if (posts.length < MIN_SAFE_POSTS) {
+        throw new Error(`manifest has only ${posts.length} posts — aborting write`);
+      }
 
-  const payload: FileInfo = {
-    path: MANIFEST_PATH,
-    content: JSON.stringify({ ...manifest, posts }),
-    ...(sha ? { sha } : {}),
-  };
+      const index = posts.findIndex((p) => p.author === entry.author && p.slug === entry.slug);
+      if (index >= 0) {
+        posts[index] = entry;
+      } else {
+        posts.push(entry);
+      }
+      posts.sort((a, b) => (a.date < b.date ? 1 : -1));
 
-  if (env.ENV === "dev") {
-    await local(payload, env);
-  } else {
-    await github(payload, env);
+      const payload: FileInfo = {
+        path: MANIFEST_PATH,
+        content: JSON.stringify({ ...manifest, posts }),
+        ...(sha ? { sha } : {}),
+      };
+
+      if (env.ENV === "dev") {
+        await local(payload, env);
+      } else {
+        await github(payload, env);
+      }
+      return;
+    } catch (e) {
+      if (attempt === MAX_RETRIES - 1) throw e;
+      // back off briefly so the competing writer can finish its commit
+      await new Promise((resolve) => setTimeout(resolve, 300 * (attempt + 1)));
+    }
   }
 }
