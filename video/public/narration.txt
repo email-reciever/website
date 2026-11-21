@@ -1,10 +1,11 @@
 欢迎收看 Email Reciever 周总结。
 本周时间范围 2026/11/16 — 2026/11/22 20:00。
 去重后共收录 58 篇文章，来自 15 个技术订阅源。
-本周三条主线：AI 基础设施进入治理时代，安全与信任成为另一面，Web 平台正在回归。
-本周要点开始。
-第1条，New in AWS Quick: More capable flows, an updated web experience, and agents that work together。
-第2条，Cut self-hosted LLM cost and latency with the distributed KV caching agent skill。
-第3条，Introducing managed cluster extensions for observability and user management in Amazon SageMaker HyperPod Slurm。
-热门关键词包括：amazon，sagemaker，bedrock，aws，inference，cloudflare。
-更多内容，请访问 Email Reciever 网站。
+一句话总览。本周的主线不是"模型又强了多少",而是 AI 从演示走向生产后暴露的工程债:成本、治理、安全与可观测性同时成为头条;与此同时,Web 平台正在悄悄收回失地——CSS/HTML 原生能力回归,前端工具链开始为"AI 写出来的代码"收拾残局。
+主线一:AI 基础设施进入"治理时代"。来自 AWS 的 21 篇内容几乎全部围绕同一个主题展开:把 Agent 从单点能力变成可控的生产系统。
+主线二:安全与信任正在成为 AI 叙事的另一面。本周安全信号异常密集,而且来自两个方向。
+主线三:Web 平台回归,工具链补课。另一条暗线是平台能力的回归:
+下钻发现(已保存 5 篇)。从 Bytes #540 页面继续下钻,我们保存了这些与主线相关的文章:
+本周推荐(按阅读优先级)。1. How the BMW Group governs hundreds of agents across thousands of developers — 大型组织 Agent 治理的一手经验
+收尾。如果用一句话概括本周:AI 的故事正在从"能不能做"变成"能不能负责",而 Web 开发者的答案藏在平台能力、可验证性与工程纪律里。
+出处索引和完整链接请查看网页版总结。更多内容，请访问 Email Reciever 网站。

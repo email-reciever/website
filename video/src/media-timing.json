@@ -1,44 +1,77 @@
 {
-  "durationMs": 64526,
+  "durationMs": 114480,
   "fps": 30,
   "scenes": [
     {
       "type": "intro",
       "from": 0,
-      "to": 9.632
+      "to": 10.584
     },
     {
       "type": "stats",
-      "from": 9.632,
-      "to": 23.118
+      "from": 10.584,
+      "to": 15.816
     },
     {
-      "type": "highlight",
+      "type": "section",
       "index": 0,
-      "from": 23.118,
-      "to": 33.004
+      "heading": "一句话总览",
+      "body": "本周的主线不是\"模型又强了多少\",而是 AI 从演示走向生产后暴露的工程债:成本、治理、安全与可观测性同时成为头条;与此同时,Web 平台正在悄悄收回失地——CSS/HTML 原生能力回归,前端工具链开始为\"AI 写出来的代码\"收拾残局。",
+      "from": 15.816,
+      "to": 41.592
     },
     {
-      "type": "highlight",
+      "type": "section",
       "index": 1,
-      "from": 33.004,
-      "to": 42.51
+      "heading": "主线一:AI 基础设施进入\"治理时代\"",
+      "body": "来自 AWS 的 21 篇内容几乎全部围绕同一个主题展开:把 Agent 从单点能力变成可控的生产系统。",
+      "from": 41.592,
+      "to": 55.344
     },
     {
-      "type": "highlight",
+      "type": "section",
       "index": 2,
-      "from": 42.51,
-      "to": 52.573
+      "heading": "主线二:安全与信任正在成为 AI 叙事的另一面",
+      "body": "本周安全信号异常密集,而且来自两个方向。",
+      "from": 55.344,
+      "to": 64.872
     },
     {
-      "type": "keywords",
-      "from": 52.573,
-      "to": 61.057
+      "type": "section",
+      "index": 3,
+      "heading": "主线三:Web 平台回归,工具链补课",
+      "body": "另一条暗线是平台能力的回归:",
+      "from": 64.872,
+      "to": 72.048
+    },
+    {
+      "type": "section",
+      "index": 4,
+      "heading": "下钻发现(已保存 5 篇)",
+      "body": "从 Bytes #540 页面继续下钻,我们保存了这些与主线相关的文章:",
+      "from": 72.048,
+      "to": 81.36
+    },
+    {
+      "type": "section",
+      "index": 5,
+      "heading": "本周推荐(按阅读优先级)",
+      "body": "1. How the BMW Group governs hundreds of agents across thousands of developers — 大型组织 Agent 治理的一手经验",
+      "from": 81.36,
+      "to": 93
+    },
+    {
+      "type": "section",
+      "index": 6,
+      "heading": "收尾",
+      "body": "如果用一句话概括本周:AI 的故事正在从\"能不能做\"变成\"能不能负责\",而 Web 开发者的答案藏在平台能力、可验证性与工程纪律里。",
+      "from": 93,
+      "to": 106.296
     },
     {
       "type": "outro",
-      "from": 61.057,
-      "to": 64.526
+      "from": 106.296,
+      "to": 114.48
     }
   ]
 }

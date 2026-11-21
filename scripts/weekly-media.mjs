@@ -9,7 +9,7 @@
  * Usage: node scripts/weekly-media.mjs [2026-W47]
  */
 import { spawnSync } from "node:child_process";
-import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, readFile, unlink, writeFile } from "node:fs/promises";
 import { createRequire } from "node:module";
 import path from "node:path";
 import { EdgeTTS } from "@andresaya/edge-tts";
@@ -33,19 +33,40 @@ function run(command, args, cwd) {
 
 const digest = JSON.parse(await readFile(path.join(ROOT, "weekly", `${WEEK}.json`), "utf8"));
 
+/** Split the editorial Markdown into narratable sections. */
+function parseSections(markdown) {
+  const sections = [];
+  let current = null;
+  for (const raw of String(markdown || "").split("\n")) {
+    const line = raw.trim();
+    if (line.startsWith("## ")) {
+      current = { heading: line.slice(3).trim(), body: "" };
+      sections.push(current);
+      continue;
+    }
+    if (!current || !line || line.startsWith("#")) continue;
+    if (line.startsWith("> ") || (!line.startsWith("-") && !line.startsWith("*"))) {
+      if (!current.body) {
+        current.body = line.replace(/[*_>`]/g, "").slice(0, 240);
+      }
+    }
+  }
+  return sections.filter((section) => section.heading !== "出处索引");
+}
+
+const sections = parseSections(digest.editorial);
+const plain = (text) =>
+  String(text)
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/[*_`>]/g, "");
 const lines = [
   "欢迎收看 Email Reciever 周总结。",
   `本周时间范围 ${digest.week.label}。`,
   `去重后共收录 ${digest.total} 篇文章，来自 ${digest.sources.length} 个技术订阅源。`,
-  "本周三条主线：AI 基础设施进入治理时代，安全与信任成为另一面，Web 平台正在回归。",
-  "本周要点开始。",
-  ...digest.highlights.slice(0, 3).map((post, i) => `第${i + 1}条，${post.title}。`),
-  `热门关键词包括：${digest.keywords
-    .slice(0, 6)
-    .map((kw) => kw.word)
-    .join("，")}。`,
-  "更多内容，请访问 Email Reciever 网站。",
+  ...sections.map((section) => `${plain(section.heading)}。${plain(section.body).slice(0, 130)}`),
+  "出处索引和完整链接请查看网页版总结。更多内容，请访问 Email Reciever 网站。",
 ];
+console.log(`  narration: ${lines.length} lines / ${sections.length} editorial sections`);
 
 await writeFile(path.join(VIDEO, "src/weekly.json"), JSON.stringify(digest));
 await writeFile(path.join(VIDEO, "public/narration.txt"), lines.join("\n"));
@@ -79,13 +100,22 @@ const chunks = [];
 let cursor = 0;
 
 async function synthesizeLine(text) {
-  const tts = new EdgeTTS();
-  const result = await tts.generate(text, VOICE);
-  // Edge TTS reports duration in seconds; convert to ms for VTT + Remotion.
-  const last = result.sentenceBoundaries?.at(-1);
-  const fallbackSeconds = last ? (last.offset + last.duration) / 1_000_000 : 0;
-  const durationMs = Math.round((result.duration ?? fallbackSeconds) * 1000);
-  return { audio: Buffer.from(result.audio), durationMs };
+  let lastError;
+  for (let attempt = 0; attempt < 4; attempt++) {
+    try {
+      const tts = new EdgeTTS({ timeout: 60_000 });
+      const result = await tts.generate(text, VOICE);
+      const last = result.sentenceBoundaries?.at(-1);
+      const fallbackSeconds = last ? (last.offset + last.duration) / 1_000_000 : 0;
+      const durationMs = Math.round((result.duration ?? fallbackSeconds) * 1000);
+      if (!durationMs) throw new Error("empty duration");
+      return { audio: Buffer.from(result.audio), durationMs };
+    } catch (error) {
+      lastError = error;
+      console.warn(`  TTS retry ${attempt + 1}/4 for "${text.slice(0, 16)}…": ${String(error)}`);
+    }
+  }
+  throw lastError;
 }
 
 try {
@@ -129,6 +159,8 @@ if (mp3.length) {
     m4as.push(await readFile(out));
   }
   await writeFile(path.join(PUBLIC, `${WEEK}.m4a`), Buffer.concat(m4as));
+  // Remove a stale mp3 so the player falls through to the freshly built m4a.
+  await unlink(path.join(PUBLIC, `${WEEK}.mp3`)).catch(() => {});
 }
 
 // Cue timing comes from the synthesized durations, so captions match the audio.
@@ -151,13 +183,20 @@ const timing = {
   durationMs: totalMs,
   fps: FPS,
   scenes: [
-    { type: "intro", from: at(0), to: at(2) },
-    { type: "stats", from: at(2), to: at(4) },
-    { type: "highlight", index: 0, from: at(4), to: at(6) },
-    { type: "highlight", index: 1, from: at(6), to: at(7) },
-    { type: "highlight", index: 2, from: at(7), to: at(8) },
-    { type: "keywords", from: at(8), to: at(9) },
-    { type: "outro", from: at(9), to: totalMs / 1000 },
+    { type: "intro", from: 0, to: at(2) },
+    { type: "stats", from: at(2), to: at(3) },
+    ...sections.map((section, index) => {
+      const start = 3 + index;
+      return {
+        type: "section",
+        index,
+        heading: plain(section.heading),
+        body: plain(section.body),
+        from: at(start),
+        to: at(start + 1),
+      };
+    }),
+    { type: "outro", from: at(3 + sections.length), to: totalMs / 1000 },
   ],
 };
 await writeFile(path.join(VIDEO, "src/media-timing.json"), JSON.stringify(timing, null, 2));

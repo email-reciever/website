@@ -128,90 +128,6 @@ const Stats: React.FC = () => {
   );
 };
 
-const Highlight: React.FC<{ index: number; title: string; source: string; image?: string }> = ({
-  index,
-  title,
-  source,
-  image,
-}) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const p = rise(frame, fps, 4);
-  return (
-    <AbsoluteFill style={{ backgroundColor: "#000", padding: 120, fontFamily: "Geist, sans-serif" }}>
-      <Grid />
-      <div style={{ fontFamily: "GeistMono, monospace", fontSize: 26, letterSpacing: 8, color: CYAN }}>
-        {String(index + 1).padStart(2, "0")} / HIGHLIGHT · {source.toUpperCase()}
-      </div>
-      <div style={{ display: "flex", gap: 70, alignItems: "flex-start", marginTop: 90 }}>
-        <div
-          style={{
-            opacity: p,
-            translate: `0 ${interpolate(p, [0, 1], [50, 0])}px`,
-            fontSize: image ? 64 : 74,
-            fontWeight: 700,
-            lineHeight: 1.12,
-            letterSpacing: -3,
-            color: INK,
-            flex: 1,
-          }}
-        >
-          {title}
-        </div>
-        {image ? (
-          <div
-            style={{
-              opacity: rise(frame, fps, 12),
-              width: 620,
-              height: 400,
-              border: `2px solid ${CYAN}`,
-              padding: 12,
-              background: "rgba(0,229,255,0.05)",
-              flexShrink: 0,
-            }}
-          >
-            <CanvasImage
-              src={staticFile(image)}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          </div>
-        ) : null}
-      </div>
-      <div style={{ marginTop: 70, height: 3, width: interpolate(frame, [8, 60], [0, 1680], { extrapolateRight: "clamp" }), background: CYAN }} />
-    </AbsoluteFill>
-  );
-};
-
-const Keywords: React.FC = () => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  return (
-    <AbsoluteFill style={{ backgroundColor: "#000", padding: 120, fontFamily: "Geist, sans-serif" }}>
-      <Grid />
-      <div style={{ fontFamily: "GeistMono, monospace", fontSize: 26, letterSpacing: 8, color: CYAN }}>
-        03 / SIGNALS
-      </div>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 28, marginTop: 120, maxWidth: 1660 }}>
-        {data.keywords.slice(0, 14).map((kw, i) => (
-          <div
-            key={kw.word}
-            style={{
-              opacity: rise(frame, fps, 5 + i * 3),
-              border: "1px solid rgba(242,251,255,0.18)",
-              borderLeft: `3px solid ${CYAN}`,
-              padding: "22px 34px",
-              fontSize: 42,
-              color: INK,
-            }}
-          >
-            {kw.word} <span style={{ color: CYAN, fontFamily: "GeistMono, monospace" }}>{kw.count}</span>
-          </div>
-        ))}
-      </div>
-    </AbsoluteFill>
-  );
-};
-
 const Outro: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -254,6 +170,82 @@ const Outro: React.FC = () => {
   );
 };
 
+/** One scene per section of the editorial summary, so the video carries the
+ * same conclusions as the written digest. */
+const SectionScene: React.FC<{
+  index: number;
+  heading: string;
+  body: string;
+  image?: string;
+}> = ({ index, heading, body, image }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const p = rise(frame, fps, 4);
+  return (
+    <AbsoluteFill style={{ backgroundColor: "#000", padding: 120, fontFamily: "Geist, sans-serif" }}>
+      <Grid />
+      <div style={{ fontFamily: "GeistMono, monospace", fontSize: 26, letterSpacing: 8, color: CYAN }}>
+        {String(index + 1).padStart(2, "0")} / WEEKLY SIGNAL
+      </div>
+      <div style={{ display: "flex", gap: 70, marginTop: 80, alignItems: "flex-start" }}>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div
+            style={{
+              opacity: p,
+              translate: `0 ${interpolate(p, [0, 1], [50, 0])}px`,
+              fontSize: heading.length > 16 ? 54 : heading.length > 11 ? 64 : 76,
+              fontWeight: 800,
+              letterSpacing: -3,
+              lineHeight: 1.15,
+              color: INK,
+            }}
+          >
+            {heading}
+          </div>
+          <div
+            style={{
+              opacity: rise(frame, fps, 16),
+              marginTop: 50,
+              fontSize: 38,
+              lineHeight: 1.5,
+              color: MUTED,
+              maxWidth: 1000,
+            }}
+          >
+            {body}
+          </div>
+        </div>
+        {image ? (
+          <div
+            style={{
+              opacity: rise(frame, fps, 12),
+              width: 560,
+              height: 360,
+              border: `2px solid ${CYAN}`,
+              padding: 10,
+              background: "rgba(0,229,255,0.05)",
+              flexShrink: 0,
+            }}
+          >
+            <CanvasImage
+              src={staticFile(image)}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </div>
+        ) : null}
+      </div>
+      <div
+        style={{
+          marginTop: 60,
+          height: 3,
+          width: interpolate(frame, [8, 60], [0, 1680], { extrapolateRight: "clamp" }),
+          background: CYAN,
+        }}
+      />
+    </AbsoluteFill>
+  );
+};
+
 // Scene boundaries come from the actual TTS durations, so video + captions
 // stay locked to the narration.
 const frames = (seconds: number) => Math.round(seconds * timing.fps);
@@ -276,31 +268,22 @@ export const WeeklyDigest: React.FC = () => {
       >
         <Stats />
       </Sequence>
-      {[0, 1, 2].map((index) => {
-        const item = timing.scenes.find((s) => s.type === "highlight" && s.index === index);
-        const post = data.highlights[index];
-        if (!item || !post) return null;
-        return (
+      {timing.scenes
+        .filter((item) => item.type === "section")
+        .map((item, index) => (
           <Sequence
-            key={post.slug}
+            key={`${item.type}-${index}`}
             from={frames(item.from)}
             durationInFrames={frames(item.to - item.from)}
           >
-            <Highlight
-              index={index}
-              title={post.title}
-              source={post.author}
-              image={highlightImages[index]}
+            <SectionScene
+              index={item.index ?? index}
+              heading={item.heading ?? ""}
+              body={item.body ?? ""}
+              image={highlightImages[item.index ?? index]}
             />
           </Sequence>
-        );
-      })}
-      <Sequence
-        from={frames(scene("keywords")?.from ?? 0)}
-        durationInFrames={frames((scene("keywords")?.to ?? 0) - (scene("keywords")?.from ?? 0))}
-      >
-        <Keywords />
-      </Sequence>
+        ))}
       <Sequence
         from={frames(scene("outro")?.from ?? 0)}
         durationInFrames={frames((scene("outro")?.to ?? 0) - (scene("outro")?.from ?? 0))}
