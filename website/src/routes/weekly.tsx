@@ -33,7 +33,7 @@ function WeeklyPage() {
 
   return (
     <div className="mx-auto w-full max-w-7xl px-5 py-12 sm:px-8">
-      <section className="hero-stage mb-12 border-b border-base-300/60">
+      <section className="hero-stage weekly-hero mb-12 border-b border-base-300/60">
         <div className="scan-grid absolute inset-0" />
         <div className="hero-content relative flex flex-col gap-5 px-1 py-12">
           <div className="mono-label">Email Reciever / weekly signal</div>

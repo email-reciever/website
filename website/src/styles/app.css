@@ -224,6 +224,10 @@
   will-change: transform, opacity;
 }
 
+.weekly-hero {
+  min-height: min(56vh, 520px);
+}
+
 .hero-title {
   color: var(--stage-fg);
 }
