@@ -46,7 +46,12 @@ for (const [key, posts] of groups) {
   if (posts.length < 2) continue;
   const scored = [];
   for (const post of posts) scored.push({ post, len: await bodyLength(post) });
-  scored.sort((a, b) => b.len - a.len);
+  // Prefer a translated copy, then the longer body.
+  scored.sort((a, b) => {
+    const ta = a.post.translated === false ? 0 : 1;
+    const tb = b.post.translated === false ? 0 : 1;
+    return tb - ta || b.len - a.len;
+  });
   console.log(`duplicate ${key}: ${scored.map((s) => `${s.post.slug}(${s.len})`).join(", ")}`);
   remove.push(...scored.slice(1).map((s) => s.post));
 }
