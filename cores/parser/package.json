@@ -16,29 +16,29 @@
     "@octokit/rest": "^22.0.1",
     "cheerio": "^1.2.0",
     "dayjs": "^1.11.23",
-    "fast-xml-parser": "^5.11.2",
-    "js-base64": "^3.9.4",
-    "js-yaml": "^5.4.3",
+    "fast-xml-parser": "^5.12.1",
+    "js-base64": "^3.9.7",
+    "js-yaml": "^5.5.0",
     "lodash.chunk": "^4.2.0",
-    "mdast-util-from-markdown": "^2.0.1",
+    "mdast-util-from-markdown": "^2.1.0",
     "mdast-util-to-string": "^4.0.0",
-    "postal-mime": "^4.0.6",
+    "postal-mime": "^4.2.1",
     "remark-parse": "^11.0.0",
     "remark-stringify": "^11.0.0",
     "unified": "^11.0.5",
     "unist-util-filter": "^5.0.1",
     "unist-util-find": "^3.0.0",
-    "unist-util-is": "^6.0.0",
-    "unist-util-visit": "^5.0.0"
+    "unist-util-is": "^6.0.1",
+    "unist-util-visit": "^5.2.0"
   },
   "devDependencies": {
-    "@cloudflare/vitest-plugin": "^1.4.3",
+    "@cloudflare/vitest-plugin": "^1.9.0",
     "@email.reciever/types": "workspace:^",
     "@types/lodash.chunk": "^4.2.9",
-    "@types/node": "^24.0.0",
+    "@types/node": "^24.19.2",
     "@types/unist": "^3.0.3",
     "typescript": "^5.9.3",
-    "vitest": "^4.1.0",
-    "wrangler": "^4.151.0"
+    "vitest": "^4.1.12",
+    "wrangler": "^4.166.0"
   }
 }

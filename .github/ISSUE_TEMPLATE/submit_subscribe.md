@@ -1,4 +1,5 @@
 ---
+
 name: Subscribe Addon
 about: Submit your subscrib url
 title: '[Subscribe]: '

@@ -1,4 +1,5 @@
 ---
+
 name: Record Blog
 about: Submit Record
 title: '[Recorder]: '

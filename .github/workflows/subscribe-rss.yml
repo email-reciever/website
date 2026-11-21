@@ -15,6 +15,6 @@ jobs:
       - name: send trigger curl
         uses: indiesdev/curl@v1.1
         with:
-          method: 'POST'
+          method: "POST"
           url: ${{ secrets.WORKER_RSS_URL }}
           timeout: 300000

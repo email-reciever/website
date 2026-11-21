@@ -2,7 +2,7 @@ name: Subscribe-zhihu
 
 on:
   schedule:
-    - cron: '0 0 */7 * *'
+    - cron: "0 0 */7 * *"
   workflow_dispatch:
 
 jobs:
@@ -12,6 +12,6 @@ jobs:
       - name: send trigger curl
         uses: indiesdev/curl@v1.1
         with:
-          method: 'POST'
+          method: "POST"
           url: ${{ secrets.WORKER_URL }}
           timeout: 100000
