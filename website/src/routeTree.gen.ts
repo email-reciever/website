@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as RssDotxmlRouteImport } from './routes/rss[.]xml'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SubscribeRouteImport } from './routes/subscribe'
+import { Route as WeeklyRouteImport } from './routes/weekly'
 import { Route as PostAuthorSlugRouteImport } from './routes/post.$author.$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -35,6 +36,11 @@ const SubscribeRoute = SubscribeRouteImport.update({
   path: '/subscribe',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WeeklyRoute = WeeklyRouteImport.update({
+  id: '/weekly',
+  path: '/weekly',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PostAuthorSlugRoute = PostAuthorSlugRouteImport.update({
   id: '/post/$author/$slug',
   path: '/post/$author/$slug',
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/rss.xml': typeof RssDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/subscribe': typeof SubscribeRoute
+  '/weekly': typeof WeeklyRoute
   '/post/$author/$slug': typeof PostAuthorSlugRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/rss.xml': typeof RssDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/subscribe': typeof SubscribeRoute
+  '/weekly': typeof WeeklyRoute
   '/post/$author/$slug': typeof PostAuthorSlugRoute
 }
 export interface FileRoutesById {
@@ -61,20 +69,33 @@ export interface FileRoutesById {
   '/rss.xml': typeof RssDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/subscribe': typeof SubscribeRoute
+  '/weekly': typeof WeeklyRoute
   '/post/$author/$slug': typeof PostAuthorSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/rss.xml' | '/sitemap.xml' | '/subscribe' | '/post/$author/$slug'
+    | '/'
+    | '/rss.xml'
+    | '/sitemap.xml'
+    | '/subscribe'
+    | '/weekly'
+    | '/post/$author/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/rss.xml' | '/sitemap.xml' | '/subscribe' | '/post/$author/$slug'
+  to:
+    | '/'
+    | '/rss.xml'
+    | '/sitemap.xml'
+    | '/subscribe'
+    | '/weekly'
+    | '/post/$author/$slug'
   id:
     | '__root__'
     | '/'
     | '/rss.xml'
     | '/sitemap.xml'
     | '/subscribe'
+    | '/weekly'
     | '/post/$author/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -83,6 +104,7 @@ export interface RootRouteChildren {
   RssDotxmlRoute: typeof RssDotxmlRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SubscribeRoute: typeof SubscribeRoute
+  WeeklyRoute: typeof WeeklyRoute
   PostAuthorSlugRoute: typeof PostAuthorSlugRoute
 }
 
@@ -116,6 +138,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SubscribeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/weekly': {
+      id: '/weekly'
+      path: '/weekly'
+      fullPath: '/weekly'
+      preLoaderRoute: typeof WeeklyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/post/$author/$slug': {
       id: '/post/$author/$slug'
       path: '/post/$author/$slug'
@@ -131,6 +160,7 @@ const rootRouteChildren: RootRouteChildren = {
   RssDotxmlRoute: RssDotxmlRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SubscribeRoute: SubscribeRoute,
+  WeeklyRoute: WeeklyRoute,
   PostAuthorSlugRoute: PostAuthorSlugRoute,
 }
 export const routeTree = rootRouteImport

@@ -29,6 +29,16 @@ export function Header() {
         </div>
         <div className="navbar-end gap-1">
           <Link
+            to="/weekly"
+            search={{ week: undefined }}
+            className="btn btn-ghost btn-sm gap-2 font-mono text-[10px] tracking-[0.14em] text-base-content/55 uppercase hover:text-[var(--signal)]"
+          >
+            <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
+              <path d="M4 3h16v18H4V3Zm2 2v2h2V5H6Zm4 0v2h2V5h-2Zm4 0v2h2V5h-2ZM6 9v2h2V9H6Zm4 0v2h2V9h-2Zm4 0v2h2V9h-2ZM6 13v2h2v-2H6Zm4 0v2h2v-2h-2Zm4 0v2h2v-2h-2Z" />
+            </svg>
+            <span className="hidden sm:inline">Weekly</span>
+          </Link>
+          <Link
             to="/subscribe"
             className="btn btn-ghost btn-sm gap-2 font-mono text-[10px] tracking-[0.14em] text-base-content/55 uppercase hover:text-[var(--signal)]"
           >

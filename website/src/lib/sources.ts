@@ -28,6 +28,12 @@ export const SOURCES: Record<string, SourceMeta> = {
   syntaxfm: { label: "Syntax", note: "Syntax 通讯" },
   tyler: { label: "Bytes", note: "ui.dev 出品" },
   zhihu: { label: "知乎专栏", note: "中文技术周刊" },
+  weekly: {
+    label: "Weekly Digest",
+    note: "周总结下钻",
+    icon: "/media-source/others-ico.png",
+    banner: "/media-source/others-banner.png",
+  },
 
   // RSS-only sources added 2026-11 — typographic SVG assets keep them honest
   // (no fake logos) and on-brand with the monochrome visual system.

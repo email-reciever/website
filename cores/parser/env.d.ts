@@ -16,4 +16,6 @@ interface Env {
   MYMEMORY_EMAIL?: string;
   /** self service binding used by the cron fan-out (fresh subrequest budget per source) */
   SELF: Fetcher;
+  /** Browserless API key for optional weekly down-drill CDP scans */
+  BROWSERLESS_KEY?: string;
 }
