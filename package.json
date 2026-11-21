@@ -32,6 +32,7 @@
   },
   "packageManager": "pnpm@10.34.7",
   "devDependencies": {
+    "@andresaya/edge-tts": "^1.9.1",
     "@biomejs/biome": "^2.6.8"
   },
   "licenses": [

@@ -1,9 +1,9 @@
 欢迎收看 Email Reciever 周总结。
 本周时间范围 2026/11/16 — 2026/11/22 20:00。
 去重后共收录 58 篇文章，来自 15 个技术订阅源。
-本周要点：
-第1，New in AWS Quick: More capable flows, an updated web experience, and agents that work together。
-第2，Cut self-hosted LLM cost and latency with the distributed KV caching agent skill。
-第3，Introducing managed cluster extensions for observability and user management in Amazon SageMaker HyperPod Slurm。
+本周要点开始。
+第1条，New in AWS Quick: More capable flows, an updated web experience, and agents that work together。
+第2条，Cut self-hosted LLM cost and latency with the distributed KV caching agent skill。
+第3条，Introducing managed cluster extensions for observability and user management in Amazon SageMaker HyperPod Slurm。
 热门关键词包括：amazon，sagemaker，bedrock，aws，inference，cloudflare。
 更多内容，请访问 Email Reciever 网站。

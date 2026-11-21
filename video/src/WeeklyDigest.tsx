@@ -9,12 +9,11 @@ import {
   useVideoConfig,
 } from "remotion";
 import data from "./weekly.json";
+import timing from "./media-timing.json";
 
 const CYAN = "#00E5FF";
 const INK = "#F2FBFF";
 const MUTED = "rgba(242,251,255,0.55)";
-
-type SceneProps = Record<string, never>;
 
 const fontStyle = `
 @font-face{font-family:Geist;src:url(${staticFile("fonts/geist.woff2")}) format("woff2");font-weight:100 900}
@@ -39,7 +38,7 @@ const Grid: React.FC = () => (
   />
 );
 
-const Intro: React.FC<SceneProps> = () => {
+const Intro: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const a = rise(frame, fps, 4);
@@ -83,7 +82,7 @@ const Intro: React.FC<SceneProps> = () => {
   );
 };
 
-const Stats: React.FC<SceneProps> = () => {
+const Stats: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   return (
@@ -157,7 +156,7 @@ const Highlight: React.FC<{ index: number; title: string; source: string }> = ({
   );
 };
 
-const Keywords: React.FC<SceneProps> = () => {
+const Keywords: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   return (
@@ -187,7 +186,7 @@ const Keywords: React.FC<SceneProps> = () => {
   );
 };
 
-const Outro: React.FC<SceneProps> = () => {
+const Outro: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   return (
@@ -229,32 +228,52 @@ const Outro: React.FC<SceneProps> = () => {
   );
 };
 
+// Scene boundaries come from the actual TTS durations, so video + captions
+// stay locked to the narration.
+const frames = (seconds: number) => Math.round(seconds * timing.fps);
+
 export const WeeklyDigest: React.FC = () => {
-  const { fps } = useVideoConfig();
+  const scene = (name: string) => timing.scenes.find((item) => item.type === name);
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       <style>{fontStyle}</style>
-      <Audio src={staticFile("narration.m4a")} />
-      <Sequence durationInFrames={6 * fps} premountFor={1 * fps}>
+      <Audio src={staticFile("narration.mp3")} />
+      <Sequence
+        from={frames(scene("intro")?.from ?? 0)}
+        durationInFrames={frames((scene("intro")?.to ?? 0) - (scene("intro")?.from ?? 0))}
+      >
         <Intro />
       </Sequence>
-      <Sequence from={6 * fps} durationInFrames={8 * fps} premountFor={1 * fps}>
+      <Sequence
+        from={frames(scene("stats")?.from ?? 0)}
+        durationInFrames={frames((scene("stats")?.to ?? 0) - (scene("stats")?.from ?? 0))}
+      >
         <Stats />
       </Sequence>
-      {data.highlights.slice(0, 3).map((post, i) => (
-        <Sequence
-          key={post.slug}
-          from={(14 + i * 7) * fps}
-          durationInFrames={7 * fps}
-          premountFor={1 * fps}
-        >
-          <Highlight index={i} title={post.title} source={post.author} />
-        </Sequence>
-      ))}
-      <Sequence from={35 * fps} durationInFrames={14 * fps} premountFor={1 * fps}>
+      {[0, 1, 2].map((index) => {
+        const item = timing.scenes.find((s) => s.type === "highlight" && s.index === index);
+        const post = data.highlights[index];
+        if (!item || !post) return null;
+        return (
+          <Sequence
+            key={post.slug}
+            from={frames(item.from)}
+            durationInFrames={frames(item.to - item.from)}
+          >
+            <Highlight index={index} title={post.title} source={post.author} />
+          </Sequence>
+        );
+      })}
+      <Sequence
+        from={frames(scene("keywords")?.from ?? 0)}
+        durationInFrames={frames((scene("keywords")?.to ?? 0) - (scene("keywords")?.from ?? 0))}
+      >
         <Keywords />
       </Sequence>
-      <Sequence from={49 * fps} durationInFrames={10 * fps} premountFor={1 * fps}>
+      <Sequence
+        from={frames(scene("outro")?.from ?? 0)}
+        durationInFrames={frames((scene("outro")?.to ?? 0) - (scene("outro")?.from ?? 0))}
+      >
         <Outro />
       </Sequence>
     </AbsoluteFill>

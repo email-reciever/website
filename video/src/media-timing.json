@@ -1,0 +1,44 @@
+{
+  "durationMs": 55152,
+  "fps": 30,
+  "scenes": [
+    {
+      "type": "intro",
+      "from": 0,
+      "to": 10.584
+    },
+    {
+      "type": "stats",
+      "from": 10.584,
+      "to": 15.816
+    },
+    {
+      "type": "highlight",
+      "index": 0,
+      "from": 15.816,
+      "to": 27.024
+    },
+    {
+      "type": "highlight",
+      "index": 1,
+      "from": 27.024,
+      "to": 34.464
+    },
+    {
+      "type": "highlight",
+      "index": 2,
+      "from": 34.464,
+      "to": 43.56
+    },
+    {
+      "type": "keywords",
+      "from": 43.56,
+      "to": 51.288
+    },
+    {
+      "type": "outro",
+      "from": 51.288,
+      "to": 55.152
+    }
+  ]
+}

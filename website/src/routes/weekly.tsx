@@ -122,9 +122,10 @@ function WeeklyPage() {
           <div className="mono-label">audio / narration</div>
           <div className="flex min-h-28 flex-col justify-center gap-4 border border-base-300/70 p-5">
             <p className="text-[13px] leading-relaxed text-base-content/60">
-              中文语音导读,由 macOS 中文语音合成,与视频同步生成。
+              中文语音导读,由 Edge 神经语音合成,字幕与画面按真实语音时长对齐。
             </p>
             <audio controls preload="metadata" className="w-full">
+              <source src={`/weekly/${digest.week.key}.mp3`} type="audio/mpeg" />
               <source src={`/weekly/${digest.week.key}.m4a`} type="audio/mp4" />
               <track
                 kind="captions"
@@ -135,7 +136,7 @@ function WeeklyPage() {
               />
               你的浏览器不支持音频播放。
             </audio>
-            <a href={`/weekly/${digest.week.key}.m4a`} download className="btn-cine h-9 w-fit px-4">
+            <a href={`/weekly/${digest.week.key}.mp3`} download className="btn-cine h-9 w-fit px-4">
               下载音频
             </a>
           </div>

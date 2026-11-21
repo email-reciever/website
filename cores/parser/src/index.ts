@@ -36,6 +36,7 @@ import { logger } from "./utils/logger";
 import { reconcileSource } from "./utils/reconcile";
 import { syncRssSource } from "./utils/rss";
 import { syncArchiveSource } from "./utils/scrape";
+import { synthesize } from "./utils/tts";
 
 dayjs.locale("zh-cn");
 
@@ -212,6 +213,18 @@ export default {
         return Response.json({ error: "unknown source", source: key }, { status: 404 });
       }
       return Response.json({ source: key, synced: Date.now() });
+    } else if (pathname === "/tts" && request.method === "POST") {
+      // Keyless online TTS for weekly narration when no macOS runner is around.
+      try {
+        const body = (await request.json()) as { text?: string };
+        const audio = await synthesize(String(body.text ?? ""), env);
+        return new Response(new Blob([audio], { type: "audio/mpeg" }), {
+          status: 200,
+          headers: { "Content-Type": "audio/mpeg", "Cache-Control": "public, max-age=86400" },
+        });
+      } catch (error) {
+        return Response.json({ error: String(error) }, { status: 503 });
+      }
     } else if (pathname === "/issue") {
       const payload = await request.json<Record<string, any>>();
       try {
