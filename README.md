@@ -14,21 +14,21 @@ flowchart LR
     D -->|SSR + 边缘缓存| E[Cloudflare Workers]
 ```
 
-- **内容不在构建期打包**(这也是本次重构的起因 —— 1800+ 篇文章全量 SSG 超出了 Cloudflare Pages 的构建限制),网站在请求时通过 raw CDN 拉取,两级缓存(edge cache + worker 内存)扛住流量。
+- **内容不在构建期打包**(这也是本次重构的起因 —— 2400+ 篇文章全量 SSG 超出了 Cloudflare Pages 的构建限制),网站在请求时通过 raw CDN 拉取,两级缓存(edge cache + worker 内存)扛住流量。
 - `manifest.json` 是全部文章的元数据索引,parser 每发布一篇就同步更新;列表页只读这一个文件。
 
 ## 目录
 
-| 路径 | 说明 |
-| --- | --- |
-| `website/` | TanStack Start 站点(React 19 + @tanstack/markdown + Tailwind 4 + daisyUI 5),部署到 Cloudflare Workers |
-| `cores/parser/` | Worker:接收邮件 / RSS 直连 / 归档页爬取、按订阅源切片、google gtx + Workers AI 翻译、写入仓库 |
-| `packages/consts` | 订阅源白名单 / RSS 源清单等常量(parser 与 website 共享) |
-| `packages/turndown` | HTML → Markdown 转换器(带自定义规则的 fork) |
-| `packages/server` | Deno 辅助服务:本地写入、批量补发、Discord 通知 |
-| `packages/dts` | frontmatter 等类型定义 |
-| `content/` | 文章正文 `{author}/{timestamp}.md` |
-| `manifest.json` | 文章索引(网站列表页数据源) |
+| 路径                | 说明                                                                                                  |
+| ------------------- | ----------------------------------------------------------------------------------------------------- |
+| `website/`          | TanStack Start 站点(React 19 + @tanstack/markdown + Tailwind 4 + daisyUI 5),部署到 Cloudflare Workers |
+| `cores/parser/`     | Worker:接收邮件 / RSS 直连 / 归档页爬取、按订阅源切片、google gtx + Workers AI 翻译、写入仓库         |
+| `packages/consts`   | 订阅源白名单 / RSS 源清单等常量(parser 与 website 共享)                                               |
+| `packages/turndown` | HTML → Markdown 转换器(带自定义规则的 fork)                                                           |
+| `packages/server`   | Deno 辅助服务:本地写入、批量补发、Discord 通知                                                        |
+| `packages/dts`      | frontmatter 等类型定义                                                                                |
+| `content/`          | 文章正文 `{author}/{timestamp}.md`                                                                    |
+| `manifest.json`     | 文章索引(网站列表页数据源)                                                                            |
 
 ## 开发
 
@@ -42,6 +42,9 @@ pnpm sr               # deno 辅助服务
 
 pnpm check            # biome lint / format 检查
 pnpm format           # biome 自动修复
+
+pnpm migrate          # 增量收编 src/content 中的遗留 MDX(幂等)
+pnpm migrate:rebuild  # 索引漂移时从 content/**/*.md 全量重建 manifest.json
 ```
 
 ## 部署
