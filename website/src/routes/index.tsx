@@ -79,11 +79,11 @@ function ListPage() {
                 <span className="text-[var(--signal)]">signal.</span>
               </h1>
               <div className="hero-rule mt-7 max-w-2xl" />
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-300/80 sm:text-lg">
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-[var(--stage-muted)] sm:text-lg">
                 来自 {Object.keys(counts).length} 个技术订阅源的内容，自动切片、翻译、归档。
               </p>
             </div>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[0.6875rem] tracking-[0.18em] text-slate-400/70 uppercase">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[0.6875rem] tracking-[0.18em] text-[var(--stage-meta)] uppercase">
               <span>{total} documents indexed</span>
               <span className="text-[var(--signal)]">/</span>
               <span>17 direct feeds</span>
@@ -97,7 +97,7 @@ function ListPage() {
             <div className="flex items-center gap-3">
               <span className="mono-label">Scroll to explore</span>
               <span className="h-px flex-1 bg-gradient-to-r from-[var(--signal)]/60 to-transparent" />
-              <span className="font-mono text-[10px] text-slate-500">↓</span>
+              <span className="font-mono text-[10px] text-[var(--stage-lite)]">↓</span>
             </div>
           </div>
         </div>

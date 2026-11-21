@@ -81,7 +81,7 @@ function RootError({ error }: { error: unknown }) {
       <section className="flex min-h-[70vh] flex-col items-center justify-center gap-6 px-5 text-center">
         <div className="h-px w-16 bg-[var(--signal)]" />
         <div className="mono-label">Error / 500</div>
-        <h1 className="display-caps text-7xl text-white/20 sm:text-8xl">Lost signal</h1>
+        <h1 className="display-caps text-7xl text-base-content/20 sm:text-8xl">Lost signal</h1>
         <p className="max-w-md font-mono text-xs tracking-[0.1em] text-base-content/50">
           {message}
         </p>
@@ -98,7 +98,7 @@ function NotFound() {
     <section className="flex min-h-[70vh] flex-col items-center justify-center gap-6 px-5 text-center">
       <div className="h-px w-16 bg-[var(--signal)]" />
       <div className="mono-label">Error / 404</div>
-      <h1 className="display-caps text-8xl text-white/20 sm:text-9xl">No signal</h1>
+      <h1 className="display-caps text-8xl text-base-content/20 sm:text-9xl">No signal</h1>
       <p className="font-mono text-xs tracking-[0.1em] text-base-content/50">
         这篇文章不存在或已被移除
       </p>

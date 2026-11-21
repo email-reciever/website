@@ -36,7 +36,7 @@ export function SearchBar() {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder="SEARCH THE ARCHIVE"
-        className="grow bg-transparent font-mono text-xs tracking-[0.08em] text-white outline-none placeholder:text-slate-500"
+        className="grow bg-transparent font-mono text-xs tracking-[0.08em] text-[var(--input-fg)] outline-none placeholder:text-[var(--stage-lite)]"
       />
       {value ? (
         <button
@@ -48,7 +48,7 @@ export function SearchBar() {
           ✕
         </button>
       ) : (
-        <kbd className="hidden border border-white/20 px-1.5 py-0.5 font-mono text-[10px] text-slate-500 sm:inline">
+        <kbd className="hidden border border-base-content/20 px-1.5 py-0.5 font-mono text-[10px] text-[var(--stage-lite)] sm:inline">
           /
         </kbd>
       )}

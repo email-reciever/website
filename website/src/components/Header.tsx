@@ -4,7 +4,7 @@ import { SITE } from "@/lib/sources";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-base-300/60 bg-black/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-base-300/60 bg-[var(--header-bg)] backdrop-blur-xl">
       <div className="h-px w-full bg-gradient-to-r from-[var(--signal)] via-[var(--signal)]/25 to-transparent" />
       <div className="navbar mx-auto max-w-7xl px-5 sm:px-8">
         <div className="navbar-start gap-3">
@@ -16,7 +16,9 @@ export function Header() {
               width="28"
               height="28"
             />
-            <span className="display-caps text-sm tracking-[-0.03em] text-white">{SITE.title}</span>
+            <span className="display-caps text-sm tracking-[-0.03em] text-[var(--stage-fg)]">
+              {SITE.title}
+            </span>
             <span className="mono-label hidden border-l border-base-300/50 pl-3 md:inline">
               / feed
             </span>

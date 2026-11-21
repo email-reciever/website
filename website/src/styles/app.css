@@ -28,7 +28,19 @@
 :root {
   --signal: #00e5ff;
   --signal-rgb: 0, 229, 255;
+  --on-signal: #000000;
   --ease-cine: cubic-bezier(0.16, 1, 0.3, 1);
+  --stage-bg: #000000;
+  --stage-fg: #f2fbff;
+  --stage-muted: rgba(226, 240, 247, 0.78);
+  --stage-meta: #94a3b8;
+  --stage-lite: #64748b;
+  --stage-fade: #000000;
+  --input-bg: rgba(0, 0, 0, 0.55);
+  --input-fg: #ffffff;
+  --header-bg: rgba(0, 0, 0, 0.85);
+  --footer-bg: #000000;
+  --code-bg: #080c10;
 }
 
 /* dim — canonical. "dim" key kept so existing localStorage themes still work. */
@@ -60,9 +72,24 @@
   --radius-selector: 0;
   --radius-field: 0;
   --radius-box: 0;
+
+  --signal: #00e5ff;
+  --signal-rgb: 0, 229, 255;
+  --on-signal: #000000;
+  --stage-bg: #000000;
+  --stage-fg: #f2fbff;
+  --stage-muted: rgba(226, 240, 247, 0.78);
+  --stage-meta: #94a3b8;
+  --stage-lite: #64748b;
+  --stage-fade: #000000;
+  --input-bg: rgba(0, 0, 0, 0.55);
+  --input-fg: #ffffff;
+  --header-bg: rgba(0, 0, 0, 0.85);
+  --footer-bg: #000000;
+  --code-bg: #080c10;
 }
 
-/* light — same geometry, inverted ground, same single hue. */
+/* light — same geometry and single hue, inverted ground. No black holes. */
 :root[data-theme="light"] {
   color-scheme: light;
   --color-base-100: #ffffff;
@@ -91,6 +118,21 @@
   --radius-selector: 0;
   --radius-field: 0;
   --radius-box: 0;
+
+  --signal: #007e8f;
+  --signal-rgb: 0, 126, 143;
+  --on-signal: #ffffff;
+  --stage-bg: #eef4f7;
+  --stage-fg: #06121a;
+  --stage-muted: rgba(6, 18, 26, 0.7);
+  --stage-meta: #52636e;
+  --stage-lite: #64748b;
+  --stage-fade: #eef4f7;
+  --input-bg: rgba(255, 255, 255, 0.72);
+  --input-fg: #06121a;
+  --header-bg: rgba(244, 247, 249, 0.88);
+  --footer-bg: #f4f7f9;
+  --code-bg: #eaf0f4;
 }
 
 @layer base {
@@ -108,7 +150,7 @@
 
   ::selection {
     background: var(--signal);
-    color: #000;
+    color: var(--on-signal);
   }
 
   :focus-visible {
@@ -151,7 +193,7 @@
   isolation: isolate;
   overflow: hidden;
   min-height: min(86vh, 760px);
-  background: #000;
+  background: var(--stage-bg);
 }
 
 .hero-stage canvas {
@@ -171,7 +213,7 @@
   pointer-events: none;
   background:
     radial-gradient(ellipse 60% 60% at 78% 22%, rgba(var(--signal-rgb), 0.14), transparent 65%),
-    linear-gradient(to bottom, transparent 45%, #000 100%);
+    linear-gradient(to bottom, transparent 45%, var(--stage-fade) 100%);
 }
 
 .hero-content {
@@ -183,7 +225,10 @@
 }
 
 .hero-title {
-  color: #f2fbff;
+  color: var(--stage-fg);
+}
+
+:root[data-theme="dim"] .hero-title {
   text-shadow: 0 0 80px rgba(var(--signal-rgb), 0.18);
 }
 
@@ -270,13 +315,13 @@
 
 .btn-cine:hover {
   background: var(--signal);
-  color: #000;
+  color: var(--on-signal);
 }
 
 /* thin cyan input with a hairline frame */
 .cine-input {
   border: 1px solid color-mix(in oklab, var(--color-base-content) 16%, transparent);
-  background: rgba(0, 0, 0, 0.55);
+  background: var(--input-bg);
   transition: border-color 250ms var(--ease-cine);
 }
 
@@ -474,7 +519,7 @@
   padding: 1.1rem 1.25rem;
   font-size: 0.875rem;
   line-height: 1.75;
-  background: #080c10;
+  background: var(--code-bg);
 }
 
 .markdown-body pre code {

@@ -28,7 +28,7 @@ export function ThemeToggle() {
   return (
     <button
       type="button"
-      className="btn btn-ghost btn-sm btn-circle text-slate-400 hover:text-[var(--signal)]"
+      className="btn btn-ghost btn-sm btn-circle text-base-content/55 hover:text-[var(--signal)]"
       onClick={toggle}
       aria-label="切换主题"
     >

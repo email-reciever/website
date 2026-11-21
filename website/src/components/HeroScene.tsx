@@ -67,6 +67,8 @@ export function HeroScene() {
 
     const draw = () => {
       ctx.clearRect(0, 0, width, height);
+      const light = document.documentElement.getAttribute("data-theme") === "light";
+      const rgb = light ? "0,126,143" : "0,229,255";
 
       for (const p of particles) {
         if (!reduced) {
@@ -90,7 +92,7 @@ export function HeroScene() {
         const y = p.y + p.oy;
         ctx.beginPath();
         ctx.arc(x, y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 229, 255, ${p.alpha})`;
+        ctx.fillStyle = `rgba(${rgb}, ${p.alpha})`;
         ctx.fill();
       }
 
@@ -104,12 +106,20 @@ export function HeroScene() {
       if (reduced) draw();
     });
     observer.observe(canvas);
+    const themeObserver = new MutationObserver(() => {
+      if (reduced) draw();
+    });
+    themeObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
     window.addEventListener("pointermove", onMove, { passive: true });
     window.addEventListener("pointerleave", onLeave);
 
     return () => {
       cancelAnimationFrame(raf);
       observer.disconnect();
+      themeObserver.disconnect();
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("pointerleave", onLeave);
     };

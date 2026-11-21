@@ -17,7 +17,7 @@ export function SourceTabs({ counts }: { counts: Record<string, number> }) {
     "inline-flex h-9 items-center gap-2 border px-3 font-mono text-[11px] tracking-[0.08em] transition-colors";
   const idle =
     "border-base-300/60 text-base-content/55 hover:border-[var(--signal)]/60 hover:text-[var(--signal)]";
-  const on = "border-[var(--signal)] bg-[var(--signal)] text-black";
+  const on = "border-[var(--signal)] bg-[var(--signal)] text-[var(--on-signal)]";
 
   return (
     <div className="flex flex-wrap gap-2" role="tablist">

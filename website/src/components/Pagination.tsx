@@ -24,7 +24,7 @@ export function Pagination({ page, totalPages }: PaginationProps) {
     "inline-flex h-10 min-w-10 items-center justify-center border px-2 font-mono text-xs tracking-[0.08em] transition-colors";
   const idle =
     "border-base-300/60 text-base-content/55 hover:border-[var(--signal)]/60 hover:text-[var(--signal)]";
-  const on = "border-[var(--signal)] bg-[var(--signal)] text-black";
+  const on = "border-[var(--signal)] bg-[var(--signal)] text-[var(--on-signal)]";
 
   return (
     <nav className="flex items-center gap-2" aria-label="分页">
