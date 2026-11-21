@@ -131,8 +131,11 @@ async function translateChunk(
   env: Env,
 ): Promise<string> {
   const expected = markersOf(chunk).join("\n");
-  // primary (retry once) → fallback (retry once)
-  const attempts: Provider[] = [chain[0], chain[0], chain[1], chain[1]];
+  // One attempt per provider. Each attempt costs a subrequest on Workers; four
+  // attempts × ~17 chunks blew the free-plan subrequest budget during the first
+  // live sync. A failed chunk now falls back once and otherwise degrades to the
+  // original prose (translated=false), which is the documented failure mode.
+  const attempts: Provider[] = [chain[0], chain[1]];
 
   for (const provider of attempts) {
     try {

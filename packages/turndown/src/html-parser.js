@@ -1,6 +1,9 @@
 /*
  * Set up window for Node.js
  */
+// Static import (not require) — Vite 8/Rolldown turns a dynamic require of an
+// external module into a __require helper that Cloudflare Workers rejects.
+import domino from '@mixmark-io/domino'
 
 var root = (typeof window !== 'undefined' ? window : {})
 
@@ -47,7 +50,6 @@ function createHTMLParser() {
       }
     }
   } else {
-    var domino = require('@mixmark-io/domino')
     Parser.prototype.parseFromString = function (string) {
       return domino.createDocument(string)
     }

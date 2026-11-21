@@ -9,9 +9,11 @@ OPEN_ACTION = "opened"
 OPEN_USER = "innocces"
 SELF_EMAIL = "jiangjiangjiangxi@gmail.com"
 TR_SERVE = "https://email-reciever.deno.dev"
-# optional translation overrides:
-# TR_MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast"   # Workers AI model (ai provider)
-# TR_PROVIDER = "google"                                  # 'google' (non-AI, default) or 'ai'
+# Translation: the keyless google gtx endpoint returned 429 from Cloudflare
+# egress on the first live sync — use Workers AI as the primary channel.
+# Bigger chunks (4000 vs 1200 chars) also cut subrequests sharply.
+TR_PROVIDER = "ai"
+# TR_MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast"   # Workers AI model override
 
 # RSS direct-subscription sync (utils/rss.ts), also triggerable via POST /rss
 [triggers]

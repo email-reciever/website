@@ -15,8 +15,9 @@ import { html2md } from "./html2md";
 import { logger } from "./logger";
 import { getMetaData, setMetaData } from "./metadata";
 
-/** per-run cap per source — feeds are weekly, this is plenty */
-export const MAX_ITEMS_PER_RUN = 5;
+/** per-run cap per source — keep low: a single sync invocation services every
+ * source, and each article translation spends subrequests (free plan: 50/run). */
+export const MAX_ITEMS_PER_RUN = 2;
 /** bound the dedupe list so metadata files stay small */
 const DEDUPE_LIMIT = 200;
 
