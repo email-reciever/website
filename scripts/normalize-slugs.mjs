@@ -29,6 +29,7 @@ function slugFromDate(value) {
 const manifest = JSON.parse(await readFile(MANIFEST, "utf8"));
 const byKey = new Map(manifest.posts.map((p) => [`${p.author}/${p.slug}`, p]));
 const renames = [];
+const reserved = new Set();
 
 for (const author of await readdir(path.join(ROOT, "content"))) {
   const dir = path.join(ROOT, "content", author);
@@ -49,12 +50,14 @@ for (const author of await readdir(path.join(ROOT, "content"))) {
       try {
         await stat(target);
       } catch {
-        break;
+        // also reserve names chosen earlier in this run — renames happen later
+        if (!reserved.has(`${author}/${finalSlug}`)) break;
       }
       suffix += 1;
       finalSlug = `${desired}_${pad(suffix, 3)}`;
       target = path.join(dir, `${finalSlug}.md`);
     }
+    reserved.add(`${author}/${finalSlug}`);
     renames.push({ author, from: currentSlug, to: finalSlug, filePath, target });
   }
 }

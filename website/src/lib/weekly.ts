@@ -18,6 +18,8 @@ export interface WeeklyDigest {
   recommendations: ManifestEntry[];
   /** down-drilled articles saved when Browserless CDP is available */
   drilled: Array<{ title: string; url: string; excerpt: string }>;
+  /** editor-written deep summary in Markdown */
+  editorial?: string;
   source: "browserless" | "archive";
 }
 
@@ -144,12 +146,14 @@ export async function buildWeeklyDigest(weekKey?: string): Promise<WeeklyDigest>
     .slice(0, 12);
 
   let drilled: WeeklyDigest["drilled"] = [];
+  let editorial: string | undefined;
   let source: WeeklyDigest["source"] = "archive";
   try {
     const saved = await getSavedDigest(week.key);
     if (saved) {
       drilled = saved.drilled ?? [];
       source = saved.source === "browserless" ? "browserless" : "archive";
+      editorial = saved.editorial;
     }
   } catch {
     /* keep the extractive digest */
@@ -166,6 +170,7 @@ export async function buildWeeklyDigest(weekKey?: string): Promise<WeeklyDigest>
     highlights: unique.slice(0, 6),
     recommendations,
     drilled,
+    editorial,
     source,
   };
 }

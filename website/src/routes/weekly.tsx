@@ -1,12 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
+import { Markdown } from "@/components/Markdown";
 import { formatDate } from "@/lib/date";
+import { renderMarkdown } from "@/lib/markdown";
 import { sourceLabel } from "@/lib/sources";
 import { buildWeeklyDigest, type WeeklyDigest, weekInfo } from "@/lib/weekly";
 
 const fetchDigest = createServerFn({ method: "GET" })
   .validator((data: { week?: string }) => data)
   .handler(({ data }) => buildWeeklyDigest(data.week));
+
+const renderEditorial = createServerFn({ method: "GET" })
+  .validator((data: { md: string }) => data)
+  .handler(({ data }) => renderMarkdown(data.md));
 
 export const Route = createFileRoute("/weekly")({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -16,7 +22,13 @@ export const Route = createFileRoute("/weekly")({
         : undefined,
   }),
   loaderDeps: ({ search }) => ({ week: search.week }),
-  loader: ({ deps }) => fetchDigest({ data: deps }),
+  loader: async ({ deps }) => {
+    const digest = await fetchDigest({ data: deps });
+    const editorialHtml = digest.editorial
+      ? await renderEditorial({ data: { md: digest.editorial } })
+      : null;
+    return { ...digest, editorialHtml };
+  },
   head: () => ({
     meta: [
       { title: "周总结 / Weekly — Email Reciever" },
@@ -27,7 +39,9 @@ export const Route = createFileRoute("/weekly")({
 });
 
 function WeeklyPage() {
-  const digest = Route.useLoaderData() as WeeklyDigest;
+  const { editorialHtml, ...digest } = Route.useLoaderData() as WeeklyDigest & {
+    editorialHtml: string | null;
+  };
   const { week } = Route.useSearch();
   const current = weekInfo();
 
@@ -142,6 +156,16 @@ function WeeklyPage() {
           </div>
         </div>
       </section>
+
+      {editorialHtml && (
+        <section className="mb-12 border border-base-300/60 bg-base-100/40 p-6 sm:p-9">
+          <div className="mono-label mb-6">editorial / 本周深度总结</div>
+          <Markdown html={editorialHtml} />
+          <a href={`/weekly/${digest.week.key}-summary.md`} className="btn-cine mt-8 h-9 px-4">
+            下载 Markdown
+          </a>
+        </section>
+      )}
 
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_300px]">
         <div className="flex flex-col gap-10">
