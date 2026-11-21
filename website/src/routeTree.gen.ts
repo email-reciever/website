@@ -14,7 +14,6 @@ import { Route as RssDotxmlRouteImport } from './routes/rss[.]xml'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SubscribeRouteImport } from './routes/subscribe'
 import { Route as WeeklyRouteImport } from './routes/weekly'
-import { Route as ApiDrillRouteImport } from './routes/api.drill'
 import { Route as PostAuthorSlugRouteImport } from './routes/post.$author.$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -42,11 +41,6 @@ const WeeklyRoute = WeeklyRouteImport.update({
   path: '/weekly',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiDrillRoute = ApiDrillRouteImport.update({
-  id: '/api/drill',
-  path: '/api/drill',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const PostAuthorSlugRoute = PostAuthorSlugRouteImport.update({
   id: '/post/$author/$slug',
   path: '/post/$author/$slug',
@@ -59,7 +53,6 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/subscribe': typeof SubscribeRoute
   '/weekly': typeof WeeklyRoute
-  '/api/drill': typeof ApiDrillRoute
   '/post/$author/$slug': typeof PostAuthorSlugRoute
 }
 export interface FileRoutesByTo {
@@ -68,7 +61,6 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/subscribe': typeof SubscribeRoute
   '/weekly': typeof WeeklyRoute
-  '/api/drill': typeof ApiDrillRoute
   '/post/$author/$slug': typeof PostAuthorSlugRoute
 }
 export interface FileRoutesById {
@@ -78,7 +70,6 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/subscribe': typeof SubscribeRoute
   '/weekly': typeof WeeklyRoute
-  '/api/drill': typeof ApiDrillRoute
   '/post/$author/$slug': typeof PostAuthorSlugRoute
 }
 export interface FileRouteTypes {
@@ -89,7 +80,6 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/subscribe'
     | '/weekly'
-    | '/api/drill'
     | '/post/$author/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -98,7 +88,6 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/subscribe'
     | '/weekly'
-    | '/api/drill'
     | '/post/$author/$slug'
   id:
     | '__root__'
@@ -107,7 +96,6 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/subscribe'
     | '/weekly'
-    | '/api/drill'
     | '/post/$author/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -117,7 +105,6 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SubscribeRoute: typeof SubscribeRoute
   WeeklyRoute: typeof WeeklyRoute
-  ApiDrillRoute: typeof ApiDrillRoute
   PostAuthorSlugRoute: typeof PostAuthorSlugRoute
 }
 
@@ -158,13 +145,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WeeklyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/drill': {
-      id: '/api/drill'
-      path: '/api/drill'
-      fullPath: '/api/drill'
-      preLoaderRoute: typeof ApiDrillRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/post/$author/$slug': {
       id: '/post/$author/$slug'
       path: '/post/$author/$slug'
@@ -181,7 +161,6 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SubscribeRoute: SubscribeRoute,
   WeeklyRoute: WeeklyRoute,
-  ApiDrillRoute: ApiDrillRoute,
   PostAuthorSlugRoute: PostAuthorSlugRoute,
 }
 export const routeTree = rootRouteImport
