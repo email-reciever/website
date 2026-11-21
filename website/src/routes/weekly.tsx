@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
+import { useState } from "react";
 import { Markdown } from "@/components/Markdown";
 import { formatDate } from "@/lib/date";
 import { renderMarkdown } from "@/lib/markdown";
@@ -138,7 +139,7 @@ function WeeklyPage() {
             <p className="text-[13px] leading-relaxed text-base-content/60">
               中文语音导读,由 Edge 神经语音合成,字幕与画面按真实语音时长对齐。
             </p>
-            <audio controls preload="metadata" className="w-full">
+            <audio controls preload="metadata" className="audio-player">
               <source src={`/weekly/${digest.week.key}.mp3`} type="audio/mpeg" />
               <source src={`/weekly/${digest.week.key}.m4a`} type="audio/mp4" />
               <track
@@ -215,27 +216,7 @@ function WeeklyPage() {
             </div>
           </section>
 
-          {digest.drilled.length > 0 && (
-            <section>
-              <h2 className="display-caps mb-5 text-xl">下钻文章 / drilled</h2>
-              <div className="flex flex-col gap-2">
-                {digest.drilled.map((item) => (
-                  <a
-                    key={item.url}
-                    href={item.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="cine-card p-4"
-                  >
-                    <div className="text-sm font-medium">{item.title}</div>
-                    <p className="mt-1 line-clamp-2 text-[13px] text-base-content/55">
-                      {item.excerpt}
-                    </p>
-                  </a>
-                ))}
-              </div>
-            </section>
-          )}
+          {digest.drilled.length > 0 && <DrilledList items={digest.drilled} />}
         </div>
 
         <aside className="flex flex-col gap-6">
@@ -266,6 +247,113 @@ function WeeklyPage() {
         </aside>
       </div>
     </div>
+  );
+}
+
+type DrilledItem = {
+  title: string;
+  url: string;
+  excerpt: string;
+  source?: string;
+  links?: Array<{ url: string; text: string }>;
+  images?: string[];
+};
+
+function DrilledList({ items }: { items: DrilledItem[] }) {
+  const [more, setMore] = useState<Record<string, Array<{ url: string; text: string }>>>({});
+  const [busy, setBusy] = useState("");
+
+  const drill = async (url: string) => {
+    setBusy(url);
+    try {
+      const response = await fetch("/api/drill", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ urls: [url] }),
+      });
+      const data = (await response.json()) as {
+        items?: Array<{ links?: Array<{ url: string; text: string }> }>;
+      };
+      setMore((prev) => ({ ...prev, [url]: data.items?.[0]?.links ?? [] }));
+    } finally {
+      setBusy("");
+    }
+  };
+
+  return (
+    <section>
+      <h2 className="display-caps mb-5 text-xl">下钻文章 / drilled</h2>
+      <div className="flex flex-col gap-3">
+        {items.map((item) => (
+          <article key={item.url} className="cine-card flex flex-col gap-3 p-4">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+              <a href={item.url} target="_blank" rel="noreferrer" className="min-w-0">
+                <div className="text-sm font-medium hover:text-[var(--signal)]">{item.title}</div>
+                <p className="mt-1 line-clamp-2 text-[13px] text-base-content/55">{item.excerpt}</p>
+              </a>
+              <button
+                type="button"
+                onClick={() => drill(item.url)}
+                disabled={busy === item.url}
+                className="btn-cine h-8 shrink-0 px-3 disabled:opacity-40"
+              >
+                {busy === item.url ? "扫描中…" : "继续下钻 ↗"}
+              </button>
+            </div>
+            {item.images && item.images.length > 0 && (
+              <div className="flex gap-2 overflow-x-auto">
+                {item.images.slice(0, 3).map((src) => (
+                  <img
+                    key={src}
+                    src={src}
+                    alt=""
+                    loading="lazy"
+                    className="h-20 w-32 shrink-0 border border-base-300/60 object-cover grayscale transition-[filter] hover:grayscale-0"
+                  />
+                ))}
+              </div>
+            )}
+            {item.links && item.links.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {item.links.slice(0, 4).map((link) => (
+                  <a
+                    key={link.url}
+                    href={link.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="drill-link"
+                  >
+                    {link.text.slice(0, 48)} ↗
+                  </a>
+                ))}
+              </div>
+            )}
+            {more[item.url] && (
+              <div className="border-t border-base-300/50 pt-3">
+                <div className="mono-label mb-2">next layer / 下一层</div>
+                <div className="flex flex-wrap gap-2">
+                  {more[item.url].length ? (
+                    more[item.url].map((link) => (
+                      <a
+                        key={link.url}
+                        href={link.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="drill-link"
+                      >
+                        {link.text.slice(0, 48)} ↗
+                      </a>
+                    ))
+                  ) : (
+                    <span className="font-mono text-[10px] text-base-content/40">没有更多外链</span>
+                  )}
+                </div>
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+    </section>
   );
 }
 

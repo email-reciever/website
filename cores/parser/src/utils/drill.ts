@@ -12,6 +12,7 @@ export interface DrilledItem {
   title: string;
   text: string;
   links: Array<{ url: string; text: string }>;
+  images: string[];
 }
 
 const decode = (value: string) =>
@@ -60,9 +61,22 @@ export async function drillUrls(urls: string[], env: Env): Promise<DrilledItem[]
         if (links.some((item) => item.url === target)) continue;
         links.push({ url: target, text: text.slice(0, 160) });
       }
-      out.push({ source: url, title, text, links });
+      const images: string[] = [];
+      const imgRe = /<img[^>]+(?:src|data-src)="(https?:\/\/[^"]+)"[^>]*>/gi;
+      for (const match of html.matchAll(imgRe)) {
+        if (images.length >= 4) break;
+        const src = decode(match[1]);
+        if (!images.includes(src)) images.push(src);
+      }
+      out.push({ source: url, title, text, links, images });
     } catch (error) {
-      out.push({ source: url, title: url, text: `drill failed: ${String(error)}`, links: [] });
+      out.push({
+        source: url,
+        title: url,
+        text: `drill failed: ${String(error)}`,
+        links: [],
+        images: [],
+      });
     }
   }
   return out;

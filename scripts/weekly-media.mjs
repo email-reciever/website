@@ -10,8 +10,12 @@
  */
 import { spawnSync } from "node:child_process";
 import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
+import { createRequire } from "node:module";
 import path from "node:path";
 import { EdgeTTS } from "@andresaya/edge-tts";
+
+const require = createRequire(path.resolve("cores/parser/package.json"));
+const yaml = require("js-yaml");
 
 const ROOT = process.cwd();
 const WEEK = process.argv[2] || "2026-W47";
@@ -33,6 +37,7 @@ const lines = [
   "欢迎收看 Email Reciever 周总结。",
   `本周时间范围 ${digest.week.label}。`,
   `去重后共收录 ${digest.total} 篇文章，来自 ${digest.sources.length} 个技术订阅源。`,
+  "本周三条主线：AI 基础设施进入治理时代，安全与信任成为另一面，Web 平台正在回归。",
   "本周要点开始。",
   ...digest.highlights.slice(0, 3).map((post, i) => `第${i + 1}条，${post.title}。`),
   `热门关键词包括：${digest.keywords
@@ -45,6 +50,30 @@ const lines = [
 await writeFile(path.join(VIDEO, "src/weekly.json"), JSON.stringify(digest));
 await writeFile(path.join(VIDEO, "public/narration.txt"), lines.join("\n"));
 await mkdir(PUBLIC, { recursive: true });
+
+// Pull the first real image out of each highlighted article so the video can
+// show it instead of relying on decorative abstract art.
+const highlightImages = [];
+for (const [index, post] of digest.highlights.slice(0, 3).entries()) {
+  try {
+    const raw = await readFile(path.join(ROOT, "content", post.author, `${post.slug}.md`), "utf8");
+    const match = /^---\n([\s\S]*?)\n---\n?/.exec(raw);
+    const fm = match ? yaml.load(match[1]) || {} : {};
+    const body = match ? raw.slice(match[0].length) : raw;
+    const found = /!\[[^\]]*\]\((https?:\/\/[^)\s]+)\)/.exec(body);
+    const url = found?.[1] || (String(fm.banner || "").startsWith("http") ? fm.banner : "");
+    if (!url) continue;
+    const response = await fetch(url, { signal: AbortSignal.timeout(20_000) });
+    if (!response.ok) continue;
+    const file = `highlight-${index}.png`;
+    await writeFile(path.join(VIDEO, "public", file), Buffer.from(await response.arrayBuffer()));
+    highlightImages.push(file);
+    console.log(`  image ${index}: ${url.slice(0, 80)}`);
+  } catch {
+    /* keep the text-only scene */
+  }
+}
+await writeFile(path.join(VIDEO, "src/highlight-images.json"), JSON.stringify(highlightImages));
 
 const chunks = [];
 let cursor = 0;
@@ -123,12 +152,12 @@ const timing = {
   fps: FPS,
   scenes: [
     { type: "intro", from: at(0), to: at(2) },
-    { type: "stats", from: at(2), to: at(3) },
-    { type: "highlight", index: 0, from: at(3), to: at(5) },
-    { type: "highlight", index: 1, from: at(5), to: at(6) },
-    { type: "highlight", index: 2, from: at(6), to: at(7) },
-    { type: "keywords", from: at(7), to: at(8) },
-    { type: "outro", from: at(8), to: totalMs / 1000 },
+    { type: "stats", from: at(2), to: at(4) },
+    { type: "highlight", index: 0, from: at(4), to: at(6) },
+    { type: "highlight", index: 1, from: at(6), to: at(7) },
+    { type: "highlight", index: 2, from: at(7), to: at(8) },
+    { type: "keywords", from: at(8), to: at(9) },
+    { type: "outro", from: at(9), to: totalMs / 1000 },
   ],
 };
 await writeFile(path.join(VIDEO, "src/media-timing.json"), JSON.stringify(timing, null, 2));

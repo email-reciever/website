@@ -10,8 +10,8 @@
 
 来自 AWS 的 21 篇内容几乎全部围绕同一个主题展开:把 Agent 从单点能力变成可控的生产系统。
 
-- **推理成本与延迟**:`distributed KV caching agent skill` 直指自托管 LLM 最痛的两件事——重复计算与首 token 延迟;HyperPod **Global Inference Gateway** 用"一个端点跨区域与集群"把多Region部署从运维问题降级为配置问题。
-- **可观测性与治理**:HyperPod 的托管集群扩展、增强型基础设施观测,以及"BMW 如何在数千名开发者中治理数百个 Agent"——这是本周最值得精读的一篇,它说明Agent治理已经从研究话题变成大型工程组织的日常流程。
+- **推理成本与延迟**:[distributed KV caching agent skill](https://email-reciever-website.jiangjiangjiangxi.workers.dev/post/awsml/2026-11-21_00-14-26_000) 直指自托管 LLM 最痛的两件事——重复计算与首 token 延迟;HyperPod [Global Inference Gateway](https://email-reciever-website.jiangjiangjiangxi.workers.dev/post/awsml/2026-11-20_22-35-24_000) 用"一个端点跨区域与集群"把多Region部署从运维问题降级为配置问题。
+- **可观测性与治理**:HyperPod 的托管集群扩展、增强型基础设施观测,以及[BMW 如何在数千名开发者中治理数百个 Agent](https://email-reciever-website.jiangjiangjiangxi.workers.dev/post/awsml/2026-11-19_22-20-23_000)——这是本周最值得精读的一篇,它说明Agent治理已经从研究话题变成大型工程组织的日常流程。
 - **风险与合规**:Standard Bank 用生成式 AI 自动化风险评估,Textract Insights 强调"可验证"——关键词从 accuracy 转向 **verifiable**。
 
 **判断**:2026 年的 AI 竞争焦点已从模型榜单转向"谁能把 Agent 管起来"。推理网关、KV 缓存、权限与支付(AgentCore payments)这些看似枯燥的组件,才是下一阶段真正的护城河。
@@ -21,7 +21,7 @@
 本周安全信号异常密集,而且来自两个方向。
 
 - **基础设施层**:Cloudflare 连续披露 `ruby2shell (CVE-2026-132825)`、`phpAfterShell`、`Java4Shell (CVE-2026-114938)` 与五个 nginx 漏洞,并给出 WAF 缓解方案;选举期间的流量与攻击报告则提醒我们,网络层威胁始终与真实世界事件同步。
-- **叙事层**:MIT Tech Review 的 "Building trustworthy AI by fencing it in, not predicting it" 提出一个冷静的观点——可信 AI 靠的是**约束边界**,而不是预测模型行为;Gary Marcus 连发数篇质疑 Anthropic IPO 与 AI 泡沫,并指出美国基础设施在 AI 负载下的压力;React Status 关注 Next.js 频繁的安全公告,JavaScript Weekly 则整理"AI 在 Web 开发中最常犯的 10 个错误"。
+- **叙事层**:MIT Tech Review 的 [Building trustworthy AI by fencing it in, not predicting it](https://email-reciever-website.jiangjiangjiangxi.workers.dev/post/mittechai/2026-11-16_16-04-28_000) 提出一个冷静的观点——可信 AI 靠的是**约束边界**,而不是预测模型行为;Gary Marcus 连发数篇质疑 Anthropic IPO 与 AI 泡沫,并指出美国基础设施在 AI 负载下的压力;React Status 关注 Next.js 频繁的安全公告,JavaScript Weekly 则整理[AI 在 Web 开发中最常犯的 10 个错误](https://email-reciever-website.jiangjiangjiangxi.workers.dev/post/javascriptweekly/2026-11-17_18-57-25_879)。
 
 **判断**:当"AI 生成代码"进入主流,安全边界与可验证性会从加分项变成准入项。前端团队尤其需要把 AI 输出当作不可信输入来处理。
 
@@ -29,7 +29,7 @@
 
 另一条暗线是平台能力的回归:
 
-- CSS `scroll-state()` 与 `animation-range-start` 让滚动驱动动画进入原生时代;CSS-Tricks 的"Standout Designs"访谈和 frontendfocus 的"开发者如何看待 HTML"调查都在重新审视基础技术。
+- CSS [`scroll-state()`](https://email-reciever-website.jiangjiangjiangxi.workers.dev/post/csstricks/2026-11-19_14-57-54_000) 与 `animation-range-start` 让滚动驱动动画进入原生时代;CSS-Tricks 的"Standout Designs"访谈和 frontendfocus 的"开发者如何看待 HTML"调查都在重新审视基础技术。
 - Webpack 内置 CSS 与 HTML 支持,意味着"为框架配置构建"的成本继续下降。
 - Solid 2.0 正式登场,配合 Bytes 的专题报道;React 侧则有一篇扎实的实战:"如何把 Next.js 内存从 5GB 降到 1GB",以及 Node 的"时间旅行调试"。
 - Smashing Magazine 提醒:**AI 加速了构建,可访问性测试如何跟上?**
@@ -54,6 +54,16 @@
 4. **The top 10 things AI gets wrong in web development** — 给 AI 生成代码划边界
 5. **scroll-state()** — 原生 CSS 能力的最新进展
 6. **How I build UIs** — 个人工作流,短小但有启发
+
+## 出处索引
+
+- [AWS: distributed KV caching agent skill](https://email-reciever-website.jiangjiangjiangxi.workers.dev/post/awsml/2026-11-21_00-14-26_000) — 自托管 LLM 的成本与延迟
+- [AWS: SageMaker HyperPod Global Inference Gateway](https://email-reciever-website.jiangjiangjiangxi.workers.dev/post/awsml/2026-11-20_22-35-24_000) — 跨区域统一推理端点
+- [AWS: BMW 治理数百个 Agent](https://email-reciever-website.jiangjiangjiangxi.workers.dev/post/awsml/2026-11-19_22-20-23_000) — 大型组织的 Agent 治理
+- [MIT Tech Review: fenced-in trustworthy AI](https://email-reciever-website.jiangjiangjiangxi.workers.dev/post/mittechai/2026-11-16_16-04-28_000) — 可信 AI 的边界思路
+- [JavaScript Weekly: AI gets web dev wrong](https://email-reciever-website.jiangjiangjiangxi.workers.dev/post/javascriptweekly/2026-11-17_18-57-25_879) — AI 写 Web 的常见错误
+- [CSS-Tricks: scroll-state()](https://email-reciever-website.jiangjiangjiangxi.workers.dev/post/csstricks/2026-11-19_14-57-54_000) — 原生 CSS 状态查询
+- [React Digest: Next.js 5GB → 1GB](https://email-reciever-website.jiangjiangjiangxi.workers.dev/post/reactdigest/2026-11-15_19-25-00_000) — 内存优化实战
 
 ## 收尾
 

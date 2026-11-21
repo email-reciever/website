@@ -63,7 +63,14 @@ for (const item of items) {
       "utf8",
     );
     manifest.posts.push({ ...fm, slug });
-    saved.push({ title: link.text, url: link.url, excerpt: item.text.slice(0, 200) });
+    saved.push({
+      title: link.text,
+      url: link.url,
+      excerpt: item.text.slice(0, 200),
+      source: item.source,
+      links: item.links,
+      images: item.images ?? [],
+    });
   }
 }
 

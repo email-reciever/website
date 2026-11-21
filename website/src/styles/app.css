@@ -228,6 +228,48 @@
   min-height: min(56vh, 520px);
 }
 
+.audio-player {
+  width: 100%;
+  height: 44px;
+  border: 1px solid color-mix(in oklab, var(--signal) 35%, transparent);
+  border-left: 3px solid var(--signal);
+  background: color-mix(in oklab, var(--signal) 4%, transparent);
+  padding: 4px 12px;
+}
+
+.audio-player::-webkit-media-controls-panel {
+  background: transparent;
+}
+
+.audio-player::-webkit-media-controls-enclosure {
+  background: transparent;
+}
+
+.audio-player::-webkit-media-controls-current-time-display,
+.audio-player::-webkit-media-controls-time-remaining-display {
+  color: var(--stage-fg);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.drill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid color-mix(in oklab, var(--signal) 30%, transparent);
+  padding: 0.4rem 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: color-mix(in oklab, var(--stage-fg) 70%, transparent);
+  transition: all 200ms var(--ease-cine);
+}
+
+.drill-link:hover {
+  border-color: var(--signal);
+  color: var(--signal);
+}
+
 .hero-title {
   color: var(--stage-fg);
 }
