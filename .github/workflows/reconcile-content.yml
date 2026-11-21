@@ -1,0 +1,23 @@
+name: Reconcile-content
+
+# 校正已有内容:重新抓取已归档文章对应的源条目,补齐缺失正文/译文,
+# 源内容有变化时原地更新(不新建 slug)。
+# worker 自身也有每日 cron(wrangler.toml 的 45 4 * * *),这里用于手动立即触发
+# 以及云端 cron 失效时的备份。
+# 复用已有 secret: WORKER_RSS_URL = https://<worker>/rss
+
+on:
+  schedule:
+    - cron: "50 4 * * *"
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: reconcile existing posts
+        uses: indiesdev/curl@v1.1
+        with:
+          method: "POST"
+          url: "${{ secrets.WORKER_RSS_URL }}?reconcile=1"
+          timeout: 600000

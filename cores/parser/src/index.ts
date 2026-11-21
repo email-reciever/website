@@ -33,6 +33,7 @@ import {
 import { forward } from "./utils/forward";
 import { issue } from "./utils/issue";
 import { logger } from "./utils/logger";
+import { reconcileSource } from "./utils/reconcile";
 import { syncRssSource } from "./utils/rss";
 import { syncArchiveSource } from "./utils/scrape";
 
@@ -40,6 +41,8 @@ dayjs.locale("zh-cn");
 
 /** daily backfill cron — walks older feed items missing from the project */
 const BACKFILL_CRON = "15 3 * * *";
+/** daily reconcile cron — repairs existing posts and source drift */
+const RECONCILE_CRON = "45 4 * * *";
 
 const ALL_SYNC_KEYS = [
   ...(Object.keys(RSS_SOURCES) as SenderType[]),
@@ -52,12 +55,14 @@ const ALL_SYNC_KEYS = [
  * free-plan budget after the first few. A self-fetch gives every source a
  * fresh budget; the fan-out itself costs only 17 subrequests.
  */
-async function fanOutSync(env: Env, backfill = false) {
+type SyncMode = "sync" | "backfill" | "reconcile";
+
+async function fanOutSync(env: Env, mode: SyncMode = "sync") {
   const detail: Array<{ key: SenderType; status: number; body: string }> = [];
   const path = (key: SenderType) =>
-    backfill
-      ? `https://rss.internal/rss/backfill/${encodeURIComponent(key)}`
-      : `https://rss.internal/rss/${encodeURIComponent(key)}`;
+    mode === "sync"
+      ? `https://rss.internal/rss/${encodeURIComponent(key)}`
+      : `https://rss.internal/rss/${mode}/${encodeURIComponent(key)}`;
   // Serialized: concurrent invocations race on manifest.json's
   // read-modify-write and GitHub rejects the competing commits, so new posts
   // land on disk but miss the index. One at a time keeps the index exact.
@@ -166,15 +171,26 @@ export default {
       await zhihu("", "", [], env);
       return Response.json({ fetch: Date.now() });
     } else if (pathname === "/rss") {
-      // manual trigger: ?backfill=1 walks older missing items instead of newest
-      const backfill = new URL(url).searchParams.get("backfill") === "1";
-      const detail = await fanOutSync(env, backfill);
+      // manual trigger: ?backfill=1 walks older missing items, ?reconcile=1
+      // repairs existing posts / source drift
+      const params = new URL(url).searchParams;
+      const mode: SyncMode =
+        params.get("reconcile") === "1"
+          ? "reconcile"
+          : params.get("backfill") === "1"
+            ? "backfill"
+            : "sync";
+      const detail = await fanOutSync(env, mode);
       return Response.json({
         synced: Date.now(),
-        mode: backfill ? "backfill" : "sync",
+        mode,
         sources: ALL_SYNC_KEYS.length,
         detail,
       });
+    } else if (pathname.startsWith("/rss/reconcile/")) {
+      const key = decodeURIComponent(pathname.slice("/rss/reconcile/".length)) as SenderType;
+      await reconcileSource(key, env, adapter);
+      return Response.json({ source: key, mode: "reconcile", synced: Date.now() });
     } else if (pathname.startsWith("/rss/backfill/")) {
       const key = decodeURIComponent(pathname.slice("/rss/backfill/".length)) as SenderType;
       if (key in RSS_SOURCES) {
@@ -212,7 +228,13 @@ export default {
   // direct-subscription sync (RSS feeds + archive scrapes), crons in wrangler.toml.
   // Fan out via self-fetch so every source gets its own subrequest budget.
   async scheduled(controller, env) {
-    await fanOutSync(env, controller.cron === BACKFILL_CRON);
+    const mode: SyncMode =
+      controller.cron === BACKFILL_CRON
+        ? "backfill"
+        : controller.cron === RECONCILE_CRON
+          ? "reconcile"
+          : "sync";
+    await fanOutSync(env, mode);
   },
   async email(message, env, _ctx) {
     try {

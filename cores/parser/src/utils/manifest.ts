@@ -32,6 +32,7 @@ export interface ManifestEntry {
   date: string;
   origin_url?: string;
   origin_site?: string;
+  email_recorder?: string;
   subAuthor?: string;
   avatar?: string;
   banner?: string;

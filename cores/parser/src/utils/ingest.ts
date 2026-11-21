@@ -45,13 +45,21 @@ export async function readProcessed(key: SenderType, env: Env): Promise<string[]
   return content ?? [];
 }
 
-async function publishItem(
+export interface RenderedItem {
+  content: string;
+  translated: boolean;
+  originUrl: string;
+}
+
+/** Run an item through the same slicing + translation pipeline used by new
+ * posts. Shared by ingest (new) and reconcile (repair existing). */
+export async function renderItem(
   key: SenderType,
   mode: "newsletter" | "article",
   item: IngestItem,
   adapter: AdapterMap,
   env: Env,
-) {
+): Promise<RenderedItem> {
   let content = item.html;
   let translated = false;
   let originUrl = item.link;
@@ -77,6 +85,17 @@ async function publishItem(
     translated = result.translated;
   }
 
+  return { content, translated, originUrl };
+}
+
+async function publishItem(
+  key: SenderType,
+  mode: "newsletter" | "article",
+  item: IngestItem,
+  adapter: AdapterMap,
+  env: Env,
+) {
+  const { content, translated, originUrl } = await renderItem(key, mode, item, adapter, env);
   await createBlog(
     content,
     {

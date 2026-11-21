@@ -20,8 +20,8 @@ TR_PROVIDER = "ai"
 
 # RSS direct-subscription sync (utils/rss.ts), also triggerable via POST /rss
 [triggers]
-# 06h: newest-first sync. 03:15 daily: backfill older feed items missing here.
-crons = ["0 */6 * * *", "15 3 * * *"]
+# 06h: newest-first sync · 03:15: backfill missing history · 04:45: reconcile existing posts
+crons = ["0 */6 * * *", "15 3 * * *", "45 4 * * *"]
 
 # deno server (TR_SERVE) is only used for dev-mode file writes, batch replay
 # and discord notifications — translation runs on Workers AI (AI binding)

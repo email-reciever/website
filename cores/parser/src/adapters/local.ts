@@ -7,6 +7,7 @@ import type { FileInfo } from "./github";
 export interface LocalReadResult {
   status?: number;
   content?: string;
+  sha?: string;
 }
 
 export async function localRead(fileName: string, env: Env): Promise<LocalReadResult | undefined> {

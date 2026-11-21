@@ -46,7 +46,7 @@ export interface SyncOptions {
 }
 
 /** every item in the feed, newest first — callers decide which slice to ingest */
-async function fetchFeedItems(feed: string): Promise<IngestItem[]> {
+export async function fetchFeedItems(feed: string): Promise<IngestItem[]> {
   const xml = await fetch(feed, { headers: CRAWL_HEADERS }).then((response) => {
     if (!response.ok) throw new Error(`feed fetch failed: ${feed} → ${response.status}`);
     return response.text();

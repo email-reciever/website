@@ -25,4 +25,6 @@ export interface Frontmatter {
   avatar?: string;
   /** banner image path or url */
   banner?: string;
+  /** hash of the source HTML, used by the reconcile cron to detect source edits */
+  source_hash?: string;
 }
