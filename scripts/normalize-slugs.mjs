@@ -42,15 +42,20 @@ for (const author of await readdir(path.join(ROOT, "content"))) {
     const fm = match ? yaml.load(match[1]) || {} : {};
     const desired = slugFromDate(fm.date);
     if (!desired || desired === currentSlug) continue;
-    const target = path.join(dir, `${desired}.md`);
-    try {
-      await stat(target);
-      console.log(`  conflict ${author}/${desired}.md already exists — skipped`);
-      continue;
-    } catch {
-      /* target free */
+    let target = path.join(dir, `${desired}.md`);
+    let finalSlug = desired;
+    let suffix = 0;
+    while (true) {
+      try {
+        await stat(target);
+      } catch {
+        break;
+      }
+      suffix += 1;
+      finalSlug = `${desired}_${pad(suffix, 3)}`;
+      target = path.join(dir, `${finalSlug}.md`);
     }
-    renames.push({ author, from: currentSlug, to: desired, filePath, target });
+    renames.push({ author, from: currentSlug, to: finalSlug, filePath, target });
   }
 }
 

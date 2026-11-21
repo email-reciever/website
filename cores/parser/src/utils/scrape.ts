@@ -54,6 +54,34 @@ async function discoverLinks(
   return links;
 }
 
+const MONTHS =
+  "January|February|March|April|May|June|July|August|September|October|November|December";
+const DATE_PATTERNS = [
+  /property=["']article:published_time["']\s+content=["']([^"']+)["']/i,
+  /content=["']([^"']+)["']\s+property=["']article:published_time["']/i,
+  /"datePublished"\s*:\s*"([^"]+)"/i,
+  /<time[^>]+datetime=["']([^"']+)["']/i,
+  new RegExp(`\\b(?:${MONTHS})\\s+\\d{1,2},?\\s+20\\d{2}\\b`, "i"),
+  /\b\d{1,2}\/\d{1,2}\/20\d{2}\b/,
+];
+
+/** archive pages rarely expose a machine date, so fall back to the visible one */
+function pageDate(html: string, title: string): string | undefined {
+  for (const re of DATE_PATTERNS) {
+    const found = re.exec(html) || re.exec(title);
+    if (!found) continue;
+    const raw = String(found[1] || found[0]).trim();
+    const numeric = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(raw);
+    const parsed = numeric
+      ? new Date(Date.UTC(Number(numeric[3]), Number(numeric[1]) - 1, Number(numeric[2])))
+      : new Date(/^\d{4}-\d{2}-\d{2}/.test(raw) ? raw : `${raw} UTC`);
+    if (!Number.isNaN(parsed.getTime()) && parsed.getUTCFullYear() >= 2000) {
+      return parsed.toISOString();
+    }
+  }
+  return undefined;
+}
+
 /** fetch one item page and build a complete ingest item */
 async function hydrateItem(link: string, source: ArchiveSource): Promise<IngestItem> {
   const html = await fetchPage(link);
@@ -67,6 +95,7 @@ async function hydrateItem(link: string, source: ArchiveSource): Promise<IngestI
     title,
     link,
     html,
+    pubDate: pageDate(html, rawTitle),
     recorder: `scrape:${source.list}`,
   };
 }
