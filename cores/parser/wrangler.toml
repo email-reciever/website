@@ -15,8 +15,8 @@ TR_SERVE = "https://email-reciever.deno.dev"
 TR_PROVIDER = "ai"
 # TR_MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast"   # Workers AI model override
 # cron fan-out: syncing every source in one invocation exhausts the free-plan
-# subrequest budget, so /rss and scheduled dispatch one source per invocation.
-WORKER_ORIGIN = "https://subscribe-email.jiangjiangjiangxi.workers.dev"
+# subrequest budget, so /rss and scheduled dispatch one source per invocation
+# through the SELF service binding declared below.
 
 # RSS direct-subscription sync (utils/rss.ts), also triggerable via POST /rss
 [triggers]
@@ -34,3 +34,10 @@ binding = "AI"
 [[r2_buckets]]
 binding = "LOGGER"
 bucket_name = "email-reciever-logger"
+
+# Self service binding: a worker cannot fetch its own workers.dev URL
+# (Cloudflare error 1042). A binding re-enters this worker with a fresh
+# subrequest budget for each source during the RSS fan-out.
+[[services]]
+binding = "SELF"
+service = "subscribe-email"

@@ -49,15 +49,32 @@ const ALL_SYNC_KEYS = [
  * free-plan budget after the first few. A self-fetch gives every source a
  * fresh budget; the fan-out itself costs only 17 subrequests.
  */
-async function fanOutSync(origin: string, env: Env): Promise<number> {
-  const results = await Promise.allSettled(
-    ALL_SYNC_KEYS.map((key) =>
-      fetch(`${origin}/rss/${encodeURIComponent(key)}`, { method: "POST" }),
-    ),
-  );
-  const failed = results.filter((r) => r.status === "rejected").length;
-  if (failed) logger(env, `rss fan-out failures: ${failed}`);
-  return failed;
+async function fanOutSync(env: Env) {
+  const detail: Array<{ key: SenderType; status: number; body: string }> = [];
+  // Batches of 4: running 17 translation-heavy invocations at once trips the
+  // free-plan CPU limit on larger feeds.
+  const batchSize = 4;
+  for (let i = 0; i < ALL_SYNC_KEYS.length; i += batchSize) {
+    const batch = ALL_SYNC_KEYS.slice(i, i + batchSize);
+    const results = await Promise.allSettled(
+      batch.map(async (key) => {
+        const res = await env.SELF.fetch(`https://rss.internal/rss/${encodeURIComponent(key)}`, {
+          method: "POST",
+        });
+        const body = await res.text();
+        return { key, status: res.status, body: body.slice(0, 120) };
+      }),
+    );
+    results.forEach((r, j) => {
+      detail.push(
+        r.status === "fulfilled"
+          ? r.value
+          : { key: batch[j], status: -1, body: String(r.reason).slice(0, 120) },
+      );
+    });
+  }
+  logger(env, "rss fan-out", JSON.stringify(detail));
+  return detail;
 }
 
 const adapter: AdapterMap = {
@@ -144,8 +161,8 @@ export default {
       return Response.json({ fetch: Date.now() });
     } else if (pathname === "/rss") {
       // manual trigger: fan out one source per invocation
-      const failed = await fanOutSync(new URL(url).origin, env);
-      return Response.json({ synced: Date.now(), sources: ALL_SYNC_KEYS.length, failed });
+      const detail = await fanOutSync(env);
+      return Response.json({ synced: Date.now(), sources: ALL_SYNC_KEYS.length, detail });
     } else if (pathname.startsWith("/rss/")) {
       // single-source worker invoked by the fan-out above (or called directly)
       const key = decodeURIComponent(pathname.slice("/rss/".length)) as SenderType;
@@ -174,7 +191,7 @@ export default {
   // Fan out via self-fetch so every source gets its own subrequest budget.
   async scheduled(controller, env) {
     void controller;
-    await fanOutSync(env.WORKER_ORIGIN, env);
+    await fanOutSync(env);
   },
   async email(message, env, _ctx) {
     try {
