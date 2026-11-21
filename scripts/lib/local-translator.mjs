@@ -105,9 +105,16 @@ export async function openLocalTranslator() {
     }
   };
   const send = (method, params = {}) =>
-    new Promise((resolve) => {
+    new Promise((resolve, reject) => {
       const i = ++id;
-      pending.set(i, resolve);
+      const timer = setTimeout(() => {
+        pending.delete(i);
+        reject(new Error(`CDP timeout: ${method}`));
+      }, 120_000);
+      pending.set(i, (msg) => {
+        clearTimeout(timer);
+        resolve(msg);
+      });
       ws.send(JSON.stringify({ id: i, method, params }));
     });
 

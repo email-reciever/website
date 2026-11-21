@@ -14,7 +14,7 @@
  *   node scripts/backfill-all.mjs --author reactdigest --limit 5 --dry-run
  */
 
-import { readFile, writeFile } from "node:fs/promises";
+import { readdir, readFile, stat, writeFile } from "node:fs/promises";
 import { createRequire } from "node:module";
 import path from "node:path";
 import { openLocalTranslator } from "./lib/local-translator.mjs";
@@ -98,6 +98,21 @@ async function main() {
   const report = JSON.parse(await readFile(REPORT, "utf8"));
   const manifest = JSON.parse(await readFile(MANIFEST, "utf8"));
   const seen = new Set(manifest.posts.map((p) => normalize(p.origin_url)));
+  // Resume support: manifest is only written at the end, so a killed run leaves
+  // successfully fetched items on disk but absent from the index. Read their
+  // origin_urls back so the next run does not fetch them again.
+  for (const author of await readdir(path.join(ROOT, "content"))) {
+    const dir = path.join(ROOT, "content", author);
+    if (!(await stat(dir)).isDirectory()) continue;
+    for (const file of await readdir(dir)) {
+      if (!file.endsWith(".md")) continue;
+      const raw = await readFile(path.join(dir, file), "utf8");
+      const match = /^---\n([\s\S]*?)\n---\n?/.exec(raw);
+      if (!match) continue;
+      const fm = yaml.load(match[1]) || {};
+      if (fm.origin_url) seen.add(normalize(fm.origin_url));
+    }
+  }
 
   const candidates = [];
   const emptyCandidates = [];
@@ -133,7 +148,10 @@ async function main() {
   try {
     for (const candidate of candidates.slice(0, limit)) {
       try {
-        const response = await fetch(candidate.url, { headers: CRAWL_HEADERS });
+        const response = await fetch(candidate.url, {
+          headers: CRAWL_HEADERS,
+          signal: AbortSignal.timeout(45_000),
+        });
         if (!response.ok) {
           console.log(`  skip ${response.status} ${candidate.url}`);
           continue;
