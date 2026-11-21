@@ -22,7 +22,6 @@ import {
   readProcessed,
 } from "./ingest";
 import { logger } from "./logger";
-import { readManifest } from "./manifest";
 
 async function fetchPage(url: string): Promise<string> {
   return fetch(url, { headers: CRAWL_HEADERS }).then((response) => {
@@ -89,14 +88,7 @@ export async function syncArchiveSource(
   if (!source) return;
   try {
     const processed = await readProcessed(key, env);
-    let known = new Set<string>();
-    if (opts.backfill) {
-      const { manifest } = await readManifest(env);
-      known = new Set(
-        manifest.posts.map((p) => p.origin_url).filter((url): url is string => Boolean(url)),
-      );
-    }
-    const allLinks = await discoverLinks(source, processed, known);
+    const allLinks = await discoverLinks(source, processed, new Set<string>());
     // backfill walks from the oldest missing archive entry
     const links = opts.backfill
       ? [...allLinks].reverse().slice(0, MAX_ITEMS_PER_RUN)

@@ -27,7 +27,6 @@ import {
   readProcessed,
 } from "./ingest";
 import { logger } from "./logger";
-import { readManifest } from "./manifest";
 
 interface FeedItem {
   title?: string | Record<string, unknown>;
@@ -66,14 +65,8 @@ export async function fetchFeedItems(feed: string): Promise<IngestItem[]> {
     .filter((item) => item.guid && item.html);
 }
 
-/** origin URLs already present in the project — the authoritative dedupe set
- * for backfilling (metadata files can be missing or pruned) */
-async function knownLinks(env: Env): Promise<Set<string>> {
-  const { manifest } = await readManifest(env);
-  return new Set(
-    manifest.posts.map((p) => p.origin_url).filter((url): url is string => Boolean(url)),
-  );
-}
+/** Dedupe for backfill uses the per-source GUID metadata only. Reading the
+ * full manifest (now >1 MB) costs more CPU than the free plan allows. */
 
 /** sync one feed source — called in its own Worker invocation via /rss/:source
  * so each source gets a fresh subrequest budget (free plan: 50 per invocation) */
@@ -87,9 +80,8 @@ export async function syncRssSource(
   if (!conf) return;
   try {
     const processed = await readProcessed(key, env);
-    const known = opts.backfill ? await knownLinks(env) : new Set<string>();
     const candidates = (await fetchFeedItems(conf.feed)).filter(
-      (item) => !processed.includes(item.guid) && !known.has(item.link),
+      (item) => !processed.includes(item.guid),
     );
     // backfill deliberately starts at the oldest missing item; normal sync
     // keeps taking the newest one. Each invocation still ingests just one item.
