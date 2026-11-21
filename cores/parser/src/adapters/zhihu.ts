@@ -117,7 +117,8 @@ function generators<R extends (...args: any[]) => Promise<any> | any>(processors
 }
 
 export const zhihu: Adapter = async (_text, _html, _headers, env) => {
-  const { content: metaData, sha } = await getMetaData<Record<string, string[]>>("zhihu", env);
+  const { content, sha } = await getMetaData<Record<string, string[]>>("zhihu", env);
+  const metaData = content ?? {};
   const processors = generators(
     Object.keys(ZHUSER).map((v) => () => getUserLatestArticals(v as Users, metaData[v] ?? [], env)),
   );
