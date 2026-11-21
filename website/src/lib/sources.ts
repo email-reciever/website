@@ -3,6 +3,9 @@ export interface SourceMeta {
   label: string;
   /** short zh description shown under the site title / source tabs */
   note: string;
+  /** optional asset overrides — newer RSS-only sources ship typographic SVGs */
+  icon?: string;
+  banner?: string;
 }
 
 export const SOURCES: Record<string, SourceMeta> = {
@@ -25,6 +28,57 @@ export const SOURCES: Record<string, SourceMeta> = {
   syntaxfm: { label: "Syntax", note: "Syntax 通讯" },
   tyler: { label: "Bytes", note: "ui.dev 出品" },
   zhihu: { label: "知乎专栏", note: "中文技术周刊" },
+
+  // RSS-only sources added 2026-11 — typographic SVG assets keep them honest
+  // (no fake logos) and on-brand with the monochrome visual system.
+  smashingmag: {
+    label: "Smashing Mag",
+    note: "前端设计与工程",
+    icon: "/media-source/smashingmag-ico.svg",
+    banner: "/media-source/smashingmag-banner.svg",
+  },
+  typescript: {
+    label: "TypeScript",
+    note: "TS 官方博客",
+    icon: "/media-source/typescript-ico.svg",
+    banner: "/media-source/typescript-banner.svg",
+  },
+  svelte: {
+    label: "Svelte",
+    note: "Svelte / SvelteKit",
+    icon: "/media-source/svelte-ico.svg",
+    banner: "/media-source/svelte-banner.svg",
+  },
+  csstricks: {
+    label: "CSS-Tricks",
+    note: "CSS 与 Web 前端",
+    icon: "/media-source/csstricks-ico.svg",
+    banner: "/media-source/csstricks-banner.svg",
+  },
+  importai: {
+    label: "Import AI",
+    note: "AI 政策与观察",
+    icon: "/media-source/importai-ico.svg",
+    banner: "/media-source/importai-banner.svg",
+  },
+  mittechai: {
+    label: "MIT Tech AI",
+    note: "MIT 科技评论 AI",
+    icon: "/media-source/mittechai-ico.svg",
+    banner: "/media-source/mittechai-banner.svg",
+  },
+  garymarcus: {
+    label: "Gary Marcus",
+    note: "AI 深度评论",
+    icon: "/media-source/garymarcus-ico.svg",
+    banner: "/media-source/garymarcus-banner.svg",
+  },
+  awsml: {
+    label: "AWS ML",
+    note: "AWS 机器学习博客",
+    icon: "/media-source/awsml-ico.svg",
+    banner: "/media-source/awsml-banner.svg",
+  },
 };
 
 export function sourceLabel(key: string): string {
@@ -36,11 +90,11 @@ export function sourceNote(key: string): string {
 }
 
 export function sourceIcon(key: string): string {
-  return `/media-source/${key}-ico.png`;
+  return SOURCES[key]?.icon ?? `/media-source/${key}-ico.png`;
 }
 
 export function sourceBanner(key: string): string {
-  return `/media-source/${key}-banner.png`;
+  return SOURCES[key]?.banner ?? `/media-source/${key}-banner.png`;
 }
 
 /** site-level metadata */

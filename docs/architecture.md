@@ -42,7 +42,7 @@ sequenceDiagram
 
 列表页唯一数据源,仓库根目录,parser 每次发布后 upsert(按 `author + slug` 去重,按 `date` 倒序)。website 端 schema 见 `website/src/lib/types.ts`。
 
-**已知取舍**:manifest 更新是 read-modify-write,两封邮件并发到达时后写会覆盖先写,丢失一条索引(文章本体不会丢)。订阅邮件频率极低,风险可接受;若发生漂移,本地重跑 `scripts/migrate-content.mjs --force` 可从文件全量重建。
+**已知取舍**:manifest 更新是 read-modify-write,两封邮件并发到达时后写会覆盖先写,丢失一条索引(文章本体不会丢)。订阅邮件频率极低,风险可接受;若发生漂移,本地重跑 `pnpm migrate:rebuild` 从 `content/**/*.md` 全量重建(真正的源文件已不再是 `src/content`,详见迁移章节)。
 
 ## website(website/)
 
@@ -87,6 +87,8 @@ sequenceDiagram
 
 - **newsletter 模式**:feed 条目即完整一期邮件(HTML 与邮件正文一致),复用既有邮件 adapter 切片 —— cooperpress 三刊 + react status(`/rss` 路径同系)、bytes(爬取,见下)
 - **article 模式**:feed 条目是单篇文章,`html2md` 直转 —— cloudflareblog(`/rss`)、astro(`/rss.xml`)、reactdigest(`/newsletters.rss`,原生 feed)
+- **2026-11 新增的权威源**(全部实测为 RSS 2.0 且条目含全文 `content:encoded` / 完整 HTML description):前端 —— smashingmag、typescript、svelte、csstricks;AI —— importai、mittechai、garymarcus、awsml。全部走 article 模式,新增源的 `{key}.metadata.json` 预置为 `[]`,否则首次 `githubRead` 会因文件不存在抛 404 导致该源静默失败。
+- **未纳入的源**:tldr.tech 的 AI feed 只有标题/链接无正文,therundown.ai 只有 50 字摘要,openai / web.dev / huggingface / nodejs.org 的 feed 也只是摘要 —— article 模式下会产出空或极短文章,故暂不接入(若要接入需先实现"按 link 抓正文"的 hydrate 步骤)。
 
 **列表页爬取**(`packages/consts/src/archives.ts`,无 RSS 的源):
 
@@ -105,19 +107,24 @@ sequenceDiagram
 
 ## 迁移(`scripts/migrate-content.mjs`)
 
-一次性脚本:`src/content/**/*.mdx` → `content/**/*.md` + `manifest.json`。
+原始的一次性迁移(`src/content/**/*.mdx` → `content/**/*.md` + `manifest.json`)已完成 2392 篇。脚本现已改造为可重复运行的内容维护工具,三种模式:
+
+- **默认(增量)**:扫描 `src/content/**/*.mdx`,只转换 `content/` 中尚不存在的 slug,并把新条目 upsert 进 manifest。幂等,不动任何已迁移文件。用于收编旧 worker 在重构后继续提交进 `src/content` 的遗留 MDX(2026-11-21 已收编 36 篇,索引现为 2428 篇)。
+- `--force`:同上,但覆盖已存在的目标 `.md`。**注意**:这里不再删除整个 `content/`(旧版 `--force` 的行为),因为真正的源文件已经是 `content/` 本身。
+- `--rebuild-manifest`(`pnpm migrate:rebuild`):从 `content/**/*.md` 的 frontmatter 全量重建 manifest,用于索引漂移恢复。
 
 - 丢弃 `<Detail>` 内的英文原文(既定决策,仓库体积减半),frontmatter 归一(drop `layout`、`origin_site` 冗余保留 zhihu 用法、`date` 从文件名时间戳重建为 ISO)
 - 还原旧转义:`&lt;`→`<`、`&lcub;`→`{`
-- 迁移后 `src/` 整体删除
+- 脚本在安装依赖后用 `cores/parser` 的 js-yaml 序列化;未安装时内置 YAML-lite 兜底,便于在 `pnpm install` 前直接跑迁移
 
-> 已知边角:若某文章正文本身想展示字面 `<`,会被错误还原(极罕见,接受)
+> 已知边角:若某文章正文本身想展示字面 `<`,会被错误还原(极罕见,接受)。
+> 旧写入方仍会把新文章提交到 `src/content/**/*.mdx`,需重新部署 parser(`pnpm parser:deploy`)让其按新结构写 `content/`;在那之前定期跑 `pnpm migrate` 收编即可。
 
 ## 运维要点
 
 - worker secrets:`REPO_TOKEN`(GitHub PAT)、`ZHIHU_COOKIE`、`ENV`(设 `dev` 时写入走本地 deno server)
 - worker vars:`TR_PROVIDER`(`google` 非 AI 默认 / `ai`)、`TR_MODEL`(AI 模型覆盖)
 - GitHub secrets:`WORKER_URL`(zhihu 手动触发)、`WORKER_RSS_URL`(RSS 手动补跑,`https://<worker>/rss`)
-- 部署:`corepack pnpm deploy`(website → Cloudflare Workers,worker 名 `email-reciever-website`);`corepack pnpm parser:deploy`
+- 部署:`corepack pnpm deploy`(website → Cloudflare Workers,worker 名 `email-reciever-website`);`corepack pnpm parser:deploy`。若仍看到 `chore(blog): src/content/*.mdx` 提交,说明线上 parser 仍是旧版本,先重新部署 parser,再执行 `pnpm migrate` 收编遗留文件
 - 若列表/详情冷渲染 CPU 超出免费额度(10ms),优先确认缓存命中率;必要时升级 Workers Paid
 - 重建索引:本地 `corepack pnpm migrate --force`

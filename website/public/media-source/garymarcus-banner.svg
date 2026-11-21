@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <radialGradient id="g" cx="0" cy="0" r="1" gradientTransform="translate(120 40) rotate(35) scale(620 420)">
+      <stop offset="0" stop-color="#1a1a1a"/>
+      <stop offset="1" stop-color="#080808"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="300" fill="url(#g)"/>
+  <rect x="0" y="0" width="6" height="300" fill="#ededed"/>
+  <text x="56" y="150" fill="#ededed" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="76" font-weight="600" letter-spacing="-2">GARY MARCUS</text>
+  <text x="58" y="200" fill="#888" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="22" letter-spacing="4">AI / COMMENTARY</text>
+</svg>

@@ -43,6 +43,42 @@ export const RSS_SOURCES = {
     feed: "https://reactdigest.net/newsletters.rss",
     mode: "article",
   },
+
+  // --- frontend / web platform (full-content feeds, verified 2026-11) ---
+  smashingmag: {
+    feed: "https://www.smashingmagazine.com/feed/",
+    mode: "article",
+  },
+  typescript: {
+    feed: "https://devblogs.microsoft.com/typescript/feed/",
+    mode: "article",
+  },
+  svelte: {
+    feed: "https://svelte.dev/blog/rss.xml",
+    mode: "article",
+  },
+  csstricks: {
+    feed: "https://css-tricks.com/feed/",
+    mode: "article",
+  },
+
+  // --- AI (full-content feeds, verified 2026-11) ---
+  importai: {
+    feed: "https://importai.substack.com/feed",
+    mode: "article",
+  },
+  mittechai: {
+    feed: "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+    mode: "article",
+  },
+  garymarcus: {
+    feed: "https://garymarcus.substack.com/feed",
+    mode: "article",
+  },
+  awsml: {
+    feed: "https://aws.amazon.com/blogs/machine-learning/feed/",
+    mode: "article",
+  },
 } as const satisfies Record<string, RssSource>;
 
 export type RssSourceKey = Lowercase<keyof typeof RSS_SOURCES>;

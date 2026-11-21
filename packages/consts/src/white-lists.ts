@@ -17,4 +17,14 @@ export const WHITELISTS = {
   SYNTAXFM: "crew@syntax.fm",
   RNN: "newsletters@infinite.red",
   ASTRO: "withastro@buttondown.email",
+  // RSS-only sources: the value is the feed URL (never an inbound email sender),
+  // kept here so every ingest key stays inside the SenderType union.
+  SMASHINGMAG: "https://www.smashingmagazine.com/feed/",
+  TYPESCRIPT: "https://devblogs.microsoft.com/typescript/feed/",
+  SVELTE: "https://svelte.dev/blog/rss.xml",
+  CSSTRICKS: "https://css-tricks.com/feed/",
+  IMPORTAI: "https://importai.substack.com/feed",
+  MITTECHAI: "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+  GARYMARCUS: "https://garymarcus.substack.com/feed",
+  AWSML: "https://aws.amazon.com/blogs/machine-learning/feed/",
 } as const;

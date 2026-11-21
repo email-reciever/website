@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#0a0a0a"/>
+  <rect x="0.5" y="0.5" width="63" height="63" rx="11.5" fill="none" stroke="#1f1f1f"/>
+  <text x="32" y="40" text-anchor="middle" fill="#ededed" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="22" font-weight="600">AW</text>
+</svg>
