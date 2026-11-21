@@ -100,8 +100,14 @@ async function main() {
   const seen = new Set(manifest.posts.map((p) => normalize(p.origin_url)));
 
   const candidates = [];
+  const emptyCandidates = [];
   for (const [author, data] of Object.entries(report.sources)) {
     if (authorFilter && author !== authorFilter) continue;
+    // Empty bodies are already in the manifest — retry them in place, without
+    // the "already known URL" filter used for genuinely missing items.
+    for (const item of data.emptyCandidates || []) {
+      emptyCandidates.push({ ...item, author, via: "empty" });
+    }
     const items = [
       ...(data.feedCandidates || []).map((i) => ({ ...i, via: "feed" })),
       ...(data.issueCandidates || []).map((i) => ({ ...i, via: "issue" })),
@@ -113,6 +119,7 @@ async function main() {
       candidates.push({ ...item, author });
     }
   }
+  candidates.unshift(...emptyCandidates);
 
   console.log(
     `candidates: ${candidates.length}, processing up to ${limit}${dryRun ? " (dry run)" : ""}`,
@@ -147,6 +154,42 @@ async function main() {
           `  ${candidate.author}: ${finalTitle.slice(0, 50)} (${translated.translatedCount} lines)`,
         );
         if (dryRun) continue;
+
+        if (candidate.via === "empty" && candidate.slug) {
+          const existing = path.join(ROOT, "content", candidate.author, `${candidate.slug}.md`);
+          let fm = {};
+          try {
+            const raw = await readFile(existing, "utf8");
+            const match = /^---\n([\s\S]*?)\n---\n?/.exec(raw);
+            if (match) fm = yaml.load(match[1]) || {};
+          } catch {
+            /* fall through to a fresh frontmatter */
+          }
+          const nextFm = {
+            ...fm,
+            title: fm.title || finalTitle,
+            description: fm.description || finalTitle,
+            author: candidate.author,
+            origin_url: candidate.url,
+            translated: true,
+            avatar: `/media-source/${candidate.author}-ico.png`,
+          };
+          const fmYaml = yaml.dump(nextFm, { lineWidth: -1, noRefs: true }).trimEnd();
+          await writeFile(
+            existing,
+            `---\n${fmYaml}\n---\n\n${translated.markdown.trim()}\n`,
+            "utf8",
+          );
+          const entry = manifest.posts.find(
+            (p) => p.author === candidate.author && p.slug === candidate.slug,
+          );
+          if (entry) {
+            entry.translated = true;
+            entry.description = nextFm.description;
+          }
+          done += 1;
+          continue;
+        }
 
         const slug = slugNow();
         const isoDate = date ? new Date(date).toISOString() : new Date().toISOString();

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T08:23:33.740Z",
+  "generatedAt": "2026-11-21T09:49:56.798Z",
   "sources": {
     "javascriptweekly": {
       "feedItems": 4,
@@ -8,7 +8,29 @@
       "issuesPresent": 110,
       "issueRange": "702-811",
       "issueMissing": 0,
-      "issueCandidates": []
+      "issueCandidates": [],
+      "emptyCandidates": [
+        {
+          "url": "https://javascriptweekly.com/link/192692/rss",
+          "title": "How X (Twitter) is rebuilding its web app",
+          "slug": "2026-11-21_06-08-03_536"
+        },
+        {
+          "url": "https://javascriptweekly.com/link/193000/rss",
+          "title": "The top 10 things AI gets wrong in web development",
+          "slug": "2026-11-21_06-08-06_781"
+        },
+        {
+          "url": "https://javascriptweekly.com/link/192358/rss",
+          "title": "What Claude spends building with 12 JavaScript stacks",
+          "slug": "2026-11-21_06-24-21_768"
+        },
+        {
+          "url": "https://javascriptweekly.com/link/192048/rss",
+          "title": "Rebuilding the original GTA engine in JavaScript",
+          "slug": "2026-11-21_06-29-53_622"
+        }
+      ]
     },
     "nodeweekly": {
       "feedItems": 4,
@@ -21,6 +43,28 @@
         {
           "number": 644,
           "url": "https://nodeweekly.com/issues/644"
+        }
+      ],
+      "emptyCandidates": [
+        {
+          "url": "https://nodeweekly.com/link/192804/rss",
+          "title": "22 Node, Bun and Deno stacks benchmarked",
+          "slug": "2026-11-21_06-08-11_219"
+        },
+        {
+          "url": "https://nodeweekly.com/link/193092/rss",
+          "title": "Time-travel debugging for Node",
+          "slug": "2026-11-21_06-08-14_547"
+        },
+        {
+          "url": "https://nodeweekly.com/link/192491/rss",
+          "title": "Node 27's first alpha brings breaking changes",
+          "slug": "2026-11-21_06-16-53_799"
+        },
+        {
+          "url": "https://nodeweekly.com/link/192169/rss",
+          "title": "Node security releases to fix a Brotli flaw",
+          "slug": "2026-11-21_06-30-00_792"
         }
       ]
     },
@@ -35,6 +79,578 @@
         {
           "number": 742,
           "url": "https://frontendfoc.us/issues/742"
+        }
+      ],
+      "emptyCandidates": [
+        {
+          "url": "https://frontendfoc.us/issues/658",
+          "title": "Remembering the first decade of web design",
+          "slug": "2024-09-04_14-25-09_229"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/659",
+          "title": "Release notes for the entire web platform",
+          "slug": "2024-09-11_16-40-57_616"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/660",
+          "title": "New iOS, new macOS, so there's a new Safari, too.",
+          "slug": "2024-09-18_16-37-21_218"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/661",
+          "title": "Masonry moves forward",
+          "slug": "2024-09-25_17-19-37_328"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/662",
+          "title": "The Web Components debate",
+          "slug": "2024-10-02_18-05-43_958"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/663",
+          "title": "CSS nesting is getting better for everyone",
+          "slug": "2024-10-09_16-39-09_815"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/664",
+          "title": "What should the web platform focus on in 2025?",
+          "slug": "2024-10-16_18-27-40_853"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/665",
+          "title": "The State of CSS 2024 results are out",
+          "slug": "2024-10-23_15-34-39_645"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/666",
+          "title": "Content-aware components, and blazing fast tools",
+          "slug": "2024-10-30_17-11-29_247"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/667",
+          "title": "Are you using container queries yet?",
+          "slug": "2024-11-06_18-07-32_213"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/668",
+          "title": "CSS gets an official logo",
+          "slug": "2024-11-13_18-38-58_740"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/669",
+          "title": "Might Google be forced to sell Chrome?",
+          "slug": "2024-11-20_14-46-57_226"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/670",
+          "title": "Where to draw the line with browser support",
+          "slug": "2024-11-27_19-09-36_516"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/671",
+          "title": "A layered approach to speculation rules",
+          "slug": "2024-12-04_18-39-04_325"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/672",
+          "title": "What the data tell us about the web in 2024",
+          "slug": "2024-12-11_15-47-39_123"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/673",
+          "title": "Here's what went down in 2024",
+          "slug": "2024-12-18_15-21-55_867"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/674",
+          "title": "Frontend and HTML features to be aware of in 2025",
+          "slug": "2025-01-08_15-27-50_776"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/675",
+          "title": "Time to trim your text with CSS",
+          "slug": "2025-01-15_17-50-02_341"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/676",
+          "title": "Six CSS snippets you need to know",
+          "slug": "2025-01-22_15-51-03_720"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/677",
+          "title": "Revisiting CSS multi-column layouts",
+          "slug": "2025-01-29_17-30-10_044"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/678",
+          "title": "Learning to code with your voice",
+          "slug": "2025-02-05_17-58-38_099"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/679",
+          "title": "15 years on from Responsive Web Design",
+          "slug": "2025-02-12_15-58-45_959"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/680",
+          "title": "19 Web features getting broader support in 2025",
+          "slug": "2025-02-19_17-48-33_205"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/681",
+          "title": "Can (and should) an LLM write your 'alt' text?",
+          "slug": "2025-02-26_17-14-05_798"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/682",
+          "title": "An introduction to functions in CSS",
+          "slug": "2025-03-05_18-00-14_465"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/683",
+          "title": "How to dynamically generate and modify color in CSS",
+          "slug": "2025-03-12_18-25-33_954"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/684",
+          "title": "Are breadcrumbs 'dead' in web design?",
+          "slug": "2025-03-19_17-39-49_992"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/685",
+          "title": "Bringing custom styling to 'select' elements",
+          "slug": "2025-03-26_17-24-26_902"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/686",
+          "title": "Another option in the masonry mix",
+          "slug": "2025-04-02_14-15-11_105"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/687",
+          "title": "An unprecedented level of polish to web typography",
+          "slug": "2025-04-09_18-08-17_358"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/688",
+          "title": "PSA： Default styles for H1 elements are changing",
+          "slug": "2025-04-16_13-07-25_851"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/689",
+          "title": "Chrome's hand stays in the cookie jar",
+          "slug": "2025-04-23_18-29-49_534"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/690",
+          "title": "32 years of an open WWW",
+          "slug": "2025-04-30_17-17-23_550"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/691",
+          "title": "An objective look at CSS Carousels",
+          "slug": "2025-05-07_17-18-07_005"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/692",
+          "title": "With Figma Sites it's DIVs all the way down",
+          "slug": "2025-05-14_16-47-35_247"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/693",
+          "title": "Google bangs the Gemini drum",
+          "slug": "2025-05-21_17-09-15_109"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/694",
+          "title": "Writing for AI, the new SEO?",
+          "slug": "2025-05-28_17-24-12_438"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/695",
+          "title": "CSS 'if' functions start to roll out",
+          "slug": "2025-06-04_18-10-27_945"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/696",
+          "title": "Safari jumps to 26",
+          "slug": "2025-06-11_15-55-34_078"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/697",
+          "title": "You're not a frontend dev until you've....",
+          "slug": "2025-06-18_16-16-22_294"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/698",
+          "title": "Creating scroll-driven animations with just CSS",
+          "slug": "2025-06-25_15-22-19_769"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/699",
+          "title": "All the colors of the web",
+          "slug": "2025-07-02_16-39-50_044"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/700",
+          "title": "The opportunities offered by CSS's if()",
+          "slug": "2025-07-09_17-35-00_565"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/701",
+          "title": "Frontend innovation through constraints",
+          "slug": "2025-07-16_18-07-54_308"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/702",
+          "title": "What you need to know about SVGs",
+          "slug": "2025-07-23_18-02-33_880"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/703",
+          "title": "Building towards CSS masonry, brick by brick",
+          "slug": "2025-07-30_16-59-39_488"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/704",
+          "title": "The cascading layers of importance",
+          "slug": "2025-08-06_17-28-34_639"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/705",
+          "title": "Is there no such thing as a 'CSS reset'?",
+          "slug": "2025-08-20_15-51-31_021"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/706",
+          "title": "Rolling the dice with random CSS",
+          "slug": "2025-08-27_17-56-02_590"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/707",
+          "title": "As Chrome turns 17, Google gets to keep it",
+          "slug": "2025-09-03_18-22-14_053"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/708",
+          "title": "What you need to know about color interpolation and shifting",
+          "slug": "2025-09-11_12-37-46_989"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/709",
+          "title": "Getting animations done right and with purpose",
+          "slug": "2025-09-17_17-29-30_472"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/710",
+          "title": "What you need to know about modern CSS",
+          "slug": "2025-09-24_17-27-25_492"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/711",
+          "title": "How much do you really know about media queries?",
+          "slug": "2025-10-01_18-45-05_964"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/712",
+          "title": "How Core Web Vitals has saved us thousands of years",
+          "slug": "2025-10-08_18-13-30_375"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/713",
+          "title": "Firefox finally supports View Transitions",
+          "slug": "2025-10-15_18-24-02_809"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/714",
+          "title": "25 new CSS features explained",
+          "slug": "2025-10-22_18-36-50_005"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/715",
+          "title": "The future of progressive image rendering",
+          "slug": "2025-10-29_17-36-02_339"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/716",
+          "title": "Getting perfect tooltip placement",
+          "slug": "2025-11-05_18-23-37_215"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/717",
+          "title": "Those are some S-tier animation techniques",
+          "slug": "2025-11-12_19-06-07_287"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/718",
+          "title": "Tuesday was a big day for both Cloudflare and Google",
+          "slug": "2025-11-19_19-39-28_655"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/719",
+          "title": "How Wikipedia handled a domain change",
+          "slug": "2025-11-26_19-07-10_895"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/720",
+          "title": "It's time to open some web advent calendars",
+          "slug": "2025-12-03_17-49-12_372"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/721",
+          "title": "Wrapping up the year in CSS",
+          "slug": "2025-12-10_18-07-24_155"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/722",
+          "title": "A Focus on 2025",
+          "slug": "2025-12-17_18-39-21_632"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/723",
+          "title": "The CSS features you need to know this year, including Grid Lanes",
+          "slug": "2026-01-07_15-43-50_328"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/724",
+          "title": "When is an API not an API?",
+          "slug": "2026-01-14_18-10-59_807"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/725",
+          "title": "How the web has changed in the past twelve months",
+          "slug": "2026-01-21_18-23-31_129"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/726",
+          "title": "When will 'Grid Lanes' truly arrive, and how can we use it today?",
+          "slug": "2026-01-28_17-52-23_413"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/727",
+          "title": "Stop rushing to single-column layouts",
+          "slug": "2026-02-04_17-35-57_064"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/728",
+          "title": "The median web site has 2,802 CSS rules",
+          "slug": "2026-02-11_19-24-41_904"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/729",
+          "title": "Interop 2026 launched： 15 new cross-browser features coming",
+          "slug": "2026-02-18_16-42-12_861"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/730",
+          "title": "Someone built an x86 emulator in pure CSS",
+          "slug": "2026-02-25_18-19-15_853"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/731",
+          "title": "Is this the most seen UI on the web?",
+          "slug": "2026-03-04_18-26-23_524"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/732",
+          "title": "11ty goes Awesome, but not everyone is feeling the awe...",
+          "slug": "2026-03-11_19-11-00_629"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/733",
+          "title": "A new tool to improve load performance",
+          "slug": "2026-03-18_17-48-37_580"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/734",
+          "title": "The Great CSS Expansion： Replacing JS with native features",
+          "slug": "2026-03-25_19-47-11_777"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/735",
+          "title": "Rendering Doom in 3D with CSS",
+          "slug": "2026-04-01_16-56-35_847"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/736",
+          "title": "HTML video/audio lazy-loading now a web standard",
+          "slug": "2026-04-08_17-02-17_059"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/737",
+          "title": "Google's crackdown on back button 'hijacking'",
+          "slug": "2026-04-15_17-17-08_236"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/738",
+          "title": "font-family doesn't fall back the way you think it does",
+          "slug": "2026-04-22_18-12-55_746"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/739",
+          "title": "The end of srcset/sizes headaches is here",
+          "slug": "2026-04-29_16-49-20_895"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/740",
+          "title": "CSS, but make it random",
+          "slug": "2026-05-06_16-30-51_269"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/741",
+          "title": "A new HTML element for installing web apps",
+          "slug": "2026-05-13_17-40-15_973"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/743",
+          "title": "What's still missing from CSS",
+          "slug": "2026-05-27_17-03-07_771"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/744",
+          "title": "Rendering 3D meshes in the DOM with CSS",
+          "slug": "2026-06-03_18-24-15_749"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/745",
+          "title": "Safari's 58 new features",
+          "slug": "2026-06-10_17-10-56_572"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/746",
+          "title": "The scope superpower hiding in CSS @function",
+          "slug": "2026-06-17_17-16-42_880"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/747",
+          "title": "CSS that picks its own readable text color",
+          "slug": "2026-06-24_18-17-35_174"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/748",
+          "title": "The select element, sized just right",
+          "slug": "2026-07-01_17-12-03_130"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/749",
+          "title": "Edge gets started on CSS mixins",
+          "slug": "2026-07-08_18-07-10_544"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/750",
+          "title": "Does the frontend still need build tools?",
+          "slug": "2026-07-15_18-09-11_491"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/751",
+          "title": "Rebuilding the World Cup table with CSS Subgrid",
+          "slug": "2026-07-22_17-37-25_631"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/752",
+          "title": "The amazingly versatile conic-gradient()",
+          "slug": "2026-07-29_12-52-31_893"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/753",
+          "title": "The new CSS feature devs love most but can't rely on yet",
+          "slug": "2026-08-05_18-13-25_008"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/754",
+          "title": "Five CSS properties for eye-catching text designs",
+          "slug": "2026-08-12_19-52-32_122"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/755",
+          "title": "The asteroid hitting frontend development",
+          "slug": "2026-08-26_17-51-28_785"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/756",
+          "title": "htmx 4.0 takes HTML-driven apps further",
+          "slug": "2026-09-02_13-56-02_526"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/757",
+          "title": "What's new in HTML for 2026",
+          "slug": "2026-09-09_15-59-10_086"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/758",
+          "title": "When CSS could run JavaScript",
+          "slug": "2026-09-16_17-38-31_499"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/759",
+          "title": "12 CSS features that can retire your dependencies",
+          "slug": "2026-09-23_18-35-07_132"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/760",
+          "title": "Why GitHub now ships more CSS, not less",
+          "slug": "2026-09-30_17-31-11_858"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/761",
+          "title": "JPEG XL finally ships in Chrome",
+          "slug": "2026-10-07_18-33-55_806"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/762",
+          "title": "The best way to use icons in Web UIs",
+          "slug": "2026-10-14_18-16-15_560"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/763",
+          "title": "Ten CSS features worth voting for",
+          "slug": "2026-10-21_17-21-08_971"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/764",
+          "title": "The spyware hiding in old script tags",
+          "slug": "2026-10-28_18-40-21_315"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/765",
+          "title": "Safari will 'dark mode' your site for you",
+          "slug": "2026-11-04_18-25-28_595"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/766",
+          "title": "Responsive design is more than resizing a window",
+          "slug": "2026-11-11_19-36-11_802"
+        },
+        {
+          "url": "https://frontendfoc.us/issues/767",
+          "title": "What developers think of HTML right now",
+          "slug": "2026-11-18_18-31-12_140"
+        },
+        {
+          "url": "https://frontendfoc.us/link/192769/rss",
+          "title": "Responsive design is more than resizing a window",
+          "slug": "2026-11-21_06-08-19_171"
+        },
+        {
+          "url": "https://frontendfoc.us/link/193044/rss",
+          "title": "What developers think of HTML right now",
+          "slug": "2026-11-21_06-08-22_579"
+        },
+        {
+          "url": "https://frontendfoc.us/link/192125/rss",
+          "title": "The spyware hiding in old script tags",
+          "slug": "2026-11-21_06-15-30_086"
+        },
+        {
+          "url": "https://frontendfoc.us/link/192441/rss",
+          "title": "Safari will 'dark mode' your site for you",
+          "slug": "2026-11-21_06-30-08_298"
+        },
+        {
+          "url": "https://frontendfoc.us/link/192125/rss",
+          "title": "The spyware hiding in old script tags",
+          "slug": "2026-11-21_06-35-40_342"
         }
       ]
     },
@@ -1165,6 +1781,43 @@
           "title": "Astro 0.19",
           "date": "Wed, 18 Aug 2021 00:00:00 GMT"
         }
+      ],
+      "emptyCandidates": [
+        {
+          "url": "https://buttondown-0009.com/c/YmQwMmJjNjEtY2YxZS00Y2NmLThhYzctZWNmYTZiMzZiMDM5fDFmZjAzZTQ5LWQ2NjAtNDE3Ni1iMjYyLTEwYWE2ZWQ3ZmQ3MHxodHRwczovL2J1dHRvbmRvd24uY29tL3dpdGhhc3Ryby9hcmNoaXZlL2hvdXN0b24td2UtaGF2ZS1hLWhhY2thdGhvbi98ZW1haWw=",
+          "title": "Houston, we have a hackathon",
+          "slug": "2026-07-09_10-55-03_887"
+        },
+        {
+          "url": "https://astro.build/blog/whats-new-october-2026/",
+          "title": "What's new in Astro - October 2026",
+          "slug": "2026-11-21_06-15-36_442"
+        },
+        {
+          "url": "https://astro.build/blog/whats-new-september-2026/",
+          "title": "What's new in Astro - September 2026",
+          "slug": "2026-11-21_06-16-58_436"
+        },
+        {
+          "url": "https://astro.build/case-studies/evil-martians/",
+          "title": "Affordable and Fast Migration",
+          "slug": "2026-11-21_06-24-29_478"
+        },
+        {
+          "url": "https://astro.build/blog/starlight-042/",
+          "title": "Starlight 0.42",
+          "slug": "2026-11-21_06-35-54_658"
+        },
+        {
+          "url": "https://astro.build/blog/introducing-astro/",
+          "title": "Introducing Astro: Ship Less JavaScript",
+          "slug": "2026-11-21_06-45-19_690"
+        },
+        {
+          "url": "https://astro.build/blog/astro-018/",
+          "title": "Astro 0.18 Release",
+          "slug": "2026-11-21_07-59-00_905"
+        }
       ]
     },
     "reactdigest": {
@@ -1172,28 +1825,8 @@
       "feedMissing": 0,
       "feedCandidates": [],
       "archiveLinks": 581,
-      "archiveMissing": 526,
+      "archiveMissing": 521,
       "archiveCandidates": [
-        {
-          "url": "https://reactdigest.net/newsletters/2385-making-context-cheap-with-react-compiler",
-          "title": "Making context cheap with React compiler"
-        },
-        {
-          "url": "https://reactdigest.net/newsletters/2380-how-to-sync-a-design-system-with-claude-design",
-          "title": "How to sync a design system with Claude design"
-        },
-        {
-          "url": "https://reactdigest.net/newsletters/2375-the-cost-of-abstraction-for-humans-and-ai-agents",
-          "title": "The cost of abstraction for humans and AI agents"
-        },
-        {
-          "url": "https://reactdigest.net/newsletters/2370-write-react-ship-direct-dom",
-          "title": "Write React. Ship direct DOM."
-        },
-        {
-          "url": "https://reactdigest.net/newsletters/2365-the-browser-s-main-thread-is-expensive",
-          "title": "The browser&#39;s main thread is expensive"
-        },
         {
           "url": "https://reactdigest.net/newsletters/2360-how-react-works-the-complete-tutorial",
           "title": "How React works: The complete tutorial"
@@ -5357,17 +5990,82 @@
           "url": "https://bytes.dev/archives/3",
           "title": "7/6/2020Issue 3Turn off Hamilton, let&#x27;s talk about $$$Read Issue →"
         }
+      ],
+      "emptyCandidates": [
+        {
+          "url": "https://bytes.dev/archives/1",
+          "title": "jQuery and TypeScript take the L",
+          "slug": "2026-11-21_06-46-33_650"
+        },
+        {
+          "url": "https://bytes.dev/archives/2",
+          "title": "JS OGs reminisce, Angular ditches IE, and the future of No Code",
+          "slug": "2026-11-21_08-00-16_119"
+        }
       ]
     },
     "alexkondov": {
       "archiveLinks": 0,
       "archiveMissing": 0,
       "archiveCandidates": []
+    },
+    "arcupdate": {
+      "emptyCandidates": [
+        {
+          "url": "https://thebrowser.company/",
+          "title": "We’ve decided to sunset Arc on December 22, 2026",
+          "slug": "2026-10-22_17-14-05_098"
+        }
+      ]
+    },
+    "mediumcom": {
+      "emptyCandidates": [
+        {
+          "url": "https://medium.com/",
+          "title": "I Only Make Documents in One Format | Joe Riad in Level Up Coding",
+          "slug": "2026-03-11_23-00-16_445"
+        },
+        {
+          "url": "https://medium.com/",
+          "title": "Longer stories just got easier to read with the new Table of Contents",
+          "slug": "2026-07-27_22-04-56_348"
+        }
+      ]
+    },
+    "rnn": {
+      "emptyCandidates": [
+        {
+          "url": "https://mailchi.mp/infinite/react-native-newsletter-4741041?e=077ac9fa1d",
+          "title": "Issue 189 — RN is about to be 10x faster, FlashList V2 drops, and Chain React is back",
+          "slug": "2025-08-12_23-23-30_533"
+        },
+        {
+          "url": "https://mailchi.mp/infinite/react-native-newsletter-4741228?e=077ac9fa1d",
+          "title": "Issue 190 — React's new foundation is here",
+          "slug": "2025-11-19_18-33-44_699"
+        },
+        {
+          "url": "https://mailchi.mp/infinite/react-native-newsletter-4741360?e=077ac9fa1d",
+          "title": "Issue 191 — Your React Native Wrapped 2025 is here!! (and more RN great news)",
+          "slug": "2025-12-30_23-40-52_738"
+        },
+        {
+          "url": "https://mailchi.mp/infinite/react-native-newsletter-4741470?e=077ac9fa1d",
+          "title": "React Native's polishing era continues",
+          "slug": "2026-02-12_17-47-47_130"
+        },
+        {
+          "url": "https://mailchi.mp/infinite/react-native-newsletter-4741603?e=077ac9fa1d",
+          "title": "Issue 193： State of React Native 2025 results and Expo SDK 55",
+          "slug": "2026-03-26_23-34-01_543"
+        }
+      ]
     }
   },
   "totals": {
     "feedMissing": 360,
     "issueMissing": 33,
-    "archiveMissing": 830
+    "archiveMissing": 825,
+    "emptyBodies": 139
   }
 }

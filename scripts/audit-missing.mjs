@@ -8,9 +8,14 @@
  *
  * Usage: node scripts/audit-missing.mjs [--out scripts/out/missing-report.json]
  */
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+
+import { mkdir, readdir, readFile, stat, writeFile } from "node:fs/promises";
+import { createRequire } from "node:module";
 import path from "node:path";
 import { ARCHIVES, CRAWL_HEADERS, FEEDS, ISSUE_SOURCES } from "./lib/sources.mjs";
+
+const require = createRequire(path.resolve("cores/parser/package.json"));
+const yaml = require("js-yaml");
 
 const ROOT = process.cwd();
 const MANIFEST = path.join(ROOT, "manifest.json");
@@ -79,7 +84,7 @@ for (const post of posts) {
 const report = {
   generatedAt: new Date().toISOString(),
   sources: {},
-  totals: { feedMissing: 0, issueMissing: 0, archiveMissing: 0 },
+  totals: { feedMissing: 0, issueMissing: 0, archiveMissing: 0, emptyBodies: 0 },
 };
 
 for (const [key, url] of Object.entries(FEEDS)) {
@@ -161,6 +166,30 @@ for (const [key, conf] of Object.entries(ARCHIVES)) {
   await sleep(200);
 }
 
+// Posts whose body was lost during the legacy MDX migration are retryable too.
+for (const author of await readdir(path.join(ROOT, "content"))) {
+  const dir = path.join(ROOT, "content", author);
+  if (!(await stat(dir)).isDirectory()) continue;
+  for (const file of await readdir(dir)) {
+    if (!file.endsWith(".md")) continue;
+    const raw = await readFile(path.join(dir, file), "utf8");
+    const match = /^---\n([\s\S]*?)\n---\n?/.exec(raw);
+    const fm = match ? yaml.load(match[1]) || {} : {};
+    const body = match ? raw.slice(match[0].length) : raw;
+    if (body.trim().length >= 80) continue;
+    const url = String(fm.origin_url || "");
+    if (!url || url === "javascript:;" || !url.startsWith("http")) continue;
+    report.sources[author] = {
+      ...(report.sources[author] || {}),
+      emptyCandidates: [
+        ...(report.sources[author]?.emptyCandidates || []),
+        { url, title: fm.title || file.slice(0, -3), slug: file.slice(0, -3) },
+      ],
+    };
+    report.totals.emptyBodies += 1;
+  }
+}
+
 await mkdir(path.dirname(OUT), { recursive: true });
 await writeFile(OUT, `${JSON.stringify(report, null, 2)}\n`, "utf8");
 
@@ -172,9 +201,10 @@ for (const [key, data] of Object.entries(report.sources)) {
     bits.push(`issues ${data.issueMissing} (${data.issueRange})`);
   if (data.archiveMissing !== undefined)
     bits.push(`archive ${data.archiveMissing}/${data.archiveLinks}`);
+  if (data.emptyCandidates?.length) bits.push(`empty ${data.emptyCandidates.length}`);
   if (data.feedError || data.archiveError) bits.push(data.feedError || data.archiveError);
   if (bits.length) console.log(`  ${key.padEnd(18)} ${bits.join(" · ")}`);
 }
 console.log(
-  `TOTAL feed=${report.totals.feedMissing} issue=${report.totals.issueMissing} archive=${report.totals.archiveMissing}`,
+  `TOTAL feed=${report.totals.feedMissing} issue=${report.totals.issueMissing} archive=${report.totals.archiveMissing} empty=${report.totals.emptyBodies}`,
 );

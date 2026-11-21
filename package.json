@@ -15,6 +15,7 @@
     "audit:missing": "node scripts/audit-missing.mjs",
     "backfill:all": "node scripts/backfill-all.mjs",
     "translate:local": "node scripts/translate-local.mjs",
+    "normalize:slugs": "node scripts/normalize-slugs.mjs",
     "parser:dev": "corepack pnpm -F=\"@email.reciever/parser\" dev",
     "parser:deploy": "corepack pnpm -F=\"@email.reciever/parser\" run deploy",
     "parser:test": "corepack pnpm -F=\"@email.reciever/parser\" test",
