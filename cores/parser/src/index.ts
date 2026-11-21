@@ -3,6 +3,8 @@ import type { Header } from "postal-mime";
 import postalMime from "postal-mime";
 import "dayjs/locale/zh-cn";
 
+import { ARCHIVES_SOURCES } from "@email.reciever/consts/archives";
+import { RSS_SOURCES } from "@email.reciever/consts/rss";
 import type { Frontmatter } from "@email.reciever/types/markdown-extends";
 import { alexkondov } from "./adapters/alexkondov";
 import { arcupdate } from "./adapters/arcupdate";
@@ -31,10 +33,32 @@ import {
 import { forward } from "./utils/forward";
 import { issue } from "./utils/issue";
 import { logger } from "./utils/logger";
-import { syncRssSources } from "./utils/rss";
-import { syncArchiveSources } from "./utils/scrape";
+import { syncRssSource } from "./utils/rss";
+import { syncArchiveSource } from "./utils/scrape";
 
 dayjs.locale("zh-cn");
+
+const ALL_SYNC_KEYS = [
+  ...(Object.keys(RSS_SOURCES) as SenderType[]),
+  ...(Object.keys(ARCHIVES_SOURCES) as SenderType[]),
+];
+
+/**
+ * Each source must run in its own invocation: 17 sources × ~15 subrequests
+ * (GitHub reads/writes, feed fetch, translation) blow the 50-subrequest
+ * free-plan budget after the first few. A self-fetch gives every source a
+ * fresh budget; the fan-out itself costs only 17 subrequests.
+ */
+async function fanOutSync(origin: string, env: Env): Promise<number> {
+  const results = await Promise.allSettled(
+    ALL_SYNC_KEYS.map((key) =>
+      fetch(`${origin}/rss/${encodeURIComponent(key)}`, { method: "POST" }),
+    ),
+  );
+  const failed = results.filter((r) => r.status === "rejected").length;
+  if (failed) logger(env, `rss fan-out failures: ${failed}`);
+  return failed;
+}
 
 const adapter: AdapterMap = {
   reactdigest: rd,
@@ -119,11 +143,20 @@ export default {
       await zhihu("", "", [], env);
       return Response.json({ fetch: Date.now() });
     } else if (pathname === "/rss") {
-      // manual trigger for the direct-subscription sync (feeds + archives;
-      // also runs on the cron trigger)
-      await syncRssSources(env, adapter);
-      await syncArchiveSources(env, adapter);
-      return Response.json({ synced: Date.now() });
+      // manual trigger: fan out one source per invocation
+      const failed = await fanOutSync(new URL(url).origin, env);
+      return Response.json({ synced: Date.now(), sources: ALL_SYNC_KEYS.length, failed });
+    } else if (pathname.startsWith("/rss/")) {
+      // single-source worker invoked by the fan-out above (or called directly)
+      const key = decodeURIComponent(pathname.slice("/rss/".length)) as SenderType;
+      if (key in RSS_SOURCES) {
+        await syncRssSource(key, env, adapter);
+      } else if (key in ARCHIVES_SOURCES) {
+        await syncArchiveSource(key, env, adapter);
+      } else {
+        return Response.json({ error: "unknown source", source: key }, { status: 404 });
+      }
+      return Response.json({ source: key, synced: Date.now() });
     } else if (pathname === "/issue") {
       const payload = await request.json<Record<string, any>>();
       try {
@@ -137,11 +170,11 @@ export default {
 
     return Response.redirect(repoURI);
   },
-  // direct-subscription sync (RSS feeds + archive scrapes), crons in wrangler.toml
+  // direct-subscription sync (RSS feeds + archive scrapes), crons in wrangler.toml.
+  // Fan out via self-fetch so every source gets its own subrequest budget.
   async scheduled(controller, env) {
     void controller;
-    await syncRssSources(env, adapter);
-    await syncArchiveSources(env, adapter);
+    await fanOutSync(env.WORKER_ORIGIN, env);
   },
   async email(message, env, _ctx) {
     try {

@@ -66,26 +66,34 @@ async function hydrateItem(link: string, source: ArchiveSource): Promise<IngestI
   };
 }
 
-/** entry for the scheduled cron handler and the manual `/rss` route */
-export async function syncArchiveSources(env: Env, adapter: AdapterMap) {
-  const entries = Object.entries(ARCHIVES_SOURCES) as [SenderType, ArchiveSource][];
-  for (const [key, source] of entries) {
-    try {
-      const processed = await readProcessed(key, env);
-      const links = await discoverLinks(source, processed);
-      if (!links.length) continue;
-      // hydrate oldest-first so a mid-run failure keeps chronological order
-      const items: IngestItem[] = [];
-      for (const link of [...links].reverse()) {
-        try {
-          items.push(await hydrateItem(link, source));
-        } catch (e) {
-          logger(env, `scrape hydrate failed: ${key}`, link, e);
-        }
+/** sync one archive source — invoked in its own Worker invocation via /rss/:source */
+export async function syncArchiveSource(key: SenderType, env: Env, adapter: AdapterMap) {
+  const source = ARCHIVES_SOURCES[key as keyof typeof ARCHIVES_SOURCES] as
+    | ArchiveSource
+    | undefined;
+  if (!source) return;
+  try {
+    const processed = await readProcessed(key, env);
+    const links = await discoverLinks(source, processed);
+    if (!links.length) return;
+    // hydrate oldest-first so a mid-run failure keeps chronological order
+    const items: IngestItem[] = [];
+    for (const link of [...links].reverse()) {
+      try {
+        items.push(await hydrateItem(link, source));
+      } catch (e) {
+        logger(env, `scrape hydrate failed: ${key}`, link, e);
       }
-      await ingestItems(key, source.mode, items, adapter, env);
-    } catch (e) {
-      logger(env, `scrape sync failed: ${key}`, e);
     }
+    await ingestItems(key, source.mode, items, adapter, env);
+  } catch (e) {
+    logger(env, `scrape sync failed: ${key}`, e);
+  }
+}
+
+/** legacy in-process path (local dev / single-source debugging) */
+export async function syncArchiveSources(env: Env, adapter: AdapterMap) {
+  for (const key of Object.keys(ARCHIVES_SOURCES) as SenderType[]) {
+    await syncArchiveSource(key, env, adapter);
   }
 }

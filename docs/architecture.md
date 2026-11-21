@@ -98,6 +98,8 @@ sequenceDiagram
 
 **调度**:cron(`[triggers]` 每 6h)+ 手动 `POST /rss`(GH workflow `subscribe-rss.yml`,secrets `WORKER_RSS_URL`)。
 
+> **fan-out(2026-11 修复)**:一个 invocation 串行同步全部 17 个源会耗尽 Workers 免费版 50 次 subrequest 的预算(排在第 5 个之后的源永远失败)。现在 `/rss` 与 cron 都会向 `/rss/:source` 自请求,每个源在独立 invocation 中运行、拥有独立预算;`TR_PROVIDER=ai` 且每源每次最多 2 篇。var `WORKER_ORIGIN` 供 cron 构造自请求地址。
+
 **未能直连的源**(继续走邮件链路):producthunt(归档页为客户端渲染,正文藏在 hydration JSON 里,cheerio 不可靠 —— 已探查确认)、medium、insidergithub、modular、arcupdate、syntaxfm、rnn。`us3.campaign-archive.com/feed` 是 Mailchimp 账户级 URL,裸路径 404,alexkondov 已改由其自有博客爬取。两条链路并存互不影响;已直连的源建议停掉对应邮件转发,避免同期双发。
 
 ## 共享包

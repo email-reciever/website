@@ -12,4 +12,6 @@ interface Env {
   TR_MODEL?: string;
   /** translation provider chain primary: 'google' (non-AI, default) or 'ai' */
   TR_PROVIDER?: "google" | "ai";
+  /** self URL used by the cron fan-out (each source runs in its own invocation) */
+  WORKER_ORIGIN: string;
 }

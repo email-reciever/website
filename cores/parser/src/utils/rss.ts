@@ -60,16 +60,23 @@ async function fetchNewItems(feed: string, processed: string[]): Promise<IngestI
     .slice(0, MAX_ITEMS_PER_RUN);
 }
 
-/** entry for the scheduled cron handler and the manual `/rss` route */
+/** sync one feed source — called in its own Worker invocation via /rss/:source
+ * so each source gets a fresh subrequest budget (free plan: 50 per invocation) */
+export async function syncRssSource(key: SenderType, env: Env, adapter: AdapterMap) {
+  const conf = RSS_SOURCES[key as keyof typeof RSS_SOURCES] as RssSource | undefined;
+  if (!conf) return;
+  try {
+    const processed = await readProcessed(key, env);
+    const items = await fetchNewItems(conf.feed, processed);
+    await ingestItems(key, conf.mode, items, adapter, env);
+  } catch (e) {
+    logger(env, `rss sync failed: ${key}`, e);
+  }
+}
+
+/** legacy in-process path (local dev / single-source debugging) */
 export async function syncRssSources(env: Env, adapter: AdapterMap) {
-  const entries = Object.entries(RSS_SOURCES) as [SenderType, RssSource][];
-  for (const [key, conf] of entries) {
-    try {
-      const processed = await readProcessed(key, env);
-      const items = await fetchNewItems(conf.feed, processed);
-      await ingestItems(key, conf.mode, items, adapter, env);
-    } catch (e) {
-      logger(env, `rss sync failed: ${key}`, e);
-    }
+  for (const key of Object.keys(RSS_SOURCES) as SenderType[]) {
+    await syncRssSource(key, env, adapter);
   }
 }
