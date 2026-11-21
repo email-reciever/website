@@ -42,7 +42,7 @@ sequenceDiagram
 
 列表页唯一数据源,仓库根目录,parser 每次发布后 upsert(按 `author + slug` 去重,按 `date` 倒序)。website 端 schema 见 `website/src/lib/types.ts`。
 
-**已知取舍**:manifest 更新是 read-modify-write,两封邮件并发到达时后写会覆盖先写,丢失一条索引(文章本体不会丢)。订阅邮件频率极低,风险可接受;若发生漂移,本地重跑 `pnpm migrate:rebuild` 从 `content/**/*.md` 全量重建(真正的源文件已不再是 `src/content`,详见迁移章节)。
+**已知取舍 / 2026-11 加固**:manifest 更新是 read-modify-write。邮件并发风险很低,但 RSS fan-out 会并发写索引,因此加了三层保护:① 读取失败**绝不**退化为空索引(否则一次写就把索引缩成 1 条);② 单条不足 100 篇视为异常,拒绝写入;③ 冲突时重读重试。fan-out 目前串行执行(每源一条),彻底避免竞争。若仍漂移,本地跑 `pnpm migrate:rebuild` 从 `content/**/*.md` 全量重建(写**紧凑 JSON**——GitHub Contents API 对 >1MB 文件返回空 content,parser 的 `githubRead` 已加 Git Blob API 兜底)。
 
 ## website(website/)
 
@@ -77,7 +77,7 @@ sequenceDiagram
 3. 失败时 `md()` 落回原文并标记 `translated: false`(用户可见该文未翻译)
 4. remark-code-plugin 按位置还原真实代码块
 
-> 注意:`gtx` 是 Google 的非官方端点,对数据中心 IP 可能限流(旧管线 Deno Deploy 遇到的正是这个),这正是保留 AI 兜底与 `TR_PROVIDER` 开关的原因 —— 若观察到大面积翻译失败,切到 `TR_PROVIDER=ai` 即可。本机网络无法直连 google 域名属预期,worker 部署在 Cloudflare 边缘不受影响。
+> 注意:`gtx` 是 Google 的非官方端点。2026-11 首次实跑时 Cloudflare 出口 IP 收到大面积 **429**,已把线上 `TR_PROVIDER` 切为 `ai`,并把每个 chunk 的 provider 尝试从 4 次降到 2 次(每次尝试都消耗 subrequest)。本机网络无法直连 google 域名属预期。
 
 ### 直连订阅(已实施:RSS + 列表页爬取)
 
@@ -98,7 +98,7 @@ sequenceDiagram
 
 **调度**:cron(`[triggers]` 每 6h)+ 手动 `POST /rss`(GH workflow `subscribe-rss.yml`,secrets `WORKER_RSS_URL`)。
 
-> **fan-out(2026-11 修复)**:一个 invocation 串行同步全部 17 个源会耗尽 Workers 免费版 50 次 subrequest 的预算(排在第 5 个之后的源永远失败)。现在 `/rss` 与 cron 都会向 `/rss/:source` 自请求,每个源在独立 invocation 中运行、拥有独立预算;`TR_PROVIDER=ai` 且每源每次最多 2 篇。var `WORKER_ORIGIN` 供 cron 构造自请求地址。
+> **fan-out(2026-11 修复)**:一个 invocation 同步全部 17 个源会耗尽 Workers 免费版 50 次 subrequest(第 5 个之后的源永远失败)。现在 `/rss` 与 cron 通过 `SELF` service binding 调用 `/rss/:source`,每个源在独立 invocation 中运行、拥有独立预算 —— 不能用 `fetch(自己的 workers.dev URL)`,Cloudflare 会报 1042。fan-out **串行**执行(并发会让 manifest 竞争),每源每次最多 1 篇,以控制 CPU 时间。全量同步约 100–260s。
 
 **未能直连的源**(继续走邮件链路):producthunt(归档页为客户端渲染,正文藏在 hydration JSON 里,cheerio 不可靠 —— 已探查确认)、medium、insidergithub、modular、arcupdate、syntaxfm、rnn。`us3.campaign-archive.com/feed` 是 Mailchimp 账户级 URL,裸路径 404,alexkondov 已改由其自有博客爬取。两条链路并存互不影响;已直连的源建议停掉对应邮件转发,避免同期双发。
 

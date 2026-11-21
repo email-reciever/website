@@ -15,7 +15,10 @@ export default defineConfig({
   // ],
   build: {
     rollupOptions: {
-      external: ['@mixmark-io/domino']
+      external: ['@mixmark-io/domino'],
+      output: {
+        globals: { '@mixmark-io/domino': 'domino' }
+      }
     },
     sourcemap: true,
     lib: {
