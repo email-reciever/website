@@ -16,6 +16,7 @@
     "backfill:all": "node scripts/backfill-all.mjs",
     "translate:local": "node scripts/translate-local.mjs",
     "normalize:slugs": "node scripts/normalize-slugs.mjs",
+    "content:reextract": "node scripts/content-reextract.mjs",
     "weekly:digest": "node scripts/weekly-digest.mjs",
     "weekly:media": "node scripts/weekly-media.mjs",
     "weekly:drill": "node scripts/weekly-drill.mjs",

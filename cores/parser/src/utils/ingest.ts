@@ -11,6 +11,7 @@
 import { md } from "../adapters/md";
 import type { AdapterMap, SenderType } from "../types";
 import { createBlog, createCommonFrontmatter } from "./blog";
+import { cleanMarkdown, extractHtml, resolveHtml } from "./extract";
 import { html2md } from "./html2md";
 import { logger } from "./logger";
 import { getMetaData, setMetaData } from "./metadata";
@@ -64,12 +65,19 @@ export async function renderItem(
   let translated = false;
   let originUrl = item.link;
 
+  // Teaser-only feeds (Astro, CSS-Tricks) must be hydrated from the canonical
+  // article page before extraction. The prune/extract step runs for every
+  // source, including email adapters, so inline <script>/<style> and tracking
+  // pixels never reach turndown.
+  const { html: resolvedHtml } = await resolveHtml(item, key);
+  const html = extractHtml(resolvedHtml, key);
+
   if (mode === "newsletter") {
     // item HTML === email HTML → reuse the email adapter's slicing rules
     const collector = adapter[key];
     if (!collector) throw new Error(`no adapter registered for ${key}`);
-    const output = await collector("", item.html, [], env);
-    content = output.blogContent || "";
+    const output = await collector("", html, [], env);
+    content = cleanMarkdown(output.blogContent || "", key);
     if (output.origin_url) {
       originUrl = output.origin_url;
     }
@@ -79,8 +87,9 @@ export async function renderItem(
       translated = result.translated;
     }
   } else {
-    const { md: articleMd } = html2md(item.html);
-    const result = await md(articleMd, env);
+    const { md: articleMd } = html2md(html);
+    content = cleanMarkdown(articleMd, key);
+    const result = await md(content, env);
     content = result.content;
     translated = result.translated;
   }

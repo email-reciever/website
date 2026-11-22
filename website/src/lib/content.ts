@@ -20,7 +20,7 @@ import type { ListQuery, ListResult, Manifest, ManifestEntry, PostPage } from ".
 const BRANCH = "main";
 /** Bump this to invalidate the edge/in-memory caches after a bulk content
  * rewrite (slug/date repairs). raw.githubusercontent ignores the query param. */
-const CACHE_VERSION = "20261121d";
+const CACHE_VERSION = "20261122a";
 const MANIFEST_TTL = 5 * 60 * 1000; // 5min — new posts appear quickly
 const POST_TTL = 60 * 60 * 1000; // 1h — post content is immutable
 const PAGE_SIZE = 24;

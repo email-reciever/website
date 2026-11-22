@@ -10,7 +10,8 @@
     "./regexp": "./src/regexp.ts",
     "./zhihu": "./src/zhihu.ts",
     "./rss": "./src/rss.ts",
-    "./archives": "./src/archives.ts"
+    "./archives": "./src/archives.ts",
+    "./content-rules": "./src/content-rules.ts"
   },
   "files": [
     "src"
